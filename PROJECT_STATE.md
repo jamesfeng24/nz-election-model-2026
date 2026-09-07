@@ -1,6 +1,6 @@
 # Project state
 
-Last updated: 2026-09-07. Canonical repository: https://github.com/jamesfeng24/nz-election-model-2026. Working branch: main. Git history identifies the exact revision.
+Last updated: 2026-09-07. Canonical repository: https://github.com/jamesfeng24/nz-election-model-2026. Working branch: stage/01-foundation; last branch: main. Git history identifies the exact revision.
 
 ## Objective
 
@@ -8,7 +8,7 @@ Build a transparent, reproducible static web application for the 2026 New Zealan
 
 ## Current stage
 
-Stage 1 — application architecture and persistent handoff complete. Stop here; later stages require explicit user authorization.
+Stage 1 correction in progress. Initial foundation is already on main; the expanded workflow is being completed on stage/01-foundation. Do not begin Stage 2.
 
 ## Completed stages
 
@@ -63,3 +63,7 @@ Polling aggregation and pollster effects; 2023 reconstruction on 2026 boundaries
 After explicit authorization: **Stage 2 — inventory authoritative data sources and design domain schemas. Read the required handoff documents, identify source candidates and access/licensing limitations, specify party/candidate/electorate identifiers and boundary vintages, propose poll and vote observation contracts with units, missingness and validation rules, and record decisions. Do not download election datasets, fit statistical models or implement MMP allocation unless separately authorized. Update the handoff documents, run all checks, commit and push, then stop.**
 
 If the previous session was interrupted during publication, first inspect `git status` and compare HEAD to origin/main; push the existing stage-1 commit if needed rather than rebuilding it. No local files outside this repository are needed to resume.
+
+## Correction checkpoint — 2026-09-07
+
+Base commit: 9eed98405f6dca4ac86248c32cbf410887b1086f. Latest main was fetched and confirmed before the branch was created. No PR yet. Added docs/statistical-specification.md, expanded AGENTS/DECISIONS/METHODOLOGY/DATA_SOURCES/architecture and the data/script layout. Remaining: domain contracts and tests, Python config/checks, final documentation reconciliation, all gates and unmerged PR. Previous verification above applies to the initial foundation only; correction checks are pending. No datasets or models added. Resume this correction before considering Stage 2.

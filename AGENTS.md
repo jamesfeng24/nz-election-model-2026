@@ -13,3 +13,11 @@
 - Update PROJECT_STATE.md at the end of every stage, including exact next task and check status. Update decisions, methodology, sources and changelog when affected.
 - Do not start later stages unless explicitly asked. Stage 1 authorizes architecture, contracts, documentation and shell only.
 - When interrupted, record incomplete work, commands, branch, blockers and next action in PROJECT_STATE.md. A fresh session must resume from files alone.
+
+## Branch and stage workflow
+
+Before major work fetch/pull latest main, confirm the remote is `jamesfeng24/nz-election-model-2026`, and inspect the working tree. Create the user-specified stage branch before editing; this correction uses `stage/01-foundation`. Work only on that branch. Commit and push meaningful checkpoints periodically, not only at the end. Open a pull request into main at completion; never merge it yourself or publish directly to main. Preserve the historical initial foundation commit already on main; do not rewrite shared history to simulate compliance.
+
+Read `docs/statistical-specification.md` as a fifth mandatory document before major work. Update PROJECT_STATE.md **before the final commit**, recording current/last branch, important commits and PRs, material files, all check results, datasets, limitations and exact next task. Update DATA_SOURCES.md, DECISIONS.md and CHANGELOG.md each stage, including an explicit no-data-change note where applicable.
+
+Python is allowed offline only. Keep dependencies reproducible and minimal; run relevant Python tests as well as frontend tests, typecheck and build. Export required website artifacts to versioned JSON/GeoJSON. Keep eventual Monte Carlo code independent of the DOM and serializable for Web Worker execution. Do not implement Stage 2 or collect data during this stage.
