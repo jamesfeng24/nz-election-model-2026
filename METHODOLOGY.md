@@ -1,0 +1,21 @@
+# Methodology
+
+## Current implementation
+
+None. Stage 1 contains only the application shell, provenance contracts and documentation. No polling aggregation, regression, electorate reconstruction, effect estimation, simulation or MMP allocation is implemented. Empty states are not forecasts.
+
+## Intended scope (not yet methods)
+
+Estimate current national party support from multiple pollsters; reconstruct 2023 results on 2026 electorate boundaries; model every 2026 electorate using party vote, candidate vote and split-ticket evidence; distinguish National and Labour electorate-vote resilience; normalize candidate overperformance for national conditions; estimate first-term incumbency and candidate replacement effects; model Opportunity separately from 2023 TOP; simulate joint outcomes, qualification, Sainte-Laguë, list MPs and overhangs; explain individual electorate forecasts.
+
+## Requirements for each future component
+
+Before implementation record: research question and estimand; source IDs and coverage; units and missingness; assumptions; mathematical specification; uncertainty treatment; interactions with other components; validation and sensitivity tests; outputs and limitations. Cite verified electoral rules before implementing MMP. Do not hard-code unverified thresholds, seat counts or boundaries.
+
+## Prevent overlapping effects
+
+Resilience, split voting, national-environment normalization, incumbency and replacement can explain overlapping variation. Maintain an effect-dependency table when specifying models. State baseline, conditioning variables, residual effect and integration order; do not sum separately fitted effects without justification and validation. No integration order is chosen yet.
+
+## Validation principles
+
+Future work should document suitable historical holdouts, calibration and sensitivity checks without leaking outcome information. Distinguish evidence gaps, sampling uncertainty, parameter uncertainty and model uncertainty. Record seeds for stochastic runs, intervals and their interpretation. Never substitute fabricated data to produce a complete-looking forecast.

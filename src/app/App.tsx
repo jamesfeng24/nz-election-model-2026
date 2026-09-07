@@ -1,0 +1,11 @@
+import { useEffect } from 'react';
+import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { pages } from './pages';
+function Page({ page }: { page: typeof pages[number] }) {
+  return <><p className="eyebrow">2026 GENERAL ELECTION / {page.label.toUpperCase()}</p><h1>{page.title}</h1><p className="intro">{page.description}</p><section className="status-panel" aria-labelledby="status-heading"><div><span className="badge">Foundation stage</span><h2 id="status-heading">No forecast published</h2><p>{page.detail}</p></div><div className="readiness"><p className="eyebrow">BEFORE RESULTS</p><ul>{page.needs.map((need) => <li key={need}><span aria-hidden="true">○</span>{need}</li>)}</ul></div></section><section className="principles" aria-label="Project principles"><article><span>01 / EVIDENCE</span><h2>Traceable inputs</h2><p>Original sources and processing steps will accompany every dataset.</p></article><article><span>02 / UNCERTAINTY</span><h2>Honest estimates</h2><p>Missing evidence stays visible. Precision must be earned through validation.</p></article><article><span>03 / EXPLANATION</span><h2>Methods in the open</h2><p>Each modelling stage will document its assumptions and limitations.</p></article></section></>;
+}
+export function App() {
+ const { pathname } = useLocation();
+ useEffect(() => { document.title = `${pages.find(p => p.path === pathname)?.label ?? 'Page not found'} | NZ Election Model 2026`; document.getElementById('main')?.focus(); }, [pathname]);
+ return <><a className="skip" href="#main">Skip to content</a><header><Link className="brand" to="/">NZ <span>Election Model</span><b>2026</b></Link><span className="project-tag">INDEPENDENT RESEARCH PROJECT</span></header><nav aria-label="Main navigation">{pages.map(page => <NavLink key={page.path} to={page.path} end={page.path === '/'}>{page.label}</NavLink>)}</nav><main id="main" tabIndex={-1}><Routes>{pages.map(page => <Route key={page.path} path={page.path} element={<Page page={page} />} />)}<Route path="*" element={<><h1>Page not found</h1><p>This address does not match a project page.</p><Link to="/">Return to Forecast</Link></>} /></Routes></main><footer><span>NZ Election Model 2026 · Architecture first. Evidence next.</span><a href="https://github.com/jamesfeng24/nz-election-model-2026">Repository & documentation ↗</a></footer></>;
+}
