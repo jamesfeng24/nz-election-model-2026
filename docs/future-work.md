@@ -1,8 +1,8 @@
 # Future work — requires explicit authorization
 
-Only stage 1 is implemented. The following is a proposed sequence, not permission to proceed.
+Only stage 1 infrastructure is implemented, including provisional domain contracts and a read-only source integrity check. No statistical component is implemented. The following is a proposed sequence, not permission to proceed.
 
-1. **Data inventory and domain schema design:** identify authoritative source candidates and access/licensing constraints; specify observation schemas, identifiers, boundary versions and validation rules. Do not ingest data or implement models in this step unless separately requested.
+1. **Data inventory and domain contract review:** identify authoritative source candidates and access/licensing constraints; review the draft v1 observation schemas, identifiers, boundary versions and validation rules against documented source formats. Record amendments before ingestion. Do not ingest data or implement models in this step unless separately requested.
 2. **Reproducible acquisition and processing:** preserve source bytes, register provenance, implement deterministic scripts and validation.
 3. **2023 reconstruction on 2026 boundaries:** specify crosswalk methods and quantify allocation uncertainty.
 4. **National polling support:** define aggregation, pollster effects and uncertainty with validation.

@@ -1,65 +1,75 @@
 # Project state
 
-Last updated: 2026-09-07. Canonical repository: https://github.com/jamesfeng24/nz-election-model-2026. Working branch: main. Git history identifies the exact revision.
+Updated 2026-09-07. GitHub is canonical: https://github.com/jamesfeng24/nz-election-model-2026.
 
-## Objective
+## Objective and current stage
 
-Build a transparent, reproducible static web application for the 2026 New Zealand general election: national support, boundary-aware electorate forecasts, candidate and split-vote effects, probabilistic seats and MMP explanations. Fresh sessions must resume from this repository alone.
+Build a transparent, reproducible 2026 New Zealand election website: national support, all electorates on official 2026 boundaries, independent candidate estimators, normalized historical effects, joint uncertainty, MMP allocation and configurable government outcomes. A fresh session must resume from these files alone.
 
-## Current stage
+Stage 1 foundation correction complete and submitted for review in PR #1. Final handoff is committed on the same stage branch. No Stage 2 work authorized. The original shell is already on main; these corrections are separate and must not be merged by the agent.
 
-Stage 1 — application architecture and persistent handoff complete. Stop here; later stages require explicit user authorization.
+## Current/last branch and important commits/PRs
 
-## Completed stages
+- Current branch: `stage/01-foundation`; last branch: `main`.
+- Base / original foundation: `9eed98405f6dca4ac86248c32cbf410887b1086f` (already on main).
+- Pushed specification/workflow checkpoint: `015c96ffb3bff49219220115b0712fde26b231fd`.
+- Domain/Python checkpoint: `38c38aaf8d8c23b13598064b8792700289501511`.
+- Final handoff commit: consult the head of the PR/stage branch (a commit cannot contain its own SHA).
+- PR #1: https://github.com/jamesfeng24/nz-election-model-2026/pull/1 — stage/01-foundation → main, open and unmerged at handoff. Do not merge it automatically.
+- Initial direct-to-main publication cannot be retroactively corrected; shared history is preserved. All work in this correction uses the requested branch.
 
-- Stage 1: React/TypeScript/Vite/Vitest foundation; seven navigable pages and unknown-route handling; reserved model modules; source metadata validation and empty registry; reproducibility, architecture and handoff documentation; locked dependencies and CI.
+## Completed stages and material files
 
-## Important files
+Stage 1 infrastructure only:
 
-- AGENTS.md: mandatory persistent rules.
-- DECISIONS.md: architecture choices and rationale.
-- METHODOLOGY.md: intended scope and safeguards; no implemented statistical methods.
-- DATA_SOURCES.md: mandatory external-data provenance standard.
-- docs/data-dictionary.md: current contracts and deferred domain schemas.
-- docs/architecture.md, docs/reproducibility.md, docs/future-work.md: boundaries, recovery workflow and proposed sequence.
-- src/app/App.tsx, src/app/pages.ts, src/styles.css: website shell.
-- src/types/contracts.ts: source metadata schemas and availability type.
-- data/sources.json: empty real source registry; data/raw and data/processed contain guidance only.
-- src/models/*/README.md: reserved module responsibilities.
-- package.json, package-lock.json, .nvmrc, vite.config.ts, tsconfig.json: reproducible tooling.
-- .github/workflows/ci.yml: automated stage gates.
+- React/TypeScript/Vite/Vitest static shell with seven routes, unavailable states and unknown-route handling: src/app, src/styles.css.
+- Persistent rules and handoff: AGENTS.md, PROJECT_STATE.md, DECISIONS.md, METHODOLOGY.md, DATA_SOURCES.md, CHANGELOG.md.
+- Detailed intended pipeline, independent estimators and explicit exclusions: docs/statistical-specification.md.
+- Runtime provenance contracts: src/types/contracts.ts; draft domain contracts and serializable simulation message types: src/types/domain.ts; synthetic tests colocated with them.
+- Contract meanings and limits: docs/data-dictionary.md. Architecture, reproducibility and backlog: docs/architecture.md, docs/reproducibility.md, docs/future-work.md.
+- Reserved model boundaries: src/models/{polling,electorates,regressions,split-voting,candidate-effects,simulation,mmp}; src/components, src/data and src/utils reserve shared boundaries.
+- Raw elections/polls/boundaries/candidates and processed elections/polls/electorates/split-votes/model directories; data/README.md; empty data/sources.json.
+- scripts/ingest, transform, validate, analysis; read-only scripts/validate/source_files.py and eight standard-library tests in scripts/tests.
+- Python 3.12.2 pin and empty third-party dependency set: .python-version, pyproject.toml. No scientific packages installed.
+- Frontend locked dependencies, Node pin, check commands and separate frontend/Python CI jobs: package.json, package-lock.json, .nvmrc, .github/workflows/ci.yml.
+- README includes local frontend/Python setup and future Cloudflare Pages instructions. public/ contains guidance only.
 
-## Verification status
+## Current test/build state
 
-Local verification on 2026-09-07, Node 22.17.0 / npm 10.9.2:
+Local checks on 2026-09-07, Node 22.17.0 / npm 10.9.2 / Python 3.12.2:
 
-- `npm run test`: PASS, 19 tests in 2 files (all routes, navigation, missing route and source contracts).
+- `npm run test`: PASS, 30 tests across 3 files.
 - `npm run typecheck`: PASS.
-- `npm run build`: PASS; generated static dist/ output (not committed).
-- Local dev server starts successfully.
-- Visual browser inspection: NOT COMPLETED. Browser tool could not verify its admin-enforced security policy and denied localhost access. No security workaround attempted. Unit rendering tests passed; visual/mobile inspection remains a follow-up check.
-- GitHub Actions configured; remote CI result is separate from the local checks above.
+- `npm run build`: PASS, static dist output ignored by Git.
+- `npm run test:python`: PASS, 8 tests.
+- `npm run validate:sources`: PASS, zero registered resources (not a data-coverage claim).
+- `npm run check:all`: PASS; combines the above.
+- `git diff --check`: PASS.
+- Remote CI for implementation commit 38c38aa: frontend job passed; Python unit tests and source-integrity steps passed in run 34105472000. Final documentation-commit CI is tracked by the PR checks and is separate from these recorded results.
+- Visual inspection was blocked in the original session because the browser tool could not verify its admin policy. This correction changes no UI rendering. Visual/mobile and hosted deep-link checks remain for later deployment review.
 
-## Known problems and operational notes
+## Available datasets and data limitations
 
-No known test, type or build errors. This machine's npm configuration points at an unavailable local proxy; dependency installation succeeded using per-command `--proxy=null --https-proxy=null`. No user-wide configuration was changed. Normal environments should use `npm ci`; only apply the override if the same proxy issue occurs.
-
-Cloudflare deployment is not configured or performed. Deep-link refresh must be verified when deployed. Code licence remains an explicit maintainer decision. Domain schemas are deliberately deferred, not implied by the source metadata contract.
-
-## Data limitations
-
-No external election data, polls, boundary files, candidate records or processed datasets exist. No electoral rules have been verified for implementation. Source metadata fixtures are synthetic and appear only in tests. No forecast can be produced from this stage.
+None. No election, poll, boundary, candidate or processed data collected. The real source register is empty. Synthetic metadata/count fixtures exist only in tests and are not website inputs. Electoral rules and the requested 71-electorate coverage target need official verification before implementation. No coefficients, predictions or simulation outputs exist.
 
 ## Modelling components completed
 
-None. Infrastructure contracts and empty module boundaries only.
+None. Draft data contracts, intended specification and validation infrastructure are not statistical models. No worker, ingestion pipeline, fitted estimator or MMP engine is implemented.
 
-## Modelling components outstanding
+## Outstanding modelling components
 
-Polling aggregation and pollster effects; 2023 reconstruction on 2026 boundaries; every electorate model; party/candidate/split-ticket evidence; National/Labour resilience; national-environment normalization; first-term incumbency; replacement effects; separate Opportunity treatment; regressions and diagnostics; joint probabilistic simulation; qualification, Sainte-Laguë, list MPs and overhangs; calibration and electorate explanations.
+2023-on-2026 reconstruction; multi-pollster national support; local party movement; independent split-ticket, elasticity and normalized-premium estimators; National/Labour resilience; personal-vote persistence; national normalization; freshman and replacement effects; separate Opportunity model; historical backtesting and learned weights; correlated uncertainty; seeded all-electorate simulation; verified qualification and exact Sainte-Laguë; list MPs, overhangs and Parliament size; configurable government combinations; calibration and transparent electorate explanations.
+
+## Known issues and design limits
+
+- Domain schemas are draft v1. They validate structure, not external authenticity or whole-dataset joins. Review source compatibility, fractional reconstructed counts, dynamic majority thresholds and list-order schemas before implementing those components; see the dictionary.
+- No code licence selected. Data rights must be reviewed source by source.
+- No Cloudflare deployment performed. Python remains offline; future website inputs must be JSON/GeoJSON. Worker messages are contracts only.
+- This machine's npm proxy is unavailable; prior installation succeeded with per-command `--proxy=null --https-proxy=null`, without changing global settings.
+- Local Git lacks HTTPS write credentials; checkpoints are published through the GitHub connection with identical Git trees and non-forced stage ref updates, then synchronized locally. Never expose credentials or change main to work around this.
 
 ## Exact recommended next task
 
-After explicit authorization: **Stage 2 — inventory authoritative data sources and design domain schemas. Read the required handoff documents, identify source candidates and access/licensing limitations, specify party/candidate/electorate identifiers and boundary vintages, propose poll and vote observation contracts with units, missingness and validation rules, and record decisions. Do not download election datasets, fit statistical models or implement MMP allocation unless separately authorized. Update the handoff documents, run all checks, commit and push, then stop.**
+After the user reviews/merges this PR and explicitly authorizes Stage 2: **Inventory authoritative data sources and review the draft domain contracts against documented source formats. Read all five mandatory documents, fetch latest main, create the user-specified Stage 2 branch, identify source candidates and access/licensing limitations, verify planned electorate/boundary coverage and electoral rule sources, and record contract amendments and validation requirements. Do not download election datasets or implement statistical/MMP models unless separately authorized. Update all stage documents, run checks, push checkpoints and open an unmerged PR.**
 
-If the previous session was interrupted during publication, first inspect `git status` and compare HEAD to origin/main; push the existing stage-1 commit if needed rather than rebuilding it. No local files outside this repository are needed to resume.
+If publication is interrupted, first inspect git status, fetch origin, and compare the stage branch to origin/stage/01-foundation. Resume publication/PR handoff, not Stage 2. No temporary files or previous conversation are needed.

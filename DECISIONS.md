@@ -21,3 +21,27 @@ Commit lockfile, Node version, CI and persistent stage documents. All future pro
 ## D005 — 2026-09-07 — No assumed licence
 
 Do not assign a licence without an explicit choice. Repository is public with open-source-style structure; code licensing remains a documented maintainer decision. Data rights must be recorded per source.
+
+## Decision metadata for D001–D005
+
+All five decisions originated in Stage 1 on 2026-09-07. D001 is a standing stack constraint; backend/database alternatives were excluded by the user. D002 is a revisitable architecture choice; hash routing and separate page modules were alternatives, but clean URLs and the small shared shell keep the foundation simple. D003's domain-contract deferral is superseded by D006. D004 is a standing reproducibility requirement; chat-only handoff and unpinned installs were rejected. D005 remains unresolved pending a maintainer licence choice; unilaterally selecting MIT or another licence was rejected. None is an empirically fitted statistical decision.
+
+## D006 — Stage 1 correction / 2026-09-07 — Domain contracts now
+
+Decision: add versioned domain schemas/types without observations or algorithms, superseding D003's domain-schema deferral. Rationale: a fresh session needs explicit shared contracts. Alternative: continue deferring all domain definitions; rejected by the expanded stage instructions. Status: provisional interfaces, subject to evidence-led schema revisions; statistical specifications and weights remain subject to backtesting.
+
+## D007 — Stage 1 correction / 2026-09-07 — Offline Python, serializable browser inputs
+
+Decision: pin Python 3.12.2, use only its standard library for foundation checks, and declare an empty dependency set. Add pinned third-party packages and a lockfile only when needed. Export JSON/GeoJSON; keep eventual TypeScript Monte Carlo inputs/outputs serializable for a module Web Worker. Rationale: reproducibility without unused scientific packages or a deployed Python service. Alternatives: installing the full research stack now or executing Python in production; rejected as unnecessary. Status: standing runtime boundary; package choices revisitable when research begins.
+
+## D008 — Stage 1 correction / 2026-09-07 — Preserve existing module names
+
+Decision: retain src/app, src/models and colocated tests; add src/components and src/data boundaries plus the requested data/script subdirectories. Rationale: exact names were flexible and moving working files adds no capability. Alternative: mechanically rename all directories to the example tree. Status: revisitable architecture choice, not subject to statistical backtesting.
+
+## D009 — Stage 1 correction / 2026-09-07 — Independent estimators and evidence-led combination
+
+Decision: preserve independent split-ticket, elasticity and normalized-premium predictions and learn final weights out of sample. Rationale: correlated bonuses can double count personal vote. Alternative: hand-tuned weights or stacked bonuses; excluded by the project instructions. Status: independence and evidence requirement are standing constraints; estimands, normalizations and fitted weights are subject to historical backtesting.
+
+## D010 — Stage 1 correction / 2026-09-07 — Corrective PR, no history rewrite
+
+Decision: branch from current main and submit only missing foundation work through stage/01-foundation. Rationale: initial commit 9eed984 already exists on main; the corrective PR cannot retroactively represent it as unmerged. Alternatives: reverting main or force-rewriting history; not requested. Status: permanent historical record. All new work stays on the stage branch and the PR must remain unmerged.
