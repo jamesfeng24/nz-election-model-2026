@@ -1,1 +1,2368 @@
-{"schemaVersion":1,"sources":[]}
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part1.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part1.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part1.csv",
+      "retrievedAt": "2026-09-07T14:02:34.822081+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part1.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "42fb7bd7b284e959f6128e8fb6230b6772783e17f750176683d869f409e4ba6f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part4.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part4.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part4.csv",
+      "retrievedAt": "2026-09-07T14:02:41.712278+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part4.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c8a7324d6dae846e5319f706a682e430b1007e8941122d8ce2ac478f7ea3a6e5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part5.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part5.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part5.csv",
+      "retrievedAt": "2026-09-07T14:02:42.230652+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part5.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "d0cbbbef5f00ee737367566c1ecee33a0458b9aa23e44fd9ddbccf8b96ce6d94",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part6.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part6.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part6.csv",
+      "retrievedAt": "2026-09-07T14:02:45.398987+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part6.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "ad02171f663bbc181fccdb3f8a46e960c9850576dc2772af52b90c4b0f0054c5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_1.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_1.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_1.csv",
+      "retrievedAt": "2026-09-07T14:03:19.392837+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_1.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "239237c6fbb68f72b5d6aaa9fdc63cbe187aa66a502e8add248fe7cf5c73f376",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_10.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_10.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_10.csv",
+      "retrievedAt": "2026-09-07T14:03:46.654421+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_10.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "7dc1ef3c5ed0962c3c70277b80cc8127b098d8fe2a6116c5c97fcf5b0237b40e",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_11.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_11.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_11.csv",
+      "retrievedAt": "2026-09-07T14:03:49.649345+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_11.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "f219e2db1bac972f5813ca5b7631e222419ccd93d4ce77ec0944c3fa1525f98b",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_12.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_12.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_12.csv",
+      "retrievedAt": "2026-09-07T14:03:52.722719+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_12.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "bf97ab96cd4963dce6e70af6f6248eed1cced75fe1c10901cb3149411504fc3c",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_13.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_13.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_13.csv",
+      "retrievedAt": "2026-09-07T14:04:26.841602+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_13.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "1f249577800f85b6af4c195d5a31c5d430c7eac1ac9633475c2b3b4b32df9731",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_14.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_14.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_14.csv",
+      "retrievedAt": "2026-09-07T14:04:29.863833+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_14.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "e85c0edc9f2003b393e7e0461ff5ba0904dbd19faf79edeaa25039ac8abc2493",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_15.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_15.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_15.csv",
+      "retrievedAt": "2026-09-07T14:04:32.868060+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_15.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "a657bc335ad27f7ad9692f68a825e7aee56990461868b430008d8b1d08583243",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_16.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_16.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_16.csv",
+      "retrievedAt": "2026-09-07T14:04:35.888552+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_16.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "85668f484771b90d6b894261f1b2c417fb39054ce6f1fd2b8a1c83b1e64a45c6",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_17.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_17.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_17.csv",
+      "retrievedAt": "2026-09-07T14:04:39.047616+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_17.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "42d219a9beed4ce2eb4179c7f06426144f20b3ec032f0666571875d833168a02",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_18.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_18.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_18.csv",
+      "retrievedAt": "2026-09-07T14:04:41.962465+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_18.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "283899e8c4d754229adda65bc33b751055a675c4a8ddadc677d69507d832947d",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_19.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_19.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_19.csv",
+      "retrievedAt": "2026-09-07T14:04:44.964493+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_19.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "01d2d532eae1a907d1e286eae48fbc564905ea1f28b487a4850006b8c832b4c7",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_2.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_2.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_2.csv",
+      "retrievedAt": "2026-09-07T14:03:22.569360+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_2.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "98336aec580b29a1a98839227b978732847669bac4b2d1fbb2c01632c89f6f32",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_20.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_20.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_20.csv",
+      "retrievedAt": "2026-09-07T14:04:47.984102+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_20.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "65e349480628c30579504fd888a887f61ebf1bbcf2e723db12d9aa90003114ea",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_21.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_21.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_21.csv",
+      "retrievedAt": "2026-09-07T14:04:51.167627+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_21.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "8e3cdf3bc421f066400f51b0152bf6f20513954f1a2c89116baaebef49514bdf",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_22.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_22.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_22.csv",
+      "retrievedAt": "2026-09-07T14:04:54.043286+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_22.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "56ed18f5d1380ca117349c7c0b3fc7262755693a0092f05d1af94ca5133ace80",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_23.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_23.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_23.csv",
+      "retrievedAt": "2026-09-07T14:04:57.180691+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_23.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "338b9c21feedf8db1acb8b74d8e2d0bb6c0e6f67dd430aba5253763860b545de",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_24.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_24.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_24.csv",
+      "retrievedAt": "2026-09-07T14:05:00.094017+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_24.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "1b3f89e523c18865ee9d4ead810214c398dc8feeb437577c3451c1c8e86b900f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_25.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_25.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_25.csv",
+      "retrievedAt": "2026-09-07T14:05:03.106730+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_25.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "fe9fc204fc23d424f1c622edad6bcedffb750e33ed296fbeb03aec794a1da4c6",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_26.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_26.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_26.csv",
+      "retrievedAt": "2026-09-07T14:05:06.126195+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_26.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "9ffc863339176ea28918e9317041d9cf4013eb5206bee7fc998374f106c897ba",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_27.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_27.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_27.csv",
+      "retrievedAt": "2026-09-07T14:05:09.190863+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_27.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "ef0cba4f2f670e7d713faffb37b603995bf876c6a4109d25de776f164b8f6fae",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_28.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_28.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_28.csv",
+      "retrievedAt": "2026-09-07T14:05:12.194183+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_28.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "bd15390282774302002fb4ad687acb4ba173031184965956c1c4927abd02ac98",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_29.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_29.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_29.csv",
+      "retrievedAt": "2026-09-07T14:05:15.223781+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_29.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "8d01628fc768f007c6a37024eb853b80ef4e98051748e459cad6885af0e5b649",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_3.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_3.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_3.csv",
+      "retrievedAt": "2026-09-07T14:03:25.494438+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_3.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "5dbb9fd52e1368075588c5db7c50419e52be2cf4a1c87b77977914886d290620",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_30.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_30.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_30.csv",
+      "retrievedAt": "2026-09-07T14:05:18.302955+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_30.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "73a69e2be91588966a87f880117c76670295378753706195815008e373f85dc7",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_31.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_31.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_31.csv",
+      "retrievedAt": "2026-09-07T14:06:14.171850+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_31.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "59a0e748df5e6c1525881794e7010c44c26747b4ec6022d45ac5b2771ed20870",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_32.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_32.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_32.csv",
+      "retrievedAt": "2026-09-07T14:06:17.131653+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_32.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "654268786a5290b0f165ce6c829985c2bb1486ea8348785b30a6e532743c4e2e",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_33.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_33.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_33.csv",
+      "retrievedAt": "2026-09-07T14:06:20.250799+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_33.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "58ac4fc57424067c02c164af52c728675bb080cd931ca0b548ec4307c519c6eb",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_34.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_34.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_34.csv",
+      "retrievedAt": "2026-09-07T14:06:23.184712+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_34.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "74d5090a76bff309055102ce89b6e0d5f00760bec75747a79c25a1a645f0b3c5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_35.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_35.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_35.csv",
+      "retrievedAt": "2026-09-07T14:06:26.193840+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_35.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0739a539de99cc69404c76ab7f070e45f044019d104d570fa98dbb08101ccdca",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_36.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_36.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_36.csv",
+      "retrievedAt": "2026-09-07T14:06:29.260951+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_36.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "95ca68f5f320f403b8b3274984e2f3d1eeb1ffdcba37fbe0d30dbaae010a7adb",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_37.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_37.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_37.csv",
+      "retrievedAt": "2026-09-07T14:06:32.247241+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_37.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "a5a1a70cc96e6e5dc0ca2e16213e7706c1f5f59c7eec808e2470f29ec1ea93ce",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_38.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_38.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_38.csv",
+      "retrievedAt": "2026-09-07T14:06:35.291390+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_38.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "bf2ba64450b41d698db853f325ee10792470951e233cea26acd75a5c6eb0ee22",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_39.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_39.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_39.csv",
+      "retrievedAt": "2026-09-07T14:06:38.319788+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_39.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "d4f0e3cf906457e455f6a6061185eac0cbd4953d3de89047826daed38099416f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_4.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_4.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_4.csv",
+      "retrievedAt": "2026-09-07T14:03:28.522355+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_4.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c85b5ea0141f2fe1802e0c154d5212fe9324e4ff406c316dff7b5e7915e77018",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_40.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_40.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_40.csv",
+      "retrievedAt": "2026-09-07T14:06:41.313019+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_40.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "ffe304b1c47ed8fa9a7417b434de30da94bc903572db96445ab787c6f3e5843a",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_41.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_41.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_41.csv",
+      "retrievedAt": "2026-09-07T14:06:44.343965+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_41.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "5feb7bdf2958c2ff70632fba565056964e1d477a419be2b86395328b00957def",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_42.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_42.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_42.csv",
+      "retrievedAt": "2026-09-07T14:06:47.398342+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_42.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "069f53914507be53efdba5b7fd5bc16689de894bb38b8f85f4e0427721b95939",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_43.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_43.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_43.csv",
+      "retrievedAt": "2026-09-07T14:06:50.477433+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_43.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "23818e39700eb268c923f41517a93b6f7e0bcc47d03ce9c9392b9354c77fbb98",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_44.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_44.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_44.csv",
+      "retrievedAt": "2026-09-07T14:06:53.473611+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_44.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "dbf58343f7316bffe0e6e574967e16ee957bff4696af01a52d4e1b54eee09bf4",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_45.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_45.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_45.csv",
+      "retrievedAt": "2026-09-07T14:06:56.477795+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_45.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "65acc481ca2ac931139aaa4f25716bd3c0ee142d2ff2a6ddf8823dc376812cb6",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_46.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_46.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_46.csv",
+      "retrievedAt": "2026-09-07T14:06:59.586602+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_46.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "14f2c3a6911919dfd2b63e935903a92602add2976d62b4d209871d94c0572810",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_47.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_47.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_47.csv",
+      "retrievedAt": "2026-09-07T14:07:02.526053+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_47.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "504ccf2e50675624dce79bf785a3c431b75ecdf35bc3ffb06cb09a9659203254",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_48.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_48.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_48.csv",
+      "retrievedAt": "2026-09-07T14:07:05.592560+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_48.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "6601231e29fc0b1ca24dc5d6b86e41e17b3ca539acb0b4674a7fd1c4d786a5fd",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_49.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_49.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_49.csv",
+      "retrievedAt": "2026-09-07T14:09:59.311767+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_49.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "23c09448c403e28140fd0df5cbc156943eba543937622675be66f9d7c475efc6",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_5.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_5.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_5.csv",
+      "retrievedAt": "2026-09-07T14:03:31.560596+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_5.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "54f7a6440c728abf3011b4ca5b9f114f3e268dda7e2495a1ea534c61778b356f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_50.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_50.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_50.csv",
+      "retrievedAt": "2026-09-07T14:10:02.254295+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_50.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "68d17648986eda8e07a1e67932050f7a1488412992f3133ac1bf4b7a6438334d",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_51.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_51.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_51.csv",
+      "retrievedAt": "2026-09-07T14:10:05.269104+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_51.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "75bd30772eb1371f3c1bcb40e6e037022d5670d8384ecdd1bdef0d01d7f6cc11",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_52.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_52.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_52.csv",
+      "retrievedAt": "2026-09-07T14:10:08.313084+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_52.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "e891f7d5c9a58d2f8b42daf45e3a983e843a00d67b5b5f6a0a3aba20865dfceb",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_53.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_53.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_53.csv",
+      "retrievedAt": "2026-09-07T14:10:11.352990+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_53.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c0c7e51a401e99dd95f5c3759312e8dda51d357e0676cdefa56bf462f034e074",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_54.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_54.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_54.csv",
+      "retrievedAt": "2026-09-07T14:10:14.383707+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_54.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "b04259ec6b44514402e55e2356eeff89d119706b83d4b89e7d59c755fe948f51",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_55.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_55.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_55.csv",
+      "retrievedAt": "2026-09-07T14:10:17.469064+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_55.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "1bfb6acc2bbb04e131650ad3af3311fe8ea612fb8340cc9e15c11e04e7c49cf5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_56.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_56.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_56.csv",
+      "retrievedAt": "2026-09-07T14:10:20.403656+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_56.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "a5577213da477b1f2df20fd7debe9897fedb34d2b9353133e8b7c2580907ebf9",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_57.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_57.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_57.csv",
+      "retrievedAt": "2026-09-07T14:10:23.455371+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_57.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "80e7091b455b8808e7956b631cf65218cfe5e9dbce928c5080a49ba49790f9ab",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_58.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_58.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_58.csv",
+      "retrievedAt": "2026-09-07T14:10:26.556405+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_58.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "2729e0cacfe29027bd036069cb483c5ba3a68d8ecae2cbee134796d3d860487c",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_59.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_59.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_59.csv",
+      "retrievedAt": "2026-09-07T14:10:29.513802+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_59.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "28244f8da2be6ea2d14f6cee4ea824d378cc8864d09e67be04ffef1bc81e8a78",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_6.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_6.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_6.csv",
+      "retrievedAt": "2026-09-07T14:03:34.544921+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_6.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "a27f6302b2195fe39d511a14ed4cf0e7bd39ce538a00a0ff789313f83b032c02",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_60.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_60.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_60.csv",
+      "retrievedAt": "2026-09-07T14:10:32.624221+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_60.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "ec056ede32dfe626dbc61796ceae321db20b67f3e7a47baf6a64c57a56681140",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_61.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_61.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_61.csv",
+      "retrievedAt": "2026-09-07T14:10:35.627235+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_61.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "b6bd98c13900a372dba1762e5db431a1b2f811b64f5e63e0ecd1c1ebbb8ebfa7",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_62.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_62.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_62.csv",
+      "retrievedAt": "2026-09-07T14:10:38.585529+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_62.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "298377bcaacb2df85107d1bab4af16ecf41ca2fa2851173f19d6241283eca609",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_63.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_63.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_63.csv",
+      "retrievedAt": "2026-09-07T14:10:41.965321+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_63.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c9e2d57bbc89ab7bff273cf6d7590e83b3d4758b511bc0939ca5527ad7b8280f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_64.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_64.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_64.csv",
+      "retrievedAt": "2026-09-07T14:10:44.754194+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_64.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "331d53d191de8e52fa1deedae2f44acc0314c8f4055b6fb8fb26d30d7fcd0705",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_65.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_65.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_65.csv",
+      "retrievedAt": "2026-09-07T14:10:47.650471+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_65.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "8917d397490e3824eeceda6f48f6c3220a8ec816837e01ae713ceac83d664e64",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_66.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_66.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_66.csv",
+      "retrievedAt": "2026-09-07T14:10:50.839540+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_66.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "8878c3af69b53b499d3139896eff5646641bd2892a028066ce5b19017525bf39",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_67.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_67.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_67.csv",
+      "retrievedAt": "2026-09-07T14:11:05.384544+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_67.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "d3cafc5e7a05a2364c54c4899ae437a1541a27cd762e1fed1cced09ac49f07d5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_68.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_68.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_68.csv",
+      "retrievedAt": "2026-09-07T14:11:08.380232+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_68.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "d5cfcb5882925edf0a07fd9fd735b304cd665c5679d8acd99a2e8383e0e609a8",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_69.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_69.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_69.csv",
+      "retrievedAt": "2026-09-07T14:11:11.379840+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_69.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "6459d8fb76520d17635d217a3b5010cbbfb472de8d4cd4e7373dc4568660710f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_7.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_7.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_7.csv",
+      "retrievedAt": "2026-09-07T14:03:37.662585+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_7.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "fcc15dcb71b4ead064964c52e035ca328b2765fc86e1d245bfc16395d8185cdb",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_70.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_70.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_70.csv",
+      "retrievedAt": "2026-09-07T14:11:14.525818+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_70.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0b8e462c8557b4ab10eee1ba17d261f8eb42819d42b2aebad267ad4c70c0f93c",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_8.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_8.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_8.csv",
+      "retrievedAt": "2026-09-07T14:03:40.594821+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_8.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c616f7a9ec562428d48bbac7ad5ee47bb712c3fc5b8f5bbcd6c8946ed299ba6a",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part8_cand_9.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part8_cand_9.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part8_cand_9.csv",
+      "retrievedAt": "2026-09-07T14:03:43.604178+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part8_cand_9.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "6318c6149ff903ce7d29c054ded55cd2ab767ebf226cc26690650b25ece048e2",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part9_1.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part9_1.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part9_1.csv",
+      "retrievedAt": "2026-09-07T14:02:35.173984+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part9_1.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "caeef6ca371804ebec0832755a084fedfea27383912b6aab2be134eec69f8836",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-e9-csv-e9_part9_2.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/e9/csv/e9_part9_2.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "e9_part9_2.csv",
+      "retrievedAt": "2026-09-07T14:02:38.462910+00:00",
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part9_2.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "15b34f0a6d815e8f37eda6b1bced2d958708626a0ff396c4c731d5c79556d813",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-1.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-1.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-1.csv",
+      "retrievedAt": "2026-09-07T09:28:59.754228+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-1.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: recovered prior browser download; timestamp from downloaded file mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "df107cb2569d14043ba05d0cbcaf350deef519d53719f9e2903f2ec8e70e88c0",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-10.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-10.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-10.csv",
+      "retrievedAt": "2026-09-07T14:11:53.048139+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-10.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "f94db1d5b040b303c51fdcda404737fd3a4d939d1de84f3d15b8864f0e4f61d7",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-11.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-11.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-11.csv",
+      "retrievedAt": "2026-09-07T14:11:56.115517+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-11.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "5ffc71a2575a521382c649a0bfae1652b6f32cde4ec6108e1b210fa6052db5e0",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-12.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-12.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-12.csv",
+      "retrievedAt": "2026-09-07T14:11:59.078329+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-12.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "7793eb4c2181ccf86e25cad271175d971d207bb2501a38078bc6a137e4e20355",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-13.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-13.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-13.csv",
+      "retrievedAt": "2026-09-07T14:12:02.130357+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-13.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "025fbbe78f4f7a407beac4eff30a44c545cf1cea483cf96bac14d4ee54658e44",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-14.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-14.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-14.csv",
+      "retrievedAt": "2026-09-07T14:12:05.116702+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-14.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "aa674624dcf2e30f8f1bfacf931d8f72d11b501c7ae36fc06791faf3fb647314",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-15.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-15.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-15.csv",
+      "retrievedAt": "2026-09-07T14:12:08.156353+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-15.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "157db32ae4e9108b9b1b0a2c7e8595923fee29d8b364de296bb793678e0cba3f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-16.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-16.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-16.csv",
+      "retrievedAt": "2026-09-07T14:12:11.288207+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-16.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "d5f5fd342c4acfb3cff010ecd259ddbb2524ce4c03b68917cb74a7de492b98c3",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-17.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-17.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-17.csv",
+      "retrievedAt": "2026-09-07T14:12:14.187884+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-17.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0db537c88d7b199853a8cabb1574674bb1b1d7b746304455f420a2fd9295fc11",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-18.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-18.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-18.csv",
+      "retrievedAt": "2026-09-07T14:12:17.200172+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-18.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "396d4f5c9facab703f3db0fbeb39a35a0cba93b381ea51a5bdc730d77073d8e5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-19.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-19.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-19.csv",
+      "retrievedAt": "2026-09-07T14:12:20.343771+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-19.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "2a2b028ed2dab6066a1def617779f6d9eefba3b7414e5e1548d53e8d523c06a5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-2.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-2.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-2.csv",
+      "retrievedAt": "2026-09-07T14:11:28.842196+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-2.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "ab61431ba9d38b28a5e11fb8555c584e0c7528b8e8491d311befdf3c9893a11d",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-20.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-20.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-20.csv",
+      "retrievedAt": "2026-09-07T14:13:13.166446+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-20.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c640bc0d9c718aada805c91cee09e6cffd993bb7c977babf51d5e1f356cff9ed",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-21.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-21.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-21.csv",
+      "retrievedAt": "2026-09-07T14:13:16.132000+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-21.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "13bacf9c192861f80623cae88a54f14496ee7c73429c549ec6e821a4381cd6c2",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-22.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-22.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-22.csv",
+      "retrievedAt": "2026-09-07T14:13:19.257018+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-22.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "46211def393b65b817dd46f422a957319e9fee571f0e19a5808f5d542c76da4b",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-23.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-23.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-23.csv",
+      "retrievedAt": "2026-09-07T14:13:22.515687+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-23.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "bf28b3d46008622805a0aaa268e95f9675f56df3e741a383586290ec3288ce79",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-24.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-24.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-24.csv",
+      "retrievedAt": "2026-09-07T14:13:25.472475+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-24.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c13bc8d64e050a80b946251cbe40530977d7d8288f9cad56401e20e129dcdb24",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-25.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-25.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-25.csv",
+      "retrievedAt": "2026-09-07T14:13:28.539421+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-25.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "3df1e2be104e80ff4a4af7909829f33e661a92ada6241c344bb79f72a0c8d37f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-26.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-26.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-26.csv",
+      "retrievedAt": "2026-09-07T14:13:31.650644+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-26.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "57c7777eccafb61658e20a2f0839cecaf2230c43a24596959ace241eba55c1a6",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-27.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-27.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-27.csv",
+      "retrievedAt": "2026-09-07T14:13:34.703801+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-27.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "432bdff9857dba8dcc7f67c13f187c52cdc73b7f0c387f34286314b22bc99485",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-28.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-28.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-28.csv",
+      "retrievedAt": "2026-09-07T14:13:37.665040+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-28.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "ef6056d181fa99889056d66ba2b219b83b705dbcc20b012bd1fa4f15f9c315d5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-29.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-29.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-29.csv",
+      "retrievedAt": "2026-09-07T14:13:40.759874+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-29.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c4713bf4b70df29b575a6e2f6a7d22093b16dcbeb0b7a63f9ad7244296b324b4",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-3.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-3.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-3.csv",
+      "retrievedAt": "2026-09-07T14:11:31.946130+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-3.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0a7cfd7b6cb3e29f388e239f3ab4111fe3b0893c1855b5c100e4da209e80deba",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-30.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-30.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-30.csv",
+      "retrievedAt": "2026-09-07T14:13:43.650272+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-30.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "8e7f859dbe8727376824c0eb616c5d021b3cc0ab3441426d43662ed592838aa4",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-31.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-31.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-31.csv",
+      "retrievedAt": "2026-09-07T14:13:46.667143+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-31.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0a31371d665c2347704ea18e6e60628fa2d0afcb0b992ed296be6389e0d35bc5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-32.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-32.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-32.csv",
+      "retrievedAt": "2026-09-07T14:13:49.710292+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-32.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "f12162e6379a0f9de54d7562573e57b7c2ebf87c8097e537d95cba3b2adb1dc5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-33.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-33.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-33.csv",
+      "retrievedAt": "2026-09-07T14:13:52.743263+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-33.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "2bc4a7fcf296acaead3075a9140a84ecf08b84dc5f30a465ea4181ca490a8911",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-34.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-34.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-34.csv",
+      "retrievedAt": "2026-09-07T14:13:56.209709+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-34.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "2f796a36d328522823e47329efd37e4a6c87b1d247285098ddd6397049cabeda",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-35.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-35.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-35.csv",
+      "retrievedAt": "2026-09-07T14:13:58.935117+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-35.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "4dbc3385bcc27d3acfd6ffa11e9ba236f7e11deef1e2c9020a02b9de489fd85a",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-36.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-36.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-36.csv",
+      "retrievedAt": "2026-09-07T14:14:01.841235+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-36.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "6f810ca848e938d53dd29925a4febf99a6acbb66df95065fef6a92520dcb717b",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-37.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-37.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-37.csv",
+      "retrievedAt": "2026-09-07T14:14:04.850941+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-37.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "311becc51f4e2f7092e2f3f9e6a971f8b543c72176e823cc5a65e7089addf26e",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-38.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-38.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-38.csv",
+      "retrievedAt": "2026-09-07T14:17:30.959231+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-38.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "24d2529d2385a8be53f1f31ee6caad2dee4ec2ff11664108012ffcb7ecd6fe1d",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-39.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-39.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-39.csv",
+      "retrievedAt": "2026-09-07T14:17:33.920728+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-39.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "197ac8c4ef3659d0206ed6051a472cffa733e624db6e06ac5085e2256552d3c9",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-4.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-4.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-4.csv",
+      "retrievedAt": "2026-09-07T14:11:34.858378+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-4.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0c78734f0f55247004a0243267f442f9d8e5b16dfcaf85536a6d28dc47f00a4d",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-40.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-40.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-40.csv",
+      "retrievedAt": "2026-09-07T14:17:36.909187+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-40.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "89dfd3c7fdb2441f733efdb664f8e7ab1c311f7e982af6a5792e2b875b06bc44",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-41.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-41.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-41.csv",
+      "retrievedAt": "2026-09-07T14:17:40.079217+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-41.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0bdab7a46a0eb6905c70595d80b4a251721190ae151d67bad1f382ec3533a01b",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-42.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-42.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-42.csv",
+      "retrievedAt": "2026-09-07T14:17:42.959452+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-42.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0ccdd9a6357cca1150b54ab0fcd1af4de6e8ff4acddc8d11a34803dad806d048",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-43.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-43.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-43.csv",
+      "retrievedAt": "2026-09-07T14:17:46.010148+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-43.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "5551707db7cf19c00136d1ec39abc2b9add0d93d9f6e633e4650b4528df406be",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-44.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-44.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-44.csv",
+      "retrievedAt": "2026-09-07T14:17:49.027089+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-44.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "840a84a88e1d860ea647a277ef30b7c64f208bcb51c80d5b924150d80aa195ce",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-45.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-45.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-45.csv",
+      "retrievedAt": "2026-09-07T14:17:52.035385+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-45.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0d42b9f2088f5f06d2890c34e6d9d6e476e9bea45a26a72ca808aedee356ff72",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-46.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-46.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-46.csv",
+      "retrievedAt": "2026-09-07T14:17:55.201658+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-46.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "1085b610f8f365bd8d6a64b5c2afa01893db58c1cf4af7b11603505d11c2e161",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-47.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-47.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-47.csv",
+      "retrievedAt": "2026-09-07T14:17:58.119086+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-47.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "b56277b72293f930fc6881e6b758af89897899b44b9ef5ab533f6ade04ad3c92",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-48.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-48.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-48.csv",
+      "retrievedAt": "2026-09-07T14:18:01.232753+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-48.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "716bdbf4a4632de10de5598398baa5ab1635286f5867af3ebca059be442fd70f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-49.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-49.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-49.csv",
+      "retrievedAt": "2026-09-07T14:18:04.153747+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-49.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "6da1fe4bde7fb5e7d46392c5a6f27c488aca4a3a6513b7b168a5ba388d4a67cd",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-5.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-5.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-5.csv",
+      "retrievedAt": "2026-09-07T14:11:37.918650+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-5.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "b02e5197335a7973bc19b3cd0060f00e0c4a7042ffa3e3dd32a8619455081b46",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-50.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-50.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-50.csv",
+      "retrievedAt": "2026-09-07T14:18:07.186770+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-50.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "3ab4ec3d339422bac5fee34cc55d8849fd62697784e12d78862816ca35fa21af",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-51.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-51.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-51.csv",
+      "retrievedAt": "2026-09-07T14:18:10.206614+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-51.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "82c84f86e88fd24c06f68dd4456b461f3b7e317d00a6e64c3d097b32adff2e73",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-52.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-52.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-52.csv",
+      "retrievedAt": "2026-09-07T14:18:13.240530+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-52.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "a6be4a7ff6d31e3402d7e0b03cc938afa2f1639a8426cb686c8e385e96f64ba3",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-53.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-53.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-53.csv",
+      "retrievedAt": "2026-09-07T14:18:16.389848+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-53.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "f03e1a0fb5cb7c56e60fa518296ceb73d5a1a3f65b2f47bc83ce4302dc3374b7",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-54.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-54.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-54.csv",
+      "retrievedAt": "2026-09-07T14:18:19.419776+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-54.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "f7ec42b1cc8b61b946b08b8aad346d05381122883c3b694489142b2c2ad4161f",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-55.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-55.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-55.csv",
+      "retrievedAt": "2026-09-07T14:18:22.352568+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-55.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "c672068ffc2bfdbbb37d0c7d12fde52f3c3bce3d7cc4cf2d1750c0df5bd30edb",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-56.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-56.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-56.csv",
+      "retrievedAt": "2026-09-07T14:18:44.935585+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-56.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "6a3cb4156e4dbe9ce7973fe872b707fcadec2132b8ccc5b7c30c0fb071dd908e",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-57.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-57.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-57.csv",
+      "retrievedAt": "2026-09-07T14:18:47.989177+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-57.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "178c808b6bd1c0f0ee9dee43ab0fa19bcf114719492e7786a43eff0504fc0def",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-58.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-58.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-58.csv",
+      "retrievedAt": "2026-09-07T14:18:51.031213+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-58.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "aa77b70e1e8d7d95c8c6cc94feae72bb65ff6b16506ff02c95cb9bef105785d5",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-59.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-59.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-59.csv",
+      "retrievedAt": "2026-09-07T14:18:54.043563+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-59.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "94f10d000faf74a18307dc34cf1ecd8c7edfae8335326907d06485a30c12104a",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-6.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-6.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-6.csv",
+      "retrievedAt": "2026-09-07T14:11:40.925483+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-6.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "3d39bd768e252b5b2333866cc5017a37b6b39dbe829a570e09be5c4ea49b05f7",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-60.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-60.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-60.csv",
+      "retrievedAt": "2026-09-07T14:18:57.074093+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-60.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "3e1eae61280727036703269317800164d723c3cdf00032e93dd2b1c808bfac95",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-61.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-61.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-61.csv",
+      "retrievedAt": "2026-09-07T14:19:00.199902+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-61.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "7b9b77a923e323159b90ccb60755f28df57eac4e74c5b90f3d642b9b2aa9ef37",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-62.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-62.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-62.csv",
+      "retrievedAt": "2026-09-07T14:19:03.212444+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-62.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "f2a1cf4d4e9487f64e71a69cc5a9e885e3d84967a8d4097a1be6175eb2bac6ff",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-63.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-63.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-63.csv",
+      "retrievedAt": "2026-09-07T14:19:06.209854+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-63.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "1dc95f27e2ce63efde047024c62ff8afd4c6f4f768b698af78ccb50109f39106",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-7.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-7.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-7.csv",
+      "retrievedAt": "2026-09-07T14:11:44.071685+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-7.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0af3f914cb259576e3146752f0c49dd21f7bd37cc8ce2e91965b843a06654204",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-8.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-8.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-8.csv",
+      "retrievedAt": "2026-09-07T14:11:47.076552+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-8.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "0f1da0cc8baf861b8091a8f3fb33fb443f713685d28587754572afe61181c018",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-9.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-9.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-9.csv",
+      "retrievedAt": "2026-09-07T14:11:49.992415+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-9.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "5bdeb380a686fd39e5a78e99e2fb22c8434c26f9d9a0d7437717dde7808e5917",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    }
+  ]
+}

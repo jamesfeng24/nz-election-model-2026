@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "year": 2008,
+  "generalElectorates": 63,
+  "supportingMaoriElectorates": 7,
+  "candidateRecords": 499,
+  "partyVoteRecords": 1197,
+  "splitMatrices": 63,
+  "nationalPartyValidVotes": 2344566,
+  "nationalCandidateValidVotes": 2300266,
+  "nationalVotesCast": 2376480,
+  "labelMappings": [
+    {
+      "sourceLabel": "THE REPUBLIC OF NEW ZEALAND PART",
+      "matchedLabel": "The Republic of New Zealand Party",
+      "reason": "unique truncated-header prefix in official national summary"
+    },
+    {
+      "electorate": "Dunedin North",
+      "sourceLabel": "TUREI, Metiria (Green Party)",
+      "matchedLabel": "STANTON TUREI, Metiria Leanne Agnes",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Hunua",
+      "sourceLabel": "KENWORTHY (SHAW), Fiona (Green Party)",
+      "matchedLabel": "KENWORTHY, Fiona Marie",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Hunua",
+      "sourceLabel": "MULFORD, Helen (New Zealand First Party)",
+      "matchedLabel": "MULFORD - TYLER, Helen Jane",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Maungakiekie",
+      "sourceLabel": "PARATENE, Rawiri (Green Party)",
+      "matchedLabel": "BROUGHTON, David Peter",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Ohariu",
+      "sourceLabel": "STRYPE, Danyl (Aotearoa Legalise Cannabis Party)",
+      "matchedLabel": "BRUCE, Daniel Antonio",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Selwyn",
+      "sourceLabel": "NORMAN, Victoria (United Future)",
+      "matchedLabel": "ROGERS, Victoria Jane",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Waitakere",
+      "sourceLabel": "MISA TUPOU, Fia (New Zealand Pacific Party)",
+      "matchedLabel": "TURNER-TUPOU, Fia Taemanu",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    }
+  ],
+  "discrepancies": [],
+  "checks": [
+    "nonnegative integer counts",
+    "vote/share normalization",
+    "official winners and majorities",
+    "turnout components and rates",
+    "electorate/general/Maori/national totals",
+    "national party and candidate-party aggregates",
+    "split row counts and rounding-bounded percentages/columns"
+  ],
+  "limitations": [
+    "Split cells publish rounded percentages only; exact counts remain null.",
+    "Candidate person IDs are not asserted; full names, parties and comparison keys support later reviewed linking.",
+    "Electorate names retain CSV spelling; missing macrons in a source are not invented.",
+    "Māori candidate files are supporting inputs for national reconciliation; primary outputs cover general electorates."
+  ]
+}

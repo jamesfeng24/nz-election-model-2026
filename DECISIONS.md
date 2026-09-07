@@ -45,3 +45,15 @@ Decision: preserve independent split-ticket, elasticity and normalized-premium p
 ## D010 — Stage 1 correction / 2026-09-07 — Corrective PR, no history rewrite
 
 Decision: branch from current main and submit only missing foundation work through stage/01-foundation. Rationale: initial commit 9eed984 already exists on main; the corrective PR cannot retroactively represent it as unmerged. Alternatives: reverting main or force-rewriting history; not requested. Status: permanent historical record. All new work stays on the stage branch and the PR must remain unmerged.
+
+## D011 — 2026-09-08 — Historical evidence without inferred cell counts
+
+Stage 2 authorizes authoritative observations, superseding D003's empty-register instruction for this stage. Store immutable raw CSVs, exact provenance and deterministic JSON. The 2008 split source publishes rounded percentages only: retain percentages and null joint counts, with rounding-bounded reconciliation. Do not manufacture exact cells. Use all 70 electorate candidate files for national controls but export the requested 63 general electorates.
+
+## D012 — 2026-09-08 — Local occurrence identities and source variants
+
+Use election-local candidate occurrence IDs; leave personId null. Preserve source full/display names and Unicode. Seven 2008 split/candidate name variants are explicitly joined within the same electorate using unique party candidature and independently reconciled overall vote share; record each mapping. This is not cross-election identity verification. Keep historical ingestion exports separate from provisional model schemas until consumer integration is reviewed.
+
+## D013 — 2026-09-08 — Pause after saved 2008 checkpoint
+
+User requested a stop for usage conservation after work already completed at B. Push B and a separate current-state documentation handoff; do not begin 2011/2014 or open a Stage 2 completion PR. Resume only when authorized. Checkpoints C/D/E and final PR remain outstanding.
