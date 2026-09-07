@@ -29,3 +29,9 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Acquired and checksum-registered all 139 official 2008 inputs.
 - Generated general-electorate results and percentage-only split matrices with national controls and a validation report.
 - Preserved source name variants through explicit local mappings; exact unavailable joint counts remain null.
+
+### Stage 2 pause handoff — 2026-09-08
+- Checkpoint B pushed as 49bd2356088d6a1ed44b0bab897bee4bd218709c; no 2011/2014 work started.
+- Replaced stale state claims; documented actual historical output fields, source limitations, offline reproduction, decisions and precise checkpoint C recovery instructions.
+- Stage 2 is incomplete; no completion PR created. Historical PR #1 was subsequently merged by the user before Stage 2.
+- Pause-handoff validation passed: 30 frontend tests, 13 Python tests, typecheck, build, 139 source hashes and exact 2008 regeneration.

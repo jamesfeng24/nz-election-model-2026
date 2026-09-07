@@ -1,6 +1,6 @@
 # Data dictionary — draft exchange contracts v1
 
-These contracts describe future records, not real observations. Runtime Zod schemas and inferred TypeScript types are in `src/types/domain.ts`; provenance schemas remain in `src/types/contracts.ts`. No model or electoral rule is implemented by schema validation.
+The Stage 1 contracts below describe intended model records. Actual Stage 2 historical exports have a separate contract documented at the end of this file. Runtime Zod schemas and inferred TypeScript types are in `src/types/domain.ts`; provenance schemas remain in `src/types/contracts.ts`. No model or electoral rule is implemented by schema validation.
 
 ## Conventions
 
@@ -54,6 +54,27 @@ SimulationWorkerRequest/Response are plain TypeScript message unions (run, progr
 
 SourceRegistrySchema is a strict version-1 registry with unique source IDs. SourceRecord fields are defined in [DATA_SOURCES.md](../DATA_SOURCES.md). rawPath is a repository-relative materialization location; processingScript is null until a script exists. SHA-256 refers to unchanged bytes. `scripts/validate/source_files.py` checks local containment, file existence and checksums; it does not download missing inputs. Full metadata validation is exercised by Vitest.
 
-Availability<T> distinguishes unavailable/reason from available/value/sourceIds; it is not yet a runtime result wrapper. Domain schemas do not verify external authenticity, foreign-key existence, electoral legality, whole-dataset completeness or calibration. Future dataset validators must enforce joins, source references, boundary consistency, semantic dates, scenario references and election coverage before publication. No domain dataset exists to validate now.
+Availability<T> distinguishes unavailable/reason from available/value/sourceIds; it is not yet a runtime result wrapper. Domain schemas do not verify external authenticity, foreign-key existence, electoral legality, whole-dataset completeness or calibration. Future dataset validators must enforce joins, source references, boundary consistency, semantic dates, scenario references and election coverage before publication. Historical exports now exist under the separate ingestion contract below; they are not instances of every draft model schema.
 
 Breaking changes require explicit versioning, migration guidance and tests. Do not treat this provisional contract as permission to force evidence into an unsuitable representation.
+
+## Historical ingestion export v1 — implemented for 2008
+
+These are deterministic JSON preparation outputs, not forecasts and not yet wired into the website or Stage 1 Zod model schemas. `schemaVersion` is 1; the processor is the executable validation contract. Changes require review and regeneration.
+
+| Output/field | Meaning |
+| --- | --- |
+| elections/YEAR.json | year, general `electorates`, all-electorate `nationalControls`, input `sourceIds` |
+| electorate | election-local id/electionId, sourceElectorateNumber, source name, kind, historical boundaryVersionId, validPartyVotes, validCandidateVotes, partyBallot/candidateBallot, parties/candidates, winnerCandidateId, majority and sourceIds |
+| party record | sourceHeader, partyName, comparison partyKey, integer votes, calculated share of local valid party votes |
+| candidate record | full source name/party, integer votes, sourceShare and calculated share of local valid candidate votes, elected flag, occurrence id, partyKey, nameMatchKey, personId:null |
+| ballot record | ordinary/special valid and informal counts, ordinary/special disallowed counts, validVotes, informalVotes, votesCast, enrolled, electoralPopulation, reportedTurnoutPercent, source name/scope |
+| nationalControls | separate party/candidate general, Māori and national summaries; official national party and candidate-party totals with provenance |
+| split-votes/YEAR.json | year and matrices; each matrix has id, electorateId, sourceIds, sourceElectorateLabel, encoding, countAvailability, rows |
+| matrix row | partyLabel, exact totalPartyVotes, cells, reportedTotalPercent; final row is an overall total, not another party observation |
+| matrix cell | source candidateLabel, category (candidate/informal/party-vote-only), nullable candidateId, count:null, reportedPercent (0–100 or null) |
+| YEAR-validation.json | coverage counts, national totals, checks, labelMappings, discrepancies and limitations |
+
+All `share` and `sourceShare` fields are proportions (0–1). Fields ending `Percent` are percentages (0–100). Split percentages have two-decimal source rounding; exact joint counts are unavailable, never silently estimated. Split denominator is valid plus informal party votes, excluding disallowed ballots; it differs from valid party/candidate share denominators. Party-vote-only accounts for absent candidate votes. Zero means an observed zero, null means unavailable. Missing required count inputs fail processing.
+
+Candidate IDs refer to occurrences, not persons. Comparison keys remove accents/punctuation only for joins while original Unicode labels remain. Local name variants are explicitly recorded in the report; keys must never establish cross-election identity. Boundary version labels describe the historical publication only, with no geometry or crosswalk claim. Māori inputs are retained raw for national reconciliation; general-electorate output coverage is deliberate.

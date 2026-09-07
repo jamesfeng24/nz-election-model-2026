@@ -1,83 +1,68 @@
 # Project state
 
-Updated 2026-09-07. GitHub is canonical: https://github.com/jamesfeng24/nz-election-model-2026.
+Updated 2026-09-08 (Australia/Sydney). GitHub is canonical: https://github.com/jamesfeng24/nz-election-model-2026.
 
 ## Objective and current stage
 
-Build a transparent, reproducible 2026 New Zealand election website: national support, all electorates on official 2026 boundaries, independent candidate estimators, normalized historical effects, joint uncertainty, MMP allocation and configurable government outcomes. A fresh session must resume from these files alone.
+Build a transparent, reproducible static website modelling the 2026 New Zealand election. React/TypeScript/Vite/Vitest; offline Python preparation; no backend/database. Read AGENTS.md, DECISIONS.md, METHODOLOGY.md, DATA_SOURCES.md, docs/statistical-specification.md, docs/data-dictionary.md and docs/reproducibility.md before major work.
 
-Stage 1 merged in 8cf0345dba83e3adb68630d1044e2839b2cf2037. Stage 2 historical ingestion authorized and in progress. Checkpoint A: immutable source import/re-fetch, initial split parser, tests and recovered source are working. B/C/D/E remain pending.
+**Stage 2 is paused at the user's request after checkpoint B. It is not complete. Do not start 2011, 2014 or Stage 3 until the user resumes work.** No Stage 2 completion PR has been created. Main is unchanged by this stage.
 
-## Current/last branch and important commits/PRs
+## Branch and completed checkpoints
 
-- Current branch: `stage/02-historical-2008-2014`; last branch: `main`.
-- Base / original foundation: `9eed98405f6dca4ac86248c32cbf410887b1086f` (already on main).
-- Pushed specification/workflow checkpoint: `015c96ffb3bff49219220115b0712fde26b231fd`.
-- Domain/Python checkpoint: `38c38aaf8d8c23b13598064b8792700289501511`.
-- Final handoff commit: consult the head of the PR/stage branch (a commit cannot contain its own SHA).
-- PR #1: https://github.com/jamesfeng24/nz-election-model-2026/pull/1 — stage/01-foundation → main, merged by the user; verified before Stage 2.
-- Initial direct-to-main publication cannot be retroactively corrected; shared history is preserved. All work in this correction uses the requested branch.
+- Existing branch: `stage/02-historical-2008-2014`. Preserve it; do not reset/recreate it.
+- Stage 1 merged through PR #1: https://github.com/jamesfeng24/nz-election-model-2026/pull/1. Verified main commit: `8cf0345dba83e3adb68630d1044e2839b2cf2037`.
+- A, recovery/infrastructure, pushed: `03664153ec97fb2d60311b271735b727ad8d0d81`.
+- B, complete 2008 acquisition/processing/basic validation, pushed: `49bd2356088d6a1ed44b0bab897bee4bd218709c`.
+- A separate documentation handoff follows B. Its authoritative SHA is the branch head, not a self-reference in this file.
+- C (2011), D (2014), E (unified integration/validation/docs) remain outstanding. Push each separately as soon as complete. Create an unmerged PR into main only when Stage 2 is genuinely complete.
 
-## Completed stages and material files
+## Recovery result
 
-Stage 1 infrastructure only:
+Initial inspection found local and remote stage branches equal to merged main, with no modified, staged, untracked or unpushed project work. One original 2008 Auckland Central split CSV survived in Downloads; it was recovered byte-for-byte, checksum-registered and committed. No partially written ingestion code survived. Synced project reference files were untouched.
 
-- React/TypeScript/Vite/Vitest static shell with seven routes, unavailable states and unknown-route handling: src/app, src/styles.css.
-- Persistent rules and handoff: AGENTS.md, PROJECT_STATE.md, DECISIONS.md, METHODOLOGY.md, DATA_SOURCES.md, CHANGELOG.md.
-- Detailed intended pipeline, independent estimators and explicit exclusions: docs/statistical-specification.md.
-- Runtime provenance contracts: src/types/contracts.ts; draft domain contracts and serializable simulation message types: src/types/domain.ts; synthetic tests colocated with them.
-- Contract meanings and limits: docs/data-dictionary.md. Architecture, reproducibility and backlog: docs/architecture.md, docs/reproducibility.md, docs/future-work.md.
-- Reserved model boundaries: src/models/{polling,electorates,regressions,split-voting,candidate-effects,simulation,mmp}; src/components, src/data and src/utils reserve shared boundaries.
-- Raw elections/polls/boundaries/candidates and processed elections/polls/electorates/split-votes/model directories; data/README.md; empty data/sources.json.
-- scripts/ingest, transform, validate, analysis; read-only scripts/validate/source_files.py and eight standard-library tests in scripts/tests.
-- Python 3.12.2 pin and empty third-party dependency set: .python-version, pyproject.toml. No scientific packages installed.
-- Frontend locked dependencies, Node pin, check commands and separate frontend/Python CI jobs: package.json, package-lock.json, .nvmrc, .github/workflows/ci.yml.
-- README includes local frontend/Python setup and future Cloudflare Pages instructions. public/ contains guidance only.
+## Available data and important files
 
-## Current test/build state
+- `data/sources.json`: 139 authoritative 2008 CSV resources, exact URLs, retrieval timestamps, SHA-256, raw paths, processor and limitations.
+- `data/source-plans/historical-2008.json`: explicit acquisition inventory (six national/electorate summary/control tables, 70 candidate tables, 63 general-electorate split tables).
+- `data/raw/elections/2008/`: all 139 source files, unchanged.
+- `data/processed/elections/2008.json`: 63 general electorates, 499 candidate records, 1,197 party-vote records, winners, turnout and national controls.
+- `data/processed/split-votes/2008.json`: 63 general-electorate matrices of reported percentages; exact joint counts are unavailable and null.
+- `data/processed/elections/2008-validation.json`: reconciliation results, eight source-label mappings, zero unresolved discrepancies.
+- `scripts/ingest/historical_sources.py`: immutable import and checksum-pinned reacquisition.
+- `scripts/ingest/import_historical_downloads.py`: import files from an explicit acquisition plan, preserving browser downloads.
+- `scripts/transform/historical.py`: deterministic processor and `--check` regeneration verification; implemented and verified for 2008 only. CLI year options do not imply 2011/2014 compatibility.
+- `scripts/tests/`: 13 standard-library tests, including source integrity, immutable recovery/import, Unicode and explicit missingness.
+- `docs/historical-ingestion.md`, `docs/data-dictionary.md`, `docs/reproducibility.md`: source peculiarities, actual output contract and commands.
+- Stage 1 app and draft model contracts remain in `src/app`, `src/types` and `src/models`; historical JSON is not yet consumed by the website. No statistical models are implemented.
 
-Local checks on 2026-09-07, Node 22.17.0 / npm 10.9.2 / Python 3.12.2:
+## Validation status
 
-- `npm run test`: PASS, 30 tests across 3 files.
-- `npm run typecheck`: PASS.
-- `npm run build`: PASS, static dist output ignored by Git.
-- `npm run test:python`: PASS, 8 tests.
-- `npm run validate:sources`: PASS, zero registered resources (not a data-coverage claim).
-- `npm run check:all`: PASS; combines the above.
-- `git diff --check`: PASS.
-- Remote CI for implementation commit 38c38aa: frontend job passed; Python unit tests and source-integrity steps passed in run 34105472000. Final documentation-commit CI is tracked by the PR checks and is separate from these recorded results.
-- Visual inspection was blocked in the original session because the browser tool could not verify its admin policy. This correction changes no UI rendering. Visual/mobile and hosted deep-link checks remain for later deployment review.
+2008 processor completed with zero unresolved discrepancies: nonnegative counts, normalized party/candidate shares, official winners and majorities, turnout components/rates, general/Māori/national totals, national party and candidate-party aggregates, split row totals and rounding-bounded column comparisons. National valid party votes: 2,344,566; valid candidate votes: 2,300,266; votes cast: 2,376,480. Seven Māori candidate tables support national controls but are not primary electorate outputs.
 
-## Available datasets and data limitations
+At B, 13 Python tests passed and byte-for-byte regeneration passed. The final handoff checks are recorded below after running them. No full Stage 2 validation can be claimed while two years are absent. Existing Python CI does not yet run historical regeneration; integrating that and stronger processor regression tests remains for E.
 
-None. No election, poll, boundary, candidate or processed data collected. The real source register is empty. Synthetic metadata/count fixtures exist only in tests and are not website inputs. Electoral rules and the requested 71-electorate coverage target need official verification before implementation. No coefficients, predictions or simulation outputs exist.
+## Known limitations and outstanding work
 
-## Modelling components completed
+- No 2011 or 2014 raw/processed inputs acquired in this session. No polling, 2023 reconstruction or 2026 boundary inputs.
+- Split files provide two-decimal percentages, not exact joint counts. Do not infer observed counts by rounding percentages. Denominators include informal party votes and exclude disallowed ballots; keep informal candidate and party-vote-only categories.
+- Candidate occurrence IDs are election-local. `personId` is null. Full names, source labels, parties and comparison keys aid later reviewed linking but do not establish cross-election identity.
+- Seven candidate display/full-name variants and a truncated party header are explicitly mapped and reported. The mappings establish local source joins, not independent biographical claims.
+- Source spelling/Unicode is preserved; missing CSV macrons are not invented. Historical boundary IDs label the publication vintage, not a verified geometry/crosswalk.
+- Direct archive fetches returned HTTP 403 in this environment. Normal browser downloads worked; immutable committed raw files permit offline regeneration. Do not bypass access controls.
+- Historical export contract is documented separately from the Stage 1 draft Zod model schemas. Full typed consumer integration and wider tests remain for E.
+- Code licence selection and Cloudflare deployment remain deferred. Data reuse terms are recorded separately.
+- Local Git has no HTTPS write credentials. Publish identical trees through the GitHub connection using non-forced stage ref updates, then fetch/synchronize; do not change main or expose credentials.
 
-None. Draft data contracts, intended specification and validation infrastructure are not statistical models. No worker, ingestion pipeline, fitted estimator or MMP engine is implemented.
+## Modelling components
 
-## Outstanding modelling components
+Completed: none. Ingestion and validation are infrastructure, not a statistical model.
+Outstanding: national polling; boundary reconstruction; independent split/elasticity/premium estimators; National/Labour resilience; normalization; incumbency/replacement effects; separate Opportunity behaviour; backtesting/calibration; correlated simulation; MMP/list/overhang allocation and explanations. All remain out of scope here.
 
-2023-on-2026 reconstruction; multi-pollster national support; local party movement; independent split-ticket, elasticity and normalized-premium estimators; National/Labour resilience; personal-vote persistence; national normalization; freshman and replacement effects; separate Opportunity model; historical backtesting and learned weights; correlated uncertainty; seeded all-electorate simulation; verified qualification and exact Sainte-Laguë; list MPs, overhangs and Parliament size; configurable government combinations; calibration and transparent electorate explanations.
+## Exact recommended next task when authorized
 
-## Known issues and design limits
+Resume checkpoint C on the existing branch. First inspect status/staged/untracked files and unpushed commits, fetch origin, preserve any new local work, compare main/stage ancestry, and read the handoff files. Run the committed 2008 regeneration check. Inspect authoritative 2011 index links and formats, create an explicit source plan, acquire unchanged raw files with provenance, adapt transformations only on source evidence, normalize all general electorates and reconcile national totals using Māori supporting inputs. Document discrepancies; commit and push 2011 immediately. Repeat for 2014 as D, then complete unified tests/contracts/docs as E, run all checks, push, create the unmerged PR and stop. Stage 3 must not assume a complete three-election dataset until Stage 2 is finished and reviewed.
 
-- Domain schemas are draft v1. They validate structure, not external authenticity or whole-dataset joins. Review source compatibility, fractional reconstructed counts, dynamic majority thresholds and list-order schemas before implementing those components; see the dictionary.
-- No code licence selected. Data rights must be reviewed source by source.
-- No Cloudflare deployment performed. Python remains offline; future website inputs must be JSON/GeoJSON. Worker messages are contracts only.
-- This machine's npm proxy is unavailable; prior installation succeeded with per-command `--proxy=null --https-proxy=null`, without changing global settings.
-- Local Git lacks HTTPS write credentials; checkpoints are published through the GitHub connection with identical Git trees and non-forced stage ref updates, then synchronized locally. Never expose credentials or change main to work around this.
+## Final pause-handoff checks — 2026-09-08
 
-## Exact recommended next task
-
-After the user reviews/merges this PR and explicitly authorizes Stage 2: **Inventory authoritative data sources and review the draft domain contracts against documented source formats. Read all five mandatory documents, fetch latest main, create the user-specified Stage 2 branch, identify source candidates and access/licensing limitations, verify planned electorate/boundary coverage and electoral rule sources, and record contract amendments and validation requirements. Do not download election datasets or implement statistical/MMP models unless separately authorized. Update all stage documents, run checks, push checkpoints and open an unmerged PR.**
-
-If publication is interrupted, first inspect git status, fetch origin, and compare the stage branch to origin/stage/01-foundation. Resume publication/PR handoff, not Stage 2. No temporary files or previous conversation are needed.
-
-## Stage 2 recovery checkpoint A
-
-Recovered clean local and remote stage branch, both equal current main. No modified/staged/untracked files or unpushed commits survived. Recovered one raw CSV in Downloads: 2008 Auckland Central split-vote table, imported byte-for-byte with checksum. New files: scripts/ingest/historical_sources.py, scripts/transform/historical.py, scripts/tests/test_historical.py, docs/historical-ingestion.md. Python tests: 13 pass. Next: acquire 2008 official summary/control and general-electorate CSVs, normalize and validate, then immediately push checkpoint B. Repeat 2011 (C), 2014 (D), then unified validation/docs (E) and an unmerged PR. Prior Stage 1 dataset/status text above is historical until final reconciliation.
-
-## Stage 2 checkpoint B — 2008 complete
-
-139 immutable official CSV resources acquired. Processed outputs contain 63 general electorates, 499 candidate records, 1,197 party-vote records and 63 percentage-only split matrices. Seven Māori electorate candidate files support national reconciliation. All totals/winners/shares and rounding-bounded split checks pass, with zero unresolved discrepancies. Seven local candidate display/full-name mappings and one truncated party header are recorded in the validation report; no cross-election identities are asserted. Next: acquire, process and validate 2011, then immediately commit/push checkpoint C; repeat for 2014 before final integration. Stage 2 remains incomplete; no PR yet.
+PASS: 30 frontend tests (3 files), 13 Python tests, TypeScript type checking, production build, integrity of all 139 registered sources, byte-for-byte regeneration of all three 2008 outputs, and git diff whitespace check. These are local results for the saved checkpoint, not a claim of completed 2011/2014 coverage or remote CI execution. All meaningful files are committed and published on the stage branch; verify local/remote equality when resuming.

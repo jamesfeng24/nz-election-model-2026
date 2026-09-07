@@ -1,6 +1,6 @@
 # Data sources and provenance standard
 
-**No external election datasets have been collected.** `data/sources.json` is an empty, version-1 registry. Software documentation links are not election datasets.
+**2008 ingestion is complete at checkpoint B; 2011 and 2014 are not yet acquired.** `data/sources.json` is the version-1 registry of 139 committed official CSV resources. Software documentation links are not election datasets.
 
 Every future external dataset must have a SourceRecord validated by `src/types/contracts.ts`, recording:
 
@@ -27,3 +27,13 @@ Unknown values must stay unknown; do not infer evidence from plausible-looking v
 No datasets added or retrieved. For large/restricted resources, record a reproducible fetch command or script and expected checksum in source-specific notes; rawPath remains the materialization location even if bytes are excluded from Git. The source metadata contract does not imply the resource is checked in. Future validation must distinguish committed raw files from reproducibly fetched inputs and verify both before processing. Update this register and its limitations every stage.
 
 Stage 2 checkpoint A: one recovered official 2008 Auckland Central split CSV registered in data/sources.json. Exact URLs, timestamps and hashes are recorded there; see docs/historical-ingestion.md. No complete election dataset yet.
+
+## Current 2008 coverage — checkpoint B
+
+Source organisation: New Zealand Electoral Commission archive (historical Chief Electoral Office publication). The exact resource URLs, retrieval dates, raw repository paths, processing script, checksums and per-resource limitations are in `data/sources.json`; the explicit inventory is `data/source-plans/historical-2008.json`.
+
+Official indexes: [E9 statistics](https://www.electionresults.govt.nz/electionresults_2008/e9/html/statistics.html), [candidate results](https://www.electionresults.govt.nz/electionresults_2008/e9/html/e9_part8.html), [split voting](https://www.electionresults.govt.nz/electionresults_2008/splitvote_index.html). Inputs are six summary/control CSVs (parts 1, 4, 5, 6, 9_1, 9_2), 70 candidate CSVs and 63 general-electorate split CSVs. All raw bytes are committed under `data/raw/elections/2008/`; no large-file exclusions are needed.
+
+Normal browser downloads were used after direct HTTP requests returned 403. Import records browser-file timestamps as retrieval metadata; the recovered Auckland Central file retains its earlier timestamp. Output reproduction is offline. [Crown copyright/reuse terms](https://www.electionresults.govt.nz/about.html) permit accurate reproduction with source/copyright acknowledgement; no endorsement is implied.
+
+Limitations: rounded split percentages only; no observed joint counts. Source-specific name variants and truncated headers are recorded in the validation report. CSV spelling is preserved, including missing macrons. Māori candidate records support national totals but only general electorates are exported as primary records. Cross-election candidate identity and boundary reconstruction are deferred. Historical Stage 1/A notes above describe earlier checkpoints, not current coverage.
