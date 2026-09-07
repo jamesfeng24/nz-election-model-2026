@@ -6,16 +6,16 @@ Updated 2026-09-07. GitHub is canonical: https://github.com/jamesfeng24/nz-elect
 
 Build a transparent, reproducible 2026 New Zealand election website: national support, all electorates on official 2026 boundaries, independent candidate estimators, normalized historical effects, joint uncertainty, MMP allocation and configurable government outcomes. A fresh session must resume from these files alone.
 
-Stage 1 foundation correction complete and submitted for review in PR #1. Final handoff is committed on the same stage branch. No Stage 2 work authorized. The original shell is already on main; these corrections are separate and must not be merged by the agent.
+Stage 1 merged in 8cf0345dba83e3adb68630d1044e2839b2cf2037. Stage 2 historical ingestion authorized and in progress. Checkpoint A: immutable source import/re-fetch, initial split parser, tests and recovered source are working. B/C/D/E remain pending.
 
 ## Current/last branch and important commits/PRs
 
-- Current branch: `stage/01-foundation`; last branch: `main`.
+- Current branch: `stage/02-historical-2008-2014`; last branch: `main`.
 - Base / original foundation: `9eed98405f6dca4ac86248c32cbf410887b1086f` (already on main).
 - Pushed specification/workflow checkpoint: `015c96ffb3bff49219220115b0712fde26b231fd`.
 - Domain/Python checkpoint: `38c38aaf8d8c23b13598064b8792700289501511`.
 - Final handoff commit: consult the head of the PR/stage branch (a commit cannot contain its own SHA).
-- PR #1: https://github.com/jamesfeng24/nz-election-model-2026/pull/1 — stage/01-foundation → main, open and unmerged at handoff. Do not merge it automatically.
+- PR #1: https://github.com/jamesfeng24/nz-election-model-2026/pull/1 — stage/01-foundation → main, merged by the user; verified before Stage 2.
 - Initial direct-to-main publication cannot be retroactively corrected; shared history is preserved. All work in this correction uses the requested branch.
 
 ## Completed stages and material files
@@ -73,3 +73,7 @@ None. Draft data contracts, intended specification and validation infrastructure
 After the user reviews/merges this PR and explicitly authorizes Stage 2: **Inventory authoritative data sources and review the draft domain contracts against documented source formats. Read all five mandatory documents, fetch latest main, create the user-specified Stage 2 branch, identify source candidates and access/licensing limitations, verify planned electorate/boundary coverage and electoral rule sources, and record contract amendments and validation requirements. Do not download election datasets or implement statistical/MMP models unless separately authorized. Update all stage documents, run checks, push checkpoints and open an unmerged PR.**
 
 If publication is interrupted, first inspect git status, fetch origin, and compare the stage branch to origin/stage/01-foundation. Resume publication/PR handoff, not Stage 2. No temporary files or previous conversation are needed.
+
+## Stage 2 recovery checkpoint A
+
+Recovered clean local and remote stage branch, both equal current main. No modified/staged/untracked files or unpushed commits survived. Recovered one raw CSV in Downloads: 2008 Auckland Central split-vote table, imported byte-for-byte with checksum. New files: scripts/ingest/historical_sources.py, scripts/transform/historical.py, scripts/tests/test_historical.py, docs/historical-ingestion.md. Python tests: 13 pass. Next: acquire 2008 official summary/control and general-electorate CSVs, normalize and validate, then immediately push checkpoint B. Repeat 2011 (C), 2014 (D), then unified validation/docs (E) and an unmerged PR. Prior Stage 1 dataset/status text above is historical until final reconciliation.

@@ -20,3 +20,7 @@
 - Added source-integrity verification without downloading or changing data. No model or election data added.
 
 - Submitted corrective PR #1: https://github.com/jamesfeng24/nz-election-model-2026/pull/1; left open and unmerged. All local gates pass (30 frontend tests, 8 Python tests, typecheck, build and source integrity).
+
+## Stage 2 checkpoint A — recovery and ingestion infrastructure
+
+Preserved recovered official split CSV; added immutable import/checksum-pinned fetch, CSV parsing and Unicode/missing-value tests. No statistical model added.

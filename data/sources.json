@@ -1,1 +1,22 @@
-{"schemaVersion":1,"sources":[]}
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "schemaVersion": 1,
+      "id": "ec-2008-elect-splitvote-1.csv",
+      "organisation": "New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)",
+      "url": "https://www.electionresults.govt.nz/electionresults_2008/elect-splitvote-1.csv",
+      "dateOrElection": "2008 general election",
+      "resource": "elect-splitvote-1.csv",
+      "retrievedAt": "2026-09-07T09:28:59.754228+00:00",
+      "rawPath": "data/raw/elections/2008/elect-splitvote-1.csv",
+      "processingScript": "scripts/transform/historical.py",
+      "limitations": [
+        "Acquisition: recovered prior browser download; timestamp from downloaded file mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "df107cb2569d14043ba05d0cbcaf350deef519d53719f9e2903f2ec8e70e88c0",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    }
+  ]
+}
