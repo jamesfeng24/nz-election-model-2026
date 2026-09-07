@@ -1,1 +1,39 @@
-{"name":"nz-election-model-2026","private":true,"version":"0.1.0","type":"module","engines":{"node":">=22.12.0 <23"},"scripts":{"dev":"vite","test":"vitest run","test:watch":"vitest","typecheck":"tsc --noEmit","build":"vite build","preview":"vite preview","check":"npm run test && npm run typecheck && npm run build"},"dependencies":{"react":"19.2.8","react-dom":"19.2.8","react-router-dom":"7.18.3","zod":"4.5.4"},"devDependencies":{"@testing-library/jest-dom":"7.0.1","@testing-library/react":"16.3.3","@types/node":"26.4.1","@types/react":"19.2.18","@types/react-dom":"19.2.7","@vitejs/plugin-react":"6.1.1","jsdom":"29.1.1","typescript":"7.0.2","vite":"8.2.2","vitest":"5.0.0"}}
+{
+  "name": "nz-election-model-2026",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0 <23"
+  },
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "npm run test && npm run typecheck && npm run build",
+    "test:python": "python3 -m unittest discover -s scripts/tests -v",
+    "validate:sources": "python3 scripts/validate/source_files.py",
+    "check:all": "npm run check && npm run test:python && npm run validate:sources"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router-dom": "7.18.3",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@types/node": "26.4.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "@vitejs/plugin-react": "6.1.1",
+    "jsdom": "29.1.1",
+    "typescript": "7.0.2",
+    "vite": "8.2.2",
+    "vitest": "5.0.0"
+  }
+}

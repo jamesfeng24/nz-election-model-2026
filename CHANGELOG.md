@@ -15,4 +15,6 @@
 - Created stage/01-foundation from the published foundation; all corrections are reviewable separately from main.
 - Added intended statistical specification, explicit estimator constraints and fuller persistent workflow rules.
 - Added data/script directory boundaries and offline Python / Web Worker architecture guidance.
-- Domain contracts and Python verification are in progress at this checkpoint; no model or election data added.
+- Added draft runtime schemas/types for all requested domain entities, candidate history, predictions, allocation accounting and serializable worker messages.
+- Added Python 3.12.2 configuration with zero third-party dependencies, eight integrity tests and a Python CI job.
+- Added source-integrity verification without downloading or changing data. No model or election data added.

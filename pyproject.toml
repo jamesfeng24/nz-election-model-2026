@@ -1,0 +1,12 @@
+[project]
+name = "nz-election-model-2026-research"
+version = "0.1.0"
+description = "Offline research infrastructure; no model implemented"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[tool.foundation]
+python-version = "3.12.2"
+test-command = "python3 -m unittest discover -s scripts/tests -v"
+# Standard library only. Add exact locked dependencies when research needs them.
+# This is not an installable Python package: execute scripts from the repository.
