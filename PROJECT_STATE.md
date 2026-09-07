@@ -77,3 +77,7 @@ If publication is interrupted, first inspect git status, fetch origin, and compa
 ## Stage 2 recovery checkpoint A
 
 Recovered clean local and remote stage branch, both equal current main. No modified/staged/untracked files or unpushed commits survived. Recovered one raw CSV in Downloads: 2008 Auckland Central split-vote table, imported byte-for-byte with checksum. New files: scripts/ingest/historical_sources.py, scripts/transform/historical.py, scripts/tests/test_historical.py, docs/historical-ingestion.md. Python tests: 13 pass. Next: acquire 2008 official summary/control and general-electorate CSVs, normalize and validate, then immediately push checkpoint B. Repeat 2011 (C), 2014 (D), then unified validation/docs (E) and an unmerged PR. Prior Stage 1 dataset/status text above is historical until final reconciliation.
+
+## Stage 2 checkpoint B — 2008 complete
+
+139 immutable official CSV resources acquired. Processed outputs contain 63 general electorates, 499 candidate records, 1,197 party-vote records and 63 percentage-only split matrices. Seven Māori electorate candidate files support national reconciliation. All totals/winners/shares and rounding-bounded split checks pass, with zero unresolved discrepancies. Seven local candidate display/full-name mappings and one truncated party header are recorded in the validation report; no cross-election identities are asserted. Next: acquire, process and validate 2011, then immediately commit/push checkpoint C; repeat for 2014 before final integration. Stage 2 remains incomplete; no PR yet.

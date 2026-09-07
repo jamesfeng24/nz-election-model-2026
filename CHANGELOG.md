@@ -24,3 +24,8 @@
 ## Stage 2 checkpoint A — recovery and ingestion infrastructure
 
 Preserved recovered official split CSV; added immutable import/checksum-pinned fetch, CSV parsing and Unicode/missing-value tests. No statistical model added.
+
+### Stage 2 checkpoint B
+- Acquired and checksum-registered all 139 official 2008 inputs.
+- Generated general-electorate results and percentage-only split matrices with national controls and a validation report.
+- Preserved source name variants through explicit local mappings; exact unavailable joint counts remain null.
