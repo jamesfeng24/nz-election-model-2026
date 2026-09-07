@@ -6,15 +6,16 @@ Updated 2026-09-07. GitHub is canonical: https://github.com/jamesfeng24/nz-elect
 
 Build a transparent, reproducible 2026 New Zealand election website: national support, all electorates on official 2026 boundaries, independent candidate estimators, normalized historical effects, joint uncertainty, MMP allocation and configurable government outcomes. A fresh session must resume from these files alone.
 
-Stage 1 foundation correction: implementation complete; publication and final PR handoff pending. No Stage 2 work authorized. The original shell is already on main; these corrections are separate and must not be merged by the agent.
+Stage 1 foundation correction complete and submitted for review in PR #1. Final handoff is committed on the same stage branch. No Stage 2 work authorized. The original shell is already on main; these corrections are separate and must not be merged by the agent.
 
 ## Current/last branch and important commits/PRs
 
 - Current branch: `stage/01-foundation`; last branch: `main`.
 - Base / original foundation: `9eed98405f6dca4ac86248c32cbf410887b1086f` (already on main).
 - Pushed specification/workflow checkpoint: `015c96ffb3bff49219220115b0712fde26b231fd`.
-- Domain/Python checkpoint: being committed with this state update; consult branch history for its final remote SHA.
-- PR: not yet opened at this checkpoint. Next action: publish the checkpoint, create a PR into main, record its URL here in a final handoff commit, then leave it unmerged.
+- Domain/Python checkpoint: `38c38aaf8d8c23b13598064b8792700289501511`.
+- Final handoff commit: consult the head of the PR/stage branch (a commit cannot contain its own SHA).
+- PR #1: https://github.com/jamesfeng24/nz-election-model-2026/pull/1 — stage/01-foundation → main, open and unmerged at handoff. Do not merge it automatically.
 - Initial direct-to-main publication cannot be retroactively corrected; shared history is preserved. All work in this correction uses the requested branch.
 
 ## Completed stages and material files
@@ -44,7 +45,7 @@ Local checks on 2026-09-07, Node 22.17.0 / npm 10.9.2 / Python 3.12.2:
 - `npm run validate:sources`: PASS, zero registered resources (not a data-coverage claim).
 - `npm run check:all`: PASS; combines the above.
 - `git diff --check`: PASS.
-- Remote CI: result pending publication. Local check results are not a claim of a successful Actions run.
+- Remote CI for implementation commit 38c38aa: frontend job passed; Python unit tests and source-integrity steps passed in run 34105472000. Final documentation-commit CI is tracked by the PR checks and is separate from these recorded results.
 - Visual inspection was blocked in the original session because the browser tool could not verify its admin policy. This correction changes no UI rendering. Visual/mobile and hosted deep-link checks remain for later deployment review.
 
 ## Available datasets and data limitations

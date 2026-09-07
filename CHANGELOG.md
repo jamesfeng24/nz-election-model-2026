@@ -18,3 +18,5 @@
 - Added draft runtime schemas/types for all requested domain entities, candidate history, predictions, allocation accounting and serializable worker messages.
 - Added Python 3.12.2 configuration with zero third-party dependencies, eight integrity tests and a Python CI job.
 - Added source-integrity verification without downloading or changing data. No model or election data added.
+
+- Submitted corrective PR #1: https://github.com/jamesfeng24/nz-election-model-2026/pull/1; left open and unmerged. All local gates pass (30 frontend tests, 8 Python tests, typecheck, build and source integrity).
