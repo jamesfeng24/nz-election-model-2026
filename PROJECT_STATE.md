@@ -73,3 +73,7 @@ When explicitly authorized, fetch current main, inspect status and confirm the 2
 ## Active 2014 checkpoint
 
 Existing branch fast-forwarded to the confirmed 2011 merge. 2014 has 64 general plus seven Māori electorates. Initial controls/candidate/split files parse with the shared reader. Split destinations group Internet Party and MANA Movement as Internet MANA; actual candidate affiliations are retained. Complete acquisition, adapt source-specific joins/controls, validate and push data immediately; then final docs/checks and unmerged PR. Do not begin integration. Next after this task: **2008–2014 integration and cross-year validation only**.
+
+## 2014 recovery and complete acquisition
+
+Recovered and checksum-verified 100 files, including all 71 candidates and split matrices 1–19; pushed as 73f68dc before further downloads. Acquired only missing split matrices 20–64. All 145 planned 2014 raw resources are now preserved: 71 candidate files, 64 local split files, six E9 controls and four split aggregate/summary controls. Processing remains in progress; no claim of completed validation yet. Next within this task: resolve documented source-name joins, reuse aggregate validation with 2014 grouping, push processed outputs, then final tests/docs and unmerged PR.
