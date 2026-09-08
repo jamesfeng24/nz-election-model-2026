@@ -29,6 +29,8 @@ def canonical(key):
 def build_panel(root):
     panel = {k: [] for k in ('electorates', 'party-votes', 'candidate-votes', 'split-votes', 'election-controls')}
     inputs = {}
+    registry = json.loads((root / 'data/sources.json').read_bytes())
+    source_ids = {r['id'] for r in registry['sources']}
     for year in YEARS:
         loaded = {}
         for kind, relative in [('elections', f'data/processed/elections/{year}.json'), ('split', f'data/processed/split-votes/{year}.json'), ('validation', f'data/processed/elections/{year}-validation.json')]:
@@ -37,6 +39,7 @@ def build_panel(root):
             loaded[kind] = json.loads(raw)
             require(loaded[kind]['year'] == year and loaded[kind]['schemaVersion'] == 1, 'Unsupported input year/schema')
         election, split, report = (loaded[k] for k in ('elections', 'split', 'validation'))
+        require(set(election['sourceIds']) <= source_ids, 'Unknown provenance source')
         require(not report['discrepancies'], f'Unresolved per-year discrepancies: {year}')
         for electorate in election['electorates']:
             metadata = {k: copy.deepcopy(v) for k, v in electorate.items() if k not in ('parties', 'candidates')}
@@ -92,13 +95,34 @@ def validate_panel(panel):
                 require(cell['reportedPercent'] is None or 0 <= cell['reportedPercent'] <= 100, 'Split percentage')
                 require(cell['candidateId'] is None or cell['candidateId'] in candidates, 'Split candidate reference')
     require([r['year'] for r in panel['election-controls']] == list(YEARS), 'Control years')
+    for control in panel['election-controls']:
+        year = control['year']
+        local = [e for e in electorates.values() if e['year'] == year]
+        for ballot in ('party', 'candidate'):
+            totals = control['nationalControls'][ballot]
+            for field in ('validVotes', 'informalVotes', 'votesCast', 'enrolled'):
+                require(sum(e[ballot + 'Ballot'][field] for e in local) == totals['general'][field], 'Panel general control')
+                require(totals['general'][field] + totals['maori'][field] == totals['national'][field], 'Panel national control')
+
+
+
+def verify_years(root):
+    """Regenerate in memory from preserved raw files; never write per-year inputs."""
+    from .historical import build_year
+    for year in YEARS:
+        rebuilt = build_year(root, year)
+        for kind, relative in [('elections', f'data/processed/elections/{year}.json'), ('split', f'data/processed/split-votes/{year}.json'), ('validation', f'data/processed/elections/{year}-validation.json')]:
+            require((root / relative).read_bytes() == encode(rebuilt[kind]), 'Per-year regression: ' + relative)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
+    parser.add_argument('--verify-years', action='store_true', help='Also regenerate all three years in memory and require byte-identical inputs')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[2]
+    if args.verify_years:
+        verify_years(root)
     for name, value in build_panel(root).items():
         path = root / DEST / name
         data = encode(value)

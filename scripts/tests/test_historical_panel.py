@@ -65,6 +65,7 @@ class HistoricalPanelTests(unittest.TestCase):
             lambda p: p['split-votes'][0]['rows'][0]['cells'][0].update(count=10),
             lambda p: p['split-votes'][0].update(year=2017),
             lambda p: p['party-votes'][0].update(canonicalPartyId='invented'),
+            lambda p: p['election-controls'][0]['nationalControls']['party']['national'].update(validVotes=1),
         ]
         for mutation in mutations:
             with self.subTest(mutation=mutation):
