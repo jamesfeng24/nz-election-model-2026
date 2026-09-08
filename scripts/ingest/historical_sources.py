@@ -47,7 +47,7 @@ def register(root: Path, year: int, url: str, data: bytes, retrieved_at: str, me
             stream.write(data)
     if existing:
         return existing
-    record = {'schemaVersion': 1, 'id': source_id, 'organisation': 'New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)',
+    record = {'schemaVersion': 1, 'id': source_id, 'organisation': ('New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)' if year == 2008 else 'New Zealand Electoral Commission'),
               'url': url, 'dateOrElection': str(year) + ' general election', 'resource': path.name,
               'retrievedAt': retrieved_at, 'rawPath': path.relative_to(root).as_posix(),
               'processingScript': 'scripts/transform/historical.py',

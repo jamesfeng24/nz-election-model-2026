@@ -18,7 +18,7 @@ def main():
     imported = 0
     for entry in plan['resources']:
         name = Path(entry['url']).name
-        download = args.directory / (Path(name).stem + args.suffix + '.csv')
+        download = args.directory / entry.get('downloadFilename', Path(name).stem + args.suffix + '.csv')
         if not download.exists():
             missing.append(name)
             continue

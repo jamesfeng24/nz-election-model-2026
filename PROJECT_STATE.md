@@ -68,3 +68,7 @@ Finish only 2011, pushing sequencing, ingestion, processed-data and documentatio
 ## Final pause-handoff checks — 2026-09-08
 
 PASS: 30 frontend tests (3 files), 13 Python tests, TypeScript type checking, production build, integrity of all 139 registered sources, byte-for-byte regeneration of all three 2008 outputs, and git diff whitespace check. These are local results for the saved checkpoint, not a claim of completed 2011/2014 coverage or remote CI execution. All meaningful files are committed and published on the stage branch; verify local/remote equality when resuming.
+
+## Stage 2B acquisition checkpoint
+
+Sequencing pushed in 720ceb6. Preserved initial 2011 controls, candidate files and split sample/aggregates through the existing immutable importer. Existing CSV reader handles the UTF-8 BOM and macrons. Electorate split cells are rounded percentages; the aggregate summary additionally reports exact split/non-split counts, to be preserved separately. Full 2011 acquisition, joins and reconciliation remain underway. No 2014 work.
