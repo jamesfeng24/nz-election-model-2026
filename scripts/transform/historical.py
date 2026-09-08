@@ -238,6 +238,14 @@ def build_year(root, year: int) -> dict:
                     short_name, party = match.groups()
                     matches = [c for c in candidate['candidates'] if key(c['name'].split(',')[0]) == key(short_name.split(',')[0]) and c['partyKey'] == key(party)]
                     aliases = {
+                        (2011, 'Bay of Plenty', 'STEVENS, Sharon (Mana)'): 'TIPENE, Tangi Sharon',
+                        (2011, 'Dunedin North', 'TUREI, Metiria (Green Party)'): 'STANTON TUREI, Metiria Leanne Agnes',
+                        (2011, 'Hamilton East', 'ORGAD, Sehai (Labour Party)'): 'SCHOENBERGER-ORGAD, Sehai',
+                        (2011, 'Manukau East', 'TAYLOR, Asenati (New Zealand First Party)'): 'LOLE-TAYLOR, Asenati',
+                        (2011, 'Maungakiekie', 'HO, Jerry (New Zealand First Party)'): 'HE, Xiao Peng',
+                        (2011, 'New Lynn', 'DAVIDSON, Sean (Aotearoa Legalise Cannabis Party)'): 'DAVIDSON-NORRIS, Sean Benjamin',
+                        (2011, 'Pakuranga', 'MULFORD, Helen Jane (New Zealand First Party)'): 'MULFORD-TYLER, Helen Jane',
+                        (2011, 'Wellington Central', 'KARENA, Puhi (Independent)'): 'FUIMAONO-KARENA, Geoffrey Wayne Puhi',
                         (2008, 'Dunedin North', 'TUREI, Metiria (Green Party)'): 'STANTON TUREI, Metiria Leanne Agnes',
                         (2008, 'Hunua', 'KENWORTHY (SHAW), Fiona (Green Party)'): 'KENWORTHY, Fiona Marie',
                         (2008, 'Hunua', 'MULFORD, Helen (New Zealand First Party)'): 'MULFORD - TYLER, Helen Jane',

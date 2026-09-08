@@ -72,3 +72,7 @@ PASS: 30 frontend tests (3 files), 13 Python tests, TypeScript type checking, pr
 ## Stage 2B acquisition checkpoint
 
 Sequencing pushed in 720ceb6. Preserved initial 2011 controls, candidate files and split sample/aggregates through the existing immutable importer. Existing CSV reader handles the UTF-8 BOM and macrons. Electorate split cells are rounded percentages; the aggregate summary additionally reports exact split/non-split counts, to be preserved separately. Full 2011 acquisition, joins and reconciliation remain underway. No 2014 work.
+
+## Stage 2B processed-data checkpoint
+
+2011 primary outputs are generated: 63 general electorates, 423 candidate records, 819 party-vote records, 63 split matrices. All 143 raw files are preserved. Core reconciliation reports zero discrepancies: national valid party votes 2,237,464; valid candidate votes 2,172,434; votes cast 2,278,989. Eight explicit local candidate label mappings are recorded. The shared parser change preserves 2008 output bytes exactly. Remaining for final handoff: aggregate split controls, focused tests, final checks and current documentation, then an unmerged 2011 PR. No 2014 work.
