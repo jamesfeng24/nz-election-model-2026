@@ -105,3 +105,34 @@ Final 2014 output SHA-256:
 For missing inputs, use `python3 -m scripts.ingest.historical_sources --year 2014 --fetch-registered`. If direct access is blocked, use normal browser downloads of exact registered URLs, then `python3 -m scripts.ingest.import_historical_downloads --year 2014 --directory /path/to/downloads`. The plan records observed browser duplicate filenames; adapt acquisition metadata to actual filenames if needed, never source contents. Do not import a prior year's same-basename download. Existing source records remain immutable/idempotent.
 
 Frontend tests/typecheck/build were run because AGENTS.md requires them, not because frontend code changed. No broad 2008/2011 re-audit or cross-year integration was performed. Next task: **2008–2014 integration and cross-year validation only**.
+
+## Integrated 2008–2014 panel (Stage 2D)
+
+Normal panel regeneration uses only committed per-year JSON, with no network or raw reparsing:
+
+```sh
+python3 -m scripts.transform.historical_panel
+python3 -m scripts.transform.historical_panel --check
+```
+
+One offline verification command covers preserved raw inputs → all three per-year outputs → combined panel and cross-year invariants:
+
+```sh
+python3 -m scripts.transform.historical_panel --check --verify-years
+python3 -m unittest discover -s scripts/tests -v
+```
+
+`--verify-years` invokes the existing per-year validators (including consumed-source checksums and rounded/exact control reconciliation), regenerates all nine input outputs **in memory**, and requires byte equality before checking the panel. It never overwrites per-year files. CI runs this command. No fetch/download is part of any command above.
+
+For intentional full output regeneration after a reviewed processing change:
+
+```sh
+for year in 2008 2011 2014; do
+  python3 -m scripts.transform.historical --year "$year" || exit 1
+done
+python3 -m scripts.transform.historical_panel
+python3 -m scripts.transform.historical_panel --check --verify-years
+python3 -m unittest discover -s scripts/tests -v
+```
+
+The manifest records every per-year input hash and panel output hash. JSON serialization uses UTF-8, preserved Unicode, deterministic input order and no wall-clock timestamps. Code and canonical-party decisions are versioned with Git. Stage 2D passed all 31 Python tests, all-year regeneration, 30 frontend tests, typecheck and build. All previous per-year hashes listed above remain unchanged. Next task: **2017 historical election ingestion only**, after review/merge and explicit authorization.

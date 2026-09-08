@@ -92,3 +92,28 @@ Existing v1 election and split fields are reused. Coverage is 64 general elector
 The split export adds `partyGrouping`: sourceCandidateParties [Internet Party, MANA Movement], splitReportParty Internet MANA, and a scope explanation. The validation report exposes the same record as `splitPartyGrouping`. This applies only to 2014 split joins/controls. Candidate `party`, `partyKey`, and national candidate-party controls retain their original affiliations; the grouping does not merge party identities or estimate behaviour.
 
 Eight labelMappings preserve original split labels and official candidate-table names, including the Kaikōura spelling difference and Wellington Central independent-name variant. Exact raw labels are retained in immutable CSVs; display fields follow the existing NFC/trim parsing conventions. Unknown cross-election personId stays null. The 337 informal-party non-split source convention is recorded in sourcePeculiarities and officialSplitSummary.limitations. No prior-year processed schema/data changed.
+
+## Integrated 2008–2014 panel (Stage 2D, schemaVersion 1)
+
+`data/processed/historical/2008-2014/` contains five record containers (`schemaVersion`, `years`, `records`) and `manifest.json`. It is a lossless projection of the committed per-year historical contracts, not an instance of the provisional model-facing TypeScript schemas.
+
+| File | Record/key | Representation |
+| --- | --- | --- |
+| electorate metadata: `electorates.json` | `id`; year + official electorate number | Original metadata except nested parties/candidates; includes boundary version, both ballot denominators/turnout, winner, majority and source IDs. |
+| `party-votes.json` | `(year, electorateId, partyKey)` | Original party fields plus year, electionId, electorateId, sourceIds and canonicalPartyId. |
+| `candidate-votes.json` | `(year, id)` | Original candidate fields plus year, electionId, electorateId, sourceIds and canonicalPartyId. IDs identify occurrences, not people. |
+| `split-votes.json` | `(year, electorateId)` | Original full matrices unchanged, including source labels, candidate references, countAvailability and rounded percentages. |
+| `election-controls.json` | `year` | Original nationalControls, sourceIds, perYearValidation (including name mappings), aggregateMatrices, officialSplitSummary, partyGrouping and aggregateSplitAvailability. |
+| `manifest.json` | input/output paths | Nine per-year input SHA-256 hashes, five panel output hashes, counts, reviewed canonical aliases and evidence URL. Manifest does not hash itself. |
+
+Safe invariants for future stages:
+
+- Every top-level observation has an explicit year; nested split observations inherit the enclosing matrix's year/electorate. There are exactly 63/63/64 general electorates and 190 matrices; year-specific geography is not harmonized.
+- `partyKey` is the existing source-name comparison key. `canonicalPartyId` is a separate historical party identifier: conservativeparty → conservative; mana → manamovement; other keys unchanged. Independent has null canonicalPartyId because it is not one political party. Original `partyName`/`party`, headers and split labels are retained. No other organizational equivalence is inferred.
+- Raw election controls and split reports intentionally retain their published labels rather than receiving a false uniform affiliation. The 2014 `partyGrouping` applies only to split-report joins. Internet MANA never replaces Internet Party/MANA Movement candidate affiliations.
+- Candidate `personId` remains null; source-name comparison keys are not person IDs. Preserved within-year name mappings do not establish cross-year identity. Electorate IDs also must not be treated as cross-year continuity identifiers.
+- Vote counts are nonnegative integers. Party/candidate `share` is a fraction from its own valid-vote denominator. Source `sourceShare` is retained for candidates. Party/candidate denominators are not interchangeable.
+- Split `reportedPercent` is percentage points (0–100), published to two decimals; local `count` is null, never reconstructed. Rounding tolerance is 0.005 percentage points per cell; existing per-year validators apply the corresponding row/weighted-column bounds. Split rows include informal party votes but exclude disallowed ballots. The final total row is a control, not another source party.
+- Exact aggregate split/non-split summary counts remain separately identified and do not imply exact local joint counts. Null and zero remain distinct. For 2008, aggregateSplitAvailability is `not-collected` and aggregate fields are null; this is not a claim that the official source lacks such data. For 2011/2014 it is `preserved`.
+- Primary records are general electorates. General/Māori/national controls preserve supporting scope; detailed Māori candidate outputs were not added. No overall national total should be equated to the general-only record sum.
+- All source IDs resolve through the unchanged registry. Per-year outputs and their labels/precision are unchanged by integration; the manifest identifies their exact bytes.
