@@ -58,7 +58,7 @@ Availability<T> distinguishes unavailable/reason from available/value/sourceIds;
 
 Breaking changes require explicit versioning, migration guidance and tests. Do not treat this provisional contract as permission to force evidence into an unsuitable representation.
 
-## Historical ingestion export v1 — implemented for 2008
+## Historical ingestion export v1 — implemented for 2008 and 2011
 
 These are deterministic JSON preparation outputs, not forecasts and not yet wired into the website or Stage 1 Zod model schemas. `schemaVersion` is 1; the processor is the executable validation contract. Changes require review and regeneration.
 
@@ -78,3 +78,9 @@ These are deterministic JSON preparation outputs, not forecasts and not yet wire
 All `share` and `sourceShare` fields are proportions (0–1). Fields ending `Percent` are percentages (0–100). Split percentages have two-decimal source rounding; exact joint counts are unavailable, never silently estimated. Split denominator is valid plus informal party votes, excluding disallowed ballots; it differs from valid party/candidate share denominators. Party-vote-only accounts for absent candidate votes. Zero means an observed zero, null means unavailable. Missing required count inputs fail processing.
 
 Candidate IDs refer to occurrences, not persons. Comparison keys remove accents/punctuation only for joins while original Unicode labels remain. Local name variants are explicitly recorded in the report; keys must never establish cross-election identity. Boundary version labels describe the historical publication only, with no geometry or crosswalk claim. Māori inputs are retained raw for national reconciliation; general-electorate output coverage is deliberate.
+
+### 2011 additions and source precision
+
+The shared election/local-matrix fields are unchanged. Party keys remain canonical normalized source-name identifiers within the dataset, not political-continuity claims. Candidate occurrence IDs are election-local; full candidate names are in election records and original abbreviated/common labels in split cells, linked by candidateId. Eight alternate-surname mappings are explicit in the validation report. Unicode source names such as Māngere and Māori Party are preserved.
+
+The 2011 split export additionally contains `aggregateMatrices` keyed general/maori/national, each with sourceIds and the same percentage-row representation; here candidateLabel names a destination **party/category**, not an individual candidate. `officialSplitSummary` contains sourceIds, limitations and rows: partyLabel, totalPartyVotes, nonSplitCandidateVotes, reportedNonSplitPercent, splitCandidateVotes, reportedSplitPercent, isTotal. Counts in this summary are published exact aggregate counts, never inferred local joint counts. Its final total row is not an extra observation. The informal-party non-split source convention is explicitly flagged. `sourcePeculiarities` is an additional 2011 validation-report field. These additive ingestion fields do not change 2008 exports or imply model-facing TypeScript compatibility.

@@ -46,3 +46,7 @@ Record the estimand, units, denominator, input source IDs, boundary vintage, mis
 ## Runtime boundary
 
 Offline Python may perform ingestion, geographic transformation, regression and backtesting. Export versioned JSON/GeoJSON with provenance, coefficients and uncertainty metadata for the website; Python must not be required on Cloudflare Pages. Pure TypeScript simulation modules must accept serializable inputs and seeded configuration so they can run in a module Web Worker. No model, worker execution or simulation is implemented in stage 1.
+
+## Revised sequencing constraint — 2026-09-08
+
+The authoritative implementation order is recorded in [future-work.md](future-work.md). It supersedes earlier proposed ordering without changing estimands. Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization.

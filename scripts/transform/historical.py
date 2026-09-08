@@ -238,6 +238,14 @@ def build_year(root, year: int) -> dict:
                     short_name, party = match.groups()
                     matches = [c for c in candidate['candidates'] if key(c['name'].split(',')[0]) == key(short_name.split(',')[0]) and c['partyKey'] == key(party)]
                     aliases = {
+                        (2011, 'Bay of Plenty', 'STEVENS, Sharon (Mana)'): 'TIPENE, Tangi Sharon',
+                        (2011, 'Dunedin North', 'TUREI, Metiria (Green Party)'): 'STANTON TUREI, Metiria Leanne Agnes',
+                        (2011, 'Hamilton East', 'ORGAD, Sehai (Labour Party)'): 'SCHOENBERGER-ORGAD, Sehai',
+                        (2011, 'Manukau East', 'TAYLOR, Asenati (New Zealand First Party)'): 'LOLE-TAYLOR, Asenati',
+                        (2011, 'Maungakiekie', 'HO, Jerry (New Zealand First Party)'): 'HE, Xiao Peng',
+                        (2011, 'New Lynn', 'DAVIDSON, Sean (Aotearoa Legalise Cannabis Party)'): 'DAVIDSON-NORRIS, Sean Benjamin',
+                        (2011, 'Pakuranga', 'MULFORD, Helen Jane (New Zealand First Party)'): 'MULFORD-TYLER, Helen Jane',
+                        (2011, 'Wellington Central', 'KARENA, Puhi (Independent)'): 'FUIMAONO-KARENA, Geoffrey Wayne Puhi',
                         (2008, 'Dunedin North', 'TUREI, Metiria (Green Party)'): 'STANTON TUREI, Metiria Leanne Agnes',
                         (2008, 'Hunua', 'KENWORTHY (SHAW), Fiona (Green Party)'): 'KENWORTHY, Fiona Marie',
                         (2008, 'Hunua', 'MULFORD, Helen (New Zealand First Party)'): 'MULFORD - TYLER, Helen Jane',
@@ -296,8 +304,14 @@ def build_year(root, year: int) -> dict:
               'labelMappings': mappings, 'discrepancies': discrepancies,
               'checks': ['nonnegative integer counts', 'vote/share normalization', 'official winners and majorities', 'turnout components and rates', 'electorate/general/Maori/national totals', 'national party and candidate-party aggregates', 'split row counts and rounding-bounded percentages/columns'],
               'limitations': ['Split cells publish rounded percentages only; exact counts remain null.', 'Candidate person IDs are not asserted; full names, parties and comparison keys support later reviewed linking.', 'Electorate names retain CSV spelling; missing macrons in a source are not invented.', 'Māori candidate files are supporting inputs for national reconciliation; primary outputs cover general electorates.']}
+    extra_split = {}
+    if year == 2011:
+        from .historical_2011 import validate_2011
+        extra_split = validate_2011(source, all_electorates, matrices)
+        report['checks'].extend(['2011 unique electorate/candidate IDs and complete split coverage', '2011 aggregate split matrices and exact summary controls', '2011 local-to-general aggregate split intervals'])
+        report['sourcePeculiarities'] = extra_split['officialSplitSummary']['limitations']
     return {'elections': {'schemaVersion': 1, 'year': year, 'electorates': general, 'nationalControls': {'party': turnout_totals, 'candidate': cand_totals, 'parties': list(national_parties.values())}, 'sourceIds': sorted(used)},
-            'split': {'schemaVersion': 1, 'year': year, 'matrices': matrices}, 'validation': report}
+            'split': {'schemaVersion': 1, 'year': year, 'matrices': matrices, **extra_split}, 'validation': report}
 
 
 def main():

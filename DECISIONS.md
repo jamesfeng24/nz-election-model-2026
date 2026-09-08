@@ -57,3 +57,11 @@ Use election-local candidate occurrence IDs; leave personId null. Preserve sourc
 ## D013 — 2026-09-08 — Pause after saved 2008 checkpoint
 
 User requested a stop for usage conservation after work already completed at B. Push B and a separate current-state documentation handoff; do not begin 2011/2014 or open a Stage 2 completion PR. Resume only when authorized. Checkpoints C/D/E and final PR remain outstanding.
+
+## D014 — 2026-09-08 — Historical selection before 2026 inputs
+
+Adopt the 25-step sequence in docs/future-work.md. Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization. This supersedes prior broad Stage 2 sequencing and D013's pause: 2008 is merged through PR #2; authorize only 2011 on stage/02b-historical-2011, followed by an unmerged PR. No data or fitted model changes in this checkpoint.
+
+## D015 — 2026-09-08 — Preserve 2011 aggregate evidence and source conventions
+
+Reuse the 2008 pipeline and append 2011 aggregate controls without changing 2008 output schemas/bytes. Preserve exact published aggregate split/non-split summary counts separately from rounded local and aggregate matrix percentages. Validate local-to-general intervals rather than infer exact cells. The official summary's informal-party non-split value matches Party Vote Only, not Candidate Informals; retain and flag it rather than relabel raw evidence. Eight 2011 local candidate-name variants are mapped explicitly with same-electorate party/vote evidence; cross-election identity remains deferred.

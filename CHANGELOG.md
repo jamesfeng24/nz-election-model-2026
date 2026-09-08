@@ -35,3 +35,16 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Replaced stale state claims; documented actual historical output fields, source limitations, offline reproduction, decisions and precise checkpoint C recovery instructions.
 - Stage 2 is incomplete; no completion PR created. Historical PR #1 was subsequently merged by the user before Stage 2.
 - Pause-handoff validation passed: 30 frontend tests, 13 Python tests, typecheck, build, 139 source hashes and exact 2008 regeneration.
+
+## Stage 2B — sequencing checkpoint — 2026-09-08
+
+- Verified the valid 2008 merge in main and created stage/02b-historical-2011.
+- Recorded the revised 25-step sequence and froze the boundary between historical selection/weight fitting and later 2026 Opportunity/polling inputs.
+- Documentation only; no data changes. 2014 remains out of scope.
+
+## Stage 2B — 2011 complete for review
+
+- Preserved 143 official raw resources; produced 63 general electorates, 423 candidate records, 819 party-vote records and 63 split matrices. Added three aggregate split controls and exact summary counts.
+- Reused shared ingestion/parsing; retained Unicode/macrons and eight explicit local candidate-name mappings. Documented the informal-party aggregate summary convention.
+- Passed 20 Python tests, all 282 source checksums, deterministic 2011 regeneration, targeted byte-identical 2008 regression, 30 frontend tests, typecheck and production build. Zero unresolved numeric reconciliation discrepancies.
+- Stage 2A/2008 remains validly merged; 2014 and unified historical integration remain outstanding. Next: 2014 ingestion only. Current 2026 polling and Opportunity remain deferred until historical backtesting/weight freeze.

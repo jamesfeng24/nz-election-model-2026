@@ -23,3 +23,7 @@ Future work should document suitable historical holdouts, calibration and sensit
 ## Detailed intended specification
 
 Read [docs/statistical-specification.md](docs/statistical-specification.md) for the full pipeline, independent estimators, historical normalization, candidate personal-vote persistence, exclusion rules and configurable government scenarios. These are design constraints, not implemented methods or sourced observations. The source registry remains empty after the Stage 1 correction.
+
+## Revised sequencing constraint — 2026-09-08
+
+The authoritative implementation order is recorded in [docs/future-work.md](docs/future-work.md). It supersedes earlier proposed ordering without changing estimands. Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization.

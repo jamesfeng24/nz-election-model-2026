@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "year": 2011,
+  "generalElectorates": 63,
+  "supportingMaoriElectorates": 7,
+  "candidateRecords": 423,
+  "partyVoteRecords": 819,
+  "splitMatrices": 63,
+  "nationalPartyValidVotes": 2237464,
+  "nationalCandidateValidVotes": 2172434,
+  "nationalVotesCast": 2278989,
+  "labelMappings": [
+    {
+      "electorate": "Bay of Plenty",
+      "sourceLabel": "STEVENS, Sharon (Mana)",
+      "matchedLabel": "TIPENE, Tangi Sharon",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Dunedin North",
+      "sourceLabel": "TUREI, Metiria (Green Party)",
+      "matchedLabel": "STANTON TUREI, Metiria Leanne Agnes",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Hamilton East",
+      "sourceLabel": "ORGAD, Sehai (Labour Party)",
+      "matchedLabel": "SCHOENBERGER-ORGAD, Sehai",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Manukau East",
+      "sourceLabel": "TAYLOR, Asenati (New Zealand First Party)",
+      "matchedLabel": "LOLE-TAYLOR, Asenati",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Maungakiekie",
+      "sourceLabel": "HO, Jerry (New Zealand First Party)",
+      "matchedLabel": "HE, Xiao Peng",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "New Lynn",
+      "sourceLabel": "DAVIDSON, Sean (Aotearoa Legalise Cannabis Party)",
+      "matchedLabel": "DAVIDSON-NORRIS, Sean Benjamin",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Pakuranga",
+      "sourceLabel": "MULFORD, Helen Jane (New Zealand First Party)",
+      "matchedLabel": "MULFORD-TYLER, Helen Jane",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    },
+    {
+      "electorate": "Wellington Central",
+      "sourceLabel": "KARENA, Puhi (Independent)",
+      "matchedLabel": "FUIMAONO-KARENA, Geoffrey Wayne Puhi",
+      "reason": "same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity"
+    }
+  ],
+  "discrepancies": [],
+  "checks": [
+    "nonnegative integer counts",
+    "vote/share normalization",
+    "official winners and majorities",
+    "turnout components and rates",
+    "electorate/general/Maori/national totals",
+    "national party and candidate-party aggregates",
+    "split row counts and rounding-bounded percentages/columns",
+    "2011 unique electorate/candidate IDs and complete split coverage",
+    "2011 aggregate split matrices and exact summary controls",
+    "2011 local-to-general aggregate split intervals"
+  ],
+  "limitations": [
+    "Split cells publish rounded percentages only; exact counts remain null.",
+    "Candidate person IDs are not asserted; full names, parties and comparison keys support later reviewed linking.",
+    "Electorate names retain CSV spelling; missing macrons in a source are not invented.",
+    "Māori candidate files are supporting inputs for national reconciliation; primary outputs cover general electorates."
+  ],
+  "sourcePeculiarities": [
+    "Informal Party Votes non-split count is 424 and matches the Party Vote Only column, not Candidate Informals. Retained as published; exclude this category from party-behaviour estimates. Exact aggregate summary counts do not provide exact electorate joint cells."
+  ]
+}
