@@ -8,8 +8,8 @@ Build a transparent, reproducible static 2026 New Zealand election website. Reac
 
 - Stage 1: application architecture and permanent handoff complete and merged.
 - Stage 2A / 2008: complete and merged through PR #2; valid main merge `f819f48fe4030a7fbe5a9aa22f7826a745f7e509`. Never revert this merge.
-- Stage 2B / 2011: ingestion and validation complete on `stage/02b-historical-2011`, ready for its unmerged PR into main. No automatic merge.
-- Stage 2C / 2014: not started.
+- Stage 2B / 2011: complete and merged via PR #3 at main 2448ec6.
+- Stage 2C / 2014: in progress on stage/02c-historical-2014; raw acquisition checkpoint underway.
 - 2008–2014 integration/unified validation: still outstanding after 2014. The broader historical stage is not complete.
 
 ## Permanent sequence and modelling constraint
@@ -69,3 +69,7 @@ All fitted components remain outstanding. Follow the sequence in docs/future-wor
 **2014 ingestion only**
 
 When explicitly authorized, fetch current main, inspect status and confirm the 2011 PR's review/merge status before selecting the next branch. Read AGENTS.md and this file plus relevant code/documentation. Reuse the shared pipeline, preserve source differences, push checkpoints and stop after an unmerged PR. Do not infer permission for integration or statistical modelling.
+
+## Active 2014 checkpoint
+
+Existing branch fast-forwarded to the confirmed 2011 merge. 2014 has 64 general plus seven Māori electorates. Initial controls/candidate/split files parse with the shared reader. Split destinations group Internet Party and MANA Movement as Internet MANA; actual candidate affiliations are retained. Complete acquisition, adapt source-specific joins/controls, validate and push data immediately; then final docs/checks and unmerged PR. Do not begin integration. Next after this task: **2008–2014 integration and cross-year validation only**.

@@ -57,6 +57,17 @@ def key(value: str) -> str:
     return re.sub(r'[^a-z0-9]', '', ''.join(c for c in unicodedata.normalize('NFKD', value).casefold() if not unicodedata.combining(c)))
 
 
+def split_party_key(party_key: str, year: int) -> str:
+    """Official 2014 split reports group these candidatures under Internet MANA.
+
+    Candidate records and national candidate totals retain the actual affiliations.
+    This is a publication grouping, not cross-election party continuity.
+    """
+    if year == 2014 and party_key in ('internetparty', 'manamovement'):
+        return 'internetmana'
+    return party_key
+
+
 def require(condition: bool, message: str):
     if not condition:
         raise ValueError(message)
@@ -236,7 +247,7 @@ def build_year(root, year: int) -> dict:
                     match = re.fullmatch(r'(.*) \((.*)\)', label)
                     require(match is not None, 'Unrecognized candidate label: ' + label)
                     short_name, party = match.groups()
-                    matches = [c for c in candidate['candidates'] if key(c['name'].split(',')[0]) == key(short_name.split(',')[0]) and c['partyKey'] == key(party)]
+                    matches = [c for c in candidate['candidates'] if key(c['name'].split(',')[0]) == key(short_name.split(',')[0]) and split_party_key(c['partyKey'], year) == key(party)]
                     aliases = {
                         (2011, 'Bay of Plenty', 'STEVENS, Sharon (Mana)'): 'TIPENE, Tangi Sharon',
                         (2011, 'Dunedin North', 'TUREI, Metiria (Green Party)'): 'STANTON TUREI, Metiria Leanne Agnes',
@@ -256,7 +267,7 @@ def build_year(root, year: int) -> dict:
                     }
                     alias = aliases.get((year, name, label))
                     if not matches and alias:
-                        matches = [c for c in candidate['candidates'] if c['name'] == alias and c['partyKey'] == key(party)]
+                        matches = [c for c in candidate['candidates'] if c['name'] == alias and split_party_key(c['partyKey'], year) == key(party)]
                         mapping = {'electorate': name, 'sourceLabel': label, 'matchedLabel': alias, 'reason': 'same-electorate source name variant; unique party candidate and overall vote share reconcile; not a cross-election person identity'}
                         if mapping not in mappings:
                             mappings.append(mapping)

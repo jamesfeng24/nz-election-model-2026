@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 1,
+  "year": 2014,
+  "discoveredFrom": [
+    "https://www.electionresults.govt.nz/electionresults_2014/e9/html/statistics.html",
+    "https://www.electionresults.govt.nz/electionresults_2014/e9/html/e9_part8_cand_index.html",
+    "https://www.electionresults.govt.nz/electionresults_2014/splitvote_index.html"
+  ],
+  "resources": [
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part1.csv",
+      "role": "summary/control",
+      "downloadFilename": "e9_part1 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part9_1.csv",
+      "role": "summary/control",
+      "downloadFilename": "e9_part9_1 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part9_2.csv",
+      "role": "summary/control",
+      "downloadFilename": "e9_part9_2 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part4.csv",
+      "role": "summary/control",
+      "downloadFilename": "e9_part4 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part5.csv",
+      "role": "summary/control",
+      "downloadFilename": "e9_part5 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part6.csv",
+      "role": "summary/control",
+      "downloadFilename": "e9_part6 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_1.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_1 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_2.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_2 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_3.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_3 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_4.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_4 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_5.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_5 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_6.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_6 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_7.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_7 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_8.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_8 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_9.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_9 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_10.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_10 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_11.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_11 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_12.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_12 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_13.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_13 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_14.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_14 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_15.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_15 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_16.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_16 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_17.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_17 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_18.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_18 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_19.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_19 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_20.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_20 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_21.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_21 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_22.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_22 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_23.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_23 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_24.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_24 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_25.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_25 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_26.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_26 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_27.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_27 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_28.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_28 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_29.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_29 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_30.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_30 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_31.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_31 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_32.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_32 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_33.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_33 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_34.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_34 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_35.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_35 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_36.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_36 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_37.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_37 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_38.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_38 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_39.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_39 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_40.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_40 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_41.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_41 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_42.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_42 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_43.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_43 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_44.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_44 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_45.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_45 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_46.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_46 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_47.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_47 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_48.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_48 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_49.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_49 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_50.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_50 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_51.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_51 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_52.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_52 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_53.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_53 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_54.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_54 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_55.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_55 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_56.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_56 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_57.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_57 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_58.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_58 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_59.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_59 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_60.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_60 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_61.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_61 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_62.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_62 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_63.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_63 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_64.csv",
+      "role": "general candidate",
+      "downloadFilename": "e9_part8_cand_64 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_65.csv",
+      "role": "supporting Māori candidate",
+      "downloadFilename": "e9_part8_cand_65 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_66.csv",
+      "role": "supporting Māori candidate",
+      "downloadFilename": "e9_part8_cand_66 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_67.csv",
+      "role": "supporting Māori candidate",
+      "downloadFilename": "e9_part8_cand_67 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_68.csv",
+      "role": "supporting Māori candidate",
+      "downloadFilename": "e9_part8_cand_68 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_69.csv",
+      "role": "supporting Māori candidate",
+      "downloadFilename": "e9_part8_cand_69 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_70.csv",
+      "role": "supporting Māori candidate",
+      "downloadFilename": "e9_part8_cand_70 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/e9/csv/e9_part8_cand_71.csv",
+      "role": "supporting Māori candidate",
+      "downloadFilename": "e9_part8_cand_71.csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-1.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-1 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-2.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-2 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-3.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-3 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-4.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-4 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-5.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-5 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-6.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-6 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-7.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-7 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-8.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-8 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-9.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-9 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-10.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-10 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-11.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-11 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-12.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-12 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-13.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-13 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-14.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-14 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-15.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-15 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-16.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-16 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-17.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-17 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-18.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-18 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-19.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-19 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-20.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-20 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-21.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-21 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-22.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-22 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-23.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-23 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-24.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-24 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-25.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-25 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-26.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-26 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-27.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-27 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-28.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-28 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-29.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-29 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-30.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-30 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-31.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-31 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-32.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-32 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-33.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-33 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-34.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-34 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-35.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-35 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-36.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-36 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-37.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-37 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-38.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-38 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-39.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-39 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-40.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-40 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-41.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-41 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-42.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-42 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-43.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-43 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-44.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-44 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-45.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-45 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-46.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-46 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-47.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-47 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-48.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-48 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-49.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-49 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-50.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-50 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-51.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-51 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-52.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-52 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-53.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-53 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-54.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-54 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-55.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-55 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-56.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-56 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-57.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-57 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-58.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-58 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-59.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-59 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-60.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-60 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-61.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-61 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-62.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-62 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-63.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-63 (2).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-64.csv",
+      "role": "general split matrix",
+      "downloadFilename": "elect-splitvote-64.csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-summary.csv",
+      "role": "split aggregate control",
+      "downloadFilename": "elect-splitvote-summary (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-Overall.csv",
+      "role": "split aggregate control",
+      "downloadFilename": "elect-splitvote-Overall (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-General.csv",
+      "role": "split aggregate control",
+      "downloadFilename": "elect-splitvote-General (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/elect-splitvote-Maori.csv",
+      "role": "split aggregate control",
+      "downloadFilename": "elect-splitvote-Maori (1).csv"
+    }
+  ]
+}
