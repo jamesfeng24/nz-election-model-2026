@@ -1,6 +1,6 @@
 # Data sources and provenance standard
 
-**2008 is complete and merged; 2011 ingestion is complete on its review branch; 2014 is not acquired.** `data/sources.json` contains 282 committed official CSV resources (139 for 2008, 143 for 2011). Software documentation links are not election datasets.
+**2008 and 2011 are complete and merged; 2014 ingestion is complete on its review branch.** `data/sources.json` contains 427 committed official CSV resources (139 for 2008, 143 for 2011, 145 for 2014). Software documentation links are not election datasets.
 
 Every future external dataset must have a SourceRecord validated by `src/types/contracts.ts`, recording:
 
@@ -45,3 +45,11 @@ New Zealand Electoral Commission, 26 November 2011 general election. [E9 statist
 Coverage: six E9 control tables (parts 1/4/5/6/9_1/9_2), 70 candidate result tables, 63 general split matrices, General/Maori/Overall aggregate split matrices and the split summary. Seven Māori candidate files support national controls. Reuse terms remain the Electoral Commission archive's Crown copyright/source-acknowledgement terms already recorded above.
 
 2011 differs from inspected 2008 CSVs in UTF-8 BOM/macron spelling and eight local candidate name aliases. Electorate split cells still contain rounded percentages only. Aggregate summary split/non-split counts are exact and preserved separately. The informal-party summary row labels 424 votes non-split, matching Party Vote Only rather than Candidate Informals in the overall matrix; retained as published and excluded from substantive party-behaviour interpretation. No unexplained reconciliation discrepancies remain. No 2014 sources acquired.
+
+## 2014 coverage — Stage 2C
+
+New Zealand Electoral Commission, 20 September 2014 general election. Source indexes: [statistics](https://www.electionresults.govt.nz/electionresults_2014/e9/html/statistics.html), [candidate files](https://www.electionresults.govt.nz/electionresults_2014/e9/html/e9_part8_cand_index.html), [split reports](https://www.electionresults.govt.nz/electionresults_2014/splitvote_index.html). Each of the 145 resources has its exact URL, retrieval timestamp, raw path, checksum, processor and limitations in data/sources.json. The explicit plan is data/source-plans/historical-2014.json. All originals are committed unchanged under data/raw/elections/2014/. Existing Crown copyright/source-acknowledgement terms apply.
+
+Coverage: six E9 controls, 71 candidate files (64 general and seven supporting Māori), 64 general split files, three aggregate split matrices and one exact aggregate split summary. Browser file timestamps record acquisition; recovery verified and pushed 100 existing resources before downloading only 45 missing matrices.
+
+Source limitations: rounded joint percentages only; candidate identities are election-local. Internet Party/MANA Movement remain original candidate affiliations, while split tables group them as Internet MANA. Eight explicit source-name variants are retained, including TOMLINSON/TOMLINSOM. The summary's informal-party non-split count of 337 corresponds to Party Vote Only in the overall matrix, not Candidate Informals; retained as published, with no substantive party-behaviour interpretation. All numeric reconciliations pass. No integration or later-year acquisition was performed.

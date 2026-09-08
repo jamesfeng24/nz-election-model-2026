@@ -48,3 +48,11 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Reused shared ingestion/parsing; retained Unicode/macrons and eight explicit local candidate-name mappings. Documented the informal-party aggregate summary convention.
 - Passed 20 Python tests, all 282 source checksums, deterministic 2011 regeneration, targeted byte-identical 2008 regression, 30 frontend tests, typecheck and production build. Zero unresolved numeric reconciliation discrepancies.
 - Stage 2A/2008 remains validly merged; 2014 and unified historical integration remain outstanding. Next: 2014 ingestion only. Current 2026 polling and Opportunity remain deferred until historical backtesting/weight freeze.
+
+## Stage 2C — 2014 complete for review
+
+- Recovered and checksum-verified 100 existing sources, pushed before further acquisition; acquired only missing split matrices 20–64 and pushed all 145 raw files.
+- Processed 64 general electorates, 451 candidate records, 960 party-vote records, 64 local split matrices, three aggregate matrices and exact summary controls.
+- Retained candidate affiliations and eight source-name variants; added explicit 2014-only Internet MANA split grouping. Documented the 337 informal-party summary convention.
+- Reused/extracted aggregate validation, retaining the 2011 API and byte-identical 2008/2011 outputs. Twelve focused Python tests, 2014 checksums/regeneration, 30 frontend tests, typecheck/build and whitespace checks passed. No unresolved numeric discrepancies.
+- Updated handoff for the next task: 2008–2014 integration and cross-year validation only. No integration, 2017 or statistical/2026 modelling performed.
