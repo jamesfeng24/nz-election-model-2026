@@ -77,3 +77,7 @@ Existing branch fast-forwarded to the confirmed 2011 merge. 2014 has 64 general 
 ## 2014 recovery and complete acquisition
 
 Recovered and checksum-verified 100 files, including all 71 candidates and split matrices 1–19; pushed as 73f68dc before further downloads. Acquired only missing split matrices 20–64. All 145 planned 2014 raw resources are now preserved: 71 candidate files, 64 local split files, six E9 controls and four split aggregate/summary controls. Processing remains in progress; no claim of completed validation yet. Next within this task: resolve documented source-name joins, reuse aggregate validation with 2014 grouping, push processed outputs, then final tests/docs and unmerged PR.
+
+## 2014 processed checkpoint
+
+Acquisition pushed as 08940e0. All 64 general electorates process successfully: 451 candidate records, 960 party-vote records, 64 local split matrices and aggregate controls. National valid party votes 2,405,622; valid candidate votes 2,347,607; votes cast 2,446,297. No unresolved numeric discrepancies. Eight local source-name variants preserved/mapped. Internet Party/MANA Movement candidate affiliations remain unchanged; only split-report joins use Internet MANA. Shared aggregate validation was extracted for reuse; targeted 2008/2011 regeneration confirms their committed outputs remain byte-identical. Final focused tests and documentation remain before PR.
