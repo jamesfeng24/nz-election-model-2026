@@ -56,3 +56,11 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Retained candidate affiliations and eight source-name variants; added explicit 2014-only Internet MANA split grouping. Documented the 337 informal-party summary convention.
 - Reused/extracted aggregate validation, retaining the 2011 API and byte-identical 2008/2011 outputs. Twelve focused Python tests, 2014 checksums/regeneration, 30 frontend tests, typecheck/build and whitespace checks passed. No unresolved numeric discrepancies.
 - Updated handoff for the next task: 2008–2014 integration and cross-year validation only. No integration, 2017 or statistical/2026 modelling performed.
+
+## Unreleased — Stage 2D historical integration — 2026-09-08
+
+- Confirmed 2008, 2011 and 2014 ingestion merged into main (latest merge 7e9dd53).
+- Added six deterministic panel files covering 190 general electorate-years, 2,976 party records, 1,373 candidate records, 190 local split matrices and three election-control records.
+- Preserved source labels, election-local identities, name mappings, rounded split percentages and exact aggregate controls. Added separately documented canonical party aliases; preserved 2014 candidate affiliations.
+- Added focused cross-year mutation/lossless-projection tests and offline raw-to-panel byte verification in CI. All 31 Python tests and required frontend checks pass.
+- All nine prior per-year outputs, 427 raw sources and source registry are unchanged; no new data acquired. Next authorized task should be 2017 historical election ingestion only.
