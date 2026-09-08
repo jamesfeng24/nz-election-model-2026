@@ -35,3 +35,9 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Replaced stale state claims; documented actual historical output fields, source limitations, offline reproduction, decisions and precise checkpoint C recovery instructions.
 - Stage 2 is incomplete; no completion PR created. Historical PR #1 was subsequently merged by the user before Stage 2.
 - Pause-handoff validation passed: 30 frontend tests, 13 Python tests, typecheck, build, 139 source hashes and exact 2008 regeneration.
+
+## Stage 2B — sequencing checkpoint — 2026-09-08
+
+- Verified the valid 2008 merge in main and created stage/02b-historical-2011.
+- Recorded the revised 25-step sequence and froze the boundary between historical selection/weight fitting and later 2026 Opportunity/polling inputs.
+- Documentation only; no data changes. 2014 remains out of scope.

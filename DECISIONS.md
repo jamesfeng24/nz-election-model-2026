@@ -57,3 +57,7 @@ Use election-local candidate occurrence IDs; leave personId null. Preserve sourc
 ## D013 — 2026-09-08 — Pause after saved 2008 checkpoint
 
 User requested a stop for usage conservation after work already completed at B. Push B and a separate current-state documentation handoff; do not begin 2011/2014 or open a Stage 2 completion PR. Resume only when authorized. Checkpoints C/D/E and final PR remain outstanding.
+
+## D014 — 2026-09-08 — Historical selection before 2026 inputs
+
+Adopt the 25-step sequence in docs/future-work.md. Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization. This supersedes prior broad Stage 2 sequencing and D013's pause: 2008 is merged through PR #2; authorize only 2011 on stage/02b-historical-2011, followed by an unmerged PR. No data or fitted model changes in this checkpoint.

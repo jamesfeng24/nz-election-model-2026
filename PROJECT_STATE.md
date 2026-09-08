@@ -6,7 +6,7 @@ Updated 2026-09-08 (Australia/Sydney). GitHub is canonical: https://github.com/j
 
 Build a transparent, reproducible static website modelling the 2026 New Zealand election. React/TypeScript/Vite/Vitest; offline Python preparation; no backend/database. Read AGENTS.md, DECISIONS.md, METHODOLOGY.md, DATA_SOURCES.md, docs/statistical-specification.md, docs/data-dictionary.md and docs/reproducibility.md before major work.
 
-**Stage 2 is paused at the user's request after checkpoint B. It is not complete. Do not start 2011, 2014 or Stage 3 until the user resumes work.** No Stage 2 completion PR has been created. Main is unchanged by this stage.
+**Stage 2A / 2008 is complete and merged via PR #2 at main f819f48fe4030a7fbe5a9aa22f7826a745f7e509. Stage 2B / 2011 is now authorized and in progress on stage/02b-historical-2011. Stage 2C / 2014 is not started.** Broader historical integration remains outstanding. Open an unmerged PR for 2011 only; do not continue to 2014.
 
 ## Branch and completed checkpoints
 
@@ -59,9 +59,11 @@ At B, 13 Python tests passed and byte-for-byte regeneration passed. The final ha
 Completed: none. Ingestion and validation are infrastructure, not a statistical model.
 Outstanding: national polling; boundary reconstruction; independent split/elasticity/premium estimators; National/Labour resilience; normalization; incumbency/replacement effects; separate Opportunity behaviour; backtesting/calibration; correlated simulation; MMP/list/overhang allocation and explanations. All remain out of scope here.
 
-## Exact recommended next task when authorized
+## Current sequence and next task
 
-Resume checkpoint C on the existing branch. First inspect status/staged/untracked files and unpushed commits, fetch origin, preserve any new local work, compare main/stage ancestry, and read the handoff files. Run the committed 2008 regeneration check. Inspect authoritative 2011 index links and formats, create an explicit source plan, acquire unchanged raw files with provenance, adapt transformations only on source evidence, normalize all general electorates and reconcile national totals using Māori supporting inputs. Document discrepancies; commit and push 2011 immediately. Repeat for 2014 as D, then complete unified tests/contracts/docs as E, run all checks, push, create the unmerged PR and stop. Stage 3 must not assume a complete three-election dataset until Stage 2 is finished and reviewed.
+The revised 25-step project sequence is authoritative in docs/future-work.md. Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization.
+
+Finish only 2011, pushing sequencing, ingestion, processed-data and documentation checkpoints separately. After 2011 the exact next task is **2014 ingestion only**. The older checkpoint/branch notes above are historical; the active branch is stage/02b-historical-2011.
 
 ## Final pause-handoff checks — 2026-09-08
 
