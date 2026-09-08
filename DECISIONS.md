@@ -65,3 +65,7 @@ Adopt the 25-step sequence in docs/future-work.md. Current 2026 polling and Oppo
 ## D015 — 2026-09-08 — Preserve 2011 aggregate evidence and source conventions
 
 Reuse the 2008 pipeline and append 2011 aggregate controls without changing 2008 output schemas/bytes. Preserve exact published aggregate split/non-split summary counts separately from rounded local and aggregate matrix percentages. Validate local-to-general intervals rather than infer exact cells. The official summary's informal-party non-split value matches Party Vote Only, not Candidate Informals; retain and flag it rather than relabel raw evidence. Eight 2011 local candidate-name variants are mapped explicitly with same-electorate party/vote evidence; cross-election identity remains deferred.
+
+## D016 — 2026-09-08 — 2014 source grouping without affiliation replacement
+
+The official 2014 split reports group Internet Party and MANA Movement candidatures under Internet MANA, while candidate-result tables and national candidate controls distinguish them. Preserve those original affiliations and use an explicit 2014-only mapping for split joins and aggregate checks; expose the grouping in processed metadata. Reuse the 2011 control algorithm with publication-specific electorate counts and grouping, retaining byte-identical prior-year exports. This is source-format reconciliation, not political continuity or modelling.

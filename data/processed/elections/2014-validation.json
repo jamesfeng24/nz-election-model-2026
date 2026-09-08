@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "year": 2014,
+  "generalElectorates": 64,
+  "supportingMaoriElectorates": 7,
+  "candidateRecords": 451,
+  "partyVoteRecords": 960,
+  "splitMatrices": 64,
+  "nationalPartyValidVotes": 2405622,
+  "nationalCandidateValidVotes": 2347607,
+  "nationalVotesCast": 2446297,
+  "labelMappings": [
+    {
+      "electorate": "Bay of Plenty",
+      "sourceLabel": "LIVINGSTON, Tracy (Democrats for Social Credit)",
+      "matchedLabel": "LIVINGSTON-POOLEY, Tracy",
+      "reason": "explicit local source-name variant; party grouping and unique overall vote share reconcile; not a cross-election identity"
+    },
+    {
+      "electorate": "Dunedin North",
+      "sourceLabel": "TUREI, Metiria (Green Party)",
+      "matchedLabel": "STANTON TUREI, Metiria Leanne Agnes",
+      "reason": "explicit local source-name variant; party grouping and unique overall vote share reconcile; not a cross-election identity"
+    },
+    {
+      "electorate": "Epsom",
+      "sourceLabel": "RANKIN, Christine (Conservative)",
+      "matchedLabel": "RANKIN-MacINTYRE, Christine Kathryn",
+      "reason": "explicit local source-name variant; party grouping and unique overall vote share reconcile; not a cross-election identity"
+    },
+    {
+      "electorate": "Hamilton West",
+      "sourceLabel": "MUTI, Sara (ACT New Zealand)",
+      "matchedLabel": "RUSSELL-MUTI, Sara Jane",
+      "reason": "explicit local source-name variant; party grouping and unique overall vote share reconcile; not a cross-election identity"
+    },
+    {
+      "electorate": "Kaikōura",
+      "sourceLabel": "TOMLINSON, Glen (Ban1080)",
+      "matchedLabel": "TOMLINSOM, Glen James",
+      "reason": "explicit local source-name variant; party grouping and unique overall vote share reconcile; not a cross-election identity"
+    },
+    {
+      "electorate": "Māngere",
+      "sourceLabel": "TURNER, Misa Fia (National Party)",
+      "matchedLabel": "TURNER-TUPOU, Fia Taemanu",
+      "reason": "explicit local source-name variant; party grouping and unique overall vote share reconcile; not a cross-election identity"
+    },
+    {
+      "electorate": "Tauranga",
+      "sourceLabel": "OHIA-GATE, Verna (Māori Party)",
+      "matchedLabel": "GATE, Verna Te Roha",
+      "reason": "explicit local source-name variant; party grouping and unique overall vote share reconcile; not a cross-election identity"
+    },
+    {
+      "electorate": "Wellington Central",
+      "sourceLabel": "KARENA PUHI, Huimaono Geoff (Independent)",
+      "matchedLabel": "KARENA WHUIMAONO, Geoffrey",
+      "reason": "explicit local source-name variant; party grouping and unique overall vote share reconcile; not a cross-election identity"
+    }
+  ],
+  "discrepancies": [],
+  "checks": [
+    "nonnegative integer counts",
+    "vote/share normalization",
+    "official winners and majorities",
+    "turnout components and rates",
+    "electorate/general/Maori/national totals",
+    "national party and candidate-party aggregates",
+    "split row counts and rounding-bounded percentages/columns",
+    "2014 unique electorate/candidate IDs and complete split coverage",
+    "2014 aggregate split matrices and exact summary controls",
+    "2014 local-to-general aggregate split intervals"
+  ],
+  "limitations": [
+    "Split cells publish rounded percentages only; exact counts remain null.",
+    "Candidate person IDs are not asserted; full names, parties and comparison keys support later reviewed linking.",
+    "Electorate names retain CSV spelling; missing macrons in a source are not invented.",
+    "Māori candidate files are supporting inputs for national reconciliation; primary outputs cover general electorates."
+  ],
+  "sourcePeculiarities": [
+    "Informal Party Votes non-split count is 337 and matches the Party Vote Only column, not Candidate Informals. Retained as published; exclude this category from party-behaviour estimates. Exact aggregate summary counts do not provide exact electorate joint cells."
+  ],
+  "splitPartyGrouping": {
+    "sourceCandidateParties": [
+      "Internet Party",
+      "MANA Movement"
+    ],
+    "splitReportParty": "Internet MANA",
+    "scope": "2014 split reports only; original candidate affiliations and national candidate-party totals unchanged"
+  }
+}

@@ -4,68 +4,67 @@ Updated 2026-09-08. GitHub is canonical: https://github.com/jamesfeng24/nz-elect
 
 ## Objective and current stage
 
-Build a transparent, reproducible static 2026 New Zealand election website. React/TypeScript/Vite/Vitest; offline Python data preparation; no backend/database. Preserve raw evidence and uncertainty. No statistical models have been implemented.
+Build a transparent, reproducible static 2026 New Zealand election website. React/TypeScript/Vite/Vitest; offline Python preparation; no backend/database. Preserve raw evidence and uncertainty. No statistical model has been implemented.
 
-- Stage 1: application architecture and permanent handoff complete and merged.
-- Stage 2A / 2008: complete and merged through PR #2; valid main merge `f819f48fe4030a7fbe5a9aa22f7826a745f7e509`. Never revert this merge.
-- Stage 2B / 2011: ingestion and validation complete on `stage/02b-historical-2011`, ready for its unmerged PR into main. No automatic merge.
-- Stage 2C / 2014: not started.
-- 2008–2014 integration/unified validation: still outstanding after 2014. The broader historical stage is not complete.
+- 2008 ingestion: complete and merged through PR #2 (main merge f819f48).
+- 2011 ingestion: complete and merged through PR #3 (main merge 2448ec6).
+- 2014 ingestion: complete on `stage/02c-historical-2014`, ready for an unmerged PR into main.
+- 2008–2014 integration/cross-year validation: not started in this task.
+- 2017: not started.
+- 2026 polling and Opportunity modelling remain intentionally deferred until historical model backtesting and ensemble-weight freeze. They must not influence historical model selection or weights. The established sequence remains in docs/future-work.md.
 
-## Permanent sequence and modelling constraint
+## Branch, recovery and checkpoints
 
-The revised 25-step sequence is in docs/future-work.md. Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Both are intentionally deferred until historical backtesting and ensemble-weight freeze. This task does not authorize any later work.
+Current branch: stage/02c-historical-2014, based on confirmed main merge 2448ec6. Initial branch creation happened before the user merged PR #3; the clean branch was then fast-forwarded to that merge. Main and prior-year raw/processed data were not altered.
 
-## Branch and checkpoints
+- e061f30: first 27 official files and explicit 2014 split-party grouping pushed.
+- 73f68dc: recovered 100 checksum-valid sources, including all 71 candidate files and split matrices 1–19; committed/pushed before further acquisition.
+- 08940e0: all 145 planned raw files acquired and pushed. Only missing matrices 20–64 were downloaded during recovery.
+- 8b2a257: complete processed outputs and core/aggregate reconciliation pushed immediately.
+- Final tests/documentation handoff follows these commits; branch HEAD is its authoritative SHA. Create the 2014 PR only after push, leave unmerged and stop. If interrupted during publication, look up the PR by head branch before creating one.
 
-The branch was created from current main after a successful fetch and clean working-tree inspection. Local Git fetch/push now works; no separate credential change is needed. Main was not modified by this task.
+Local Git authentication now works. Preserve any new local changes before future fetch/synchronization; never reset/recreate a branch to discard interrupted work. The earlier interrupted 2008 session recovered one original Auckland Central split CSV, now safely merged.
 
-- `720ceb6`: sequencing documentation pushed before ingestion.
-- `a1bda19`: initial 2011 acquisition/shared importer checkpoint pushed.
-- `418b30c`: complete raw acquisition, primary outputs and core reconciliation pushed immediately.
-- Final handoff follows these checkpoints; use branch HEAD for its SHA. PR is to be created after this commit is pushed; locate it by head branch in GitHub if resuming during publication. Do not create a duplicate or merge it.
+## Data and important files
 
-## Available data and important files
+- data/sources.json: 427 registered resources, comprising 139 (2008), 143 (2011), 145 (2014). Exact URLs, retrieval times, checksums and processing paths are recorded per file.
+- data/source-plans/historical-2014.json: exact acquisition inventory and observed browser download filenames; authoritative index URLs included.
+- data/raw/elections/2014/: six E9 controls (1/4/5/6/9_1/9_2), 71 candidate files, 64 general-electorate split matrices, three aggregate split matrices and one exact aggregate summary. All original bytes unchanged.
+- data/processed/elections/2014.json: 64 general electorates, 451 candidate records, 960 party-vote records, denominators, winners/margins, turnout, national/general/Māori controls and source IDs.
+- data/processed/split-votes/2014.json: all 64 local matrices, aggregate percentage matrices, exact published split/non-split summary counts and explicit partyGrouping metadata.
+- data/processed/elections/2014-validation.json: coverage, reconciliations, eight local name mappings, source peculiarities and zero unresolved numeric discrepancies.
+- scripts/ingest/historical_sources.py and import_historical_downloads.py: existing immutable import/checksum-pinned fetch system, reused unchanged during this 2014 task.
+- scripts/transform/historical.py: shared pipeline, explicit 2014 split-party grouping and local name aliases.
+- scripts/transform/historical_split_controls.py: extracted existing 2011 aggregate validator, parameterized for the 2014 electorate count and source grouping; no cross-year panel/integration performed.
+- scripts/transform/historical_2011.py: compatibility wrapper retaining the original 2011 entry point.
+- scripts/tests/test_historical_2014.py: deterministic exports, 2014 inventory/checksums, source affiliations, Unicode/aliases, missingness and mutation rejection.
+- Existing 2008/2011 artifacts remain unchanged. The website does not yet consume historical exports; model-facing TypeScript contracts remain provisional.
 
-- `data/sources.json`: 282 registered raw resources (139 for 2008; 143 for 2011), exact URLs, acquisition timestamps, SHA-256 and processor paths.
-- `data/raw/elections/2011/`: six E9 summary/control CSVs, 70 candidate CSVs, 63 general-electorate split CSVs, three aggregate split matrices and one exact split summary. Originals are unchanged.
-- `data/source-plans/historical-2011.json`: explicit URL inventory and observed browser download filenames; no dependency on chat history.
-- `data/processed/elections/2011.json`: 63 general electorates, 423 candidate records, 819 party-vote records, winners, margins, valid denominators, turnout, national/general/Māori controls and source IDs.
-- `data/processed/split-votes/2011.json`: 63 local matrices, three aggregate percentage matrices and exact published split/non-split summary counts.
-- `data/processed/elections/2011-validation.json`: checks, counts, eight explicit local name mappings, source peculiarity and zero unresolved reconciliation discrepancies.
-- `scripts/ingest/historical_sources.py` and `import_historical_downloads.py`: shared immutable import/reacquisition; year-correct provenance organisation and optional explicit download filenames.
-- `scripts/transform/historical.py`: shared deterministic processor, 2011 local name mappings, optional 2011 control extension.
-- `scripts/transform/historical_2011.py`: 2011-specific coverage and aggregate controls, not a separate ingestion pipeline.
-- `scripts/tests/test_historical_2011.py`: deterministic export, Unicode/missingness, exact aggregate summary and semantic mutation tests.
-- Existing 2008 raw/processed files are unchanged. Existing app/model interfaces remain in src; historical data is not yet loaded into the UI.
+## Final local checks
 
-## Final validation status
+PASS: 12 focused Python tests (shared infrastructure plus 2014), all 145 official 2014 input checksums, deterministic 2014 regeneration, targeted 2008 and 2011 byte-for-byte regeneration because shared Python code changed, 30 frontend tests, TypeScript checking and production build (required by AGENTS.md), and Git whitespace checks. No frontend/shared TypeScript changes. No broad prior-year re-audit. Remote CI results are separate from local validation.
 
-PASS locally: 20 Python tests; 282 source-file checksums; deterministic 2011 output regeneration; targeted byte-for-byte 2008 regeneration because shared Python code changed; 30 frontend tests, TypeScript checking and production build as required by AGENTS.md; git diff whitespace check. No frontend or shared TypeScript files changed. Remote CI status is separate from these local results.
+2014 validates expected and unique electorate/candidate coverage; nonnegative votes; party/candidate denominators and shares; official winners/margins; turnout; general/Māori/national totals and national party/candidate-party totals; all local split rows/columns within source rounding; aggregate controls; and local-to-general aggregate intervals. National valid party votes: 2,405,622; valid candidate votes: 2,347,607; votes cast: 2,446,297. All numeric checks pass with no unresolved discrepancies.
 
-2011 reconciliation passes for expected/unique electorate coverage, nonnegative counts, party/candidate denominators and normalized shares, official winners/margins, turnout components, general/Māori/national totals, national party and candidate-party totals, all local split rows/columns within published precision, aggregate split controls and local-to-general aggregate intervals. National valid party votes: 2,237,464; valid candidate votes: 2,172,434; votes cast: 2,278,989. No unexplained numeric discrepancies remain.
+## 2014 source differences and limits
 
-## Source differences and limitations
+- 64 general electorates plus seven supporting Māori electorates, versus 63+7 in 2011. Historical publication IDs are not geometry or boundary crosswalks. Do not join electorate numbers across elections.
+- Candidate source index is e9_part8_cand_index.html. UTF-8 BOMs/macrons are retained as in 2011; shared CSV structures otherwise remain compatible.
+- Internet Party and MANA Movement are separate candidate affiliations in official candidate tables. Only 2014 split reports group them as Internet MANA. The transform preserves source candidate parties and their national totals; split joins and aggregate grouping use the explicit year-scoped mapping. This is not party continuity or a behavioural assumption.
+- Eight explicit local candidate-label variants are preserved and joined using party/grouping, name evidence and independently reconciling vote share. Kaikōura has TOMLINSON versus TOMLINSOM. Wellington Central has two independent candidates; the explicit KARENA mapping is checked against the 52-vote candidate, not the other independent with 90 votes. No person identity across elections is asserted; personId remains null.
+- Local and aggregate split cells provide two-decimal percentages, not exact joint counts; count stays null and countAvailability is explicit. Exact aggregate summary split/non-split counts are preserved separately and cannot recover local exact cells.
+- The source summary labels 337 informal-party votes non-split, matching Party Vote Only rather than Candidate Informals. Preserve this published convention and exclude that category from party-behaviour estimation.
+- Split denominators include informal party votes, exclude disallowed ballots and differ from valid-vote share denominators. Supporting Māori files allow national reconciliation; primary outputs are general electorates only.
+- Browser-acquired originals are committed and regeneration is offline. Never overwrite a source merely because a later download differs; investigate versions/checksums.
+- No 2017, integration, statistical modelling, 2026 polling, Opportunity, deployment or licence-selection work was performed.
 
-- 2011 CSVs contain UTF-8 BOMs and macrons; source spelling is preserved. Original/full and split display names remain in their respective records. Eight explicit local aliases are documented; candidate occurrence IDs are reliable only within the election. personId remains null; no candidate-continuity model.
-- Electorate split cells publish two-decimal percentages only, with count:null. Three party-destination aggregate matrices likewise publish percentages. The separate summary supplies exact aggregate split/non-split counts, not exact electorate joint cells.
-- The summary's Informal Party Votes non-split count (424) corresponds to Party Vote Only in the overall table, not Candidate Informals. This source convention is retained and flagged; exclude it from party-behaviour estimates. No raw correction was made.
-- Split denominators include informal party votes, exclude disallowed ballots and differ from valid-vote share denominators. Māori candidate files support national controls; primary modelling outputs cover general electorates only.
-- 2011 needs no structural rewrite of the shared 2008 CSV reader; adaptations are provenance, explicit aliases and additional control validation. Aggregate controls were not collected for 2008 in this task; harmonizing them belongs to later integration.
-- Browser acquisition was reused from 2008 after earlier direct-download blocking. All raw files are committed, so regeneration is offline. Fetch scripts remain checksum-pinned; do not replace raw data if a remote release changes.
-- Historical JSON contracts remain separate from draft model-facing TypeScript schemas. Party keys are normalized source-name keys, not assertions of political continuity. Boundary labels identify historical publication vintage, not geometry or a crosswalk.
-- No 2014, later election, 2026 polling, Opportunity, statistical model, deployment or code-licence choice was attempted.
+## Modelling completed/outstanding
 
-## Recovery history
+Completed: none; ingestion and validation are infrastructure.
+Outstanding: all fitted historical estimators, boundary reconstruction, backtesting/weight freeze and later 2026-specific modelling, Monte Carlo/MMP and website outputs. Follow the recorded sequence only when explicitly authorized.
 
-The interrupted 2008 session yielded one recoverable Auckland Central split CSV, preserved unchanged; no partial code survived. That work is now merged. This 2011 task began from a clean checkout of that merged state and pushed its own checkpoints. Preserve any new local work before future synchronization.
+## Exact next task
 
-## Modelling components outstanding
+**2008–2014 integration and cross-year validation only.**
 
-All fitted components remain outstanding. Follow the sequence in docs/future-work.md: finish historical ingestion/integration, then boundary reconstruction, historical estimators and backtesting/weight freeze before later 2026-specific work.
-
-## Exact next recommended task
-
-**2014 ingestion only**
-
-When explicitly authorized, fetch current main, inspect status and confirm the 2011 PR's review/merge status before selecting the next branch. Read AGENTS.md and this file plus relevant code/documentation. Reuse the shared pipeline, preserve source differences, push checkpoints and stop after an unmerged PR. Do not infer permission for integration or statistical modelling.
+2008 ingestion is complete and merged; 2011 ingestion is complete and merged; 2014 ingestion is complete for review. Confirm the 2014 PR is merged before starting the next authorized branch. 2017 is not started. 2026 polling and Opportunity modelling remain intentionally deferred until historical model backtesting and ensemble-weight freeze.

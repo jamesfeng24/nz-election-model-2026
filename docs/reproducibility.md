@@ -63,7 +63,7 @@ The three committed 2008 output hashes at B are respectively:
 - split-votes/2008.json: `3a9a763ef298ce894066982752bdc60627c14dd952b6a370ad196473f90bfc7a`
 - elections/2008-validation.json: `389d131e4e5884aa9c29ce6960183dfa05b2c04129362a1dc79442c2920d5973`
 
-2011 now has a complete plan and validated inputs as documented below. 2014 remains unimplemented; accepting that CLI option is not a coverage claim. Resume instructions and mandatory per-year pushes are in PROJECT_STATE.md.
+2011 now has a complete plan and validated inputs as documented below. 2014 is now implemented as described in its section below. Resume instructions and mandatory per-year pushes are in PROJECT_STATE.md.
 
 ## Reproduce 2011 (Stage 2B)
 
@@ -85,3 +85,23 @@ The 2011 output SHA-256 hashes are:
 For missing raw files, use the established `historical_sources --year 2011 --fetch-registered` mechanism. If HTTP is blocked, browser-download exact registered URLs and use `import_historical_downloads --year 2011 --directory /path/to/downloads`. The plan's optional downloadFilename records observed collision names; adjust only acquisition metadata if a fresh browser names downloads differently. Do not accidentally import the older 2008 same-basename file. Retrieval timestamps derive from original browser file modification times and existing records remain idempotent.
 
 2011 source checksums and all semantic validations passed. Since shared Python code changed, the specific 2008 `--check` regression was run and all committed 2008 output bytes matched; no broader 2008 re-audit was performed. AGENTS.md requires frontend tests/typecheck/build, and those also passed. Local Git fetch/push worked for this task. Next task: 2014 ingestion only.
+
+## Reproduce 2014 (Stage 2C)
+
+All 145 raw sources are committed. Use the existing pinned Python 3.12.2 runtime without third-party packages:
+
+```sh
+python3 -m unittest scripts.tests.test_historical scripts.tests.test_historical_2014
+python3 -m scripts.transform.historical --year 2014 --check
+```
+
+The 2014 tests verify exactly 145 registered inputs and their checksums; the transform independently verifies every consumed input. Regeneration compares exact UTF-8 output bytes, with no timestamps in generated data. Source registry hashes identify inputs; Git revision identifies code/configuration. The shared aggregate implementation is now historical_split_controls.py, with the 2011 API preserved by a wrapper. Targeted 2008/2011 regeneration confirmed unchanged bytes after this extraction and the year-scoped grouping change.
+
+Final 2014 output SHA-256:
+- elections/2014.json: `f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c`
+- split-votes/2014.json: `0388187be992b503c861ece81f8452322b8d404fa0709360fc77c6d31101e292`
+- elections/2014-validation.json: `a70bbe76e5ffc735ca7188c31f3a84046c4d57b683e502ffdd7182a3d8792261`
+
+For missing inputs, use `python3 -m scripts.ingest.historical_sources --year 2014 --fetch-registered`. If direct access is blocked, use normal browser downloads of exact registered URLs, then `python3 -m scripts.ingest.import_historical_downloads --year 2014 --directory /path/to/downloads`. The plan records observed browser duplicate filenames; adapt acquisition metadata to actual filenames if needed, never source contents. Do not import a prior year's same-basename download. Existing source records remain immutable/idempotent.
+
+Frontend tests/typecheck/build were run because AGENTS.md requires them, not because frontend code changed. No broad 2008/2011 re-audit or cross-year integration was performed. Next task: **2008–2014 integration and cross-year validation only**.
