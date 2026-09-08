@@ -1,6 +1,6 @@
 # Data sources and provenance standard
 
-**2008 ingestion is complete at checkpoint B; 2011 and 2014 are not yet acquired.** `data/sources.json` is the version-1 registry of 139 committed official CSV resources. Software documentation links are not election datasets.
+**2008 is complete and merged; 2011 ingestion is complete on its review branch; 2014 is not acquired.** `data/sources.json` contains 282 committed official CSV resources (139 for 2008, 143 for 2011). Software documentation links are not election datasets.
 
 Every future external dataset must have a SourceRecord validated by `src/types/contracts.ts`, recording:
 
@@ -37,3 +37,11 @@ Official indexes: [E9 statistics](https://www.electionresults.govt.nz/electionre
 Normal browser downloads were used after direct HTTP requests returned 403. Import records browser-file timestamps as retrieval metadata; the recovered Auckland Central file retains its earlier timestamp. Output reproduction is offline. [Crown copyright/reuse terms](https://www.electionresults.govt.nz/about.html) permit accurate reproduction with source/copyright acknowledgement; no endorsement is implied.
 
 Limitations: rounded split percentages only; no observed joint counts. Source-specific name variants and truncated headers are recorded in the validation report. CSV spelling is preserved, including missing macrons. Māori candidate records support national totals but only general electorates are exported as primary records. Cross-election candidate identity and boundary reconstruction are deferred. Historical Stage 1/A notes above describe earlier checkpoints, not current coverage.
+
+## 2011 coverage — Stage 2B
+
+New Zealand Electoral Commission, 26 November 2011 general election. [E9 statistics](https://www.electionresults.govt.nz/electionresults_2011/e9/html/statistics.html), [candidate source index](https://www.electionresults.govt.nz/electionresults_2011/e9/html/e9_part8.html), [split-vote source index](https://www.electionresults.govt.nz/electionresults_2011/splitvote_index.html). Exact resources, retrieval timestamps, unchanged raw paths, processing script and checksums are recorded individually in `data/sources.json`; the 143-resource inventory is `data/source-plans/historical-2011.json`. Browser-acquired originals are committed under `data/raw/elections/2011/`.
+
+Coverage: six E9 control tables (parts 1/4/5/6/9_1/9_2), 70 candidate result tables, 63 general split matrices, General/Maori/Overall aggregate split matrices and the split summary. Seven Māori candidate files support national controls. Reuse terms remain the Electoral Commission archive's Crown copyright/source-acknowledgement terms already recorded above.
+
+2011 differs from inspected 2008 CSVs in UTF-8 BOM/macron spelling and eight local candidate name aliases. Electorate split cells still contain rounded percentages only. Aggregate summary split/non-split counts are exact and preserved separately. The informal-party summary row labels 424 votes non-split, matching Party Vote Only rather than Candidate Informals in the overall matrix; retained as published and excluded from substantive party-behaviour interpretation. No unexplained reconciliation discrepancies remain. No 2014 sources acquired.

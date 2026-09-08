@@ -63,4 +63,25 @@ The three committed 2008 output hashes at B are respectively:
 - split-votes/2008.json: `3a9a763ef298ce894066982752bdc60627c14dd952b6a370ad196473f90bfc7a`
 - elections/2008-validation.json: `389d131e4e5884aa9c29ce6960183dfa05b2c04129362a1dc79442c2920d5973`
 
-2011/2014 plans and inputs do not exist yet. A CLI option accepting those years is not a validated implementation. Resume instructions and mandatory per-year pushes are in PROJECT_STATE.md.
+2011 now has a complete plan and validated inputs as documented below. 2014 remains unimplemented; accepting that CLI option is not a coverage claim. Resume instructions and mandatory per-year pushes are in PROJECT_STATE.md.
+
+## Reproduce 2011 (Stage 2B)
+
+Use the same pinned runtimes and zero Python dependencies as 2008. All 143 inputs are committed; regeneration needs no network:
+
+```sh
+python3 -m unittest discover -s scripts/tests
+python3 scripts/validate/source_files.py
+python3 -m scripts.transform.historical --year 2011 --check
+```
+
+Omit `--check` only to intentionally regenerate reviewed outputs. The shared processor calls the 2011-specific control extension; configuration is the year and committed source inventory, and the Git revision identifies code. The new tests regenerate 2011 deterministically and mutate only temporary copies to check rejected bad votes, winner totals, split percentages and summary counts. No authoritative raw file is edited.
+
+The 2011 output SHA-256 hashes are:
+- elections/2011.json: `8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030`
+- split-votes/2011.json: `3e503b3757380e63d3da795ea9506c3c3ba445b89f815f18b33343207d04514c`
+- elections/2011-validation.json: `7fba25dbba5d750d0b49564f83b8ce5f95f497e2ddec1166df06169f34690ebd`
+
+For missing raw files, use the established `historical_sources --year 2011 --fetch-registered` mechanism. If HTTP is blocked, browser-download exact registered URLs and use `import_historical_downloads --year 2011 --directory /path/to/downloads`. The plan's optional downloadFilename records observed collision names; adjust only acquisition metadata if a fresh browser names downloads differently. Do not accidentally import the older 2008 same-basename file. Retrieval timestamps derive from original browser file modification times and existing records remain idempotent.
+
+2011 source checksums and all semantic validations passed. Since shared Python code changed, the specific 2008 `--check` regression was run and all committed 2008 output bytes matched; no broader 2008 re-audit was performed. AGENTS.md requires frontend tests/typecheck/build, and those also passed. Local Git fetch/push worked for this task. Next task: 2014 ingestion only.

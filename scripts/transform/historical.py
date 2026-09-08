@@ -304,8 +304,14 @@ def build_year(root, year: int) -> dict:
               'labelMappings': mappings, 'discrepancies': discrepancies,
               'checks': ['nonnegative integer counts', 'vote/share normalization', 'official winners and majorities', 'turnout components and rates', 'electorate/general/Maori/national totals', 'national party and candidate-party aggregates', 'split row counts and rounding-bounded percentages/columns'],
               'limitations': ['Split cells publish rounded percentages only; exact counts remain null.', 'Candidate person IDs are not asserted; full names, parties and comparison keys support later reviewed linking.', 'Electorate names retain CSV spelling; missing macrons in a source are not invented.', 'Māori candidate files are supporting inputs for national reconciliation; primary outputs cover general electorates.']}
+    extra_split = {}
+    if year == 2011:
+        from .historical_2011 import validate_2011
+        extra_split = validate_2011(source, all_electorates, matrices)
+        report['checks'].extend(['2011 unique electorate/candidate IDs and complete split coverage', '2011 aggregate split matrices and exact summary controls', '2011 local-to-general aggregate split intervals'])
+        report['sourcePeculiarities'] = extra_split['officialSplitSummary']['limitations']
     return {'elections': {'schemaVersion': 1, 'year': year, 'electorates': general, 'nationalControls': {'party': turnout_totals, 'candidate': cand_totals, 'parties': list(national_parties.values())}, 'sourceIds': sorted(used)},
-            'split': {'schemaVersion': 1, 'year': year, 'matrices': matrices}, 'validation': report}
+            'split': {'schemaVersion': 1, 'year': year, 'matrices': matrices, **extra_split}, 'validation': report}
 
 
 def main():
