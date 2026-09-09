@@ -2,7 +2,7 @@
 
 ## Current implementation
 
-None. Stage 1 contains only the application shell, provenance contracts and documentation. No polling aggregation, regression, electorate reconstruction, effect estimation, simulation or MMP allocation is implemented. Empty states are not forecasts.
+Historical design note: Stage 1 contained only the application shell, provenance contracts and documentation. Current state: validated 2008–2014 ingestion and integration are merged; 2017 ingestion is authorized. No polling aggregation, regression, electorate reconstruction, effect estimation, simulation or MMP allocation is implemented. Empty states are not forecasts.
 
 ## Intended scope (not yet methods)
 
@@ -22,7 +22,7 @@ Future work should document suitable historical holdouts, calibration and sensit
 
 ## Detailed intended specification
 
-Read [docs/statistical-specification.md](docs/statistical-specification.md) for the full pipeline, independent estimators, historical normalization, candidate personal-vote persistence, exclusion rules and configurable government scenarios. These are design constraints, not implemented methods or sourced observations. The source registry remains empty after the Stage 1 correction.
+Read [docs/statistical-specification.md](docs/statistical-specification.md) for the full pipeline, independent estimators, historical normalization, candidate personal-vote persistence, exclusion rules and configurable government scenarios. These are design constraints, not implemented methods or sourced observations. The source registry was empty after the Stage 1 correction; current acquired coverage is recorded in DATA_SOURCES.md and PROJECT_STATE.md.
 
 ## Revised sequencing constraint — 2026-09-08
 

@@ -64,3 +64,9 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Preserved source labels, election-local identities, name mappings, rounded split percentages and exact aggregate controls. Added separately documented canonical party aliases; preserved 2014 candidate affiliations.
 - Added focused cross-year mutation/lossless-projection tests and offline raw-to-panel byte verification in CI. All 31 Python tests and required frontend checks pass.
 - All nine prior per-year outputs, 427 raw sources and source registry are unchanged; no new data acquired. Next authorized task should be 2017 historical election ingestion only.
+
+## Unreleased — Stage 3A checkpoint A — 2026-09-09
+
+- Verified PR #5 merged at f627903 and branched stage/03a-historical-2017 from current main.
+- Scoped persistent reading/testing rules; removed obsolete Stage 2 branch instructions and repaired current-state wording while preserving historical decisions.
+- No data, parser, frontend or model changes. Documentation whitespace validation passed; ingestion checks start with code/data checkpoints.

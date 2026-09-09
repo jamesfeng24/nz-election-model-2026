@@ -1,6 +1,6 @@
 # Project state
 
-Updated 2026-09-08. GitHub is canonical: https://github.com/jamesfeng24/nz-election-model-2026.
+Updated 2026-09-09. GitHub is canonical: https://github.com/jamesfeng24/nz-election-model-2026.
 
 ## Objective and current stage
 
@@ -10,17 +10,21 @@ Completed:
 - 2008 ingestion: merged through PR #2 (main merge f819f48).
 - 2011 ingestion: merged through PR #3 (main merge 2448ec6).
 - 2014 ingestion: merged through PR #4 (main merge 7e9dd53).
-- 2008–2014 integration and cross-year validation: complete on `stage/02d-historical-2008-2014-integration`, ready for PR review into main; do not merge automatically.
+- 2008–2014 integration and cross-year validation: complete and merged through PR #5, main merge f62790363a95823e67158200acb5b864cd2f7741.
 
-2017 is not started. Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights.
+Stage 3A / 2017 ingestion only is now authorized; acquisition has not started. Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights.
 
 ## Branch and checkpoints
 
-Current branch: `stage/02d-historical-2008-2014-integration`, created from clean, fetched main at 7e9dd53 after confirming all three ingestion merges.
+Current branch: `stage/03a-historical-2017`, created from clean fetched main f62790363a95823e67158200acb5b864cd2f7741. Verified PR #5 merge and ancestry of integration head f3485e9007dff2de37567df36beda5b8db702626. Checkpoint A repairs scoped handoff rules; no data/code changes yet.
+
+Previous integration checkpoints:
 
 - 6da663a: working panel, core integration tests and six combined output files; pushed.
 - a276304: offline all-year regression command, control reconciliation and CI; pushed.
-- Final documentation checkpoint follows; branch HEAD identifies its authoritative SHA. Publish a PR into main after pushing; leave it unmerged. If interrupted during publication, find the PR by this head branch before creating another.
+- f3485e9: integration documentation; merged in PR #5.
+
+2017 checkpoint plan: A rules/state; B official index/resource plan and core immutable acquisition; C core transform/validation; D split evidence; E all Python tests, source integrity, deterministic 2017 and old-output compatibility, final handoff and unmerged PR. Push each checkpoint. Next action after A: inspect official 2017 statistics and split/voting-place indexes, preserve exact discovered URLs, inspect CSV layouts before choosing adapter architecture. No 2017 source/processed counts exist yet.
 
 Local Git authentication works. Preserve local work before future synchronization. No old ingestion work was reset, reacquired or rewritten in this task. Prior 2014 recovery history remains in PR #4 and its commits.
 
@@ -43,7 +47,7 @@ The source registry still has 427 immutable official files: 139 (2008), 143 (201
 - Existing per-year transform and source validators are unchanged. CI now also runs all-year byte comparisons and panel verification.
 - `docs/data-dictionary.md`: panel contract and safe invariants. Historical exports remain separate from provisional frontend model contracts; no frontend consumer was added.
 
-## Verification status
+## Last completed integration verification (not rerun for documentation-only A)
 
 PASS: all 31 Python tests; offline `python3 -m scripts.transform.historical_panel --check --verify-years`; regeneration of all nine per-year outputs with byte equality and consumed-source checksum validation; all 190 local split matrices and available aggregate controls through existing per-year validators; panel determinism; general/Māori/national control relationships; source-label and Unicode preservation; deliberate corrupt-panel rejection.
 
@@ -72,4 +76,4 @@ After separately authorized 2017 ingestion: 2020 ingestion; 2023 ingestion; full
 
 **2017 historical election ingestion only.**
 
-First confirm this integration PR is merged into main. Do not begin 2017, later elections or modelling without explicit authorization.
+Resume the authorized 2017 task from checkpoint A. Do not begin 2020 or modelling. After 2017 is complete, the next task is 2020 historical election ingestion only, requiring separate authorization.

@@ -1,6 +1,6 @@
 # Data sources and provenance standard
 
-**2008 and 2011 are complete and merged; 2014 ingestion is complete on its review branch.** `data/sources.json` contains 427 committed official CSV resources (139 for 2008, 143 for 2011, 145 for 2014). Software documentation links are not election datasets.
+**2008, 2011, 2014 and their integration are complete and merged. 2017 ingestion is now authorized; checkpoint A adds no sources.** `data/sources.json` contains 427 committed official CSV resources (139 for 2008, 143 for 2011, 145 for 2014). Software documentation links are not election datasets.
 
 Every future external dataset must have a SourceRecord validated by `src/types/contracts.ts`, recording:
 
