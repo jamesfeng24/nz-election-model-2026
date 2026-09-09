@@ -70,3 +70,9 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Verified PR #5 merged at f627903 and branched stage/03a-historical-2017 from current main.
 - Scoped persistent reading/testing rules; removed obsolete Stage 2 branch instructions and repaired current-state wording while preserving historical decisions.
 - No data, parser, frontend or model changes. Documentation whitespace validation passed; ingestion checks start with code/data checkpoints.
+
+## Unreleased — Stage 3A checkpoint B — 2026-09-09
+
+- Discovered 145 exact official CSV links, preserving electorate name/number associations from official indexes.
+- Extended immutable import allowlist to 2017; saved 12 initial official sources with checksums and retrieval provenance.
+- Identified modern percentage/rounding differences before parser implementation. Thirteen focused tests and source integrity pass. No prior processed outputs changed.

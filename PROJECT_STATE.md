@@ -77,3 +77,13 @@ After separately authorized 2017 ingestion: 2020 ingestion; 2023 ingestion; full
 **2017 historical election ingestion only.**
 
 Resume the authorized 2017 task from checkpoint A. Do not begin 2020 or modelling. After 2017 is complete, the next task is 2020 historical election ingestion only, requiring separate authorization.
+
+## Stage 3A checkpoint B — 2026-09-09
+
+Checkpoint A b1367db is pushed. Official index discovery produced a 145-CSV plan: six core controls, 71 candidate/voting-place files (seven supporting Māori), 64 general split matrices and four aggregate split files. Twelve originals are preserved and checksum-valid: all six controls, candidate electorate 1, local split electorate 1, and all four aggregates. Remaining: candidate files 2–71 and general split files 2–64 (133 files). No 2017 processed outputs yet.
+
+Direct curl returns 403; native Chrome downloads work to `/Users/jamesfeng/Downloads`. In-app browser clicks did not yield local files. Use exact plan URLs with normal Chrome downloads, then `python3 -m scripts.ingest.import_historical_downloads --year 2017 --directory /Users/jamesfeng/Downloads --allow-partial`. Import preserves originals/mtime and refuses changed bytes. Source processingScript is null until a functioning adapter exists.
+
+Observed 2017 differences: candidate footer shares are 0–100 percentages; turnout percentages are rounded to two decimals; files use descriptive statistics/csv paths; local split cells remain rounded percentages, and aggregate summary has exact counts. Create a dedicated 2017 adapter; do not add format switches to historical.py. No speculative aliases or cross-election linking. Full format/semantic validation remains outstanding.
+
+Checks at B: 13 acquisition/integrity tests pass; all 439 registered source files pass checksum validation; whitespace check passes. No formatter/linter is configured in this repository. No frontend code changed or frontend checks rerun. All old processed outputs untouched.
