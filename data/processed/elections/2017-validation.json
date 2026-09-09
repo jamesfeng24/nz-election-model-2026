@@ -5,9 +5,9 @@
   "supportingMaoriElectorates": 7,
   "candidateRecords": 431,
   "partyVoteRecords": 1024,
-  "splitMatrices": null,
-  "splitStatus": "not-yet-validated",
-  "sourceFilesConsumed": 77,
+  "splitMatrices": 64,
+  "splitStatus": "validated",
+  "sourceFilesConsumed": 145,
   "discrepancies": [],
   "checks": [
     "official index name/number identity",
@@ -18,12 +18,18 @@
     "national party and candidate-party totals and nominations",
     "general/Maori/national control sums",
     "unique election-local candidate IDs",
-    "consumed source checksums"
+    "consumed source checksums",
+    "Local split rows, columns and rounded intervals",
+    "General/Māori/national split controls",
+    "Local/general aggregate interval agreement",
+    "Exact national split summary"
   ],
   "labelMappings": [],
   "limitations": [
     "Primary records cover general electorates only; Maori candidatures support national controls.",
     "personId is null: no cross-election linking.",
-    "No boundary harmonization or fitted model."
+    "No boundary harmonization or fitted model.",
+    "Local and aggregate matrix percentages are rounded to two decimal places; exact joint cell counts remain null.",
+    "Informal Party Votes non-split count matches Party Vote Only, not Candidate Informals; preserve the published convention and exclude it from party-behaviour estimates. Exact national summary counts do not supply exact local joint cells."
   ]
 }
