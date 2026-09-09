@@ -76,3 +76,5 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Discovered 145 exact official CSV links, preserving electorate name/number associations from official indexes.
 - Extended immutable import allowlist to 2017; saved 12 initial official sources with checksums and retrieval provenance.
 - Identified modern percentage/rounding differences before parser implementation. Thirteen focused tests and source integrity pass. No prior processed outputs changed.
+
+- Recovery checkpoint: preserved candidate files 52–71 that survived after the 62-source push; 82 official 2017 files now registered. Saved small modern table parsers and six passing focused tests. Remaining acquisition is only general split files 2–64; no validated full-election outputs yet.
