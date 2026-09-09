@@ -7269,7 +7269,7 @@
       "resource": "candidate-votes-and-turnout-by-electorate.csv",
       "retrievedAt": "2026-09-09T01:07:48.127408+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-and-turnout-by-electorate.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7286,7 +7286,7 @@
       "resource": "candidate-votes-by-voting-place-1.csv",
       "retrievedAt": "2026-09-09T01:08:54.627761+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-1.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7303,7 +7303,7 @@
       "resource": "candidate-votes-by-voting-place-10.csv",
       "retrievedAt": "2026-09-09T01:10:42.334955+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-10.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7320,7 +7320,7 @@
       "resource": "candidate-votes-by-voting-place-11.csv",
       "retrievedAt": "2026-09-09T01:10:43.320642+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-11.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7337,7 +7337,7 @@
       "resource": "candidate-votes-by-voting-place-12.csv",
       "retrievedAt": "2026-09-09T01:10:44.042471+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-12.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7354,7 +7354,7 @@
       "resource": "candidate-votes-by-voting-place-13.csv",
       "retrievedAt": "2026-09-09T01:10:44.707722+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-13.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7371,7 +7371,7 @@
       "resource": "candidate-votes-by-voting-place-14.csv",
       "retrievedAt": "2026-09-09T01:10:45.401125+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-14.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7388,7 +7388,7 @@
       "resource": "candidate-votes-by-voting-place-15.csv",
       "retrievedAt": "2026-09-09T01:10:46.118234+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-15.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7405,7 +7405,7 @@
       "resource": "candidate-votes-by-voting-place-16.csv",
       "retrievedAt": "2026-09-09T01:10:46.891824+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-16.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7422,7 +7422,7 @@
       "resource": "candidate-votes-by-voting-place-17.csv",
       "retrievedAt": "2026-09-09T01:10:47.596994+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-17.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7439,7 +7439,7 @@
       "resource": "candidate-votes-by-voting-place-18.csv",
       "retrievedAt": "2026-09-09T01:10:48.316777+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-18.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7456,7 +7456,7 @@
       "resource": "candidate-votes-by-voting-place-19.csv",
       "retrievedAt": "2026-09-09T01:10:49.119112+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-19.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7473,7 +7473,7 @@
       "resource": "candidate-votes-by-voting-place-2.csv",
       "retrievedAt": "2026-09-09T01:10:35.660426+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-2.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7490,7 +7490,7 @@
       "resource": "candidate-votes-by-voting-place-20.csv",
       "retrievedAt": "2026-09-09T01:10:49.830344+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-20.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7507,7 +7507,7 @@
       "resource": "candidate-votes-by-voting-place-21.csv",
       "retrievedAt": "2026-09-09T01:10:50.688966+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-21.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7524,7 +7524,7 @@
       "resource": "candidate-votes-by-voting-place-22.csv",
       "retrievedAt": "2026-09-09T01:10:51.913063+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-22.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7541,7 +7541,7 @@
       "resource": "candidate-votes-by-voting-place-23.csv",
       "retrievedAt": "2026-09-09T01:10:52.695128+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-23.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7558,7 +7558,7 @@
       "resource": "candidate-votes-by-voting-place-24.csv",
       "retrievedAt": "2026-09-09T01:10:53.559002+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-24.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7575,7 +7575,7 @@
       "resource": "candidate-votes-by-voting-place-25.csv",
       "retrievedAt": "2026-09-09T01:10:54.248986+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-25.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7592,7 +7592,7 @@
       "resource": "candidate-votes-by-voting-place-26.csv",
       "retrievedAt": "2026-09-09T01:10:55.111827+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-26.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7609,7 +7609,7 @@
       "resource": "candidate-votes-by-voting-place-27.csv",
       "retrievedAt": "2026-09-09T01:11:35.197299+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-27.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7626,7 +7626,7 @@
       "resource": "candidate-votes-by-voting-place-28.csv",
       "retrievedAt": "2026-09-09T01:11:36.085072+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-28.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7643,7 +7643,7 @@
       "resource": "candidate-votes-by-voting-place-29.csv",
       "retrievedAt": "2026-09-09T01:11:36.848221+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-29.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7660,7 +7660,7 @@
       "resource": "candidate-votes-by-voting-place-3.csv",
       "retrievedAt": "2026-09-09T01:10:36.365268+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-3.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7677,7 +7677,7 @@
       "resource": "candidate-votes-by-voting-place-30.csv",
       "retrievedAt": "2026-09-09T01:11:37.648577+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-30.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7694,7 +7694,7 @@
       "resource": "candidate-votes-by-voting-place-31.csv",
       "retrievedAt": "2026-09-09T01:11:38.433301+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-31.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7711,7 +7711,7 @@
       "resource": "candidate-votes-by-voting-place-32.csv",
       "retrievedAt": "2026-09-09T01:11:39.225880+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-32.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7728,7 +7728,7 @@
       "resource": "candidate-votes-by-voting-place-33.csv",
       "retrievedAt": "2026-09-09T01:11:40.044556+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-33.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7745,7 +7745,7 @@
       "resource": "candidate-votes-by-voting-place-34.csv",
       "retrievedAt": "2026-09-09T01:11:40.756740+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-34.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7762,7 +7762,7 @@
       "resource": "candidate-votes-by-voting-place-35.csv",
       "retrievedAt": "2026-09-09T01:11:41.443591+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-35.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7779,7 +7779,7 @@
       "resource": "candidate-votes-by-voting-place-36.csv",
       "retrievedAt": "2026-09-09T01:11:42.213618+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-36.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7796,7 +7796,7 @@
       "resource": "candidate-votes-by-voting-place-37.csv",
       "retrievedAt": "2026-09-09T01:11:42.911196+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-37.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7813,7 +7813,7 @@
       "resource": "candidate-votes-by-voting-place-38.csv",
       "retrievedAt": "2026-09-09T01:11:43.814704+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-38.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7830,7 +7830,7 @@
       "resource": "candidate-votes-by-voting-place-39.csv",
       "retrievedAt": "2026-09-09T01:11:44.428310+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-39.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7847,7 +7847,7 @@
       "resource": "candidate-votes-by-voting-place-4.csv",
       "retrievedAt": "2026-09-09T01:10:37.074689+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-4.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7864,7 +7864,7 @@
       "resource": "candidate-votes-by-voting-place-40.csv",
       "retrievedAt": "2026-09-09T01:11:45.168688+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-40.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7881,7 +7881,7 @@
       "resource": "candidate-votes-by-voting-place-41.csv",
       "retrievedAt": "2026-09-09T01:11:46.034822+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-41.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7898,7 +7898,7 @@
       "resource": "candidate-votes-by-voting-place-42.csv",
       "retrievedAt": "2026-09-09T01:11:46.709060+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-42.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7915,7 +7915,7 @@
       "resource": "candidate-votes-by-voting-place-43.csv",
       "retrievedAt": "2026-09-09T01:11:47.353298+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-43.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7932,7 +7932,7 @@
       "resource": "candidate-votes-by-voting-place-44.csv",
       "retrievedAt": "2026-09-09T01:11:48.073306+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-44.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7949,7 +7949,7 @@
       "resource": "candidate-votes-by-voting-place-45.csv",
       "retrievedAt": "2026-09-09T01:11:48.933639+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-45.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7966,7 +7966,7 @@
       "resource": "candidate-votes-by-voting-place-46.csv",
       "retrievedAt": "2026-09-09T01:11:49.600744+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-46.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -7983,7 +7983,7 @@
       "resource": "candidate-votes-by-voting-place-47.csv",
       "retrievedAt": "2026-09-09T01:11:50.332430+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-47.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8000,7 +8000,7 @@
       "resource": "candidate-votes-by-voting-place-48.csv",
       "retrievedAt": "2026-09-09T01:11:51.155304+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-48.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8017,7 +8017,7 @@
       "resource": "candidate-votes-by-voting-place-49.csv",
       "retrievedAt": "2026-09-09T01:11:51.991163+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-49.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8034,7 +8034,7 @@
       "resource": "candidate-votes-by-voting-place-5.csv",
       "retrievedAt": "2026-09-09T01:10:37.805887+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-5.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8051,7 +8051,7 @@
       "resource": "candidate-votes-by-voting-place-50.csv",
       "retrievedAt": "2026-09-09T01:11:53.126255+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-50.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8068,7 +8068,7 @@
       "resource": "candidate-votes-by-voting-place-51.csv",
       "retrievedAt": "2026-09-09T01:11:53.839323+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-51.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8085,7 +8085,7 @@
       "resource": "candidate-votes-by-voting-place-52.csv",
       "retrievedAt": "2026-09-09T01:15:04.960247+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-52.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8102,7 +8102,7 @@
       "resource": "candidate-votes-by-voting-place-53.csv",
       "retrievedAt": "2026-09-09T01:15:05.735087+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-53.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8119,7 +8119,7 @@
       "resource": "candidate-votes-by-voting-place-54.csv",
       "retrievedAt": "2026-09-09T01:15:06.567220+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-54.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8136,7 +8136,7 @@
       "resource": "candidate-votes-by-voting-place-55.csv",
       "retrievedAt": "2026-09-09T01:15:07.338265+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-55.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8153,7 +8153,7 @@
       "resource": "candidate-votes-by-voting-place-56.csv",
       "retrievedAt": "2026-09-09T01:15:08.132481+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-56.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8170,7 +8170,7 @@
       "resource": "candidate-votes-by-voting-place-57.csv",
       "retrievedAt": "2026-09-09T01:15:09.041914+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-57.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8187,7 +8187,7 @@
       "resource": "candidate-votes-by-voting-place-58.csv",
       "retrievedAt": "2026-09-09T01:15:09.727744+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-58.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8204,7 +8204,7 @@
       "resource": "candidate-votes-by-voting-place-59.csv",
       "retrievedAt": "2026-09-09T01:15:11.004843+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-59.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8221,7 +8221,7 @@
       "resource": "candidate-votes-by-voting-place-6.csv",
       "retrievedAt": "2026-09-09T01:10:38.635675+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-6.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8238,7 +8238,7 @@
       "resource": "candidate-votes-by-voting-place-60.csv",
       "retrievedAt": "2026-09-09T01:15:11.703826+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-60.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8255,7 +8255,7 @@
       "resource": "candidate-votes-by-voting-place-61.csv",
       "retrievedAt": "2026-09-09T01:15:12.451567+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-61.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8272,7 +8272,7 @@
       "resource": "candidate-votes-by-voting-place-62.csv",
       "retrievedAt": "2026-09-09T01:15:13.155997+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-62.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8289,7 +8289,7 @@
       "resource": "candidate-votes-by-voting-place-63.csv",
       "retrievedAt": "2026-09-09T01:15:13.867800+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-63.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8306,7 +8306,7 @@
       "resource": "candidate-votes-by-voting-place-64.csv",
       "retrievedAt": "2026-09-09T01:15:14.741574+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-64.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8323,7 +8323,7 @@
       "resource": "candidate-votes-by-voting-place-65.csv",
       "retrievedAt": "2026-09-09T01:15:15.307826+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-65.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8340,7 +8340,7 @@
       "resource": "candidate-votes-by-voting-place-66.csv",
       "retrievedAt": "2026-09-09T01:15:16.103261+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-66.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8357,7 +8357,7 @@
       "resource": "candidate-votes-by-voting-place-67.csv",
       "retrievedAt": "2026-09-09T01:15:16.806700+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-67.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8374,7 +8374,7 @@
       "resource": "candidate-votes-by-voting-place-68.csv",
       "retrievedAt": "2026-09-09T01:15:17.573065+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-68.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8391,7 +8391,7 @@
       "resource": "candidate-votes-by-voting-place-69.csv",
       "retrievedAt": "2026-09-09T01:15:18.454136+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-69.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8408,7 +8408,7 @@
       "resource": "candidate-votes-by-voting-place-7.csv",
       "retrievedAt": "2026-09-09T01:10:39.350788+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-7.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8425,7 +8425,7 @@
       "resource": "candidate-votes-by-voting-place-70.csv",
       "retrievedAt": "2026-09-09T01:15:19.077775+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-70.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8442,7 +8442,7 @@
       "resource": "candidate-votes-by-voting-place-71.csv",
       "retrievedAt": "2026-09-09T01:15:19.789240+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-71.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8459,7 +8459,7 @@
       "resource": "candidate-votes-by-voting-place-8.csv",
       "retrievedAt": "2026-09-09T01:10:40.289803+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-8.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8476,7 +8476,7 @@
       "resource": "candidate-votes-by-voting-place-9.csv",
       "retrievedAt": "2026-09-09T01:10:41.657216+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/candidate-votes-by-voting-place-9.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8493,7 +8493,7 @@
       "resource": "overall-results-summary.csv",
       "retrievedAt": "2026-09-09T01:07:21.173327+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/overall-results-summary.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8510,7 +8510,7 @@
       "resource": "party-votes-and-turnout-by-electorate.csv",
       "retrievedAt": "2026-09-09T01:07:47.371170+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/party-votes-and-turnout-by-electorate.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -8527,7 +8527,7 @@
       "resource": "percentage-votes-for-registered-parties.csv",
       "retrievedAt": "2026-09-09T01:07:49.641353+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/percentage-votes-for-registered-parties.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -9700,7 +9700,7 @@
       "resource": "votes-for-registered-parties-by-electorate.csv",
       "retrievedAt": "2026-09-09T01:07:48.887228+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/votes-for-registered-parties-by-electorate.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
@@ -9717,7 +9717,7 @@
       "resource": "winning-electorate-candidates.csv",
       "retrievedAt": "2026-09-09T01:07:50.342855+00:00",
       "rawPath": "data/raw/elections/2017/statistics/csv/winning-electorate-candidates.csv",
-      "processingScript": null,
+      "processingScript": "scripts/transform/modern_election.py",
       "limitations": [
         "Acquisition: normal browser download; timestamp from local download mtime",
         "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."

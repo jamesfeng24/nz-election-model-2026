@@ -66,7 +66,7 @@ def turnout_table(data):
     return records, totals
 
 
-def candidate_table(data):
+def candidate_table(data, electorate_names=()):
     """Reconcile footer candidates with every voting-place row and column."""
     rows, encoding = read_csv(data)
     start = next(i for i, row in enumerate(rows) if row[0] == 'Electorate Candidate Valid Votes')
@@ -88,9 +88,15 @@ def candidate_table(data):
     total_index = total_rows[0]
     totals = list(map(count, rows[total_index][2:]))
     details = []
+    disclosure_notes = []
+    section_labels = []
     for row in rows[3:total_index]:
+        if row == ['', 'Voting places where less than 6 votes were taken']:
+            disclosure_notes.append(row[1])
+            continue
         if len(row) == 1:
-            require(row[0] in ('Advance Voting Places', 'Voting Places'), 'Unknown voting-place section')
+            require(row[0] in ('Advance Voting Places', 'Voting Places') or row[0] in electorate_names, 'Unknown voting-place section')
+            section_labels.append(row[0])
             continue
         require(len(row) == len(rows[2]), 'Ragged voting-place row')
         values = list(map(count, row[2:]))
@@ -109,7 +115,7 @@ def candidate_table(data):
     require(len(ranked) >= 2 and ranked[0]['name'] == winner and ranked[0]['votes'] - ranked[1]['votes'] == count(majority), 'Candidate winner or majority')
     return {'sourceElectorateLabel': rows[1][0], 'candidates': candidates, 'validVotes': total,
             'informalVotes': totals[-1], 'winnerName': winner, 'majority': count(majority),
-            'sourceEncoding': encoding, 'votingPlaceRowsValidated': len(details)}
+            'sourceEncoding': encoding, 'votingPlaceRowsValidated': len(details), 'sourceDisclosureNotes': disclosure_notes, 'sourceSectionLabels': section_labels}
 
 
 def party_table(data):
