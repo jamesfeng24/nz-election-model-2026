@@ -30,4 +30,4 @@ Revised by the user on 2026-09-08; supersedes earlier proposed implementation or
 
 Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization.
 
-Current task: Stage 2B, 2011 ingestion only. 2008 is complete and merged; 2014 and integration remain outstanding. Next task after 2011: **2014 ingestion only**.
+Current state: Stage 3A, 2017 ingestion complete for PR review. 2008–2014 ingestion/integration are merged. Next task after review/merge and explicit authorization: **2020 historical election ingestion only**.

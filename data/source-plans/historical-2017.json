@@ -1,0 +1,862 @@
+{
+  "schemaVersion": 1,
+  "year": 2017,
+  "discoveredFrom": [
+    "https://www.electionresults.govt.nz/electionresults_2017/statistics/index.html",
+    "https://www.electionresults.govt.nz/electionresults_2017/statistics/votes-by-voting-place-electorate-index.html",
+    "https://www.electionresults.govt.nz/electionresults_2017/statistics/split-votes-index.html"
+  ],
+  "discoveryNotes": "Exact CSV hrefs and all 71 name/number associations inspected in official rendered indexes on 2026-09-09. General/Maori separation confirmed by split index and turnout controls. No electorate numbering inferred from names.",
+  "resources": [
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/overall-results-summary.csv",
+      "role": "summary/control"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/party-votes-and-turnout-by-electorate.csv",
+      "role": "summary/control"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-and-turnout-by-electorate.csv",
+      "role": "summary/control"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/votes-for-registered-parties-by-electorate.csv",
+      "role": "summary/control"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/percentage-votes-for-registered-parties.csv",
+      "role": "summary/control"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/winning-electorate-candidates.csv",
+      "role": "summary/control"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-1.csv",
+      "role": "general candidate",
+      "electorateName": "Auckland Central",
+      "sourceElectorateNumber": 1
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-2.csv",
+      "role": "general candidate",
+      "electorateName": "Bay of Plenty",
+      "sourceElectorateNumber": 2
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-3.csv",
+      "role": "general candidate",
+      "electorateName": "Botany",
+      "sourceElectorateNumber": 3
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-4.csv",
+      "role": "general candidate",
+      "electorateName": "Christchurch Central",
+      "sourceElectorateNumber": 4
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-5.csv",
+      "role": "general candidate",
+      "electorateName": "Christchurch East",
+      "sourceElectorateNumber": 5
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-6.csv",
+      "role": "general candidate",
+      "electorateName": "Clutha-Southland",
+      "sourceElectorateNumber": 6
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-7.csv",
+      "role": "general candidate",
+      "electorateName": "Coromandel",
+      "sourceElectorateNumber": 7
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-8.csv",
+      "role": "general candidate",
+      "electorateName": "Dunedin North",
+      "sourceElectorateNumber": 8
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-9.csv",
+      "role": "general candidate",
+      "electorateName": "Dunedin South",
+      "sourceElectorateNumber": 9
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-10.csv",
+      "role": "general candidate",
+      "electorateName": "East Coast",
+      "sourceElectorateNumber": 10
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-11.csv",
+      "role": "general candidate",
+      "electorateName": "East Coast Bays",
+      "sourceElectorateNumber": 11
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-12.csv",
+      "role": "general candidate",
+      "electorateName": "Epsom",
+      "sourceElectorateNumber": 12
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-13.csv",
+      "role": "general candidate",
+      "electorateName": "Hamilton East",
+      "sourceElectorateNumber": 13
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-14.csv",
+      "role": "general candidate",
+      "electorateName": "Hamilton West",
+      "sourceElectorateNumber": 14
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-15.csv",
+      "role": "general candidate",
+      "electorateName": "Helensville",
+      "sourceElectorateNumber": 15
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-16.csv",
+      "role": "general candidate",
+      "electorateName": "Hunua",
+      "sourceElectorateNumber": 16
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-17.csv",
+      "role": "general candidate",
+      "electorateName": "Hutt South",
+      "sourceElectorateNumber": 17
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-18.csv",
+      "role": "general candidate",
+      "electorateName": "Ilam",
+      "sourceElectorateNumber": 18
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-19.csv",
+      "role": "general candidate",
+      "electorateName": "Invercargill",
+      "sourceElectorateNumber": 19
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-20.csv",
+      "role": "general candidate",
+      "electorateName": "Kaikōura",
+      "sourceElectorateNumber": 20
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-21.csv",
+      "role": "general candidate",
+      "electorateName": "Kelston",
+      "sourceElectorateNumber": 21
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-22.csv",
+      "role": "general candidate",
+      "electorateName": "Mana",
+      "sourceElectorateNumber": 22
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-23.csv",
+      "role": "general candidate",
+      "electorateName": "Māngere",
+      "sourceElectorateNumber": 23
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-24.csv",
+      "role": "general candidate",
+      "electorateName": "Manukau East",
+      "sourceElectorateNumber": 24
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-25.csv",
+      "role": "general candidate",
+      "electorateName": "Manurewa",
+      "sourceElectorateNumber": 25
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-26.csv",
+      "role": "general candidate",
+      "electorateName": "Maungakiekie",
+      "sourceElectorateNumber": 26
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-27.csv",
+      "role": "general candidate",
+      "electorateName": "Mt Albert",
+      "sourceElectorateNumber": 27
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-28.csv",
+      "role": "general candidate",
+      "electorateName": "Mt Roskill",
+      "sourceElectorateNumber": 28
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-29.csv",
+      "role": "general candidate",
+      "electorateName": "Napier",
+      "sourceElectorateNumber": 29
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-30.csv",
+      "role": "general candidate",
+      "electorateName": "Nelson",
+      "sourceElectorateNumber": 30
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-31.csv",
+      "role": "general candidate",
+      "electorateName": "New Lynn",
+      "sourceElectorateNumber": 31
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-32.csv",
+      "role": "general candidate",
+      "electorateName": "New Plymouth",
+      "sourceElectorateNumber": 32
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-33.csv",
+      "role": "general candidate",
+      "electorateName": "North Shore",
+      "sourceElectorateNumber": 33
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-34.csv",
+      "role": "general candidate",
+      "electorateName": "Northcote",
+      "sourceElectorateNumber": 34
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-35.csv",
+      "role": "general candidate",
+      "electorateName": "Northland",
+      "sourceElectorateNumber": 35
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-36.csv",
+      "role": "general candidate",
+      "electorateName": "Ōhāriu",
+      "sourceElectorateNumber": 36
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-37.csv",
+      "role": "general candidate",
+      "electorateName": "Ōtaki",
+      "sourceElectorateNumber": 37
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-38.csv",
+      "role": "general candidate",
+      "electorateName": "Pakuranga",
+      "sourceElectorateNumber": 38
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-39.csv",
+      "role": "general candidate",
+      "electorateName": "Palmerston North",
+      "sourceElectorateNumber": 39
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-40.csv",
+      "role": "general candidate",
+      "electorateName": "Papakura",
+      "sourceElectorateNumber": 40
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-41.csv",
+      "role": "general candidate",
+      "electorateName": "Port Hills",
+      "sourceElectorateNumber": 41
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-42.csv",
+      "role": "general candidate",
+      "electorateName": "Rangitata",
+      "sourceElectorateNumber": 42
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-43.csv",
+      "role": "general candidate",
+      "electorateName": "Rangitīkei",
+      "sourceElectorateNumber": 43
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-44.csv",
+      "role": "general candidate",
+      "electorateName": "Rimutaka",
+      "sourceElectorateNumber": 44
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-45.csv",
+      "role": "general candidate",
+      "electorateName": "Rodney",
+      "sourceElectorateNumber": 45
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-46.csv",
+      "role": "general candidate",
+      "electorateName": "Rongotai",
+      "sourceElectorateNumber": 46
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-47.csv",
+      "role": "general candidate",
+      "electorateName": "Rotorua",
+      "sourceElectorateNumber": 47
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-48.csv",
+      "role": "general candidate",
+      "electorateName": "Selwyn",
+      "sourceElectorateNumber": 48
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-49.csv",
+      "role": "general candidate",
+      "electorateName": "Tāmaki",
+      "sourceElectorateNumber": 49
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-50.csv",
+      "role": "general candidate",
+      "electorateName": "Taranaki-King Country",
+      "sourceElectorateNumber": 50
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-51.csv",
+      "role": "general candidate",
+      "electorateName": "Taupō",
+      "sourceElectorateNumber": 51
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-52.csv",
+      "role": "general candidate",
+      "electorateName": "Tauranga",
+      "sourceElectorateNumber": 52
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-53.csv",
+      "role": "general candidate",
+      "electorateName": "Te Atatū",
+      "sourceElectorateNumber": 53
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-54.csv",
+      "role": "general candidate",
+      "electorateName": "Tukituki",
+      "sourceElectorateNumber": 54
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-55.csv",
+      "role": "general candidate",
+      "electorateName": "Upper Harbour",
+      "sourceElectorateNumber": 55
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-56.csv",
+      "role": "general candidate",
+      "electorateName": "Waikato",
+      "sourceElectorateNumber": 56
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-57.csv",
+      "role": "general candidate",
+      "electorateName": "Waimakariri",
+      "sourceElectorateNumber": 57
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-58.csv",
+      "role": "general candidate",
+      "electorateName": "Wairarapa",
+      "sourceElectorateNumber": 58
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-59.csv",
+      "role": "general candidate",
+      "electorateName": "Waitaki",
+      "sourceElectorateNumber": 59
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-60.csv",
+      "role": "general candidate",
+      "electorateName": "Wellington Central",
+      "sourceElectorateNumber": 60
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-61.csv",
+      "role": "general candidate",
+      "electorateName": "West Coast-Tasman",
+      "sourceElectorateNumber": 61
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-62.csv",
+      "role": "general candidate",
+      "electorateName": "Whanganui",
+      "sourceElectorateNumber": 62
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-63.csv",
+      "role": "general candidate",
+      "electorateName": "Whangarei",
+      "sourceElectorateNumber": 63
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-64.csv",
+      "role": "general candidate",
+      "electorateName": "Wigram",
+      "sourceElectorateNumber": 64
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-65.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Hauraki-Waikato",
+      "sourceElectorateNumber": 65
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-66.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Ikaroa-Rāwhiti",
+      "sourceElectorateNumber": 66
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-67.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Tāmaki Makaurau",
+      "sourceElectorateNumber": 67
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-68.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Te Tai Hauāuru",
+      "sourceElectorateNumber": 68
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-69.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Te Tai Tokerau",
+      "sourceElectorateNumber": 69
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-70.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Te Tai Tonga",
+      "sourceElectorateNumber": 70
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/candidate-votes-by-voting-place-71.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Waiariki",
+      "sourceElectorateNumber": 71
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-summary.csv",
+      "role": "aggregate split"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-all.csv",
+      "role": "aggregate split"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-general.csv",
+      "role": "aggregate split"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-maori.csv",
+      "role": "aggregate split"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-1.csv",
+      "role": "general split",
+      "electorateName": "Auckland Central",
+      "sourceElectorateNumber": 1
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-2.csv",
+      "role": "general split",
+      "electorateName": "Bay of Plenty",
+      "sourceElectorateNumber": 2
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-3.csv",
+      "role": "general split",
+      "electorateName": "Botany",
+      "sourceElectorateNumber": 3
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-4.csv",
+      "role": "general split",
+      "electorateName": "Christchurch Central",
+      "sourceElectorateNumber": 4
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-5.csv",
+      "role": "general split",
+      "electorateName": "Christchurch East",
+      "sourceElectorateNumber": 5
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-6.csv",
+      "role": "general split",
+      "electorateName": "Clutha-Southland",
+      "sourceElectorateNumber": 6
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-7.csv",
+      "role": "general split",
+      "electorateName": "Coromandel",
+      "sourceElectorateNumber": 7
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-8.csv",
+      "role": "general split",
+      "electorateName": "Dunedin North",
+      "sourceElectorateNumber": 8
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-9.csv",
+      "role": "general split",
+      "electorateName": "Dunedin South",
+      "sourceElectorateNumber": 9
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-10.csv",
+      "role": "general split",
+      "electorateName": "East Coast",
+      "sourceElectorateNumber": 10
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-11.csv",
+      "role": "general split",
+      "electorateName": "East Coast Bays",
+      "sourceElectorateNumber": 11
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-12.csv",
+      "role": "general split",
+      "electorateName": "Epsom",
+      "sourceElectorateNumber": 12
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-13.csv",
+      "role": "general split",
+      "electorateName": "Hamilton East",
+      "sourceElectorateNumber": 13
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-14.csv",
+      "role": "general split",
+      "electorateName": "Hamilton West",
+      "sourceElectorateNumber": 14
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-15.csv",
+      "role": "general split",
+      "electorateName": "Helensville",
+      "sourceElectorateNumber": 15
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-16.csv",
+      "role": "general split",
+      "electorateName": "Hunua",
+      "sourceElectorateNumber": 16
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-17.csv",
+      "role": "general split",
+      "electorateName": "Hutt South",
+      "sourceElectorateNumber": 17
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-18.csv",
+      "role": "general split",
+      "electorateName": "Ilam",
+      "sourceElectorateNumber": 18
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-19.csv",
+      "role": "general split",
+      "electorateName": "Invercargill",
+      "sourceElectorateNumber": 19
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-20.csv",
+      "role": "general split",
+      "electorateName": "Kaikōura",
+      "sourceElectorateNumber": 20
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-21.csv",
+      "role": "general split",
+      "electorateName": "Kelston",
+      "sourceElectorateNumber": 21
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-22.csv",
+      "role": "general split",
+      "electorateName": "Mana",
+      "sourceElectorateNumber": 22
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-23.csv",
+      "role": "general split",
+      "electorateName": "Māngere",
+      "sourceElectorateNumber": 23
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-24.csv",
+      "role": "general split",
+      "electorateName": "Manukau East",
+      "sourceElectorateNumber": 24
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-25.csv",
+      "role": "general split",
+      "electorateName": "Manurewa",
+      "sourceElectorateNumber": 25
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-26.csv",
+      "role": "general split",
+      "electorateName": "Maungakiekie",
+      "sourceElectorateNumber": 26
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-27.csv",
+      "role": "general split",
+      "electorateName": "Mt Albert",
+      "sourceElectorateNumber": 27
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-28.csv",
+      "role": "general split",
+      "electorateName": "Mt Roskill",
+      "sourceElectorateNumber": 28
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-29.csv",
+      "role": "general split",
+      "electorateName": "Napier",
+      "sourceElectorateNumber": 29
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-30.csv",
+      "role": "general split",
+      "electorateName": "Nelson",
+      "sourceElectorateNumber": 30
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-31.csv",
+      "role": "general split",
+      "electorateName": "New Lynn",
+      "sourceElectorateNumber": 31
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-32.csv",
+      "role": "general split",
+      "electorateName": "New Plymouth",
+      "sourceElectorateNumber": 32
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-33.csv",
+      "role": "general split",
+      "electorateName": "North Shore",
+      "sourceElectorateNumber": 33
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-34.csv",
+      "role": "general split",
+      "electorateName": "Northcote",
+      "sourceElectorateNumber": 34
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-35.csv",
+      "role": "general split",
+      "electorateName": "Northland",
+      "sourceElectorateNumber": 35
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-36.csv",
+      "role": "general split",
+      "electorateName": "Ōhāriu",
+      "sourceElectorateNumber": 36
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-37.csv",
+      "role": "general split",
+      "electorateName": "Ōtaki",
+      "sourceElectorateNumber": 37
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-38.csv",
+      "role": "general split",
+      "electorateName": "Pakuranga",
+      "sourceElectorateNumber": 38
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-39.csv",
+      "role": "general split",
+      "electorateName": "Palmerston North",
+      "sourceElectorateNumber": 39
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-40.csv",
+      "role": "general split",
+      "electorateName": "Papakura",
+      "sourceElectorateNumber": 40
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-41.csv",
+      "role": "general split",
+      "electorateName": "Port Hills",
+      "sourceElectorateNumber": 41
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-42.csv",
+      "role": "general split",
+      "electorateName": "Rangitata",
+      "sourceElectorateNumber": 42
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-43.csv",
+      "role": "general split",
+      "electorateName": "Rangitīkei",
+      "sourceElectorateNumber": 43
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-44.csv",
+      "role": "general split",
+      "electorateName": "Rimutaka",
+      "sourceElectorateNumber": 44
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-45.csv",
+      "role": "general split",
+      "electorateName": "Rodney",
+      "sourceElectorateNumber": 45
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-46.csv",
+      "role": "general split",
+      "electorateName": "Rongotai",
+      "sourceElectorateNumber": 46
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-47.csv",
+      "role": "general split",
+      "electorateName": "Rotorua",
+      "sourceElectorateNumber": 47
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-48.csv",
+      "role": "general split",
+      "electorateName": "Selwyn",
+      "sourceElectorateNumber": 48
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-49.csv",
+      "role": "general split",
+      "electorateName": "Tāmaki",
+      "sourceElectorateNumber": 49
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-50.csv",
+      "role": "general split",
+      "electorateName": "Taranaki-King Country",
+      "sourceElectorateNumber": 50
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-51.csv",
+      "role": "general split",
+      "electorateName": "Taupō",
+      "sourceElectorateNumber": 51
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-52.csv",
+      "role": "general split",
+      "electorateName": "Tauranga",
+      "sourceElectorateNumber": 52
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-53.csv",
+      "role": "general split",
+      "electorateName": "Te Atatū",
+      "sourceElectorateNumber": 53
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-54.csv",
+      "role": "general split",
+      "electorateName": "Tukituki",
+      "sourceElectorateNumber": 54
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-55.csv",
+      "role": "general split",
+      "electorateName": "Upper Harbour",
+      "sourceElectorateNumber": 55
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-56.csv",
+      "role": "general split",
+      "electorateName": "Waikato",
+      "sourceElectorateNumber": 56
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-57.csv",
+      "role": "general split",
+      "electorateName": "Waimakariri",
+      "sourceElectorateNumber": 57
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-58.csv",
+      "role": "general split",
+      "electorateName": "Wairarapa",
+      "sourceElectorateNumber": 58
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-59.csv",
+      "role": "general split",
+      "electorateName": "Waitaki",
+      "sourceElectorateNumber": 59
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-60.csv",
+      "role": "general split",
+      "electorateName": "Wellington Central",
+      "sourceElectorateNumber": 60
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-61.csv",
+      "role": "general split",
+      "electorateName": "West Coast-Tasman",
+      "sourceElectorateNumber": 61
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-62.csv",
+      "role": "general split",
+      "electorateName": "Whanganui",
+      "sourceElectorateNumber": 62
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-63.csv",
+      "role": "general split",
+      "electorateName": "Whangarei",
+      "sourceElectorateNumber": 63
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/statistics/csv/split-votes-electorate-64.csv",
+      "role": "general split",
+      "electorateName": "Wigram",
+      "sourceElectorateNumber": 64
+    }
+  ]
+}

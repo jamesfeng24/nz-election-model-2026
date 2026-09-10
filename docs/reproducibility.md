@@ -136,3 +136,18 @@ python3 -m unittest discover -s scripts/tests -v
 ```
 
 The manifest records every per-year input hash and panel output hash. JSON serialization uses UTF-8, preserved Unicode, deterministic input order and no wall-clock timestamps. Code and canonical-party decisions are versioned with Git. Stage 2D passed all 31 Python tests, all-year regeneration, 30 frontend tests, typecheck and build. All previous per-year hashes listed above remain unchanged. Next task: **2017 historical election ingestion only**, after review/merge and explicit authorization.
+
+## Reproduce 2017 (Stage 3A)
+
+All 145 official sources are committed with registry hashes; use pinned Python and its standard library, without browser/network access:
+
+```sh
+python3 -m scripts.transform.modern_election --check
+python3 -m unittest discover -s scripts/tests -v
+python3 scripts/validate/source_files.py
+python3 -m scripts.transform.historical_panel --check --verify-years
+```
+
+Omit `--check` to deliberately regenerate the three 2017 exports. Complete validation is always required; the temporary core-only checkpoint mode has been removed. CI checks committed output equality. The 2017 adapter consumes all 145 inputs, checks hashes before parsing, and uses deterministic UTF-8 JSON without timestamps. Acquisition remains a separate immutable import process using the explicit source plan; do not redownload valid preserved files.
+
+Final verification passed 51 Python tests, all 572 registry hashes, exact 2017 regeneration and all historical regressions. All 21 pre-existing processed files match branch base f627903 byte-for-byte, including all nine earlier per-year outputs and six panel files. No frontend/shared TypeScript changed, so frontend checks were not rerun under the scoped AGENTS.md rule. No formatter/linter is configured; compilation and whitespace checks passed.

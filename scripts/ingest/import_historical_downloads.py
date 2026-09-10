@@ -3,12 +3,12 @@ import argparse
 from datetime import datetime, timezone
 import json
 from pathlib import Path
-from scripts.ingest.historical_sources import ROOT, register
+from scripts.ingest.historical_sources import ROOT, YEARS, register
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--year', type=int, choices=(2008, 2011, 2014), required=True)
+    parser.add_argument('--year', type=int, choices=YEARS, required=True)
     parser.add_argument('--directory', type=Path, required=True)
     parser.add_argument('--suffix', default='', help='Browser duplicate suffix before .csv, e.g. " (1)"')
     parser.add_argument('--allow-partial', action='store_true')

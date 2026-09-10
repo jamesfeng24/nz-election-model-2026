@@ -1,6 +1,6 @@
 # Data sources and provenance standard
 
-**2008 and 2011 are complete and merged; 2014 ingestion is complete on its review branch.** `data/sources.json` contains 427 committed official CSV resources (139 for 2008, 143 for 2011, 145 for 2014). Software documentation links are not election datasets.
+**2008–2014 ingestion/integration are merged; 2017 ingestion is complete on its review branch.** `data/sources.json` contains 572 committed official CSV resources (139 for 2008, 143 for 2011, 145 for 2014 and 145 for 2017). Software documentation links are not election datasets.
 
 Every future external dataset must have a SourceRecord validated by `src/types/contracts.ts`, recording:
 
@@ -61,3 +61,13 @@ All three ingestion PRs are merged into main. Integration adds no election obser
 Canonical-party evidence: New Zealand Electoral Commission, *Report on the 2014 General Election*, March 2015, paragraph 187 (printed page 23; PDF page 31), [official report](https://elections.nz/assets/2014-general-election/report-of-the-electoral-commission-on-the-2014-general-election.pdf), consulted 2026-09-08. It confirms the Conservative abbreviated-name change and Mana → MANA Movement. This is a documentary citation supporting the two versioned alias rules, not a newly ingested numerical dataset; no raw copy is registered and offline regeneration does not fetch the report. Preserve Conservative Party/Conservative and Mana/MANA Movement source labels separately. No additional organizational equivalences are inferred.
 
 2008 aggregate split controls remain not collected in this repository. Local rounded percentages and 2011/2014 exact aggregate summaries retain their distinct precision. No prior-year source or processed bytes changed. No 2017 or later-election data acquired.
+
+## 2017 coverage — Stage 3A complete
+
+New Zealand Electoral Commission, 23 September 2017 general election. [Statistics index](https://www.electionresults.govt.nz/electionresults_2017/statistics/index.html), [candidate/voting-place index](https://www.electionresults.govt.nz/electionresults_2017/statistics/votes-by-voting-place-electorate-index.html), [split index](https://www.electionresults.govt.nz/electionresults_2017/statistics/split-votes-index.html). Exact discovered URLs and electorate name/number associations are in data/source-plans/historical-2017.json; no IDs were inferred from names.
+
+All 145 planned originals are committed: six controls, 71 candidate files, 64 local split files, three aggregate matrices and one exact summary. Registry entries record actual retrieval timestamps, unchanged raw paths, SHA-256, source terms and scripts/transform/modern_election.py. Normal Chrome downloads were used after direct HTTP 403; interrupted candidate downloads were recovered and saved before further acquisition. Subsequent processing requires no network.
+
+Outputs cover 64 general electorates, 431 candidate records and 1,024 party records. Seven Māori electorates support national reconciliation of 453 candidatures. All 64 local split matrices and general/Māori/national controls reconcile within published precision. No candidate aliases were needed; exact affiliations and Unicode labels remain preserved.
+
+Candidate source shares and turnout are two-decimal percentages. Local and aggregate split cells are rounded percentages with null joint counts; exact national summary counts are retained separately. The informal-party non-split count 350 matches Party Vote Only, not Candidate Informals, and must not be interpreted as party behaviour. Voting-place disclosure notes and supporting geographic section headings are not missing counts to zero-fill. No unexplained discrepancy remains. Existing 2008–2014 outputs and raw evidence are unchanged; no later-election data acquired.

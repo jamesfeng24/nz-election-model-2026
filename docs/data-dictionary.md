@@ -117,3 +117,13 @@ Safe invariants for future stages:
 - Exact aggregate split/non-split summary counts remain separately identified and do not imply exact local joint counts. Null and zero remain distinct. For 2008, aggregateSplitAvailability is `not-collected` and aggregate fields are null; this is not a claim that the official source lacks such data. For 2011/2014 it is `preserved`.
 - Primary records are general electorates. General/Māori/national controls preserve supporting scope; detailed Māori candidate outputs were not added. No overall national total should be equated to the general-only record sum.
 - All source IDs resolve through the unchanged registry. Per-year outputs and their labels/precision are unchanged by integration; the manifest identifies their exact bytes.
+
+## 2017 modern publication adapter
+
+The 2017 per-election exports retain the historical electorate/candidate/party shape, without extending the 2008–2014 panel. General records: 64 electorates, 431 candidates, 1,024 party observations. Supporting Māori evidence remains in raw files and general/Māori/national controls.
+
+- Candidate `reportedPercent` preserves the published 0–100 value; `sourceShare` is that rounded value divided by 100; `share` is independently calculated from valid candidate votes. Unlike old source files, the 2017 candidate footer supplies percentages rather than fractions.
+- Ballot `reportedInformalPercent` uses valid plus informal votes. Candidate-ballot `reportedWinnerPercentOfVotesCast` uses all votes cast, with null for aggregate rows. Turnout percentages use the enrolled denominator and two-decimal rounding tolerance.
+- `sourceDisclosureNotes` retains nonnumeric source disclosure notes; `votingPlaceRowsValidated` counts numeric rows reconciled to official totals, not geocoded or residential observations.
+- National party controls preserve `sourceGroup`, published zero party votes for candidate-only affiliations, `candidateNominations` and reported party/candidate percentages. Missing values are never substituted with zero.
+- Split `precision` records rounded-percentage representation, decimalPlaces 2, percentageUnit percent and exactJointCountsAvailable false. Exact national summary counts remain separate. No candidate aliases or cross-year identities are asserted; personId stays null.

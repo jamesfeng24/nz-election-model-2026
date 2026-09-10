@@ -64,3 +64,25 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Preserved source labels, election-local identities, name mappings, rounded split percentages and exact aggregate controls. Added separately documented canonical party aliases; preserved 2014 candidate affiliations.
 - Added focused cross-year mutation/lossless-projection tests and offline raw-to-panel byte verification in CI. All 31 Python tests and required frontend checks pass.
 - All nine prior per-year outputs, 427 raw sources and source registry are unchanged; no new data acquired. Next authorized task should be 2017 historical election ingestion only.
+
+## Unreleased — Stage 3A checkpoint A — 2026-09-09
+
+- Verified PR #5 merged at f627903 and branched stage/03a-historical-2017 from current main.
+- Scoped persistent reading/testing rules; removed obsolete Stage 2 branch instructions and repaired current-state wording while preserving historical decisions.
+- No data, parser, frontend or model changes. Documentation whitespace validation passed; ingestion checks start with code/data checkpoints.
+
+## Unreleased — Stage 3A checkpoint B — 2026-09-09
+
+- Discovered 145 exact official CSV links, preserving electorate name/number associations from official indexes.
+- Extended immutable import allowlist to 2017; saved 12 initial official sources with checksums and retrieval provenance.
+- Identified modern percentage/rounding differences before parser implementation. Thirteen focused tests and source integrity pass. No prior processed outputs changed.
+
+- Recovery checkpoint: preserved candidate files 52–71 that survived after the 62-source push; 82 official 2017 files now registered. Saved small modern table parsers and six passing focused tests. Remaining acquisition is only general split files 2–64; no validated full-election outputs yet.
+
+## Unreleased — Stage 3A complete — 2026-09-10
+
+- Recovered and pushed interrupted acquisition/parser/finalization work before continuing; all 145 official 2017 sources now preserved with exact provenance/checksums.
+- Added separate modern-format table, election and split adapters. Exported 64 general electorates, 431 candidate records, 1,024 party records, 64 local split matrices, three aggregate matrices and exact national split summary.
+- Reconciled all 71 candidate files and national totals. Preserved percentage units, Unicode, original affiliations, disclosure notes and unresolved person identities. No aliases or fabricated joint counts.
+- All 51 Python tests, source integrity, deterministic regeneration and prior-year compatibility checks pass. Legacy parser and all prior processed bytes unchanged. CI now checks 2017 regeneration.
+- Updated handoff, source coverage, data dictionary and reproducibility. No frontend changes, modelling, cross-year linking, panel extension or later-year acquisition. Next task: 2020 historical election ingestion only.

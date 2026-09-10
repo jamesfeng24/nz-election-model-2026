@@ -1,6 +1,6 @@
 # Statistical specification — intended design, not an implemented model
 
-Stage 1 / 2026-09-07. No data has been collected, coefficients estimated or electoral rules verified. This document records the requested research design; it is not a set of empirical findings. Read it before major work alongside PROJECT_STATE, METHODOLOGY, DECISIONS and DATA_SOURCES.
+Historical Stage 1 design note / 2026-09-07: at that checkpoint no data had been collected, coefficients estimated or electoral rules verified. Current ingestion progress is recorded in PROJECT_STATE.md; no model has been fitted. This document records the requested research design; it is not a set of empirical findings. Consult it for modelling, integration or relevant methodological questions under AGENTS.md.
 
 ## Intended final pipeline
 
