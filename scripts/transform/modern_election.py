@@ -139,30 +139,26 @@ def encode(value):
     return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode()
 
 
-def build_year(root, include_split=True):
+def build_year(root):
     source = Sources(root)
     election, electorates = build_core(root, source)
-    details = {'checks': [], 'labelMappings': [], 'limitations': []}
-    split = None
-    if include_split:
-        from .modern_split import build_split
-        split, details = build_split(source, electorates, election['nationalControls']['parties'])
+    from .modern_split import build_split
+    split, details = build_split(source, electorates, election['nationalControls']['parties'])
     report = {'schemaVersion': 1, 'year': YEAR, 'generalElectorates': 64, 'supportingMaoriElectorates': 7,
               'candidateRecords': sum(len(e['candidates']) for e in election['electorates']),
               'partyVoteRecords': sum(len(e['parties']) for e in election['electorates']),
-              'splitMatrices': len(split['matrices']) if split else None, 'splitStatus': 'validated' if split else 'not-yet-validated',
+              'splitMatrices': len(split['matrices']), 'splitStatus': 'validated',
               'sourceFilesConsumed': len(source.used), 'discrepancies': [],
               'checks': ['official index name/number identity', 'all candidate voting-place rows and columns', 'party/candidate/turnout/valid/informal controls', 'official winner and majority', 'two-decimal source percentage reconciliation', 'national party and candidate-party totals and nominations', 'general/Maori/national control sums', 'unique election-local candidate IDs', 'consumed source checksums'] + details['checks'],
               'labelMappings': details['labelMappings'], 'limitations': ['Primary records cover general electorates only; Maori candidatures support national controls.', 'personId is null: no cross-election linking.', 'No boundary harmonization or fitted model.'] + details['limitations']}
-    return {'elections': election, 'validation': report, **({'split': split} if split else {})}
+    return {'elections': election, 'validation': report, 'split': split}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
-    parser.add_argument('--core-only', action='store_true', help='Explicit development checkpoint: split validation remains incomplete')
     args = parser.parse_args()
-    outputs = build_year(ROOT, not args.core_only)
+    outputs = build_year(ROOT)
     for kind, value in outputs.items():
         relative = f'data/processed/split-votes/2017.json' if kind == 'split' else f'data/processed/elections/2017{"-validation" if kind == "validation" else ""}.json'
         path = ROOT / relative

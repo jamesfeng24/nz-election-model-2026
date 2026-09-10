@@ -50,7 +50,7 @@ def register(root: Path, year: int, url: str, data: bytes, retrieved_at: str, me
     record = {'schemaVersion': 1, 'id': source_id, 'organisation': ('New Zealand Electoral Commission (historical Chief Electoral Office results for 2008)' if year == 2008 else 'New Zealand Electoral Commission'),
               'url': url, 'dateOrElection': str(year) + ' general election', 'resource': path.name,
               'retrievedAt': retrieved_at, 'rawPath': path.relative_to(root).as_posix(),
-              'processingScript': None if year == 2017 else 'scripts/transform/historical.py',
+              'processingScript': 'scripts/transform/modern_election.py' if year == 2017 else 'scripts/transform/historical.py',
               'limitations': ['Acquisition: ' + method, 'Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md.'],
               'sha256': digest, 'licence': LICENSE}
     registry['sources'].append(record)
