@@ -8,7 +8,7 @@ Build a transparent static 2026 election website with reproducible offline histo
 
 Completed and merged: 2008 ingestion (PR #2), 2011 ingestion (PR #3), 2014 ingestion (PR #4), 2008–2014 integration (PR #5, merge f62790363a95823e67158200acb5b864cd2f7741).
 
-Stage 3A / 2017 ingestion is complete on `stage/03a-historical-2017`, ready for an unmerged PR into main. No 2020 work or extension of the historical panel was performed.
+Stage 3A / 2017 ingestion is complete on `stage/03a-historical-2017`, under review in unmerged PR #6: https://github.com/jamesfeng24/nz-election-model-2026/pull/6. No 2020 work or extension of the historical panel was performed.
 
 ## Branch, recovery and checkpoints
 
@@ -23,7 +23,7 @@ Branch base: f62790363a95823e67158200acb5b864cd2f7741, verified to contain integ
 - 4ef0fad: full split validation and focused regression tests.
 - 24e92f3: recovered interrupted finalization changes: CI regeneration, processor provenance and removal of partial export mode.
 
-All checkpoints above are pushed. Final documentation follows; branch HEAD identifies its exact commit. PR publication is pending this handoff commit; if interrupted, look up the PR by head branch before creating another. Leave the PR unmerged.
+All checkpoints above are pushed. Final validated documentation commit: b40ff3236f5ee94976a43e00543739e0c341ea10. PR #6 is open and unmerged: https://github.com/jamesfeng24/nz-election-model-2026/pull/6. This final metadata commit records publication; branch HEAD identifies its exact SHA. Do not create a duplicate PR or merge it automatically.
 
 ## Source inventory and outputs
 
