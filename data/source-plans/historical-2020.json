@@ -1,0 +1,1021 @@
+{
+  "schemaVersion": 1,
+  "year": 2020,
+  "discoveredFrom": [
+    "https://www.electionresults.govt.nz/electionresults_2020/statistics/index.html",
+    "https://www.electionresults.govt.nz/electionresults_2020/statistics/votes-by-voting-place-electorate-index.html",
+    "https://www.electionresults.govt.nz/electionresults_2020/statistics/split-votes-index.html"
+  ],
+  "discoveryNotes": "Exact CSV hrefs and all 72 name/number associations inspected in official rendered indexes on 2026-09-10. Split index explicitly separates 65 general and 7 Māori electorates. URL numbering transcribed from the indexes, not inferred from names. Browser duplicate filenames are recorded for local import only.",
+  "resources": [
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/overall-results-summary.csv",
+      "role": "summary/control",
+      "downloadFilename": "overall-results-summary (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/party-votes-and-turnout-by-electorate.csv",
+      "role": "summary/control",
+      "downloadFilename": "party-votes-and-turnout-by-electorate (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-and-turnout-by-electorate.csv",
+      "role": "summary/control",
+      "downloadFilename": "candidate-votes-and-turnout-by-electorate (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/votes-for-registered-parties-by-electorate.csv",
+      "role": "summary/control",
+      "downloadFilename": "votes-for-registered-parties-by-electorate (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/percentage-votes-for-registered-parties.csv",
+      "role": "summary/control",
+      "downloadFilename": "percentage-votes-for-registered-parties (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/winning-electorate-candidates.csv",
+      "role": "summary/control",
+      "downloadFilename": "winning-electorate-candidates (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-summary.csv",
+      "role": "aggregate split",
+      "downloadFilename": "split-votes-summary (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-all.csv",
+      "role": "aggregate split",
+      "downloadFilename": "split-votes-all (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-general.csv",
+      "role": "aggregate split",
+      "downloadFilename": "split-votes-general (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-maori.csv",
+      "role": "aggregate split",
+      "downloadFilename": "split-votes-maori (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-1.csv",
+      "role": "general candidate",
+      "electorateName": "Auckland Central",
+      "sourceElectorateNumber": 1,
+      "downloadFilename": "candidate-votes-by-voting-place-1 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-2.csv",
+      "role": "general candidate",
+      "electorateName": "Banks Peninsula",
+      "sourceElectorateNumber": 2,
+      "downloadFilename": "candidate-votes-by-voting-place-2 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-3.csv",
+      "role": "general candidate",
+      "electorateName": "Bay of Plenty",
+      "sourceElectorateNumber": 3,
+      "downloadFilename": "candidate-votes-by-voting-place-3 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-4.csv",
+      "role": "general candidate",
+      "electorateName": "Botany",
+      "sourceElectorateNumber": 4,
+      "downloadFilename": "candidate-votes-by-voting-place-4 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-5.csv",
+      "role": "general candidate",
+      "electorateName": "Christchurch Central",
+      "sourceElectorateNumber": 5,
+      "downloadFilename": "candidate-votes-by-voting-place-5 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-6.csv",
+      "role": "general candidate",
+      "electorateName": "Christchurch East",
+      "sourceElectorateNumber": 6,
+      "downloadFilename": "candidate-votes-by-voting-place-6 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-7.csv",
+      "role": "general candidate",
+      "electorateName": "Coromandel",
+      "sourceElectorateNumber": 7,
+      "downloadFilename": "candidate-votes-by-voting-place-7 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-8.csv",
+      "role": "general candidate",
+      "electorateName": "Dunedin",
+      "sourceElectorateNumber": 8,
+      "downloadFilename": "candidate-votes-by-voting-place-8 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-9.csv",
+      "role": "general candidate",
+      "electorateName": "East Coast",
+      "sourceElectorateNumber": 9,
+      "downloadFilename": "candidate-votes-by-voting-place-9 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-10.csv",
+      "role": "general candidate",
+      "electorateName": "East Coast Bays",
+      "sourceElectorateNumber": 10,
+      "downloadFilename": "candidate-votes-by-voting-place-10 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-11.csv",
+      "role": "general candidate",
+      "electorateName": "Epsom",
+      "sourceElectorateNumber": 11,
+      "downloadFilename": "candidate-votes-by-voting-place-11 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-12.csv",
+      "role": "general candidate",
+      "electorateName": "Hamilton East",
+      "sourceElectorateNumber": 12,
+      "downloadFilename": "candidate-votes-by-voting-place-12 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-13.csv",
+      "role": "general candidate",
+      "electorateName": "Hamilton West",
+      "sourceElectorateNumber": 13,
+      "downloadFilename": "candidate-votes-by-voting-place-13 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-14.csv",
+      "role": "general candidate",
+      "electorateName": "Hutt South",
+      "sourceElectorateNumber": 14,
+      "downloadFilename": "candidate-votes-by-voting-place-14 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-15.csv",
+      "role": "general candidate",
+      "electorateName": "Ilam",
+      "sourceElectorateNumber": 15,
+      "downloadFilename": "candidate-votes-by-voting-place-15 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-16.csv",
+      "role": "general candidate",
+      "electorateName": "Invercargill",
+      "sourceElectorateNumber": 16,
+      "downloadFilename": "candidate-votes-by-voting-place-16 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-17.csv",
+      "role": "general candidate",
+      "electorateName": "Kaikōura",
+      "sourceElectorateNumber": 17,
+      "downloadFilename": "candidate-votes-by-voting-place-17 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-18.csv",
+      "role": "general candidate",
+      "electorateName": "Kaipara ki Mahurangi",
+      "sourceElectorateNumber": 18,
+      "downloadFilename": "candidate-votes-by-voting-place-18 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-19.csv",
+      "role": "general candidate",
+      "electorateName": "Kelston",
+      "sourceElectorateNumber": 19,
+      "downloadFilename": "candidate-votes-by-voting-place-19 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-20.csv",
+      "role": "general candidate",
+      "electorateName": "Mana",
+      "sourceElectorateNumber": 20,
+      "downloadFilename": "candidate-votes-by-voting-place-20 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-21.csv",
+      "role": "general candidate",
+      "electorateName": "Māngere",
+      "sourceElectorateNumber": 21,
+      "downloadFilename": "candidate-votes-by-voting-place-21 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-22.csv",
+      "role": "general candidate",
+      "electorateName": "Manurewa",
+      "sourceElectorateNumber": 22,
+      "downloadFilename": "candidate-votes-by-voting-place-22 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-23.csv",
+      "role": "general candidate",
+      "electorateName": "Maungakiekie",
+      "sourceElectorateNumber": 23,
+      "downloadFilename": "candidate-votes-by-voting-place-23 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-24.csv",
+      "role": "general candidate",
+      "electorateName": "Mt Albert",
+      "sourceElectorateNumber": 24,
+      "downloadFilename": "candidate-votes-by-voting-place-24 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-25.csv",
+      "role": "general candidate",
+      "electorateName": "Mt Roskill",
+      "sourceElectorateNumber": 25,
+      "downloadFilename": "candidate-votes-by-voting-place-25 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-26.csv",
+      "role": "general candidate",
+      "electorateName": "Napier",
+      "sourceElectorateNumber": 26,
+      "downloadFilename": "candidate-votes-by-voting-place-26 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-27.csv",
+      "role": "general candidate",
+      "electorateName": "Nelson",
+      "sourceElectorateNumber": 27,
+      "downloadFilename": "candidate-votes-by-voting-place-27 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-28.csv",
+      "role": "general candidate",
+      "electorateName": "New Lynn",
+      "sourceElectorateNumber": 28,
+      "downloadFilename": "candidate-votes-by-voting-place-28 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-29.csv",
+      "role": "general candidate",
+      "electorateName": "New Plymouth",
+      "sourceElectorateNumber": 29,
+      "downloadFilename": "candidate-votes-by-voting-place-29 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-30.csv",
+      "role": "general candidate",
+      "electorateName": "North Shore",
+      "sourceElectorateNumber": 30,
+      "downloadFilename": "candidate-votes-by-voting-place-30 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-31.csv",
+      "role": "general candidate",
+      "electorateName": "Northcote",
+      "sourceElectorateNumber": 31,
+      "downloadFilename": "candidate-votes-by-voting-place-31 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-32.csv",
+      "role": "general candidate",
+      "electorateName": "Northland",
+      "sourceElectorateNumber": 32,
+      "downloadFilename": "candidate-votes-by-voting-place-32 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-33.csv",
+      "role": "general candidate",
+      "electorateName": "Ōhāriu",
+      "sourceElectorateNumber": 33,
+      "downloadFilename": "candidate-votes-by-voting-place-33 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-34.csv",
+      "role": "general candidate",
+      "electorateName": "Ōtaki",
+      "sourceElectorateNumber": 34,
+      "downloadFilename": "candidate-votes-by-voting-place-34 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-35.csv",
+      "role": "general candidate",
+      "electorateName": "Pakuranga",
+      "sourceElectorateNumber": 35,
+      "downloadFilename": "candidate-votes-by-voting-place-35 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-36.csv",
+      "role": "general candidate",
+      "electorateName": "Palmerston North",
+      "sourceElectorateNumber": 36,
+      "downloadFilename": "candidate-votes-by-voting-place-36 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-37.csv",
+      "role": "general candidate",
+      "electorateName": "Panmure-Ōtāhuhu",
+      "sourceElectorateNumber": 37,
+      "downloadFilename": "candidate-votes-by-voting-place-37 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-38.csv",
+      "role": "general candidate",
+      "electorateName": "Papakura",
+      "sourceElectorateNumber": 38,
+      "downloadFilename": "candidate-votes-by-voting-place-38 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-39.csv",
+      "role": "general candidate",
+      "electorateName": "Port Waikato",
+      "sourceElectorateNumber": 39,
+      "downloadFilename": "candidate-votes-by-voting-place-39 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-40.csv",
+      "role": "general candidate",
+      "electorateName": "Rangitata",
+      "sourceElectorateNumber": 40,
+      "downloadFilename": "candidate-votes-by-voting-place-40 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-41.csv",
+      "role": "general candidate",
+      "electorateName": "Rangitīkei",
+      "sourceElectorateNumber": 41,
+      "downloadFilename": "candidate-votes-by-voting-place-41 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-42.csv",
+      "role": "general candidate",
+      "electorateName": "Remutaka",
+      "sourceElectorateNumber": 42,
+      "downloadFilename": "candidate-votes-by-voting-place-42 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-43.csv",
+      "role": "general candidate",
+      "electorateName": "Rongotai",
+      "sourceElectorateNumber": 43,
+      "downloadFilename": "candidate-votes-by-voting-place-43 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-44.csv",
+      "role": "general candidate",
+      "electorateName": "Rotorua",
+      "sourceElectorateNumber": 44,
+      "downloadFilename": "candidate-votes-by-voting-place-44 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-45.csv",
+      "role": "general candidate",
+      "electorateName": "Selwyn",
+      "sourceElectorateNumber": 45,
+      "downloadFilename": "candidate-votes-by-voting-place-45 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-46.csv",
+      "role": "general candidate",
+      "electorateName": "Southland",
+      "sourceElectorateNumber": 46,
+      "downloadFilename": "candidate-votes-by-voting-place-46 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-47.csv",
+      "role": "general candidate",
+      "electorateName": "Taieri",
+      "sourceElectorateNumber": 47,
+      "downloadFilename": "candidate-votes-by-voting-place-47 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-48.csv",
+      "role": "general candidate",
+      "electorateName": "Takanini",
+      "sourceElectorateNumber": 48,
+      "downloadFilename": "candidate-votes-by-voting-place-48 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-49.csv",
+      "role": "general candidate",
+      "electorateName": "Tāmaki",
+      "sourceElectorateNumber": 49,
+      "downloadFilename": "candidate-votes-by-voting-place-49 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-50.csv",
+      "role": "general candidate",
+      "electorateName": "Taranaki-King Country",
+      "sourceElectorateNumber": 50,
+      "downloadFilename": "candidate-votes-by-voting-place-50 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-51.csv",
+      "role": "general candidate",
+      "electorateName": "Taupō",
+      "sourceElectorateNumber": 51,
+      "downloadFilename": "candidate-votes-by-voting-place-51 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-52.csv",
+      "role": "general candidate",
+      "electorateName": "Tauranga",
+      "sourceElectorateNumber": 52,
+      "downloadFilename": "candidate-votes-by-voting-place-52 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-53.csv",
+      "role": "general candidate",
+      "electorateName": "Te Atatū",
+      "sourceElectorateNumber": 53,
+      "downloadFilename": "candidate-votes-by-voting-place-53 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-54.csv",
+      "role": "general candidate",
+      "electorateName": "Tukituki",
+      "sourceElectorateNumber": 54,
+      "downloadFilename": "candidate-votes-by-voting-place-54 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-55.csv",
+      "role": "general candidate",
+      "electorateName": "Upper Harbour",
+      "sourceElectorateNumber": 55,
+      "downloadFilename": "candidate-votes-by-voting-place-55 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-56.csv",
+      "role": "general candidate",
+      "electorateName": "Waikato",
+      "sourceElectorateNumber": 56,
+      "downloadFilename": "candidate-votes-by-voting-place-56 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-57.csv",
+      "role": "general candidate",
+      "electorateName": "Waimakariri",
+      "sourceElectorateNumber": 57,
+      "downloadFilename": "candidate-votes-by-voting-place-57 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-58.csv",
+      "role": "general candidate",
+      "electorateName": "Wairarapa",
+      "sourceElectorateNumber": 58,
+      "downloadFilename": "candidate-votes-by-voting-place-58 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-59.csv",
+      "role": "general candidate",
+      "electorateName": "Waitaki",
+      "sourceElectorateNumber": 59,
+      "downloadFilename": "candidate-votes-by-voting-place-59 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-60.csv",
+      "role": "general candidate",
+      "electorateName": "Wellington Central",
+      "sourceElectorateNumber": 60,
+      "downloadFilename": "candidate-votes-by-voting-place-60 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-61.csv",
+      "role": "general candidate",
+      "electorateName": "West Coast-Tasman",
+      "sourceElectorateNumber": 61,
+      "downloadFilename": "candidate-votes-by-voting-place-61 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-62.csv",
+      "role": "general candidate",
+      "electorateName": "Whanganui",
+      "sourceElectorateNumber": 62,
+      "downloadFilename": "candidate-votes-by-voting-place-62 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-63.csv",
+      "role": "general candidate",
+      "electorateName": "Whangaparāoa",
+      "sourceElectorateNumber": 63,
+      "downloadFilename": "candidate-votes-by-voting-place-63 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-64.csv",
+      "role": "general candidate",
+      "electorateName": "Whangārei",
+      "sourceElectorateNumber": 64,
+      "downloadFilename": "candidate-votes-by-voting-place-64 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-65.csv",
+      "role": "general candidate",
+      "electorateName": "Wigram",
+      "sourceElectorateNumber": 65,
+      "downloadFilename": "candidate-votes-by-voting-place-65 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-66.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Hauraki-Waikato",
+      "sourceElectorateNumber": 66,
+      "downloadFilename": "candidate-votes-by-voting-place-66 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-67.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Ikaroa-Rāwhiti",
+      "sourceElectorateNumber": 67,
+      "downloadFilename": "candidate-votes-by-voting-place-67 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-68.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Tāmaki Makaurau",
+      "sourceElectorateNumber": 68,
+      "downloadFilename": "candidate-votes-by-voting-place-68 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-69.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Te Tai Hauāuru",
+      "sourceElectorateNumber": 69,
+      "downloadFilename": "candidate-votes-by-voting-place-69 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-70.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Te Tai Tokerau",
+      "sourceElectorateNumber": 70,
+      "downloadFilename": "candidate-votes-by-voting-place-70 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-71.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Te Tai Tonga",
+      "sourceElectorateNumber": 71,
+      "downloadFilename": "candidate-votes-by-voting-place-71 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/candidate-votes-by-voting-place-72.csv",
+      "role": "supporting Maori candidate",
+      "electorateName": "Waiariki",
+      "sourceElectorateNumber": 72,
+      "downloadFilename": "candidate-votes-by-voting-place-72.csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-1.csv",
+      "role": "general split",
+      "electorateName": "Auckland Central",
+      "sourceElectorateNumber": 1,
+      "downloadFilename": "split-votes-electorate-1 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-2.csv",
+      "role": "general split",
+      "electorateName": "Banks Peninsula",
+      "sourceElectorateNumber": 2,
+      "downloadFilename": "split-votes-electorate-2 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-3.csv",
+      "role": "general split",
+      "electorateName": "Bay of Plenty",
+      "sourceElectorateNumber": 3,
+      "downloadFilename": "split-votes-electorate-3 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-4.csv",
+      "role": "general split",
+      "electorateName": "Botany",
+      "sourceElectorateNumber": 4,
+      "downloadFilename": "split-votes-electorate-4 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-5.csv",
+      "role": "general split",
+      "electorateName": "Christchurch Central",
+      "sourceElectorateNumber": 5,
+      "downloadFilename": "split-votes-electorate-5 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-6.csv",
+      "role": "general split",
+      "electorateName": "Christchurch East",
+      "sourceElectorateNumber": 6,
+      "downloadFilename": "split-votes-electorate-6 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-7.csv",
+      "role": "general split",
+      "electorateName": "Coromandel",
+      "sourceElectorateNumber": 7,
+      "downloadFilename": "split-votes-electorate-7 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-8.csv",
+      "role": "general split",
+      "electorateName": "Dunedin",
+      "sourceElectorateNumber": 8,
+      "downloadFilename": "split-votes-electorate-8 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-9.csv",
+      "role": "general split",
+      "electorateName": "East Coast",
+      "sourceElectorateNumber": 9,
+      "downloadFilename": "split-votes-electorate-9 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-10.csv",
+      "role": "general split",
+      "electorateName": "East Coast Bays",
+      "sourceElectorateNumber": 10,
+      "downloadFilename": "split-votes-electorate-10 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-11.csv",
+      "role": "general split",
+      "electorateName": "Epsom",
+      "sourceElectorateNumber": 11,
+      "downloadFilename": "split-votes-electorate-11 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-12.csv",
+      "role": "general split",
+      "electorateName": "Hamilton East",
+      "sourceElectorateNumber": 12,
+      "downloadFilename": "split-votes-electorate-12 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-13.csv",
+      "role": "general split",
+      "electorateName": "Hamilton West",
+      "sourceElectorateNumber": 13,
+      "downloadFilename": "split-votes-electorate-13 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-14.csv",
+      "role": "general split",
+      "electorateName": "Hutt South",
+      "sourceElectorateNumber": 14,
+      "downloadFilename": "split-votes-electorate-14 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-15.csv",
+      "role": "general split",
+      "electorateName": "Ilam",
+      "sourceElectorateNumber": 15,
+      "downloadFilename": "split-votes-electorate-15 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-16.csv",
+      "role": "general split",
+      "electorateName": "Invercargill",
+      "sourceElectorateNumber": 16,
+      "downloadFilename": "split-votes-electorate-16 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-17.csv",
+      "role": "general split",
+      "electorateName": "Kaikōura",
+      "sourceElectorateNumber": 17,
+      "downloadFilename": "split-votes-electorate-17 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-18.csv",
+      "role": "general split",
+      "electorateName": "Kaipara ki Mahurangi",
+      "sourceElectorateNumber": 18,
+      "downloadFilename": "split-votes-electorate-18 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-19.csv",
+      "role": "general split",
+      "electorateName": "Kelston",
+      "sourceElectorateNumber": 19,
+      "downloadFilename": "split-votes-electorate-19 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-20.csv",
+      "role": "general split",
+      "electorateName": "Mana",
+      "sourceElectorateNumber": 20,
+      "downloadFilename": "split-votes-electorate-20 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-21.csv",
+      "role": "general split",
+      "electorateName": "Māngere",
+      "sourceElectorateNumber": 21,
+      "downloadFilename": "split-votes-electorate-21 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-22.csv",
+      "role": "general split",
+      "electorateName": "Manurewa",
+      "sourceElectorateNumber": 22,
+      "downloadFilename": "split-votes-electorate-22 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-23.csv",
+      "role": "general split",
+      "electorateName": "Maungakiekie",
+      "sourceElectorateNumber": 23,
+      "downloadFilename": "split-votes-electorate-23 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-24.csv",
+      "role": "general split",
+      "electorateName": "Mt Albert",
+      "sourceElectorateNumber": 24,
+      "downloadFilename": "split-votes-electorate-24 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-25.csv",
+      "role": "general split",
+      "electorateName": "Mt Roskill",
+      "sourceElectorateNumber": 25,
+      "downloadFilename": "split-votes-electorate-25 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-26.csv",
+      "role": "general split",
+      "electorateName": "Napier",
+      "sourceElectorateNumber": 26,
+      "downloadFilename": "split-votes-electorate-26 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-27.csv",
+      "role": "general split",
+      "electorateName": "Nelson",
+      "sourceElectorateNumber": 27,
+      "downloadFilename": "split-votes-electorate-27 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-28.csv",
+      "role": "general split",
+      "electorateName": "New Lynn",
+      "sourceElectorateNumber": 28,
+      "downloadFilename": "split-votes-electorate-28 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-29.csv",
+      "role": "general split",
+      "electorateName": "New Plymouth",
+      "sourceElectorateNumber": 29,
+      "downloadFilename": "split-votes-electorate-29 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-30.csv",
+      "role": "general split",
+      "electorateName": "North Shore",
+      "sourceElectorateNumber": 30,
+      "downloadFilename": "split-votes-electorate-30 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-31.csv",
+      "role": "general split",
+      "electorateName": "Northcote",
+      "sourceElectorateNumber": 31,
+      "downloadFilename": "split-votes-electorate-31 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-32.csv",
+      "role": "general split",
+      "electorateName": "Northland",
+      "sourceElectorateNumber": 32,
+      "downloadFilename": "split-votes-electorate-32 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-33.csv",
+      "role": "general split",
+      "electorateName": "Ōhāriu",
+      "sourceElectorateNumber": 33,
+      "downloadFilename": "split-votes-electorate-33 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-34.csv",
+      "role": "general split",
+      "electorateName": "Ōtaki",
+      "sourceElectorateNumber": 34,
+      "downloadFilename": "split-votes-electorate-34 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-35.csv",
+      "role": "general split",
+      "electorateName": "Pakuranga",
+      "sourceElectorateNumber": 35,
+      "downloadFilename": "split-votes-electorate-35 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-36.csv",
+      "role": "general split",
+      "electorateName": "Palmerston North",
+      "sourceElectorateNumber": 36,
+      "downloadFilename": "split-votes-electorate-36 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-37.csv",
+      "role": "general split",
+      "electorateName": "Panmure-Ōtāhuhu",
+      "sourceElectorateNumber": 37,
+      "downloadFilename": "split-votes-electorate-37 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-38.csv",
+      "role": "general split",
+      "electorateName": "Papakura",
+      "sourceElectorateNumber": 38,
+      "downloadFilename": "split-votes-electorate-38 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-39.csv",
+      "role": "general split",
+      "electorateName": "Port Waikato",
+      "sourceElectorateNumber": 39,
+      "downloadFilename": "split-votes-electorate-39 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-40.csv",
+      "role": "general split",
+      "electorateName": "Rangitata",
+      "sourceElectorateNumber": 40,
+      "downloadFilename": "split-votes-electorate-40 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-41.csv",
+      "role": "general split",
+      "electorateName": "Rangitīkei",
+      "sourceElectorateNumber": 41,
+      "downloadFilename": "split-votes-electorate-41 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-42.csv",
+      "role": "general split",
+      "electorateName": "Remutaka",
+      "sourceElectorateNumber": 42,
+      "downloadFilename": "split-votes-electorate-42 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-43.csv",
+      "role": "general split",
+      "electorateName": "Rongotai",
+      "sourceElectorateNumber": 43,
+      "downloadFilename": "split-votes-electorate-43 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-44.csv",
+      "role": "general split",
+      "electorateName": "Rotorua",
+      "sourceElectorateNumber": 44,
+      "downloadFilename": "split-votes-electorate-44 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-45.csv",
+      "role": "general split",
+      "electorateName": "Selwyn",
+      "sourceElectorateNumber": 45,
+      "downloadFilename": "split-votes-electorate-45 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-46.csv",
+      "role": "general split",
+      "electorateName": "Southland",
+      "sourceElectorateNumber": 46,
+      "downloadFilename": "split-votes-electorate-46 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-47.csv",
+      "role": "general split",
+      "electorateName": "Taieri",
+      "sourceElectorateNumber": 47,
+      "downloadFilename": "split-votes-electorate-47 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-48.csv",
+      "role": "general split",
+      "electorateName": "Takanini",
+      "sourceElectorateNumber": 48,
+      "downloadFilename": "split-votes-electorate-48 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-49.csv",
+      "role": "general split",
+      "electorateName": "Tāmaki",
+      "sourceElectorateNumber": 49,
+      "downloadFilename": "split-votes-electorate-49 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-50.csv",
+      "role": "general split",
+      "electorateName": "Taranaki-King Country",
+      "sourceElectorateNumber": 50,
+      "downloadFilename": "split-votes-electorate-50 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-51.csv",
+      "role": "general split",
+      "electorateName": "Taupō",
+      "sourceElectorateNumber": 51,
+      "downloadFilename": "split-votes-electorate-51 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-52.csv",
+      "role": "general split",
+      "electorateName": "Tauranga",
+      "sourceElectorateNumber": 52,
+      "downloadFilename": "split-votes-electorate-52 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-53.csv",
+      "role": "general split",
+      "electorateName": "Te Atatū",
+      "sourceElectorateNumber": 53,
+      "downloadFilename": "split-votes-electorate-53 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-54.csv",
+      "role": "general split",
+      "electorateName": "Tukituki",
+      "sourceElectorateNumber": 54,
+      "downloadFilename": "split-votes-electorate-54 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-55.csv",
+      "role": "general split",
+      "electorateName": "Upper Harbour",
+      "sourceElectorateNumber": 55,
+      "downloadFilename": "split-votes-electorate-55 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-56.csv",
+      "role": "general split",
+      "electorateName": "Waikato",
+      "sourceElectorateNumber": 56,
+      "downloadFilename": "split-votes-electorate-56 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-57.csv",
+      "role": "general split",
+      "electorateName": "Waimakariri",
+      "sourceElectorateNumber": 57,
+      "downloadFilename": "split-votes-electorate-57 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-58.csv",
+      "role": "general split",
+      "electorateName": "Wairarapa",
+      "sourceElectorateNumber": 58,
+      "downloadFilename": "split-votes-electorate-58 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-59.csv",
+      "role": "general split",
+      "electorateName": "Waitaki",
+      "sourceElectorateNumber": 59,
+      "downloadFilename": "split-votes-electorate-59 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-60.csv",
+      "role": "general split",
+      "electorateName": "Wellington Central",
+      "sourceElectorateNumber": 60,
+      "downloadFilename": "split-votes-electorate-60 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-61.csv",
+      "role": "general split",
+      "electorateName": "West Coast-Tasman",
+      "sourceElectorateNumber": 61,
+      "downloadFilename": "split-votes-electorate-61 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-62.csv",
+      "role": "general split",
+      "electorateName": "Whanganui",
+      "sourceElectorateNumber": 62,
+      "downloadFilename": "split-votes-electorate-62 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-63.csv",
+      "role": "general split",
+      "electorateName": "Whangaparāoa",
+      "sourceElectorateNumber": 63,
+      "downloadFilename": "split-votes-electorate-63 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-64.csv",
+      "role": "general split",
+      "electorateName": "Whangārei",
+      "sourceElectorateNumber": 64,
+      "downloadFilename": "split-votes-electorate-64 (1).csv"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-65.csv",
+      "role": "general split",
+      "electorateName": "Wigram",
+      "sourceElectorateNumber": 65,
+      "downloadFilename": "split-votes-electorate-65.csv"
+    }
+  ]
+}
