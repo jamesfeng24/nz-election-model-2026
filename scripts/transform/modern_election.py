@@ -1,26 +1,25 @@
-"""Offline modern-election adapter; deliberately separate from the legacy E9 pipeline."""
+"""Offline 2017 election adapter; deliberately separate from the legacy E9 pipeline."""
 import argparse
 import hashlib
 import json
 from pathlib import Path
 
 from .historical import count, key, read_csv, require
-from .modern_config import CONFIGS, election_config
 from .modern_tables import candidate_table, check_percent, overall_table, party_table, percent, turnout_table, winners_table
 
+YEAR = 2017
 ROOT = Path(__file__).resolve().parents[2]
 
 
 class Sources:
-    """Read only registered unchanged election bytes and retain consumed provenance."""
+    """Read only registered unchanged 2017 bytes and retain consumed provenance."""
 
-    def __init__(self, root, year=2017):
-        self.config = election_config(year)
+    def __init__(self, root):
         self.root = root
         records = json.loads((root / 'data/sources.json').read_text())['sources']
         self.records = {}
         for record in records:
-            if record['dateOrElection'] == f'{self.config.year} general election':
+            if record['dateOrElection'] == '2017 general election':
                 name = Path(record['rawPath']).name
                 require(name not in self.records, 'Ambiguous source basename')
                 self.records[name] = record
@@ -62,8 +61,7 @@ def validate_party_percentages(data, party_rows):
 
 def make_electorate(entry, ballot, candidate_ballot, parties, winner, source, shared_ids, electorate_names):
     number = entry['sourceElectorateNumber']
-    config = source.config
-    eid = f'{config.election_id}-electorate-{number:02}'
+    eid = f'nz-general-2017-electorate-{number:02}'
     candidates, sid = parse(source, Path(entry['url']).stem, lambda data: candidate_table(data, electorate_names))
     require(candidates['sourceElectorateLabel'] == entry['electorateName'] + ' ' + str(number), 'Official name/number mismatch')
     require(ballot['name'] == entry['electorateName'], 'Plan/turnout name mismatch')
@@ -80,8 +78,8 @@ def make_electorate(entry, ballot, candidate_ballot, parties, winner, source, sh
     check_percent(winner['votes'], candidate_ballot['votesCast'], candidate_ballot['reportedWinnerPercentOfVotesCast'], 'Winner turnout share')
     for index, candidate in enumerate(candidates['candidates'], 1):
         candidate.update(id=f'{eid}-candidate-{index:02}', nameMatchKey=key(candidate['name']), personId=None, partyKey=key(candidate['party']), elected=candidate['name'] == winner['candidateName'])
-    return {'id': eid, 'electionId': config.election_id, 'year': config.year, 'sourceElectorateNumber': number,
-            'name': ballot['name'], 'kind': ballot['scope'], 'boundaryVersionId': config.boundary_version_id,
+    return {'id': eid, 'electionId': 'nz-general-2017', 'year': YEAR, 'sourceElectorateNumber': number,
+            'name': ballot['name'], 'kind': ballot['scope'], 'boundaryVersionId': 'historical-election-2017-as-published',
             'validPartyVotes': ballot['validVotes'], 'validCandidateVotes': candidate_ballot['validVotes'],
             'partyBallot': ballot, 'candidateBallot': candidate_ballot, 'parties': parties['parties'],
             'candidates': candidates['candidates'], 'winnerCandidateId': elected[0]['id'], 'majority': winner['majority'],
@@ -104,9 +102,8 @@ def validate_aggregates(electorates, party_controls, overall):
     require({c['partyKey'] for e in electorates for c in e['candidates']} <= set(all_parties), 'Unknown candidate affiliation')
 
 
-def build_core(root, source=None, year=2017):
-    source = source or Sources(root, year)
-    config = source.config
+def build_core(root, source=None):
+    source = source or Sources(root)
     (ballots, party_totals), party_sid = parse(source, 'party-votes-and-turnout-by-electorate', turnout_table)
     (candidate_ballots, candidate_totals), candidate_sid = parse(source, 'candidate-votes-and-turnout-by-electorate', turnout_table)
     parties, parties_sid = parse(source, 'votes-for-registered-parties-by-electorate', party_table)
@@ -115,16 +112,15 @@ def build_core(root, source=None, year=2017):
     percentage_data, percentage_sid = source('percentage-votes-for-registered-parties.csv')
     percentage_rows = {**parties['records'], **{key(r['name']): r for r in parties['totals'].values()}}
     validate_party_percentages(percentage_data, percentage_rows)
-    plan = json.loads((root / config.source_plan).read_text())
-    require(plan['year'] == config.year, 'Source plan election mismatch')
+    plan = json.loads((root / 'data/source-plans/historical-2017.json').read_text())
     entries = [e for e in plan['resources'] if e['role'] in ('general candidate', 'supporting Maori candidate')]
-    require(len(entries) == config.total_electorates and len({e['sourceElectorateNumber'] for e in entries}) == config.total_electorates, 'Candidate plan coverage')
+    require(len(entries) == 71 and len({e['sourceElectorateNumber'] for e in entries}) == 71, 'Candidate plan coverage')
     by_name = {key(b['name']): b for b in ballots}
     candidates_by_name = {key(b['name']): b for b in candidate_ballots}
     require(set(by_name) == set(candidates_by_name) == set(winners) == set(parties['records']) == {key(e['electorateName']) for e in entries}, 'Electorate table coverage')
     shared_ids = [party_sid, candidate_sid, parties_sid, winner_sid, overall_sid, percentage_sid]
     electorates = [make_electorate(e, by_name[key(e['electorateName'])], candidates_by_name[key(e['electorateName'])], parties['records'][key(e['electorateName'])], winners[key(e['electorateName'])], source, shared_ids, [b['name'] for b in ballots]) for e in entries]
-    require(sum(e['kind'] == 'general' for e in electorates) == config.general_electorates and sum(e['kind'] == 'maori' for e in electorates) == config.maori_electorates, 'General/Maori coverage')
+    require(sum(e['kind'] == 'general' for e in electorates) == 64 and sum(e['kind'] == 'maori' for e in electorates) == 7, 'General/Maori coverage')
     ids = [c['id'] for e in electorates for c in e['candidates']]
     require(len(set(ids)) == len(ids), 'Duplicate candidate occurrence')
     validate_aggregates(electorates, parties['totals'], overall)
@@ -133,7 +129,7 @@ def build_core(root, source=None, year=2017):
             require(totals['national'][field] == overall[kind + ballot + 'Votes'], 'Overall ballot control')
     for p in overall['parties']:
         p['sourceId'] = overall_sid
-    result = {'schemaVersion': 1, 'year': config.year, 'electorates': [e for e in electorates if e['kind'] == 'general'],
+    result = {'schemaVersion': 1, 'year': YEAR, 'electorates': [e for e in electorates if e['kind'] == 'general'],
               'nationalControls': {'party': party_totals, 'candidate': candidate_totals, 'parties': overall['parties']},
               'sourceIds': sorted(source.used)}
     return result, electorates
@@ -143,14 +139,12 @@ def encode(value):
     return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode()
 
 
-def build_year(root, year=2017):
-    source = Sources(root, year)
-    config = source.config
+def build_year(root):
+    source = Sources(root)
     election, electorates = build_core(root, source)
     from .modern_split import build_split
-    split, details = build_split(source, electorates, election['nationalControls']['parties'], config)
-    require(len(source.used) == config.source_files, 'Source inventory coverage')
-    report = {'schemaVersion': 1, 'year': config.year, 'generalElectorates': config.general_electorates, 'supportingMaoriElectorates': config.maori_electorates,
+    split, details = build_split(source, electorates, election['nationalControls']['parties'])
+    report = {'schemaVersion': 1, 'year': YEAR, 'generalElectorates': 64, 'supportingMaoriElectorates': 7,
               'candidateRecords': sum(len(e['candidates']) for e in election['electorates']),
               'partyVoteRecords': sum(len(e['parties']) for e in election['electorates']),
               'splitMatrices': len(split['matrices']), 'splitStatus': 'validated',
@@ -162,12 +156,11 @@ def build_year(root, year=2017):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--year', type=int, choices=sorted(CONFIGS), default=2017)
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
-    outputs = build_year(ROOT, args.year)
+    outputs = build_year(ROOT)
     for kind, value in outputs.items():
-        relative = f'data/processed/split-votes/{args.year}.json' if kind == 'split' else f'data/processed/elections/{args.year}{"-validation" if kind == "validation" else ""}.json'
+        relative = f'data/processed/split-votes/2017.json' if kind == 'split' else f'data/processed/elections/2017{"-validation" if kind == "validation" else ""}.json'
         path = ROOT / relative
         if args.check:
             require(path.read_bytes() == encode(value), 'Stale processed output: ' + relative)

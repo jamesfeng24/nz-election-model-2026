@@ -2,16 +2,6 @@
 
 Updated 2026-09-10. GitHub is canonical: https://github.com/jamesfeng24/nz-election-model-2026.
 
-## Active Stage 3B checkpoint — 2026-09-10
-
-2017 PR #6 is merged in main at a151441397b599ea58ce90127a66d160a889b394. Current branch: `stage/03b-historical-2020`, based on that clean main commit. Authorized scope: 2020 ingestion only. The completed 2017 handoff below is retained as historical context.
-
-Official 2020 indexes confirm 65 general + seven Māori electorates. The explicit 147-resource plan is `data/source-plans/historical-2020.json`. 83 official files are imported unchanged and checksum-registered: all six core controls, all 72 candidate files, local split 1, three aggregate splits and exact summary. Core reconciliation passes for all 72 electorates: primary export covers 65 general electorates, 561 candidate records and 1,105 party records. Official winners, majorities, turnout, informal/valid controls and national party/candidate counts reconcile. Shared modern configuration (D019) preserves deterministic 2017 output bytes; 23 focused tests pass. Registry integrity passes for 655 total resources.
-
-Next action: acquire only missing general split files 2–65 using the explicit plan. Then generate full 2020 outputs, add regression/mutation tests, run final validation and update documentation. Candidate/core acquisition is complete. Do not re-download preserved sources. All prior processed outputs remain untouched. No modelling, person linking or panel extension. After this stage the next task is **2023 historical election ingestion only**.
-
-## Historical 2017 completion handoff
-
 ## Objective and current stage
 
 Build a transparent static 2026 election website with reproducible offline historical data and later independently validated models. React/TypeScript/Vite/Vitest, no backend/database. No model has been fitted.

@@ -1,8 +1,7 @@
-"""Modern split evidence: rounded local matrices and exact national summaries."""
+"""2017 split evidence: rounded local matrices and exact national summaries."""
 from collections import defaultdict
 
 from .historical import count, key, read_csv, require, split_rows
-from .modern_config import election_config
 from .modern_tables import percent
 
 
@@ -65,7 +64,7 @@ def local_matrix(source, electorate):
     for index, cell in enumerate(table['rows'][-1]['cells']):
         label = cell['candidateLabel']
         check_column(table, index, candidates[label]['votes'] if label in candidates else controls[label])
-    return {'schemaVersion': 1, 'id': electorate['id']+'-split', 'electorateId': electorate['id'], 'year': electorate['year'], **table}
+    return {'schemaVersion': 1, 'id': electorate['id']+'-split', 'electorateId': electorate['id'], 'year': 2017, **table}
 
 
 def aggregate_matrix(source, electorates, scope):
@@ -144,16 +143,14 @@ def split_summary(source, aggregate):
     return {'sourceIds': [sid], 'rows': result, 'limitations': ['Informal Party Votes non-split count matches Party Vote Only, not Candidate Informals; preserve the published convention and exclude it from party-behaviour estimates. Exact national summary counts do not supply exact local joint cells.']}
 
 
-def build_split(source, all_electorates, national_parties, config=None):
-    """Build complete evidence from checksum-verified source callbacks."""
-    config = config or election_config(2017)
-    require(all(e['year'] == config.year for e in all_electorates), 'Mixed election split inputs')
+def build_split(source, all_electorates, national_parties):
+    """Build complete 2017 evidence from checksum-verified source callbacks."""
     general = [e for e in all_electorates if e['kind'] == 'general']
-    require(len(general) == config.general_electorates and len(all_electorates) == config.total_electorates, f'{config.year} split electorate coverage')
+    require(len(general) == 64 and len(all_electorates) == 71, '2017 split electorate coverage')
     matrices = [local_matrix(source, e) for e in general]
     aggregates = {scope: aggregate_matrix(source, all_electorates, scope) for scope in ('general', 'maori', 'national')}
     check_local_aggregate(matrices, general, aggregates['general'])
     summary = split_summary(source, aggregates['national'])
-    return ({'schemaVersion': 1, 'year': config.year, 'matrices': matrices, 'aggregateMatrices': aggregates, 'officialSplitSummary': summary},
+    return ({'schemaVersion': 1, 'year': 2017, 'matrices': matrices, 'aggregateMatrices': aggregates, 'officialSplitSummary': summary},
             {'checks': ['Local split rows, columns and rounded intervals', 'General/Māori/national split controls', 'Local/general aggregate interval agreement', 'Exact national split summary'],
              'labelMappings': [], 'limitations': ['Local and aggregate matrix percentages are rounded to two decimal places; exact joint cell counts remain null.', *summary['limitations']]})

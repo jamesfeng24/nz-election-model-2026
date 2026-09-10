@@ -77,7 +77,3 @@ Build the 2008–2014 panel from validated per-year JSON, retaining election-spe
 ## D018 — 2026-09-09 — Source-format-specific modern election adapter
 
 2017 descriptive statistics CSVs retain several older concepts but change candidate share units to percentages, round turnout rates to two decimals, and add publication-specific section/summary rows. Keep legacy historical.py unchanged. Use modern_tables.py for small pure table parsers, modern_election.py for 2017 orchestration/reconciliation, and modern_split.py for rounded matrices/exact summary controls. Reuse only generic Unicode/count/key/ratio/split parsing helpers. No assumption that 2020/2023 formats match until their authorized inspection. Candidate/person continuity and panel integration remain deferred.
-
-## D019 — 2026-09-10 — Shared modern parser with explicit election configuration
-
-The preserved 2020 representative controls, candidate and split tables use the same modern publication layouts as 2017. Reuse modern table/split parsing and parameterize orchestration with explicit year, election/boundary identifiers and expected coverage. Keep source-specific exceptions small and evidence-based. The legacy E9 parser and all previously committed processed outputs remain unchanged; 2020 is an independent per-election export, not a panel extension.

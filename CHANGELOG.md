@@ -86,9 +86,3 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Reconciled all 71 candidate files and national totals. Preserved percentage units, Unicode, original affiliations, disclosure notes and unresolved person identities. No aliases or fabricated joint counts.
 - All 51 Python tests, source integrity, deterministic regeneration and prior-year compatibility checks pass. Legacy parser and all prior processed bytes unchanged. CI now checks 2017 regeneration.
 - Updated handoff, source coverage, data dictionary and reproducibility. No frontend changes, modelling, cross-year linking, panel extension or later-year acquisition. Next task: 2020 historical election ingestion only.
-
-## Stage 3B acquisition checkpoint — 2026-09-10
-
-- Confirmed merged 2017 PR #6 and branched from a151441 for 2020 only.
-- Recorded 147 explicit official resources and preserved 13 representative source files with checksums.
-- Verified representative modern table compatibility before bulk acquisition; no processed historical observations changed.
