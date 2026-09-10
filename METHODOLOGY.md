@@ -2,7 +2,7 @@
 
 ## Current implementation
 
-Historical design note: Stage 1 contained only the application shell, provenance contracts and documentation. Current state: validated 2008–2014 ingestion and integration are merged; 2017 ingestion is authorized. No polling aggregation, regression, electorate reconstruction, effect estimation, simulation or MMP allocation is implemented. Empty states are not forecasts.
+Historical design note: Stage 1 contained only the application shell, provenance contracts and documentation. Current state: validated 2008–2014 ingestion and integration are merged; 2017 ingestion is complete for review using a source-format-specific adapter (D018). No polling aggregation, regression, electorate reconstruction, effect estimation, simulation or MMP allocation is implemented. Empty states are not forecasts.
 
 ## Intended scope (not yet methods)
 
