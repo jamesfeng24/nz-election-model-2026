@@ -1,6 +1,6 @@
 # Data sources and provenance standard
 
-**2008–2014 ingestion/integration are merged; 2017 ingestion is complete on its review branch.** `data/sources.json` contains 572 committed official CSV resources (139 for 2008, 143 for 2011, 145 for 2014 and 145 for 2017). Software documentation links are not election datasets.
+**2008–2017 ingestion and 2008–2014 integration are merged; 2020 final validation is complete on its review branch.** `data/sources.json` contains 720 official CSV resources: 139 for 2008, 143 for 2011, 145 for 2014, 145 for 2017 and 148 for 2020.
 
 Every future external dataset must have a SourceRecord validated by `src/types/contracts.ts`, recording:
 
@@ -71,3 +71,11 @@ All 145 planned originals are committed: six controls, 71 candidate files, 64 lo
 Outputs cover 64 general electorates, 431 candidate records and 1,024 party records. Seven Māori electorates support national reconciliation of 453 candidatures. All 64 local split matrices and general/Māori/national controls reconcile within published precision. No candidate aliases were needed; exact affiliations and Unicode labels remain preserved.
 
 Candidate source shares and turnout are two-decimal percentages. Local and aggregate split cells are rounded percentages with null joint counts; exact national summary counts are retained separately. The informal-party non-split count 350 matches Party Vote Only, not Candidate Informals, and must not be interpreted as party behaviour. Voting-place disclosure notes and supporting geographic section headings are not missing counts to zero-fill. No unexplained discrepancy remains. Existing 2008–2014 outputs and raw evidence are unchanged; no later-election data acquired.
+
+## 2020 coverage — Stage 3B complete
+
+Electoral Commission, 17 October 2020 general election. Exact resources discovered through the official [statistics index](https://www.electionresults.govt.nz/electionresults_2020/statistics/index.html), [voting-place index](https://www.electionresults.govt.nz/electionresults_2020/statistics/votes-by-voting-place-electorate-index.html) and [split index](https://www.electionresults.govt.nz/electionresults_2020/statistics/split-votes-index.html) are recorded in `data/source-plans/historical-2020.json`. All 148 originals are preserved under `data/raw/elections/2020/statistics/csv/`, with actual browser-download timestamps, URLs, checksums and modern_election.py provenance. The original 147-file inventory was fully recovered; no reacquisition was needed. One supporting Te Tai Tokerau split file was subsequently added for discrepancy analysis.
+
+Coverage: six core controls, 72 candidate files, 65 general split matrices, three aggregate matrices, one exact summary and one supporting Māori split. Outputs: 65 general electorates, 561 candidates, 1,105 party records. All 601 national candidatures reconcile. No source-name aliases were needed.
+
+The aggregate Māori/national split controls include NZ Public Party's 1,349 candidate votes under Advance NZ. This is an inferred reporting grouping, supported by exact candidate-party totals and rounded column reconciliation, not an official explanation of party identity. The preserved [local Te Tai Tokerau table](https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-70.csv) and candidate file retain NZ Public Party. The transform preserves those labels and records the aggregate-only mapping; the source's rationale remains unstated. Informal-party non-split 537 matches Party Vote Only. Rounded local/aggregate joint cells remain null-count observations; exact national split/non-split counts remain separate. All source checksums and validation pass without changing earlier processed datasets.

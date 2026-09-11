@@ -92,3 +92,11 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Confirmed merged 2017 PR #6 and branched from a151441 for 2020 only.
 - Recorded 147 explicit official resources and preserved 13 representative source files with checksums.
 - Verified representative modern table compatibility before bulk acquisition; no processed historical observations changed.
+
+## Stage 3B completion — 2026-09-11
+
+- Recovered all 147 planned originals already saved at cutoff and surviving regression tests; added one supporting official split source to resolve aggregate reporting differences.
+- Completed deterministic 2020 outputs: 65 general electorates, 561 candidates, 1,105 party records, 65 local splits, three aggregates, exact national summary and one supporting Māori split.
+- Preserved official affiliations with explicit aggregate-only NZ Public Party/Advance NZ reporting metadata.
+- Passed 69 Python tests, 720 source checksums, modern deterministic checks and historical compatibility; all 24 prior processed files unchanged.
+- No modelling, cross-election identity linking or panel extension. Next task: 2023 ingestion only.
