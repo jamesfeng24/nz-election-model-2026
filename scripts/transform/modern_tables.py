@@ -28,7 +28,7 @@ def unique(records, field):
     return result
 
 
-def turnout_table(data):
+def turnout_table(data, cancelled_names=()):
     """Return electorate ballot controls and general/Māori/national controls."""
     rows, _ = read_csv(data)
     start = next(i for i, row in enumerate(rows) if row[0] == 'Electoral District') + 2
@@ -50,7 +50,10 @@ def turnout_table(data):
         require(record['ordinaryInformal'] + record['specialInformal'] == record['informalVotes'], 'Informal vote components')
         require(sum(record[f] for f in ('validVotes', 'informalVotes', 'ordinaryDisallowed', 'specialDisallowed')) == record['votesCast'], 'Votes cast components')
         check_percent(record['votesCast'], record['enrolled'], record['reportedTurnoutPercent'], row[0])
-        check_percent(record['informalVotes'], record['validVotes'] + record['informalVotes'], record['reportedInformalPercent'], row[0])
+        if row[0] in cancelled_names:
+            require(record['validVotes'] == record['informalVotes'] == 0 and record['reportedInformalPercent'] == 0 and record.get('reportedWinnerPercentOfVotesCast') == 0, 'Cancelled ballot controls')
+        else:
+            check_percent(record['informalVotes'], record['validVotes'] + record['informalVotes'], record['reportedInformalPercent'], row[0])
         if row[0] in scopes:
             require(record['scope'] not in totals, 'Duplicate turnout control')
             totals[record['scope']] = record
@@ -66,21 +69,28 @@ def turnout_table(data):
     return records, totals
 
 
-def candidate_table(data, electorate_names=()):
+def candidate_table(data, electorate_names=(), cancelled=False):
     """Reconcile footer candidates with every voting-place row and column."""
     rows, encoding = read_csv(data)
     start = next(i for i, row in enumerate(rows) if row[0] == 'Electorate Candidate Valid Votes')
     headers = rows[2][2:-2]
     require(len(headers) == len(set(headers)), 'Duplicate candidate column')
-    winner_text = next(cell for cell in rows[start] if ' - majority ' in cell)
-    winner, majority = winner_text.rsplit(' - majority ', 1)
+    marker = rows[1][0].endswith('\n(Poll Cancelled)')
+    require(marker == cancelled, 'Unexpected candidate cancellation marker')
+    winner_cells = [cell for cell in rows[start] if ' - majority ' in cell]
+    if cancelled:
+        require(not winner_cells, 'Cancelled contest has winner')
+        winner, majority = None, None
+    else:
+        require(len(winner_cells) == 1, 'Missing or ambiguous candidate winner')
+        winner, majority = winner_cells[0].rsplit(' - majority ', 1)
     candidates = []
     for row in rows[start + 1:]:
         require(len(row) == 4, 'Ragged candidate footer')
         require(bool(row[0]) and bool(row[1]), 'Missing candidate name or affiliation')
         reported = percent(row[3])
         candidates.append({'name': row[0], 'party': row[1], 'votes': count(row[2]),
-                           'sourceShare': reported / 100, 'reportedPercent': reported})
+                           'sourceShare': None if cancelled else reported / 100, 'reportedPercent': reported})
     unique(candidates, 'name')
     require(headers == [c['name'] for c in candidates], 'Candidate header/footer identity')
     total_rows = [i for i, row in enumerate(rows[:start]) if len(row) == len(rows[2]) and row[1].endswith(' Total')]
@@ -102,7 +112,7 @@ def candidate_table(data, electorate_names=()):
         values = list(map(count, row[2:]))
         require(sum(values[:-2]) == values[-2], 'Voting-place valid total')
         details.append(values)
-    require([sum(column) for column in zip(*details)] == totals, 'Voting-place column totals')
+    require(([sum(column) for column in zip(*details)] if details else [0] * len(totals) if cancelled else []) == totals, 'Voting-place column totals')
     require([c['votes'] for c in candidates] == totals[:-2], 'Candidate footer/polling-place totals')
     total = sum(c['votes'] for c in candidates)
     require(total == totals[-2], 'Candidate valid total')
@@ -110,11 +120,17 @@ def candidate_table(data, electorate_names=()):
     require(combined[1] == 'Valid Candidate Votes plus Informal Candidate Votes' and count(combined[-1]) == sum(totals[-2:]), 'Candidate counted ballot total')
     for candidate in candidates:
         candidate['share'] = ratio(candidate['votes'], total)
-        check_percent(candidate['votes'], total, candidate['reportedPercent'], candidate['name'])
+        if cancelled:
+            require(candidate['votes'] == candidate['reportedPercent'] == 0 and candidate['share'] is None, 'Cancelled candidate source controls')
+        else:
+            check_percent(candidate['votes'], total, candidate['reportedPercent'], candidate['name'])
     ranked = sorted(candidates, key=lambda c: c['votes'], reverse=True)
-    require(len(ranked) >= 2 and ranked[0]['name'] == winner and ranked[0]['votes'] - ranked[1]['votes'] == count(majority), 'Candidate winner or majority')
+    if cancelled:
+        require(total == totals[-1] == 0 and all(value == 0 for row in details for value in row), 'Cancelled candidate totals')
+    else:
+        require(len(ranked) >= 2 and ranked[0]['name'] == winner and ranked[0]['votes'] - ranked[1]['votes'] == count(majority), 'Candidate winner or majority')
     return {'sourceElectorateLabel': rows[1][0], 'candidates': candidates, 'validVotes': total,
-            'informalVotes': totals[-1], 'winnerName': winner, 'majority': count(majority),
+            'informalVotes': totals[-1], 'winnerName': winner, 'majority': None if cancelled else count(majority),
             'sourceEncoding': encoding, 'votingPlaceRowsValidated': len(details), 'sourceDisclosureNotes': disclosure_notes, 'sourceSectionLabels': section_labels}
 
 
@@ -165,15 +181,41 @@ def overall_table(data):
         elif group and row[0]:
             require(len(row) == 9, 'Ragged overall party row')
             parties.append({'name': row[0], 'partyKey': key(row[0]), 'sourceGroup': group,
-                            'partyVotes': count(row[2]), 'candidateVotes': count(row[6]),
-                            'reportedPartyPercent': percent(row[3]), 'reportedCandidatePercent': percent(row[7]),
-                            'candidateNominations': count(row[8])})
+                            'partyVotes': count(row[2]) if row[2] else None, 'candidateVotes': count(row[6]) if row[6] else None,
+                            'reportedPartyPercent': percent(row[3]) if row[3] else None, 'reportedCandidatePercent': percent(row[7]) if row[7] else None,
+                            'candidateNominations': count(row[8]) if row[8] else None})
+    parties = merge_overall_rows(parties)
     unique(parties, 'name')
     valid, informal = rows[end - 2], rows[end - 1]
     controls = {'validPartyVotes': count(valid[3]), 'validCandidateVotes': count(valid[7]),
                 'informalPartyVotes': count(informal[3]), 'informalCandidateVotes': count(informal[7])}
     for ballot in ('Party', 'Candidate'):
-        require(sum(p[ballot.lower() + 'Votes'] for p in parties) == controls['valid' + ballot + 'Votes'], 'Overall vote sum')
+        require(sum(p[ballot.lower() + 'Votes'] for p in parties if p[ballot.lower() + 'Votes'] is not None) == controls['valid' + ballot + 'Votes'], 'Overall vote sum')
         for party in parties:
-            check_percent(party[ballot.lower() + 'Votes'], controls['valid' + ballot + 'Votes'], party['reported' + ballot + 'Percent'], party['name'])
+            if party[ballot.lower() + 'Votes'] is not None:
+                check_percent(party[ballot.lower() + 'Votes'], controls['valid' + ballot + 'Votes'], party['reported' + ballot + 'Percent'], party['name'])
     return {'parties': parties, **controls}
+
+
+def merge_overall_rows(rows):
+    """Join complementary party/candidate sections; absent ballot fields stay null."""
+    result = {}
+    for row in rows:
+        for fields in (('partyVotes', 'reportedPartyPercent'), ('candidateVotes', 'reportedCandidatePercent', 'candidateNominations')):
+            require(len({row[field] is None for field in fields}) == 1, 'Partially missing overall ballot fields')
+        identity = row['partyKey']
+        if identity not in result:
+            result[identity] = dict(row)
+            continue
+        existing = result[identity]
+        require(existing['name'] == row['name'] and existing['sourceGroup'] == row['sourceGroup'], 'Ambiguous overall source identity')
+        require('sourceRows' not in existing, 'Repeated overall source identity')
+        evidence = [dict(existing), dict(row)]
+        for field in ('partyVotes', 'reportedPartyPercent', 'candidateVotes', 'reportedCandidatePercent', 'candidateNominations'):
+            require((existing[field] is None) != (row[field] is None), 'Overlapping overall source fields')
+            if existing[field] is None:
+                existing[field] = row[field]
+        existing['sourceRows'] = evidence
+    for row in result.values():
+        require(row['candidateVotes'] is not None, 'Missing overall candidate observations')
+    return list(result.values())

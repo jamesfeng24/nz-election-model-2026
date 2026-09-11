@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 class ModernConfigTests(unittest.TestCase):
     def test_only_inspected_elections_are_supported(self):
         with self.assertRaisesRegex(ValueError, 'Unsupported modern election'):
-            election_config(2023)
+            election_config(2026)
         self.assertEqual(election_config(2017).total_electorates, 71)
         self.assertEqual(election_config(2020).total_electorates, 72)
 
