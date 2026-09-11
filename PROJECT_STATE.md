@@ -6,7 +6,7 @@ Updated 2026-09-11. GitHub is canonical: https://github.com/jamesfeng24/nz-elect
 
 Build a transparent static 2026 election website with reproducible historical evidence and later independently validated models. React/TypeScript/Vite/Vitest; no backend/database. No model has been fitted.
 
-Completed and merged: 2008 (PR #2), 2011 (#3), 2014 (#4), 2008–2014 integration (#5), 2017 (#6). Stage 3B / 2020 ingestion and validation is complete on `stage/03b-historical-2020`; final completion PR publication is pending. Do not repeat acquisition.
+Completed and merged: 2008 (PR #2), 2011 (#3), 2014 (#4), 2008–2014 integration (#5), 2017 (#6). Stage 3B / 2020 ingestion and validation is complete on `stage/03b-historical-2020`; completion PR #8 is open and unmerged: https://github.com/jamesfeng24/nz-election-model-2026/pull/8. Do not repeat acquisition.
 
 ## Branch and checkpoints
 
@@ -21,7 +21,7 @@ Original clean main base: `a151441397b599ea58ce90127a66d160a889b394` (2017 merge
 - `04b3a07`: one additional supporting Te Tai Tokerau split file to investigate aggregate grouping.
 - `f18bdb0`: complete split validation, outputs and tests.
 
-All checkpoints are pushed. Final documentation commit and PR metadata follow; Git branch HEAD identifies the final exact SHA.
+All checkpoints are pushed. Final validated documentation commit: `42d26e17366fd21ffca04ef0cbdd7d3e67ef0745`. PR #8 records the completion against main afff44bcbe74de11cae6b171e13764fb7b42eeb4. This metadata-only commit records publication; Git branch HEAD identifies its exact SHA. Leave PR #8 unmerged.
 
 ## Inventory and deterministic outputs
 
