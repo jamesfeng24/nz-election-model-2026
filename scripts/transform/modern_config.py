@@ -8,6 +8,8 @@ class ElectionConfig:
     general_electorates: int
     maori_electorates: int
     source_files: int
+    aggregate_affiliations: tuple = ()
+    supporting_split_numbers: tuple = ()
 
     @property
     def total_electorates(self):
@@ -28,7 +30,7 @@ class ElectionConfig:
 
 CONFIGS = {
     2017: ElectionConfig(2017, 64, 7, 145),
-    2020: ElectionConfig(2020, 65, 7, 147),
+    2020: ElectionConfig(2020, 65, 7, 148, (('NZ Public Party', 'Advance NZ'),), (70,)),
 }
 
 

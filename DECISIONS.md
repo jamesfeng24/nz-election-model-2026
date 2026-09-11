@@ -81,3 +81,7 @@ Build the 2008–2014 panel from validated per-year JSON, retaining election-spe
 ## D019 — 2026-09-10 — Shared modern parser with explicit election configuration
 
 The preserved 2020 representative controls, candidate and split tables use the same modern publication layouts as 2017. Reuse modern table/split parsing and parameterize orchestration with explicit year, election/boundary identifiers and expected coverage. Keep source-specific exceptions small and evidence-based. The legacy E9 parser and all previously committed processed outputs remain unchanged; 2020 is an independent per-election export, not a panel extension.
+
+## D020 — 2026-09-11 — 2020 aggregate split reporting group
+
+Retain NZ Public Party as the official candidate affiliation and local split label. Māori/national aggregate split column totals reconcile when its sole candidature (1,349 votes) is grouped under Advance NZ rather than other parties. Record this as an inferred, 2020-only aggregate reporting convention with provenance; do not treat it as party continuity. Preserve and validate supporting Te Tai Tokerau split evidence separately. The source rationale is unstated. No tolerance relaxation, raw correction or exact joint-cell reconstruction is permitted.

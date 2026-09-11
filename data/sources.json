@@ -12107,6 +12107,23 @@
     },
     {
       "schemaVersion": 1,
+      "id": "ec-2020-statistics-csv-split-votes-electorate-70.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-70.csv",
+      "dateOrElection": "2020 general election",
+      "resource": "split-votes-electorate-70.csv",
+      "retrievedAt": "2026-09-11T04:49:50.308926+00:00",
+      "rawPath": "data/raw/elections/2020/statistics/csv/split-votes-electorate-70.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "1a45992fbe4927a355de52d022557cad52e688b0a3bbf60dffa1b1035e4a206c",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
       "id": "ec-2020-statistics-csv-split-votes-electorate-8.csv",
       "organisation": "New Zealand Electoral Commission",
       "url": "https://www.electionresults.govt.nz/electionresults_2020/statistics/csv/split-votes-electorate-8.csv",

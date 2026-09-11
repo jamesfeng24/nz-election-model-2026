@@ -127,3 +127,9 @@ The 2017 per-election exports retain the historical electorate/candidate/party s
 - `sourceDisclosureNotes` retains nonnumeric source disclosure notes; `votingPlaceRowsValidated` counts numeric rows reconciled to official totals, not geocoded or residential observations.
 - National party controls preserve `sourceGroup`, published zero party votes for candidate-only affiliations, `candidateNominations` and reported party/candidate percentages. Missing values are never substituted with zero.
 - Split `precision` records rounded-percentage representation, decimalPlaces 2, percentageUnit percent and exactJointCountsAvailable false. Exact national summary counts remain separate. No candidate aliases or cross-year identities are asserted; personId stays null.
+
+## 2020 modern export additions
+
+The shared modern contract also covers 2020: 65 general electorates, 561 candidates and 1,105 party observations. Election year, official numbering and as-published boundary IDs are distinct from 2017. No cross-election identity or geography is inferred.
+
+2020 split exports add `supportingMatrices` (one Māori local matrix, distinct from the 65 primary matrices) and `aggregateAffiliationMappings`: sourceAffiliation, aggregateSplitColumn, scope, evidence basis and sourceIds. NZ Public Party → Advance NZ applies only to aggregate split controls; exact candidate affiliations and local labels are untouched. This is an explicitly recorded inference about report grouping, not political-party canonicalization. Matrix precision, null exact joint counts and separate exact summary retain the 2017 meanings.

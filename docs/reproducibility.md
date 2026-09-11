@@ -151,3 +151,17 @@ python3 -m scripts.transform.historical_panel --check --verify-years
 Omit `--check` to deliberately regenerate the three 2017 exports. Complete validation is always required; the temporary core-only checkpoint mode has been removed. CI checks committed output equality. The 2017 adapter consumes all 145 inputs, checks hashes before parsing, and uses deterministic UTF-8 JSON without timestamps. Acquisition remains a separate immutable import process using the explicit source plan; do not redownload valid preserved files.
 
 Final verification passed 51 Python tests, all 572 registry hashes, exact 2017 regeneration and all historical regressions. All 21 pre-existing processed files match branch base f627903 byte-for-byte, including all nine earlier per-year outputs and six panel files. No frontend/shared TypeScript changed, so frontend checks were not rerun under the scoped AGENTS.md rule. No formatter/linter is configured; compilation and whitespace checks passed.
+
+## Reproduce 2020 (Stage 3B)
+
+All 148 official originals are committed. No browser or network is needed:
+
+```sh
+python3 -m scripts.transform.modern_election --year 2020 --check
+python3 -m scripts.transform.modern_election --year 2017 --check
+python3 scripts/validate/source_files.py
+python3 -m scripts.transform.historical_panel --check --verify-years
+python3 -m unittest discover -s scripts/tests
+```
+
+Omit `--check` from the first command to regenerate only the three 2020 exports. CI includes 2020 equality checking. Explicit modern_config.py settings select source plan, year/IDs/coverage and the documented aggregate-only affiliation grouping. No historical panel extension occurs. Final checks: 69 Python tests, 720 registry hashes, deterministic modern exports, prior-year regression and byte identity of all 24 processed files from base a151441. No frontend/shared TypeScript changed; those checks were not rerun. Next task: 2023 ingestion only.
