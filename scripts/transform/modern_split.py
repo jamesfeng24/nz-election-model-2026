@@ -68,7 +68,9 @@ def local_matrix(source, electorate):
     return {'schemaVersion': 1, 'id': electorate['id']+'-split', 'electorateId': electorate['id'], 'year': electorate['year'], **table}
 
 
-def aggregate_matrix(source, electorates, scope):
+def aggregate_matrix(source, electorates, scope, config=None):
+    config = config or election_config(2017)
+    affiliation = {key(a): key(b) for a, b in config.aggregate_affiliations}
     raw, sid = source('split-votes-'+('all' if scope == 'national' else scope)+'.csv')
     table = checked_table(raw, sid)
     selected = [e for e in electorates if scope == 'national' or e['kind'] == scope]
@@ -77,7 +79,7 @@ def aggregate_matrix(source, electorates, scope):
         for p in electorate['parties']:
             party[p['partyKey']] += p['votes']
         for c in electorate['candidates']:
-            candidate[c['partyKey']] += c['votes']
+            candidate[affiliation.get(c['partyKey'], c['partyKey'])] += c['votes']
     informal = sum(e['partyBallot']['informalVotes'] for e in selected)
     total = sum(party.values())+informal
     require(table['rows'][-1]['totalPartyVotes'] == total, 'Aggregate split denominator '+scope)
@@ -116,6 +118,18 @@ def check_local_aggregate(matrices, general, aggregate):
             require(abs(midpoint-row['totalPartyVotes']*cell['reportedPercent']/100) <= bound+row['totalPartyVotes']*.00005+1e-8, 'Local/aggregate split interval')
 
 
+def check_aggregate_scopes(aggregates):
+    """General and Māori rounded cells must sum to the national interval."""
+    scopes = {scope: {r['partyLabel']: r for r in table['rows']} for scope, table in aggregates.items()}
+    for label, national in scopes['national'].items():
+        components = [scopes[scope][label] for scope in ('general', 'maori')]
+        require(sum(r['totalPartyVotes'] for r in components) == national['totalPartyVotes'], 'Aggregate scope row count')
+        for index, cell in enumerate(national['cells']):
+            midpoint = sum(r['totalPartyVotes'] * (r['cells'][index]['reportedPercent'] or 0) / 100 for r in components)
+            target = national['totalPartyVotes'] * (cell['reportedPercent'] or 0) / 100
+            require(abs(midpoint - target) <= national['totalPartyVotes'] * .0001 + 1e-8, 'Aggregate scope interval')
+
+
 def split_summary(source, aggregate):
     raw, sid = source('split-votes-summary.csv')
     rows, _ = read_csv(raw)
@@ -151,9 +165,21 @@ def build_split(source, all_electorates, national_parties, config=None):
     general = [e for e in all_electorates if e['kind'] == 'general']
     require(len(general) == config.general_electorates and len(all_electorates) == config.total_electorates, f'{config.year} split electorate coverage')
     matrices = [local_matrix(source, e) for e in general]
-    aggregates = {scope: aggregate_matrix(source, all_electorates, scope) for scope in ('general', 'maori', 'national')}
+    aggregates = {scope: aggregate_matrix(source, all_electorates, scope, config) for scope in ('general', 'maori', 'national')}
     check_local_aggregate(matrices, general, aggregates['general'])
+    check_aggregate_scopes(aggregates)
     summary = split_summary(source, aggregates['national'])
-    return ({'schemaVersion': 1, 'year': config.year, 'matrices': matrices, 'aggregateMatrices': aggregates, 'officialSplitSummary': summary},
+    supporting = [local_matrix(source, e) for e in all_electorates if e['sourceElectorateNumber'] in config.supporting_split_numbers]
+    require(len(supporting) == len(config.supporting_split_numbers), 'Supporting split coverage')
+    extra = {}
+    if supporting:
+        extra = {'supportingMatrices': supporting, 'aggregateAffiliationMappings': [
+            {'sourceAffiliation': a, 'aggregateSplitColumn': b,
+             'scope': 'aggregate split controls only',
+             'basis': 'Inferred reporting grouping: official candidate and local split labels remain unchanged; aggregate column controls reconcile only with this grouping.',
+             'sourceIds': sorted({sid for m in supporting + list(aggregates.values()) for sid in m['sourceIds']})}
+            for a, b in config.aggregate_affiliations]}
+
+    return ({'schemaVersion': 1, 'year': config.year, 'matrices': matrices, 'aggregateMatrices': aggregates, 'officialSplitSummary': summary, **extra},
             {'checks': ['Local split rows, columns and rounded intervals', 'General/Māori/national split controls', 'Local/general aggregate interval agreement', 'Exact national split summary'],
-             'labelMappings': [], 'limitations': ['Local and aggregate matrix percentages are rounded to two decimal places; exact joint cell counts remain null.', *summary['limitations']]})
+             'labelMappings': [], 'limitations': ['Local and aggregate matrix percentages are rounded to two decimal places; exact joint cell counts remain null.', *summary['limitations'], *(['Aggregate splits group NZ Public Party under Advance NZ, inferred from reconciled column controls; candidate affiliations and supporting Te Tai Tokerau local labels remain NZ Public Party. This is not party continuity evidence.'] if config.aggregate_affiliations else [])]})

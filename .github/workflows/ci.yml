@@ -24,3 +24,4 @@ jobs:
       - run: python3 scripts/validate/source_files.py
       - run: python3 -m scripts.transform.historical_panel --check --verify-years
       - run: python3 -m scripts.transform.modern_election --check
+      - run: python3 -m scripts.transform.modern_election --year 2020 --check

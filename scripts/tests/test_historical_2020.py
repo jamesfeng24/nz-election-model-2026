@@ -122,7 +122,7 @@ class Historical2020CompleteTest(SourceMutationMixin, unittest.TestCase):
         for kind, path in paths.items():
             self.assertEqual((ROOT/'data/processed'/path).read_bytes(), encode(self.outputs[kind]))
         report = self.outputs['validation']
-        self.assertEqual(report['sourceFilesConsumed'], 147)
+        self.assertEqual(report['sourceFilesConsumed'], 148)
         self.assertEqual(report['splitMatrices'], 65)
         self.assertEqual(report['discrepancies'], [])
         self.assertEqual(report['labelMappings'], [])
@@ -130,10 +130,10 @@ class Historical2020CompleteTest(SourceMutationMixin, unittest.TestCase):
     def test_entire_inventory_consumed_with_provenance(self):
         sources = [s for s in json.loads((ROOT/'data/sources.json').read_text())['sources']
                    if s['dateOrElection'] == '2020 general election']
-        self.assertEqual(len(sources), 147)
+        self.assertEqual(len(sources), 148)
         referenced = set(self.outputs['elections']['sourceIds'])
         split = self.outputs['split']
-        for matrix in split['matrices'] + list(split['aggregateMatrices'].values()):
+        for matrix in split['matrices'] + split['supportingMatrices'] + list(split['aggregateMatrices'].values()):
             referenced.update(matrix['sourceIds'])
         referenced.update(split['officialSplitSummary']['sourceIds'])
         self.assertEqual(referenced, {s['id'] for s in sources})
@@ -144,7 +144,7 @@ class Historical2020CompleteTest(SourceMutationMixin, unittest.TestCase):
         split = self.outputs['split']
         self.assertEqual(len(split['matrices']), 65)
         self.assertEqual(len(split['aggregateMatrices']), 3)
-        for matrix in split['matrices'] + list(split['aggregateMatrices'].values()):
+        for matrix in split['matrices'] + split['supportingMatrices'] + list(split['aggregateMatrices'].values()):
             self.assertEqual(matrix['precision']['representation'], 'rounded-percentage')
             self.assertFalse(matrix['precision']['exactJointCountsAvailable'])
             self.assertTrue(all(c['count'] is None for r in matrix['rows'] for c in r['cells']))
@@ -153,6 +153,26 @@ class Historical2020CompleteTest(SourceMutationMixin, unittest.TestCase):
             self.assertIsInstance(row['nonSplitCandidateVotes'], int)
             self.assertIsInstance(row['splitCandidateVotes'], int)
             self.assertEqual(row['nonSplitCandidateVotes'] + row['splitCandidateVotes'], row['totalPartyVotes'])
+
+    def test_reporting_grouping_does_not_rewrite_affiliations(self):
+        from dataclasses import replace
+        from scripts.transform.modern_config import election_config
+        from scripts.transform.modern_election import Sources
+        from scripts.transform.modern_split import aggregate_matrix
+        source = Sources(ROOT, 2020)
+        _, electorates = build_core(ROOT, source)
+        candidate = next(c for e in electorates for c in e['candidates'] if c['party'] == 'NZ Public Party')
+        self.assertEqual(candidate['votes'], 1349)
+        self.assertIsNone(candidate['personId'])
+        config = election_config(2020)
+        with self.assertRaisesRegex(ValueError, 'Split overall column share'):
+            aggregate_matrix(source, electorates, 'maori', replace(config, aggregate_affiliations=()))
+        for scope in ('maori', 'national'):
+            aggregate_matrix(source, electorates, scope, config)
+        supporting = self.outputs['split']['supportingMatrices']
+        self.assertEqual(len(supporting), 1)
+        self.assertTrue(any('NZ Public Party' in c['candidateLabel'] for c in supporting[0]['rows'][0]['cells']))
+        self.assertEqual(candidate['party'], 'NZ Public Party')
 
     def test_split_semantic_mutation_rejected(self):
         self.assert_source_mutation('split-votes-electorate-1.csv', b',13.22,', b',23.22,', 'rounding', split=True)
