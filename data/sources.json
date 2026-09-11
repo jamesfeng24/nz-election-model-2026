@@ -12240,6 +12240,261 @@
       ],
       "sha256": "3353be55e0d1ddb80bb025f7bf786b28ba1e884803de7441b8ce9d8501c6f20e",
       "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/candidate-votes-and-turnout-by-electorate.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "candidate-votes-and-turnout-by-electorate.csv",
+      "retrievedAt": "2026-09-11T05:26:29.141865+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/candidate-votes-and-turnout-by-electorate.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "a2de137554b2e4540910d91c3a778fa2079fb3c4ce27e705d866e09a8322ba30",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-candidate-votes-by-voting-place-1.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/candidate-votes-by-voting-place-1.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "candidate-votes-by-voting-place-1.csv",
+      "retrievedAt": "2026-09-11T05:26:32.242206+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/candidate-votes-by-voting-place-1.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "f13138b53dc532676785e899e2ee83f72c1eeb23dc0cc4e8ca83185ca89b79a1",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-candidate-votes-by-voting-place-39.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/candidate-votes-by-voting-place-39.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "candidate-votes-by-voting-place-39.csv",
+      "retrievedAt": "2026-09-11T05:26:34.179207+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/candidate-votes-by-voting-place-39.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "2151d5f7789a09b32f866a7da71f3217026e8cf9801c1ad0b7aa570e89bb7e77",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-candidate-votes-by-voting-place-66.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/candidate-votes-by-voting-place-66.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "candidate-votes-by-voting-place-66.csv",
+      "retrievedAt": "2026-09-11T05:26:33.472292+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/candidate-votes-by-voting-place-66.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "59aa8d0b67c73abd6ed43f9fa8d9663bbc8dae2cb0e55dd0003f3ee28674971a",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-overall-results-summary.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/overall-results-summary.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "overall-results-summary.csv",
+      "retrievedAt": "2026-09-11T05:26:27.526972+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/overall-results-summary.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "013ae008906b1fb71348ce127a5063ae04881aa58d95a65b4ff3054b9132fb12",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/party-votes-and-turnout-by-electorate.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "party-votes-and-turnout-by-electorate.csv",
+      "retrievedAt": "2026-09-11T05:26:28.285559+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/party-votes-and-turnout-by-electorate.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "024952949e03bcb6eb9b3757b3a4623dddcd70929fb32eb21972078860bf5c3e",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/percentage-votes-for-registered-parties.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "percentage-votes-for-registered-parties.csv",
+      "retrievedAt": "2026-09-11T05:26:30.651253+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/percentage-votes-for-registered-parties.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "5dd687ee07a6723a446c610380af4dcd62c4dff3fc6f4ff5081c6e7d6a6cccc6",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-split-votes-all.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/split-votes-all.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "split-votes-all.csv",
+      "retrievedAt": "2026-09-11T05:26:36.071906+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/split-votes-all.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "e0f4152daf9618f2b9cea7fd020fa864f259c82664e8aecb631f810634427086",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/split-votes-electorate-1.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "split-votes-electorate-1.csv",
+      "retrievedAt": "2026-09-11T05:26:38.479903+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/split-votes-electorate-1.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "57e8646a338fa602ad8b1fee36da02e77fe0877aa7abc6e2294293723d03b664",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/split-votes-electorate-39.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "split-votes-electorate-39.csv",
+      "retrievedAt": "2026-09-11T05:26:39.231582+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/split-votes-electorate-39.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "8764aa16cb115064d3de486149cbb2fffd9bdb58af212612b02d0ac0a0ad9efe",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-split-votes-general.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/split-votes-general.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "split-votes-general.csv",
+      "retrievedAt": "2026-09-11T05:26:36.821386+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/split-votes-general.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "e7a9b6f583e2b58a6a6ed85e163f5d25fa9b6246c6f8a3840f2ad9f4468f6b9c",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-split-votes-maori.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/split-votes-maori.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "split-votes-maori.csv",
+      "retrievedAt": "2026-09-11T05:26:37.709377+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/split-votes-maori.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "a12191a94ba8f562ebd0f8ed6eda2ec5053f096d5183dcc5a2cb17e913dedc0e",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-split-votes-summary.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/split-votes-summary.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "split-votes-summary.csv",
+      "retrievedAt": "2026-09-11T05:26:35.089380+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/split-votes-summary.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "e12d8d21863a51ac020ea20fbcafd209603c7f6c482bc342d48886b3d41dd133",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/votes-for-registered-parties-by-electorate.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "votes-for-registered-parties-by-electorate.csv",
+      "retrievedAt": "2026-09-11T05:26:29.937793+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/votes-for-registered-parties-by-electorate.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "a63372c42effdb86b8354766fd4ed954f5c36af5350e13abd617adbae5c49ab8",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ec-2023-statistics-csv-winning-electorate-candidates.csv",
+      "organisation": "New Zealand Electoral Commission",
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/statistics/csv/winning-electorate-candidates.csv",
+      "dateOrElection": "2023 general election",
+      "resource": "winning-electorate-candidates.csv",
+      "retrievedAt": "2026-09-11T05:26:31.458816+00:00",
+      "rawPath": "data/raw/elections/2023/statistics/csv/winning-electorate-candidates.csv",
+      "processingScript": "scripts/transform/modern_election.py",
+      "limitations": [
+        "Acquisition: normal browser download; timestamp from local download mtime",
+        "Historical publication; preserve source spelling and rounding. See docs/historical-ingestion.md."
+      ],
+      "sha256": "873d655cad904b5bffd7ad661ceccb4d89db3dc12bc7ad20702124981cfec429",
+      "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
     }
   ]
 }
