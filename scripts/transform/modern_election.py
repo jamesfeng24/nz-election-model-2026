@@ -126,7 +126,7 @@ def build_core(root, source=None, year=2017):
     config = source.config
     (ballots, party_totals), party_sid = parse(source, 'party-votes-and-turnout-by-electorate', turnout_table)
     (candidate_ballots, candidate_totals), candidate_sid = parse(source, 'candidate-votes-and-turnout-by-electorate', lambda data: turnout_table(data, tuple(name for name, _ in config.cancelled_contests)))
-    parties, parties_sid = parse(source, 'votes-for-registered-parties-by-electorate', party_table)
+    parties, parties_sid = parse(source, 'votes-for-registered-parties-by-electorate', lambda data: party_table(data, config.party_label_aliases))
     winners, winner_sid = parse(source, 'winning-electorate-candidates', winners_table)
     overall, overall_sid = parse(source, 'overall-results-summary', overall_table)
     percentage_data, percentage_sid = source('percentage-votes-for-registered-parties.csv')

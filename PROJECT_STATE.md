@@ -4,11 +4,11 @@ Updated 2026-09-11. Current authorized scope: Stage 3C / 2023 historical ingesti
 
 Branch `stage/03c-historical-2023`, base `8d85200d2c810b28d0ed2d7c0d5820fcb863a2cc`; verified completed 2020 PR #8 merged. Clean start. Prior completed handoff retained below as historical context.
 
-Checkpoint A: explicit 147-CSV plan verified from official 2023 indexes, 15 representative files imported with hashes. Sources include normal general/Māori and cancelled Port Waikato candidate/split files. No previous raw/processed files changed. Remaining acquisition: candidate2 onward excluding already preserved1,39,66; split2 onward excluding1,39. Determine missing URLs from registry/plan before downloading; browser duplicate filenames are explicit in plan.
+Recovery checkpoint 2026-09-13: all 147 planned 2023 CSV sources are preserved and registered; all 867 repository source checksums pass. Recovered source-local Leighton Baker/NZ Loyal joins; nine focused 2023 tests pass. No new acquisition is needed. Core processing and split reconciliation remain under development. Next action: investigate the Te Pāti Māori general aggregate/local split interval discrepancy from preserved sources, then complete outputs and final verification. Existing historical outputs remain untouched.
 
 Verified 2023 differences: Port Waikato candidate/split labels contain `(Poll Cancelled)`, nine nomination rows publish zeros, winner table omits it (71 winners). Candidate turnout records zero valid/informal and804 special-disallowed/votes-cast. Party vote proceeds normally (42,399 valid +258 informal). Published national split denominator is2,867,478 including Port Waikato; percentage destinations leave its42,657 votes unallocated, rather than excluding it. Preserve this non-behavioural missing mass explicitly. Freedoms NZ overall source separates party/candidate rows and constituent affiliations with blank, not zero, fields. Statistics index notes2May2024 informal-voting-place update; preserve current bytes.
 
-Next action: continue small acquisition batches and implement narrow cancellation-aware modern parser; core/split/tests still incomplete. No modelling, person linking, boundaries or panel extension. After completion, exact next task: **Full 2008–2023 historical-panel integration and cross-year validation only.**
+Next action: resolve the preserved-source split interval discrepancy; complete core/split outputs and tests. No modelling, person linking, boundaries or panel extension. After completion, exact next task: **Full 2008–2023 historical-panel integration and cross-year validation only.**
 
 ## Historical 2020 handoff (superseded current status)
 

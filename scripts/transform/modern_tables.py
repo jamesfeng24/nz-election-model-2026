@@ -134,9 +134,10 @@ def candidate_table(data, electorate_names=(), cancelled=False):
             'sourceEncoding': encoding, 'votingPlaceRowsValidated': len(details), 'sourceDisclosureNotes': disclosure_notes, 'sourceSectionLabels': section_labels}
 
 
-def party_table(data):
+def party_table(data, aliases=()):
     """Return all party rows, retaining official labels and explicit totals."""
     rows, _ = read_csv(data)
+    aliases = dict(aliases)
     labels = rows[1][1:-3]
     require(len(set(map(key, labels))) == len(labels), 'Ambiguous party header')
     records, totals = [], {}
@@ -144,7 +145,7 @@ def party_table(data):
     for row in rows[2:]:
         require(len(row) == len(rows[1]), 'Ragged party row')
         valid, informal, counted = map(count, row[-3:])
-        parties = [{'partyName': label, 'partyKey': key(label), 'sourceHeader': label,
+        parties = [{'partyName': label, 'partyKey': key(aliases.get(label, label)), 'sourceHeader': label,
                     'votes': count(value), 'share': ratio(count(value), valid)}
                    for label, value in zip(labels, row[1:-3])]
         require(sum(p['votes'] for p in parties) == valid and valid + informal == counted, 'Party row totals')
