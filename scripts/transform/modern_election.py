@@ -172,8 +172,8 @@ def build_year(root, year=2017):
     report = {'schemaVersion': 1, 'year': config.year, 'generalElectorates': config.general_electorates, 'supportingMaoriElectorates': config.maori_electorates,
               'candidateRecords': sum(len(e['candidates']) for e in election['electorates']),
               'partyVoteRecords': sum(len(e['parties']) for e in election['electorates']),
-              'splitMatrices': len(split['matrices']), 'splitStatus': 'validated',
-              'sourceFilesConsumed': len(source.used), 'discrepancies': [],
+              'splitMatrices': len(split['matrices']), 'splitStatus': 'validated-with-source-discrepancies' if details.get('discrepancies') else 'validated',
+              'sourceFilesConsumed': len(source.used), 'discrepancies': details.get('discrepancies', []),
               'checks': ['official index name/number identity', 'all candidate voting-place rows and columns', 'party/candidate/turnout/valid/informal controls', 'official winner and majority', 'two-decimal source percentage reconciliation', 'national party and candidate-party totals and nominations', 'general/Maori/national control sums', 'unique election-local candidate IDs', 'consumed source checksums'] + details['checks'],
               'labelMappings': details['labelMappings'], 'limitations': ['Primary records cover general electorates only; Maori candidatures support national controls.', 'personId is null: no cross-election linking.', 'No boundary harmonization or fitted model.'] + details['limitations']}
     return {'elections': election, 'validation': report, 'split': split}
