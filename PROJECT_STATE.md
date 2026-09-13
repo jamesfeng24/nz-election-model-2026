@@ -9,7 +9,8 @@ Branch `stage/03d-historical-2008-2023`; clean base `455d7149caddfeefe23c817533e
 - `dbb2d43`: 18 input hashes and six previous-panel baseline hashes pinned before integration.
 - `62d94e7`: six-year core/split integration, source semantics, conservative rename aliases and old-slice proof.
 - `c55a727`: focused mutation/cross-year tests and complete verification checkpoint.
-- Final documentation SHA is branch HEAD; PR link will be recorded after creation. All checkpoints pushed.
+- `9ca104a363aac8bcc9a02876c9690aae1e6612f1`: final documentation checkpoint.
+- PR #10: https://github.com/jamesfeng24/nz-election-model-2026/pull/10 — open and unmerged. This metadata-only commit records publication; exact final SHA is branch HEAD. All checkpoints pushed.
 
 ## Coverage and output files
 
