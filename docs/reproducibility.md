@@ -165,3 +165,20 @@ python3 -m unittest discover -s scripts/tests
 ```
 
 Omit `--check` from the first command to regenerate only the three 2020 exports. CI includes 2020 equality checking. Explicit modern_config.py settings select source plan, year/IDs/coverage and the documented aggregate-only affiliation grouping. No historical panel extension occurs. Final checks: 69 Python tests, 720 registry hashes, deterministic modern exports, prior-year regression and byte identity of all 24 processed files from base a151441. No frontend/shared TypeScript changed; those checks were not rerun. Next task: 2023 ingestion only.
+
+## Reproduce 2023 (Stage 3C)
+
+Use preserved sources offline; no acquisition is needed:
+
+```sh
+python3 -m scripts.transform.modern_election --year 2023 --check
+python3 -m scripts.transform.modern_election --year 2020 --check
+python3 -m scripts.transform.modern_election --year 2017 --check
+python3 -m scripts.transform.historical_panel --check --verify-years
+python3 scripts/validate/source_files.py
+python3 -m unittest discover -s scripts/tests -q
+```
+
+Omit `--check` only from the 2023 command to regenerate its three exports. The reviewed rational discrepancy fingerprints in `data/source-plans/2023-split-discrepancies.json` are a versioned validation input, not a source correction. New/changed/disappearing discrepancies fail; do not regenerate that registry automatically to make tests pass. Exact source arithmetic and limitations are documented in `docs/2023-split-discrepancy.md`.
+
+Final checks pass: 96 Python tests, 867 hashes, three modern deterministic checks, legacy regeneration and byte identity of all 27 previously processed files. The existing panel is not extended. No frontend/shared TypeScript changes; frontend checks were not required or run.

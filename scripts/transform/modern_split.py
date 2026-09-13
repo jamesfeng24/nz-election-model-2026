@@ -123,7 +123,7 @@ def aggregate_matrix(source, electorates, scope, config=None, audit=None):
             'partyVotesIncludedInPublishedDenominator': excluded,
             'candidateDestinationAllocationAvailable': False,
             'bySourcePartyKey': dict(unallocated),
-            'limitation': 'Published denominators include the cancelled contest, but destination percentages allocate no votes from that contest. This is not ordinary split behaviour.'}
+            'limitation': 'Published denominators include the cancelled contest. Its local publication allocates no destinations; aggregate Party Vote Only has a separately recorded unresolved excess. The cancelled contribution is not an imputed destination allocation or ordinary split behaviour.'}
     party, candidate = defaultdict(int), defaultdict(int)
     for electorate in selected:
         for p in electorate['parties']:

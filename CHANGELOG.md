@@ -100,3 +100,12 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Preserved official affiliations with explicit aggregate-only NZ Public Party/Advance NZ reporting metadata.
 - Passed 69 Python tests, 720 source checksums, modern deterministic checks and historical compatibility; all 24 prior processed files unchanged.
 - No modelling, cross-election identity linking or panel extension. Next task: 2023 ingestion only.
+
+## 2026-09-13 — Stage 3C / 2023 ingestion
+
+- Recovered and pushed source-local joins; retained all 147 acquired official files without reacquisition.
+- Added 65 general-electorate outputs (468 nominations, 1,105 party rows), supporting national controls and complete split publications.
+- Represented Port Waikato cancellation explicitly; preserved Freedoms NZ constituent affiliations, source blanks and local party-label joins.
+- Preserved 21 related bounded aggregate Party Vote Only reconciliation failures with exact rational intervals; no inferred allocations or widened tolerances.
+- Passed 96 Python tests, source integrity and deterministic/compatibility checks; all 27 previous processed files unchanged.
+- No model, person linking, boundary reconstruction or panel extension. Next: full 2008–2023 historical-panel integration and cross-year validation only, after authorization.
