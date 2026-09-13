@@ -204,3 +204,20 @@ npm run check
 ```
 
 `--verify-years` explicitly invokes legacy and modern per-election regenerators in memory for all six years; it does not write inputs or acquire sources. This is separate verification, not the panel's ingestion path. Full verification passed 109 Python tests, all 867 raw checksums and all 18 processed hashes, six per-year deterministic checks, old-slice/manifest byte compatibility, 30 frontend tests, typecheck and build. Frontend checks were run once because AGENTS.md requires them at this major integration checkpoint. Known 2023 source discrepancies remain recorded; no new discrepancy is accepted.
+
+## Stage 4 geography checkpoint (in progress)
+
+Observed election outputs and the full historical panel remain immutable. Stage 4 now covers three separate boundary transitions: 2011→2014, 2017→2020, and 2023→2026; acquisition/validation of the last transition is first. No crosswalk or notional vote baseline exists yet.
+
+Boundary topology requires the optional exact dependencies in `requirements-boundaries.txt` (NumPy 2.2.6, Shapely 2.1.2) and Python 3.12. Install in a dedicated virtual environment. Runtime source acquisition remains shell/browser-only; Python processing is offline. CI installs the same pinned dependencies before the existing Python checks. No CI path filtering or verification reduction was introduced.
+
+```sh
+.venv/bin/python -m unittest scripts.tests.test_boundary_geometry -v
+.venv/bin/python -m scripts.boundaries.audit_geography
+.venv/bin/python -m scripts.boundaries.audit_geography --check
+python3 scripts/validate/source_files.py
+```
+
+The acquisition audit is explicitly incomplete and contains only geometry diagnostics, never transfer weights. Its area differences must not be interpreted as population flows. The original ArcGIS JSON responses are stored without quantization/simplification; all four source layers are EPSG:2193. The decoder preserves holes and islands and rejects invalid topology rather than repairing raw data.
+
+The public population attachment has 57,553 final-version meshblocks. Suppressed `-999` values remain missing (not negative population, zero or a midpoint estimate). Other values are confidentialised by random rounding to base three. The public January 2025 ArcGIS meshblock geometry has 57,551 units and is not an established substitute. The exact Datafinder layer 122744 geometry export requires normal login; source-boundary membership and Schedule C controls are still needed. The preserved population CSV and lookup PDF must not be downloaded again.

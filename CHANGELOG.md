@@ -118,3 +118,10 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Added six canonical alias keys for five documented name/abbreviation changes; no candidate-person or alliance linking.
 - Passed 109 Python tests, source/input integrity, all-year deterministic checks, 30 frontend tests, typecheck and production build.
 - No model or boundary harmonization. Next authorized task requires a new instruction: 2023→2026 boundary reconstruction only.
+
+## Stage 4 in progress — 2026-09-14
+
+- Expanded the existing branch scope to three independent boundary-transition baselines (2011→2014, 2017→2020, 2023→2026), with the current transition first.
+- Preserved eleven official geography/population/schedule resources with checksums, including four complete HD electorate layers and 57,553 meshblock population records.
+- Added strict offline polygon topology decoding, focused tests, pinned optional geometry dependencies and an explicitly incomplete deterministic acquisition audit.
+- Recorded suppressed population values and geometry differences for officially unchanged seats; no population weights, synthetic votes, historical data changes or models introduced.

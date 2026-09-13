@@ -77,7 +77,11 @@
       "expectedCrs": 2193,
       "limitations": [
         "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
-      ]
+      ],
+      "boundaryYear": 2020,
+      "electorateType": "general",
+      "codeField": "GED2020_V1_00",
+      "nameField": "GED2020_V1_00_NAME"
     },
     {
       "id": "stats-2020-maori-geometry",
@@ -90,7 +94,11 @@
       "expectedCrs": 2193,
       "limitations": [
         "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
-      ]
+      ],
+      "boundaryYear": 2020,
+      "electorateType": "maori",
+      "codeField": "MED2020_V1_00",
+      "nameField": "MED2020_V1_00_NAME"
     },
     {
       "id": "stats-2025-general-geometry",
@@ -103,7 +111,11 @@
       "expectedCrs": 2193,
       "limitations": [
         "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
-      ]
+      ],
+      "boundaryYear": 2025,
+      "electorateType": "general",
+      "codeField": "GED2025_V1_00",
+      "nameField": "GED2025_V1_00_NAME"
     },
     {
       "id": "stats-2025-maori-geometry",
@@ -116,7 +128,19 @@
       "expectedCrs": 2193,
       "limitations": [
         "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
-      ]
+      ],
+      "boundaryYear": 2025,
+      "electorateType": "maori",
+      "codeField": "MED2025_V1_00",
+      "nameField": "MED2025_V1_00_NAME"
+    },
+    {
+      "id": "rc-2025-schedule-c",
+      "url": "https://elections.nz/assets/pagecomponent-file-files/SCHEDULE-C-TABLES-OF-THE-ELECTORATES-AND-POPULATIONS.pdf",
+      "rawPath": "data/raw/boundaries/2020-2025/schedule-c.pdf",
+      "role": "Official final electorate population and quota controls",
+      "organisation": "Representation Commission",
+      "format": "pdf"
     }
   ]
 }

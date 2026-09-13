@@ -44,3 +44,14 @@ class GeometryTests(unittest.TestCase):
                     data=json.loads((root/f'data/raw/boundaries/2020-2025/{kind}-{year}-geometry.json').read_bytes())
                     field=f'{prefix}{year}_V1_00'
                     self.assertEqual(len(decode_layer(data,field,field+'_NAME',count)),count)
+
+    def test_saved_audit_is_deterministic_and_not_a_crosswalk(self):
+        from scripts.boundaries.audit_geography import build, OUTPUT
+        first = build()
+        self.assertEqual(first, build())
+        self.assertEqual(first, json.loads(OUTPUT.read_bytes()))
+        self.assertFalse(first['isVoteTransferOutput'])
+        unchanged = first['officialUnchangedGeometryComparisons']
+        self.assertEqual(len(unchanged), 19)
+        self.assertTrue(all(r['populationMovement'] is None for r in unchanged))
+        self.assertEqual(sum(r['renamed'] for r in unchanged), 1)

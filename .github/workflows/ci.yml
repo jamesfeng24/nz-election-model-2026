@@ -20,6 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version-file: .python-version
+      - run: python3 -m pip install -r requirements-boundaries.txt
       - run: python3 -m unittest discover -s scripts/tests -v
       - run: python3 scripts/validate/source_files.py
       - run: python3 -m scripts.transform.historical_panel --check --verify-years
