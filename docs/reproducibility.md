@@ -182,3 +182,25 @@ python3 -m unittest discover -s scripts/tests -q
 Omit `--check` only from the 2023 command to regenerate its three exports. The reviewed rational discrepancy fingerprints in `data/source-plans/2023-split-discrepancies.json` are a versioned validation input, not a source correction. New/changed/disappearing discrepancies fail; do not regenerate that registry automatically to make tests pass. Exact source arithmetic and limitations are documented in `docs/2023-split-discrepancy.md`.
 
 Final checks pass: 96 Python tests, 867 hashes, three modern deterministic checks, legacy regeneration and byte identity of all 27 previously processed files. The existing panel is not extended. No frontend/shared TypeScript changes; frontend checks were not required or run.
+
+## Full-panel integration — Stage 3D (supersedes earlier panel output path)
+
+Normal construction consumes only the 18 validated per-year processed JSON files, never CSV archives:
+
+```sh
+python3 -m scripts.transform.historical_panel
+python3 -m scripts.transform.historical_panel --check
+```
+
+Outputs are the existing five content families plus manifest in `data/processed/historical/2008-2023/`. The old combined directory is replaced; old content survives exactly in the six-year panel and Git history. Every build verifies pinned per-year input hashes, lossless source projection and the old-slice hashes stored in `data/source-plans/historical-panel.json`. Do not update that contract to conceal altered inputs. The old manifest is reconstructed for an independent hash comparison. Two identical runs produce identical bytes; check mode rejects stale outputs.
+
+Final compatibility/audit commands:
+
+```sh
+python3 -m scripts.transform.historical_panel --check --verify-years
+python3 -m unittest discover -s scripts/tests -q
+python3 scripts/validate/source_files.py
+npm run check
+```
+
+`--verify-years` explicitly invokes legacy and modern per-election regenerators in memory for all six years; it does not write inputs or acquire sources. This is separate verification, not the panel's ingestion path. Full verification passed 109 Python tests, all 867 raw checksums and all 18 processed hashes, six per-year deterministic checks, old-slice/manifest byte compatibility, 30 frontend tests, typecheck and build. Frontend checks were run once because AGENTS.md requires them at this major integration checkpoint. Known 2023 source discrepancies remain recorded; no new discrepancy is accepted.

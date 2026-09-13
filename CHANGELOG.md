@@ -109,3 +109,12 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Preserved 21 related bounded aggregate Party Vote Only reconciliation failures with exact rational intervals; no inferred allocations or widened tolerances.
 - Passed 96 Python tests, source integrity and deterministic/compatibility checks; all 27 previous processed files unchanged.
 - No model, person linking, boundary reconstruction or panel extension. Next: full 2008–2023 historical-panel integration and cross-year validation only, after authorization.
+
+## 2026-09-13 — Stage 3D / full historical integration
+
+- Extended the existing processed-input panel to six elections: 384 electorate-years, 6,210 party rows, 2,833 candidate occurrences, 383 ordinary plus one cancelled split publication.
+- Replaced the 2008–2014 combined directory with 2008–2023 outputs while proving byte-identical old subsets and reconstructed manifest; all 18 per-election inputs unchanged.
+- Preserved all aggregate/supporting evidence, Port Waikato cancellation, source groupings and 21 known 2023 discrepancies.
+- Added six canonical alias keys for five documented name/abbreviation changes; no candidate-person or alliance linking.
+- Passed 109 Python tests, source/input integrity, all-year deterministic checks, 30 frontend tests, typecheck and production build.
+- No model or boundary harmonization. Next authorized task requires a new instruction: 2023→2026 boundary reconstruction only.
