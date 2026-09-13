@@ -1,6 +1,6 @@
 # Data sources and provenance standard
 
-**2008–2017 ingestion and 2008–2014 integration are merged; 2020 final validation is complete on its review branch.** `data/sources.json` contains 720 official CSV resources: 139 for 2008, 143 for 2011, 145 for 2014, 145 for 2017 and 148 for 2020.
+**2008–2023 ingestion is merged; full historical integration is complete for review.** `data/sources.json` contains 867 official CSV resources: 139 for 2008, 143 for 2011, 145 for 2014, 145 for 2017, 148 for 2020 and 147 for 2023.
 
 Every future external dataset must have a SourceRecord validated by `src/types/contracts.ts`, recording:
 
@@ -87,3 +87,16 @@ All 147 planned official Electoral Commission CSVs are preserved under `data/raw
 Primary outputs contain 65 general electorates, 468 nominations (including nine cancelled Port Waikato nominations) and 1,105 party rows. Seven Māori electorates support national reconciliation; 495 nominations nationally. Port Waikato's party vote remains substantive; no candidate outcome is fabricated or replaced by the by-election. Split outputs retain 64 ordinary matrices, one cancelled publication, three aggregates and exact summary.
 
 Published aggregate Party Vote Only evidence does not fully reconcile with local evidence/cancellation-adjusted controls. Twenty-one related failed assertions are retained with exact rational endpoints, original values and source IDs; see `docs/2023-split-discrepancy.md`. Denominators include Port Waikato; no missing mass is allocated. All candidate-destination joins and other checks pass. Freedoms NZ aggregate grouping does not overwrite constituent affiliations. Leighton Baker/NZ Loyal abbreviated/full party labels use explicit local joins. Exact joint split counts remain unavailable.
+
+## Full historical integration — Stage 3D
+
+The panel consumes all six validated processed election/split/validation sets, pinned by 18 hashes at merged base 455d7149caddfeefe23c817533e3ffb6c35809d4. No election observations, raw downloads or source registry records were added. All 867 source resources remain unchanged. Existing source-specific missingness, grouping, cancellation and unresolved 2023 discrepancy metadata propagate without re-analysis.
+
+Bounded party-continuity references consulted 2026-09-13 (documentary citations, not acquired election datasets; no runtime network dependency):
+
+- Conservative → New Conservative: [Electoral Commission approval, 8 August 2018](https://elections.nz/media-and-news/2018/change-to-conservative-party-name-and-logo).
+- New Conservative → New Conservatives, Māori Party → Te Pāti Māori, ONE Party → NewZeal: [2023 election report, Party registrations, PDF page 113](https://elections.nz/assets/2023-General-Election/Report-on-the-2023-General-Election.pdf).
+- NZ Outdoors Party → NZ Outdoors & Freedom Party: [Commission approval of 6 April 2022](https://elections.nz/media-and-news/2022/change-to-nz-outdoors-and-freedom-party-name-and-logo).
+- Democrats for Social Credit → Social Credit: [application identifying both abbreviations](https://elections.nz/media-and-news/2019/application-to-substitute-a-political-party-name-abbreviation-and-register-a-substitute-party-logo), with approval dated 15 October 2019 in the [historical registration register](https://elections.nz/assets/pagecomponent-file-files/Register-of-Political-Parties-and-Logos-12-Sept-2023-v2.pdf).
+
+These approved name/abbreviation changes support integration-only canonical IDs. They do not imply alliance equivalence, person identity or stable voting behaviour. Exact source labels remain preserved. Original Conservative/Mana decisions remain unchanged. No later election, current polling or Opportunity evidence was collected.

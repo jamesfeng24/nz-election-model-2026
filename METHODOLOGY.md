@@ -2,7 +2,7 @@
 
 ## Current implementation
 
-Historical design note: Stage 1 contained only the application shell, provenance contracts and documentation. Current state: validated 2008–2014 ingestion and integration are merged; 2017 ingestion is complete for review using a source-format-specific adapter (D018). No polling aggregation, regression, electorate reconstruction, effect estimation, simulation or MMP allocation is implemented. Empty states are not forecasts.
+Historical design note: Stage 1 contained only the application shell, provenance contracts and documentation. Current state: all six 2008–2023 ingestions are merged; full historical-panel integration is complete for review (D022). The panel retains election-specific geography, unresolved candidate-person IDs, cancelled-contest missingness and known source discrepancies; it is not a harmonized or fitted dataset. No polling aggregation, regression, electorate reconstruction, effect estimation, simulation or MMP allocation is implemented. Empty states are not forecasts.
 
 ## Intended scope (not yet methods)
 

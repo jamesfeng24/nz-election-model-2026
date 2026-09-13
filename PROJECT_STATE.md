@@ -1,54 +1,56 @@
 # Project state
 
-Updated 2026-09-13. GitHub is canonical. Stage 3C / 2023 ingestion is complete with explicitly bounded, unresolved official split-source discrepancies; PR readiness checks pass. Leave the completion PR unmerged. No integration is authorized in this task.
+Updated 2026-09-13. GitHub is canonical. Stage 3D full 2008–2023 historical-panel integration and cross-year validation is complete, ready for an unmerged review PR. Known 2023 source discrepancies remain unresolved and explicitly preserved; no new integration discrepancy exists.
 
-## Branch and recovery
+## Branch and checkpoints
 
-- Branch: `stage/03c-historical-2023`.
-- Base: `8d85200d2c810b28d0ed2d7c0d5820fcb863a2cc`; completed 2020 PR #8 was merged before this branch started.
-- `fe9a6da`: acquisition state preceding instruction cleanup; all 147 planned files already preserved. No reacquisition was performed during this recovery.
-- `a9772f4`: approved repository-only workflow cleanup.
-- `b796228`: recovered uncommitted source-local Leighton Baker/NZ Loyal joins, nine focused tests and handoff.
-- `8253387`: rational interval investigation, bounded source-discrepancy registry and focused tests.
-- `1b5aba5`: complete outputs and real-source regression tests.
-- `495a5d73ff30b91d91c80ec5afe25bc3fefb6d33`: final documentation and validated output checkpoint.
-- Completion PR #9: https://github.com/jamesfeng24/nz-election-model-2026/pull/9 — open, unmerged. This metadata-only commit records publication; exact final SHA is branch HEAD.
+Branch `stage/03d-historical-2008-2023`; clean base `455d7149caddfeefe23c817533e3ffb6c35809d4`, PR #9 merge verified before work. All six ingestions are merged.
 
-All listed checkpoints are pushed. No local-only ingestion work remains. Prior interrupted work was recovered, checked and pushed before further implementation.
+- `dbb2d43`: 18 input hashes and six previous-panel baseline hashes pinned before integration.
+- `62d94e7`: six-year core/split integration, source semantics, conservative rename aliases and old-slice proof.
+- `c55a727`: focused mutation/cross-year tests and complete verification checkpoint.
+- `9ca104a363aac8bcc9a02876c9690aae1e6612f1`: final documentation checkpoint.
+- PR #10: https://github.com/jamesfeng24/nz-election-model-2026/pull/10 — open and unmerged. This metadata-only commit records publication; exact final SHA is branch HEAD. All checkpoints pushed.
 
-## Inventory and outputs
+## Coverage and output files
 
-147 immutable official Electoral Commission CSVs: six core tables, 72 candidate/voting-place files, 65 general local split files, three aggregate split matrices and one exact national split summary. Registry contains 867 resources overall. Explicit URLs, acquisition timestamps, SHA-256 and processing provenance are in `data/sources.json`; `data/source-plans/historical-2023.json` defines the acquired inventory. No source is missing.
+| Year | General electorates | Party records | Candidate records | Ordinary split matrices | Cancelled split publications |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2008 | 63 | 1,197 | 499 | 63 | 0 |
+| 2011 | 63 | 819 | 423 | 63 | 0 |
+| 2014 | 64 | 960 | 451 | 64 | 0 |
+| 2017 | 64 | 1,024 | 431 | 64 | 0 |
+| 2020 | 65 | 1,105 | 561 | 65 | 0 |
+| 2023 | 65 | 1,105 | 468 | 64 | 1 |
+| Total | 384 | 6,210 | 2,833 | 383 | 1 |
 
-- `data/processed/elections/2023.json`: 65 general electorates; 468 candidate records including nine cancelled nominations; 1,105 party records.
-- Seven Māori electorates support national controls: 495 total nominations across 72 electorates. Candidate contests: 71 held nationally (64 general + seven Māori), one cancelled general contest.
-- `data/processed/split-votes/2023.json`: 64 normal local matrices, one cancelled Port Waikato publication, general/Māori/national aggregates, exact national summary and explicit source discrepancies.
-- `data/processed/elections/2023-validation.json`: coverage, checks, limitations, source IDs and 21 related failed reconciliation assertions. Status `validated-with-source-discrepancies` does not claim full numeric reconciliation.
+`data/processed/historical/2008-2023/` replaces the earlier 2008-2014 output directory, using the same five content families plus manifest: electorates, party-votes, candidate-votes, split-votes, election-controls and manifest JSON. No redundant second builder. Each year retains national/supporting controls, original source IDs and per-year validation. 2008 aggregate splits remain null/not-collected; later aggregates, exact summaries, supporting 2020 matrix, source mappings and 2023 discrepancy layers are preserved without fabrication.
 
-National valid party votes 2,851,211; informal party votes 16,267. Exact split summary denominator 2,867,478 = 1,849,366 non-split + 1,018,112 split. National valid candidate votes 2,742,677; informal candidate votes 40,353.
+## Implementation and compatibility
 
-## Architecture and source semantics
+`historical_panel.py` consumes only validated per-year processed JSON during normal panel builds. `panel_config.py` holds coverage and integration-only aliases; `panel_validation.py` audits structure, foreign keys and lossless reconstruction of processed source objects. `data/source-plans/historical-panel.json` pins 18 inputs and prior-panel hashes at base. The manifest records input/output/code/config hashes, counts, coverage and known discrepancies. `--verify-years` separately regenerates all six years in memory for compatibility; it never writes per-year files.
 
-Shared `modern_config.py`, `modern_tables.py`, `modern_election.py` and `modern_split.py` support 2017/2020/2023 through explicit configuration. Legacy `historical.py` is untouched. New `split_intervals.py` computes exact rational rounding envelopes and fails closed unless an impossible comparison matches the reviewed fingerprint in `data/source-plans/2023-split-discrepancies.json`.
+Schema remains 1 with additive modern source metadata. Missing candidateContestStatus on legacy/2017/2020 records means held; 2023 explicitly states held/cancelled. Keeping old records intact permits byte-identical serialized 2008–2014 subsets and an exactly reconstructed old manifest, all six hashes checked on every build. All 18 per-election JSON inputs remain byte-identical to base (20 total files including non-JSON files in those directories). No raw or per-election transformations changed.
 
-Port Waikato: valid party vote 42,399 plus 258 informal is substantive. Its candidate poll is cancelled; nine source nominations/zero vote fields are retained, with null winner, majority, candidate shares and elected status. Its zero-percentage local split publication is non-behavioural, with no inferred joint counts. Official aggregate denominators include its 42,657 party votes. Missing destination mass is not rescaled or allocated. The national exact split residual includes cancellation-related ballots and is not wholly behavioural evidence. The by-election is excluded.
+## Identity and source semantics
 
-Unresolved publication discrepancy: Te Pāti Māori general Party Vote Only local rounding enclosure [1937.4629,1940.3855] versus aggregate [1979.22795,1982.18865], disjoint by at least 38.84245 votes. Fifteen Party Vote Only local/general comparisons, two general row sums and four aggregate column controls are impossible within the original two-decimal precision. Candidate destination joins, aggregate geographic scope checks and exact-summary comparisons otherwise reconcile. See `docs/2023-split-discrepancy.md` for arithmetic and cause analysis. Port Waikato's candidate/party disallowed difference of 619 is consistent with total excess intervals but is not a proven party-level allocation or explanation. Preserve both official publications; no correction, imputation or tolerance expansion.
+Canonical IDs retain existing Conservative and Mana aliases. Six new alias keys cover five approved rename/abbreviation relationships: New Conservative/New Conservatives → conservative; Te Pāti Māori → maoriparty; NewZeal → oneparty; NZ Outdoors & Freedom Party → nzoutdoorsparty; Social Credit → democratsforsocialcredit. Official Electoral Commission name-change evidence is recorded in panel_config.py, DATA_SOURCES.md and D022. Source labels/keys are unchanged; no temporary alliance or report grouping becomes a global alias. TOP remains separate from Opportunity. No candidate-person linking, incumbent/status inference, boundary harmonization or modelling occurred; all personId values remain null and geography is election-specific as published.
 
-Freedoms NZ: preserve complementary source rows and blank fields. Explicit published zeros are distinct from blanks; constituent candidate affiliations remain NZ Outdoors & Freedom Party, Rock the Vote NZ and Vision New Zealand. Their grouping under Freedoms NZ is limited to aggregate split destinations. Leighton Baker → Leighton Baker Party and NZ Loyal → New Zealand Loyal are source-local party-table joins. Candidate split whitespace normalization is recorded locally where needed; no person identity joins.
+Port Waikato 2023 retains 42,399 valid party votes, nine nominations/source zeros, null candidate shares/elected outcomes/winner/majority and one non-behavioural split publication. The by-election is absent. Aggregate denominators include its party votes; no destination mass is imputed or rescaled. The exact summary's published residual is not wholly behavioural evidence.
 
-The official index notes a 2 May 2024 update to informal counts at small voting places. Current published bytes are preserved, not pre-update reconstructions. Local/aggregate percentages remain rounded, all exact joint counts null. No candidate-person linking, model fitting, boundary reconstruction or panel extension occurred. Historical TOP is not mapped to 2026 Opportunity.
+The 21 known source reconciliation failures propagate exactly into election controls and manifest. Te Pāti Māori Party Vote Only local enclosure [1937.4629,1940.3855] versus aggregate [1979.22795,1982.18865] remains unresolved. This integration did not reopen the source investigation, widen tolerances or mark it resolved. A new/altered discrepancy fails against pinned input evidence. Details remain in docs/2023-split-discrepancy.md.
 
-## Verification actually run
+## Actual final verification
 
-- Complete Python suite: 96 tests passed, including 2023 coverage/cancellation/source mutation, exact interval and fail-closed discrepancy tests.
-- Source integrity: all 867 registry hashes pass, including all 147 for 2023.
-- Deterministic 2023 generation/check and 2017/2020 checks pass.
-- `historical_panel --check --verify-years` passes for 2008/2011/2014 and the existing panel.
-- All 27 processed files present at branch base remain byte-identical, including 2008/2011/2014/2017/2020 and the integrated 2008–2014 outputs. Legacy parser bytes also match base.
-- Python compilation and Git whitespace checks pass. No Python formatter/linter is configured.
-- Frontend tests/typecheck/build were not run: no frontend/shared TypeScript changes; scoped AGENTS.md does not require them for this ingestion stage.
+- Complete Python suite: 109 tests passed.
+- All 867 registered source hashes passed; all 18 processed-input hashes passed.
+- Full-panel --check --verify-years passed, including six per-election deterministic regressions.
+- Two complete panel builds produced identical bytes.
+- Five old content subsets plus reconstructed old manifest match their baseline hashes exactly.
+- All six elections' processed datasets remain byte-identical to base.
+- Integration-required frontend verification: 30 tests passed, TypeScript check passed, production build passed.
+- Python compilation and Git whitespace checks passed; no Python formatter/linter configured.
 
 ## Exact next task
 
-**Full 2008–2023 historical-panel integration and cross-year validation only.** Start only after explicit authorization. Carry forward cancellation semantics and bounded split-source discrepancies; do not treat them as fabricated reconciled evidence. No modelling is authorized by this handoff.
+**2023→2026 boundary reconstruction only.** Begin only after explicit authorization. The panel does not harmonize boundaries or identify voters' residence. Do not fit models or ingest current polling as part of that next task without authorization.
