@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "status": "Metadata and official controls first; geometry queries and population resources follow schema inspection",
+  "resources": [
+    {
+      "id": "stats-2020-general-metadata",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2020/FeatureServer/0?f=pjson",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2020-metadata.json",
+      "role": "Official HD layer schema, CRS and publication evidence",
+      "organisation": "Stats NZ",
+      "format": "json"
+    },
+    {
+      "id": "stats-2020-maori-metadata",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2020/FeatureServer/0?f=pjson",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2020-metadata.json",
+      "role": "Official HD layer schema, CRS and publication evidence",
+      "organisation": "Stats NZ",
+      "format": "json"
+    },
+    {
+      "id": "stats-2025-general-metadata",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2025/FeatureServer/0?f=pjson",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2025-metadata.json",
+      "role": "Official HD layer schema, CRS and publication evidence",
+      "organisation": "Stats NZ",
+      "format": "json"
+    },
+    {
+      "id": "stats-2025-maori-metadata",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2025/FeatureServer/0?f=pjson",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2025-metadata.json",
+      "role": "Official HD layer schema, CRS and publication evidence",
+      "organisation": "Stats NZ",
+      "format": "json"
+    },
+    {
+      "id": "rc-2025-schedule-b",
+      "url": "https://elections.nz/assets/pagecomponent-file-files/SCHEDULE-B-LIST-OF-UNCHANGED-AND-CHANGED-ELECTORATES.pdf",
+      "rawPath": "data/raw/boundaries/2020-2025/schedule-b.pdf",
+      "role": "Official final changed/unchanged control",
+      "organisation": "Representation Commission",
+      "format": "pdf"
+    }
+  ]
+}
