@@ -1,9 +1,39 @@
 # Project state
 
-Updated 2026-09-13. Stage 4 only: 2023→2026 boundary reconstruction. Branch `stage/04-boundary-2023-2026`, clean base `624fe1d74aa43014e0c65f534c161e22b51e250d`; PR #10 verified merged. Existing full historical panel --check passed before branching. Historical outputs, aliases and discrepancies are immutable inputs.
+Updated 2026-09-13. Stage 4: **Historical boundary-transition reconstruction** on existing branch `stage/04-boundary-2023-2026`. Base `624fe1d74aa43014e0c65f534c161e22b51e250d` (PR #10 merged). Do not restart, rebase or change branches.
 
-Preparatory checkpoint: reviewed repository/domain contracts; boundary source plan starts with four official Stats NZ HD 2020/2025 general/Māori layer metadata responses and Schedule B. Read-only curl acquisition is separate from offline Python. No geometry or population weights have been inferred; no synthetic results yet. Next action: acquire/register/check metadata and official schedules, derive exact geometry queries from actual schemas, reconcile geometry inventory/change controls, then push geographic checkpoint before population weighting. Population resource 122744 schema and access still to inspect.
+## Authorized scope and order
 
-Source discovery verified official publication: final boundaries released 8 August 2025, 19 unchanged overall, 49 general and three Māori adjusted. Do not use proposed layers or electorate land area as population weights. Candidate/split Port Waikato missingness and 21 historical discrepancies must propagate. No person linking or model fitting.
+Continue 2023 results → final 2025/2026 boundaries first, then reconstruct 2011 → 2014 and 2017 → 2020 independently. Verify historic boundary regimes from official evidence. Use generic boundary-transition machinery with explicit source election/boundary, target election/boundary, population source and provenance configuration. These are separate derived baselines, never replacements for observed election data or the historical panel.
 
-Exact next stage after completion, only on explicit authorization: **Local party-vote transformation backtesting only.**
+Primary weights must use contemporaneous official small-area population/electoral-population evidence, preferably meshblocks and official concordances. Whole-electorate land-area weights are prohibited. Preserve fractional party votes and party-by-party mass. Candidate/split sensitivity is secondary and only where defensible. No person linking, modelling, polling or geographic voter-residence inference from voting places.
+
+## Saved progress
+
+- `fa025b0`: authoritative boundary source plan and acquisition/registration tools.
+- `0caa0f7`: four immutable official Stats NZ HD layer **metadata responses**, 2020 and 2025 general/Māori, registered in `data/sources.json`. Actual polygon geometry and population records have NOT yet been acquired.
+- Working tree was clean on resumption; no surviving uncommitted acquisition found.
+- Source validation passed for 871 registered resources at the metadata checkpoint (867 historical + four boundary metadata).
+- Historical panel deterministic check passed before branching. Historical outputs remain unchanged; no derived boundary outputs yet.
+
+## Current acquisition and unresolved access
+
+`data/source-plans/boundary-2023-2026.json` holds exact reviewed URLs. Metadata identifies layer 0, native EPSG:2193, official general/Māori fields for each year. Final 2025 layers must be used, never proposed layers. Official publication confirms 2020 boundaries used for 2020/2023 and final August 2025 boundaries for 2026. Historical regime evidence remains to acquire after current geographic checkpoint.
+
+Schedule B direct curl returned a 212-byte HTML access response, not a PDF; it was rejected and not registered. No schedule PDF is preserved yet. Browser inspection of Stats NZ Datafinder layer 122744 (2023 Census Electoral Population Meshblock 2025 Version 2) returned a blank application shell; schema/download access still unresolved. Do not count either source as acquired. Inspect the existing browser state/access before another download attempt.
+
+Exact next action: acquire deterministic full-resolution geometry queries using preserved layer metadata; obtain official schedules B/C and layer 122744 schema/population evidence through normal official access; reconcile 65+7 source and 64+7 target inventory and official changed/unchanged controls. Save this geographic checkpoint before lengthy historical acquisition. Never infer population transfer from metadata or electorate area.
+
+## Remaining checkpoints
+
+A. Current 2023→2026 geometry/schedules/population and change reconciliation.
+B. Generic crosswalk framework and validated current transition.
+C. Historical 2011→2014 and 2017→2020 geography/population sources, saved before lengthy processing.
+D. Three population crosswalks with conservation and quality metrics.
+E. Three separate notional party-vote baselines with per-party conservation.
+F. Optional defensible candidate/split sensitivity.
+G. Final determinism, substantive validation, immutable historical-byte checks, documentation and unmerged PR into main.
+
+Every meaningful checkpoint must update this handoff and be pushed. No Stage 4 PR yet. All three transitions must be complete before final PR readiness. Preserve Port Waikato cancelled candidate/split missingness, substantive party votes and the 21 documented 2023 source discrepancies. No prior output or panel changes authorized.
+
+Exact next stage after all three transitions are complete, only on explicit authorization: **Local party-vote transformation backtesting only.**
