@@ -11,7 +11,8 @@ Updated 2026-09-13. GitHub is canonical. Stage 3C / 2023 ingestion is complete w
 - `b796228`: recovered uncommitted source-local Leighton Baker/NZ Loyal joins, nine focused tests and handoff.
 - `8253387`: rational interval investigation, bounded source-discrepancy registry and focused tests.
 - `1b5aba5`: complete outputs and real-source regression tests.
-- Final documentation/checkpoint SHA is identified by branch HEAD. PR link will be recorded after creation.
+- `495a5d73ff30b91d91c80ec5afe25bc3fefb6d33`: final documentation and validated output checkpoint.
+- Completion PR #9: https://github.com/jamesfeng24/nz-election-model-2026/pull/9 — open, unmerged. This metadata-only commit records publication; exact final SHA is branch HEAD.
 
 All listed checkpoints are pushed. No local-only ingestion work remains. Prior interrupted work was recovered, checked and pushed before further implementation.
 
