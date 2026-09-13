@@ -14931,6 +14931,96 @@
       ],
       "sha256": "6a798bb3e6688d6ff36f1b86d984ee1b4719a76e19d22f13a9421d4b33043f51",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-meshblock-geopackage-part-001",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647609/download/",
+      "dateOrElection": "2023 Census electoral population; final 2025 meshblocks for 2026 electorate boundaries",
+      "resource": "Original GeoPackage export ZIP byte segment 1; see data/source-plans/meshblock-2025-export.json",
+      "retrievedAt": "2026-09-13T23:01:34.857403+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part001",
+      "processingScript": null,
+      "limitations": [
+        "Byte segmentation is storage only; join ordered parts to recover the original unchanged archive.",
+        "Re-export may change ZIP packaging; use committed parts for exact reproducibility.",
+        "Electoral population suppression (-999) and base-three random rounding remain source limitations."
+      ],
+      "sha256": "a787e4b92da61612700a42a8fb2377eeec1b0178eb66a15fd4134bd77dccfefd",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-meshblock-geopackage-part-002",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647609/download/",
+      "dateOrElection": "2023 Census electoral population; final 2025 meshblocks for 2026 electorate boundaries",
+      "resource": "Original GeoPackage export ZIP byte segment 2; see data/source-plans/meshblock-2025-export.json",
+      "retrievedAt": "2026-09-13T23:01:34.857403+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part002",
+      "processingScript": null,
+      "limitations": [
+        "Byte segmentation is storage only; join ordered parts to recover the original unchanged archive.",
+        "Re-export may change ZIP packaging; use committed parts for exact reproducibility.",
+        "Electoral population suppression (-999) and base-three random rounding remain source limitations."
+      ],
+      "sha256": "66054e26976cad98d40296ab709ec8ce1ab69665cfc9ad6242176670c9579988",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-meshblock-geopackage-part-003",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647609/download/",
+      "dateOrElection": "2023 Census electoral population; final 2025 meshblocks for 2026 electorate boundaries",
+      "resource": "Original GeoPackage export ZIP byte segment 3; see data/source-plans/meshblock-2025-export.json",
+      "retrievedAt": "2026-09-13T23:01:34.857403+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part003",
+      "processingScript": null,
+      "limitations": [
+        "Byte segmentation is storage only; join ordered parts to recover the original unchanged archive.",
+        "Re-export may change ZIP packaging; use committed parts for exact reproducibility.",
+        "Electoral population suppression (-999) and base-three random rounding remain source limitations."
+      ],
+      "sha256": "727e2520b77ed9ae78c058fcc3b575e3aa0f4e7c57b04ef0d9a7119604f6fd9e",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-meshblock-geopackage-part-004",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647609/download/",
+      "dateOrElection": "2023 Census electoral population; final 2025 meshblocks for 2026 electorate boundaries",
+      "resource": "Original GeoPackage export ZIP byte segment 4; see data/source-plans/meshblock-2025-export.json",
+      "retrievedAt": "2026-09-13T23:01:34.857403+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part004",
+      "processingScript": null,
+      "limitations": [
+        "Byte segmentation is storage only; join ordered parts to recover the original unchanged archive.",
+        "Re-export may change ZIP packaging; use committed parts for exact reproducibility.",
+        "Electoral population suppression (-999) and base-three random rounding remain source limitations."
+      ],
+      "sha256": "c2544b709dc2860bc92c1ad26e44dac26dd6a337b6efdab387a9e61bd456051a",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-meshblock-geopackage-part-005",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647609/download/",
+      "dateOrElection": "2023 Census electoral population; final 2025 meshblocks for 2026 electorate boundaries",
+      "resource": "Original GeoPackage export ZIP byte segment 5; see data/source-plans/meshblock-2025-export.json",
+      "retrievedAt": "2026-09-13T23:01:34.857403+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part005",
+      "processingScript": null,
+      "limitations": [
+        "Byte segmentation is storage only; join ordered parts to recover the original unchanged archive.",
+        "Re-export may change ZIP packaging; use committed parts for exact reproducibility.",
+        "Electoral population suppression (-999) and base-three random rounding remain source limitations."
+      ],
+      "sha256": "0fbc4335a977e470159bf087c95dded641fcb7d1044f60e83c8026e3303711bc",
+      "licence": "Creative Commons Attribution 4.0 International"
     }
   ]
 }

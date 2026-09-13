@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "stats-2025-meshblock-geopackage",
+  "organisation": "Stats NZ",
+  "layerId": 122744,
+  "layerVersion": 418310,
+  "exportId": 4647609,
+  "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647609/download/",
+  "catalogueUrl": "https://datafinder.stats.govt.nz/layer/122744-2023-census-electoral-population-meshblock-2025-version-2/",
+  "retrievedAt": "2026-09-13T23:01:34.857403+00:00",
+  "format": "GeoPackage in original ZIP",
+  "crs": "EPSG:2193",
+  "crop": null,
+  "originalFilename": "statsnz-2023-census-electoral-population-meshblock-2025-version-2-GPKG.zip",
+  "originalBytes": 143811969,
+  "originalSha256": "7d5857d44683f4f62c0309bd15c2f2bdf71f6ba0044a4a90f77ac9bec03f0da2",
+  "parts": [
+    {
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part001",
+      "offset": 0,
+      "bytes": 33554432,
+      "sha256": "a787e4b92da61612700a42a8fb2377eeec1b0178eb66a15fd4134bd77dccfefd",
+      "sourceId": "stats-2025-meshblock-geopackage-part-001"
+    },
+    {
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part002",
+      "offset": 33554432,
+      "bytes": 33554432,
+      "sha256": "66054e26976cad98d40296ab709ec8ce1ab69665cfc9ad6242176670c9579988",
+      "sourceId": "stats-2025-meshblock-geopackage-part-002"
+    },
+    {
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part003",
+      "offset": 67108864,
+      "bytes": 33554432,
+      "sha256": "727e2520b77ed9ae78c058fcc3b575e3aa0f4e7c57b04ef0d9a7119604f6fd9e",
+      "sourceId": "stats-2025-meshblock-geopackage-part-003"
+    },
+    {
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part004",
+      "offset": 100663296,
+      "bytes": 33554432,
+      "sha256": "c2544b709dc2860bc92c1ad26e44dac26dd6a337b6efdab387a9e61bd456051a",
+      "sourceId": "stats-2025-meshblock-geopackage-part-004"
+    },
+    {
+      "rawPath": "data/raw/boundaries/2020-2025/meshblock-export/original.zip.part005",
+      "offset": 134217728,
+      "bytes": 9594241,
+      "sha256": "0fbc4335a977e470159bf087c95dded641fcb7d1044f60e83c8026e3303711bc",
+      "sourceId": "stats-2025-meshblock-geopackage-part-005"
+    }
+  ],
+  "members": [
+    {
+      "name": "2023-census-electoral-population-meshblock-2025-data.csv",
+      "bytes": 6173510,
+      "sha256": "32e97d7f2128e1de2fbfeee9a73a258f449ded602cca77aa9d97c0516430f6ff"
+    },
+    {
+      "name": "2023-census-electoral-population-meshblock-2025-lookup.pdf",
+      "bytes": 138146,
+      "sha256": "ed82805299067626874d5d43fda82211e1bcd27f2425f67eb16f5c1c473e6a07"
+    },
+    {
+      "name": "2023-census-electoral-population-meshblock-2025-version-2-ISO.pdf",
+      "bytes": 30050,
+      "sha256": "b301df277b315c7fb03ab29703ef40b4a018c15d7bb2d5869126bbf231a1fe68"
+    },
+    {
+      "name": "2023-census-electoral-population-meshblock-2025-version-2.gpkg",
+      "bytes": 283885568,
+      "sha256": "0788b2478cdc74a90bf9971169c537b4c4ccc9ebf515be24bd06c31386bb7fb0"
+    },
+    {
+      "name": "2023-census-electoral-population-meshblock-2025-version-2.txt",
+      "bytes": 23016,
+      "sha256": "a7249a3c025aebd6f24b057e5c2f8e4438b87914e089744281bf82ccb0c41a6c"
+    },
+    {
+      "name": "2023-census-electoral-population-meshblock-2025-version-2.xml",
+      "bytes": 18058,
+      "sha256": "1764bcf791f1970668eef72227cd5be2a52b012a61bf77449203f004d6a68231"
+    }
+  ],
+  "limitations": [
+    "Byte segmentation is storage only; join ordered parts to recover the original unchanged archive.",
+    "Re-export may change ZIP packaging; use committed parts for exact reproducibility.",
+    "Electoral population suppression (-999) and base-three random rounding remain source limitations."
+  ]
+}
