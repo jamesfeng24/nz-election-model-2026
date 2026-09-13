@@ -14739,6 +14739,70 @@
       ],
       "sha256": "873d655cad904b5bffd7ad661ceccb4d89db3dc12bc7ad20702124981cfec429",
       "licence": "Crown copyright; accurate reproduction with source acknowledgement permitted: https://www.electionresults.govt.nz/about.html"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-general-metadata",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2020/FeatureServer/0?f=pjson",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official HD layer schema, CRS and publication evidence",
+      "retrievedAt": "2026-09-13T10:56:06.496139+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2020-metadata.json",
+      "processingScript": null,
+      "limitations": [
+        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
+      ],
+      "sha256": "f09fc7d10543a072e382a0ce08e2c1a938e7dced50be2177cdb6de5fbbaf3edd",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-maori-metadata",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2020/FeatureServer/0?f=pjson",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official HD layer schema, CRS and publication evidence",
+      "retrievedAt": "2026-09-13T10:56:07.110627+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2020-metadata.json",
+      "processingScript": null,
+      "limitations": [
+        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
+      ],
+      "sha256": "f9cd113fe5ba763a490761c7c3fe83e6635d935a8df6b15dada7b66a2c33bf7d",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-general-metadata",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2025/FeatureServer/0?f=pjson",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official HD layer schema, CRS and publication evidence",
+      "retrievedAt": "2026-09-13T10:56:07.768348+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2025-metadata.json",
+      "processingScript": null,
+      "limitations": [
+        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
+      ],
+      "sha256": "b52b456e4937fac67e4e7c2b512c192c6101b786709327943c8c775ac60955f6",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-maori-metadata",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2025/FeatureServer/0?f=pjson",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official HD layer schema, CRS and publication evidence",
+      "retrievedAt": "2026-09-13T10:56:08.378888+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2025-metadata.json",
+      "processingScript": null,
+      "limitations": [
+        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
+      ],
+      "sha256": "b8e377fb36a1cb2ace950c22f6ce13f00f15a0054054ff57f66500da04254cd6",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     }
   ]
 }
