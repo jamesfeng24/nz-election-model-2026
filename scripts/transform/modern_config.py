@@ -10,6 +10,9 @@ class ElectionConfig:
     source_files: int
     aggregate_affiliations: tuple = ()
     supporting_split_numbers: tuple = ()
+    cancelled_contests: tuple = ()
+    party_label_aliases: tuple = ()
+    split_discrepancy_file: str = ""
 
     @property
     def total_electorates(self):
@@ -30,6 +33,7 @@ class ElectionConfig:
 
 CONFIGS = {
     2017: ElectionConfig(2017, 64, 7, 145),
+    2023: ElectionConfig(2023, 65, 7, 147, split_discrepancy_file="data/source-plans/2023-split-discrepancies.json", aggregate_affiliations=(('NZ Outdoors & Freedom Party', 'Freedoms NZ'), ('Rock the Vote NZ', 'Freedoms NZ'), ('Vision New Zealand', 'Freedoms NZ')), party_label_aliases=(('Leighton Baker', 'Leighton Baker Party'), ('NZ Loyal', 'New Zealand Loyal')), cancelled_contests=(('Port Waikato', 39),)),
     2020: ElectionConfig(2020, 65, 7, 148, (('NZ Public Party', 'Advance NZ'),), (70,)),
 }
 

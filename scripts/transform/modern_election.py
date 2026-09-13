@@ -64,28 +64,41 @@ def make_electorate(entry, ballot, candidate_ballot, parties, winner, source, sh
     number = entry['sourceElectorateNumber']
     config = source.config
     eid = f'{config.election_id}-electorate-{number:02}'
-    candidates, sid = parse(source, Path(entry['url']).stem, lambda data: candidate_table(data, electorate_names))
-    require(candidates['sourceElectorateLabel'] == entry['electorateName'] + ' ' + str(number), 'Official name/number mismatch')
+    cancelled = (entry['electorateName'], number) in config.cancelled_contests
+    candidates, sid = parse(source, Path(entry['url']).stem, lambda data: candidate_table(data, electorate_names, cancelled))
+    require(candidates['sourceElectorateLabel'] == entry['electorateName'] + ' ' + str(number) + ('\n(Poll Cancelled)' if cancelled else ''), 'Official name/number mismatch')
     require(ballot['name'] == entry['electorateName'], 'Plan/turnout name mismatch')
     require(ballot['scope'] == ('general' if entry['role'] == 'general candidate' else 'maori'), 'Electorate classification')
-    for field in ('votesCast', 'enrolled', 'electoralPopulation', 'ordinaryDisallowed'):
+    for field in (('enrolled', 'electoralPopulation') if cancelled else ('votesCast', 'enrolled', 'electoralPopulation', 'ordinaryDisallowed')):
         require(ballot[field] == candidate_ballot[field], 'Ballot shared control: ' + field)
     for field in ('validVotes', 'informalVotes'):
         require(parties[field] == ballot[field], 'Party ballot denominator')
         require(candidates[field] == candidate_ballot[field], 'Candidate ballot denominator')
-    elected = [c for c in candidates['candidates'] if c['name'] == winner['candidateName']]
-    require(len(elected) == 1 and elected[0]['party'] == winner['party'] and elected[0]['votes'] == winner['votes'], 'Official winner mismatch')
-    require(candidates['winnerName'] == winner['candidateName'] and candidates['majority'] == winner['majority'], 'Official majority mismatch')
-    check_percent(winner['votes'], candidates['validVotes'], winner['reportedPercent'], 'Winner valid share')
-    check_percent(winner['votes'], candidate_ballot['votesCast'], candidate_ballot['reportedWinnerPercentOfVotesCast'], 'Winner turnout share')
+    if cancelled:
+        require(winner is None and candidates['winnerName'] is None and candidates['majority'] is None, 'Cancelled contest has official winner')
+        require(candidate_ballot['validVotes'] == candidate_ballot['informalVotes'] == candidate_ballot['ordinaryDisallowed'] == 0, 'Cancelled ballot observations')
+        require(candidate_ballot['votesCast'] == candidate_ballot['specialDisallowed'], 'Cancelled ballot disallowed controls')
+        elected = []
+    else:
+        elected = [c for c in candidates['candidates'] if c['name'] == winner['candidateName']]
+        require(len(elected) == 1 and elected[0]['party'] == winner['party'] and elected[0]['votes'] == winner['votes'], 'Official winner mismatch')
+        require(candidates['winnerName'] == winner['candidateName'] and candidates['majority'] == winner['majority'], 'Official majority mismatch')
+        check_percent(winner['votes'], candidates['validVotes'], winner['reportedPercent'], 'Winner valid share')
+        check_percent(winner['votes'], candidate_ballot['votesCast'], candidate_ballot['reportedWinnerPercentOfVotesCast'], 'Winner turnout share')
     for index, candidate in enumerate(candidates['candidates'], 1):
-        candidate.update(id=f'{eid}-candidate-{index:02}', nameMatchKey=key(candidate['name']), personId=None, partyKey=key(candidate['party']), elected=candidate['name'] == winner['candidateName'])
-    return {'id': eid, 'electionId': config.election_id, 'year': config.year, 'sourceElectorateNumber': number,
+        candidate.update(id=f'{eid}-candidate-{index:02}', nameMatchKey=key(candidate['name']), personId=None, partyKey=key(candidate['party']), elected=None if cancelled else candidate['name'] == winner['candidateName'])
+    result = {'id': eid, 'electionId': config.election_id, 'year': config.year, 'sourceElectorateNumber': number,
             'name': ballot['name'], 'kind': ballot['scope'], 'boundaryVersionId': config.boundary_version_id,
             'validPartyVotes': ballot['validVotes'], 'validCandidateVotes': candidate_ballot['validVotes'],
             'partyBallot': ballot, 'candidateBallot': candidate_ballot, 'parties': parties['parties'],
-            'candidates': candidates['candidates'], 'winnerCandidateId': elected[0]['id'], 'majority': winner['majority'],
+            'candidates': candidates['candidates'], 'winnerCandidateId': None if cancelled else elected[0]['id'], 'majority': None if cancelled else winner['majority'],
             'sourceDisclosureNotes': candidates['sourceDisclosureNotes'], 'votingPlaceRowsValidated': candidates['votingPlaceRowsValidated'], 'sourceIds': sorted(shared_ids + [sid])}
+
+    if config.cancelled_contests:
+        result['candidateContestStatus'] = 'cancelled' if cancelled else 'held'
+        if cancelled:
+            result['sourceCandidateElectorateLabel'] = candidates['sourceElectorateLabel']
+    return result
 
 
 def validate_aggregates(electorates, party_controls, overall):
@@ -97,7 +110,11 @@ def validate_aggregates(electorates, party_controls, overall):
             total = sum(p['votes'] for e in selected for p in e['parties'] if p['partyKey'] == party['partyKey'])
             require(total == party['votes'], 'Party geographic aggregate: ' + scope)
     for party_key, party in all_parties.items():
-        require(sum(p['votes'] for e in electorates for p in e['parties'] if p['partyKey'] == party_key) == party['partyVotes'], 'National party total: ' + party['name'])
+        party_records = [p for e in electorates for p in e['parties'] if p['partyKey'] == party_key]
+        if party['partyVotes'] is None:
+            require(not party_records, 'Unreported national party affiliation appears on ballot')
+        else:
+            require(sum(p['votes'] for p in party_records) == party['partyVotes'], 'National party total: ' + party['name'])
         candidates = [c for e in electorates for c in e['candidates'] if c['partyKey'] == party_key]
         require(sum(c['votes'] for c in candidates) == party['candidateVotes'], 'National candidate-party total: ' + party['name'])
         require(len(candidates) == party['candidateNominations'], 'National candidate nominations: ' + party['name'])
@@ -108,8 +125,8 @@ def build_core(root, source=None, year=2017):
     source = source or Sources(root, year)
     config = source.config
     (ballots, party_totals), party_sid = parse(source, 'party-votes-and-turnout-by-electorate', turnout_table)
-    (candidate_ballots, candidate_totals), candidate_sid = parse(source, 'candidate-votes-and-turnout-by-electorate', turnout_table)
-    parties, parties_sid = parse(source, 'votes-for-registered-parties-by-electorate', party_table)
+    (candidate_ballots, candidate_totals), candidate_sid = parse(source, 'candidate-votes-and-turnout-by-electorate', lambda data: turnout_table(data, tuple(name for name, _ in config.cancelled_contests)))
+    parties, parties_sid = parse(source, 'votes-for-registered-parties-by-electorate', lambda data: party_table(data, config.party_label_aliases))
     winners, winner_sid = parse(source, 'winning-electorate-candidates', winners_table)
     overall, overall_sid = parse(source, 'overall-results-summary', overall_table)
     percentage_data, percentage_sid = source('percentage-votes-for-registered-parties.csv')
@@ -121,9 +138,11 @@ def build_core(root, source=None, year=2017):
     require(len(entries) == config.total_electorates and len({e['sourceElectorateNumber'] for e in entries}) == config.total_electorates, 'Candidate plan coverage')
     by_name = {key(b['name']): b for b in ballots}
     candidates_by_name = {key(b['name']): b for b in candidate_ballots}
-    require(set(by_name) == set(candidates_by_name) == set(winners) == set(parties['records']) == {key(e['electorateName']) for e in entries}, 'Electorate table coverage')
+    require(set(by_name) == set(candidates_by_name) == set(parties['records']) == {key(e['electorateName']) for e in entries}, 'Electorate table coverage')
+    require(set(winners) == set(by_name) - {key(name) for name, _ in config.cancelled_contests}, 'Official winner coverage')
+    require(all(any(e['electorateName'] == name and e['sourceElectorateNumber'] == number for e in entries) for name, number in config.cancelled_contests), 'Cancellation configuration identity')
     shared_ids = [party_sid, candidate_sid, parties_sid, winner_sid, overall_sid, percentage_sid]
-    electorates = [make_electorate(e, by_name[key(e['electorateName'])], candidates_by_name[key(e['electorateName'])], parties['records'][key(e['electorateName'])], winners[key(e['electorateName'])], source, shared_ids, [b['name'] for b in ballots]) for e in entries]
+    electorates = [make_electorate(e, by_name[key(e['electorateName'])], candidates_by_name[key(e['electorateName'])], parties['records'][key(e['electorateName'])], winners.get(key(e['electorateName'])), source, shared_ids, [b['name'] for b in ballots]) for e in entries]
     require(sum(e['kind'] == 'general' for e in electorates) == config.general_electorates and sum(e['kind'] == 'maori' for e in electorates) == config.maori_electorates, 'General/Maori coverage')
     ids = [c['id'] for e in electorates for c in e['candidates']]
     require(len(set(ids)) == len(ids), 'Duplicate candidate occurrence')
@@ -153,8 +172,8 @@ def build_year(root, year=2017):
     report = {'schemaVersion': 1, 'year': config.year, 'generalElectorates': config.general_electorates, 'supportingMaoriElectorates': config.maori_electorates,
               'candidateRecords': sum(len(e['candidates']) for e in election['electorates']),
               'partyVoteRecords': sum(len(e['parties']) for e in election['electorates']),
-              'splitMatrices': len(split['matrices']), 'splitStatus': 'validated',
-              'sourceFilesConsumed': len(source.used), 'discrepancies': [],
+              'splitMatrices': len(split['matrices']), 'splitStatus': 'validated-with-source-discrepancies' if details.get('discrepancies') else 'validated',
+              'sourceFilesConsumed': len(source.used), 'discrepancies': details.get('discrepancies', []),
               'checks': ['official index name/number identity', 'all candidate voting-place rows and columns', 'party/candidate/turnout/valid/informal controls', 'official winner and majority', 'two-decimal source percentage reconciliation', 'national party and candidate-party totals and nominations', 'general/Maori/national control sums', 'unique election-local candidate IDs', 'consumed source checksums'] + details['checks'],
               'labelMappings': details['labelMappings'], 'limitations': ['Primary records cover general electorates only; Maori candidatures support national controls.', 'personId is null: no cross-election linking.', 'No boundary harmonization or fitted model.'] + details['limitations']}
     return {'elections': election, 'validation': report, 'split': split}

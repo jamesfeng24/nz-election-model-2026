@@ -85,3 +85,9 @@ The preserved 2020 representative controls, candidate and split tables use the s
 ## D020 — 2026-09-11 — 2020 aggregate split reporting group
 
 Retain NZ Public Party as the official candidate affiliation and local split label. Māori/national aggregate split column totals reconcile when its sole candidature (1,349 votes) is grouped under Advance NZ rather than other parties. Record this as an inferred, 2020-only aggregate reporting convention with provenance; do not treat it as party continuity. Preserve and validate supporting Te Tai Tokerau split evidence separately. The source rationale is unstated. No tolerance relaxation, raw correction or exact joint-cell reconstruction is permitted.
+
+## D021 — 2026-09-13 — Cancelled contests and 2023 split-source discrepancies
+
+Configure Port Waikato's general-election candidate contest as cancelled and verify official markers. Retain nominations and published zeros; derived winner/majority/share/elected outcomes are null. Preserve its substantive party vote and non-behavioural local split publication. Do not substitute the by-election. Existing 2017/2020 serialized contracts remain unchanged.
+
+2023 aggregate denominators include Port Waikato. Exact rational rounding intervals prove Party Vote Only discrepancies; retain both official values with narrowly fingerprinted unresolved discrepancies, not increased tolerances or an inferred ballot allocation. See docs/2023-split-discrepancy.md. An unexplained source difference is not a fitted effect. Freedoms NZ constituent affiliations remain unchanged; aggregate-only joins and two abbreviated party-header joins do not establish cross-year identity. Complementary overall-summary source rows retain original blanks separately from explicitly published zeros.
