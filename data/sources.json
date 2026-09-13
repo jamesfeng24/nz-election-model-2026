@@ -14803,6 +14803,38 @@
       ],
       "sha256": "b8e377fb36a1cb2ace950c22f6ce13f00f15a0054054ff57f66500da04254cd6",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-population",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/122744/versions/418310/attachments/25789/download/",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Confidentialised 2023 Census electoral populations by 2025 version 2 meshblock with final electorate membership",
+      "retrievedAt": "2026-09-13T15:07:59.091547+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/population-2025.csv",
+      "processingScript": null,
+      "limitations": [
+        "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
+      ],
+      "sha256": "32e97d7f2128e1de2fbfeee9a73a258f449ded602cca77aa9d97c0516430f6ff",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-population-lookup",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/122744/versions/418310/attachments/25790/download/",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official population dataset lookup and confidentiality documentation",
+      "retrievedAt": "2026-09-13T15:09:01.343025+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/population-lookup.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
+      ],
+      "sha256": "ed82805299067626874d5d43fda82211e1bcd27f2425f67eb16f5c1c473e6a07",
+      "licence": "Creative Commons Attribution 4.0 International"
     }
   ]
 }

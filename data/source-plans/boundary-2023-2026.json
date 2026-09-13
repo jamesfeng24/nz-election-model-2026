@@ -41,6 +41,30 @@
       "role": "Official final changed/unchanged control",
       "organisation": "Representation Commission",
       "format": "pdf"
+    },
+    {
+      "id": "stats-2025-population",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/122744/versions/418310/attachments/25789/download/",
+      "rawPath": "data/raw/boundaries/2020-2025/population-2025.csv",
+      "role": "Confidentialised 2023 Census electoral populations by 2025 version 2 meshblock with final electorate membership",
+      "organisation": "Stats NZ",
+      "format": "csv",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
+      ]
+    },
+    {
+      "id": "stats-2025-population-lookup",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/122744/versions/418310/attachments/25790/download/",
+      "rawPath": "data/raw/boundaries/2020-2025/population-lookup.pdf",
+      "role": "Official population dataset lookup and confidentiality documentation",
+      "organisation": "Stats NZ",
+      "format": "pdf",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Project state
 
-Updated 2026-09-13. Stage 4: **Historical boundary-transition reconstruction** on existing branch `stage/04-boundary-2023-2026`. Base `624fe1d74aa43014e0c65f534c161e22b51e250d` (PR #10 merged). Do not restart, rebase or change branches.
+Updated 2026-09-14. Stage 4: **Historical boundary-transition reconstruction** on existing branch `stage/04-boundary-2023-2026`. Base `624fe1d74aa43014e0c65f534c161e22b51e250d` (PR #10 merged). Do not restart, rebase or change branches.
 
 ## Authorized scope and order
 
@@ -20,7 +20,7 @@ Primary weights must use contemporaneous official small-area population/electora
 
 `data/source-plans/boundary-2023-2026.json` holds exact reviewed URLs. Metadata identifies layer 0, native EPSG:2193, official general/Māori fields for each year. Final 2025 layers must be used, never proposed layers. Official publication confirms 2020 boundaries used for 2020/2023 and final August 2025 boundaries for 2026. Historical regime evidence remains to acquire after current geographic checkpoint.
 
-Schedule B direct curl returned a 212-byte HTML access response, not a PDF; it was rejected and not registered. No schedule PDF is preserved yet. Browser inspection of Stats NZ Datafinder layer 122744 (2023 Census Electoral Population Meshblock 2025 Version 2) returned a blank application shell; schema/download access still unresolved. Do not count either source as acquired. Inspect the existing browser state/access before another download attempt.
+Schedule B direct curl returned a 212-byte HTML access response, not a PDF; it was rejected and not registered. No schedule PDF is preserved yet. The existing Stats NZ layer 122744 browser page subsequently loaded. Its linked official CSV and lookup PDF are now preserved and registered (873 total resources). CSV has 57,553 unique meshblocks, 64 general and seven Māori membership codes. General population is suppressed (-999) in 5,697 rows, Māori in 29,990; all other counts are nonnegative multiples of three. Suppression is not zero. The source uses random rounding to base three; exact control reconciliation needs confidentiality-aware treatment. No weights have been calculated. The CSV contains target membership but no source membership; official concordances or geometry are still required. Do not re-download these two valid sources.
 
 Exact next action: acquire deterministic full-resolution geometry queries using preserved layer metadata; obtain official schedules B/C and layer 122744 schema/population evidence through normal official access; reconcile 65+7 source and 64+7 target inventory and official changed/unchanged controls. Save this geographic checkpoint before lengthy historical acquisition. Never infer population transfer from metadata or electorate area.
 
