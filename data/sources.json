@@ -14835,6 +14835,70 @@
       ],
       "sha256": "ed82805299067626874d5d43fda82211e1bcd27f2425f67eb16f5c1c473e6a07",
       "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-general-geometry",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2020/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Complete official HD polygon query; no simplification or quantization requested",
+      "retrievedAt": "2026-09-13T15:11:16.594581+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2020-geometry.json",
+      "processingScript": null,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ],
+      "sha256": "e2ef2de2fc6ab595161ce87ce84ee279ac718df74ccbbbfea36b83ffa7cd3061",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-maori-geometry",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2020/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Complete official HD polygon query; no simplification or quantization requested",
+      "retrievedAt": "2026-09-13T15:12:03.125237+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2020-geometry.json",
+      "processingScript": null,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ],
+      "sha256": "0994a4e00022c4caad11b04eed86f183b332a013173b02b7466ac425cfa342b5",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-general-geometry",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Complete official HD polygon query; no simplification or quantization requested",
+      "retrievedAt": "2026-09-13T15:12:10.534688+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2025-geometry.json",
+      "processingScript": null,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ],
+      "sha256": "2badebc87aaabe4f91d686ff27bfc0844e36ddfc6d40705963456917e3008f15",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-maori-geometry",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Complete official HD polygon query; no simplification or quantization requested",
+      "retrievedAt": "2026-09-13T15:12:05.700161+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2025-geometry.json",
+      "processingScript": null,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ],
+      "sha256": "181044b74c2a1c89926c89d9a884faabe8e43fb54cbcd9cad1f461cd6399537b",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     }
   ]
 }

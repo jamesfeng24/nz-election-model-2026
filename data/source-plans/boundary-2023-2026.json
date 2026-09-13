@@ -65,6 +65,58 @@
       "limitations": [
         "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
       ]
+    },
+    {
+      "id": "stats-2020-general-geometry",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2020/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2020-geometry.json",
+      "role": "Complete official HD polygon query; no simplification or quantization requested",
+      "organisation": "Stats NZ",
+      "format": "json",
+      "expectedFeatureCount": 65,
+      "expectedCrs": 2193,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ]
+    },
+    {
+      "id": "stats-2020-maori-geometry",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2020/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2020-geometry.json",
+      "role": "Complete official HD polygon query; no simplification or quantization requested",
+      "organisation": "Stats NZ",
+      "format": "json",
+      "expectedFeatureCount": 7,
+      "expectedCrs": 2193,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ]
+    },
+    {
+      "id": "stats-2025-general-geometry",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2025-geometry.json",
+      "role": "Complete official HD polygon query; no simplification or quantization requested",
+      "organisation": "Stats NZ",
+      "format": "json",
+      "expectedFeatureCount": 64,
+      "expectedCrs": 2193,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ]
+    },
+    {
+      "id": "stats-2025-maori-geometry",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2025-geometry.json",
+      "role": "Complete official HD polygon query; no simplification or quantization requested",
+      "organisation": "Stats NZ",
+      "format": "json",
+      "expectedFeatureCount": 7,
+      "expectedCrs": 2193,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ]
     }
   ]
 }

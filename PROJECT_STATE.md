@@ -11,12 +11,14 @@ Primary weights must use contemporaneous official small-area population/electora
 ## Saved progress
 
 - `fa025b0`: authoritative boundary source plan and acquisition/registration tools.
-- `0caa0f7`: four immutable official Stats NZ HD layer **metadata responses**, 2020 and 2025 general/Māori, registered in `data/sources.json`. Actual polygon geometry and population records have NOT yet been acquired.
+- `0caa0f7`: four immutable official Stats NZ HD layer **metadata responses**, 2020 and 2025 general/Māori, registered in `data/sources.json`. Four full-resolution geometry responses and the population CSV/lookup were subsequently acquired as recorded below.
 - Working tree was clean on resumption; no surviving uncommitted acquisition found.
 - Source validation passed for 871 registered resources at the metadata checkpoint (867 historical + four boundary metadata).
 - Historical panel deterministic check passed before branching. Historical outputs remain unchanged; no derived boundary outputs yet.
 
 ## Current acquisition and unresolved access
+
+Four complete HD geometry responses are preserved under `data/raw/boundaries/2020-2025/*-geometry.json`. Inventory: 2020 65 general + 7 Māori; 2025 64 general + 7 Māori. EPSG:2193, unique OBJECTIDs, closed rings, no transfer-limit truncation. Original JSON response bytes unchanged; no simplification requested. Polygon topological validity, source/target membership and change-control reconciliation remain pending. Total source registry now 877 (867 historical + 10 Stage 4). Population checkpoint `c91eb24` is pushed.
 
 `data/source-plans/boundary-2023-2026.json` holds exact reviewed URLs. Metadata identifies layer 0, native EPSG:2193, official general/Māori fields for each year. Final 2025 layers must be used, never proposed layers. Official publication confirms 2020 boundaries used for 2020/2023 and final August 2025 boundaries for 2026. Historical regime evidence remains to acquire after current geographic checkpoint.
 
