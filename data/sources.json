@@ -15021,6 +15021,22 @@
       ],
       "sha256": "0fbc4335a977e470159bf087c95dded641fcb7d1044f60e83c8026e3303711bc",
       "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-geographic-areas-table",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647631/download/",
+      "dateOrElection": "January 2025 meshblock membership in 2020 electorates",
+      "resource": "Geographic Areas Table 2025, table 120975, version 404495; original CSV export ZIP 4647631",
+      "retrievedAt": "2026-09-14T04:05:04.850815+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/geographic-areas-table-2025.zip",
+      "processingScript": null,
+      "limitations": [
+        "January 2025 meshblocks differ from final August 2025 version 2. Match exact IDs where available; investigate remaining units before allocation."
+      ],
+      "sha256": "cc18d753a2922697e2edfa361db3d5541a5f92acd9f0f67cba90f8f0779c5103",
+      "licence": "Creative Commons Attribution 4.0 International"
     }
   ]
 }
