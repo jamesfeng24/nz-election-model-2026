@@ -232,3 +232,12 @@ Resume Stage 4 entirely offline for the acquired 2020→2025 inputs:
 ```
 
 Omit `--check` to regenerate the corresponding audit. The population audit reconstructs verified raw ZIP bytes in memory and extracts the GeoPackage into a temporary directory; no network or raw-source edits occur. Original byte segments, CRC and every archived member hash are checked. Schedule C controls are a documented transcription of the preserved PDF, not regenerated from a live website. Audits are not transition weights or notional vote outputs. Source joins preserve explicit predecessor IDs and source hashes; unresolved membership fails completeness tests.
+
+Suppression reconciliation is offline and deterministic:
+
+```sh
+.venv/bin/python -m scripts.boundaries.suppression_report --check
+.venv/bin/python -m unittest scripts.tests.test_boundary_feasible -v
+```
+
+The report records sharp conditional population/weight bounds, exact rational endpoints, control availability, two source-local exception identities and input hashes. Small exhaustive fixtures verify that ratio endpoints are attainable under all destination equations. An unexpected additional unchanged-seat exception fails validation.
