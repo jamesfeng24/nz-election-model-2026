@@ -32,15 +32,19 @@ def build():
     for kind, prefix in [('general', 'GED'), ('maori', 'MED')]:
         features = json.loads(read(folder + kind + '-2020-geometry.json'))['features']
         controls[kind] = {f['attributes'][prefix + '2020_V1_00']: f['attributes'][prefix + '2020_V1_00_NAME'] for f in features}
-    records = join_memberships(population, concordance, controls)
+    lineage = read_csv_zip(read(folder + 'geographic-areas-table-2026.zip'),
+                           'geographic-areas-table-2026.csv', 'MB2026_code')
+    records = join_memberships(population, concordance, controls, lineage)
     unresolved = [r for r in records if r['membershipStatus'] == 'unresolved']
     return {'schemaVersion': 1, 'status': 'incomplete_source_membership' if unresolved else 'membership_complete',
             'isVoteTransferOutput': False, 'inputHashes': hashes,
             'finalMeshblockCount': len(population), 'concordanceMeshblockCount': len(concordance),
-            'exactOfficialMembershipCount': len(records) - len(unresolved),
+            'exactOfficialMembershipCount': sum(r['membershipStatus'] == 'official_exact_code' for r in records),
+            'officialLineageMembershipCount': sum(r['membershipStatus'] == 'official_historical_code' for r in records),
+            'officialLineageJoins': [r for r in records if r['membershipStatus'] == 'official_historical_code'],
             'unresolvedMeshblocks': unresolved,
             'concordanceOnlyMeshblocks': sorted(concordance.keys() - population.keys()),
-            'limitations': ['Exact-code joins only. New meshblocks require official lineage or documented geometry fallback.',
+            'limitations': ['Official exact-code and explicit historical-code joins only; no geometry allocation.',
                             'Suppressed population is not zero. No population weights or synthetic votes produced.']}
 
 

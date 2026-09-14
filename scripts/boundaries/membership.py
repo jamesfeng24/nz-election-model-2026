@@ -22,11 +22,24 @@ def read_csv_zip(raw, member, key):
         return index_rows(rows, key)
 
 
-def join_memberships(population, concordance, source_controls):
+def join_memberships(population, concordance, source_controls, lineage=None):
     """No prefix matching, spatial guesses, suppressed-value filling or weights."""
     records = []
     for code, row in sorted(population.items()):
         source = concordance.get(code)
+        predecessor = code if source else None
+        status = 'official_exact_code' if source else 'unresolved'
+        if source is None and lineage is not None and code in lineage:
+            link = lineage[code]
+            predecessor = link['MB2025_code']
+            source = concordance.get(predecessor)
+            if source is None:
+                raise ValueError('Official predecessor absent from concordance: ' + code)
+            for prefix in ('GED', 'MED'):
+                if (link[f'{prefix}2025_code'] != row[f'{prefix}2025_V1_00'] or
+                        link[f'{prefix}2025_name'] != row[f'{prefix}2025_V1_00_NAME']):
+                    raise ValueError('Lineage target electorate mismatch: ' + code)
+            status = 'official_historical_code'
         memberships = {}
         for kind, prefix in [('general', 'GED'), ('maori', 'MED')]:
             source_code = source[f'{prefix}2020_code'] if source else None
@@ -39,6 +52,7 @@ def join_memberships(population, concordance, source_controls):
                 'targetName': row[f'{prefix}2025_V1_00_NAME'],
             }
         records.append({'meshblockId': code,
-                        'membershipStatus': 'official_exact_code' if source else 'unresolved',
+                        'membershipStatus': status,
+                        'sourceConcordanceMeshblockId': predecessor,
                         'memberships': memberships})
     return records

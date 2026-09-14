@@ -1,30 +1,33 @@
 {
   "schemaVersion": 1,
-  "status": "incomplete_source_membership",
+  "status": "membership_complete",
   "isVoteTransferOutput": false,
   "inputHashes": {
     "data/raw/boundaries/2020-2025/population-2025.csv": "32e97d7f2128e1de2fbfeee9a73a258f449ded602cca77aa9d97c0516430f6ff",
     "data/raw/boundaries/2020-2025/geographic-areas-table-2025.zip": "cc18d753a2922697e2edfa361db3d5541a5f92acd9f0f67cba90f8f0779c5103",
     "data/raw/boundaries/2020-2025/general-2020-geometry.json": "e2ef2de2fc6ab595161ce87ce84ee279ac718df74ccbbbfea36b83ffa7cd3061",
-    "data/raw/boundaries/2020-2025/maori-2020-geometry.json": "0994a4e00022c4caad11b04eed86f183b332a013173b02b7466ac425cfa342b5"
+    "data/raw/boundaries/2020-2025/maori-2020-geometry.json": "0994a4e00022c4caad11b04eed86f183b332a013173b02b7466ac425cfa342b5",
+    "data/raw/boundaries/2020-2025/geographic-areas-table-2026.zip": "d1987e306014eedb35dd859726295d2c6e962dc5cbd93d4afa1303ecaffc13e4"
   },
   "finalMeshblockCount": 57553,
   "concordanceMeshblockCount": 57551,
   "exactOfficialMembershipCount": 57517,
-  "unresolvedMeshblocks": [
+  "officialLineageMembershipCount": 36,
+  "officialLineageJoins": [
     {
       "meshblockId": "4019179",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "1275302",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "051",
+          "sourceName": "Taupō",
           "targetCode": "049",
           "targetName": "Taupō"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "7",
+          "sourceName": "Waiariki",
           "targetCode": "7",
           "targetName": "Waiariki"
         }
@@ -32,17 +35,18 @@
     },
     {
       "meshblockId": "4019180",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "1275302",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "051",
+          "sourceName": "Taupō",
           "targetCode": "049",
           "targetName": "Taupō"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "7",
+          "sourceName": "Waiariki",
           "targetCode": "7",
           "targetName": "Waiariki"
         }
@@ -50,17 +54,18 @@
     },
     {
       "meshblockId": "4019181",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "2137317",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "060",
+          "sourceName": "Wellington Central",
           "targetCode": "059",
           "targetName": "Wellington North"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "6",
+          "sourceName": "Te Tai Tonga",
           "targetCode": "6",
           "targetName": "Te Tai Tonga"
         }
@@ -68,17 +73,18 @@
     },
     {
       "meshblockId": "4019182",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "2137317",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "060",
+          "sourceName": "Wellington Central",
           "targetCode": "058",
           "targetName": "Wellington Bays"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "6",
+          "sourceName": "Te Tai Tonga",
           "targetCode": "6",
           "targetName": "Te Tai Tonga"
         }
@@ -86,17 +92,18 @@
     },
     {
       "meshblockId": "4019183",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0608359",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "025",
+          "sourceName": "Mt Roskill",
           "targetCode": "027",
           "targetName": "Mt Roskill"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -104,17 +111,18 @@
     },
     {
       "meshblockId": "4019184",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0608359",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "025",
+          "sourceName": "Mt Roskill",
           "targetCode": "027",
           "targetName": "Mt Roskill"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -122,17 +130,18 @@
     },
     {
       "meshblockId": "4019185",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4000013",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "028",
+          "sourceName": "New Lynn",
           "targetCode": "056",
           "targetName": "Waitākere"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -140,17 +149,18 @@
     },
     {
       "meshblockId": "4019186",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4000013",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "028",
+          "sourceName": "New Lynn",
           "targetCode": "056",
           "targetName": "Waitākere"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -158,17 +168,18 @@
     },
     {
       "meshblockId": "4019187",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0634387",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "037",
+          "sourceName": "Panmure-Ōtāhuhu",
           "targetCode": "024",
           "targetName": "Maungakiekie"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -176,17 +187,18 @@
     },
     {
       "meshblockId": "4019188",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0634387",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "037",
+          "sourceName": "Panmure-Ōtāhuhu",
           "targetCode": "047",
           "targetName": "Tāmaki"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -194,17 +206,18 @@
     },
     {
       "meshblockId": "4019189",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0181616",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "063",
+          "sourceName": "Whangaparāoa",
           "targetCode": "009",
           "targetName": "East Coast Bays"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -212,17 +225,18 @@
     },
     {
       "meshblockId": "4019190",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0181616",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "063",
+          "sourceName": "Whangaparāoa",
           "targetCode": "009",
           "targetName": "East Coast Bays"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -230,17 +244,18 @@
     },
     {
       "meshblockId": "4019191",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0608328",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "028",
+          "sourceName": "New Lynn",
           "targetCode": "056",
           "targetName": "Waitākere"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -248,17 +263,18 @@
     },
     {
       "meshblockId": "4019192",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0608328",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "028",
+          "sourceName": "New Lynn",
           "targetCode": "027",
           "targetName": "Mt Roskill"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -266,17 +282,18 @@
     },
     {
       "meshblockId": "4019193",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0634361",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "038",
+          "sourceName": "Papakura",
           "targetCode": "003",
           "targetName": "Botany"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "1",
+          "sourceName": "Hauraki-Waikato",
           "targetCode": "1",
           "targetName": "Hauraki-Waikato"
         }
@@ -284,17 +301,18 @@
     },
     {
       "meshblockId": "4019194",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0634361",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "038",
+          "sourceName": "Papakura",
           "targetCode": "037",
           "targetName": "Papakura"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "1",
+          "sourceName": "Hauraki-Waikato",
           "targetCode": "1",
           "targetName": "Hauraki-Waikato"
         }
@@ -302,17 +320,18 @@
     },
     {
       "meshblockId": "4019195",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4000008",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "010",
+          "sourceName": "East Coast Bays",
           "targetCode": "009",
           "targetName": "East Coast Bays"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -320,17 +339,18 @@
     },
     {
       "meshblockId": "4019196",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4000008",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "010",
+          "sourceName": "East Coast Bays",
           "targetCode": "052",
           "targetName": "Upper Harbour"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -338,17 +358,18 @@
     },
     {
       "meshblockId": "4019197",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "1193211",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "003",
+          "sourceName": "Bay of Plenty",
           "targetCode": "026",
           "targetName": "Mt Maunganui"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "7",
+          "sourceName": "Waiariki",
           "targetCode": "7",
           "targetName": "Waiariki"
         }
@@ -356,17 +377,18 @@
     },
     {
       "meshblockId": "4019198",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "1193211",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "003",
+          "sourceName": "Bay of Plenty",
           "targetCode": "026",
           "targetName": "Mt Maunganui"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "7",
+          "sourceName": "Waiariki",
           "targetCode": "7",
           "targetName": "Waiariki"
         }
@@ -374,17 +396,18 @@
     },
     {
       "meshblockId": "4019199",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4017009",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "052",
+          "sourceName": "Tauranga",
           "targetCode": "026",
           "targetName": "Mt Maunganui"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "7",
+          "sourceName": "Waiariki",
           "targetCode": "7",
           "targetName": "Waiariki"
         }
@@ -392,17 +415,18 @@
     },
     {
       "meshblockId": "4019200",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4017009",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "052",
+          "sourceName": "Tauranga",
           "targetCode": "050",
           "targetName": "Tauranga"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "7",
+          "sourceName": "Waiariki",
           "targetCode": "7",
           "targetName": "Waiariki"
         }
@@ -410,17 +434,18 @@
     },
     {
       "meshblockId": "4019201",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0634363",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "038",
+          "sourceName": "Papakura",
           "targetCode": "003",
           "targetName": "Botany"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "1",
+          "sourceName": "Hauraki-Waikato",
           "targetCode": "1",
           "targetName": "Hauraki-Waikato"
         }
@@ -428,17 +453,18 @@
     },
     {
       "meshblockId": "4019202",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0634363",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "038",
+          "sourceName": "Papakura",
           "targetCode": "037",
           "targetName": "Papakura"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "1",
+          "sourceName": "Hauraki-Waikato",
           "targetCode": "1",
           "targetName": "Hauraki-Waikato"
         }
@@ -446,17 +472,18 @@
     },
     {
       "meshblockId": "4019203",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0634337",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "004",
+          "sourceName": "Botany",
           "targetCode": "035",
           "targetName": "Pakuranga"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -464,17 +491,18 @@
     },
     {
       "meshblockId": "4019204",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0634337",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "004",
+          "sourceName": "Botany",
           "targetCode": "003",
           "targetName": "Botany"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -482,17 +510,18 @@
     },
     {
       "meshblockId": "4019205",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4003128",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "018",
+          "sourceName": "Kaipara ki Mahurangi",
           "targetCode": "052",
           "targetName": "Upper Harbour"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -500,17 +529,18 @@
     },
     {
       "meshblockId": "4019206",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4003128",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "018",
+          "sourceName": "Kaipara ki Mahurangi",
           "targetCode": "014",
           "targetName": "Henderson"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -518,17 +548,18 @@
     },
     {
       "meshblockId": "4019207",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4000046",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "028",
+          "sourceName": "New Lynn",
           "targetCode": "011",
           "targetName": "Glendene"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -536,17 +567,18 @@
     },
     {
       "meshblockId": "4019208",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "4000046",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "028",
+          "sourceName": "New Lynn",
           "targetCode": "056",
           "targetName": "Waitākere"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "3",
+          "sourceName": "Tāmaki Makaurau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
@@ -554,17 +586,18 @@
     },
     {
       "meshblockId": "4019209",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0147211",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "063",
+          "sourceName": "Whangaparāoa",
           "targetCode": "019",
           "targetName": "Kaipara ki Mahurangi"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -572,17 +605,18 @@
     },
     {
       "meshblockId": "4019210",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0147211",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "063",
+          "sourceName": "Whangaparāoa",
           "targetCode": "062",
           "targetName": "Whangaparāoa"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -590,17 +624,18 @@
     },
     {
       "meshblockId": "4019211",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0147212",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "063",
+          "sourceName": "Whangaparāoa",
           "targetCode": "019",
           "targetName": "Kaipara ki Mahurangi"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -608,17 +643,18 @@
     },
     {
       "meshblockId": "4019212",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0147212",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "063",
+          "sourceName": "Whangaparāoa",
           "targetCode": "062",
           "targetName": "Whangaparāoa"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -626,17 +662,18 @@
     },
     {
       "meshblockId": "4019213",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0358409",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "053",
+          "sourceName": "Te Atatū",
           "targetCode": "011",
           "targetName": "Glendene"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "5",
           "targetName": "Te Tai Tokerau"
         }
@@ -644,23 +681,25 @@
     },
     {
       "meshblockId": "4019214",
-      "membershipStatus": "unresolved",
+      "membershipStatus": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0358409",
       "memberships": {
         "general": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "053",
+          "sourceName": "Te Atatū",
           "targetCode": "011",
           "targetName": "Glendene"
         },
         "maori": {
-          "sourceCode": null,
-          "sourceName": null,
+          "sourceCode": "5",
+          "sourceName": "Te Tai Tokerau",
           "targetCode": "3",
           "targetName": "Tāmaki Makaurau"
         }
       }
     }
   ],
+  "unresolvedMeshblocks": [],
   "concordanceOnlyMeshblocks": [
     "0016901",
     "0016902",
@@ -698,7 +737,7 @@
     "4017009"
   ],
   "limitations": [
-    "Exact-code joins only. New meshblocks require official lineage or documented geometry fallback.",
+    "Official exact-code and explicit historical-code joins only; no geometry allocation.",
     "Suppressed population is not zero. No population weights or synthetic votes produced."
   ]
 }
