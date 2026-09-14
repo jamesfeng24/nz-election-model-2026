@@ -60,4 +60,3 @@ def load():
                                 'sourceConcordanceMeshblockId': membership['sourceConcordanceMeshblockId']})
     return {'cells': cells, 'controls': totals, 'sourceNames': source_names,
             'targetNames': target_names, 'changes': changes, 'inputHashes': hashes}
-
