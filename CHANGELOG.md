@@ -133,3 +133,9 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Validated all 57,553 source memberships: 57,517 direct and 36 official lineage joins; no geometry fallback.
 - Added deterministic geometry/population and Schedule C disclosure-control audits, 71 passing electorate controls, and focused failure tests.
 - Retained suppressed values as unavailable; documented two technical membership exceptions pending crosswalk treatment. Historical observed data and panel remain unchanged; transition weights/notional votes are still incomplete.
+
+### Stage 4 current transition crosswalk
+
+- Resolved both suppression exceptions as sharp feasible intervals without zero filling.
+- Added 65→64 general and 7→7 Māori population crosswalk constraints, reverse composition/quality metrics, deterministic manifest and endpoint-conservation tests.
+- Preserved all historical observations; older crosswalks and synthetic vote baselines remain outstanding.

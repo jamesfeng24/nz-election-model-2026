@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "nz-2023-to-2026",
+  "sourceElectionYear": 2023,
+  "targetElectionYear": 2026,
+  "sourceBoundaryId": "stats-nz-electorates-2020",
+  "targetBoundaryId": "stats-nz-electorates-final-2025",
+  "populationVintage": "2023 Census electoral population, final August 2025 release",
+  "adapter": "current_inputs",
+  "expectedSourceCounts": {"general": 65, "maori": 7},
+  "expectedTargetCounts": {"general": 64, "maori": 7},
+  "populationMethod": "official_meshblock_membership_with_disclosure_bounds",
+  "pointEstimatePolicy": "unavailable_unless_uniquely_identified",
+  "observedElectionInputsModified": false
+}

@@ -79,3 +79,16 @@ def outgoing_weight_bounds(edges):
                        'weight': float(lower) if lower == upper else None,
                        'uniquelyIdentified': lower == upper})
     return result
+
+
+def aggregate(cells):
+    edges = {}
+    for cell in cells:
+        key = cell['source'], cell['target']
+        edge = edges.setdefault(key, {'source': key[0], 'target': key[1], 'lower': 0,
+                                     'upper': 0, 'meshblockCount': 0, 'suppressedCount': 0})
+        edge['lower'] += cell['population']['lower']
+        edge['upper'] += cell['population']['upper']
+        edge['meshblockCount'] += 1
+        edge['suppressedCount'] += cell['population']['status'] == 'suppressed'
+    return [edges[k] for k in sorted(edges)]

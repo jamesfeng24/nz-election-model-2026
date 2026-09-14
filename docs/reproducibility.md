@@ -241,3 +241,13 @@ Suppression reconciliation is offline and deterministic:
 ```
 
 The report records sharp conditional population/weight bounds, exact rational endpoints, control availability, two source-local exception identities and input hashes. Small exhaustive fixtures verify that ratio endpoints are attainable under all destination equations. An unexpected additional unchanged-seat exception fails validation.
+
+Current transition crosswalk and manifest:
+
+```sh
+.venv/bin/python -m scripts.boundaries.transition --transition 2023-2026
+.venv/bin/python -m scripts.boundaries.transition --transition 2023-2026 --check
+.venv/bin/python -m unittest scripts.tests.test_boundary_transition scripts.tests.test_boundary_composition scripts.tests.test_boundary_feasible -v
+```
+
+The transition consumes preserved memberships/population controls offline. Manifest hashes include input data, configuration, implementation and output bytes. Witness allocations exist only inside tests; they are not nominal population estimates or exported observations. Older transition adapters remain to implement after authoritative acquisition.

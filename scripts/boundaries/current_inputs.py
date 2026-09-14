@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from scripts.boundaries.membership import index_rows, read_csv_zip, join_memberships
 from scripts.boundaries.population import population_interval
+from scripts.boundaries.feasible import aggregate
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -60,15 +61,3 @@ def load():
     return {'cells': cells, 'controls': totals, 'sourceNames': source_names,
             'targetNames': target_names, 'changes': changes, 'inputHashes': hashes}
 
-
-def aggregate(cells):
-    edges = {}
-    for cell in cells:
-        key = cell['source'], cell['target']
-        edge = edges.setdefault(key, {'source': key[0], 'target': key[1], 'lower': 0,
-                                     'upper': 0, 'meshblockCount': 0, 'suppressedCount': 0})
-        edge['lower'] += cell['population']['lower']
-        edge['upper'] += cell['population']['upper']
-        edge['meshblockCount'] += 1
-        edge['suppressedCount'] += cell['population']['status'] == 'suppressed'
-    return [edges[k] for k in sorted(edges)]
