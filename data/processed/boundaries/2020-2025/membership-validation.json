@@ -1,0 +1,704 @@
+{
+  "schemaVersion": 1,
+  "status": "incomplete_source_membership",
+  "isVoteTransferOutput": false,
+  "inputHashes": {
+    "data/raw/boundaries/2020-2025/population-2025.csv": "32e97d7f2128e1de2fbfeee9a73a258f449ded602cca77aa9d97c0516430f6ff",
+    "data/raw/boundaries/2020-2025/geographic-areas-table-2025.zip": "cc18d753a2922697e2edfa361db3d5541a5f92acd9f0f67cba90f8f0779c5103",
+    "data/raw/boundaries/2020-2025/general-2020-geometry.json": "e2ef2de2fc6ab595161ce87ce84ee279ac718df74ccbbbfea36b83ffa7cd3061",
+    "data/raw/boundaries/2020-2025/maori-2020-geometry.json": "0994a4e00022c4caad11b04eed86f183b332a013173b02b7466ac425cfa342b5"
+  },
+  "finalMeshblockCount": 57553,
+  "concordanceMeshblockCount": 57551,
+  "exactOfficialMembershipCount": 57517,
+  "unresolvedMeshblocks": [
+    {
+      "meshblockId": "4019179",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "049",
+          "targetName": "Taupō"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "7",
+          "targetName": "Waiariki"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019180",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "049",
+          "targetName": "Taupō"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "7",
+          "targetName": "Waiariki"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019181",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "059",
+          "targetName": "Wellington North"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "6",
+          "targetName": "Te Tai Tonga"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019182",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "058",
+          "targetName": "Wellington Bays"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "6",
+          "targetName": "Te Tai Tonga"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019183",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "027",
+          "targetName": "Mt Roskill"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019184",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "027",
+          "targetName": "Mt Roskill"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019185",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "056",
+          "targetName": "Waitākere"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019186",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "056",
+          "targetName": "Waitākere"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019187",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "024",
+          "targetName": "Maungakiekie"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019188",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "047",
+          "targetName": "Tāmaki"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019189",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "009",
+          "targetName": "East Coast Bays"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019190",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "009",
+          "targetName": "East Coast Bays"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019191",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "056",
+          "targetName": "Waitākere"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019192",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "027",
+          "targetName": "Mt Roskill"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019193",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "003",
+          "targetName": "Botany"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "1",
+          "targetName": "Hauraki-Waikato"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019194",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "037",
+          "targetName": "Papakura"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "1",
+          "targetName": "Hauraki-Waikato"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019195",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "009",
+          "targetName": "East Coast Bays"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019196",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "052",
+          "targetName": "Upper Harbour"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019197",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "026",
+          "targetName": "Mt Maunganui"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "7",
+          "targetName": "Waiariki"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019198",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "026",
+          "targetName": "Mt Maunganui"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "7",
+          "targetName": "Waiariki"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019199",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "026",
+          "targetName": "Mt Maunganui"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "7",
+          "targetName": "Waiariki"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019200",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "050",
+          "targetName": "Tauranga"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "7",
+          "targetName": "Waiariki"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019201",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "003",
+          "targetName": "Botany"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "1",
+          "targetName": "Hauraki-Waikato"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019202",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "037",
+          "targetName": "Papakura"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "1",
+          "targetName": "Hauraki-Waikato"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019203",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "035",
+          "targetName": "Pakuranga"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019204",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "003",
+          "targetName": "Botany"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019205",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "052",
+          "targetName": "Upper Harbour"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019206",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "014",
+          "targetName": "Henderson"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019207",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "011",
+          "targetName": "Glendene"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019208",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "056",
+          "targetName": "Waitākere"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019209",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "019",
+          "targetName": "Kaipara ki Mahurangi"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019210",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "062",
+          "targetName": "Whangaparāoa"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019211",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "019",
+          "targetName": "Kaipara ki Mahurangi"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019212",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "062",
+          "targetName": "Whangaparāoa"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019213",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "011",
+          "targetName": "Glendene"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "5",
+          "targetName": "Te Tai Tokerau"
+        }
+      }
+    },
+    {
+      "meshblockId": "4019214",
+      "membershipStatus": "unresolved",
+      "memberships": {
+        "general": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "011",
+          "targetName": "Glendene"
+        },
+        "maori": {
+          "sourceCode": null,
+          "sourceName": null,
+          "targetCode": "3",
+          "targetName": "Tāmaki Makaurau"
+        }
+      }
+    }
+  ],
+  "concordanceOnlyMeshblocks": [
+    "0016901",
+    "0016902",
+    "0147211",
+    "0147212",
+    "0181616",
+    "0358409",
+    "0608328",
+    "0608359",
+    "0634337",
+    "0634361",
+    "0634363",
+    "0634387",
+    "1193211",
+    "1275302",
+    "1588000",
+    "2137317",
+    "3166401",
+    "3166402",
+    "3166600",
+    "3166710",
+    "3166711",
+    "3195000",
+    "3196001",
+    "3196002",
+    "3196003",
+    "3196004",
+    "3196005",
+    "3196006",
+    "3196007",
+    "4000008",
+    "4000013",
+    "4000046",
+    "4003128",
+    "4017009"
+  ],
+  "limitations": [
+    "Exact-code joins only. New meshblocks require official lineage or documented geometry fallback.",
+    "Suppressed population is not zero. No population weights or synthetic votes produced."
+  ]
+}

@@ -15037,6 +15037,22 @@
       ],
       "sha256": "cc18d753a2922697e2edfa361db3d5541a5f92acd9f0f67cba90f8f0779c5103",
       "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2026-geographic-areas-table",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/my/export-history/4648225/",
+      "dateOrElection": "2026 meshblocks with historic January 2025 membership",
+      "resource": "Geographic Areas Table 2026, table 123518; original CSV export ZIP 4648225; catalogue https://datafinder.stats.govt.nz/table/123518-geographic-areas-table-2026/",
+      "retrievedAt": "2026-09-14T04:13:27.111638+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/geographic-areas-table-2026.zip",
+      "processingScript": "scripts/boundaries/audit_membership.py",
+      "limitations": [
+        "Used only for explicit MB2026_code to MB2025_code lineage for final-2025 codes absent from the earlier table; not a substitute for electoral population or geometry."
+      ],
+      "sha256": "d1987e306014eedb35dd859726295d2c6e962dc5cbd93d4afa1303ecaffc13e4",
+      "licence": "Creative Commons Attribution 4.0 International"
     }
   ]
 }
