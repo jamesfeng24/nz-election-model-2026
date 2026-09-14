@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "resources": [
+    {
+      "id": "stats-2020-electoral-population",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22604/download/",
+      "rawPath": "data/raw/boundaries/2014-2020/population-2020.csv",
+      "format": "csv",
+      "requiredColumns": [
+        "MB2020_V2_00",
+        "General_Electoral_Population",
+        "Maori_Electoral_Population",
+        "GED2020_V1_00",
+        "MED2020_V1_00"
+      ],
+      "role": "2018 Census electoral population on final Meshblock 2020; layer104578 version310991",
+      "organisation": "Stats NZ",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ]
+    },
+    {
+      "id": "stats-2020-electoral-population-lookup",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22607/download/",
+      "rawPath": "data/raw/boundaries/2014-2020/population-lookup.pdf",
+      "format": "pdf",
+      "role": "Official field lookup for 2018 electoral population layer",
+      "organisation": "Stats NZ",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ]
+    },
+    {
+      "id": "stats-2020-geographic-areas-file",
+      "url": "https://datafinder.stats.govt.nz/my/export-history/4648445/",
+      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-file-2020.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "geographic-areas-file-2020.csv",
+        "geographic-areas-file-2020.txt"
+      ],
+      "role": "Official Geographic Areas File 2020 table104285 version381332; export4648445; MB2020 to GED2014/MED2014 membership",
+      "organisation": "Stats NZ",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ]
+    }
+  ]
+}

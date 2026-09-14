@@ -1,4 +1,6 @@
 """Offline registration of unchanged, format-checked planned boundary responses."""
+import argparse
+import zipfile
 import csv
 import io
 import hashlib
@@ -10,7 +12,10 @@ ROOT=Path(__file__).resolve().parents[2]
 
 
 def main():
-    plan=json.loads((ROOT/'data/source-plans/boundary-2023-2026.json').read_text())
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--plan',default='data/source-plans/boundary-2023-2026.json')
+    args=parser.parse_args()
+    plan=json.loads((ROOT/args.plan).read_text())
     registry_path=ROOT/'data/sources.json'
     registry=json.loads(registry_path.read_text())
     known={r['id']:r for r in registry['sources']}
@@ -24,8 +29,12 @@ def main():
             if 'error' in value:raise ValueError('API error: '+str(path))
         elif entry['format']=='csv':
             rows=list(csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))))
-            if not rows or 'MB2025_V2_00' not in rows[0]:
+            if not rows or not set(entry.get('requiredColumns',['MB2025_V2_00'])).issubset(rows[0]):
                 raise ValueError('Unexpected population CSV schema: '+str(path))
+        elif entry['format']=='zip':
+            with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+                if archive.testzip() is not None or not set(entry.get('requiredMembers',[])).issubset(archive.namelist()):
+                    raise ValueError('Invalid source ZIP: '+str(path))
         elif entry['format']=='pdf' and not raw.startswith(b'%PDF-'):
             raise ValueError('Not an official PDF response: '+str(path))
         digest=hashlib.sha256(raw).hexdigest()
@@ -33,7 +42,7 @@ def main():
             if known[entry['id']]['sha256']!=digest:raise ValueError('Existing source changed')
             continue
         registry['sources'].append({'schemaVersion':1,'id':entry['id'],'organisation':entry['organisation'],
-            'url':entry['url'],'dateOrElection':'2020/2025 electorate boundaries for 2023/2026 elections',
+            'url':entry['url'],'dateOrElection':entry.get('dateOrElection','2020/2025 electorate boundaries for 2023/2026 elections'),
             'resource':entry['role'],'retrievedAt':datetime.fromtimestamp(path.stat().st_mtime,timezone.utc).isoformat(),
             'rawPath':entry['rawPath'],'processingScript':None,
             'limitations':entry.get('limitations',['Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata.']),

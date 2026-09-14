@@ -15053,6 +15053,54 @@
       ],
       "sha256": "d1987e306014eedb35dd859726295d2c6e962dc5cbd93d4afa1303ecaffc13e4",
       "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-electoral-population",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22604/download/",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "resource": "2018 Census electoral population on final Meshblock 2020; layer104578 version310991",
+      "retrievedAt": "2026-09-14T09:34:27.647337+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/population-2020.csv",
+      "processingScript": null,
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ],
+      "sha256": "a10ed9c53cb171b58d853a3bdd2ac947e10031cd09ec6bf0d3ca614ce4a1991a",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-electoral-population-lookup",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22607/download/",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "resource": "Official field lookup for 2018 electoral population layer",
+      "retrievedAt": "2026-09-14T09:36:57.534578+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/population-lookup.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ],
+      "sha256": "ee3ead055522f7e8e079ebd1db41d863ee04eb9f26af5b4bbfda15962ee73d95",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/my/export-history/4648445/",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "resource": "Official Geographic Areas File 2020 table104285 version381332; export4648445; MB2020 to GED2014/MED2014 membership",
+      "retrievedAt": "2026-09-14T09:36:58.012158+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-file-2020.zip",
+      "processingScript": null,
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ],
+      "sha256": "9353321994f207ab9decd1cab2f70248b5fd343b609d6eae5097f75e91918c6c",
+      "licence": "Creative Commons Attribution 4.0 International"
     }
   ]
 }
