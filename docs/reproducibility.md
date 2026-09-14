@@ -220,4 +220,15 @@ python3 scripts/validate/source_files.py
 
 The acquisition audit is explicitly incomplete and contains only geometry diagnostics, never transfer weights. Its area differences must not be interpreted as population flows. The original ArcGIS JSON responses are stored without quantization/simplification; all four source layers are EPSG:2193. The decoder preserves holes and islands and rejects invalid topology rather than repairing raw data.
 
-The public population attachment has 57,553 final-version meshblocks. Suppressed `-999` values remain missing (not negative population, zero or a midpoint estimate). Other values are confidentialised by random rounding to base three. The public January 2025 ArcGIS meshblock geometry has 57,551 units and is not an established substitute. The exact Datafinder layer 122744 geometry export requires normal login; source-boundary membership and Schedule C controls are still needed. The preserved population CSV and lookup PDF must not be downloaded again.
+The public population attachment has 57,553 final-version meshblocks. Suppressed `-999` values remain missing (not negative population, zero or a midpoint estimate). Other values are confidentialised by random rounding to base three. The public January 2025 ArcGIS meshblock geometry has 57,551 units and is not an established substitute. The exact Datafinder layer 122744 geometry export was subsequently acquired through normal authenticated export; source membership and Schedule C disclosure-control audits now pass. The preserved population CSV and lookup PDF must not be downloaded again.
+
+
+Resume Stage 4 entirely offline for the acquired 2020→2025 inputs:
+
+```sh
+.venv/bin/python -m scripts.boundaries.audit_membership --check
+.venv/bin/python -m scripts.boundaries.audit_population --check
+.venv/bin/python -m unittest scripts.tests.test_boundary_membership scripts.tests.test_boundary_population scripts.tests.test_boundary_geopackage scripts.tests.test_boundary_archive -v
+```
+
+Omit `--check` to regenerate the corresponding audit. The population audit reconstructs verified raw ZIP bytes in memory and extracts the GeoPackage into a temporary directory; no network or raw-source edits occur. Original byte segments, CRC and every archived member hash are checked. Schedule C controls are a documented transcription of the preserved PDF, not regenerated from a live website. Audits are not transition weights or notional vote outputs. Source joins preserve explicit predecessor IDs and source hashes; unresolved membership fails completeness tests.

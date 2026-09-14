@@ -8,6 +8,14 @@ Continue 2023 results → final 2025/2026 boundaries first, then reconstruct 201
 
 Primary weights must use contemporaneous official small-area population/electoral-population evidence, preferably meshblocks and official concordances. Whole-electorate land-area weights are prohibited. Preserve fractional party votes and party-by-party mass. Candidate/split sensitivity is secondary and only where defensible. No person linking, modelling, polling or geographic voter-residence inference from voting places.
 
+## Current resumable checkpoint
+
+Source membership is complete: 57,517 direct + 36 official historical-code joins cover all 57,553 final meshblocks, without geometry inference. Exact GeoPackage/CSV identity and all 71 Schedule C population controls now pass reproducible disclosure-bound validation. All 886 raw registry checksums pass (15 distinct Stage 4 resources). Acquisition is preserved; do not re-export the meshblocks or either concordance table.
+
+The current crosswalk is **not yet complete**. Next action: reconcile the two suppressed-population technical membership exceptions (4018221 and 4019214) with Schedule B, and implement explicit population-weight uncertainty/conservation before generating any synthetic party votes. Continue the current transition first; older transition acquisition follows. No model, person linking or historical-output change has occurred. No Stage 4 PR yet.
+
+The chronological sections below describe earlier checkpoints; completed access/acquisition steps are historical, not instructions to repeat them.
+
 ## Saved progress
 
 - `fa025b0`: authoritative boundary source plan and acquisition/registration tools.
@@ -16,7 +24,7 @@ Primary weights must use contemporaneous official small-area population/electora
 - Source validation passed for 871 registered resources at the metadata checkpoint (867 historical + four boundary metadata).
 - Historical panel deterministic check passed before branching. Historical outputs remain unchanged; no derived boundary outputs yet.
 
-## Current acquisition and unresolved access
+## Historical acquisition/access checkpoint (superseded by current checkpoint)
 
 Four complete HD geometry responses are preserved under `data/raw/boundaries/2020-2025/*-geometry.json`. Inventory: 2020 65 general + 7 Māori; 2025 64 general + 7 Māori. EPSG:2193, unique OBJECTIDs, closed rings, no transfer-limit truncation. Original JSON response bytes unchanged; no simplification requested. All 143 polygons passed strict topological validation without repair using pinned Shapely 2.1.2 / NumPy 2.2.6. Source/target meshblock membership and change-control reconciliation remain pending. Total source registry now 878 (867 historical + 11 Stage 4, including Schedule B). Population checkpoint `c91eb24` is pushed.
 
@@ -24,7 +32,7 @@ Four complete HD geometry responses are preserved under `data/raw/boundaries/202
 
 Schedule B direct curl returned a 212-byte HTML access response, not a PDF; it was rejected and not registered. Schedule B was subsequently acquired unchanged through its normal Chrome link and is now preserved. Schedule C direct access also returned HTML; browser download was requested but no completed local file was found. Do not register the HTML as PDF. The existing Stats NZ layer 122744 browser page subsequently loaded. Its linked official CSV and lookup PDF are now preserved and registered (873 total resources). CSV has 57,553 unique meshblocks, 64 general and seven Māori membership codes. General population is suppressed (-999) in 5,697 rows, Māori in 29,990; all other counts are nonnegative multiples of three. Suppression is not zero. The source uses random rounding to base three; exact control reconciliation needs confidentiality-aware treatment. No weights have been calculated. The CSV contains target membership but no source membership; official concordances or geometry are still required. Do not re-download these two valid sources.
 
-Exact next action: acquire deterministic full-resolution geometry queries using preserved layer metadata; obtain official schedules B/C and layer 122744 schema/population evidence through normal official access; reconcile 65+7 source and 64+7 target inventory and official changed/unchanged controls. Save this geographic checkpoint before lengthy historical acquisition. Never infer population transfer from metadata or electorate area.
+Historical next action (completed): acquire deterministic full-resolution geometry queries using preserved layer metadata; obtain official schedules B/C and layer 122744 schema/population evidence through normal official access; reconcile 65+7 source and 64+7 target inventory and official changed/unchanged controls. Save this geographic checkpoint before lengthy historical acquisition. Never infer population transfer from metadata or electorate area.
 
 ## Remaining checkpoints
 
@@ -46,7 +54,7 @@ Exact next stage after all three transitions are complete, only on explicit auth
 
 Layer 122744's geometry export UI was inspected: Shapefile export is approximately 160 MB, EPSG:2193, and Create Export routes to login. The public CSV attachment already preserved is available without login; polygon export requires normal Stats NZ/Datafinder login. No login bypass attempted. Next bounded access work: seek a published official meshblock concordance/public equivalent, or obtain the official export through authenticated normal access. The source CSV lacks source-boundary membership, so do not produce weights yet.
 
-## Latest saved audit / next required access
+## Historical geometry-only audit (access subsequently resolved)
 
 - Important pushed acquisition SHAs: `472f43d` (all four HD geometry responses), `7f196e3` (topology decoder/tests and Schedule B).
 - Geographic acquisition audit: `data/processed/boundaries/2020-2025/geography-validation.json`, regenerated by `.venv/bin/python -m scripts.boundaries.audit_geography`; `--check` passes. It is explicitly incomplete, not a vote-transfer output. All 19 officially unchanged seats have non-identical geometry across the published vintages. Symmetric-difference areas are diagnostics only, not population weights. Population movement remains null. The derived Schedule B control file preserves its source/page and the East Cape/East Coast rename.
@@ -83,3 +91,9 @@ Acquired only the needed official Geographic Areas Table 2026, table 123518, exp
 Acquisition checkpoint `88f528e` is pushed. All **57,553** final meshblocks now have authoritative 2020 general/Māori source memberships: **57,517 direct code joins + 36 explicit historical-code joins** using the preserved 2026 table. All 36 lineage records also match the final population CSV's target electorate codes and exact names. No geometry inference, prefix matching, zero-filling or new source download is needed for membership. Five focused membership tests pass, including malformed lineage and deterministic real-data coverage. `membership-validation.json` preserves the 36 joins and source hashes; it is a membership audit, not a vote-transfer matrix.
 
 A bounded Schedule B consistency check found only two meshblock identity exceptions among officially unchanged seats: 4018221 affects East Cape/East Coast; 4019214 affects Te Tai Tokerau/Tāmaki Makaurau. Relevant published populations are suppressed (-999), not observed zero. Investigate these against the preserved technical-adjustment metadata and geometry before final population/control reconciliation; do not turn suppressed cells into zero solely because Schedule B says unchanged. Exact next action: finish the reproducible geometry/population inventory audit and Schedule C population-control reconciliation, preserving suppression/random-rounding bounds, then build the 2023→2026 population crosswalk. Older transitions and notional vote baselines remain outstanding; no final PR yet.
+
+## Population inventory/control checkpoint — 2026-09-14
+
+Membership checkpoint `7bda4ba` is pushed. New `audit_population.py` reconstructs/checksums the immutable ZIP, checks every archived member hash/CRC, verifies all 57,553 GeoPackage geometries and CSV population/target fields, and validates all 71 Schedule C totals within disclosure-compatible integer bounds. Suppressed values retain null substantive values with bounds 0–5; released base-three rounded values permit ±2 (lower bound at least 6), not nearest-rounding ±1. These are disclosure bounds, not confidence intervals or inferred exact counts. All controls pass; no suppressed cell was filled. Derived Schedule C transcription records the duplicate overlaid Māori table and excludes projection columns.
+
+Thirteen focused tests passed across population, membership, GeoPackage and archive modules; real-data tests prove deterministic regeneration of both new audits. Full final-stage suite not yet rerun. Source checksum validation: 886 passed. No frontend/TypeScript changes or frontend checks at this Python-only checkpoint. Exact next action is the current checkpoint above; preserve both suppressed technical exceptions rather than assigning invented zeros. Older transitions and all three synthetic vote baselines remain outstanding.

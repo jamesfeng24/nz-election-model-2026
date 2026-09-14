@@ -125,3 +125,11 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Preserved eleven official geography/population/schedule resources with checksums, including four complete HD electorate layers and 57,553 meshblock population records.
 - Added strict offline polygon topology decoding, focused tests, pinned optional geometry dependencies and an explicitly incomplete deterministic acquisition audit.
 - Recorded suppressed population values and geometry differences for officially unchanged seats; no population weights, synthetic votes, historical data changes or models introduced.
+
+
+### Stage 4 recovered membership and population evidence
+
+- Preserved the completed 2025 concordance and exact GeoPackage reader; acquired only the needed 2026 historical-code concordance.
+- Validated all 57,553 source memberships: 57,517 direct and 36 official lineage joins; no geometry fallback.
+- Added deterministic geometry/population and Schedule C disclosure-control audits, 71 passing electorate controls, and focused failure tests.
+- Retained suppressed values as unavailable; documented two technical membership exceptions pending crosswalk treatment. Historical observed data and panel remain unchanged; transition weights/notional votes are still incomplete.
