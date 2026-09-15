@@ -50,6 +50,23 @@
       "limitations": [
         "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
       ]
+    },
+    {
+      "id": "stats-2013-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4648446/download/",
+      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2013.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "geographic-areas-file-2013.csv",
+        "geographic-areas-file-2013.txt"
+      ],
+      "role": "Geographic Areas File 2013, official table104685/version298536; recovered original export4648446; MB2013 to GED2007/MED2007",
+      "dateOrElection": "2013 meshblock membership in 2007 electoral boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Acquisition only; target 2014 membership and contemporaneous population remain to reconcile."
+      ]
     }
   ]
 }
