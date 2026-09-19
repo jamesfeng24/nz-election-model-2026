@@ -15117,6 +15117,22 @@
       ],
       "sha256": "ba4204c31cdb2bda16d659e1eff5d9896f10036d3b2d16c6715493a88a4052dd",
       "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2021-geographic-areas-table",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4649772/download/",
+      "dateOrElection": "2021 concordance for final 2020 meshblocks",
+      "resource": "Official table105172/version381334, recovered completed export4649772; MB2021 to MB2020 lineage and GED2020/MED2020 membership",
+      "retrievedAt": "2026-09-19T14:13:22.243785+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-table-2021.zip",
+      "processingScript": null,
+      "limitations": [
+        "Historical lineage fields establish membership joins, not a population allocation between descendants. Use final-2020 published population separately for each descendant."
+      ],
+      "sha256": "40a002554cc5ac1b199da16b2de739d64632515efcecc7ab8a6f16dbd6222dd2",
+      "licence": "Creative Commons Attribution 4.0 International"
     }
   ]
 }
