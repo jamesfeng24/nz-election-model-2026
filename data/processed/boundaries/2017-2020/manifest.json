@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "transitionId": "nz-2017-to-2020",
+  "inputHashes": {
+    "data/raw/boundaries/2014-2020/population-2020.csv": "a10ed9c53cb171b58d853a3bdd2ac947e10031cd09ec6bf0d3ca614ce4a1991a",
+    "data/raw/boundaries/2014-2020/geographic-areas-file-2020.zip": "9353321994f207ab9decd1cab2f70248b5fd343b609d6eae5097f75e91918c6c",
+    "data/raw/boundaries/2014-2020/geographic-areas-table-2021.zip": "40a002554cc5ac1b199da16b2de739d64632515efcecc7ab8a6f16dbd6222dd2",
+    "data/raw/boundaries/2014-2020/schedule-c.pdf": "5a2bfeeea822447bdc7b58bcfab9a5ed3c6e162a1e28400bb34d02c6790652cd",
+    "data/raw/boundaries/2014-2020/schedule-b.pdf": "dc8b3d82a90bda6428ca58dcab446616dab4633dd6d40112a31f99dd19ae6657",
+    "data/controls/boundaries/2020-population-controls.json": "6df8568fbff5327ccdb587991341dce52e25ee1983bf30cf03afd021488766ac",
+    "data/controls/boundaries/2020-change-controls.json": "473cb0c4c6389cf7ef2293a37668c12c203011535a17e0b9772a104e810f28ee",
+    "data/controls/boundaries/transitions/2017-2020.json": "28bc8f6747c73ba68f87737a3c4bd80f852b7559efd290d5346d582ac2fb8a48"
+  },
+  "codeHashes": {
+    "scripts/boundaries/transition.py": "c651bc1ec959861f7701585a0f1bbf7e9dd1251a967eabb72b01eae3550fe99c",
+    "scripts/boundaries/composition.py": "567a9cde1cbbab5757a6c38046c07de8ef28578b55092bdef570684ac7953076",
+    "scripts/boundaries/feasible.py": "627153d019c7dbd11044589b425453fc5b36cf2fc6086c6cde3ff655af5c9caa",
+    "scripts/boundaries/current_inputs.py": "ee1635e804427badd6244bd0c6f3ab4d44e5020e7131f226ac563989c6872f48",
+    "scripts/boundaries/membership.py": "44aaf1ae9a81c82ab6242d220dadfab00e3d5b7feb7d86aba11a81c59264907f",
+    "scripts/boundaries/population.py": "d56bdf4168824d1699635f470b590afd88ba3f35956bffaf36a78b4924f86887",
+    "scripts/boundaries/inputs_2020.py": "589403355e1f63d4888b9c3297523d1949d9cc70d44dafbe81653860e5261201",
+    "scripts/boundaries/lineage_2020.py": "0c111b47e5e17545acd92cb0928d26f7b00639184760ebe1e2a8600d920e382f"
+  },
+  "outputSha256": "f39868460a56f9870e7868b77a62bf89393a6f3d02d20976be9fc266c52195d1",
+  "scopes": {
+    "general": {
+      "sources": 64,
+      "targets": 65,
+      "edges": 97
+    },
+    "maori": {
+      "sources": 7,
+      "targets": 7,
+      "edges": 10
+    }
+  }
+}

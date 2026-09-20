@@ -8,8 +8,9 @@ from scripts.boundaries.feasible import tighten_destinations, outgoing_weight_bo
 from scripts.boundaries.composition import summarize
 
 
-def build_scope(cells, controls, source_names, target_names, unchanged, renames):
+def build_scope(cells, controls, source_names, target_names, unchanged, renames, source_label_aliases=None):
     from scripts.boundaries.feasible import aggregate
+    source_label_aliases = source_label_aliases or {}
     if set(controls) != set(target_names):
         raise ValueError('Incomplete target control/name coverage')
     if {c['source'] for c in cells} != source_names.keys():
@@ -25,7 +26,7 @@ def build_scope(cells, controls, source_names, target_names, unchanged, renames)
         incoming = [e for e in edges if e['target'] == code]
         metrics = summarize(incoming, controls[code])
         expected_source = renames.get(name, name)
-        foreign = [e for e in incoming if source_names[e['source']] != expected_source]
+        foreign = [e for e in incoming if source_label_aliases.get(source_names[e['source']], source_names[e['source']]) != expected_source]
         official_status = 'unchanged' if name in unchanged else 'changed'
         if official_status == 'unchanged' and any(e['lower'] > 0 for e in foreign):
             raise ValueError('Positive identified transfer into officially unchanged electorate')
@@ -57,17 +58,19 @@ def build_scope(cells, controls, source_names, target_names, unchanged, renames)
 
 
 def build(config):
-    if config['adapter'] != 'current_inputs':
+    from scripts.boundaries import current_inputs, inputs_2020
+    adapters = {'current_inputs': current_inputs, 'inputs_2020': inputs_2020}
+    if config['adapter'] not in adapters:
         raise ValueError('No reviewed adapter for transition')
-    from scripts.boundaries.current_inputs import load
-    inputs = load()
+    inputs = adapters[config['adapter']].load()
     scopes = {}
     for kind,key in [('general','unchangedGeneral'),('maori','unchangedMaori')]:
         if len(inputs['sourceNames'][kind])!=config['expectedSourceCounts'][kind] or len(inputs['targetNames'][kind])!=config['expectedTargetCounts'][kind]:
             raise ValueError('Unexpected electorate inventory')
         scopes[kind] = build_scope(inputs['cells'][kind],inputs['controls'][kind],
                                    inputs['sourceNames'][kind],inputs['targetNames'][kind],
-                                   inputs['changes'][key],inputs['changes']['unchangedRename'])
+                                   inputs['changes'][key],inputs['changes']['unchangedRename'],
+                                   inputs['changes'].get('sourceLabelAliases'))
     return {'schemaVersion':1,'transition':config,'status':'validated_feasible_crosswalk',
             'dataClass':'synthetic_reconstruction_constraints_not_observed_votes',
             'inputHashes':inputs['inputHashes'],'scopes':scopes,
@@ -91,6 +94,8 @@ def main():
     folder=ROOT / f'data/processed/boundaries/{args.transition}'
     output=folder/'crosswalk.json'
     code_paths=['scripts/boundaries/'+name+'.py' for name in ['transition','composition','feasible','current_inputs','membership','population']]
+    if config['adapter'] == 'inputs_2020':
+        code_paths += ['scripts/boundaries/inputs_2020.py', 'scripts/boundaries/lineage_2020.py']
     manifest={'schemaVersion':1,'transitionId':config['id'],
               'inputHashes':{**result['inputHashes'],str(config_path.relative_to(ROOT)):hashlib.sha256(config_path.read_bytes()).hexdigest()},
               'codeHashes':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in code_paths},

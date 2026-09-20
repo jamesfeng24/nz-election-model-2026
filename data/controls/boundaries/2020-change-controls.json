@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "rc-2020-change-controls",
+  "unchangedGeneral": [
+    "Auckland Central",
+    "Mt Albert",
+    "Rotorua",
+    "Botany",
+    "Napier",
+    "Tāmaki",
+    "Christchurch Central",
+    "New Plymouth",
+    "Taranaki-King Country",
+    "East Coast",
+    "North Shore",
+    "Tauranga",
+    "East Coast Bays",
+    "Northcote",
+    "Te Atatū",
+    "Epsom",
+    "Ōhāriu",
+    "Tukituki",
+    "Hamilton East",
+    "Ōtaki",
+    "Waimakariri",
+    "Hutt South",
+    "Pakuranga",
+    "Wairarapa",
+    "Kaikōura",
+    "Palmerston North",
+    "Wellington Central",
+    "Kelston",
+    "Rangitīkei",
+    "Whanganui",
+    "Mana",
+    "Remutaka",
+    "Māngere",
+    "Rongotai"
+  ],
+  "unchangedMaori": [
+    "Te Tai Hauāuru",
+    "Waiariki"
+  ],
+  "unchangedRename": {
+    "Remutaka": "Rimutaka"
+  },
+  "expectedChangedGeneral": 31,
+  "expectedChangedMaori": 5,
+  "limitations": [
+    "Uses corrected published Schedule B. Rename join is local to unchanged-electorate validation."
+  ],
+  "sourceLabelAliases": {
+    "Kaikoura": "Kaikōura",
+    "Mangere": "Māngere",
+    "Ohariu": "Ōhāriu",
+    "Otaki": "Ōtaki",
+    "Rangitikei": "Rangitīkei",
+    "Tamaki": "Tāmaki",
+    "Te Atatu": "Te Atatū",
+    "Te Tai Hauauru": "Te Tai Hauāuru"
+  }
+}

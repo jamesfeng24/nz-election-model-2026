@@ -58,7 +58,7 @@ def reconcile(population, source, lineage):
     return cells, names, splits, outside
 
 
-def build():
+def load_memberships():
     registry = json.loads((ROOT / 'data/sources.json').read_bytes())['sources']
     hashes = {}
 
@@ -78,6 +78,11 @@ def build():
     cells, names, splits, outside = reconcile(pop, source, lineage)
     if len(pop) != 53582 or [(len(names[k]['source']), len(names[k]['target'])) for k in cells] != [(64, 65), (7, 7)]:
         raise ValueError('Unexpected 2014/2020 membership coverage')
+    return cells, names, splits, outside, hashes, pop, lineage
+
+
+def build():
+    cells, names, splits, outside, hashes, pop, lineage = load_memberships()
     return {'schemaVersion': 1, 'transition': '2017-2020', 'status': 'membership_complete_controls_pending',
             'inputHashes': hashes, 'populationMeshblocks': len(pop),
             'directLineageCount': sum(c == lineage[c]['MB2020_code'] for c in pop),
