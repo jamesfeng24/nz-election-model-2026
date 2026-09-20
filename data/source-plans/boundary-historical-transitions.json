@@ -84,6 +84,18 @@
       "limitations": [
         "Historical lineage fields establish membership joins, not a population allocation between descendants. Use final-2020 published population separately for each descendant."
       ]
+    },
+    {
+      "id": "rc-2020-population-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/Boundary-Review/SCHEDULE-C-TABLES-OF-THE-ELECTORATES-AND-POPULATIONS.pdf",
+      "rawPath": "data/raw/boundaries/2014-2020/schedule-c.pdf",
+      "format": "pdf",
+      "role": "2020 final electorate population controls, Schedule C",
+      "dateOrElection": "2020 boundaries / 2018 electoral population",
+      "limitations": [
+        "Population columns are controls; projected percentage changes are not population observations."
+      ]
     }
   ]
 }
