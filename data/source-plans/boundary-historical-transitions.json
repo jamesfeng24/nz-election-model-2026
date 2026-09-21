@@ -108,6 +108,42 @@
       "limitations": [
         "Published correction: Waiariki unchanged, Hauraki-Waikato changed."
       ]
+    },
+    {
+      "id": "stats-2016-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654757/download/",
+      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2016.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "geographic-areas-file-2016.csv",
+        "geographic-areas-file-2016.txt"
+      ],
+      "role": "Official table104684/version298534, export4654757; MB2016→MB2013 and GED2014/MED2014 membership",
+      "dateOrElection": "2016 concordance for 2014 electoral boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "22 MB2013 predecessors map to multiple 2014 electorate pairs; do not allocate parent population twice or arbitrarily select one destination."
+      ]
+    },
+    {
+      "id": "stats-2013-resident-population",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654758/download/",
+      "rawPath": "data/raw/boundaries/2007-2014/population-2013.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "population-by-meshblock-2013-census.csv",
+        "population-by-meshblock-2013-census.txt"
+      ],
+      "role": "Official layer8437 export4654758; CSV without geometry; 2013 usual-resident/census-night population, not electoral population",
+      "dateOrElection": "2013 Census / 2013 meshblocks",
+      "licence": "Creative Commons Attribution 3.0 New Zealand",
+      "limitations": [
+        "Not separate general/Māori electoral populations; no substitution into electoral-population controls authorized at acquisition checkpoint.",
+        "2013 release has rounded zero/three values and -999/-995 markers. Do not apply the later electoral-population suppression parser.",
+        "22 old meshblocks have multiple 2014 electorate destinations and no descendant population allocation in this source."
+      ]
     }
   ]
 }

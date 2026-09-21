@@ -15165,6 +15165,40 @@
       ],
       "sha256": "dc8b3d82a90bda6428ca58dcab446616dab4633dd6d40112a31f99dd19ae6657",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2016-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654757/download/",
+      "dateOrElection": "2016 concordance for 2014 electoral boundaries",
+      "resource": "Official table104684/version298534, export4654757; MB2016→MB2013 and GED2014/MED2014 membership",
+      "retrievedAt": "2026-09-20T05:04:17.147700+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2016.zip",
+      "processingScript": null,
+      "limitations": [
+        "22 MB2013 predecessors map to multiple 2014 electorate pairs; do not allocate parent population twice or arbitrarily select one destination."
+      ],
+      "sha256": "52aeca2f5327d4c742c912b10772f71e4f3c5db6417a992fd4a9975165040874",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2013-resident-population",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654758/download/",
+      "dateOrElection": "2013 Census / 2013 meshblocks",
+      "resource": "Official layer8437 export4654758; CSV without geometry; 2013 usual-resident/census-night population, not electoral population",
+      "retrievedAt": "2026-09-20T05:05:52.236289+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/population-2013.zip",
+      "processingScript": null,
+      "limitations": [
+        "Not separate general/Māori electoral populations; no substitution into electoral-population controls authorized at acquisition checkpoint.",
+        "2013 release has rounded zero/three values and -999/-995 markers. Do not apply the later electoral-population suppression parser.",
+        "22 old meshblocks have multiple 2014 electorate destinations and no descendant population allocation in this source."
+      ],
+      "sha256": "d6f7de1c24c11720025b7569f123569e61f934990f2848875b64b1ab27cd3241",
+      "licence": "Creative Commons Attribution 3.0 New Zealand"
     }
   ]
 }
