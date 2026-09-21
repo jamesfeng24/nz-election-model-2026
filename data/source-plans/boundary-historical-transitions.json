@@ -190,6 +190,31 @@
         "2013-mb-dataset-Total-New-Zealand-Individual-Part-3a.csv",
         "2013-mb-dataset-Total-New-Zealand-Dwelling.csv"
       ]
+    },
+    {
+      "id": "rc-2014-population-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/2014-boundary-review/Schedule-C-Population-data-of-the-proposed-and-final-electorates.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/schedule-c.pdf",
+      "format": "pdf",
+      "role": "Final and proposed 2014 Schedule C electorate electoral-population controls; user-assisted original browser download",
+      "dateOrElection": "2014 boundaries / 2013 Census",
+      "limitations": [
+        "Only final sections are controls; proposed populations and projected variation percentages must not be substituted."
+      ]
+    },
+    {
+      "id": "stats-2000-electoral-mathematics",
+      "organisation": "Statistics New Zealand",
+      "url": "https://aceproject.org/ero-en/topics/boundary-delimitation/New%20Zealand%20-%20The%20Mathmatics%20of%20Electoral%20District%20Allocation%20in%20New%20Zealand%20%28bdc02a%29.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/electoral-mathematics-2000.pdf",
+      "format": "pdf",
+      "role": "Original Stats NZ Research and Analytical Report 2000 #12, Westbrooke and Ryan; preserved copy hosted by ACE Electoral Knowledge Network",
+      "dateOrElection": "2000 methodology cited by Stats NZ electoral-population guidance",
+      "limitations": [
+        "Scanned original publication. Page11 applies area-specific roll/descent quantities at national, island and electoral-district levels; does not establish a constant national ratio at meshblock level.",
+        "Historical methodological evidence, not a 2013 numerical dataset."
+      ]
     }
   ]
 }

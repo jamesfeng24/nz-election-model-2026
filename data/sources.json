@@ -15248,6 +15248,39 @@
       ],
       "sha256": "2ac72f012571a47aef584644a73f13e8b9e8066d49b616bf4a37e73ebc3a6349",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rc-2014-population-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/2014-boundary-review/Schedule-C-Population-data-of-the-proposed-and-final-electorates.pdf",
+      "dateOrElection": "2014 boundaries / 2013 Census",
+      "resource": "Final and proposed 2014 Schedule C electorate electoral-population controls; user-assisted original browser download",
+      "retrievedAt": "2026-09-21T14:29:38.550069+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/schedule-c.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Only final sections are controls; proposed populations and projected variation percentages must not be substituted."
+      ],
+      "sha256": "2aae6e29c2710797744b169162a451b7e16806e95040439c20d165c4b9b15bcc",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2000-electoral-mathematics",
+      "organisation": "Statistics New Zealand",
+      "url": "https://aceproject.org/ero-en/topics/boundary-delimitation/New%20Zealand%20-%20The%20Mathmatics%20of%20Electoral%20District%20Allocation%20in%20New%20Zealand%20%28bdc02a%29.pdf",
+      "dateOrElection": "2000 methodology cited by Stats NZ electoral-population guidance",
+      "resource": "Original Stats NZ Research and Analytical Report 2000 #12, Westbrooke and Ryan; preserved copy hosted by ACE Electoral Knowledge Network",
+      "retrievedAt": "2026-09-21T14:30:46.552253+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/electoral-mathematics-2000.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Scanned original publication. Page11 applies area-specific roll/descent quantities at national, island and electoral-district levels; does not establish a constant national ratio at meshblock level.",
+        "Historical methodological evidence, not a 2013 numerical dataset."
+      ],
+      "sha256": "6c903c1ee3a4411432d991ea8ab340d4bc784bea164ba19858ae26e039c152b8",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     }
   ]
 }
