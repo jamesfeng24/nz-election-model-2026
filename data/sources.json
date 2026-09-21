@@ -15199,6 +15199,55 @@
       ],
       "sha256": "d6f7de1c24c11720025b7569f123569e61f934990f2848875b64b1ab27cd3241",
       "licence": "Creative Commons Attribution 3.0 New Zealand"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2013-electoral-allocation-methodology",
+      "organisation": "Stats NZ",
+      "url": "https://www.stats.govt.nz/assets/Uploads/Retirement-of-archive-website-project-files/Methods/The-mathematics-of-electorate-allocation-in-New-Zealand-based-on-the-outcome-of-the-2013-Census-and-Maori-Electoral-Option-2013/maths-2013-electorate-allocation.pdf",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "resource": "2013 Government Statistician electoral-allocation methodology; exact national and island roll counts",
+      "retrievedAt": "2026-09-21T13:40:31.082428+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/electoral-population-methodology-2013.pdf",
+      "processingScript": null,
+      "limitations": [
+        "National and island calculations use different roll ratios; this document alone does not establish a meshblock-level ratio."
+      ],
+      "sha256": "2b705a474012f2e1449c9337e21f6407ce81804b3bb2ad80c7ad443fbdd46bd9",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-electoral-descent-imputation-methodology",
+      "organisation": "Stats NZ",
+      "url": "https://www.stats.govt.nz/assets/Uploads/Methods/Deriving-the-2018-Maori-descent-electoral-population/Deriving-the-2018-maori-descent-electoral-population.pdf",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "resource": "Official retrospective account of 2013 electoral Māori-descent imputation, page 5",
+      "retrievedAt": "2026-09-21T13:41:50.692896+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/descent-imputation-methodology.pdf",
+      "processingScript": null,
+      "limitations": [
+        "2013 imputation used individual and household information and random assignment; published meshblock descent is not the completed electoral variable."
+      ],
+      "sha256": "d87efcac8833731b94add8b3e24d15b3f62edcf12d165b39ce07cd77ffd162f4",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2013-census-meshblock-dataset",
+      "organisation": "Stats NZ",
+      "url": "https://www3.stats.govt.nz/meshblock/2013/csv/2013_mb_dataset_Total_New_Zealand_CSV.zip",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "resource": "Official 2013 Census meshblock dataset, complete original seven-table CSV ZIP",
+      "retrievedAt": "2026-09-21T13:46:45.226946+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/census-meshblock-dataset.zip",
+      "processingScript": null,
+      "limitations": [
+        "CSV encoding is Windows-1252; includes multiple geographic levels and census years. Select 2013 meshblock records explicitly.",
+        "Published descent Yes/No/unknown/not-elsewhere-included counts are not the imputed electoral descent variable. Confidential cells must not become zero."
+      ],
+      "sha256": "2ac72f012571a47aef584644a73f13e8b9e8066d49b616bf4a37e73ebc3a6349",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     }
   ]
 }

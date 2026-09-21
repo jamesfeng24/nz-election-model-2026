@@ -144,6 +144,52 @@
         "2013 release has rounded zero/three values and -999/-995 markers. Do not apply the later electoral-population suppression parser.",
         "22 old meshblocks have multiple 2014 electorate destinations and no descendant population allocation in this source."
       ]
+    },
+    {
+      "id": "stats-2013-electoral-allocation-methodology",
+      "organisation": "Stats NZ",
+      "url": "https://www.stats.govt.nz/assets/Uploads/Retirement-of-archive-website-project-files/Methods/The-mathematics-of-electorate-allocation-in-New-Zealand-based-on-the-outcome-of-the-2013-Census-and-Maori-Electoral-Option-2013/maths-2013-electorate-allocation.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/electoral-population-methodology-2013.pdf",
+      "format": "pdf",
+      "role": "2013 Government Statistician electoral-allocation methodology; exact national and island roll counts",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "limitations": [
+        "National and island calculations use different roll ratios; this document alone does not establish a meshblock-level ratio."
+      ]
+    },
+    {
+      "id": "stats-electoral-descent-imputation-methodology",
+      "organisation": "Stats NZ",
+      "url": "https://www.stats.govt.nz/assets/Uploads/Methods/Deriving-the-2018-Maori-descent-electoral-population/Deriving-the-2018-maori-descent-electoral-population.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/descent-imputation-methodology.pdf",
+      "format": "pdf",
+      "role": "Official retrospective account of 2013 electoral Māori-descent imputation, page 5",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "limitations": [
+        "2013 imputation used individual and household information and random assignment; published meshblock descent is not the completed electoral variable."
+      ]
+    },
+    {
+      "id": "stats-2013-census-meshblock-dataset",
+      "organisation": "Stats NZ",
+      "url": "https://www3.stats.govt.nz/meshblock/2013/csv/2013_mb_dataset_Total_New_Zealand_CSV.zip",
+      "rawPath": "data/raw/boundaries/2007-2014/census-meshblock-dataset.zip",
+      "format": "zip",
+      "role": "Official 2013 Census meshblock dataset, complete original seven-table CSV ZIP",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "limitations": [
+        "CSV encoding is Windows-1252; includes multiple geographic levels and census years. Select 2013 meshblock records explicitly.",
+        "Published descent Yes/No/unknown/not-elsewhere-included counts are not the imputed electoral descent variable. Confidential cells must not become zero."
+      ],
+      "requiredMembers": [
+        "2013-mb-dataset-Total-New-Zealand-Individual-Part-3b.csv",
+        "2013-mb-dataset-Total-New-Zealand-Family.csv",
+        "2013-mb-dataset-Total-New-Zealand-Household.csv",
+        "2013-mb-dataset-Total-New-Zealand-Individual-Part-1.csv",
+        "2013-mb-dataset-Total-New-Zealand-Individual-Part-2.csv",
+        "2013-mb-dataset-Total-New-Zealand-Individual-Part-3a.csv",
+        "2013-mb-dataset-Total-New-Zealand-Dwelling.csv"
+      ]
     }
   ]
 }
