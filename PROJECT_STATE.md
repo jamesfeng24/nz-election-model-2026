@@ -1,6 +1,6 @@
 # Project state
 
-Updated 2026-09-14. Stage 4: **Historical boundary-transition reconstruction** on existing branch `stage/04-boundary-2023-2026`. Base `624fe1d74aa43014e0c65f534c161e22b51e250d` (PR #10 merged). Do not restart, rebase or change branches.
+Updated 2026-09-22. Stage 4: **Historical boundary-transition reconstruction** on existing branch `stage/04-boundary-2023-2026`. Base `624fe1d74aa43014e0c65f534c161e22b51e250d` (PR #10 merged). Do not restart, rebase or change branches.
 
 ## Authorized scope and order
 
@@ -10,11 +10,15 @@ Primary weights must use contemporaneous official small-area population/electora
 
 ## Current resumable checkpoint
 
-Source membership is complete: 57,517 direct + 36 official historical-code joins cover all 57,553 final meshblocks, without geometry inference. Exact GeoPackage/CSV identity and all 71 Schedule C population controls now pass reproducible disclosure-bound validation. All 886 raw registry checksums pass (15 distinct Stage 4 resources). Acquisition is preserved; do not re-export the meshblocks or either concordance table.
+The **2023→2026 and 2017→2020 feasible crosswalks are complete and pushed**. Do not repeat acquisition or reconstruction. Immediate remaining unit: select and implement a defensible **2011→2014 population basis**, then its crosswalk. No notional party-vote baselines exist yet; no final PR or modelling is authorized.
 
-The current 2023→2026 crosswalk is complete as a validated feasible set with coupled uncertainty/conservation constraints; non-identified point weights remain null. The two suppressed-population exceptions remain non-identified 0–5 intervals (D023). Next acquire missing older-transition sources. Continue the current transition first; older transition acquisition follows. No model, person linking or historical-output change has occurred. No Stage 4 PR yet.
+Latest acquisition/control checkpoint: `b3d1816a137cc2cfa69494c5d6a46cc93b9b332f`, confirmed on remote. All **900 registered source checksums pass**. Recovered original 2013 Census archive, electoral/imputation methodologies and final2014 Schedule C are safely preserved. See the final chronological entries for exact paths and findings. Historical observed/panel files and both completed crosswalks remain unchanged.
 
-The chronological sections below describe earlier checkpoints; completed access/acquisition steps are historical, not instructions to repeat them.
+**Exact next action:** complete the offline 2013 evidence audit using Individual Part1 of the preserved Windows-1252 Census ZIP. Join its MB rows to GAF2013 and GAF2016 lineage; verify the 22 multi-destination parents/1,827 published resident total. Bound electoral descent from Yes/No/unknown/not-stated categories and random rounding without treating confidential `..C` as zero or automatically as 0–5. Independently rounded totals/categories require feasible partition constraints. Public descent is not the imputed electoral variable. The original methodological paper page11 uses area-specific roll quantities; national/island ratios do not establish meshblock allocation. Final2014 controls also differ from seat-allocation totals. Assess whether these missing local proportions leave Level B too weak; if so use only the explicitly authorized, labelled Level C fallback where conceptually defensible. Do not impose electoral controls on resident proxy quantities. Record the evidence decision before generating weights; no method has yet been selected.
+
+Usage reached **91%** on2026-09-22: stopped new acquisitions/large computation and saved this handoff. No unfinished code or unregistered valid downloads remain. The 2000 methodological PDF is already preserved; temporary failed HTML download is not a source. No new user download is needed for Schedule C.
+
+The chronological sections below are historical checkpoints, not instructions to repeat completed steps. Later stages remain unauthorized. Next stage after Stage4 completion: **Local party-vote transformation backtesting only**.
 
 ## Saved progress
 
