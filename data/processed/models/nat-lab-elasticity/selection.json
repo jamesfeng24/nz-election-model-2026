@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "parties": {
+    "nationalparty": {
+      "historicalOLS": 0.7368717803805616,
+      "status": "unresolved_no_stable_material_gain",
+      "selectedBeta": null,
+      "benchmarkBeta": 1,
+      "transitionBetaRange": [
+        0.3876671554483156,
+        0.759028113475548
+      ],
+      "minimumAggregateGainAcrossBaselinesPP": -0.4151685287759461,
+      "allChronologicalHoldoutsImproveAcrossBaselines": false,
+      "reason": "Frozen0.25pp material-gain screen plus consistent holdout/transform improvement; empirical OLS remains descriptive when the screen fails."
+    },
+    "labourparty": {
+      "historicalOLS": 0.6147472776674173,
+      "status": "unresolved_no_stable_material_gain",
+      "selectedBeta": null,
+      "benchmarkBeta": 1,
+      "transitionBetaRange": [
+        0.2125146621354551,
+        0.7297199152310391
+      ],
+      "minimumAggregateGainAcrossBaselinesPP": -0.5260913237110376,
+      "allChronologicalHoldoutsImproveAcrossBaselines": false,
+      "reason": "Frozen0.25pp material-gain screen plus consistent holdout/transform improvement; empirical OLS remains descriptive when the screen fails."
+    }
+  },
+  "stage5SelectionUnchanged": true,
+  "limitations": [
+    "Three transition clusters only; no formal asymptotic standard errors.",
+    "Candidate changes remain residual noise; coefficient is not an incumbent or person effect.",
+    "Māori evidence descriptive only; no operational Māori coefficient.",
+    "No changed-boundary candidate pairs or2026 predictions."
+  ],
+  "nextStage": "Normalized candidate overperformance only"
+}

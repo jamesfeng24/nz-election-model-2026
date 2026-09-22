@@ -35,3 +35,32 @@ class ElasticityTests(unittest.TestCase):
             self.assertFalse(r['personIdentityInferred'])
             self.assertAlmostEqual(r['deltaParty'],r['targetPartyShare']-r['sourcePartyShare'])
             self.assertAlmostEqual(r['deltaCandidate'],r['targetCandidateShare']-r['sourceCandidateShare'])
+    def test_changed_boundary_and_person_inference_fail(self):
+        from pathlib import Path
+        from unittest.mock import patch
+        import json
+        original=Path.read_bytes
+        def changed(path):
+            raw=original(path)
+            if str(path).endswith('party-vote-transform/backtest-records.json'):
+                d=json.loads(raw)
+                for r in d['records']:
+                    if r['primary'] and r['canonicalPartyId']=='nationalparty':r['boundaryRegime']='wrong';break
+                return json.dumps(d).encode()
+            return raw
+        with patch.object(Path,'read_bytes',changed):
+            with self.assertRaises(ValueError):build()
+        e={'validCandidateVotes':1,'candidates':[{'party':'National Party','votes':1,'share':1,'personId':'guessed'}]}
+        with self.assertRaises(ValueError):extract(e,'nationalparty')
+    def test_pinned_mutation_and_determinism(self):
+        from pathlib import Path
+        from unittest.mock import patch
+        from scripts.models.nat_lab_elasticity.run import build as full
+        a=full();self.assertEqual(a,full())
+        for party in a['fits.json']['general'].values():self.assertEqual(party['full']['n'],191)
+        original=Path.read_bytes
+        def changed(path):
+            raw=original(path)
+            return raw+b' ' if str(path).endswith('elections/2023.json') else raw
+        with patch.object(Path,'read_bytes',changed):
+            with self.assertRaises(ValueError):full()
