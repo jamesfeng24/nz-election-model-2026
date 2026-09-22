@@ -173,3 +173,7 @@ Target metadata records official change/rename status, reverse predecessor compo
 `backtesting-readiness.json` links five same-boundary observed/synthetic comparisons and the future2026 baseline, records input hashes and verifies notional party inventories, numerical brackets and conservation controls. Observed election-local boundary IDs remain unchanged; integration explicitly records the official boundary regime. Code043's malformed2014 source label has a narrow, recorded typography join.
 
 `secondary-availability.json` provides population-origin coverage bounds from held candidate-contest predecessors using the full coupled system. It is not a ballot-observation rate. Unidentified candidate-affiliation/split vote baselines are null; no zero filling. Original21 source-discrepancy records are copied exactly. No candidate person linking, inferred joint cells or Port Waikato behavioural observation.
+
+### Stage5 party-vote transformation outputs
+
+Each backtest record keys transition × election-local electorate × canonical party. Shares are fractions; score summaries use percentage points, clipping frequency fractions. Point predictions/errors are null when not identified; outer prediction/error bounds are marginal/conservative. Numerical reconstruction brackets are separate. Continuity statuses exclude entrants/exits instead of zero-filling. Scores macro-average party MAEs equally; vote weights are actual target party counts. selection.json retains an unresolved candidate set with null default. No vector normalization.

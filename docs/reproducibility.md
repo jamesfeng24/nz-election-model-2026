@@ -278,3 +278,7 @@ Final offline checks also include:
 ```
 
 The final Stage4 outputs supersede earlier acquisition-only notes. Secondary reconstruction is deliberately limited to availability/coverage metadata, with null unidentified vote baselines. Historical inputs remain untouched.
+
+### Stage5 offline backtests
+
+`.venv/bin/python -m scripts.models.party_vote_transform.run --check` validates pinned historical/boundary hashes, regenerates records/scores/selection in memory and compares committed bytes. Omit --check only for an intentional reviewed regeneration. No source fetching or expensive boundary optimization occurs. Run `.venv/bin/python -m unittest scripts.tests.test_party_transform -q` for focused formulas, identity, uncertainty, score, anti-leakage and input-corruption tests. Specification was committed before scoring; output and implementation hashes are recorded in manifest.json. All pre-Stage5 data must remain byte-identical.

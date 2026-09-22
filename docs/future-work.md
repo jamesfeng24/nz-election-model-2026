@@ -30,4 +30,4 @@ Revised by the user on 2026-09-08; supersedes earlier proposed implementation or
 
 Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization.
 
-Current state: Stage 3A, 2017 ingestion complete for PR review. 2008–2014 ingestion/integration are merged. Next task after review/merge and explicit authorization: **2020 historical election ingestion only**.
+Current state: Stage4 is merged through PR #11. Stage5 local party-vote transformation backtesting is complete for review; selection remains unresolved among additive, proportional and log-odds. Exact next task after review/merge and explicit authorization: **NAT/LAB electorate elasticity only**. Use one parameterized baseline pipeline and materiality-directed sensitivity, not three separate systems.
