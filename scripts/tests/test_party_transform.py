@@ -39,3 +39,39 @@ class IdentityTests(unittest.TestCase):
             with self.assertRaises(ValueError):allowed(path)
         self.assertEqual(sum(t['primary'] for t in spec['transitions']),3)
         self.assertEqual(len(spec['transitions']),5)
+
+class ScoreTests(unittest.TestCase):
+    def test_metrics_fixture(self):
+        from scripts.models.party_vote_transform.scoring import metrics
+        rows=[]
+        for party,p,y,v in [('a',.1,.2,1),('a',.4,.2,3),('b',.1,.1,2)]:
+            rows.append({'primary':True,'canonicalPartyId':party,'actualTargetPartyVotes':v,'predictions':{'additive':prediction_bounds('additive',p,p,.2,.2,y)}})
+        m=metrics(rows,'additive')
+        self.assertAlmostEqual(m['mae'][0],10)
+        self.assertAlmostEqual(m['macroPartyMAE'][0],7.5)
+        self.assertAlmostEqual(m['voteWeightedMAE'][0],100*.7/6)
+        self.assertAlmostEqual(m['rmse'][0],100*(.05/3)**.5)
+        self.assertAlmostEqual(m['bias'][0],100*.1/3)
+        self.assertEqual(m['mae'][0],m['mae'][1])
+    def test_real_records_and_uncertainty_contract(self):
+        from scripts.models.party_vote_transform.run import build
+        outputs=build();rows=outputs['backtest-records.json']['records']
+        self.assertEqual(len(rows),3773)
+        self.assertEqual({r['targetYear'] for r in rows},{2011,2014,2017,2020,2023})
+        for r in rows:
+            if r['primary']:
+                self.assertIsNotNone(r['sourceLocalShare'])
+                self.assertIsNone(r['numericalReconstruction'])
+                for p in r['predictions'].values():self.assertAlmostEqual(p['lower'],p['upper'])
+            else:self.assertIsNotNone(r['numericalReconstruction'])
+        self.assertTrue(any(r['sourceLocalShare'] is None for r in rows))
+    def test_changed_historical_bytes_rejected(self):
+        from pathlib import Path
+        from unittest.mock import patch
+        from scripts.models.party_vote_transform.run import build
+        original=Path.read_bytes
+        def mutated(path):
+            raw=original(path)
+            return raw+b' ' if str(path).endswith('/elections/2008.json') else raw
+        with patch.object(Path,'read_bytes',mutated):
+            with self.assertRaises(ValueError):build()
