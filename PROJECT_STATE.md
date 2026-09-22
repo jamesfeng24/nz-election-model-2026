@@ -1,3 +1,11 @@
+# Stage7 current state — 2026-09-23
+
+Branch `stage/07-normalized-candidate-overperformance`; base `a28044a795e18a1ebc07bc3ea7c16fd23d6c8c14` (PR13 merged, including audit cfc92496f3425fa5059b9291b6af78fd529cc932). Clean start; Stage5/6 deterministic checks passed. No source acquisition/web use.
+
+Checkpoint A: specification frozen before occurrence diagnostics in `data/processed/models/candidate-overperformance/specification.json`. Six observed elections only; exact within-election counterparts, matched candidate/party contest universe, mandatory leave-one-out, raw additive primary with proportional/odds sensitivity. No person identity/status, persistence or candidate transport. Next action: build eligible/excluded occurrence inventory and matched-reference normalization, then focused tests. No unresolved source question. Exact next stage after completion: **Candidate persistence only**, separately authorized; build reusable person/history/status infrastructure at its start.
+
+## Historical Stage6 handoff
+
 # Stage6 current state — 2026-09-23
 
 Branch `stage/06-nat-lab-elasticity`; base `be5e8da770e8ee0eaf95d8749565a5cb2078889b` (PR12 merged). Checkpoints:bca87cd frozen specification,eb91063 eligibility/infrastructure,1f483b1 fits/temporal sensitivity. No new sources or browser work.
