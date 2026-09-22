@@ -21,3 +21,21 @@ class FormulaTests(unittest.TestCase):
             self.assertGreaterEqual(r['absoluteErrorUpper'],r['absoluteErrorLower'])
         with self.assertRaises(ValueError):prediction_bounds('additive',.4,.1,.2,.3,.2)
         with self.assertRaises(ValueError):prediction_bounds('additive',.1,.4,.2,.3,2)
+
+class IdentityTests(unittest.TestCase):
+    def test_historical_identity_and_anti_leakage(self):
+        import json
+        from scripts.models.party_vote_transform.inputs import Inputs,continuity,DEST,allowed
+        from scripts.transform.panel_config import canonical
+        x=Inputs();e=x.elections();spec=json.loads((DEST/'specification.json').read_bytes());rows=continuity(e,spec['transitions'])
+        self.assertEqual(sum(r['status']=='eligible' for r in rows),53)
+        self.assertEqual(canonical('newconservative'),canonical('conservativeparty'))
+        self.assertNotEqual(canonical('internetmana'),canonical('manamovement'))
+        self.assertNotEqual(canonical('advance'),canonical('nzpublicparty'))
+        self.assertTrue(all(r['source'] is None for r in rows if r['status']=='entrant'))
+        self.assertTrue(all(r['target'] is None for r in rows if r['status']=='exit'))
+        self.assertFalse(any('opportunity'==r['canonicalPartyId'] for r in rows))
+        for path in ['data/processed/polls/2026.json','data/processed/candidates/2026.json','data/processed/boundaries/2023-2026/party-votes.json','data/processed/models/incumbency.json']:
+            with self.assertRaises(ValueError):allowed(path)
+        self.assertEqual(sum(t['primary'] for t in spec['transitions']),3)
+        self.assertEqual(len(spec['transitions']),5)
