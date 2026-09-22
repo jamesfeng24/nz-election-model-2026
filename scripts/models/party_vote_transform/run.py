@@ -5,6 +5,7 @@ import json
 from scripts.models.party_vote_transform.inputs import Inputs,DEST,ROOT,continuity
 from scripts.models.party_vote_transform.records import build_records
 from scripts.models.party_vote_transform.scoring import build_scores
+from scripts.models.party_vote_transform.selection import interpret
 
 
 def encode(x):return (json.dumps(x,ensure_ascii=False,indent=2,allow_nan=False)+'\n').encode()
@@ -22,6 +23,7 @@ def build():
     if any(contract.get(p)!=h for p,h in inputs.hashes.items()):raise ValueError('Unpinned evidence')
     outputs={'party-continuity.json':{'schemaVersion':1,'records':ids},'backtest-records.json':{'schemaVersion':1,'records':records,'errorBoundsMeaning':'Marginal/conservative, not jointly attainable; no 2026 outcome'},
         'vector-diagnostics.json':{'schemaVersion':1,'records':vectors,'renormalizationApplied':False},'scores.json':{'schemaVersion':1,'units':'percentage points except clipping fraction','reports':build_scores(records)}}
+    outputs['selection.json']=interpret(outputs['scores.json']['reports'])
     manifest={'schemaVersion':1,'inputHashes':contract,'specificationSha256':hashlib.sha256((DEST/'specification.json').read_bytes()).hexdigest(),
         'codeHashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'scripts/models/party_vote_transform').glob('*.py'))},
         'outputHashes':{p:hashlib.sha256(encode(d)).hexdigest() for p,d in outputs.items()},'recordCount':len(records),'scoredYears':[2008,2011,2014,2017,2020,2023]}
