@@ -1,0 +1,2722 @@
+{
+  "schemaVersion": 1,
+  "dataClass": "secondary_evidence_availability_not_reconstructed_votes",
+  "inputHashes": {
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/split-votes/2011.json": "3e503b3757380e63d3da795ea9506c3c3ba445b89f815f18b33343207d04514c",
+    "data/processed/boundaries/2011-2014/crosswalk.json": "1efa8b9c2d03471c09b57b03614a02fcb5378c85b5cb92496e2c4ab30c752725",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/split-votes/2017.json": "a9164c523df84aae1018d64d70255eaabdcbe780ff8d8a5f9bc46820a8c0f7ef",
+    "data/processed/boundaries/2017-2020/crosswalk.json": "f39868460a56f9870e7868b77a62bf89393a6f3d02d20976be9fc266c52195d1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e",
+    "data/processed/split-votes/2023.json": "81a6bdbc1ceedbf52436af45e6fdc0e979873f34b9427219124029f88b20203c",
+    "data/processed/boundaries/2023-2026/crosswalk.json": "72dde71fa9dd8916916d78130482a19d6941ec32b97be7aee8eef7f464c2caae"
+  },
+  "transitions": {
+    "2011-2014": {
+      "heldGeneralSourceContests": 63,
+      "cancelledGeneralSourceContests": 0,
+      "localSplitPublications": 63,
+      "candidateAffiliationBaseline": null,
+      "splitJointBaseline": null,
+      "status": "evidence_coverage_only_reconstruction_not_identified",
+      "targetCoverage": [
+        {
+          "targetCode": "001",
+          "targetName": "Auckland Central",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "002",
+          "targetName": "Bay of Plenty",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "003",
+          "targetName": "Botany",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "004",
+          "targetName": "Christchurch Central",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "005",
+          "targetName": "Christchurch East",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "006",
+          "targetName": "Clutha-Southland",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "007",
+          "targetName": "Coromandel",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "008",
+          "targetName": "Dunedin North",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "009",
+          "targetName": "Dunedin South",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "010",
+          "targetName": "East Coast",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "011",
+          "targetName": "East Coast Bays",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "012",
+          "targetName": "Epsom",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "013",
+          "targetName": "Hamilton East",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "014",
+          "targetName": "Hamilton West",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "015",
+          "targetName": "Helensville",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "016",
+          "targetName": "Hunua",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "017",
+          "targetName": "Hutt South",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "018",
+          "targetName": "Ilam",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "019",
+          "targetName": "Invercargill",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "020",
+          "targetName": "Kaikoura",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "021",
+          "targetName": "Kelston",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "022",
+          "targetName": "Mana",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "023",
+          "targetName": "Mangere",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "024",
+          "targetName": "Manukau East",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "025",
+          "targetName": "Manurewa",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "026",
+          "targetName": "Maungakiekie",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "027",
+          "targetName": "Mt Albert",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "028",
+          "targetName": "Mt Roskill",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "029",
+          "targetName": "Napier",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "030",
+          "targetName": "Nelson",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "031",
+          "targetName": "New Lynn",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "032",
+          "targetName": "New Plymouth",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "033",
+          "targetName": "North Shore",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "034",
+          "targetName": "Northcote",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "035",
+          "targetName": "Northland",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "036",
+          "targetName": "Ohariu",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "037",
+          "targetName": "Otaki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "038",
+          "targetName": "Pakuranga",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "039",
+          "targetName": "Palmerston North",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "040",
+          "targetName": "Papakura",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "041",
+          "targetName": "Port Hills",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "042",
+          "targetName": "Rangitata",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "043",
+          "targetName": "Rangit?¢kei",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "044",
+          "targetName": "Rimutaka",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "045",
+          "targetName": "Rodney",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "046",
+          "targetName": "Rongotai",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "047",
+          "targetName": "Rotorua",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "048",
+          "targetName": "Selwyn",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "049",
+          "targetName": "Tamaki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "050",
+          "targetName": "Taranaki-King Country",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "051",
+          "targetName": "Taupo",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "052",
+          "targetName": "Tauranga",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "053",
+          "targetName": "Te Atatu",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "054",
+          "targetName": "Tukituki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "055",
+          "targetName": "Upper Harbour",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "056",
+          "targetName": "Waikato",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "057",
+          "targetName": "Waimakariri",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "058",
+          "targetName": "Wairarapa",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "059",
+          "targetName": "Waitaki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "060",
+          "targetName": "Wellington Central",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "061",
+          "targetName": "West Coast-Tasman",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "062",
+          "targetName": "Whanganui",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "063",
+          "targetName": "Whangarei",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "064",
+          "targetName": "Wigram",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        }
+      ],
+      "sourceDiscrepancies": [],
+      "reason": "Source-electorate totals do not identify candidate-affiliation or candidate-destination distributions within transferred populations. Candidate choices are contest-local; population weighting would add an unvalidated local-homogeneity assumption. Rounded split percentages additionally do not identify joint counts. No forced secondary vote output."
+    },
+    "2017-2020": {
+      "heldGeneralSourceContests": 64,
+      "cancelledGeneralSourceContests": 0,
+      "localSplitPublications": 64,
+      "candidateAffiliationBaseline": null,
+      "splitJointBaseline": null,
+      "status": "evidence_coverage_only_reconstruction_not_identified",
+      "targetCoverage": [
+        {
+          "targetCode": "001",
+          "targetName": "Auckland Central",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "002",
+          "targetName": "Banks Peninsula",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "003",
+          "targetName": "Bay of Plenty",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "004",
+          "targetName": "Botany",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "005",
+          "targetName": "Christchurch Central",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "006",
+          "targetName": "Christchurch East",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "007",
+          "targetName": "Coromandel",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "008",
+          "targetName": "Dunedin",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "009",
+          "targetName": "East Coast",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "010",
+          "targetName": "East Coast Bays",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "011",
+          "targetName": "Epsom",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "012",
+          "targetName": "Hamilton East",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "013",
+          "targetName": "Hamilton West",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "014",
+          "targetName": "Hutt South",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "015",
+          "targetName": "Ilam",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "016",
+          "targetName": "Invercargill",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "017",
+          "targetName": "Kaikōura",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "018",
+          "targetName": "Kaipara ki Mahurangi",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "019",
+          "targetName": "Kelston",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "020",
+          "targetName": "Mana",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "021",
+          "targetName": "Māngere",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "022",
+          "targetName": "Manurewa",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "023",
+          "targetName": "Maungakiekie",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "024",
+          "targetName": "Mt Albert",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "025",
+          "targetName": "Mt Roskill",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "026",
+          "targetName": "Napier",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "027",
+          "targetName": "Nelson",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "028",
+          "targetName": "New Lynn",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "029",
+          "targetName": "New Plymouth",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "030",
+          "targetName": "North Shore",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "031",
+          "targetName": "Northcote",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "032",
+          "targetName": "Northland",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "033",
+          "targetName": "Ōhāriu",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "034",
+          "targetName": "Ōtaki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "035",
+          "targetName": "Pakuranga",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "036",
+          "targetName": "Palmerston North",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "037",
+          "targetName": "Panmure-Ōtāhuhu",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "038",
+          "targetName": "Papakura",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "039",
+          "targetName": "Port Waikato",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "040",
+          "targetName": "Rangitata",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "041",
+          "targetName": "Rangitīkei",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "042",
+          "targetName": "Remutaka",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "043",
+          "targetName": "Rongotai",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "044",
+          "targetName": "Rotorua",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "045",
+          "targetName": "Selwyn",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "046",
+          "targetName": "Southland",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "047",
+          "targetName": "Taieri",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "048",
+          "targetName": "Takanini",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "049",
+          "targetName": "Tāmaki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "050",
+          "targetName": "Taranaki-King Country",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "051",
+          "targetName": "Taupō",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "052",
+          "targetName": "Tauranga",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "053",
+          "targetName": "Te Atatū",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "054",
+          "targetName": "Tukituki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "055",
+          "targetName": "Upper Harbour",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "056",
+          "targetName": "Waikato",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "057",
+          "targetName": "Waimakariri",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "058",
+          "targetName": "Wairarapa",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "059",
+          "targetName": "Waitaki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "060",
+          "targetName": "Wellington Central",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "061",
+          "targetName": "West Coast-Tasman",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "062",
+          "targetName": "Whanganui",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "063",
+          "targetName": "Whangaparāoa",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "064",
+          "targetName": "Whangārei",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "065",
+          "targetName": "Wigram",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        }
+      ],
+      "sourceDiscrepancies": [],
+      "reason": "Source-electorate totals do not identify candidate-affiliation or candidate-destination distributions within transferred populations. Candidate choices are contest-local; population weighting would add an unvalidated local-homogeneity assumption. Rounded split percentages additionally do not identify joint counts. No forced secondary vote output."
+    },
+    "2023-2026": {
+      "heldGeneralSourceContests": 64,
+      "cancelledGeneralSourceContests": 1,
+      "localSplitPublications": 65,
+      "candidateAffiliationBaseline": null,
+      "splitJointBaseline": null,
+      "status": "evidence_coverage_only_reconstruction_not_identified",
+      "targetCoverage": [
+        {
+          "targetCode": "001",
+          "targetName": "Auckland Central",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "002",
+          "targetName": "Banks Peninsula",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "003",
+          "targetName": "Botany",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "004",
+          "targetName": "Christchurch Central",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "005",
+          "targetName": "Christchurch East",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "006",
+          "targetName": "Coromandel",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "007",
+          "targetName": "Dunedin",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "008",
+          "targetName": "East Cape",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "009",
+          "targetName": "East Coast Bays",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "010",
+          "targetName": "Epsom",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "011",
+          "targetName": "Glendene",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "012",
+          "targetName": "Hamilton East",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "013",
+          "targetName": "Hamilton West",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "014",
+          "targetName": "Henderson",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "015",
+          "targetName": "Hutt South",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "016",
+          "targetName": "Ilam",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "017",
+          "targetName": "Invercargill",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "018",
+          "targetName": "Kaikōura",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "019",
+          "targetName": "Kaipara ki Mahurangi",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "020",
+          "targetName": "Kapiti",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "021",
+          "targetName": "Kenepuru",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "022",
+          "targetName": "Māngere",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "023",
+          "targetName": "Manurewa",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "024",
+          "targetName": "Maungakiekie",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "025",
+          "targetName": "Mt Albert",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "026",
+          "targetName": "Mt Maunganui",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "027",
+          "targetName": "Mt Roskill",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "028",
+          "targetName": "Napier",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "029",
+          "targetName": "Nelson",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "030",
+          "targetName": "New Plymouth",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "031",
+          "targetName": "North Shore",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "032",
+          "targetName": "Northcote",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "033",
+          "targetName": "Northland",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "034",
+          "targetName": "Ōtāhuhu",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "035",
+          "targetName": "Pakuranga",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "036",
+          "targetName": "Palmerston North",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "037",
+          "targetName": "Papakura",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "038",
+          "targetName": "Port Waikato",
+          "heldContestPredecessorPopulationFractionLower": 0.0,
+          "heldContestPredecessorPopulationFractionUpper": 0.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "039",
+          "targetName": "Rangitata",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "040",
+          "targetName": "Rangitīkei",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "041",
+          "targetName": "Remutaka",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "042",
+          "targetName": "Rotorua",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "043",
+          "targetName": "Selwyn",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "044",
+          "targetName": "Southland",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "045",
+          "targetName": "Taieri",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "046",
+          "targetName": "Takanini",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "047",
+          "targetName": "Tāmaki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "048",
+          "targetName": "Taranaki-King Country",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "049",
+          "targetName": "Taupō",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "050",
+          "targetName": "Tauranga",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "051",
+          "targetName": "Tukituki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "052",
+          "targetName": "Upper Harbour",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "053",
+          "targetName": "Waikato",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "054",
+          "targetName": "Waimakariri",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "055",
+          "targetName": "Wairarapa",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "056",
+          "targetName": "Waitākere",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "057",
+          "targetName": "Waitaki",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "058",
+          "targetName": "Wellington Bays",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "059",
+          "targetName": "Wellington North",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "060",
+          "targetName": "West Coast-Tasman",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "061",
+          "targetName": "Whanganui",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "062",
+          "targetName": "Whangaparāoa",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "063",
+          "targetName": "Whangārei",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        },
+        {
+          "targetCode": "064",
+          "targetName": "Wigram",
+          "heldContestPredecessorPopulationFractionLower": 1.0,
+          "heldContestPredecessorPopulationFractionUpper": 1.0,
+          "meaning": "Population-origin coverage only, not a candidate-ballot observation rate."
+        }
+      ],
+      "sourceDiscrepancies": [
+        {
+          "id": "row:ec-2023-statistics-csv-split-votes-general.csv:Aotearoa Legalise Cannabis Party",
+          "leftInterval": [
+            "105781721/10000",
+            "6624464/625"
+          ],
+          "rightInterval": [
+            "10577",
+            "10577"
+          ],
+          "minimumGapVotes": "11721/10000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "row:ec-2023-statistics-csv-split-votes-general.csv:Te Pāti Māori",
+          "leftInterval": [
+            "584767857/20000",
+            "58592253/2000"
+          ],
+          "rightInterval": [
+            "29226",
+            "29226"
+          ],
+          "minimumGapVotes": "247857/20000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "column-total:ec-2023-statistics-csv-split-votes-general.csv:Party Vote Only",
+          "leftInterval": [
+            "86528533/2500",
+            "87196707/2500"
+          ],
+          "rightInterval": [
+            "34068",
+            "34068"
+          ],
+          "minimumGapVotes": "1358533/2500",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "column-rows:ec-2023-statistics-csv-split-votes-general.csv:Party Vote Only",
+          "leftInterval": [
+            "346224579/10000",
+            "13955891/400"
+          ],
+          "rightInterval": [
+            "34068",
+            "34068"
+          ],
+          "minimumGapVotes": "5544579/10000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "column-total:ec-2023-statistics-csv-split-votes-all.csv:Party Vote Only",
+          "leftInterval": [
+            "84590601/2000",
+            "425820483/10000"
+          ],
+          "rightInterval": [
+            "41791",
+            "41791"
+          ],
+          "minimumGapVotes": "1008601/2000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-all.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "column-rows:ec-2023-statistics-csv-split-votes-all.csv:Party Vote Only",
+          "leftInterval": [
+            "211264943/5000",
+            "106349341/2500"
+          ],
+          "rightInterval": [
+            "41791",
+            "41791"
+          ],
+          "minimumGapVotes": "2309943/5000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-all.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:ACT New Zealand:Party Vote Only",
+          "leftInterval": [
+            "19296943/10000",
+            "19536081/10000"
+          ],
+          "rightInterval": [
+            "7864689/4000",
+            "7962387/4000"
+          ],
+          "minimumGapVotes": "251283/20000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:Animal Justice Party:Party Vote Only",
+          "leftInterval": [
+            "1456111/20000",
+            "1464181/20000"
+          ],
+          "rightInterval": [
+            "1478819/20000",
+            "1488453/20000"
+          ],
+          "minimumGapVotes": "7319/10000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:Aotearoa Legalise Cannabis Party:Party Vote Only",
+          "leftInterval": [
+            "1485717/4000",
+            "7449739/20000"
+          ],
+          "rightInterval": [
+            "3801539/10000",
+            "3812293/10000"
+          ],
+          "minimumGapVotes": "153339/20000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:DemocracyNZ:Party Vote Only",
+          "leftInterval": [
+            "189309/2500",
+            "1525613/20000"
+          ],
+          "rightInterval": [
+            "1555173/20000",
+            "1568187/20000"
+          ],
+          "minimumGapVotes": "739/500",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:Freedoms NZ:Party Vote Only",
+          "leftInterval": [
+            "2466549/10000",
+            "989507/4000"
+          ],
+          "rightInterval": [
+            "5085509/20000",
+            "5100667/20000"
+          ],
+          "minimumGapVotes": "68987/10000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:Green Party:Party Vote Only",
+          "leftInterval": [
+            "77051177/20000",
+            "77672043/20000"
+          ],
+          "rightInterval": [
+            "77916831/20000",
+            "78542669/20000"
+          ],
+          "minimumGapVotes": "61197/5000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:Labour Party:Party Vote Only",
+          "leftInterval": [
+            "23858267/2000",
+            "119966039/10000"
+          ],
+          "rightInterval": [
+            "121848027/10000",
+            "122530649/10000"
+          ],
+          "minimumGapVotes": "470497/2500",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:National Party:Party Vote Only",
+          "leftInterval": [
+            "94124109/10000",
+            "95178909/10000"
+          ],
+          "rightInterval": [
+            "192617783/20000",
+            "194769937/20000"
+          ],
+          "minimumGapVotes": "451993/4000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:New Conservatives:Party Vote Only",
+          "leftInterval": [
+            "1297011/20000",
+            "1304147/20000"
+          ],
+          "rightInterval": [
+            "1336741/20000",
+            "1345623/20000"
+          ],
+          "minimumGapVotes": "16297/10000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:New Zealand First Party:Party Vote Only",
+          "leftInterval": [
+            "1150681/625",
+            "1160797/625"
+          ],
+          "rightInterval": [
+            "18892729/10000",
+            "19057731/10000"
+          ],
+          "minimumGapVotes": "319977/10000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:New Zealand Loyal:Party Vote Only",
+          "leftInterval": [
+            "13949469/20000",
+            "14012911/20000"
+          ],
+          "rightInterval": [
+            "14103301/20000",
+            "14167847/20000"
+          ],
+          "minimumGapVotes": "9039/2000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:NewZeal:Party Vote Only",
+          "leftInterval": [
+            "4565879/20000",
+            "45947/200"
+          ],
+          "rightInterval": [
+            "4643989/20000",
+            "4674243/20000"
+          ],
+          "minimumGapVotes": "49289/20000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:Te Pāti Māori:Party Vote Only",
+          "leftInterval": [
+            "19374629/10000",
+            "3880771/2000"
+          ],
+          "rightInterval": [
+            "39584559/20000",
+            "39643773/20000"
+          ],
+          "minimumGapVotes": "776849/20000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:Women’s Rights Party:Party Vote Only",
+          "leftInterval": [
+            "569229/10000",
+            "35692/625"
+          ],
+          "rightInterval": [
+            "1155507/20000",
+            "1160233/20000"
+          ],
+          "minimumGapVotes": "13363/20000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        },
+        {
+          "id": "local-general:Informal Party Votes:Party Vote Only",
+          "leftInterval": [
+            "1013329/2500",
+            "508277/1250"
+          ],
+          "rightInterval": [
+            "4118653/10000",
+            "6611/16"
+          ],
+          "minimumGapVotes": "52437/10000",
+          "sourceIds": [
+            "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-10.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-11.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-12.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-15.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-17.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-18.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-19.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-2.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-20.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-24.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-25.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-26.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-27.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-29.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-3.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-30.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-32.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-34.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-36.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-4.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-41.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-44.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-45.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-47.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-48.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-49.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-5.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-51.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-53.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-57.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-58.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-59.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-6.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-62.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-63.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-64.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-65.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-8.csv",
+            "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+            "ec-2023-statistics-csv-split-votes-general.csv"
+          ],
+          "status": "unresolved-official-source-discrepancy"
+        }
+      ],
+      "reason": "Source-electorate totals do not identify candidate-affiliation or candidate-destination distributions within transferred populations. Candidate choices are contest-local; population weighting would add an unvalidated local-homogeneity assumption. Rounded split percentages additionally do not identify joint counts. No forced secondary vote output."
+    }
+  },
+  "limitations": [
+    "No person linking or candidate continuity assertion. No exact local split counts inferred.",
+    "Port Waikato cancelled candidate and split evidence is unavailable, never a zero-performance observation. Its ordinary party vote remains in the primary baseline.",
+    "The 21 preserved 2023 discrepancies are propagated unchanged; aggregate denominator gaps are not imputed or normalized.",
+    "No voting-place residence inference. Māori secondary evidence is not reconstructed; general-primary coverage only."
+  ]
+}
