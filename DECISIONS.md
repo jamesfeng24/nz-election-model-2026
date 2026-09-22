@@ -131,3 +131,9 @@ Freeze formulas, three observed primary transitions, two bounded robustness tran
 ## D027 — 2026-09-23 — Materiality-directed research and computation
 
 User-authorized permanent workflow: repository/offline evidence first, then only bounded authoritative research with a precise consequential missing fact. Compare maximum downstream effect with dominant uncertainty before extending precision work. Preserve defensible bounds when further refinement is immaterial; never hide correctness failures, leakage, conservation errors or missingness. Foundational reusable statistical algorithms and validation remain worth substantial effort. Run focused checks during development and required full checks once at readiness unless failure/relevant changes justify repetition. Later elasticity should parameterize retained transforms in one pipeline, assess material sensitivity and stop when conclusions are invariant. No authorization to begin it now.
+
+## D028 — 2026-09-23 — Party-seat elasticity, unresolved operational slopes
+
+Freeze specification at bca87cd before coefficients: positive delta response, separate zero-intercept general-seat OLS, actual party changes, three same-boundary clusters. Candidate change is residual noise; no person linkage. Exclude cancelled/missing candidacies; Māori observations remain descriptive. One parameterized validation pipeline substitutes Stage5 predictions without changing structural fitting or Stage5 selection.
+
+National fullβ0.736872 and Labour0.614747 are descriptive. Both fail stable chronological improvement overβ1 across holdouts/transforms; selectedBeta remains null. Preserve unresolved status rather than force bespoke coefficients. The predeclared0.25pp material-gain diagnostic is not a significance threshold. No precision refinement, bootstrap, source archaeology or later-stage effects warranted. Exact next stage: normalized candidate overperformance only.

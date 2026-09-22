@@ -177,3 +177,7 @@ Target metadata records official change/rename status, reverse predecessor compo
 ### Stage5 party-vote transformation outputs
 
 Each backtest record keys transition × election-local electorate × canonical party. Shares are fractions; score summaries use percentage points, clipping frequency fractions. Point predictions/errors are null when not identified; outer prediction/error bounds are marginal/conservative. Numerical reconstruction brackets are separate. Continuity statuses exclude entrants/exits instead of zero-filling. Scores macro-average party MAEs equally; vote weights are actual target party counts. selection.json retains an unresolved candidate set with null default. No vector normalization.
+
+### Stage6 party-seat elasticity
+
+`records.json` stores held paired candidacies, their separate candidate/party denominators via pinned source records, fraction shares/deltas, original candidate labels, scope/geography and frozen Stage5 predicted party shares. Names do not assert person continuity. `fits.json` contains zero-intercept unrestricted slopes/sample sizes/training years; Māori reference diagnostics are not operational coefficients. `backtests.json` distinguishes descriptive, leave-one-out stability and chronological modes with raw candidate predictions and percentage-point loss metrics. `selection.json` separates descriptive historicalOLS from nullable selectedBeta andβ1 benchmark. No cancelled/missing candidate zero filling.

@@ -2,7 +2,7 @@
 
 ## Current implementation
 
-Historical design note: Stage 1 contained only the application shell, provenance contracts and documentation. Current state: all six 2008–2023 ingestions are merged; full historical-panel integration is complete for review (D022). The panel retains election-specific geography, unresolved candidate-person IDs, cancelled-contest missingness and known source discrepancies; it is not a harmonized or fitted dataset. Stage4 boundary reconstruction is merged and Stage5 parameter-free historical transformation backtesting is complete for review. No polling aggregation, fitted elasticity, candidate effects, simulation or MMP allocation is implemented. Empty states are not forecasts.
+Historical design note: Stage 1 contained only the application shell, provenance contracts and documentation. Current state: all six 2008–2023 ingestions are merged; full historical-panel integration is complete for review (D022). The panel retains election-specific geography, unresolved candidate-person IDs, cancelled-contest missingness and known source discrepancies; it is not a harmonized or fitted dataset. Stage4 boundary reconstruction is merged and Stage5 parameter-free historical transformation backtesting is complete for review. Stage6 descriptive party-seat elasticity fits and temporal validation are complete for review, with both operational elasticities unresolved. No polling aggregation, person/candidate effects, simulation or MMP allocation is implemented. Empty states are not forecasts.
 
 ## Intended scope (not yet methods)
 
@@ -45,3 +45,24 @@ Frozen0.5%/1% national-support threshold diagnostics and leave-one-transition-ou
 Selection remains `unresolved_between_methods`, default null, retained set additive/proportional/log-odds. Log-odds is the strongest generic aggregate performer and robust to the bounded geographic evidence, but the material general-Labour advantage for additive and mixed Māori transition results prevent a universal default under the frozen rule. No statistical significance claim from only three primary clusters. Later authorized elasticity must use one parameterized pipeline and evaluate retained-transform sensitivity; stop precision exploration if conclusions are materially unchanged.
 
 Output family: `data/processed/models/party-vote-transform/` specification, pinned input contract, continuity, records, scores, vector diagnostics, selection and manifest. Exact next stage: **NAT/LAB electorate elasticity only**, not begun.
+
+## Stage6 — National/Labour party-seat elasticity (2026-09-23)
+
+Estimand: Δcandidate share = β_party × Δlocal party share, each share using its own valid-vote denominator. Fit separate unrestricted, zero-intercept, equal-observation OLS slopes on general seats. The positive prediction C1=C0+β(P1−P0) follows the explicit delta estimand; inconsistent minus signs in the request's displayed prose were interpreted as formatting slips before fitting. No candidate premium/person effect is estimated.
+
+Use only2008→2011,2014→2017,2020→2023 on their validated2007/2014/2020 boundary regimes. Changed-boundary candidate baselines were not reconstructed. Each party has191 general observations (63/64/64). Port Waikato cancellation excludes one2020→2023 pair per party. Candidate names remain source labels; person identity is neither inferred nor required. Māori evidence has21 Labour pairs and zero National pairs; it is descriptive only, never pooled or assigned a separate operational coefficient.
+
+| Party | Full OLS β | 2008→2011 | 2014→2017 | 2020→2023 |
+|---|---:|---:|---:|---:|
+| National | 0.736872 | 0.387667 | 0.759028 | 0.758046 |
+| Labour | 0.614747 | 0.212515 | 0.305435 | 0.729720 |
+
+Chronological training uses2008 only for the2014 transition, then2008+2014 for2020. National training slopes0.387667/0.576726; Labour0.212515/0.279460. Leave-one-transition-out estimates are stability diagnostics, explicitly not chronological forecasts when future data train an earlier holdout.
+
+Observed-local-party chronological MAE(pp), pooled over the two equal-sized holdouts: National β0=7.6412, β1=3.8401, fitted=4.1457; Labour β0=11.0337, β1=7.6308, fitted=7.3160. National fitted loses toβ1 in both holdouts (3.8575vs3.4778 and4.4340vs4.2024). Labour improves strongly in2014→2017 (4.0231vs7.8733) but worsens in2020→2023 (10.6089vs7.3883). RMSE/bias/median/p90 and predictions are preserved per party/transition/baseline.
+
+One pipeline uses the same structural training slope with Stage5 additive/proportional/log-odds predictions. Chronological fitted MAE: National4.5880/4.6019/4.6428 versusβ1 4.2202/4.6241/4.2277; Labour7.3911/7.5308/7.5207 versusβ1 7.5891/7.9081/6.9946. Transform sensitivity does not establish stable bespoke elasticity. No transform-specific refitting or change to Stage5's unresolved default.
+
+Both parties remain `unresolved_no_stable_material_gain`, selectedBeta null; full OLS estimates are descriptive, β1 retained as benchmark rather than claimed optimal truth. The pre-fit0.25pp indicative material-gain screen and consistent chronological holdout/transform improvement requirement fail. This is not a significance test. Raw linear predictions are not silently clipped; out-of-range diagnostics are stored (three across all repeated evaluation configurations).
+
+Limitations: only three transition clusters, residual candidate changes, no same-person effects, no changed-boundary candidate pairs, seven Māori seats per election, conditional realized-party validation distinguished from forecast-pipeline sensitivity. No new sources/web use or2026 predictions. Exact next stage: **Normalized candidate overperformance only**, on separate authorization.

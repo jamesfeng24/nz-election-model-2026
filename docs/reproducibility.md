@@ -282,3 +282,7 @@ The final Stage4 outputs supersede earlier acquisition-only notes. Secondary rec
 ### Stage5 offline backtests
 
 `.venv/bin/python -m scripts.models.party_vote_transform.run --check` validates pinned historical/boundary hashes, regenerates records/scores/selection in memory and compares committed bytes. Omit --check only for an intentional reviewed regeneration. No source fetching or expensive boundary optimization occurs. Run `.venv/bin/python -m unittest scripts.tests.test_party_transform -q` for focused formulas, identity, uncertainty, score, anti-leakage and input-corruption tests. Specification was committed before scoring; output and implementation hashes are recorded in manifest.json. All pre-Stage5 data must remain byte-identical.
+
+### Stage6 offline elasticity
+
+Run `.venv/bin/python -m scripts.models.nat_lab_elasticity.run --check` to verify pinned historical/Stage5 hashes and deterministic outputs. Omit --check only for intentional regeneration. Focused tests: `.venv/bin/python -m unittest scripts.tests.test_nat_lab_elasticity -q`. No source retrieval or boundary recomputation. Primary scores use raw linear predictions and flag out-of-range values; chronology and training years are explicit.
