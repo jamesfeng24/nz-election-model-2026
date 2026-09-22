@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "stage": 6,
+  "frozenBeforeFitting": true,
+  "estimand": "Party-seat response of candidate-share change to actual local-party-share change; not candidate-person effect",
+  "equation": "C1=C0+beta_party*(P1-P0); deltaC=beta_party*deltaP",
+  "signClarification": "Positive sign follows explicit delta estimand and beta=1 interpretation; minus signs in prose display treated as formatting slips",
+  "fit": "separate National/Labour zero-intercept OLS, beta=sum(deltaP*deltaC)/sum(deltaP**2), equal eligible general-electorate-transition weights, unrestricted beta",
+  "parties": [
+    "nationalparty",
+    "labourparty"
+  ],
+  "transitions": [
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "boundaryRegime": "2007"
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "boundaryRegime": "2014"
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "boundaryRegime": "2020"
+    }
+  ],
+  "excludedTransitions": [
+    "2011-2014",
+    "2017-2020"
+  ],
+  "eligibility": "same geography, both contests held, unique actual party candidature and positive valid candidate/party denominators in both years; missing candidature excluded, no zero imputation",
+  "candidateIdentity": "election-local occurrences only; person identity neither inferred nor required",
+  "primaryScope": "general",
+  "maori": "descriptive paired diagnostics only; never pooled into primary beta, no separate operational coefficient from seven seats",
+  "prediction": "raw linear C0+beta*(targetP-sourceP); flag out-of-range predictions, no hidden clipping",
+  "comparators": [
+    0,
+    1,
+    "party_specific_OLS"
+  ],
+  "validation": [
+    "full_fit_descriptive",
+    "transition_specific_descriptive",
+    "leave_one_transition_out_stability_not_chronological",
+    "chronological_train2008_test2014",
+    "chronological_train2008+2014_test2020"
+  ],
+  "transforms": [
+    "actual_observed_local_party",
+    "additive",
+    "proportional",
+    "log_odds"
+  ],
+  "forecastSensitivity": "same training structural beta with each Stage5 predicted target party share; no transform-specific refitting",
+  "metrics": [
+    "MAE_pp",
+    "RMSE_pp",
+    "bias_pp",
+    "medianAbsoluteError_pp",
+    "p90AbsoluteError_pp"
+  ],
+  "decision": "retain bespoke beta only if clear stable chronological improvement vs1 survives transform sensitivity; otherwise adequate baseline or unresolved. Report raw empirical estimates regardless.",
+  "materialityDiagnostic": "Predeclare0.25pp MAE gain as an indicative material gain, require positive gain in both chronological holdouts and across retained transform aggregate diagnostics for retention; no significance claim or fitted threshold",
+  "antiLeakage": "No random holdouts; chronological training years strictly earlier than holdout; only historical2008-2023 inputs and frozen Stage5 predictions; no person links, later effects,2026inputs",
+  "limitations": [
+    "Only three transition clusters",
+    "Replacement/candidate changes remain residual noise",
+    "Realized-party structural prediction is conditional diagnostic, not forecasting",
+    "No changed-boundary candidate reconstruction"
+  ]
+}

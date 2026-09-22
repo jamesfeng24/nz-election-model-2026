@@ -1,3 +1,9 @@
+# Stage6 current state — 2026-09-23
+
+Authorized NAT/LAB party-seat elasticity only. Branch `stage/06-nat-lab-elasticity`; base `be5e8da770e8ee0eaf95d8749565a5cb2078889b`, PR12 verified merged, clean start, Stage5 deterministic check passed. Modelling context read. Specification frozen before fitting: positive delta response, zero-intercept OLS, three same-boundary transitions, general primary; no person linking. Next: build eligible records and focused tests, then fit/checkpoint. Exact next stage **Normalized candidate overperformance only**, not authorized now.
+
+## Historical Stage5 handoff
+
 # Stage5 current state — 2026-09-23
 
 Branch `stage/05-party-vote-backtesting`; base `0fe95a5a05e687a64d702501e1a775453096c118` (PR11 merged). Checkpoints:b919915 frozen design,a731c54 continuity/input pins,214f083 records/scores,271b038 unresolved selection. Resumption found a clean tree and no surviving uncommitted work. No browser or new source acquisition.
