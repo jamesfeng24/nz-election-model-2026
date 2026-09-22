@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "chronological": {
+    "nationalparty": {
+      "actual_observed_local_party": {
+        "chronologicalMAEpp": {
+          "no_response": 7.641217573634308,
+          "one_for_one": 3.840104154655247,
+          "fitted": 4.1457433028033615
+        },
+        "fittedGainOverOneForOnePP": -0.30563914814811444,
+        "gainByHoldoutPP": {
+          "2014": -0.37963834420283593,
+          "2020": -0.23163995209339383
+        }
+      },
+      "additive": {
+        "chronologicalMAEpp": {
+          "no_response": 7.641217573634308,
+          "one_for_one": 4.220234181409571,
+          "fitted": 4.587995560716998
+        },
+        "fittedGainOverOneForOnePP": -0.367761379307427,
+        "gainByHoldoutPP": {
+          "2014": -0.2937142428275008,
+          "2020": -0.44180851578735236
+        }
+      },
+      "proportional": {
+        "chronologicalMAEpp": {
+          "no_response": 7.641217573634308,
+          "one_for_one": 4.62414259385168,
+          "fitted": 4.6018525025118375
+        },
+        "fittedGainOverOneForOnePP": 0.022290091339842277,
+        "gainByHoldoutPP": {
+          "2014": -0.3005590034313017,
+          "2020": 0.34513918611098493
+        }
+      },
+      "log_odds": {
+        "chronologicalMAEpp": {
+          "no_response": 7.641217573634308,
+          "one_for_one": 4.227666567498239,
+          "fitted": 4.642835096274185
+        },
+        "fittedGainOverOneForOnePP": -0.4151685287759461,
+        "gainByHoldoutPP": {
+          "2014": -0.32541668065432816,
+          "2020": -0.5049203768975641
+        }
+      }
+    },
+    "labourparty": {
+      "actual_observed_local_party": {
+        "chronologicalMAEpp": {
+          "no_response": 11.033706074343172,
+          "one_for_one": 7.630816696834275,
+          "fitted": 7.316033285613417
+        },
+        "fittedGainOverOneForOnePP": 0.3147834112208576,
+        "gainByHoldoutPP": {
+          "2014": 3.8501668645769147,
+          "2020": -3.2206000421351995
+        }
+      },
+      "additive": {
+        "chronologicalMAEpp": {
+          "no_response": 11.033706074343172,
+          "one_for_one": 7.589134633755048,
+          "fitted": 7.391139657690168
+        },
+        "fittedGainOverOneForOnePP": 0.19799497606488003,
+        "gainByHoldoutPP": {
+          "2014": 4.221763714918299,
+          "2020": -3.8257737627885406
+        }
+      },
+      "proportional": {
+        "chronologicalMAEpp": {
+          "no_response": 11.033706074343172,
+          "one_for_one": 7.908135539951244,
+          "fitted": 7.530759659623317
+        },
+        "fittedGainOverOneForOnePP": 0.3773758803279277,
+        "gainByHoldoutPP": {
+          "2014": 4.436550668688348,
+          "2020": -3.6817989080324924
+        }
+      },
+      "log_odds": {
+        "chronologicalMAEpp": {
+          "no_response": 11.033706074343172,
+          "one_for_one": 6.9945974891462726,
+          "fitted": 7.52068881285731
+        },
+        "fittedGainOverOneForOnePP": -0.5260913237110376,
+        "gainByHoldoutPP": {
+          "2014": 3.433565305751779,
+          "2020": -4.4857479531738536
+        }
+      }
+    }
+  }
+}

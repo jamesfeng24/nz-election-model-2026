@@ -155,3 +155,9 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Freeze and backtest three generic national-to-local party transformations across five historical transitions:3,773 records,53 eligible party-transition identities,25 entrants,27 exits.
 - Separate primary observed evidence from conservative reconstruction robustness; retain general/Māori, party, threshold, leave-one-out, clipping and vector diagnostics.
 - Preserve unresolved selection with no default; add permanent repository-first/materiality rules. No new sources, forecasts or later-stage effects.
+
+## 2026-09-23 — Stage6
+
+- Freeze and fit separate National/Labour party-seat delta elasticities:191 general observations each;21 descriptive Māori Labour pairs; cancelled/missing candidacies excluded.
+- Add chronological, leave-one-transition-out andβ0/1 comparisons plus one parameterized Stage5 transform sensitivity pipeline. Both operational coefficients remain unresolved; descriptive fits retained.
+- Preserve all prior data and Stage5 selection; no web/source acquisition, candidate-person linking or2026 forecasting.

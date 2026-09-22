@@ -1,3 +1,40 @@
+# Stage6 current state — 2026-09-23
+
+Branch `stage/06-nat-lab-elasticity`; base `be5e8da770e8ee0eaf95d8749565a5cb2078889b` (PR12 merged). Checkpoints:bca87cd frozen specification,eb91063 eligibility/infrastructure,1f483b1 fits/temporal sensitivity. No new sources or browser work.
+
+## Challenge audit checkpoint — 2026-09-23
+
+`docs/audits/stage6-architecture.md` classifies material findings; `stage6-exploratory.json` and `scripts/audits/stage6.py` preserve bounded offline diagnostics. Conclusion: sound with minor contract clarifications. CHANGE NOW items are documentation: unconditional/provisional association, explicit target-boundary candidate baseline dependency, and separately validated predictive views rather than independent evidence/additive bonuses. Frozen model outputs and unresolved selection remain unchanged.
+
+Common-intercept diagnostics fail consistent chronological improvement (Labour worsens both holdouts); equal-seat weighting retained. Reusable person/status infrastructure deferred to persistence; conditional β review after replacement, before integration. No person linking, Stage7, web/source acquisition or precision refinement.
+
+Audit verification: six focused Stage6 tests, deterministic Stage6 check, repeatable exploratory results and matching frozen zero-intercept reference metrics passed. No diff to any data or Stage6 model implementation since f523a9a; documentation/isolated exploratory utility only. Full suite/frontend not repeated because numerical model code/outputs are unchanged. PR13 ready to merge as a historical diagnostic stage with these dependencies; leave unmerged. Exact next stage remains **Normalized candidate overperformance only**, on explicit authorization.
+
+## Stage6 — National/Labour party-seat elasticity (2026-09-23)
+
+Estimand: Δcandidate share = β_party × Δlocal party share, each share using its own valid-vote denominator. Fit separate unrestricted, zero-intercept, equal-observation OLS slopes on general seats. The positive prediction C1=C0+β(P1−P0) follows the explicit delta estimand; inconsistent minus signs in the request's displayed prose were interpreted as formatting slips before fitting. No candidate premium/person effect is estimated.
+
+Use only2008→2011,2014→2017,2020→2023 on their validated2007/2014/2020 boundary regimes. Changed-boundary candidate baselines were not reconstructed. Each party has191 general observations (63/64/64). Port Waikato cancellation excludes one2020→2023 pair per party. Candidate names remain source labels; person identity is neither inferred nor required. Māori evidence has21 Labour pairs and zero National pairs; it is descriptive only, never pooled or assigned a separate operational coefficient.
+
+| Party | Full OLS β | 2008→2011 | 2014→2017 | 2020→2023 |
+|---|---:|---:|---:|---:|
+| National | 0.736872 | 0.387667 | 0.759028 | 0.758046 |
+| Labour | 0.614747 | 0.212515 | 0.305435 | 0.729720 |
+
+Chronological training uses2008 only for the2014 transition, then2008+2014 for2020. National training slopes0.387667/0.576726; Labour0.212515/0.279460. Leave-one-transition-out estimates are stability diagnostics, explicitly not chronological forecasts when future data train an earlier holdout.
+
+Observed-local-party chronological MAE(pp), pooled over the two equal-sized holdouts: National β0=7.6412, β1=3.8401, fitted=4.1457; Labour β0=11.0337, β1=7.6308, fitted=7.3160. National fitted loses toβ1 in both holdouts (3.8575vs3.4778 and4.4340vs4.2024). Labour improves strongly in2014→2017 (4.0231vs7.8733) but worsens in2020→2023 (10.6089vs7.3883). RMSE/bias/median/p90 and predictions are preserved per party/transition/baseline.
+
+One pipeline uses the same structural training slope with Stage5 additive/proportional/log-odds predictions. Chronological fitted MAE: National4.5880/4.6019/4.6428 versusβ1 4.2202/4.6241/4.2277; Labour7.3911/7.5308/7.5207 versusβ1 7.5891/7.9081/6.9946. Transform sensitivity does not establish stable bespoke elasticity. No transform-specific refitting or change to Stage5's unresolved default.
+
+Both parties remain `unresolved_no_stable_material_gain`, selectedBeta null; full OLS estimates are descriptive, β1 retained as benchmark rather than claimed optimal truth. The pre-fit0.25pp indicative material-gain screen and consistent chronological holdout/transform improvement requirement fail. This is not a significance test. Raw linear predictions are not silently clipped; out-of-range diagnostics are stored (three across all repeated evaluation configurations).
+
+Limitations: only three transition clusters, residual candidate changes, no same-person effects, no changed-boundary candidate pairs, seven Māori seats per election, conditional realized-party validation distinguished from forecast-pipeline sensitivity. No new sources/web use or2026 predictions. Exact next stage: **Normalized candidate overperformance only**, on separate authorization.
+
+Outputs: `data/processed/models/nat-lab-elasticity/{specification,input-contract,records,fits,backtests,sensitivity,selection,manifest}.json`. Offline deterministic command `.venv/bin/python -m scripts.models.nat_lab_elasticity.run --check`. Final verification:173 Python tests passed (including6 focused Stage6 tests); deterministic Stage6 regeneration/check and pinned historical/Stage5 input hashes passed; all985 pre-Stage6 data files byte-identical, including Stage5 selection, raw registry, boundary outputs and discrepancy records. Frontend30 tests, TypeScript and production build passed. git diff --check passed; no configured Python formatter/linter. No expensive boundary regeneration or new source acquisition. Stage6 complete. Unmerged PR #13: https://github.com/jamesfeng24/nz-election-model-2026/pull/13 . Final verification/docs checkpoint30e7bfa; branch head includes this PR-link handoff. Next action: review PR13; no next-stage work without explicit authorization.
+
+## Historical Stage5 handoff
+
 # Stage5 current state — 2026-09-23
 
 Branch `stage/05-party-vote-backtesting`; base `0fe95a5a05e687a64d702501e1a775453096c118` (PR11 merged). Checkpoints:b919915 frozen design,a731c54 continuity/input pins,214f083 records/scores,271b038 unresolved selection. Resumption found a clean tree and no surviving uncommitted work. No browser or new source acquisition.

@@ -1,0 +1,682 @@
+{
+  "schemaVersion": 1,
+  "general": {
+    "nationalparty": {
+      "full": {
+        "beta": 0.7368717803805616,
+        "n": 191,
+        "trainingSourceYears": [
+          2008,
+          2014,
+          2020
+        ],
+        "intercept": 0
+      },
+      "transitionSpecific": {
+        "2008": {
+          "beta": 0.3876671554483156,
+          "n": 63,
+          "trainingSourceYears": [
+            2008
+          ],
+          "intercept": 0
+        },
+        "2014": {
+          "beta": 0.759028113475548,
+          "n": 64,
+          "trainingSourceYears": [
+            2014
+          ],
+          "intercept": 0
+        },
+        "2020": {
+          "beta": 0.7580464936499556,
+          "n": 64,
+          "trainingSourceYears": [
+            2020
+          ],
+          "intercept": 0
+        }
+      },
+      "leaveOneOut": {
+        "2008": {
+          "beta": 0.7581084023795746,
+          "n": 128,
+          "trainingSourceYears": [
+            2014,
+            2020
+          ],
+          "intercept": 0
+        },
+        "2014": {
+          "beta": 0.7354712700522251,
+          "n": 127,
+          "trainingSourceYears": [
+            2008,
+            2020
+          ],
+          "intercept": 0
+        },
+        "2020": {
+          "beta": 0.5767255352832117,
+          "n": 127,
+          "trainingSourceYears": [
+            2008,
+            2014
+          ],
+          "intercept": 0
+        }
+      },
+      "chronological": {
+        "2014": {
+          "beta": 0.3876671554483156,
+          "n": 63,
+          "trainingSourceYears": [
+            2008
+          ],
+          "intercept": 0
+        },
+        "2020": {
+          "beta": 0.5767255352832117,
+          "n": 127,
+          "trainingSourceYears": [
+            2008,
+            2014
+          ],
+          "intercept": 0
+        }
+      }
+    },
+    "labourparty": {
+      "full": {
+        "beta": 0.6147472776674173,
+        "n": 191,
+        "trainingSourceYears": [
+          2008,
+          2014,
+          2020
+        ],
+        "intercept": 0
+      },
+      "transitionSpecific": {
+        "2008": {
+          "beta": 0.2125146621354551,
+          "n": 63,
+          "trainingSourceYears": [
+            2008
+          ],
+          "intercept": 0
+        },
+        "2014": {
+          "beta": 0.30543505549744565,
+          "n": 64,
+          "trainingSourceYears": [
+            2014
+          ],
+          "intercept": 0
+        },
+        "2020": {
+          "beta": 0.7297199152310391,
+          "n": 64,
+          "trainingSourceYears": [
+            2020
+          ],
+          "intercept": 0
+        }
+      },
+      "leaveOneOut": {
+        "2008": {
+          "beta": 0.6456650362289261,
+          "n": 128,
+          "trainingSourceYears": [
+            2014,
+            2020
+          ],
+          "intercept": 0
+        },
+        "2014": {
+          "beta": 0.6844796203151364,
+          "n": 127,
+          "trainingSourceYears": [
+            2008,
+            2020
+          ],
+          "intercept": 0
+        },
+        "2020": {
+          "beta": 0.2794604662665759,
+          "n": 127,
+          "trainingSourceYears": [
+            2008,
+            2014
+          ],
+          "intercept": 0
+        }
+      },
+      "chronological": {
+        "2014": {
+          "beta": 0.2125146621354551,
+          "n": 63,
+          "trainingSourceYears": [
+            2008
+          ],
+          "intercept": 0
+        },
+        "2020": {
+          "beta": 0.2794604662665759,
+          "n": 127,
+          "trainingSourceYears": [
+            2008,
+            2014
+          ],
+          "intercept": 0
+        }
+      }
+    }
+  },
+  "maoriDiagnostics": {
+    "nationalparty": {
+      "pairedObservations": 0,
+      "operationalMaoriCoefficient": null,
+      "status": "no_paired_candidacies",
+      "generalCoefficientReferenceDiagnostics": {
+        "2008": {
+          "no_response": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          },
+          "one_for_one": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          },
+          "general_beta_reference": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          }
+        },
+        "2014": {
+          "no_response": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          },
+          "one_for_one": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          },
+          "general_beta_reference": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          }
+        },
+        "2020": {
+          "no_response": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          },
+          "one_for_one": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          },
+          "general_beta_reference": {
+            "n": 0,
+            "metrics": null,
+            "predictions": []
+          }
+        }
+      }
+    },
+    "labourparty": {
+      "pairedObservations": 21,
+      "operationalMaoriCoefficient": null,
+      "status": "descriptive_only_small_cluster_count",
+      "generalCoefficientReferenceDiagnostics": {
+        "2008": {
+          "no_response": {
+            "n": 7,
+            "metrics": {
+              "maePP": 5.634982070053909,
+              "rmsePP": 6.476637702680145,
+              "biasPP": -3.203576875813091,
+              "medianAbsoluteErrorPP": 7.332584974307041,
+              "p90AbsoluteErrorPP": 8.336137425316908,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.5249298147108367,
+                "actual": 0.5837523946360154
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.5149125992012034,
+                "actual": 0.607095624173423
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.2734447063646613,
+                "actual": 0.3509249801384633
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.29423532508554884,
+                "actual": 0.2984937861519959
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.2943814432989691,
+                "actual": 0.3709866666666667
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaitonga:labourparty",
+                "prediction": 0.4179746968344795,
+                "actual": 0.4062013647791213
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-waiariki:labourparty",
+                "prediction": 0.31834666666666667,
+                "actual": 0.24502081692359626
+              }
+            ]
+          },
+          "one_for_one": {
+            "n": 7,
+            "metrics": {
+              "maePP": 12.270104864873518,
+              "rmsePP": 13.242720797594904,
+              "biasPP": -12.270104864873518,
+              "medianAbsoluteErrorPP": 12.327828196988522,
+              "p90AbsoluteErrorPP": 17.55694764282525,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.46047411266613014,
+                "actual": 0.5837523946360154
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.43871942000808983,
+                "actual": 0.607095624173423
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.19118581771122656,
+                "actual": 0.3509249801384633
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.20801078213188973,
+                "actual": 0.2984937861519959
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.1846272818440352,
+                "actual": 0.3709866666666667
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaitonga:labourparty",
+                "prediction": 0.3074023909088621,
+                "actual": 0.4062013647791213
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-waiariki:labourparty",
+                "prediction": 0.2131484876579018,
+                "actual": 0.24502081692359626
+              }
+            ]
+          },
+          "general_beta_reference": {
+            "n": 7,
+            "metrics": {
+              "maePP": 9.024501863036651,
+              "rmsePP": 10.190060800520087,
+              "biasPP": -8.777200274983434,
+              "medianAbsoluteErrorPP": 9.844654728730424,
+              "p90AbsoluteErrorPP": 14.10440628087225,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.48530584734871113,
+                "actual": 0.5837523946360154
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.4680730497154111,
+                "actual": 0.607095624173423
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.22287627850101507,
+                "actual": 0.3509249801384633
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.2412290220366696,
+                "actual": 0.2984937861519959
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.2269103713318783,
+                "actual": 0.3709866666666667
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-tetaitonga:labourparty",
+                "prediction": 0.3500006727812974,
+                "actual": 0.4062013647791213
+              },
+              {
+                "recordId": "2008-2011:nz-general-2011-maori-source-waiariki:labourparty",
+                "prediction": 0.2536763725054588,
+                "actual": 0.24502081692359626
+              }
+            ]
+          }
+        },
+        "2014": {
+          "no_response": {
+            "n": 7,
+            "metrics": {
+              "maePP": 10.239607837249707,
+              "rmsePP": 12.500087562947481,
+              "biasPP": -10.239607837249707,
+              "medianAbsoluteErrorPP": 9.23979501302526,
+              "p90AbsoluteErrorPP": 16.875993096838236,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.6156137958895117,
+                "actual": 0.7156014773949226
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.4626660341555977,
+                "actual": 0.5513430958584135
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.3827549413139576,
+                "actual": 0.48807854137447404
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.4133789860997547,
+                "actual": 0.45014022343800286
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.4472690430137239,
+                "actual": 0.5396669931439765
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaitonga:labourparty",
+                "prediction": 0.42922490470139774,
+                "actual": 0.4589354952414522
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-waiariki:labourparty",
+                "prediction": 0.27344701583434833,
+                "actual": 0.5373614431645295
+              }
+            ]
+          },
+          "one_for_one": {
+            "n": 7,
+            "metrics": {
+              "maePP": 10.413643532741911,
+              "rmsePP": 11.06797014616646,
+              "biasPP": 8.637590943105003,
+              "medianAbsoluteErrorPP": 8.583588303332224,
+              "p90AbsoluteErrorPP": 14.826184356934997,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.7765497017682698,
+                "actual": 0.7156014773949226
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.6370856287448681,
+                "actual": 0.5513430958584135
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.5739144244077963,
+                "actual": 0.48807854137447404
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.5825208474957528,
+                "actual": 0.45014022343800286
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.6772043263831902,
+                "actual": 0.5396669931439765
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaitonga:labourparty",
+                "prediction": 0.6232841043060066,
+                "actual": 0.4589354952414522
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-waiariki:labourparty",
+                "prediction": 0.47519960252723775,
+                "actual": 0.5373614431645295
+              }
+            ]
+          },
+          "general_beta_reference": {
+            "n": 7,
+            "metrics": {
+              "maePP": 5.3919657339849705,
+              "rmsePP": 7.071355366881998,
+              "biasPP": 1.3650987229600413,
+              "medianAbsoluteErrorPP": 4.895413936081294,
+              "p90AbsoluteErrorPP": 10.97070940332652,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.7145487059074179,
+                "actual": 0.7156014773949226
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.5698900051012062,
+                "actual": 0.5513430958584135
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.5002697131462056,
+                "actual": 0.48807854137447404
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.5173584849325442,
+                "actual": 0.45014022343800286
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.5886211325047894,
+                "actual": 0.5396669931439765
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-tetaitonga:labourparty",
+                "prediction": 0.548522269364649,
+                "actual": 0.4589354952414522
+              },
+              {
+                "recordId": "2014-2017:nz-general-2017-maori-source-waiariki:labourparty",
+                "prediction": 0.3974738692661617,
+                "actual": 0.5373614431645295
+              }
+            ]
+          }
+        },
+        "2020": {
+          "no_response": {
+            "n": 7,
+            "metrics": {
+              "maePP": 15.171669619023362,
+              "rmsePP": 17.972010874894025,
+              "biasPP": 15.171669619023362,
+              "medianAbsoluteErrorPP": 19.914363111991097,
+              "p90AbsoluteErrorPP": 24.848239920762072,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.6801250214077753,
+                "actual": 0.41460288584776944
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.5556596472648772,
+                "actual": 0.5410713582870862
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.4099448397154049,
+                "actual": 0.39907654340644033
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.4873356845142674,
+                "actual": 0.2790788752251899
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.5676918982625556,
+                "actual": 0.36854826714264466
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaitonga:labourparty",
+                "prediction": 0.5040245710654523,
+                "actual": 0.37750943396226416
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-waiariki:labourparty",
+                "prediction": 0.4361927055803066,
+                "actual": 0.1990701306076093
+              }
+            ]
+          },
+          "one_for_one": {
+            "n": 7,
+            "metrics": {
+              "maePP": 7.6668786567579374,
+              "rmsePP": 9.072622244451093,
+              "biasPP": -2.814768396649537,
+              "medianAbsoluteErrorPP": 6.766146064535644,
+              "p90AbsoluteErrorPP": 12.750774589985134,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.47960197880554967,
+                "actual": 0.41460288584776944
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.43925403571695154,
+                "actual": 0.5410713582870862
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.233033162512014,
+                "actual": 0.39907654340644033
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.28373833749026484,
+                "actual": 0.2790788752251899
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.4010521103782271,
+                "actual": 0.36854826714264466
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaitonga:labourparty",
+                "prediction": 0.27851249055756355,
+                "actual": 0.37750943396226416
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-waiariki:labourparty",
+                "prediction": 0.26673159125296575,
+                "actual": 0.1990701306076093
+              }
+            ]
+          },
+          "general_beta_reference": {
+            "n": 7,
+            "metrics": {
+              "maePP": 8.885333526413445,
+              "rmsePP": 9.793665481868247,
+              "biasPP": 4.114555813954704,
+              "medianAbsoluteErrorPP": 9.670227516694412,
+              "p90AbsoluteErrorPP": 13.666854616596655,
+              "outOfRangePredictions": 0
+            },
+            "predictions": [
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-haurakiwaikato:labourparty",
+                "prediction": 0.5568540268584695,
+                "actual": 0.41460288584776944
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-ikaroarawhiti:labourparty",
+                "prediction": 0.48409961446057903,
+                "actual": 0.5410713582870862
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tamakimakaurau:labourparty",
+                "prediction": 0.30118886776704346,
+                "actual": 0.39907654340644033
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaihauauru:labourparty",
+                "prediction": 0.3621747696909534,
+                "actual": 0.2790788752251899
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaitokerau:labourparty",
+                "prediction": 0.4652505423095888,
+                "actual": 0.36854826714264466
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-tetaitonga:labourparty",
+                "prediction": 0.36539163349211223,
+                "actual": 0.37750943396226416
+              },
+              {
+                "recordId": "2020-2023:nz-general-2023-maori-source-waiariki:labourparty",
+                "prediction": 0.3320169468770868,
+                "actual": 0.1990701306076093
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
