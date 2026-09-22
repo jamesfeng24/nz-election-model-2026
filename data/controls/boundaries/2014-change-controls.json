@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "rc-2014-boundary-report",
+  "sourcePages": [
+    9,
+    10,
+    11,
+    12
+  ],
+  "unchangedGeneral": [
+    "Northland",
+    "Whangarei",
+    "North Shore",
+    "Northcote",
+    "Manurewa",
+    "Māngere",
+    "Pakuranga",
+    "Taupō",
+    "Tukituki",
+    "Wairarapa",
+    "Palmerston North",
+    "Mana",
+    "Rongotai",
+    "Clutha-Southland",
+    "Dunedin South",
+    "Invercargill",
+    "Kaikōura",
+    "Nelson",
+    "West Coast-Tasman",
+    "Ilam"
+  ],
+  "unchangedMaori": [
+    "Hauraki-Waikato",
+    "Tāmaki Makaurau",
+    "Te Tai Hauāuru",
+    "Te Tai Tokerau",
+    "Te Tai Tonga"
+  ],
+  "changedMaori": [
+    "Ikaroa-Rāwhiti",
+    "Waiariki"
+  ],
+  "limitations": [
+    "Macron variants join locally by unique normalized label; source labels retained.",
+    "Technical changes described as not involving population, but no suppressed/rounded micro-count is replaced by zero."
+  ]
+}

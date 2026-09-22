@@ -204,3 +204,77 @@ npm run check
 ```
 
 `--verify-years` explicitly invokes legacy and modern per-election regenerators in memory for all six years; it does not write inputs or acquire sources. This is separate verification, not the panel's ingestion path. Full verification passed 109 Python tests, all 867 raw checksums and all 18 processed hashes, six per-year deterministic checks, old-slice/manifest byte compatibility, 30 frontend tests, typecheck and build. Frontend checks were run once because AGENTS.md requires them at this major integration checkpoint. Known 2023 source discrepancies remain recorded; no new discrepancy is accepted.
+
+## Stage 4 geography checkpoint (in progress)
+
+Observed election outputs and the full historical panel remain immutable. Stage 4 now covers three separate boundary transitions: 2011→2014, 2017→2020, and 2023→2026; acquisition/validation of the last transition is first. No crosswalk or notional vote baseline exists yet.
+
+Boundary topology requires the optional exact dependencies in `requirements-boundaries.txt` (NumPy 2.2.6, Shapely 2.1.2) and Python 3.12. Install in a dedicated virtual environment. Runtime source acquisition remains shell/browser-only; Python processing is offline. CI installs the same pinned dependencies before the existing Python checks. No CI path filtering or verification reduction was introduced.
+
+```sh
+.venv/bin/python -m unittest scripts.tests.test_boundary_geometry -v
+.venv/bin/python -m scripts.boundaries.audit_geography
+.venv/bin/python -m scripts.boundaries.audit_geography --check
+python3 scripts/validate/source_files.py
+```
+
+The acquisition audit is explicitly incomplete and contains only geometry diagnostics, never transfer weights. Its area differences must not be interpreted as population flows. The original ArcGIS JSON responses are stored without quantization/simplification; all four source layers are EPSG:2193. The decoder preserves holes and islands and rejects invalid topology rather than repairing raw data.
+
+The public population attachment has 57,553 final-version meshblocks. Suppressed `-999` values remain missing (not negative population, zero or a midpoint estimate). Other values are confidentialised by random rounding to base three. The public January 2025 ArcGIS meshblock geometry has 57,551 units and is not an established substitute. The exact Datafinder layer 122744 geometry export was subsequently acquired through normal authenticated export; source membership and Schedule C disclosure-control audits now pass. The preserved population CSV and lookup PDF must not be downloaded again.
+
+
+Resume Stage 4 entirely offline for the acquired 2020→2025 inputs:
+
+```sh
+.venv/bin/python -m scripts.boundaries.audit_membership --check
+.venv/bin/python -m scripts.boundaries.audit_population --check
+.venv/bin/python -m unittest scripts.tests.test_boundary_membership scripts.tests.test_boundary_population scripts.tests.test_boundary_geopackage scripts.tests.test_boundary_archive -v
+```
+
+Omit `--check` to regenerate the corresponding audit. The population audit reconstructs verified raw ZIP bytes in memory and extracts the GeoPackage into a temporary directory; no network or raw-source edits occur. Original byte segments, CRC and every archived member hash are checked. Schedule C controls are a documented transcription of the preserved PDF, not regenerated from a live website. Audits are not transition weights or notional vote outputs. Source joins preserve explicit predecessor IDs and source hashes; unresolved membership fails completeness tests.
+
+Suppression reconciliation is offline and deterministic:
+
+```sh
+.venv/bin/python -m scripts.boundaries.suppression_report --check
+.venv/bin/python -m unittest scripts.tests.test_boundary_feasible -v
+```
+
+The report records sharp conditional population/weight bounds, exact rational endpoints, control availability, two source-local exception identities and input hashes. Small exhaustive fixtures verify that ratio endpoints are attainable under all destination equations. An unexpected additional unchanged-seat exception fails validation.
+
+Current transition crosswalk and manifest:
+
+```sh
+.venv/bin/python -m scripts.boundaries.transition --transition 2023-2026
+.venv/bin/python -m scripts.boundaries.transition --transition 2023-2026 --check
+.venv/bin/python -m unittest scripts.tests.test_boundary_transition scripts.tests.test_boundary_composition scripts.tests.test_boundary_feasible -v
+```
+
+The transition consumes preserved memberships/population controls offline. Manifest hashes include input data, configuration, implementation and output bytes. Witness allocations exist only inside tests; they are not nominal population estimates or exported observations. Older transition adapters remain to implement after authoritative acquisition.
+
+### Stage 4 final reconstruction checks
+
+Use the pinned `requirements-boundaries.txt` environment (including SciPy1.16.0):
+
+```
+python -m scripts.boundaries.transition_2014 --check
+python -m scripts.boundaries.contract --check
+python -m scripts.boundaries.notional --transition 2011-2014 --check
+python -m scripts.boundaries.notional --transition 2017-2020 --check
+```
+
+Omit `--check` only to intentionally regenerate the corresponding derived output. All three party baselines are complete. Notional outputs use64 branch-and-bound nodes per extremum by default; retain this parameter for byte-identical regeneration. The files expose numerical enclosure gaps separately from geographic identification uncertainty. They are not fitted predictions or exact local voting observations. All three crosswalks remain globally coupled; marginal endpoints cannot be combined arbitrarily. No raw source fetching occurs during these commands.
+
+Final offline checks also include:
+
+```sh
+.venv/bin/python -m scripts.boundaries.transition --transition 2017-2020 --check
+.venv/bin/python -m scripts.boundaries.transition --transition 2023-2026 --check
+.venv/bin/python -m scripts.boundaries.notional --transition 2023-2026 --check
+.venv/bin/python -m scripts.boundaries.readiness --check
+.venv/bin/python -m scripts.boundaries.secondary --check
+.venv/bin/python -m scripts.validate.source_files
+.venv/bin/python -m unittest discover -s scripts/tests -q
+```
+
+The final Stage4 outputs supersede earlier acquisition-only notes. Secondary reconstruction is deliberately limited to availability/coverage metadata, with null unidentified vote baselines. Historical inputs remain untouched.

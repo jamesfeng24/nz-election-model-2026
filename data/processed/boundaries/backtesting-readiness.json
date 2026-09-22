@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "status": "validated_data_contract_not_model_backtest",
+  "inputHashes": {
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e",
+    "data/processed/boundaries/2011-2014/party-votes.json": "6ede70a42d97ee8c1908fafafecc84fcef862d6e91bc680c3e4627be3821932d",
+    "data/processed/boundaries/2011-2014/party-votes-manifest.json": "ed220aed547db9f19634cc8c14acf0c61004686318cd2a62798f97dcb99c5767",
+    "data/processed/boundaries/2011-2014/crosswalk.json": "1efa8b9c2d03471c09b57b03614a02fcb5378c85b5cb92496e2c4ab30c752725",
+    "data/processed/boundaries/2017-2020/party-votes.json": "81b9ccb8418b924cb4fadfbb8536b324e66142dc943b063efe9f3ecc8e2df755",
+    "data/processed/boundaries/2017-2020/party-votes-manifest.json": "c5d3dd644a482f8a8c789e0bb918cf9ea162f4ca65fbb25dda9ca957983180ca",
+    "data/processed/boundaries/2017-2020/crosswalk.json": "f39868460a56f9870e7868b77a62bf89393a6f3d02d20976be9fc266c52195d1",
+    "data/processed/boundaries/2023-2026/party-votes.json": "6f5991b0383a845b1b9cbe91548cbe593cbc04d461aae90eab226a931961164a",
+    "data/processed/boundaries/2023-2026/party-votes-manifest.json": "8c320a3853a1ab1df94fbe08a44478977ea21a94be0f5938a849971a9ccaa94b",
+    "data/processed/boundaries/2023-2026/crosswalk.json": "72dde71fa9dd8916916d78130482a19d6941ec32b97be7aee8eef7f464c2caae"
+  },
+  "partyAudits": {
+    "2011-2014": {
+      "general": {
+        "targets": 64,
+        "partyRecords": 832,
+        "sourceVotes": 2108255,
+        "partyConservationControls": 13,
+        "maximumNumericalGapVotes": 8.745829079991042
+      },
+      "maori": {
+        "targets": 7,
+        "partyRecords": 91,
+        "sourceVotes": 129209,
+        "partyConservationControls": 13,
+        "maximumNumericalGapVotes": 1e-06
+      }
+    },
+    "2017-2020": {
+      "general": {
+        "targets": 65,
+        "partyRecords": 1040,
+        "sourceVotes": 2430028,
+        "partyConservationControls": 16,
+        "maximumNumericalGapVotes": 0.2475242826982392
+      },
+      "maori": {
+        "targets": 7,
+        "partyRecords": 112,
+        "sourceVotes": 161868,
+        "partyConservationControls": 16,
+        "maximumNumericalGapVotes": 1e-06
+      }
+    },
+    "2023-2026": {
+      "general": {
+        "targets": 64,
+        "partyRecords": 1088,
+        "sourceVotes": 2659474,
+        "partyConservationControls": 17,
+        "maximumNumericalGapVotes": 0.2528717366000162
+      },
+      "maori": {
+        "targets": 7,
+        "partyRecords": 119,
+        "sourceVotes": 191737,
+        "partyConservationControls": 17,
+        "maximumNumericalGapVotes": 1.0000018189894035e-06
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "boundaryRegime": "2007",
+      "leftClass": "observed",
+      "rightClass": "observed",
+      "generalElectorates": 63,
+      "status": "same_boundary_inventory_validated"
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "boundaryRegime": "2014",
+      "leftClass": "synthetic_bounds",
+      "rightClass": "observed",
+      "generalElectorates": 64,
+      "status": "same_boundary_inventory_validated"
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "boundaryRegime": "2014",
+      "leftClass": "observed",
+      "rightClass": "observed",
+      "generalElectorates": 64,
+      "status": "same_boundary_inventory_validated"
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "boundaryRegime": "2020",
+      "leftClass": "synthetic_bounds",
+      "rightClass": "observed",
+      "generalElectorates": 65,
+      "status": "same_boundary_inventory_validated"
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "boundaryRegime": "2020",
+      "leftClass": "observed",
+      "rightClass": "observed",
+      "generalElectorates": 65,
+      "status": "same_boundary_inventory_validated"
+    }
+  ],
+  "sourceLocalNameMappings": [
+    {
+      "transition": "2011-2014",
+      "targetCode": "043",
+      "sourceLabel": "Rangit?¢kei",
+      "electionLabel": "Rangitīkei",
+      "evidence": "Same official electorate number043; Schedule C sourceName Rangitῑkei. Raw and crosswalk source labels preserved."
+    }
+  ],
+  "futureBaseline": {
+    "sourceYear": 2023,
+    "targetYear": 2026,
+    "boundaryRegime": "2025",
+    "class": "synthetic_bounds",
+    "generalElectorates": 64
+  },
+  "limitations": [
+    "Same-boundary membership is checked using preserved boundary regimes and normalized source-local electorate labels; observed IDs remain unchanged.",
+    "Party identities across elections are not harmonized by this contract. No model fitted.",
+    "Marginal bound endpoints cannot be selected independently; optimization gaps remain separate from geographic uncertainty."
+  ]
+}

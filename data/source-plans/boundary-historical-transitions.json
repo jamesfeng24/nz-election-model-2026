@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "resources": [
+    {
+      "id": "stats-2020-electoral-population",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22604/download/",
+      "rawPath": "data/raw/boundaries/2014-2020/population-2020.csv",
+      "format": "csv",
+      "requiredColumns": [
+        "MB2020_V2_00",
+        "General_Electoral_Population",
+        "Maori_Electoral_Population",
+        "GED2020_V1_00",
+        "MED2020_V1_00"
+      ],
+      "role": "2018 Census electoral population on final Meshblock 2020; layer104578 version310991",
+      "organisation": "Stats NZ",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ]
+    },
+    {
+      "id": "stats-2020-electoral-population-lookup",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22607/download/",
+      "rawPath": "data/raw/boundaries/2014-2020/population-lookup.pdf",
+      "format": "pdf",
+      "role": "Official field lookup for 2018 electoral population layer",
+      "organisation": "Stats NZ",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ]
+    },
+    {
+      "id": "stats-2020-geographic-areas-file",
+      "url": "https://datafinder.stats.govt.nz/my/export-history/4648445/",
+      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-file-2020.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "geographic-areas-file-2020.csv",
+        "geographic-areas-file-2020.txt"
+      ],
+      "role": "Official Geographic Areas File 2020 table104285 version381332; export4648445; MB2020 to GED2014/MED2014 membership",
+      "organisation": "Stats NZ",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ]
+    },
+    {
+      "id": "stats-2013-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4648446/download/",
+      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2013.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "geographic-areas-file-2013.csv",
+        "geographic-areas-file-2013.txt"
+      ],
+      "role": "Geographic Areas File 2013, official table104685/version298536; recovered original export4648446; MB2013 to GED2007/MED2007",
+      "dateOrElection": "2013 meshblock membership in 2007 electoral boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Acquisition only; target 2014 membership and contemporaneous population remain to reconcile."
+      ]
+    },
+    {
+      "id": "stats-2021-geographic-areas-table",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4649772/download/",
+      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-table-2021.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "geographic-areas-table-2021.csv",
+        "geographic-areas-table-2021.txt"
+      ],
+      "role": "Official table105172/version381334, recovered completed export4649772; MB2021 to MB2020 lineage and GED2020/MED2020 membership",
+      "dateOrElection": "2021 concordance for final 2020 meshblocks",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "Historical lineage fields establish membership joins, not a population allocation between descendants. Use final-2020 published population separately for each descendant."
+      ]
+    },
+    {
+      "id": "rc-2020-population-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/Boundary-Review/SCHEDULE-C-TABLES-OF-THE-ELECTORATES-AND-POPULATIONS.pdf",
+      "rawPath": "data/raw/boundaries/2014-2020/schedule-c.pdf",
+      "format": "pdf",
+      "role": "2020 final electorate population controls, Schedule C",
+      "dateOrElection": "2020 boundaries / 2018 electoral population",
+      "limitations": [
+        "Population columns are controls; projected percentage changes are not population observations."
+      ]
+    },
+    {
+      "id": "rc-2020-change-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/Boundary-Review/SCHEDULE-B-LIST-OF-UNCHANGED-AND-CHANGED-ELECTORATES.pdf",
+      "rawPath": "data/raw/boundaries/2014-2020/schedule-b.pdf",
+      "format": "pdf",
+      "role": "2020 Schedule B corrected unchanged/changed electorate list",
+      "dateOrElection": "2014 to 2020 boundaries",
+      "limitations": [
+        "Published correction: Waiariki unchanged, Hauraki-Waikato changed."
+      ]
+    },
+    {
+      "id": "stats-2016-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654757/download/",
+      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2016.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "geographic-areas-file-2016.csv",
+        "geographic-areas-file-2016.txt"
+      ],
+      "role": "Official table104684/version298534, export4654757; MB2016→MB2013 and GED2014/MED2014 membership",
+      "dateOrElection": "2016 concordance for 2014 electoral boundaries",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "limitations": [
+        "22 MB2013 predecessors map to multiple 2014 electorate pairs; do not allocate parent population twice or arbitrarily select one destination."
+      ]
+    },
+    {
+      "id": "stats-2013-resident-population",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654758/download/",
+      "rawPath": "data/raw/boundaries/2007-2014/population-2013.zip",
+      "format": "zip",
+      "requiredMembers": [
+        "population-by-meshblock-2013-census.csv",
+        "population-by-meshblock-2013-census.txt"
+      ],
+      "role": "Official layer8437 export4654758; CSV without geometry; 2013 usual-resident/census-night population, not electoral population",
+      "dateOrElection": "2013 Census / 2013 meshblocks",
+      "licence": "Creative Commons Attribution 3.0 New Zealand",
+      "limitations": [
+        "Not separate general/Māori electoral populations; no substitution into electoral-population controls authorized at acquisition checkpoint.",
+        "2013 release has rounded zero/three values and -999/-995 markers. Do not apply the later electoral-population suppression parser.",
+        "22 old meshblocks have multiple 2014 electorate destinations and no descendant population allocation in this source."
+      ]
+    },
+    {
+      "id": "stats-2013-electoral-allocation-methodology",
+      "organisation": "Stats NZ",
+      "url": "https://www.stats.govt.nz/assets/Uploads/Retirement-of-archive-website-project-files/Methods/The-mathematics-of-electorate-allocation-in-New-Zealand-based-on-the-outcome-of-the-2013-Census-and-Maori-Electoral-Option-2013/maths-2013-electorate-allocation.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/electoral-population-methodology-2013.pdf",
+      "format": "pdf",
+      "role": "2013 Government Statistician electoral-allocation methodology; exact national and island roll counts",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "limitations": [
+        "National and island calculations use different roll ratios; this document alone does not establish a meshblock-level ratio."
+      ]
+    },
+    {
+      "id": "stats-electoral-descent-imputation-methodology",
+      "organisation": "Stats NZ",
+      "url": "https://www.stats.govt.nz/assets/Uploads/Methods/Deriving-the-2018-Maori-descent-electoral-population/Deriving-the-2018-maori-descent-electoral-population.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/descent-imputation-methodology.pdf",
+      "format": "pdf",
+      "role": "Official retrospective account of 2013 electoral Māori-descent imputation, page 5",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "limitations": [
+        "2013 imputation used individual and household information and random assignment; published meshblock descent is not the completed electoral variable."
+      ]
+    },
+    {
+      "id": "stats-2013-census-meshblock-dataset",
+      "organisation": "Stats NZ",
+      "url": "https://www3.stats.govt.nz/meshblock/2013/csv/2013_mb_dataset_Total_New_Zealand_CSV.zip",
+      "rawPath": "data/raw/boundaries/2007-2014/census-meshblock-dataset.zip",
+      "format": "zip",
+      "role": "Official 2013 Census meshblock dataset, complete original seven-table CSV ZIP",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "limitations": [
+        "CSV encoding is Windows-1252; includes multiple geographic levels and census years. Select 2013 meshblock records explicitly.",
+        "Published descent Yes/No/unknown/not-elsewhere-included counts are not the imputed electoral descent variable. Confidential cells must not become zero."
+      ],
+      "requiredMembers": [
+        "2013-mb-dataset-Total-New-Zealand-Individual-Part-3b.csv",
+        "2013-mb-dataset-Total-New-Zealand-Family.csv",
+        "2013-mb-dataset-Total-New-Zealand-Household.csv",
+        "2013-mb-dataset-Total-New-Zealand-Individual-Part-1.csv",
+        "2013-mb-dataset-Total-New-Zealand-Individual-Part-2.csv",
+        "2013-mb-dataset-Total-New-Zealand-Individual-Part-3a.csv",
+        "2013-mb-dataset-Total-New-Zealand-Dwelling.csv"
+      ]
+    },
+    {
+      "id": "rc-2014-population-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/2014-boundary-review/Schedule-C-Population-data-of-the-proposed-and-final-electorates.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/schedule-c.pdf",
+      "format": "pdf",
+      "role": "Final and proposed 2014 Schedule C electorate electoral-population controls; user-assisted original browser download",
+      "dateOrElection": "2014 boundaries / 2013 Census",
+      "limitations": [
+        "Only final sections are controls; proposed populations and projected variation percentages must not be substituted."
+      ]
+    },
+    {
+      "id": "stats-2000-electoral-mathematics",
+      "organisation": "Statistics New Zealand",
+      "url": "https://aceproject.org/ero-en/topics/boundary-delimitation/New%20Zealand%20-%20The%20Mathmatics%20of%20Electoral%20District%20Allocation%20in%20New%20Zealand%20%28bdc02a%29.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/electoral-mathematics-2000.pdf",
+      "format": "pdf",
+      "role": "Original Stats NZ Research and Analytical Report 2000 #12, Westbrooke and Ryan; preserved copy hosted by ACE Electoral Knowledge Network",
+      "dateOrElection": "2000 methodology cited by Stats NZ electoral-population guidance",
+      "limitations": [
+        "Scanned original publication. Page11 applies area-specific roll/descent quantities at national, island and electoral-district levels; does not establish a constant national ratio at meshblock level.",
+        "Historical methodological evidence, not a 2013 numerical dataset."
+      ]
+    },
+    {
+      "id": "rc-2014-boundary-report",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/2014-boundary-review/Representation-Commissions-report-2014.pdf",
+      "rawPath": "data/raw/boundaries/2007-2014/representation-commission-report-2014.pdf",
+      "format": "pdf",
+      "role": "2014 final report, pages9–12 unchanged seats and technical changes",
+      "dateOrElection": "2007 to 2014 boundary review",
+      "limitations": [
+        "Narrative no-population technical changes do not identify individual rounded zero cells as exact zero."
+      ]
+    }
+  ]
+}

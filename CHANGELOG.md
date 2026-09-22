@@ -118,3 +118,34 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Added six canonical alias keys for five documented name/abbreviation changes; no candidate-person or alliance linking.
 - Passed 109 Python tests, source/input integrity, all-year deterministic checks, 30 frontend tests, typecheck and production build.
 - No model or boundary harmonization. Next authorized task requires a new instruction: 2023→2026 boundary reconstruction only.
+
+## Stage 4 in progress — 2026-09-14
+
+- Expanded the existing branch scope to three independent boundary-transition baselines (2011→2014, 2017→2020, 2023→2026), with the current transition first.
+- Preserved eleven official geography/population/schedule resources with checksums, including four complete HD electorate layers and 57,553 meshblock population records.
+- Added strict offline polygon topology decoding, focused tests, pinned optional geometry dependencies and an explicitly incomplete deterministic acquisition audit.
+- Recorded suppressed population values and geometry differences for officially unchanged seats; no population weights, synthetic votes, historical data changes or models introduced.
+
+
+### Stage 4 recovered membership and population evidence
+
+- Preserved the completed 2025 concordance and exact GeoPackage reader; acquired only the needed 2026 historical-code concordance.
+- Validated all 57,553 source memberships: 57,517 direct and 36 official lineage joins; no geometry fallback.
+- Added deterministic geometry/population and Schedule C disclosure-control audits, 71 passing electorate controls, and focused failure tests.
+- Retained suppressed values as unavailable; documented two technical membership exceptions pending crosswalk treatment. Historical observed data and panel remain unchanged; transition weights/notional votes are still incomplete.
+
+### Stage 4 current transition crosswalk
+
+- Resolved both suppression exceptions as sharp feasible intervals without zero filling.
+- Added 65→64 general and 7→7 Māori population crosswalk constraints, reverse composition/quality metrics, deterministic manifest and endpoint-conservation tests.
+- Preserved all historical observations; older crosswalks and synthetic vote baselines remain outstanding.
+
+## Stage4 checkpoint —2026-09-22
+
+- Added LevelB constrained2011→2014 electoral-population reconstruction,22 coupled split parents, all71 final controls and official unchanged-seat audit.
+- Added common global validation for all three transitions without modifying the two completed crosswalks or observed history.
+- Added2011-on-2014 and2017-on-2020 notional party-vote enclosures with explicit numerical gaps and party-mass conservation. 2023-on-2026 party generation and finalStage4 readiness remain pending; no modelling or final PR.
+
+- Complete 2023-on-2026 notional party-vote bounds with deterministic regeneration and party-by-party conservation; no candidate or split inference.
+
+- Complete Stage4 three-transition crosswalks and party-vote bounds, same-boundary readiness audit, secondary availability assessment and final reproducibility checks. Preserve all observed historical outputs; no modelling.

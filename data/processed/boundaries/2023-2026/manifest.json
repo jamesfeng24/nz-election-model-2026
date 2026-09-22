@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "transitionId": "nz-2023-to-2026",
+  "inputHashes": {
+    "data/raw/boundaries/2020-2025/population-2025.csv": "32e97d7f2128e1de2fbfeee9a73a258f449ded602cca77aa9d97c0516430f6ff",
+    "data/raw/boundaries/2020-2025/geographic-areas-table-2025.zip": "cc18d753a2922697e2edfa361db3d5541a5f92acd9f0f67cba90f8f0779c5103",
+    "data/raw/boundaries/2020-2025/geographic-areas-table-2026.zip": "d1987e306014eedb35dd859726295d2c6e962dc5cbd93d4afa1303ecaffc13e4",
+    "data/raw/boundaries/2020-2025/general-2020-geometry.json": "e2ef2de2fc6ab595161ce87ce84ee279ac718df74ccbbbfea36b83ffa7cd3061",
+    "data/raw/boundaries/2020-2025/general-2025-geometry.json": "2badebc87aaabe4f91d686ff27bfc0844e36ddfc6d40705963456917e3008f15",
+    "data/raw/boundaries/2020-2025/maori-2020-geometry.json": "0994a4e00022c4caad11b04eed86f183b332a013173b02b7466ac425cfa342b5",
+    "data/raw/boundaries/2020-2025/maori-2025-geometry.json": "181044b74c2a1c89926c89d9a884faabe8e43fb54cbcd9cad1f461cd6399537b",
+    "data/controls/boundaries/2025-population-controls.json": "477bff0d1e542b61ede0ab23b1d0270a97cd0e38e2777656cae8364bd5a7eb6b",
+    "data/raw/boundaries/2020-2025/schedule-c.pdf": "6a798bb3e6688d6ff36f1b86d984ee1b4719a76e19d22f13a9421d4b33043f51",
+    "data/controls/boundaries/2025-change-controls.json": "781eb1f22749ec1f4ba195dcf88277560a467d554604b059e5167eabbafc267e",
+    "data/raw/boundaries/2020-2025/schedule-b.pdf": "df6189571d258ada9d650086e23240f1a555aaf8825f9284579eefd9d9673d62",
+    "data/controls/boundaries/transitions/2023-2026.json": "8e6c9b03b3c70a41403998d2e56280877c8088de8f343a3cfa896efe4d64f5fb"
+  },
+  "codeHashes": {
+    "scripts/boundaries/transition.py": "c651bc1ec959861f7701585a0f1bbf7e9dd1251a967eabb72b01eae3550fe99c",
+    "scripts/boundaries/composition.py": "567a9cde1cbbab5757a6c38046c07de8ef28578b55092bdef570684ac7953076",
+    "scripts/boundaries/feasible.py": "627153d019c7dbd11044589b425453fc5b36cf2fc6086c6cde3ff655af5c9caa",
+    "scripts/boundaries/current_inputs.py": "ee1635e804427badd6244bd0c6f3ab4d44e5020e7131f226ac563989c6872f48",
+    "scripts/boundaries/membership.py": "44aaf1ae9a81c82ab6242d220dadfab00e3d5b7feb7d86aba11a81c59264907f",
+    "scripts/boundaries/population.py": "d56bdf4168824d1699635f470b590afd88ba3f35956bffaf36a78b4924f86887"
+  },
+  "outputSha256": "72dde71fa9dd8916916d78130482a19d6941ec32b97be7aee8eef7f464c2caae",
+  "scopes": {
+    "general": {
+      "sources": 65,
+      "targets": 64,
+      "edges": 123
+    },
+    "maori": {
+      "sources": 7,
+      "targets": 7,
+      "edges": 10
+    }
+  }
+}

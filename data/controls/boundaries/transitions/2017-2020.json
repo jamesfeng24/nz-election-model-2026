@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "nz-2017-to-2020",
+  "sourceElectionYear": 2017,
+  "targetElectionYear": 2020,
+  "sourceBoundaryId": "stats-nz-electorates-2014",
+  "targetBoundaryId": "stats-nz-electorates-2020",
+  "populationVintage": "2018 Census electoral population on final Meshblock 2020",
+  "adapter": "inputs_2020",
+  "expectedSourceCounts": {
+    "general": 64,
+    "maori": 7
+  },
+  "expectedTargetCounts": {
+    "general": 65,
+    "maori": 7
+  },
+  "populationMethod": "official_meshblock_membership_with_disclosure_bounds",
+  "pointEstimatePolicy": "unavailable_unless_uniquely_identified",
+  "observedElectionInputsModified": false
+}

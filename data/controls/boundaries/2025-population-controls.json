@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "rc-2025-schedule-c",
+  "derivation": "Transcribed electoral-population column and current numeric SNZ references from preserved Schedule C, pages 1–3. Duplicate overlaid Māori table uses older M-prefixed references; identical names/populations are not counted twice. Projection columns are not ingested. PDF extraction spacing in Taupō corrected in this derived transcription only. All 71 code/name pairs checked against preserved 2025 boundary layers.",
+  "electorates": [
+    {
+      "scheduleCode": "N01",
+      "sourceCode": "033",
+      "name": "Northland",
+      "electoralPopulation": 72936,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N02",
+      "sourceCode": "063",
+      "name": "Whangārei",
+      "electoralPopulation": 73054,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N03",
+      "sourceCode": "019",
+      "name": "Kaipara ki Mahurangi",
+      "electoralPopulation": 67565,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N04",
+      "sourceCode": "062",
+      "name": "Whangaparāoa",
+      "electoralPopulation": 66778,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N05",
+      "sourceCode": "009",
+      "name": "East Coast Bays",
+      "electoralPopulation": 68471,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N06",
+      "sourceCode": "031",
+      "name": "North Shore",
+      "electoralPopulation": 67505,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N07",
+      "sourceCode": "052",
+      "name": "Upper Harbour",
+      "electoralPopulation": 66392,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N08",
+      "sourceCode": "032",
+      "name": "Northcote",
+      "electoralPopulation": 69373,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N09",
+      "sourceCode": "056",
+      "name": "Waitākere",
+      "electoralPopulation": 67096,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N10",
+      "sourceCode": "014",
+      "name": "Henderson",
+      "electoralPopulation": 67170,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N11",
+      "sourceCode": "011",
+      "name": "Glendene",
+      "electoralPopulation": 68383,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N12",
+      "sourceCode": "027",
+      "name": "Mt Roskill",
+      "electoralPopulation": 69221,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N13",
+      "sourceCode": "025",
+      "name": "Mt Albert",
+      "electoralPopulation": 67192,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N14",
+      "sourceCode": "001",
+      "name": "Auckland Central",
+      "electoralPopulation": 68162,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N15",
+      "sourceCode": "010",
+      "name": "Epsom",
+      "electoralPopulation": 67435,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N16",
+      "sourceCode": "047",
+      "name": "Tāmaki",
+      "electoralPopulation": 66696,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N17",
+      "sourceCode": "024",
+      "name": "Maungakiekie",
+      "electoralPopulation": 70643,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N18",
+      "sourceCode": "035",
+      "name": "Pakuranga",
+      "electoralPopulation": 67431,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N19",
+      "sourceCode": "034",
+      "name": "Ōtāhuhu",
+      "electoralPopulation": 66649,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N20",
+      "sourceCode": "022",
+      "name": "Māngere",
+      "electoralPopulation": 69001,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N21",
+      "sourceCode": "003",
+      "name": "Botany",
+      "electoralPopulation": 66407,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N22",
+      "sourceCode": "046",
+      "name": "Takanini",
+      "electoralPopulation": 67144,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N23",
+      "sourceCode": "023",
+      "name": "Manurewa",
+      "electoralPopulation": 72873,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N24",
+      "sourceCode": "037",
+      "name": "Papakura",
+      "electoralPopulation": 66881,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N25",
+      "sourceCode": "006",
+      "name": "Coromandel",
+      "electoralPopulation": 70560,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N26",
+      "sourceCode": "038",
+      "name": "Port Waikato",
+      "electoralPopulation": 72869,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N27",
+      "sourceCode": "053",
+      "name": "Waikato",
+      "electoralPopulation": 72013,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N28",
+      "sourceCode": "013",
+      "name": "Hamilton West",
+      "electoralPopulation": 71663,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N29",
+      "sourceCode": "012",
+      "name": "Hamilton East",
+      "electoralPopulation": 70874,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N30",
+      "sourceCode": "050",
+      "name": "Tauranga",
+      "electoralPopulation": 71852,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N31",
+      "sourceCode": "026",
+      "name": "Mt Maunganui",
+      "electoralPopulation": 70953,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N32",
+      "sourceCode": "042",
+      "name": "Rotorua",
+      "electoralPopulation": 66574,
+      "sourcePage": 1,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N33",
+      "sourceCode": "048",
+      "name": "Taranaki-King Country",
+      "electoralPopulation": 71074,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N34",
+      "sourceCode": "008",
+      "name": "East Cape",
+      "electoralPopulation": 70147,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N35",
+      "sourceCode": "049",
+      "name": "Taupō",
+      "electoralPopulation": 73252,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N36",
+      "sourceCode": "028",
+      "name": "Napier",
+      "electoralPopulation": 68034,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N37",
+      "sourceCode": "030",
+      "name": "New Plymouth",
+      "electoralPopulation": 71636,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N38",
+      "sourceCode": "061",
+      "name": "Whanganui",
+      "electoralPopulation": 72105,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N39",
+      "sourceCode": "040",
+      "name": "Rangitīkei",
+      "electoralPopulation": 73353,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N40",
+      "sourceCode": "051",
+      "name": "Tukituki",
+      "electoralPopulation": 67994,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N41",
+      "sourceCode": "036",
+      "name": "Palmerston North",
+      "electoralPopulation": 73298,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N42",
+      "sourceCode": "055",
+      "name": "Wairarapa",
+      "electoralPopulation": 72929,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N43",
+      "sourceCode": "020",
+      "name": "Kapiti",
+      "electoralPopulation": 71616,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N44",
+      "sourceCode": "021",
+      "name": "Kenepuru",
+      "electoralPopulation": 70951,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N45",
+      "sourceCode": "041",
+      "name": "Remutaka",
+      "electoralPopulation": 72383,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N46",
+      "sourceCode": "015",
+      "name": "Hutt South",
+      "electoralPopulation": 72971,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N47",
+      "sourceCode": "059",
+      "name": "Wellington North",
+      "electoralPopulation": 73049,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "N48",
+      "sourceCode": "058",
+      "name": "Wellington Bays",
+      "electoralPopulation": 72383,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S01",
+      "sourceCode": "029",
+      "name": "Nelson",
+      "electoralPopulation": 67897,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S02",
+      "sourceCode": "060",
+      "name": "West Coast-Tasman",
+      "electoralPopulation": 67972,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S03",
+      "sourceCode": "018",
+      "name": "Kaikōura",
+      "electoralPopulation": 67979,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S04",
+      "sourceCode": "054",
+      "name": "Waimakariri",
+      "electoralPopulation": 72977,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S05",
+      "sourceCode": "005",
+      "name": "Christchurch East",
+      "electoralPopulation": 73351,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S06",
+      "sourceCode": "004",
+      "name": "Christchurch Central",
+      "electoralPopulation": 70160,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S07",
+      "sourceCode": "016",
+      "name": "Ilam",
+      "electoralPopulation": 71598,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S08",
+      "sourceCode": "002",
+      "name": "Banks Peninsula",
+      "electoralPopulation": 72855,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S09",
+      "sourceCode": "064",
+      "name": "Wigram",
+      "electoralPopulation": 72780,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S10",
+      "sourceCode": "043",
+      "name": "Selwyn",
+      "electoralPopulation": 68506,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S11",
+      "sourceCode": "039",
+      "name": "Rangitata",
+      "electoralPopulation": 69892,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S12",
+      "sourceCode": "057",
+      "name": "Waitaki",
+      "electoralPopulation": 72509,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S13",
+      "sourceCode": "007",
+      "name": "Dunedin",
+      "electoralPopulation": 67654,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S14",
+      "sourceCode": "045",
+      "name": "Taieri",
+      "electoralPopulation": 66935,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S15",
+      "sourceCode": "044",
+      "name": "Southland",
+      "electoralPopulation": 70048,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "S16",
+      "sourceCode": "017",
+      "name": "Invercargill",
+      "electoralPopulation": 67227,
+      "sourcePage": 2,
+      "electorateType": "general"
+    },
+    {
+      "scheduleCode": "M01",
+      "sourceCode": "5",
+      "name": "Te Tai Tokerau",
+      "electoralPopulation": 76202,
+      "sourcePage": 3,
+      "electorateType": "maori"
+    },
+    {
+      "scheduleCode": "M02",
+      "sourceCode": "3",
+      "name": "Tāmaki Makaurau",
+      "electoralPopulation": 70930,
+      "sourcePage": 3,
+      "electorateType": "maori"
+    },
+    {
+      "scheduleCode": "M03",
+      "sourceCode": "1",
+      "name": "Hauraki-Waikato",
+      "electoralPopulation": 75488,
+      "sourcePage": 3,
+      "electorateType": "maori"
+    },
+    {
+      "scheduleCode": "M04",
+      "sourceCode": "7",
+      "name": "Waiariki",
+      "electoralPopulation": 74426,
+      "sourcePage": 3,
+      "electorateType": "maori"
+    },
+    {
+      "scheduleCode": "M05",
+      "sourceCode": "4",
+      "name": "Te Tai Hauāuru",
+      "electoralPopulation": 75188,
+      "sourcePage": 3,
+      "electorateType": "maori"
+    },
+    {
+      "scheduleCode": "M06",
+      "sourceCode": "2",
+      "name": "Ikaroa-Rāwhiti",
+      "electoralPopulation": 73574,
+      "sourcePage": 3,
+      "electorateType": "maori"
+    },
+    {
+      "scheduleCode": "M07",
+      "sourceCode": "6",
+      "name": "Te Tai Tonga",
+      "electoralPopulation": 74197,
+      "sourcePage": 3,
+      "electorateType": "maori"
+    }
+  ]
+}

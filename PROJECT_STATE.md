@@ -1,56 +1,215 @@
 # Project state
 
-Updated 2026-09-13. GitHub is canonical. Stage 3D full 2008–2023 historical-panel integration and cross-year validation is complete, ready for an unmerged review PR. Known 2023 source discrepancies remain unresolved and explicitly preserved; no new integration discrepancy exists.
+Updated 2026-09-22. Stage 4: **Historical boundary-transition reconstruction** on existing branch `stage/04-boundary-2023-2026`. Base `624fe1d74aa43014e0c65f534c161e22b51e250d` (PR #10 merged). Do not restart, rebase or change branches.
 
-## Branch and checkpoints
+## Authorized scope and order
 
-Branch `stage/03d-historical-2008-2023`; clean base `455d7149caddfeefe23c817533e3ffb6c35809d4`, PR #9 merge verified before work. All six ingestions are merged.
+Continue 2023 results → final 2025/2026 boundaries first, then reconstruct 2011 → 2014 and 2017 → 2020 independently. Verify historic boundary regimes from official evidence. Use generic boundary-transition machinery with explicit source election/boundary, target election/boundary, population source and provenance configuration. These are separate derived baselines, never replacements for observed election data or the historical panel.
 
-- `dbb2d43`: 18 input hashes and six previous-panel baseline hashes pinned before integration.
-- `62d94e7`: six-year core/split integration, source semantics, conservative rename aliases and old-slice proof.
-- `c55a727`: focused mutation/cross-year tests and complete verification checkpoint.
-- `9ca104a363aac8bcc9a02876c9690aae1e6612f1`: final documentation checkpoint.
-- PR #10: https://github.com/jamesfeng24/nz-election-model-2026/pull/10 — open and unmerged. This metadata-only commit records publication; exact final SHA is branch HEAD. All checkpoints pushed.
+Primary weights must use contemporaneous official small-area population/electoral-population evidence, preferably meshblocks and official concordances. Whole-electorate land-area weights are prohibited. Preserve fractional party votes and party-by-party mass. Candidate/split sensitivity is secondary and only where defensible. No person linking, modelling, polling or geographic voter-residence inference from voting places.
 
-## Coverage and output files
+## Current resumable checkpoint
 
-| Year | General electorates | Party records | Candidate records | Ordinary split matrices | Cancelled split publications |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| 2008 | 63 | 1,197 | 499 | 63 | 0 |
-| 2011 | 63 | 819 | 423 | 63 | 0 |
-| 2014 | 64 | 960 | 451 | 64 | 0 |
-| 2017 | 64 | 1,024 | 431 | 64 | 0 |
-| 2020 | 65 | 1,105 | 561 | 65 | 0 |
-| 2023 | 65 | 1,105 | 468 | 64 | 1 |
-| Total | 384 | 6,210 | 2,833 | 383 | 1 |
+Stage 4 implementation is complete; final PR readiness checks are recorded below. Current branch `stage/04-boundary-2023-2026`, base `624fe1d74aa43014e0c65f534c161e22b51e250d`. Checkpoints: `d94db13` common geography audit; `822e198` recovered 2011/2017 party bounds; `1ee2e65` all three party baselines; `495e9e0` same-boundary and secondary coverage audit. Final documentation commit follows; its SHA is the branch head rather than a self-referential value in this file. No modelling, person linking or observed-data changes.
 
-`data/processed/historical/2008-2023/` replaces the earlier 2008-2014 output directory, using the same five content families plus manifest: electorates, party-votes, candidate-votes, split-votes, election-controls and manifest JSON. No redundant second builder. Each year retains national/supporting controls, original source IDs and per-year validation. 2008 aggregate splits remain null/not-collected; later aggregates, exact summaries, supporting 2020 matrix, source mappings and 2023 discrepancy layers are preserved without fabrication.
+| Transition | General / Māori coverage | General / Māori party rows | Population method |
+|---|---|---|---|
+| 2011→2014 | 63→64 / 7→7 | 832 / 91 | Level B necessary-constraint electoral-population outer feasible set; no resident point proxy |
+| 2017→2020 | 64→65 / 7→7 | 1,040 / 112 | 2018 Census electoral population, official meshblock lineage/memberships, disclosure bounds and 72 final controls |
+| 2023→2026 | 65→64 / 7→7 | 1,088 / 119 | 2023 Census electoral population on final2025 meshblocks, official memberships, disclosure bounds and 71 final controls |
 
-## Implementation and compatibility
+2011 uses all71 final2014 controls. The22 split predecessors contain1,827 published usual residents and retain coupled allocations. Widest general/Māori weight widths are16.0866/0.3757 percentage points. Corresponding widths for2017 are2.0032/2.8671 points and2023 are2.7973/2.7612 points. These are identification ranges, not standard errors. All unchanged-seat controls pass:2014 has20 general/five Māori;2020 has34 general/two Māori; current-transition technical suppression remains explicit. Rotorua→East Cape and Te Tai Tokerau→Tāmaki Makaurau each retain0–5 feasible people; zero is not established.
 
-`historical_panel.py` consumes only validated per-year processed JSON during normal panel builds. `panel_config.py` holds coverage and integration-only aliases; `panel_validation.py` audits structure, foreign keys and lossless reconstruction of processed source objects. `data/source-plans/historical-panel.json` pins 18 inputs and prior-panel hashes at base. The manifest records input/output/code/config hashes, counts, coverage and known discrepancies. `--verify-years` separately regenerates all six years in memory for compatibility; it never writes per-year files.
+All party totals conserve in both scopes and nationally for every coupled allocation. Fractional synthetic votes and interval endpoints remain separate from observations. No nominal midpoint. 2011 maximum numerical vote-extremum gap8.745829 votes (Upper Harbour, National), at most0.032162% of a conservative27,193.52 reconstructed-valid-vote lower bound. The directly optimized share-gap maximum is0.000428 percentage points, versus a largest overall geographical/numerical share interval of3.045 points. Keep the64-node deterministic budget: negligible for broad reconstruction use, not a promise of sub-vote precision. 2017 and2023 vote-gap maxima0.247524/0.252872; share-gap maxima0.000174/0.000174 percentage points. Feasible attainable brackets and outer numerical bounds remain separately stored; endpoints cannot be independently combined.
 
-Schema remains 1 with additive modern source metadata. Missing candidateContestStatus on legacy/2017/2020 records means held; 2023 explicitly states held/cancelled. Keeping old records intact permits byte-identical serialized 2008–2014 subsets and an exactly reconstructed old manifest, all six hashes checked on every build. All 18 per-election JSON inputs remain byte-identical to base (20 total files including non-JSON files in those directories). No raw or per-election transformations changed.
+`backtesting-readiness.json` validates all five requested same-boundary comparisons and the future2026 baseline. Explicit source-local join:2014 code043 `Rangit?¢kei` → `Rangitīkei`, supported by official code and Schedule C typography; original source labels unchanged. No cross-year party/person identity assertion.
 
-## Identity and source semantics
+`secondary-availability.json` records general target population-origin evidence coverage. Candidate-affiliation and split-vote baselines remain null because transferred local distributions are not identified without additional unvalidated assumptions. Held general source contests are63/64/64, with one cancelled2023 Port Waikato source. This is coverage metadata, not a candidate-ballot rate. All21 known2023 split discrepancies are copied unchanged. Port Waikato party vote remains substantive, candidate/split evidence unavailable; no destination imputation or rescaling.
 
-Canonical IDs retain existing Conservative and Mana aliases. Six new alias keys cover five approved rename/abbreviation relationships: New Conservative/New Conservatives → conservative; Te Pāti Māori → maoriparty; NewZeal → oneparty; NZ Outdoors & Freedom Party → nzoutdoorsparty; Social Credit → democratsforsocialcredit. Official Electoral Commission name-change evidence is recorded in panel_config.py, DATA_SOURCES.md and D022. Source labels/keys are unchanged; no temporary alliance or report grouping becomes a global alias. TOP remains separate from Opportunity. No candidate-person linking, incumbent/status inference, boundary harmonization or modelling occurred; all personId values remain null and geography is election-specific as published.
+Source inventory:901 registered entries (867 historical,34 boundary entries; five segments preserve one large geometry archive). No reacquisition. All26 branch-base historical processed/panel files are byte-identical, including six per-election sets and full panel; historical raw election files, aliases and legacy parser have no diff.
 
-Port Waikato 2023 retains 42,399 valid party votes, nine nominations/source zeros, null candidate shares/elected outcomes/winner/majority and one non-behavioural split publication. The by-election is absent. Aggregate denominators include its party votes; no destination mass is imputed or rescaled. The exact summary's published residual is not wholly behavioural evidence.
+Checks: all three crosswalk deterministic checks; common global constraint check; all three notional deterministic checks; readiness/secondary deterministic checks;901 source checksums; frontend30 tests, TypeScript and production build passed once because this is final integration readiness under AGENTS. Full Python suite:160 tests passed (32.744s). No configured Python formatter/linter; `git diff --check` used. Unmerged PR #11: https://github.com/jamesfeng24/nz-election-model-2026/pull/11 . Final implementation/documentation checkpoint `5dad8d49afd1e4f7fd60c3d751e83522d32c10dd`; this final handoff records the PR.
 
-The 21 known source reconciliation failures propagate exactly into election controls and manifest. Te Pāti Māori Party Vote Only local enclosure [1937.4629,1940.3855] versus aggregate [1979.22795,1982.18865] remains unresolved. This integration did not reopen the source investigation, widen tolerances or mark it resolved. A new/altered discrepancy fails against pinned input evidence. Details remain in docs/2023-split-discrepancy.md.
+**Exact next action:** review PR #11; Stage4 is complete and the PR remains unmerged. Do not begin another stage. After review/merge and explicit authorization, the exact next stage is **Local party-vote transformation backtesting only**.
 
-## Actual final verification
+Historical chronological entries below are evidence of prior checkpoints, not instructions to repeat acquisition or unresolved tasks superseded above.
 
-- Complete Python suite: 109 tests passed.
-- All 867 registered source hashes passed; all 18 processed-input hashes passed.
-- Full-panel --check --verify-years passed, including six per-election deterministic regressions.
-- Two complete panel builds produced identical bytes.
-- Five old content subsets plus reconstructed old manifest match their baseline hashes exactly.
-- All six elections' processed datasets remain byte-identical to base.
-- Integration-required frontend verification: 30 tests passed, TypeScript check passed, production build passed.
-- Python compilation and Git whitespace checks passed; no Python formatter/linter configured.
+## Saved progress
 
-## Exact next task
+- `fa025b0`: authoritative boundary source plan and acquisition/registration tools.
+- `0caa0f7`: four immutable official Stats NZ HD layer **metadata responses**, 2020 and 2025 general/Māori, registered in `data/sources.json`. Four full-resolution geometry responses and the population CSV/lookup were subsequently acquired as recorded below.
+- Working tree was clean on resumption; no surviving uncommitted acquisition found.
+- Source validation passed for 871 registered resources at the metadata checkpoint (867 historical + four boundary metadata).
+- Historical panel deterministic check passed before branching. Historical outputs remain unchanged; no derived boundary outputs yet.
 
-**2023→2026 boundary reconstruction only.** Begin only after explicit authorization. The panel does not harmonize boundaries or identify voters' residence. Do not fit models or ingest current polling as part of that next task without authorization.
+## Historical acquisition/access checkpoint (superseded by current checkpoint)
+
+Four complete HD geometry responses are preserved under `data/raw/boundaries/2020-2025/*-geometry.json`. Inventory: 2020 65 general + 7 Māori; 2025 64 general + 7 Māori. EPSG:2193, unique OBJECTIDs, closed rings, no transfer-limit truncation. Original JSON response bytes unchanged; no simplification requested. All 143 polygons passed strict topological validation without repair using pinned Shapely 2.1.2 / NumPy 2.2.6. Source/target meshblock membership and change-control reconciliation remain pending. Total source registry now 878 (867 historical + 11 Stage 4, including Schedule B). Population checkpoint `c91eb24` is pushed.
+
+`data/source-plans/boundary-2023-2026.json` holds exact reviewed URLs. Metadata identifies layer 0, native EPSG:2193, official general/Māori fields for each year. Final 2025 layers must be used, never proposed layers. Official publication confirms 2020 boundaries used for 2020/2023 and final August 2025 boundaries for 2026. Historical regime evidence remains to acquire after current geographic checkpoint.
+
+Schedule B direct curl returned a 212-byte HTML access response, not a PDF; it was rejected and not registered. Schedule B was subsequently acquired unchanged through its normal Chrome link and is now preserved. Schedule C direct access also returned HTML; browser download was requested but no completed local file was found. Do not register the HTML as PDF. The existing Stats NZ layer 122744 browser page subsequently loaded. Its linked official CSV and lookup PDF are now preserved and registered (873 total resources). CSV has 57,553 unique meshblocks, 64 general and seven Māori membership codes. General population is suppressed (-999) in 5,697 rows, Māori in 29,990; all other counts are nonnegative multiples of three. Suppression is not zero. The source uses random rounding to base three; exact control reconciliation needs confidentiality-aware treatment. No weights have been calculated. The CSV contains target membership but no source membership; official concordances or geometry are still required. Do not re-download these two valid sources.
+
+Historical next action (completed): acquire deterministic full-resolution geometry queries using preserved layer metadata; obtain official schedules B/C and layer 122744 schema/population evidence through normal official access; reconcile 65+7 source and 64+7 target inventory and official changed/unchanged controls. Save this geographic checkpoint before lengthy historical acquisition. Never infer population transfer from metadata or electorate area.
+
+## Remaining checkpoints
+
+A. Current 2023→2026 geometry/schedules/population and change reconciliation.
+B. Generic crosswalk framework and validated current transition.
+C. Historical 2011→2014 and 2017→2020 geography/population sources, saved before lengthy processing.
+D. Three population crosswalks with conservation and quality metrics.
+E. Three separate notional party-vote baselines with per-party conservation.
+F. Optional defensible candidate/split sensitivity.
+G. Final determinism, substantive validation, immutable historical-byte checks, documentation and unmerged PR into main.
+
+Every meaningful checkpoint must update this handoff and be pushed. No Stage 4 PR yet. All three transitions must be complete before final PR readiness. Preserve Port Waikato cancelled candidate/split missingness, substantive party votes and the 21 documented 2023 source discrepancies. No prior output or panel changes authorized.
+
+Exact next stage after all three transitions are complete, only on explicit authorization: **Local party-vote transformation backtesting only.**
+
+## Geography implementation checkpoint
+
+`scripts/boundaries/geometry.py` decodes Esri clockwise shells and counterclockwise holes, preserves multipart islands, and rejects invalid topology without repair. `scripts/tests/test_boundary_geometry.py` includes four synthetic failure/structure tests, one real-source test covering all four layers, and a deterministic audit test. Run with `.venv/bin/python -m unittest scripts.tests.test_boundary_geometry -v`; six tests passed. `requirements-boundaries.txt` pins Shapely 2.1.2 and NumPy 2.2.6. Inherited system NumPy 1.26.4 caused a wheel runtime error; isolated pinned NumPy resolved it. Install these dependencies in a dedicated environment for subsequent boundary checks; do not alter legacy ingestion dependencies.
+
+Layer 122744's geometry export UI was inspected: Shapefile export is approximately 160 MB, EPSG:2193, and Create Export routes to login. The public CSV attachment already preserved is available without login; polygon export requires normal Stats NZ/Datafinder login. No login bypass attempted. Next bounded access work: seek a published official meshblock concordance/public equivalent, or obtain the official export through authenticated normal access. The source CSV lacks source-boundary membership, so do not produce weights yet.
+
+## Historical geometry-only audit (access subsequently resolved)
+
+- Important pushed acquisition SHAs: `472f43d` (all four HD geometry responses), `7f196e3` (topology decoder/tests and Schedule B).
+- Geographic acquisition audit: `data/processed/boundaries/2020-2025/geography-validation.json`, regenerated by `.venv/bin/python -m scripts.boundaries.audit_geography`; `--check` passes. It is explicitly incomplete, not a vote-transfer output. All 19 officially unchanged seats have non-identical geometry across the published vintages. Symmetric-difference areas are diagnostics only, not population weights. Population movement remains null. The derived Schedule B control file preserves its source/page and the East Cape/East Coast rename.
+- Full Python suite: **115 tests passed**, including six focused geometry/audit tests. All **878 registered raw-source checksums passed**. Historical panel deterministic check passed. Git comparison against base confirms every per-election processed dataset and historical panel file remains byte-identical. No frontend/shared TypeScript changed; frontend checks not run at this incomplete acquisition checkpoint. `git diff --check` passed; no Python formatter is configured.
+- Minimal CI change installs `requirements-boundaries.txt` before existing Python checks. No check removed, path filter or cancellation change introduced.
+- Bounded public alternative inspected: Stats NZ `Meshblock_2025/FeatureServer` describes January 2025 **57,551** meshblocks, not final version 2's **57,553**. It has not been accepted or registered as equivalent. Do not substitute it without valid official concordance evidence.
+- **Exact next action:** obtain normal authenticated Stats NZ Datafinder export of layer **122744**, revision/version **418310**, EPSG:2193, preferably GeoPackage for full field names and offline SQLite/WKB inspection. The existing export dialog's Create Export link routes to login. User login is needed for this route; never bypass it. Preserve returned archive unchanged, exact export settings/URL/time/checksum, verify all 57,553 codes against the saved CSV, then establish 2020 electorate membership. Check surviving downloads first. Schedule C is now explicitly planned but remains unacquired; its direct response was HTML, and no completed browser download was found. Resume from the exact official plan URL rather than rediscovering it.
+- No crosswalk weights, synthetic votes, older transition acquisition or fitted model yet. Checkpoint A remains incomplete pending membership/population/control reconciliation. No Stage 4 PR; do not create the final PR before all three transitions pass.
+
+## Authenticated continuation — 2026-09-14
+
+User signed in to Datafinder. On the existing layer 122744 page, started a full-layer GeoPackage export in native EPSG:2193 (UI estimate 84 MB), without a crop. Export is preparing; do not create a duplicate. Check its existing progress dialog / completed downloads before any new request. The old Schedule C download was recovered unchanged from Downloads, registered as `rc-2025-schedule-c`, and checksum-validated (879 total resources). No re-download was needed. Next: preserve/checksum the completed GeoPackage archive, inspect its metadata and 57,553 meshblock IDs against the preserved CSV, then continue source-boundary membership audit.
+
+## Exact meshblock geometry acquired
+
+Authenticated export **4647609** completed and was downloaded normally from `https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647609/download/`. Original ZIP: **143,811,969 bytes**, SHA-256 **7d5857d44683f4f62c0309bd15c2f2bdf71f6ba0044a4a90f77ac9bec03f0da2**. ZIP CRC passes. Preserved unchanged as five ordered 32-MiB-or-smaller byte segments in `data/raw/boundaries/2020-2025/meshblock-export/`; this is reversible storage, not source transformation. Manifest `data/source-plans/meshblock-2025-export.json` records export settings, source URLs, timestamp, original/archive member/part hashes. Registry has 884 entries: 13 distinct Stage 4 official resources represented by 17 registry records because this one archive occupies five byte segments. Do not re-export/re-download it.
+
+`python3 -m scripts.boundaries.archive data/source-plans/meshblock-2025-export.json /tmp/nz-meshblock-2025-original.zip` reconstructs and verifies identical original ZIP bytes. Focused archive reconstruction/mutation test passed; all 884 registered checksums passed. Next: inspect the GeoPackage and compare all IDs/population/target membership to the preserved CSV, then establish source-boundary memberships. Geometry and population-field reconciliation are not yet claimed.
+
+## Recovered concordance checkpoint
+
+Recovered the existing completed official export **4647631** (no duplicate export requested): table **120975**, Geographic Areas Table 2025, version **404495**, original CSV ZIP now `data/raw/boundaries/2020-2025/geographic-areas-table-2025.zip`. ZIP CRC passes; 57,551 unique MB2025 codes; explicit GED2020/MED2020 code/name fields. Registered source `stats-2025-geographic-areas-table`; registry now 885 records. Source geometry export remains safely pushed at `cfdbc94`.
+
+Recovered uncommitted `scripts/boundaries/geopackage.py` and three passing focused tests. This adapter already validated all 57,553 GeoPackage geometries and their ID/population/target membership against the saved CSV in the previous uninterrupted work. No transformations or historical data rewritten. Exact next action: join final-version meshblocks to the official 2025 concordance by code, quantify unmatched units, and resolve only those using authoritative lineage/geometry evidence. Preserve all missingness; no weights yet.
+
+## Official lineage acquisition checkpoint — 2026-09-14
+
+Recovered concordance/GeoPackage adapter pushed at `9618f27`. Exact initial join: 57,517 final meshblocks match Geographic Areas Table 2025 directly; 36 new codes do not; 34 old-table codes are absent from the final population inventory. The deterministic `scripts.boundaries.audit_membership` records these facts and validates matched source code/name pairs against 2020 geometry metadata. Three focused membership tests pass; audit regeneration/check passes. No weights produced.
+
+Acquired only the needed official Geographic Areas Table 2026, table 123518, export 4648225: original 2,260,265-byte CSV ZIP preserved and registered. CRC passes; 57,575 rows. Its explicit MB2026_code→MB2025_code fields provide predecessors for all 36 unmatched final-2025 codes (4019179–4019214). Next action: validate target electorate consistency and apply those explicit two-step official joins, with traceable source IDs; do not infer predecessors from numeric similarity. No geometry fallback is currently indicated. Registry now 886 entries, 15 distinct Stage 4 resources. Earlier historical data unchanged. Stage 4 remains incomplete; no PR yet.
+
+## Complete official source-membership join — 2026-09-14
+
+Acquisition checkpoint `88f528e` is pushed. All **57,553** final meshblocks now have authoritative 2020 general/Māori source memberships: **57,517 direct code joins + 36 explicit historical-code joins** using the preserved 2026 table. All 36 lineage records also match the final population CSV's target electorate codes and exact names. No geometry inference, prefix matching, zero-filling or new source download is needed for membership. Five focused membership tests pass, including malformed lineage and deterministic real-data coverage. `membership-validation.json` preserves the 36 joins and source hashes; it is a membership audit, not a vote-transfer matrix.
+
+A bounded Schedule B consistency check found only two meshblock identity exceptions among officially unchanged seats: 4018221 affects East Cape/East Coast; 4019214 affects Te Tai Tokerau/Tāmaki Makaurau. Relevant published populations are suppressed (-999), not observed zero. Investigate these against the preserved technical-adjustment metadata and geometry before final population/control reconciliation; do not turn suppressed cells into zero solely because Schedule B says unchanged. Exact next action: finish the reproducible geometry/population inventory audit and Schedule C population-control reconciliation, preserving suppression/random-rounding bounds, then build the 2023→2026 population crosswalk. Older transitions and notional vote baselines remain outstanding; no final PR yet.
+
+## Population inventory/control checkpoint — 2026-09-14
+
+Membership checkpoint `7bda4ba` is pushed. New `audit_population.py` reconstructs/checksums the immutable ZIP, checks every archived member hash/CRC, verifies all 57,553 GeoPackage geometries and CSV population/target fields, and validates all 71 Schedule C totals within disclosure-compatible integer bounds. Suppressed values retain null substantive values with bounds 0–5; released base-three rounded values permit ±2 (lower bound at least 6), not nearest-rounding ±1. These are disclosure bounds, not confidence intervals or inferred exact counts. All controls pass; no suppressed cell was filled. Derived Schedule C transcription records the duplicate overlaid Māori table and excludes projection columns.
+
+Thirteen focused tests passed across population, membership, GeoPackage and archive modules; real-data tests prove deterministic regeneration of both new audits. Full final-stage suite not yet rerun. Source checksum validation: 886 passed. No frontend/TypeScript changes or frontend checks at this Python-only checkpoint. Exact next action is the current checkpoint above; preserve both suppressed technical exceptions rather than assigning invented zeros. Older transitions and all three synthetic vote baselines remain outstanding.
+
+## Clean usage-limit stop
+
+Population audit checkpoint `ecf9d73bf5ca283c2abf0b6dfc7ac6ecd1c43f8b` is pushed; remote tracking matches. Usage check showed 85% of the five-hour window consumed, so no further source acquisition was started. Existing and new downloads are safely preserved. The observed historical per-election and integrated-panel paths have no differences from branch base.
+
+For the next session, run the two audit `--check` commands in docs/reproducibility.md only as needed, then inspect the preserved geometry/metadata for these exact exceptions: MB4018221 has official source Rotorua (044), target East Cape (008), both populations suppressed; MB4019214 has official predecessor MB0358409, source Māori Te Tai Tokerau (5), target Tāmaki Makaurau (3), both populations suppressed. Treat official technical-adjustment narrative as evidence to assess, not permission to replace suppressed values with zero. Then complete the current population crosswalk with explicit uncertainty before older transition acquisition. No new login/download is needed for the current membership evidence. Final PR remains deferred until all Stage 4 outputs pass. Next modelling stage remains Local party-vote transformation backtesting only, not authorized in this run.
+
+## Suppression exceptions resolved as intervals — 2026-09-14
+
+Resumed clean at `8d97c9807f0d0a58d689de1fd110a95f043c3951`; fetch confirmed remote state, no surviving uncommitted work or reacquisition. New `current_inputs.py` loads the registered membership/population evidence; `feasible.py` implements exact controlled integer/ratio bounds; `suppression_report.py` generates the two-exception report. Nine focused feasibility/membership tests passed, including exhaustive attainable-endpoint/conservation fixtures and deterministic real-source output. Source checks remain mandatory at the next acquisition/final checkpoint; no raw data changed here.
+
+Both exceptions remain population **[0,5]**, not uniquely identified. Rotorua→East Cape outgoing weight is **[0,5/64501]**; Te Tai Tokerau→Tāmaki Makaurau is **[0,5/76207]**. Published target controls are 70,147 and 70,930 respectively. Same-vintage exact source totals are not registered; 2023 turnout population is a different vintage and must not be imposed. Technical-change prose does not justify replacing suppression with zero. D023 records the mathematical treatment. No nominal values or reconstructed votes produced. Historical inputs unchanged.
+
+Exact next action: build the complete current transition from grouped meshblock disclosure intervals using the same target equations and sharp outgoing/reverse composition bounds. Preserve coupled constraints and null non-identified weights; do not sum marginal endpoints as a feasible matrix. Validate full 65→64 general and 7→7 Māori coverage, identity/rename/technical exceptions and conservation. Push that checkpoint before acquiring older transition inputs. Stage 4 and final PR remain incomplete.
+
+## Current transition feasible crosswalk complete — 2026-09-14
+
+Suppression checkpoint `14566b9` is pushed. `scripts.boundaries.transition` now emits a deterministic feasible crosswalk and manifest under `data/processed/boundaries/2023-2026/`: **65→64 general, 123 edges; 7→7 Māori, 10 edges; 57,553 meshblocks per population universe**. The source/target version configuration is separate; no common-geography panel created. Source outgoing weights sum to one for every feasible joint population assignment. Reverse composition, dominant predecessor/share bounds, non-dominant share, positive/effective predecessor counts, official changed/unchanged/rename state, input/code hashes and missingness are exported. Non-identified point weights remain null; no nominal population or vote baseline is fabricated. Interpretation in docs/data-dictionary.md and D023.
+
+Ten focused transition/composition/feasibility tests passed. Exhaustive small fixtures prove metric bounds; real tests build attainable witnesses for every lower/upper weight endpoint and check all destination/source conservation equations. Deterministic crosswalk/manifest `--check` passed; historical observed/panel paths remain byte-identical to base. Full final-stage checks are deferred until older transitions are complete. No raw acquisition during this unit.
+
+Exact next action: acquire only missing contemporaneous official small-area population/concordance evidence for **2011→2014 and 2017→2020**, preserving source inventories before processing. Known catalogue discoveries from earlier work: Geographic Areas File 2013 table104685, 2018 table104680, 2020 table104285. Check their actual historic electorate fields and compatible population releases; do not substitute modern population or electorate area. Reuse generic feasible constraints with small source-specific adapters where justified. All three party-vote baselines follow completion of the older crosswalks. No final PR yet; no modelling authorized.
+
+## Older-transition acquisition started
+
+Current feasible crosswalk and manifest are pushed at `abcc849` (implementation checkpoint `b87d919`). Newly preserved 2014→2020 inputs: final 2018 electoral-population CSV (53,582 meshblocks, Stats NZ layer104578/version310991), lookup PDF, and Geographic Areas File 2020 original export ZIP4648445 (53,596 records, table104285/version381332; GED2014/MED2014 fields). Registry **889**, all checksums pass. Generalized the existing boundary registrar only for explicit plan path/required CSV columns/ZIP CRC and period metadata; no historical parser/data change. Source plan: `data/source-plans/boundary-historical-transitions.json`.
+
+The official Geographic Areas File 2013 table104685 (version298536) exposes GED2007/MED2007 fields; its CSV export has been requested in the existing browser and may complete shortly. Preserve that existing export rather than requesting another. Datafinder search did not reveal a 2013 electoral-population layer; its official 2013 usual-resident meshblock layer8437 is available, but do not assume it is electoral population. A government dataset-request response indicates small-area electoral population release began with 2018/2020; further bounded evidence is needed before choosing a documented older proxy. Do not force matching controls across population definitions.
+
+Next: check completed 2013 export/downloads, reconcile 2020 final meshblock IDs against preserved concordance (use official later lineage if needed), and acquire only missing population/control/membership evidence. Save each batch. Both older crosswalks and all synthetic votes are still outstanding; no final PR.
+
+## Recovered 2013 export — 2026-09-15
+
+Resumed clean at `98dcedf19c5cf01e604fbfac3c37040007f46256` on the existing branch. The 2020 population/lookup/concordance files were already registered and were not downloaded again. Recovered the **existing** completed Geographic Areas File 2013 export4648446 through authenticated browser download (no new export). Plain HTTP correctly required authentication; no access bypass. Original ZIP preserved under `data/raw/boundaries/2007-2014/`, CRC and unique MB2013 identity/schema checked; source registry now 890 and all checksums pass. Catalogue table104685/version298536 supplies GED2007/MED2007 membership.
+
+No unfinished code survived this resume. Exact next action: complete 2017→2020 first. The preserved 2020 population and concordance have 53,578 directly matching IDs and four new final meshblocks 4012027–4012030. Official Geographic Areas Table2021 (table105172/version381334) was inspected but no export was requested yet; MB2021→MB2020 historical fields and GED2020/MED2020 fields can resolve lineage if they identify those four codes. Acquire only this missing source and target controls/official change evidence as necessary, then validate the older transition. Do not redo the completed current crosswalk. Stage4 remains incomplete and no PR is authorized yet.
+
+## Recovered 2021 lineage export — 2026-09-20
+
+Resumed clean at `a1d94c5`. Recovered existing completed export4649772 (no duplicate export), table105172/version381334: 53,598 unique MB2021 records, archive CRC passes. Four final-2020 codes are two documented descendant pairs: 4012027/4012028→MB2020 4011907; 4012029/4012030→MB2020 2909110. Their target memberships agree with the expected final electorate fields; complete offline join/control validation follows. Count each final population row once, never add retired predecessor population. Registry source `stats-2021-geographic-areas-table`.
+
+Next: preserve official 2020 Schedules B/C from the previously discovered Elections NZ report links (neither PDF survived the interrupted command), then implement/test the explicit final-2020→old-MB2020 membership adapter and reconcile all 72 target population controls. The 2017→2020 crosswalk remains incomplete. Existing current crosswalk and observed election/panel outputs unchanged; no modelling or final PR.
+
+## 2020 membership audit and population controls — 2026-09-20
+
+Recovered lineage checkpoint `a5fa217` is pushed. New `scripts.boundaries.lineage_2020` validates all 53,582 final population rows through official MB2021→MB2020 lineage, including 53,578 unchanged IDs and two one-to-many predecessor groups. The only 16 unused old records are officially outside both electorate systems. Each final population row is retained exactly once with suppression bounds. Output: `data/processed/boundaries/2017-2020/membership-validation.json`. Four focused tests pass (real deterministic source check, wrong target/absent parent, parent double counting, dropped in-electorate source). Audit `--check` and diff whitespace checks pass. No prior code/output changed.
+
+2020 Schedule C downloaded through the authenticated normal browser after the user cleared the Elections NZ CAPTCHA. Original PDF registered as `rc-2020-population-controls`; all **892** source checksums pass. `data/controls/boundaries/2020-population-controls.json` transcribes 72 electoral-population values, excluding projections; all 72 fall within the meshblock disclosure bounds. Schedule Māori codes66–72 map by exact ordered labels to Stats NZ1–7. Preserve original PDF label Rangitῑkei when making an explicit local typography join to Rangitīkei. The failed direct HTTP responses were HTML and were excluded from raw sources (moved to temporary diagnostics).
+
+Next: obtain the already-discovered 2020 Schedule B PDF from the now-cleared Elections NZ browser page; it has not downloaded yet. Validate its corrected unchanged Māori list (Te Tai Hauāuru and Waiariki), then connect the audited cells and 72 controls to the generic feasible crosswalk adapter. Complete unchanged/rename checks and endpoint/conservation tests before claiming 2017→2020 complete. Both older full crosswalks, notional vote baselines and final Stage4 PR remain outstanding. No modelling or next stage started.
+
+## 2017→2020 feasible crosswalk complete — 2026-09-20
+
+Acquisition/audit checkpoint `33f3cba` pushed. Original corrected 2020 Schedule B now preserved after user-assisted normal browser download; registry **893**, all checksums pass. The explicit `inputs_2020` adapter uses official lineage, final small-area 2018 electoral populations and all 72 Schedule C controls. New transition output: `data/processed/boundaries/2017-2020/{crosswalk,manifest}.json`: **64→65 general / 97 edges; 7→7 Māori / 10 edges; 53,582 population meshblocks per universe**. All 34 unchanged general and two unchanged Māori seats have identity membership. Corrected Schedule B lists Waiariki unchanged, Hauraki-Waikato changed. Rimutaka→Remutaka is a local unchanged-name join; eight older unaccented source labels have explicit macron joins, preserving raw/source labels. Schedule C Rangitῑkei typography maps locally to Rangitīkei. No population allocated to a retired predecessor in addition to its descendants.
+
+Fourteen focused existing transition/feasibility/composition/lineage checks plus three new 2020 transition tests pass. Every 2020 edge weight endpoint has a tested feasible witness satisfying destination totals, bounds, source population conservation and outgoing weights summing to one. 2017→2020 deterministic check passes. Existing 2023→2026 crosswalk bytes unchanged; only its manifest code hash refreshed for generic adapter dispatch. Its deterministic check passes. Historical per-election and historical-panel paths remain byte-identical to branch base. No nominal suppressed population, notional votes, modelling, person linking or final PR.
+
+Exact next action: complete **2011→2014**. Reuse recovered GAF2013 official GED2007/MED2007 source membership. Inspect official GAF2016/table104684 or other already-discovered target concordance for GED2014 and MB2013 lineage; acquire only missing evidence. Resolve contemporaneous 2013 small-area electoral population availability before using any documented usual-resident proxy (layer8437 is known, not yet acquired). Obtain final 2014 controls/change evidence appropriate to the population definition. Save source checkpoint before lengthy processing. Then validate all three crosswalks and create notional party-vote baselines with feasible uncertainty/conservation. Exact next stage remains Local party-vote transformation backtesting only, not authorized now.
+
+## 2013 source-basis investigation authorized — 2026-09-21
+
+2017→2020 complete checkpoint `90e20ed` is pushed. Recovered and registered official GAF2016 export4654757/table104684/version298534: 47,062 unique MB2016 records with MB2013 lineage and GED2014/MED2014. Preserved 2013 resident population layer8437 CSV export4654758 (geometry omitted by official export option), 46,621 unique meshblocks. Both original ZIP CRC checks pass; all 895 registered checksums pass. The 22 MB2013 predecessors with multiple 2014 electorate pairs have 1,827 published usual residents in this source, no suppressed resident count among these 22. Whole-parent allocation or duplicate descendant allocation is prohibited. This release permits rounded zero/three and documents -999 suppression/-995 not calculated; do not reuse the later electoral-population parser unmodified.
+
+User explicitly directs bounded Level A search for actual historic electoral-population inputs, then Level B formula-derived feasible bounds if defensible, and only otherwise documented Level C proxy. No simple resident proxy implemented or selected. Investigate published Māori descent vs electoral Māori descent, imputation/unknowns, precise option ratio and its spatial application. Official methodology located: https://www.stats.govt.nz/methods/the-mathematics-of-electorate-allocation-in-new-zealand-based-on-the-outcome-of-the-2013-census-and-maori-electoral-option-2013/ and its `maths-2013-electorate-allocation.pdf` attachment (not downloaded yet). Do not assume the national ratio alone specifies local application. The 2019 Stats NZ response at data.govt.nz/datasetrequest/show/416 points to 2018 data; it does NOT prove historic 2013 data never existed. Exact continuation: preserve/read methodology, inspect official Census meshblock descent tables, obtain final2014 Schedule C; select strongest justified basis with coupled 22-parent constraints. No further user confirmation needed for the authorized evidence hierarchy unless materially consequential ambiguity remains. All synthetic votes, 2011→2014 crosswalk, final audit/PR still outstanding.
+
+## 2013 electoral-population evidence preserved — 2026-09-21
+
+Recovered two unchanged official methodology PDFs and the completed full official 2013 Census meshblock CSV archive from temporary storage; no duplicate download. Registered three sources, **898 total checksums pass**, archive CRC passes. The full archive uses Windows-1252 and contains seven CSV tables; Individual Part 1 has explicit 2013 Māori descent Yes/No/Don't Know/Not Elsewhere Included/total columns. It mixes geographic levels and census years; filter explicitly. Raw evidence is not yet a derived electoral-population estimate.
+
+Official retrospective imputation methodology page 5 confirms that 2013 electoral Māori descent was separately imputed for responses other than Yes/No, using household descent, iwi, ethnicity, age and island, with random assignment. Public descent counts cannot be treated as the completed electoral variable. The 2013 allocation methodology gives exact national roll counts 256,212 / 203,640 and national MEP420,990, but uses distinct island ratios for general-seat allocation. Its island GEP totals plus national MEP do not constitute one additive resident-population partition; do not impose a false global equality. Local application still requires authoritative clarification.
+
+Exact next action: inspect the preserved descent categories and disclosure footnotes without dumping entire CSVs; acquire the final 2014 Schedule C control source from the official historical-boundaries index; finish the bounded A/B/C evidence decision. No proxy or 2011→2014 crosswalk selected yet. The two completed crosswalks, historical observed outputs and panel are unchanged. No modelling or final PR.
+
+## Final 2014 control evidence recovered — 2026-09-22
+
+Evidence checkpoint `0a95ac5` pushed. User-assisted original Schedule C download is now preserved and registered; original Stats NZ Research and Analytical Report2000#12 (Westbrooke/Ryan, cited by later official guidance) preserved from ACE's archived copy. Registry **900**, all source checksums pass. Page11 of the original paper explicitly defines the formula using the area's own Māori/general roll counts and descent population, including electoral districts; it does not authorize substituting the national ratio for every meshblock.
+
+`data/controls/boundaries/2014-population-controls.json` transcribes all **71 final** Schedule C rows, checking each population-minus-quota against the printed difference. It excludes proposed tables/projections. Sums are NI general **2,869,797**, SI general **954,627**, Māori **419,931**, distinct from the seat-allocation methodology's NI2,867,110/SI954,871/nationalMEP420,990. Preserve these distinct geographic calculation scopes, not a false additive national partition.
+
+The public Census archive contains **46,629 unique MB rows**, versus46,621 in the geographic resident layer. Five independently rounded national rows repeat in different table groupings; do not sum them. Descent confidentiality affects4,717 Yes cells and4,424 No cells. Unknown/not-stated imputation and absent local roll proportions prevent an exact formula reconstruction. Next: finish a reproducible evidence audit and test category/lineage bounds, then select the strongest defensible transition representation under the authorized hierarchy. No proxy implemented, no weights fabricated, no final PR.
+
+## 2011→2014 constrained population implementation — 2026-09-22
+
+Resumed clean at `e8291c92f794b484a7b7f4b2b2356d5d00739854`; fetch preserved the existing branch/base. No new source acquisition or surviving unfinished work. Added `census_2013.py`, `inputs_2014.py`, `coupled.py`, `transition_2014.py`. Six focused tests pass, including exhaustive small-system flow/fractional extrema and Census unknown-imputation partitions. Real inputs reconcile **63→64 general /119 edges;7→7 Māori /8 edges**, all71 Schedule C controls, and22 coupled split parents/1,827 published residents. Deterministic2011→2014 generation/check passes. The two older completed crosswalks were not modified or regenerated.
+
+Level B selected (D024): necessary electoral-population bounds with unknown local roll fractions, not exact meshblock reconstruction. Widest outgoing general interval0.1608658452, Māori0.0037568948. SciPy1.16.0 already works in the existing environment and is now pinned in requirements-boundaries.txt. Exact network witnesses enforce all constraints together; no independent interval endpoints or nominal suppressed/imputed population. Source integrity check is run at checkpoint. No frontend code changed; unrelated frontend checks not run.
+
+Next: complete official2014 changed/unchanged audit and quantitative party-vote uncertainty diagnostic, then common three-transition validation and all three notional party outputs. Two zero-published-resident MBs that are officially outside final electorates remain separately documented with rounding bounds; do not silently turn them into zero or assign a target. Target maximum-predecessor share currently has explicitly conservative bounds. Stage4/PR remain incomplete. No modelling, person linking or observed-output changes.
+
+## Three-transition common audit — 2026-09-22
+
+Preserved original user-downloaded2014 main Commission report, registered as rc-2014-boundary-report. Its pages9–12 establish20 unchanged general/five unchanged Māori seats and technical changes not involving population; all unchanged target memberships are identities. `2014-change-controls.json` retains exact names; joins normalize only source-local accents/punctuation.
+
+`python -m scripts.boundaries.contract` passes: every published edge population and outgoing-weight endpoint matches a global LP/fractional optimum, all source bounds match, target controls/composition match and feasible witnesses conserve each source. Existing2017→2020 and2023→2026 crosswalks were read only. Registry901 checksums pass. Tests cover corrupted bounds, controls and duplicate IDs as well as exhaustive small systems. No vote baseline yet; continue there next.
+
+## Final verification — 2026-09-22
+
+160 Python tests pass, all901 source checksums pass, all three crosswalk and party-vote deterministic checks pass, common global/readiness/secondary audits pass. All26 observed historical/panel files compare byte-identically with branch base; historical raw/aliases/legacy parser have no diff. Frontend30 tests, typecheck and build pass. No new data acquisition, model, person link or synthetic midpoint. Stage4 complete; next is Local party-vote transformation backtesting only after explicit authorization.

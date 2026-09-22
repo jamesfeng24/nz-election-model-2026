@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "status": "resolved_as_partially_identified",
+  "transitionId": "nz-2023-to-2026",
+  "inputHashes": {
+    "data/raw/boundaries/2020-2025/population-2025.csv": "32e97d7f2128e1de2fbfeee9a73a258f449ded602cca77aa9d97c0516430f6ff",
+    "data/raw/boundaries/2020-2025/geographic-areas-table-2025.zip": "cc18d753a2922697e2edfa361db3d5541a5f92acd9f0f67cba90f8f0779c5103",
+    "data/raw/boundaries/2020-2025/geographic-areas-table-2026.zip": "d1987e306014eedb35dd859726295d2c6e962dc5cbd93d4afa1303ecaffc13e4",
+    "data/raw/boundaries/2020-2025/general-2020-geometry.json": "e2ef2de2fc6ab595161ce87ce84ee279ac718df74ccbbbfea36b83ffa7cd3061",
+    "data/raw/boundaries/2020-2025/general-2025-geometry.json": "2badebc87aaabe4f91d686ff27bfc0844e36ddfc6d40705963456917e3008f15",
+    "data/raw/boundaries/2020-2025/maori-2020-geometry.json": "0994a4e00022c4caad11b04eed86f183b332a013173b02b7466ac425cfa342b5",
+    "data/raw/boundaries/2020-2025/maori-2025-geometry.json": "181044b74c2a1c89926c89d9a884faabe8e43fb54cbcd9cad1f461cd6399537b",
+    "data/controls/boundaries/2025-population-controls.json": "477bff0d1e542b61ede0ab23b1d0270a97cd0e38e2777656cae8364bd5a7eb6b",
+    "data/raw/boundaries/2020-2025/schedule-c.pdf": "6a798bb3e6688d6ff36f1b86d984ee1b4719a76e19d22f13a9421d4b33043f51",
+    "data/controls/boundaries/2025-change-controls.json": "781eb1f22749ec1f4ba195dcf88277560a467d554604b059e5167eabbafc267e",
+    "data/raw/boundaries/2020-2025/schedule-b.pdf": "df6189571d258ada9d650086e23240f1a555aaf8825f9284579eefd9d9673d62"
+  },
+  "method": "Integer meshblock disclosure intervals plus exact published target totals; destination partitions are independent, giving sharp edge and outgoing-ratio bounds.",
+  "conditionality": "Bounds assume Schedule C totals describe the same electoral-population universe. No unregistered source-side total or unobserved subgroup count is imposed.",
+  "technicalAdjustmentEvidence": "Preserved layer metadata describes technical changes without population; Schedule B marks affected seats unchanged, but neither identifies these suppressed cells individually as zero.",
+  "nominalPopulation": null,
+  "exceptions": [
+    {
+      "meshblockId": "4018221",
+      "source": "044",
+      "target": "008",
+      "population": {
+        "published": -999,
+        "value": null,
+        "status": "suppressed",
+        "lower": 0,
+        "upper": 5
+      },
+      "membershipMethod": "official_exact_code",
+      "sourceConcordanceMeshblockId": "4018221",
+      "electorateType": "general",
+      "sourceName": "Rotorua",
+      "targetName": "East Cape",
+      "publishedSourcePopulationControl": null,
+      "sourceControlReason": "No same-vintage source-electorate total is registered; election turnout population is a different vintage and is not imposed.",
+      "targetPopulationControl": 70147,
+      "conditionalPopulationLower": 0,
+      "conditionalPopulationUpper": 5,
+      "transfer": {
+        "source": "044",
+        "target": "008",
+        "lower": 0,
+        "upper": 5,
+        "meshblockCount": 1,
+        "suppressedCount": 1,
+        "sourcePopulationLower": 64496,
+        "sourcePopulationUpper": 64565,
+        "weightLower": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "weightUpper": {
+          "numerator": 5,
+          "denominator": 64501
+        },
+        "weight": null,
+        "uniquelyIdentified": false
+      },
+      "targetCompositionLower": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "targetCompositionUpper": {
+        "numerator": 5,
+        "denominator": 70147
+      },
+      "notionalPartyVoteImpact": {
+        "formula": "source party votes × transfer weight",
+        "pointEstimate": null,
+        "lowerMultiplier": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "upperMultiplier": {
+          "numerator": 5,
+          "denominator": 64501
+        },
+        "conservation": "Any feasible increase here reduces other destinations from the same source; marginal endpoints must not be summed as a joint allocation."
+      },
+      "interpretation": "Zero is feasible but not identified. Preserve suppressed value and full feasible range; do not force an unchanged-seat identity or discard this meshblock."
+    },
+    {
+      "meshblockId": "4019214",
+      "source": "5",
+      "target": "3",
+      "population": {
+        "published": -999,
+        "value": null,
+        "status": "suppressed",
+        "lower": 0,
+        "upper": 5
+      },
+      "membershipMethod": "official_historical_code",
+      "sourceConcordanceMeshblockId": "0358409",
+      "electorateType": "maori",
+      "sourceName": "Te Tai Tokerau",
+      "targetName": "Tāmaki Makaurau",
+      "publishedSourcePopulationControl": null,
+      "sourceControlReason": "No same-vintage source-electorate total is registered; election turnout population is a different vintage and is not imposed.",
+      "targetPopulationControl": 70930,
+      "conditionalPopulationLower": 0,
+      "conditionalPopulationUpper": 5,
+      "transfer": {
+        "source": "5",
+        "target": "3",
+        "lower": 0,
+        "upper": 5,
+        "meshblockCount": 1,
+        "suppressedCount": 1,
+        "sourcePopulationLower": 76202,
+        "sourcePopulationUpper": 76207,
+        "weightLower": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "weightUpper": {
+          "numerator": 5,
+          "denominator": 76207
+        },
+        "weight": null,
+        "uniquelyIdentified": false
+      },
+      "targetCompositionLower": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "targetCompositionUpper": {
+        "numerator": 1,
+        "denominator": 14186
+      },
+      "notionalPartyVoteImpact": {
+        "formula": "source party votes × transfer weight",
+        "pointEstimate": null,
+        "lowerMultiplier": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "upperMultiplier": {
+          "numerator": 5,
+          "denominator": 76207
+        },
+        "conservation": "Any feasible increase here reduces other destinations from the same source; marginal endpoints must not be summed as a joint allocation."
+      },
+      "interpretation": "Zero is feasible but not identified. Preserve suppressed value and full feasible range; do not force an unchanged-seat identity or discard this meshblock."
+    }
+  ]
+}
