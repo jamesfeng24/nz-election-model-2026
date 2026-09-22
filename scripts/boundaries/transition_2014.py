@@ -7,6 +7,7 @@ from scripts.boundaries.census_2013 import ROOT
 from scripts.boundaries.inputs_2014 import load
 from scripts.boundaries.coupled import PopulationSystem
 from scripts.boundaries.feasible import fraction_json
+from scripts.transform.historical import key
 
 
 def scope_output(inputs):
@@ -36,9 +37,14 @@ def scope_output(inputs):
                    for other in incoming if other is not e):certain.append(e['source'])
         dl=Fraction(max(e['lower'] for e in incoming),total)
         du=Fraction(max(e['upper'] for e in incoming),total)
+        unchanged=key(name) in {key(n) for n in inputs['unchanged']}
+        foreign=[e for e in incoming if key(inputs['names']['source'][e['source']])!=key(name)]
+        if unchanged and any(e['lower']>0 for e in foreign):
+            raise ValueError('Identified population transfer into officially unchanged seat')
         targets.append({'code':t,'name':name,'populationControl':total,
-            'officialChangeStatus':None,'officialChangeStatusAvailability':'report control not yet transcribed',
-            'membershipIdentity':len(incoming)==1 and inputs['names']['source'][incoming[0]['source']]==name,
+            'officialChangeStatus':'unchanged' if unchanged else 'changed',
+            'membershipIdentity':not foreign,
+            'unchangedMembershipStatus':('identity' if not foreign else 'rounded_technical_uncertainty') if unchanged else None,
             'dominantPredecessor':certain[0] if len(certain)==1 else None,
             'dominantPredecessorShareLower':fraction_json(dl),
             'dominantPredecessorShareUpper':fraction_json(du),
@@ -62,7 +68,7 @@ def build():
     return {'schemaVersion':1,'transition':{'id':'2011-2014','sourceElectionYear':2011,'targetElectionYear':2014,
         'sourceBoundaryVersion':'2007','targetBoundaryVersion':'2014','populationVintage':'2013 Census',
         'adapter':'inputs_2014','populationBasisLevel':'B'},
-        'status':'validated_population_feasible_set_change_audit_pending',
+        'status':'validated_feasible_crosswalk',
         'dataClass':'synthetic_reconstruction_constraints_not_observed_votes',
         'nominalAllocation':None,'inputHashes':inputs['inputHashes'],
         'scopes':{k:scope_output(v) for k,v in inputs['scopes'].items()},

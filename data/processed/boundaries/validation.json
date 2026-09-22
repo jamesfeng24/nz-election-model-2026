@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "transitions": {
+    "2011-2014": {
+      "crosswalkSha256": "1efa8b9c2d03471c09b57b03614a02fcb5378c85b5cb92496e2c4ab30c752725",
+      "scopes": {
+        "general": {
+          "sources": 63,
+          "targets": 64,
+          "edges": 119,
+          "controlsSatisfied": 64,
+          "maximumWeightIntervalWidth": 0.16086584519744915,
+          "globalExtremaAndWitnessChecks": "passed"
+        },
+        "maori": {
+          "sources": 7,
+          "targets": 7,
+          "edges": 8,
+          "controlsSatisfied": 7,
+          "maximumWeightIntervalWidth": 0.003756894755716457,
+          "globalExtremaAndWitnessChecks": "passed"
+        }
+      }
+    },
+    "2017-2020": {
+      "crosswalkSha256": "f39868460a56f9870e7868b77a62bf89393a6f3d02d20976be9fc266c52195d1",
+      "scopes": {
+        "general": {
+          "sources": 64,
+          "targets": 65,
+          "edges": 97,
+          "controlsSatisfied": 65,
+          "maximumWeightIntervalWidth": 0.020031946735121497,
+          "globalExtremaAndWitnessChecks": "passed"
+        },
+        "maori": {
+          "sources": 7,
+          "targets": 7,
+          "edges": 10,
+          "controlsSatisfied": 7,
+          "maximumWeightIntervalWidth": 0.028670627384588577,
+          "globalExtremaAndWitnessChecks": "passed"
+        }
+      }
+    },
+    "2023-2026": {
+      "crosswalkSha256": "72dde71fa9dd8916916d78130482a19d6941ec32b97be7aee8eef7f464c2caae",
+      "scopes": {
+        "general": {
+          "sources": 65,
+          "targets": 64,
+          "edges": 123,
+          "controlsSatisfied": 64,
+          "maximumWeightIntervalWidth": 0.02797263388571306,
+          "globalExtremaAndWitnessChecks": "passed"
+        },
+        "maori": {
+          "sources": 7,
+          "targets": 7,
+          "edges": 10,
+          "controlsSatisfied": 7,
+          "maximumWeightIntervalWidth": 0.027611702106426595,
+          "globalExtremaAndWitnessChecks": "passed"
+        }
+      }
+    }
+  },
+  "conservation": "Every feasible assignment conserves source population and outgoing weight; marginal interval endpoints must not be summed as an assignment."
+}

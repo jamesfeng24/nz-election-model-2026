@@ -21,6 +21,11 @@ def load():
     raw = (ROOT / controls_path).read_bytes()
     hashes[controls_path] = hashlib.sha256(raw).hexdigest()
     controls = json.loads(raw)
+    change_path='data/controls/boundaries/2014-change-controls.json'
+    change_raw=(ROOT/change_path).read_bytes()
+    hashes[change_path]=hashlib.sha256(change_raw).hexdigest()
+    changes=json.loads(change_raw)
+    registered_bytes(folder+'representation-commission-report-2014.pdf',hashes)
     registered_bytes(folder + 'schedule-c.pdf', hashes)
     if controls['sourceSha256'] != hashes[folder + 'schedule-c.pdf']:
         raise ValueError('Control transcription source hash mismatch')
@@ -95,7 +100,8 @@ def load():
             raise ValueError('Target control inventory mismatch')
         if (len(names['source']),len(names['target'])) != ((63,64) if kind=='general' else (7,7)):
             raise ValueError('Wrong electorate inventory')
-        scopes[kind] = {'names': names, 'groups': sorted(groups,key=lambda g:g['id']), 'controls': totals}
+        scopes[kind] = {'names': names, 'groups': sorted(groups,key=lambda g:g['id']), 'controls': totals,
+                        'unchanged':changes['unchangedGeneral' if kind=='general' else 'unchangedMaori']}
     return {'scopes': scopes, 'splitEvidence': [split_evidence[k] for k in sorted(split_evidence)],
             'inputHashes': hashes, 'censusMeshblocks': len(census),
             'outsideWithoutCensus': sorted(outside),
