@@ -2,6 +2,14 @@
 
 Branch `stage/06-nat-lab-elasticity`; base `be5e8da770e8ee0eaf95d8749565a5cb2078889b` (PR12 merged). Checkpoints:bca87cd frozen specification,eb91063 eligibility/infrastructure,1f483b1 fits/temporal sensitivity. No new sources or browser work.
 
+## Challenge audit checkpoint — 2026-09-23
+
+`docs/audits/stage6-architecture.md` classifies material findings; `stage6-exploratory.json` and `scripts/audits/stage6.py` preserve bounded offline diagnostics. Conclusion: sound with minor contract clarifications. CHANGE NOW items are documentation: unconditional/provisional association, explicit target-boundary candidate baseline dependency, and separately validated predictive views rather than independent evidence/additive bonuses. Frozen model outputs and unresolved selection remain unchanged.
+
+Common-intercept diagnostics fail consistent chronological improvement (Labour worsens both holdouts); equal-seat weighting retained. Reusable person/status infrastructure deferred to persistence; conditional β review after replacement, before integration. No person linking, Stage7, web/source acquisition or precision refinement.
+
+Audit verification: six focused Stage6 tests, deterministic Stage6 check, repeatable exploratory results and matching frozen zero-intercept reference metrics passed. No diff to any data or Stage6 model implementation since f523a9a; documentation/isolated exploratory utility only. Full suite/frontend not repeated because numerical model code/outputs are unchanged. PR13 ready to merge as a historical diagnostic stage with these dependencies; leave unmerged. Exact next stage remains **Normalized candidate overperformance only**, on explicit authorization.
+
 ## Stage6 — National/Labour party-seat elasticity (2026-09-23)
 
 Estimand: Δcandidate share = β_party × Δlocal party share, each share using its own valid-vote denominator. Fit separate unrestricted, zero-intercept, equal-observation OLS slopes on general seats. The positive prediction C1=C0+β(P1−P0) follows the explicit delta estimand; inconsistent minus signs in the request's displayed prose were interpreted as formatting slips before fitting. No candidate premium/person effect is estimated.

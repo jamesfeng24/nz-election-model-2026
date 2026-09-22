@@ -1,0 +1,157 @@
+{
+  "status": "exploratory_not_model_selection",
+  "inputRecordsSha256": "846c76dbc7b23f7e368835782f2d38c6b7b1292874e7366e2df8fa9f2ffc45fd",
+  "inputElectionHashes": {
+    "2008": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "2011": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "2014": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "2017": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "2020": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "2023": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e"
+  },
+  "results": {
+    "nationalparty": {
+      "zeroBeta": 0.7368717803805613,
+      "commonIntercept": {
+        "alphaPP": -0.5294222811835237,
+        "beta": 0.7689672305392217
+      },
+      "transitionInterceptDiagnostic": {
+        "beta": 0.6971119217550259,
+        "alphaPP": {
+          "2008": -0.9681771318610067,
+          "2014": -0.4171621320806278,
+          "2020": 0.710486490721919
+        },
+        "unseenInterceptPolicy": "Not forecastable without a separately validated prior; no holdout outcome used to set alpha."
+      },
+      "targetCandidateVoteWeightedBeta": 0.7360215181103532,
+      "transitionBalancedBeta": 0.7365543046559319,
+      "residualCorrelations": {
+        "sourceCandidateShare": -0.2670538853914026,
+        "sourcePartyShare": -0.038739242773094935
+      },
+      "denominatorConventionDeltaDifferencePP": {
+        "median": 0.2230981005116428,
+        "p90": 0.7174224238474636,
+        "max": 1.5723677027526195
+      },
+      "chronological": {
+        "2014": {
+          "zero": {
+            "alpha": 0.0,
+            "beta": 0.38766715544831554,
+            "maePP": 3.857467060441539,
+            "rmsePP": 5.742885465223333
+          },
+          "common_intercept": {
+            "alpha": -0.004548970508666969,
+            "beta": 0.47195400454257774,
+            "maePP": 3.582260394709977,
+            "rmsePP": 5.617286713654476
+          },
+          "beta1": {
+            "alpha": 0.0,
+            "beta": 1.0,
+            "maePP": 3.477828716238703,
+            "rmsePP": 5.6549037725831415
+          }
+        },
+        "2020": {
+          "zero": {
+            "alpha": 0.0,
+            "beta": 0.5767255352832114,
+            "maePP": 4.434019545165187,
+            "rmsePP": 5.9729552832472255
+          },
+          "common_intercept": {
+            "alpha": -0.007227206281083237,
+            "beta": 0.5627821674251652,
+            "maePP": 5.008857871035217,
+            "rmsePP": 6.386265280934561
+          },
+          "beta1": {
+            "alpha": 0.0,
+            "beta": 1.0,
+            "maePP": 4.20237959307179,
+            "rmsePP": 6.3611970905821975
+          }
+        }
+      }
+    },
+    "labourparty": {
+      "zeroBeta": 0.6147472776674174,
+      "commonIntercept": {
+        "alphaPP": -1.011995436817278,
+        "beta": 0.5900396884416873
+      },
+      "transitionInterceptDiagnostic": {
+        "beta": 0.5313239898798733,
+        "alphaPP": {
+          "2008": 3.256529375758119,
+          "2014": -2.567386712069257,
+          "2020": -4.719300478029533
+        },
+        "unseenInterceptPolicy": "Not forecastable without a separately validated prior; no holdout outcome used to set alpha."
+      },
+      "targetCandidateVoteWeightedBeta": 0.6209777879148639,
+      "transitionBalancedBeta": 0.6142920650770642,
+      "residualCorrelations": {
+        "sourceCandidateShare": -0.23306849205381228,
+        "sourcePartyShare": 0.017504823292470353
+      },
+      "denominatorConventionDeltaDifferencePP": {
+        "median": 0.22048941480645456,
+        "p90": 0.5899326211074973,
+        "max": 2.5117196542708164
+      },
+      "chronological": {
+        "2014": {
+          "zero": {
+            "alpha": 0.0,
+            "beta": 0.21251466213545508,
+            "maePP": 4.0231460519271,
+            "rmsePP": 4.81332461227785
+          },
+          "common_intercept": {
+            "alpha": 0.042790001060007216,
+            "beta": 0.6989393651860781,
+            "maePP": 8.743976609097276,
+            "rmsePP": 9.979731297024639
+          },
+          "beta1": {
+            "alpha": 0.0,
+            "beta": 1.0,
+            "maePP": 7.873312916504016,
+            "rmsePP": 9.36329629157214
+          }
+        },
+        "2020": {
+          "zero": {
+            "alpha": 0.0,
+            "beta": 0.27946046626657606,
+            "maePP": 10.60892051929973,
+            "rmsePP": 11.882796269547784
+          },
+          "common_intercept": {
+            "alpha": 0.010776293996108759,
+            "beta": 0.2491429909482087,
+            "maePP": 12.395498986541071,
+            "rmsePP": 13.502098617369848
+          },
+          "beta1": {
+            "alpha": 0.0,
+            "beta": 1.0,
+            "maePP": 7.388320477164534,
+            "rmsePP": 8.350841186627727
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Only three transitions; intercept diagnostics are not causal identification.",
+    "Residual/source-level correlation in change models may contain mechanical regression-to-mean and omitted candidate effects.",
+    "No person linkage or candidate effect estimated."
+  ]
+}
