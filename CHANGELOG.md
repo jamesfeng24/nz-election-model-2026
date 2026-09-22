@@ -147,3 +147,5 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Added2011-on-2014 and2017-on-2020 notional party-vote enclosures with explicit numerical gaps and party-mass conservation. 2023-on-2026 party generation and finalStage4 readiness remain pending; no modelling or final PR.
 
 - Complete 2023-on-2026 notional party-vote bounds with deterministic regeneration and party-by-party conservation; no candidate or split inference.
+
+- Complete Stage4 three-transition crosswalks and party-vote bounds, same-boundary readiness audit, secondary availability assessment and final reproducibility checks. Preserve all observed historical outputs; no modelling.
