@@ -149,3 +149,9 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Complete 2023-on-2026 notional party-vote bounds with deterministic regeneration and party-by-party conservation; no candidate or split inference.
 
 - Complete Stage4 three-transition crosswalks and party-vote bounds, same-boundary readiness audit, secondary availability assessment and final reproducibility checks. Preserve all observed historical outputs; no modelling.
+
+## 2026-09-23 — Stage5
+
+- Freeze and backtest three generic national-to-local party transformations across five historical transitions:3,773 records,53 eligible party-transition identities,25 entrants,27 exits.
+- Separate primary observed evidence from conservative reconstruction robustness; retain general/Māori, party, threshold, leave-one-out, clipping and vector diagnostics.
+- Preserve unresolved selection with no default; add permanent repository-first/materiality rules. No new sources, forecasts or later-stage effects.

@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 1,
+  "selectionStatus": "unresolved_between_methods",
+  "defaultLocalPartyVoteTransform": null,
+  "retainedCandidateSet": [
+    "additive",
+    "proportional",
+    "log_odds"
+  ],
+  "leadingGenericEvidence": "log_odds",
+  "primaryScores": {
+    "general": {
+      "additive": {
+        "records": 2047,
+        "parties": 15,
+        "interpretation": "point scores",
+        "mae": [
+          0.7866696762130752,
+          0.7866696762130752
+        ],
+        "rmse": [
+          1.483875946694964,
+          1.483875946694964
+        ],
+        "bias": [
+          0.019739937035951963,
+          0.019739937035951963
+        ],
+        "medianAbsoluteError": [
+          0.2978220869506526,
+          0.2978220869506526
+        ],
+        "p90AbsoluteError": [
+          2.132405994436833,
+          2.132405994436833
+        ],
+        "macroPartyMAE": [
+          0.6086919261978412,
+          0.6086919261978412
+        ],
+        "voteWeightedMAE": [
+          1.9025841509450205,
+          1.9025841509450205
+        ],
+        "clippingFrequency": [
+          0.08744504152418173,
+          0.08744504152418173
+        ]
+      },
+      "proportional": {
+        "records": 2047,
+        "parties": 15,
+        "interpretation": "point scores",
+        "mae": [
+          0.789950163049883,
+          0.789950163049883
+        ],
+        "rmse": [
+          2.0150464435080595,
+          2.0150464435080595
+        ],
+        "bias": [
+          -0.017540389045545918,
+          -0.017540389045545918
+        ],
+        "medianAbsoluteError": [
+          0.1451881910100733,
+          0.1451881910100733
+        ],
+        "p90AbsoluteError": [
+          2.3433435704747554,
+          2.3433435704747554
+        ],
+        "macroPartyMAE": [
+          0.5956898826692664,
+          0.5956898826692664
+        ],
+        "voteWeightedMAE": [
+          2.449774019000455,
+          2.449774019000455
+        ],
+        "clippingFrequency": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_odds": {
+        "records": 2047,
+        "parties": 15,
+        "interpretation": "point scores",
+        "mae": [
+          0.6493746207196224,
+          0.6493746207196224
+        ],
+        "rmse": [
+          1.4297730281375716,
+          1.4297730281375716
+        ],
+        "bias": [
+          -0.05325171371321817,
+          -0.05325171371321817
+        ],
+        "medianAbsoluteError": [
+          0.1438522692259081,
+          0.1438522692259081
+        ],
+        "p90AbsoluteError": [
+          1.981203287645141,
+          1.981203287645141
+        ],
+        "macroPartyMAE": [
+          0.4958846093829657,
+          0.4958846093829657
+        ],
+        "voteWeightedMAE": [
+          1.886982431110113,
+          1.886982431110113
+        ],
+        "clippingFrequency": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "maori": {
+      "additive": {
+        "records": 224,
+        "parties": 15,
+        "interpretation": "point scores",
+        "mae": [
+          2.3772734533351136,
+          2.3772734533351136
+        ],
+        "rmse": [
+          4.628505415655617,
+          4.628505415655617
+        ],
+        "bias": [
+          0.25850218916884243,
+          0.25850218916884243
+        ],
+        "medianAbsoluteError": [
+          0.7178410699365634,
+          0.7178410699365634
+        ],
+        "p90AbsoluteError": [
+          8.230667506447137,
+          8.230667506447137
+        ],
+        "macroPartyMAE": [
+          1.7544137879240231,
+          1.7544137879240231
+        ],
+        "voteWeightedMAE": [
+          6.19652328236452,
+          6.19652328236452
+        ],
+        "clippingFrequency": [
+          0.23660714285714285,
+          0.23660714285714285
+        ]
+      },
+      "proportional": {
+        "records": 224,
+        "parties": 15,
+        "interpretation": "point scores",
+        "mae": [
+          1.3887409364601102,
+          1.3887409364601102
+        ],
+        "rmse": [
+          2.867427234046038,
+          2.867427234046038
+        ],
+        "bias": [
+          0.12061921168099496,
+          0.12061921168099496
+        ],
+        "medianAbsoluteError": [
+          0.3416548973555749,
+          0.3416548973555749
+        ],
+        "p90AbsoluteError": [
+          4.06719232347686,
+          4.06719232347686
+        ],
+        "macroPartyMAE": [
+          1.0509850775038743,
+          1.0509850775038743
+        ],
+        "voteWeightedMAE": [
+          4.2867955666705635,
+          4.2867955666705635
+        ],
+        "clippingFrequency": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_odds": {
+        "records": 224,
+        "parties": 15,
+        "interpretation": "point scores",
+        "mae": [
+          1.3097474457205103,
+          1.3097474457205103
+        ],
+        "rmse": [
+          2.4295903096634452,
+          2.4295903096634452
+        ],
+        "bias": [
+          0.05948835025711798,
+          0.05948835025711798
+        ],
+        "medianAbsoluteError": [
+          0.4106461824905813,
+          0.4106461824905813
+        ],
+        "p90AbsoluteError": [
+          3.994927898062289,
+          3.994927898062289
+        ],
+        "macroPartyMAE": [
+          0.9947359897414774,
+          0.9947359897414774
+        ],
+        "voteWeightedMAE": [
+          3.6080680314147964,
+          3.6080680314147964
+        ],
+        "clippingFrequency": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "allFiveMarginalRobustness": {
+    "general": {
+      "additive": {
+        "records": 3402,
+        "parties": 16,
+        "interpretation": "conservative marginal enclosures; not jointly attainable loss extrema",
+        "mae": [
+          0.7723647404146468,
+          0.7842311457459391
+        ],
+        "rmse": [
+          1.4470131746943564,
+          1.4630838816810785
+        ],
+        "bias": [
+          0.010721473584498414,
+          0.022932639383838667
+        ],
+        "medianAbsoluteError": [
+          0.27885576713283294,
+          0.29116217770594355
+        ],
+        "p90AbsoluteError": [
+          2.140564182877757,
+          2.1677435177935305
+        ],
+        "macroPartyMAE": [
+          0.5546163733475183,
+          0.5625953207854638
+        ],
+        "voteWeightedMAE": [
+          1.8231670481407367,
+          1.858976820063095
+        ],
+        "clippingFrequency": [
+          0.059376837154614934,
+          0.059376837154614934
+        ]
+      },
+      "proportional": {
+        "records": 3402,
+        "parties": 16,
+        "interpretation": "conservative marginal enclosures; not jointly attainable loss extrema",
+        "mae": [
+          0.7904284854777652,
+          0.8022796076309741
+        ],
+        "rmse": [
+          1.9083070214132483,
+          1.9209803570646438
+        ],
+        "bias": [
+          -0.03179840828109338,
+          -0.019647294713719274
+        ],
+        "medianAbsoluteError": [
+          0.1594589099357389,
+          0.16463248448628415
+        ],
+        "p90AbsoluteError": [
+          2.2905298990059966,
+          2.3424857839727635
+        ],
+        "macroPartyMAE": [
+          0.5581676185822739,
+          0.5661416994469912
+        ],
+        "voteWeightedMAE": [
+          2.347493165138797,
+          2.3834135636759046
+        ],
+        "clippingFrequency": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_odds": {
+        "records": 3402,
+        "parties": 16,
+        "interpretation": "conservative marginal enclosures; not jointly attainable loss extrema",
+        "mae": [
+          0.6645211289037931,
+          0.6764386834174239
+        ],
+        "rmse": [
+          1.4107554737903047,
+          1.4270631734159878
+        ],
+        "bias": [
+          -0.03720281376531546,
+          -0.024986951075903093
+        ],
+        "medianAbsoluteError": [
+          0.15801021366095067,
+          0.16444708554210638
+        ],
+        "p90AbsoluteError": [
+          2.008200017555397,
+          2.051138682978936
+        ],
+        "macroPartyMAE": [
+          0.4747398763899637,
+          0.48275732935954185
+        ],
+        "voteWeightedMAE": [
+          1.8133045789194562,
+          1.8489135443964226
+        ],
+        "clippingFrequency": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "maori": {
+      "additive": {
+        "records": 371,
+        "parties": 16,
+        "interpretation": "conservative marginal enclosures; not jointly attainable loss extrema",
+        "mae": [
+          2.092730624866156,
+          2.0939441005944817
+        ],
+        "rmse": [
+          4.074349182098837,
+          4.075699071305861
+        ],
+        "bias": [
+          0.3465122513922314,
+          0.3477257271205568
+        ],
+        "medianAbsoluteError": [
+          0.7784614978512125,
+          0.77984882397776
+        ],
+        "p90AbsoluteError": [
+          6.1457051188262,
+          6.1457051188262
+        ],
+        "macroPartyMAE": [
+          1.4502263130688484,
+          1.4510629690248023
+        ],
+        "voteWeightedMAE": [
+          5.781554623795227,
+          5.785403478139051
+        ],
+        "clippingFrequency": [
+          0.19946091644204852,
+          0.19946091644204852
+        ]
+      },
+      "proportional": {
+        "records": 371,
+        "parties": 16,
+        "interpretation": "conservative marginal enclosures; not jointly attainable loss extrema",
+        "mae": [
+          1.4727399608267076,
+          1.4741572275755126
+        ],
+        "rmse": [
+          3.538555394294638,
+          3.541472089915999
+        ],
+        "bias": [
+          0.3259427179666899,
+          0.32735998471549504
+        ],
+        "medianAbsoluteError": [
+          0.3986729078379492,
+          0.3986729078379492
+        ],
+        "p90AbsoluteError": [
+          3.7834106024276446,
+          3.7834106024276446
+        ],
+        "macroPartyMAE": [
+          1.0389634587390792,
+          1.0399391088864551
+        ],
+        "voteWeightedMAE": [
+          5.938265997752179,
+          5.942915991072437
+        ],
+        "clippingFrequency": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_odds": {
+        "records": 371,
+        "parties": 16,
+        "interpretation": "conservative marginal enclosures; not jointly attainable loss extrema",
+        "mae": [
+          1.2297043040932563,
+          1.2309695105295746
+        ],
+        "rmse": [
+          2.417384046987962,
+          2.419371214127882
+        ],
+        "bias": [
+          0.10868317810712438,
+          0.10994838454344294
+        ],
+        "medianAbsoluteError": [
+          0.4150972450224319,
+          0.4150972450224319
+        ],
+        "p90AbsoluteError": [
+          3.4666559651821527,
+          3.4666559651821527
+        ],
+        "macroPartyMAE": [
+          0.877841256482562,
+          0.8787162856056941
+        ],
+        "voteWeightedMAE": [
+          4.045836773461201,
+          4.049315017345398
+        ],
+        "clippingFrequency": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "observedTransitionWinners": {
+    "general": {
+      "2008": "log_odds",
+      "2014": "log_odds",
+      "2020": "log_odds"
+    },
+    "maori": {
+      "2008": "proportional",
+      "2014": "proportional",
+      "2020": "log_odds"
+    }
+  },
+  "logOddsRobustlyLowerMacroMAE": {
+    "general": {
+      "additive": true,
+      "proportional": true
+    },
+    "maori": {
+      "additive": true,
+      "proportional": true
+    }
+  },
+  "conflicts": [
+    "Māori observed-transition winners differ; proportional wins2008→2011 and2014→2017, log-odds wins2020→2023.",
+    "General Labour favours additive MAE/RMSE while overall macro-party scores favour log-odds."
+  ],
+  "rationale": "Log-odds leads overall observed macro-party MAE and RMSE in both scopes and remains superior under conservative five-transition macro-MAE enclosures. However pre-specified scope/transition and National/Labour diagnostics materially conflict. Do not impose a universal default. Retain additive for general Labour, proportional for early Māori evidence, and log-odds as overall leader.",
+  "nextStageRequirement": "NAT/LAB electorate elasticity must test conclusions across retained baseline transformations; no elasticity fitted here.",
+  "limitations": [
+    "Only three primary election-transition clusters; seven Māori electorates each, no independent-electorate significance claim.",
+    "All-five losses are marginal conservative bounds, not jointly attained election-wide losses; no optimizer added.",
+    "Small-party thresholds0.5% and1% were frozen before scoring; all results are reported. No tuned exclusions.",
+    "No vector renormalization, future political data, Opportunity mapping or candidate effects."
+  ]
+}
