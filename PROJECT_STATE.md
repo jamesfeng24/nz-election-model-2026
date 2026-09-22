@@ -28,9 +28,9 @@ All party totals conserve in both scopes and nationally for every coupled alloca
 
 Source inventory:901 registered entries (867 historical,34 boundary entries; five segments preserve one large geometry archive). No reacquisition. All26 branch-base historical processed/panel files are byte-identical, including six per-election sets and full panel; historical raw election files, aliases and legacy parser have no diff.
 
-Checks: all three crosswalk deterministic checks; common global constraint check; all three notional deterministic checks; readiness/secondary deterministic checks;901 source checksums; frontend30 tests, TypeScript and production build passed once because this is final integration readiness under AGENTS. Full Python suite:160 tests passed (32.744s). No configured Python formatter/linter; `git diff --check` used. Unmerged PR to be recorded after creation.
+Checks: all three crosswalk deterministic checks; common global constraint check; all three notional deterministic checks; readiness/secondary deterministic checks;901 source checksums; frontend30 tests, TypeScript and production build passed once because this is final integration readiness under AGENTS. Full Python suite:160 tests passed (32.744s). No configured Python formatter/linter; `git diff --check` used. Unmerged PR #11: https://github.com/jamesfeng24/nz-election-model-2026/pull/11 . Final implementation/documentation checkpoint `5dad8d49afd1e4f7fd60c3d751e83522d32c10dd`; this final handoff records the PR.
 
-**Exact next action:** create the Stage4 unmerged PR after final checks and documentation push; do not begin another stage. After review/merge and explicit authorization, the exact next stage is **Local party-vote transformation backtesting only**.
+**Exact next action:** review PR #11; Stage4 is complete and the PR remains unmerged. Do not begin another stage. After review/merge and explicit authorization, the exact next stage is **Local party-vote transformation backtesting only**.
 
 Historical chronological entries below are evidence of prior checkpoints, not instructions to repeat acquisition or unresolved tasks superseded above.
 
