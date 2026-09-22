@@ -251,3 +251,16 @@ Current transition crosswalk and manifest:
 ```
 
 The transition consumes preserved memberships/population controls offline. Manifest hashes include input data, configuration, implementation and output bytes. Witness allocations exist only inside tests; they are not nominal population estimates or exported observations. Older transition adapters remain to implement after authoritative acquisition.
+
+### Stage 4 constrained2013 adapter and notional diagnostics (in progress)
+
+Use the pinned `requirements-boundaries.txt` environment (including SciPy1.16.0):
+
+```
+python -m scripts.boundaries.transition_2014 --check
+python -m scripts.boundaries.contract --check
+python -m scripts.boundaries.notional --transition 2011-2014 --check
+python -m scripts.boundaries.notional --transition 2017-2020 --check
+```
+
+Omit `--check` only to intentionally regenerate the corresponding derived output. The2023→2026 party baseline remains pending at this checkpoint. Notional outputs use64 branch-and-bound nodes per extremum by default; retain this parameter for byte-identical regeneration. The files expose numerical enclosure gaps separately from geographic identification uncertainty. They are not fitted predictions or exact local voting observations. All three crosswalks remain globally coupled; marginal endpoints cannot be combined arbitrarily. No raw source fetching occurs during these commands.

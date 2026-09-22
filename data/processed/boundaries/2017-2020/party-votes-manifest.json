@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "inputHashes": {
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/raw/elections/2017/statistics/csv/votes-for-registered-parties-by-electorate.csv": "874c5e497dcf76fad8b2ae7d7ced80992bd982dc8a4368574346aacec8663a44",
+    "data/processed/boundaries/2017-2020/crosswalk.json": "f39868460a56f9870e7868b77a62bf89393a6f3d02d20976be9fc266c52195d1"
+  },
+  "codeHashes": {
+    "scripts/boundaries/notional.py": "cc01bc466c78ef42b11ce6e6f2f7c5c1be986be461511b0bd0868b99c9b567ba",
+    "scripts/boundaries/notional_bounds.py": "1c51cbecf69e3d718911def0e31e27a69cdfa65c7a7e9cb218ea2d395a36a328",
+    "scripts/boundaries/party_inputs.py": "643eecd0eee4cf741a7778534408f407fcc62f6b82b4f5f54c94251632bba4a0",
+    "scripts/boundaries/coupled.py": "bce75593abe014edd97cb7f6d372612f366ee4ebd311b7a9fe6e74991864ee26",
+    "scripts/boundaries/contract.py": "e771cb58cf938c0be55b5616dc4295a717d3a6de663af9fd981334bf07a1306b"
+  },
+  "outputSha256": "81b9ccb8418b924cb4fadfbb8536b324e66142dc943b063efe9f3ecc8e2df755"
+}
