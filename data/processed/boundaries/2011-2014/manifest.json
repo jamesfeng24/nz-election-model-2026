@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "transitionId": "2011-2014",
+  "inputHashes": {
+    "data/raw/boundaries/2007-2014/electoral-population-methodology-2013.pdf": "2b705a474012f2e1449c9337e21f6407ce81804b3bb2ad80c7ad443fbdd46bd9",
+    "data/raw/boundaries/2007-2014/descent-imputation-methodology.pdf": "d87efcac8833731b94add8b3e24d15b3f62edcf12d165b39ce07cd77ffd162f4",
+    "data/raw/boundaries/2007-2014/electoral-mathematics-2000.pdf": "6c903c1ee3a4411432d991ea8ab340d4bc784bea164ba19858ae26e039c152b8",
+    "data/raw/boundaries/2007-2014/geographic-areas-file-2013.zip": "ba4204c31cdb2bda16d659e1eff5d9896f10036d3b2d16c6715493a88a4052dd",
+    "data/raw/boundaries/2007-2014/geographic-areas-file-2016.zip": "52aeca2f5327d4c742c912b10772f71e4f3c5db6417a992fd4a9975165040874",
+    "data/raw/boundaries/2007-2014/census-meshblock-dataset.zip": "2ac72f012571a47aef584644a73f13e8b9e8066d49b616bf4a37e73ebc3a6349",
+    "data/controls/boundaries/2014-population-controls.json": "d4f54878e3e132d3618ec6b70482be3356dcdd1c13ed2b66ecc4312b84fdae5d",
+    "data/raw/boundaries/2007-2014/schedule-c.pdf": "2aae6e29c2710797744b169162a451b7e16806e95040439c20d165c4b9b15bcc"
+  },
+  "codeHashes": {
+    "scripts/boundaries/transition_2014.py": "981190b8a562a79d37eb4a3c9279b0b16497605fe90469094a2bba0b3022d68c",
+    "scripts/boundaries/inputs_2014.py": "483a2c4747e7cd704320b4535fcd25533aeec4352deb02dd42767dc6e3541c67",
+    "scripts/boundaries/census_2013.py": "0070648356eadb0813125dd428ae843b0fe92728d571885c81361dd3a097bba6",
+    "scripts/boundaries/coupled.py": "bce75593abe014edd97cb7f6d372612f366ee4ebd311b7a9fe6e74991864ee26"
+  },
+  "outputSha256": "647eccdc574b806c840340e4435c294cf4bada2db151be4917ebe762e30b5636",
+  "coverage": {
+    "general": {
+      "sources": 63,
+      "targets": 64,
+      "edges": 119
+    },
+    "maori": {
+      "sources": 7,
+      "targets": 7,
+      "edges": 8
+    }
+  }
+}
