@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "stage": 5,
+  "frozenBeforeScoring": true,
+  "estimand": "target local share among valid party votes conditional only on source local share and source/target nationwide valid-party shares",
+  "units": "shares fractions; reported errors percentage points",
+  "transitions": [
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "boundaryRegime": "2007",
+      "primary": true
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "boundaryRegime": "2014",
+      "primary": false
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "boundaryRegime": "2014",
+      "primary": true
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "boundaryRegime": "2020",
+      "primary": false
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "boundaryRegime": "2020",
+      "primary": true
+    }
+  ],
+  "futureInputContract": "2023-on-2026 supported as bounds; never scored or predicted in Stage5",
+  "formulas": {
+    "additive": "clip(p+P1-P0,0,1)",
+    "proportional": "clip(p*P1/P0,0,1)",
+    "log_odds": "p*OR/(1-p+p*OR); OR=P1*(1-P0)/(P0*(1-P1))"
+  },
+  "eligibility": "existing panel canonical identity, unique source/target match,0<P0,P1<1; entrants/exits/ambiguous excluded without fake zeros",
+  "metrics": [
+    "MAE",
+    "RMSE",
+    "bias",
+    "median absolute error",
+    "90th percentile absolute error",
+    "clipping frequency",
+    "macro-party MAE",
+    "target-party-vote-weighted MAE"
+  ],
+  "aggregation": "Report general and Maori separately; aggregate records equally then macro-average canonical-party MAEs; vote weighting uses actual target party votes. Transition is validation cluster, no random split. Quantiles use linear interpolation.",
+  "sensitivities": {
+    "nationalShareThresholdsBothElections": [
+      0.005,
+      0.01
+    ],
+    "groups": [
+      "all persistent",
+      "National/Labour",
+      "other persistent"
+    ],
+    "leaveOneTransitionOut": true
+  },
+  "uncertainty": "Monotone propagation of Stage4 outer share bounds; retain attainable extremum brackets and numerical gaps separately; aggregate lower/upper loss summaries are conservative marginal enclosures, not jointly attainable realizations. No midpoint.",
+  "selectionOrder": [
+    "observed-only macro-party MAE",
+    "observed-only RMSE/bias",
+    "transition stability",
+    "National/Labour diagnostics",
+    "all-five uncertainty-aware robustness",
+    "clipping/pathologies"
+  ],
+  "selectionGuard": "If materially conflicting winners or robustness ordering can reverse, retain unresolved candidate set; no automatic winner from one aggregate.",
+  "antiLeakage": [
+    "Only six historical elections 2008-2023",
+    "No2026 political inputs",
+    "No candidate effects or person linking",
+    "No fitted coefficients",
+    "No party-vector normalization",
+    "No current/future Opportunity mapping"
+  ],
+  "limitations": [
+    "Only three primary transition clusters; seven Maori electorates per election",
+    "National target support is conditioning information, not a national forecast",
+    "Synthetic geographic intervals are coupled; aggregate marginal bounds may be loose"
+  ]
+}

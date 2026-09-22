@@ -1,3 +1,9 @@
+# Stage5 current state — 2026-09-23
+
+Authorized: local party-vote transformation backtesting only. Branch `stage/05-party-vote-backtesting`, base `0fe95a5a05e687a64d702501e1a775453096c118`; PR11 verified merged. Clean start and all Stage4 crosswalk/notional deterministic checks plus readiness passed. Required modelling context read. Specification frozen before scores; formulas and focused fixtures introduced. Next action: construct explicit existing-canonical continuity inventory and historical general/Māori party inputs, then five-transition records. No results/selection yet. Exact next stage after this: **NAT/LAB electorate elasticity only**, not authorized now.
+
+## Historical Stage4 handoff (superseded current status)
+
 # Project state
 
 Updated 2026-09-22. Stage 4: **Historical boundary-transition reconstruction** on existing branch `stage/04-boundary-2023-2026`. Base `624fe1d74aa43014e0c65f534c161e22b51e250d` (PR #10 merged). Do not restart, rebase or change branches.
