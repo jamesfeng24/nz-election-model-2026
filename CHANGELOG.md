@@ -145,3 +145,5 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Added LevelB constrained2011→2014 electoral-population reconstruction,22 coupled split parents, all71 final controls and official unchanged-seat audit.
 - Added common global validation for all three transitions without modifying the two completed crosswalks or observed history.
 - Added2011-on-2014 and2017-on-2020 notional party-vote enclosures with explicit numerical gaps and party-mass conservation. 2023-on-2026 party generation and finalStage4 readiness remain pending; no modelling or final PR.
+
+- Complete 2023-on-2026 notional party-vote bounds with deterministic regeneration and party-by-party conservation; no candidate or split inference.
