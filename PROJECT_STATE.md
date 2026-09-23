@@ -1,3 +1,11 @@
+# Stage10 pre-fit replacement inventory — 2026-09-23
+
+Stage9 PR #16 was verified MERGED as `1f47a7e5cac73968493514db63701ebf3a46db80`, containing reviewed head `abb139f`. Main was safely fast-forwarded and `stage/10-replacement-candidate-effects` created from that merge with a clean working tree. The Stage10 pre-fit inventory is now generated and pinned, before any Stage10 effect fitting. It has 1,433 observed same-party party-seat comparisons over five adjacent transitions. The unchanged-boundary general source-winner comparisons number 54/64/65; pre-target corroboration supports 20/16/3 continuations and **zero** distinct-person replacements. Eight source-winner distinct-person cases are only retrospectively corroborated via target/later official winner evidence. Māori winner status is unknown in the processed election flag, not presumed challenger. The inherited Stage9 profile corpus is selected toward source-winner recontesters and cannot establish balanced incoming-candidate identity. Details, exclusions and limitations are in `docs/replacement-candidate.md`. No new raw sources, previous outputs or operational coefficients changed.
+
+Exact next action: commit/push this inventory checkpoint, freeze the Stage10 specification before fitting, then perform only evidence-supported retrospective diagnostics, tests and final handoff. Null operational selection is expected if no outcome-independent treatment sample exists; do not relax identity or boundary rules to manufacture one.
+
+---
+
 # Stage9 PR handoff — 2026-09-23
 
 Stage9 implementation and corrected diagnostics were committed/pushed at `ad7bbc8` and [PR #16](https://github.com/jamesfeng24/nz-election-model-2026/pull/16) was opened into main, left unmerged. Its implementation-head GitHub `check` and `python` jobs passed on both push and PR runs; local configured validation and historical-output preservation are recorded in the checkpoint below. This final documentation handoff does not change model code, input files or numerical outputs. The reviewed Stage9 result is `selectedOperationalFreshmanEffectPP=null`; descriptive fitted terms are not operational bonuses. Exact next stage is replacement-candidate effects, requiring separate authorization after Stage9 review/merge. Do not start them from this task.

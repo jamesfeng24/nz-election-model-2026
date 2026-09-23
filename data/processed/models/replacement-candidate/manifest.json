@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "stage": 10,
+  "phase": "pre_fit_inventory",
+  "inputHashes": {
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/models/candidate-persistence/person-links.json": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+    "data/processed/models/party-vote-transform/party-continuity.json": "d3c6cfa63f59725cbc9276e2442f1f59eafe24a9526a4fbb9ca52d68fcb3071b",
+    "data/processed/models/freshman-incumbency/tenure-evidence.json": "1995e2c832dbf9126ff32efc094f1cafd82191b41a48db6cae9bbb337d8505db",
+    "data/processed/models/freshman-incumbency/input-contract.json": "e180163d54eb28d4d86840dcbb58675a0050dd7e19ad7a67b395fd206c992b82",
+    "data/processed/models/freshman-incumbency/manifest.json": "339a0f2fc2ff25d4efb29d2639a7c3cc2181be6fbaf7064267384b056ad9e1b8",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e"
+  },
+  "codeHashes": {
+    "scripts/models/replacement_candidate/__init__.py": "9e7bceb3bf2efd4618bd284a1df4ef1c33b6f7e6ee48d7ff4cb37bfd2df53107",
+    "scripts/models/replacement_candidate/inventory.py": "4aa3b903c4aea4ad4fbb649d9077a987e0140813f2683f2aafd0c4c303256250",
+    "scripts/models/replacement_candidate/run.py": "8f977ba861da59647351f580aa9f2d287e8ac41cc45123bf8f71a900f0f75b97"
+  },
+  "outputHashes": {
+    "input-contract.json": "505ff7264a3ff3aa05a25e8bc2da5968149270d60f928cca8f1552090caca35d",
+    "inventory.json": "965283f54de40fcf8bfcb0f757bf71ffc2f6ce7f234f3c358da2c3d52cd8da35"
+  }
+}
