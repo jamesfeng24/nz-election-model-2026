@@ -9,6 +9,10 @@
     "data/processed/models/freshman-incumbency/tenure-evidence.json": "1995e2c832dbf9126ff32efc094f1cafd82191b41a48db6cae9bbb337d8505db",
     "data/processed/models/freshman-incumbency/input-contract.json": "e180163d54eb28d4d86840dcbb58675a0050dd7e19ad7a67b395fd206c992b82",
     "data/processed/models/freshman-incumbency/manifest.json": "339a0f2fc2ff25d4efb29d2639a7c3cc2181be6fbaf7064267384b056ad9e1b8",
+    "data/source-plans/stage10-identity-review-plan.json": "d1e4e46d2b39f7e2eedc823357af79fb71fd2de9fbcf5b4e650bce86c04acad7",
+    "data/source-plans/stage10-identity-adjudications.json": "60b412ea6059bb02d0b8c53b771d65a41d8c4fd68e012cbf31fb577a9cf13e3f",
+    "data/source-plans/stage10-identity-sources.json": "eacdc2d2ddce927e4211d833075975cd364dc6eaa900437637ce0d7a04189db1",
+    "data/source-plans/stage10-maori-winner-sources.json": "4affa38dbe8b98edc9fc2f57efa6ed8a51eb6b501a62d3bc3f6fc4985915ba93",
     "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
     "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
     "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
@@ -18,11 +22,15 @@
   },
   "codeHashes": {
     "scripts/models/replacement_candidate/__init__.py": "9e7bceb3bf2efd4618bd284a1df4ef1c33b6f7e6ee48d7ff4cb37bfd2df53107",
-    "scripts/models/replacement_candidate/inventory.py": "4aa3b903c4aea4ad4fbb649d9077a987e0140813f2683f2aafd0c4c303256250",
-    "scripts/models/replacement_candidate/run.py": "8f977ba861da59647351f580aa9f2d287e8ac41cc45123bf8f71a900f0f75b97"
+    "scripts/models/replacement_candidate/identity_evidence.py": "33f65a8b2de45ccfa1d3831014091df890ad513f2449e523e5a8a5fb617b4c5f",
+    "scripts/models/replacement_candidate/inventory.py": "8b616809a9aff50c73b2fdc9b9a56ceb647373cbc54a8731a455c1bce58e1695",
+    "scripts/models/replacement_candidate/maori_winners.py": "726f6bb63838540f334b1cb506b79d38856bcfc4ea67d7c994160ab2b39c5839",
+    "scripts/models/replacement_candidate/run.py": "c573452ea4db9233978ddb388df8d8c75c78010056c09babf05c82bf31a82db5"
   },
   "outputHashes": {
-    "input-contract.json": "505ff7264a3ff3aa05a25e8bc2da5968149270d60f928cca8f1552090caca35d",
-    "inventory.json": "965283f54de40fcf8bfcb0f757bf71ffc2f6ce7f234f3c358da2c3d52cd8da35"
+    "input-contract.json": "4f83e8cd55dd208f01f4c5c010cb218aef5be6dd88367bf7e026f7b56a3b3dba",
+    "maori-winner-overlay.json": "ef9b2fa6f4e3e7f3ab1cf957a3df331360c7bd6f055f6fa3398dda87d30d2daa",
+    "identity-review.json": "2d55299d81887b2493fcc4e248e6de2902e4201e60d35c4a0b1cf0ed2fddb2b9",
+    "inventory.json": "32814149650544904f0cba43d53bc64ede3f5584395995ca93cb0b989545335a"
   }
 }

@@ -3,24 +3,33 @@
 from collections import Counter, defaultdict
 
 from scripts.models.freshman_incumbency.inventory import find_profile
+from scripts.models.freshman_incumbency.inventory import _source_date
+from scripts.transform.historical import key
+from datetime import datetime
 
 
 ADJACENT = {2008: 2011, 2011: 2014, 2014: 2017, 2017: 2020, 2020: 2023}
 UNCHANGED = {(2008, 2011), (2014, 2017), (2020, 2023)}
 
 
-def _anchors(link, before_year):
+def _anchors(link, before_date):
     if not link or link.get('personExistenceStatus') != 'official_profile_corroborated':
         return []
     return sorted(anchor['candidateOccurrenceId'] for anchor in
                   link['evidence'].get('anchorOccurrences', [])
                   if anchor.get('electionDate') and
-                  int(anchor['electionDate'][-4:]) < before_year)
+                  datetime.strptime(anchor['electionDate'], '%d %B %Y').date().isoformat() < before_date)
 
 
-def _identity(source, target, source_link, target_link):
-    source_anchors = _anchors(source_link, target['year'])
-    target_anchors = _anchors(target_link, target['year'])
+def _identity(source, target, source_link, target_link, adjudication=None):
+    target_date = _source_date(target['year'])
+    source_anchors = _anchors(source_link, target_date)
+    target_anchors = _anchors(target_link, target_date)
+    if adjudication:
+        identity = {'primary': 'supported_replacement',
+                    'by_election_successor': 'supported_by_election_successor',
+                    'retrospective_alias': 'retrospective_alias_replacement'}[adjudication['role']]
+        return identity, adjudication['targetRoute'], source_anchors, target_anchors
     same_chain = (source['sourceCandidateName'] == target['sourceCandidateName'] and
                   source['candidateAffiliationKey'] == target['candidateAffiliationKey'] and
                   source['electorateName'] == target['electorateName'])
@@ -55,6 +64,23 @@ def _profile_for_anchors(anchor_ids, by_id, elected_ids, profiles):
     return next(iter(matches.values())) if len(matches) == 1 else None
 
 
+def _profile_for_adjudicated_occurrence(source, profiles):
+    """Attach dated career evidence only after independent occurrence adjudication."""
+    if ',' not in source['sourceCandidateName']:
+        return None
+    surname, given = source['sourceCandidateName'].split(',', 1)
+    first = given.strip().split()[0]
+    matches = []
+    for profile in profiles:
+        display = profile.get('displayName') or ''
+        if ',' not in display:
+            continue
+        profile_surname, profile_given = display.split(',', 1)
+        if key(profile_surname) == key(surname) and key(profile_given.strip().split()[0]) == key(first):
+            matches.append(profile)
+    return matches[0] if len(matches) == 1 else None
+
+
 def _prior_service(profile, target_year):
     if profile is None or profile['tenureEvidenceStatus'] != 'complete_dated_table':
         return {'status': 'unknown', 'priorElectorate': None, 'priorList': None}
@@ -67,7 +93,8 @@ def _prior_service(profile, target_year):
                              for row in profile['serviceRows'])}
 
 
-def build_inventory(occurrences, links, continuity, elected_ids, profiles=()):
+def build_inventory(occurrences, links, continuity, elected_ids, profiles=(),
+                    adjudications=None, maori_winner_ids=()):
     """Pair all observed same-party seats; retain unresolved and excluded records."""
     by_seat = _indexed(occurrences)
     by_link = {row['candidateOccurrenceId']: row for row in links}
@@ -76,6 +103,8 @@ def build_inventory(occurrences, links, continuity, elected_ids, profiles=()):
     by_id = {row['candidateOccurrenceId']: row for row in occurrences}
     if len(by_id) != len(occurrences) or not set(by_link) <= set(by_id):
         raise ValueError('Duplicate occurrence or dangling identity link')
+    adjudications = adjudications or {}
+    maori_winner_ids = set(maori_winner_ids)
     parties = defaultdict(list)
     for row in continuity:
         parties[(row['sourceYear'], row['targetYear'])].append(row)
@@ -109,17 +138,33 @@ def build_inventory(occurrences, links, continuity, elected_ids, profiles=()):
                     reasons.append('missing_normalized_premium')
                 source_id, target_id = source['candidateOccurrenceId'], target['candidateOccurrenceId']
                 source_link, target_link = by_link.get(source_id), by_link.get(target_id)
+                adjudication = adjudications.get(source_id + '->' + target_id)
                 identity, method, source_anchors, target_anchors = _identity(
-                    source, target, source_link, target_link)
-                source_winner = source_id in elected_ids if scope == 'general' else None
+                    source, target, source_link, target_link, adjudication)
+                source_winner = (source_id in elected_ids if scope == 'general' else
+                                 source_id in maori_winner_ids if source_year in (2008, 2014, 2020)
+                                 else None)
                 source_profile = _profile_for_anchors([source_id] if source_winner else [],
                                                       by_id, elected_ids, profiles)
                 incoming_profile = _profile_for_anchors(target_anchors, by_id,
                                                         elected_ids, profiles)
-                if identity not in ('supported_continuation', 'supported_replacement'):
+                if adjudication:
+                    incoming_profile = next(
+                        (profile for profile in profiles if profile['sourceId'] ==
+                         adjudication['targetEvidenceId']), None)
+                    incoming_profile = incoming_profile or _profile_for_adjudicated_occurrence(
+                        target, profiles)
+                if identity not in ('supported_continuation', 'supported_replacement',
+                                    'supported_by_election_successor'):
                     reasons.append('identity_not_pre_target_supported')
+                if identity == 'supported_by_election_successor':
+                    reasons.append('by_election_successor_separate_diagnostic')
+                if identity == 'retrospective_alias_replacement':
+                    reasons.append('alias_resolution_uses_later_success_covered_profile')
+                if scope == 'maori':
+                    reasons.append('maori_scope_separate_diagnostic')
                 if source_winner is None:
-                    reasons.append('maori_winner_status_unavailable')
+                    reasons.append('maori_winner_status_not_overlaid_for_changed_boundary_year')
                 elif not source_winner:
                     reasons.append('outgoing_challenger_separate_diagnostic')
                 records.append({
@@ -140,14 +185,31 @@ def build_inventory(occurrences, links, continuity, elected_ids, profiles=()):
                     'sourceCareerHistory': _prior_service(source_profile, source_year),
                     'incomingProfileId': incoming_profile['sourceId'] if incoming_profile else None,
                     'incomingCareerHistory': _prior_service(incoming_profile, target_year),
+                    'incomingCareerEvidenceBasis': ('dated_profile_direct_identity_route'
+                                                    if adjudication and incoming_profile and
+                                                    incoming_profile['sourceId'] == adjudication['targetEvidenceId'] else
+                                                    'unique_profile_name_after_independent_occurrence_adjudication'
+                                                    if adjudication and incoming_profile else
+                                                    'inherited_winner_anchor' if incoming_profile else 'unknown'),
                     'sourceIdentityStatus': source_link['status'] if source_link else 'unresolved',
                     'targetIdentityStatus': target_link['status'] if target_link else 'unresolved',
+                    'sourceOccurrenceConfidence': (adjudication['sourceOccurrenceConfidence'] if adjudication
+                                                   else source_link['status'] if source_link else 'unresolved'),
+                    'targetOccurrenceConfidence': (adjudication['targetOccurrenceConfidence'] if adjudication
+                                                   else target_link['status'] if target_link else 'unresolved'),
                     'sourcePersonId': source_link['personId'] if source_link else None,
                     'targetPersonId': target_link['personId'] if target_link else None,
                     'sourceIdentityEvidence': source_link['evidence'] if source_link else None,
                     'targetIdentityEvidence': target_link['evidence'] if target_link else None,
                     'sourcePreTargetAnchors': source_anchors,
                     'targetPreTargetAnchors': target_anchors,
+                    'stage10IdentityEvidence': adjudication,
+                    'identityDependsOnTargetResult': (identity == 'retrospective_distinct_people'),
+                    'identityDependsOnLaterOutcomeCoverage': bool(
+                        adjudication and adjudication.get('laterOutcomeCoverageDependent')),
+                    'candidateStatusKnownBeforeTarget': bool(
+                        identity in ('supported_continuation', 'supported_replacement',
+                                     'supported_by_election_successor')),
                     'identityClass': identity, 'identityMethod': method,
                     'sourceBoundaryRegime': source['boundaryRegime'],
                     'targetBoundaryRegime': target['boundaryRegime'],

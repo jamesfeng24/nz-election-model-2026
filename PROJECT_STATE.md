@@ -1,3 +1,15 @@
+# Stage 10 review correction: amended inventory before new fitting — 2026-09-24
+
+PR #17 remains open on `stage/10-replacement-candidate-effects`. The reviewed implementation is `2d6cb298`; the predeclared 182-case audit plan was pushed at `2c417cb`, followed by 23 checksum-registered authoritative/party-authored pages at `cb6db60` and `acd0b4d` (the last acquired page and source registration are included in the next checkpoint). The original Stage 10 pre-fit inventory/specification and descriptive analysis remain in commit history and are explicitly superseded by `data/processed/models/replacement-candidate/post-review-amendment.json` for this correction.
+
+The corrected inventory audits all 182 predeclared comparable general source-winner cases and investigated the 20 priority cases. Ten have new occurrence-specific adjudications: five are primary replacements (2008→2011 two, 2014→2017 one, 2020→2023 two); four are prior by-election successors inventoried separately; one Hutt South alias bridge depends on a profile acquired after later success and is a retrospective diagnostic. General primary continuations remain 20/16/3. Louisa Wall's documented pre-2011 list service remains distinct from electorate service. Unresolved cases stay unresolved. This evidence pass was predeclared without target outcomes, but profile coverage is selected toward MPs and cannot establish representative validation.
+
+A 24-record, stage-specific snapshot pins 21 official Māori candidate tables and three winner summaries. Their exact name/vote/majority joins recover all 21 Māori source winners in 2008, 2014 and 2020; cross-election identity is not inferred and Māori remains a separate diagnostic scope. Stage 5–9 generated outputs have not been edited.
+
+**Exact next action:** commit and push this corrected inventory/amendment checkpoint before fitting. Then implement the originally frozen conditional replacement/no-effect chronological comparisons with identical samples, source/target winner-flag counterfactual, normalization/identity sensitivities and null-if-gates-fail selection. Run focused and final checks, update findings/methodology/decisions/source/data-dictionary/reproducibility/PR description, push final head, verify CI, leave PR unmerged. No Stage 6 refit or split-ticket work.
+
+---
+
 # Stage10 review-correction evidence plan — 2026-09-24
 
 The Stage10 PR #17 branch was clean at reviewed head `2d6cb298a8028e81e89c1fd4458afaf67bb8e0a0` when the two blocking audit findings were received. The old pre-fit inventory/specification and saved diagnostics remain historical checkpoints; no prior output has been overwritten. The first review finding is confirmed: `inventory.py` demands inherited official winner anchors in earlier calendar years and therefore misses independently evidenced list service, by-election entry and newcomers. Preserved dated profiles verify Jacinda Ardern's list service from2008 and Mt Albert electorate service from2017-02-25; Jami-Lee Ross's Botany electorate service from2011-03-05; and Louisa Wall's prior list service. Those facts alone do not establish every occurrence link or balanced evaluation eligibility.

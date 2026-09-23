@@ -36,6 +36,22 @@
     },
     {
       "schemaVersion": 1,
+      "id": "stage10-identity-labour-candidates-list-2011",
+      "organisation": "New Zealand Labour Party",
+      "url": "https://m.scoop.co.nz/stories/PA1109/S00048/labour-completes-selections-for-the-2011-general-election.htm",
+      "dateOrElection": "2011 general-election candidate selections",
+      "resource": "Party candidate selection statement",
+      "publishedDate": "2011-09-02",
+      "retrievedAt": "2026-09-23T16:27:41.816550+00:00",
+      "rawPath": "data/raw/identity-stage10/labour-candidates-list-2011.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored candidate list mirrored by Scoop. It confirms named pre-election candidacy but not complete career history."
+      ],
+      "sha256": "8ac970810e8216011fbbd54b0befbab8d479514ae6fb1c97086fcdece94d3fc4"
+    },
+    {
+      "schemaVersion": 1,
       "id": "stage10-identity-national-penk-campaign-2017",
       "organisation": "New Zealand National Party",
       "url": "https://m.scoop.co.nz/stories/PO1709/S00188/penk-brings-minister-to-electorate-to-see-for-himself.htm",
@@ -49,6 +65,22 @@
         "Party-authored statement mirrored by Scoop; not independent verification of every occurrence or full career history."
       ],
       "sha256": "ae43817a0bd3402dd5caa0b8d44c20a946bc6f88b99f07301fb8cbc48638b09f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-national-penk-selection-2017",
+      "organisation": "New Zealand National Party (supplied content via Indian Newslink)",
+      "url": "https://indiannewslink.co.nz/national-selects-penk-for-helensville/",
+      "dateOrElection": "2017 general-election candidate selection",
+      "resource": "Party candidate selection statement",
+      "publishedDate": "2017-03-02",
+      "retrievedAt": "2026-09-23T16:30:07.808564+00:00",
+      "rawPath": "data/raw/identity-stage10/national-penk-selection-2017.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-supplied content republished by independent outlet; date and candidate identity are pre-result, full career history remains separate."
+      ],
+      "sha256": "adc93f4e59966468719b2b83adc4938e37ae5485d2170926ea09a7aa055dfb05"
     },
     {
       "schemaVersion": 1,
