@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "stage": 10,
+  "inventoryCommit": "3e0945b464583039a76c985123395c44ebb70c6f",
+  "estimand": "Incremental predictive association of a different person replacing a source-election winner for the same party and unchanged-boundary general seat with the target normalized candidate residual, conditional on the outgoing residual and known target candidacy. Not a causal replacement penalty or isolated personal vote.",
+  "units": "One observed same-party party-seat adjacent-election comparison; source and target normalized candidate residuals in percentage points, equal pair weights. Source winners are the primary status group; source challengers are separate diagnostics.",
+  "eligibility": "Same canonical party continuity with actual source/target candidate affiliation keys, held matched contests, nonmissing source and target residuals, same named seat and scope, unchanged verified boundary regime in 2008→2011, 2014→2017 or 2020→2023. General only in primary because processed Māori source-winner status is unavailable. Target candidacy known; target victory is never an input.",
+  "identity": "Supported replacement requires two distinct official person IDs with source-or-earlier winner anchors dated before the target election. Supported continuation requires a source-anchored same-person exact name/party/seat chain, with target projection marked probable. Name difference or sameness alone is insufficient. Retrospective target/later anchors are distinct diagnostics, not validation. Profile publication/retrieval timing and career completeness stay separate.",
+  "formulationChoice": "A constant-shift model y=alpha+beta*x+gamma*R would compare replacement with continuation at the same source residual. A retention model y=alpha+beta*x+delta*(R*x) would allow replacement change to vary with outgoing residual. Both require a supported replacement group and a chronological holdout. The retention interaction is substantively preferable for loss of outgoing overperformance, but one interaction cannot represent incoming strength. Freeze the constant-shift model as the simplest primary diagnostic and retain the interaction as one prespecified sensitivity only if data support fitting; do not search for an attractive coefficient.",
+  "model": {
+    "primary": "y_i = alpha + beta*x_i + gamma*R_i + error_i",
+    "noReplacement": "y_i = alpha0 + beta0*x_i + error_i",
+    "retentionSensitivity": "y_i = alpha + beta*x_i + delta*(R_i*x_i) + error_i",
+    "intercept": "Included because later party/election references and selected candidate cohorts can shift even when x=0. Stage 6 zero-intercept elasticity is a different estimand."
+  },
+  "benchmarks": [
+    "no-replacement fitted on identical training records",
+    "carry-forward yhat=x",
+    "zero residual yhat=0"
+  ],
+  "validation": "2011 is descriptive only. Fit 2017 from 2011 target records and 2023 from 2011+2017 target records. For each target, both groups must be present in earlier training and in the holdout before any fitted replacement comparison. Predictors are source residual, source status and known target candidacy only. Evaluate MAE and RMSE on identical holdout records; do not use target residual or reference offset as a predictor.",
+  "testabilityAndSelection": "With zero pre-target-supported replacement events in the committed inventory, no primary model or chronological replacement score is identifiable. Selected operational replacement effect is null. If future separately authorized evidence makes both groups available in each trained holdout, require non-worse MAE and RMSE versus no-effect in each trained holdout, at least 0.25 percentage point pooled MAE improvement, stable direction under normalization and identity sensitivities, and no target-outcome-dependent cohort admission. These gates are frozen now and are not a license to relax identity eligibility in this stage.",
+  "sensitivities": [
+    "proportional and log-odds residual scales on available identical records",
+    "source challenger replacements separately; no pooling",
+    "retention interaction if identifiable",
+    "first-term comparator composition reported, not corrected with Stage 9 descriptive coefficient",
+    "retrospective target/later-anchored identity diagnostic labelled winner-selected and excluded from operational selection"
+  ],
+  "uncertainty": "Only three unchanged-boundary transition clusters, shared party/election references and repeated seats/people. Report transition counts and descriptive ranges; no candidate-pair iid significance or causal identification. Stable party-seat differences, regression to mean, retirement/recontesting and profile selection remain explicit.",
+  "outputs": [
+    "frozen inventory.json and input-contract.json",
+    "analysis.json with eligibility, arithmetic benchmarks and scale/status diagnostics or explicit unavailable reasons",
+    "selection.json with nullable selectedOperationalReplacementEffectPP and failed gates",
+    "stage-specific analysis manifest and deterministic checks"
+  ],
+  "integration": "A future model must condition candidate residual transport on identity/status and target-boundary baseline availability; never preserve outgoing premium unchanged and also subtract a replacement penalty, stack Stage8/9/Stage6 effects, or set unknown incoming strength to zero. Stage6 conditional elasticity review is a separate later decision; no Stage6 refit or output edit in Stage10.",
+  "outgoingStatusDefinition": "Outgoing source winner versus challenger is observed from source election. Departure reason remains unknown absent evidence; winner at source need not be incumbent at target if service was interrupted. Incoming prior electorate/list service and earlier candidacy are separate and unknown if evidence is incomplete. Stage 9 first-term status is not imposed as an operational correction.",
+  "freezeStatus": "frozen after committed pre-fit inventory, before Stage 10 effect calculations"
+}

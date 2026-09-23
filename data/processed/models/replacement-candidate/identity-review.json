@@ -1,0 +1,1716 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "eventId": "nz-general-2008-electorate-01-candidate-06->nz-general-2011-electorate-01-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-02-candidate-06->nz-general-2011-electorate-02-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-03-candidate-08->nz-general-2011-electorate-03-candidate-03",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "supported_by_election_successor",
+      "adjudication": {
+        "eventId": "nz-general-2008-electorate-03-candidate-08->nz-general-2011-electorate-03-candidate-03",
+        "sourceYear": 2008,
+        "targetYear": 2011,
+        "electorateName": "Botany",
+        "sourceRoute": "retrospective_electorate_history",
+        "targetRoute": "pre_target_by_election_service",
+        "sourceEvidenceId": "stage10-identity-parliament-electorate-botany",
+        "targetEvidenceId": "parliament-former-profile-ross-jami-lee-2026-09-23",
+        "sourceFactDate": "2008-11-08",
+        "targetFactDate": "2011-03-05",
+        "sourceNameProof": "Pansy Wong",
+        "targetNameProof": "Jami-Lee Ross",
+        "role": "by_election_successor",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "probable",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2020-11-06",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "sourceRetrievalAt": "2026-09-23T16:20:15.490932+00:00",
+        "targetRetrievalAt": "2026-09-23T06:13:48+00:00",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-04-candidate-04->nz-general-2011-electorate-04-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-05-candidate-01->nz-general-2011-electorate-05-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-06-candidate-01->nz-general-2011-electorate-06-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-07-candidate-02->nz-general-2011-electorate-07-candidate-06",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "supported_replacement",
+      "adjudication": {
+        "eventId": "nz-general-2008-electorate-07-candidate-02->nz-general-2011-electorate-07-candidate-06",
+        "sourceYear": 2008,
+        "targetYear": 2011,
+        "electorateName": "Coromandel",
+        "sourceRoute": "source_winner_anchor",
+        "targetRoute": "pre_result_party_selection",
+        "sourceEvidenceId": "parliament:goudie-sandra",
+        "targetEvidenceId": "stage10-identity-national-simpson-selection-2011",
+        "sourceFactDate": "2008-11-08",
+        "targetFactDate": "2011-04-20",
+        "sourceNameProof": "GOUDIE, Sandra Anne",
+        "targetNameProof": "Scott Simpson",
+        "role": "primary",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "confirmed",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2011-04-20",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "sourceRetrievalAt": null,
+        "targetRetrievalAt": "2026-09-23T16:20:15.490932+00:00",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-08-candidate-05->nz-general-2011-electorate-08-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-09-candidate-02->nz-general-2011-electorate-09-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-10-candidate-04->nz-general-2011-electorate-10-candidate-08",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-11-candidate-07->nz-general-2011-electorate-11-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-12-candidate-04->nz-general-2011-electorate-12-candidate-01",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-13-candidate-01->nz-general-2011-electorate-13-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-14-candidate-02->nz-general-2011-electorate-14-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-15-candidate-04->nz-general-2011-electorate-15-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-16-candidate-04->nz-general-2011-electorate-16-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-17-candidate-04->nz-general-2011-electorate-17-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-18-candidate-01->nz-general-2011-electorate-18-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-19-candidate-04->nz-general-2011-electorate-19-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-21-candidate-05->nz-general-2011-electorate-21-candidate-01",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "supported_by_election_successor",
+      "adjudication": {
+        "eventId": "nz-general-2008-electorate-21-candidate-05->nz-general-2011-electorate-21-candidate-01",
+        "sourceYear": 2008,
+        "targetYear": 2011,
+        "electorateName": "Mana",
+        "sourceRoute": "retrospective_electorate_history",
+        "targetRoute": "pre_target_by_election_service",
+        "sourceEvidenceId": "stage10-identity-parliament-electorate-mana",
+        "targetEvidenceId": "parliament-former-profile-faafoi-kris-2026-09-23",
+        "sourceFactDate": "2008-11-08",
+        "targetFactDate": "2010-11-20",
+        "sourceNameProof": "Winifred Alexandra Laban",
+        "targetNameProof": "Kris Faafoi",
+        "role": "by_election_successor",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "probable",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2022-07-25",
+        "sourceRetrievalAt": "2026-09-23T16:20:15.490932+00:00",
+        "targetRetrievalAt": "2026-09-23T06:13:42+00:00",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-23-candidate-07->nz-general-2011-electorate-23-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-24-candidate-05->nz-general-2011-electorate-24-candidate-06",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "supported_replacement",
+      "adjudication": {
+        "eventId": "nz-general-2008-electorate-24-candidate-05->nz-general-2011-electorate-24-candidate-06",
+        "sourceYear": 2008,
+        "targetYear": 2011,
+        "electorateName": "Manurewa",
+        "sourceRoute": "source_winner_anchor",
+        "targetRoute": "pre_result_party_candidate_list",
+        "sourceEvidenceId": "parliament:hawkins-george",
+        "targetEvidenceId": "stage10-identity-labour-candidates-list-2011",
+        "sourceFactDate": "2008-11-08",
+        "targetFactDate": "2011-09-02",
+        "sourceNameProof": "HAWKINS, George Warren",
+        "targetNameProof": "Louisa Wall",
+        "role": "primary",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "confirmed",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2011-09-02",
+        "sourceRetrievalAt": null,
+        "targetRetrievalAt": "2026-09-23T16:27:41.816550+00:00",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-25-candidate-08->nz-general-2011-electorate-25-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-26-candidate-02->nz-general-2011-electorate-26-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_distinct_people",
+      "correctedIdentityClass": "retrospective_distinct_people",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-27-candidate-04->nz-general-2011-electorate-27-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-28-candidate-04->nz-general-2011-electorate-28-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-29-candidate-04->nz-general-2011-electorate-29-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-30-candidate-01->nz-general-2011-electorate-30-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-31-candidate-05->nz-general-2011-electorate-31-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-32-candidate-06->nz-general-2011-electorate-32-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-33-candidate-01->nz-general-2011-electorate-33-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-34-candidate-01->nz-general-2011-electorate-34-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-37-candidate-08->nz-general-2011-electorate-37-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-38-candidate-03->nz-general-2011-electorate-38-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-39-candidate-02->nz-general-2011-electorate-39-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-40-candidate-03->nz-general-2011-electorate-40-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-41-candidate-03->nz-general-2011-electorate-41-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-43-candidate-01->nz-general-2011-electorate-43-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-44-candidate-08->nz-general-2011-electorate-44-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-45-candidate-04->nz-general-2011-electorate-45-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-46-candidate-02->nz-general-2011-electorate-46-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-47-candidate-01->nz-general-2011-electorate-47-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-49-candidate-01->nz-general-2011-electorate-49-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-51-candidate-02->nz-general-2011-electorate-51-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-53-candidate-03->nz-general-2011-electorate-53-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-54-candidate-07->nz-general-2011-electorate-54-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-55-candidate-02->nz-general-2011-electorate-55-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-56-candidate-02->nz-general-2011-electorate-56-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-57-candidate-02->nz-general-2011-electorate-57-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-58-candidate-02->nz-general-2011-electorate-58-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-59-candidate-10->nz-general-2011-electorate-59-candidate-09",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-60-candidate-01->nz-general-2011-electorate-60-candidate-01",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-61-candidate-01->nz-general-2011-electorate-61-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2008-electorate-62-candidate-05->nz-general-2011-electorate-62-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-01-candidate-02->nz-general-2017-electorate-01-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-02-candidate-05->nz-general-2017-electorate-02-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-03-candidate-03->nz-general-2017-electorate-03-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-04-candidate-08->nz-general-2017-electorate-04-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-05-candidate-07->nz-general-2017-electorate-05-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-06-candidate-02->nz-general-2017-electorate-06-candidate-07",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-07-candidate-07->nz-general-2017-electorate-07-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-08-candidate-01->nz-general-2017-electorate-08-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-09-candidate-02->nz-general-2017-electorate-09-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-10-candidate-07->nz-general-2017-electorate-10-candidate-06",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-11-candidate-03->nz-general-2017-electorate-11-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_distinct_people",
+      "correctedIdentityClass": "retrospective_distinct_people",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-12-candidate-10->nz-general-2017-electorate-12-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-13-candidate-02->nz-general-2017-electorate-13-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-14-candidate-02->nz-general-2017-electorate-14-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-15-candidate-06->nz-general-2017-electorate-15-candidate-03",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "supported_replacement",
+      "adjudication": {
+        "eventId": "nz-general-2014-electorate-15-candidate-06->nz-general-2017-electorate-15-candidate-03",
+        "sourceYear": 2014,
+        "targetYear": 2017,
+        "electorateName": "Helensville",
+        "sourceRoute": "source_winner_anchor",
+        "targetRoute": "pre_result_party_campaign",
+        "sourceEvidenceId": "parliament:key-john",
+        "targetEvidenceId": "stage10-identity-national-penk-selection-2017",
+        "sourceFactDate": "2014-09-20",
+        "targetFactDate": "2017-03-02",
+        "sourceNameProof": "KEY, John Phillip",
+        "targetNameProof": "Christopher Penk",
+        "role": "primary",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "confirmed",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2017-03-02",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "sourceRetrievalAt": null,
+        "targetRetrievalAt": "2026-09-23T16:30:07.808564+00:00",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-16-candidate-01->nz-general-2017-electorate-16-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-17-candidate-03->nz-general-2017-electorate-17-candidate-01",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "retrospective_alias_replacement",
+      "adjudication": {
+        "eventId": "nz-general-2014-electorate-17-candidate-03->nz-general-2017-electorate-17-candidate-01",
+        "sourceYear": 2014,
+        "targetYear": 2017,
+        "electorateName": "Hutt South",
+        "sourceRoute": "source_winner_anchor",
+        "targetRoute": "pre_result_party_candidate_list",
+        "sourceEvidenceId": "parliament:mallard-trevor",
+        "targetEvidenceId": "stage10-identity-labour-andersen-list-2017",
+        "sourceFactDate": "2014-09-20",
+        "targetFactDate": "2017-05-02",
+        "sourceNameProof": "MALLARD, Trevor Colin",
+        "targetNameProof": "Ginny Andersen",
+        "role": "retrospective_alias",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "probable",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2017-05-02",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "The pre-result party list uses Ginny; the preserved retrospective Parliament profile bridges Ginny to Virginia after her 2020 win. This later-success-covered alias is a diagnostic, excluded from primary validation.",
+        "sourceRetrievalAt": null,
+        "targetRetrievalAt": "2026-09-23T16:20:15.490932+00:00",
+        "aliasEvidenceId": "parliament-current-profile-andersen-ginny-2026-09-23",
+        "laterOutcomeCoverageDependent": true,
+        "aliasNames": [
+          "Ginny Andersen",
+          "Virginia Andersen"
+        ]
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-18-candidate-02->nz-general-2017-electorate-18-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-19-candidate-03->nz-general-2017-electorate-19-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-20-candidate-07->nz-general-2017-electorate-20-candidate-08",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-21-candidate-07->nz-general-2017-electorate-21-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-22-candidate-03->nz-general-2017-electorate-22-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-23-candidate-03->nz-general-2017-electorate-23-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-24-candidate-04->nz-general-2017-electorate-24-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-25-candidate-07->nz-general-2017-electorate-25-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-26-candidate-05->nz-general-2017-electorate-26-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_distinct_people",
+      "correctedIdentityClass": "retrospective_distinct_people",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-27-candidate-06->nz-general-2017-electorate-27-candidate-01",
+      "externalPriority": true,
+      "originalIdentityClass": "retrospective_distinct_people",
+      "correctedIdentityClass": "supported_by_election_successor",
+      "adjudication": {
+        "eventId": "nz-general-2014-electorate-27-candidate-06->nz-general-2017-electorate-27-candidate-01",
+        "sourceYear": 2014,
+        "targetYear": 2017,
+        "electorateName": "Mt Albert",
+        "sourceRoute": "source_winner_anchor",
+        "targetRoute": "pre_target_by_election_service",
+        "sourceEvidenceId": "parliament:shearer-david",
+        "targetEvidenceId": "parliament-former-profile-ardern-jacinda-2026-09-23",
+        "sourceFactDate": "2014-09-20",
+        "targetFactDate": "2017-02-25",
+        "sourceNameProof": "SHEARER, David James",
+        "targetNameProof": "Jacinda Ardern",
+        "role": "by_election_successor",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "probable",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2024-08-13",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "sourceRetrievalAt": null,
+        "targetRetrievalAt": "2026-09-23T06:13:36+00:00",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-28-candidate-04->nz-general-2017-electorate-28-candidate-09",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-29-candidate-03->nz-general-2017-electorate-29-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-30-candidate-06->nz-general-2017-electorate-30-candidate-08",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-31-candidate-01->nz-general-2017-electorate-31-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-32-candidate-06->nz-general-2017-electorate-32-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-33-candidate-01->nz-general-2017-electorate-33-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-34-candidate-01->nz-general-2017-electorate-34-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-35-candidate-06->nz-general-2017-electorate-35-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-36-candidate-03->nz-general-2017-electorate-36-candidate-05",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-37-candidate-02->nz-general-2017-electorate-37-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-38-candidate-04->nz-general-2017-electorate-38-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-39-candidate-03->nz-general-2017-electorate-39-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-40-candidate-02->nz-general-2017-electorate-40-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-41-candidate-02->nz-general-2017-electorate-41-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-42-candidate-03->nz-general-2017-electorate-42-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-43-candidate-02->nz-general-2017-electorate-43-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-44-candidate-01->nz-general-2017-electorate-44-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-45-candidate-06->nz-general-2017-electorate-45-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-46-candidate-04->nz-general-2017-electorate-46-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-47-candidate-03->nz-general-2017-electorate-47-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-48-candidate-01->nz-general-2017-electorate-48-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-49-candidate-04->nz-general-2017-electorate-49-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-50-candidate-05->nz-general-2017-electorate-50-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-51-candidate-07->nz-general-2017-electorate-51-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-52-candidate-01->nz-general-2017-electorate-52-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-53-candidate-06->nz-general-2017-electorate-53-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-54-candidate-01->nz-general-2017-electorate-54-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-55-candidate-01->nz-general-2017-electorate-55-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-56-candidate-06->nz-general-2017-electorate-56-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-57-candidate-03->nz-general-2017-electorate-57-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-58-candidate-06->nz-general-2017-electorate-58-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-59-candidate-04->nz-general-2017-electorate-59-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-60-candidate-07->nz-general-2017-electorate-60-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-61-candidate-04->nz-general-2017-electorate-61-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-62-candidate-01->nz-general-2017-electorate-62-candidate-02",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-63-candidate-10->nz-general-2017-electorate-63-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2014-electorate-64-candidate-09->nz-general-2017-electorate-64-candidate-08",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-01-candidate-09->nz-general-2023-electorate-01-candidate-09",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-02-candidate-05->nz-general-2023-electorate-02-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-03-candidate-10->nz-general-2023-electorate-03-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_distinct_people",
+      "correctedIdentityClass": "retrospective_distinct_people",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-04-candidate-04->nz-general-2023-electorate-04-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-05-candidate-09->nz-general-2023-electorate-05-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-06-candidate-09->nz-general-2023-electorate-06-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-07-candidate-08->nz-general-2023-electorate-07-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-08-candidate-03->nz-general-2023-electorate-08-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_distinct_people",
+      "correctedIdentityClass": "retrospective_distinct_people",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-09-candidate-02->nz-general-2023-electorate-09-candidate-02",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-10-candidate-06->nz-general-2023-electorate-10-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-11-candidate-09->nz-general-2023-electorate-11-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-12-candidate-11->nz-general-2023-electorate-12-candidate-05",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-13-candidate-07->nz-general-2023-electorate-13-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-14-candidate-01->nz-general-2023-electorate-14-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-15-candidate-05->nz-general-2023-electorate-15-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-16-candidate-08->nz-general-2023-electorate-16-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-17-candidate-12->nz-general-2023-electorate-17-candidate-11",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-18-candidate-07->nz-general-2023-electorate-18-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-19-candidate-10->nz-general-2023-electorate-19-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-20-candidate-02->nz-general-2023-electorate-20-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-21-candidate-06->nz-general-2023-electorate-21-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_distinct_people",
+      "correctedIdentityClass": "retrospective_distinct_people",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-22-candidate-11->nz-general-2023-electorate-22-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-23-candidate-05->nz-general-2023-electorate-23-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-24-candidate-01->nz-general-2023-electorate-24-candidate-07",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_distinct_people",
+      "correctedIdentityClass": "retrospective_distinct_people",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-25-candidate-10->nz-general-2023-electorate-25-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-26-candidate-05->nz-general-2023-electorate-26-candidate-02",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-27-candidate-02->nz-general-2023-electorate-27-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-28-candidate-10->nz-general-2023-electorate-28-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-29-candidate-01->nz-general-2023-electorate-29-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-30-candidate-09->nz-general-2023-electorate-30-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-31-candidate-04->nz-general-2023-electorate-31-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-32-candidate-09->nz-general-2023-electorate-32-candidate-09",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-33-candidate-07->nz-general-2023-electorate-33-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-34-candidate-06->nz-general-2023-electorate-34-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-35-candidate-01->nz-general-2023-electorate-35-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-36-candidate-06->nz-general-2023-electorate-36-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-37-candidate-06->nz-general-2023-electorate-37-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-38-candidate-02->nz-general-2023-electorate-38-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-40-candidate-07->nz-general-2023-electorate-40-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-41-candidate-03->nz-general-2023-electorate-41-candidate-04",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "supported_replacement",
+      "adjudication": {
+        "eventId": "nz-general-2020-electorate-41-candidate-03->nz-general-2023-electorate-41-candidate-04",
+        "sourceYear": 2020,
+        "targetYear": 2023,
+        "electorateName": "Rangitīkei",
+        "sourceRoute": "source_winner_anchor",
+        "targetRoute": "pre_result_party_selection",
+        "sourceEvidenceId": "parliament:mckelvie-ian",
+        "targetEvidenceId": "stage10-identity-national-redmayne-selection-2022",
+        "sourceFactDate": "2020-10-17",
+        "targetFactDate": "2022-11-05",
+        "sourceNameProof": "McKELVIE, Ian Robert Flockhart",
+        "targetNameProof": "Suze Redmayne",
+        "role": "primary",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "confirmed",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2022-11-05",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "sourceRetrievalAt": null,
+        "targetRetrievalAt": "2026-09-23T16:20:15.490932+00:00",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-42-candidate-03->nz-general-2023-electorate-42-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-43-candidate-03->nz-general-2023-electorate-43-candidate-02",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "supported_replacement",
+      "adjudication": {
+        "eventId": "nz-general-2020-electorate-43-candidate-03->nz-general-2023-electorate-43-candidate-02",
+        "sourceYear": 2020,
+        "targetYear": 2023,
+        "electorateName": "Rongotai",
+        "sourceRoute": "retrospective_electorate_history",
+        "targetRoute": "pre_result_party_selection",
+        "sourceEvidenceId": "stage10-identity-parliament-electorate-rongotai",
+        "targetEvidenceId": "stage10-identity-fleur-fitzsimons-selection-2023",
+        "sourceFactDate": "2020-10-17",
+        "targetFactDate": "2023-03-04",
+        "sourceNameProof": "Paul Eagle",
+        "targetNameProof": "Fleur Fitzsimons",
+        "role": "primary",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "confirmed",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2023-03-04",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "sourceRetrievalAt": "2026-09-23T16:20:15.490932+00:00",
+        "targetRetrievalAt": "2026-09-23T16:20:15.490932+00:00",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-44-candidate-02->nz-general-2023-electorate-44-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-45-candidate-03->nz-general-2023-electorate-45-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-46-candidate-05->nz-general-2023-electorate-46-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-47-candidate-04->nz-general-2023-electorate-47-candidate-04",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-48-candidate-01->nz-general-2023-electorate-48-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-49-candidate-04->nz-general-2023-electorate-49-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "supported_continuation",
+      "correctedIdentityClass": "supported_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-50-candidate-02->nz-general-2023-electorate-50-candidate-02",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-51-candidate-08->nz-general-2023-electorate-51-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-52-candidate-01->nz-general-2023-electorate-52-candidate-09",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "supported_by_election_successor",
+      "adjudication": {
+        "eventId": "nz-general-2020-electorate-52-candidate-01->nz-general-2023-electorate-52-candidate-09",
+        "sourceYear": 2020,
+        "targetYear": 2023,
+        "electorateName": "Tauranga",
+        "sourceRoute": "source_winner_anchor",
+        "targetRoute": "pre_target_by_election_success",
+        "sourceEvidenceId": "parliament:bridges-simon",
+        "targetEvidenceId": "stage10-identity-national-uffindell-by-election-2022",
+        "sourceFactDate": "2020-10-17",
+        "targetFactDate": "2022-06-18",
+        "sourceNameProof": "BRIDGES, Simon",
+        "targetNameProof": "Sam Uffindell",
+        "role": "by_election_successor",
+        "sourceOccurrenceConfidence": "confirmed",
+        "targetOccurrenceConfidence": "probable",
+        "distinctPersonEvidence": "different named people independently anchored to the same party-seat transition; not name contrast alone",
+        "sourcePublicationDate": null,
+        "targetPublicationDate": "2022-06-19",
+        "targetOutcomeDependent": false,
+        "sourceCoverageCaveat": "retrospective or party statement coverage is selective; target election winner flag was not used to select or validate this record",
+        "sourceRetrievalAt": null,
+        "targetRetrievalAt": "2026-09-23T16:22:13.087965+00:00",
+        "aliasEvidenceId": null,
+        "laterOutcomeCoverageDependent": false
+      },
+      "reviewOutcome": "supported_by_new_evidence"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-53-candidate-07->nz-general-2023-electorate-53-candidate-06",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-54-candidate-02->nz-general-2023-electorate-54-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-55-candidate-09->nz-general-2023-electorate-55-candidate-08",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-56-candidate-04->nz-general-2023-electorate-56-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-57-candidate-03->nz-general-2023-electorate-57-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-58-candidate-06->nz-general-2023-electorate-58-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-59-candidate-03->nz-general-2023-electorate-59-candidate-01",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-60-candidate-07->nz-general-2023-electorate-60-candidate-09",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-61-candidate-09->nz-general-2023-electorate-61-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-62-candidate-04->nz-general-2023-electorate-62-candidate-05",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-63-candidate-07->nz-general-2023-electorate-63-candidate-03",
+      "externalPriority": false,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-64-candidate-04->nz-general-2023-electorate-64-candidate-06",
+      "externalPriority": true,
+      "originalIdentityClass": "unresolved_identity",
+      "correctedIdentityClass": "unresolved_identity",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    },
+    {
+      "eventId": "nz-general-2020-electorate-65-candidate-10->nz-general-2023-electorate-65-candidate-10",
+      "externalPriority": false,
+      "originalIdentityClass": "retrospective_or_ambiguous_continuation",
+      "correctedIdentityClass": "retrospective_or_ambiguous_continuation",
+      "adjudication": null,
+      "reviewOutcome": "preserved_evidence_only; unresolved identity retained where applicable"
+    }
+  ],
+  "acquisitionSelection": "20 cases predeclared without target wins or residual changes. Retrospective Parliament profiles are stronger for winners; five requested seat pages failed and no exhaustive biography search followed."
+}

@@ -1,0 +1,4689 @@
+{
+  "schemaVersion": 2,
+  "primaryTransitionCounts": [
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "treatment": 2,
+      "comparator": 20,
+      "retrospectiveDistinctPeople": 1,
+      "byElectionSuccessors": 2,
+      "laterSuccessCoveredAliases": 0
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "treatment": 1,
+      "comparator": 16,
+      "retrospectiveDistinctPeople": 2,
+      "byElectionSuccessors": 1,
+      "laterSuccessCoveredAliases": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "treatment": 2,
+      "comparator": 3,
+      "retrospectiveDistinctPeople": 4,
+      "byElectionSuccessors": 1,
+      "laterSuccessCoveredAliases": 0
+    }
+  ],
+  "primaryTreatmentCount": 5,
+  "primaryComparatorCount": 39,
+  "retrospectiveDistinctPeopleCount": 7,
+  "retrospectiveTargetWinners": 7,
+  "byElectionSuccessorCount": 4,
+  "laterSuccessCoveredAliasCount": 1,
+  "partyCounts": [
+    {
+      "sourceYear": 2008,
+      "partyKey": "labourparty",
+      "identityClass": "supported_continuation",
+      "count": 10
+    },
+    {
+      "sourceYear": 2008,
+      "partyKey": "labourparty",
+      "identityClass": "supported_replacement",
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "partyKey": "nationalparty",
+      "identityClass": "supported_continuation",
+      "count": 10
+    },
+    {
+      "sourceYear": 2008,
+      "partyKey": "nationalparty",
+      "identityClass": "supported_replacement",
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "partyKey": "labourparty",
+      "identityClass": "supported_continuation",
+      "count": 6
+    },
+    {
+      "sourceYear": 2014,
+      "partyKey": "nationalparty",
+      "identityClass": "supported_continuation",
+      "count": 10
+    },
+    {
+      "sourceYear": 2014,
+      "partyKey": "nationalparty",
+      "identityClass": "supported_replacement",
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "partyKey": "labourparty",
+      "identityClass": "supported_continuation",
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "partyKey": "labourparty",
+      "identityClass": "supported_replacement",
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "partyKey": "nationalparty",
+      "identityClass": "supported_continuation",
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "partyKey": "nationalparty",
+      "identityClass": "supported_replacement",
+      "count": 1
+    }
+  ],
+  "cohortBreakdown": [
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 22
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "alliance",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "alliance",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 13
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 22
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 11
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 21
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_by_election_successor",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 8
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": true,
+      "count": 2
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_replacement",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "libertarianz",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "libertarianz",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 11
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 18
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_by_election_successor",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 10
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_replacement",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "unitedfuture",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "partyKey": "unitedfuture",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 12
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 13
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "conservative",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "conservative",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 44
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 18
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 23
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 8
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 18
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "maoriparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "maoriparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 18
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 10
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 11
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "unitedfuture",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "unitedfuture",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "partyKey": "unitedfuture",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 11
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 8
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "ban1080",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "ban1080",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "conservative",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "conservative",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 20
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 13
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 27
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 13
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 14
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_alias_replacement",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_by_election_successor",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 6
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "maoriparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "maoriparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 10
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 17
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 10
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_replacement",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 11
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "unitedfuture",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "partyKey": "unitedfuture",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 10
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "conservative",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "conservative",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 18
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "democratsforsocialcredit",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 31
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 15
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 10
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner_unknown",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 14
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "nzoutdoorsparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "theopportunitiespartytop",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "partyKey": "theopportunitiespartytop",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 9
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 10
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 31
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "actnewzealand",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "aotearoalegalisecannabisparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "conservative",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 10
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 8
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 32
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "greenparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "greenparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 14
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 15
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": true,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_replacement",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 4
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "labourparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "maoriparty",
+      "electorateType": "maori",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 6
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 7
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 15
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_distinct_people",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 8
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_by_election_successor",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_continuation",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": true,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "supported_replacement",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": true,
+      "count": 1
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "nationalparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_winner",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "confirmed",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 5
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "newzealandfirstparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 11
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "oneparty",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 2
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "theopportunitiespartytop",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "probable",
+      "primaryEligible": false,
+      "count": 3
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "partyKey": "theopportunitiespartytop",
+      "electorateType": "general",
+      "outgoingStatus": "source_challenger",
+      "identityClass": "unresolved_identity",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "primaryEligible": false,
+      "count": 7
+    }
+  ],
+  "chronologicalFittedComparison": {
+    "additive": [
+      {
+        "targetYear": 2017,
+        "trainingTargetYears": [
+          2011
+        ],
+        "counts": {
+          "trainingReplacement": 2,
+          "trainingContinuation": 20,
+          "holdoutReplacement": 1,
+          "holdoutContinuation": 16
+        },
+        "fittedReplacement": {
+          "interceptPP": 4.3038826885704315,
+          "priorSlope": 0.7246598812410874,
+          "replacementShiftPP": -7.538618322184153
+        },
+        "fittedNoReplacement": {
+          "interceptPP": 3.642072756913496,
+          "priorSlope": 0.7198018805809154
+        },
+        "fittedRetentionSensitivity": {
+          "interceptPP": 3.419981329871665,
+          "priorSlope": 0.8568456019189492,
+          "replacementPriorInteraction": -0.9839761760430867
+        },
+        "replacementScore": {
+          "n": 17,
+          "maePP": 3.52968155300673,
+          "rmsePP": 4.210456500540915
+        },
+        "noReplacementScore": {
+          "n": 17,
+          "maePP": 3.5766865719173513,
+          "rmsePP": 4.359377501876415
+        },
+        "retentionScore": {
+          "n": 17,
+          "maePP": 3.5731613305806316,
+          "rmsePP": 4.303977951765962
+        },
+        "zeroScore": {
+          "n": 17,
+          "maePP": 6.517122439632246,
+          "rmsePP": 7.7417012047579155
+        },
+        "carryForwardScore": {
+          "n": 17,
+          "maePP": 3.0312466353696896,
+          "rmsePP": 4.320439724306192
+        },
+        "holdoutEventIds": [
+          "nz-general-2014-electorate-15-candidate-06->nz-general-2017-electorate-15-candidate-03",
+          "nz-general-2014-electorate-02-candidate-05->nz-general-2017-electorate-02-candidate-04",
+          "nz-general-2014-electorate-03-candidate-03->nz-general-2017-electorate-03-candidate-04",
+          "nz-general-2014-electorate-08-candidate-01->nz-general-2017-electorate-08-candidate-02",
+          "nz-general-2014-electorate-09-candidate-02->nz-general-2017-electorate-09-candidate-01",
+          "nz-general-2014-electorate-13-candidate-02->nz-general-2017-electorate-13-candidate-01",
+          "nz-general-2014-electorate-19-candidate-03->nz-general-2017-electorate-19-candidate-03",
+          "nz-general-2014-electorate-29-candidate-03->nz-general-2017-electorate-29-candidate-05",
+          "nz-general-2014-electorate-39-candidate-03->nz-general-2017-electorate-39-candidate-03",
+          "nz-general-2014-electorate-40-candidate-02->nz-general-2017-electorate-40-candidate-02",
+          "nz-general-2014-electorate-41-candidate-02->nz-general-2017-electorate-41-candidate-01",
+          "nz-general-2014-electorate-43-candidate-02->nz-general-2017-electorate-43-candidate-03",
+          "nz-general-2014-electorate-48-candidate-01->nz-general-2017-electorate-48-candidate-01",
+          "nz-general-2014-electorate-52-candidate-01->nz-general-2017-electorate-52-candidate-02",
+          "nz-general-2014-electorate-55-candidate-01->nz-general-2017-electorate-55-candidate-02",
+          "nz-general-2014-electorate-58-candidate-06->nz-general-2017-electorate-58-candidate-06",
+          "nz-general-2014-electorate-60-candidate-07->nz-general-2017-electorate-60-candidate-03"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "counts": {
+          "trainingReplacement": 3,
+          "trainingContinuation": 36,
+          "holdoutReplacement": 2,
+          "holdoutContinuation": 3
+        },
+        "fittedReplacement": {
+          "interceptPP": 3.5739770413226726,
+          "priorSlope": 0.648083865981873,
+          "replacementShiftPP": -6.943738454379806
+        },
+        "fittedNoReplacement": {
+          "interceptPP": 3.1077906137258378,
+          "priorSlope": 0.6352701084862783
+        },
+        "fittedRetentionSensitivity": {
+          "interceptPP": 3.2297485194435254,
+          "priorSlope": 0.687818174847562,
+          "replacementPriorInteraction": -0.8874631873326183
+        },
+        "replacementScore": {
+          "n": 5,
+          "maePP": 10.827830270244712,
+          "rmsePP": 15.929809798913201
+        },
+        "noReplacementScore": {
+          "n": 5,
+          "maePP": 13.069360103284032,
+          "rmsePP": 16.49960908134124
+        },
+        "retentionScore": {
+          "n": 5,
+          "maePP": 11.072230482074755,
+          "rmsePP": 15.894041981599797
+        },
+        "zeroScore": {
+          "n": 5,
+          "maePP": 6.791908348245106,
+          "rmsePP": 11.689366050768118
+        },
+        "carryForwardScore": {
+          "n": 5,
+          "maePP": 11.94775748189589,
+          "rmsePP": 15.784326797567907
+        },
+        "holdoutEventIds": [
+          "nz-general-2020-electorate-41-candidate-03->nz-general-2023-electorate-41-candidate-04",
+          "nz-general-2020-electorate-43-candidate-03->nz-general-2023-electorate-43-candidate-02",
+          "nz-general-2020-electorate-15-candidate-05->nz-general-2023-electorate-15-candidate-07",
+          "nz-general-2020-electorate-38-candidate-02->nz-general-2023-electorate-38-candidate-01",
+          "nz-general-2020-electorate-49-candidate-04->nz-general-2023-electorate-49-candidate-01"
+        ]
+      }
+    ],
+    "proportional": [
+      {
+        "targetYear": 2017,
+        "trainingTargetYears": [
+          2011
+        ],
+        "counts": {
+          "trainingReplacement": 2,
+          "trainingContinuation": 20,
+          "holdoutReplacement": 1,
+          "holdoutContinuation": 16
+        },
+        "fittedReplacement": {
+          "interceptPP": 3.5756835810524583,
+          "priorSlope": 0.7949672158156273,
+          "replacementShiftPP": -11.10093553289506
+        },
+        "fittedNoReplacement": {
+          "interceptPP": 2.534544236484048,
+          "priorSlope": 0.8019224956281076
+        },
+        "fittedRetentionSensitivity": {
+          "interceptPP": 2.3179020554869028,
+          "priorSlope": 0.9277373465411981,
+          "replacementPriorInteraction": -0.883505103901547
+        },
+        "replacementScore": {
+          "n": 17,
+          "maePP": 3.4625506876276204,
+          "rmsePP": 4.150770709432186
+        },
+        "noReplacementScore": {
+          "n": 17,
+          "maePP": 3.4854559905852236,
+          "rmsePP": 4.28041952266397
+        },
+        "retentionScore": {
+          "n": 17,
+          "maePP": 3.392908214813535,
+          "rmsePP": 4.227483409299838
+        },
+        "zeroScore": {
+          "n": 17,
+          "maePP": 6.481065166492202,
+          "rmsePP": 7.69895082414632
+        },
+        "carryForwardScore": {
+          "n": 17,
+          "maePP": 3.3331530420918463,
+          "rmsePP": 4.568333668721466
+        },
+        "holdoutEventIds": [
+          "nz-general-2014-electorate-15-candidate-06->nz-general-2017-electorate-15-candidate-03",
+          "nz-general-2014-electorate-02-candidate-05->nz-general-2017-electorate-02-candidate-04",
+          "nz-general-2014-electorate-03-candidate-03->nz-general-2017-electorate-03-candidate-04",
+          "nz-general-2014-electorate-08-candidate-01->nz-general-2017-electorate-08-candidate-02",
+          "nz-general-2014-electorate-09-candidate-02->nz-general-2017-electorate-09-candidate-01",
+          "nz-general-2014-electorate-13-candidate-02->nz-general-2017-electorate-13-candidate-01",
+          "nz-general-2014-electorate-19-candidate-03->nz-general-2017-electorate-19-candidate-03",
+          "nz-general-2014-electorate-29-candidate-03->nz-general-2017-electorate-29-candidate-05",
+          "nz-general-2014-electorate-39-candidate-03->nz-general-2017-electorate-39-candidate-03",
+          "nz-general-2014-electorate-40-candidate-02->nz-general-2017-electorate-40-candidate-02",
+          "nz-general-2014-electorate-41-candidate-02->nz-general-2017-electorate-41-candidate-01",
+          "nz-general-2014-electorate-43-candidate-02->nz-general-2017-electorate-43-candidate-03",
+          "nz-general-2014-electorate-48-candidate-01->nz-general-2017-electorate-48-candidate-01",
+          "nz-general-2014-electorate-52-candidate-01->nz-general-2017-electorate-52-candidate-02",
+          "nz-general-2014-electorate-55-candidate-01->nz-general-2017-electorate-55-candidate-02",
+          "nz-general-2014-electorate-58-candidate-06->nz-general-2017-electorate-58-candidate-06",
+          "nz-general-2014-electorate-60-candidate-07->nz-general-2017-electorate-60-candidate-03"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "counts": {
+          "trainingReplacement": 3,
+          "trainingContinuation": 36,
+          "holdoutReplacement": 2,
+          "holdoutContinuation": 3
+        },
+        "fittedReplacement": {
+          "interceptPP": 3.3286985757295184,
+          "priorSlope": 0.6692349220234369,
+          "replacementShiftPP": -9.513163204944918
+        },
+        "fittedNoReplacement": {
+          "interceptPP": 2.690472792874127,
+          "priorSlope": 0.6505558694824138
+        },
+        "fittedRetentionSensitivity": {
+          "interceptPP": 2.775419013634895,
+          "priorSlope": 0.7046571740521057,
+          "replacementPriorInteraction": -0.8231614983980041
+        },
+        "replacementScore": {
+          "n": 5,
+          "maePP": 10.351224062291768,
+          "rmsePP": 15.593091155499387
+        },
+        "noReplacementScore": {
+          "n": 5,
+          "maePP": 12.519200784205845,
+          "rmsePP": 16.13928546920864
+        },
+        "retentionScore": {
+          "n": 5,
+          "maePP": 10.741593343026086,
+          "rmsePP": 15.472533570533955
+        },
+        "zeroScore": {
+          "n": 5,
+          "maePP": 7.347281650281578,
+          "rmsePP": 12.621137820387787
+        },
+        "carryForwardScore": {
+          "n": 5,
+          "maePP": 11.161629437235515,
+          "rmsePP": 15.153895859089161
+        },
+        "holdoutEventIds": [
+          "nz-general-2020-electorate-41-candidate-03->nz-general-2023-electorate-41-candidate-04",
+          "nz-general-2020-electorate-43-candidate-03->nz-general-2023-electorate-43-candidate-02",
+          "nz-general-2020-electorate-15-candidate-05->nz-general-2023-electorate-15-candidate-07",
+          "nz-general-2020-electorate-38-candidate-02->nz-general-2023-electorate-38-candidate-01",
+          "nz-general-2020-electorate-49-candidate-04->nz-general-2023-electorate-49-candidate-01"
+        ]
+      }
+    ],
+    "log_odds": [
+      {
+        "targetYear": 2017,
+        "trainingTargetYears": [
+          2011
+        ],
+        "counts": {
+          "trainingReplacement": 2,
+          "trainingContinuation": 20,
+          "holdoutReplacement": 1,
+          "holdoutContinuation": 16
+        },
+        "fittedReplacement": {
+          "interceptPP": 4.118284674567732,
+          "priorSlope": 0.722189426022008,
+          "replacementShiftPP": -7.702887675607282
+        },
+        "fittedNoReplacement": {
+          "interceptPP": 3.4310731142591955,
+          "priorSlope": 0.7194825329715812
+        },
+        "fittedRetentionSensitivity": {
+          "interceptPP": 3.194034417350521,
+          "priorSlope": 0.8562945638761461,
+          "replacementPriorInteraction": -0.9542041825608694
+        },
+        "replacementScore": {
+          "n": 17,
+          "maePP": 3.36896132486649,
+          "rmsePP": 4.084562525154234
+        },
+        "noReplacementScore": {
+          "n": 17,
+          "maePP": 3.5306844979050203,
+          "rmsePP": 4.265845163472784
+        },
+        "retentionScore": {
+          "n": 17,
+          "maePP": 3.442465409670041,
+          "rmsePP": 4.185863140419165
+        },
+        "zeroScore": {
+          "n": 17,
+          "maePP": 6.505273290351674,
+          "rmsePP": 7.728083778921381
+        },
+        "carryForwardScore": {
+          "n": 17,
+          "maePP": 3.1174911566726844,
+          "rmsePP": 4.409748569325056
+        },
+        "holdoutEventIds": [
+          "nz-general-2014-electorate-15-candidate-06->nz-general-2017-electorate-15-candidate-03",
+          "nz-general-2014-electorate-02-candidate-05->nz-general-2017-electorate-02-candidate-04",
+          "nz-general-2014-electorate-03-candidate-03->nz-general-2017-electorate-03-candidate-04",
+          "nz-general-2014-electorate-08-candidate-01->nz-general-2017-electorate-08-candidate-02",
+          "nz-general-2014-electorate-09-candidate-02->nz-general-2017-electorate-09-candidate-01",
+          "nz-general-2014-electorate-13-candidate-02->nz-general-2017-electorate-13-candidate-01",
+          "nz-general-2014-electorate-19-candidate-03->nz-general-2017-electorate-19-candidate-03",
+          "nz-general-2014-electorate-29-candidate-03->nz-general-2017-electorate-29-candidate-05",
+          "nz-general-2014-electorate-39-candidate-03->nz-general-2017-electorate-39-candidate-03",
+          "nz-general-2014-electorate-40-candidate-02->nz-general-2017-electorate-40-candidate-02",
+          "nz-general-2014-electorate-41-candidate-02->nz-general-2017-electorate-41-candidate-01",
+          "nz-general-2014-electorate-43-candidate-02->nz-general-2017-electorate-43-candidate-03",
+          "nz-general-2014-electorate-48-candidate-01->nz-general-2017-electorate-48-candidate-01",
+          "nz-general-2014-electorate-52-candidate-01->nz-general-2017-electorate-52-candidate-02",
+          "nz-general-2014-electorate-55-candidate-01->nz-general-2017-electorate-55-candidate-02",
+          "nz-general-2014-electorate-58-candidate-06->nz-general-2017-electorate-58-candidate-06",
+          "nz-general-2014-electorate-60-candidate-07->nz-general-2017-electorate-60-candidate-03"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "counts": {
+          "trainingReplacement": 3,
+          "trainingContinuation": 36,
+          "holdoutReplacement": 2,
+          "holdoutContinuation": 3
+        },
+        "fittedReplacement": {
+          "interceptPP": 3.517996920342976,
+          "priorSlope": 0.6469446941827617,
+          "replacementShiftPP": -7.121838578564761
+        },
+        "fittedNoReplacement": {
+          "interceptPP": 3.0440517834277836,
+          "priorSlope": 0.632773217159498
+        },
+        "fittedRetentionSensitivity": {
+          "interceptPP": 3.1543796848182577,
+          "priorSlope": 0.686774176494786,
+          "replacementPriorInteraction": -0.8752714842417555
+        },
+        "replacementScore": {
+          "n": 5,
+          "maePP": 10.315427500870669,
+          "rmsePP": 15.472395264981868
+        },
+        "noReplacementScore": {
+          "n": 5,
+          "maePP": 12.62141926985957,
+          "rmsePP": 16.075085472462572
+        },
+        "retentionScore": {
+          "n": 5,
+          "maePP": 10.708368207200769,
+          "rmsePP": 15.428862427091682
+        },
+        "zeroScore": {
+          "n": 5,
+          "maePP": 6.763061761601875,
+          "rmsePP": 11.688138648450664
+        },
+        "carryForwardScore": {
+          "n": 5,
+          "maePP": 11.360149983278834,
+          "rmsePP": 15.234923563857684
+        },
+        "holdoutEventIds": [
+          "nz-general-2020-electorate-41-candidate-03->nz-general-2023-electorate-41-candidate-04",
+          "nz-general-2020-electorate-43-candidate-03->nz-general-2023-electorate-43-candidate-02",
+          "nz-general-2020-electorate-15-candidate-05->nz-general-2023-electorate-15-candidate-07",
+          "nz-general-2020-electorate-38-candidate-02->nz-general-2023-electorate-38-candidate-01",
+          "nz-general-2020-electorate-49-candidate-04->nz-general-2023-electorate-49-candidate-01"
+        ]
+      }
+    ]
+  },
+  "strictSourceAnchorSensitivity": {
+    "n": 43,
+    "additiveChronological": [
+      {
+        "targetYear": 2017,
+        "trainingTargetYears": [
+          2011
+        ],
+        "counts": {
+          "trainingReplacement": 2,
+          "trainingContinuation": 20,
+          "holdoutReplacement": 1,
+          "holdoutContinuation": 16
+        },
+        "fittedReplacement": {
+          "interceptPP": 4.3038826885704315,
+          "priorSlope": 0.7246598812410874,
+          "replacementShiftPP": -7.538618322184153
+        },
+        "fittedNoReplacement": {
+          "interceptPP": 3.642072756913496,
+          "priorSlope": 0.7198018805809154
+        },
+        "fittedRetentionSensitivity": {
+          "interceptPP": 3.419981329871665,
+          "priorSlope": 0.8568456019189492,
+          "replacementPriorInteraction": -0.9839761760430867
+        },
+        "replacementScore": {
+          "n": 17,
+          "maePP": 3.52968155300673,
+          "rmsePP": 4.210456500540915
+        },
+        "noReplacementScore": {
+          "n": 17,
+          "maePP": 3.5766865719173513,
+          "rmsePP": 4.359377501876415
+        },
+        "retentionScore": {
+          "n": 17,
+          "maePP": 3.5731613305806316,
+          "rmsePP": 4.303977951765962
+        },
+        "zeroScore": {
+          "n": 17,
+          "maePP": 6.517122439632246,
+          "rmsePP": 7.7417012047579155
+        },
+        "carryForwardScore": {
+          "n": 17,
+          "maePP": 3.0312466353696896,
+          "rmsePP": 4.320439724306192
+        },
+        "holdoutEventIds": [
+          "nz-general-2014-electorate-15-candidate-06->nz-general-2017-electorate-15-candidate-03",
+          "nz-general-2014-electorate-02-candidate-05->nz-general-2017-electorate-02-candidate-04",
+          "nz-general-2014-electorate-03-candidate-03->nz-general-2017-electorate-03-candidate-04",
+          "nz-general-2014-electorate-08-candidate-01->nz-general-2017-electorate-08-candidate-02",
+          "nz-general-2014-electorate-09-candidate-02->nz-general-2017-electorate-09-candidate-01",
+          "nz-general-2014-electorate-13-candidate-02->nz-general-2017-electorate-13-candidate-01",
+          "nz-general-2014-electorate-19-candidate-03->nz-general-2017-electorate-19-candidate-03",
+          "nz-general-2014-electorate-29-candidate-03->nz-general-2017-electorate-29-candidate-05",
+          "nz-general-2014-electorate-39-candidate-03->nz-general-2017-electorate-39-candidate-03",
+          "nz-general-2014-electorate-40-candidate-02->nz-general-2017-electorate-40-candidate-02",
+          "nz-general-2014-electorate-41-candidate-02->nz-general-2017-electorate-41-candidate-01",
+          "nz-general-2014-electorate-43-candidate-02->nz-general-2017-electorate-43-candidate-03",
+          "nz-general-2014-electorate-48-candidate-01->nz-general-2017-electorate-48-candidate-01",
+          "nz-general-2014-electorate-52-candidate-01->nz-general-2017-electorate-52-candidate-02",
+          "nz-general-2014-electorate-55-candidate-01->nz-general-2017-electorate-55-candidate-02",
+          "nz-general-2014-electorate-58-candidate-06->nz-general-2017-electorate-58-candidate-06",
+          "nz-general-2014-electorate-60-candidate-07->nz-general-2017-electorate-60-candidate-03"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "counts": {
+          "trainingReplacement": 3,
+          "trainingContinuation": 36,
+          "holdoutReplacement": 1,
+          "holdoutContinuation": 3
+        },
+        "fittedReplacement": {
+          "interceptPP": 3.5739770413226726,
+          "priorSlope": 0.648083865981873,
+          "replacementShiftPP": -6.943738454379806
+        },
+        "fittedNoReplacement": {
+          "interceptPP": 3.1077906137258378,
+          "priorSlope": 0.6352701084862783
+        },
+        "fittedRetentionSensitivity": {
+          "interceptPP": 3.2297485194435254,
+          "priorSlope": 0.687818174847562,
+          "replacementPriorInteraction": -0.8874631873326183
+        },
+        "replacementScore": {
+          "n": 4,
+          "maePP": 12.517194289572814,
+          "rmsePP": 17.6934045273745
+        },
+        "noReplacementScore": {
+          "n": 4,
+          "maePP": 13.723947807490276,
+          "rmsePP": 17.691536847315856
+        },
+        "retentionScore": {
+          "n": 4,
+          "maePP": 12.77576771163097,
+          "rmsePP": 17.642077499262136
+        },
+        "zeroScore": {
+          "n": 4,
+          "maePP": 7.855298105694721,
+          "rmsePP": 13.0073361615839
+        },
+        "carryForwardScore": {
+          "n": 4,
+          "maePP": 12.409232992404991,
+          "rmsePP": 16.909149734199257
+        },
+        "holdoutEventIds": [
+          "nz-general-2020-electorate-41-candidate-03->nz-general-2023-electorate-41-candidate-04",
+          "nz-general-2020-electorate-15-candidate-05->nz-general-2023-electorate-15-candidate-07",
+          "nz-general-2020-electorate-38-candidate-02->nz-general-2023-electorate-38-candidate-01",
+          "nz-general-2020-electorate-49-candidate-04->nz-general-2023-electorate-49-candidate-01"
+        ]
+      }
+    ],
+    "fullSample": {
+      "interceptPP": 2.404334254114662,
+      "priorSlope": 0.630300386943747,
+      "replacementShiftPP": -5.880419537090982
+    }
+  },
+  "fullSampleDescriptions": {
+    "additive": {
+      "replacement": {
+        "interceptPP": 2.43295623664661,
+        "priorSlope": 0.6247982457739122,
+        "replacementShiftPP": -6.640665592496613
+      },
+      "noReplacement": {
+        "interceptPP": 1.8512018281987404,
+        "priorSlope": 0.592297963353918
+      },
+      "retentionSensitivity": {
+        "interceptPP": 2.106129914962686,
+        "priorSlope": 0.6658843527828324,
+        "replacementPriorInteraction": -0.912777723254343
+      }
+    },
+    "proportional": {
+      "replacement": {
+        "interceptPP": 1.6949749573054325,
+        "priorSlope": 0.7581579271576364,
+        "replacementShiftPP": -8.372954171657762
+      },
+      "noReplacement": {
+        "interceptPP": 0.9559676822252259,
+        "priorSlope": 0.714556572577738
+      },
+      "retentionSensitivity": {
+        "interceptPP": 1.1829369442173496,
+        "priorSlope": 0.7971314947128606,
+        "replacementPriorInteraction": -0.9409313203732863
+      }
+    },
+    "log_odds": {
+      "replacement": {
+        "interceptPP": 2.2312470849840005,
+        "priorSlope": 0.6627702651390545,
+        "replacementShiftPP": -6.834296621078539
+      },
+      "noReplacement": {
+        "interceptPP": 1.6313493618175103,
+        "priorSlope": 0.6286074650861128
+      },
+      "retentionSensitivity": {
+        "interceptPP": 1.8801708693716082,
+        "priorSlope": 0.7060277340239265,
+        "replacementPriorInteraction": -0.9361892741327867
+      }
+    }
+  },
+  "descriptiveBenchmarks": {
+    "additive": {
+      "supportedContinuation": {
+        "2008": {
+          "n": 20,
+          "meanPriorPP": 4.832001094643063,
+          "meanTargetPP": 7.8054400279712794,
+          "meanChangePP": 2.9734389333282154,
+          "zero": {
+            "n": 20,
+            "maePP": 7.8054400279712794,
+            "rmsePP": 8.846422860712373
+          },
+          "carryForward": {
+            "n": 20,
+            "maePP": 3.311382228081515,
+            "rmsePP": 4.433401541874387
+          }
+        },
+        "2014": {
+          "n": 16,
+          "meanPriorPP": 5.784994367173547,
+          "meanTargetPP": 5.948237259479249,
+          "meanChangePP": 0.16324289230570355,
+          "zero": {
+            "n": 16,
+            "maePP": 6.885800997884239,
+            "rmsePP": 7.978465884828143
+          },
+          "carryForward": {
+            "n": 16,
+            "maePP": 2.775823107757216,
+            "rmsePP": 4.082425270795353
+          }
+        },
+        "2020": {
+          "n": 3,
+          "meanPriorPP": 4.558987886989701,
+          "meanTargetPP": -9.879391703341541,
+          "meanChangePP": -14.438379590331245,
+          "zero": {
+            "n": 3,
+            "maePP": 10.362377878496469,
+            "rmsePP": 15.018339686401506
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 14.438379590331243,
+            "rmsePP": 19.180826448027783
+          }
+        }
+      },
+      "retrospectiveDistinctPeople": {
+        "2008": {
+          "n": 1,
+          "meanPriorPP": 15.686601989852395,
+          "meanTargetPP": 14.678968226664185,
+          "meanChangePP": -1.0076337631882093,
+          "zero": {
+            "n": 1,
+            "maePP": 14.678968226664185,
+            "rmsePP": 14.678968226664185
+          },
+          "carryForward": {
+            "n": 1,
+            "maePP": 1.0076337631882093,
+            "rmsePP": 1.0076337631882093
+          }
+        },
+        "2014": {
+          "n": 2,
+          "meanPriorPP": 3.2450413338845325,
+          "meanTargetPP": 3.1875040054676034,
+          "meanChangePP": -0.057537328416928935,
+          "zero": {
+            "n": 2,
+            "maePP": 3.1875040054676034,
+            "rmsePP": 3.1881648404408756
+          },
+          "carryForward": {
+            "n": 2,
+            "maePP": 4.226265963723824,
+            "rmsePP": 4.226657608594742
+          }
+        },
+        "2020": {
+          "n": 4,
+          "meanPriorPP": 7.492977833166378,
+          "meanTargetPP": 1.1351421693031882,
+          "meanChangePP": -6.35783566386319,
+          "zero": {
+            "n": 4,
+            "maePP": 3.7908928322490043,
+            "rmsePP": 4.191377945134601
+          },
+          "carryForward": {
+            "n": 4,
+            "maePP": 9.2161393224197,
+            "rmsePP": 11.509964090273202
+          }
+        }
+      }
+    },
+    "proportional": {
+      "supportedContinuation": {
+        "2008": {
+          "n": 20,
+          "meanPriorPP": 4.604972020763359,
+          "meanTargetPP": 7.236485367307568,
+          "meanChangePP": 2.6315133465442093,
+          "zero": {
+            "n": 20,
+            "maePP": 7.236485367307568,
+            "rmsePP": 8.418730534370804
+          },
+          "carryForward": {
+            "n": 20,
+            "maePP": 3.47113718341785,
+            "rmsePP": 4.516559530133289
+          }
+        },
+        "2014": {
+          "n": 16,
+          "meanPriorPP": 5.398335005004112,
+          "meanTargetPP": 5.9089795064318675,
+          "meanChangePP": 0.5106445014277556,
+          "zero": {
+            "n": 16,
+            "maePP": 6.847047837028325,
+            "rmsePP": 7.9343568237678355
+          },
+          "carryForward": {
+            "n": 16,
+            "maePP": 3.0893098301550315,
+            "rmsePP": 4.347731826596858
+          }
+        },
+        "2020": {
+          "n": 3,
+          "meanPriorPP": 2.1682853010557723,
+          "meanTargetPP": -10.975693189528302,
+          "meanChangePP": -13.143978490584074,
+          "zero": {
+            "n": 3,
+            "maePP": 10.9756931895283,
+            "rmsePP": 16.18384145166671
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 13.143978490584074,
+            "rmsePP": 18.25273136980091
+          }
+        }
+      },
+      "retrospectiveDistinctPeople": {
+        "2008": {
+          "n": 1,
+          "meanPriorPP": 15.427238360173213,
+          "meanTargetPP": 12.033302917782674,
+          "meanChangePP": -3.393935442390539,
+          "zero": {
+            "n": 1,
+            "maePP": 12.033302917782674,
+            "rmsePP": 12.033302917782674
+          },
+          "carryForward": {
+            "n": 1,
+            "maePP": 3.393935442390539,
+            "rmsePP": 3.393935442390539
+          }
+        },
+        "2014": {
+          "n": 2,
+          "meanPriorPP": 3.2672024516457703,
+          "meanTargetPP": 3.1957614003794403,
+          "meanChangePP": -0.07144105126632994,
+          "zero": {
+            "n": 2,
+            "maePP": 3.195761400379441,
+            "rmsePP": 3.196826136767834
+          },
+          "carryForward": {
+            "n": 2,
+            "maePP": 4.112685314852871,
+            "rmsePP": 4.113305765781641
+          }
+        },
+        "2020": {
+          "n": 4,
+          "meanPriorPP": 7.3279493506047855,
+          "meanTargetPP": -0.6469042230867126,
+          "meanChangePP": -7.974853573691498,
+          "zero": {
+            "n": 4,
+            "maePP": 5.346797428492329,
+            "rmsePP": 6.0408999050525605
+          },
+          "carryForward": {
+            "n": 4,
+            "maePP": 10.426365148814968,
+            "rmsePP": 12.542798315720256
+          }
+        }
+      }
+    },
+    "log_odds": {
+      "supportedContinuation": {
+        "2008": {
+          "n": 20,
+          "meanPriorPP": 4.816364455140032,
+          "meanTargetPP": 7.5966121559381135,
+          "meanChangePP": 2.780247700798082,
+          "zero": {
+            "n": 20,
+            "maePP": 7.5966121559381135,
+            "rmsePP": 8.6795735775155
+          },
+          "carryForward": {
+            "n": 20,
+            "maePP": 3.25900158406087,
+            "rmsePP": 4.394417612127173
+          }
+        },
+        "2014": {
+          "n": 16,
+          "meanPriorPP": 5.597078460523217,
+          "meanTargetPP": 5.935629875688287,
+          "meanChangePP": 0.3385514151650695,
+          "zero": {
+            "n": 16,
+            "maePP": 6.873233476019075,
+            "rmsePP": 7.964428447930654
+          },
+          "carryForward": {
+            "n": 16,
+            "maePP": 2.8685572794355707,
+            "rmsePP": 4.184523942745865
+          }
+        },
+        "2020": {
+          "n": 3,
+          "meanPriorPP": 3.7391406082855903,
+          "meanTargetPP": -9.751004478337117,
+          "meanChangePP": -13.49014508662271,
+          "zero": {
+            "n": 3,
+            "maePP": 10.180387551628849,
+            "rmsePP": 14.995433908887643
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 13.49014508662271,
+            "rmsePP": 18.40977348176741
+          }
+        }
+      },
+      "retrospectiveDistinctPeople": {
+        "2008": {
+          "n": 1,
+          "meanPriorPP": 15.598568365263482,
+          "meanTargetPP": 13.689909009420397,
+          "meanChangePP": -1.9086593558430842,
+          "zero": {
+            "n": 1,
+            "maePP": 13.689909009420397,
+            "rmsePP": 13.689909009420397
+          },
+          "carryForward": {
+            "n": 1,
+            "maePP": 1.9086593558430842,
+            "rmsePP": 1.9086593558430842
+          }
+        },
+        "2014": {
+          "n": 2,
+          "meanPriorPP": 3.216371357181286,
+          "meanTargetPP": 3.184132474301543,
+          "meanChangePP": -0.032238882879742636,
+          "zero": {
+            "n": 2,
+            "maePP": 3.184132474301543,
+            "rmsePP": 3.18476895155254
+          },
+          "carryForward": {
+            "n": 2,
+            "maePP": 4.233618637533521,
+            "rmsePP": 4.2337413848321575
+          }
+        },
+        "2020": {
+          "n": 4,
+          "meanPriorPP": 7.151005726924805,
+          "meanTargetPP": 0.9102905351257018,
+          "meanChangePP": -6.2407151917991035,
+          "zero": {
+            "n": 4,
+            "maePP": 3.904339996367212,
+            "rmsePP": 4.260215229822406
+          },
+          "carryForward": {
+            "n": 4,
+            "maePP": 8.951384269748388,
+            "rmsePP": 11.376322770832253
+          }
+        }
+      }
+    }
+  },
+  "retrospectiveTargetWinnerSelected": true,
+  "outgoingStatusCounts": {
+    "source_challenger": 1081,
+    "source_winner": 316,
+    "source_winner_unknown": 36
+  },
+  "identityClassCounts": {
+    "retrospective_alias_replacement": 1,
+    "retrospective_distinct_people": 14,
+    "retrospective_or_ambiguous_continuation": 436,
+    "supported_by_election_successor": 4,
+    "supported_continuation": 64,
+    "supported_replacement": 5,
+    "unresolved_identity": 909
+  },
+  "interpretation": "Conditional fits and chronological scores are predictive diagnostics only. Retrospective target/later-anchored identities and later-success-covered aliases cannot determine operational selection. Few election clusters and shared references preclude candidate-pair iid uncertainty or causal claims.",
+  "validationStatus": "Retrospectively assembled evidence-selected diagnostic cohort; cannot validate a replacement coefficient for all returning party-seat contests",
+  "acquisitionIndependentOfTargetLaterOutcomes": false
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "stage": 10,
+  "status": "post-review amendment after original frozen specification and descriptive calculations; committed before newly feasible model fitting",
+  "reviewedHead": "2d6cb298a8028e81e89c1fd4458afaf67bb8e0a0",
+  "originalRestriction": "Both distinct persons required inherited official general-election winner anchors in an earlier calendar year; Māori source winners were unknown because processed general-only flags were used. The original specification therefore recorded zero primary replacements.",
+  "whyInsufficient": "An earlier general-election win is neither necessary nor the only pre-result occurrence-specific identity evidence. It excludes independently nominated newcomers, prior list MPs and by-election entrants. Preserved official Māori candidate tables and winner summaries identify source winners.",
+  "correctedIdentityRule": "Source and target occurrences require independent person/occurrence evidence dated before the target result, with direct source winner anchor or documented electorate service and pre-result party candidacy/selection or dated pre-target by-election service. Distinctness requires separately corroborated people. Name contrast alone is insufficient. Fact, publication and retrieval dates remain separate. Unknown aliases or later-success-covered bridges cannot enter primary validation.",
+  "cohortRule": "Primary general unchanged-boundary source-winner cohort admits supported distinct-person replacement with pre-result occurrence-specific candidacy and no by-election succession, alongside unchanged inherited source-anchored continuations. By-election successors are separately inventoried; retrospective alias and target/later-anchor cases are diagnostics only. Māori winner status is recovered but remains separate from the general primary coefficient.",
+  "sourceSelection": "The 182 comparable source-winner events were inventoried before search; 20 priority cases were declared without target winner flags or residual changes. Twenty-three newly preserved official or party-authored pages cover 14 seat profiles and nine party statements; five attempted Parliament seat pages returned errors. The inherited 107 MP profiles remain selected toward parliamentary service. Coverage, including alias resolution, is not balanced for incoming losers.",
+  "unchangedEstimand": "Predictive incremental association of replacing a source-election winner in a same-party unchanged-boundary general seat, conditional on outgoing normalized residual and known target candidacy; not causal personal vote loss.",
+  "unchangedModel": "Primary y=alpha+beta*x+gamma*R with equal pair weights; no-effect alpha0+beta0*x fitted independently on same training sample, zero and carry-forward benchmarks, 2017 and 2023 chronological holdouts. Retention interaction and normalization/identity sensitivities remain bounded.",
+  "unchangedOperationalGates": "Both groups in each trained holdout, no worse MAE and RMSE versus no-effect in each trained holdout, pooled MAE improvement >=0.25 percentage point, stable sign under sensitivities, no target/later-outcome-dependent primary admission. Failure selects null.",
+  "originalCheckpoint": "3e0945b464583039a76c985123395c44ebb70c6f",
+  "amendedInventoryCommit": "48392b95e0cdced8ab220bda862e6e9ca9de58df",
+  "effectCalculationAfterThisCommit": true,
+  "affectedOutputs": [
+    "inventory.json",
+    "identity-review.json",
+    "maori-winner-overlay.json",
+    "input-contract.json",
+    "manifest.json",
+    "analysis.json",
+    "selection.json",
+    "cohort-audit.json",
+    "analysis-input-contract.json",
+    "analysis-manifest.json"
+  ],
+  "preservedOutputs": "Stage 5–9 numerical artifacts and their provenance checks are unchanged."
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 2,
+  "selectedOperationalReplacementEffectPP": null,
+  "selectionStatus": "not_selected_under_frozen_gates",
+  "gates": {
+    "bothGroupsEachTrainedHoldout": true,
+    "nonworseMAEAndRMSEEachHoldout": true,
+    "pooledMAEImprovementPP": 0.5457606584853255,
+    "pooledMAEImprovementAtLeast0_25PP": true,
+    "normalizationIdentityDirectionStable": true,
+    "acquisitionIndependentOfTargetLaterOutcomes": false
+  },
+  "failedGates": [
+    "acquisition_independent_of_target_later_outcomes"
+  ],
+  "reason": "Corrected evidence did not satisfy the predeclared operational gates; descriptive fits remain non-operational."
+}
