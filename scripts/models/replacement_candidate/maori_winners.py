@@ -66,9 +66,9 @@ def build_overlay(root: Path, occurrences, records):
             path = paths.pop()
             raw = (root / path).read_bytes()
             if year == 2020:
-                source_rows, _ = read_csv(raw)
-                sections = tuple(row[0] for row in source_rows if len(row) == 1)
-                parsed = modern_candidates(raw, electorate_names=sections)
+                election_seats = {row['electorateName'] for row in occurrences
+                                  if row['year'] == 2020}
+                parsed = modern_candidates(raw, electorate_names=election_seats)
             else:
                 parsed = historical_candidates(raw)
             official = summary.get(key(seat))

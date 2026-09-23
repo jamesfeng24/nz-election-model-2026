@@ -14742,66 +14742,162 @@
     },
     {
       "schemaVersion": 1,
-      "id": "rc-2014-boundary-report",
-      "organisation": "Representation Commission",
-      "url": "https://elections.nz/assets/2014-boundary-review/Representation-Commissions-report-2014.pdf",
-      "dateOrElection": "2007 to 2014 boundary review",
-      "resource": "2014 final report, pages9–12 unchanged seats and technical changes",
-      "retrievedAt": "2026-09-22T04:17:08.302603+00:00",
-      "rawPath": "data/raw/boundaries/2007-2014/representation-commission-report-2014.pdf",
+      "id": "stats-2020-general-metadata",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2020/FeatureServer/0?f=pjson",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official HD layer schema, CRS and publication evidence",
+      "retrievedAt": "2026-09-13T10:56:06.496139+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2020-metadata.json",
       "processingScript": null,
       "limitations": [
-        "Narrative no-population technical changes do not identify individual rounded zero cells as exact zero."
+        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
       ],
-      "sha256": "ab573cf95d6a062250c05b3c18bcf811c70b56e650e5f724eae6128e0f08725e",
+      "sha256": "f09fc7d10543a072e382a0ce08e2c1a938e7dced50be2177cdb6de5fbbaf3edd",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     },
     {
       "schemaVersion": 1,
-      "id": "rc-2014-population-controls",
-      "organisation": "Representation Commission",
-      "url": "https://elections.nz/assets/2014-boundary-review/Schedule-C-Population-data-of-the-proposed-and-final-electorates.pdf",
-      "dateOrElection": "2014 boundaries / 2013 Census",
-      "resource": "Final and proposed 2014 Schedule C electorate electoral-population controls; user-assisted original browser download",
-      "retrievedAt": "2026-09-21T14:29:38.550069+00:00",
-      "rawPath": "data/raw/boundaries/2007-2014/schedule-c.pdf",
+      "id": "stats-2020-maori-metadata",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2020/FeatureServer/0?f=pjson",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official HD layer schema, CRS and publication evidence",
+      "retrievedAt": "2026-09-13T10:56:07.110627+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2020-metadata.json",
       "processingScript": null,
       "limitations": [
-        "Only final sections are controls; proposed populations and projected variation percentages must not be substituted."
+        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
       ],
-      "sha256": "2aae6e29c2710797744b169162a451b7e16806e95040439c20d165c4b9b15bcc",
+      "sha256": "f9cd113fe5ba763a490761c7c3fe83e6635d935a8df6b15dada7b66a2c33bf7d",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     },
     {
       "schemaVersion": 1,
-      "id": "rc-2020-change-controls",
-      "organisation": "Representation Commission",
-      "url": "https://elections.nz/assets/Boundary-Review/SCHEDULE-B-LIST-OF-UNCHANGED-AND-CHANGED-ELECTORATES.pdf",
-      "dateOrElection": "2014 to 2020 boundaries",
-      "resource": "2020 Schedule B corrected unchanged/changed electorate list",
-      "retrievedAt": "2026-09-20T04:58:34.350946+00:00",
-      "rawPath": "data/raw/boundaries/2014-2020/schedule-b.pdf",
+      "id": "stats-2025-general-metadata",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2025/FeatureServer/0?f=pjson",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official HD layer schema, CRS and publication evidence",
+      "retrievedAt": "2026-09-13T10:56:07.768348+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2025-metadata.json",
       "processingScript": null,
       "limitations": [
-        "Published correction: Waiariki unchanged, Hauraki-Waikato changed."
+        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
       ],
-      "sha256": "dc8b3d82a90bda6428ca58dcab446616dab4633dd6d40112a31f99dd19ae6657",
+      "sha256": "b52b456e4937fac67e4e7c2b512c192c6101b786709327943c8c775ac60955f6",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     },
     {
       "schemaVersion": 1,
-      "id": "rc-2020-population-controls",
-      "organisation": "Representation Commission",
-      "url": "https://elections.nz/assets/Boundary-Review/SCHEDULE-C-TABLES-OF-THE-ELECTORATES-AND-POPULATIONS.pdf",
-      "dateOrElection": "2020 boundaries / 2018 electoral population",
-      "resource": "2020 final electorate population controls, Schedule C",
-      "retrievedAt": "2026-09-20T04:54:35.072581+00:00",
-      "rawPath": "data/raw/boundaries/2014-2020/schedule-c.pdf",
+      "id": "stats-2025-maori-metadata",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2025/FeatureServer/0?f=pjson",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official HD layer schema, CRS and publication evidence",
+      "retrievedAt": "2026-09-13T10:56:08.378888+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2025-metadata.json",
       "processingScript": null,
       "limitations": [
-        "Population columns are controls; projected percentage changes are not population observations."
+        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
       ],
-      "sha256": "5a2bfeeea822447bdc7b58bcfab9a5ed3c6e162a1e28400bb34d02c6790652cd",
+      "sha256": "b8e377fb36a1cb2ace950c22f6ce13f00f15a0054054ff57f66500da04254cd6",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-population",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/122744/versions/418310/attachments/25789/download/",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Confidentialised 2023 Census electoral populations by 2025 version 2 meshblock with final electorate membership",
+      "retrievedAt": "2026-09-13T15:07:59.091547+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/population-2025.csv",
+      "processingScript": null,
+      "limitations": [
+        "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
+      ],
+      "sha256": "32e97d7f2128e1de2fbfeee9a73a258f449ded602cca77aa9d97c0516430f6ff",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-population-lookup",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/122744/versions/418310/attachments/25790/download/",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Official population dataset lookup and confidentiality documentation",
+      "retrievedAt": "2026-09-13T15:09:01.343025+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/population-lookup.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
+      ],
+      "sha256": "ed82805299067626874d5d43fda82211e1bcd27f2425f67eb16f5c1c473e6a07",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-general-geometry",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2020/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Complete official HD polygon query; no simplification or quantization requested",
+      "retrievedAt": "2026-09-13T15:11:16.594581+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2020-geometry.json",
+      "processingScript": null,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ],
+      "sha256": "e2ef2de2fc6ab595161ce87ce84ee279ac718df74ccbbbfea36b83ffa7cd3061",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-maori-geometry",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2020/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Complete official HD polygon query; no simplification or quantization requested",
+      "retrievedAt": "2026-09-13T15:12:03.125237+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2020-geometry.json",
+      "processingScript": null,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ],
+      "sha256": "0994a4e00022c4caad11b04eed86f183b332a013173b02b7466ac425cfa342b5",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-general-geometry",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Complete official HD polygon query; no simplification or quantization requested",
+      "retrievedAt": "2026-09-13T15:12:10.534688+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/general-2025-geometry.json",
+      "processingScript": null,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ],
+      "sha256": "2badebc87aaabe4f91d686ff27bfc0844e36ddfc6d40705963456917e3008f15",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2025-maori-geometry",
+      "organisation": "Stats NZ",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
+      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
+      "resource": "Complete official HD polygon query; no simplification or quantization requested",
+      "retrievedAt": "2026-09-13T15:12:05.700161+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/maori-2025-geometry.json",
+      "processingScript": null,
+      "limitations": [
+        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
+      ],
+      "sha256": "181044b74c2a1c89926c89d9a884faabe8e43fb54cbcd9cad1f461cd6399537b",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     },
     {
@@ -14834,682 +14930,6 @@
         "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
       ],
       "sha256": "6a798bb3e6688d6ff36f1b86d984ee1b4719a76e19d22f13a9421d4b33043f51",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-fleur-fitzsimons-selection-2023",
-      "organisation": "Fleur Fitzsimons / New Zealand Labour Party",
-      "url": "https://m.scoop.co.nz/stories/PO2303/S00035/labour-selects-fleur-fitzsimons-for-rongotai.htm",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Party candidate statement",
-      "publishedDate": "2023-03-04",
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/fleur-fitzsimons-selection-2023.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
-      ],
-      "sha256": "d0a5579aef275c9307244952be05918518e682c1e3dd9a606f746b025d18bf48"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-labour-andersen-list-2017",
-      "organisation": "New Zealand Labour Party",
-      "url": "https://m.scoop.co.nz/stories/PA1705/S00018/labour-party-list-for-the-2017-election-announced.htm",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Party candidate statement",
-      "publishedDate": "2017-05-02",
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/labour-andersen-list-2017.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
-      ],
-      "sha256": "12373ce439643b4b05f252ed9b622cd8d451bd94f6805d2acf349c06dddc8efe"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-labour-candidates-list-2011",
-      "organisation": "New Zealand Labour Party",
-      "url": "https://m.scoop.co.nz/stories/PA1109/S00048/labour-completes-selections-for-the-2011-general-election.htm",
-      "dateOrElection": "2011 general-election candidate selections",
-      "resource": "Party candidate selection statement",
-      "publishedDate": "2011-09-02",
-      "retrievedAt": "2026-09-23T16:27:41.816550+00:00",
-      "rawPath": "data/raw/identity-stage10/labour-candidates-list-2011.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-authored candidate list mirrored by Scoop. It confirms named pre-election candidacy but not complete career history."
-      ],
-      "sha256": "8ac970810e8216011fbbd54b0befbab8d479514ae6fb1c97086fcdece94d3fc4"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-national-penk-campaign-2017",
-      "organisation": "New Zealand National Party",
-      "url": "https://m.scoop.co.nz/stories/PO1709/S00188/penk-brings-minister-to-electorate-to-see-for-himself.htm",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Party statement",
-      "publishedDate": "2017-09-11",
-      "retrievedAt": "2026-09-23T16:22:13.087965+00:00",
-      "rawPath": "data/raw/identity-stage10/national-penk-campaign-2017.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-authored statement mirrored by Scoop; not independent verification of every occurrence or full career history."
-      ],
-      "sha256": "ae43817a0bd3402dd5caa0b8d44c20a946bc6f88b99f07301fb8cbc48638b09f"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-national-penk-selection-2017",
-      "organisation": "New Zealand National Party (supplied content via Indian Newslink)",
-      "url": "https://indiannewslink.co.nz/national-selects-penk-for-helensville/",
-      "dateOrElection": "2017 general-election candidate selection",
-      "resource": "Party candidate selection statement",
-      "publishedDate": "2017-03-02",
-      "retrievedAt": "2026-09-23T16:30:07.808564+00:00",
-      "rawPath": "data/raw/identity-stage10/national-penk-selection-2017.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-supplied content republished by independent outlet; date and candidate identity are pre-result, full career history remains separate."
-      ],
-      "sha256": "adc93f4e59966468719b2b83adc4938e37ae5485d2170926ea09a7aa055dfb05"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-national-redmayne-selection-2022",
-      "organisation": "New Zealand National Party",
-      "url": "https://m.scoop.co.nz/stories/PA2211/S00041/suze-redmayne-selected-as-nationals-candidate-in-rangitikei.htm",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Party candidate statement",
-      "publishedDate": "2022-11-05",
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/national-redmayne-selection-2022.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
-      ],
-      "sha256": "241a76626b9a14f76ba1c5ef7d4e64d1bffe331dba29da40eaa123e865d4d496"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-national-ross-selection-2011",
-      "organisation": "New Zealand National Party",
-      "url": "https://m.scoop.co.nz/stories/PO1101/S00119/national-selects-jami-lee-ross-as-botany-candidate.htm",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Party statement",
-      "publishedDate": "2011-01-28",
-      "retrievedAt": "2026-09-23T16:22:13.087965+00:00",
-      "rawPath": "data/raw/identity-stage10/national-ross-selection-2011.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-authored statement mirrored by Scoop; not independent verification of every occurrence or full career history."
-      ],
-      "sha256": "6c43d229ce93ef8bde9e64275c0cfb42109cb85789430e56c8f9d28b5a4c925a"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-national-simpson-selection-2011",
-      "organisation": "New Zealand National Party",
-      "url": "https://m.scoop.co.nz/stories/PO1104/S00255/national-selects-scott-simpson-as-coromandel-candidate.htm",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Party candidate statement",
-      "publishedDate": "2011-04-20",
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/national-simpson-selection-2011.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
-      ],
-      "sha256": "2827a8b51b997f6b3df8ae1dd08da5ed60fb384b4be6d344dc88a45c13ad4838"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-national-uffindell-by-election-2022",
-      "organisation": "New Zealand National Party",
-      "url": "https://m.scoop.co.nz/stories/PA2206/S00147/luxon-welcomes-tauranga-by-election-result.htm",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Party statement",
-      "publishedDate": "2022-06-19",
-      "retrievedAt": "2026-09-23T16:22:13.087965+00:00",
-      "rawPath": "data/raw/identity-stage10/national-uffindell-by-election-2022.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Party-authored statement mirrored by Scoop; not independent verification of every occurrence or full career history."
-      ],
-      "sha256": "9e18633fc8592b305a754b06c925b61ddd8dd98b8cc6fcdae22ac692d1943cc4"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-botany",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/botany-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-botany.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "3d82b8d924072e2c1a20c56d4a55be98e67270f1159a0fed793ff194a6c13692"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-coromandel",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/coromandel-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-coromandel.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "870b1d05c59670461891616a4cf6e39317b1091d1ff5665ee27a50ec999ebdfd"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-east-coast",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/east-coast-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-east-coast.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "11bae35c61735608a9b0e20a2a9cb85e9cff17c03b2b470ecfe2fa762fed190e"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-epsom",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/epsom-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-epsom.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "c60da1e27f0d8cb5b72bb74ec464739f3d265ec1269bedc90fe8a4d3731a7ff9"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-hamilton-east",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/hamilton-east-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-hamilton-east.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "4c04b0b33715df15c6f094830faecb20992ae328cf507b67358dc37767a19134"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-hutt-south",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/hutt-south-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-hutt-south.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "d8347cabe6059bcb1024681e2463d5e9026930e81ac4bdbcc425ac30fb35799d"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-mana",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/mana-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-mana.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "f4e027bf5d3953b56a69ba3a9ba192ba11ab269db7336c520e313750c49570db"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-manurewa",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/manurewa-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-manurewa.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "266f63b626a76a0740a563c19079e167da30ac66c13b92ad8148ede2974ff206"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-mt-albert",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/mt-albert-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-mt-albert.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "757d06b975b039bf7fe4a59cea0f25f27a3ea9f1e42cfd7e2a6d51429dc33d15"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-napier",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/napier-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-napier.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "d3434d45356eda43bc1a8873ca428298e544ec4a31f18460fba4b314cfb838ad"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-rongotai",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/rongotai-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-rongotai.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "c4bc462a6903b219880d078183d7cd4091bbd348c7a2b602ab0953733f281f70"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-tauranga",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/tauranga-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-tauranga.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "87a425ae26f97158b6a9597180d77a15daf22feca2415c9ac9d832e924d6ac3e"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-west-coast-tasman",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/west-coast-tasman-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-west-coast-tasman.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "1a951480b793705c2426330a68e531cf7dc8a5872327fb0045a1ce39d25080e1"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stage10-identity-parliament-electorate-whanganui",
-      "organisation": "New Zealand Parliament",
-      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/whanganui-electorate-profile/",
-      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
-      "resource": "Official electorate history",
-      "publishedDate": null,
-      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
-      "rawPath": "data/raw/identity-stage10/parliament-electorate-whanganui.html",
-      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
-      "limitations": [
-        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
-      ],
-      "sha256": "c0824a97b415c7544d9eb94813999d27517114d24b35cab3abf43a1f0be385fa"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2000-electoral-mathematics",
-      "organisation": "Statistics New Zealand",
-      "url": "https://aceproject.org/ero-en/topics/boundary-delimitation/New%20Zealand%20-%20The%20Mathmatics%20of%20Electoral%20District%20Allocation%20in%20New%20Zealand%20%28bdc02a%29.pdf",
-      "dateOrElection": "2000 methodology cited by Stats NZ electoral-population guidance",
-      "resource": "Original Stats NZ Research and Analytical Report 2000 #12, Westbrooke and Ryan; preserved copy hosted by ACE Electoral Knowledge Network",
-      "retrievedAt": "2026-09-21T14:30:46.552253+00:00",
-      "rawPath": "data/raw/boundaries/2007-2014/electoral-mathematics-2000.pdf",
-      "processingScript": null,
-      "limitations": [
-        "Scanned original publication. Page11 applies area-specific roll/descent quantities at national, island and electoral-district levels; does not establish a constant national ratio at meshblock level.",
-        "Historical methodological evidence, not a 2013 numerical dataset."
-      ],
-      "sha256": "6c903c1ee3a4411432d991ea8ab340d4bc784bea164ba19858ae26e039c152b8",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2013-census-meshblock-dataset",
-      "organisation": "Stats NZ",
-      "url": "https://www3.stats.govt.nz/meshblock/2013/csv/2013_mb_dataset_Total_New_Zealand_CSV.zip",
-      "dateOrElection": "2013 Census / 2014 boundary population investigation",
-      "resource": "Official 2013 Census meshblock dataset, complete original seven-table CSV ZIP",
-      "retrievedAt": "2026-09-21T13:46:45.226946+00:00",
-      "rawPath": "data/raw/boundaries/2007-2014/census-meshblock-dataset.zip",
-      "processingScript": null,
-      "limitations": [
-        "CSV encoding is Windows-1252; includes multiple geographic levels and census years. Select 2013 meshblock records explicitly.",
-        "Published descent Yes/No/unknown/not-elsewhere-included counts are not the imputed electoral descent variable. Confidential cells must not become zero."
-      ],
-      "sha256": "2ac72f012571a47aef584644a73f13e8b9e8066d49b616bf4a37e73ebc3a6349",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2013-electoral-allocation-methodology",
-      "organisation": "Stats NZ",
-      "url": "https://www.stats.govt.nz/assets/Uploads/Retirement-of-archive-website-project-files/Methods/The-mathematics-of-electorate-allocation-in-New-Zealand-based-on-the-outcome-of-the-2013-Census-and-Maori-Electoral-Option-2013/maths-2013-electorate-allocation.pdf",
-      "dateOrElection": "2013 Census / 2014 boundary population investigation",
-      "resource": "2013 Government Statistician electoral-allocation methodology; exact national and island roll counts",
-      "retrievedAt": "2026-09-21T13:40:31.082428+00:00",
-      "rawPath": "data/raw/boundaries/2007-2014/electoral-population-methodology-2013.pdf",
-      "processingScript": null,
-      "limitations": [
-        "National and island calculations use different roll ratios; this document alone does not establish a meshblock-level ratio."
-      ],
-      "sha256": "2b705a474012f2e1449c9337e21f6407ce81804b3bb2ad80c7ad443fbdd46bd9",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2013-geographic-areas-file",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4648446/download/",
-      "dateOrElection": "2013 meshblock membership in 2007 electoral boundaries",
-      "resource": "Geographic Areas File 2013, official table104685/version298536; recovered original export4648446; MB2013 to GED2007/MED2007",
-      "retrievedAt": "2026-09-15T05:10:30.275917+00:00",
-      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2013.zip",
-      "processingScript": null,
-      "limitations": [
-        "Acquisition only; target 2014 membership and contemporaneous population remain to reconcile."
-      ],
-      "sha256": "ba4204c31cdb2bda16d659e1eff5d9896f10036d3b2d16c6715493a88a4052dd",
-      "licence": "Creative Commons Attribution 4.0 International"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2013-resident-population",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654758/download/",
-      "dateOrElection": "2013 Census / 2013 meshblocks",
-      "resource": "Official layer8437 export4654758; CSV without geometry; 2013 usual-resident/census-night population, not electoral population",
-      "retrievedAt": "2026-09-20T05:05:52.236289+00:00",
-      "rawPath": "data/raw/boundaries/2007-2014/population-2013.zip",
-      "processingScript": null,
-      "limitations": [
-        "Not separate general/Māori electoral populations; no substitution into electoral-population controls authorized at acquisition checkpoint.",
-        "2013 release has rounded zero/three values and -999/-995 markers. Do not apply the later electoral-population suppression parser.",
-        "22 old meshblocks have multiple 2014 electorate destinations and no descendant population allocation in this source."
-      ],
-      "sha256": "d6f7de1c24c11720025b7569f123569e61f934990f2848875b64b1ab27cd3241",
-      "licence": "Creative Commons Attribution 3.0 New Zealand"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2016-geographic-areas-file",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654757/download/",
-      "dateOrElection": "2016 concordance for 2014 electoral boundaries",
-      "resource": "Official table104684/version298534, export4654757; MB2016→MB2013 and GED2014/MED2014 membership",
-      "retrievedAt": "2026-09-20T05:04:17.147700+00:00",
-      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2016.zip",
-      "processingScript": null,
-      "limitations": [
-        "22 MB2013 predecessors map to multiple 2014 electorate pairs; do not allocate parent population twice or arbitrarily select one destination."
-      ],
-      "sha256": "52aeca2f5327d4c742c912b10772f71e4f3c5db6417a992fd4a9975165040874",
-      "licence": "Creative Commons Attribution 4.0 International"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2020-electoral-population",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22604/download/",
-      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
-      "resource": "2018 Census electoral population on final Meshblock 2020; layer104578 version310991",
-      "retrievedAt": "2026-09-14T09:34:27.647337+00:00",
-      "rawPath": "data/raw/boundaries/2014-2020/population-2020.csv",
-      "processingScript": null,
-      "limitations": [
-        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
-      ],
-      "sha256": "a10ed9c53cb171b58d853a3bdd2ac947e10031cd09ec6bf0d3ca614ce4a1991a",
-      "licence": "Creative Commons Attribution 4.0 International"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2020-electoral-population-lookup",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22607/download/",
-      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
-      "resource": "Official field lookup for 2018 electoral population layer",
-      "retrievedAt": "2026-09-14T09:36:57.534578+00:00",
-      "rawPath": "data/raw/boundaries/2014-2020/population-lookup.pdf",
-      "processingScript": null,
-      "limitations": [
-        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
-      ],
-      "sha256": "ee3ead055522f7e8e079ebd1db41d863ee04eb9f26af5b4bbfda15962ee73d95",
-      "licence": "Creative Commons Attribution 4.0 International"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2020-general-geometry",
-      "organisation": "Stats NZ",
-      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2020/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Complete official HD polygon query; no simplification or quantization requested",
-      "retrievedAt": "2026-09-13T15:11:16.594581+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/general-2020-geometry.json",
-      "processingScript": null,
-      "limitations": [
-        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
-      ],
-      "sha256": "e2ef2de2fc6ab595161ce87ce84ee279ac718df74ccbbbfea36b83ffa7cd3061",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2020-general-metadata",
-      "organisation": "Stats NZ",
-      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2020/FeatureServer/0?f=pjson",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Official HD layer schema, CRS and publication evidence",
-      "retrievedAt": "2026-09-13T10:56:06.496139+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/general-2020-metadata.json",
-      "processingScript": null,
-      "limitations": [
-        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
-      ],
-      "sha256": "f09fc7d10543a072e382a0ce08e2c1a938e7dced50be2177cdb6de5fbbaf3edd",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2020-geographic-areas-file",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/my/export-history/4648445/",
-      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
-      "resource": "Official Geographic Areas File 2020 table104285 version381332; export4648445; MB2020 to GED2014/MED2014 membership",
-      "retrievedAt": "2026-09-14T09:36:58.012158+00:00",
-      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-file-2020.zip",
-      "processingScript": null,
-      "limitations": [
-        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
-      ],
-      "sha256": "9353321994f207ab9decd1cab2f70248b5fd343b609d6eae5097f75e91918c6c",
-      "licence": "Creative Commons Attribution 4.0 International"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2020-maori-geometry",
-      "organisation": "Stats NZ",
-      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2020/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Complete official HD polygon query; no simplification or quantization requested",
-      "retrievedAt": "2026-09-13T15:12:03.125237+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/maori-2020-geometry.json",
-      "processingScript": null,
-      "limitations": [
-        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
-      ],
-      "sha256": "0994a4e00022c4caad11b04eed86f183b332a013173b02b7466ac425cfa342b5",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2020-maori-metadata",
-      "organisation": "Stats NZ",
-      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2020/FeatureServer/0?f=pjson",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Official HD layer schema, CRS and publication evidence",
-      "retrievedAt": "2026-09-13T10:56:07.110627+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/maori-2020-metadata.json",
-      "processingScript": null,
-      "limitations": [
-        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
-      ],
-      "sha256": "f9cd113fe5ba763a490761c7c3fe83e6635d935a8df6b15dada7b66a2c33bf7d",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2021-geographic-areas-table",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4649772/download/",
-      "dateOrElection": "2021 concordance for final 2020 meshblocks",
-      "resource": "Official table105172/version381334, recovered completed export4649772; MB2021 to MB2020 lineage and GED2020/MED2020 membership",
-      "retrievedAt": "2026-09-19T14:13:22.243785+00:00",
-      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-table-2021.zip",
-      "processingScript": null,
-      "limitations": [
-        "Historical lineage fields establish membership joins, not a population allocation between descendants. Use final-2020 published population separately for each descendant."
-      ],
-      "sha256": "40a002554cc5ac1b199da16b2de739d64632515efcecc7ab8a6f16dbd6222dd2",
-      "licence": "Creative Commons Attribution 4.0 International"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2025-general-geometry",
-      "organisation": "Stats NZ",
-      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Complete official HD polygon query; no simplification or quantization requested",
-      "retrievedAt": "2026-09-13T15:12:10.534688+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/general-2025-geometry.json",
-      "processingScript": null,
-      "limitations": [
-        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
-      ],
-      "sha256": "2badebc87aaabe4f91d686ff27bfc0844e36ddfc6d40705963456917e3008f15",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2025-general-metadata",
-      "organisation": "Stats NZ",
-      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/General_Electorates_2025/FeatureServer/0?f=pjson",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Official HD layer schema, CRS and publication evidence",
-      "retrievedAt": "2026-09-13T10:56:07.768348+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/general-2025-metadata.json",
-      "processingScript": null,
-      "limitations": [
-        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
-      ],
-      "sha256": "b52b456e4937fac67e4e7c2b512c192c6101b786709327943c8c775ac60955f6",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2025-geographic-areas-table",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647631/download/",
-      "dateOrElection": "January 2025 meshblock membership in 2020 electorates",
-      "resource": "Geographic Areas Table 2025, table 120975, version 404495; original CSV export ZIP 4647631",
-      "retrievedAt": "2026-09-14T04:05:04.850815+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/geographic-areas-table-2025.zip",
-      "processingScript": null,
-      "limitations": [
-        "January 2025 meshblocks differ from final August 2025 version 2. Match exact IDs where available; investigate remaining units before allocation."
-      ],
-      "sha256": "cc18d753a2922697e2edfa361db3d5541a5f92acd9f0f67cba90f8f0779c5103",
-      "licence": "Creative Commons Attribution 4.0 International"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2025-maori-geometry",
-      "organisation": "Stats NZ",
-      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=2193&orderByFields=OBJECTID&f=json",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Complete official HD polygon query; no simplification or quantization requested",
-      "retrievedAt": "2026-09-13T15:12:05.700161+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/maori-2025-geometry.json",
-      "processingScript": null,
-      "limitations": [
-        "Acquired geometry inventory and closed rings checked; topology and official change reconciliation pending. Electorate area is not a population weight."
-      ],
-      "sha256": "181044b74c2a1c89926c89d9a884faabe8e43fb54cbcd9cad1f461cd6399537b",
-      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2025-maori-metadata",
-      "organisation": "Stats NZ",
-      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/M%C4%81ori_Electorates_2025/FeatureServer/0?f=pjson",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Official HD layer schema, CRS and publication evidence",
-      "retrievedAt": "2026-09-13T10:56:08.378888+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/maori-2025-metadata.json",
-      "processingScript": null,
-      "limitations": [
-        "Stage 4 acquisition; geographic reconciliation pending. No population/vote-transfer inference from metadata."
-      ],
-      "sha256": "b8e377fb36a1cb2ace950c22f6ce13f00f15a0054054ff57f66500da04254cd6",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
     },
     {
@@ -15604,34 +15024,18 @@
     },
     {
       "schemaVersion": 1,
-      "id": "stats-2025-population",
+      "id": "stats-2025-geographic-areas-table",
       "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/122744/versions/418310/attachments/25789/download/",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Confidentialised 2023 Census electoral populations by 2025 version 2 meshblock with final electorate membership",
-      "retrievedAt": "2026-09-13T15:07:59.091547+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/population-2025.csv",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4647631/download/",
+      "dateOrElection": "January 2025 meshblock membership in 2020 electorates",
+      "resource": "Geographic Areas Table 2025, table 120975, version 404495; original CSV export ZIP 4647631",
+      "retrievedAt": "2026-09-14T04:05:04.850815+00:00",
+      "rawPath": "data/raw/boundaries/2020-2025/geographic-areas-table-2025.zip",
       "processingScript": null,
       "limitations": [
-        "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
+        "January 2025 meshblocks differ from final August 2025 version 2. Match exact IDs where available; investigate remaining units before allocation."
       ],
-      "sha256": "32e97d7f2128e1de2fbfeee9a73a258f449ded602cca77aa9d97c0516430f6ff",
-      "licence": "Creative Commons Attribution 4.0 International"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "stats-2025-population-lookup",
-      "organisation": "Stats NZ",
-      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/122744/versions/418310/attachments/25790/download/",
-      "dateOrElection": "2020/2025 electorate boundaries for 2023/2026 elections",
-      "resource": "Official population dataset lookup and confidentiality documentation",
-      "retrievedAt": "2026-09-13T15:09:01.343025+00:00",
-      "rawPath": "data/raw/boundaries/2020-2025/population-lookup.pdf",
-      "processingScript": null,
-      "limitations": [
-        "Counts below six suppressed as -999; random rounding to base three. Never treat suppression as zero or use land area as population."
-      ],
-      "sha256": "ed82805299067626874d5d43fda82211e1bcd27f2425f67eb16f5c1c473e6a07",
+      "sha256": "cc18d753a2922697e2edfa361db3d5541a5f92acd9f0f67cba90f8f0779c5103",
       "licence": "Creative Commons Attribution 4.0 International"
     },
     {
@@ -15652,6 +15056,168 @@
     },
     {
       "schemaVersion": 1,
+      "id": "stats-2020-electoral-population",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22604/download/",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "resource": "2018 Census electoral population on final Meshblock 2020; layer104578 version310991",
+      "retrievedAt": "2026-09-14T09:34:27.647337+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/population-2020.csv",
+      "processingScript": null,
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ],
+      "sha256": "a10ed9c53cb171b58d853a3bdd2ac947e10031cd09ec6bf0d3ca614ce4a1991a",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-electoral-population-lookup",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/layers/104578/versions/310991/attachments/22607/download/",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "resource": "Official field lookup for 2018 electoral population layer",
+      "retrievedAt": "2026-09-14T09:36:57.534578+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/population-lookup.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ],
+      "sha256": "ee3ead055522f7e8e079ebd1db41d863ee04eb9f26af5b4bbfda15962ee73d95",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2020-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/my/export-history/4648445/",
+      "dateOrElection": "2018 Census / 2014 to 2020 boundaries",
+      "resource": "Official Geographic Areas File 2020 table104285 version381332; export4648445; MB2020 to GED2014/MED2014 membership",
+      "retrievedAt": "2026-09-14T09:36:58.012158+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-file-2020.zip",
+      "processingScript": null,
+      "limitations": [
+        "Acquisition checkpoint; final meshblock/concordance coverage and target population controls not yet reconciled."
+      ],
+      "sha256": "9353321994f207ab9decd1cab2f70248b5fd343b609d6eae5097f75e91918c6c",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2013-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4648446/download/",
+      "dateOrElection": "2013 meshblock membership in 2007 electoral boundaries",
+      "resource": "Geographic Areas File 2013, official table104685/version298536; recovered original export4648446; MB2013 to GED2007/MED2007",
+      "retrievedAt": "2026-09-15T05:10:30.275917+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2013.zip",
+      "processingScript": null,
+      "limitations": [
+        "Acquisition only; target 2014 membership and contemporaneous population remain to reconcile."
+      ],
+      "sha256": "ba4204c31cdb2bda16d659e1eff5d9896f10036d3b2d16c6715493a88a4052dd",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2021-geographic-areas-table",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4649772/download/",
+      "dateOrElection": "2021 concordance for final 2020 meshblocks",
+      "resource": "Official table105172/version381334, recovered completed export4649772; MB2021 to MB2020 lineage and GED2020/MED2020 membership",
+      "retrievedAt": "2026-09-19T14:13:22.243785+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/geographic-areas-table-2021.zip",
+      "processingScript": null,
+      "limitations": [
+        "Historical lineage fields establish membership joins, not a population allocation between descendants. Use final-2020 published population separately for each descendant."
+      ],
+      "sha256": "40a002554cc5ac1b199da16b2de739d64632515efcecc7ab8a6f16dbd6222dd2",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rc-2020-population-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/Boundary-Review/SCHEDULE-C-TABLES-OF-THE-ELECTORATES-AND-POPULATIONS.pdf",
+      "dateOrElection": "2020 boundaries / 2018 electoral population",
+      "resource": "2020 final electorate population controls, Schedule C",
+      "retrievedAt": "2026-09-20T04:54:35.072581+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/schedule-c.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Population columns are controls; projected percentage changes are not population observations."
+      ],
+      "sha256": "5a2bfeeea822447bdc7b58bcfab9a5ed3c6e162a1e28400bb34d02c6790652cd",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rc-2020-change-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/Boundary-Review/SCHEDULE-B-LIST-OF-UNCHANGED-AND-CHANGED-ELECTORATES.pdf",
+      "dateOrElection": "2014 to 2020 boundaries",
+      "resource": "2020 Schedule B corrected unchanged/changed electorate list",
+      "retrievedAt": "2026-09-20T04:58:34.350946+00:00",
+      "rawPath": "data/raw/boundaries/2014-2020/schedule-b.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Published correction: Waiariki unchanged, Hauraki-Waikato changed."
+      ],
+      "sha256": "dc8b3d82a90bda6428ca58dcab446616dab4633dd6d40112a31f99dd19ae6657",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2016-geographic-areas-file",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654757/download/",
+      "dateOrElection": "2016 concordance for 2014 electoral boundaries",
+      "resource": "Official table104684/version298534, export4654757; MB2016→MB2013 and GED2014/MED2014 membership",
+      "retrievedAt": "2026-09-20T05:04:17.147700+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/geographic-areas-file-2016.zip",
+      "processingScript": null,
+      "limitations": [
+        "22 MB2013 predecessors map to multiple 2014 electorate pairs; do not allocate parent population twice or arbitrarily select one destination."
+      ],
+      "sha256": "52aeca2f5327d4c742c912b10772f71e4f3c5db6417a992fd4a9975165040874",
+      "licence": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2013-resident-population",
+      "organisation": "Stats NZ",
+      "url": "https://datafinder.stats.govt.nz/services/api/v1.x/exports/4654758/download/",
+      "dateOrElection": "2013 Census / 2013 meshblocks",
+      "resource": "Official layer8437 export4654758; CSV without geometry; 2013 usual-resident/census-night population, not electoral population",
+      "retrievedAt": "2026-09-20T05:05:52.236289+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/population-2013.zip",
+      "processingScript": null,
+      "limitations": [
+        "Not separate general/Māori electoral populations; no substitution into electoral-population controls authorized at acquisition checkpoint.",
+        "2013 release has rounded zero/three values and -999/-995 markers. Do not apply the later electoral-population suppression parser.",
+        "22 old meshblocks have multiple 2014 electorate destinations and no descendant population allocation in this source."
+      ],
+      "sha256": "d6f7de1c24c11720025b7569f123569e61f934990f2848875b64b1ab27cd3241",
+      "licence": "Creative Commons Attribution 3.0 New Zealand"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2013-electoral-allocation-methodology",
+      "organisation": "Stats NZ",
+      "url": "https://www.stats.govt.nz/assets/Uploads/Retirement-of-archive-website-project-files/Methods/The-mathematics-of-electorate-allocation-in-New-Zealand-based-on-the-outcome-of-the-2013-Census-and-Maori-Electoral-Option-2013/maths-2013-electorate-allocation.pdf",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "resource": "2013 Government Statistician electoral-allocation methodology; exact national and island roll counts",
+      "retrievedAt": "2026-09-21T13:40:31.082428+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/electoral-population-methodology-2013.pdf",
+      "processingScript": null,
+      "limitations": [
+        "National and island calculations use different roll ratios; this document alone does not establish a meshblock-level ratio."
+      ],
+      "sha256": "2b705a474012f2e1449c9337e21f6407ce81804b3bb2ad80c7ad443fbdd46bd9",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
       "id": "stats-electoral-descent-imputation-methodology",
       "organisation": "Stats NZ",
       "url": "https://www.stats.govt.nz/assets/Uploads/Methods/Deriving-the-2018-Maori-descent-electoral-population/Deriving-the-2018-maori-descent-electoral-population.pdf",
@@ -15665,6 +15231,440 @@
       ],
       "sha256": "d87efcac8833731b94add8b3e24d15b3f62edcf12d165b39ce07cd77ffd162f4",
       "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2013-census-meshblock-dataset",
+      "organisation": "Stats NZ",
+      "url": "https://www3.stats.govt.nz/meshblock/2013/csv/2013_mb_dataset_Total_New_Zealand_CSV.zip",
+      "dateOrElection": "2013 Census / 2014 boundary population investigation",
+      "resource": "Official 2013 Census meshblock dataset, complete original seven-table CSV ZIP",
+      "retrievedAt": "2026-09-21T13:46:45.226946+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/census-meshblock-dataset.zip",
+      "processingScript": null,
+      "limitations": [
+        "CSV encoding is Windows-1252; includes multiple geographic levels and census years. Select 2013 meshblock records explicitly.",
+        "Published descent Yes/No/unknown/not-elsewhere-included counts are not the imputed electoral descent variable. Confidential cells must not become zero."
+      ],
+      "sha256": "2ac72f012571a47aef584644a73f13e8b9e8066d49b616bf4a37e73ebc3a6349",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rc-2014-population-controls",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/2014-boundary-review/Schedule-C-Population-data-of-the-proposed-and-final-electorates.pdf",
+      "dateOrElection": "2014 boundaries / 2013 Census",
+      "resource": "Final and proposed 2014 Schedule C electorate electoral-population controls; user-assisted original browser download",
+      "retrievedAt": "2026-09-21T14:29:38.550069+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/schedule-c.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Only final sections are controls; proposed populations and projected variation percentages must not be substituted."
+      ],
+      "sha256": "2aae6e29c2710797744b169162a451b7e16806e95040439c20d165c4b9b15bcc",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stats-2000-electoral-mathematics",
+      "organisation": "Statistics New Zealand",
+      "url": "https://aceproject.org/ero-en/topics/boundary-delimitation/New%20Zealand%20-%20The%20Mathmatics%20of%20Electoral%20District%20Allocation%20in%20New%20Zealand%20%28bdc02a%29.pdf",
+      "dateOrElection": "2000 methodology cited by Stats NZ electoral-population guidance",
+      "resource": "Original Stats NZ Research and Analytical Report 2000 #12, Westbrooke and Ryan; preserved copy hosted by ACE Electoral Knowledge Network",
+      "retrievedAt": "2026-09-21T14:30:46.552253+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/electoral-mathematics-2000.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Scanned original publication. Page11 applies area-specific roll/descent quantities at national, island and electoral-district levels; does not establish a constant national ratio at meshblock level.",
+        "Historical methodological evidence, not a 2013 numerical dataset."
+      ],
+      "sha256": "6c903c1ee3a4411432d991ea8ab340d4bc784bea164ba19858ae26e039c152b8",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rc-2014-boundary-report",
+      "organisation": "Representation Commission",
+      "url": "https://elections.nz/assets/2014-boundary-review/Representation-Commissions-report-2014.pdf",
+      "dateOrElection": "2007 to 2014 boundary review",
+      "resource": "2014 final report, pages9–12 unchanged seats and technical changes",
+      "retrievedAt": "2026-09-22T04:17:08.302603+00:00",
+      "rawPath": "data/raw/boundaries/2007-2014/representation-commission-report-2014.pdf",
+      "processingScript": null,
+      "limitations": [
+        "Narrative no-population technical changes do not identify individual rounded zero cells as exact zero."
+      ],
+      "sha256": "ab573cf95d6a062250c05b3c18bcf811c70b56e650e5f724eae6128e0f08725e",
+      "licence": "Representation Commission / Stats NZ attribution; specific reuse terms pending verification."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-fleur-fitzsimons-selection-2023",
+      "organisation": "Fleur Fitzsimons / New Zealand Labour Party",
+      "url": "https://m.scoop.co.nz/stories/PO2303/S00035/labour-selects-fleur-fitzsimons-for-rongotai.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party candidate statement",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/fleur-fitzsimons-selection-2023.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
+      ],
+      "sha256": "d0a5579aef275c9307244952be05918518e682c1e3dd9a606f746b025d18bf48",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-labour-andersen-list-2017",
+      "organisation": "New Zealand Labour Party",
+      "url": "https://m.scoop.co.nz/stories/PA1705/S00018/labour-party-list-for-the-2017-election-announced.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party candidate statement",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/labour-andersen-list-2017.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
+      ],
+      "sha256": "12373ce439643b4b05f252ed9b622cd8d451bd94f6805d2acf349c06dddc8efe",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-labour-candidates-list-2011",
+      "organisation": "New Zealand Labour Party",
+      "url": "https://m.scoop.co.nz/stories/PA1109/S00048/labour-completes-selections-for-the-2011-general-election.htm",
+      "dateOrElection": "2011 general-election candidate selections",
+      "resource": "Party candidate selection statement",
+      "retrievedAt": "2026-09-23T16:27:41.816550+00:00",
+      "rawPath": "data/raw/identity-stage10/labour-candidates-list-2011.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored candidate list mirrored by Scoop. It confirms named pre-election candidacy but not complete career history."
+      ],
+      "sha256": "8ac970810e8216011fbbd54b0befbab8d479514ae6fb1c97086fcdece94d3fc4",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-national-penk-campaign-2017",
+      "organisation": "New Zealand National Party",
+      "url": "https://m.scoop.co.nz/stories/PO1709/S00188/penk-brings-minister-to-electorate-to-see-for-himself.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party statement",
+      "retrievedAt": "2026-09-23T16:22:13.087965+00:00",
+      "rawPath": "data/raw/identity-stage10/national-penk-campaign-2017.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored statement mirrored by Scoop; not independent verification of every occurrence or full career history."
+      ],
+      "sha256": "ae43817a0bd3402dd5caa0b8d44c20a946bc6f88b99f07301fb8cbc48638b09f",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-national-penk-selection-2017",
+      "organisation": "New Zealand National Party (supplied content via Indian Newslink)",
+      "url": "https://indiannewslink.co.nz/national-selects-penk-for-helensville/",
+      "dateOrElection": "2017 general-election candidate selection",
+      "resource": "Party candidate selection statement",
+      "retrievedAt": "2026-09-23T16:30:07.808564+00:00",
+      "rawPath": "data/raw/identity-stage10/national-penk-selection-2017.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-supplied content republished by independent outlet; date and candidate identity are pre-result, full career history remains separate."
+      ],
+      "sha256": "adc93f4e59966468719b2b83adc4938e37ae5485d2170926ea09a7aa055dfb05",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-national-redmayne-selection-2022",
+      "organisation": "New Zealand National Party",
+      "url": "https://m.scoop.co.nz/stories/PA2211/S00041/suze-redmayne-selected-as-nationals-candidate-in-rangitikei.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party candidate statement",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/national-redmayne-selection-2022.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
+      ],
+      "sha256": "241a76626b9a14f76ba1c5ef7d4e64d1bffe331dba29da40eaa123e865d4d496",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-national-ross-selection-2011",
+      "organisation": "New Zealand National Party",
+      "url": "https://m.scoop.co.nz/stories/PO1101/S00119/national-selects-jami-lee-ross-as-botany-candidate.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party statement",
+      "retrievedAt": "2026-09-23T16:22:13.087965+00:00",
+      "rawPath": "data/raw/identity-stage10/national-ross-selection-2011.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored statement mirrored by Scoop; not independent verification of every occurrence or full career history."
+      ],
+      "sha256": "6c43d229ce93ef8bde9e64275c0cfb42109cb85789430e56c8f9d28b5a4c925a",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-national-simpson-selection-2011",
+      "organisation": "New Zealand National Party",
+      "url": "https://m.scoop.co.nz/stories/PO1104/S00255/national-selects-scott-simpson-as-coromandel-candidate.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party candidate statement",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/national-simpson-selection-2011.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
+      ],
+      "sha256": "2827a8b51b997f6b3df8ae1dd08da5ed60fb384b4be6d344dc88a45c13ad4838",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-national-uffindell-by-election-2022",
+      "organisation": "New Zealand National Party",
+      "url": "https://m.scoop.co.nz/stories/PA2206/S00147/luxon-welcomes-tauranga-by-election-result.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party statement",
+      "retrievedAt": "2026-09-23T16:22:13.087965+00:00",
+      "rawPath": "data/raw/identity-stage10/national-uffindell-by-election-2022.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored statement mirrored by Scoop; not independent verification of every occurrence or full career history."
+      ],
+      "sha256": "9e18633fc8592b305a754b06c925b61ddd8dd98b8cc6fcdae22ac692d1943cc4",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-botany",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/botany-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-botany.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "3d82b8d924072e2c1a20c56d4a55be98e67270f1159a0fed793ff194a6c13692",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-coromandel",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/coromandel-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-coromandel.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "870b1d05c59670461891616a4cf6e39317b1091d1ff5665ee27a50ec999ebdfd",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-east-coast",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/east-coast-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-east-coast.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "11bae35c61735608a9b0e20a2a9cb85e9cff17c03b2b470ecfe2fa762fed190e",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-epsom",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/epsom-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-epsom.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "c60da1e27f0d8cb5b72bb74ec464739f3d265ec1269bedc90fe8a4d3731a7ff9",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-hamilton-east",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/hamilton-east-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-hamilton-east.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "4c04b0b33715df15c6f094830faecb20992ae328cf507b67358dc37767a19134",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-hutt-south",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/hutt-south-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-hutt-south.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "d8347cabe6059bcb1024681e2463d5e9026930e81ac4bdbcc425ac30fb35799d",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-mana",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/mana-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-mana.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "f4e027bf5d3953b56a69ba3a9ba192ba11ab269db7336c520e313750c49570db",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-manurewa",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/manurewa-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-manurewa.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "266f63b626a76a0740a563c19079e167da30ac66c13b92ad8148ede2974ff206",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-mt-albert",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/mt-albert-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-mt-albert.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "757d06b975b039bf7fe4a59cea0f25f27a3ea9f1e42cfd7e2a6d51429dc33d15",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-napier",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/napier-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-napier.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "d3434d45356eda43bc1a8873ca428298e544ec4a31f18460fba4b314cfb838ad",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-rongotai",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/rongotai-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-rongotai.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "c4bc462a6903b219880d078183d7cd4091bbd348c7a2b602ab0953733f281f70",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-tauranga",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/tauranga-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-tauranga.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "87a425ae26f97158b6a9597180d77a15daf22feca2415c9ac9d832e924d6ac3e",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-west-coast-tasman",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/west-coast-tasman-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-west-coast-tasman.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "1a951480b793705c2426330a68e531cf7dc8a5872327fb0045a1ce39d25080e1",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-parliament-electorate-whanganui",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/electorate-profiles/whanganui-electorate-profile/",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Official electorate history",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/parliament-electorate-whanganui.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Retrospective electorate profile, primarily discussing winners; publication date not established. Selection by predeclared seat list does not make underlying coverage outcome independent."
+      ],
+      "sha256": "c0824a97b415c7544d9eb94813999d27517114d24b35cab3abf43a1f0be385fa",
+      "licence": "Source attribution preserved; specific reuse terms not established."
     }
   ]
 }

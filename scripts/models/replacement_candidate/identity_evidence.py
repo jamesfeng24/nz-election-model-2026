@@ -6,6 +6,22 @@ from scripts.models.freshman_incumbency.inventory import _source_date
 from scripts.transform.historical import key
 
 
+def verify_identity_snapshot(registry, snapshot):
+    """Pin only consumed identity records; tolerate unrelated registry additions."""
+    live = registry['sources']
+    ids = [row['id'] for row in live]
+    if len(ids) != len(set(ids)):
+        raise ValueError('Ambiguous source ID in registry')
+    by_id = {row['id']: row for row in live}
+    required = snapshot['sources']
+    if len(required) != len({row['id'] for row in required}):
+        raise ValueError('Duplicate required identity source ID')
+    for record in required:
+        expected = {key: value for key, value in record.items() if key != 'publishedDate'}
+        if by_id.get(record['id']) != expected:
+            raise ValueError('Changed or deleted required identity source record')
+
+
 class _VisibleText(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -109,3 +125,37 @@ def validate_adjudications(root, plan, adjudications, occurrences, source_record
             raise ValueError('Later-success-covered alias entered primary cohort')
         result[event_id] = row
     return result
+
+
+def build_person_links(adjudications, inherited_links, occurrences):
+    """Extend occurrence links without rewriting the frozen Stage 8 person layer."""
+    inherited = {row['candidateOccurrenceId']: row for row in inherited_links}
+    valid_ids = {row['candidateOccurrenceId'] for row in occurrences}
+    links = {}
+    for event_id, evidence in sorted(adjudications.items()):
+        source_id, target_id = event_id.split('->')
+        for prefix, occurrence_id in (('source', source_id), ('target', target_id)):
+            if occurrence_id not in valid_ids:
+                raise ValueError('Dangling Stage 10 occurrence link')
+            inherited_link = inherited.get(occurrence_id)
+            person_id = (inherited_link['personId'] if inherited_link and
+                         inherited_link['personId'] else
+                         f'person:stage10:occurrence:{occurrence_id}')
+            proposed = {
+                'candidateOccurrenceId': occurrence_id, 'personId': person_id,
+                'occurrenceConfidence': evidence[prefix + 'OccurrenceConfidence'],
+                'personExistenceStatus': 'independently_corroborated',
+                'method': evidence[prefix + 'Route'],
+                'sourceId': evidence[prefix + 'EvidenceId'],
+                'historicalFactDate': evidence[prefix + 'FactDate'],
+                'publicationDate': evidence[prefix + 'PublicationDate'],
+                'retrievalAt': evidence[prefix + 'RetrievalAt'],
+                'adjudicationRole': evidence['role'],
+                'careerHistoryStatus': 'separate_dated_tenure_overlay_or_unknown',
+            }
+            if occurrence_id in links and links[occurrence_id] != proposed:
+                raise ValueError('Conflicting Stage 10 occurrence links')
+            links[occurrence_id] = proposed
+        if links[source_id]['personId'] == links[target_id]['personId']:
+            raise ValueError('Distinct-person adjudication resolves to same person ID')
+    return {'schemaVersion': 1, 'links': [links[key] for key in sorted(links)]}

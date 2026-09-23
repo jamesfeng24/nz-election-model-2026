@@ -1,11 +1,17 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "selectedOperationalReplacementEffectPP": null,
-  "selectionStatus": "insufficient_outcome_independent_treatment_evidence",
+  "selectionStatus": "not_selected_under_frozen_gates",
   "gates": {
-    "bothGroupsEachTransition": false,
-    "chronologicalImprovement": null,
-    "normalizationIdentityStability": null
+    "bothGroupsEachTrainedHoldout": true,
+    "nonworseMAEAndRMSEEachHoldout": true,
+    "pooledMAEImprovementPP": 0.5457606584853255,
+    "pooledMAEImprovementAtLeast0_25PP": true,
+    "normalizationIdentityDirectionStable": true,
+    "acquisitionIndependentOfTargetLaterOutcomes": false
   },
-  "reason": "No pre-target-supported source-winner replacement in any unchanged-boundary transition; neither full nor no-replacement model has a common two-group evaluation sample."
+  "failedGates": [
+    "acquisition_independent_of_target_later_outcomes"
+  ],
+  "reason": "Corrected evidence did not satisfy the predeclared operational gates; descriptive fits remain non-operational."
 }

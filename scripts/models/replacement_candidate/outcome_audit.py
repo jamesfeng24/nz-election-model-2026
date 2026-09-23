@@ -11,7 +11,8 @@ INDEX_PATHS = ('data/raw/identity-parliament-former.html',
                'data/raw/identity-parliament-current.html')
 
 
-def audit(root, inventory, occurrences, continuity, profiles, winners_by_year):
+def audit(root, inventory, occurrences, continuity, profiles, winners_by_year,
+          adjudications, maori_winner_ids, person_links):
     """Check event class and eligibility with candidate/tenure records held fixed."""
     source_plan = json.loads((root / 'data/source-plans/candidate-persistence-sources.json').read_bytes())
     metadata = {item['id']: item for item in source_plan['sources']}
@@ -24,7 +25,8 @@ def audit(root, inventory, occurrences, continuity, profiles, winners_by_year):
         projected = project_members(occurrences, members, earlier_winners, metadata)
         links = build_identity(occurrences, projected)['links']
         changed = {row['eventId']: row for row in build_inventory(
-            occurrences, links, continuity, earlier_winners, profiles)['records']
+            occurrences, links, continuity, earlier_winners, profiles,
+            adjudications, maori_winner_ids, person_links)['records']
             if row['sourceYear'] == source_year}
         original = {row['eventId']: row for row in inventory
                     if row['sourceYear'] == source_year}
@@ -41,7 +43,7 @@ def audit(root, inventory, occurrences, continuity, profiles, winners_by_year):
                             'originalPrimaryEligible': row['primaryEligible'],
                             'classificationAndEligibilityStable': stable})
     return {'schemaVersion': 1,
-            'method': 'Rebuild Stage 8 profile projections and Stage 10 inventory after removing target/later winner flags, with candidacies, preserved raw indexes, dated profiles and earlier winners fixed.',
+            'method': 'Rebuild Stage 8 profile projections and Stage 10 inventory after removing target/later winner flags, with candidacies, preserved raw indexes, dated profiles, new adjudicated pre-result facts and official Māori source-winner overlay fixed.',
             'records': records,
             'counts': {'total': len(records),
                        'unstable': sum(not row['classificationAndEligibilityStable'] for row in records),

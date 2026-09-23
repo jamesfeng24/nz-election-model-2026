@@ -94,7 +94,7 @@ def _prior_service(profile, target_year):
 
 
 def build_inventory(occurrences, links, continuity, elected_ids, profiles=(),
-                    adjudications=None, maori_winner_ids=()):
+                    adjudications=None, maori_winner_ids=(), person_links=None):
     """Pair all observed same-party seats; retain unresolved and excluded records."""
     by_seat = _indexed(occurrences)
     by_link = {row['candidateOccurrenceId']: row for row in links}
@@ -105,6 +105,9 @@ def build_inventory(occurrences, links, continuity, elected_ids, profiles=(),
         raise ValueError('Duplicate occurrence or dangling identity link')
     adjudications = adjudications or {}
     maori_winner_ids = set(maori_winner_ids)
+    person_links = person_links or {}
+    if not set(person_links) <= set(by_id):
+        raise ValueError('Dangling Stage 10 person-link occurrence')
     parties = defaultdict(list)
     for row in continuity:
         parties[(row['sourceYear'], row['targetYear'])].append(row)
@@ -138,6 +141,8 @@ def build_inventory(occurrences, links, continuity, elected_ids, profiles=(),
                     reasons.append('missing_normalized_premium')
                 source_id, target_id = source['candidateOccurrenceId'], target['candidateOccurrenceId']
                 source_link, target_link = by_link.get(source_id), by_link.get(target_id)
+                stage_source = person_links.get(source_id)
+                stage_target = person_links.get(target_id)
                 adjudication = adjudications.get(source_id + '->' + target_id)
                 identity, method, source_anchors, target_anchors = _identity(
                     source, target, source_link, target_link, adjudication)
@@ -191,14 +196,20 @@ def build_inventory(occurrences, links, continuity, elected_ids, profiles=(),
                                                     'unique_profile_name_after_independent_occurrence_adjudication'
                                                     if adjudication and incoming_profile else
                                                     'inherited_winner_anchor' if incoming_profile else 'unknown'),
-                    'sourceIdentityStatus': source_link['status'] if source_link else 'unresolved',
-                    'targetIdentityStatus': target_link['status'] if target_link else 'unresolved',
+                    'sourceIdentityStatus': (stage_source['occurrenceConfidence'] if stage_source else
+                                             source_link['status'] if source_link else 'unresolved'),
+                    'targetIdentityStatus': (stage_target['occurrenceConfidence'] if stage_target else
+                                             target_link['status'] if target_link else 'unresolved'),
+                    'inheritedSourceIdentityStatus': source_link['status'] if source_link else 'unresolved',
+                    'inheritedTargetIdentityStatus': target_link['status'] if target_link else 'unresolved',
                     'sourceOccurrenceConfidence': (adjudication['sourceOccurrenceConfidence'] if adjudication
                                                    else source_link['status'] if source_link else 'unresolved'),
                     'targetOccurrenceConfidence': (adjudication['targetOccurrenceConfidence'] if adjudication
                                                    else target_link['status'] if target_link else 'unresolved'),
-                    'sourcePersonId': source_link['personId'] if source_link else None,
-                    'targetPersonId': target_link['personId'] if target_link else None,
+                    'sourcePersonId': (stage_source['personId'] if stage_source else
+                                       source_link['personId'] if source_link else None),
+                    'targetPersonId': (stage_target['personId'] if stage_target else
+                                       target_link['personId'] if target_link else None),
                     'sourceIdentityEvidence': source_link['evidence'] if source_link else None,
                     'targetIdentityEvidence': target_link['evidence'] if target_link else None,
                     'sourcePreTargetAnchors': source_anchors,

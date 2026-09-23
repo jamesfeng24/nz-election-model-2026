@@ -6,7 +6,8 @@ import json
 from pathlib import Path
 
 from scripts.models.replacement_candidate.inventory import build_inventory
-from scripts.models.replacement_candidate.identity_evidence import validate_adjudications
+from scripts.models.replacement_candidate.identity_evidence import (
+    build_person_links, validate_adjudications, verify_identity_snapshot)
 from scripts.models.replacement_candidate.maori_winners import build_overlay, verify_snapshot
 from scripts.validate.source_files import verify_source_files
 
@@ -50,18 +51,22 @@ def build():
     profiles = read(INPUTS[3])['profiles']
     identity_sources = read('data/source-plans/stage10-identity-sources.json')
     tenure_sources = read('data/source-plans/freshman-incumbency-tenure-sources.json')
+    registry = read('data/sources.json')
+    verify_identity_snapshot(registry, identity_sources)
     verify_source_files(ROOT, identity_sources)
     verify_source_files(ROOT, tenure_sources)
     maori_snapshot = read('data/source-plans/stage10-maori-winner-sources.json')
-    maori_records = verify_snapshot(ROOT, occurrences, read('data/sources.json'), maori_snapshot)
+    maori_records = verify_snapshot(ROOT, occurrences, registry, maori_snapshot)
     maori_overlay = build_overlay(ROOT, occurrences, maori_records)
     adjudications = validate_adjudications(
         ROOT, read('data/source-plans/stage10-identity-review-plan.json'),
         read('data/source-plans/stage10-identity-adjudications.json'), occurrences,
         identity_sources['sources'], tenure_sources['sources'], profiles, links)
+    person_links = build_person_links(adjudications, links, occurrences)
     inventory = build_inventory(
         occurrences, links, read(INPUTS[2])['records'], elected, profiles,
-        adjudications, {row['winnerOccurrenceId'] for row in maori_overlay['records']})
+        adjudications, {row['winnerOccurrenceId'] for row in maori_overlay['records']},
+        {row['candidateOccurrenceId']: row for row in person_links['links']})
     by_event = {row['eventId']: row for row in inventory['records']}
     review = {'schemaVersion': 1, 'records': [
         {'eventId': row['eventId'], 'externalPriority': row['externalPriority'],
@@ -73,7 +78,8 @@ def build():
         for row in read('data/source-plans/stage10-identity-review-plan.json')['records']],
         'acquisitionSelection': '20 cases predeclared without target wins or residual changes. Retrospective Parliament profiles are stronger for winners; five requested seat pages failed and no exhaustive biography search followed.'}
     outputs = {'input-contract.json': expected, 'maori-winner-overlay.json': maori_overlay,
-               'identity-review.json': review, 'inventory.json': inventory}
+               'person-links.json': person_links, 'identity-review.json': review,
+               'inventory.json': inventory}
     code = [ROOT / f'scripts/models/replacement_candidate/{name}.py'
             for name in ('__init__', 'identity_evidence', 'inventory', 'maori_winners', 'run')]
     outputs['manifest.json'] = {

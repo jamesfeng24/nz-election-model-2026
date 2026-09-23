@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "method": "Rebuild Stage 8 profile projections and Stage 10 inventory after removing target/later winner flags, with candidacies, preserved raw indexes, dated profiles and earlier winners fixed.",
+  "method": "Rebuild Stage 8 profile projections and Stage 10 inventory after removing target/later winner flags, with candidacies, preserved raw indexes, dated profiles, new adjudicated pre-result facts and official Māori source-winner overlay fixed.",
   "records": [
     {
       "eventId": "nz-general-2008-electorate-01-candidate-06->nz-general-2011-electorate-01-candidate-04",
@@ -93,8 +93,8 @@
     {
       "eventId": "nz-general-2008-electorate-03-candidate-08->nz-general-2011-electorate-03-candidate-03",
       "sourceYear": 2008,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
+      "originalIdentityClass": "supported_by_election_successor",
+      "counterfactualIdentityClass": "supported_by_election_successor",
       "originalPrimaryEligible": false,
       "classificationAndEligibilityStable": true
     },
@@ -205,9 +205,9 @@
     {
       "eventId": "nz-general-2008-electorate-07-candidate-02->nz-general-2011-electorate-07-candidate-06",
       "sourceYear": 2008,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
-      "originalPrimaryEligible": false,
+      "originalIdentityClass": "supported_replacement",
+      "counterfactualIdentityClass": "supported_replacement",
+      "originalPrimaryEligible": true,
       "classificationAndEligibilityStable": true
     },
     {
@@ -717,8 +717,8 @@
     {
       "eventId": "nz-general-2008-electorate-21-candidate-05->nz-general-2011-electorate-21-candidate-01",
       "sourceYear": 2008,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
+      "originalIdentityClass": "supported_by_election_successor",
+      "counterfactualIdentityClass": "supported_by_election_successor",
       "originalPrimaryEligible": false,
       "classificationAndEligibilityStable": true
     },
@@ -781,9 +781,9 @@
     {
       "eventId": "nz-general-2008-electorate-24-candidate-05->nz-general-2011-electorate-24-candidate-06",
       "sourceYear": 2008,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
-      "originalPrimaryEligible": false,
+      "originalIdentityClass": "supported_replacement",
+      "counterfactualIdentityClass": "supported_replacement",
+      "originalPrimaryEligible": true,
       "classificationAndEligibilityStable": true
     },
     {
@@ -5077,9 +5077,9 @@
     {
       "eventId": "nz-general-2014-electorate-15-candidate-06->nz-general-2017-electorate-15-candidate-03",
       "sourceYear": 2014,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
-      "originalPrimaryEligible": false,
+      "originalIdentityClass": "supported_replacement",
+      "counterfactualIdentityClass": "supported_replacement",
+      "originalPrimaryEligible": true,
       "classificationAndEligibilityStable": true
     },
     {
@@ -5133,8 +5133,8 @@
     {
       "eventId": "nz-general-2014-electorate-17-candidate-03->nz-general-2017-electorate-17-candidate-01",
       "sourceYear": 2014,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
+      "originalIdentityClass": "retrospective_alias_replacement",
+      "counterfactualIdentityClass": "retrospective_alias_replacement",
       "originalPrimaryEligible": false,
       "classificationAndEligibilityStable": true
     },
@@ -5525,10 +5525,10 @@
     {
       "eventId": "nz-general-2014-electorate-27-candidate-06->nz-general-2017-electorate-27-candidate-01",
       "sourceYear": 2014,
-      "originalIdentityClass": "retrospective_distinct_people",
-      "counterfactualIdentityClass": "unresolved_identity",
+      "originalIdentityClass": "supported_by_election_successor",
+      "counterfactualIdentityClass": "supported_by_election_successor",
       "originalPrimaryEligible": false,
-      "classificationAndEligibilityStable": false
+      "classificationAndEligibilityStable": true
     },
     {
       "eventId": "nz-general-2014-electorate-28-candidate-01->nz-general-2017-electorate-28-candidate-01",
@@ -10509,9 +10509,9 @@
     {
       "eventId": "nz-general-2020-electorate-41-candidate-03->nz-general-2023-electorate-41-candidate-04",
       "sourceYear": 2020,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
-      "originalPrimaryEligible": false,
+      "originalIdentityClass": "supported_replacement",
+      "counterfactualIdentityClass": "supported_replacement",
+      "originalPrimaryEligible": true,
       "classificationAndEligibilityStable": true
     },
     {
@@ -10605,9 +10605,9 @@
     {
       "eventId": "nz-general-2020-electorate-43-candidate-03->nz-general-2023-electorate-43-candidate-02",
       "sourceYear": 2020,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
-      "originalPrimaryEligible": false,
+      "originalIdentityClass": "supported_replacement",
+      "counterfactualIdentityClass": "supported_replacement",
+      "originalPrimaryEligible": true,
       "classificationAndEligibilityStable": true
     },
     {
@@ -10861,8 +10861,8 @@
     {
       "eventId": "nz-general-2020-electorate-52-candidate-01->nz-general-2023-electorate-52-candidate-09",
       "sourceYear": 2020,
-      "originalIdentityClass": "unresolved_identity",
-      "counterfactualIdentityClass": "unresolved_identity",
+      "originalIdentityClass": "supported_by_election_successor",
+      "counterfactualIdentityClass": "supported_by_election_successor",
       "originalPrimaryEligible": false,
       "classificationAndEligibilityStable": true
     },
@@ -11469,7 +11469,7 @@
   ],
   "counts": {
     "total": 1433,
-    "unstable": 23,
+    "unstable": 22,
     "unstablePrimary": 0
   },
   "limitation": "A stable flag counterfactual does not establish unbiased retrospective profile acquisition, publication or survival."

@@ -1,4 +1,4 @@
-"""Generate or verify the Stage 10 non-identifiability analysis."""
+"""Generate or verify amended Stage 10 conditional replacement diagnostics."""
 
 import argparse
 import hashlib
@@ -14,9 +14,14 @@ from scripts.validate.source_files import verify_source_files
 SOURCE_PLANS = ('data/source-plans/candidate-persistence-sources.json',
                 'data/source-plans/freshman-incumbency-tenure-sources.json')
 INPUTS = ('data/processed/models/replacement-candidate/inventory.json',
+          'data/processed/models/replacement-candidate/identity-review.json',
+          'data/processed/models/replacement-candidate/maori-winner-overlay.json',
+          'data/processed/models/replacement-candidate/person-links.json',
           'data/processed/models/replacement-candidate/input-contract.json',
           'data/processed/models/replacement-candidate/manifest.json',
           'data/processed/models/replacement-candidate/specification.json',
+          'data/processed/models/replacement-candidate/post-review-amendment.json',
+          'data/processed/models/replacement-candidate/postfit-selection-audit.json',
           *INVENTORY_INPUTS, *SOURCE_PLANS, *INDEX_PATHS)
 
 
@@ -43,14 +48,30 @@ def build():
             specification['inventoryCommit'] != '3e0945b464583039a76c985123395c44ebb70c6f' or
             not specification['freezeStatus'].startswith('frozen after committed pre-fit inventory')):
         raise ValueError('Stage 10 specification was not frozen before analysis')
+    amendment = _read('data/processed/models/replacement-candidate/post-review-amendment.json')
+    if (amendment['stage'] != 10 or amendment['amendedInventoryCommit'] !=
+            '48392b95e0cdced8ab220bda862e6e9ca9de58df'):
+        raise ValueError('Stage 10 post-review amendment lacks pre-fit inventory checkpoint')
     records = _read('data/processed/models/replacement-candidate/inventory.json')['records']
     occurrences = _read(INVENTORY_INPUTS[0])['records']
     continuity = _read(INVENTORY_INPUTS[2])['records']
     profiles = _read(INVENTORY_INPUTS[3])['profiles']
     winners = _winners()
-    counterfactual = audit(ROOT, records, occurrences, continuity, profiles, winners)
+    adjudications = {row['eventId']: row['stage10IdentityEvidence'] for row in records
+                     if row['stage10IdentityEvidence']}
+    maori_winner_ids = {row['winnerOccurrenceId'] for row in
+                        _read('data/processed/models/replacement-candidate/maori-winner-overlay.json')['records']}
+    person_links = {row['candidateOccurrenceId']: row for row in
+                    _read('data/processed/models/replacement-candidate/person-links.json')['links']}
+    counterfactual = audit(ROOT, records, occurrences, continuity, profiles, winners,
+                           adjudications, maori_winner_ids, person_links)
     analysis = analyze(records, counterfactual, set().union(*winners.values()))
-    selection = select(analysis)
+    acquisition_audit = _read('data/processed/models/replacement-candidate/postfit-selection-audit.json')
+    if acquisition_audit['stage'] != 10 or acquisition_audit['acquisitionIndependentOfTargetLaterOutcomes']:
+        raise ValueError('Stage 10 acquisition-selection finding changed without review')
+    analysis['validationStatus'] = acquisition_audit['operationalCohortStatus']
+    analysis['acquisitionIndependentOfTargetLaterOutcomes'] = False
+    selection = select(analysis, acquisition_audit['acquisitionIndependentOfTargetLaterOutcomes'])
     inputs = {name: digest(ROOT / name) for name in sorted(set(INPUTS))}
     outputs = {'analysis-input-contract.json': inputs,
                'cohort-audit.json': counterfactual,
