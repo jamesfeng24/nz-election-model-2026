@@ -1,0 +1,1468 @@
+{
+  "schemaVersion": 1,
+  "primary": {
+    "n": 90,
+    "firstTermN": 31,
+    "experiencedN": 59,
+    "fullSampleDescriptiveFit": {
+      "interceptPP": 0.7801693316835492,
+      "priorSlope": 0.744501367635331,
+      "freshmanEffectPP": 2.63007233094965,
+      "n": 90,
+      "firstTermN": 31,
+      "experiencedN": 59
+    },
+    "fullSampleNoFreshmanFit": {
+      "interceptPP": 1.848472095132852,
+      "priorSlope": 0.7134039830674193,
+      "freshmanEffectPP": null,
+      "n": 90,
+      "firstTermN": 31,
+      "experiencedN": 59
+    },
+    "changeContrast": {
+      "firstTermMeanChangePP": 2.5197846859870183,
+      "experiencedMeanChangePP": -0.7871850991321514,
+      "differencePP": 3.3069697851191697
+    },
+    "chronological": [
+      {
+        "targetYear": 2011,
+        "trainingTargetYears": [],
+        "trainingN": 0,
+        "holdoutN": 28,
+        "holdoutFirstTermN": 10,
+        "holdoutExperiencedN": 18,
+        "trainingFit": null,
+        "trainingNoFreshmanFit": null,
+        "scores": {
+          "fitted": null,
+          "noFreshman": null,
+          "prior": {
+            "n": 28,
+            "firstTermN": 10,
+            "experiencedN": 18,
+            "maePP": 3.8062954633284347,
+            "rmsePP": 4.907611431573784
+          },
+          "zero": {
+            "n": 28,
+            "firstTermN": 10,
+            "experiencedN": 18,
+            "maePP": 6.076898968992293,
+            "rmsePP": 7.143894075358559
+          }
+        }
+      },
+      {
+        "targetYear": 2017,
+        "trainingTargetYears": [
+          2011
+        ],
+        "trainingN": 28,
+        "holdoutN": 36,
+        "holdoutFirstTermN": 9,
+        "holdoutExperiencedN": 27,
+        "trainingFit": {
+          "interceptPP": 2.345698907921551,
+          "priorSlope": 0.5512014252698215,
+          "freshmanEffectPP": 3.6180871746116634,
+          "n": 28,
+          "firstTermN": 10,
+          "experiencedN": 18
+        },
+        "trainingNoFreshmanFit": {
+          "interceptPP": 4.312180841730922,
+          "priorSlope": 0.3874515940235613,
+          "freshmanEffectPP": null,
+          "n": 28,
+          "firstTermN": 10,
+          "experiencedN": 18
+        },
+        "scores": {
+          "fitted": {
+            "n": 36,
+            "firstTermN": 9,
+            "experiencedN": 27,
+            "maePP": 3.033778139294186,
+            "rmsePP": 4.182816195422887
+          },
+          "noFreshman": {
+            "n": 36,
+            "firstTermN": 9,
+            "experiencedN": 27,
+            "maePP": 3.3129142298770473,
+            "rmsePP": 4.981349690970316
+          },
+          "prior": {
+            "n": 36,
+            "firstTermN": 9,
+            "experiencedN": 27,
+            "maePP": 2.8322322466261687,
+            "rmsePP": 4.142566268014936
+          },
+          "zero": {
+            "n": 36,
+            "firstTermN": 9,
+            "experiencedN": 27,
+            "maePP": 6.151152576041172,
+            "rmsePP": 9.06635521625995
+          }
+        }
+      },
+      {
+        "targetYear": 2023,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "trainingN": 64,
+        "holdoutN": 26,
+        "holdoutFirstTermN": 12,
+        "holdoutExperiencedN": 14,
+        "trainingFit": {
+          "interceptPP": 1.1117866703735588,
+          "priorSlope": 0.7273266701009921,
+          "freshmanEffectPP": 3.365274500728905,
+          "n": 64,
+          "firstTermN": 19,
+          "experiencedN": 45
+        },
+        "trainingNoFreshmanFit": {
+          "interceptPP": 2.29123060055565,
+          "priorSlope": 0.6895779214170935,
+          "freshmanEffectPP": null,
+          "n": 64,
+          "firstTermN": 19,
+          "experiencedN": 45
+        },
+        "scores": {
+          "fitted": {
+            "n": 26,
+            "firstTermN": 12,
+            "experiencedN": 14,
+            "maePP": 3.943143115834502,
+            "rmsePP": 7.198418086022539
+          },
+          "noFreshman": {
+            "n": 26,
+            "firstTermN": 12,
+            "experiencedN": 14,
+            "maePP": 3.5768858039976807,
+            "rmsePP": 7.104603697147044
+          },
+          "prior": {
+            "n": 26,
+            "firstTermN": 12,
+            "experiencedN": 14,
+            "maePP": 3.8874861009055803,
+            "rmsePP": 7.216905950662684
+          },
+          "zero": {
+            "n": 26,
+            "firstTermN": 12,
+            "experiencedN": 14,
+            "maePP": 7.878729406947331,
+            "rmsePP": 10.717747290360734
+          }
+        }
+      }
+    ],
+    "leaveOneTransitionOutDescriptive": [
+      {
+        "omittedTargetYear": 2011,
+        "fit": {
+          "interceptPP": 0.29171844483574183,
+          "priorSlope": 0.7879365408559263,
+          "freshmanEffectPP": 1.8420465763882499,
+          "n": 62,
+          "firstTermN": 21,
+          "experiencedN": 41
+        }
+      },
+      {
+        "omittedTargetYear": 2017,
+        "fit": {
+          "interceptPP": 0.9719152717444735,
+          "priorSlope": 0.7066525888506368,
+          "freshmanEffectPP": 2.707803688129184,
+          "n": 54,
+          "firstTermN": 22,
+          "experiencedN": 32
+        }
+      },
+      {
+        "omittedTargetYear": 2023,
+        "fit": {
+          "interceptPP": 1.1117866703735588,
+          "priorSlope": 0.7273266701009921,
+          "freshmanEffectPP": 3.365274500728905,
+          "n": 64,
+          "firstTermN": 19,
+          "experiencedN": 45
+        }
+      }
+    ],
+    "interpretation": "Full-sample fits and omitted-transition diagnostics are retrospective; only chronological holdout scores assess earlier-election training."
+  },
+  "normalizationSensitivity": {
+    "proportional": {
+      "n": 90,
+      "firstTermN": 31,
+      "experiencedN": 59,
+      "fullSampleDescriptiveFit": {
+        "interceptPP": 1.2606084820954822,
+        "priorSlope": 0.6765650444783347,
+        "freshmanEffectPP": 2.3741032450603075,
+        "n": 90,
+        "firstTermN": 31,
+        "experiencedN": 59
+      },
+      "fullSampleNoFreshmanFit": {
+        "interceptPP": 2.184736744519009,
+        "priorSlope": 0.6524061232250606,
+        "freshmanEffectPP": null,
+        "n": 90,
+        "firstTermN": 31,
+        "experiencedN": 59
+      },
+      "changeContrast": {
+        "firstTermMeanChangePP": 2.7894261325160605,
+        "experiencedMeanChangePP": -0.4677914389294692,
+        "differencePP": 3.25721757144553
+      },
+      "chronological": [
+        {
+          "targetYear": 2011,
+          "trainingTargetYears": [],
+          "trainingN": 0,
+          "holdoutN": 28,
+          "holdoutFirstTermN": 10,
+          "holdoutExperiencedN": 18,
+          "trainingFit": null,
+          "trainingNoFreshmanFit": null,
+          "scores": {
+            "fitted": null,
+            "noFreshman": null,
+            "prior": {
+              "n": 28,
+              "firstTermN": 10,
+              "experiencedN": 18,
+              "maePP": 4.262600366207789,
+              "rmsePP": 5.489005019560284
+            },
+            "zero": {
+              "n": 28,
+              "firstTermN": 10,
+              "experiencedN": 18,
+              "maePP": 6.012587886307907,
+              "rmsePP": 7.0858766266433175
+            }
+          }
+        },
+        {
+          "targetYear": 2017,
+          "trainingTargetYears": [
+            2011
+          ],
+          "trainingN": 28,
+          "holdoutN": 36,
+          "holdoutFirstTermN": 9,
+          "holdoutExperiencedN": 27,
+          "trainingFit": {
+            "interceptPP": 1.8835082563053411,
+            "priorSlope": 0.5286987964654679,
+            "freshmanEffectPP": 3.6686457529292547,
+            "n": 28,
+            "firstTermN": 10,
+            "experiencedN": 18
+          },
+          "trainingNoFreshmanFit": {
+            "interceptPP": 3.7998775332593517,
+            "priorSlope": 0.37227633704854035,
+            "freshmanEffectPP": null,
+            "n": 28,
+            "firstTermN": 10,
+            "experiencedN": 18
+          },
+          "scores": {
+            "fitted": {
+              "n": 36,
+              "firstTermN": 9,
+              "experiencedN": 27,
+              "maePP": 3.3133024222311858,
+              "rmsePP": 4.475701062317161
+            },
+            "noFreshman": {
+              "n": 36,
+              "firstTermN": 9,
+              "experiencedN": 27,
+              "maePP": 3.227194340051018,
+              "rmsePP": 5.04185166840789
+            },
+            "prior": {
+              "n": 36,
+              "firstTermN": 9,
+              "experiencedN": 27,
+              "maePP": 3.7182864170166203,
+              "rmsePP": 5.7596439896406455
+            },
+            "zero": {
+              "n": 36,
+              "firstTermN": 9,
+              "experiencedN": 27,
+              "maePP": 6.1187930632654375,
+              "rmsePP": 9.02721329444554
+            }
+          }
+        },
+        {
+          "targetYear": 2023,
+          "trainingTargetYears": [
+            2011,
+            2017
+          ],
+          "trainingN": 64,
+          "holdoutN": 26,
+          "holdoutFirstTermN": 12,
+          "holdoutExperiencedN": 14,
+          "trainingFit": {
+            "interceptPP": 1.801780923178657,
+            "priorSlope": 0.6144576415157311,
+            "freshmanEffectPP": 3.203887132223611,
+            "n": 64,
+            "firstTermN": 19,
+            "experiencedN": 45
+          },
+          "trainingNoFreshmanFit": {
+            "interceptPP": 2.87972039241812,
+            "priorSlope": 0.5833541425752967,
+            "freshmanEffectPP": null,
+            "n": 64,
+            "firstTermN": 19,
+            "experiencedN": 45
+          },
+          "scores": {
+            "fitted": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 4.534414547637853,
+              "rmsePP": 7.545864672478248
+            },
+            "noFreshman": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 4.065806274194304,
+              "rmsePP": 7.415458323645603
+            },
+            "prior": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 4.166794308044539,
+              "rmsePP": 7.206885975512425
+            },
+            "zero": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 7.289137866527541,
+              "rmsePP": 10.695838765810372
+            }
+          }
+        }
+      ],
+      "leaveOneTransitionOutDescriptive": [
+        {
+          "omittedTargetYear": 2011,
+          "fit": {
+            "interceptPP": 1.210804341017476,
+            "priorSlope": 0.6991755714903537,
+            "freshmanEffectPP": 1.5282610340939307,
+            "n": 62,
+            "firstTermN": 21,
+            "experiencedN": 41
+          }
+        },
+        {
+          "omittedTargetYear": 2017,
+          "fit": {
+            "interceptPP": 0.4166499790464515,
+            "priorSlope": 0.746474130292116,
+            "freshmanEffectPP": 2.768000420454639,
+            "n": 54,
+            "firstTermN": 22,
+            "experiencedN": 32
+          }
+        },
+        {
+          "omittedTargetYear": 2023,
+          "fit": {
+            "interceptPP": 1.801780923178657,
+            "priorSlope": 0.6144576415157311,
+            "freshmanEffectPP": 3.203887132223611,
+            "n": 64,
+            "firstTermN": 19,
+            "experiencedN": 45
+          }
+        }
+      ],
+      "interpretation": "Full-sample fits and omitted-transition diagnostics are retrospective; only chronological holdout scores assess earlier-election training."
+    },
+    "log_odds": {
+      "n": 90,
+      "firstTermN": 31,
+      "experiencedN": 59,
+      "fullSampleDescriptiveFit": {
+        "interceptPP": 0.9067832651059613,
+        "priorSlope": 0.7485707966432424,
+        "freshmanEffectPP": 2.5390297776678454,
+        "n": 90,
+        "firstTermN": 31,
+        "experiencedN": 59
+      },
+      "fullSampleNoFreshmanFit": {
+        "interceptPP": 1.9268669733631825,
+        "priorSlope": 0.7194724598257469,
+        "freshmanEffectPP": null,
+        "n": 90,
+        "firstTermN": 31,
+        "experiencedN": 59
+      },
+      "changeContrast": {
+        "firstTermMeanChangePP": 2.620491813869559,
+        "experiencedMeanChangePP": -0.5777456843491665,
+        "differencePP": 3.1982374982187256
+      },
+      "chronological": [
+        {
+          "targetYear": 2011,
+          "trainingTargetYears": [],
+          "trainingN": 0,
+          "holdoutN": 28,
+          "holdoutFirstTermN": 10,
+          "holdoutExperiencedN": 18,
+          "trainingFit": null,
+          "trainingNoFreshmanFit": null,
+          "scores": {
+            "fitted": null,
+            "noFreshman": null,
+            "prior": {
+              "n": 28,
+              "firstTermN": 10,
+              "experiencedN": 18,
+              "maePP": 3.772357447492952,
+              "rmsePP": 4.8495510841297405
+            },
+            "zero": {
+              "n": 28,
+              "firstTermN": 10,
+              "experiencedN": 18,
+              "maePP": 6.001222802078809,
+              "rmsePP": 7.077443914556922
+            }
+          }
+        },
+        {
+          "targetYear": 2017,
+          "trainingTargetYears": [
+            2011
+          ],
+          "trainingN": 28,
+          "holdoutN": 36,
+          "holdoutFirstTermN": 9,
+          "holdoutExperiencedN": 27,
+          "trainingFit": {
+            "interceptPP": 2.3374850925090325,
+            "priorSlope": 0.5494126623052993,
+            "freshmanEffectPP": 3.4302691034894517,
+            "n": 28,
+            "firstTermN": 10,
+            "experiencedN": 18
+          },
+          "trainingNoFreshmanFit": {
+            "interceptPP": 4.213022143669877,
+            "priorSlope": 0.39195543843822345,
+            "freshmanEffectPP": null,
+            "n": 28,
+            "firstTermN": 10,
+            "experiencedN": 18
+          },
+          "scores": {
+            "fitted": {
+              "n": 36,
+              "firstTermN": 9,
+              "experiencedN": 27,
+              "maePP": 3.058569316825797,
+              "rmsePP": 4.213940074758254
+            },
+            "noFreshman": {
+              "n": 36,
+              "firstTermN": 9,
+              "experiencedN": 27,
+              "maePP": 3.2724756195097986,
+              "rmsePP": 4.950925567047134
+            },
+            "prior": {
+              "n": 36,
+              "firstTermN": 9,
+              "experiencedN": 27,
+              "maePP": 2.9666638066935325,
+              "rmsePP": 4.2784313194900205
+            },
+            "zero": {
+              "n": 36,
+              "firstTermN": 9,
+              "experiencedN": 27,
+              "maePP": 6.140502792755417,
+              "rmsePP": 9.04172201478805
+            }
+          }
+        },
+        {
+          "targetYear": 2023,
+          "trainingTargetYears": [
+            2011,
+            2017
+          ],
+          "trainingN": 64,
+          "holdoutN": 26,
+          "holdoutFirstTermN": 12,
+          "holdoutExperiencedN": 14,
+          "trainingFit": {
+            "interceptPP": 1.2674500505063997,
+            "priorSlope": 0.7193783607008425,
+            "freshmanEffectPP": 3.158449395541333,
+            "n": 64,
+            "firstTermN": 19,
+            "experiencedN": 45
+          },
+          "trainingNoFreshmanFit": {
+            "interceptPP": 2.3629845629514215,
+            "priorSlope": 0.6853871119195931,
+            "freshmanEffectPP": null,
+            "n": 64,
+            "firstTermN": 19,
+            "experiencedN": 45
+          },
+          "scores": {
+            "fitted": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 3.8831591355042905,
+              "rmsePP": 7.044048743428004
+            },
+            "noFreshman": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 3.5511083368903202,
+              "rmsePP": 6.986056691995894
+            },
+            "prior": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 3.791441630696803,
+              "rmsePP": 7.068277910331216
+            },
+            "zero": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 7.773082312585861,
+              "rmsePP": 10.803015640391717
+            }
+          }
+        }
+      ],
+      "leaveOneTransitionOutDescriptive": [
+        {
+          "omittedTargetYear": 2011,
+          "fit": {
+            "interceptPP": 0.5402168211777004,
+            "priorSlope": 0.7869275746769065,
+            "freshmanEffectPP": 1.7753319134179777,
+            "n": 62,
+            "firstTermN": 21,
+            "experiencedN": 41
+          }
+        },
+        {
+          "omittedTargetYear": 2017,
+          "fit": {
+            "interceptPP": 0.9005249930742765,
+            "priorSlope": 0.7321210670521722,
+            "freshmanEffectPP": 2.744360317650682,
+            "n": 54,
+            "firstTermN": 22,
+            "experiencedN": 32
+          }
+        },
+        {
+          "omittedTargetYear": 2023,
+          "fit": {
+            "interceptPP": 1.2674500505063997,
+            "priorSlope": 0.7193783607008425,
+            "freshmanEffectPP": 3.158449395541333,
+            "n": 64,
+            "firstTermN": 19,
+            "experiencedN": 45
+          }
+        }
+      ],
+      "interpretation": "Full-sample fits and omitted-transition diagnostics are retrospective; only chronological holdout scores assess earlier-election training."
+    }
+  },
+  "priorListSensitivity": {
+    "n": 99,
+    "firstTermN": 40,
+    "experiencedN": 59,
+    "fullSampleDescriptiveFit": {
+      "interceptPP": 0.58947666676338,
+      "priorSlope": 0.7755866883076445,
+      "freshmanEffectPP": 3.085625110559635,
+      "n": 99,
+      "firstTermN": 40,
+      "experiencedN": 59
+    },
+    "fullSampleNoFreshmanFit": {
+      "interceptPP": 2.0448563748072814,
+      "priorSlope": 0.7336862211759425,
+      "freshmanEffectPP": null,
+      "n": 99,
+      "firstTermN": 40,
+      "experiencedN": 59
+    },
+    "changeContrast": {
+      "firstTermMeanChangePP": 2.939695928581508,
+      "experiencedMeanChangePP": -0.7871850991321514,
+      "differencePP": 3.7268810277136595
+    },
+    "chronological": [
+      {
+        "targetYear": 2011,
+        "trainingTargetYears": [],
+        "trainingN": 0,
+        "holdoutN": 29,
+        "holdoutFirstTermN": 11,
+        "holdoutExperiencedN": 18,
+        "trainingFit": null,
+        "trainingNoFreshmanFit": null,
+        "scores": {
+          "fitted": null,
+          "noFreshman": null,
+          "prior": {
+            "n": 29,
+            "firstTermN": 11,
+            "experiencedN": 18,
+            "maePP": 3.763711075896463,
+            "rmsePP": 4.845837284620047
+          },
+          "zero": {
+            "n": 29,
+            "firstTermN": 11,
+            "experiencedN": 18,
+            "maePP": 6.008354047843339,
+            "rmsePP": 7.0605922870305005
+          }
+        }
+      },
+      {
+        "targetYear": 2017,
+        "trainingTargetYears": [
+          2011
+        ],
+        "trainingN": 29,
+        "holdoutN": 38,
+        "holdoutFirstTermN": 11,
+        "holdoutExperiencedN": 27,
+        "trainingFit": {
+          "interceptPP": 2.3477779228152604,
+          "priorSlope": 0.5508303414615432,
+          "freshmanEffectPP": 3.3700675059402827,
+          "n": 29,
+          "firstTermN": 11,
+          "experiencedN": 18
+        },
+        "trainingNoFreshmanFit": {
+          "interceptPP": 4.270469858415395,
+          "priorSlope": 0.3908626722644053,
+          "freshmanEffectPP": null,
+          "n": 29,
+          "firstTermN": 11,
+          "experiencedN": 18
+        },
+        "scores": {
+          "fitted": {
+            "n": 38,
+            "firstTermN": 11,
+            "experiencedN": 27,
+            "maePP": 3.0429023461647104,
+            "rmsePP": 4.158716725043749
+          },
+          "noFreshman": {
+            "n": 38,
+            "firstTermN": 11,
+            "experiencedN": 27,
+            "maePP": 3.360848562843936,
+            "rmsePP": 5.011677774493295
+          },
+          "prior": {
+            "n": 38,
+            "firstTermN": 11,
+            "experiencedN": 27,
+            "maePP": 2.9865585686959277,
+            "rmsePP": 4.26809629768285
+          },
+          "zero": {
+            "n": 38,
+            "firstTermN": 11,
+            "experiencedN": 27,
+            "maePP": 6.332008909332328,
+            "rmsePP": 9.199997186789963
+          }
+        }
+      },
+      {
+        "targetYear": 2023,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "trainingN": 67,
+        "holdoutN": 32,
+        "holdoutFirstTermN": 18,
+        "holdoutExperiencedN": 14,
+        "trainingFit": {
+          "interceptPP": 1.0534976337185622,
+          "priorSlope": 0.737870606689288,
+          "freshmanEffectPP": 3.535818421047864,
+          "n": 67,
+          "firstTermN": 22,
+          "experiencedN": 45
+        },
+        "trainingNoFreshmanFit": {
+          "interceptPP": 2.4171347893297455,
+          "priorSlope": 0.6947705125636058,
+          "freshmanEffectPP": null,
+          "n": 67,
+          "firstTermN": 22,
+          "experiencedN": 45
+        },
+        "scores": {
+          "fitted": {
+            "n": 32,
+            "firstTermN": 18,
+            "experiencedN": 14,
+            "maePP": 4.108504010984688,
+            "rmsePP": 6.921529523748586
+          },
+          "noFreshman": {
+            "n": 32,
+            "firstTermN": 18,
+            "experiencedN": 14,
+            "maePP": 3.915718205761443,
+            "rmsePP": 6.95484966997888
+          },
+          "prior": {
+            "n": 32,
+            "firstTermN": 18,
+            "experiencedN": 14,
+            "maePP": 4.210699024832566,
+            "rmsePP": 7.059819374466117
+          },
+          "zero": {
+            "n": 32,
+            "firstTermN": 18,
+            "experiencedN": 14,
+            "maePP": 7.907516999441525,
+            "rmsePP": 10.917831158620679
+          }
+        }
+      }
+    ],
+    "leaveOneTransitionOutDescriptive": [
+      {
+        "omittedTargetYear": 2011,
+        "fit": {
+          "interceptPP": 0.12936800718893982,
+          "priorSlope": 0.8134311543577619,
+          "freshmanEffectPP": 2.7444855359971543,
+          "n": 70,
+          "firstTermN": 29,
+          "experiencedN": 41
+        }
+      },
+      {
+        "omittedTargetYear": 2017,
+        "fit": {
+          "interceptPP": 0.5725991470312555,
+          "priorSlope": 0.7663601405427798,
+          "freshmanEffectPP": 3.171828342677914,
+          "n": 61,
+          "firstTermN": 29,
+          "experiencedN": 32
+        }
+      },
+      {
+        "omittedTargetYear": 2023,
+        "fit": {
+          "interceptPP": 1.0534976337185622,
+          "priorSlope": 0.737870606689288,
+          "freshmanEffectPP": 3.535818421047864,
+          "n": 67,
+          "firstTermN": 22,
+          "experiencedN": 45
+        }
+      }
+    ],
+    "interpretation": "Full-sample fits and omitted-transition diagnostics are retrospective; only chronological holdout scores assess earlier-election training."
+  },
+  "offCycleSensitivity": {
+    "n": 94,
+    "firstTermN": 31,
+    "experiencedN": 63,
+    "fullSampleDescriptiveFit": {
+      "interceptPP": 0.7482471397097361,
+      "priorSlope": 0.7487088816841106,
+      "freshmanEffectPP": 2.6473306078786076,
+      "n": 94,
+      "firstTermN": 31,
+      "experiencedN": 63
+    },
+    "fullSampleNoFreshmanFit": {
+      "interceptPP": 1.7985206348864704,
+      "priorSlope": 0.7155521726861372,
+      "freshmanEffectPP": null,
+      "n": 94,
+      "firstTermN": 31,
+      "experiencedN": 63
+    },
+    "changeContrast": {
+      "firstTermMeanChangePP": 2.5197846859870183,
+      "experiencedMeanChangePP": -0.8248176688243303,
+      "differencePP": 3.3446023548113484
+    },
+    "chronological": [
+      {
+        "targetYear": 2011,
+        "trainingTargetYears": [],
+        "trainingN": 0,
+        "holdoutN": 28,
+        "holdoutFirstTermN": 10,
+        "holdoutExperiencedN": 18,
+        "trainingFit": null,
+        "trainingNoFreshmanFit": null,
+        "scores": {
+          "fitted": null,
+          "noFreshman": null,
+          "prior": {
+            "n": 28,
+            "firstTermN": 10,
+            "experiencedN": 18,
+            "maePP": 3.8062954633284347,
+            "rmsePP": 4.907611431573784
+          },
+          "zero": {
+            "n": 28,
+            "firstTermN": 10,
+            "experiencedN": 18,
+            "maePP": 6.076898968992293,
+            "rmsePP": 7.143894075358559
+          }
+        }
+      },
+      {
+        "targetYear": 2017,
+        "trainingTargetYears": [
+          2011
+        ],
+        "trainingN": 28,
+        "holdoutN": 39,
+        "holdoutFirstTermN": 9,
+        "holdoutExperiencedN": 30,
+        "trainingFit": {
+          "interceptPP": 2.345698907921551,
+          "priorSlope": 0.5512014252698215,
+          "freshmanEffectPP": 3.6180871746116634,
+          "n": 28,
+          "firstTermN": 10,
+          "experiencedN": 18
+        },
+        "trainingNoFreshmanFit": {
+          "interceptPP": 4.312180841730922,
+          "priorSlope": 0.3874515940235613,
+          "freshmanEffectPP": null,
+          "n": 28,
+          "firstTermN": 10,
+          "experiencedN": 18
+        },
+        "scores": {
+          "fitted": {
+            "n": 39,
+            "firstTermN": 9,
+            "experiencedN": 30,
+            "maePP": 3.0093449640415266,
+            "rmsePP": 4.122056778995651
+          },
+          "noFreshman": {
+            "n": 39,
+            "firstTermN": 9,
+            "experiencedN": 30,
+            "maePP": 3.307932550270425,
+            "rmsePP": 4.894890436738709
+          },
+          "prior": {
+            "n": 39,
+            "firstTermN": 9,
+            "experiencedN": 30,
+            "maePP": 2.7778468238807315,
+            "rmsePP": 4.045377656528706
+          },
+          "zero": {
+            "n": 39,
+            "firstTermN": 9,
+            "experiencedN": 30,
+            "maePP": 6.220092542200864,
+            "rmsePP": 9.01671646400706
+          }
+        }
+      },
+      {
+        "targetYear": 2023,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "trainingN": 67,
+        "holdoutN": 27,
+        "holdoutFirstTermN": 12,
+        "holdoutExperiencedN": 15,
+        "trainingFit": {
+          "interceptPP": 1.0718181163908338,
+          "priorSlope": 0.7336899581919122,
+          "freshmanEffectPP": 3.386137296951925,
+          "n": 67,
+          "firstTermN": 19,
+          "experiencedN": 48
+        },
+        "trainingNoFreshmanFit": {
+          "interceptPP": 2.232381765829496,
+          "priorSlope": 0.6930867313306128,
+          "freshmanEffectPP": null,
+          "n": 67,
+          "firstTermN": 19,
+          "experiencedN": 48
+        },
+        "scores": {
+          "fitted": {
+            "n": 27,
+            "firstTermN": 12,
+            "experiencedN": 15,
+            "maePP": 3.827295461803349,
+            "rmsePP": 7.06429847873277
+          },
+          "noFreshman": {
+            "n": 27,
+            "firstTermN": 12,
+            "experiencedN": 15,
+            "maePP": 3.513391177175526,
+            "rmsePP": 6.972347715638305
+          },
+          "prior": {
+            "n": 27,
+            "firstTermN": 12,
+            "experiencedN": 15,
+            "maePP": 3.815145599271751,
+            "rmsePP": 7.091775379017202
+          },
+          "zero": {
+            "n": 27,
+            "firstTermN": 12,
+            "experiencedN": 15,
+            "maePP": 7.800955221943265,
+            "rmsePP": 10.576034431814604
+          }
+        }
+      }
+    ],
+    "leaveOneTransitionOutDescriptive": [
+      {
+        "omittedTargetYear": 2011,
+        "fit": {
+          "interceptPP": 0.2643378268975175,
+          "priorSlope": 0.7927916329258731,
+          "freshmanEffectPP": 1.8477909147234461,
+          "n": 66,
+          "firstTermN": 21,
+          "experiencedN": 45
+        }
+      },
+      {
+        "omittedTargetYear": 2017,
+        "fit": {
+          "interceptPP": 0.9545854370216109,
+          "priorSlope": 0.706329215967223,
+          "freshmanEffectPP": 2.726095537711457,
+          "n": 55,
+          "firstTermN": 22,
+          "experiencedN": 33
+        }
+      },
+      {
+        "omittedTargetYear": 2023,
+        "fit": {
+          "interceptPP": 1.0718181163908338,
+          "priorSlope": 0.7336899581919122,
+          "freshmanEffectPP": 3.386137296951925,
+          "n": 67,
+          "firstTermN": 19,
+          "experiencedN": 48
+        }
+      }
+    ],
+    "interpretation": "Full-sample fits and omitted-transition diagnostics are retrospective; only chronological holdout scores assess earlier-election training."
+  },
+  "bothConfirmedRetrospectiveWinnerSelected": {
+    "n": 25,
+    "firstTermN": 8,
+    "experiencedN": 17,
+    "fullSampleDescriptiveFit": {
+      "interceptPP": 2.11223755028291,
+      "priorSlope": 0.6014749469055831,
+      "freshmanEffectPP": 2.306729226152495,
+      "n": 25,
+      "firstTermN": 8,
+      "experiencedN": 17
+    },
+    "fullSampleNoFreshmanFit": {
+      "interceptPP": 3.111324455161628,
+      "priorSlope": 0.5439158579019362,
+      "freshmanEffectPP": null,
+      "n": 25,
+      "firstTermN": 8,
+      "experiencedN": 17
+    },
+    "changeContrast": {
+      "firstTermMeanChangePP": 3.506205923556922,
+      "experiencedMeanChangePP": -0.11505159580829813,
+      "differencePP": 3.62125751936522
+    },
+    "chronological": [
+      {
+        "targetYear": 2011,
+        "trainingTargetYears": [],
+        "trainingN": 0,
+        "holdoutN": 11,
+        "holdoutFirstTermN": 5,
+        "holdoutExperiencedN": 6,
+        "trainingFit": null,
+        "trainingNoFreshmanFit": null,
+        "scores": {
+          "fitted": null,
+          "noFreshman": null,
+          "prior": {
+            "n": 11,
+            "firstTermN": 5,
+            "experiencedN": 6,
+            "maePP": 3.2403951697072415,
+            "rmsePP": 4.3805968301869465
+          },
+          "zero": {
+            "n": 11,
+            "firstTermN": 5,
+            "experiencedN": 6,
+            "maePP": 6.745545872328493,
+            "rmsePP": 7.691167973505434
+          }
+        }
+      },
+      {
+        "targetYear": 2017,
+        "trainingTargetYears": [
+          2011
+        ],
+        "trainingN": 11,
+        "holdoutN": 13,
+        "holdoutFirstTermN": 3,
+        "holdoutExperiencedN": 10,
+        "trainingFit": {
+          "interceptPP": 2.805189876883718,
+          "priorSlope": 0.5917028019651559,
+          "freshmanEffectPP": 3.7857395088866004,
+          "n": 11,
+          "firstTermN": 5,
+          "experiencedN": 6
+        },
+        "trainingNoFreshmanFit": {
+          "interceptPP": 4.452298570609874,
+          "priorSlope": 0.6113453153033311,
+          "freshmanEffectPP": null,
+          "n": 11,
+          "firstTermN": 5,
+          "experiencedN": 6
+        },
+        "scores": {
+          "fitted": {
+            "n": 13,
+            "firstTermN": 3,
+            "experiencedN": 10,
+            "maePP": 3.182577852752916,
+            "rmsePP": 3.8939801602017217
+          },
+          "noFreshman": {
+            "n": 13,
+            "firstTermN": 3,
+            "experiencedN": 10,
+            "maePP": 3.2147210217301074,
+            "rmsePP": 3.8668366060202586
+          },
+          "prior": {
+            "n": 13,
+            "firstTermN": 3,
+            "experiencedN": 10,
+            "maePP": 2.729633560244419,
+            "rmsePP": 3.9495816203485425
+          },
+          "zero": {
+            "n": 13,
+            "firstTermN": 3,
+            "experiencedN": 10,
+            "maePP": 6.1155547714707215,
+            "rmsePP": 6.7044739436444365
+          }
+        }
+      },
+      {
+        "targetYear": 2023,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "trainingN": 24,
+        "holdoutN": 1,
+        "holdoutFirstTermN": 0,
+        "holdoutExperiencedN": 1,
+        "trainingFit": {
+          "interceptPP": 2.3994840536155913,
+          "priorSlope": 0.5899624955811417,
+          "freshmanEffectPP": 2.045850236751567,
+          "n": 24,
+          "firstTermN": 8,
+          "experiencedN": 16
+        },
+        "trainingNoFreshmanFit": {
+          "interceptPP": 3.3193044901545052,
+          "priorSlope": 0.5379448004773913,
+          "freshmanEffectPP": null,
+          "n": 24,
+          "firstTermN": 8,
+          "experiencedN": 16
+        },
+        "scores": {
+          "fitted": {
+            "n": 1,
+            "firstTermN": 0,
+            "experiencedN": 1,
+            "maePP": 3.789391106476818,
+            "rmsePP": 3.789391106476818
+          },
+          "noFreshman": {
+            "n": 1,
+            "firstTermN": 0,
+            "experiencedN": 1,
+            "maePP": 4.5227835861203545,
+            "rmsePP": 4.5227835861203545
+          },
+          "prior": {
+            "n": 1,
+            "firstTermN": 0,
+            "experiencedN": 1,
+            "maePP": 2.8594541761395917,
+            "rmsePP": 2.8594541761395917
+          },
+          "zero": {
+            "n": 1,
+            "firstTermN": 0,
+            "experiencedN": 1,
+            "maePP": 0.7244792627323915,
+            "rmsePP": 0.7244792627323915
+          }
+        }
+      }
+    ],
+    "leaveOneTransitionOutDescriptive": [
+      {
+        "omittedTargetYear": 2011,
+        "fit": {
+          "interceptPP": 2.276194310710618,
+          "priorSlope": 0.5231193504391725,
+          "freshmanEffectPP": -1.447466886415318,
+          "n": 14,
+          "firstTermN": 3,
+          "experiencedN": 11
+        }
+      },
+      {
+        "omittedTargetYear": 2017,
+        "fit": {
+          "interceptPP": 2.203406131477387,
+          "priorSlope": 0.5921451344185678,
+          "freshmanEffectPP": 4.385786264687048,
+          "n": 12,
+          "firstTermN": 5,
+          "experiencedN": 7
+        }
+      },
+      {
+        "omittedTargetYear": 2023,
+        "fit": {
+          "interceptPP": 2.3994840536155913,
+          "priorSlope": 0.5899624955811417,
+          "freshmanEffectPP": 2.045850236751567,
+          "n": 24,
+          "firstTermN": 8,
+          "experiencedN": 16
+        }
+      }
+    ],
+    "interpretation": "Full-sample fits and omitted-transition diagnostics are retrospective; only chronological holdout scores assess earlier-election training."
+  },
+  "supersededPreAuditOutcomeDependentCohort": {
+    "status": "audit trail only; not operational validation",
+    "analysis": {
+      "n": 93,
+      "firstTermN": 32,
+      "experiencedN": 61,
+      "fullSampleDescriptiveFit": {
+        "interceptPP": 0.7484951277656566,
+        "priorSlope": 0.7429845282274072,
+        "freshmanEffectPP": 2.7249965786241725,
+        "n": 93,
+        "firstTermN": 32,
+        "experiencedN": 61
+      },
+      "fullSampleNoFreshmanFit": {
+        "interceptPP": 1.865754680245157,
+        "priorSlope": 0.7085296858449699,
+        "freshmanEffectPP": null,
+        "n": 93,
+        "firstTermN": 32,
+        "experiencedN": 61
+      },
+      "changeContrast": {
+        "firstTermMeanChangePP": 2.598527944944025,
+        "experiencedMeanChangePP": -0.8353368399548942,
+        "differencePP": 3.433864784898919
+      },
+      "chronological": [
+        {
+          "targetYear": 2011,
+          "trainingTargetYears": [],
+          "trainingN": 0,
+          "holdoutN": 30,
+          "holdoutFirstTermN": 11,
+          "holdoutExperiencedN": 19,
+          "trainingFit": null,
+          "trainingNoFreshmanFit": null,
+          "scores": {
+            "fitted": null,
+            "noFreshman": null,
+            "prior": {
+              "n": 30,
+              "firstTermN": 11,
+              "experiencedN": 19,
+              "maePP": 3.7748861370999913,
+              "rmsePP": 4.838824838113583
+            },
+            "zero": {
+              "n": 30,
+              "firstTermN": 11,
+              "experiencedN": 19,
+              "maePP": 6.048615668674813,
+              "rmsePP": 7.054675651948713
+            }
+          }
+        },
+        {
+          "targetYear": 2017,
+          "trainingTargetYears": [
+            2011
+          ],
+          "trainingN": 30,
+          "holdoutN": 37,
+          "holdoutFirstTermN": 9,
+          "holdoutExperiencedN": 28,
+          "trainingFit": {
+            "interceptPP": 2.311690940443491,
+            "priorSlope": 0.5494454183731632,
+            "freshmanEffectPP": 3.607163810059269,
+            "n": 30,
+            "firstTermN": 11,
+            "experiencedN": 19
+          },
+          "trainingNoFreshmanFit": {
+            "interceptPP": 4.359482481106395,
+            "priorSlope": 0.372860357459296,
+            "freshmanEffectPP": null,
+            "n": 30,
+            "firstTermN": 11,
+            "experiencedN": 19
+          },
+          "scores": {
+            "fitted": {
+              "n": 37,
+              "firstTermN": 9,
+              "experiencedN": 28,
+              "maePP": 2.9956580157275257,
+              "rmsePP": 4.136526293089762
+            },
+            "noFreshman": {
+              "n": 37,
+              "firstTermN": 9,
+              "experiencedN": 28,
+              "maePP": 3.315129875007701,
+              "rmsePP": 5.0052073261058965
+            },
+            "prior": {
+              "n": 37,
+              "firstTermN": 9,
+              "experiencedN": 28,
+              "maePP": 2.8335471648594965,
+              "rmsePP": 4.113557952812795
+            },
+            "zero": {
+              "n": 37,
+              "firstTermN": 9,
+              "experiencedN": 28,
+              "maePP": 6.095497787396898,
+              "rmsePP": 8.968263175301928
+            }
+          }
+        },
+        {
+          "targetYear": 2023,
+          "trainingTargetYears": [
+            2011,
+            2017
+          ],
+          "trainingN": 67,
+          "holdoutN": 26,
+          "holdoutFirstTermN": 12,
+          "holdoutExperiencedN": 14,
+          "trainingFit": {
+            "interceptPP": 1.0603737014299963,
+            "priorSlope": 0.7253886809752256,
+            "freshmanEffectPP": 3.4626704713940875,
+            "n": 67,
+            "firstTermN": 20,
+            "experiencedN": 47
+          },
+          "trainingNoFreshmanFit": {
+            "interceptPP": 2.3004711689995965,
+            "priorSlope": 0.6822526423948027,
+            "freshmanEffectPP": null,
+            "n": 67,
+            "firstTermN": 20,
+            "experiencedN": 47
+          },
+          "scores": {
+            "fitted": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 3.9571034578447053,
+              "rmsePP": 7.20145780259215
+            },
+            "noFreshman": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 3.5892974979381487,
+              "rmsePP": 7.104720854615579
+            },
+            "prior": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 3.8874861009055803,
+              "rmsePP": 7.216905950662684
+            },
+            "zero": {
+              "n": 26,
+              "firstTermN": 12,
+              "experiencedN": 14,
+              "maePP": 7.878729406947331,
+              "rmsePP": 10.717747290360734
+            }
+          }
+        }
+      ],
+      "leaveOneTransitionOutDescriptive": [
+        {
+          "omittedTargetYear": 2011,
+          "fit": {
+            "interceptPP": 0.253039139502374,
+            "priorSlope": 0.7876776689709971,
+            "freshmanEffectPP": 1.8818795209117742,
+            "n": 63,
+            "firstTermN": 21,
+            "experiencedN": 42
+          }
+        },
+        {
+          "omittedTargetYear": 2017,
+          "fit": {
+            "interceptPP": 0.9667160651975335,
+            "priorSlope": 0.7049418378587673,
+            "freshmanEffectPP": 2.788514724898401,
+            "n": 56,
+            "firstTermN": 23,
+            "experiencedN": 33
+          }
+        },
+        {
+          "omittedTargetYear": 2023,
+          "fit": {
+            "interceptPP": 1.0603737014299963,
+            "priorSlope": 0.7253886809752256,
+            "freshmanEffectPP": 3.4626704713940875,
+            "n": 67,
+            "firstTermN": 20,
+            "experiencedN": 47
+          }
+        }
+      ],
+      "interpretation": "Full-sample fits and omitted-transition diagnostics are retrospective; only chronological holdout scores assess earlier-election training."
+    }
+  },
+  "targetOutcomeCompositionRetrospective": [
+    {
+      "targetYear": 2011,
+      "n": 28,
+      "targetWinners": 27,
+      "targetLosers": 1,
+      "confirmedTargetLosers": 0
+    },
+    {
+      "targetYear": 2017,
+      "n": 36,
+      "targetWinners": 35,
+      "targetLosers": 1,
+      "confirmedTargetLosers": 0
+    },
+    {
+      "targetYear": 2023,
+      "n": 26,
+      "targetWinners": 20,
+      "targetLosers": 6,
+      "confirmedTargetLosers": 0
+    }
+  ],
+  "maoriClassifiedSourceWinnerPairs": 0,
+  "selectionAndDependence": "Corrected link eligibility survives target/later winner counterfactuals. Source-winner and recontesting selection, retrospective profile publication, probable target links, repeated people, shared party/election reference offsets and three transition clusters still limit inference. Observed target win rate alone does not prove target-outcome selection. No candidate-pair iid p-values."
+}

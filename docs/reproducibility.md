@@ -300,3 +300,17 @@ Run `.venv/bin/python -m scripts.models.candidate_persistence.run --check` to ve
 The manifest contains input, implementation and serialized output hashes. Candidate occurrences, earlier numerical model outputs, historical elections and boundary products remain byte-identical to merged main `fa1dda369f1cccbb9b2494c7ebac0db72f4177d9`. The Stage6/7 provenance contracts/manifests and Stage6 record input-hash metadata were deliberately updated under D032; see `docs/audits/stage8-source-provenance.md` for exact changed fields and byte comparisons. Rebuilding Stage7 with `--check`, checking source integrity and comparing numerical prior files against main provide that guard. A changed identity source or Stage7 outcome must fail rather than be silently repinned.
 
 Stage6/7 now read the live `data/sources.json` but pin `data/source-plans/stage6-7-supporting-candidate-sources.json`, an immutable snapshot of the42 consumed records. The validator compares required live records exactly and hashes their raw files. Unrelated registry additions are accepted. `.venv/bin/python -m unittest scripts.tests.test_source_provenance -v` covers additions, required record alteration/deletion and required raw-byte alteration, including both stage builds.
+
+## Stage9 freshman incumbency
+
+From a clean checkout with the configured Python environment, run:
+
+```sh
+.venv/bin/python -m scripts.models.freshman_incumbency.run inventory --check
+.venv/bin/python -m scripts.models.freshman_incumbency.analysis_run --check
+.venv/bin/python -m unittest scripts.tests.test_freshman_inventory scripts.tests.test_freshman_analysis -v
+```
+
+The first command verifies the committed **pre-fit** inventory, all108 stage-specific raw profile/index checksums, source-plan metadata, Stage7/8 inputs and deterministic bytes. The second verifies the original specification, explicit **post-fit** cohort amendment, reconstructed target/later-winner counterfactual, corrected analysis contracts and output bytes. Neither command fetches sources, reruns boundary reconstruction or rewrites earlier outputs. Omit `--check` only when intentionally regenerating Stage9 outputs from pinned inputs and reviewing the resulting diff. Stage9's plan is independent of `data/sources.json`; Stage6/7 continue to guard their42 consumed source records and raw bytes. Do not repin contracts to conceal a changed source or prior output.
+
+The committed pre-fit inventory at `6ddec50` and specification at `fb0f491`/pre-fit clarification `c5560f7` precede any effect fitting. `postfit-audit-amendment.json` is later: the first93-pair result had three inherited target/later-winner-dependent links. Reproduction keeps that history and evaluates90 counterfactually stable pairs. `analysis.json.supersededPreAuditOutcomeDependentCohort` is retained for audit, not validation. Stage5–8 deterministic checks and `npm run check:all` remain final validation gates; no historical numerical output should change in Stage9.

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "stage": 9,
+  "status": "post-fit cohort correction; not part of the pre-fit freeze",
+  "frozenSpecificationCommit": "c5560f7",
+  "originalRule": "Use all 93 pre-fit inventory.primaryEligible pairs, assuming the inherited Stage 8 pair links survive a target/later winner counterfactual.",
+  "auditFinding": "The high target win rate is an observed outcome, not itself evidence of target-outcome selection. The actual inherited linkage does have a narrower dependency: three cross-name pairs disappear when target and later winner flags are removed while candidate records, prior winners, official index pages and dated tenure evidence are held fixed.",
+  "correction": "Rebuild Stage 8 profile projections, person links and pairs in memory for each transition after removing target/later winner flags. Preserve the committed pre-fit inventory as historical evidence, and exclude the three pairs whose source-winner comparable link or classification does not survive. Apply the same surviving-link restriction to all primary and sensitivity fits. The final evaluation set has 90 general pairs, conditional on a source win and known target candidacy.",
+  "excludedPairIds": [
+    "nz-general-2008-electorate-13-candidate-01->nz-general-2011-electorate-13-candidate-01",
+    "nz-general-2008-electorate-25-candidate-08->nz-general-2011-electorate-25-candidate-05",
+    "nz-general-2014-electorate-34-candidate-01->nz-general-2017-electorate-34-candidate-02"
+  ],
+  "acquisitionAudit": "The bounded profile URL list was derived from the 125 original Stage 8 source-winner pairs, so the three inherited outcome-dependent links also entered its search universe. The Lotu-Iiga profile was used only by a removed pair; the Bennett and Coleman profiles also serve surviving source-winner pairs. Other retrieved profiles and table completeness remain retrospectively selected and cannot be shown to be historically outcome independent from this counterfactual.",
+  "unchanged": "The tenure inventory, frozen equation, treatment/comparator definitions, chronology, benchmarks, normalization scales and Stage 5–8 artifacts remain unchanged. No threshold or model was tuned to recover an operational effect.",
+  "interpretation": "The corrected cohort avoids demonstrable target/later-winner-dependent pair admission. It still selects source winners who recontest and have retrospectively available official tenure evidence. Target identity may be probable. The observed target win rate is reported descriptively, not as proof of selection."
+}

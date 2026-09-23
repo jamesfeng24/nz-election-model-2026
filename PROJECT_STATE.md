@@ -1,3 +1,45 @@
+# Stage9 PR handoff — 2026-09-23
+
+Stage9 implementation and corrected diagnostics were committed/pushed at `ad7bbc8` and [PR #16](https://github.com/jamesfeng24/nz-election-model-2026/pull/16) was opened into main, left unmerged. Its implementation-head GitHub `check` and `python` jobs passed on both push and PR runs; local configured validation and historical-output preservation are recorded in the checkpoint below. This final documentation handoff does not change model code, input files or numerical outputs. The reviewed Stage9 result is `selectedOperationalFreshmanEffectPP=null`; descriptive fitted terms are not operational bonuses. Exact next stage is replacement-candidate effects, requiring separate authorization after Stage9 review/merge. Do not start them from this task.
+
+---
+
+# Stage9 corrected analysis checkpoint — 2026-09-23
+
+The committed pre-fit inventory (`6ddec50`) and original model specification (`fb0f491`, clarified **before fitting** at `c5560f7`) remain unchanged. First numerical fitting found a positive descriptive freshman term but mixed holdout performance. A subsequent **post-fit** audit traced target/later-outcome dependence through three inherited Stage8 cross-name pair links. Rebuilding Stage8 identity/pair construction with target and later winner flags turned off, while candidate records and dated tenure evidence remain fixed, removes three of the original93 primary pairs and no new comparable pairs appear. `postfit-audit-amendment.json` and `cohort-audit.json` document that correction; the original93-pair outputs are retained only as superseded audit diagnostics. The corrected evaluation cohort has90 general pairs:31 first-term and59 experienced (28/36/26 by transition), zero Māori. Stage9 treatment classification itself is unaffected by target/later flags. The corrected observed target win rate is82/90, which alone is **not** evidence of target-win selection; the three pair-link dependencies are the concrete defect. Prior-win/recontesting selection and retrospective profile availability remain.
+
+Corrected full-sample intercept/prior slope/freshman term is+0.780pp/0.745/+2.630pp, descriptive only. Chronological fitted versus no-freshman MAE/RMSE is3.034/4.183 versus3.313/4.981pp in2017 and3.943/7.198 versus3.577/7.105pp in2023. Pooled MAE gain is0.008pp, below the frozen0.25pp gate. Alternative scales/prior-list/off-cycle sensitivity are recorded. No target loser has an independently confirmed Stage8 link. `selectedOperationalFreshmanEffectPP=null` because2023 and identity-breadth gates fail. No Stage8 β or freshman bonus was deployed; Stage5/6 operational choices remain unresolved. `docs/freshman-incumbency.md`, D035, METHODOLOGY, sources and dictionary record findings and limits. Final local validation passed:226 configured Python tests,30 frontend tests, TypeScript typecheck, Vite build,901 shared source checksums, focused Stage9 source tests, and deterministic Stage5–9 `--check` commands. Git comparison against merged main shows no prior numerical output or shared registry changes. Commit/push and PR checks remain.
+
+Exact next action: commit/push completed Stage9 files, open an unmerged PR and confirm its final GitHub checks. Replacement-candidate fitting requires separate authorization.
+
+---
+
+# Stage9 frozen statistical specification checkpoint — 2026-09-23
+
+The pre-fit tenure inventory was committed/pushed at `6ddec50`. After reviewing its93 primary general pairs (32 first-term,61 experienced; zero Māori), `data/processed/models/freshman-incumbency/specification.json`, D034 and `docs/freshman-incumbency.md` froze the Stage9 analysis at `fb0f491` **before any effect fitting**. The primary equal-weight intercept model jointly estimates a prior-residual term and an incremental first-term indicator; the no-freshman version is the principal benchmark. Chronological 2017 and2023 holdouts use only earlier target elections for fitting; zero and carry-forward are secondary benchmarks. Proportional/log-odds, prior-list/off-cycle, mean-change and target-confirmed winner-selected diagnostics are separate. Before numerical estimation, the identity-breadth gate was clarified to require independently confirmed target losers as well as winners in each trained holdout; this is a separate pre-fit clarification, not an inventory rewrite. No Stage8 operational coefficient is adopted, no target result is an eligibility input, and no model was fitted in this checkpoint.
+
+Exact next action: commit/push this specification, then implement Stage9 fitting/backtesting and deterministic outputs without editing the frozen inventory or specification. Run required checks, preserve Stage5–8 numerical files, and open an unmerged Stage9 PR.
+
+---
+
+# Stage9 pre-fit tenure inventory checkpoint — 2026-09-23
+
+The bounded source acquisition at `ffd31c3` is now parsed into a separately pinned Stage9 tenure overlay and a 532-pair pre-fit inventory (`data/processed/models/freshman-incumbency/`). Of107 official profiles,101 have complete reconciled dated electorate/list tables and six have no usable dated service rows. Among125 unchanged-boundary source-winner general recontester pairs (43/45/37 by transition),122 have a unique official source-seat/date match. Primary candidate cohorts before seeing fitted results are32 first-ever electorate-win freshmen (11/9/12) and61 continuing experienced incumbents (19/28/14); no Māori source-winner pairs are linkable in the comparable set. The32 exclusions are10 seat switches, six former/interrupted electorate careers, nine prior-list freshmen, four off-cycle entrants and three unresolved tenure matches. Target wins and target premiums do not enter classification, and a focused counterfactual test holds eligibility fixed when target/later winners change. These cohorts remain conditional on known target candidacy, retrospectively published profile coverage and Stage8 probable target identities. `docs/freshman-incumbency.md` records the evidence checkpoint. No effect was fitted yet.
+
+Exact next action: commit and push this pre-fit inventory; then freeze the Stage9 statistical specification after reviewing these sample sizes and only then implement/freeze fitting and chronological validation. Preserve Stage8 outputs, historical source checks and null operational selections.
+
+---
+
+# Stage9 freshman-incumbency acquisition checkpoint — 2026-09-23
+
+PR #15 was verified MERGED as `6f405ecdd84dbe7b222821087e6cb37940d64b14`, containing reviewed Stage8 head `36771329983e1fcf60198ebe13f0f2daebb36261`. A clean `stage/09-freshman-incumbency` branch was created from fetched merged main. Stage8 audit corrections and null operational persistence selection remain authoritative; older Stage8 open-PR wording below is historical. Authorized scope is dated tenure evidence, pre-fit inventory, frozen freshman specification, bounded fitting/validation if supportable; no replacement fit.
+
+Preserved-source review found Stage8's former-MP index covers only page1 of2, and individual Parliament profiles expose dated `Member for / List` service rows and first-election dates. A bounded source-winner/recontester pass identified125 comparable source-winner pairs across the three unchanged-boundary transitions. Acquired and checksum-registered the missing former-index page2 plus107 official individual profiles under `data/raw/identity-parliament-profiles/`, in the stage-specific `data/source-plans/freshman-incumbency-tenure-sources.json`; all108 raw SHA-256 checks pass. Initial inspection suggested seven profiles lacked the expected table; the completed parser resolved one additional table, leaving six without usable dated rows. No Stage7/8 files were regenerated, no broad registry record was changed and no model was fitted.
+
+Exact next action: parse the preserved profile tenure rows conservatively, corroborate source-winner occurrences with seat/date, construct the full pre-fit transition inventory with explicit first-ever win/experienced/returning/unknown, list-service and by-election status, then commit and push that inventory **before fitting**. Freeze the Stage9 statistical specification only after reviewing inventory coverage. Do not infer prior career from first panel appearance or target victory.
+
+---
+
 # Stage8 PR #15 post-fit audit correction — 2026-09-23
 
 Current branch: `stage/08-candidate-persistence`, based on Stage7 merged main `fa1dda369f1cccbb9b2494c7ebac0db72f4177d9`. PR #15 remains open and must stay unmerged. The prior Stage8 checkpoint was `88246815f8c1a621637ae62726da7980053a7a38`. D031 and the earlier Stage8 handoff below are historical pre-audit records; D033 and `specification.json.auditAmendment` transparently record this **post-fit** correction, not a new pre-fit freeze.
