@@ -3,7 +3,7 @@
   "inputHashes": {
     "data/processed/models/party-vote-transform/selection.json": "2ef4ecf6224c14ea1657b0add8b2f4517272486893580f49792c2b41e3715863",
     "data/processed/models/party-vote-transform/backtest-records.json": "06464b70a46f4efd40297560d100ab969515b8a2f58a971ec6397d5dfbcea602",
-    "data/sources.json": "909b18ce1ddaa1d41ce1e91d987c4b70ae5cc3f02d59812660fc72b21334fa3d",
+    "data/source-plans/stage6-7-supporting-candidate-sources.json": "811222d43222de826c532957ad9fe8f57e1ff519a0de637bd0e7450ab47873b5",
     "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
     "data/source-plans/historical-2008.json": "b7010c3f506c0d03d1f1f621d393846a37ed12918a0aeba96fdfb277104ff9a9",
     "data/raw/elections/2008/e9/csv/e9_part8_cand_64.csv": "331d53d191de8e52fa1deedae2f44acc0314c8f4055b6fb8fb26d30d7fcd0705",
@@ -62,11 +62,12 @@
   "specificationSha256": "baebd1acbc8fd25a47c4bb0cec733fce8139e4c2d83ec668b608b222ebca0010",
   "codeHashes": {
     "scripts/models/nat_lab_elasticity/model.py": "173348d63150621825bdeb0d103d4ee025314a9ef7163f3ad6474e6394571073",
-    "scripts/models/nat_lab_elasticity/records.py": "7846ff75de2862214634b9a2e2e5447bf434cc302334deb95e726dc11fbf358b",
-    "scripts/models/nat_lab_elasticity/run.py": "e96b6069d9282cd5f9e372465aa6ae2191609a52a62f32c981876c7b9b4f002f"
+    "scripts/models/nat_lab_elasticity/records.py": "ff17cd4aa94e4ca3468b22f66d83c2acc5a9b44614e17b81ff69c86095e19ec1",
+    "scripts/models/nat_lab_elasticity/run.py": "51203af68444e1b1a0693cfa6a3222bfe0c888b7283373f897eee8b7db808269",
+    "scripts/models/source_provenance.py": "69c229030266b1e5f57aad9ddbda311918b6b767b1cf0f2dacb23afc996571cd"
   },
   "outputHashes": {
-    "records.json": "846c76dbc7b23f7e368835782f2d38c6b7b1292874e7366e2df8fa9f2ffc45fd",
+    "records.json": "1d1565d50e0e7302d20fde81c88d5fb0fc408fde47645df2fa2bdb0068867ed4",
     "fits.json": "d84cbc046d807b12a5b762b89bea9d19271084a5dda0a8fd8835654d33c1bb94",
     "backtests.json": "78edbc3e9ab0644bb64b81ae85c97ca84313da6afc0f68cb7c684b610cf7dc72",
     "sensitivity.json": "0ae0d5b154c4a87ec4373ce06b5b00c7ef46826cdbae580121f1f7e30eabcfd4",

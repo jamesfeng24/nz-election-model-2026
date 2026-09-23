@@ -4,6 +4,7 @@ import json
 import re
 
 from scripts.models.party_vote_transform.inputs import Inputs as PartyInputs
+from scripts.models.source_provenance import validated_supporting_sources
 from scripts.transform.historical import candidate_table as legacy, key
 from scripts.transform.modern_tables import candidate_table as modern
 from scripts.transform.panel_config import YEARS, COUNTS
@@ -92,8 +93,9 @@ def build():
         hashes[path] = hashlib.sha256(raw).hexdigest()
         return raw
 
-    registry = json.loads(read('data/sources.json'))['sources']
-    by_url = {r['url']: r for r in registry}
+    snapshot = json.loads(read('data/source-plans/stage6-7-supporting-candidate-sources.json'))
+    registry = json.loads((ROOT/'data/sources.json').read_bytes())
+    supporting = validated_supporting_sources(snapshot, registry, read)
     rows = []
     for year in YEARS:
         path = f'data/processed/elections/{year}.json'
@@ -113,10 +115,10 @@ def build():
             raise ValueError('Supporting Maori candidate inventory')
         names = [e['name'] for scope in parties[year]['scopes'].values() for e in scope.values()]
         for entry in entries:
-            source = by_url[entry['url']]
-            raw = read(source['rawPath'])
-            if hashes[source['rawPath']] != source['sha256']:
-                raise ValueError('Source checksum changed')
+            if entry['url'] not in supporting:
+                raise ValueError('Unpinned supporting candidate source')
+            source = supporting[entry['url']]['record']
+            raw = supporting[entry['url']]['raw']
             c = legacy(raw) if year <= 2014 else modern(raw, names)
             label = c['sourceElectorateLabel']
             name = re.sub(r'\s+\d+$', '', label)
