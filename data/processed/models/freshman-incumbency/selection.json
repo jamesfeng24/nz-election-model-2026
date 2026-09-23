@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "selectedOperationalFreshmanEffectPP": null,
+  "gates": {
+    "twoChronologicalHoldoutsIdentified": true,
+    "effectDirectionStable": true,
+    "nonWorseHoldoutMAEAndRMSE": false,
+    "pooledMAEGainPP": 0.008487244406865475,
+    "materialGainAtLeast025PP": false,
+    "normalizationAndPriorListDirectionStable": true,
+    "adequateIdentityGeographyBreadth": false
+  },
+  "targetConfirmedPairCountRetrospective": 25,
+  "identityBreadthEvidence": "Requires independently corroborated target losers as well as winners in each trained holdout. Confirmed-target restriction alone is winner-selected.",
+  "reason": "At least one frozen validation, sensitivity or coverage criterion failed; evidence supports descriptive diagnostics only.",
+  "prohibition": "Do not add a freshman bonus to Stage 6/7/8 outputs or transport this estimate to changed boundaries."
+}

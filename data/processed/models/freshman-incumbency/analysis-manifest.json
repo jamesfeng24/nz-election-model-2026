@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "stage": 9,
+  "specificationCommit": "c5560f7",
+  "inputHashes": {
+    "data/processed/models/freshman-incumbency/inventory.json": "1b56201012dd01c40a2c44b5748dccfc1bf4eb2bc38f5983f4e406ef03f50021",
+    "data/processed/models/freshman-incumbency/tenure-evidence.json": "1995e2c832dbf9126ff32efc094f1cafd82191b41a48db6cae9bbb337d8505db",
+    "data/processed/models/freshman-incumbency/input-contract.json": "e180163d54eb28d4d86840dcbb58675a0050dd7e19ad7a67b395fd206c992b82",
+    "data/processed/models/freshman-incumbency/manifest.json": "339a0f2fc2ff25d4efb29d2639a7c3cc2181be6fbaf7064267384b056ad9e1b8",
+    "data/processed/models/freshman-incumbency/specification.json": "20ac362a9feede3d278abb620b3ace9584e729a53e5b111dd9f8482dfdee2a28",
+    "data/processed/models/freshman-incumbency/postfit-audit-amendment.json": "040deaae0f4a3a4f68fa3e7eb9e9278fc778f31cf011017590974e29abd224ed",
+    "data/processed/models/candidate-persistence/pairs.json": "6d7fa0ef4bd8892d7c75a8bdc4bc997937a300bec39b2e474dbad15691c9f6c6",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/source-plans/candidate-persistence-sources.json": "ccfa7cbbfa9fb4136a501d8790dbc4dac7bcc995f989a6d3a4e7a0e22c6e267b",
+    "data/raw/identity-parliament-former.html": "8f57f858a07090a17ae462f9e761487b59611c0dd53a72c39c07fa34b86ce6ca",
+    "data/raw/identity-parliament-current.html": "97e71cd616605f00f8e6b90364de0d4650c267fff9867ac3ddeb0e492b8bc24a",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e"
+  },
+  "codeHashes": {
+    "scripts/models/freshman_incumbency/model.py": "4111ed4840c9316d77d4ce56b0617f305aa21a98c81fd2e75b09dc47550361d1",
+    "scripts/models/freshman_incumbency/analysis_run.py": "3e74efadb69c0839cb212a3cf165beeaabe06e058d466cde90a4cf3c349fd7f5",
+    "scripts/models/freshman_incumbency/outcome_audit.py": "65314ce22cded9bdf528965369ad7a39f040379f6326de40b50fae889c6190f8",
+    "scripts/models/candidate_persistence/identity.py": "9e7fbbb64b340c4f08077dae1afb2fbeb9433b1c7f7fe8ee1b6a10b1777a2b74",
+    "scripts/models/candidate_persistence/official.py": "d6a445ae25bd99f0975a8c8988a0e2b1f339caadc51c5a51b6c8478c74742905",
+    "scripts/models/candidate_persistence/pairs.py": "bb1b8b96758106bb5c2fd1fba662fda1b044df3a92707599a2e19f319948e466",
+    "scripts/models/freshman_incumbency/inventory.py": "d88434d3d53cc4e4d2c60afee28d20e64e67368f91282a522fc39c56838d8eed"
+  },
+  "outputHashes": {
+    "analysis-input-contract.json": "37a56aa06500e2288d9a28eb0a6392b1a56b4b199b59e2368d46d2395c59edc0",
+    "cohort-audit.json": "3992bc310daab7078099ad04c923a20a17fd348dc75d8da3739559d009a4fc40",
+    "analysis.json": "b2d8beb66d362130915b284a3b2fe8fda40688c17c0defab873868f5ff405b38",
+    "selection.json": "03e7c7fe77b05b2645872b83bb236a678777b23dc00e692c2077b03abebe6a9c"
+  }
+}

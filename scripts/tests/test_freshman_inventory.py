@@ -80,6 +80,18 @@ class FreshmanInventoryTests(unittest.TestCase):
                                  [profile([service('2008-11-08')])], {'source'})['records'][0]
         self.assertIn('unresolved_occurrence_identity', record['exclusionReasons'])
 
+    def test_missing_or_ambiguous_service_does_not_establish_never_served(self):
+        source = occurrence('source', 2008)
+        target = occurrence('target', 2011)
+        incomplete = profile([])
+        incomplete['tenureEvidenceStatus'] = 'no_usable_dated_rows'
+        self.assertEqual(classify_tenure(source, 2011, incomplete)[0], 'uncertain')
+        ambiguous = [profile([service('2008-11-08')]), profile([service('2008-11-08')])]
+        ambiguous[1]['sourceId'] = 'official:2'
+        record = build_inventory([pair()], [source, target], ambiguous, {'source'})['records'][0]
+        self.assertEqual(record['tenureCategory'], 'uncertain')
+        self.assertIn('ambiguous_source_service', record['exclusionReasons'])
+
     def test_target_and_later_wins_cannot_change_pre_result_eligibility(self):
         rows = [occurrence('source', 2008), occurrence('target', 2011)]
         p = profile([service('2008-11-08')])
