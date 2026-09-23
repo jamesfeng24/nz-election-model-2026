@@ -2,6 +2,16 @@
 
 Stage7 complete. Unmerged PR #14: https://github.com/jamesfeng24/nz-election-model-2026/pull/14 . Final implementation/verification checkpoint `eef561733d8fcd36f8c56f4879106e6df8c33b2d`; this documentation-only commit records the PR handoff. Branch `stage/07-normalized-candidate-overperformance`; base `a28044a795e18a1ebc07bc3ea7c16fd23d6c8c14` (PR13 merged, including architecture audit cfc92496f3425fa5059b9291b6af78fd529cc932). Checkpoints:21dfed7 frozen specification before diagnostics;f817bc0 matched-contest/leave-one-out implementation and outputs. Resumption preserved and verified local work. No web/source acquisition.
 
+## Fresh-task handoff verification
+
+Verified completion/handoff SHA: `6538614e53c64a0f6486acd6bf1635d55f104b8c`. The implementation and final numerical verification were completed at `eef561733d8fcd36f8c56f4879106e6df8c33b2d`;6538614 recorded the PR link only. This subsequent handoff clarification is documentation-only. PR #14 was verified OPEN/unmerged with completion SHA as its remote head before this clarification. No numerical work was rerun; no data, formulas, outputs or stage scope changed.
+
+Read AGENTS.md, this current section, DECISIONS.md (especially D027–D030) and docs/future-work.md first. The frozen specification is `data/processed/models/candidate-overperformance/specification.json`; generated outputs and their manifest are in that same directory. Consult the Stage7 sections of METHODOLOGY.md and docs/statistical-specification.md, docs/data-dictionary.md, docs/reproducibility.md and docs/audits/stage6-architecture.md as needed; do not restart completed computation. Earlier handoffs below are historical records, not current authorization.
+
+Pending action is PR #14 review/merge by the user; leave it unmerged here. Before any separately authorized persistence stage, fetch canonical main, verify PR #14 is merged and identify its actual merge commit. Verify that the starting checkout contains that merged work and the Stage7 specification/outputs. A squash/rebase/merge can produce a different SHA; do not assume the branch completion SHA equals the merge SHA. Preserve any local work before synchronization.
+
+Candidate persistence remains the next stage, requiring separate authorization. Its first unit is reusable person/history/status infrastructure. Fitting freshman-incumbency and replacement effects remains later, separately authorized work; building shared status evidence does not authorize those fits.
+
 ## Coverage and normalization
 
 |Election|Occurrences|Eligible|Normalized|
