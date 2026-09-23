@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "stage": 7,
+  "elections": [2008, 2011, 2014, 2017, 2020, 2023],
+  "estimand": "Occurrence-level candidate-minus-local-party share, net of the party-election matched-contest candidate-versus-party offset excluding this occurrence's contest.",
+  "units": "fractions internally; diagnostic distributions in percentage points",
+  "inputClass": "observed election results only, on each election's actual geography",
+  "eligibility": "Held contest, valid distinct candidate/party denominators, exact within-election affiliation counterpart. Preserve excluded nominations with reasons. Source-report groupings do not establish identity.",
+  "referenceUniverse": "All eligible general and Maori contests for the same election and party; identical contest universe for candidate and party aggregates.",
+  "referenceShares": {"candidate": "sum(candidateVotes)/sum(validCandidateVotes)", "party": "sum(partyVotes)/sum(validPartyVotes)"},
+  "leaveOneOut": "Subtract the entire focal contest's candidate/party numerators and respective denominators. Require at least two eligible contests before subtraction; otherwise normalized residual is null and raw premium is retained.",
+  "formulas": {
+    "rawPremium": "c-p",
+    "additive": "expectedRaw=p+C_ref_minus_i-P_ref_minus_i; residual=c-expectedRaw",
+    "proportional": "expectedRaw=p*C_ref_minus_i/P_ref_minus_i, provided P_ref_minus_i>0",
+    "log_odds": "OR=C_ref_minus_i*(1-P_ref_minus_i)/(P_ref_minus_i*(1-C_ref_minus_i)); expected=p*OR/(1-p+p*OR), provided both reference shares lie strictly between zero and one"
+  },
+  "boundsPolicy": "Preserve raw additive/proportional expected values and residuals. Also expose bounded expected values and out-of-range flags. No silent clipping or pseudocounts.",
+  "primaryNormalization": "additive_national_centered",
+  "sensitivityMethods": ["proportional", "log_odds"],
+  "selectionRule": "Retain additive unless material broadly systematic pathology appears. Inspect all groups, scope/major-party distributions, reference coverage, out-of-range/undefined cases and share correlations. Do not optimize correlations or fit another model.",
+  "coveragePolicy": "Only hard minimum is two matched contests. Store quantitative slate coverage and denominators; no further selection threshold.",
+  "antiLeakage": "Each reference uses the same election only and excludes the focal contest. No future outcomes, synthetic candidate baselines, person links/statuses, polling or 2026 inputs.",
+  "interpretation": "Descriptive residual, not candidate quality, persistent personal vote, causal effect or forecast bonus.",
+  "dependencies": "Stage6 remains a provisional response component. No target-geography transport or additive stacking of overlapping effects. Person/history/status infrastructure begins only in the later authorized persistence stage."
+}

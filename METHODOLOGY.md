@@ -70,3 +70,42 @@ Limitations: only three transition clusters, residual candidate changes, no same
 ## Stage6 architecture audit clarification
 
 The [challenge audit](docs/audits/stage6-architecture.md) retains numerical results but clarifies identification and deployment. β is a provisional unconditional party-seat association; candidate/status effects correlated with party movement need not be mere noise. A response view requires a validated target-boundary candidate reference baseline, which Stage4 did not supply. Later premium construction must make that dependency/availability explicit. Three views are separate complete predictions with overlapping evidence, not independent bonuses. Review conditional β after replacement effects and before integration. Build reusable person/history/status evidence once at the start of persistence, after occurrence-level normalization is defined. No Stage7 work was performed by this audit.
+
+## Stage7 — occurrence-level normalized candidate overperformance
+
+The specification was frozen at21dfed7 before diagnostics. Each of the six observed elections is processed on its published geography; there is no cross-election or person matching. A held candidate contest is eligible only when the candidate affiliation has an exact normalized within-election party-vote counterpart. Existing source-header expansions remain source-local; report alliances do not create counterpart identities. Independents, unmatched affiliations and cancelled nominations remain in the occurrence inventory with reasons. General occurrence IDs/source labels are unchanged. The42 previously preserved supporting Māori candidate files supply174 additional observed occurrences, with IDs derived from election, official electorate number and source candidate order. These are not person IDs.
+
+Candidate share c uses valid candidate votes; party share p uses valid party votes. Raw premium is c−p. For each party/election, aggregate candidate and party shares over **exactly the same eligible contested seats**, using their respective summed denominators. The primary reference includes both general and Māori eligible contests. For each focal occurrence subtract its entire contest's candidate numerator/denominator and party numerator/denominator. Expected raw additive share is p+C_ref,−i−P_ref,−i; normalized residual is c−expected. A party with fewer than two matched contests retains raw premium but has no normalized residual. A candidate cannot contribute to its own reference.
+
+The additive residual is an interpretable percentage-point deviation after removing the election-wide matched-contest offset. It is not necessarily exactly zero-mean across seats: references are vote-weighted, denominators differ and each reference leaves out a different seat. This is not a defect to remove by additional centering. It is not identified candidate quality, persistent personal vote, a causal effect or a forecast bonus.
+
+Proportional expected share p×C_ref,−i/P_ref,−i and the corresponding log-odds shift are sensitivity fields in the same pipeline. Undefined domains stay null with reasons; no pseudocounts. Raw expected values, explicit out-of-range flags and bounded alternatives are separate. Primary residuals use raw additive values, never silent clipping.
+
+| Election | All occurrences | Eligible exact counterparts | Normalized |
+|---|---:|---:|---:|
+|2008|522|486|486|
+|2011|453|423|423|
+|2014|483|412|412|
+|2017|453|407|407|
+|2020|601|543|542|
+|2023|495|403|403|
+|Total|3,007|2,674|2,673|
+
+Exclusions:163 independents,161 unmatched affiliations,nine cancelled Port Waikato nominations. The only eligible singleton is Heartland NZ2020.90 party-election reference cells retain full slate coverage and denominator metadata (one to72 contests).2014 MANA Movement/Internet Party,2020 NZ Public Party and2023 Freedoms constituent affiliations are not globally joined to alliance party votes. Historical TOP is unchanged.
+
+Additive is retained as `additive_national_centered`. Only3/2,673 (0.112%) raw references fall outside[0,1], all slightly negative: NZ First/Wellington Central2011, ACT/Rongotai2020, ACT/Māngere2023. The largest bounded adjustment is0.6583pp. Proportional/log-odds have zero out-of-range or undefined cases among normalized occurrences (the singleton is unavailable for every method). Across all occurrences, additive residual correlation with local party share is0.0395 and with leave-one-out party reference strength−0.0210. Correlation with candidate share0.3071 is descriptive and partly mechanically induced by the residual definition, not a fitting target.
+
+General normalized residuals: n2,528, mean−0.0369pp, SD5.1974pp. Māori: n145, mean1.0026pp, SD10.5500pp. General National/Labour each have383 normalized occurrences, means−0.0410/+0.7037pp and SD7.4440/6.8453pp. Māori Labour has42, mean−9.4688pp; Māori National has only2 (both2023), mean−5.5078pp, insufficient for generalization. These scope differences are substantive descriptive findings, not candidate-quality comparisons.
+
+Alternative scales are not interchangeable. Proportional/log-odds residual differences from additive have overall SD2.0908/1.4308pp; individual absolute differences reach35.48/26.42pp. Māori mean differences are−3.3697/−1.9691pp. Their Māori local-share correlations (−0.562/−0.493) do not consistently remove the additive pattern (−0.439). Sparse references and heterogeneous contest environments warrant sensitivity in later validation, not a new tuned normalization or forced Māori-only model. No broadly systematic failure requires changing the frozen additive descriptive estimand; no operational predictive superiority is claimed.
+
+### Updated effect dependency contract
+
+| Component | Stage7 dependency / overlap guard |
+|---|---|
+|Stage6 response|Remains provisional; requires a later defensible target-geography candidate reference. Stage7 supplies observed residual evidence, not that transported baseline.|
+|Persistence (next, separately authorized)|First build one reusable person/history/status evidence layer; then test whether prior same-person normalized residual predicts a later residual. Do not add retained premium twice.|
+|First-term incumbency / replacement|Estimate conditional residual change using the same normalized scale and shared history; do not stack unconditioned bonuses or remove a prior premium twice.|
+|Split-ticket / later integration|Alternative complete predictive views with overlapping evidence. Combine validated complete predictions, not independent premium/elasticity/split bonuses.|
+
+**Forecast restriction:** same-election observed references and residuals validly describe that election's outcomes. Neither the target election's observed reference offset nor its observed residual may be an input to forecasting that election. Later temporal validation must construct predictors from information available before the holdout. No residual has been transported across boundaries/candidates, no person linking performed and no2026 candidate baseline created.

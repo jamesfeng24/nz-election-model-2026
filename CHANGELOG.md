@@ -161,3 +161,11 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Freeze and fit separate National/Labour party-seat delta elasticities:191 general observations each;21 descriptive Māori Labour pairs; cancelled/missing candidacies excluded.
 - Add chronological, leave-one-transition-out andβ0/1 comparisons plus one parameterized Stage5 transform sensitivity pipeline. Both operational coefficients remain unresolved; descriptive fits retained.
 - Preserve all prior data and Stage5 selection; no web/source acquisition, candidate-person linking or2026 forecasting.
+
+## Stage7 — normalized candidate occurrences — 2026-09-23
+
+- Added deterministic observed-only candidate normalization for all six historical elections:3,007 occurrences,2,674 exact eligible counterparts,2,673 leave-one-out residuals.
+- Preserved333 excluded nominations and one eligible singleton with reasons; retained immutable historical IDs/labels, distinct denominators and source evidence.
+- Added matched-contest references, raw additive primary residuals, proportional/odds sensitivities, coverage/scope diagnostics and pinned input/output hashes.
+- Retained additive after bounded diagnostics; documented sparse-slate/Māori sensitivity and the ban on using target-outcome normalization as a forecast input.
+- No person linking, persistence, boundary transport,2026 inputs or prior-output changes.

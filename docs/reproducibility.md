@@ -286,3 +286,9 @@ The final Stage4 outputs supersede earlier acquisition-only notes. Secondary rec
 ### Stage6 offline elasticity
 
 Run `.venv/bin/python -m scripts.models.nat_lab_elasticity.run --check` to verify pinned historical/Stage5 hashes and deterministic outputs. Omit --check only for intentional regeneration. Focused tests: `.venv/bin/python -m unittest scripts.tests.test_nat_lab_elasticity -q`. No source retrieval or boundary recomputation. Primary scores use raw linear predictions and flag out-of-range values; chronology and training years are explicit.
+
+## Stage7 observed candidate normalization
+
+Run `.venv/bin/python -m scripts.models.candidate_overperformance.run` to regenerate, or append `--check` to verify committed bytes without writing. Focused tests: `.venv/bin/python -m unittest scripts.tests.test_candidate_overperformance -v`. The pipeline uses standard-library arithmetic and existing validated source parsers; no new dependency or network access. It consumes all six observed election files and already-preserved supporting Māori candidate/party evidence, checks pinned hashes and candidate/party scope controls, then computes matched references and whole-contest leave-one-out residuals. It does not run boundary reconstruction or person linking.
+
+The manifest pins input/specification/implementation hashes and serialized output hashes. Repeated builds must be byte-identical. A changed input or stale output fails the check; do not repin to hide unexplained changes. Preserve every pre-Stage7 data file against base `a28044a795e18a1ebc07bc3ea7c16fd23d6c8c14`, including Stage4/5/6 outputs and source registry. Keep the original Stage6 audit unchanged. Full configured verification is required at final model-release readiness, not after every small edit.
