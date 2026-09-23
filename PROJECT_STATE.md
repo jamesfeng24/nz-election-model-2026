@@ -1,3 +1,13 @@
+# Stage9 freshman-incumbency acquisition checkpoint — 2026-09-23
+
+PR #15 was verified MERGED as `6f405ecdd84dbe7b222821087e6cb37940d64b14`, containing reviewed Stage8 head `36771329983e1fcf60198ebe13f0f2daebb36261`. A clean `stage/09-freshman-incumbency` branch was created from fetched merged main. Stage8 audit corrections and null operational persistence selection remain authoritative; older Stage8 open-PR wording below is historical. Authorized scope is dated tenure evidence, pre-fit inventory, frozen freshman specification, bounded fitting/validation if supportable; no replacement fit.
+
+Preserved-source review found Stage8's former-MP index covers only page1 of2, and individual Parliament profiles expose dated `Member for / List` service rows and first-election dates. A bounded source-winner/recontester pass identified125 comparable source-winner pairs across the three unchanged-boundary transitions. Acquired and checksum-registered the missing former-index page2 plus107 official individual profiles under `data/raw/identity-parliament-profiles/`, in the stage-specific `data/source-plans/freshman-incumbency-tenure-sources.json`; all108 raw SHA-256 checks pass. Seven profiles lack the expected tenure table and will remain unresolved unless other preserved authoritative evidence suffices. No Stage7/8 files were regenerated, no broad registry record was changed and no model was fitted.
+
+Exact next action: parse the preserved profile tenure rows conservatively, corroborate source-winner occurrences with seat/date, construct the full pre-fit transition inventory with explicit first-ever win/experienced/returning/unknown, list-service and by-election status, then commit and push that inventory **before fitting**. Freeze the Stage9 statistical specification only after reviewing inventory coverage. Do not infer prior career from first panel appearance or target victory.
+
+---
+
 # Stage8 PR #15 post-fit audit correction — 2026-09-23
 
 Current branch: `stage/08-candidate-persistence`, based on Stage7 merged main `fa1dda369f1cccbb9b2494c7ebac0db72f4177d9`. PR #15 remains open and must stay unmerged. The prior Stage8 checkpoint was `88246815f8c1a621637ae62726da7980053a7a38`. D031 and the earlier Stage8 handoff below are historical pre-audit records; D033 and `specification.json.auditAmendment` transparently record this **post-fit** correction, not a new pre-fit freeze.
