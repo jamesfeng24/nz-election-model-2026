@@ -1,6 +1,6 @@
 # Stage7 current state — 2026-09-23
 
-Stage7 complete, ready for unmerged PR review. Branch `stage/07-normalized-candidate-overperformance`; base `a28044a795e18a1ebc07bc3ea7c16fd23d6c8c14` (PR13 merged, including architecture audit cfc92496f3425fa5059b9291b6af78fd529cc932). Checkpoints:21dfed7 frozen specification before diagnostics;f817bc0 matched-contest/leave-one-out implementation and outputs. Resumption preserved and verified local work. No web/source acquisition.
+Stage7 complete. Unmerged PR #14: https://github.com/jamesfeng24/nz-election-model-2026/pull/14 . Final implementation/verification checkpoint `eef561733d8fcd36f8c56f4879106e6df8c33b2d`; this documentation-only commit records the PR handoff. Branch `stage/07-normalized-candidate-overperformance`; base `a28044a795e18a1ebc07bc3ea7c16fd23d6c8c14` (PR13 merged, including architecture audit cfc92496f3425fa5059b9291b6af78fd529cc932). Checkpoints:21dfed7 frozen specification before diagnostics;f817bc0 matched-contest/leave-one-out implementation and outputs. Resumption preserved and verified local work. No web/source acquisition.
 
 ## Coverage and normalization
 
