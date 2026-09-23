@@ -39,6 +39,15 @@ class CandidateOverperformanceTests(unittest.TestCase):
         self.assertAlmostEqual(out[0]['normalizedPremium'], .1)
         self.assertAlmostEqual(out[1]['normalizedPremium'], -.1)
 
+    def test_excluded_contest_does_not_enter_either_reference(self):
+        a, b = fixture(1, 30, 100, 20, 200), fixture(2, 80, 200, 90, 300)
+        excluded = fixture(3, 900, 1000, 900, 1000)
+        excluded.update(eligible=False, exclusionReason='no_exact_party_vote_counterpart', rawPremium=None)
+        refs, _ = normalize([a, b], {2011: 70})
+        augmented, out = normalize([a, b, excluded], {2011: 70})
+        self.assertEqual(refs, augmented)
+        self.assertIsNone(out[-1]['referenceId'])
+
     def test_self_never_defines_own_reference(self):
         a, b = fixture(1, 30, 100, 20, 200), fixture(2, 80, 200, 90, 300)
         _, before = normalize([a, b], {2011: 70})

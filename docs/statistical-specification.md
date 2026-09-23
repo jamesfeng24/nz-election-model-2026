@@ -89,3 +89,13 @@ One pipeline uses the same structural training slope with Stage5 additive/propor
 Both parties remain `unresolved_no_stable_material_gain`, selectedBeta null; full OLS estimates are descriptive, β1 retained as benchmark rather than claimed optimal truth. The pre-fit0.25pp indicative material-gain screen and consistent chronological holdout/transform improvement requirement fail. This is not a significance test. Raw linear predictions are not silently clipped; out-of-range diagnostics are stored (three across all repeated evaluation configurations).
 
 Limitations: only three transition clusters, residual candidate changes, no same-person effects, no changed-boundary candidate pairs, seven Māori seats per election, conditional realized-party validation distinguished from forecast-pipeline sensitivity. No new sources/web use or2026 predictions. Exact next stage: **Normalized candidate overperformance only**, on separate authorization.
+
+## Stage7 frozen descriptive normalization
+
+Stage7 specification: `data/processed/models/candidate-overperformance/specification.json` (frozen21dfed7). For eligible occurrence i, c_i=v_i/D_candidate,e and p_i=w_p,e/D_party,e. Over the same party/election matched contest set E excluding e, C_−i=Σv/ΣD_candidate and P_−i=Σw/ΣD_party. Raw premium=c_i−p_i; primary normalized residual=c_i−[p_i+C_−i−P_−i]. This uses all eligible general/Māori contests together, with scope diagnostics separate. Require |E|≥2 before removing the focal contest. No smoothing, missingness imputation, fitted slope or extra coverage threshold.
+
+Proportional p_i C_−i/P_−i requires P_−i>0. Odds shift requires both reference shares strictly inside(0,1). Preserve raw expected values, bounded alternatives, domain failures and residuals separately. Primary additive residual uses the raw reference. Nationally centred does not imply an exactly zero unweighted seat mean. The identity join is exact within election, not cross-election organizational/person inference.
+
+Outputs cover3,007 occurrences,2,674 eligible and2,673 normalized in six observed elections. Retain additive primary;3 raw references are negative by at most0.6583pp. Alternative scales have material individual and Māori differences; they remain sensitivities for later validation, not independently selected models. Full diagnostics and quantitative reference coverage are persisted. See METHODOLOGY for results and the updated dependency map.
+
+Same-election normalization describes an outcome. A target election's observed reference or residual cannot be a predictor of that target. Stage6 is still a provisional response component. No candidate baseline transport, persistence or additive stacking of overlapping candidate effects is authorized by this layer.

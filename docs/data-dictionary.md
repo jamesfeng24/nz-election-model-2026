@@ -181,3 +181,18 @@ Each backtest record keys transition × election-local electorate × canonical p
 ### Stage6 party-seat elasticity
 
 `records.json` stores held paired candidacies, their separate candidate/party denominators via pinned source records, fraction shares/deltas, original candidate labels, scope/geography and frozen Stage5 predicted party shares. Names do not assert person continuity. `fits.json` contains zero-intercept unrestricted slopes/sample sizes/training years; Māori reference diagnostics are not operational coefficients. `backtests.json` distinguishes descriptive, leave-one-out stability and chronological modes with raw candidate predictions and percentage-point loss metrics. `selection.json` separates descriptive historicalOLS from nullable selectedBeta andβ1 benchmark. No cancelled/missing candidate zero filling.
+
+## Stage7 candidate-overperformance output family
+
+`data/processed/models/candidate-overperformance/` is a separate descriptive modelling layer; historical inputs are unchanged.
+
+- `specification.json`: frozen formulas, eligibility, universe, leave-one-out and interpretation policy.
+- `input-contract.json`: path→SHA256 of all consumed preserved evidence, including supporting Māori candidate files; no synthetic candidate inputs.
+- `occurrences.json.records`: all nominations, keyed by immutable election-local `candidateOccurrenceId`. Includes year/election/boundary/official seat identity, exact candidate/affiliation/party labels, null `personId`, published vote evidence, distinct denominators, shares, `rawPremium`, eligibility/reasons and provenance paths/source IDs. Supporting Māori IDs use official election/number and source order. `sourcePartyHeader` preserves the published column label separately from normalized party identity.
+- `references.json.references`: party/election reference ID, exact matched seat/occurrence lists, counts, all-electorate coverage fraction, scope counts, candidate/party sums and aggregate shares. All official seats, including the cancelled seat, form the coverage denominator; only eligible held contests enter references.
+- Occurrence `leaveOneOutReference`: aggregate counts/denominators after removing the entire focal contest; shares/offset null when no contest remains. `referenceCoverage` describes the original slate. Only one minimum: at least two matched contests before subtraction.
+- `methods`: parameterized additive/proportional/log_odds raw/bounded expectations, out-of-range flags, unavailable reasons and raw residuals. `normalizedPremium` is the raw additive residual in fractions. A singleton retains raw premium but has null normalized premium and `insufficient_reference_contests`. Excluded occurrences have null premiums, explicit exclusions, and preserved source evidence; Port Waikato's published zeros are not observed candidate outcomes.
+- `diagnostics.json` / `normalization-sensitivity.json`: counts, coverage, distributions in percentage points, scope/party/election comparisons, correlations and scale differences. No person rankings, fitted effects or inferred quality.
+- `selection.json`: descriptive primary, sensitivity methods and interpretation/forecast restrictions. `manifest.json`: base revision, input/specification/code/output hashes and coverage counts.
+
+A residual is an outcome description. Future persistence may use a prior residual only with valid history and temporal separation; target-election observed offsets/residuals cannot enter predictors for that election. Missing values and undefined transforms remain null, never epsilon-smoothed or zero-filled.

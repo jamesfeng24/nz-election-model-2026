@@ -98,6 +98,11 @@ def build():
     for year in YEARS:
         path = f'data/processed/elections/{year}.json'
         observed = json.loads(read(path))
+        headers = {p['partyKey']: p['sourceHeader'] for p in observed['electorates'][0]['parties']}
+        for scope in parties[year]['scopes'].values():
+            for seat in scope.values():
+                for party in seat['parties'].values():
+                    party['sourceHeader'] = headers[party['partyKey']]
         for e in observed['electorates']:
             rows.extend(make_occurrences(year, e, 'general', parties[year]['scopes']['general'][key(e['name'])],
                                          {'inputPath': path, 'sourceIds': e['sourceIds']}))
@@ -123,6 +128,10 @@ def build():
             rows.extend(make_occurrences(year, e, 'maori', parties[year]['scopes']['maori'][key(name)],
                                          {'inputPath': source['rawPath'], 'sourceIds': [source['id']],
                                           'occurrenceIdBasis': 'official election/number and source candidate order; supporting observed record, not person identity'}))
+        for scope, expected_count in [('general', COUNTS[year][0]), ('maori', 7)]:
+            seats = {r['electorateId']: r['validCandidateVotes'] for r in rows if r['year'] == year and r['electorateType'] == scope}
+            if len(seats) != expected_count or sum(seats.values()) != observed['nationalControls']['candidate'][scope]['validVotes']:
+                raise ValueError('Observed candidate scope control mismatch')
     rows.sort(key=lambda r: (r['year'], r['sourceElectorateNumber'], r['candidateOccurrenceId']))
     if len({r['candidateOccurrenceId'] for r in rows}) != len(rows):
         raise ValueError('Duplicate occurrence ID')

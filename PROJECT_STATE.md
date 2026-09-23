@@ -1,8 +1,32 @@
 # Stage7 current state — 2026-09-23
 
-Branch `stage/07-normalized-candidate-overperformance`; base `a28044a795e18a1ebc07bc3ea7c16fd23d6c8c14` (PR13 merged, including audit cfc92496f3425fa5059b9291b6af78fd529cc932). Clean start; Stage5/6 deterministic checks passed. No source acquisition/web use.
+Stage7 complete, ready for unmerged PR review. Branch `stage/07-normalized-candidate-overperformance`; base `a28044a795e18a1ebc07bc3ea7c16fd23d6c8c14` (PR13 merged, including architecture audit cfc92496f3425fa5059b9291b6af78fd529cc932). Checkpoints:21dfed7 frozen specification before diagnostics;f817bc0 matched-contest/leave-one-out implementation and outputs. Resumption preserved and verified local work. No web/source acquisition.
 
-Checkpoint A: specification frozen before occurrence diagnostics in `data/processed/models/candidate-overperformance/specification.json`. Six observed elections only; exact within-election counterparts, matched candidate/party contest universe, mandatory leave-one-out, raw additive primary with proportional/odds sensitivity. No person identity/status, persistence or candidate transport. Checkpoint B: recovered local implementation and deterministic outputs; 12 focused tests pass. 3,007 occurrences (2,833 general,174 Māori),2,674 eligible,2,673 normalized; exclusions163 independents,161 no exact party counterpart,nine cancelled nominations.90 party-election reference cells;2020 Heartland is the one singleton with raw premium only. Both numerator/denominator pairs use the same matched seats; whole focal contest removed. Additive has3 out-of-range references (maximum0.6583pp); alternatives none. Māori scope/individual-scale differences retained as limitations, not optimized away. Next action: final review/documentation and required complete verification, then unmerged PR. No person linking or downstream modelling. Exact next stage after completion: **Candidate persistence only**, separately authorized; build reusable person/history/status infrastructure at its start.
+## Coverage and normalization
+
+|Election|Occurrences|Eligible|Normalized|
+|---|---:|---:|---:|
+|2008|522|486|486|
+|2011|453|423|423|
+|2014|483|412|412|
+|2017|453|407|407|
+|2020|601|543|542|
+|2023|495|403|403|
+|Total|3,007|2,674|2,673|
+
+2,833 general and174 Māori occurrences retain source evidence. Exclusions:163 independents,161 affiliations lacking an exact party-vote counterpart,nine cancelled Port Waikato nominations.2020 Heartland NZ is the sole eligible singleton: raw premium retained, normalized residual null.90 party-election reference cells cover one to72 contests, with quantitative coverage and vote denominators. General normalized n2,528; Māori n145. General National/Labour each383; Māori National2 and Labour42. General source occurrence IDs remain immutable; supporting Māori IDs use official election/number/source order and imply no person linkage.
+
+Both reference aggregates use the same matched held seats and their own valid-vote denominators. Whole focal contest removed from both aggregates. Retain raw additive nationally centred residuals as primary, proportional/log-odds as sensitivities.3/2,673 additive references lie below zero, maximum0.6583pp; no proportional/odds out-of-range or undefined cases among normalized records. Additive local-party-share correlation0.0395 overall; no broad failure warrants replacing the frozen estimand. General residual mean−0.0369pp/SD5.1974pp; Māori1.0026/10.5500pp. General National mean−0.0410pp and Labour+0.7037pp; Māori Labour−9.4688pp. Scope differences and individual alternative-scale differences are material descriptive limitations, retained for later validation rather than optimized away. See METHODOLOGY and persisted diagnostics for complete reference coverage/distributions.
+
+These are outcome descriptions, not personal-vote effects, quality or operational bonuses. Target-election observed reference offsets/residuals cannot predict that election. No person linking, persistence, incumbency, replacement, candidate transport,2026 inputs or model integration. Stage6 remains provisional; overlap/dependency documentation is updated without altering its audit or outputs.
+
+## Final verification
+
+186 Python tests passed, including13 focused Stage7 tests for formulas, denominators, matched universes, whole-contest leave-one-out, singleton missingness, report-only identities, cancellation, future/person/status rejection, input hashes and deterministic output hashes. Deterministic Stage7 generation/check passed; repeated builds produce identical bytes. All901 registered source checksums passed. All993 pre-Stage7 data files byte-identical to branch base, including historical election/panel, boundary, Stage5/6, raw registry and discrepancy records. Stage6 audit markdown/results/utility byte-identical. Stage5/6 deterministic checks passed at stage start. Frontend30 tests, TypeScript check and production build passed. git diff --check passed; no configured Python formatter/linter. Full checks ran once at final readiness; no acquisition or unrelated manual reconstruction.
+
+Output family: `data/processed/models/candidate-overperformance/` specification,input-contract,references,occurrences,diagnostics,normalization-sensitivity,selection,manifest. Reproduce with `.venv/bin/python -m scripts.models.candidate_overperformance.run --check`. Selection: `primaryNormalization=additive_national_centered`, `normalizationStatus=retained_descriptive_primary`. No unresolved correctness question; remaining limitations are noisy sparse references, heterogeneous scope/party contexts and scale sensitivity, not interpreted as identified persistence.
+
+Next action: review the unmerged Stage7 PR; no further modelling in this task. Exact next stage: **Candidate persistence only**, requiring separate authorization. At its start build one reusable person/history/status evidence layer, reused by subsequent effects. Do not begin it here.
 
 ## Historical Stage6 handoff
 
