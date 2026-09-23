@@ -1,0 +1,3482 @@
+{
+  "schemaVersion": 1,
+  "overall": {
+    "occurrenceCount": 3007,
+    "eligibleCount": 2674,
+    "normalizedCount": 2673,
+    "exclusions": {
+      "cancelled_candidate_contest": 9,
+      "independent_no_party_vote_counterpart": 163,
+      "no_exact_party_vote_counterpart": 161
+    },
+    "normalizationUnavailable": {
+      "cancelled_candidate_contest": 9,
+      "independent_no_party_vote_counterpart": 163,
+      "insufficient_reference_contests": 1,
+      "no_exact_party_vote_counterpart": 161
+    },
+    "rawPremium": {
+      "n": 2674,
+      "meanPP": 1.1029663742603801,
+      "medianPP": 0.1709138753781348,
+      "sdPP": 6.4991013642901025,
+      "minPP": -40.76048702923444,
+      "p10PP": -4.306005221395464,
+      "p90PP": 8.218609471254588,
+      "maxPP": 49.83211618557679
+    },
+    "normalizedPremium": {
+      "n": 2673,
+      "meanPP": 0.019526768645863075,
+      "medianPP": -0.2588031576148765,
+      "sdPP": 5.625029634125479,
+      "minPP": -43.70518046597077,
+      "p10PP": -4.322681272609146,
+      "p90PP": 5.27079987700558,
+      "maxPP": 51.29739612384371
+    }
+  },
+  "byElection": {
+    "2008": {
+      "occurrenceCount": 522,
+      "eligibleCount": 486,
+      "normalizedCount": 486,
+      "exclusions": {
+        "independent_no_party_vote_counterpart": 23,
+        "no_exact_party_vote_counterpart": 13
+      },
+      "normalizationUnavailable": {
+        "independent_no_party_vote_counterpart": 23,
+        "no_exact_party_vote_counterpart": 13
+      },
+      "rawPremium": {
+        "n": 486,
+        "meanPP": 0.9943615645316972,
+        "medianPP": 0.11989951199870738,
+        "sdPP": 6.646217480243082,
+        "minPP": -40.76048702923444,
+        "p10PP": -2.698550707435094,
+        "p90PP": 6.849325917150967,
+        "maxPP": 49.83211618557679
+      },
+      "normalizedPremium": {
+        "n": 486,
+        "meanPP": -0.07743067122862064,
+        "medianPP": -0.3317054832713633,
+        "sdPP": 5.810180577884617,
+        "minPP": -43.70518046597077,
+        "p10PP": -3.14073824672728,
+        "p90PP": 4.626105157007052,
+        "maxPP": 51.29739612384371
+      }
+    },
+    "2011": {
+      "occurrenceCount": 453,
+      "eligibleCount": 423,
+      "normalizedCount": 423,
+      "exclusions": {
+        "independent_no_party_vote_counterpart": 17,
+        "no_exact_party_vote_counterpart": 13
+      },
+      "normalizationUnavailable": {
+        "independent_no_party_vote_counterpart": 17,
+        "no_exact_party_vote_counterpart": 13
+      },
+      "rawPremium": {
+        "n": 423,
+        "meanPP": 1.2343365276633833,
+        "medianPP": 0.09983836858911202,
+        "sdPP": 6.739474460386564,
+        "minPP": -31.043747787545428,
+        "p10PP": -4.461206546417511,
+        "p90PP": 8.331220933548101,
+        "maxPP": 41.54134233840042
+      },
+      "normalizedPremium": {
+        "n": 423,
+        "meanPP": 0.07972724439272622,
+        "medianPP": -0.3220801791465937,
+        "sdPP": 5.856011996396834,
+        "minPP": -32.06874034120802,
+        "p10PP": -5.1088014696611035,
+        "p90PP": 5.738736095267532,
+        "maxPP": 41.72959910674639
+      }
+    },
+    "2014": {
+      "occurrenceCount": 483,
+      "eligibleCount": 412,
+      "normalizedCount": 412,
+      "exclusions": {
+        "independent_no_party_vote_counterpart": 24,
+        "no_exact_party_vote_counterpart": 47
+      },
+      "normalizationUnavailable": {
+        "independent_no_party_vote_counterpart": 24,
+        "no_exact_party_vote_counterpart": 47
+      },
+      "rawPremium": {
+        "n": 412,
+        "meanPP": 1.3192016876710704,
+        "medianPP": 0.127134600758694,
+        "sdPP": 7.095668330991354,
+        "minPP": -33.77332040218101,
+        "p10PP": -4.371408824017859,
+        "p90PP": 8.926177586705933,
+        "maxPP": 40.69567717241366
+      },
+      "normalizedPremium": {
+        "n": 412,
+        "meanPP": 0.05553856546365147,
+        "medianPP": -0.5014834950615814,
+        "sdPP": 6.166002377138096,
+        "minPP": -33.78124823418679,
+        "p10PP": -4.424421181049558,
+        "p90PP": 6.488275454231639,
+        "maxPP": 40.542224872735574
+      }
+    },
+    "2017": {
+      "occurrenceCount": 453,
+      "eligibleCount": 407,
+      "normalizedCount": 407,
+      "exclusions": {
+        "independent_no_party_vote_counterpart": 30,
+        "no_exact_party_vote_counterpart": 16
+      },
+      "normalizationUnavailable": {
+        "independent_no_party_vote_counterpart": 30,
+        "no_exact_party_vote_counterpart": 16
+      },
+      "rawPremium": {
+        "n": 407,
+        "meanPP": 0.8454076862868558,
+        "medianPP": 0.1460500712437876,
+        "sdPP": 5.7212702281936885,
+        "minPP": -29.89319860780269,
+        "p10PP": -4.067329064335798,
+        "p90PP": 6.0765306268030885,
+        "maxPP": 41.38901732823643
+      },
+      "normalizedPremium": {
+        "n": 407,
+        "meanPP": 0.08121199229975318,
+        "medianPP": -0.5113259127331071,
+        "sdPP": 5.809387535047616,
+        "minPP": -30.355090930315747,
+        "p10PP": -4.815374081528022,
+        "p90PP": 5.491963253770408,
+        "maxPP": 41.33024402318271
+      }
+    },
+    "2020": {
+      "occurrenceCount": 601,
+      "eligibleCount": 543,
+      "normalizedCount": 542,
+      "exclusions": {
+        "independent_no_party_vote_counterpart": 33,
+        "no_exact_party_vote_counterpart": 25
+      },
+      "normalizationUnavailable": {
+        "independent_no_party_vote_counterpart": 33,
+        "insufficient_reference_contests": 1,
+        "no_exact_party_vote_counterpart": 25
+      },
+      "rawPremium": {
+        "n": 543,
+        "meanPP": 0.7211528696352129,
+        "medianPP": 0.15259339892064946,
+        "sdPP": 6.046146927400835,
+        "minPP": -21.86485076429929,
+        "p10PP": -5.321378375560969,
+        "p90PP": 7.7730158465656976,
+        "maxPP": 37.121465374059156
+      },
+      "normalizedPremium": {
+        "n": 542,
+        "meanPP": -0.010453895994092783,
+        "medianPP": -0.08396166740118172,
+        "sdPP": 4.301776267225956,
+        "minPP": -31.692048215792596,
+        "p10PP": -3.6276130854410717,
+        "p90PP": 3.472487979777292,
+        "maxPP": 41.93234153550836
+      }
+    },
+    "2023": {
+      "occurrenceCount": 495,
+      "eligibleCount": 403,
+      "normalizedCount": 403,
+      "exclusions": {
+        "cancelled_candidate_contest": 9,
+        "independent_no_party_vote_counterpart": 36,
+        "no_exact_party_vote_counterpart": 47
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 9,
+        "independent_no_party_vote_counterpart": 36,
+        "no_exact_party_vote_counterpart": 47
+      },
+      "rawPremium": {
+        "n": 403,
+        "meanPP": 1.6495533036156047,
+        "medianPP": 0.6288512482370657,
+        "sdPP": 6.699894369339313,
+        "minPP": -27.341382567486495,
+        "p10PP": -4.7284565620547045,
+        "p90PP": 10.641245505148385,
+        "maxPP": 37.98150427695119
+      },
+      "normalizedPremium": {
+        "n": 403,
+        "meanPP": 0.01447289384901435,
+        "medianPP": -0.30952834361805576,
+        "sdPP": 5.941288788932018,
+        "minPP": -33.91790871664405,
+        "p10PP": -4.879979765374809,
+        "p90PP": 5.495253393044155,
+        "maxPP": 35.73255862291081
+      }
+    }
+  },
+  "byScope": {
+    "general": {
+      "occurrenceCount": 2833,
+      "eligibleCount": 2529,
+      "normalizedCount": 2528,
+      "exclusions": {
+        "cancelled_candidate_contest": 9,
+        "independent_no_party_vote_counterpart": 152,
+        "no_exact_party_vote_counterpart": 143
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 9,
+        "independent_no_party_vote_counterpart": 152,
+        "insufficient_reference_contests": 1,
+        "no_exact_party_vote_counterpart": 143
+      },
+      "rawPremium": {
+        "n": 2529,
+        "meanPP": 0.8492299307058977,
+        "medianPP": 0.14934316613868015,
+        "sdPP": 5.853299484098615,
+        "minPP": -40.76048702923444,
+        "p10PP": -4.16936867260653,
+        "p90PP": 6.807288325764454,
+        "maxPP": 49.83211618557679
+      },
+      "normalizedPremium": {
+        "n": 2528,
+        "meanPP": -0.03686039265950389,
+        "medianPP": -0.28926017825590467,
+        "sdPP": 5.197415961208272,
+        "minPP": -43.70518046597077,
+        "p10PP": -3.995946274470126,
+        "p90PP": 4.729146217436095,
+        "maxPP": 51.29739612384371
+      }
+    },
+    "maori": {
+      "occurrenceCount": 174,
+      "eligibleCount": 145,
+      "normalizedCount": 145,
+      "exclusions": {
+        "independent_no_party_vote_counterpart": 11,
+        "no_exact_party_vote_counterpart": 18
+      },
+      "normalizationUnavailable": {
+        "independent_no_party_vote_counterpart": 11,
+        "no_exact_party_vote_counterpart": 18
+      },
+      "rawPremium": {
+        "n": 145,
+        "meanPP": 5.528479931152009,
+        "medianPP": 2.3943116530945634,
+        "sdPP": 12.675317340079276,
+        "minPP": -23.816914359961473,
+        "p10PP": -10.498265729635875,
+        "p90PP": 24.77232434289448,
+        "maxPP": 39.81346814963963
+      },
+      "normalizedPremium": {
+        "n": 145,
+        "meanPP": 1.002607760231847,
+        "medianPP": 1.1462702492565573,
+        "sdPP": 10.550015382457241,
+        "minPP": -28.275965693059117,
+        "p10PP": -12.09193778710625,
+        "p90PP": 14.199278825435782,
+        "maxPP": 31.46467677870263
+      }
+    }
+  },
+  "byAffiliation": {
+    "actnewzealand": {
+      "occurrenceCount": 305,
+      "eligibleCount": 304,
+      "normalizedCount": 304,
+      "exclusions": {
+        "cancelled_candidate_contest": 1
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1
+      },
+      "rawPremium": {
+        "n": 304,
+        "meanPP": -0.9528012827651345,
+        "medianPP": -0.7952110858517665,
+        "sdPP": 6.712152824097002,
+        "minPP": -8.093724928356465,
+        "p10PP": -5.994956580823064,
+        "p90PP": 0.4041921929281898,
+        "maxPP": 49.83211618557679
+      },
+      "normalizedPremium": {
+        "n": 304,
+        "meanPP": 0.007605398999599975,
+        "medianPP": -1.1249988994139013,
+        "sdPP": 6.546665230883036,
+        "minPP": -5.384557337294388,
+        "p10PP": -2.6437424351316774,
+        "p90PP": 1.3030140225158904,
+        "maxPP": 51.29739612384371
+      }
+    },
+    "advancenz": {
+      "occurrenceCount": 54,
+      "eligibleCount": 54,
+      "normalizedCount": 54,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 54,
+        "meanPP": 0.16338604400526974,
+        "medianPP": 0.0936211733060491,
+        "sdPP": 0.2849543124106554,
+        "minPP": -0.19592763504914684,
+        "p10PP": -0.06320956556053678,
+        "p90PP": 0.4220899336795855,
+        "maxPP": 1.2516648333296372
+      },
+      "normalizedPremium": {
+        "n": 54,
+        "meanPP": 0.022633525453164847,
+        "medianPP": -0.04805800993471035,
+        "sdPP": 0.289631323439183,
+        "minPP": -0.3437264437395674,
+        "p10PP": -0.2080617743369487,
+        "p90PP": 0.28489910952826397,
+        "maxPP": 1.1255048342357739
+      }
+    },
+    "alliance": {
+      "occurrenceCount": 21,
+      "eligibleCount": 20,
+      "normalizedCount": 20,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 20,
+        "meanPP": 0.3173523230698461,
+        "medianPP": 0.1834749059628832,
+        "sdPP": 0.4576217219481172,
+        "minPP": -0.03395354474171276,
+        "p10PP": 0.047569069863545296,
+        "p90PP": 0.5999153715808627,
+        "maxPP": 2.050625793879958
+      },
+      "normalizedPremium": {
+        "n": 20,
+        "meanPP": 0.011967721286548987,
+        "medianPP": -0.06336214894489642,
+        "sdPP": 0.5145116596388485,
+        "minPP": -0.6463235924411177,
+        "p10PP": -0.4168997071717715,
+        "p90PP": 0.21437339883762296,
+        "maxPP": 1.8322488146902665
+      }
+    },
+    "animaljusticeparty": {
+      "occurrenceCount": 17,
+      "eligibleCount": 16,
+      "normalizedCount": 16,
+      "exclusions": {
+        "cancelled_candidate_contest": 1
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1
+      },
+      "rawPremium": {
+        "n": 16,
+        "meanPP": 0.7112350862023261,
+        "medianPP": 0.6667939550502886,
+        "sdPP": 0.37772968268286017,
+        "minPP": 0.11273894361569271,
+        "p10PP": 0.28266992477736985,
+        "p90PP": 1.0827977943283438,
+        "maxPP": 1.7371652476349877
+      },
+      "normalizedPremium": {
+        "n": 16,
+        "meanPP": 0.01135617336844692,
+        "medianPP": -0.03542230773064614,
+        "sdPP": 0.4027947115861995,
+        "minPP": -0.6321459945180945,
+        "p10PP": -0.44370064265334996,
+        "p90PP": 0.40845709726441537,
+        "maxPP": 1.1032251807129503
+      }
+    },
+    "aotearoalegalisecannabisparty": {
+      "occurrenceCount": 64,
+      "eligibleCount": 64,
+      "normalizedCount": 64,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 64,
+        "meanPP": 1.3928211420222005,
+        "medianPP": 0.8056137242637684,
+        "sdPP": 1.5614897369783354,
+        "minPP": 0.19892933622860012,
+        "p10PP": 0.5012292132448342,
+        "p90PP": 3.0713080147863927,
+        "maxPP": 9.058062350680116
+      },
+      "normalizedPremium": {
+        "n": 64,
+        "meanPP": 0.18564899275721558,
+        "medianPP": -0.2510086187465824,
+        "sdPP": 1.5905610271108517,
+        "minPP": -1.4376782793817484,
+        "p10PP": -1.0425839233890986,
+        "p90PP": 2.2664300530810153,
+        "maxPP": 7.710848061831024
+      }
+    },
+    "aotearoanzyouthparty": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "attica": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "ban1080": {
+      "occurrenceCount": 8,
+      "eligibleCount": 8,
+      "normalizedCount": 8,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 8,
+        "meanPP": 1.8144307024195836,
+        "medianPP": 1.6096789903741984,
+        "sdPP": 1.0633455238428149,
+        "minPP": 0.5679556659574101,
+        "p10PP": 0.7508231228081678,
+        "p90PP": 3.2667050595760316,
+        "maxPP": 3.9189946140203284
+      },
+      "normalizedPremium": {
+        "n": 8,
+        "meanPP": -0.0027084993626780712,
+        "medianPP": -0.6233646627650536,
+        "sdPP": 1.3465096801611007,
+        "minPP": -1.3490166680050704,
+        "p10PP": -1.1526997522821587,
+        "p90PP": 1.8040604181296638,
+        "maxPP": 2.823559489287311
+      }
+    },
+    "climatefirst": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "climateparty": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "communistleague": {
+      "occurrenceCount": 10,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 10
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 10
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "conservative": {
+      "occurrenceCount": 91,
+      "eligibleCount": 91,
+      "normalizedCount": 91,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 91,
+        "meanPP": -0.24308884913390916,
+        "medianPP": -0.4867461131364414,
+        "sdPP": 2.311777210201574,
+        "minPP": -2.852885376825762,
+        "p10PP": -2.127943324620459,
+        "p90PP": 0.8290275038195738,
+        "maxPP": 14.945195160425676
+      },
+      "normalizedPremium": {
+        "n": 91,
+        "meanPP": 0.025667193795771568,
+        "medianPP": -0.23531437463514573,
+        "sdPP": 2.3177723411393116,
+        "minPP": -2.3731622373564702,
+        "p10PP": -1.6365212153024618,
+        "p90PP": 0.9739255266449967,
+        "maxPP": 15.72035357358152
+      }
+    },
+    "conservativeparty": {
+      "occurrenceCount": 52,
+      "eligibleCount": 52,
+      "normalizedCount": 52,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 52,
+        "meanPP": 0.17562537034175546,
+        "medianPP": -0.22551438691259607,
+        "sdPP": 2.300637053364103,
+        "minPP": -1.4599323441121443,
+        "p10PP": -1.0531539440895357,
+        "p90PP": 1.1255370217070424,
+        "maxPP": 14.85372700804914
+      },
+      "normalizedPremium": {
+        "n": 52,
+        "meanPP": -0.010220298640930076,
+        "medianPP": -0.4192582237979607,
+        "sdPP": 2.3511951615731257,
+        "minPP": -1.6825879938816595,
+        "p10PP": -1.2650613953796572,
+        "p90PP": 0.9576659889962716,
+        "maxPP": 15.003901764536954
+      }
+    },
+    "democracynz": {
+      "occurrenceCount": 13,
+      "eligibleCount": 12,
+      "normalizedCount": 12,
+      "exclusions": {
+        "cancelled_candidate_contest": 1
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1
+      },
+      "rawPremium": {
+        "n": 12,
+        "meanPP": 1.654042999091321,
+        "medianPP": 1.0840255266439107,
+        "sdPP": 1.6323375083490763,
+        "minPP": 0.540646765774853,
+        "p10PP": 0.5496903098579065,
+        "p90PP": 2.3085290206917763,
+        "maxPP": 6.713786252628069
+      },
+      "normalizedPremium": {
+        "n": 12,
+        "meanPP": -0.040945665990096504,
+        "medianPP": -0.6665261656614467,
+        "sdPP": 1.787299934067795,
+        "minPP": -1.2585933633553295,
+        "p10PP": -1.2469674201748926,
+        "p90PP": 0.6734754492769935,
+        "maxPP": 5.500479372559614
+      }
+    },
+    "democratsforsocialcredit": {
+      "occurrenceCount": 71,
+      "eligibleCount": 71,
+      "normalizedCount": 71,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 71,
+        "meanPP": 0.3056231701917747,
+        "medianPP": 0.19943747952399193,
+        "sdPP": 0.40277818905425156,
+        "minPP": -0.01683004772121098,
+        "p10PP": 0.05679025905194209,
+        "p90PP": 0.4615092239585476,
+        "maxPP": 2.3879085619537403
+      },
+      "normalizedPremium": {
+        "n": 71,
+        "meanPP": 0.0015769903420239468,
+        "medianPP": -0.12968562353193985,
+        "sdPP": 0.42625080041867186,
+        "minPP": -0.3564566682850586,
+        "p10PP": -0.25368464323957846,
+        "p90PP": 0.2238543537462995,
+        "maxPP": 2.1625097591173956
+      }
+    },
+    "directdemocracyparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "economiceuthenics": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "familyparty": {
+      "occurrenceCount": 11,
+      "eligibleCount": 11,
+      "normalizedCount": 11,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 11,
+        "meanPP": 1.9376474084529496,
+        "medianPP": 1.1596927596601354,
+        "sdPP": 2.2747049471999388,
+        "minPP": 0.47534238457945305,
+        "p10PP": 0.7401204508669833,
+        "p90PP": 2.953694246588443,
+        "maxPP": 8.8606232825891
+      },
+      "normalizedPremium": {
+        "n": 11,
+        "meanPP": 0.004334712902490091,
+        "medianPP": -0.8579141760536781,
+        "sdPP": 2.519180855541317,
+        "minPP": -1.6108487359913826,
+        "p10PP": -1.3053900992304555,
+        "p90PP": 1.094385629288595,
+        "maxPP": 7.679359894735946
+      }
+    },
+    "focusnewzealand": {
+      "occurrenceCount": 2,
+      "eligibleCount": 2,
+      "normalizedCount": 2,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 2,
+        "meanPP": 2.235725991767885,
+        "medianPP": 2.235725991767885,
+        "sdPP": 1.9521802933941135,
+        "minPP": 0.2835456983737718,
+        "p10PP": 0.6739817570525946,
+        "p90PP": 3.7974702264831763,
+        "maxPP": 4.187906285161999
+      },
+      "normalizedPremium": {
+        "n": 2,
+        "meanPP": 0.0,
+        "medianPP": 0.0,
+        "sdPP": 3.9043605867882274,
+        "minPP": -3.9043605867882274,
+        "p10PP": -3.123488469430582,
+        "p90PP": 3.1234884694305824,
+        "maxPP": 3.9043605867882274
+      }
+    },
+    "futureyouthparty": {
+      "occurrenceCount": 3,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "godsownnz": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "greenparty": {
+      "occurrenceCount": 354,
+      "eligibleCount": 353,
+      "normalizedCount": 353,
+      "exclusions": {
+        "cancelled_candidate_contest": 1
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1
+      },
+      "rawPremium": {
+        "n": 353,
+        "meanPP": -1.3142158543364606,
+        "medianPP": -1.0783807696002277,
+        "sdPP": 4.2763659712933855,
+        "minPP": -16.247352419061396,
+        "p10PP": -5.629303390793508,
+        "p90PP": 2.360259661309557,
+        "maxPP": 24.22493441488297
+      },
+      "normalizedPremium": {
+        "n": 353,
+        "meanPP": 0.16136152266609075,
+        "medianPP": -0.02121264446218185,
+        "sdPP": 4.06583474725946,
+        "minPP": -13.72218621500982,
+        "p10PP": -3.827377516967031,
+        "p90PP": 3.828757039795638,
+        "maxPP": 26.518366780006076
+      }
+    },
+    "hapuparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "harmony": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "heartlandnz": {
+      "occurrenceCount": 1,
+      "eligibleCount": 1,
+      "normalizedCount": 0,
+      "exclusions": {},
+      "normalizationUnavailable": {
+        "insufficient_reference_contests": 1
+      },
+      "rawPremium": {
+        "n": 1,
+        "meanPP": 19.908937345756506,
+        "medianPP": 19.908937345756506,
+        "sdPP": 0.0,
+        "minPP": 19.908937345756506,
+        "p10PP": 19.908937345756506,
+        "p90PP": 19.908937345756506,
+        "maxPP": 19.908937345756506
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "humanrightsparty": {
+      "occurrenceCount": 8,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 8
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 8
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "independent": {
+      "occurrenceCount": 163,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "independent_no_party_vote_counterpart": 163
+      },
+      "normalizationUnavailable": {
+        "independent_no_party_vote_counterpart": 163
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "integritynewzealand": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "internetparty": {
+      "occurrenceCount": 15,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 15
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 15
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "jimandertonsprogressive": {
+      "occurrenceCount": 26,
+      "eligibleCount": 26,
+      "normalizedCount": 26,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 26,
+        "meanPP": 1.5903138904169278,
+        "medianPP": -0.04284023549919864,
+        "sdPP": 7.455450991889449,
+        "minPP": -0.587175298062683,
+        "p10PP": -0.3439594340877402,
+        "p90PP": 1.0328329082544228,
+        "maxPP": 38.77637230840948
+      },
+      "normalizedPremium": {
+        "n": 26,
+        "meanPP": -0.02265875652045806,
+        "medianPP": -1.7086642355376527,
+        "sdPP": 7.757154165653204,
+        "minPP": -2.3011531110046928,
+        "p10PP": -2.0342039810592514,
+        "p90PP": -0.6043891145090525,
+        "maxPP": 38.66813347236132
+      }
+    },
+    "kiwiparty": {
+      "occurrenceCount": 36,
+      "eligibleCount": 36,
+      "normalizedCount": 36,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 36,
+        "meanPP": 0.559813225525439,
+        "medianPP": 0.347790669372457,
+        "sdPP": 0.7912364305734157,
+        "minPP": -0.10071713274060634,
+        "p10PP": 0.07642867728028463,
+        "p90PP": 0.978160777983628,
+        "maxPP": 4.25845845672806
+      },
+      "normalizedPremium": {
+        "n": 36,
+        "meanPP": -0.017249151643655578,
+        "medianPP": -0.23594016506959378,
+        "sdPP": 0.8151763290075833,
+        "minPP": -0.6975674021177501,
+        "p10PP": -0.5170981548114373,
+        "p90PP": 0.41377044824519804,
+        "maxPP": 3.7929051520177075
+      }
+    },
+    "labourparty": {
+      "occurrenceCount": 426,
+      "eligibleCount": 425,
+      "normalizedCount": 425,
+      "exclusions": {
+        "cancelled_candidate_contest": 1
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1
+      },
+      "rawPremium": {
+        "n": 425,
+        "meanPP": 3.194193707256158,
+        "medianPP": 2.676929805728945,
+        "sdPP": 8.478116171694376,
+        "minPP": -25.04547258416151,
+        "p10PP": -6.291479287682297,
+        "p90PP": 14.06843654536656,
+        "maxPP": 29.259635803088592
+      },
+      "normalizedPremium": {
+        "n": 425,
+        "meanPP": -0.30162052034150677,
+        "medianPP": -0.6439070823923532,
+        "sdPP": 7.638188367350486,
+        "minPP": -28.275965693059117,
+        "p10PP": -8.78954836475708,
+        "p90PP": 9.115799007013841,
+        "maxPP": 25.00337104051249
+      }
+    },
+    "leightonbakerparty": {
+      "occurrenceCount": 3,
+      "eligibleCount": 3,
+      "normalizedCount": 3,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 3,
+        "meanPP": 1.646078525652833,
+        "medianPP": 1.048150701734695,
+        "sdPP": 1.181636059705054,
+        "minPP": 0.5936515228757852,
+        "p10PP": 0.6845513586475671,
+        "p90PP": 2.8467768222253538,
+        "maxPP": 3.2964333523480187
+      },
+      "normalizedPremium": {
+        "n": 3,
+        "meanPP": -0.06275923778833119,
+        "medianPP": -1.0452632647754911,
+        "sdPP": 1.7941488561883738,
+        "minPP": -1.5974562747297778,
+        "p10PP": -1.4870176727389204,
+        "p90PP": 1.7545008079571223,
+        "maxPP": 2.4544418261402754
+      }
+    },
+    "libertarianz": {
+      "occurrenceCount": 25,
+      "eligibleCount": 25,
+      "normalizedCount": 25,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 25,
+        "meanPP": 0.2744850583524411,
+        "medianPP": 0.17816240658191412,
+        "sdPP": 0.34077859139502986,
+        "minPP": 0.06908817723137481,
+        "p10PP": 0.08331230977814721,
+        "p90PP": 0.33097828547792746,
+        "maxPP": 1.6513258011517786
+      },
+      "normalizedPremium": {
+        "n": 25,
+        "meanPP": 0.0008697119847181482,
+        "medianPP": -0.09496676655497246,
+        "sdPP": 0.3712083022125455,
+        "minPP": -0.31540943865666826,
+        "p10PP": -0.20302031788533803,
+        "p90PP": 0.10518919372239566,
+        "maxPP": 1.4580486474262169
+      }
+    },
+    "mana": {
+      "occurrenceCount": 23,
+      "eligibleCount": 23,
+      "normalizedCount": 23,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 23,
+        "meanPP": 3.9168857417535956,
+        "medianPP": 0.6475196956024359,
+        "sdPP": 7.183715817852189,
+        "minPP": -0.06370339567740788,
+        "p10PP": 0.044392774121701825,
+        "p90PP": 14.994224109138502,
+        "maxPP": 27.60826765801614
+      },
+      "normalizedPremium": {
+        "n": 23,
+        "meanPP": 0.813400566435959,
+        "medianPP": -1.4861002609117027,
+        "sdPP": 9.444171647737225,
+        "minPP": -26.54662476122307,
+        "p10PP": -2.1457516352067882,
+        "p90PP": 13.380313997392724,
+        "maxPP": 26.54662476122307
+      }
+    },
+    "manamovement": {
+      "occurrenceCount": 18,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 18
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 18
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "maoriparty": {
+      "occurrenceCount": 73,
+      "eligibleCount": 73,
+      "normalizedCount": 73,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 73,
+        "meanPP": 9.475055574104921,
+        "medianPP": 1.324525033277923,
+        "sdPP": 11.471009516562294,
+        "minPP": -0.21372997156010096,
+        "p10PP": 0.0030278491750486136,
+        "p90PP": 26.43262266497922,
+        "maxPP": 39.81346814963963
+      },
+      "normalizedPremium": {
+        "n": 73,
+        "meanPP": 1.315901748327593,
+        "medianPP": -2.5328508837097288,
+        "sdPP": 8.798485255335656,
+        "minPP": -15.100036138662476,
+        "p10PP": -6.369029502963897,
+        "p90PP": 15.257353323196908,
+        "maxPP": 23.071841909642583
+      }
+    },
+    "mcgillicuddyseriousparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "moneyfreeparty": {
+      "occurrenceCount": 11,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 11
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 11
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "moneyfreepartynz": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "nap": {
+      "occurrenceCount": 10,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 10
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 10
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "nationalparty": {
+      "occurrenceCount": 386,
+      "eligibleCount": 385,
+      "normalizedCount": 385,
+      "exclusions": {
+        "cancelled_candidate_contest": 1
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1
+      },
+      "rawPremium": {
+        "n": 385,
+        "meanPP": 2.8790225868735306,
+        "medianPP": 3.346686829874984,
+        "sdPP": 8.132680425850538,
+        "minPP": -40.76048702923444,
+        "p10PP": -5.758133134909353,
+        "p90PP": 12.421151646904896,
+        "maxPP": 20.732206536016296
+      },
+      "normalizedPremium": {
+        "n": 385,
+        "meanPP": -0.0693650854887291,
+        "medianPP": 1.195794332400535,
+        "sdPP": 7.435036170134102,
+        "minPP": -43.70518046597077,
+        "p10PP": -7.553223685762915,
+        "p90PP": 7.170798503372592,
+        "maxPP": 12.697483585123281
+      }
+    },
+    "newconservative": {
+      "occurrenceCount": 72,
+      "eligibleCount": 72,
+      "normalizedCount": 72,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 72,
+        "meanPP": 0.31604080570872295,
+        "medianPP": 0.22170041221815287,
+        "sdPP": 0.6221661917088399,
+        "minPP": -0.8332960529887036,
+        "p10PP": -0.31793827301334976,
+        "p90PP": 1.180895209257358,
+        "maxPP": 2.682143089363274
+      },
+      "normalizedPremium": {
+        "n": 72,
+        "meanPP": 0.03618235904268257,
+        "medianPP": -0.05904644189384514,
+        "sdPP": 0.6307537080599664,
+        "minPP": -1.1307085752355805,
+        "p10PP": -0.6072598630779856,
+        "p90PP": 0.9094223068410013,
+        "maxPP": 2.4364466129046107
+      }
+    },
+    "newconservatives": {
+      "occurrenceCount": 10,
+      "eligibleCount": 10,
+      "normalizedCount": 10,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 10,
+        "meanPP": 0.5294084706624766,
+        "medianPP": 0.4771346591811618,
+        "sdPP": 0.2641006846811521,
+        "minPP": 0.16200171493052257,
+        "p10PP": 0.2918367721225197,
+        "p90PP": 0.8204667746969727,
+        "maxPP": 1.15606580153366
+      },
+      "normalizedPremium": {
+        "n": 10,
+        "meanPP": -6.399507083595588e-05,
+        "medianPP": -0.05750325818048825,
+        "sdPP": 0.2933708099262932,
+        "minPP": -0.40994792422859444,
+        "p10PP": -0.2649431258727132,
+        "p90PP": 0.3281156034606818,
+        "maxPP": 0.6924339294079003
+      }
+    },
+    "neweconomicsparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "newnationparty": {
+      "occurrenceCount": 3,
+      "eligibleCount": 3,
+      "normalizedCount": 3,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 3,
+        "meanPP": 0.20035068875761264,
+        "medianPP": 0.1848759268624722,
+        "sdPP": 0.09377625649405325,
+        "minPP": 0.09402064126360613,
+        "p10PP": 0.11219169838337933,
+        "p90PP": 0.29469958388990214,
+        "maxPP": 0.3221554981467596
+      },
+      "normalizedPremium": {
+        "n": 3,
+        "meanPP": -0.0025989903706404812,
+        "medianPP": -0.026473762413945293,
+        "sdPP": 0.14511530738645143,
+        "minPP": -0.1671840536343597,
+        "p10PP": -0.1390419953902768,
+        "p90PP": 0.1433939234663178,
+        "maxPP": 0.18586084493638355
+      }
+    },
+    "newworldordermccannparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "newzeal": {
+      "occurrenceCount": 4,
+      "eligibleCount": 4,
+      "normalizedCount": 4,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 4,
+        "meanPP": 1.2214781774500185,
+        "medianPP": 1.131870590876661,
+        "sdPP": 0.6166658446745023,
+        "minPP": 0.4609308041414033,
+        "p10PP": 0.6179883919822939,
+        "p90PP": 1.8966540321764291,
+        "maxPP": 2.1612407239053484
+      },
+      "normalizedPremium": {
+        "n": 4,
+        "meanPP": 0.06037687081149994,
+        "medianPP": -0.03015706760713023,
+        "sdPP": 0.8211872955763043,
+        "minPP": -0.9868150978908847,
+        "p10PP": -0.758209219850682,
+        "p90PP": 0.9513901122085863,
+        "maxPP": 1.288636716351145
+      }
+    },
+    "newzealandfirstparty": {
+      "occurrenceCount": 203,
+      "eligibleCount": 202,
+      "normalizedCount": 202,
+      "exclusions": {
+        "cancelled_candidate_contest": 1
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1
+      },
+      "rawPremium": {
+        "n": 202,
+        "meanPP": -1.3213136490980641,
+        "medianPP": -1.5874260388827328,
+        "sdPP": 3.0973287421762117,
+        "minPP": -6.1818783177580094,
+        "p10PP": -4.02882376434807,
+        "p90PP": 0.8342982854168595,
+        "maxPP": 21.639495445870306
+      },
+      "normalizedPremium": {
+        "n": 202,
+        "meanPP": -0.02890022022590585,
+        "medianPP": -0.5499268616871846,
+        "sdPP": 2.943653985293228,
+        "minPP": -4.285947256070037,
+        "p10PP": -2.22982508919024,
+        "p90PP": 1.8923853178174963,
+        "maxPP": 22.76335364937182
+      }
+    },
+    "newzealandloyal": {
+      "occurrenceCount": 33,
+      "eligibleCount": 32,
+      "normalizedCount": 32,
+      "exclusions": {
+        "cancelled_candidate_contest": 1
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1
+      },
+      "rawPremium": {
+        "n": 32,
+        "meanPP": 0.9074799689114686,
+        "medianPP": 0.7136326148691569,
+        "sdPP": 0.7471454136376569,
+        "minPP": -0.36537131368866194,
+        "p10PP": 0.19225179185792374,
+        "p90PP": 1.8268225323952856,
+        "maxPP": 3.1143745467950876
+      },
+      "normalizedPremium": {
+        "n": 32,
+        "meanPP": -0.0010652745673094812,
+        "medianPP": -0.20079281444073863,
+        "sdPP": 0.7712506139931812,
+        "minPP": -1.3195729123504116,
+        "p10PP": -0.7396013958201467,
+        "p90PP": 0.9451811664016924,
+        "maxPP": 2.273282844189175
+      }
+    },
+    "newzealandpacificparty": {
+      "occurrenceCount": 8,
+      "eligibleCount": 8,
+      "normalizedCount": 8,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 8,
+        "meanPP": 1.8620213509827497,
+        "medianPP": 0.27712978652398457,
+        "sdPP": 3.9201154633839703,
+        "minPP": -0.09252941792089144,
+        "p10PP": 0.02163522810407198,
+        "p90PP": 4.407117300461723,
+        "maxPP": 12.18604884308199
+      },
+      "normalizedPremium": {
+        "n": 8,
+        "meanPP": 0.3283999416454784,
+        "medianPP": -1.4500885283126574,
+        "sdPP": 4.377849952458852,
+        "minPP": -1.8904236224894309,
+        "p10PP": -1.7566540574325382,
+        "p90PP": 3.1989347508832178,
+        "maxPP": 11.851220054941402
+      }
+    },
+    "newzealandrepresentativeparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "newzealandsovereigntyparty": {
+      "occurrenceCount": 3,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "ngaiwi": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "nocommercialairportatwhenuapaiairbaseparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "northlandparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "nzeconomiceuthenicsparty": {
+      "occurrenceCount": 5,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 5
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 5
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "nzindependentcoalition": {
+      "occurrenceCount": 4,
+      "eligibleCount": 4,
+      "normalizedCount": 4,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 4,
+        "meanPP": 1.2891384909198749,
+        "medianPP": 0.8154261108826881,
+        "sdPP": 1.2158731823071245,
+        "minPP": 0.23314217529766668,
+        "p10PP": 0.28490799484673607,
+        "p90PP": 2.672338891022763,
+        "maxPP": 3.292559566616456
+      },
+      "normalizedPremium": {
+        "n": 4,
+        "meanPP": -0.015417578693150337,
+        "medianPP": -0.6612618932705279,
+        "sdPP": 1.6890319468164499,
+        "minPP": -1.503498981159405,
+        "p10PP": -1.4199462158231744,
+        "p90PP": 1.9057865100987763,
+        "maxPP": 2.7643524529278594
+      }
+    },
+    "nzoutdoorsfreedomparty": {
+      "occurrenceCount": 3,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "nzoutdoorsparty": {
+      "occurrenceCount": 30,
+      "eligibleCount": 30,
+      "normalizedCount": 30,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 30,
+        "meanPP": 0.637191096255488,
+        "medianPP": 0.5402351136957504,
+        "sdPP": 0.47672506657971897,
+        "minPP": 0.05883032132034062,
+        "p10PP": 0.1703417868250587,
+        "p90PP": 1.2314994784706592,
+        "maxPP": 1.911017030638116
+      },
+      "normalizedPremium": {
+        "n": 30,
+        "meanPP": 0.016279850219415675,
+        "medianPP": -0.10434997700090698,
+        "sdPP": 0.5392070853637263,
+        "minPP": -0.8011372659940471,
+        "p10PP": -0.527471248644484,
+        "p90PP": 0.6547132607304955,
+        "maxPP": 1.5672988736319406
+      }
+    },
+    "nzpublicparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "oneparty": {
+      "occurrenceCount": 29,
+      "eligibleCount": 29,
+      "normalizedCount": 29,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 29,
+        "meanPP": 0.208862305451669,
+        "medianPP": 0.15380416360028268,
+        "sdPP": 0.17578802161507157,
+        "minPP": -0.15289816940348083,
+        "p10PP": 0.04799641689666054,
+        "p90PP": 0.529973857325341,
+        "maxPP": 0.6065924684832074
+      },
+      "normalizedPremium": {
+        "n": 29,
+        "meanPP": 0.015621052566794654,
+        "medianPP": -0.04100594294777589,
+        "sdPP": 0.18149913145426413,
+        "minPP": -0.3597482998507336,
+        "p10PP": -0.15108890936164007,
+        "p90PP": 0.34481508853547715,
+        "maxPP": 0.42269596836879036
+      }
+    },
+    "patrioticrevolutionaryfront": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "piratepartyofnewzealand": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "progressiveaotearoanewzealand": {
+      "occurrenceCount": 3,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "protectandprospernewzealand": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "ramresidentsactionmovement": {
+      "occurrenceCount": 11,
+      "eligibleCount": 11,
+      "normalizedCount": 11,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 11,
+        "meanPP": 0.28335789139692436,
+        "medianPP": 0.19007237757182252,
+        "sdPP": 0.19299388819341995,
+        "minPP": 0.08882226098430385,
+        "p10PP": 0.11939560097666381,
+        "p90PP": 0.574107774081796,
+        "maxPP": 0.7134292243035528
+      },
+      "normalizedPremium": {
+        "n": 11,
+        "meanPP": 0.012093789413104652,
+        "medianPP": -0.0891286262703861,
+        "sdPP": 0.21200098568544506,
+        "minPP": -0.20307771034533398,
+        "p10PP": -0.16997297207661397,
+        "p90PP": 0.3236367186055778,
+        "maxPP": 0.4888323779775855
+      }
+    },
+    "republicofnewzealandparty": {
+      "occurrenceCount": 3,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 3
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "restoreallthingsinchrist": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "rockthevotenz": {
+      "occurrenceCount": 4,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 4
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 4
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "socialcredit": {
+      "occurrenceCount": 19,
+      "eligibleCount": 19,
+      "normalizedCount": 19,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 19,
+        "meanPP": 0.2237207366744786,
+        "medianPP": 0.19321044324267844,
+        "sdPP": 0.1147620142231013,
+        "minPP": 0.03134268934499157,
+        "p10PP": 0.10699362922744121,
+        "p90PP": 0.33218835028320837,
+        "maxPP": 0.5148622078927783
+      },
+      "normalizedPremium": {
+        "n": 19,
+        "meanPP": -0.0033225372283784815,
+        "medianPP": -0.035955701277908196,
+        "sdPP": 0.12126892468208984,
+        "minPP": -0.20757915212859576,
+        "p10PP": -0.12601727663831175,
+        "p90PP": 0.11123138326397224,
+        "maxPP": 0.3048685211807249
+      }
+    },
+    "sustainablenewzealandparty": {
+      "occurrenceCount": 10,
+      "eligibleCount": 10,
+      "normalizedCount": 10,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 10,
+        "meanPP": 0.4796381229056966,
+        "medianPP": 0.2784805392410871,
+        "sdPP": 0.37316080648206784,
+        "minPP": 0.10378472899267889,
+        "p10PP": 0.11791616608712409,
+        "p90PP": 0.9475204951085976,
+        "maxPP": 1.2097568600290058
+      },
+      "normalizedPremium": {
+        "n": 10,
+        "meanPP": -0.006566001506531599,
+        "medianPP": -0.23148959132737665,
+        "sdPP": 0.4159424189875634,
+        "minPP": -0.42583510095275917,
+        "p10PP": -0.4106607606033124,
+        "p90PP": 0.5087074252421827,
+        "maxPP": 0.8136865599317749
+      }
+    },
+    "teaparty": {
+      "occurrenceCount": 9,
+      "eligibleCount": 9,
+      "normalizedCount": 9,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 9,
+        "meanPP": 0.531305256034293,
+        "medianPP": 0.33181647455041335,
+        "sdPP": 0.552143167896683,
+        "minPP": 0.04386723136292661,
+        "p10PP": 0.18441578161881433,
+        "p90PP": 0.9683691056803048,
+        "maxPP": 2.007753670876906
+      },
+      "normalizedPremium": {
+        "n": 9,
+        "meanPP": 0.00555402572746723,
+        "medianPP": -0.21810394186509385,
+        "sdPP": 0.6176802672175729,
+        "minPP": -0.5400145876838369,
+        "p10PP": -0.38742495339714533,
+        "p90PP": 0.49705643700895574,
+        "maxPP": 1.6556680304797868
+      }
+    },
+    "tepatimaori": {
+      "occurrenceCount": 17,
+      "eligibleCount": 17,
+      "normalizedCount": 17,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 17,
+        "meanPP": 9.851730358462865,
+        "medianPP": 3.617146712715328,
+        "sdPP": 11.490814194041368,
+        "minPP": 0.15517678658514245,
+        "p10PP": 0.3990722020934177,
+        "p90PP": 26.53453460477497,
+        "maxPP": 37.98150427695119
+      },
+      "normalizedPremium": {
+        "n": 17,
+        "meanPP": 1.7188969967029637,
+        "medianPP": -4.736123772301455,
+        "sdPP": 12.145365681354537,
+        "minPP": -8.691606616180529,
+        "p10PP": -8.302637581535109,
+        "p90PP": 19.318153522901486,
+        "maxPP": 31.46467677870263
+      }
+    },
+    "theexpats": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "thelogicparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "theopportunitiespartytop": {
+      "occurrenceCount": 55,
+      "eligibleCount": 55,
+      "normalizedCount": 55,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 55,
+        "meanPP": 0.8646220091467223,
+        "medianPP": 0.29218320480040305,
+        "sdPP": 3.1442743760040326,
+        "minPP": -2.192078448508999,
+        "p10PP": -1.0100794166601126,
+        "p90PP": 2.672064557785315,
+        "maxPP": 20.819613843635253
+      },
+      "normalizedPremium": {
+        "n": 55,
+        "meanPP": -0.03178508527699466,
+        "medianPP": -0.6050907736801188,
+        "sdPP": 3.343103808753368,
+        "minPP": -4.353438911566472,
+        "p10PP": -2.079358946868022,
+        "p90PP": 1.8019459148665793,
+        "maxPP": 20.597904030520446
+      }
+    },
+    "therepublicofnewzealandparty": {
+      "occurrenceCount": 5,
+      "eligibleCount": 5,
+      "normalizedCount": 5,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 5,
+        "meanPP": 0.0676074617069614,
+        "medianPP": 0.07623913393325812,
+        "sdPP": 0.044509951537584275,
+        "minPP": -0.015186149640018614,
+        "p10PP": 0.016950873721452358,
+        "p90PP": 0.10675785520979365,
+        "maxPP": 0.1101334450931509
+      },
+      "normalizedPremium": {
+        "n": 5,
+        "meanPP": 0.0001910539282499752,
+        "medianPP": 0.010841354027490849,
+        "sdPP": 0.05604455546644346,
+        "minPP": -0.10411501544836824,
+        "p10PP": -0.06357584686410267,
+        "p90PP": 0.049345371354926684,
+        "maxPP": 0.0527348066749703
+      }
+    },
+    "trumpnewzealandparty": {
+      "occurrenceCount": 1,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 1
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "unitedfuture": {
+      "occurrenceCount": 90,
+      "eligibleCount": 90,
+      "normalizedCount": 90,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 90,
+        "meanPP": 1.106971219602503,
+        "medianPP": -0.07159163643217244,
+        "sdPP": 6.22405279142456,
+        "minPP": -0.8477409668866519,
+        "p10PP": -0.448242795816053,
+        "p90PP": 0.4820831282306385,
+        "maxPP": 36.802068282480036
+      },
+      "normalizedPremium": {
+        "n": 90,
+        "meanPP": -0.09965685590452444,
+        "medianPP": -0.8001780862376079,
+        "sdPP": 6.5486133269726325,
+        "minPP": -4.035911018186837,
+        "p10PP": -3.549957836563224,
+        "p90PP": 0.12255860263650259,
+        "maxPP": 36.82418326122547
+      }
+    },
+    "visionnewzealand": {
+      "occurrenceCount": 30,
+      "eligibleCount": 5,
+      "normalizedCount": 5,
+      "exclusions": {
+        "cancelled_candidate_contest": 1,
+        "no_exact_party_vote_counterpart": 24
+      },
+      "normalizationUnavailable": {
+        "cancelled_candidate_contest": 1,
+        "no_exact_party_vote_counterpart": 24
+      },
+      "rawPremium": {
+        "n": 5,
+        "meanPP": 0.7054095552623042,
+        "medianPP": 0.41585449495400967,
+        "sdPP": 0.7235568125724566,
+        "minPP": 0.11590866954869425,
+        "p10PP": 0.20386556201526865,
+        "p90PP": 1.4891235783396066,
+        "maxPP": 2.1266504695106576
+      },
+      "normalizedPremium": {
+        "n": 5,
+        "meanPP": 0.09026685838751053,
+        "medianPP": -0.23206932678599862,
+        "sdPP": 0.8686540927888923,
+        "minPP": -0.6381990253730657,
+        "p10PP": -0.5320287122001861,
+        "p90PP": 1.0357600150115356,
+        "maxPP": 1.79004830198271
+      }
+    },
+    "voiceofthepeople": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "workersnow": {
+      "occurrenceCount": 2,
+      "eligibleCount": 0,
+      "normalizedCount": 0,
+      "exclusions": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "normalizationUnavailable": {
+        "no_exact_party_vote_counterpart": 2
+      },
+      "rawPremium": {
+        "n": 0
+      },
+      "normalizedPremium": {
+        "n": 0
+      }
+    },
+    "workersparty": {
+      "occurrenceCount": 4,
+      "eligibleCount": 4,
+      "normalizedCount": 4,
+      "exclusions": {},
+      "normalizationUnavailable": {},
+      "rawPremium": {
+        "n": 4,
+        "meanPP": 0.262482005180223,
+        "medianPP": 0.2602346444538216,
+        "sdPP": 0.11471537517228572,
+        "minPP": 0.11874018564072297,
+        "p10PP": 0.1399831859188105,
+        "p90PP": 0.3867787130227567,
+        "maxPP": 0.4107185461725259
+      },
+      "normalizedPremium": {
+        "n": 4,
+        "meanPP": -0.00877500364429249,
+        "medianPP": -0.013370941403668304,
+        "sdPP": 0.1492596542085252,
+        "minPP": -0.19111830578968977,
+        "p10PP": -0.16713950095303803,
+        "p90PP": 0.15326624387195373,
+        "maxPP": 0.18276017401985642
+      }
+    }
+  },
+  "majorParties": {
+    "nationalparty": {
+      "general": {
+        "occurrenceCount": 384,
+        "eligibleCount": 383,
+        "normalizedCount": 383,
+        "exclusions": {
+          "cancelled_candidate_contest": 1
+        },
+        "normalizationUnavailable": {
+          "cancelled_candidate_contest": 1
+        },
+        "rawPremium": {
+          "n": 383,
+          "meanPP": 2.8909459523919043,
+          "medianPP": 3.4287720905256114,
+          "sdPP": 8.152183536808614,
+          "minPP": -40.76048702923444,
+          "p10PP": -5.7637932074230935,
+          "p90PP": 12.427037058544181,
+          "maxPP": 20.732206536016296
+        },
+        "normalizedPremium": {
+          "n": 383,
+          "meanPP": -0.04096582721495843,
+          "medianPP": 1.2624113637641265,
+          "sdPP": 7.443975218249146,
+          "minPP": -43.70518046597077,
+          "p10PP": -7.570794945270584,
+          "p90PP": 7.201730495751465,
+          "maxPP": 12.697483585123281
+        }
+      },
+      "maori": {
+        "occurrenceCount": 2,
+        "eligibleCount": 2,
+        "normalizedCount": 2,
+        "exclusions": {},
+        "normalizationUnavailable": {},
+        "rawPremium": {
+          "n": 2,
+          "meanPP": 0.5956980901049375,
+          "medianPP": 0.5956980901049375,
+          "sdPP": 0.27971468234324204,
+          "minPP": 0.3159834077616955,
+          "p10PP": 0.3719263442303439,
+          "p90PP": 0.8194698359795312,
+          "maxPP": 0.8754127724481795
+        },
+        "normalizedPremium": {
+          "n": 2,
+          "meanPP": -5.507823044915815,
+          "medianPP": -5.507823044915815,
+          "sdPP": 0.2796169711046699,
+          "minPP": -5.787440016020485,
+          "p10PP": -5.731516621799551,
+          "p90PP": -5.284129468032079,
+          "maxPP": -5.228206073811145
+        }
+      }
+    },
+    "labourparty": {
+      "general": {
+        "occurrenceCount": 384,
+        "eligibleCount": 383,
+        "normalizedCount": 383,
+        "exclusions": {
+          "cancelled_candidate_contest": 1
+        },
+        "normalizationUnavailable": {
+          "cancelled_candidate_contest": 1
+        },
+        "rawPremium": {
+          "n": 383,
+          "meanPP": 4.188065364111446,
+          "medianPP": 3.4874143255653856,
+          "sdPP": 7.743798533041729,
+          "minPP": -25.04547258416151,
+          "p10PP": -4.654710927078674,
+          "p90PP": 14.573824827027769,
+          "maxPP": 29.259635803088592
+        },
+        "normalizedPremium": {
+          "n": 383,
+          "meanPP": 0.703657239951373,
+          "medianPP": 0.22444018166081214,
+          "sdPP": 6.845314424656358,
+          "minPP": -26.680080773011827,
+          "p10PP": -7.020650844293163,
+          "p90PP": 10.033485877725324,
+          "maxPP": 25.00337104051249
+        }
+      },
+      "maori": {
+        "occurrenceCount": 42,
+        "eligibleCount": 42,
+        "normalizedCount": 42,
+        "exclusions": {},
+        "normalizationUnavailable": {},
+        "rawPremium": {
+          "n": 42,
+          "meanPP": -5.8689692588289715,
+          "medianPP": -6.057174210332908,
+          "sdPP": 9.45284892267894,
+          "minPP": -23.816914359961473,
+          "p10PP": -16.964690106344925,
+          "p90PP": 8.67467448111046,
+          "maxPP": 15.066208889897903
+        },
+        "normalizedPremium": {
+          "n": 42,
+          "meanPP": -9.468796286821815,
+          "medianPP": -9.945028095154814,
+          "sdPP": 8.355158527795922,
+          "minPP": -28.275965693059117,
+          "p10PP": -19.814176714582977,
+          "p90PP": 3.195868820722648,
+          "maxPP": 8.042950554479877
+        }
+      }
+    }
+  },
+  "referenceCoverage": [
+    {
+      "referenceId": "2020:heartlandnz",
+      "contestCount": 1,
+      "coverageFraction": 0.013888888888888888,
+      "scopeCounts": {
+        "general": 1,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2014:focusnewzealand",
+      "contestCount": 2,
+      "coverageFraction": 0.028169014084507043,
+      "scopeCounts": {
+        "general": 2,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2017:mana",
+      "contestCount": 2,
+      "coverageFraction": 0.028169014084507043,
+      "scopeCounts": {
+        "general": 1,
+        "maori": 1
+      }
+    },
+    {
+      "referenceId": "2017:ban1080",
+      "contestCount": 3,
+      "coverageFraction": 0.04225352112676056,
+      "scopeCounts": {
+        "general": 3,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:leightonbakerparty",
+      "contestCount": 3,
+      "coverageFraction": 0.041666666666666664,
+      "scopeCounts": {
+        "general": 3,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:newnationparty",
+      "contestCount": 3,
+      "coverageFraction": 0.041666666666666664,
+      "scopeCounts": {
+        "general": 3,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:workersparty",
+      "contestCount": 4,
+      "coverageFraction": 0.05714285714285714,
+      "scopeCounts": {
+        "general": 4,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2014:nzindependentcoalition",
+      "contestCount": 4,
+      "coverageFraction": 0.056338028169014086,
+      "scopeCounts": {
+        "general": 3,
+        "maori": 1
+      }
+    },
+    {
+      "referenceId": "2017:nzoutdoorsparty",
+      "contestCount": 4,
+      "coverageFraction": 0.056338028169014086,
+      "scopeCounts": {
+        "general": 4,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:newzeal",
+      "contestCount": 4,
+      "coverageFraction": 0.05555555555555555,
+      "scopeCounts": {
+        "general": 4,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:therepublicofnewzealandparty",
+      "contestCount": 5,
+      "coverageFraction": 0.07142857142857142,
+      "scopeCounts": {
+        "general": 5,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:alliance",
+      "contestCount": 5,
+      "coverageFraction": 0.07142857142857142,
+      "scopeCounts": {
+        "general": 5,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2014:ban1080",
+      "contestCount": 5,
+      "coverageFraction": 0.07042253521126761,
+      "scopeCounts": {
+        "general": 5,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:visionnewzealand",
+      "contestCount": 5,
+      "coverageFraction": 0.06944444444444445,
+      "scopeCounts": {
+        "general": 4,
+        "maori": 1
+      }
+    },
+    {
+      "referenceId": "2017:aotearoalegalisecannabisparty",
+      "contestCount": 6,
+      "coverageFraction": 0.08450704225352113,
+      "scopeCounts": {
+        "general": 4,
+        "maori": 2
+      }
+    },
+    {
+      "referenceId": "2008:maoriparty",
+      "contestCount": 7,
+      "coverageFraction": 0.1,
+      "scopeCounts": {
+        "general": 0,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2020:maoriparty",
+      "contestCount": 7,
+      "coverageFraction": 0.09722222222222222,
+      "scopeCounts": {
+        "general": 0,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2008:aotearoalegalisecannabisparty",
+      "contestCount": 8,
+      "coverageFraction": 0.11428571428571428,
+      "scopeCounts": {
+        "general": 7,
+        "maori": 1
+      }
+    },
+    {
+      "referenceId": "2008:newzealandpacificparty",
+      "contestCount": 8,
+      "coverageFraction": 0.11428571428571428,
+      "scopeCounts": {
+        "general": 8,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2017:unitedfuture",
+      "contestCount": 8,
+      "coverageFraction": 0.11267605633802817,
+      "scopeCounts": {
+        "general": 8,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:libertarianz",
+      "contestCount": 9,
+      "coverageFraction": 0.12857142857142856,
+      "scopeCounts": {
+        "general": 9,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:aotearoalegalisecannabisparty",
+      "contestCount": 9,
+      "coverageFraction": 0.125,
+      "scopeCounts": {
+        "general": 7,
+        "maori": 2
+      }
+    },
+    {
+      "referenceId": "2020:teaparty",
+      "contestCount": 9,
+      "coverageFraction": 0.125,
+      "scopeCounts": {
+        "general": 9,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2014:aotearoalegalisecannabisparty",
+      "contestCount": 10,
+      "coverageFraction": 0.14084507042253522,
+      "scopeCounts": {
+        "general": 9,
+        "maori": 1
+      }
+    },
+    {
+      "referenceId": "2020:sustainablenewzealandparty",
+      "contestCount": 10,
+      "coverageFraction": 0.1388888888888889,
+      "scopeCounts": {
+        "general": 10,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:newconservatives",
+      "contestCount": 10,
+      "coverageFraction": 0.1388888888888889,
+      "scopeCounts": {
+        "general": 10,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:familyparty",
+      "contestCount": 11,
+      "coverageFraction": 0.15714285714285714,
+      "scopeCounts": {
+        "general": 11,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:ramresidentsactionmovement",
+      "contestCount": 11,
+      "coverageFraction": 0.15714285714285714,
+      "scopeCounts": {
+        "general": 11,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:maoriparty",
+      "contestCount": 11,
+      "coverageFraction": 0.15714285714285714,
+      "scopeCounts": {
+        "general": 4,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2014:unitedfuture",
+      "contestCount": 11,
+      "coverageFraction": 0.15492957746478872,
+      "scopeCounts": {
+        "general": 11,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:democracynz",
+      "contestCount": 12,
+      "coverageFraction": 0.16666666666666666,
+      "scopeCounts": {
+        "general": 12,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2017:democratsforsocialcredit",
+      "contestCount": 13,
+      "coverageFraction": 0.18309859154929578,
+      "scopeCounts": {
+        "general": 13,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:theopportunitiespartytop",
+      "contestCount": 13,
+      "coverageFraction": 0.18055555555555555,
+      "scopeCounts": {
+        "general": 13,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:democratsforsocialcredit",
+      "contestCount": 14,
+      "coverageFraction": 0.2,
+      "scopeCounts": {
+        "general": 14,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:democratsforsocialcredit",
+      "contestCount": 14,
+      "coverageFraction": 0.2,
+      "scopeCounts": {
+        "general": 14,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:aotearoalegalisecannabisparty",
+      "contestCount": 14,
+      "coverageFraction": 0.19444444444444445,
+      "scopeCounts": {
+        "general": 12,
+        "maori": 2
+      }
+    },
+    {
+      "referenceId": "2008:alliance",
+      "contestCount": 15,
+      "coverageFraction": 0.21428571428571427,
+      "scopeCounts": {
+        "general": 15,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:libertarianz",
+      "contestCount": 16,
+      "coverageFraction": 0.22857142857142856,
+      "scopeCounts": {
+        "general": 16,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:animaljusticeparty",
+      "contestCount": 16,
+      "coverageFraction": 0.2222222222222222,
+      "scopeCounts": {
+        "general": 16,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:aotearoalegalisecannabisparty",
+      "contestCount": 17,
+      "coverageFraction": 0.24285714285714285,
+      "scopeCounts": {
+        "general": 15,
+        "maori": 2
+      }
+    },
+    {
+      "referenceId": "2023:tepatimaori",
+      "contestCount": 17,
+      "coverageFraction": 0.2361111111111111,
+      "scopeCounts": {
+        "general": 10,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2020:socialcredit",
+      "contestCount": 19,
+      "coverageFraction": 0.2638888888888889,
+      "scopeCounts": {
+        "general": 19,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:unitedfuture",
+      "contestCount": 20,
+      "coverageFraction": 0.2857142857142857,
+      "scopeCounts": {
+        "general": 20,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:mana",
+      "contestCount": 21,
+      "coverageFraction": 0.3,
+      "scopeCounts": {
+        "general": 14,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2017:theopportunitiespartytop",
+      "contestCount": 21,
+      "coverageFraction": 0.29577464788732394,
+      "scopeCounts": {
+        "general": 21,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:theopportunitiespartytop",
+      "contestCount": 21,
+      "coverageFraction": 0.2916666666666667,
+      "scopeCounts": {
+        "general": 21,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:newzealandfirstparty",
+      "contestCount": 22,
+      "coverageFraction": 0.3142857142857143,
+      "scopeCounts": {
+        "general": 22,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2014:maoriparty",
+      "contestCount": 24,
+      "coverageFraction": 0.3380281690140845,
+      "scopeCounts": {
+        "general": 17,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2017:maoriparty",
+      "contestCount": 24,
+      "coverageFraction": 0.3380281690140845,
+      "scopeCounts": {
+        "general": 18,
+        "maori": 6
+      }
+    },
+    {
+      "referenceId": "2008:jimandertonsprogressive",
+      "contestCount": 26,
+      "coverageFraction": 0.37142857142857144,
+      "scopeCounts": {
+        "general": 26,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:nzoutdoorsparty",
+      "contestCount": 26,
+      "coverageFraction": 0.3611111111111111,
+      "scopeCounts": {
+        "general": 23,
+        "maori": 3
+      }
+    },
+    {
+      "referenceId": "2017:conservative",
+      "contestCount": 27,
+      "coverageFraction": 0.38028169014084506,
+      "scopeCounts": {
+        "general": 27,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:newzealandfirstparty",
+      "contestCount": 27,
+      "coverageFraction": 0.375,
+      "scopeCounts": {
+        "general": 27,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:oneparty",
+      "contestCount": 29,
+      "coverageFraction": 0.4027777777777778,
+      "scopeCounts": {
+        "general": 27,
+        "maori": 2
+      }
+    },
+    {
+      "referenceId": "2014:democratsforsocialcredit",
+      "contestCount": 30,
+      "coverageFraction": 0.4225352112676056,
+      "scopeCounts": {
+        "general": 29,
+        "maori": 1
+      }
+    },
+    {
+      "referenceId": "2014:newzealandfirstparty",
+      "contestCount": 31,
+      "coverageFraction": 0.43661971830985913,
+      "scopeCounts": {
+        "general": 31,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:newzealandfirstparty",
+      "contestCount": 32,
+      "coverageFraction": 0.45714285714285713,
+      "scopeCounts": {
+        "general": 32,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:newzealandloyal",
+      "contestCount": 32,
+      "coverageFraction": 0.4444444444444444,
+      "scopeCounts": {
+        "general": 32,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:newzealandfirstparty",
+      "contestCount": 33,
+      "coverageFraction": 0.4583333333333333,
+      "scopeCounts": {
+        "general": 33,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:kiwiparty",
+      "contestCount": 36,
+      "coverageFraction": 0.5142857142857142,
+      "scopeCounts": {
+        "general": 35,
+        "maori": 1
+      }
+    },
+    {
+      "referenceId": "2014:actnewzealand",
+      "contestCount": 39,
+      "coverageFraction": 0.5492957746478874,
+      "scopeCounts": {
+        "general": 39,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2017:actnewzealand",
+      "contestCount": 41,
+      "coverageFraction": 0.5774647887323944,
+      "scopeCounts": {
+        "general": 41,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:actnewzealand",
+      "contestCount": 50,
+      "coverageFraction": 0.7142857142857143,
+      "scopeCounts": {
+        "general": 50,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:unitedfuture",
+      "contestCount": 51,
+      "coverageFraction": 0.7285714285714285,
+      "scopeCounts": {
+        "general": 51,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:greenparty",
+      "contestCount": 51,
+      "coverageFraction": 0.7083333333333334,
+      "scopeCounts": {
+        "general": 49,
+        "maori": 2
+      }
+    },
+    {
+      "referenceId": "2011:conservativeparty",
+      "contestCount": 52,
+      "coverageFraction": 0.7428571428571429,
+      "scopeCounts": {
+        "general": 52,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:advancenz",
+      "contestCount": 54,
+      "coverageFraction": 0.75,
+      "scopeCounts": {
+        "general": 49,
+        "maori": 5
+      }
+    },
+    {
+      "referenceId": "2014:greenparty",
+      "contestCount": 57,
+      "coverageFraction": 0.8028169014084507,
+      "scopeCounts": {
+        "general": 53,
+        "maori": 4
+      }
+    },
+    {
+      "referenceId": "2017:newzealandfirstparty",
+      "contestCount": 57,
+      "coverageFraction": 0.8028169014084507,
+      "scopeCounts": {
+        "general": 57,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:actnewzealand",
+      "contestCount": 57,
+      "coverageFraction": 0.7916666666666666,
+      "scopeCounts": {
+        "general": 57,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2023:actnewzealand",
+      "contestCount": 58,
+      "coverageFraction": 0.8055555555555556,
+      "scopeCounts": {
+        "general": 58,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2008:actnewzealand",
+      "contestCount": 59,
+      "coverageFraction": 0.8428571428571429,
+      "scopeCounts": {
+        "general": 58,
+        "maori": 1
+      }
+    },
+    {
+      "referenceId": "2011:greenparty",
+      "contestCount": 59,
+      "coverageFraction": 0.8428571428571429,
+      "scopeCounts": {
+        "general": 56,
+        "maori": 3
+      }
+    },
+    {
+      "referenceId": "2008:greenparty",
+      "contestCount": 60,
+      "coverageFraction": 0.8571428571428571,
+      "scopeCounts": {
+        "general": 57,
+        "maori": 3
+      }
+    },
+    {
+      "referenceId": "2020:greenparty",
+      "contestCount": 60,
+      "coverageFraction": 0.8333333333333334,
+      "scopeCounts": {
+        "general": 57,
+        "maori": 3
+      }
+    },
+    {
+      "referenceId": "2008:nationalparty",
+      "contestCount": 63,
+      "coverageFraction": 0.9,
+      "scopeCounts": {
+        "general": 63,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2011:nationalparty",
+      "contestCount": 63,
+      "coverageFraction": 0.9,
+      "scopeCounts": {
+        "general": 63,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2014:conservative",
+      "contestCount": 64,
+      "coverageFraction": 0.9014084507042254,
+      "scopeCounts": {
+        "general": 64,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2014:nationalparty",
+      "contestCount": 64,
+      "coverageFraction": 0.9014084507042254,
+      "scopeCounts": {
+        "general": 64,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2017:nationalparty",
+      "contestCount": 64,
+      "coverageFraction": 0.9014084507042254,
+      "scopeCounts": {
+        "general": 64,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2020:nationalparty",
+      "contestCount": 65,
+      "coverageFraction": 0.9027777777777778,
+      "scopeCounts": {
+        "general": 65,
+        "maori": 0
+      }
+    },
+    {
+      "referenceId": "2017:greenparty",
+      "contestCount": 66,
+      "coverageFraction": 0.9295774647887324,
+      "scopeCounts": {
+        "general": 61,
+        "maori": 5
+      }
+    },
+    {
+      "referenceId": "2023:nationalparty",
+      "contestCount": 66,
+      "coverageFraction": 0.9166666666666666,
+      "scopeCounts": {
+        "general": 64,
+        "maori": 2
+      }
+    },
+    {
+      "referenceId": "2008:labourparty",
+      "contestCount": 70,
+      "coverageFraction": 1.0,
+      "scopeCounts": {
+        "general": 63,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2011:labourparty",
+      "contestCount": 70,
+      "coverageFraction": 1.0,
+      "scopeCounts": {
+        "general": 63,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2014:labourparty",
+      "contestCount": 71,
+      "coverageFraction": 1.0,
+      "scopeCounts": {
+        "general": 64,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2017:labourparty",
+      "contestCount": 71,
+      "coverageFraction": 1.0,
+      "scopeCounts": {
+        "general": 64,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2023:labourparty",
+      "contestCount": 71,
+      "coverageFraction": 0.9861111111111112,
+      "scopeCounts": {
+        "general": 64,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2020:labourparty",
+      "contestCount": 72,
+      "coverageFraction": 1.0,
+      "scopeCounts": {
+        "general": 65,
+        "maori": 7
+      }
+    },
+    {
+      "referenceId": "2020:newconservative",
+      "contestCount": 72,
+      "coverageFraction": 1.0,
+      "scopeCounts": {
+        "general": 65,
+        "maori": 7
+      }
+    }
+  ],
+  "coverageInterpretation": "Full coverage ranking, no fitted cutoff or additional exclusion. Two is the only hard contest minimum; a two-contest slate has one other reference contest.",
+  "excludedAffiliations": [
+    {
+      "year": 2008,
+      "affiliation": "Aotearoa NZ Youth Party",
+      "count": 1
+    },
+    {
+      "year": 2008,
+      "affiliation": "Communist League",
+      "count": 2
+    },
+    {
+      "year": 2008,
+      "affiliation": "Direct Democracy Party",
+      "count": 1
+    },
+    {
+      "year": 2008,
+      "affiliation": "Hapu Party",
+      "count": 1
+    },
+    {
+      "year": 2008,
+      "affiliation": "Human Rights Party",
+      "count": 3
+    },
+    {
+      "year": 2008,
+      "affiliation": "McGillicuddy Serious Party",
+      "count": 1
+    },
+    {
+      "year": 2008,
+      "affiliation": "NZ Economic Euthenics Party",
+      "count": 1
+    },
+    {
+      "year": 2008,
+      "affiliation": "New Zealand Representative Party",
+      "count": 1
+    },
+    {
+      "year": 2008,
+      "affiliation": "No Commercial Airport at Whenuapai Airbase Party",
+      "count": 1
+    },
+    {
+      "year": 2008,
+      "affiliation": "Restore All Things in Christ",
+      "count": 1
+    },
+    {
+      "year": 2011,
+      "affiliation": "Aotearoa NZ Youth Party",
+      "count": 1
+    },
+    {
+      "year": 2011,
+      "affiliation": "Communist League",
+      "count": 2
+    },
+    {
+      "year": 2011,
+      "affiliation": "Human Rights Party",
+      "count": 1
+    },
+    {
+      "year": 2011,
+      "affiliation": "NZ Economic Euthenics Party",
+      "count": 1
+    },
+    {
+      "year": 2011,
+      "affiliation": "New Economics Party",
+      "count": 1
+    },
+    {
+      "year": 2011,
+      "affiliation": "New Zealand Sovereignty Party",
+      "count": 2
+    },
+    {
+      "year": 2011,
+      "affiliation": "Nga Iwi",
+      "count": 2
+    },
+    {
+      "year": 2011,
+      "affiliation": "Pirate Party of New Zealand",
+      "count": 2
+    },
+    {
+      "year": 2011,
+      "affiliation": "Restore All Things in Christ",
+      "count": 1
+    },
+    {
+      "year": 2014,
+      "affiliation": "Alliance",
+      "count": 1
+    },
+    {
+      "year": 2014,
+      "affiliation": "Climate Party",
+      "count": 2
+    },
+    {
+      "year": 2014,
+      "affiliation": "Communist League",
+      "count": 2
+    },
+    {
+      "year": 2014,
+      "affiliation": "Human Rights Party",
+      "count": 1
+    },
+    {
+      "year": 2014,
+      "affiliation": "Internet Party",
+      "count": 15
+    },
+    {
+      "year": 2014,
+      "affiliation": "MANA Movement",
+      "count": 18
+    },
+    {
+      "year": 2014,
+      "affiliation": "Money Free Party",
+      "count": 5
+    },
+    {
+      "year": 2014,
+      "affiliation": "NZ Economic Euthenics Party",
+      "count": 1
+    },
+    {
+      "year": 2014,
+      "affiliation": "Patriotic Revolutionary Front",
+      "count": 1
+    },
+    {
+      "year": 2014,
+      "affiliation": "The Expats",
+      "count": 1
+    },
+    {
+      "year": 2017,
+      "affiliation": "Climate First",
+      "count": 1
+    },
+    {
+      "year": 2017,
+      "affiliation": "Communist League",
+      "count": 2
+    },
+    {
+      "year": 2017,
+      "affiliation": "Future Youth Party",
+      "count": 1
+    },
+    {
+      "year": 2017,
+      "affiliation": "GOdsownNZ",
+      "count": 1
+    },
+    {
+      "year": 2017,
+      "affiliation": "Human Rights Party",
+      "count": 1
+    },
+    {
+      "year": 2017,
+      "affiliation": "Money Free Party",
+      "count": 4
+    },
+    {
+      "year": 2017,
+      "affiliation": "NAP",
+      "count": 3
+    },
+    {
+      "year": 2017,
+      "affiliation": "NZ Economic Euthenics Party",
+      "count": 1
+    },
+    {
+      "year": 2017,
+      "affiliation": "Republic of New Zealand Party",
+      "count": 1
+    },
+    {
+      "year": 2017,
+      "affiliation": "The Logic Party",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "Attica",
+      "count": 2
+    },
+    {
+      "year": 2020,
+      "affiliation": "Climate First",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "Communist League",
+      "count": 2
+    },
+    {
+      "year": 2020,
+      "affiliation": "Future Youth Party",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "Harmony",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "Human Rights Party",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "Integrity New Zealand",
+      "count": 2
+    },
+    {
+      "year": 2020,
+      "affiliation": "Money Free Party",
+      "count": 2
+    },
+    {
+      "year": 2020,
+      "affiliation": "NAP",
+      "count": 5
+    },
+    {
+      "year": 2020,
+      "affiliation": "NZ Economic Euthenics Party",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "NZ Public Party",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "Progressive Aotearoa New Zealand",
+      "count": 2
+    },
+    {
+      "year": 2020,
+      "affiliation": "Republic of New Zealand Party",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "Trump New Zealand Party",
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "affiliation": "Voice of the People",
+      "count": 2
+    },
+    {
+      "year": 2023,
+      "affiliation": "Economic Euthenics",
+      "count": 1
+    },
+    {
+      "year": 2023,
+      "affiliation": "Future Youth Party",
+      "count": 1
+    },
+    {
+      "year": 2023,
+      "affiliation": "Human Rights Party",
+      "count": 1
+    },
+    {
+      "year": 2023,
+      "affiliation": "Money Free Party NZ",
+      "count": 2
+    },
+    {
+      "year": 2023,
+      "affiliation": "NAP",
+      "count": 2
+    },
+    {
+      "year": 2023,
+      "affiliation": "NZ Outdoors & Freedom Party",
+      "count": 3
+    },
+    {
+      "year": 2023,
+      "affiliation": "New World Order McCann Party",
+      "count": 1
+    },
+    {
+      "year": 2023,
+      "affiliation": "New Zealand Sovereignty Party",
+      "count": 1
+    },
+    {
+      "year": 2023,
+      "affiliation": "Northland Party",
+      "count": 1
+    },
+    {
+      "year": 2023,
+      "affiliation": "Progressive Aotearoa New Zealand",
+      "count": 1
+    },
+    {
+      "year": 2023,
+      "affiliation": "Protect and Prosper New Zealand",
+      "count": 2
+    },
+    {
+      "year": 2023,
+      "affiliation": "Republic of New Zealand Party",
+      "count": 1
+    },
+    {
+      "year": 2023,
+      "affiliation": "Rock the Vote NZ",
+      "count": 4
+    },
+    {
+      "year": 2023,
+      "affiliation": "Vision New Zealand",
+      "count": 24
+    },
+    {
+      "year": 2023,
+      "affiliation": "Workers Now",
+      "count": 2
+    }
+  ]
+}

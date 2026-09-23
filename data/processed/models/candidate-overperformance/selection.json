@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "primaryNormalization": "additive_national_centered",
+  "normalizationStatus": "retained_descriptive_primary",
+  "alternativeSensitivityMethods": [
+    "proportional",
+    "log_odds"
+  ],
+  "unresolvedPathology": "No broad failure of additive interpretation; material Maori scope differences and individual scale sensitivity remain for later validation.",
+  "forecastRestriction": "Same-election observed residual/reference is descriptive only, never a predictor of that same election.",
+  "reason": "Retain the prespecified interpretable raw percentage-point residual. Range and share-level diagnostics do not justify replacing the estimand; alternative scales remain sensitivity fields, not fitted competitors.",
+  "pathologyCounts": {
+    "additive": {
+      "definedCount": 2673,
+      "outOfRangeCount": 3,
+      "undefinedReasons": {},
+      "maximumBoundedAdjustmentPP": 0.6582795316009665
+    },
+    "proportional": {
+      "definedCount": 2673,
+      "outOfRangeCount": 0,
+      "undefinedReasons": {},
+      "maximumBoundedAdjustmentPP": 0.0
+    },
+    "log_odds": {
+      "definedCount": 2673,
+      "outOfRangeCount": 0,
+      "undefinedReasons": {},
+      "maximumBoundedAdjustmentPP": 0.0
+    }
+  },
+  "limitations": [
+    "Occurrence-level descriptive residual only; not personal quality, persistence or a causal effect.",
+    "Sparse slates can have noisy leave-one-out references; quantitative coverage remains explicit, with no extra cutoff.",
+    "Election-wide general/Maori reference can mask scope differences; scope diagnostics are separate.",
+    "Alternative normalization scales can materially differ; retain sensitivity for later historical validation.",
+    "No candidate residual is transported across people, elections or boundaries. No2026 baseline is constructed.",
+    "Stage6 remains provisional; complete predictive views must not stack overlapping premiums/effects."
+  ],
+  "nextStage": "Candidate persistence only; build reusable person/history/status evidence once at its start when authorized."
+}
