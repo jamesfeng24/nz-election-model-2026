@@ -12,7 +12,7 @@
   "unchangedModel": "Primary y=alpha+beta*x+gamma*R with equal pair weights; no-effect alpha0+beta0*x fitted independently on same training sample, zero and carry-forward benchmarks, 2017 and 2023 chronological holdouts. Retention interaction and normalization/identity sensitivities remain bounded.",
   "unchangedOperationalGates": "Both groups in each trained holdout, no worse MAE and RMSE versus no-effect in each trained holdout, pooled MAE improvement >=0.25 percentage point, stable sign under sensitivities, no target/later-outcome-dependent primary admission. Failure selects null.",
   "originalCheckpoint": "3e0945b464583039a76c985123395c44ebb70c6f",
-  "amendedInventoryCommit": null,
+  "amendedInventoryCommit": "48392b95e0cdced8ab220bda862e6e9ca9de58df",
   "effectCalculationAfterThisCommit": true,
   "affectedOutputs": [
     "inventory.json",
