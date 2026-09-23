@@ -1,4 +1,8 @@
-# Stage7 current state — 2026-09-23
+# Stage8 active — 2026-09-23
+
+PR #14 is verified merged into `main` as `fa1dda369f1cccbb9b2494c7ebac0db72f4177d9`, including Stage7 implementation `6538614e53c64a0f6486acd6bf1635d55f104b8c` and final handoff `b76dd8cdf0a4003fd1a78bf00261c4a540175c6a`. A clean local Stage7 branch was preserved; `stage/08-candidate-persistence` was created directly from fetched merged main. Stage7 specification and occurrence outputs are present. The Stage8 specification is now frozen before any fit at `data/processed/models/candidate-persistence/specification.json`. It limits the primary sample to evidenced same-person same-seat pairs on the three unchanged-boundary transitions, and predeclares chronological benchmarks, uncertainty and nullable operational selection. Next action: build separate auditable identity/status links, pin inputs, then fit and score conditional persistence. No Stage8 model has yet been fitted. Historical Stage7 wording below predates the verified merge.
+
+# Stage7 historical handoff — 2026-09-23
 
 Stage7 complete. Unmerged PR #14: https://github.com/jamesfeng24/nz-election-model-2026/pull/14 . Final implementation/verification checkpoint `eef561733d8fcd36f8c56f4879106e6df8c33b2d`; this documentation-only commit records the PR handoff. Branch `stage/07-normalized-candidate-overperformance`; base `a28044a795e18a1ebc07bc3ea7c16fd23d6c8c14` (PR13 merged, including architecture audit cfc92496f3425fa5059b9291b6af78fd529cc932). Checkpoints:21dfed7 frozen specification before diagnostics;f817bc0 matched-contest/leave-one-out implementation and outputs. Resumption preserved and verified local work. No web/source acquisition.
 
