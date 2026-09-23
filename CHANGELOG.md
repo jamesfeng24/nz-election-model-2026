@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — Stage8 candidate persistence — 2026-09-23
+
+- Started from verified merged Stage7 main and froze the Stage8 estimand, chronology, identity and operational gate before fitting.
+- Preserved two official Parliament member indexes with source registry checksums; added auditable person links, unresolved identities and election-dated history/status without changing source occurrences.
+- Built unchanged-boundary same-seat persistence pairs, chronological benchmark/fitted comparisons, scale and identity sensitivities and deterministic pinned outputs.
+- Found descriptive selected-sample continuity but no stable fitted gain over the prior-residual benchmark; selected operational persistence coefficient remains null. No freshman-incumbency or replacement fit, Stage6 bonus, candidate transport or2026 input.
+
 ## 0.1.0 — 2026-09-07
 
 - Established React, TypeScript, Vite and Vitest static application.

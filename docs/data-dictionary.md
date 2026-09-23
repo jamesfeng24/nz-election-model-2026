@@ -196,3 +196,14 @@ Each backtest record keys transition × election-local electorate × canonical p
 - `selection.json`: descriptive primary, sensitivity methods and interpretation/forecast restrictions. `manifest.json`: base revision, input/specification/code/output hashes and coverage counts.
 
 A residual is an outcome description. Future persistence may use a prior residual only with valid history and temporal separation; target-election observed offsets/residuals cannot enter predictors for that election. Missing values and undefined transforms remain null, never epsilon-smoothed or zero-filled.
+
+## Stage8 candidate-persistence output family
+
+`data/processed/models/candidate-persistence/` is separate from and does not alter Stage7 occurrences or earlier processed data.
+
+- `specification.json` freezes identity, status, geography, chronological validation, practical selection and overlap rules before fitting. `input-contract.json` pins Stage7 occurrences, six observed election files, two preserved Parliament indexes and their Stage8 source plan/specification by SHA-256.
+- `person-links.json.links` maps immutable `candidateOccurrenceId` to a separate `personId` with `confirmed`/`probable` status, method and occurrence/source/official-profile evidence. `unresolved` has one explicit record per unlinked occurrence; `persons` holds linked occurrence IDs and preserved source-name aliases. Probable chains are not silently promoted to confirmed. Stage7 `personId` remains null.
+- `history-status.json.records` has one row per Stage7 occurrence with election year, status, linked earlier occurrence IDs, prior-tenure evidence, `leftCensored` and nullable orthogonal `leadership`. Unknown is not new or first-term. No status coefficients are present.
+- `pairs.json.pairs` records adjacent linked histories, scope, party keys, electorates/boundary regimes, link confidence, additive prior/target residuals and alternative-scale residuals, primary/probable eligibility and exclusion reasons. `targetResidual` is historical outcome evidence only. `diagnostics` counts overlapping reasons and transition/scope coverage.
+- `analysis.json` separates the confirmed general primary full-sample descriptive fit from expanding chronological scores, zero-intercept sensitivity, proportional/log-odds sensitivity, probable-link sensitivity and separate Māori diagnostics. Residuals internally are fractions; reported losses/intercepts are percentage points.
+- `selection.json.selectedOperationalCoefficient` is nullable and currently null. `manifest.json` pins branch base, input/code/output hashes and identity/pair counts. No candidate effect is exposed as an application coefficient.

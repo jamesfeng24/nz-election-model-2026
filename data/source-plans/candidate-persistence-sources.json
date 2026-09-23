@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-mp-index-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/",
+      "dateOrElection": "Former MPs listed on 2026-09-23",
+      "resource": "Official former-MP index with person profile links and published service spans",
+      "retrievedAt": "2026-09-23T14:28:00+10:00",
+      "rawPath": "data/raw/identity-parliament-former.html",
+      "processingScript": "scripts/models/candidate_persistence/official.py",
+      "limitations": ["Retrospective MP-only identity evidence; does not cover all candidates or prove same-name non-MP identity.", "Published list may omit earlier former members and provides service, not every electorate candidacy."],
+      "sha256": "8f57f858a07090a17ae462f9e761487b59611c0dd53a72c39c07fa34b86ce6ca",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-current-mp-index-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/members-of-parliament/",
+      "dateOrElection": "Current MPs listed on 2026-09-23",
+      "resource": "Official current-MP index with person profile links and party/electorate labels",
+      "retrievedAt": "2026-09-23T14:30:00+10:00",
+      "rawPath": "data/raw/identity-parliament-current.html",
+      "processingScript": "scripts/models/candidate_persistence/official.py",
+      "limitations": ["Retrospective current-MP-only evidence; does not establish historical candidate identity alone or 2008 pre-panel tenure.", "Current labels need not equal historical source labels or party affiliation."],
+      "sha256": "97e71cd616605f00f8e6b90364de0d4650c267fff9867ac3ddeb0e492b8bc24a",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    }
+  ]
+}

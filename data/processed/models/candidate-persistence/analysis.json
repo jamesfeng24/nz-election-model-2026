@@ -1,0 +1,848 @@
+{
+  "schemaVersion": 1,
+  "primary": {
+    "scope": "general",
+    "scale": "additive",
+    "identitySet": "confirmed",
+    "n": 69,
+    "samePartyCount": 69,
+    "descriptiveFullSampleFit": {
+      "n": 69,
+      "intercept": 0.01422708038077005,
+      "slope": 0.849592442535181,
+      "inSampleRMSEPP": 5.456175551413449
+    },
+    "zeroInterceptSensitivityFit": {
+      "n": 69,
+      "intercept": 0.0,
+      "slope": 0.937288476692945,
+      "inSampleRMSEPP": 5.5726499360760595
+    },
+    "individualTransitionFits": [
+      {
+        "targetYear": 2011,
+        "fit": {
+          "n": 23,
+          "intercept": 0.041623101996125865,
+          "slope": 0.7194118829092402,
+          "inSampleRMSEPP": 3.089123966647694
+        }
+      },
+      {
+        "targetYear": 2017,
+        "fit": {
+          "n": 26,
+          "intercept": 0.010523681630804693,
+          "slope": 0.8696866578718969,
+          "inSampleRMSEPP": 3.3436886375399695
+        }
+      },
+      {
+        "targetYear": 2023,
+        "fit": {
+          "n": 20,
+          "intercept": -0.011286997783146006,
+          "slope": 0.9085122981317881,
+          "inSampleRMSEPP": 8.165042261129942
+        }
+      }
+    ],
+    "chronological": [
+      {
+        "targetYear": 2011,
+        "targetCount": 23,
+        "trainingCount": 0,
+        "trainingTargetYears": [],
+        "trainingFit": null,
+        "scores": {
+          "zero": {
+            "n": 23,
+            "maePP": 7.475725443500365,
+            "rmsePP": 8.469254384160667,
+            "biasPP": -7.475725443500365
+          },
+          "prior": {
+            "n": 23,
+            "maePP": 3.305665134962344,
+            "rmsePP": 4.328716694071177,
+            "biasPP": -2.86999773368188
+          }
+        }
+      },
+      {
+        "targetYear": 2017,
+        "targetCount": 26,
+        "trainingCount": 23,
+        "trainingTargetYears": [
+          2011
+        ],
+        "trainingFit": {
+          "n": 23,
+          "intercept": 0.041623101996125865,
+          "slope": 0.7194118829092402,
+          "inSampleRMSEPP": 3.089123966647694
+        },
+        "scores": {
+          "zero": {
+            "n": 26,
+            "maePP": 7.590332029267208,
+            "rmsePP": 10.786629364206123,
+            "biasPP": -6.582803449958361
+          },
+          "prior": {
+            "n": 26,
+            "maePP": 2.520559716688981,
+            "rmsePP": 3.552276006876707,
+            "biasPP": -0.22369096177699854
+          },
+          "fitted": {
+            "n": 26,
+            "maePP": 3.479300918737101,
+            "rmsePP": 4.203293414713651,
+            "biasPP": 2.1543278384084426
+          }
+        }
+      },
+      {
+        "targetYear": 2023,
+        "targetCount": 20,
+        "trainingCount": 49,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "trainingFit": {
+          "n": 49,
+          "intercept": 0.023998190910765917,
+          "slope": 0.8312918925417939,
+          "inSampleRMSEPP": 3.452982972957936
+        },
+        "scores": {
+          "zero": {
+            "n": 20,
+            "maePP": 9.039271425045763,
+            "rmsePP": 12.838957570710939,
+            "biasPP": -5.127036759671553
+          },
+          "prior": {
+            "n": 20,
+            "maePP": 4.998268219439908,
+            "rmsePP": 8.395816655945689,
+            "biasPP": 1.7586559831235484
+          },
+          "fitted": {
+            "n": 20,
+            "maePP": 4.998729657787688,
+            "rmsePP": 8.727431768820436,
+            "biasPP": 2.9968028830244746
+          }
+        }
+      }
+    ],
+    "equalTransitionMacroTrained": {
+      "zero": {
+        "maePP": 8.314801727156485,
+        "rmsePP": 11.81279346745853,
+        "biasPP": -5.854920104814957
+      },
+      "prior": {
+        "maePP": 3.759413968064445,
+        "rmsePP": 5.9740463314111985,
+        "biasPP": 0.767482510673275
+      },
+      "fitted": {
+        "maePP": 4.239015288262395,
+        "rmsePP": 6.465362591767043,
+        "biasPP": 2.5755653607164586
+      }
+    },
+    "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+  },
+  "sensitivity": [
+    {
+      "scope": "general",
+      "scale": "proportional",
+      "identitySet": "confirmed",
+      "n": 69,
+      "samePartyCount": 69,
+      "descriptiveFullSampleFit": {
+        "n": 69,
+        "intercept": 0.013659585949525523,
+        "slope": 0.8579250444638931,
+        "inSampleRMSEPP": 5.542722981529503
+      },
+      "zeroInterceptSensitivityFit": {
+        "n": 69,
+        "intercept": 0.0,
+        "slope": 0.9351176435334573,
+        "inSampleRMSEPP": 5.658849690190997
+      },
+      "individualTransitionFits": [
+        {
+          "targetYear": 2011,
+          "fit": {
+            "n": 23,
+            "intercept": 0.04089046771205437,
+            "slope": 0.656328736266139,
+            "inSampleRMSEPP": 3.353095090122364
+          }
+        },
+        {
+          "targetYear": 2017,
+          "fit": {
+            "n": 26,
+            "intercept": 0.016693656113907232,
+            "slope": 0.8304180068081798,
+            "inSampleRMSEPP": 3.738777812644771
+          }
+        },
+        {
+          "targetYear": 2023,
+          "fit": {
+            "n": 20,
+            "intercept": -0.014298952536851345,
+            "slope": 0.9445056514235541,
+            "inSampleRMSEPP": 8.018882313480281
+          }
+        }
+      ],
+      "chronological": [
+        {
+          "targetYear": 2011,
+          "targetCount": 23,
+          "trainingCount": 0,
+          "trainingTargetYears": [],
+          "trainingFit": null,
+          "scores": {
+            "zero": {
+              "n": 23,
+              "maePP": 6.9817946919344696,
+              "rmsePP": 8.082022992753199,
+              "biasPP": -6.9817946919344696
+            },
+            "prior": {
+              "n": 23,
+              "maePP": 3.43866617877075,
+              "rmsePP": 4.396807664733356,
+              "biasPP": -2.5743266642721334
+            }
+          }
+        },
+        {
+          "targetYear": 2017,
+          "targetCount": 26,
+          "trainingCount": 23,
+          "trainingTargetYears": [
+            2011
+          ],
+          "trainingFit": {
+            "n": 23,
+            "intercept": 0.04089046771205437,
+            "slope": 0.656328736266139,
+            "inSampleRMSEPP": 3.353095090122364
+          },
+          "scores": {
+            "zero": {
+              "n": 26,
+              "maePP": 7.548584883454904,
+              "rmsePP": 10.74104101598834,
+              "biasPP": -6.541463080919064
+            },
+            "prior": {
+              "n": 26,
+              "maePP": 2.8832666724833804,
+              "rmsePP": 4.108177596762924,
+              "biasPP": -0.6744209050697161
+            },
+            "fitted": {
+              "n": 26,
+              "maePP": 3.4998243532089406,
+              "rmsePP": 4.302224316143628,
+              "biasPP": 1.3982920671817136
+            }
+          }
+        },
+        {
+          "targetYear": 2023,
+          "targetCount": 20,
+          "trainingCount": 49,
+          "trainingTargetYears": [
+            2011,
+            2017
+          ],
+          "trainingFit": {
+            "n": 49,
+            "intercept": 0.026073826277433806,
+            "slope": 0.7990771721411833,
+            "inSampleRMSEPP": 3.674253361370386
+          },
+          "scores": {
+            "zero": {
+              "n": 20,
+              "maePP": 8.570702017130067,
+              "rmsePP": 13.09409267363055,
+              "biasPP": -4.040763945220705
+            },
+            "prior": {
+              "n": 20,
+              "maePP": 5.061022440876018,
+              "rmsePP": 8.226976829683613,
+              "biasPP": 1.7513233659144802
+            },
+            "fitted": {
+              "n": 20,
+              "maePP": 5.241182054056923,
+              "rmsePP": 8.755763314180346,
+              "biasPP": 3.19494343189941
+            }
+          }
+        }
+      ],
+      "equalTransitionMacroTrained": {
+        "zero": {
+          "maePP": 8.059643450292485,
+          "rmsePP": 11.917566844809446,
+          "biasPP": -5.2911135130698845
+        },
+        "prior": {
+          "maePP": 3.972144556679699,
+          "rmsePP": 6.167577213223268,
+          "biasPP": 0.5384512304223821
+        },
+        "fitted": {
+          "maePP": 4.370503203632932,
+          "rmsePP": 6.5289938151619875,
+          "biasPP": 2.2966177495405615
+        }
+      },
+      "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+    },
+    {
+      "scope": "general",
+      "scale": "log_odds",
+      "identitySet": "confirmed",
+      "n": 69,
+      "samePartyCount": 69,
+      "descriptiveFullSampleFit": {
+        "n": 69,
+        "intercept": 0.01479270378646979,
+        "slope": 0.8569535763417345,
+        "inSampleRMSEPP": 5.373619344096349
+      },
+      "zeroInterceptSensitivityFit": {
+        "n": 69,
+        "intercept": 0.0,
+        "slope": 0.9450933739353603,
+        "inSampleRMSEPP": 5.50599344848479
+      },
+      "individualTransitionFits": [
+        {
+          "targetYear": 2011,
+          "fit": {
+            "n": 23,
+            "intercept": 0.040672780584703895,
+            "slope": 0.7025434490019689,
+            "inSampleRMSEPP": 3.173607255924741
+          }
+        },
+        {
+          "targetYear": 2017,
+          "fit": {
+            "n": 26,
+            "intercept": 0.012620513695784139,
+            "slope": 0.8628780454671849,
+            "inSampleRMSEPP": 3.4517633358435154
+          }
+        },
+        {
+          "targetYear": 2023,
+          "fit": {
+            "n": 20,
+            "intercept": -0.008224610831379174,
+            "slope": 0.9146641135099678,
+            "inSampleRMSEPP": 8.005451888128635
+          }
+        }
+      ],
+      "chronological": [
+        {
+          "targetYear": 2011,
+          "targetCount": 23,
+          "trainingCount": 0,
+          "trainingTargetYears": [],
+          "trainingFit": null,
+          "scores": {
+            "zero": {
+              "n": 23,
+              "maePP": 7.294399994214155,
+              "rmsePP": 8.31796656219868,
+              "biasPP": -7.294399994214155
+            },
+            "prior": {
+              "n": 23,
+              "maePP": 3.2588043006149463,
+              "rmsePP": 4.2925439723651255,
+              "biasPP": -2.700916217049618
+            }
+          }
+        },
+        {
+          "targetYear": 2017,
+          "targetCount": 26,
+          "trainingCount": 23,
+          "trainingTargetYears": [
+            2011
+          ],
+          "trainingFit": {
+            "n": 23,
+            "intercept": 0.040672780584703895,
+            "slope": 0.7025434490019689,
+            "inSampleRMSEPP": 3.173607255924741
+          },
+          "scores": {
+            "zero": {
+              "n": 26,
+              "maePP": 7.574409306308727,
+              "rmsePP": 10.75887380004146,
+              "biasPP": -6.567029729427016
+            },
+            "prior": {
+              "n": 26,
+              "maePP": 2.6146960884838277,
+              "rmsePP": 3.6909945046393675,
+              "biasPP": -0.41902493579902783
+            },
+            "fitted": {
+              "n": 26,
+              "maePP": 3.396375125401089,
+              "rmsePP": 4.161901687802454,
+              "biasPP": 1.8194888212394178
+            }
+          }
+        },
+        {
+          "targetYear": 2023,
+          "targetCount": 20,
+          "trainingCount": 49,
+          "trainingTargetYears": [
+            2011,
+            2017
+          ],
+          "trainingFit": {
+            "n": 49,
+            "intercept": 0.024194244441129387,
+            "slope": 0.8284882247631103,
+            "inSampleRMSEPP": 3.493059818265377
+          },
+          "scores": {
+            "zero": {
+              "n": 20,
+              "maePP": 8.97746676937312,
+              "rmsePP": 13.087176156205759,
+              "biasPP": -5.1404571633473015
+            },
+            "prior": {
+              "n": 20,
+              "maePP": 4.758489875681855,
+              "rmsePP": 8.16647441935617,
+              "biasPP": 1.3787865222969111
+            },
+            "fitted": {
+              "n": 20,
+              "maePP": 4.874020065181999,
+              "rmsePP": 8.484515886251968,
+              "biasPP": 2.6800839086831276
+            }
+          }
+        }
+      ],
+      "equalTransitionMacroTrained": {
+        "zero": {
+          "maePP": 8.275938037840923,
+          "rmsePP": 11.92302497812361,
+          "biasPP": -5.853743446387159
+        },
+        "prior": {
+          "maePP": 3.6865929820828414,
+          "rmsePP": 5.928734461997768,
+          "biasPP": 0.4798807932489416
+        },
+        "fitted": {
+          "maePP": 4.135197595291544,
+          "rmsePP": 6.323208787027211,
+          "biasPP": 2.2497863649612726
+        }
+      },
+      "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+    },
+    {
+      "scope": "general",
+      "scale": "additive",
+      "identitySet": "confirmed_plus_probable",
+      "n": 281,
+      "samePartyCount": 281,
+      "descriptiveFullSampleFit": {
+        "n": 281,
+        "intercept": 0.0070429073396510306,
+        "slope": 0.7726013978669121,
+        "inSampleRMSEPP": 4.096282361024575
+      },
+      "zeroInterceptSensitivityFit": {
+        "n": 281,
+        "intercept": 0.0,
+        "slope": 0.7952494899486363,
+        "inSampleRMSEPP": 4.15343815316388
+      },
+      "individualTransitionFits": [
+        {
+          "targetYear": 2011,
+          "fit": {
+            "n": 100,
+            "intercept": 0.0074132521699367335,
+            "slope": 0.8774599623975494,
+            "inSampleRMSEPP": 3.5274347989415955
+          }
+        },
+        {
+          "targetYear": 2017,
+          "fit": {
+            "n": 106,
+            "intercept": 0.009502135598009692,
+            "slope": 0.6707410808044404,
+            "inSampleRMSEPP": 3.493594942036429
+          }
+        },
+        {
+          "targetYear": 2023,
+          "fit": {
+            "n": 75,
+            "intercept": 0.001045442946628436,
+            "slope": 0.8728840639729354,
+            "inSampleRMSEPP": 5.2035925175915025
+          }
+        }
+      ],
+      "chronological": [
+        {
+          "targetYear": 2011,
+          "targetCount": 100,
+          "trainingCount": 0,
+          "trainingTargetYears": [],
+          "trainingFit": null,
+          "scores": {
+            "zero": {
+              "n": 100,
+              "maePP": 4.168658189042714,
+              "rmsePP": 5.703713570639381,
+              "biasPP": -1.798682813225784
+            },
+            "prior": {
+              "n": 100,
+              "maePP": 2.4931022491237638,
+              "rmsePP": 3.622697885968551,
+              "biasPP": -0.5936619102286678
+            }
+          }
+        },
+        {
+          "targetYear": 2017,
+          "targetCount": 106,
+          "trainingCount": 100,
+          "trainingTargetYears": [
+            2011
+          ],
+          "trainingFit": {
+            "n": 100,
+            "intercept": 0.0074132521699367335,
+            "slope": 0.8774599623975494,
+            "inSampleRMSEPP": 3.5274347989415955
+          },
+          "scores": {
+            "zero": {
+              "n": 106,
+              "maePP": 4.106060457367014,
+              "rmsePP": 6.480240067213616,
+              "biasPP": -1.8465918236195735
+            },
+            "prior": {
+              "n": 106,
+              "maePP": 2.3782876131476867,
+              "rmsePP": 4.3384259060804355,
+              "biasPP": -0.5101919974101063
+            },
+            "fitted": {
+              "n": 106,
+              "maePP": 2.3146318992894086,
+              "rmsePP": 3.8360488712398157,
+              "biasPP": 0.0673707346279505
+            }
+          }
+        },
+        {
+          "targetYear": 2023,
+          "targetCount": 75,
+          "trainingCount": 206,
+          "trainingTargetYears": [
+            2011,
+            2017
+          ],
+          "trainingFit": {
+            "n": 206,
+            "intercept": 0.00901258129928452,
+            "slope": 0.724547978191954,
+            "inSampleRMSEPP": 3.557655980044964
+          },
+          "scores": {
+            "zero": {
+              "n": 75,
+              "maePP": 5.558833248631389,
+              "rmsePP": 8.666661997211556,
+              "biasPP": -2.077899969215449
+            },
+            "prior": {
+              "n": 75,
+              "maePP": 3.061632863893291,
+              "rmsePP": 5.295082939862164,
+              "biasPP": 0.1828305859637453
+            },
+            "fitted": {
+              "n": 75,
+              "maePP": 3.2791039862432525,
+              "rmsePP": 5.343472913791728,
+              "biasPP": 0.4613659137048618
+            }
+          }
+        }
+      ],
+      "equalTransitionMacroTrained": {
+        "zero": {
+          "maePP": 4.832446852999201,
+          "rmsePP": 7.573451032212586,
+          "biasPP": -1.9622458964175113
+        },
+        "prior": {
+          "maePP": 2.719960238520489,
+          "rmsePP": 4.8167544229713,
+          "biasPP": -0.16368070572318053
+        },
+        "fitted": {
+          "maePP": 2.7968679427663306,
+          "rmsePP": 4.589760892515772,
+          "biasPP": 0.26436832416640615
+        }
+      },
+      "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+    }
+  ],
+  "maoriDescriptive": {
+    "scope": "maori",
+    "scale": "additive",
+    "identitySet": "confirmed",
+    "n": 0,
+    "samePartyCount": 0,
+    "descriptiveFullSampleFit": null,
+    "zeroInterceptSensitivityFit": null,
+    "individualTransitionFits": [
+      {
+        "targetYear": 2011,
+        "fit": null
+      },
+      {
+        "targetYear": 2017,
+        "fit": null
+      },
+      {
+        "targetYear": 2023,
+        "fit": null
+      }
+    ],
+    "chronological": [
+      {
+        "targetYear": 2011,
+        "targetCount": 0,
+        "trainingCount": 0,
+        "trainingTargetYears": [],
+        "trainingFit": null,
+        "scores": null
+      },
+      {
+        "targetYear": 2017,
+        "targetCount": 0,
+        "trainingCount": 0,
+        "trainingTargetYears": [],
+        "trainingFit": null,
+        "scores": null
+      },
+      {
+        "targetYear": 2023,
+        "targetCount": 0,
+        "trainingCount": 0,
+        "trainingTargetYears": [],
+        "trainingFit": null,
+        "scores": null
+      }
+    ],
+    "equalTransitionMacroTrained": {},
+    "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+  },
+  "maoriProbableSensitivity": {
+    "scope": "maori",
+    "scale": "additive",
+    "identitySet": "confirmed_plus_probable",
+    "n": 15,
+    "samePartyCount": 15,
+    "descriptiveFullSampleFit": {
+      "n": 15,
+      "intercept": 0.026247512767358625,
+      "slope": 0.866764406287023,
+      "inSampleRMSEPP": 7.637149236405532
+    },
+    "zeroInterceptSensitivityFit": {
+      "n": 15,
+      "intercept": 0.0,
+      "slope": 0.8493118381378104,
+      "inSampleRMSEPP": 8.073575754110832
+    },
+    "individualTransitionFits": [
+      {
+        "targetYear": 2011,
+        "fit": {
+          "n": 4,
+          "intercept": 0.0611759526570024,
+          "slope": 0.6594574075197436,
+          "inSampleRMSEPP": 4.419599956877189
+        }
+      },
+      {
+        "targetYear": 2017,
+        "fit": {
+          "n": 8,
+          "intercept": 0.007929825837294818,
+          "slope": 1.2486100849144632,
+          "inSampleRMSEPP": 6.619446773069034
+        }
+      },
+      {
+        "targetYear": 2023,
+        "fit": {
+          "n": 3,
+          "intercept": -0.061811216921678694,
+          "slope": 0.003981200400866128,
+          "inSampleRMSEPP": 1.9616035266646803
+        }
+      }
+    ],
+    "chronological": [
+      {
+        "targetYear": 2011,
+        "targetCount": 4,
+        "trainingCount": 0,
+        "trainingTargetYears": [],
+        "trainingFit": null,
+        "scores": {
+          "zero": {
+            "n": 4,
+            "maePP": 7.080665146540325,
+            "rmsePP": 8.646096706411956,
+            "biasPP": -4.463545173566009
+          },
+          "prior": {
+            "n": 4,
+            "maePP": 7.669147101953385,
+            "rmsePP": 8.806311647982112,
+            "biasPP": -6.971743691428151
+          }
+        }
+      },
+      {
+        "targetYear": 2017,
+        "targetCount": 8,
+        "trainingCount": 4,
+        "trainingTargetYears": [
+          2011
+        ],
+        "trainingFit": {
+          "n": 4,
+          "intercept": 0.0611759526570024,
+          "slope": 0.6594574075197436,
+          "inSampleRMSEPP": 4.419599956877189
+        },
+        "scores": {
+          "zero": {
+            "n": 8,
+            "maePP": 13.610374010072043,
+            "rmsePP": 14.640043000124422,
+            "biasPP": -3.8560473237041295
+          },
+          "prior": {
+            "n": 8,
+            "maePP": 5.2317381647113725,
+            "rmsePP": 7.208022017636148,
+            "biasPP": -1.4028677627009163
+          },
+          "fitted": {
+            "n": 8,
+            "maePP": 8.159107897526265,
+            "rmsePP": 9.670512035050269,
+            "biasPP": 3.879315375475713
+          }
+        }
+      },
+      {
+        "targetYear": 2023,
+        "targetCount": 3,
+        "trainingCount": 12,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "trainingFit": {
+          "n": 12,
+          "intercept": 0.032495351316482214,
+          "slope": 1.0120399867445995,
+          "inSampleRMSEPP": 7.060520085668159
+        },
+        "scores": {
+          "zero": {
+            "n": 3,
+            "maePP": 6.208079816218877,
+            "rmsePP": 6.510730628730722,
+            "biasPP": 6.208079816218877
+          },
+          "prior": {
+            "n": 3,
+            "maePP": 9.044368906383417,
+            "rmsePP": 9.806521487263751,
+            "biasPP": -0.5632758897494683
+          },
+          "fitted": {
+            "n": 3,
+            "maePP": 8.08495810462803,
+            "rmsePP": 10.240748764486744,
+            "biasPP": 2.6047322089559257
+          }
+        }
+      }
+    ],
+    "equalTransitionMacroTrained": {
+      "zero": {
+        "maePP": 9.90922691314546,
+        "rmsePP": 10.575386814427572,
+        "biasPP": 1.1760162462573738
+      },
+      "prior": {
+        "maePP": 7.138053535547394,
+        "rmsePP": 8.507271752449949,
+        "biasPP": -0.9830718262251923
+      },
+      "fitted": {
+        "maePP": 8.122033001077147,
+        "rmsePP": 9.955630399768506,
+        "biasPP": 3.2420237922158193
+      }
+    },
+    "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+  },
+  "dependence": "Shared party/election reference offsets, repeated people and three transition clusters preclude candidate-pair iid inference.",
+  "selection": "Conditional on returning candidacy, MP-focused confirmation, held contests and unchanged seat geography."
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "branchBase": "fa1dda369f1cccbb9b2494c7ebac0db72f4177d9",
+  "inputHashes": {
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/models/candidate-persistence/specification.json": "d5889cab444aa195e3b36e9b7b1a64ab7a3402180aba0bd699424ac0c042a86a",
+    "data/raw/identity-parliament-current.html": "97e71cd616605f00f8e6b90364de0d4650c267fff9867ac3ddeb0e492b8bc24a",
+    "data/raw/identity-parliament-former.html": "8f57f858a07090a17ae462f9e761487b59611c0dd53a72c39c07fa34b86ce6ca",
+    "data/source-plans/candidate-persistence-sources.json": "ccfa7cbbfa9fb4136a501d8790dbc4dac7bcc995f989a6d3a4e7a0e22c6e267b"
+  },
+  "codeHashes": {
+    "scripts/models/candidate_persistence/__init__.py": "23b760aa3f8e70b2b5d2ca13b3846f45bfaf3007fbb0d8350cae7a7ddc5f33fd",
+    "scripts/models/candidate_persistence/identity.py": "390810668e583d37b4fa2df39e3d5f4c81366d108dbb5535e3f64c10cf1b48a0",
+    "scripts/models/candidate_persistence/model.py": "859d19c2663cbb832b488c95db1f547f94904e9e4c708ab42e0c57252906a187",
+    "scripts/models/candidate_persistence/official.py": "0cbfe26fffbe3d46f99693fcc44e7002207d95bc1b6f94cee477884e23db40b2",
+    "scripts/models/candidate_persistence/pairs.py": "d04bb730859b25efbae090f52d61b7dcec272678efb1d640f77a947db39de532",
+    "scripts/models/candidate_persistence/run.py": "a0a56bbba51829caa22a3eec0cc10cccd8eb93263ecd0d12dcdbb0c2935d336f",
+    "scripts/validate/source_files.py": "6da1cbcc3d3be0cd58088303697a7ce9782cd72721240e630f28c8d7ee4db445"
+  },
+  "outputHashes": {
+    "person-links.json": "457e8f87b2cdb758b2c2dfe6f8ad2bcecae15d5c7c1cfdb9fbe55a246ce1ca81",
+    "history-status.json": "1cd07b9f3e263b50b61fefb7302a1efa594234040b0e96aae24ed15502305c66",
+    "pairs.json": "2452c1aca9084667c1ccb9d6704f24e44e1b392a485d04fab2c185b17af9500f",
+    "analysis.json": "5957ce64bcb61661587a5fee3836d2e50dc938bf680138759802b9c854fe9a13",
+    "selection.json": "2dd18e7647d3f61403b3bc0df2d1798b6c1717ae4c5f5e0701607326c7223ab4"
+  },
+  "counts": {
+    "occurrences": 3007,
+    "confirmed": 215,
+    "probable": 747,
+    "unresolved": 2045,
+    "primaryPairs": 69
+  }
+}
