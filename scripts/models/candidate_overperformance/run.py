@@ -52,7 +52,8 @@ def build():
                        'Stage6 remains provisional; complete predictive views must not stack overlapping premiums/effects.'],
         'nextStage': 'Candidate persistence only; build reusable person/history/status evidence once at its start when authorized.'}
     dependencies = ['scripts/models/party_vote_transform/inputs.py', 'scripts/transform/historical.py',
-                    'scripts/transform/modern_tables.py', 'scripts/transform/modern_config.py', 'scripts/transform/panel_config.py']
+                    'scripts/transform/modern_tables.py', 'scripts/transform/modern_config.py', 'scripts/transform/panel_config.py',
+                    'scripts/models/source_provenance.py']
     code = sorted(list((ROOT/'scripts/models/candidate_overperformance').glob('*.py')) + [ROOT/p for p in dependencies])
     outputs['manifest.json'] = {
         'schemaVersion': 1, 'branchBase': BASE, 'elections': spec['elections'],

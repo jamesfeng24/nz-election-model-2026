@@ -6,6 +6,7 @@ from pathlib import Path
 from scripts.boundaries.census_2013 import ROOT
 from scripts.transform.historical import key,candidate_table as legacy
 from scripts.transform.modern_tables import candidate_table as modern
+from scripts.models.source_provenance import validated_supporting_sources
 
 DEST=ROOT/'data/processed/models/nat-lab-elasticity'
 PARTIES=('nationalparty','labourparty')
@@ -33,7 +34,9 @@ def build():
     if selection['selectionStatus']!='unresolved_between_methods' or selection['retainedCandidateSet']!=['additive','proportional','log_odds']:raise ValueError('Changed Stage5 selection')
     base=json.loads(read('data/processed/models/party-vote-transform/backtest-records.json'))['records']
     base=[r for r in base if r['primary'] and r['canonicalPartyId'] in PARTIES]
-    registry=json.loads(read('data/sources.json'))['sources'];registered={r['rawPath']:r for r in registry}
+    snapshot=json.loads(read('data/source-plans/stage6-7-supporting-candidate-sources.json'))
+    registry=json.loads((ROOT/'data/sources.json').read_bytes())
+    supporting=validated_supporting_sources(snapshot,registry,read)
     elections={}
     for y in [2008,2011,2014,2017,2020,2023]:
         d=json.loads(read(f'data/processed/elections/{y}.json'));rs={key(e['name']):e for e in d['electorates']}
@@ -42,9 +45,8 @@ def build():
         if len(entries)!=7:raise ValueError('Supporting Maori inventory')
         names=[r['electorateName'] for r in base if r['sourceYear']==y or r['targetYear']==y]
         for entry in entries:
-            path=next(p for p,r in registered.items() if r['url']==entry['url'])
-            raw=read(path)
-            if hashes[path]!=registered[path]['sha256']:raise ValueError('Source checksum')
+            if entry['url'] not in supporting:raise ValueError('Unpinned supporting candidate source')
+            raw=supporting[entry['url']]['raw']
             c=legacy(raw) if y<=2014 else modern(raw,names)
             name=re.sub(r'\s+\d+$','',c['sourceElectorateLabel'])
             rs[key(name)]={'name':name,'validCandidateVotes':c['validVotes'],'candidates':c['candidates'],'candidateContestStatus':'held'}

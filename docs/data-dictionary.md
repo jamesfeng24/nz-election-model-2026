@@ -199,7 +199,7 @@ A residual is an outcome description. Future persistence may use a prior residua
 
 ## Stage8 candidate-persistence output family
 
-`data/processed/models/candidate-persistence/` is separate from and does not alter Stage7 occurrences or earlier processed data.
+`data/processed/models/candidate-persistence/` is separate from Stage7 occurrences and earlier numerical data. Stage6/7 provenance contracts/manifests and Stage6 record input-hash metadata were corrected under D032 without changing numerical outputs.
 
 - `specification.json` freezes identity, status, geography, chronological validation, practical selection and overlap rules before fitting. `input-contract.json` pins Stage7 occurrences, six observed election files, two preserved Parliament indexes and their Stage8 source plan/specification by SHA-256.
 - `person-links.json.links` maps immutable `candidateOccurrenceId` to a separate `personId` with `confirmed`/`probable` status, method and occurrence/source/official-profile evidence. `unresolved` has one explicit record per unlinked occurrence; `persons` holds linked occurrence IDs and preserved source-name aliases. Probable chains are not silently promoted to confirmed. Stage7 `personId` remains null.

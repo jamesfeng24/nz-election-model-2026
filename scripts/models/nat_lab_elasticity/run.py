@@ -51,7 +51,8 @@ def build():
     if [(t['sourceYear'],t['targetYear']) for t in spec['transitions']]!=[(2008,2011),(2014,2017),(2020,2023)]:raise ValueError('Invalid fitting transition')
     fits,backtests,maori=analyse(d['records']);sens=sensitivity(backtests)
     outputs={'records.json':d,'fits.json':{'schemaVersion':1,'general':fits,'maoriDiagnostics':maori},'backtests.json':{'schemaVersion':1,'records':backtests,'predictionPolicy':'raw linear, no clipping; out-of-range counts reported'},'sensitivity.json':{'schemaVersion':1,'chronological':sens},'selection.json':select(fits,sens)}
-    outputs['manifest.json']={'schemaVersion':1,'inputHashes':contract,'specificationSha256':hashlib.sha256((DEST/'specification.json').read_bytes()).hexdigest(),'codeHashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'scripts/models/nat_lab_elasticity').glob('*.py'))},'outputHashes':{p:hashlib.sha256(encode(d)).hexdigest() for p,d in outputs.items()}}
+    code=sorted([*(ROOT/'scripts/models/nat_lab_elasticity').glob('*.py'),ROOT/'scripts/models/source_provenance.py'])
+    outputs['manifest.json']={'schemaVersion':1,'inputHashes':contract,'specificationSha256':hashlib.sha256((DEST/'specification.json').read_bytes()).hexdigest(),'codeHashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in code},'outputHashes':{p:hashlib.sha256(encode(d)).hexdigest() for p,d in outputs.items()}}
     return outputs
 
 

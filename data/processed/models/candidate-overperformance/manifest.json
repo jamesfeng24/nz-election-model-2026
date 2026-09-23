@@ -81,16 +81,17 @@
     "data/source-plans/historical-2017.json": "5fc1d84c7837b73bc856dd1c845eedc0db3c00f859dab18be8bcc0b79835b29d",
     "data/source-plans/historical-2020.json": "bb83543a38e012e0952ab936e85e56b71932d551f0c2e37e42a9daa16d972ecc",
     "data/source-plans/historical-2023.json": "5b687fc00cc6e6f210dce3899fabcd1a463e48f30aec232347759bb43b7c0554",
-    "data/sources.json": "909b18ce1ddaa1d41ce1e91d987c4b70ae5cc3f02d59812660fc72b21334fa3d"
+    "data/source-plans/stage6-7-supporting-candidate-sources.json": "811222d43222de826c532957ad9fe8f57e1ff519a0de637bd0e7450ab47873b5"
   },
   "specificationSha256": "3e1ac1bf45f6a24575b9010b4961eeda6408f1cb707fb3cf274413a6df81fe28",
   "codeHashes": {
     "scripts/models/candidate_overperformance/__init__.py": "70de8049bdafe11606ceb3345388c1dae32502671dacb0647bbc68738905354f",
     "scripts/models/candidate_overperformance/diagnostics.py": "ba51c2ac7bb351188e5c507ce9bb32610d9387d4ee2d072b33247f8bc80ffde2",
-    "scripts/models/candidate_overperformance/inputs.py": "58d70e8364cf5dc6350d655ed2f94e14c47f0373a7c8272b9aa97e02b767b018",
+    "scripts/models/candidate_overperformance/inputs.py": "9f7ce6d0231bfd16a73489ef834f0ec13382b2f6aaff1cb3aedd3203d8009ce8",
     "scripts/models/candidate_overperformance/normalize.py": "a3606360b993a48a8adf88bd82dfd8c467cce8f34c767547957c8057389042b6",
-    "scripts/models/candidate_overperformance/run.py": "ad2e195620c70ebf2530f8406c7d370ed60cef1717c5595637e23b20f695ea10",
+    "scripts/models/candidate_overperformance/run.py": "43f12bb03fae2bc785b1d3084343978b0745438a7c61346ea299b4b753c320c6",
     "scripts/models/party_vote_transform/inputs.py": "084440c4f86610dda3f91d25d9c5845be9c9d4c9eea8f4ef1c446845aa8bbb3a",
+    "scripts/models/source_provenance.py": "69c229030266b1e5f57aad9ddbda311918b6b767b1cf0f2dacb23afc996571cd",
     "scripts/transform/historical.py": "8104ec5402834f15050ec11e0b48c474ddeaf754fca1e8942ebc64a16904b208",
     "scripts/transform/modern_config.py": "92850f8288151449999043966127474929a88ae4d2e328a23fdc5de1e1ff2fa3",
     "scripts/transform/modern_tables.py": "be63858d254bd67d1ec0e010dccc2ee3ef315053637864d00e87ccf8b0efe21a",
