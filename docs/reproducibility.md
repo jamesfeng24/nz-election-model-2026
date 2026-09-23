@@ -314,3 +314,14 @@ From a clean checkout with the configured Python environment, run:
 The first command verifies the committed **pre-fit** inventory, all108 stage-specific raw profile/index checksums, source-plan metadata, Stage7/8 inputs and deterministic bytes. The second verifies the original specification, explicit **post-fit** cohort amendment, reconstructed target/later-winner counterfactual, corrected analysis contracts and output bytes. Neither command fetches sources, reruns boundary reconstruction or rewrites earlier outputs. Omit `--check` only when intentionally regenerating Stage9 outputs from pinned inputs and reviewing the resulting diff. Stage9's plan is independent of `data/sources.json`; Stage6/7 continue to guard their42 consumed source records and raw bytes. Do not repin contracts to conceal a changed source or prior output.
 
 The committed pre-fit inventory at `6ddec50` and specification at `fb0f491`/pre-fit clarification `c5560f7` precede any effect fitting. `postfit-audit-amendment.json` is later: the first93-pair result had three inherited target/later-winner-dependent links. Reproduction keeps that history and evaluates90 counterfactually stable pairs. `analysis.json.supersededPreAuditOutcomeDependentCohort` is retained for audit, not validation. Stage5–8 deterministic checks and `npm run check:all` remain final validation gates; no historical numerical output should change in Stage9.
+## Reproduce Stage10 replacement inventory and diagnostic
+
+From the repository root on the Stage10 branch, with Python 3.12 and preserved raw sources:
+
+```sh
+python3 -m scripts.models.replacement_candidate.run inventory --check
+python3 -m scripts.models.replacement_candidate.analysis_run --check
+python3 -m unittest scripts.tests.test_replacement_candidate -v
+```
+
+The inventory command rebuilds all party-seat comparisons from pinned Stage7 occurrences, Stage8 links, Stage5 party continuity, Stage9 dated profile evidence and processed elections. The analysis command verifies the frozen inventory, Stage8/9 source plans and their required raw bytes, rebuilds identity after removing target/later winner flags, then compares exact saved analysis bytes. Neither command downloads inputs or regenerates old boundary outputs. `analysis-input-contract.json` and `analysis-manifest.json` identify the exact consumed bytes and code; the manifest's output hashes cover the saved diagnostics. The final configured `npm run check:all` and historical deterministic checks remain required before PR handoff.

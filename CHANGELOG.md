@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — Stage10 replacement-candidate effects — 2026-09-23
+
+- Verified Stage9 PR #16 merged, then committed/pushed the same-party party-seat pre-fit inventory and frozen replacement specification separately before diagnostics.
+- Preserved 1,433 candidate comparisons with boundary, identity, tenure and source-winner uncertainty. Only 39 general source-winner continuations, and no replacement, have pre-target-supported identity on unchanged boundaries.
+- Audited target/later-winner flags by rebuilding identity: no primary eligibility changes. Eight distinct-person cases rely on retrospective outcome anchors and all incoming candidates won; they remain descriptive.
+- Recorded zero/carry-forward arithmetic and normalization sensitivities, with the fitted chronological comparison explicitly unavailable and operational replacement effect null. Stage5–9 numerical outputs and stage-specific source protections remain unchanged.
+
 ## Unreleased — Stage8 candidate persistence — 2026-09-23
 
 - Started from verified merged Stage7 main and froze the Stage8 estimand, chronology, identity and operational gate before fitting.

@@ -1,7 +1,6 @@
 {
   "schemaVersion": 1,
   "stage": 10,
-  "status": "Outgoing source winner versus challenger is observed from source election. Departure reason remains unknown absent evidence; winner at source need not be incumbent at target if service was interrupted. Incoming prior electorate/list service and earlier candidacy are separate and unknown if evidence is incomplete. Stage 9 first-term status is not imposed as an operational correction.",
   "inventoryCommit": "3e0945b464583039a76c985123395c44ebb70c6f",
   "estimand": "Incremental predictive association of a different person replacing a source-election winner for the same party and unchanged-boundary general seat with the target normalized candidate residual, conditional on the outgoing residual and known target candidacy. Not a causal replacement penalty or isolated personal vote.",
   "units": "One observed same-party party-seat adjacent-election comparison; source and target normalized candidate residuals in percentage points, equal pair weights. Source winners are the primary status group; source challengers are separate diagnostics.",
@@ -35,5 +34,7 @@
     "selection.json with nullable selectedOperationalReplacementEffectPP and failed gates",
     "stage-specific analysis manifest and deterministic checks"
   ],
-  "integration": "A future model must condition candidate residual transport on identity/status and target-boundary baseline availability; never preserve outgoing premium unchanged and also subtract a replacement penalty, stack Stage8/9/Stage6 effects, or set unknown incoming strength to zero. Stage6 conditional elasticity review is a separate later decision; no Stage6 refit or output edit in Stage10."
+  "integration": "A future model must condition candidate residual transport on identity/status and target-boundary baseline availability; never preserve outgoing premium unchanged and also subtract a replacement penalty, stack Stage8/9/Stage6 effects, or set unknown incoming strength to zero. Stage6 conditional elasticity review is a separate later decision; no Stage6 refit or output edit in Stage10.",
+  "outgoingStatusDefinition": "Outgoing source winner versus challenger is observed from source election. Departure reason remains unknown absent evidence; winner at source need not be incumbent at target if service was interrupted. Incoming prior electorate/list service and earlier candidacy are separate and unknown if evidence is incomplete. Stage 9 first-term status is not imposed as an operational correction.",
+  "freezeStatus": "frozen after committed pre-fit inventory, before Stage 10 effect calculations"
 }

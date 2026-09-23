@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "primaryTransitionCounts": [
+    {
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "treatment": 0,
+      "comparator": 20,
+      "retrospectiveDistinctPeople": 1
+    },
+    {
+      "sourceYear": 2014,
+      "targetYear": 2017,
+      "treatment": 0,
+      "comparator": 16,
+      "retrospectiveDistinctPeople": 3
+    },
+    {
+      "sourceYear": 2020,
+      "targetYear": 2023,
+      "treatment": 0,
+      "comparator": 3,
+      "retrospectiveDistinctPeople": 4
+    }
+  ],
+  "primaryTreatmentCount": 0,
+  "primaryComparatorCount": 39,
+  "retrospectiveDistinctPeopleCount": 8,
+  "retrospectiveTargetWinners": 8,
+  "chronologicalFittedComparison": null,
+  "chronologicalUnavailableReason": "No pre-target-supported source-winner replacement in any unchanged-boundary transition; neither full nor no-replacement model has a common two-group evaluation sample.",
+  "descriptiveBenchmarks": {
+    "additive": {
+      "supportedContinuation": {
+        "2008": {
+          "n": 20,
+          "meanPriorPP": 4.832001094643063,
+          "meanTargetPP": 7.8054400279712794,
+          "meanChangePP": 2.9734389333282154,
+          "zero": {
+            "n": 20,
+            "maePP": 7.8054400279712794,
+            "rmsePP": 8.846422860712373
+          },
+          "carryForward": {
+            "n": 20,
+            "maePP": 3.311382228081515,
+            "rmsePP": 4.433401541874387
+          }
+        },
+        "2014": {
+          "n": 16,
+          "meanPriorPP": 5.784994367173547,
+          "meanTargetPP": 5.948237259479249,
+          "meanChangePP": 0.16324289230570355,
+          "zero": {
+            "n": 16,
+            "maePP": 6.885800997884239,
+            "rmsePP": 7.978465884828143
+          },
+          "carryForward": {
+            "n": 16,
+            "maePP": 2.775823107757216,
+            "rmsePP": 4.082425270795353
+          }
+        },
+        "2020": {
+          "n": 3,
+          "meanPriorPP": 4.558987886989701,
+          "meanTargetPP": -9.879391703341541,
+          "meanChangePP": -14.438379590331245,
+          "zero": {
+            "n": 3,
+            "maePP": 10.362377878496469,
+            "rmsePP": 15.018339686401506
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 14.438379590331243,
+            "rmsePP": 19.180826448027783
+          }
+        }
+      },
+      "retrospectiveDistinctPeople": {
+        "2008": {
+          "n": 1,
+          "meanPriorPP": 15.686601989852395,
+          "meanTargetPP": 14.678968226664185,
+          "meanChangePP": -1.0076337631882093,
+          "zero": {
+            "n": 1,
+            "maePP": 14.678968226664185,
+            "rmsePP": 14.678968226664185
+          },
+          "carryForward": {
+            "n": 1,
+            "maePP": 1.0076337631882093,
+            "rmsePP": 1.0076337631882093
+          }
+        },
+        "2014": {
+          "n": 3,
+          "meanPriorPP": 9.020139194485319,
+          "meanTargetPP": 8.93947006996846,
+          "meanChangePP": -0.08066912451685966,
+          "zero": {
+            "n": 3,
+            "maePP": 8.93947006996846,
+            "rmsePP": 12.086652191136375
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 2.8598215480547897,
+            "rmsePP": 3.451829514675598
+          }
+        },
+        "2020": {
+          "n": 4,
+          "meanPriorPP": 7.492977833166378,
+          "meanTargetPP": 1.1351421693031882,
+          "meanChangePP": -6.35783566386319,
+          "zero": {
+            "n": 4,
+            "maePP": 3.7908928322490043,
+            "rmsePP": 4.191377945134601
+          },
+          "carryForward": {
+            "n": 4,
+            "maePP": 9.2161393224197,
+            "rmsePP": 11.509964090273202
+          }
+        }
+      }
+    },
+    "proportional": {
+      "supportedContinuation": {
+        "2008": {
+          "n": 20,
+          "meanPriorPP": 4.604972020763359,
+          "meanTargetPP": 7.236485367307568,
+          "meanChangePP": 2.6315133465442093,
+          "zero": {
+            "n": 20,
+            "maePP": 7.236485367307568,
+            "rmsePP": 8.418730534370804
+          },
+          "carryForward": {
+            "n": 20,
+            "maePP": 3.47113718341785,
+            "rmsePP": 4.516559530133289
+          }
+        },
+        "2014": {
+          "n": 16,
+          "meanPriorPP": 5.398335005004112,
+          "meanTargetPP": 5.9089795064318675,
+          "meanChangePP": 0.5106445014277556,
+          "zero": {
+            "n": 16,
+            "maePP": 6.847047837028325,
+            "rmsePP": 7.9343568237678355
+          },
+          "carryForward": {
+            "n": 16,
+            "maePP": 3.0893098301550315,
+            "rmsePP": 4.347731826596858
+          }
+        },
+        "2020": {
+          "n": 3,
+          "meanPriorPP": 2.1682853010557723,
+          "meanTargetPP": -10.975693189528302,
+          "meanChangePP": -13.143978490584074,
+          "zero": {
+            "n": 3,
+            "maePP": 10.9756931895283,
+            "rmsePP": 16.18384145166671
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 13.143978490584074,
+            "rmsePP": 18.25273136980091
+          }
+        }
+      },
+      "retrospectiveDistinctPeople": {
+        "2008": {
+          "n": 1,
+          "meanPriorPP": 15.427238360173213,
+          "meanTargetPP": 12.033302917782674,
+          "meanChangePP": -3.393935442390539,
+          "zero": {
+            "n": 1,
+            "maePP": 12.033302917782674,
+            "rmsePP": 12.033302917782674
+          },
+          "carryForward": {
+            "n": 1,
+            "maePP": 3.393935442390539,
+            "rmsePP": 3.393935442390539
+          }
+        },
+        "2014": {
+          "n": 3,
+          "meanPriorPP": 8.527518404046267,
+          "meanTargetPP": 8.904480379932355,
+          "meanChangePP": 0.3769619758860883,
+          "zero": {
+            "n": 3,
+            "maePP": 8.904480379932357,
+            "rmsePP": 12.01970270952351
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 3.1663795532988885,
+            "rmsePP": 3.438073764981464
+          }
+        },
+        "2020": {
+          "n": 4,
+          "meanPriorPP": 7.3279493506047855,
+          "meanTargetPP": -0.6469042230867126,
+          "meanChangePP": -7.974853573691498,
+          "zero": {
+            "n": 4,
+            "maePP": 5.346797428492329,
+            "rmsePP": 6.0408999050525605
+          },
+          "carryForward": {
+            "n": 4,
+            "maePP": 10.426365148814968,
+            "rmsePP": 12.542798315720256
+          }
+        }
+      }
+    },
+    "log_odds": {
+      "supportedContinuation": {
+        "2008": {
+          "n": 20,
+          "meanPriorPP": 4.816364455140032,
+          "meanTargetPP": 7.5966121559381135,
+          "meanChangePP": 2.780247700798082,
+          "zero": {
+            "n": 20,
+            "maePP": 7.5966121559381135,
+            "rmsePP": 8.6795735775155
+          },
+          "carryForward": {
+            "n": 20,
+            "maePP": 3.25900158406087,
+            "rmsePP": 4.394417612127173
+          }
+        },
+        "2014": {
+          "n": 16,
+          "meanPriorPP": 5.597078460523217,
+          "meanTargetPP": 5.935629875688287,
+          "meanChangePP": 0.3385514151650695,
+          "zero": {
+            "n": 16,
+            "maePP": 6.873233476019075,
+            "rmsePP": 7.964428447930654
+          },
+          "carryForward": {
+            "n": 16,
+            "maePP": 2.8685572794355707,
+            "rmsePP": 4.184523942745865
+          }
+        },
+        "2020": {
+          "n": 3,
+          "meanPriorPP": 3.7391406082855903,
+          "meanTargetPP": -9.751004478337117,
+          "meanChangePP": -13.49014508662271,
+          "zero": {
+            "n": 3,
+            "maePP": 10.180387551628849,
+            "rmsePP": 14.995433908887643
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 13.49014508662271,
+            "rmsePP": 18.40977348176741
+          }
+        }
+      },
+      "retrospectiveDistinctPeople": {
+        "2008": {
+          "n": 1,
+          "meanPriorPP": 15.598568365263482,
+          "meanTargetPP": 13.689909009420397,
+          "meanChangePP": -1.9086593558430842,
+          "zero": {
+            "n": 1,
+            "maePP": 13.689909009420397,
+            "rmsePP": 13.689909009420397
+          },
+          "carryForward": {
+            "n": 1,
+            "maePP": 1.9086593558430842,
+            "rmsePP": 1.9086593558430842
+          }
+        },
+        "2014": {
+          "n": 3,
+          "meanPriorPP": 8.75685432484847,
+          "meanTargetPP": 8.92496542517504,
+          "meanChangePP": 0.1681111003265697,
+          "zero": {
+            "n": 3,
+            "maePP": 8.92496542517504,
+            "rmsePP": 12.065323709740268
+          },
+          "carryForward": {
+            "n": 3,
+            "maePP": 3.012016113935412,
+            "rmsePP": 3.4723996629096914
+          }
+        },
+        "2020": {
+          "n": 4,
+          "meanPriorPP": 7.151005726924805,
+          "meanTargetPP": 0.9102905351257018,
+          "meanChangePP": -6.2407151917991035,
+          "zero": {
+            "n": 4,
+            "maePP": 3.904339996367212,
+            "rmsePP": 4.260215229822406
+          },
+          "carryForward": {
+            "n": 4,
+            "maePP": 8.951384269748388,
+            "rmsePP": 11.376322770832253
+          }
+        }
+      }
+    }
+  },
+  "retrospectiveTargetWinnerSelected": true,
+  "outgoingStatusCounts": {
+    "source_challenger": 1054,
+    "source_winner": 298,
+    "source_winner_unknown": 81
+  },
+  "identityClassCounts": {
+    "retrospective_distinct_people": 15,
+    "retrospective_or_ambiguous_continuation": 436,
+    "supported_continuation": 64,
+    "unresolved_identity": 918
+  },
+  "interpretation": "Zero/carry-forward arithmetic uses observed outcomes only for evaluation. Retrospective distinct-person events can rely on target/later winner anchors and are not validation. No fitted replacement coefficient or candidate-pair iid inference is warranted."
+}
