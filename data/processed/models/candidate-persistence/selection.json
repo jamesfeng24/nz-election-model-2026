@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "selectedOperationalCoefficient": null,
-  "status": "unresolved_insufficient_predictive_and_identity_evidence",
+  "status": "unresolved_insufficient_outcome_independent_confirmed_validation",
   "holdoutGains": [
     {
       "targetYear": 2017,
-      "gainVsBetterBenchmarkMAEPP": -0.9587412020481199,
-      "gainVsBetterBenchmarkRMSEPP": -0.6510174078369442
+      "gainVsBetterBenchmarkMAEPP": -0.9213798250487262,
+      "gainVsBetterBenchmarkRMSEPP": -0.28665390601725615
     },
     {
       "targetYear": 2023,
-      "gainVsBetterBenchmarkMAEPP": -0.0004614383477798967,
-      "gainVsBetterBenchmarkRMSEPP": -0.3316151128747471
+      "gainVsBetterBenchmarkMAEPP": -6.038339514606745,
+      "gainVsBetterBenchmarkRMSEPP": -5.408762449083623
     }
   ],
   "performanceGatePassed": false,
   "scaleDirectionGatePassed": true,
   "identityBreadthGatePassed": false,
-  "confirmedOccurrenceCount": 215,
-  "reason": "Confirmed links are Parliament-selected and do not cover the wider returning-challenger population; a universal persistence coefficient is not supported even if a fitted holdout diagnostic improves. No Stage6 bonus is created."
+  "confirmedOccurrenceCount": 169,
+  "reason": "Validation eligibility uses a directly corroborated source winner and exact-chain target candidacy without conditioning on the target win. The target link may be probable, and this prior-winner cohort does not cover general returnees. Retrospective winner-selected scores do not enter operational selection. No Stage6 bonus is created."
 }

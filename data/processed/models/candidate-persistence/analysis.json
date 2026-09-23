@@ -3,482 +3,635 @@
   "primary": {
     "scope": "general",
     "scale": "additive",
-    "identitySet": "confirmed",
-    "n": 69,
-    "samePartyCount": 69,
+    "identitySet": "validation",
+    "n": 39,
+    "samePartyCount": 39,
     "descriptiveFullSampleFit": {
-      "n": 69,
-      "intercept": 0.01422708038077005,
-      "slope": 0.849592442535181,
-      "inSampleRMSEPP": 5.456175551413449
+      "n": 39,
+      "intercept": 0.023547713905185237,
+      "slope": 0.6398280942569219,
+      "inSampleRMSEPP": 6.485110339643185
     },
     "zeroInterceptSensitivityFit": {
-      "n": 69,
+      "n": 39,
       "intercept": 0.0,
-      "slope": 0.937288476692945,
-      "inSampleRMSEPP": 5.5726499360760595
+      "slope": 0.8865951792076788,
+      "inSampleRMSEPP": 6.676738900330467
     },
     "individualTransitionFits": [
       {
         "targetYear": 2011,
         "fit": {
-          "n": 23,
-          "intercept": 0.041623101996125865,
-          "slope": 0.7194118829092402,
-          "inSampleRMSEPP": 3.089123966647694
+          "n": 20,
+          "intercept": 0.04124725962597298,
+          "slope": 0.7617370098393722,
+          "inSampleRMSEPP": 3.1790832874595845
         }
       },
       {
         "targetYear": 2017,
         "fit": {
-          "n": 26,
-          "intercept": 0.010523681630804693,
-          "slope": 0.8696866578718969,
-          "inSampleRMSEPP": 3.3436886375399695
+          "n": 16,
+          "intercept": 0.02182605658402073,
+          "slope": 0.6509309019287779,
+          "inSampleRMSEPP": 3.455870149932739
         }
       },
       {
         "targetYear": 2023,
         "fit": {
-          "n": 20,
-          "intercept": -0.011286997783146006,
-          "slope": 0.9085122981317881,
-          "inSampleRMSEPP": 8.165042261129942
+          "n": 3,
+          "intercept": 0.2810555398755187,
+          "slope": -8.331881249189907,
+          "inSampleRMSEPP": 2.047638724594612
         }
       }
     ],
     "chronological": [
       {
         "targetYear": 2011,
-        "targetCount": 23,
+        "targetCount": 20,
         "trainingCount": 0,
         "trainingTargetYears": [],
         "trainingFit": null,
         "scores": {
           "zero": {
-            "n": 23,
-            "maePP": 7.475725443500365,
-            "rmsePP": 8.469254384160667,
-            "biasPP": -7.475725443500365
+            "n": 20,
+            "maePP": 7.8054400279712794,
+            "rmsePP": 8.846422860712373,
+            "biasPP": -7.8054400279712794
           },
           "prior": {
-            "n": 23,
-            "maePP": 3.305665134962344,
-            "rmsePP": 4.328716694071177,
-            "biasPP": -2.86999773368188
+            "n": 20,
+            "maePP": 3.311382228081515,
+            "rmsePP": 4.433401541874387,
+            "biasPP": -2.9734389333282154
           }
         }
       },
       {
         "targetYear": 2017,
-        "targetCount": 26,
-        "trainingCount": 23,
+        "targetCount": 16,
+        "trainingCount": 20,
         "trainingTargetYears": [
           2011
         ],
         "trainingFit": {
-          "n": 23,
-          "intercept": 0.041623101996125865,
-          "slope": 0.7194118829092402,
-          "inSampleRMSEPP": 3.089123966647694
+          "n": 20,
+          "intercept": 0.04124725962597298,
+          "slope": 0.7617370098393722,
+          "inSampleRMSEPP": 3.1790832874595845
         },
         "scores": {
           "zero": {
-            "n": 26,
-            "maePP": 7.590332029267208,
-            "rmsePP": 10.786629364206123,
-            "biasPP": -6.582803449958361
+            "n": 16,
+            "maePP": 6.885800997884239,
+            "rmsePP": 7.978465884828143,
+            "biasPP": -5.94823725947925
           },
           "prior": {
-            "n": 26,
-            "maePP": 2.520559716688981,
-            "rmsePP": 3.552276006876707,
-            "biasPP": -0.22369096177699854
+            "n": 16,
+            "maePP": 2.775823107757216,
+            "rmsePP": 4.082425270795353,
+            "biasPP": -0.16324289230570352
           },
           "fitted": {
-            "n": 26,
-            "maePP": 3.479300918737101,
-            "rmsePP": 4.203293414713651,
-            "biasPP": 2.1543278384084426
+            "n": 16,
+            "maePP": 3.697202932805942,
+            "rmsePP": 4.369079176812609,
+            "biasPP": 2.583133014306437
           }
         }
       },
       {
         "targetYear": 2023,
-        "targetCount": 20,
-        "trainingCount": 49,
+        "targetCount": 3,
+        "trainingCount": 36,
         "trainingTargetYears": [
           2011,
           2017
         ],
         "trainingFit": {
-          "n": 49,
-          "intercept": 0.023998190910765917,
-          "slope": 0.8312918925417939,
-          "inSampleRMSEPP": 3.452982972957936
+          "n": 36,
+          "intercept": 0.03519216956504798,
+          "slope": 0.6585033361953427,
+          "inSampleRMSEPP": 3.5386372331262677
         },
         "scores": {
           "zero": {
-            "n": 20,
-            "maePP": 9.039271425045763,
-            "rmsePP": 12.838957570710939,
-            "biasPP": -5.127036759671553
+            "n": 3,
+            "maePP": 10.362377878496469,
+            "rmsePP": 15.018339686401506,
+            "biasPP": 9.879391703341541
           },
           "prior": {
-            "n": 20,
-            "maePP": 4.998268219439908,
-            "rmsePP": 8.395816655945689,
-            "biasPP": 1.7586559831235484
+            "n": 3,
+            "maePP": 14.438379590331243,
+            "rmsePP": 19.180826448027783,
+            "biasPP": 14.438379590331243
           },
           "fitted": {
-            "n": 20,
-            "maePP": 4.998729657787688,
-            "rmsePP": 8.727431768820436,
-            "biasPP": 2.9968028830244746
+            "n": 3,
+            "maePP": 16.400717393103214,
+            "rmsePP": 20.42710213548513,
+            "biasPP": 16.400717393103214
           }
         }
       }
     ],
     "equalTransitionMacroTrained": {
       "zero": {
-        "maePP": 8.314801727156485,
-        "rmsePP": 11.81279346745853,
-        "biasPP": -5.854920104814957
+        "maePP": 8.624089438190353,
+        "rmsePP": 11.498402785614825,
+        "biasPP": 1.9655772219311456
       },
       "prior": {
-        "maePP": 3.759413968064445,
-        "rmsePP": 5.9740463314111985,
-        "biasPP": 0.767482510673275
+        "maePP": 8.60710134904423,
+        "rmsePP": 11.631625859411567,
+        "biasPP": 7.13756834901277
       },
       "fitted": {
-        "maePP": 4.239015288262395,
-        "rmsePP": 6.465362591767043,
-        "biasPP": 2.5755653607164586
+        "maePP": 10.048960162954579,
+        "rmsePP": 12.398090656148868,
+        "biasPP": 9.491925203704826
       }
     },
-    "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+    "interpretation": "Outcome-independent eligibility conditional on a directly anchored source winner and an exact-chain target candidacy; target link can be probable, and retrospective profile retrieval does not establish pre-election publication."
+  },
+  "retrospectiveWinnerSelected": {
+    "scope": "general",
+    "scale": "additive",
+    "identitySet": "retrospective_confirmed",
+    "n": 39,
+    "samePartyCount": 39,
+    "descriptiveFullSampleFit": {
+      "n": 39,
+      "intercept": 0.0315738097877382,
+      "slope": 0.6185172907325094,
+      "inSampleRMSEPP": 3.5370789547982984
+    },
+    "zeroInterceptSensitivityFit": {
+      "n": 39,
+      "intercept": 0.0,
+      "slope": 0.9490244460070227,
+      "inSampleRMSEPP": 4.133373452687013
+    },
+    "individualTransitionFits": [
+      {
+        "targetYear": 2011,
+        "fit": {
+          "n": 20,
+          "intercept": 0.04300555828183182,
+          "slope": 0.643835223493571,
+          "inSampleRMSEPP": 3.1657495883544877
+        }
+      },
+      {
+        "targetYear": 2017,
+        "fit": {
+          "n": 18,
+          "intercept": 0.01870779060620658,
+          "slope": 0.6431813047496158,
+          "inSampleRMSEPP": 3.4167762994122426
+        }
+      },
+      {
+        "targetYear": 2023,
+        "fit": null
+      }
+    ],
+    "chronological": [
+      {
+        "targetYear": 2011,
+        "targetCount": 20,
+        "trainingCount": 0,
+        "trainingTargetYears": [],
+        "trainingFit": null,
+        "scores": {
+          "zero": {
+            "n": 20,
+            "maePP": 7.266243414857139,
+            "rmsePP": 8.243058999692252,
+            "biasPP": -7.266243414857139
+          },
+          "prior": {
+            "n": 20,
+            "maePP": 3.160977395301999,
+            "rmsePP": 4.320481813456292,
+            "biasPP": -2.659959883829466
+          }
+        }
+      },
+      {
+        "targetYear": 2017,
+        "targetCount": 18,
+        "trainingCount": 20,
+        "trainingTargetYears": [
+          2011
+        ],
+        "trainingFit": {
+          "n": 20,
+          "intercept": 0.04300555828183182,
+          "slope": 0.643835223493571,
+          "inSampleRMSEPP": 3.1657495883544877
+        },
+        "scores": {
+          "zero": {
+            "n": 18,
+            "maePP": 6.489107783823604,
+            "rmsePP": 7.607328592760079,
+            "biasPP": -5.655717794130281
+          },
+          "prior": {
+            "n": 18,
+            "maePP": 2.8415004130127874,
+            "rmsePP": 4.01250740359054,
+            "biasPP": 0.228997301845748
+          },
+          "fitted": {
+            "n": 18,
+            "maePP": 3.561285088257522,
+            "rmsePP": 4.1948665161995855,
+            "biasPP": 2.4336248930666193
+          }
+        }
+      },
+      {
+        "targetYear": 2023,
+        "targetCount": 1,
+        "trainingCount": 38,
+        "trainingTargetYears": [
+          2011,
+          2017
+        ],
+        "trainingFit": {
+          "n": 38,
+          "intercept": 0.03324508469444687,
+          "slope": 0.6099274726562505,
+          "inSampleRMSEPP": 3.5006510932896124
+        },
+        "scores": {
+          "zero": {
+            "n": 1,
+            "maePP": 0.7244792627323915,
+            "rmsePP": 0.7244792627323915,
+            "biasPP": -0.7244792627323915
+          },
+          "prior": {
+            "n": 1,
+            "maePP": 2.859454176139592,
+            "rmsePP": 2.859454176139592,
+            "biasPP": 2.859454176139592
+          },
+          "fitted": {
+            "n": 1,
+            "maePP": 4.785968671251709,
+            "rmsePP": 4.785968671251709,
+            "biasPP": 4.785968671251709
+          }
+        }
+      }
+    ],
+    "equalTransitionMacroTrained": {
+      "zero": {
+        "maePP": 3.6067935232779975,
+        "rmsePP": 4.1659039277462355,
+        "biasPP": -3.190098528431336
+      },
+      "prior": {
+        "maePP": 2.85047729457619,
+        "rmsePP": 3.435980789865066,
+        "biasPP": 1.5442257389926701
+      },
+      "fitted": {
+        "maePP": 4.173626879754615,
+        "rmsePP": 4.490417593725647,
+        "biasPP": 3.6097967821591643
+      }
+    },
+    "interpretation": "Retrospective diagnostic only. Eligibility may depend on target or later electoral outcomes and cannot validate a pre-election forecast for general returnees."
   },
   "sensitivity": [
     {
       "scope": "general",
       "scale": "proportional",
-      "identitySet": "confirmed",
-      "n": 69,
-      "samePartyCount": 69,
+      "identitySet": "validation",
+      "n": 39,
+      "samePartyCount": 39,
       "descriptiveFullSampleFit": {
-        "n": 69,
-        "intercept": 0.013659585949525523,
-        "slope": 0.8579250444638931,
-        "inSampleRMSEPP": 5.542722981529503
+        "n": 39,
+        "intercept": 0.01825100137507836,
+        "slope": 0.7307228189034761,
+        "inSampleRMSEPP": 6.4691105537385205
       },
       "zeroInterceptSensitivityFit": {
-        "n": 69,
+        "n": 39,
         "intercept": 0.0,
-        "slope": 0.9351176435334573,
-        "inSampleRMSEPP": 5.658849690190997
+        "slope": 0.9194637567488411,
+        "inSampleRMSEPP": 6.598980950747779
       },
       "individualTransitionFits": [
         {
           "targetYear": 2011,
           "fit": {
-            "n": 23,
-            "intercept": 0.04089046771205437,
-            "slope": 0.656328736266139,
-            "inSampleRMSEPP": 3.353095090122364
+            "n": 20,
+            "intercept": 0.040315412117053306,
+            "slope": 0.6959747293037752,
+            "inSampleRMSEPP": 3.50533021696635
           }
         },
         {
           "targetYear": 2017,
           "fit": {
-            "n": 26,
-            "intercept": 0.016693656113907232,
-            "slope": 0.8304180068081798,
-            "inSampleRMSEPP": 3.738777812644771
+            "n": 16,
+            "intercept": 0.025560994101935526,
+            "slope": 0.6210952253111903,
+            "inSampleRMSEPP": 3.6155429603341553
           }
         },
         {
           "targetYear": 2023,
           "fit": {
-            "n": 20,
-            "intercept": -0.014298952536851345,
-            "slope": 0.9445056514235541,
-            "inSampleRMSEPP": 8.018882313480281
+            "n": 3,
+            "intercept": -0.02754986421974813,
+            "slope": -3.7913399881236556,
+            "inSampleRMSEPP": 10.47464692726036
           }
         }
       ],
       "chronological": [
         {
           "targetYear": 2011,
-          "targetCount": 23,
+          "targetCount": 20,
           "trainingCount": 0,
           "trainingTargetYears": [],
           "trainingFit": null,
           "scores": {
             "zero": {
-              "n": 23,
-              "maePP": 6.9817946919344696,
-              "rmsePP": 8.082022992753199,
-              "biasPP": -6.9817946919344696
+              "n": 20,
+              "maePP": 7.236485367307568,
+              "rmsePP": 8.418730534370804,
+              "biasPP": -7.236485367307568
             },
             "prior": {
-              "n": 23,
-              "maePP": 3.43866617877075,
-              "rmsePP": 4.396807664733356,
-              "biasPP": -2.5743266642721334
+              "n": 20,
+              "maePP": 3.47113718341785,
+              "rmsePP": 4.516559530133289,
+              "biasPP": -2.6315133465442093
             }
           }
         },
         {
           "targetYear": 2017,
-          "targetCount": 26,
-          "trainingCount": 23,
+          "targetCount": 16,
+          "trainingCount": 20,
           "trainingTargetYears": [
             2011
           ],
           "trainingFit": {
-            "n": 23,
-            "intercept": 0.04089046771205437,
-            "slope": 0.656328736266139,
-            "inSampleRMSEPP": 3.353095090122364
+            "n": 20,
+            "intercept": 0.040315412117053306,
+            "slope": 0.6959747293037752,
+            "inSampleRMSEPP": 3.50533021696635
           },
           "scores": {
             "zero": {
-              "n": 26,
-              "maePP": 7.548584883454904,
-              "rmsePP": 10.74104101598834,
-              "biasPP": -6.541463080919064
+              "n": 16,
+              "maePP": 6.847047837028325,
+              "rmsePP": 7.9343568237678355,
+              "biasPP": -5.9089795064318675
             },
             "prior": {
-              "n": 26,
-              "maePP": 2.8832666724833804,
-              "rmsePP": 4.108177596762924,
-              "biasPP": -0.6744209050697161
+              "n": 16,
+              "maePP": 3.0893098301550315,
+              "rmsePP": 4.347731826596858,
+              "biasPP": -0.5106445014277556
             },
             "fitted": {
-              "n": 26,
-              "maePP": 3.4998243532089406,
-              "rmsePP": 4.302224316143628,
-              "biasPP": 1.3982920671817136
+              "n": 16,
+              "maePP": 3.4461969200430906,
+              "rmsePP": 4.101563411740842,
+              "biasPP": 1.8796664490722943
             }
           }
         },
         {
           "targetYear": 2023,
-          "targetCount": 20,
-          "trainingCount": 49,
+          "targetCount": 3,
+          "trainingCount": 36,
           "trainingTargetYears": [
             2011,
             2017
           ],
           "trainingFit": {
-            "n": 49,
-            "intercept": 0.026073826277433806,
-            "slope": 0.7990771721411833,
-            "inSampleRMSEPP": 3.674253361370386
+            "n": 36,
+            "intercept": 0.03531446508284761,
+            "slope": 0.6283383509396007,
+            "inSampleRMSEPP": 3.6732783336607504
           },
           "scores": {
             "zero": {
-              "n": 20,
-              "maePP": 8.570702017130067,
-              "rmsePP": 13.09409267363055,
-              "biasPP": -4.040763945220705
+              "n": 3,
+              "maePP": 10.9756931895283,
+              "rmsePP": 16.18384145166671,
+              "biasPP": 10.9756931895283
             },
             "prior": {
-              "n": 20,
-              "maePP": 5.061022440876018,
-              "rmsePP": 8.226976829683613,
-              "biasPP": 1.7513233659144802
+              "n": 3,
+              "maePP": 13.143978490584074,
+              "rmsePP": 18.25273136980091,
+              "biasPP": 13.143978490584074
             },
             "fitted": {
-              "n": 20,
-              "maePP": 5.241182054056923,
-              "rmsePP": 8.755763314180346,
-              "biasPP": 3.19494343189941
+              "n": 3,
+              "maePP": 15.86955650824502,
+              "rmsePP": 20.116743952188582,
+              "biasPP": 15.86955650824502
             }
           }
         }
       ],
       "equalTransitionMacroTrained": {
         "zero": {
-          "maePP": 8.059643450292485,
-          "rmsePP": 11.917566844809446,
-          "biasPP": -5.2911135130698845
+          "maePP": 8.911370513278312,
+          "rmsePP": 12.059099137717272,
+          "biasPP": 2.5333568415482164
         },
         "prior": {
-          "maePP": 3.972144556679699,
-          "rmsePP": 6.167577213223268,
-          "biasPP": 0.5384512304223821
+          "maePP": 8.116644160369553,
+          "rmsePP": 11.300231598198884,
+          "biasPP": 6.316666994578159
         },
         "fitted": {
-          "maePP": 4.370503203632932,
-          "rmsePP": 6.5289938151619875,
-          "biasPP": 2.2966177495405615
+          "maePP": 9.657876714144056,
+          "rmsePP": 12.109153681964711,
+          "biasPP": 8.874611478658657
         }
       },
-      "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+      "interpretation": "Outcome-independent eligibility conditional on a directly anchored source winner and an exact-chain target candidacy; target link can be probable, and retrospective profile retrieval does not establish pre-election publication."
     },
     {
       "scope": "general",
       "scale": "log_odds",
-      "identitySet": "confirmed",
-      "n": 69,
-      "samePartyCount": 69,
+      "identitySet": "validation",
+      "n": 39,
+      "samePartyCount": 39,
       "descriptiveFullSampleFit": {
-        "n": 69,
-        "intercept": 0.01479270378646979,
-        "slope": 0.8569535763417345,
-        "inSampleRMSEPP": 5.373619344096349
+        "n": 39,
+        "intercept": 0.02163045699167803,
+        "slope": 0.6762653513482991,
+        "inSampleRMSEPP": 6.365725465089636
       },
       "zeroInterceptSensitivityFit": {
-        "n": 69,
+        "n": 39,
         "intercept": 0.0,
-        "slope": 0.9450933739353603,
-        "inSampleRMSEPP": 5.50599344848479
+        "slope": 0.9038479676237917,
+        "inSampleRMSEPP": 6.535548036295595
       },
       "individualTransitionFits": [
         {
           "targetYear": 2011,
           "fit": {
-            "n": 23,
-            "intercept": 0.040672780584703895,
-            "slope": 0.7025434490019689,
-            "inSampleRMSEPP": 3.173607255924741
+            "n": 20,
+            "intercept": 0.03999644498576207,
+            "slope": 0.7468221499565334,
+            "inSampleRMSEPP": 3.2857492752442146
           }
         },
         {
           "targetYear": 2017,
           "fit": {
-            "n": 26,
-            "intercept": 0.012620513695784139,
-            "slope": 0.8628780454671849,
-            "inSampleRMSEPP": 3.4517633358435154
+            "n": 16,
+            "intercept": 0.023531125306774134,
+            "slope": 0.64006916649083,
+            "inSampleRMSEPP": 3.521212458612926
           }
         },
         {
           "targetYear": 2023,
           "fit": {
-            "n": 20,
-            "intercept": -0.008224610831379174,
-            "slope": 0.9146641135099678,
-            "inSampleRMSEPP": 8.005451888128635
+            "n": 3,
+            "intercept": 0.25174436515636794,
+            "slope": -9.340499503169887,
+            "inSampleRMSEPP": 3.0667630169721787
           }
         }
       ],
       "chronological": [
         {
           "targetYear": 2011,
-          "targetCount": 23,
+          "targetCount": 20,
           "trainingCount": 0,
           "trainingTargetYears": [],
           "trainingFit": null,
           "scores": {
             "zero": {
-              "n": 23,
-              "maePP": 7.294399994214155,
-              "rmsePP": 8.31796656219868,
-              "biasPP": -7.294399994214155
+              "n": 20,
+              "maePP": 7.5966121559381135,
+              "rmsePP": 8.6795735775155,
+              "biasPP": -7.5966121559381135
             },
             "prior": {
-              "n": 23,
-              "maePP": 3.2588043006149463,
-              "rmsePP": 4.2925439723651255,
-              "biasPP": -2.700916217049618
+              "n": 20,
+              "maePP": 3.25900158406087,
+              "rmsePP": 4.394417612127173,
+              "biasPP": -2.7802477007980815
             }
           }
         },
         {
           "targetYear": 2017,
-          "targetCount": 26,
-          "trainingCount": 23,
+          "targetCount": 16,
+          "trainingCount": 20,
           "trainingTargetYears": [
             2011
           ],
           "trainingFit": {
-            "n": 23,
-            "intercept": 0.040672780584703895,
-            "slope": 0.7025434490019689,
-            "inSampleRMSEPP": 3.173607255924741
+            "n": 20,
+            "intercept": 0.03999644498576207,
+            "slope": 0.7468221499565334,
+            "inSampleRMSEPP": 3.2857492752442146
           },
           "scores": {
             "zero": {
-              "n": 26,
-              "maePP": 7.574409306308727,
-              "rmsePP": 10.75887380004146,
-              "biasPP": -6.567029729427016
+              "n": 16,
+              "maePP": 6.873233476019075,
+              "rmsePP": 7.964428447930654,
+              "biasPP": -5.935629875688286
             },
             "prior": {
-              "n": 26,
-              "maePP": 2.6146960884838277,
-              "rmsePP": 3.6909945046393675,
-              "biasPP": -0.41902493579902783
+              "n": 16,
+              "maePP": 2.8685572794355707,
+              "rmsePP": 4.184523942745865,
+              "biasPP": -0.33855141516506937
             },
             "fitted": {
-              "n": 26,
-              "maePP": 3.396375125401089,
-              "rmsePP": 4.161901687802454,
-              "biasPP": 1.8194888212394178
+              "n": 16,
+              "maePP": 3.5282236355537133,
+              "rmsePP": 4.227787127839988,
+              "biasPP": 2.2440367922512734
             }
           }
         },
         {
           "targetYear": 2023,
-          "targetCount": 20,
-          "trainingCount": 49,
+          "targetCount": 3,
+          "trainingCount": 36,
           "trainingTargetYears": [
             2011,
             2017
           ],
           "trainingFit": {
-            "n": 49,
-            "intercept": 0.024194244441129387,
-            "slope": 0.8284882247631103,
-            "inSampleRMSEPP": 3.493059818265377
+            "n": 36,
+            "intercept": 0.03487116548781097,
+            "slope": 0.6529253812922732,
+            "inSampleRMSEPP": 3.568583801748784
           },
           "scores": {
             "zero": {
-              "n": 20,
-              "maePP": 8.97746676937312,
-              "rmsePP": 13.087176156205759,
-              "biasPP": -5.1404571633473015
+              "n": 3,
+              "maePP": 10.180387551628849,
+              "rmsePP": 14.995433908887643,
+              "biasPP": 9.75100447833712
             },
             "prior": {
-              "n": 20,
-              "maePP": 4.758489875681855,
-              "rmsePP": 8.16647441935617,
-              "biasPP": 1.3787865222969111
+              "n": 3,
+              "maePP": 13.49014508662271,
+              "rmsePP": 18.40977348176741,
+              "biasPP": 13.49014508662271
             },
             "fitted": {
-              "n": 20,
-              "maePP": 4.874020065181999,
-              "rmsePP": 8.484515886251968,
-              "biasPP": 2.6800839086831276
+              "n": 3,
+              "maePP": 15.679500834488508,
+              "rmsePP": 19.82536460302409,
+              "biasPP": 15.679500834488508
             }
           }
         }
       ],
       "equalTransitionMacroTrained": {
         "zero": {
-          "maePP": 8.275938037840923,
-          "rmsePP": 11.92302497812361,
-          "biasPP": -5.853743446387159
+          "maePP": 8.526810513823962,
+          "rmsePP": 11.47993117840915,
+          "biasPP": 1.9076873013244167
         },
         "prior": {
-          "maePP": 3.6865929820828414,
-          "rmsePP": 5.928734461997768,
-          "biasPP": 0.4798807932489416
+          "maePP": 8.17935118302914,
+          "rmsePP": 11.297148712256638,
+          "biasPP": 6.575796835728821
         },
         "fitted": {
-          "maePP": 4.135197595291544,
-          "rmsePP": 6.323208787027211,
-          "biasPP": 2.2497863649612726
+          "maePP": 9.603862235021111,
+          "rmsePP": 12.02657586543204,
+          "biasPP": 8.96176881336989
         }
       },
-      "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+      "interpretation": "Outcome-independent eligibility conditional on a directly anchored source winner and an exact-chain target candidacy; target link can be probable, and retrospective profile retrieval does not establish pre-election publication."
     },
     {
       "scope": "general",
       "scale": "additive",
-      "identitySet": "confirmed_plus_probable",
+      "identitySet": "all_comparable_linked",
       "n": 281,
       "samePartyCount": 281,
       "descriptiveFullSampleFit": {
@@ -631,13 +784,13 @@
           "biasPP": 0.26436832416640615
         }
       },
-      "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+      "interpretation": "Retrospective diagnostic only. Eligibility may depend on target or later electoral outcomes and cannot validate a pre-election forecast for general returnees."
     }
   ],
   "maoriDescriptive": {
     "scope": "maori",
     "scale": "additive",
-    "identitySet": "confirmed",
+    "identitySet": "validation",
     "n": 0,
     "samePartyCount": 0,
     "descriptiveFullSampleFit": null,
@@ -683,12 +836,12 @@
       }
     ],
     "equalTransitionMacroTrained": {},
-    "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+    "interpretation": "Outcome-independent eligibility conditional on a directly anchored source winner and an exact-chain target candidacy; target link can be probable, and retrospective profile retrieval does not establish pre-election publication."
   },
   "maoriProbableSensitivity": {
     "scope": "maori",
     "scale": "additive",
-    "identitySet": "confirmed_plus_probable",
+    "identitySet": "all_comparable_linked",
     "n": 15,
     "samePartyCount": 15,
     "descriptiveFullSampleFit": {
@@ -841,8 +994,8 @@
         "biasPP": 3.2420237922158193
       }
     },
-    "interpretation": "Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence."
+    "interpretation": "Retrospective diagnostic only. Eligibility may depend on target or later electoral outcomes and cannot validate a pre-election forecast for general returnees."
   },
   "dependence": "Shared party/election reference offsets, repeated people and three transition clusters preclude candidate-pair iid inference.",
-  "selection": "Conditional on returning candidacy, MP-focused confirmation, held contests and unchanged seat geography."
+  "selection": "Outcome-independent validation is conditional on a directly confirmed source winner, exact-chain target candidacy, and unchanged seat geography. Target identity can be probable; retrospective publication timing is unknown."
 }

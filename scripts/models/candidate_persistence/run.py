@@ -58,7 +58,9 @@ def build():
     if set(contract) != expected:
         raise ValueError('Stage8 input contract incomplete or expanded')
     spec = json.loads((DEST / 'specification.json').read_bytes())
-    if spec['stage'] != 8 or not spec['frozenBeforeFitting'] or spec['primaryTransitions'] != [[2008, 2011], [2014, 2017], [2020, 2023]]:
+    if (spec['stage'] != 8 or not spec['frozenBeforeFitting'] or
+            spec['primaryTransitions'] != [[2008, 2011], [2014, 2017], [2020, 2023]] or
+            spec.get('auditAmendment', {}).get('status') != 'post-fit correction; not part of the pre-fit freeze'):
         raise ValueError('Stage8 specification changed')
     source_plan = json.loads((ROOT / SOURCE_PLAN).read_bytes())
     verify_source_files(ROOT, source_plan)
@@ -73,28 +75,32 @@ def build():
     members = []
     for name in OFFICIAL_PATHS:
         members.extend(parse_members((ROOT / name).read_bytes()))
-    official = project_members(records, members, elected_ids())
+    source_metadata = {record['id']: record for record in source_plan['sources']}
+    official = project_members(records, members, elected_ids(), source_metadata)
     identity = build_identity(records, official)
     pair_data = build_pairs(records, identity['links'])
     pairs = pair_data['pairs']
-    primary = analyze(pairs)
-    sensitivity = [analyze(pairs, scale=scale) for scale in ('proportional', 'log_odds')]
-    sensitivity.append(analyze(pairs, include_probable=True))
-    maori = analyze(pairs, scope='maori')
-    maori_probable = analyze(pairs, scope='maori', include_probable=True)
+    primary = analyze(pairs, cohort='validation')
+    retrospective = analyze(pairs, cohort='retrospective_confirmed')
+    sensitivity = [analyze(pairs, scale=scale, cohort='validation')
+                   for scale in ('proportional', 'log_odds')]
+    sensitivity.append(analyze(pairs, cohort='all_comparable_linked'))
+    maori = analyze(pairs, scope='maori', cohort='validation')
+    maori_probable = analyze(pairs, scope='maori', cohort='all_comparable_linked')
     selection = select(primary, sensitivity[:2], identity['coverage'])
     outputs = {
         'person-links.json': {'schemaVersion': 1, 'links': identity['links'],
                               'unresolved': identity['unresolved'], 'persons': identity['persons'],
                               'coverage': identity['coverage']},
         'history-status.json': {'schemaVersion': 1, 'records': identity['historyStatus'],
-                                'interpretation': 'Election-dated evidence only. Unknown and left-censored are explicit; leadership is orthogonal. No candidate-status effect is fitted.'},
+                                'interpretation': 'Election-dated status evidence is separate from person existence and occurrence identity. Projected links retain unknown career history. Leadership is orthogonal. No status effect is fitted.'},
         'pairs.json': {'schemaVersion': 1, **pair_data,
-                       'usage': 'Target residuals are historical evaluation outcomes, never same-election predictors.'},
-        'analysis.json': {'schemaVersion': 1, 'primary': primary, 'sensitivity': sensitivity,
+                       'usage': 'Target residuals are historical evaluation outcomes, never same-election predictors. Validation eligibility depends on source outcome and known target candidacy, never target or later outcomes; retrospective confirmed scores are winner-selected.'},
+        'analysis.json': {'schemaVersion': 1, 'primary': primary,
+                          'retrospectiveWinnerSelected': retrospective, 'sensitivity': sensitivity,
                           'maoriDescriptive': maori, 'maoriProbableSensitivity': maori_probable,
                           'dependence': 'Shared party/election reference offsets, repeated people and three transition clusters preclude candidate-pair iid inference.',
-                          'selection': 'Conditional on returning candidacy, MP-focused confirmation, held contests and unchanged seat geography.'},
+                          'selection': 'Outcome-independent validation is conditional on a directly confirmed source winner, exact-chain target candidacy, and unchanged seat geography. Target identity can be probable; retrospective publication timing is unknown.'},
         'selection.json': selection,
     }
     code = sorted([*(ROOT / 'scripts/models/candidate_persistence').glob('*.py'),
@@ -107,7 +113,8 @@ def build():
         'counts': {'occurrences': len(records), 'confirmed': identity['coverage']['confirmedCount'],
                    'probable': identity['coverage']['probableCount'],
                    'unresolved': identity['coverage']['unresolvedCount'],
-                   'primaryPairs': pair_data['diagnostics']['primaryPairs']},
+                   'retrospectiveConfirmedPairs': pair_data['diagnostics']['retrospectiveConfirmedPairs'],
+                   'outcomeIndependentValidationPairs': pair_data['diagnostics']['outcomeIndependentValidationPairs']},
     }
     return outputs
 

@@ -1,53 +1,51 @@
-# Stage 8 — candidate persistence
+# Stage 8 — candidate persistence, audit-corrected
 
-The specification in `data/processed/models/candidate-persistence/specification.json` was frozen before fitting. Its first checkpoint was `d606e0b`; the identity evidence and practical operational gate were clarified in `b062f60`, still before any model run. Stage 7's occurrence IDs, source labels, denominators and residuals are immutable. This stage estimates **conditional predictive persistence of a same-person residual**, not a causal or uniquely personal vote effect.
+The original specification was frozen at `d606e0b` and clarified at `b062f60`, both before fitting. The correction in this document follows the PR #15 correctness audit **after** the original fit. `specification.json.auditAmendment` records the change without rewriting that history. Stage 7's 3,007 occurrences, IDs, source labels, denominators and residuals remain immutable. The estimand is conditional predictive association between earlier and later same-person normalized residuals, not a causal or uniquely personal vote effect.
 
-## Evidence and units
+## Audit findings and identity evidence
 
-The 3,007 Stage 7 candidate-election occurrences remain the universe. The outcome and predictor are additive normalized overperformance in vote-share fractions, reported as percentage points: candidate share minus local party share minus the other matched contests' party/election offset. Candidate and party valid-vote denominators stay separate. The two alternative Stage 7 scales remain sensitivity outcomes.
+The original rule treated an official Parliament profile plus one compatible winning occurrence as confirmation of *every* occurrence in the same full-source-name/affiliation/seat chain. The profile establishes a person and the winner anchors that occurrence; it does not independently document the other nominations. The audit found 46 of 215 formerly confirmed occurrences were not qualifying anchors, including two old primary pairs where neither occurrence was a winner. Those 46 links now remain **probable** projections to the anchored person. A direct official-profile/observed-winner occurrence is **confirmed**. Exact chains without an official anchor are probable; conflicts and insufficient evidence remain unresolved. Profile names, source names and aliases remain separate.
 
-Person identity is separate from party, electorate and election-time status. Exact full source name, affiliation and seat chains without external corroboration are `probable`; conflicts and lone appearances remain `unresolved`. The bounded official Parliament former/current MP indexes corroborate a unique surname/first-name profile only when that exact full-source-name/affiliation/seat chain includes a compatible observed winning occurrence. Profile display variants are preserved alongside source names with explicit alias evidence. This retrospective validation cannot cover losing-only challengers, list-only histories or all Māori candidacies. It is an identity aid, not a pre-election feature. No candidate biography was invented.
+| Occurrence identity | Before audit | Corrected |
+| --- | ---: | ---: |
+| Confirmed direct anchors | 215 | 169 |
+| Probable projected or exact-chain links | 747 | 793 |
+| Unresolved | 2,045 | 2,045 |
+| Total | 3,007 | 3,007 |
 
-| Identity outcome | Occurrences |
-| --- | ---: |
-| Confirmed by the bounded MP evidence rule | 215 |
-| Probable exact-record chains | 747 |
-| Explicit unresolved | 2,045 |
+The person record reports whether an official profile corroborates the person's existence. Each occurrence link separately reports its confidence, method, anchor occurrence IDs and election dates, profile URL, retrieval time, and unknown publication time. A profile retrieved in 2026 is retrospective evidence about an earlier historical fact; it is not asserted to have been published by the target election. The separate history/status record makes career-history evidence confidence explicit. Only directly anchored occurrences retain supported incumbent classifications: 49 continuing, 11 first-term, 2,947 unknown. Unknown or pre-panel history is not converted to never served. Leadership remains orthogonal. No status effect is fitted.
 
-The separate history/status file has one dated record for every occurrence. It records 53 continuing and 13 first-term incumbent classifications supported by an observed earlier win plus a continuous published parliamentary service interval. The other 2,941 statuses remain unknown. Before-panel tenure is left-censored unless explicit service evidence exists. Returning/former incumbent, replacement, returning challenger, genuinely new and list-only history are valid categories in the status contract but are not assigned without evidence. Leadership is a separate nullable attribute; no status effect is fitted.
+## Cohorts and outcome timing
 
-## Pair construction
+Evaluation cohorts require two linked held, exact-counterpart, normalized occurrences in the same electorate/type and a validated unchanged-boundary transition (2008→2011, 2014→2017 or 2020→2023). Changed-boundary same-name seats, missing premiums, missing counterparts and cancelled contests remain in the pair inventory with exclusion reasons. The 532 adjacent linked pairs and 296 comparable linked pairs (281 general, 15 Māori) are unchanged.
 
-An adjacent pair requires the same linked person and two observed held, exact-counterpart, normalized occurrences. Primary pairs also require both links confirmed, the same electorate and type, and one of the three validated unchanged-boundary regimes. A repeated electorate name across a changed regime is not geographic evidence. No changed-boundary candidate votes are constructed. The pair inventory retains exclusions and both residuals for retrospective audit; target residuals are never predictors of their own election.
+The **outcome-independent validation cohort** requires a directly anchored *source* winner and an exact full-name/affiliation/seat target candidacy linked to that person. Target link confidence may be probable. Eligibility uses the source result and known target candidacy, never the target win or a later winner. This is conditional on prior-winner selection, a returning candidate and retrospectively adjudicated identity. It is not a prospective all-returnee forecast: the 2026 profile acquisition and unknown publication timing cannot establish what identity evidence was available before each election. No adequate outcome-independent cohort with both occurrences independently confirmed exists under the preserved evidence.
 
-| Transition | Linked adjacent pairs | Confirmed primary general | Comparable confirmed or probable |
-| --- | ---: | ---: | ---: |
-| 2008→2011 | 109 | 23 | 104 |
-| 2011→2014 | 125 | 0 | 0 |
-| 2014→2017 | 121 | 26 | 114 |
-| 2017→2020 | 94 | 0 | 0 |
-| 2020→2023 | 83 | 20 | 78 |
+The **retrospective confirmed diagnostic** requires two direct winner anchors. It is selected on the target win and cannot determine the operational coefficient. The broad comparable-linked sensitivity keeps probable identities visibly uncertain. Pair records include each link's evidence and confidence, anchor dates, outcome-dependency roles, and a separate inclusion reason for each cohort.
 
-There are 69 confirmed primary pairs, all general, and 296 comparable confirmed-or-probable pairs (281 general, 15 Māori). The 532 linked adjacent pairs have overlapping exclusion reasons: 219 changed-boundary transitions, 415 lacking two confirmed links, 28 missing exact party counterparts/normalized premiums, five seat or scope changes and one cancelled contest. The 2,045 unresolved occurrences cannot form evidenced pairs; this is substantial identity selection. Counts are conditional on a candidate returning and being observed. The model is **not** a complete pre-election candidacy forecast.
+| Transition | Linked adjacent | Before-audit confirmed primary | Corrected validation general | Retrospective confirmed general | Comparable linked |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2008→2011 | 109 | 23 | 20 | 20 | 104 |
+| 2011→2014 | 125 | 0 | 0 | 0 | 0 |
+| 2014→2017 | 121 | 26 | 16 | 18 | 114 |
+| 2017→2020 | 94 | 0 | 0 | 0 | 0 |
+| 2020→2023 | 83 | 20 | 3 | 1 | 78 |
+| Total | 532 | 69 | 39 | 39 | 296 |
 
-## Fit and chronological validation
+There are zero Māori pairs in either the corrected validation or retrospective confirmed cohort. The old 2023 cohort had 17 of 20 pairs whose sole qualifying identity anchor was the target win, and 18 of 20 targets won. Those old scores are superseded. Direct confirmation in the corrected retrospective cohort remains an outcome-selected diagnostic, even though its total happens also to be 39.
 
-The general primary model is ordinary least squares, `target residual = intercept + slope × prior residual`. An intercept is appropriate because Stage 7 leave-one-out residuals need not average zero among selected returning MPs. It is not inherited from Stage 6's zero-intercept response restriction. The full-sample fit is descriptive: 69 pairs, slope 0.850, intercept +1.423 percentage points; the zero-intercept descriptive sensitivity slope is 0.937. Neither is an operational coefficient. Single-transition slopes are 0.719, 0.870 and 0.909 for 2011, 2017 and 2023 target elections, but these are three dependent election clusters, not independent proof of a stable person effect.
+## Chronological diagnostics
 
-The 2011 cohort has no prior pair cohort to train on, so only benchmarks are scored. For 2017, fitting uses 2011 targets only; for 2023 it uses 2011 and 2017 targets only. Candidate identity/candidacy and earlier residuals are known conditions; each target's votes, reference offset and residual are evaluation outcomes only.
+Residuals remain vote-share fractions internally and reported errors are percentage points. The predictor is the source election's Stage 7 normalized residual. The target's observed votes, offset and residual enter only evaluation. Training uses earlier target elections: 2011 has benchmarks only; 2017 trains on 2011; 2023 trains on 2011 and 2017. Intercept plus slope remains appropriate because selected returnees' residual mean need not be zero. Zero and unchanged-prior benchmarks use the identical evaluated pairs and equal pair weighting. Full-sample fits are descriptive.
 
-| General confirmed target | Pairs | Zero MAE | Prior MAE | Fitted MAE | Zero RMSE | Prior RMSE | Fitted RMSE |
+| Validation target | Pairs | Zero MAE | Prior MAE | Fitted MAE | Zero RMSE | Prior RMSE | Fitted RMSE |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2011, benchmark only | 23 | 7.476 | 3.306 | — | 8.469 | 4.329 | — |
-| 2017 | 26 | 7.590 | 2.521 | 3.479 | 10.787 | 3.552 | 4.203 |
-| 2023 | 20 | 9.039 | 4.998 | 4.999 | 12.839 | 8.396 | 8.727 |
+| 2011, benchmark only | 20 | 7.805 | 3.311 | — | 8.846 | 4.433 | — |
+| 2017 | 16 | 6.886 | 2.776 | 3.697 | 7.978 | 4.082 | 4.369 |
+| 2023 | 3 | 10.362 | 14.438 | 16.401 | 15.018 | 19.181 | 20.427 |
 
-Errors are in percentage points. The equal-transition 2017/2023 MAE is 3.759 for unchanged prior residual and 4.239 for the fitted model. The fitted model fails the frozen practical gate in both trained holdouts; it worsens RMSE in both. A prior residual predicts later same-seat residuals better than zero in this selected sample, but the fitted shrinkage/intercept does not reliably improve on simply retaining the prior residual.
+The validation cohort's descriptive full-sample slope is 0.640 with intercept +2.355 points across 39 pairs. Proportional/log-odds descriptive slopes are 0.731/0.676; they do not repair the weak temporal evidence. The broad 281-pair general probable-link sensitivity retains slope 0.773, but identity uncertainty is greater. Fifteen comparable Māori probable pairs are too few for a coefficient. The separate winner-selected retrospective cohort has 39 general pairs and descriptive slope 0.619; its scores are not operational evidence.
 
-Proportional and log-odds scales keep positive descriptive slopes (0.858 and 0.857) but likewise fail to beat the prior benchmark in both chronological holdouts. Adding probable general links yields 281 pairs and slope 0.773; fitted MAE improves only 0.063 points over prior in 2017, then worsens by 0.217 points in 2023. The 15 probable Māori pairs are too few and unstable across three transition groups; zero confirmed Māori pairs support no separate coefficient. Full-sample and scale results are descriptive sensitivities, not model selection by attractive coefficients.
+The fitted model fails to beat the simple benchmarks in the two trained validation holdouts. The 2023 validation cohort has only three pairs and cannot establish stable generalization. The predeclared 0.25-point/no-worse-RMSE practical gate was originally applied to an outcome-selected cohort; under this post-fit amendment only the corrected validation cohort contributes diagnostic gate values. There is no adequate outcome-independent *confirmed-target* cohort or broad challenger coverage. `selectedOperationalCoefficient` therefore remains **null**, now explicitly for insufficient defensible validation as well as poor fitted performance. No Stage 6 bonus is created; Stage 5/6 operational choices remain unresolved.
 
-## Interpretation and operational decision
-
-`selectedOperationalCoefficient` is **null**. The predeclared 0.25-point MAE gain over the better simple benchmark with no RMSE deterioration does not hold, and MP-only confirmation does not establish generality to returning challengers. No residual coefficient is added to Stage 6. Stage 5's party transform and Stage 6's National/Labour operational slopes remain unresolved and provisional.
-
-The observed same-seat correlation may reflect stable electorate and party conditions, incumbency, candidate selection and shared party/election reference offsets. All primary pairs stay in the same seat and party by the conservative identity rule, so this design cannot separate personal vote retention from those conditions. Repeated people and only three election-transition clusters make candidate-pair standard errors misleading; no causal confidence interval or election-level replication claim is made. The bounded official index pass does not resolve all identities. Later replacement and freshman-incumbency effects require a separate authorized stage and may use this person/history/status layer, with fresh evidence where needed.
+Stable electorate/party conditions, incumbency, returnee selection, 2026 profile survival, and shared party/election reference offsets can all resemble person persistence. There are only three transition clusters and repeated people, so pair-level standard errors would overstate independent information. No causal retention, general-returnee forecast, or uniquely personal effect is claimed. Later freshman-incumbency work needs separate dated electorate and list-tenure evidence; replacement fitting is later still. Neither is started here.

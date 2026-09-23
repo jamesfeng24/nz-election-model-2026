@@ -39,12 +39,17 @@ def score(rows, predictions):
             'biasPP': sum(errors) / len(errors)}
 
 
-def _observations(pairs, scope, scale, include_probable):
+COHORT_FIELDS = {'validation': 'validationEligible',
+                 'retrospective_confirmed': 'retrospectiveConfirmedEligible',
+                 'all_comparable_linked': 'probableSensitivityEligible'}
+
+
+def _observations(pairs, scope, scale, cohort):
     observations = []
     for pair in pairs:
         if pair['electorateType'] != scope:
             continue
-        if not (pair['probableSensitivityEligible'] if include_probable else pair['primaryEligible']):
+        if not pair[COHORT_FIELDS[cohort]]:
             continue
         if scale == 'additive':
             x, y = pair['priorResidual'], pair['targetResidual']
@@ -58,9 +63,9 @@ def _observations(pairs, scope, scale, include_probable):
     return observations
 
 
-def analyze(pairs, scope='general', scale='additive', include_probable=False):
+def analyze(pairs, scope='general', scale='additive', cohort='validation'):
     """Separate full-sample descriptions from expanding chronological folds."""
-    observations = _observations(pairs, scope, scale, include_probable)
+    observations = _observations(pairs, scope, scale, cohort)
     descriptive = fit(observations)
     zero_intercept = fit(observations, intercept=False)
     by_transition = []
@@ -86,18 +91,20 @@ def analyze(pairs, scope='general', scale='additive', include_probable=False):
             macro[name] = {metric: sum(row['scores'][name][metric] for row in trained) / len(trained)
                            for metric in ('maePP', 'rmsePP', 'biasPP')}
     return {
-        'scope': scope, 'scale': scale, 'identitySet': 'confirmed_plus_probable' if include_probable else 'confirmed',
+        'scope': scope, 'scale': scale, 'identitySet': cohort,
         'n': len(observations), 'samePartyCount': sum(row['partyUnchanged'] for row in observations),
         'descriptiveFullSampleFit': descriptive, 'zeroInterceptSensitivityFit': zero_intercept,
         'individualTransitionFits': [{'targetYear': year, 'fit': fit([row for row in observations if row['year'] == year])}
                                      for year in TARGET_YEARS],
         'chronological': by_transition, 'equalTransitionMacroTrained': macro,
-        'interpretation': 'Retrospective prediction conditional on known target candidacy and corroborated identity; target residuals are evaluation outcomes only. Same-seat conditions and returnee selection remain confounded with person persistence.'
+        'interpretation': ('Outcome-independent eligibility conditional on a directly anchored source winner and an exact-chain target candidacy; target link can be probable, and retrospective profile retrieval does not establish pre-election publication.'
+                           if cohort == 'validation' else
+                           'Retrospective diagnostic only. Eligibility may depend on target or later electoral outcomes and cannot validate a pre-election forecast for general returnees.')
     }
 
 
 def select(primary, sensitivity, identity_coverage):
-    """Apply the frozen practical gate; never deploy an MP-only fit."""
+    """Apply the audit-amended gate to outcome-independent diagnostics only."""
     trained = [row for row in primary['chronological'] if row['scores'] and 'fitted' in row['scores']]
     gains = []
     for row in trained:
@@ -114,10 +121,10 @@ def select(primary, sensitivity, identity_coverage):
         result['n'] > 0 and result['descriptiveFullSampleFit'] is not None and
         result['descriptiveFullSampleFit']['slope'] * primary_fit['slope'] >= 0
         for result in sensitivity)
-    coverage_pass = False  # Parliamentary corroboration requires a winner; challengers remain unverified.
+    coverage_pass = False  # Target-chain identity remains probable and returnees are prior-winner selected.
     return {'schemaVersion': 1, 'selectedOperationalCoefficient': None,
-            'status': 'unresolved_insufficient_predictive_and_identity_evidence',
+            'status': 'unresolved_insufficient_outcome_independent_confirmed_validation',
             'holdoutGains': gains, 'performanceGatePassed': performance_pass,
             'scaleDirectionGatePassed': scale_pass, 'identityBreadthGatePassed': coverage_pass,
             'confirmedOccurrenceCount': identity_coverage['confirmedCount'],
-            'reason': 'Confirmed links are Parliament-selected and do not cover the wider returning-challenger population; a universal persistence coefficient is not supported even if a fitted holdout diagnostic improves. No Stage6 bonus is created.'}
+            'reason': 'Validation eligibility uses a directly corroborated source winner and exact-chain target candidacy without conditioning on the target win. The target link may be probable, and this prior-winner cohort does not cover general returnees. Retrospective winner-selected scores do not enter operational selection. No Stage6 bonus is created.'}

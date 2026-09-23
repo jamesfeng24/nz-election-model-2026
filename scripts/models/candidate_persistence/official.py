@@ -52,13 +52,14 @@ def parse_members(raw):
     return sorted(records.values(), key=lambda value: value['sourceUrl'])
 
 
-def project_members(occurrences, members, elected_ids):
-    """Corroborate unique same-name chains containing an observed winner.
+def project_members(occurrences, members, elected_ids, source_metadata=None):
+    """Anchor observed winners and retain probable links in their exact chains.
 
     A parliamentary page supplies an independent person profile. The official
     election winner and exact original full-name/party/seat chain connect it to
     a specific occurrence. Omitted middle names remain explicit aliases.
     """
+    source_metadata = source_metadata or {}
     by_key = defaultdict(list)
     for member in members:
         key = _name_key(member['name'])
@@ -84,17 +85,27 @@ def project_members(occurrences, members, elected_ids):
                              (member['serviceText'] is None and row['year'] == 2023)))
         if not winner_ids or len({row['year'] for row in rows}) != len(rows):
             continue
+        source_id = ('parliament-former-mp-index-2026-09-23' if
+                     '/former-members-of-parliament/' in member['sourceUrl'] else
+                     'parliament-current-mp-index-2026-09-23')
+        anchors = [{'candidateOccurrenceId': candidate_id,
+                    'year': next(row['year'] for row in rows if row['candidateOccurrenceId'] == candidate_id),
+                    'electionDate': ELECTION_DATES[next(row['year'] for row in rows
+                                                        if row['candidateOccurrenceId'] == candidate_id)]}
+                   for candidate_id in winner_ids]
         for row in rows:
             source_name = row['sourceCandidateName']
             evidence = {
                 'candidateOccurrenceId': row['candidateOccurrenceId'],
                 'personId': 'parliament:' + member['sourceUrl'].rsplit('/', 2)[-2],
                 'sourceUrl': member['sourceUrl'],
-                'sourceId': ('parliament-former-mp-index-2026-09-23' if
-                             '/former-members-of-parliament/' in member['sourceUrl'] else
-                             'parliament-current-mp-index-2026-09-23'),
+                'sourceId': source_id,
                 'sourceName': member['name'],
                 'winnerOccurrenceIds': winner_ids,
+                'anchorOccurrences': anchors,
+                'directOccurrenceEvidence': row['candidateOccurrenceId'] in winner_ids,
+                'evidenceRetrievedAt': source_metadata.get(source_id, {}).get('retrievedAt'),
+                'evidencePublishedAt': None,
                 'serviceText': member['serviceText'],
             }
             if member['name'] != source_name:

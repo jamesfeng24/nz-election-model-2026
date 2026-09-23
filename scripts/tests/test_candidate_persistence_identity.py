@@ -17,7 +17,8 @@ def occurrence(candidate_id, year, name='LEE, Alex Morgan', party='nationalparty
 
 def member(candidate_id, person_id='parliament:123', **fields):
     return {'candidateOccurrenceId': candidate_id, 'personId': person_id,
-            'sourceUrl': 'https://www.parliament.nz/member/123', **fields}
+            'sourceUrl': 'https://www.parliament.nz/member/123',
+            'directOccurrenceEvidence': True, **fields}
 
 
 class CandidateIdentityTests(unittest.TestCase):
@@ -28,9 +29,12 @@ class CandidateIdentityTests(unittest.TestCase):
                          [('a', 'confirmed'), ('b', 'probable')])
         self.assertEqual(result['links'][1]['personId'], 'parliament:123')
         self.assertEqual(result['links'][1]['evidence']['corroboratingOccurrenceIds'], ['a'])
+        self.assertEqual(result['links'][0]['personExistenceStatus'], 'official_profile_corroborated')
+        self.assertEqual(result['links'][1]['personExistenceStatus'], 'unverified_chain')
         self.assertEqual(result['unresolved'][0]['candidateOccurrenceId'], 'c')
         self.assertEqual(result['coverage']['occurrenceCount'], 3)
         self.assertEqual(result['coverage']['unresolvedCount'], 1)
+        self.assertIsNone(result['unresolved'][0]['evidenceRetrievedAt'])
 
     def test_name_alone_or_alias_does_not_link(self):
         rows = [occurrence('a', 2008),
@@ -90,6 +94,20 @@ class CandidateIdentityTests(unittest.TestCase):
                                               aliasEvidence='official name correspondence')])
         self.assertEqual(result['links'][0]['evidence']['officialSourceName'], 'Alex Morgan Lee')
         self.assertEqual(result['links'][0]['evidence']['aliasEvidence'], 'official name correspondence')
+
+    def test_official_profile_does_not_confirm_projected_occurrence(self):
+        rows = [occurrence('a', 2008), occurrence('b', 2011)]
+        anchor = member('a', winnerOccurrenceIds=['a'],
+                        anchorOccurrences=[{'candidateOccurrenceId': 'a', 'year': 2008,
+                                            'electionDate': '8 November 2008'}])
+        projection = member('b', directOccurrenceEvidence=False, winnerOccurrenceIds=['a'],
+                            anchorOccurrences=anchor['anchorOccurrences'])
+        result = build_identity(rows, [anchor, projection])
+        self.assertEqual([link['status'] for link in result['links']], ['confirmed', 'probable'])
+        self.assertEqual(result['links'][0]['personId'], result['links'][1]['personId'])
+        self.assertEqual(result['links'][1]['method'], 'profile_anchored_exact_chain_projection')
+        self.assertEqual(result['links'][1]['evidence']['winnerOccurrenceIds'], ['a'])
+        self.assertEqual(result['historyStatus'][1]['careerHistoryEvidenceStatus'], 'unknown')
 
     def test_deterministic_order_and_immutable_source(self):
         rows = [occurrence('b', 2011), occurrence('a', 2008), occurrence('c', 2023, seat='Elsewhere')]

@@ -7,6 +7,7 @@
 - Built unchanged-boundary same-seat persistence pairs, chronological benchmark/fitted comparisons, scale and identity sensitivities and deterministic pinned outputs.
 - Found descriptive selected-sample continuity but no stable fitted gain over the prior-residual benchmark; selected operational persistence coefficient remains null. No freshman-incumbency or replacement fit, Stage6 bonus, candidate transport or2026 input.
 - Corrected Stage6/7 source provenance after CI exposed a whole-registry hash dependency: an immutable snapshot pins42 consumed supporting candidate records and raw bytes while unrelated source additions are accepted. Only provenance metadata changed; historical numerical outputs remain identical.
+- Corrected Stage8 after PR audit: only directly anchored winner occurrences remain confirmed (169);46 projected links become probable (793 total). Outcome-independent source-anchored validation has39 general pairs (20/16/3), separate from39 target-win-selected retrospective diagnostics. The null operational selection remains; the original freeze and post-fit amendment are both recorded. No prior numerical output changed.
 
 ## 0.1.0 — 2026-09-07
 
