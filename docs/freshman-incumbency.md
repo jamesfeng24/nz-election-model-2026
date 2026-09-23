@@ -1,0 +1,26 @@
+# Stage 9 — freshman-incumbency evidence and analysis
+
+## Pre-fit evidence checkpoint (2026-09-23)
+
+This section and the pinned `data/processed/models/freshman-incumbency/inventory.json` were committed **before fitting**. No effect result was examined to choose these categories. Stage 8's person links and occurrence IDs are retained; the dated tenure records are a separate evidence overlay, not a reclassification of Stage 8's historical outputs.
+
+The acquisition was bounded to 107 New Zealand Parliament individual profiles reachable from source-winner recontesters in the unchanged-boundary Stage 8 pairs, plus the missing second page of the former-member index. The 108 raw files and their exact bytes are registered in `data/source-plans/freshman-incumbency-tenure-sources.json`. Of 107 profiles, 101 have a complete parsed dated service table and six provide no usable dated rows. A profile has its own publication date and 2026 retrieval timestamp; service start/end dates are historical facts, not evidence publication dates. Publication is generally retrospective relative to the election being evaluated.
+
+An observed source-election win, unique official profile with the same surname and explicit service for that electorate on that election date, and a Stage 8 linked target candidacy support the source occurrence. Given names can be shortened on profiles, so name alone never establishes the link. Three source winners have no unique usable dated source-service match. The profile's dated electorate and list rows and first-election date must reconcile before classifying a first-ever win. Complete-profile inference is still conditional on accuracy and completeness of Parliament's retrospective table. The target occurrence may remain only **probable** under Stage 8's exact chain; an identity match does not establish complete career history. Party-label disagreements are recorded without changing the preserved labels. No target-election win or residual is used in tenure classification or cohort admission.
+
+The inventory contains all 532 adjacent linked Stage 8 pairs and explicit reasons for excluding non-comparable geography or source candidates who did not win. Its first potentially analyzable subset is conditional on a **source winner who recontests** the same electorate across one of three unchanged-boundary transitions. This is not a sample of all incumbents, retirees, or all returning candidates. The 2008 panel edge is handled through dated pre-panel profile rows; first dataset appearance is never treated as first service. The primary treatment requires a reconciled first-ever electorate service start on the source general-election date, no prior list service, and continuing service through target-election day. The comparator has earlier continuing electorate service. A prior electorate MP switching seats at source, a returning former MP, an off-cycle entrant, interrupted service, incomplete tenure, and a prior-list freshman are held outside the primary cohort and retained with reasons for diagnostics or sensitivity. Off-cycle electorate starts in the observed panel are consistent with by-election entry but the table alone does not label an election; this remains an explicit sensitivity group. Prior list service never counts as prior electorate service.
+
+| Source→target | Scope | Comparable source winners who recontest | Matched dated source service | Primary first-term | Primary experienced | Excluded/uncertain |
+|---|---|---:|---:|---:|---:|---:|
+| 2008→2011 | General | 43 | 41 | 11 | 19 | 13 |
+| 2014→2017 | General | 45 | 45 | 9 | 28 | 8 |
+| 2020→2023 | General | 37 | 36 | 12 | 14 | 11 |
+| All three | Māori | 0 | 0 | 0 | 0 | 0 |
+
+Across the 125 source-winner comparable general pairs, 122 have a unique dated source-service profile; 32 first-term and 61 experienced pairs meet primary eligibility. The other 32 comprise 10 documented seat switches, six interrupted/former electorate careers, nine prior-list freshmen, four off-cycle experienced entrants, and three unresolved source-service matches. Some categories overlap in the raw evidence, but each pair has an explicit primary exclusion list. The broader Stage 8 comparable linked set contains 281 general and 15 Māori pairs, most without an observed source win; they do not enter an incumbency comparison.
+
+The 125 source-winner pairs comprise 39 confirmed/confirmed, four confirmed/probable, 15 probable/confirmed, and 67 probable/probable Stage 8 occurrence links; the new source-service match is an independent source-occurrence corroboration for 122 of them, while target identity uncertainty remains. The bounded profile acquisition disproportionately covers serving/former MPs and thus is selected on prior success. Target candidacy is known from retrospective election records. Later office holding can affect whether a profile is published or complete; neither target nor later winner flags enter eligibility, but this source-coverage mechanism limits generalisation. Sparse general-election clusters and zero Māori treatment/comparator observations limit inference.
+
+## Specification and results
+
+To be frozen in a separate checkpoint after this inventory. No model was fitted in the inventory checkpoint.
