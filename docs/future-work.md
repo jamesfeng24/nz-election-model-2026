@@ -19,14 +19,15 @@ Revised by the user on 2026-09-08; supersedes earlier proposed implementation or
 15. Replacement-candidate effects
 16. Historical split-ticket model
 17. Evidence-repair/design checkpoint before model integration: assess systematic identity coverage on a predetermined historical cohort, using one consistent protocol for winners, losers, continuations and replacements; distinguish occurrence identity from complete career history and retain unresolved cases and selection. Test whether repaired evidence improves complete historical predictions against simple benchmarks. Separately review conditional Stage 6 elasticity and establish a defensible target-boundary candidate baseline.
-18. Three independent electorate models, followed by historical backtesting and only then frozen ensemble weights
-19. Only then build the 2026 Opportunity model
-20. Ingest 2026 candidate slate
-21. Ingest latest 2026 polling
-22. Produce 2026 seat model
-23. Monte Carlo
-24. MMP/overhang
-25. Final website/coalition outputs
+18. Three separately validated electorate prediction views, where evidence supports them
+19. Historical backtesting and only then frozen ensemble weights
+20. Only then build the 2026 Opportunity model
+21. Ingest 2026 candidate slate
+22. Ingest latest 2026 polling
+23. Produce 2026 seat model
+24. Monte Carlo
+25. MMP/overhang
+26. Final website/coalition outputs
 
 Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization.
 

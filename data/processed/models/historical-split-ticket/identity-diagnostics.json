@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "counts": {
+    "retrospective_alias_replacement": 1,
+    "retrospective_distinct_people": 8,
+    "retrospective_or_ambiguous_continuation": 242,
+    "supported_by_election_successor": 4,
+    "supported_continuation": 39,
+    "supported_replacement": 5,
+    "unresolved_identity": 504
+  },
+  "scores": [
+    {
+      "identityClass": "retrospective_alias_replacement",
+      "n": 1,
+      "local": null
+    },
+    {
+      "identityClass": "retrospective_distinct_people",
+      "n": 8,
+      "local": {
+        "n": 8,
+        "maeLowerPP": 6.170876195797419,
+        "maeUpperPP": 6.190512748914892,
+        "rmseLowerPP": 9.49500405704295,
+        "rmseUpperPP": 9.507831939899145,
+        "biasLowerPP": 4.525117993229659,
+        "biasUpperPP": 4.544754546347131
+      }
+    },
+    {
+      "identityClass": "retrospective_or_ambiguous_continuation",
+      "n": 242,
+      "local": {
+        "n": 242,
+        "maeLowerPP": 2.2963505188682367,
+        "maeUpperPP": 2.3157728532380797,
+        "rmseLowerPP": 3.6932807138390262,
+        "rmseUpperPP": 3.7054185145977603,
+        "biasLowerPP": -0.022211395047491703,
+        "biasUpperPP": -0.002755633243294729
+      }
+    },
+    {
+      "identityClass": "supported_by_election_successor",
+      "n": 4,
+      "local": null
+    },
+    {
+      "identityClass": "supported_continuation",
+      "n": 39,
+      "local": {
+        "n": 39,
+        "maeLowerPP": 4.224310888631049,
+        "maeUpperPP": 4.243767229864476,
+        "rmseLowerPP": 6.76677300924639,
+        "rmseUpperPP": 6.778987881847587,
+        "biasLowerPP": -0.7538793090038447,
+        "biasUpperPP": -0.734422967770418
+      }
+    },
+    {
+      "identityClass": "supported_replacement",
+      "n": 5,
+      "local": {
+        "n": 5,
+        "maeLowerPP": 7.736397007341478,
+        "maeUpperPP": 7.7558890567288366,
+        "rmseLowerPP": 8.711909610112958,
+        "rmseUpperPP": 8.729277337128407,
+        "biasLowerPP": 6.502920714909214,
+        "biasUpperPP": 6.522412764296573
+      }
+    },
+    {
+      "identityClass": "unresolved_identity",
+      "n": 504,
+      "local": {
+        "n": 504,
+        "maeLowerPP": 2.5089593013474603,
+        "maeUpperPP": 2.528391445381253,
+        "rmseLowerPP": 4.6282343535373185,
+        "rmseUpperPP": 4.6388348759711615,
+        "biasLowerPP": 0.26121437828826666,
+        "biasUpperPP": 0.28068339154810873
+      }
+    }
+  ],
+  "caveat": "Inherited Stage10 identity evidence was retrospectively acquired with outcome-related selection. Status never admits or excludes Stage11 predictions; small supported replacement groups are descriptive only."
+}
