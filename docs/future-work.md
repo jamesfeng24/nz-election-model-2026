@@ -18,8 +18,8 @@ Revised by the user on 2026-09-08; supersedes earlier proposed implementation or
 14. Freshman incumbency
 15. Replacement-candidate effects
 16. Historical split-ticket model
-17. Three independent electorate models
-18. Historical backtesting and freeze ensemble weights
+17. Evidence-repair/design checkpoint before model integration: assess systematic identity coverage on a predetermined historical cohort, using one consistent protocol for winners, losers, continuations and replacements; distinguish occurrence identity from complete career history and retain unresolved cases and selection. Test whether repaired evidence improves complete historical predictions against simple benchmarks. Separately review conditional Stage 6 elasticity and establish a defensible target-boundary candidate baseline.
+18. Three independent electorate models, followed by historical backtesting and only then frozen ensemble weights
 19. Only then build the 2026 Opportunity model
 20. Ingest 2026 candidate slate
 21. Ingest latest 2026 polling
@@ -30,6 +30,6 @@ Revised by the user on 2026-09-08; supersedes earlier proposed implementation or
 
 Current 2026 polling and Opportunity-specific modelling must not influence historical model selection or ensemble weights. Freeze the historical backtesting design and ensemble weights before Opportunity-specific modelling or current 2026 polling ingestion. Each later task requires explicit authorization.
 
-Current state: Stage7 [PR #14](https://github.com/jamesfeng24/nz-election-model-2026/pull/14), Stage8 [PR #15](https://github.com/jamesfeng24/nz-election-model-2026/pull/15) and Stage9 [PR #16](https://github.com/jamesfeng24/nz-election-model-2026/pull/16) are merged. Stage8 persistence and Stage9 freshman-incumbency operational effects remain null. Stage10 [PR #17](https://github.com/jamesfeng24/nz-election-model-2026/pull/17) is unmerged. Its post-review evidence correction finds five independently corroborated general source-winner replacements and 39 continuations; chronological fitted scores are retrospective evidence-selected diagnostics. The acquisition queue partly used inherited identity gaps that can depend on target/later winner anchors, so the operational replacement coefficient remains null despite favourable numerical gates. Official Māori source winners are recovered but person identity remains unresolved for a separate Māori fit. See `docs/replacement-candidate.md` and D037. The next item in the authorized sequence is historical split-ticket modelling, requiring separate authorization; D029's conditional Stage6 elasticity review is a dependency before later integration, not a Stage10 refit.
+Current state: Stage7–10 are merged; Stage10 [PR #17](https://github.com/jamesfeng24/nz-election-model-2026/pull/17) merged as `8ae94ccc` with its reviewed correction. Operational persistence, freshman and replacement effects remain null; the Stage10 descriptive replacement shift is not an operational adjustment. Stage11 historical split-ticket modelling is authorized now. Before any integration or ensemble-weight freeze, complete the separate evidence-repair/design checkpoint above, the conditional Stage6 elasticity review and a target-boundary candidate baseline. Stage11 records evidence relevant to those dependencies; it does not carry out the broad identity repair, integrate models or fit weights.
 
 Historical note: before separately authorized persistence work, canonical main had to contain the actual merged Stage7 work; the merge SHA need not equal a branch completion SHA. The shared person/history/status infrastructure was added in Stage8 and extended with dated tenure in Stage9. Replacement effects remain a later stage.

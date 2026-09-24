@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "stage": 11,
+  "tableCoverage": [
+    {
+      "year": 2008,
+      "cancelledOrNonbehavioural": 0,
+      "candidateColumns": 499,
+      "maoriElectoratesWithoutLocalMatrix": 7,
+      "officialSourceDiscrepancies": 0,
+      "partyVoteRows": 1197,
+      "roundedLocalMatrices": 63,
+      "supportingMaoriLocalMatrices": 0
+    },
+    {
+      "year": 2011,
+      "cancelledOrNonbehavioural": 0,
+      "candidateColumns": 423,
+      "maoriElectoratesWithoutLocalMatrix": 7,
+      "officialSourceDiscrepancies": 0,
+      "partyVoteRows": 819,
+      "roundedLocalMatrices": 63,
+      "supportingMaoriLocalMatrices": 0
+    },
+    {
+      "year": 2014,
+      "cancelledOrNonbehavioural": 0,
+      "candidateColumns": 451,
+      "maoriElectoratesWithoutLocalMatrix": 7,
+      "officialSourceDiscrepancies": 0,
+      "partyVoteRows": 960,
+      "roundedLocalMatrices": 64,
+      "supportingMaoriLocalMatrices": 0
+    },
+    {
+      "year": 2017,
+      "cancelledOrNonbehavioural": 0,
+      "candidateColumns": 431,
+      "maoriElectoratesWithoutLocalMatrix": 7,
+      "officialSourceDiscrepancies": 0,
+      "partyVoteRows": 1024,
+      "roundedLocalMatrices": 64,
+      "supportingMaoriLocalMatrices": 0
+    },
+    {
+      "year": 2020,
+      "cancelledOrNonbehavioural": 0,
+      "candidateColumns": 561,
+      "maoriElectoratesWithoutLocalMatrix": 6,
+      "officialSourceDiscrepancies": 0,
+      "partyVoteRows": 1105,
+      "roundedLocalMatrices": 65,
+      "supportingMaoriLocalMatrices": 1
+    },
+    {
+      "year": 2023,
+      "cancelledOrNonbehavioural": 1,
+      "candidateColumns": 468,
+      "maoriElectoratesWithoutLocalMatrix": 7,
+      "officialSourceDiscrepancies": 21,
+      "partyVoteRows": 1105,
+      "roundedLocalMatrices": 65,
+      "supportingMaoriLocalMatrices": 0
+    }
+  ],
+  "ballotPopulation": "Party ballot groups, including informal party ballots; each local row is an exact group count. Candidate, informal-candidate and party-vote-only columns are rounded conditional percentages of that row, not exact joint counts.",
+  "candidateShareMapping": "The sum of predicted candidate votes must be divided by the separately observed or forecast valid-candidate-vote denominator. Party-ballot totals and candidate valid votes differ.",
+  "maoriStatus": "Aggregate general/Māori/national matrices have destination party groups rather than local named candidates. One supporting 2020 Māori local matrix is not a six-election comparable panel.",
+  "discrepancyStatus": "2023 preserves 21 unresolved aggregate Party Vote Only reconciliation assertions; do not allocate the mass or reinterpret cancelled Port Waikato as behaviour.",
+  "exactJointCountsAvailable": false
+}
