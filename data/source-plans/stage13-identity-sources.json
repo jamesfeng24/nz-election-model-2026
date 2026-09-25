@@ -73,6 +73,114 @@
       ],
       "sha256": "4b2e3b0cacd6906760f60d0793376e9b241108d46662d4fab22336148f0d0d82",
       "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-labour-2011-complete-candidate-selections",
+      "organisation": "New Zealand Labour Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PA1109/S00048/labour-completes-selections-for-the-2011-general-election.htm",
+      "dateOrElection": "2011 general election",
+      "resource": "Dated complete Labour electorate-candidate selection announcement",
+      "publishedDate": "2011-09-02",
+      "retrievedAt": "2026-09-25T18:24:30.399308+00:00",
+      "rawPath": "data/raw/identity-stage13/labour-2011-complete-selections.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "A shared party statement names candidates and electorates in 2011. Each fixed-cohort occurrence requires a separate exact text and seat check; this source does not automatically establish any cross-election relation.",
+        "Publication precedes the election result; nomination-close as-of availability requires a separately pinned cutoff."
+      ],
+      "sha256": "f8e20fa597ed029a1cc8dfafe21310e8116499660130bf8e6c26f4fe69630f4e",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-national-katie-nimon-napier-selection-2020",
+      "organisation": "New Zealand National Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO2005/S00088/katie-nimon-nationals-candidate-in-napier.htm",
+      "dateOrElection": "2020 general election",
+      "resource": "Dated party candidate-selection statement",
+      "publishedDate": "2020-05-07",
+      "retrievedAt": "2026-09-25T18:30:45.723388+00:00",
+      "rawPath": "data/raw/identity-stage13/national-katie-nimon-napier-2020.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Dated National Party statement names Katie Nimon as Napier candidate in 2020; historical 2023 identity and full career require separate evidence.",
+        "Historical fact date and publication/retrieval time remain separate; strict as-of admission requires a pinned nomination-close cutoff."
+      ],
+      "sha256": "4945fa4253724e127cdd5693bf148ce223f3468129eef3332c312e1885ed6f92",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-martin-langford-napier-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/napier-electorate/candidates/martin-langford",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:30:45.723478+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-martin-langford-napier-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Candidate-submitted first-person profile names Martin Langford as Napier DemocracyNZ candidate in 2023; original publication time is not exposed and career fields do not establish complete history.",
+        "Historical fact date and publication/retrieval time remain separate; strict as-of admission requires a pinned nomination-close cutoff."
+      ],
+      "sha256": "4eccc6b4d6b9c288bfb5890d2babec19f67673d4c8761c116784053f9992c0f8",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-unitedfuture-2011-candidate-list",
+      "organisation": "United Future NZ Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PA1110/S00336/credibility-and-experience-top-unitedfuture-list.htm",
+      "dateOrElection": "2011 general election",
+      "resource": "Dated party candidate list",
+      "publishedDate": "2011-10-20",
+      "retrievedAt": "2026-09-25T18:35:31.486308+00:00",
+      "rawPath": "data/raw/identity-stage13/unitedfuture-2011-list.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Dated party list pairs Sultan Eusoff with Palmerston North and names his full name; each other sampled occurrence needs its own text and seat check.",
+        "Source fact, publication and retrieval times are separated; a strict as-of nomination-close admission still needs a pinned cutoff."
+      ],
+      "sha256": "c64601f02961b44fb83901fda9b2e8e1e0d2eab675a123014b2c40248a5e3d4f",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-mark-hutchinson-napier-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/napier-electorate/candidates/mark-hutchinson",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:35:31.549959+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-mark-hutchinson-napier-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "First-person Napier Labour candidate profile; original publication time unknown and career fields are not exhaustive proof.",
+        "Source fact, publication and retrieval times are separated; a strict as-of nomination-close admission still needs a pinned cutoff."
+      ],
+      "sha256": "902b6711ea4f88ca48b6fd446a640e7a8ec366790c8559be72835f1764a3a8a1",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-nina-su-epsom-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/epsom-electorate/candidates/nina-su",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:35:32.147092+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-nina-su-epsom-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "First-person Epsom TOP candidate profile; original publication time unknown and career fields are not exhaustive proof.",
+        "Source fact, publication and retrieval times are separated; a strict as-of nomination-close admission still needs a pinned cutoff."
+      ],
+      "sha256": "0e0c9d775d9d23315095da89aa5d7e8c1ae358774f920b53041625e268f72f41",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
     }
   ]
 }
