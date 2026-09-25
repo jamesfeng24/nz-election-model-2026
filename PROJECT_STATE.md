@@ -1,4 +1,14 @@
-# Stage 13 fixed-cohort identity evidence pass — pre-acquisition, 2026-09-26
+# Stage 13 fixed-cohort identity evidence pass — partial acquisition handoff, 2026-09-26
+
+The user reported low remaining usage and requested a resumable handoff. This is **not a completed evidence pass**: the fixed order has been processed through occurrence 324; 91 positions (325–415) remain untouched. The merged PR #19 base and frozen 415-occurrence cohort are unchanged. The replayed search ledger records 596 formal search attempts, 279 searched-but-unresolved cases, four separately logged preflight cases, 26 cases with sufficient preserved direct evidence, 15 acquired-source cases **pending occurrence adjudication**, and 91 not yet reached. Fifteen unique raw resources are registered against the 60-resource ceiling. These are acquisition states, not final identity-confidence counts. No effect, forecast, baseline or earlier model output was changed.
+
+The fixed-order batches through 324 and raw-source checksums are committed on `stage/13-fixed-cohort-identity-evidence`. Two previous CI runs failed only because a new Stage 13 test hard-coded the source count as one; commit `21c34fe` changed the assertion to the actual capped source-plan size while retaining duplicate/raw-byte failure checks. [Run 36175064545](https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/36175064545) passed both jobs on that correction. The initially over-queried first four cases remain disclosed in `tooling-preflight-audit.json` and received no evidence promotion from the extra queries.
+
+**Resume exactly at order 325.** Continue the frozen two-query protocol until order 415 or the 60-resource cap. Review any candidate-specific search hits and log failed retrievals. Then build separate occurrence/person/relation/career adjudications with source/fact/publication/retrieval timing, unresolved/conflict audit and full-cohort coverage by transition, scope, source/target and later observed outcome. Source results already acquired remain pending adjudication; do not treat the 15 as confirmed links. Run deterministic, source-integrity and prior-output-preservation checks, then commit/push and open the unmerged PR. No later modelling is authorized.
+
+---
+
+# Stage 13 initial acquisition checkpoint — 2026-09-26
 
 PR #19 is verified **merged** as `c99624f9725219a65f7421ec38b5d6627e72865d`, containing reviewed head `e6fca5ca7a1fd2706003c8759245fbbce485ef8d`. The previous checkout was clean; `stage/13-fixed-cohort-identity-evidence` starts from fetched merged main. Historical open-PR wording below predates that merge. The user authorized only a fixed-cohort evidence pass, not effect fitting or forecast integration.
 
