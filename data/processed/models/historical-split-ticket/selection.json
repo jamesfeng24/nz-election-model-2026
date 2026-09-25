@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "selectedOperationalSplitView": null,
+  "gates": {
+    "matchedComponentImprovesBothBenchmarksEachHoldout": true,
+    "completePartyBallotMassMapping": false,
+    "candidateIdentityTransferValidated": false,
+    "outcomeIndependentComputationalEligibility": true
+  },
+  "reason": "The matched ballot component improves both benchmarks, but every comparable target contest has unmatched source party groups; candidate-party transfer to uncertain replacements is unvalidated. No complete pre-election candidate forecast is established."
+}

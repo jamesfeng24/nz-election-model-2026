@@ -325,3 +325,15 @@ python3 -m unittest scripts.tests.test_replacement_candidate -v
 ```
 
 The inventory command rebuilds all party-seat comparisons from pinned Stage7 occurrences, Stage8 links, Stage5 party continuity, Stage9 dated profile evidence and processed elections. It verifies the 23 new Stage10 identity pages, exact required Māori source records and raw bytes, and 21 official winner joins; unrelated registry additions are accepted. It checks the revised inventory, identity review, Māori winner overlay, input contract and manifest against exact saved bytes. The analysis command verifies the original frozen specification and explicitly **post-review** inventory amendment, plus the separately recorded **post-fit** acquisition-selection audit. It rebuilds identity after removing target/later winner flags with the acquired historical evidence fixed, independently fits replacement and no-replacement models using only earlier elections, scores identical holdout rows and checks all saved analysis bytes. Neither command downloads inputs, reruns boundary reconstruction or rewrites Stage5–9 outputs. The original pre-review inventory/specification checkpoints remain in Git history; `post-review-amendment.json` is not claimed to have been frozen before the original fitting. `analysis-input-contract.json` and `analysis-manifest.json` identify exact consumed bytes/code and output hashes. Run `npm run check:all` and the CI historical deterministic commands before PR handoff.
+
+## Reproduce Stage11 split evidence and conditional diagnostics
+
+From the repository root in the pinned Python environment:
+
+```sh
+.venv/bin/python -m scripts.models.historical_split_ticket.run --check
+.venv/bin/python -m scripts.models.historical_split_ticket.analysis_run --check
+.venv/bin/python -m unittest scripts.tests.test_historical_split_ticket -v
+```
+
+The first command verifies the committed pre-fit source/coverage inventory, all384 consumed local split source records and raw SHA-256, processed election/split input hashes and the reviewed2023 discrepancy plan. It tolerates unrelated registry additions but rejects changed/deleted/duplicate required source records or changed raw bytes. The second rechecks the evidence bytes and frozen specification, rebuilds the candidate inventory after flipping historical winner flags, then recomputes conditional local, source-year pooled and party-only split predictions, exact rounding intervals, joint mass, Stage5 party-input sensitivity, identity diagnostics, selection and manifests. Target split percentages and candidate totals are evaluation inputs only. It performs no network request, raw source acquisition or boundary reconstruction and does not rewrite Stage5–10 outputs. Omit `--check` only for intentional Stage11 output regeneration after reviewing inputs/code. Run `npm run check:all` in `.venv` plus CI historical and 2017/2020 modern-election deterministic checks for final validation.
