@@ -19,6 +19,60 @@
       ],
       "sha256": "38fa368661f616aeab3bb5aac84eccb1d4b2e078eb851f791653cba213f88217",
       "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-naisi-chen-east-coast-bays-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/east-coast-bays-electorate/candidates/naisi-chen",
+      "dateOrElection": "2023 general election",
+      "resource": "Archived candidate profile and candidate-submitted statement",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:11:59.648421+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-naisi-chen-east-coast-bays-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "The archived page names Naisi Chen as East Coast Bays Labour candidate and includes a first-person statement; exact original publication time is not exposed by this retained HTML.",
+        "Policy.nz platform publication/selection may be retrospective or incomplete; this page does not establish all career history or cross-election same-person relations."
+      ],
+      "sha256": "af5cd53cc3a858ab96e251834f86ed6f9f1e7b1d2ae9426da5a2ca5e923346af",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-nzf-alok-gupta-hutt-south-selection-2017",
+      "organisation": "New Zealand First Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO1708/S00317/new-zealand-first-announces-wellington-region-candidates.htm",
+      "dateOrElection": "2017 general election",
+      "resource": "New Zealand First candidate announcement for Hutt South",
+      "publishedDate": "2017-08-15",
+      "retrievedAt": "2026-09-25T18:19:05.423768+00:00",
+      "rawPath": "data/raw/identity-stage13/nzf-alok-gupta-hutt-south-2017.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Party statement explicitly selects Alok Gupta as Hutt South candidate in 2017; it does not prove every other same-name occurrence or full career history.",
+        "Publication predates the general-election result; a strict historical nomination-close cutoff requires its own pinned date."
+      ],
+      "sha256": "e82ac5d0501f4adbd559cb1695028c011f8facbae10bbeba13d6f4f78219951c",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-green-rick-bazeley-whangarei-selection-2023",
+      "organisation": "Green Party of Aotearoa New Zealand (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO2308/S00154/the-green-party-announces-rick-bazeley-as-the-candidate-for-whangarei.htm",
+      "dateOrElection": "2023 general election",
+      "resource": "Green Party candidate announcement for Whangārei",
+      "publishedDate": "2023-08-16",
+      "retrievedAt": "2026-09-25T18:19:05.451511+00:00",
+      "rawPath": "data/raw/identity-stage13/green-rick-bazeley-whangarei-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Party statement explicitly names Rick Bazeley as Whangārei candidate in 2023 and mentions earlier candidacy; the earlier claim needs separate occurrence corroboration.",
+        "Publication predates the general-election result; a strict historical nomination-close cutoff requires its own pinned date."
+      ],
+      "sha256": "4b2e3b0cacd6906760f60d0793376e9b241108d46662d4fab22336148f0d0d82",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
     }
   ]
 }
