@@ -47,7 +47,8 @@ class Stage13SourcesAndSearchTests(unittest.TestCase):
 
     def test_new_source_duplicate_and_bytes_rejected(self):
         read = lambda path: (ROOT / path).read_bytes()
-        self.assertEqual(acquired_sources.validate_sources(self.plan, self.older, read), 1)
+        self.assertEqual(acquired_sources.validate_sources(self.plan, self.older, read),
+                         len(self.plan['sources']))
         duplicate = deepcopy(self.plan)
         duplicate['sources'].append(deepcopy(duplicate['sources'][0]))
         with self.assertRaisesRegex(ValueError, 'Duplicate'):
