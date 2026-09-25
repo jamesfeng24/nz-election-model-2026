@@ -1,4 +1,14 @@
-# Evidence-repair/design checkpoint — 2026-09-26
+# Stage 13 fixed-cohort identity evidence pass — pre-acquisition, 2026-09-26
+
+PR #19 is verified **merged** as `c99624f9725219a65f7421ec38b5d6627e72865d`, containing reviewed head `e6fca5ca7a1fd2706003c8759245fbbce485ef8d`. The previous checkout was clean; `stage/13-fixed-cohort-identity-evidence` starts from fetched merged main. Historical open-PR wording below predates that merge. The user authorized only a fixed-cohort evidence pass, not effect fitting or forecast integration.
+
+The frozen 30-cluster/415-occurrence cohort is unchanged. Before any external query, `data/source-plans/stage13-identity-acquisition-plan.json`, `data/processed/checkpoints/identity-evidence-pass/{preserved-audit,search-ledger}.json` and two stage-specific preserved-source snapshots record the exact hashed occurrence order, uniform source/search rules and an all-415 preserved-evidence audit. Direct inherited occurrence routes support 22 confirmed links; 109 remain probable and 284 unresolved. Career history is unknown for 398, complete dated table for 16, and unusable dated rows for one. The initial ledger has 415 pending records, no searches and no new resources. The source snapshots pin 96 official candidature records and 17 selected inherited identity source records and raw bytes. All numbers describe the selected cohort, not a population estimate.
+
+**Exact next action:** commit/push the pre-acquisition checkpoint, then process the ledger in fixed order using preserved sources first, no more than two authoritative searches per unresolved occurrence and no more than 60 new unique authoritative pages. Log failures and budget exhaustion separately, distinguish inherited from newly acquired evidence, and preserve all prior numerical outputs. No Stage6 refit, effects, complete forecast or ensemble work is authorized.
+
+---
+
+# Historical evidence-repair/design checkpoint — 2026-09-26
 
 Stage 11 [PR #18](https://github.com/jamesfeng24/nz-election-model-2026/pull/18) is verified **merged** as `6ba16feb32980f52784760fdcde2b9105e104005`, containing reviewed head `1fc438ed3e0d31452f9d79a5d6644da27d35caf0`. A clean `stage/12-evidence-repair-design` branch starts from that merged main. Older open-PR wording below is historical.
 
