@@ -174,6 +174,10 @@ Target metadata records official change/rename status, reverse predecessor compo
 
 `secondary-availability.json` provides population-origin coverage bounds from held candidate-contest predecessors using the full coupled system. It is not a ballot-observation rate. Unidentified candidate-affiliation/split vote baselines are null; no zero filling. Original21 source-discrepancy records are copied exactly. No candidate person linking, inferred joint cells or Port Waikato behavioural observation.
 
+### Evidence-repair/design cohort frame
+
+`data/processed/checkpoints/evidence-repair/cohort-inventory.json` is a **selection frame, not an identity or effect dataset**. Each of 213 rows keys source/target year, scope and election-local seat number under one validated unchanged-boundary regime. It preserves the two source seat labels, source and target occurrence ID lists, held/cancelled status and a deterministic sample flag. `summary` counts the fixed 30 selected seat clusters and 415 source/target occurrences; `selectionRule` and `inputHashes` make the choice and consumed Stage7/geography bytes reproducible. No vote, residual, winner, person ID, identity confidence or career-status field enters sample selection. The corresponding design document defines proposed future evidence routes and uncertainty; no selected occurrence has been adjudicated by this checkpoint.
+
 ### Stage5 party-vote transformation outputs
 
 Each backtest record keys transition × election-local electorate × canonical party. Shares are fractions; score summaries use percentage points, clipping frequency fractions. Point predictions/errors are null when not identified; outer prediction/error bounds are marginal/conservative. Numerical reconstruction brackets are separate. Continuity statuses exclude entrants/exits instead of zero-filling. Scores macro-average party MAEs equally; vote weights are actual target party counts. selection.json retains an unresolved candidate set with null default. No vector normalization.
