@@ -38,4 +38,6 @@ Run, in order, `.venv/bin/python -m scripts.models.conditional_candidate_ledger.
 
 The full 191-contest construction was invariant when target candidate votes, valid-candidate totals, winner flags and candidate-ballot fields were changed in memory; target split destination files are not construction inputs. SciPy HiGHS joint-feasibility results have checked probability/ballot residuals, and numerical/solver failure is a distinct status. The Stage 14 213-row inventory, raw files, Stage 5–11 numerical artifacts, Stage 13 evidence and previous null operational selections are preserved. Final configured tests and GitHub CI are recorded in PROJECT_STATE.md.
 
+The first PR CI run exposed machine-dependent floating-point noise in the **reported** HiGHS residuals (for example `1.8e-12` versus `3.6e-12` ballots). Raw residuals still determine numerical success or failure at the frozen tolerances; saved residual diagnostics are now rounded to those tolerances for deterministic bytes. Joint-feasibility statuses, bounds and historical conclusions did not change.
+
 **Next action:** independent review of the unmerged Stage 15 PR. A later as-of forecast design, conditional Stage 6 review or target-boundary candidate baseline requires separate authorization. Do not infer operational readiness or begin integration from this diagnostic.

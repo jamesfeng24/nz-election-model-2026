@@ -159,11 +159,15 @@ def solve_problem(problem, solver=linprog):
                  if bound is not None), default=0.0)
     if probability > PROB_TOL or ballot > BALLOT_TOL or lower > PROB_TOL or upper > PROB_TOL:
         return {'status': 'numerical_or_solver_failure', 'solverStatus': 0,
-                'probabilityResidual': probability, 'ballotResidual': ballot,
-                'boundViolation': max(lower, upper)}
+                'probabilityResidual': round(probability, 8),
+                'ballotResidual': round(ballot, 5),
+                'boundViolation': round(max(lower, upper), 8)}
+    # Retain raw residuals for the pass/fail check above; report only to the
+    # validated tolerance so harmless solver/platform roundoff is reproducible.
     return {'status': 'feasible', 'solverStatus': 0,
-            'probabilityResidual': probability, 'ballotResidual': ballot,
-            'boundViolation': max(0.0, lower, upper), 'variables': count,
+            'probabilityResidual': round(probability, 8),
+            'ballotResidual': round(ballot, 5),
+            'boundViolation': round(max(0.0, lower, upper), 8), 'variables': count,
             'equalities': len(problem.equalities),
             'inequalities': len(problem.inequalities)}
 

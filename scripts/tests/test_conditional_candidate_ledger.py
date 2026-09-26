@@ -171,6 +171,17 @@ class ConditionalCandidateLedgerTests(unittest.TestCase):
                          {'a': 70, 'b': 30}, false_success)['status'],
                          'numerical_or_solver_failure')
 
+    def test_solver_residual_reporting_ignores_valid_roundoff(self):
+        problem = feasibility.FeasibilityProblem()
+        variable = problem.variable()
+        problem.equality({variable: 1}, 1, 'ballots')
+        def rounded_solver(*args, **kwargs):
+            return SimpleNamespace(status=0, x=[1 + 2e-12])
+        result = feasibility.solve_problem(problem, rounded_solver)
+        self.assertEqual(result['status'], 'feasible')
+        self.assertEqual(result['ballotResidual'], 0)
+        self.assertEqual(result['boundViolation'], 0)
+
     def test_complete_source_row_structural_zero_retains_weight(self):
         def seat(number, candidate_parties):
             sid = f'seat-{number}'
