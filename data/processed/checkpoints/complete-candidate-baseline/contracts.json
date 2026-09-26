@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": "complete-candidate-baseline-specification",
+  "status": "proposed_for_review_no_model_run",
+  "eligibility": {
+    "framePath": "data/processed/checkpoints/evidence-repair/cohort-inventory.json",
+    "frameCount": 213,
+    "allowedTransitions": [
+      [
+        2008,
+        2011
+      ],
+      [
+        2014,
+        2017
+      ],
+      [
+        2020,
+        2023
+      ]
+    ],
+    "geography": "validated unchanged boundary regime and election-local seat number; never seat-name-only",
+    "heldBothRequiredForScoring": true,
+    "allStandingCandidatesIncluded": true,
+    "cancelledOrUnheld": "coverage-only explicit exclusion",
+    "identityRequired": false,
+    "maori": "separate coverage/abstention; no general pooled rule silently applied"
+  },
+  "informationModes": {
+    "conditional_observed_party": {
+      "allowedTargetInputs": [
+        "independently published local valid party-vote group counts",
+        "informal-party count",
+        "observed votes cast and ballot-validity controls if explicitly declared",
+        "official post-election candidature for retrospective mapping"
+      ],
+      "evaluationOnly": [
+        "target candidate vote totals",
+        "target valid-candidate denominator",
+        "target winner flags",
+        "target split destination cells"
+      ],
+      "forecastClaim": false
+    },
+    "as_of_forecast": {
+      "cutoff": "source-pinned official nomination-close timestamp, currently missing",
+      "requiredBeforeCutoff": [
+        "dated nominations",
+        "party support forecast",
+        "turnout/votes-cast forecast",
+        "party/candidate ballot-validity forecast",
+        "routing evidence or uncertainty rule"
+      ],
+      "unknownPublicationTiming": "not admissible as strictly as-of",
+      "missingRequiredInput": "abstain or provide explicitly wide bounds",
+      "forecastClaim": "only if every required input passes cutoff audit"
+    },
+    "national_support_scenario": {
+      "nationalSupportRole": "externally supplied scenario, not predicted",
+      "requiredSeparateInputs": [
+        "turnout",
+        "ballot validity",
+        "nominations",
+        "local party allocation"
+      ],
+      "forecastClaim": false
+    }
+  },
+  "ballotAccounting": {
+    "sourcePopulation": "all cast ballots in an electorate, with processed split rows covering valid plus informal party ballots where available",
+    "groups": [
+      "each named valid party-vote group",
+      "informal party vote",
+      "party-disallowed/unrepresented remainder"
+    ],
+    "destinations": [
+      "every standing named candidate",
+      "informal candidate vote",
+      "party-vote-only",
+      "candidate-disallowed or other no-valid-candidate vote"
+    ],
+    "massEquation": "votesCast = sum(groupMass); for each group, sum(destinationRouteFraction)=1; validCandidateVotes = sum(namedCandidateDestinationVotes)",
+    "groupMassMustBeNonnegative": true,
+    "routeFractionsWithin": [
+      0,
+      1
+    ],
+    "unmatchedMass": "Follow targetRouting: release only absent-source-category mass unless an unsupported/ambiguous target destination makes the entire origin row free; never double count, zero-fill or renormalize.",
+    "publishedSplitCellUnit": "rounded percent conditional on party-ballot row; count is unavailable",
+    "candidateShareDenominator": "valid candidate votes, not valid party votes or total split rows",
+    "zeroPossibleDenominator": "undefined candidate share and point abstention",
+    "jointConstraint": "candidate marginal lower/upper bounds are projections of one shared feasible contest ledger, not independently simultaneous endpoints",
+    "candidateShareBounds": "joint candidate-vote / valid-candidate-denominator extrema, never independent endpoint division",
+    "partyGroupInputConservation": "sum of every valid party group, informal party and disallowed/unrepresented remainder equals votes cast; reject or bound inconsistent transformed share vectors, no hidden renormalization"
+  },
+  "outputFields": {
+    "required": [
+      "contestId",
+      "transition",
+      "scope",
+      "mode",
+      "cutoff",
+      "sourceIdsAndHashes",
+      "standingCandidateOccurrenceIds",
+      "ballotGroups",
+      "candidateAndNoncandidateDestinations",
+      "jointRoutingConstraints",
+      "unresolvedMassReasons",
+      "candidateVoteBounds",
+      "validCandidateDenominatorBounds",
+      "candidateShareBoundsOrUndefined",
+      "pointPredictionOrAbstentionReason",
+      "benchmarkId",
+      "coverageFrameMembership"
+    ],
+    "evaluationOnlySeparateFile": [
+      "actualCandidateVotes",
+      "actualValidCandidateDenominator",
+      "actualTargetSplitCells",
+      "actualWinnerFlag",
+      "pointAndIntervalScores"
+    ],
+    "operationalSelection": null
+  },
+  "sourcePooling": {
+    "scope": "For each source year 2008/2014/2020, all held general-seat local split matrices; independently of target identity and outcomes. Use only complete uniquely mapped source rows and report all exclusions.",
+    "originWeight": "For each canonical party-ballot origin g, source seat s weight n_sg / sum_s n_sg using exact positive party-ballot row counts. Absent/zero-mass origin has no weight; missing positive row or ambiguous mapping is excluded and logged.",
+    "structuralAbsence": "Within a complete source row, no candidate of destination party h means p_sgh=[0,0] and the row stays in the pool. A printed 0.00 is a rounded observation, not structural absence.",
+    "rounding": "Apply closed conservative [max(0,(x-0.005)/100),min(1,(x+0.005)/100)] to each published two-decimal cell x; retain the cell simplex before aggregating candidate cells by canonical party category. Known independent cells form an unmapped category; category sums are not rounded anew.",
+    "primaryJointSet": "Each source row p_sg is in its rounded simplex; q_g=sum_s(n_sg/N_g)*p_sg. The primary target set is this linear image under the transport equality. Marginal endpoints may not be combined independently.",
+    "heterogeneitySensitivity": "Separate convex hull of the same eligible source-row rounded simplexes. Marginal [min source feasible endpoint,max source feasible endpoint] is descriptive only and cannot be combined independently; never a calibrated or guaranteed future interval.",
+    "noEligibleSource": "Wholly free-route the target origin group and record point abstention.",
+    "destinationSupport": "At least one eligible complete source-origin row contains a published candidate cell for the canonical destination party, including printed 0.00; structural zeros alone do not establish support. Known independent source cells are an unmapped category."
+  },
+  "targetRouting": {
+    "personalIdentity": "Never enters primary party-category routing; changing only continuation/replacement/unknown labels leaves the feasible set unchanged.",
+    "uniquePartyCategory": "Route pooled q_g,h to the unique standing candidate of h, independent of personal identity. Distinct person does not inherit outgoing person strength.",
+    "absentSourceDestinationInTarget": "Release only that coupled category mass q_g,h into a free-routing bucket over every candidate and noncandidate destination; do not release mapped mass or renormalize.",
+    "unsupportedOrAmbiguousTargetCandidate": "If any standing candidate has no supported source destination category, is independent, or cannot be uniquely mapped to a party category, release each origin row as one free-routing simplex. This supersedes category-specific release for that row and never duplicates its mass.",
+    "entrantOrMissingOrigin": "A target origin with no positive eligible source rows is wholly free-routed.",
+    "candidateOutcome": "Winner flags, candidate totals and target split cells cannot affect route applicability."
+  }
+}

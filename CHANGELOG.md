@@ -185,3 +185,7 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 - Added matched-contest references, raw additive primary residuals, proportional/odds sensitivities, coverage/scope diagnostics and pinned input/output hashes.
 - Retained additive after bounded diagnostics; documented sparse-slate/Māori sensitivity and the ban on using target-outcome normalization as a forecast input.
 - No person linking, persistence, boundary transport,2026 inputs or prior-output changes.
+
+## 2026-09-26 — Complete candidate-baseline design checkpoint
+
+Added a deterministic 213-contest input-availability inventory, proposed interval-valued ballot-accounting specification, machine-readable contracts and synthetic accounting tests. No source acquisition, model fit, historical prediction, operational selection or prior numerical output changed.

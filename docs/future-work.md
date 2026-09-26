@@ -1,6 +1,10 @@
 # Authorized project sequence
 
-## After Stage 13 evidence-pass review
+## After the complete candidate-baseline specification checkpoint
+
+Stage 13 PR #20 has merged. The current specification checkpoint on `stage/14-complete-candidate-baseline-specification` defines an identity-free, joint interval ballot ledger and a deterministic 213-contest input inventory. It performs no fitting or historical scoring. The next **proposed** implementation after independent review, requiring separate authorization, is a 191-held-general-contest conditional interval ledger using observed target party inputs, with complete ballot accounting, coverage and abstention. It would not establish an as-of forecast. Source-pinned nomination cutoffs and forecast inputs, a comparable Māori route, the conditional Stage 6 review and a 2026 target-boundary candidate baseline remain separate dependencies. Stage 8–11 null operational selections are unchanged; no ensemble fitting or integration follows automatically. See [the checkpoint](complete-candidate-baseline-checkpoint.md).
+
+## Historical Stage 13 evidence-pass planning (superseded by the checkpoint above)
 
 The fixed 415-occurrence acquisition pass is complete and awaiting independent review. Its 19 primary occurrence-specific confirmations and 128 unverified same-party cross-election relations do not establish a broad prospective returning-candidate validation cohort. The four preflight deviations, ten supplement-driven later search skips and retrospective profile availability must be assessed before any further identity acquisition design. A later modelling/design step requires separate authorization and an explicit decision about whether a balanced, outcome-independent evidence expansion is worth its cost. Stage 8–11 operational null selections remain null. Conditional Stage 6 review, a defensible 2026 target-boundary candidate baseline and complete-view validation remain separate prerequisites before integration or ensemble weights.
 
