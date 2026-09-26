@@ -154,6 +154,91 @@ def contest_bounds(groups, destinations, candidate_destinations):
                                                 if d in candidate_destinations)}
 
 
+def synthetic_source_pool(rows, categories):
+    """Illustrate fixed row-mass pooling; retain rows for coupled constraints.
+
+    Only complete, unambiguously mapped positive-mass rows may be passed here.
+    An omitted category in such a row is a structural absence, hence [0, 0].
+    Marginal endpoints alone must not replace the returned joint source rows.
+    """
+    if not rows or not categories or len(categories) != len(set(categories)):
+        raise ValueError('Invalid source pool')
+    normalized = []
+    supported = set()
+    for row in rows:
+        if row.get('complete') is not True:
+            raise ValueError('Missing source row cannot establish structural zero')
+        mass, routes = row['mass'], row['routes']
+        if not isfinite(mass) or mass <= 0 or not set(routes) <= set(categories):
+            raise ValueError('Source row must have positive mass and mapped categories')
+        supported.update(routes)
+        complete = {category: routes.get(category, [0, 0]) for category in categories}
+        if any(len(bounds) != 2 or not all(isfinite(value) for value in bounds)
+               or not 0 <= bounds[0] <= bounds[1] <= 1
+               for bounds in complete.values()):
+            raise ValueError('Invalid source rounding interval')
+        if sum(bounds[0] for bounds in complete.values()) > 1 + 1e-12 or sum(
+                bounds[1] for bounds in complete.values()) < 1 - 1e-12:
+            raise ValueError('Infeasible source row')
+        normalized.append({'mass': mass, 'routes': complete})
+    total = sum(row['mass'] for row in normalized)
+    return {
+        'totalMass': total,
+        'supportedCategories': sorted(supported),
+        'sourceRows': normalized,
+        'pooledMarginalBounds': {
+            category: [sum(row['mass'] * max(row['routes'][category][0],
+                                             1 - sum(bounds[1] for other, bounds
+                                                     in row['routes'].items() if other != category))
+                           for row in normalized) / total,
+                       sum(row['mass'] * min(row['routes'][category][1],
+                                             1 - sum(bounds[0] for other, bounds
+                                                     in row['routes'].items() if other != category))
+                           for row in normalized) / total]
+            for category in categories},
+        'heterogeneityMarginalEnvelope': {
+            category: [min(max(row['routes'][category][0],
+                               1 - sum(bounds[1] for other, bounds in row['routes'].items()
+                                       if other != category)) for row in normalized),
+                       max(min(row['routes'][category][1],
+                               1 - sum(bounds[0] for other, bounds in row['routes'].items()
+                                       if other != category)) for row in normalized)]
+            for category in categories},
+    }
+
+
+def synthetic_point_target_routes(source_routes, source_support, party_candidates,
+                                  destinations):
+    """Illustrate target mapping for an exact synthetic pooled route vector.
+
+    Identity labels are deliberately absent. Unrepresented target candidates
+    release the whole origin row; absent source categories release only theirs.
+    Interval source rows require the coupled formulation in the specification.
+    """
+    if (not destinations or len(destinations) != len(set(destinations))
+            or not set(source_support) <= set(source_routes)
+            or not set(party_candidates.values()) <= set(destinations)
+            or len(set(party_candidates.values())) != len(party_candidates)
+            or any(not isfinite(value) or value < 0 for value in source_routes.values())
+            or abs(sum(source_routes.values()) - 1) > 1e-12):
+        raise ValueError('Invalid synthetic route or target mapping')
+    free = set(party_candidates) - set(source_support)
+    if free:
+        return {destination: [0, 1] for destination in destinations}
+    fixed = {destination: 0.0 for destination in destinations}
+    unresolved = 0.0
+    for category, value in source_routes.items():
+        destination = party_candidates.get(category)
+        if destination is None:
+            destination = category if category in destinations else None
+        if destination is None:
+            unresolved += value
+        else:
+            fixed[destination] += value
+    return {destination: [value, value + unresolved]
+            for destination, value in fixed.items()}
+
+
 def build():
     frame = read(COHORT)['frame']
     elections = {year: read(Path(f'data/processed/elections/{year}.json')) for year in TARGET_YEARS}
