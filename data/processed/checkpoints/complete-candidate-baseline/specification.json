@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": "complete-candidate-baseline-specification",
+  "status": "proposed_for_review_no_historical_scores_or_model_selection",
+  "adoptedConstraints": [
+    "All 213 validated unchanged-boundary seat transitions form the historical frame; the Stage 13 identity sample does not select contests.",
+    "All standing candidates and noncandidate ballot destinations share one accounting ledger. Cancelled contests are visible but not scored.",
+    "Candidate identity, status and Stage 8-11 operational effects remain unresolved/null; unknown does not mean zero.",
+    "Target candidate votes, winner flags and target split destination cells are evaluation-only.",
+    "No 2026 candidate baseline or national-support forecast is available in this checkpoint."
+  ],
+  "proposedPredictionTasks": {
+    "conditionalHistorical": {
+      "label": "retrospective conditional candidate allocation diagnostic",
+      "inputs": [
+        "observed target local party-vote group sizes from independently published party results",
+        "observed target informal-party and turnout controls if used, separately labelled",
+        "target candidature as reconstructed from official post-election records, with historical as-of status unknown",
+        "earlier split evidence"
+      ],
+      "forbiddenInputs": [
+        "target candidate totals",
+        "target split destination percentages",
+        "target winner flags",
+        "later identities"
+      ],
+      "interpretation": "Candidate-allocation diagnostic conditional on realized target party/turnout information; not a pre-election forecast."
+    },
+    "preElectionForecast": {
+      "label": "genuine as-of candidate-vote forecast, presently input-blocked",
+      "cutoffRule": "official target nomination-close timestamp for every historical holdout, source-pinned before any scoring; exact dates not currently pinned",
+      "requiredAsOfInputs": [
+        "dated target nominations and party ballot groups",
+        "national and local party support forecast with uncertainty",
+        "votes-cast/turnout forecast",
+        "valid/informal/disallowed party and candidate ballot rates or bounds",
+        "candidate mapping and routing evidence available by cutoff"
+      ],
+      "interpretation": "May be called a forecast only when every input is demonstrably pre-cutoff and every ballot group has a feasible, explicit destination rule or a declared abstention."
+    },
+    "nationalSupportScenario": {
+      "label": "externally supplied national-support scenario, not a national forecast",
+      "requiredInputs": [
+        "scenario vector with provenance/time",
+        "local party-vote transform or range",
+        "separately supplied turnout and ballot-validity assumptions",
+        "as-of nominations"
+      ],
+      "interpretation": "Conditional scenario calculation; Stage 5 historical diagnostics use observed target national support and do not supply an as-of scenario."
+    }
+  },
+  "recommendedBaseline": {
+    "name": "training-only pooled party-destination interval ledger",
+    "estimand": "For each held contest, a jointly feasible range for every standing candidate's valid candidate votes and the valid-candidate denominator, conditional on the declared party-ballot and turnout input mode.",
+    "source": "Pool earlier general-seat split rows across seats within the source election by party-ballot group and destination PARTY CATEGORY, using exact row counts and rounded-percentage intervals. Do not use a seat-specific outgoing candidate column or interval midpoint as an exact observation. Pooling is deterministic and training-only; absent party categories remain unknown.",
+    "routing": [
+      "Define one ballot-mass group for every party-vote group, the informal-party group and the unrepresented/disallowed-party remainder from common votes cast.",
+      "Define destinations for every standing candidate plus candidate-informal and no-valid-candidate/party-only outcomes; unknown destinations remain feasible rather than receiving zero votes.",
+      "Map pooled destination-party categories to the unique standing target candidate of that continuing party. This is a population party-category allocation assumption, not a same-person assertion or transfer of one outgoing candidate’s seat-specific strength.",
+      "If the source or target party is an entrant/exit, ambiguous/report-only alliance, or the target has no unique candidate of that party, keep that source or target mass in an unconstrained joint routing set.",
+      "Independents and candidates with no matching party-ballot group remain target destinations for ballots from every group, including informal/disallowed-party; no independent-to-independent name matching is inferred.",
+      "A source destination party absent in the target is not renormalized onto survivors; its mass enters the unresolved routing set. A same-party replacement uses the pooled category rule only; no outgoing-person premium is carried forward.",
+      "Each group has nonnegative route fractions summing to one. Preserve the full feasible set, including source rounding intervals, missing group mass, turnout and validity bounds. Contest-wide candidate bounds are marginal projections, not jointly attainable endpoints.",
+      "A point candidate prediction is unavailable when the feasible candidate-vote range is nondegenerate; retain interval/bounds and point-abstention status. A candidate with unknown history is never assigned zero strength."
+    ],
+    "denominators": "Total cast ballots are partitioned into valid party, informal party and party-disallowed/unrepresented groups. Valid candidate votes equal the sum of all named-candidate destinations, including candidate-only contributions from informal/disallowed-party groups. Published candidate share divides by this valid-candidate total, not valid party votes or split-row totals. If valid-candidate total can be zero, candidate-share interval is undefined and abstains.",
+    "maori": "Keep Māori separate. The 2020 supporting local matrix is one seat/year only; without a comparable local panel and assembled full party groups, do not force local routing or a coefficient. Preserve a wide feasible ledger or abstain.",
+    "poolingRule": "For each source-election party-ballot group g and destination party/noncandidate category h, sum exact source row mass n_r times each rounded-cell probability lower/upper endpoint across eligible earlier general seats, then divide by sum n_r. Retain row-sum feasibility and an envelope of source-seat heterogeneity; if total eligible n_r is zero, the route is unknown. A category absent in the target retains a feasible unknown destination, never a redistributed point.",
+    "shareBounds": "Compute candidate-vote/valid-candidate-vote ratio extrema over the SAME joint feasible ballot ledger (a linear-fractional feasibility problem), not by dividing independent marginal endpoints. If the valid-candidate denominator can be zero, return undefined/abstain.",
+    "inputVectorConservation": "Forecast or scenario party group masses plus informal and disallowed/unrepresented mass must equal the supplied votes-cast total or a jointly feasible turnout interval. Independently transformed Stage 5 party shares are not silently normalized or clipped to repair a broken vector."
+  },
+  "comparators": [
+    {
+      "name": "party-diagonal interval accounting",
+      "purpose": "Tests whether historical local splitting adds information",
+      "rule": "A valid party group with a unique same-party candidate takes the diagonal as a prespecified simplifying assumption; informal/disallowed party groups, unmatched/absent destinations and other candidates remain explicit unknown mass. It may abstain from an exact total."
+    },
+    {
+      "name": "unrestricted feasible ballot ledger",
+      "purpose": "Tests whether pooling adds interval information rather than merely producing broad valid bounds",
+      "rule": "Every group can route to every standing candidate or noncandidate destination subject only to nonnegative mass conservation; report sharpness and interval coverage, not a competitive point score."
+    }
+  ],
+  "deferredComparator": "Stage 11's unimplemented probable-continuation candidate-share carry-forward sensitivity may be evaluated later only on a separately justified identity/geography subset, never used to select or score this checkpoint. A local source-seat split transfer is also a separately labelled sensitivity because it may carry the outgoing candidate’s seat-specific strength to a replacement; do not use it as this identity-free baseline.",
+  "validationFreezeProposal": {
+    "frame": "The 213 saved source/target seat-transition clusters; 212 held both, one 2023 Port Waikato cancelled/unheld. Every target candidature in a held contest belongs to coverage accounting regardless of identity, party or result.",
+    "holdouts": [
+      2011,
+      2017,
+      2023
+    ],
+    "training": "For target year h, source routing and any pooled/fallback parameter use elections strictly before h. No target-year split cells or candidate outcomes train h. The 2011 holdout may use 2008 source rows; any parameter needing an earlier target transition is unavailable and must abstain.",
+    "cutoff": "Nomination close is the intended common as-of cutoff. No exact date is pinned yet; strict prospective historical scoring is blocked until dated inputs are audited.",
+    "samples": "Fix full eligible contest/candidate frame first. Report each model's coverage/abstention on it, then point-error metrics on the exact intersection of model and comparator predictions. Interval diagnostics use a separately declared common interval subset; never choose a favourable subset by outcomes.",
+    "metrics": "For point valid-candidate votes and percentage-point candidate shares, equal candidate-event MAE=mean absolute error, RMSE=square root mean squared error, bias=mean signed error; n is the identical candidate intersection. Report contest-weighted sensitivity separately, not as an implicit weight change. For joint intervals report exact-target inclusion, mean and median interval width, nondegenerate/undefined denominator count, and feasible ballot-mass conservation. Report counts and rates of point and interval abstention over the full eligible frame and common subset, including entrants, independents, replacements/unknown identity and losers. Give holdout, general/Māori and party/status breakdowns where supported; avoid election-level iid claims from candidate counts.",
+    "selection": "No operational point baseline is selected unless all required as-of inputs and coherent candidate/ballot routing exist, its point coverage is nontrivial on the prespecified frame, and both later chronological holdouts show stable improvement against the party-diagonal benchmark on identical point samples and the unrestricted-ledger interval baseline for sharpness/coverage on identical samples without material calibration or mass-accounting failures. Do not infer operational choice from conditional diagnostics or an attractive coefficient. If complete point allocation remains unsupported, keep selection null/unresolved and report interval coverage and abstention.",
+    "stopping": "Stop scoring attempts if target input timing is unverified, a group cannot be bounded coherently, candidate-share denominator can be zero without an explicit undefined state, or a common comparison sample cannot be formed. Preserve uncertainty; do not invent a fallback to remove abstentions."
+  },
+  "conditionalStage6Review": "Separate later NAT/LAB general-seat common frame and information set: compare a jointly estimated conditional response with beta=1/zero and the identity-free baseline on identical holdouts and party-input modes. Retain Stage 5 additive/proportional/log-odds and D027 0.25pp materiality/stability guard; unknown identity/status stays unknown, not continuation, and Stage 10 descriptive shift is not fixed. No Stage 6 refit or target-boundary baseline is performed here.",
+  "outputContractForLaterImplementation": [
+    "contestId, transition, scope, cutoff and input mode",
+    "input source IDs/checksums and as-of availability",
+    "all standing candidate occurrence IDs and noncandidate destination IDs",
+    "party/informal/disallowed group masses or bounds",
+    "joint route constraints and unresolved mass reasons",
+    "candidate vote and valid-candidate denominator bounds",
+    "candidate-share bounds or undefined status",
+    "point prediction or explicit abstention reason",
+    "common-sample membership, benchmark ID and evaluation-only actuals in separate scoring output"
+  ],
+  "notPerformed": [
+    "source acquisition",
+    "identity adjudication",
+    "parameter fitting",
+    "historical prediction or scoring",
+    "Stage 6 review",
+    "2026 target-boundary baseline",
+    "operational selection",
+    "integration or ensemble weighting"
+  ]
+}

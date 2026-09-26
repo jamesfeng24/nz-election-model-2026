@@ -345,3 +345,7 @@ From the repository root, run `python3 -m scripts.checkpoints.identity_cohort --
 ## Stage 13 fixed-cohort evidence pass
 
 Run `python3 -m scripts.checkpoints.identity_evidence_pass --check`, `python3 -m scripts.checkpoints.profile_supplement --check`, `python3 -m scripts.checkpoints.search_identity --check`, `python3 -m scripts.checkpoints.acquired_sources --check`, and `python3 -m scripts.checkpoints.adjudicate_identity --check` from the repository root. The last check reproduces `data/processed/checkpoints/identity-evidence-pass/final/` from the committed fixed cohort, preserved audits, 11 search batches, 32 explicit source claims and pinned raw sources. Rebuilding without `--check` writes only that final Stage 13 output directory. It does not regenerate earlier model results. Run `python3 -m unittest scripts.tests.test_stage13_adjudication -v` for focused evidence contracts.
+
+## Complete candidate-baseline specification checkpoint
+
+Run `python3 -m scripts.checkpoints.complete_candidate_baseline --check` to verify the deterministic 213-contest availability inventory and pinned source-artifact hashes. Run `python3 -m unittest scripts.tests.test_complete_candidate_baseline_checkpoint -v` for synthetic mass-conservation, missing-destination, denominator and target-outcome-invariance contracts. The unmodified input files are Stage 12's full frame and the six preserved election/split files. This command creates no historical candidate predictions or scores; its synthetic fixtures remain tests only.

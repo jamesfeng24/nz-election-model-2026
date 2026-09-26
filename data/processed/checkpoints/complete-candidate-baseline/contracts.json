@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": "complete-candidate-baseline-specification",
+  "status": "proposed_for_review_no_model_run",
+  "eligibility": {
+    "framePath": "data/processed/checkpoints/evidence-repair/cohort-inventory.json",
+    "frameCount": 213,
+    "allowedTransitions": [
+      [
+        2008,
+        2011
+      ],
+      [
+        2014,
+        2017
+      ],
+      [
+        2020,
+        2023
+      ]
+    ],
+    "geography": "validated unchanged boundary regime and election-local seat number; never seat-name-only",
+    "heldBothRequiredForScoring": true,
+    "allStandingCandidatesIncluded": true,
+    "cancelledOrUnheld": "coverage-only explicit exclusion",
+    "identityRequired": false,
+    "maori": "separate coverage/abstention; no general pooled rule silently applied"
+  },
+  "informationModes": {
+    "conditional_observed_party": {
+      "allowedTargetInputs": [
+        "independently published local valid party-vote group counts",
+        "informal-party count",
+        "observed votes cast and ballot-validity controls if explicitly declared",
+        "official post-election candidature for retrospective mapping"
+      ],
+      "evaluationOnly": [
+        "target candidate vote totals",
+        "target valid-candidate denominator",
+        "target winner flags",
+        "target split destination cells"
+      ],
+      "forecastClaim": false
+    },
+    "as_of_forecast": {
+      "cutoff": "source-pinned official nomination-close timestamp, currently missing",
+      "requiredBeforeCutoff": [
+        "dated nominations",
+        "party support forecast",
+        "turnout/votes-cast forecast",
+        "party/candidate ballot-validity forecast",
+        "routing evidence or uncertainty rule"
+      ],
+      "unknownPublicationTiming": "not admissible as strictly as-of",
+      "missingRequiredInput": "abstain or provide explicitly wide bounds",
+      "forecastClaim": "only if every required input passes cutoff audit"
+    },
+    "national_support_scenario": {
+      "nationalSupportRole": "externally supplied scenario, not predicted",
+      "requiredSeparateInputs": [
+        "turnout",
+        "ballot validity",
+        "nominations",
+        "local party allocation"
+      ],
+      "forecastClaim": false
+    }
+  },
+  "ballotAccounting": {
+    "sourcePopulation": "all cast ballots in an electorate, with processed split rows covering valid plus informal party ballots where available",
+    "groups": [
+      "each named valid party-vote group",
+      "informal party vote",
+      "party-disallowed/unrepresented remainder"
+    ],
+    "destinations": [
+      "every standing named candidate",
+      "informal candidate vote",
+      "no valid candidate vote including party-vote-only or candidate-disallowed"
+    ],
+    "massEquation": "votesCast = sum(groupMass); for each group, sum(destinationRouteFraction)=1; validCandidateVotes = sum(namedCandidateDestinationVotes)",
+    "groupMassMustBeNonnegative": true,
+    "routeFractionsWithin": [
+      0,
+      1
+    ],
+    "unmatchedMass": "explicit feasible routing set across all destinations, never zero or a hidden renormalization",
+    "publishedSplitCellUnit": "rounded percent conditional on party-ballot row; count is unavailable",
+    "candidateShareDenominator": "valid candidate votes, not valid party votes or total split rows",
+    "zeroPossibleDenominator": "undefined candidate share and point abstention",
+    "jointConstraint": "candidate marginal lower/upper bounds are projections of one shared feasible contest ledger, not independently simultaneous endpoints",
+    "candidateShareBounds": "joint candidate-vote / valid-candidate-denominator extrema, never independent endpoint division",
+    "partyGroupInputConservation": "sum of every valid party group, informal party and disallowed/unrepresented remainder equals votes cast; reject or bound inconsistent transformed share vectors, no hidden renormalization"
+  },
+  "outputFields": {
+    "required": [
+      "contestId",
+      "transition",
+      "scope",
+      "mode",
+      "cutoff",
+      "sourceIdsAndHashes",
+      "standingCandidateOccurrenceIds",
+      "ballotGroups",
+      "candidateAndNoncandidateDestinations",
+      "jointRoutingConstraints",
+      "unresolvedMassReasons",
+      "candidateVoteBounds",
+      "validCandidateDenominatorBounds",
+      "candidateShareBoundsOrUndefined",
+      "pointPredictionOrAbstentionReason",
+      "benchmarkId",
+      "coverageFrameMembership"
+    ],
+    "evaluationOnlySeparateFile": [
+      "actualCandidateVotes",
+      "actualValidCandidateDenominator",
+      "actualTargetSplitCells",
+      "actualWinnerFlag",
+      "pointAndIntervalScores"
+    ],
+    "operationalSelection": null
+  }
+}
