@@ -91,7 +91,7 @@ def _pooled_origin(group, pool, candidate_parties, source_to_target,
                     'group': group, 'sourcePoolId': source_pool['id']}
     mapped = {INFORMAL_DESTINATION: INFORMAL_DESTINATION,
               PARTY_ONLY_DESTINATION: PARTY_ONLY_DESTINATION}
-    for source_category in support:
+    for source_category in sorted(support):
         source_party = source_category.removeprefix('party:')
         target_party = source_to_target.get(source_party)
         if target_party and len(by_party.get(target_party, [])) == 1:
@@ -141,7 +141,7 @@ def method_bounds(inputs, origins):
         share = share_bounds(origins, candidate_id, destinations, candidates, denominator)
         bounds.append({'candidateOccurrenceId': candidate_id,
                        'candidateVotes': votes, 'candidateShare': share,
-                       'pointCandidateVotes': ((votes[0] + votes[1]) / 2
+                       'pointCandidateVotes': (votes[0]
                                                if abs(votes[1] - votes[0]) <= 1e-8 else None),
                        'pointAbstentionReason': (None if abs(votes[1] - votes[0]) <= 1e-8
                                                   else 'nondegenerate_joint_feasible_range')})

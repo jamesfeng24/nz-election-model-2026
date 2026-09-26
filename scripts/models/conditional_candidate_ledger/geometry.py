@@ -90,10 +90,49 @@ def share_bounds(origins, candidate_id, destinations, candidate_ids, denominator
                 (ratio if destination in candidates else 0.0)
                 for destination in destinations}
 
+    # On 0 < r < 1, candidate / noncandidate / other-candidate objective
+    # ordering is fixed. Each source-row optimum is therefore one affine
+    # line in r. Only the seat chosen by the heterogeneity hull can switch.
+    def affine_line(origin, maximize):
+        def value(ratio):
+            objective = coefficients(ratio)
+            if maximize:
+                return route_maximum(origin, objective)
+            return -route_maximum(origin, {key: -coefficient
+                                           for key, coefficient in objective.items()})
+        first, second = value(0.25), value(0.75)
+        valid_candidate_votes = (first - second) / 0.5
+        candidate_votes = first + 0.25 * valid_candidate_votes
+        return candidate_votes, valid_candidate_votes
+
+    def lines(maximize):
+        result = []
+        for origin in origins:
+            if origin['routing'] == 'heterogeneity':
+                row_lines = []
+                for row in origin['pool']['rows']:
+                    single = origin | {'routing': 'primary',
+                                       'pool': {'totalMass': row['mass'],
+                                                'rows': [row]}}
+                    row_lines.append(affine_line(single, maximize))
+                result.append((row_lines, True))
+            else:
+                result.append(([affine_line(origin, maximize)], False))
+        return result
+
+    maximum_lines, minimum_lines = lines(True), lines(False)
+
+    def line_value(family, ratio, maximize):
+        total = 0.0
+        for row_lines, hull in family:
+            values = [votes - ratio * valid for votes, valid in row_lines]
+            total += (max(values) if maximize else min(values)) if hull else values[0]
+        return total
+
     lower, upper = 0.0, 1.0
     for _ in range(42):
         middle = (lower + upper) / 2
-        if contest_maximum(origins, coefficients(middle)) >= 0:
+        if line_value(maximum_lines, middle, True) >= 0:
             lower = middle
         else:
             upper = middle
@@ -101,7 +140,7 @@ def share_bounds(origins, candidate_id, destinations, candidate_ids, denominator
     lower, upper = 0.0, 1.0
     for _ in range(42):
         middle = (lower + upper) / 2
-        if contest_minimum(origins, coefficients(middle)) <= 0:
+        if line_value(minimum_lines, middle, False) <= 0:
             upper = middle
         else:
             lower = middle

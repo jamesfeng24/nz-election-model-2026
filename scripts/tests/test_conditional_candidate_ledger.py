@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from scripts.models.conditional_candidate_ledger import construct, geometry, pool, sources
+from scripts.models.conditional_candidate_ledger import construct, geometry, pool, run, sources
 from scripts.validate.source_files import verify_source_files
 
 
@@ -151,6 +151,39 @@ class ConditionalCandidateLedgerTests(unittest.TestCase):
             path.write_bytes(path.read_bytes() + b'corrupted')
             with self.assertRaises(ValueError):
                 verify_source_files(root, {'schemaVersion': 1, 'sources': [source]})
+
+    def test_full_construction_ignores_target_and_later_outcomes(self):
+        frame = sources.read('data/processed/checkpoints/complete-candidate-baseline/input-inventory.json')['records']
+        elections = {year: sources.read(f'data/processed/elections/{year}.json')
+                     for year in sources.SOURCE_YEARS + sources.TARGET_YEARS}
+        saved_pools = sources.read('data/processed/models/conditional-candidate-ledger/source-pools.json')
+        pools = {year: saved_pools['sourceYears'][str(year)] for year in sources.SOURCE_YEARS}
+        continuity = sources.read('data/processed/models/party-vote-transform/party-continuity.json')['records']
+        changed = copy.deepcopy(elections)
+        for year in sources.TARGET_YEARS:
+            for seat in changed[year]['electorates']:
+                seat['winnerCandidateId'] = None
+                seat['validCandidateVotes'] = -1
+                seat['candidateBallot'] = {'votesCast': -1}
+                for candidate in seat['candidates']:
+                    candidate['votes'] = -1
+                    candidate['elected'] = not candidate['elected']
+        actual = construct.construct(frame, changed, pools, continuity)
+        expected = sources.read('data/processed/models/conditional-candidate-ledger/ledgers.json')
+        self.assertEqual(actual, expected)
+        for year in sources.TARGET_YEARS:
+            self.assertNotIn(f'data/processed/split-votes/{year}.json', run.INPUTS)
+
+    def test_real_pool_counts_and_manifest_reproduction(self):
+        saved = sources.read('data/processed/models/conditional-candidate-ledger/source-pools.json')
+        self.assertEqual([saved['sourceYears'][str(year)]['summary']['includedRows']
+                          for year in sources.SOURCE_YEARS], [1258, 1021, 1169])
+        self.assertEqual([saved['sourceYears'][str(year)]['summary']['excludedRowsByReason']
+                          for year in sources.SOURCE_YEARS],
+                         [{'zero_mass_origin': 2}, {'zero_mass_origin': 3},
+                          {'zero_mass_origin': 1}])
+        self.assertEqual(run.build()['construction-manifest.json'],
+                         sources.read('data/processed/models/conditional-candidate-ledger/construction-manifest.json'))
 
 
 if __name__ == '__main__':
