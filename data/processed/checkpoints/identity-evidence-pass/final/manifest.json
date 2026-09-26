@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "stage": 13,
+  "inputSha256": {
+    "data/processed/checkpoints/identity-evidence-pass/preserved-audit.json": "b87bf488b564f1bf8c1c5a2e441cb552b937c09569772f3dc678d4bbff46f919",
+    "data/processed/checkpoints/identity-evidence-pass/preserved-profile-supplement.json": "6b27cd0a2b45f5b499f6c9360165c5e0aca8e5e2b945e6b4e88e18d5a1b02097",
+    "data/processed/checkpoints/identity-evidence-pass/search-attempts.json": "0f73742423c889241e20634be8904ab5d052b489c9e67c7cf6da94d2582eb68e",
+    "data/processed/checkpoints/identity-evidence-pass/tooling-preflight-audit.json": "7e8e3124b534e4395c96ac8ad83b63dd7abeff01971a3ada680308db737993cc",
+    "data/processed/checkpoints/evidence-repair/cohort-inventory.json": "baad3f9395dd23db563306eb5a8226610641584671f4cdd327bbc9468eca84d1",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/source-plans/stage13-identity-adjudications.json": "4d7ce391fc937d4f542da3c9c0a48347ce66a92b4e622ef60aa4bdce4536d20d",
+    "data/source-plans/stage13-identity-sources.json": "55d9370afe62e88eeb2fde1ab06b90f6d7d9f163d9ae852f09ecc57f632fdd96",
+    "data/source-plans/stage13-preserved-candidacy-sources.json": "0839a13c995888e49c4b175ec52acb278a71b445752f026dffc1dfa1fcbf570c",
+    "data/source-plans/stage13-preserved-identity-sources.json": "b33f7d9b67da84a9e0384f58602596a475fa9ac4706e971cbb926c7a20dc219b",
+    "data/sources.json": "7e09578d4b6121cf222cbc79905069973df4d16fb10ee66d842147696097a81e",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0001.json": "c35499f47b8a93c304e8f74b85bb6dad269530631cc2524ca06bfbcc84dc7b2a",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0005.json": "3332799fc0b1a5f27cf69e08d8462658a66f1e2cb28c3b3aa90d69e2745c77b2",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0015.json": "5ae122488401af67a540d3c2bece5f3b0dfe6ab5eb7390d40f489f2cb69a44e2",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0035.json": "b1a195ea5380d505b2674eb1333ed0055fd3e0c5e78118cdcab8a00665239f34",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0075.json": "af031ef25bf0408c1b077ca0178e5b713e4dd3fcc394d31b8280db59e5d81075",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0125.json": "abf179723fdf70669707ced8b1acf953e016ebb9c40553bfa0ea39a9b7d5481d",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0175.json": "ce15673ab677c443ec391eb05742b941a31a9430993b88a0db7fbe3cbb95f2dc",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0225.json": "9cacdb56da4d1ab5e7e28e26ac610810aa68c3343bf805635c59c7625a8f23e3",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0275.json": "20df0e28da32206f8e5790ff88ab3856405c17925049029e9309053c7eb0bf95",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0325.json": "4bb6fe15496b779224bfa761c52d5b9680fff5fa7c0f8524bfdb0885eda2aa3d",
+    "data/processed/checkpoints/identity-evidence-pass/search-batches/0375.json": "4ad8c25b4eb85074a029f9915e90b89f16ab494afd3de308f1f5bb465b75f01b",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e"
+  },
+  "outputSha256": {
+    "occurrence-evidence.json": "5f746edd6d875dcf53805d6c5f2e5e95383808353b6ae8ad963ec17e8a77f549",
+    "person-evidence.json": "35700199a26814aa03e5ecf378524a67b9a2179366deaa37435c6dc4d96c4a3f",
+    "relations.json": "2c3fa9daf8f790d6ec37877da111bcc1760132fc50b10821cdf8580b4d59fe75",
+    "unresolved-conflicts.json": "a1d68afd279e4d261cd01d7a3aa17ab643bb1170bd418b3a68ba751ec968caa7",
+    "coverage.json": "48919f3e95b2e2d625cd68a51e0f6c928411949be4815ddeb8196ee6aca2ce6a"
+  },
+  "generatorSha256": "ddfc52227f6219780148813cfe4e712686b5be834407c18966776be47bcafb23"
+}

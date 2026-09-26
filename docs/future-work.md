@@ -1,5 +1,10 @@
 # Authorized project sequence
 
+## After Stage 13 evidence-pass review
+
+The fixed 415-occurrence acquisition pass is complete and awaiting independent review. Its 19 primary occurrence-specific confirmations and 128 unverified same-party cross-election relations do not establish a broad prospective returning-candidate validation cohort. The four preflight deviations, ten supplement-driven later search skips and retrospective profile availability must be assessed before any further identity acquisition design. A later modelling/design step requires separate authorization and an explicit decision about whether a balanced, outcome-independent evidence expansion is worth its cost. Stage 8–11 operational null selections remain null. Conditional Stage 6 review, a defensible 2026 target-boundary candidate baseline and complete-view validation remain separate prerequisites before integration or ensemble weights.
+
+
 Revised by the user on 2026-09-08; supersedes earlier proposed implementation ordering.
 
 1. 2008
