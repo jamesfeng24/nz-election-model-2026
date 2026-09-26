@@ -3,9 +3,11 @@
 import copy
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 
-from scripts.models.conditional_candidate_ledger import construct, geometry, pool, run, sources
+from scripts.models.conditional_candidate_ledger import (
+    construct, feasibility, geometry, pool, run, sources)
 from scripts.validate.source_files import verify_source_files
 
 
@@ -116,6 +118,45 @@ class ConditionalCandidateLedgerTests(unittest.TestCase):
         undefined = geometry.share_bounds([{'mass': 100, 'routing': 'free'}],
                                            'a', ['a', 'b', 'other'], ['a', 'b'], [0, 100])
         self.assertEqual(undefined['status'], 'undefined_zero_feasible_denominator')
+
+    def test_joint_vector_feasibility_respects_pool_and_seat_hull(self):
+        source = {'id': '2008:g', 'totalMass': 400,
+                  'rows': [source_row(100, 0.8, 0.2),
+                           source_row(300, 0.2, 0.8)]}
+        candidates = [{'candidateOccurrenceId': 'a'},
+                      {'candidateOccurrenceId': 'b'}]
+        base = {'candidates': candidates,
+                'origins': [{'mass': 100, 'sourcePoolId': '2008:g',
+                             'mappedSourceCategories': {'party:a': 'a', 'party:b': 'b'},
+                             'routing': 'primary'}]}
+        pools = {'2008:g': source}
+        self.assertEqual(feasibility.joint_feasibility(base, pools, {'a': 35, 'b': 65})
+                         ['status'], 'feasible')
+        self.assertEqual(feasibility.joint_feasibility(base, pools, {'a': 50, 'b': 50})
+                         ['status'], 'infeasible')
+        hull = copy.deepcopy(base)
+        hull['origins'][0]['routing'] = 'heterogeneity'
+        self.assertEqual(feasibility.joint_feasibility(hull, pools, {'a': 50, 'b': 50})
+                         ['status'], 'feasible')
+
+    def test_joint_absent_mass_and_solver_failure_are_explicit(self):
+        source = {'id': '2008:g', 'totalMass': 1,
+                  'rows': [source_row(1, 0.7, 0.3)]}
+        record = {'candidates': [{'candidateOccurrenceId': 'a'},
+                                 {'candidateOccurrenceId': 'b'}],
+                  'origins': [{'mass': 100, 'sourcePoolId': '2008:g',
+                               'mappedSourceCategories': {'party:a': 'a'},
+                               'routing': 'primary'}]}
+        pools = {'2008:g': source}
+        self.assertEqual(feasibility.joint_feasibility(record, pools,
+                         {'a': 70, 'b': 30})['status'], 'feasible')
+        self.assertEqual(feasibility.joint_feasibility(record, pools,
+                         {'a': 60, 'b': 40})['status'], 'infeasible')
+        def failed_solver(*args, **kwargs):
+            return SimpleNamespace(status=4, x=None)
+        self.assertEqual(feasibility.joint_feasibility(record, pools,
+                         {'a': 70, 'b': 30}, failed_solver)['status'],
+                         'numerical_or_solver_failure')
 
     def test_source_snapshot_accepts_additions_rejects_required_changes(self):
         elections = {year: sources.read(f'data/processed/elections/{year}.json')
