@@ -76,7 +76,8 @@
     "destinations": [
       "every standing named candidate",
       "informal candidate vote",
-      "no valid candidate vote including party-vote-only or candidate-disallowed"
+      "party-vote-only",
+      "candidate-disallowed or other no-valid-candidate vote"
     ],
     "massEquation": "votesCast = sum(groupMass); for each group, sum(destinationRouteFraction)=1; validCandidateVotes = sum(namedCandidateDestinationVotes)",
     "groupMassMustBeNonnegative": true,

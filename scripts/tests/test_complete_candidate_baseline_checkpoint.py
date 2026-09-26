@@ -76,15 +76,20 @@ class CompleteCandidateBaselineCheckpointTests(unittest.TestCase):
         self.assertFalse(result['pointCandidateVotesAvailable'])
 
     def test_ballot_denominator_is_not_party_mass(self):
-        destinations = ['candidate_a', 'informal', 'party_only']
+        destinations = ['candidate_a', 'informal', 'party_only', 'candidate_disallowed']
         result = checkpoint.contest_bounds({
             'valid_party': {'mass': 30, 'routes': {
-                'candidate_a': [1, 1], 'informal': [0, 0], 'party_only': [0, 0]}},
+                'candidate_a': [0.9, 0.9], 'informal': [0, 0],
+                'party_only': [0.1, 0.1], 'candidate_disallowed': [0, 0]}},
             'informal_party': {'mass': 5, 'routes': {
-                'candidate_a': [0, 0], 'informal': [0, 0], 'party_only': [1, 1]}},
+                'candidate_a': [1, 1], 'informal': [0, 0],
+                'party_only': [0, 0], 'candidate_disallowed': [0, 0]}},
+            'party_disallowed': {'mass': 2, 'routes': {
+                'candidate_a': [0, 0], 'informal': [0, 0],
+                'party_only': [0, 0], 'candidate_disallowed': [1, 1]}},
         }, destinations, ['candidate_a'])
-        self.assertEqual(result['ballotMass'], 35)
-        self.assertEqual(result['validCandidateDenominatorBounds'], [30, 30])
+        self.assertEqual(result['ballotMass'], 37)
+        self.assertEqual(result['validCandidateDenominatorBounds'], [32, 32])
         self.assertTrue(result['pointCandidateVotesAvailable'])
 
     def test_invalid_or_hidden_mass_rejected(self):
