@@ -1,0 +1,3644 @@
+{
+  "schemaVersion": 1,
+  "stage": 13,
+  "status": "post-initial-audit_preserved-evidence-supplement",
+  "reason": "Initial audit attached Stage9 profiles only through inherited Stage8/10 links; this searches the same preserved profiles uniformly for all 415 by seat/date, then separates exact given-name proof from nickname/alias uncertainty. It changes no cohort or search order.",
+  "inputHashes": {
+    "data/processed/checkpoints/identity-evidence-pass/preserved-audit.json": "b87bf488b564f1bf8c1c5a2e441cb552b937c09569772f3dc678d4bbff46f919",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/models/freshman-incumbency/tenure-evidence.json": "1995e2c832dbf9126ff32efc094f1cafd82191b41a48db6cae9bbb337d8505db",
+    "data/source-plans/freshman-incumbency-tenure-sources.json": "b37e1cfcef3f803d93349f53da9b25cd8b8aaea438a362774eee797163f1ace3"
+  },
+  "records": [
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-08",
+      "order": 1,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-07",
+      "order": 2,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-01",
+      "order": 3,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-04-candidate-01",
+      "order": 4,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-33-candidate-01",
+      "order": 5,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-barry-maggie-2026-09-23",
+          "profileDisplayName": "Barry, Maggie",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "North Shore",
+              "party": "National Party",
+              "startDate": "2011-11-26",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2020-10-19",
+          "retrievedAt": "2026-09-23T06:13:35+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-03-candidate-04",
+      "order": 6,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-ross-jami-lee-2026-09-23",
+          "profileDisplayName": "Ross, Jami-Lee",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Botany",
+              "party": "National Party",
+              "startDate": "2011-03-05",
+              "endDate": "2018-10-16"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2020-11-06",
+          "retrievedAt": "2026-09-23T06:13:48+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-02-candidate-05",
+      "order": 7,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-ryall-tony-2026-09-23",
+          "profileDisplayName": "Ryall, Tony",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Bay of Plenty",
+              "party": "National Party",
+              "startDate": "1996-10-12",
+              "endDate": "2014-09-20"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2016-01-28",
+          "retrievedAt": "2026-09-23T06:13:49+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-08",
+      "order": 8,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-05",
+      "order": 9,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-03",
+      "order": 10,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-17-candidate-06",
+      "order": 11,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-07",
+      "order": 12,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-71-candidate-03",
+      "order": 13,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-56-candidate-07",
+      "order": 14,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-26-candidate-01",
+      "order": 15,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-17-candidate-04",
+      "order": 16,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-05",
+      "order": 17,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-26-candidate-04",
+      "order": 18,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-04",
+      "order": 19,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-68-candidate-01",
+      "order": 20,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-17-candidate-01",
+      "order": 21,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-70-candidate-01",
+      "order": 22,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-53-candidate-04",
+      "order": 23,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-69-candidate-04",
+      "order": 24,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-10",
+      "order": 25,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-04-candidate-02",
+      "order": 26,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-56-candidate-08",
+      "order": 27,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-26-candidate-03",
+      "order": 28,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-14-candidate-04",
+      "order": 29,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-08",
+      "order": 30,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-10-candidate-02",
+      "order": 31,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-02",
+      "order": 32,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-04",
+      "order": 33,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-08",
+      "order": 34,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-02-candidate-01",
+      "order": 35,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-17-candidate-01",
+      "order": 36,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-10-candidate-04",
+      "order": 37,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-01",
+      "order": 38,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-10-candidate-06",
+      "order": 39,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-57-candidate-01",
+      "order": 40,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-07",
+      "order": 41,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-07-candidate-01",
+      "order": 42,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-17-candidate-05",
+      "order": 43,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-67-candidate-02",
+      "order": 44,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-02",
+      "order": 45,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-33-candidate-02",
+      "order": 46,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-57-candidate-03",
+      "order": 47,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-doocey-matt-2026-09-23",
+          "profileDisplayName": "Doocey, Matt",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Waimakariri",
+              "party": "National Party",
+              "startDate": "2014-09-20",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:13:54+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-53-candidate-07",
+      "order": 48,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-10",
+      "order": 49,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-26-candidate-02",
+      "order": 50,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-10-candidate-05",
+      "order": 51,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-02",
+      "order": 52,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-06",
+      "order": 53,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-56-candidate-05",
+      "order": 54,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-07",
+      "order": 55,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-17-candidate-03",
+      "order": 56,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-10",
+      "order": 57,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-reti-shane-2026-09-23",
+          "profileDisplayName": "Reti, Shane",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Whangārei",
+              "party": "National Party",
+              "startDate": "2023-10-14",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:01+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-03",
+      "order": 58,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-07",
+      "order": 59,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-08",
+      "order": 60,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-69-candidate-01",
+      "order": 61,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-10-candidate-04",
+      "order": 62,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-09",
+      "order": 63,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-05",
+      "order": 64,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-05",
+      "order": 65,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-01",
+      "order": 66,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-21-candidate-03",
+      "order": 67,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-04-candidate-03",
+      "order": 68,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-02-candidate-04",
+      "order": 69,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-29-candidate-01",
+      "order": 70,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-02",
+      "order": 71,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-bridges-simon-2026-09-23",
+          "profileDisplayName": "Bridges, Simon",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Tauranga",
+              "party": "National Party",
+              "startDate": "2008-11-08",
+              "endDate": "2022-05-06"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2022-05-09",
+          "retrievedAt": "2026-09-23T06:13:37+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-07",
+      "order": 72,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-03",
+      "order": 73,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-05",
+      "order": 74,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-04-candidate-05",
+      "order": 75,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-55-candidate-03",
+      "order": 76,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-53-candidate-02",
+      "order": 77,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-10",
+      "order": 78,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-26-candidate-01",
+      "order": 79,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-04-candidate-01",
+      "order": 80,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-02",
+      "order": 81,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-05",
+      "order": 82,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-02",
+      "order": 83,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-68-candidate-02",
+      "order": 84,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-17-candidate-06",
+      "order": 85,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-02",
+      "order": 86,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-07",
+      "order": 87,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-04",
+      "order": 88,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-14-candidate-02",
+      "order": 89,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-macindoe-tim-2026-09-23",
+          "profileDisplayName": "Macindoe, Tim",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Hamilton West",
+              "party": "National Party",
+              "startDate": "2008-11-08",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2020-10-20",
+          "retrievedAt": "2026-09-23T06:13:45+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-65-candidate-02",
+      "order": 90,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-29-candidate-07",
+      "order": 91,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-04",
+      "order": 92,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-38-candidate-03",
+      "order": 93,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-lees-galloway-iain-2026-09-23",
+          "profileDisplayName": "Lees-Galloway, Iain",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Palmerston North",
+              "party": "Labour Party",
+              "startDate": "2008-11-08",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2020-11-06",
+          "retrievedAt": "2026-09-23T06:13:44+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-53-candidate-03",
+      "order": 94,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-67-candidate-04",
+      "order": 95,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-02",
+      "order": 96,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-33-candidate-03",
+      "order": 97,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-71-candidate-01",
+      "order": 98,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-01",
+      "order": 99,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-02-candidate-04",
+      "order": 100,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-21-candidate-06",
+      "order": 101,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-02",
+      "order": 102,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-08",
+      "order": 103,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-11",
+      "order": 104,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-07",
+      "order": 105,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-26-candidate-05",
+      "order": 106,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-02-candidate-02",
+      "order": 107,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-07",
+      "order": 108,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-29-candidate-03",
+      "order": 109,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-17-candidate-07",
+      "order": 110,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-08",
+      "order": 111,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-04",
+      "order": 112,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-29-candidate-02",
+      "order": 113,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-26-candidate-06",
+      "order": 114,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-14-candidate-06",
+      "order": 115,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-21-candidate-07",
+      "order": 116,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-02",
+      "order": 117,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-04",
+      "order": 118,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-65-candidate-03",
+      "order": 119,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-04-candidate-01",
+      "order": 120,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-71-candidate-04",
+      "order": 121,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-57-candidate-01",
+      "order": 122,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-11-candidate-04",
+      "order": 123,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-seymour-david-2026-09-23",
+          "profileDisplayName": "Seymour, David",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Epsom",
+              "party": "ACT Party",
+              "startDate": "2014-09-20",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:02+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-10",
+      "order": 124,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-woods-megan-2026-09-23",
+          "profileDisplayName": "Woods, Megan",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Wigram",
+              "party": "Labour Party",
+              "startDate": "2011-11-26",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:07+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-08",
+      "order": 125,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-26-candidate-06",
+      "order": 126,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-70-candidate-02",
+      "order": 127,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-56-candidate-04",
+      "order": 128,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-56-candidate-02",
+      "order": 129,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-hayes-john-2026-09-23",
+          "profileDisplayName": "Hayes, John",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Wairarapa",
+              "party": "National Party",
+              "startDate": "2005-10-05",
+              "endDate": "2014-09-20"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2014-09-22",
+          "retrievedAt": "2026-09-23T06:13:42+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-17-candidate-07",
+      "order": 130,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-26-candidate-06",
+      "order": 131,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-56-candidate-05",
+      "order": 132,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-02",
+      "order": 133,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-03",
+      "order": 134,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-71-candidate-02",
+      "order": 135,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-08",
+      "order": 136,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-26-candidate-03",
+      "order": 137,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-04",
+      "order": 138,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-09",
+      "order": 139,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-38-candidate-05",
+      "order": 140,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-17-candidate-08",
+      "order": 141,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-03",
+      "order": 142,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-08",
+      "order": 143,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-08",
+      "order": 144,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-07-candidate-05",
+      "order": 145,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-09",
+      "order": 146,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-10",
+      "order": 147,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-01",
+      "order": 148,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-67-candidate-03",
+      "order": 149,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-07",
+      "order": 150,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-sepuloni-carmel-2026-09-23",
+          "profileDisplayName": "Sepuloni, Carmel",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Kelston",
+              "party": "Labour Party",
+              "startDate": "2014-09-20",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:02+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-03",
+      "order": 151,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-06",
+      "order": 152,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-01",
+      "order": 153,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-macindoe-tim-2026-09-23",
+          "profileDisplayName": "Macindoe, Tim",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Hamilton West",
+              "party": "National Party",
+              "startDate": "2008-11-08",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2020-10-20",
+          "retrievedAt": "2026-09-23T06:13:45+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-01",
+      "order": 154,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-02",
+      "order": 155,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-14-candidate-03",
+      "order": 156,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-69-candidate-05",
+      "order": 157,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-03",
+      "order": 158,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-55-candidate-02",
+      "order": 159,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-11",
+      "order": 160,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-29-candidate-04",
+      "order": 161,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-smith-nick-2026-09-23",
+          "profileDisplayName": "Smith, Nick",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Nelson",
+              "party": "National Party",
+              "startDate": "1996-10-12",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2021-06-10",
+          "retrievedAt": "2026-09-23T06:13:50+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-03-candidate-01",
+      "order": 162,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-17-candidate-08",
+      "order": 163,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-55-candidate-06",
+      "order": 164,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-69-candidate-03",
+      "order": 165,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-01",
+      "order": 166,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-03-candidate-01",
+      "order": 167,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-55-candidate-02",
+      "order": 168,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-cosgrove-clayton-2026-09-23",
+          "profileDisplayName": "Cosgrove, Clayton",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Waimakariri",
+              "party": "Labour Party",
+              "startDate": "1999-11-27",
+              "endDate": "2011-11-26"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2017-09-25",
+          "retrievedAt": "2026-09-23T06:13:39+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-11-candidate-01",
+      "order": 169,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-70-candidate-02",
+      "order": 170,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-05",
+      "order": 171,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-68-candidate-02",
+      "order": 172,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-33-candidate-01",
+      "order": 173,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-barry-maggie-2026-09-23",
+          "profileDisplayName": "Barry, Maggie",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "North Shore",
+              "party": "National Party",
+              "startDate": "2011-11-26",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2020-10-19",
+          "retrievedAt": "2026-09-23T06:13:35+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-55-candidate-05",
+      "order": 174,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-33-candidate-06",
+      "order": 175,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-57-candidate-07",
+      "order": 176,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-09",
+      "order": 177,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-02-candidate-03",
+      "order": 178,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-29-candidate-02",
+      "order": 179,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-57-candidate-03",
+      "order": 180,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-doocey-matt-2026-09-23",
+          "profileDisplayName": "Doocey, Matt",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Waimakariri",
+              "party": "National Party",
+              "startDate": "2014-09-20",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:13:54+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-04-candidate-04",
+      "order": 181,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-luxon-christopher-2026-09-23",
+          "profileDisplayName": "Luxon, Christopher",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Botany",
+              "party": "National Party",
+              "startDate": "2020-10-17",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:13:56+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-04-candidate-05",
+      "order": 182,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-17-candidate-02",
+      "order": 183,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-38-candidate-01",
+      "order": 184,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-07-candidate-03",
+      "order": 185,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-06",
+      "order": 186,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-04",
+      "order": 187,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-55-candidate-01",
+      "order": 188,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-cosgrove-clayton-2026-09-23",
+          "profileDisplayName": "Cosgrove, Clayton",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Waimakariri",
+              "party": "Labour Party",
+              "startDate": "1999-11-27",
+              "endDate": "2011-11-26"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2017-09-25",
+          "retrievedAt": "2026-09-23T06:13:39+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-21-candidate-02",
+      "order": 189,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-02",
+      "order": 190,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-06",
+      "order": 191,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-08",
+      "order": 192,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-38-candidate-06",
+      "order": 193,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-57-candidate-05",
+      "order": 194,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-11-candidate-06",
+      "order": 195,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-11",
+      "order": 196,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-01",
+      "order": 197,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-02-candidate-02",
+      "order": 198,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-26-candidate-02",
+      "order": 199,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-10-candidate-02",
+      "order": 200,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-70-candidate-06",
+      "order": 201,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-68-candidate-04",
+      "order": 202,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-11-candidate-03",
+      "order": 203,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-07",
+      "order": 204,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-71-candidate-06",
+      "order": 205,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-26-candidate-02",
+      "order": 206,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-02-candidate-03",
+      "order": 207,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-01",
+      "order": 208,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-29-candidate-06",
+      "order": 209,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-09",
+      "order": 210,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-05",
+      "order": 211,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-09",
+      "order": 212,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-53-candidate-01",
+      "order": 213,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-04",
+      "order": 214,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-26-candidate-07",
+      "order": 215,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-11-candidate-05",
+      "order": 216,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-68-candidate-04",
+      "order": 217,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-06",
+      "order": 218,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-03",
+      "order": 219,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-09",
+      "order": 220,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-65-candidate-01",
+      "order": 221,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-67-candidate-02",
+      "order": 222,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-05",
+      "order": 223,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-10-candidate-01",
+      "order": 224,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-55-candidate-07",
+      "order": 225,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-06",
+      "order": 226,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-01",
+      "order": 227,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-56-candidate-03",
+      "order": 228,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-hayes-john-2026-09-23",
+          "profileDisplayName": "Hayes, John",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Wairarapa",
+              "party": "National Party",
+              "startDate": "2005-10-05",
+              "endDate": "2014-09-20"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2014-09-22",
+          "retrievedAt": "2026-09-23T06:13:42+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-26-candidate-03",
+      "order": 229,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-03-candidate-04",
+      "order": 230,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-10",
+      "order": 231,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-06",
+      "order": 232,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-01",
+      "order": 233,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-55-candidate-04",
+      "order": 234,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-33-candidate-05",
+      "order": 235,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-03-candidate-05",
+      "order": 236,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-07-candidate-04",
+      "order": 237,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-14-candidate-07",
+      "order": 238,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-01",
+      "order": 239,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-09",
+      "order": 240,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-26-candidate-07",
+      "order": 241,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-04-candidate-05",
+      "order": 242,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-04",
+      "order": 243,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-67-candidate-01",
+      "order": 244,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-55-candidate-05",
+      "order": 245,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-04-candidate-03",
+      "order": 246,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-33-candidate-03",
+      "order": 247,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-56-candidate-04",
+      "order": 248,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-55-candidate-01",
+      "order": 249,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-06",
+      "order": 250,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-simpson-scott-2026-09-23",
+          "profileDisplayName": "Simpson, Scott",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Coromandel",
+              "party": "National Party",
+              "startDate": "2011-11-26",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:03+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-09",
+      "order": 251,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-seymour-david-2026-09-23",
+          "profileDisplayName": "Seymour, David",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Epsom",
+              "party": "ACT Party",
+              "startDate": "2014-09-20",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:02+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-06",
+      "order": 252,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-03",
+      "order": 253,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-70-candidate-05",
+      "order": 254,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-33-candidate-04",
+      "order": 255,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-67-candidate-01",
+      "order": 256,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-67-candidate-05",
+      "order": 257,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-03-candidate-03",
+      "order": 258,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-ross-jami-lee-2026-09-23",
+          "profileDisplayName": "Ross, Jami-Lee",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Botany",
+              "party": "National Party",
+              "startDate": "2011-03-05",
+              "endDate": "2018-10-16"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2020-11-06",
+          "retrievedAt": "2026-09-23T06:13:48+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-71-candidate-05",
+      "order": 259,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-06",
+      "order": 260,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-reti-shane-2026-09-23",
+          "profileDisplayName": "Reti, Shane",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Whangārei",
+              "party": "National Party",
+              "startDate": "2014-09-20",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:01+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-04-candidate-06",
+      "order": 261,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-wagner-nicky-2026-09-23",
+          "profileDisplayName": "Wagner, Nicky",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Christchurch Central",
+              "party": "National Party",
+              "startDate": "2011-11-26",
+              "endDate": "2017-09-23"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2020-10-19",
+          "retrievedAt": "2026-09-23T06:13:51+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-01",
+      "order": 262,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-02",
+      "order": 263,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-03-candidate-03",
+      "order": 264,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-06",
+      "order": 265,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-65-candidate-02",
+      "order": 266,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-14-candidate-05",
+      "order": 267,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-53-candidate-06",
+      "order": 268,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-twyford-phil-2026-09-23",
+          "profileDisplayName": "Twyford, Phil",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Te Atatū",
+              "party": "Labour Party",
+              "startDate": "2011-11-26",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:04+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-02",
+      "order": 269,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-68-candidate-01",
+      "order": 270,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-01",
+      "order": 271,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-04",
+      "order": 272,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-04",
+      "order": 273,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-02-candidate-06",
+      "order": 274,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-03",
+      "order": 275,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-56-candidate-03",
+      "order": 276,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-11",
+      "order": 277,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-69-candidate-02",
+      "order": 278,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-04-candidate-02",
+      "order": 279,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-08",
+      "order": 280,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-07-candidate-02",
+      "order": 281,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-53-candidate-05",
+      "order": 282,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-56-candidate-06",
+      "order": 283,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-03-candidate-02",
+      "order": 284,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-07",
+      "order": 285,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-05",
+      "order": 286,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-lotu-iiga-peseta-sam-2026-09-23",
+          "profileDisplayName": "Lotu-Iiga, Peseta Sam",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Maungakiekie",
+              "party": "National Party",
+              "startDate": "2008-11-08",
+              "endDate": "2017-09-23"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2020-11-06",
+          "retrievedAt": "2026-09-23T06:13:45+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-06",
+      "order": 287,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-reti-shane-2026-09-23",
+          "profileDisplayName": "Reti, Shane",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Whangārei",
+              "party": "National Party",
+              "startDate": "2014-09-20",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:01+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-09",
+      "order": 288,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-03",
+      "order": 289,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-bridges-simon-2026-09-23",
+          "profileDisplayName": "Bridges, Simon",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Tauranga",
+              "party": "National Party",
+              "startDate": "2008-11-08",
+              "endDate": "2022-05-06"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2022-05-09",
+          "retrievedAt": "2026-09-23T06:13:37+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-11-candidate-02",
+      "order": 290,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-07",
+      "order": 291,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-33-candidate-05",
+      "order": 292,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-21-candidate-01",
+      "order": 293,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-07",
+      "order": 294,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-57-candidate-04",
+      "order": 295,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-05",
+      "order": 296,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-67-candidate-03",
+      "order": 297,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-55-candidate-03",
+      "order": 298,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-26-candidate-05",
+      "order": 299,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-nash-stuart-2026-09-23",
+          "profileDisplayName": "Nash, Stuart",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Napier",
+              "party": "Labour Party",
+              "startDate": "2014-09-20",
+              "endDate": "2023-10-14"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2023-10-14",
+          "retrievedAt": "2026-09-23T06:13:47+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-69-candidate-04",
+      "order": 300,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-26-candidate-07",
+      "order": 301,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-04-candidate-03",
+      "order": 302,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-71-candidate-04",
+      "order": 303,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-65-candidate-01",
+      "order": 304,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-09",
+      "order": 305,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-04-candidate-06",
+      "order": 306,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-10",
+      "order": 307,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-04",
+      "order": 308,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-05",
+      "order": 309,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-70-candidate-01",
+      "order": 310,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-03",
+      "order": 311,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-lees-galloway-iain-2026-09-23",
+          "profileDisplayName": "Lees-Galloway, Iain",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Palmerston North",
+              "party": "Labour Party",
+              "startDate": "2008-11-08",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2020-11-06",
+          "retrievedAt": "2026-09-23T06:13:44+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-09",
+      "order": 312,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-57-candidate-08",
+      "order": 313,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-08",
+      "order": 314,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-03-candidate-06",
+      "order": 315,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-29-candidate-03",
+      "order": 316,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-03",
+      "order": 317,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-57-candidate-04",
+      "order": 318,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-01",
+      "order": 319,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-05",
+      "order": 320,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-12-candidate-06",
+      "order": 321,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-01",
+      "order": 322,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-bennett-david-2026-09-23",
+          "profileDisplayName": "Bennett, David",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Hamilton East",
+              "party": "National Party",
+              "startDate": "2005-09-17",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2023-10-14",
+          "retrievedAt": "2026-09-23T06:13:37+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-68-candidate-03",
+      "order": 323,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-68-candidate-03",
+      "order": 324,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-02-candidate-06",
+      "order": 325,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-ryall-tony-2026-09-23",
+          "profileDisplayName": "Ryall, Tony",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Bay of Plenty",
+              "party": "National Party",
+              "startDate": "1996-10-12",
+              "endDate": "2014-09-20"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2016-01-28",
+          "retrievedAt": "2026-09-23T06:13:49+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-06",
+      "order": 326,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-10-candidate-07",
+      "order": 327,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-33-candidate-04",
+      "order": 328,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-05",
+      "order": 329,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-70-candidate-04",
+      "order": 330,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-64-candidate-04",
+      "order": 331,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-17-candidate-05",
+      "order": 332,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-07",
+      "order": 333,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-10-candidate-05",
+      "order": 334,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-03",
+      "order": 335,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-04-candidate-02",
+      "order": 336,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-02-candidate-05",
+      "order": 337,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-26-candidate-01",
+      "order": 338,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-69-candidate-01",
+      "order": 339,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-10",
+      "order": 340,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-woods-megan-2026-09-23",
+          "profileDisplayName": "Woods, Megan",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Wigram",
+              "party": "Labour Party",
+              "startDate": "2011-11-26",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:07+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-33-candidate-02",
+      "order": 341,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-04",
+      "order": 342,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-56-candidate-01",
+      "order": 343,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-06",
+      "order": 344,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-twyford-phil-2026-09-23",
+          "profileDisplayName": "Twyford, Phil",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Te Atatū",
+              "party": "Labour Party",
+              "startDate": "2011-11-26",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:04+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-17-candidate-04",
+      "order": 345,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-69-candidate-03",
+      "order": 346,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-07",
+      "order": 347,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-26-candidate-04",
+      "order": 348,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-71-candidate-03",
+      "order": 349,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-04-candidate-04",
+      "order": 350,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-luxon-christopher-2026-09-23",
+          "profileDisplayName": "Luxon, Christopher",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Botany",
+              "party": "National Party",
+              "startDate": "2020-10-17",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:13:56+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-02",
+      "order": 351,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-69-candidate-02",
+      "order": 352,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-05",
+      "order": 353,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-02-candidate-01",
+      "order": 354,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-68-candidate-05",
+      "order": 355,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-70-candidate-03",
+      "order": 356,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-56-candidate-01",
+      "order": 357,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-56-candidate-06",
+      "order": 358,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-65-candidate-07",
+      "order": 359,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-08",
+      "order": 360,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-57-candidate-06",
+      "order": 361,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-04",
+      "order": 362,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-38-candidate-04",
+      "order": 363,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-17-candidate-03",
+      "order": 364,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-mallard-trevor-2026-09-23",
+          "profileDisplayName": "Mallard, Trevor",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Hutt South",
+              "party": "Labour Party",
+              "startDate": "1996-10-12",
+              "endDate": "2017-09-23"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2022-10-20",
+          "retrievedAt": "2026-09-23T06:13:45+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "confirmed"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-26-candidate-05",
+      "order": 365,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-70-candidate-04",
+      "order": 366,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-65-candidate-04",
+      "order": 367,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-21-candidate-04",
+      "order": 368,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-57-candidate-02",
+      "order": 369,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-26-candidate-04",
+      "order": 370,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-03-candidate-02",
+      "order": 371,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-06",
+      "order": 372,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-04-candidate-04",
+      "order": 373,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-09",
+      "order": 374,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-17-candidate-02",
+      "order": 375,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-02",
+      "order": 376,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-29-candidate-05",
+      "order": 377,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-33-candidate-06",
+      "order": 378,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-05",
+      "order": 379,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-64-candidate-03",
+      "order": 380,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-04",
+      "order": 381,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-29-candidate-06",
+      "order": 382,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-65-candidate-03",
+      "order": 383,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-71-candidate-02",
+      "order": 384,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-69-candidate-06",
+      "order": 385,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-38-candidate-02",
+      "order": 386,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-06",
+      "order": 387,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-01",
+      "order": 388,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-10",
+      "order": 389,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-reti-shane-2026-09-23",
+          "profileDisplayName": "Reti, Shane",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Whangārei",
+              "party": "National Party",
+              "startDate": "2014-09-20",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:01+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-70-candidate-03",
+      "order": 390,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-11-candidate-02",
+      "order": 391,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-10-candidate-03",
+      "order": 392,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-29-candidate-04",
+      "order": 393,
+      "status": "alias_unresolved",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-former-profile-smith-nick-2026-09-23",
+          "profileDisplayName": "Smith, Nick",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Nelson",
+              "party": "National Party",
+              "startDate": "1996-10-12",
+              "endDate": "2020-10-17"
+            }
+          ],
+          "exactFirstName": false,
+          "publicationDate": "2021-06-10",
+          "retrievedAt": "2026-09-23T06:13:50+00:00",
+          "route": "unique_seat_date_but_alias_unproved"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-57-candidate-05",
+      "order": 394,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-51-candidate-03",
+      "order": 395,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-56-candidate-02",
+      "order": 396,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-05",
+      "order": 397,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-29-candidate-05",
+      "order": 398,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-03",
+      "order": 399,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-55-candidate-04",
+      "order": 400,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-06",
+      "order": 401,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-14-candidate-01",
+      "order": 402,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-07",
+      "order": 403,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-65-candidate-03",
+      "order": 404,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-05",
+      "order": 405,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-10-candidate-01",
+      "order": 406,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-57-candidate-02",
+      "order": 407,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-21-candidate-05",
+      "order": 408,
+      "status": "direct_retrospective_profile_candidate",
+      "profileCandidates": [
+        {
+          "sourceId": "parliament-current-profile-sepuloni-carmel-2026-09-23",
+          "profileDisplayName": "Sepuloni, Carmel",
+          "serviceRowsAtElection": [
+            {
+              "serviceKind": "electorate",
+              "electorateName": "Kelston",
+              "party": "Labour Party",
+              "startDate": "2014-09-20",
+              "endDate": null
+            }
+          ],
+          "exactFirstName": true,
+          "publicationDate": "2026-09-08",
+          "retrievedAt": "2026-09-23T06:14:02+00:00",
+          "route": "unique_seat_date_and_exact_given_name"
+        }
+      ],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-10-candidate-03",
+      "order": 409,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-04",
+      "order": 410,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "probable"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-14-candidate-09",
+      "order": 411,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-38-candidate-08",
+      "order": 412,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2008-electorate-29-candidate-01",
+      "order": 413,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-71-candidate-01",
+      "order": 414,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-11-candidate-07",
+      "order": 415,
+      "status": "no_candidate",
+      "profileCandidates": [],
+      "inheritedAuditConfidence": "unresolved"
+    }
+  ],
+  "summary": {
+    "alias_unresolved": 13,
+    "direct_retrospective_profile_candidate": 27,
+    "no_candidate": 375
+  }
+}

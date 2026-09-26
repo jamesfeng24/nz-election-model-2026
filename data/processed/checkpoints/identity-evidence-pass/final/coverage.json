@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "stage": 13,
+  "cohortSize": 415,
+  "acquisitionStates": {
+    "preserved_direct_evidence_sufficient": 32,
+    "searched_unresolved": 361,
+    "searched_unresolved_preflight": 4,
+    "source_acquired_pending_adjudication": 18
+  },
+  "primaryIdentityConfidence": {
+    "confirmed": 19,
+    "probable": 3,
+    "unresolved": 393
+  },
+  "inheritedReassessedConfidence": {
+    "confirmed": 22,
+    "probable": 109,
+    "unresolved": 284
+  },
+  "preservedSupplementStatuses": {
+    "alias_unresolved": 13,
+    "direct_retrospective_profile_candidate": 27,
+    "no_candidate": 375
+  },
+  "adjudicationReasons": {
+    "alias_requires_bridge": 3,
+    "name_conflict": 1,
+    "no_primary_occurrence_specific_person_evidence": 392,
+    "primary_occurrence_corroborated": 19
+  },
+  "adjudicatedSourceTiers": {
+    "candidate_submitted": 8,
+    "journalistic_interview": 1,
+    "primary_party": 23
+  },
+  "formalSearchAttempts": 766,
+  "newUniqueResources": 18,
+  "preflightDeviationCases": 4,
+  "withoutPreflightDeviation": {
+    "n": 411,
+    "primaryConfirmed": 19
+  },
+  "notReachedBudgetExhausted": 0,
+  "groups": [
+    {
+      "transition": "2008→2011",
+      "scope": "general",
+      "role": "source",
+      "observedOutcome": "later_observed_loser",
+      "n": 53,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 53,
+      "withoutPreflightDeviationN": 53,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2008→2011",
+      "scope": "general",
+      "role": "source",
+      "observedOutcome": "later_observed_winner",
+      "n": 8,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 8,
+      "withoutPreflightDeviationN": 8,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2008→2011",
+      "scope": "general",
+      "role": "target",
+      "observedOutcome": "later_observed_loser",
+      "n": 46,
+      "primaryConfirmed": 9,
+      "primaryProbable": 1,
+      "primaryUnresolved": 36,
+      "withoutPreflightDeviationN": 45,
+      "withoutPreflightDeviationConfirmed": 9
+    },
+    {
+      "transition": "2008→2011",
+      "scope": "general",
+      "role": "target",
+      "observedOutcome": "later_observed_winner",
+      "n": 8,
+      "primaryConfirmed": 2,
+      "primaryProbable": 0,
+      "primaryUnresolved": 6,
+      "withoutPreflightDeviationN": 8,
+      "withoutPreflightDeviationConfirmed": 2
+    },
+    {
+      "transition": "2008→2011",
+      "scope": "maori",
+      "role": "source",
+      "observedOutcome": "later_observed_loser",
+      "n": 6,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 6,
+      "withoutPreflightDeviationN": 6,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2008→2011",
+      "scope": "maori",
+      "role": "source",
+      "observedOutcome": "later_observed_winner",
+      "n": 2,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 2,
+      "withoutPreflightDeviationN": 2,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2008→2011",
+      "scope": "maori",
+      "role": "target",
+      "observedOutcome": "later_observed_loser",
+      "n": 6,
+      "primaryConfirmed": 1,
+      "primaryProbable": 0,
+      "primaryUnresolved": 5,
+      "withoutPreflightDeviationN": 6,
+      "withoutPreflightDeviationConfirmed": 1
+    },
+    {
+      "transition": "2008→2011",
+      "scope": "maori",
+      "role": "target",
+      "observedOutcome": "later_observed_winner",
+      "n": 2,
+      "primaryConfirmed": 1,
+      "primaryProbable": 0,
+      "primaryUnresolved": 1,
+      "withoutPreflightDeviationN": 2,
+      "withoutPreflightDeviationConfirmed": 1
+    },
+    {
+      "transition": "2014→2017",
+      "scope": "general",
+      "role": "source",
+      "observedOutcome": "later_observed_loser",
+      "n": 50,
+      "primaryConfirmed": 2,
+      "primaryProbable": 1,
+      "primaryUnresolved": 47,
+      "withoutPreflightDeviationN": 50,
+      "withoutPreflightDeviationConfirmed": 2
+    },
+    {
+      "transition": "2014→2017",
+      "scope": "general",
+      "role": "source",
+      "observedOutcome": "later_observed_winner",
+      "n": 8,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 8,
+      "withoutPreflightDeviationN": 8,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2014→2017",
+      "scope": "general",
+      "role": "target",
+      "observedOutcome": "later_observed_loser",
+      "n": 50,
+      "primaryConfirmed": 1,
+      "primaryProbable": 0,
+      "primaryUnresolved": 49,
+      "withoutPreflightDeviationN": 49,
+      "withoutPreflightDeviationConfirmed": 1
+    },
+    {
+      "transition": "2014→2017",
+      "scope": "general",
+      "role": "target",
+      "observedOutcome": "later_observed_winner",
+      "n": 8,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 8,
+      "withoutPreflightDeviationN": 8,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2014→2017",
+      "scope": "maori",
+      "role": "source",
+      "observedOutcome": "later_observed_loser",
+      "n": 9,
+      "primaryConfirmed": 1,
+      "primaryProbable": 0,
+      "primaryUnresolved": 8,
+      "withoutPreflightDeviationN": 9,
+      "withoutPreflightDeviationConfirmed": 1
+    },
+    {
+      "transition": "2014→2017",
+      "scope": "maori",
+      "role": "source",
+      "observedOutcome": "later_observed_winner",
+      "n": 2,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 2,
+      "withoutPreflightDeviationN": 2,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2014→2017",
+      "scope": "maori",
+      "role": "target",
+      "observedOutcome": "later_observed_loser",
+      "n": 5,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 5,
+      "withoutPreflightDeviationN": 5,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2014→2017",
+      "scope": "maori",
+      "role": "target",
+      "observedOutcome": "later_observed_winner",
+      "n": 2,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 2,
+      "withoutPreflightDeviationN": 2,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2020→2023",
+      "scope": "general",
+      "role": "source",
+      "observedOutcome": "later_observed_loser",
+      "n": 62,
+      "primaryConfirmed": 0,
+      "primaryProbable": 1,
+      "primaryUnresolved": 61,
+      "withoutPreflightDeviationN": 61,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2020→2023",
+      "scope": "general",
+      "role": "source",
+      "observedOutcome": "later_observed_winner",
+      "n": 8,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 8,
+      "withoutPreflightDeviationN": 8,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2020→2023",
+      "scope": "general",
+      "role": "target",
+      "observedOutcome": "later_observed_loser",
+      "n": 52,
+      "primaryConfirmed": 1,
+      "primaryProbable": 0,
+      "primaryUnresolved": 51,
+      "withoutPreflightDeviationN": 51,
+      "withoutPreflightDeviationConfirmed": 1
+    },
+    {
+      "transition": "2020→2023",
+      "scope": "general",
+      "role": "target",
+      "observedOutcome": "later_observed_winner",
+      "n": 8,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 8,
+      "withoutPreflightDeviationN": 8,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2020→2023",
+      "scope": "maori",
+      "role": "source",
+      "observedOutcome": "later_observed_loser",
+      "n": 10,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 10,
+      "withoutPreflightDeviationN": 10,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2020→2023",
+      "scope": "maori",
+      "role": "source",
+      "observedOutcome": "later_observed_winner",
+      "n": 2,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 2,
+      "withoutPreflightDeviationN": 2,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2020→2023",
+      "scope": "maori",
+      "role": "target",
+      "observedOutcome": "later_observed_loser",
+      "n": 6,
+      "primaryConfirmed": 0,
+      "primaryProbable": 0,
+      "primaryUnresolved": 6,
+      "withoutPreflightDeviationN": 6,
+      "withoutPreflightDeviationConfirmed": 0
+    },
+    {
+      "transition": "2020→2023",
+      "scope": "maori",
+      "role": "target",
+      "observedOutcome": "later_observed_winner",
+      "n": 2,
+      "primaryConfirmed": 1,
+      "primaryProbable": 0,
+      "primaryUnresolved": 1,
+      "withoutPreflightDeviationN": 2,
+      "withoutPreflightDeviationConfirmed": 1
+    }
+  ],
+  "interpretation": "Fixed unequal-probability seat sample; descriptive coverage only. Outcome groups are post-acquisition diagnostics, not selection or proof of prospective availability."
+}

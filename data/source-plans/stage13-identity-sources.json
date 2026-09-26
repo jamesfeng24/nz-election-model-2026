@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "stage": 13,
+  "sources": [
+    {
+      "schemaVersion": 1,
+      "id": "stage13-national-ngaro-te-atatu-selection-2014",
+      "organisation": "New Zealand National Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO1406/S00032/national-selects-alfred-ngaro-as-te-atatu-candidate.htm",
+      "dateOrElection": "2014 general election",
+      "resource": "Dated National candidate-selection statement",
+      "publishedDate": "2014-06-03",
+      "retrievedAt": "2026-09-25T18:05:16.339856+00:00",
+      "rawPath": "data/raw/identity-stage13/national-selects-alfred-ngaro-te-atatu-2014.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Party-authored statement on Scoop establishes Alfred Ngaro selected for Te Atatu in 2014; it does not alone prove every other Alfred Ngaro occurrence or full career history.",
+        "Publication predates the 2014 general-election result; target nomination-close timing must be verified separately."
+      ],
+      "sha256": "38fa368661f616aeab3bb5aac84eccb1d4b2e078eb851f791653cba213f88217",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-naisi-chen-east-coast-bays-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/east-coast-bays-electorate/candidates/naisi-chen",
+      "dateOrElection": "2023 general election",
+      "resource": "Archived candidate profile and candidate-submitted statement",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:11:59.648421+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-naisi-chen-east-coast-bays-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "The archived page names Naisi Chen as East Coast Bays Labour candidate and includes a first-person statement; exact original publication time is not exposed by this retained HTML.",
+        "Policy.nz platform publication/selection may be retrospective or incomplete; this page does not establish all career history or cross-election same-person relations."
+      ],
+      "sha256": "af5cd53cc3a858ab96e251834f86ed6f9f1e7b1d2ae9426da5a2ca5e923346af",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-nzf-alok-gupta-hutt-south-selection-2017",
+      "organisation": "New Zealand First Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO1708/S00317/new-zealand-first-announces-wellington-region-candidates.htm",
+      "dateOrElection": "2017 general election",
+      "resource": "New Zealand First candidate announcement for Hutt South",
+      "publishedDate": "2017-08-15",
+      "retrievedAt": "2026-09-25T18:19:05.423768+00:00",
+      "rawPath": "data/raw/identity-stage13/nzf-alok-gupta-hutt-south-2017.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Party statement explicitly selects Alok Gupta as Hutt South candidate in 2017; it does not prove every other same-name occurrence or full career history.",
+        "Publication predates the general-election result; a strict historical nomination-close cutoff requires its own pinned date."
+      ],
+      "sha256": "e82ac5d0501f4adbd559cb1695028c011f8facbae10bbeba13d6f4f78219951c",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-green-rick-bazeley-whangarei-selection-2023",
+      "organisation": "Green Party of Aotearoa New Zealand (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO2308/S00154/the-green-party-announces-rick-bazeley-as-the-candidate-for-whangarei.htm",
+      "dateOrElection": "2023 general election",
+      "resource": "Green Party candidate announcement for Whangārei",
+      "publishedDate": "2023-08-16",
+      "retrievedAt": "2026-09-25T18:19:05.451511+00:00",
+      "rawPath": "data/raw/identity-stage13/green-rick-bazeley-whangarei-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Party statement explicitly names Rick Bazeley as Whangārei candidate in 2023 and mentions earlier candidacy; the earlier claim needs separate occurrence corroboration.",
+        "Publication predates the general-election result; a strict historical nomination-close cutoff requires its own pinned date."
+      ],
+      "sha256": "4b2e3b0cacd6906760f60d0793376e9b241108d46662d4fab22336148f0d0d82",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-labour-2011-complete-candidate-selections",
+      "organisation": "New Zealand Labour Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PA1109/S00048/labour-completes-selections-for-the-2011-general-election.htm",
+      "dateOrElection": "2011 general election",
+      "resource": "Dated complete Labour electorate-candidate selection announcement",
+      "publishedDate": "2011-09-02",
+      "retrievedAt": "2026-09-25T18:24:30.399308+00:00",
+      "rawPath": "data/raw/identity-stage13/labour-2011-complete-selections.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "A shared party statement names candidates and electorates in 2011. Each fixed-cohort occurrence requires a separate exact text and seat check; this source does not automatically establish any cross-election relation.",
+        "Publication precedes the election result; nomination-close as-of availability requires a separately pinned cutoff."
+      ],
+      "sha256": "f8e20fa597ed029a1cc8dfafe21310e8116499660130bf8e6c26f4fe69630f4e",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-national-katie-nimon-napier-selection-2020",
+      "organisation": "New Zealand National Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO2005/S00088/katie-nimon-nationals-candidate-in-napier.htm",
+      "dateOrElection": "2020 general election",
+      "resource": "Dated party candidate-selection statement",
+      "publishedDate": "2020-05-07",
+      "retrievedAt": "2026-09-25T18:30:45.723388+00:00",
+      "rawPath": "data/raw/identity-stage13/national-katie-nimon-napier-2020.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Dated National Party statement names Katie Nimon as Napier candidate in 2020; historical 2023 identity and full career require separate evidence.",
+        "Historical fact date and publication/retrieval time remain separate; strict as-of admission requires a pinned nomination-close cutoff."
+      ],
+      "sha256": "4945fa4253724e127cdd5693bf148ce223f3468129eef3332c312e1885ed6f92",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-martin-langford-napier-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/napier-electorate/candidates/martin-langford",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:30:45.723478+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-martin-langford-napier-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Candidate-submitted first-person profile names Martin Langford as Napier DemocracyNZ candidate in 2023; original publication time is not exposed and career fields do not establish complete history.",
+        "Historical fact date and publication/retrieval time remain separate; strict as-of admission requires a pinned nomination-close cutoff."
+      ],
+      "sha256": "4eccc6b4d6b9c288bfb5890d2babec19f67673d4c8761c116784053f9992c0f8",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-unitedfuture-2011-candidate-list",
+      "organisation": "United Future NZ Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PA1110/S00336/credibility-and-experience-top-unitedfuture-list.htm",
+      "dateOrElection": "2011 general election",
+      "resource": "Dated party candidate list",
+      "publishedDate": "2011-10-20",
+      "retrievedAt": "2026-09-25T18:35:31.486308+00:00",
+      "rawPath": "data/raw/identity-stage13/unitedfuture-2011-list.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Dated party list pairs Sultan Eusoff with Palmerston North and names his full name; each other sampled occurrence needs its own text and seat check.",
+        "Source fact, publication and retrieval times are separated; a strict as-of nomination-close admission still needs a pinned cutoff."
+      ],
+      "sha256": "c64601f02961b44fb83901fda9b2e8e1e0d2eab675a123014b2c40248a5e3d4f",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-mark-hutchinson-napier-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/napier-electorate/candidates/mark-hutchinson",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:35:31.549959+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-mark-hutchinson-napier-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "First-person Napier Labour candidate profile; original publication time unknown and career fields are not exhaustive proof.",
+        "Source fact, publication and retrieval times are separated; a strict as-of nomination-close admission still needs a pinned cutoff."
+      ],
+      "sha256": "902b6711ea4f88ca48b6fd446a640e7a8ec366790c8559be72835f1764a3a8a1",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-nina-su-epsom-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/epsom-electorate/candidates/nina-su",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:35:32.147092+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-nina-su-epsom-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "First-person Epsom TOP candidate profile; original publication time unknown and career fields are not exhaustive proof.",
+        "Source fact, publication and retrieval times are separated; a strict as-of nomination-close admission still needs a pinned cutoff."
+      ],
+      "sha256": "0e0c9d775d9d23315095da89aa5d7e8c1ae358774f920b53041625e268f72f41",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-hbt-laurie-turnbull-napier-candidate-interview-2023",
+      "organisation": "Hawke’s Bay Today / NZ Herald (reported interview and public meeting)",
+      "url": "https://www.nzherald.co.nz/hawkes-bay-today/news/new-zealand-first-puts-forward-new-candidate-for-napier-seat/ISDDUOHMAFDVHCRHIAMGOMAKDA/",
+      "dateOrElection": "2023 general election",
+      "resource": "Contemporaneous candidate and party leader interview at Napier campaign meeting",
+      "publishedDate": "2023-07-02",
+      "retrievedAt": "2026-09-25T18:40:29.953312+00:00",
+      "rawPath": "data/raw/identity-stage13/hbt-laurie-turnbull-napier-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Reporter directly observed Laurie Turnbull campaigning for NZ First in Napier and quotes Turnbull and Winston Peters; this corroborates the 2023 occurrence but does not establish any other same-name occurrence or a complete career.",
+        "This is independent contemporaneous event reporting rather than a party-authored release; record source type separately in adjudication.",
+        "Publication predates the election result; strict nomination-close availability requires its independently pinned date."
+      ],
+      "sha256": "9c62bc146c1ddcec6bc5fe820e1b7df86a6de65b49f843284b852b5afea33bbd",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-richard-wesley-wigram-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/wigram-electorate/candidates/richard-wesley",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile for Richard Wesley in wigram electorate",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:48:02.967739+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-richard-wesley-wigram-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "First-person candidate statement corroborates this 2023 occurrence; original publication time is not exposed by retained HTML.",
+        "Any 2020 result or career summary displayed on the page is retrospective and does not automatically confirm a separate occurrence or complete career history."
+      ],
+      "sha256": "9d689996a6aab6fd3fc496b7bb66adcf4668dc438ce25505a9aa9575515924d8",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-rino-tirikatene-te-tai-tonga-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/te-tai-tonga-electorate/candidates/rino-tirikatene",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile for Rino Tirikatene in te-tai-tonga electorate",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:48:03.716701+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-rino-tirikatene-te-tai-tonga-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "First-person candidate statement corroborates this 2023 occurrence; original publication time is not exposed by retained HTML.",
+        "Any 2020 result or career summary displayed on the page is retrospective and does not automatically confirm a separate occurrence or complete career history."
+      ],
+      "sha256": "46209df78526945367cab16c2805e333451b30bf943d37458c9f0581cd2bdda3",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-kharag-singh-botany-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/botany-electorate/candidates/kharag-singh",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile for Kharag Singh in botany electorate",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:48:04.196386+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-kharag-singh-botany-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "First-person candidate statement corroborates this 2023 occurrence; original publication time is not exposed by retained HTML.",
+        "Any 2020 result or career summary displayed on the page is retrospective and does not automatically confirm a separate occurrence or complete career history."
+      ],
+      "sha256": "ad07b6fbb47dbb83624632bcb0fad33844f592e88d62b4b4b30155098f31fd89",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-policynz-georgie-dansey-hamilton-east-2023",
+      "organisation": "Policy.nz (candidate-submitted election profile)",
+      "url": "https://policy.nz/2023/hamilton-east-electorate/candidates/georgie-dansey",
+      "dateOrElection": "2023 general election",
+      "resource": "Candidate-submitted profile for Georgie Dansey in hamilton-east electorate",
+      "publishedDate": null,
+      "retrievedAt": "2026-09-25T18:48:05.593794+00:00",
+      "rawPath": "data/raw/identity-stage13/policynz-georgie-dansey-hamilton-east-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "First-person candidate statement corroborates this 2023 occurrence; original publication time is not exposed by retained HTML.",
+        "Any 2020 result or career summary displayed on the page is retrospective and does not automatically confirm a separate occurrence or complete career history."
+      ],
+      "sha256": "4b2bd7e587a4e17549fd1cb81d99eb16e025a1b646a94975f274f5872b22178f",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-alcp-2014-party-list-candidate-seats",
+      "organisation": "Aotearoa Legalise Cannabis Party (statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO1408/S00336/cannabis-party-first-to-register-for-2014-general-election.htm",
+      "dateOrElection": "2014 general election",
+      "resource": "Dated party list with candidate-electorate entries",
+      "publishedDate": "2014-08-20",
+      "retrievedAt": "2026-09-26T05:23:40.300280+00:00",
+      "rawPath": "data/raw/identity-stage13/alcp-2014-party-list-candidate-seats.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "The party-authored list explicitly pairs Emma-Jane Mihaere Kingi with Te Tai Tonga in 2014. Every other sampled occurrence needs its own exact candidate-seat check.",
+        "The article does not establish cross-election same-person links or complete career history."
+      ],
+      "sha256": "4757e65d1f863a8afcbdbd28b23041c5366dc7e5e912821357bf41f7f127f6a1",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-maori-party-raihania-ikaroa-2011",
+      "organisation": "Māori Party / Te Pāti Māori (party statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO1007/S00312/maori-party-announces-ikaroa-rawhiti-candidate.htm",
+      "dateOrElection": "2011 general election",
+      "resource": "Dated party candidate-selection announcement",
+      "publishedDate": "2010-07-26",
+      "retrievedAt": "2026-09-26T05:29:31.789601+00:00",
+      "rawPath": "data/raw/identity-stage13/maori-party-raihania-ikaroa-2011.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Māori Party selected Na Rongowhakaata Raihania for Ikaroa-Rāwhiti for the next general election; this is a pre-2011 selection statement, not a result.",
+        "The announcement establishes only the occurrence-specific nomination; other election links and full career require separate evidence."
+      ],
+      "sha256": "86f6fe2729f83788a5024e673060a365a6df141b9d51becc555b4cb80b478e26",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage13-te-pati-maori-takuta-ferris-te-tai-tonga-2023",
+      "organisation": "Māori Party / Te Pāti Māori (party statement mirrored by Scoop)",
+      "url": "https://www.scoop.co.nz/stories/PO2306/S00025/te-pati-maori-announce-te-tai-tonga-candidate-takuta-ferris.htm",
+      "dateOrElection": "2023 general election",
+      "resource": "Dated party candidate-selection announcement",
+      "publishedDate": "2023-06-04",
+      "retrievedAt": "2026-09-26T05:29:31.816621+00:00",
+      "rawPath": "data/raw/identity-stage13/te-pati-maori-takuta-ferris-te-tai-tonga-2023.html",
+      "processingScript": "scripts/checkpoints/acquired_sources.py",
+      "limitations": [
+        "Te Pāti Māori announced Takuta Ferris as Te Tai Tonga candidate for 2023; orthographic Tākuta in the official occurrence is retained separately.",
+        "The announcement establishes only the occurrence-specific nomination; other election links and full career require separate evidence."
+      ],
+      "sha256": "37af799dda1c3576cc4fb7d49bb57be890a69ebd050fb94e7fc9523bedbf6c58",
+      "licence": "Source attribution preserved; specific reuse terms unresolved."
+    }
+  ]
+}

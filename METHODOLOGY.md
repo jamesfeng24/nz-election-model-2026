@@ -1,5 +1,10 @@
 # Methodology
 
+## Stage 13 fixed-cohort identity evidence pass — 2026-09-26
+
+The outcome-blind Stage 12 cohort was acquired in fixed hashed order and individually adjudicated as described in [docs/identity-evidence-pass.md](docs/identity-evidence-pass.md). The final 415-row record keeps inherited retrospective support, the later uniform profile supplement, newly acquired claims, acquisition state, occurrence confidence, cross-election relation and career completeness separate. Dated party selection evidence confirms only its own candidate-seat occurrence; candidate-submitted profiles and a journalist interview remain ancillary outside the frozen primary hierarchy. Winner flags enter only the after-the-fact coverage table. Nineteen primary occurrence claims are confirmed, three are probable aliases and 393 unresolved; no cross-election same-person relation is promoted by a name or party match. Four preflight over-search cases and ten supplement-driven skip changes constrain interpretation. These results are retrospective coverage evidence, not a complete as-of identity cohort or an effect estimate.
+
+
 ## Evidence-repair/design checkpoint — 2026-09-26
 
 The outcome-blind Stage 12 checkpoint in [docs/evidence-repair-design-checkpoint.md](docs/evidence-repair-design-checkpoint.md) freezes a deterministic 30-seat-cluster/415-occurrence acquisition frame across the three validated unchanged-boundary transitions. It does not acquire evidence, adjudicate identities, fit effects or integrate views. Its sampling rule uses election-local seat codes and validated boundary regimes, never winner flags, residuals, profile availability or inherited identity gaps. A fixed-evidence winner-field check is necessary but cannot establish unbiased future acquisition; a later uniform source-search ledger is required. Existing null operational candidate/split selections remain null, not measured zero effects.

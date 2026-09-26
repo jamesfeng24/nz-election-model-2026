@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "stage": 13,
+  "purpose": "selected inherited identity evidence only",
+  "requiredSourceRecords": [
+    {
+      "schemaVersion": 1,
+      "id": "parliament-current-mp-index-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/members-of-parliament/",
+      "dateOrElection": "Current MPs listed on 2026-09-23",
+      "resource": "Official current-MP index with person profile links and party/electorate labels",
+      "retrievedAt": "2026-09-23T14:30:00+10:00",
+      "rawPath": "data/raw/identity-parliament-current.html",
+      "processingScript": "scripts/models/candidate_persistence/official.py",
+      "limitations": [
+        "Retrospective current-MP-only evidence; does not establish historical candidate identity alone or 2008 pre-panel tenure.",
+        "Current labels need not equal historical source labels or party affiliation."
+      ],
+      "sha256": "97e71cd616605f00f8e6b90364de0d4650c267fff9867ac3ddeb0e492b8bc24a",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-current-profile-luxon-christopher-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/members-of-parliament/luxon-christopher/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:56+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/current-luxon-christopher.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "54001a12f3919be063aeeabb044f371c8a74a1c9a877aadde11bf58ab4b00617",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-current-profile-reti-shane-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/members-of-parliament/reti-shane/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:14:01+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/current-reti-shane.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "035610fe97ac796ca18f55ea74fea147a562690716f7f7f3094949405415874d",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-current-profile-seymour-david-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/members-of-parliament/seymour-david/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:14:02+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/current-seymour-david.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "e9e5648005d87f675d70667fe71817e28f729282b45b5235803481bee4089f89",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-current-profile-woods-megan-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/members-of-parliament/woods-megan/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:14:07+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/current-woods-megan.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "6bbc0904f5df607ffc8eb5f261fa7da93016d9fd86aba3f34b241bd0ee2e8a80",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-mp-index-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/",
+      "dateOrElection": "Former MPs listed on 2026-09-23",
+      "resource": "Official former-MP index with person profile links and published service spans",
+      "retrievedAt": "2026-09-23T14:28:00+10:00",
+      "rawPath": "data/raw/identity-parliament-former.html",
+      "processingScript": "scripts/models/candidate_persistence/official.py",
+      "limitations": [
+        "Retrospective MP-only identity evidence; does not cover all candidates or prove same-name non-MP identity.",
+        "Published list may omit earlier former members and provides service, not every electorate candidacy."
+      ],
+      "sha256": "8f57f858a07090a17ae462f9e761487b59611c0dd53a72c39c07fa34b86ce6ca",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-bridges-simon-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/bridges-simon/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:37+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-bridges-simon.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "90de06a7134ea23ef7d9cba0935e754ec466e469d7301ab4b641ee57d194292c",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-burns-brendon-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/burns-brendon/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:38+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-burns-brendon.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "fc95971d5083d174aece4e177876231016c1b6d6755ff52a436a151cb3a8ad37",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-cosgrove-clayton-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/cosgrove-clayton/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:39+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-cosgrove-clayton.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "4baa519aaa34957f9729977380e168c174b33d83e6f5cc650bb4c719265c8ae8",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-hayes-john-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/hayes-john/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:42+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-hayes-john.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "83cc2fcb3b2aa030cbf42afadb0df8800a66cfba7e639799abc7b90048fcff38",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-lees-galloway-iain-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/lees-galloway-iain/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:44+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-lees-galloway-iain.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "f09f31f90fe8c968215b12e2bc3ca527ea55eb592164756a61afb8020ed993f3",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-lotu-iiga-peseta-sam-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/lotu-iiga-peseta-sam/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:45+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-lotu-iiga-peseta-sam.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "40cbe88060de49186284ae696b7cfdb3c27528a0bd428dd8c53cb85d3138983a",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-mallard-trevor-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/mallard-trevor/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:45+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-mallard-trevor.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "30a2c145e35f351e80ce4fba08cfbbce645d16711a6f1acca7ea32063e395988",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-nash-stuart-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/nash-stuart/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:47+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-nash-stuart.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "0798c37353c46e8c886bcc1c11f03a20d913dadbc6bc8cd448e8dae9f1422189",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "parliament-former-profile-ross-jami-lee-2026-09-23",
+      "organisation": "New Zealand Parliament",
+      "url": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/ross-jami-lee/",
+      "dateOrElection": "Retrospective member tenure evidence available 2026-09-23",
+      "resource": "Individual Parliament member tenure profile",
+      "retrievedAt": "2026-09-23T06:13:48+00:00",
+      "rawPath": "data/raw/identity-parliament-profiles/former-ross-jami-lee.html",
+      "processingScript": "scripts/models/freshman_incumbency/tenure.py",
+      "limitations": [
+        "Retrospective profile; source publication date and historical fact date differ.",
+        "Only explicit dated Member for/List rows can establish electorate or list tenure; missing rows remain unknown."
+      ],
+      "sha256": "d51e345b3f5433d5530301d9612ffc3f9eacb8e54ef7efdd68d3b817db06374b",
+      "licence": "New Zealand Parliament source attribution; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-labour-andersen-list-2017",
+      "organisation": "New Zealand Labour Party",
+      "url": "https://m.scoop.co.nz/stories/PA1705/S00018/labour-party-list-for-the-2017-election-announced.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party candidate statement",
+      "publishedDate": "2017-05-02",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/labour-andersen-list-2017.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
+      ],
+      "sha256": "12373ce439643b4b05f252ed9b622cd8d451bd94f6805d2acf349c06dddc8efe",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage10-identity-national-simpson-selection-2011",
+      "organisation": "New Zealand National Party",
+      "url": "https://m.scoop.co.nz/stories/PO1104/S00255/national-selects-scott-simpson-as-coromandel-candidate.htm",
+      "dateOrElection": "Stage 10 identity review; historical fact date assessed per adjudication",
+      "resource": "Party candidate statement",
+      "publishedDate": "2011-04-20",
+      "retrievedAt": "2026-09-23T16:20:15.490932+00:00",
+      "rawPath": "data/raw/identity-stage10/national-simpson-selection-2011.html",
+      "processingScript": "scripts/models/replacement_candidate/identity_evidence.py",
+      "limitations": [
+        "Party-authored candidate selection or list statement mirrored by Scoop; pre-result publication. Does not alone resolve every occurrence or full career history."
+      ],
+      "sha256": "2827a8b51b997f6b3df8ae1dd08da5ed60fb384b4be6d344dc88a45c13ad4838",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    }
+  ]
+}

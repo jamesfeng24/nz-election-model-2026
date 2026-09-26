@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "stage": 13,
+  "exactTimestampsKnown": false,
+  "status": "protocol_deviation_tooling_preflight",
+  "occurrenceIds": [
+    "nz-general-2020-electorate-12-candidate-08",
+    "nz-general-2011-electorate-51-candidate-07",
+    "nz-general-2017-electorate-63-candidate-01",
+    "nz-general-2023-electorate-04-candidate-01"
+  ],
+  "additionalQueries": [
+    {
+      "candidateOccurrenceId": "nz-general-2020-electorate-12-candidate-08",
+      "query": "Julie Anne-Marie Manders Hamilton East 2020 New Conservative candidate",
+      "purpose": "search-result relevance/endpoint preflight",
+      "acceptedEvidence": false
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2011-electorate-51-candidate-07",
+      "query": "Kathleen Patricia Louise McCabe Tauranga 2011 ACT candidate",
+      "purpose": "search-result relevance/endpoint preflight",
+      "acceptedEvidence": false
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2017-electorate-63-candidate-01",
+      "query": "Robin Barrie Grieve Whangarei 2017 ACT candidate",
+      "purpose": "search-result relevance/endpoint preflight",
+      "acceptedEvidence": false
+    },
+    {
+      "candidateOccurrenceId": "nz-general-2023-electorate-04-candidate-01",
+      "query": "John Armstrong Botany 2023 New Zealand Loyal candidate",
+      "purpose": "search-result relevance/endpoint preflight",
+      "acceptedEvidence": false
+    }
+  ],
+  "otherEndpointTests": [
+    "Exact Julie Anne-Marie Manders / Hamilton East 2020 queries against Google, Bing and DuckDuckGo public search endpoints to inspect response structure",
+    "Exact Robin Barrie Grieve / Whangarei 2017 queries against Bing to test relevance",
+    "General candidate database, 2023 nomination and 2017 biography landscape queries, not tied to an adjudication"
+  ],
+  "consequence": "No identity adjudication or acquisition from these extra searches; first four cases are closed to further external search. The over-search is visible for review."
+}

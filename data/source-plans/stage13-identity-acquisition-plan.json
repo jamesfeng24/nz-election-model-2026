@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "stage": 13,
+  "phase": "committed_before_external_acquisition",
+  "cohortPath": "data/processed/checkpoints/evidence-repair/cohort-inventory.json",
+  "cohortSize": 415,
+  "selection": "All occurrences in the 30 previously frozen complete seat-transition clusters; no addition, replacement or outcome-based priority",
+  "occurrenceOrder": {
+    "seed": "nz-election-model-2026-identity-acquisition-v1",
+    "rule": "ascending lowercase SHA-256 UTF-8 of seed|candidateOccurrenceId",
+    "tieBreak": "lexicographic case-sensitive candidateOccurrenceId",
+    "orderedIdsSha256": "62deeebe5abe4f99c62805a6a297c57c34ff8e7cf1d90ec95f8c2036e30773b8",
+    "orderedIdsEncoding": "one candidateOccurrenceId followed by newline, in acquisition order"
+  },
+  "sourceHierarchy": [
+    "Preserved official election-local candidature table establishes occurrence only; it does not itself prove cross-election person identity.",
+    "Reassess preserved Stage 8 direct winner anchors, Stage 9 dated service profiles and Stage 10 occurrence-specific official/party evidence from their raw sources; inherited probable chains remain projections.",
+    "For a still uncorroborated sampled occurrence, search official Electoral Commission/election-result and New Zealand Parliament pages for a dated occurrence-specific candidate or service fact.",
+    "If needed, search a party's own dated selection, nomination or candidate announcement; accept an authoritative mirror only when author/date/original party provenance is clear."
+  ],
+  "searchProcedure": {
+    "firstQuery": "Full preserved candidate name, electorate, election year, Electoral Commission or Parliament official domains; inspect results for occurrence-specific dated facts.",
+    "secondQuery": "Same full name, electorate, election year and preserved party label, seeking a dated official party nomination/selection statement or authoritative mirror.",
+    "maximumSearchesPerStillUncorroboratedOccurrence": 2,
+    "resultChoice": "Within a query, use the first independently occurrence-specific authoritative result under the source hierarchy; log rejected results and reasons. Do not choose by winner status, residual or attractive relation.",
+    "alreadyResolved": "After the uniform preserved audit, no external search is needed when an occurrence is directly corroborated; this is an evidence-sufficiency rule, not an inherited-label priority rule.",
+    "sharedSource": "A preserved or newly registered page can support multiple fixed-cohort occurrences only with a separate text/fact/date check for each; it never adds candidates or changes order."
+  },
+  "budget": {
+    "maxNewUniqueAuthoritativeResources": 60,
+    "maxAuthoritativeSearchesPerStillUncorroboratedOccurrence": 2,
+    "counting": "A unique successfully preserved authoritative resource counts once. A shared page or a duplicate canonical URL/identical raw SHA-256 is reused and counts once; search attempts and failed retrievals count against the per-occurrence two-search cap but not the 60-resource cap.",
+    "deduplication": "Canonicalize scheme/host case, remove fragment and tracking parameters while preserving meaningful path/query; also compare original raw SHA-256. Keep aliases and exact fetched URL in provenance.",
+    "stop": "Stop at 60 new unique resources or after at most two searches for each remaining uncorroborated occurrence. Keep not-reached-budget-exhausted distinct from searched-but-unresolved; never replace difficult cases or spend the remaining budget merely to reach 60."
+  },
+  "ledgerContract": "For every ordered occurrence record preserved-evidence review, each query and timestamp, result URL/domain, acceptance or rejection reason, retrieval failure, reused/new source ID, checksum, fact/publication/retrieval dates, and final status. Empty search attempts before acquisition are explicit pending records, not failed searches.",
+  "adjudicationContract": "Keep person existence, occurrence confidence, same/different-person relation and dated electorate/list tenure separate. Direct occurrence corroboration may confirm; name/party/seat projections stay probable; conflicting or inadequate proof stays unresolved. Retrospective winner/profile coverage is labelled and cannot create a prospective as-of link when publication timing is unknown."
+}
