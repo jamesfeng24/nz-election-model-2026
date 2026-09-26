@@ -1,6 +1,10 @@
 # Authorized project sequence
 
-## After the complete candidate-baseline specification checkpoint
+## After the conditional historical candidate-ledger diagnostic
+
+Stage14 PR #21 merged and Stage15 implements its separately authorized **conditional** ballot ledger on 191 held general contests, preserving the 213-contest coverage frame. This is not an as-of forecast: 157/191 primary contests are wholly free because of unsupported/independent destinations; all34 partly constrained primary contest candidate vectors fail joint feasibility; the historical source-seat hull is wider but not calibrated. No candidate-vote point, MAE/RMSE/bias comparison or operational candidate-ledger selection is justified. The existing Stage8–11 operational nulls remain null, not measured zero effects. [Stage15 findings](conditional-candidate-interval-ledger.md) require independent review in an unmerged PR before any follow-on implementation. Later work requiring **separate authorization** includes a date-verified as-of candidate/party/turnout input design, the conditional Stage6 NAT/LAB baseline review, and a defensible 2026 target-boundary candidate baseline. Historical evidence-repair coverage, a comparable Māori route, and candidate entrant support remain explicit design limits. Do not integrate views or freeze ensemble weights from these conditional diagnostics.
+
+## Historical Stage14 specification plan (superseded by the diagnostic above)
 
 Stage 13 PR #20 has merged. The current specification checkpoint on `stage/14-complete-candidate-baseline-specification` defines an identity-free, joint interval ballot ledger and a deterministic 213-contest input inventory. It performs no fitting or historical scoring. The next **proposed** implementation after independent review, requiring separate authorization, is a 191-held-general-contest conditional interval ledger using observed target party inputs, with complete ballot accounting, coverage and abstention. It would not establish an as-of forecast. Source-pinned nomination cutoffs and forecast inputs, a comparable Māori route, the conditional Stage 6 review and a 2026 target-boundary candidate baseline remain separate dependencies. Stage 8–11 null operational selections are unchanged; no ensemble fitting or integration follows automatically. See [the checkpoint](complete-candidate-baseline-checkpoint.md).
 

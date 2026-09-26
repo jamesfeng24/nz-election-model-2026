@@ -78,6 +78,10 @@ def build_source_pools(year, election, split):
         candidates = {candidate['id']: candidate for candidate in seat['candidates']}
         by_party = {party['partyKey']: party['votes'] for party in seat['parties']}
         by_party[INFORMAL_ORIGIN] = seat['partyBallot']['informalVotes']
+        if (not matrix['rows'] or
+                matrix['rows'][-1]['partyLabel'] != 'Total Party Votes and Percentages' or
+                matrix['rows'][-1]['totalPartyVotes'] != sum(by_party.values())):
+            raise LedgerGeometryError('Missing or inconsistent local split total row')
         seen_origins = set()
         for row in matrix['rows'][:-1]:
             origin = key(row['partyLabel'])

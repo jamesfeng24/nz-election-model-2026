@@ -1,7 +1,6 @@
 """Evaluate saved conditional ledgers against separate observed candidate results."""
 
 from collections import Counter, defaultdict
-from math import sqrt
 from statistics import mean, median
 
 from scripts.models.conditional_candidate_ledger.construct import METHODS
@@ -131,13 +130,36 @@ def _method_summary(rows, method):
             'denominatorContainsActualCount': sum(row['denominatorContainsActual'] for row in contests),
             'jointVectorStatus': dict(sorted(joint.items())),
             'pointCandidateCount': len(point),
-            'pointMetrics': None if not point else 'compute only on common point sample'}
+            'pointAbstentionCount': len(candidates) - len(point),
+            'numericalFailureContests': joint['numerical_or_solver_failure']}
+
+
+def _common_share_summary(rows):
+    common = []
+    methods = ('primary', 'heterogeneity', 'party_diagonal')
+    for row in rows:
+        for index in range(row['candidateCount']):
+            candidates = {method: row['methods'][method]['candidates'][index]
+                          for method in methods}
+            if all(candidate['shareStatus'] == 'defined' for candidate in candidates.values()):
+                common.append(candidates)
+    return {'candidateCount': len(common),
+            'methods': {method: {
+                'shareContainsActualCount': sum(item[method]['shareContainsActual']
+                                                for item in common),
+                'meanShareWidthPP': (mean(item[method]['shareWidthPP'] for item in common)
+                                     if common else None)}
+                for method in methods}}
 
 
 def summarize(records, ledgers):
     result = {'frameContests': len(ledgers['records']),
               'evaluatedContests': len(records),
               'coverageOnly': ledgers['summary']['coverageOnly'],
+              'coverageByTransitionScopeStatus': dict(sorted(Counter(
+                  f"{row['sourceYear']}->{row['targetYear']}:{row['scope']}:{row['status']}"
+                  for row in ledgers['records']).items())),
+              'conservedConstructedContests': len(records),
               'byHoldout': []}
     construction = {row['targetElectorateId']: row for row in ledgers['records']
                     if row['status'] == 'constructed'}
@@ -147,10 +169,13 @@ def summarize(records, ledgers):
                         'candidates': sum(row['candidateCount'] for row in rows),
                         'methods': {method: _method_summary(rows, method)
                                     for method in METHODS},
+                        'commonDefinedShare': _common_share_summary(rows),
                         'fullyFreePrimaryContests': sum(construction[row['targetElectorateId']]
                                                         ['methods']['primary']['allPositiveOriginsFree']
                                                         for row in rows),
                         'partyCoverageAtLeastFive': []}
+        year_summary['partiallyConstrainedPrimaryContests'] = (
+            len(rows) - year_summary['fullyFreePrimaryContests'])
         party_rows = defaultdict(list)
         for row in rows:
             for candidate in row['methods']['primary']['candidates']:

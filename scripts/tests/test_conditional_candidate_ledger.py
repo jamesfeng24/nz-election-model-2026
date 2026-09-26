@@ -7,7 +7,7 @@ from types import SimpleNamespace
 import unittest
 
 from scripts.models.conditional_candidate_ledger import (
-    construct, feasibility, geometry, pool, run, sources)
+    construct, evaluation_run, feasibility, geometry, pool, run, sources)
 from scripts.validate.source_files import verify_source_files
 
 
@@ -45,6 +45,14 @@ class ConditionalCandidateLedgerTests(unittest.TestCase):
                                                        coeff), 80)
         self.assertAlmostEqual(geometry.contest_minimum(
             [base | {'routing': 'heterogeneity'}], coeff), 20)
+        primary_share = geometry.share_bounds([base | {'routing': 'primary'}],
+                        'a', ['a', 'b', 'party_only'], ['a', 'b'], [100, 100])
+        hull_share = geometry.share_bounds([base | {'routing': 'heterogeneity'}],
+                        'a', ['a', 'b', 'party_only'], ['a', 'b'], [100, 100])
+        self.assertAlmostEqual(primary_share['bounds'][0], 0.35, places=8)
+        self.assertAlmostEqual(primary_share['bounds'][1], 0.35, places=8)
+        self.assertAlmostEqual(hull_share['bounds'][0], 0.2, places=8)
+        self.assertAlmostEqual(hull_share['bounds'][1], 0.8, places=8)
 
     def test_absent_category_releases_only_its_coupled_mass(self):
         source = {'totalMass': 1, 'rows': [source_row(1, 0.7, 0.3)]}
@@ -157,6 +165,53 @@ class ConditionalCandidateLedgerTests(unittest.TestCase):
         self.assertEqual(feasibility.joint_feasibility(record, pools,
                          {'a': 70, 'b': 30}, failed_solver)['status'],
                          'numerical_or_solver_failure')
+        def false_success(*args, **kwargs):
+            return SimpleNamespace(status=0, x=[0] * len(args[0]))
+        self.assertEqual(feasibility.joint_feasibility(record, pools,
+                         {'a': 70, 'b': 30}, false_success)['status'],
+                         'numerical_or_solver_failure')
+
+    def test_complete_source_row_structural_zero_retains_weight(self):
+        def seat(number, candidate_parties):
+            sid = f'seat-{number}'
+            return {'id': sid, 'kind': 'general',
+                    'parties': [{'partyKey': 'g', 'votes': 100}],
+                    'partyBallot': {'informalVotes': 0},
+                    'candidates': [{'id': f'{sid}-{party}', 'partyKey': party}
+                                   for party in candidate_parties]}
+        def matrix(number, percentages):
+            sid = f'seat-{number}'
+            cells = [{'category': 'candidate', 'candidateId': f'{sid}-{party}',
+                      'reportedPercent': percent} for party, percent in percentages.items()]
+            cells.extend([{'category': 'informal', 'candidateId': None,
+                           'reportedPercent': 0},
+                          {'category': 'party-vote-only', 'candidateId': None,
+                           'reportedPercent': 0}])
+            return {'id': f'matrix-{number}', 'electorateId': sid, 'year': 2008,
+                    'sourceIds': ['synthetic-only'],
+                    'rows': [{'partyLabel': 'g', 'totalPartyVotes': 100, 'cells': cells},
+                             {'partyLabel': 'Total Party Votes and Percentages',
+                              'totalPartyVotes': 100, 'cells': cells}]}
+        election = {'electorates': [seat(1, ['a', 'b']), seat(2, ['a'])]}
+        split = {'matrices': [matrix(1, {'a': 60, 'b': 40}),
+                              matrix(2, {'a': 100})]}
+        result = pool.build_source_pools(2008, election, split)
+        origin = result['pools']['g']
+        self.assertEqual(origin['includedRows'], 2)
+        self.assertEqual(origin['totalMass'], 200)
+        self.assertIn('party:b', origin['supportedDestinations'])
+        self.assertNotIn('party:b', [cell['category'] for cell in origin['rows'][1]['cells']])
+        self.assertEqual(next(cell['bounds'] for cell in origin['rows'][0]['cells']
+                              if cell['category'] == 'informal_candidate'), [0, 0.00005])
+        routed = {'mass': 100, 'routing': 'primary', 'pool': origin,
+                  'sourceCategoryDestinations': {
+                      'party:a': 'a', 'party:b': 'b',
+                      'informal_candidate': 'informal_candidate',
+                      'party_vote_only': 'party_vote_only'}}
+        result = geometry.linear_bounds([routed], {'a': 0, 'b': 1,
+                         'informal_candidate': 0, 'party_vote_only': 0})
+        self.assertLess(result[1], 21)
+        self.assertGreater(result[0], 19)
 
     def test_source_snapshot_accepts_additions_rejects_required_changes(self):
         elections = {year: sources.read(f'data/processed/elections/{year}.json')
@@ -225,6 +280,27 @@ class ConditionalCandidateLedgerTests(unittest.TestCase):
                           {'zero_mass_origin': 1}])
         self.assertEqual(run.build()['construction-manifest.json'],
                          sources.read('data/processed/models/conditional-candidate-ledger/construction-manifest.json'))
+
+    def test_evaluation_reproduction_and_common_frame(self):
+        built = evaluation_run.build()
+        for name, payload in built.items():
+            self.assertEqual(evaluation_run.encode(payload),
+                             (evaluation_run.DEST / name).read_bytes())
+        diagnostics = built['diagnostics.json']
+        self.assertEqual(diagnostics['summary']['commonVoteCandidateCount'], 1313)
+        self.assertEqual(diagnostics['summary']['commonPointCandidateCount'], 0)
+        self.assertEqual([row['fullyFreePrimaryContests'] for row in
+                          diagnostics['summary']['byHoldout']], [54, 42, 61])
+        ledgers = sources.read('data/processed/models/conditional-candidate-ledger/ledgers.json')
+        for row in ledgers['records']:
+            if row['status'] != 'constructed':
+                continue
+            for method in construct.METHODS:
+                entry = row['methods'][method]
+                self.assertEqual(sum(origin['mass'] for origin in entry['origins']),
+                                 row['votesCast'])
+                self.assertLessEqual(entry['validCandidateDenominator'][1],
+                                     row['votesCast'] + geometry.BALLOT_TOL)
 
 
 if __name__ == '__main__':
