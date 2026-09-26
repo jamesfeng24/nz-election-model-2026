@@ -45,3 +45,5 @@ No operational point baseline can be selected from this checkpoint. Later select
 ## Reproduction and preservation
 
 `python3 -m scripts.checkpoints.complete_candidate_baseline --check` regenerates the 213-row availability inventory from the Stage 12 geography/occurrence frame and preserved election/split files, verifying pinned hashes. `python3 -m unittest scripts.tests.test_complete_candidate_baseline_checkpoint -v` runs synthetic conservation, absent-destination, denominator, missingness and target-outcome-invariance checks. The synthetic ballots live only in tests. No historical candidate prediction or score is generated. Stage 5–11 numerical outputs, Stage 13 evidence, raw files and operational selections are unchanged.
+
+The initial checkpoint implementation is `179d58a`; [PR #21](https://github.com/jamesfeng24/nz-election-model-2026/pull/21) is open and must remain unmerged for independent review.
