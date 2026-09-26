@@ -1,4 +1,12 @@
-# Stage 13 fixed-cohort identity evidence pass — partial acquisition handoff, 2026-09-26
+# Stage 13 fixed-cohort identity evidence pass — acquisition complete, adjudication pending, 2026-09-26
+
+The existing `stage/13-fixed-cohort-identity-evidence` checkout and fetched remote matched checkpoint `09bfef1d44516d0ce3b58cbd17ec21f1dc348067` with no local changes. Fixed-order positions 325–415 have now been searched or skipped under the preserved-direct-evidence rule; the replayed ledger reaches `nextOrder=416` and the fixed cohort remains 415. Eighteen unique new raw resources are registered against the 60-resource ceiling. The last batches added one dated ALCP candidate-seat list and two dated Māori Party candidate-selection statements. Candidate-submitted profiles and journalistic reports found in earlier batches remain source-typed; they will not silently count as frozen-hierarchy primary confirmation. Earlier acquisition states and the four preflight over-search cases remain in history. No effects or prior numerical model outputs changed.
+
+**Exact next action:** commit/push the completed acquisition ledger and sources; then adjudicate all 415 occurrence/person/relation/history records under the frozen primary hierarchy, separately labelling preserved/inherited and outside-hierarchy sources. Audit the supplement's timing and search-skip consequences, finalize unresolved/conflict and coverage outputs including preflight-excluded sensitivity, run deterministic/source/prior-output checks, document limitations, and open an unmerged PR. This acquisition checkpoint is not final identity coverage.
+
+---
+
+# Stage 13 earlier partial acquisition handoff — 2026-09-26
 
 The user reported low remaining usage and requested a resumable handoff. This is **not a completed evidence pass**: the fixed order has been processed through occurrence 324; 91 positions (325–415) remain untouched. The merged PR #19 base and frozen 415-occurrence cohort are unchanged. The replayed search ledger records 596 formal search attempts, 279 searched-but-unresolved cases, four separately logged preflight cases, 26 cases with sufficient preserved direct evidence, 15 acquired-source cases **pending occurrence adjudication**, and 91 not yet reached. Fifteen unique raw resources are registered against the 60-resource ceiling. These are acquisition states, not final identity-confidence counts. No effect, forecast, baseline or earlier model output was changed.
 
