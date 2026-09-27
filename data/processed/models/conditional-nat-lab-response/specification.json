@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "stage": 16,
+  "status": "frozen_before_new_fits_and_scores",
+  "inventoryCommit": "20c9012",
+  "question": "Does conditioning party-seat candidate-share response on observed SOURCE victory improve chronological conditional diagnostics, and are conclusions transform-sensitive? Turnover/personal-incumbency adjustment is unsupported.",
+  "population": "All 382 eligible general National/Labour party-seat pairs from original Stage6, equal record weights; 2 cancellations excluded; Maori coverage only. No identity/status-based selection.",
+  "units": "C and P are fractions using distinct valid-candidate and valid-party denominators; y=C1-C0, x=P1-P0, W=1 if source party candidate won source seat, otherwise 0. W is not target incumbency or continuity.",
+  "equation": "C1_hat=C0+alpha+beta*(P1_input-P0)+gamma*W",
+  "models": {
+    "beta0": {
+      "columns": [],
+      "fixedBeta": 0
+    },
+    "beta1": {
+      "columns": [],
+      "fixedBeta": 1
+    },
+    "stage6_zero_intercept": {
+      "columns": [
+        "x"
+      ],
+      "fixedBeta": null
+    },
+    "common_intercept": {
+      "columns": [
+        "intercept",
+        "x"
+      ],
+      "fixedBeta": null
+    },
+    "source_victory": {
+      "columns": [
+        "intercept",
+        "x",
+        "sourceWon"
+      ],
+      "fixedBeta": null
+    },
+    "common_intercept_beta0": {
+      "columns": [
+        "intercept"
+      ],
+      "fixedBeta": 0
+    },
+    "common_intercept_beta1": {
+      "columns": [
+        "intercept"
+      ],
+      "fixedBeta": 1
+    },
+    "source_victory_beta0": {
+      "columns": [
+        "intercept",
+        "sourceWon"
+      ],
+      "fixedBeta": 0
+    },
+    "source_victory_beta1": {
+      "columns": [
+        "intercept",
+        "sourceWon"
+      ],
+      "fixedBeta": 1
+    }
+  },
+  "primaryComparisons": [
+    [
+      "source_victory",
+      "common_intercept"
+    ],
+    [
+      "source_victory",
+      "source_victory_beta0"
+    ],
+    [
+      "source_victory",
+      "source_victory_beta1"
+    ]
+  ],
+  "contextComparisons": [
+    [
+      "stage6_zero_intercept",
+      "beta0"
+    ],
+    [
+      "stage6_zero_intercept",
+      "beta1"
+    ],
+    [
+      "common_intercept",
+      "common_intercept_beta0"
+    ],
+    [
+      "common_intercept",
+      "common_intercept_beta1"
+    ]
+  ],
+  "fit": "Separate party OLS on actual observed x and y only. Exact rational normal-equation elimination from decimal input representations; scaled Gram pivot tolerance 1e-12. At least five rows per free coefficient; sourceWon models require at least five source winners and five source losers. No fitted missingness indicator, interactions, weighting search or alternative status models.",
+  "interceptFairness": "Every restricted-beta model estimates its own intercept/status nuisance terms on exactly the same permitted training records. Do not compare a fitted-intercept improvement as if it isolated beta.",
+  "chronology": "Holdouts 2011/2017/2023; train only rows with targetYear < holdout sourceYear. 2011 parameter-free beta0/beta1 only; fitted models explicitly abstain. All full-sample fits descriptive only; never used for holdout prediction.",
+  "transforms": [
+    "actual_observed_local_party",
+    "additive",
+    "proportional",
+    "log_odds"
+  ],
+  "transformRule": "Keep fitted alpha/beta/gamma fixed across modes; substitute Stage5 predicted target party shares only at prediction. National support is observed target conditioning information, not forecast. No transformation refitting or choosing best holdout transform.",
+  "bounds": "Consume Stage5 lower/upper bounds; affine propagation accounts for beta sign. Singleton intervals support exact point metrics; nondegenerate inputs yield conservative MAE/RMSE/bias enclosures, no midpoint. Observed structural training inputs must be exact; otherwise abstain rather than invent latent data. Never combine marginal extrema into joint realizations.",
+  "metrics": "Equal record MAE/RMSE/signed bias pp on identical party/holdout/mode samples, with IDs, n, abstentions, outside-[0,1] predictions and source-victory strata. Aggregate trained 2017/2023 holdouts by record count, report each fold and aggregate; no election-iid significance. No vote weighting sensitivity.",
+  "materiality": "0.25 pp aggregate MAE gain is indicative only, not significance. Stable means both trained holdouts show positive MAE gain in every input mode; also report RMSE/bias and worst-fold regressions. Material transform sensitivity means range of aggregate MAE gains >=0.25 pp or gain sign reverses. Record disagreement and stop without tuning.",
+  "statusEvidence": "Inherited Stage8/9/10 and Stage13 evidence remains audit-only. No broad prospective relation/tenure cohort; no turnover or target-incumbency gamma fitted. W is directly observed source-election victory. Source victory can proxy baseline level, selection and regression-to-mean; its coefficient is not causal incumbency.",
+  "counterfactual": "Holding evidence fixed, later winner flags/candidate outcomes cannot affect inventory/predictor construction. Held-out candidate shares may score only. Source election outcomes legitimately determine C0 and W; earlier training outcomes legitimately determine fitted coefficients. Target party votes are allowed conditional inputs.",
+  "stage15": "Use same conditional observed-local-party mode for overlap accounting only. Stage15 has no point predictions, so no point ranking. No interval-vs-point coverage contest implying relative predictive quality.",
+  "selection": {
+    "selectedOperationalBeta": null,
+    "selectedOperationalSourceVictoryEffect": null
+  },
+  "stopping": "If conditioning fails evidence/rank/training gates, abstain. Preserve out-of-range predictions without clipping; do not normalize two parties into a whole ballot model. No source acquisition, effect stacking, as-of forecast, target-boundary baseline, integration or later model selection."
+}

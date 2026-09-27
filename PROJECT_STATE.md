@@ -1,3 +1,11 @@
+# Stage 16 specification frozen — 2026-09-27
+
+Inventory checkpoint `20c9012` is pushed. The new specification freezes source-victory conditioning only (not personal incumbency/turnover), one nested separate-party OLS family, same-sample nuisance-matched beta0/1 restrictions, original Stage6 reference, chronological holdouts, fixed-coefficient Stage5 transform substitution, bounded inputs and materiality/stopping rules. No new fitting or scoring has occurred.
+
+Exact next action: commit/push this specification before fitting, implement and test the frozen pipeline, preserve prior artifacts and open an unmerged PR.
+
+---
+
 # Stage 16 conditional NAT/LAB review — pre-fit inventory, 2026-09-27
 
 PR #22 is verified merged as `1374566e0c28793cac8442f7691c7f2f388ad72e`, containing reviewed `333f634`. Clean main was synchronized and `stage/16-conditional-nat-lab-response-review` created. The deterministic pre-fit inventory has 384 general party-seat pairs, 382 eligible (191 per party) and two cancelled Port Waikato exclusions. Preserved identity/tenure evidence is audit-only; it does not establish a broad prospective turnover cohort. The supported complete covariate is source party-seat victory, not target personal incumbency. No new fits, scores, sources or adjudications have been produced. Prior outputs remain unchanged.
