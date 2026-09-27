@@ -6,7 +6,9 @@ Source-victory versus common-intercept aggregate MAE gains across observed/addit
 
 Validation: 13 focused tests; full configured check passed with 30 frontend tests, typecheck/build, 306 Python tests and 924 registered source checks. Inventory and analysis reproduce deterministically; 763 consumed raw sources verify. Independent NumPy coefficients and chronological errors agree. Full inventory/adapter/fold outcome mutations preserve eligible samples, status and heldout predictions. Prior data artifacts have no diff against merged main. No source acquisition or identity adjudication occurred.
 
-**Exact next action:** open the Stage16 PR and verify final CI, then independent review. Leave the PR unmerged. Later acquisition, target-boundary baseline design, complete-vote modelling and ensemble weights remain separately authorized. See [findings](docs/conditional-nat-lab-response-review.md), D045 and the current roadmap.
+**PR:** [#23](https://github.com/jamesfeng24/nz-election-model-2026/pull/23), open and unmerged. Implementation checkpoint: `f908bf2`. Final-head CI must be verified after this documentation checkpoint.
+
+**Exact next action:** independent review of PR #23 after final CI verification. Leave the PR unmerged. Later acquisition, target-boundary baseline design, complete-vote modelling and ensemble weights remain separately authorized. See [findings](docs/conditional-nat-lab-response-review.md), D045 and the current roadmap.
 
 ---
 
