@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — Stage 15 conditional candidate interval ledger — 2026-09-27
+
+- Implemented the reviewed pooled-equality ballot ledger, separate source-seat convex-hull sensitivity, party-diagonal and unrestricted comparators on 191 held general contests, preserving the 213-contest coverage frame.
+- Kept construction independent of target candidate outcomes; evaluated marginal and joint observed-vector feasibility separately. The primary ledger is wholly free in 157/191 contests and rejects the observed joint vector in all 34 partly constrained contests.
+- Pinned 612 consumed source records and raw bytes; deterministic regeneration, full configured tests and prior-output preservation passed. No point score or operational coefficient was selected; this remains a conditional retrospective diagnostic.
+
 ## Unreleased — Stage10 replacement-candidate effects — 2026-09-23
 
 - Verified Stage9 PR #16 merged, then committed/pushed the same-party party-seat pre-fit inventory and frozen replacement specification separately before diagnostics.

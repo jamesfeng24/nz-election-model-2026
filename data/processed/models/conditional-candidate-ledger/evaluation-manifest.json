@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "stage": 15,
+  "phase": "evaluation_after_committed_construction",
+  "inputSha256": {
+    "data/processed/models/conditional-candidate-ledger/ledgers.json": "774a159159680123a30ceaf27e6e7b2043bb86cd39bb08f53e4d8b7382120275",
+    "data/processed/models/conditional-candidate-ledger/source-pools.json": "fbaaee1df1648eddfd5d0dbcb1eb96ed0001dc697c5cd1e7c766fe87fb28399b",
+    "data/processed/models/conditional-candidate-ledger/construction-manifest.json": "ea158facf4a64b89fd666560eb6d8579a1c828c1f6b955ce741b3d5a6e771761",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e"
+  },
+  "codeSha256": {
+    "scripts/models/conditional_candidate_ledger/feasibility.py": "a566bab6646c7c41646bbe14d7a4314a0e75532a0a3d140ffcc5a3b8487342c7",
+    "scripts/models/conditional_candidate_ledger/evaluate.py": "6f0dbfc6b829899cf779defd34b382bc34f3af03d45af3ae8b7ad32dfb3c3dbd",
+    "scripts/models/conditional_candidate_ledger/evaluation_run.py": "9269f1f1782833d24439c01d48c2b0a516a14a4582d56217874090db3120d093"
+  },
+  "outputSha256": {
+    "actuals.json": "bd84e3581cb48af2ae9832c475e6467dc6f108343fa0add2fceb97ec5ec3f9d9",
+    "diagnostics.json": "5ef5915a50e209443b6d49a589b99452cfb8499a3ecae39db1b410650fdae472"
+  }
+}
