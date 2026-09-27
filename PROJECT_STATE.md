@@ -1,3 +1,11 @@
+# Stage 16 conditional NAT/LAB review — pre-fit inventory, 2026-09-27
+
+PR #22 is verified merged as `1374566e0c28793cac8442f7691c7f2f388ad72e`, containing reviewed `333f634`. Clean main was synchronized and `stage/16-conditional-nat-lab-response-review` created. The deterministic pre-fit inventory has 384 general party-seat pairs, 382 eligible (191 per party) and two cancelled Port Waikato exclusions. Preserved identity/tenure evidence is audit-only; it does not establish a broad prospective turnover cohort. The supported complete covariate is source party-seat victory, not target personal incumbency. No new fits, scores, sources or adjudications have been produced. Prior outputs remain unchanged.
+
+Exact next action: commit/push this evidence checkpoint; freeze and commit the source-victory/transform comparison specification before fitting, then implement the authorized review and open an unmerged PR. See `docs/conditional-nat-lab-response-review.md` and `data/processed/models/conditional-nat-lab-response/inventory.json`.
+
+---
+
 # Stage 15 conditional candidate interval ledger — final handoff, 2026-09-27
 
 The frozen Stage 14 conditional design has been implemented on the complete **213-contest** coverage frame: **191 held general contests** receive ledgers (63/64/64 in the 2011/2017/2023 holdouts), while 21 Māori contests and cancelled 2023 Port Waikato retain explicit coverage-only reasons. The 1,313 standing target candidates (423/431/459) are evaluated separately from construction. The primary pooled-equality set, separate source-seat convex hull, party-diagonal comparator and unrestricted comparator use the same frame. The source snapshot pins 612 consumed records and raw bytes. See [findings](docs/conditional-candidate-interval-ledger.md), [pre-calculation plan](docs/conditional-candidate-ledger-implementation-plan.md), and `data/processed/models/conditional-candidate-ledger/`.
