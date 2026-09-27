@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "stage": 16,
+  "inputHashes": {
+    "data/processed/models/nat-lab-elasticity/records.json": "1d1565d50e0e7302d20fde81c88d5fb0fc408fde47645df2fa2bdb0068867ed4",
+    "data/processed/models/nat-lab-elasticity/specification.json": "baebd1acbc8fd25a47c4bb0cec733fce8139e4c2d83ec668b608b222ebca0010",
+    "data/processed/models/nat-lab-elasticity/backtests.json": "78edbc3e9ab0644bb64b81ae85c97ca84313da6afc0f68cb7c684b610cf7dc72",
+    "data/processed/models/party-vote-transform/backtest-records.json": "06464b70a46f4efd40297560d100ab969515b8a2f58a971ec6397d5dfbcea602",
+    "data/processed/models/party-vote-transform/specification.json": "1a0f933f6ebeda4d0b7dcfdc0581ff948529de93679ca6959bf9018d01a18088",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/models/candidate-persistence/person-links.json": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+    "data/processed/models/candidate-persistence/pairs.json": "6d7fa0ef4bd8892d7c75a8bdc4bc997937a300bec39b2e474dbad15691c9f6c6",
+    "data/processed/models/freshman-incumbency/inventory.json": "1b56201012dd01c40a2c44b5748dccfc1bf4eb2bc38f5983f4e406ef03f50021",
+    "data/processed/models/replacement-candidate/inventory.json": "ba7d3244783942b406e8cba032947583c6463a2e11b13c2278449a9765ee2b52",
+    "data/processed/checkpoints/identity-evidence-pass/final/occurrence-evidence.json": "5f746edd6d875dcf53805d6c5f2e5e95383808353b6ae8ad963ec17e8a77f549",
+    "data/processed/checkpoints/identity-evidence-pass/final/relations.json": "2c3fa9daf8f790d6ec37877da111bcc1760132fc50b10821cdf8580b4d59fe75",
+    "data/processed/models/conditional-candidate-ledger/diagnostics.json": "5ef5915a50e209443b6d49a589b99452cfb8499a3ecae39db1b410650fdae472",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e",
+    "data/source-plans/stage15-conditional-ledger-sources.json": "59ed90abdad642ba410735ffdc1290b458e732641d27d987c86d6689d21eceba",
+    "data/source-plans/candidate-persistence-sources.json": "ccfa7cbbfa9fb4136a501d8790dbc4dac7bcc995f989a6d3a4e7a0e22c6e267b",
+    "data/source-plans/freshman-incumbency-tenure-sources.json": "b37e1cfcef3f803d93349f53da9b25cd8b8aaea438a362774eee797163f1ace3",
+    "data/source-plans/stage10-identity-sources.json": "6180f0e76ec140413495595c80b4bbbcf168ba660488116e242ba326e3cbe003",
+    "data/source-plans/stage13-identity-sources.json": "55d9370afe62e88eeb2fde1ab06b90f6d7d9f163d9ae852f09ecc57f632fdd96"
+  },
+  "inventoryHash": "ee9d7623746fdaa3186bc01d247b31130ef00e32057fc6f2aa1e846bdd6d46f5",
+  "specificationHash": "fa751fc103aba6f95f56b3a54eee7b1ff198ae4c2346c55f5236cd11c5161bfb",
+  "codeHashes": {
+    "scripts/models/conditional_nat_lab_response/__init__.py": "48df916e44d0456cc97c2481b1a27d9edac9ddc6fa44537ca3d49ed44b3fc635",
+    "scripts/models/conditional_nat_lab_response/analysis.py": "9b26380b99c5e8aeed364ee0b1b497e7aebca2c77e9c4a45b0414a464635a8eb",
+    "scripts/models/conditional_nat_lab_response/common.py": "23df6d83e3b6e4bbd98e5ee1c1ffb447724694e2662c45f1dc602f54484b17c6",
+    "scripts/models/conditional_nat_lab_response/inventory.py": "bcaa921012dc0578195f4e906dafc45515a2bca6ad1ba0a07d3e3dd822406c44",
+    "scripts/models/conditional_nat_lab_response/model.py": "bb6c40c57981eb44b1b3fa171586a171c0eefec5b1ba1903c7a61a0b35c76a65",
+    "scripts/models/conditional_nat_lab_response/run.py": "765f162b061003807ee0b2077601d46d027a5d296632c2594e1f1da1fa37a64f"
+  },
+  "outputHashes": {
+    "analysis.json": "a5d6367c834f56c864781cb6dd0403cb80dab95b478770c9552becf1d86f7f6a",
+    "comparisons.json": "3919a845acdbd15cf1d83f73f61b4907d9680cea9d2edfbec7ba574e071056f5",
+    "numerical-inputs.json": "422f6678edce0607b2943774ffb2f30f04f01f6f659db3a733a070d0212179ab",
+    "stage15-overlap.json": "850c5d5845747c8a681d2d38b49d5b691270f898b7d5a626ced048b7dbb17b5b"
+  }
+}

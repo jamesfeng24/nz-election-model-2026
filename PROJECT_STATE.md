@@ -1,3 +1,15 @@
+# Stage16 conditional NAT/LAB response review — implementation complete, 2026-09-27
+
+Inventory `20c9012` and specification `4fb3366` were committed/pushed before fitting. The full original general NAT/LAB frame contains 382 eligible party-seat pairs (191 per party, 63/64/64 by holdout), with two cancelled pairs excluded explicitly. Preserved identity does not support broad prospective personal-status conditioning; the fitted covariate is only source party-seat victory. All inherited adjudications remain unchanged.
+
+Source-victory versus common-intercept aggregate MAE gains across observed/additive/proportional/log-odds inputs are National 0.1111/0.0994/0.1414/0.1143pp and Labour 0.1760/0.1901/−0.0422/0.0226pp. National stays below the 0.25pp diagnostic; Labour improves 2017 but worsens 2023, with transform-dependent aggregate sign. Free beta does not stably improve both holdouts against nuisance-matched beta1. Original Stage6 chronological errors reproduce. Operational beta and source-victory selections remain null. This is conditional association, not causal incumbency or an as-of forecast.
+
+Validation: 13 focused tests; full configured check passed with 30 frontend tests, typecheck/build, 306 Python tests and 924 registered source checks. Inventory and analysis reproduce deterministically; 763 consumed raw sources verify. Independent NumPy coefficients and chronological errors agree. Full inventory/adapter/fold outcome mutations preserve eligible samples, status and heldout predictions. Prior data artifacts have no diff against merged main. No source acquisition or identity adjudication occurred.
+
+**Exact next action:** open the Stage16 PR and verify final CI, then independent review. Leave the PR unmerged. Later acquisition, target-boundary baseline design, complete-vote modelling and ensemble weights remain separately authorized. See [findings](docs/conditional-nat-lab-response-review.md), D045 and the current roadmap.
+
+---
+
 # Stage 16 specification frozen — 2026-09-27
 
 Inventory checkpoint `20c9012` is pushed. The new specification freezes source-victory conditioning only (not personal incumbency/turnover), one nested separate-party OLS family, same-sample nuisance-matched beta0/1 restrictions, original Stage6 reference, chronological holdouts, fixed-coefficient Stage5 transform substitution, bounded inputs and materiality/stopping rules. No new fitting or scoring has occurred.
