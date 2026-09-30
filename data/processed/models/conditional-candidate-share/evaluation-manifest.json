@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "stage": 18,
+  "phase": "evaluation_after_committed_construction",
+  "inputSha256": {
+    "data/processed/models/conditional-candidate-share/construction.json": "63b1c8f18cec8929f5e8a460dadf30db50ae20309142e9876b1470b3daf50cd4",
+    "data/processed/models/conditional-candidate-share/construction-manifest.json": "bd3f86dbf4445327113bbd8dd5ac74b87dceeeea2555c11ff7a5694968b50361",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e"
+  },
+  "generatorSha256": {
+    "evaluate.py": "0a332e730c3382eab9ff2099f263122af3323cd1823c20d1ffbfc86c1d1b033c",
+    "evaluation_run.py": "ab55bbae0e5f83f3527539ec996143539bbac060bf87ac5692b497f14e9fed13"
+  },
+  "outputSha256": {
+    "actuals.json": "af48cadf146407738b16106ba2a758d8bf8c32d1390bd5f41c3fadad4327171c",
+    "diagnostics.json": "07faf417105cb643ed48a3c1d8cd342013dd0903ff381c3f90161d336c21cfe9"
+  }
+}

@@ -1,11 +1,15 @@
 """Synthetic and adapter checks for the frozen conditional share baseline."""
 
 from copy import deepcopy
+from hashlib import sha256
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
 
 import numpy as np
 
-from scripts.models.conditional_candidate_share import inventory, model
+from scripts.models.conditional_candidate_share import evaluate, inventory, model
+from scripts.validate.source_files import verify_source_files
 
 
 class CandidateShareTests(unittest.TestCase):
@@ -131,6 +135,54 @@ class CandidateShareTests(unittest.TestCase):
         added = {'sources': registry['sources'] + [{
             'id': 'unrelated-synthetic', 'rawPath': 'not-a-stage18-source'}]}
         self.assertEqual(inventory.source_snapshot(added, self.elections), baseline)
+
+    def test_required_raw_bytes_are_checked(self):
+        with TemporaryDirectory() as name:
+            root = Path(name)
+            raw = root / 'data/raw/elections/sample.csv'
+            raw.parent.mkdir(parents=True)
+            raw.write_bytes(b'preserved official bytes')
+            record = {'id': 'sample', 'rawPath': 'data/raw/elections/sample.csv',
+                      'sha256': sha256(raw.read_bytes()).hexdigest()}
+            verify_source_files(root, {'schemaVersion': 1, 'sources': [record]})
+            raw.write_bytes(b'altered official bytes')
+            with self.assertRaisesRegex(ValueError, 'Checksum mismatch'):
+                verify_source_files(root, {'schemaVersion': 1, 'sources': [record]})
+
+    def test_contest_equal_metric_and_ties_arithmetic(self):
+        def row(key, error, winners):
+            return {'targetYear': 2011, 'targetElectorateId': key,
+                    'actualWinnerCandidateId': 'a',
+                    'methods': {'uniform': {'predictedWinnerSet': winners,
+                                            'candidateErrors': [
+                                                {'candidateOccurrenceId': 'a', 'errorPP': error,
+                                                 'sourcePartyKey': 'a',
+                                                 'mappingStatus': 'mapped_registered_party_group',
+                                                 'slateSizeStratum': '2-5'},
+                                                {'candidateOccurrenceId': 'b', 'errorPP': -error,
+                                                 'sourcePartyKey': 'b',
+                                                 'mappingStatus': 'mapped_registered_party_group',
+                                                 'slateSizeStratum': '2-5'}]}}}
+        metric = evaluate._metrics([row('one', 2, ['a', 'b']),
+                                    row('two', 4, ['a', 'b'])], 'uniform')
+        self.assertEqual(metric['contestEqualMaePP'], 3)
+        self.assertAlmostEqual(metric['contestEqualRmsePP'], 10 ** 0.5)
+        self.assertEqual(metric['predictedTieCount'], 2)
+        self.assertEqual(metric['tiedSetContainsActualCount'], 2)
+        self.assertEqual(metric['overallSignedBiasPPAccountingCheck'], 0)
+
+    def test_target_outcomes_enter_evaluation_only(self):
+        # Real adapters, saved construction, and a copied target election.
+        construction = inventory.read(
+            'data/processed/models/conditional-candidate-share/construction.json')
+        before = evaluate.actuals(construction, self.elections)
+        changed = deepcopy(self.elections)
+        target = next(s for s in changed[2011]['electorates']
+                      if s['id'] == before['records'][0]['targetElectorateId'])
+        target['candidates'][0]['votes'] += 1
+        target['candidates'][1]['votes'] -= 1
+        after = evaluate.actuals(construction, changed)
+        self.assertNotEqual(before, after)
 
 
 if __name__ == '__main__':
