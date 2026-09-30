@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "stage": 18,
+  "phase": "construction_before_target_evaluation",
+  "inputSha256": {
+    "data/processed/models/conditional-candidate-share/inventory.json": "f752a531202649653916acb492c8163b6ceb52e5fb6ab215eddc75c5622dca37",
+    "data/processed/models/conditional-candidate-share/inventory-manifest.json": "8fbcfa4b54b6014b758dd7f84ce4f897e52bcc446aa1683cb024a2d1aa85e6ed",
+    "data/processed/models/conditional-candidate-share/implementation-contract.json": "5d9ce994ec6974a4622eff2c05bc187fe3d1da74ca107962f88ff7603aec3732",
+    "data/processed/models/party-vote-transform/backtest-records.json": "06464b70a46f4efd40297560d100ab969515b8a2f58a971ec6397d5dfbcea602",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e"
+  },
+  "requiredSourceSnapshotSha256": "15ebd4d9a22c9658d26f355b40ec308acf6ed0a6aa5a1c75219609e3ec473523",
+  "generatorSha256": {
+    "inventory.py": "172dafb2180c4cbffe5657b824f116e7bcb82af4aef1dc593fdfee15de0d724d",
+    "model.py": "7c22edea634e5f4c793f095f3660d7caa037d85791741086cf40b57076cbcc7d",
+    "run.py": "15e740840037452cc684bea1eb01b04a8015799b26104029cb0baf5e14d77595"
+  },
+  "constructionSha256": "63b1c8f18cec8929f5e8a460dadf30db50ae20309142e9876b1470b3daf50cd4"
+}
