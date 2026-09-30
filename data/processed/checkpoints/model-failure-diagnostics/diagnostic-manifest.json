@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "stage": 19,
+  "role": "frozen_prediction_exploratory_diagnostics_no_new_fit",
+  "inventorySha256": "339591ce42a7e5c02d5f891bfd010756ee238fbc4f03e70030ff7cc38d974587",
+  "generatorSha256": {
+    "model_failure_inventory.py": "c62fbfb6483014a59886b7e5f5954537f6dabd2570224f81c79e1f9f87b5064c",
+    "model_failure_diagnostics.py": "7fc5b946af9e92d4e32c064ae3705b9423c345aa7d353c1549aeceb45d0ea15b",
+    "model_failure_plots.py": "65fdc4f82ac2c55a11e68375d8ecbfa0e4598489599a4eee51af3dc2bf671339",
+    "model_failure_run.py": "f11006b4b704787d337809e76cb43df7b14ed6ebe3c614ae740e56cbc1e59da4"
+  },
+  "outputSha256": {
+    "paired-diagnostics.json": "8bed70a6ea10742adf67c3ef67bed32ee576401c21a0b3f05fdd6883d3cdf0dc"
+  },
+  "plotSha256": {
+    "stage18-floor-vs-zero.png": "66b0f98d3d9d23cf7215cf9d8fe9433f920dd57e30df7ec0e8581357dacfdffd",
+    "stage16-party-movement.png": "ca6288e119e43ede5ed0169cc258e2d02babc01e02f5d55f8515aa78faa4abb4",
+    "stage16-source-gap.png": "046664ac28359d9583ac756b41ad02646e20d80e2dc72f8a3c06820056f331fd"
+  }
+}

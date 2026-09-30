@@ -1,5 +1,6 @@
-# Optional offline boundary-processing environment, Python 3.12.
+# Offline boundary-processing and Stage 19 diagnostic-plot environment, Python 3.12.
 # Historical ingestion remains standard-library-only.
 numpy==2.2.6
 shapely==2.1.2
 scipy==1.16.0
+matplotlib==3.10.6

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "stage": 19,
+  "status": "proposal_awaiting_separate_authorization_no_fit_or_score",
+  "sourceDiagnosticInventory": "data/processed/checkpoints/model-failure-diagnostics/diagnostic-inventory.json",
+  "developmentHoldouts": [2011, 2017, 2023],
+  "families": [
+    {
+      "id": "bounded_nat_lab_party_seat_response",
+      "estimand": "conditional next party-seat candidate share among valid candidate votes",
+      "population": "unchanged-boundary held general National and Labour party-seats",
+      "primaryInputSet": "observed_target_local_party_share_retrospective_conditional",
+      "predictors": ["source_candidate_share", "source_party_share", "target_party_share", "source_party_seat_victory"],
+      "formula": "logit(C1_hat)=logit(C0)+alpha+beta*(logit(P1)-logit(P0))+gamma*W0",
+      "restrictions": ["alpha", "alpha_beta", "alpha_gamma", "alpha_beta_gamma"],
+      "trainingLoss": "equal_party_seat_mean_squared_candidate_share_error",
+      "parameterBudgetPerParty": 3,
+      "trainingTargetYears": {"2017": [2011], "2023": [2011, 2017]},
+      "earliestHoldout": "2011_parameter_free_benchmarks_only",
+      "missingness": "abstain_if_any_required_share_noninterior_or_missing; report_common_sample",
+      "externalControls": ["stage16_common_intercept", "stage16_fixed_beta1_nuisance_matched", "one_for_one", "no_response"],
+      "sensitivity": "retained_stage5_additive_proportional_log_odds_conditional_on_observed_target_national_support; report_boundary_abstention",
+      "gate": "minimum_20_full_rank_training_party_seats_each_party_fold; both_trained_holdouts_gain_at_least_0.25pp_MAE; no_0.25pp_RMSE_regression_or_coverage_loss; stable_valid_input_modes",
+      "effectInterpretation": "party_seat_predictive_association_not_personal_incumbency_or_complete_allocation"
+    },
+    {
+      "id": "complete_share_lagged_split_and_viability",
+      "estimand": "conditional complete target candidate share among valid candidate votes",
+      "population": "fixed_213_contest_frame; held_general_construction_only; Maori_and_cancelled_coverage_only",
+      "primaryInputSet": "observed_target_local_complete_party_vector_and_retrospective_full_slate",
+      "predictors": ["target_local_party_share", "source_party_row_same_party_candidate_category_split", "source_party_seat_candidate_minus_party_gap"],
+      "formula": "w_c=(P1_group+floor)*exp(theta_split*(S0-training_mean_S0)+theta_viability*(V0-training_mean_V0)); m_c=w_c/sum_d(w_d)",
+      "noPartyGroupBase": "floor_only",
+      "unsupportedLaggedFeature": "omit_adjustment_for_that_candidate_and_report_fallback; not_an_estimate_of_zero_personal_strength",
+      "restrictions": ["floor", "floor_theta_split", "floor_theta_viability", "floor_theta_split_theta_viability"],
+      "trainingLoss": "equal_contest_mean_cross_entropy_on_valid_candidate_shares",
+      "floorRangePartyShareUnits": [0.0001, 0.1],
+      "parameterBudget": 3,
+      "trainingTargetYears": {"2017": [2011], "2023": [2011, 2017]},
+      "earliestHoldout": "2011_parameter_free_benchmarks_only",
+      "prerequisite": "pin_source_target_party_category_feature_join_and_exact_common_sample_before_fit",
+      "stopBeforeFit": "fewer_than_20_complete_constructed_contests_or_20_supported_split_feature_contests_in_either_trained_holdout",
+      "missingness": "abstain_whole_contest_for_ambiguous_party_category_incomplete_slate_or_party_vector_missing_source_table; report_supported_and_fallback_features",
+      "controls": ["jointly_refitted_floor_only", "uniform_context", "restricted_zero_floor_on_its_supported_subset"],
+      "gate": "each_trained_fold_gain_at_least_0.25pp_contest_equal_MAE_vs_jointly_refitted_floor; no_0.25pp_RMSE_regression_or_coverage_loss; rounding_endpoint_and_influence_checks",
+      "effectInterpretation": "party_level_transfer_assumption_not_verified_candidate_person_transfer"
+    }
+  ],
+  "recommendedNext": "separately_authorize_family_B_applicability_audit_then_only_if_prespecified_coverage_gates_pass_four_conditional_ablations",
+  "blockedCompletePipeline": "stage5_substitutions_lack_complete_coherent_target_party_category_vectors",
+  "operationalSelectionsChanged": false
+}

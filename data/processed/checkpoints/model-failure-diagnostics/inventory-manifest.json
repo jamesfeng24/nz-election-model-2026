@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "stage": 19,
+  "phase": "inventory_before_new_summaries",
+  "generatorSha256": "c62fbfb6483014a59886b7e5f5954537f6dabd2570224f81c79e1f9f87b5064c",
+  "inputSha256": {
+    "data/processed/models/conditional-candidate-share/construction.json": "63b1c8f18cec8929f5e8a460dadf30db50ae20309142e9876b1470b3daf50cd4",
+    "data/processed/models/conditional-candidate-share/actuals.json": "af48cadf146407738b16106ba2a758d8bf8c32d1390bd5f41c3fadad4327171c",
+    "data/processed/models/conditional-candidate-share/diagnostics.json": "07faf417105cb643ed48a3c1d8cd342013dd0903ff381c3f90161d336c21cfe9",
+    "data/processed/models/conditional-candidate-share/evaluation-manifest.json": "b945755160ac235a742ea05c738509659402ee82ab46433e4ba779097572e730",
+    "data/processed/models/conditional-nat-lab-response/analysis.json": "a5d6367c834f56c864781cb6dd0403cb80dab95b478770c9552becf1d86f7f6a",
+    "data/processed/models/conditional-nat-lab-response/numerical-inputs.json": "422f6678edce0607b2943774ffb2f30f04f01f6f659db3a733a070d0212179ab",
+    "data/processed/models/conditional-nat-lab-response/manifest.json": "4e320f0003f5c917c31a017194c50535261696b7681e8c106791dff56299a087",
+    "data/processed/models/nat-lab-elasticity/backtests.json": "78edbc3e9ab0644bb64b81ae85c97ca84313da6afc0f68cb7c684b610cf7dc72",
+    "data/processed/models/nat-lab-elasticity/records.json": "1d1565d50e0e7302d20fde81c88d5fb0fc408fde47645df2fa2bdb0068867ed4",
+    "data/processed/models/nat-lab-elasticity/manifest.json": "305964cbb2fa085213d3e44539b56248487a3205832df37005eb344100fae584",
+    "data/processed/models/candidate-persistence/analysis.json": "8711513062fbce1c7e55b48f1d48e6e56f8a4c107845baa4970f11307f7c4a75",
+    "data/processed/models/candidate-persistence/pairs.json": "6d7fa0ef4bd8892d7c75a8bdc4bc997937a300bec39b2e474dbad15691c9f6c6",
+    "data/processed/models/candidate-persistence/manifest.json": "59c741e7b7f996d2f15ae22c0090951cff844ece234eca02cfb546627d3ab4cc",
+    "data/processed/models/freshman-incumbency/analysis.json": "b2d8beb66d362130915b284a3b2fe8fda40688c17c0defab873868f5ff405b38",
+    "data/processed/models/freshman-incumbency/cohort-audit.json": "3992bc310daab7078099ad04c923a20a17fd348dc75d8da3739559d009a4fc40",
+    "data/processed/models/freshman-incumbency/analysis-manifest.json": "83c4f69fcd098549703a0a68b571e120a862f4e0480a2aa5e3705614eaa89639",
+    "data/processed/models/replacement-candidate/analysis.json": "2cd6a2ece83315f4945a7bc64400200caf36a6fed907110a318c8331c3a6e230",
+    "data/processed/models/replacement-candidate/cohort-audit.json": "b5adb1c4f92ede860881735433160d223491d90dfd5c3dfa4d3bc63c9915b337",
+    "data/processed/models/replacement-candidate/analysis-manifest.json": "9b6965b9f62cfaf4f7d1feab42dfb130e69a51dab4ca0e89404e83c4e94213f6",
+    "data/processed/models/historical-split-ticket/predictions.json": "3b4b380bf761a29d749a90c2682d4731d3a889638194cee01f621e96813acfdb",
+    "data/processed/models/historical-split-ticket/analysis-manifest.json": "03009ef789ce88ff958c6ea5b7e18f113e0d01a56fa1003a7d48b9a4f1b1f49a",
+    "data/processed/models/conditional-candidate-ledger/diagnostics.json": "5ef5915a50e209443b6d49a589b99452cfb8499a3ecae39db1b410650fdae472",
+    "data/processed/models/conditional-candidate-ledger/evaluation-manifest.json": "d9f015f9b55bf210bd43734a9ea419bf6ab7ad39f6990c427c2acd8e3d382126"
+  },
+  "outputSha256": {
+    "diagnostic-inventory.json": "339591ce42a7e5c02d5f891bfd010756ee238fbc4f03e70030ff7cc38d974587"
+  }
+}
