@@ -1,3 +1,9 @@
+# Current checkpoint: conditional NAT/LAB response review
+
+Stage15 PR #22 is merged. Stage16 completes the separately authorized conditional Stage6 review on all 382 eligible general NAT/LAB pairs. Source party-seat victory supports a narrow conditional diagnostic; preserved evidence does not support broad prospective turnover or personal-incumbency conditioning. National's status gain is below 0.25pp; Labour reverses across folds and transforms. All operational selections remain null. See [Stage16 findings](conditional-nat-lab-response-review.md).
+
+**Next action: independent review of the Stage16 PR, left unmerged.** After review, separately authorize a design checkpoint for a defensible target-boundary candidate baseline, coherent complete-vote uncertainty and dated forecast-input contracts. Do not start acquisition, integrate models, stack descriptive effects or choose ensemble weights. This review closes the deferred conditional Stage6 diagnostic, not the candidate-baseline or as-of-forecast dependencies. Earlier roadmap sections below retain their historical context.
+
 # Authorized project sequence
 
 ## After the conditional historical candidate-ledger diagnostic

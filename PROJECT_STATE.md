@@ -1,3 +1,33 @@
+# Stage16 conditional NAT/LAB response review — implementation complete, 2026-09-27
+
+Inventory `20c9012` and specification `4fb3366` were committed/pushed before fitting. The full original general NAT/LAB frame contains 382 eligible party-seat pairs (191 per party, 63/64/64 by holdout), with two cancelled pairs excluded explicitly. Preserved identity does not support broad prospective personal-status conditioning; the fitted covariate is only source party-seat victory. All inherited adjudications remain unchanged.
+
+Source-victory versus common-intercept aggregate MAE gains across observed/additive/proportional/log-odds inputs are National 0.1111/0.0994/0.1414/0.1143pp and Labour 0.1760/0.1901/−0.0422/0.0226pp. National stays below the 0.25pp diagnostic; Labour improves 2017 but worsens 2023, with transform-dependent aggregate sign. Free beta does not stably improve both holdouts against nuisance-matched beta1. Original Stage6 chronological errors reproduce. Operational beta and source-victory selections remain null. This is conditional association, not causal incumbency or an as-of forecast.
+
+Validation: 13 focused tests; full configured check passed with 30 frontend tests, typecheck/build, 306 Python tests and 924 registered source checks. Inventory and analysis reproduce deterministically; 763 consumed raw sources verify. Independent NumPy coefficients and chronological errors agree. Full inventory/adapter/fold outcome mutations preserve eligible samples, status and heldout predictions. Prior data artifacts have no diff against merged main. No source acquisition or identity adjudication occurred.
+
+**PR:** [#23](https://github.com/jamesfeng24/nz-election-model-2026/pull/23), open and unmerged. Implementation checkpoint: `f908bf2`. Final-head CI must be verified after this documentation checkpoint.
+
+**Exact next action:** independent review of PR #23 after final CI verification. Leave the PR unmerged. Later acquisition, target-boundary baseline design, complete-vote modelling and ensemble weights remain separately authorized. See [findings](docs/conditional-nat-lab-response-review.md), D045 and the current roadmap.
+
+---
+
+# Stage 16 specification frozen — 2026-09-27
+
+Inventory checkpoint `20c9012` is pushed. The new specification freezes source-victory conditioning only (not personal incumbency/turnover), one nested separate-party OLS family, same-sample nuisance-matched beta0/1 restrictions, original Stage6 reference, chronological holdouts, fixed-coefficient Stage5 transform substitution, bounded inputs and materiality/stopping rules. No new fitting or scoring has occurred.
+
+Exact next action: commit/push this specification before fitting, implement and test the frozen pipeline, preserve prior artifacts and open an unmerged PR.
+
+---
+
+# Stage 16 conditional NAT/LAB review — pre-fit inventory, 2026-09-27
+
+PR #22 is verified merged as `1374566e0c28793cac8442f7691c7f2f388ad72e`, containing reviewed `333f634`. Clean main was synchronized and `stage/16-conditional-nat-lab-response-review` created. The deterministic pre-fit inventory has 384 general party-seat pairs, 382 eligible (191 per party) and two cancelled Port Waikato exclusions. Preserved identity/tenure evidence is audit-only; it does not establish a broad prospective turnover cohort. The supported complete covariate is source party-seat victory, not target personal incumbency. No new fits, scores, sources or adjudications have been produced. Prior outputs remain unchanged.
+
+Exact next action: commit/push this evidence checkpoint; freeze and commit the source-victory/transform comparison specification before fitting, then implement the authorized review and open an unmerged PR. See `docs/conditional-nat-lab-response-review.md` and `data/processed/models/conditional-nat-lab-response/inventory.json`.
+
+---
+
 # Stage 15 conditional candidate interval ledger — final handoff, 2026-09-27
 
 The frozen Stage 14 conditional design has been implemented on the complete **213-contest** coverage frame: **191 held general contests** receive ledgers (63/64/64 in the 2011/2017/2023 holdouts), while 21 Māori contests and cancelled 2023 Port Waikato retain explicit coverage-only reasons. The 1,313 standing target candidates (423/431/459) are evaluated separately from construction. The primary pooled-equality set, separate source-seat convex hull, party-diagonal comparator and unrestricted comparator use the same frame. The source snapshot pins 612 consumed records and raw bytes. See [findings](docs/conditional-candidate-interval-ledger.md), [pre-calculation plan](docs/conditional-candidate-ledger-implementation-plan.md), and `data/processed/models/conditional-candidate-ledger/`.
