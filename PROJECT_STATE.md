@@ -1,3 +1,11 @@
+# Stage 20 preserved-evidence applicability audit — plan checkpoint, 2026-10-01
+
+Stage19 [PR #26](https://github.com/jamesfeng24/nz-election-model-2026/pull/26) was verified **MERGED** as `89f23dac78aea865f135e339cf89f008b6759266`, containing reviewed `ec009c806c1727e94785127c51c37ef0e974e50c`. The old branch was clean; main was fast-forwarded and `stage/20-complete-share-feature-applicability` created from the merge. The [Stage 20 plan](docs/stage20-applicability-plan.md) fixes preserved inputs, explicit source/target IDs and party-continuity joins, outcome exclusions, candidate fallback versus whole-contest abstention, provenance and the predeclared coverage stop. No Stage 20 feature counts, fit, prediction or score have been calculated yet.
+
+**Exact next action:** commit/push this plan, build and test the deterministic feature/source ledger, audit within-slate rank and coverage gates, then freeze the final pre-fit contract if support is sufficient. Do not fit or score any model, acquire evidence, revise person adjudications or alter operational selections.
+
+---
+
 # Stage 19 frozen-prediction diagnostic and experiment-design handoff — 2026-10-01
 
 Stage18 PR #25 was verified merged as `d51a088e1e9d91b12757241b3956dfed68d6043a`, including corrected reviewed head `a9c8b74080eb79ac23d9835e4d7af37ff38eb01a`. A clean main was fast-forwarded and branch `stage/19-model-failure-diagnostics` created. The pre-summary inventory/plan checkpoints `66868ae`, `e7780a9` and `4beefff` were committed/pushed before any new subgroup summary. Diagnostic implementation and plots checkpoint `81ce1d2` was committed/pushed next. [Findings](docs/model-failure-diagnostics.md), [pre-summary plan](docs/model-failure-diagnostic-plan.md), the [artifact inventory](data/processed/checkpoints/model-failure-diagnostics/diagnostic-inventory.json) and the [proposed experiment specification](docs/model-failure-experiment-specification.md) record the reproducible stage.
