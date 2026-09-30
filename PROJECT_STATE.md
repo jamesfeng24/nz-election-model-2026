@@ -1,4 +1,12 @@
-# Stage16 conditional NAT/LAB response review — implementation complete, 2026-09-27
+# Stage 17 candidate-baseline design — verified start, 2026-09-30
+
+PR #23 was verified **MERGED** as `47c782f37df883f4143ff6cc95086c6d37407e94`, with reviewed head `2251f6b113cebf592c423672f8f19e72d57033c0` in fetched main. The old Stage 16 checkout was clean. `stage/17-candidate-baseline-complete-forecast-design` starts directly from merged main; no earlier artifact was rewritten. The [Stage 17 plan](docs/candidate-baseline-design-plan.md) limits work to a preserved-source inventory, concrete complete-share specification and synthetic accounting tests. First read-only boundary audit found 14 general and three Māori targets with certified identity membership, one officially unchanged but technically uncertain seat in each scope, and 49 general/three Māori changed targets. The preserved voting-place candidate tables include out-of-electorate places and aggregate special-vote rows; they do not identify residential votes on target boundaries.
+
+**Exact next action:** commit/push this plan, then build the deterministic 71-seat inventory and proposed direct-share contract without historical scoring, fitting, new source acquisition, integration or a 2026 forecast. Stage 8–11, 15 and 16 null operational selections remain unchanged.
+
+---
+
+# Historical Stage16 conditional NAT/LAB response review — implementation complete, 2026-09-27
 
 Inventory `20c9012` and specification `4fb3366` were committed/pushed before fitting. The full original general NAT/LAB frame contains 382 eligible party-seat pairs (191 per party, 63/64/64 by holdout), with two cancelled pairs excluded explicitly. Preserved identity does not support broad prospective personal-status conditioning; the fitted covariate is only source party-seat victory. All inherited adjudications remain unchanged.
 
