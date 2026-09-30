@@ -618,6 +618,8 @@ Separate evaluation `632e1b3` reports contest-equal fitted MAE/RMSE **3.2644/5.9
 
 Validation: 11 focused Stage18 tests include real adapter/holdout target-outcome mutations, ranking/ties, mapping ambiguity, optimizer gates/failure/boundaries, source registry/raw bytes, joint input substitution and metric arithmetic. Independent bounded scalar minimization agrees with all three floors within `1e-8`; independent direct candidate-share arithmetic agrees with each saved holdout MAE. Inventory/construction/evaluation `--check` reproduction passes. Full `PATH="$(pwd)/.venv/bin:$PATH" npm run check:all` passes: 30 frontend tests, typecheck/build, **328 Python tests** and **924 registered-source checks**. Git comparison with merged main finds no prior raw sources, Stage4–16 numerical artifacts, Stage13 identity evidence, Stage14/17 inventory or prior operational-selection changes. Final-head GitHub CI remains to be verified after PR/handoff commit.
 
+[Stage18 PR #25](https://github.com/jamesfeng24/nz-election-model-2026/pull/25) is open into main and must remain unmerged. Final-head GitHub CI must be verified after this handoff commit.
+
 **Exact next action:** independent review of the unmerged Stage18 PR after final CI verification. A later separately authorized decision may scope dated historical nomination/party/turnout inputs and coherent slate-level uncertainty for an as-of forecast. Do not tune another floor, acquire sources, score a live forecast, integrate model views or choose ensemble weights automatically.
 
 ---
