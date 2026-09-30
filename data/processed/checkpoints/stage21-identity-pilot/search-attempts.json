@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "stage": 21,
-  "phase": "bounded_acquisition_in_progress",
+  "phase": "bounded_search_complete_adjudication_pending",
   "collectionQueries": [
     {
       "queryNumber": 1,
@@ -56,6 +56,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"William TISCH\" \"Waikato\" 2008 2011 nationalparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Official profiles or result/nomination records located for some cases, but no retrieved passage was accepted as an exact cross-election relationship bridge. Search snippet alone is insufficient.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:06:00Z",
+          "2026-09-30T21:07:00Z"
+        ]
       }
     ],
     "nz-general-2008-electorate-09-candidate-02->nz-general-2011-electorate-09-candidate-01": [
@@ -74,6 +87,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Clare CURRAN\" \"Dunedin South\" 2008 2011 labourparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Official profiles or result/nomination records located for some cases, but no retrieved passage was accepted as an exact cross-election relationship bridge. Search snippet alone is insufficient.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:06:00Z",
+          "2026-09-30T21:07:00Z"
+        ]
       }
     ],
     "nz-general-2008-electorate-02-candidate-02->nz-general-2011-electorate-02-candidate-01": [
@@ -88,6 +114,19 @@
         "observedWindowUTC": [
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
+        ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Brian CARTER\" \"Bay of Plenty\" 2008 2011 unitedfuture selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Official profiles or result/nomination records located for some cases, but no retrieved passage was accepted as an exact cross-election relationship bridge. Search snippet alone is insufficient.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:06:00Z",
+          "2026-09-30T21:07:00Z"
         ]
       }
     ],
@@ -106,6 +145,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Pieter WATSON\" \"North Shore\" 2008 2011 greenparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Official profiles or result/nomination records located for some cases, but no retrieved passage was accepted as an exact cross-election relationship bridge. Search snippet alone is insufficient.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:06:00Z",
+          "2026-09-30T21:07:00Z"
+        ]
       }
     ],
     "nz-general-2008-electorate-54-candidate-03->nz-general-2011-electorate-54-candidate-03": [
@@ -123,6 +175,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Cameron HARPER\" \"Waikato\" 2008 2011 greenparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2008-electorate-30-candidate-03->nz-general-2011-electorate-30-candidate-06": [
@@ -137,6 +202,19 @@
         "observedWindowUTC": [
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
+        ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Saffron TOMS\" \"New Lynn\" 2008 2011 greenparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
         ]
       }
     ],
@@ -153,6 +231,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"David SEYMOUR\" \"Auckland Central\" 2008 2011 actnewzealand selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2008-electorate-65-candidate-01->nz-general-2011-electorate-65-candidate-03": [
@@ -167,6 +258,19 @@
         "observedWindowUTC": [
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
+        ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Na RAIHANIA\" \"Ikaroa-Rawhiti\" 2008 2011 maoriparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
         ]
       }
     ],
@@ -185,6 +289,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Judith COLLINS\" \"Papakura\" 2014 2017 nationalparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2014-electorate-12-candidate-10->nz-general-2017-electorate-12-candidate-06": [
@@ -202,6 +319,23 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"David SEYMOUR\" \"Epsom\" 2014 2017 actnewzealand selected former candidate name history",
+        "disposition": "retrieved_official_party_career_fact_only",
+        "leadUrls": [
+          "https://www.act.org.nz/people/david-seymour"
+        ],
+        "assessment": "Official party biography supports stated prior service/election history. It does not explicitly connect both selected election-local nominations; cross-election relation remains unresolved.",
+        "acceptedResourceIds": [
+          "stage21-identity-act-david-seymour-2026-09-30"
+        ],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2014-electorate-17-candidate-01->nz-general-2017-electorate-17-candidate-03": [
@@ -217,6 +351,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Christopher BISHOP\" \"Hutt South\" 2014 2017 nationalparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2014-electorate-64-candidate-06->nz-general-2017-electorate-64-candidate-06": [
@@ -231,6 +378,19 @@
         "observedWindowUTC": [
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
+        ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"John RING\" \"Wigram\" 2014 2017 democratsforsocialcredit selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
         ]
       }
     ],
@@ -249,6 +409,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Anne TOLLEY\" \"East Coast\" 2014 2017 nationalparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2014-electorate-46-candidate-04->nz-general-2017-electorate-46-candidate-02": [
@@ -264,6 +437,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Tahere EAGLE\" \"Rongotai\" 2014 2017 labourparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2014-electorate-59-candidate-03->nz-general-2017-electorate-59-candidate-07": [
@@ -278,6 +464,19 @@
         "observedWindowUTC": [
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
+        ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Patrick WALL\" \"Waitaki\" 2014 2017 greenparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
         ]
       }
     ],
@@ -296,6 +495,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Mei TAARE\" \"Te Tai Tonga\" 2014 2017 maoriparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2020-electorate-43-candidate-05->nz-general-2023-electorate-43-candidate-05": [
@@ -313,6 +525,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Nicole McKEE\" \"Rongotai\" 2020 2023 actnewzealand selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2020-electorate-08-candidate-08->nz-general-2023-electorate-08-candidate-11": [
@@ -327,6 +552,19 @@
         "observedWindowUTC": [
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
+        ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Michael WOODHOUSE\" \"Dunedin\" 2020 2023 nationalparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
         ]
       }
     ],
@@ -345,6 +583,23 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Willow-Jean PRIME\" \"Northland\" 2020 2023 labourparty selected former candidate name history",
+        "disposition": "retrieved_official_party_career_fact_only",
+        "leadUrls": [
+          "https://www.labour.org.nz/our-team/hon-willow-jean-prime/"
+        ],
+        "assessment": "Official party biography supports stated prior service/election history. It does not explicitly connect both selected election-local nominations; cross-election relation remains unresolved.",
+        "acceptedResourceIds": [
+          "stage21-identity-labour-willow-jean-prime-2026-09-30"
+        ],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2020-electorate-54-candidate-02->nz-general-2023-electorate-54-candidate-03": [
@@ -361,6 +616,19 @@
         "observedWindowUTC": [
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
+        ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Anna LORCK\" \"Tukituki\" 2020 2023 labourparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
         ]
       }
     ],
@@ -379,6 +647,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Mark MITCHELL\" \"Whangaparāoa\" 2020 2023 nationalparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2020-electorate-20-candidate-05->nz-general-2023-electorate-20-candidate-07": [
@@ -394,6 +675,19 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Frances HUGHES\" \"Mana\" 2020 2023 nationalparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ],
     "nz-general-2020-electorate-33-candidate-08->nz-general-2023-electorate-33-candidate-06": [
@@ -408,6 +702,19 @@
         "observedWindowUTC": [
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
+        ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Stephanie RODGERS\" \"Ōhāriu\" 2020 2023 greenparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
         ]
       }
     ],
@@ -426,9 +733,57 @@
           "2026-09-30T20:59:21Z",
           "2026-09-30T21:05:08Z"
         ]
+      },
+      {
+        "attempt": 2,
+        "query": "\"Hana-Rawhiti MAIPI-CLARKE\" \"Hauraki-Waikato\" 2020 2023 maoriparty selected former candidate name history",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Search returned election-local results, one-occurrence profiles, or secondary leads; no retrieved primary passage explicitly bridges both exact candidacies. Snippets were not promoted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T21:07:00Z",
+          "2026-09-30T21:11:03Z"
+        ]
       }
     ]
   },
-  "resources": [],
-  "knownTimestampLimitation": "Search endpoint returned no per-query timestamps. The collection batch has an approximate recorded minute; all 24 first targeted queries occurred within the recorded UTC window. Exact times remain null."
+  "resources": [
+    {
+      "sourceId": "stage21-identity-act-david-seymour-2026-09-30",
+      "url": "https://www.act.org.nz/people/david-seymour",
+      "caseId": "nz-general-2014-electorate-12-candidate-10->nz-general-2017-electorate-12-candidate-06",
+      "rawRetrieval": "success",
+      "relationshipBridgeAccepted": false,
+      "careerFactAccepted": true
+    },
+    {
+      "sourceId": "stage21-identity-labour-willow-jean-prime-2026-09-30",
+      "url": "https://www.labour.org.nz/our-team/hon-willow-jean-prime/",
+      "caseId": "nz-general-2020-electorate-32-candidate-09->nz-general-2023-electorate-32-candidate-09",
+      "rawRetrieval": "success",
+      "relationshipBridgeAccepted": false,
+      "careerFactAccepted": true
+    }
+  ],
+  "knownTimestampLimitation": "Search endpoint returned no per-query timestamps. The collection batch has an approximate recorded minute; all 24 first targeted queries occurred within the recorded UTC window. Exact times remain null.",
+  "resourceRetrievalAttempts": [
+    {
+      "sourceId": "stage21-identity-act-david-seymour-2026-09-30",
+      "url": "https://www.act.org.nz/people/david-seymour",
+      "caseId": "nz-general-2014-electorate-12-candidate-10->nz-general-2017-electorate-12-candidate-06",
+      "rawRetrieval": "success",
+      "relationshipBridgeAccepted": false,
+      "careerFactAccepted": true
+    },
+    {
+      "sourceId": "stage21-identity-labour-willow-jean-prime-2026-09-30",
+      "url": "https://www.labour.org.nz/our-team/hon-willow-jean-prime/",
+      "caseId": "nz-general-2020-electorate-32-candidate-09->nz-general-2023-electorate-32-candidate-09",
+      "rawRetrieval": "success",
+      "relationshipBridgeAccepted": false,
+      "careerFactAccepted": true
+    }
+  ]
 }

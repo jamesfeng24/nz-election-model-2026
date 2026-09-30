@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "stage": 21,
+  "sourceRecords": [
+    {
+      "schemaVersion": 1,
+      "id": "stage21-identity-act-david-seymour-2026-09-30",
+      "organisation": "ACT New Zealand",
+      "url": "https://www.act.org.nz/people/david-seymour",
+      "dateOrElection": "Retrospective Stage 21 identity pilot; page publication date unknown; historical fact dates recorded separately",
+      "resource": "Official party biography",
+      "retrievedAt": "2026-09-30T21:10:29Z",
+      "rawPath": "data/raw/identity-stage21/act-david-seymour.html",
+      "processingScript": "scripts/checkpoints/stage21_identity_final.py",
+      "limitations": [
+        "Retrospective party-authored profile; historical publication date and availability before target nomination close are not established.",
+        "The profile alone does not explicitly bridge both selected election-local candidacies; it can support only the stated career facts."
+      ],
+      "sha256": "3e462562e82c0db2b939f0ef61c124c79ba740cdc030cd5cda1bb057edcf8e86",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "stage21-identity-labour-willow-jean-prime-2026-09-30",
+      "organisation": "New Zealand Labour Party",
+      "url": "https://www.labour.org.nz/our-team/hon-willow-jean-prime/",
+      "dateOrElection": "Retrospective Stage 21 identity pilot; page publication date unknown; historical fact dates recorded separately",
+      "resource": "Official party biography",
+      "retrievedAt": "2026-09-30T21:10:40Z",
+      "rawPath": "data/raw/identity-stage21/labour-willow-jean-prime.html",
+      "processingScript": "scripts/checkpoints/stage21_identity_final.py",
+      "limitations": [
+        "Retrospective party-authored profile; historical publication date and availability before target nomination close are not established.",
+        "The profile alone does not explicitly bridge both selected election-local candidacies; it can support only the stated career facts."
+      ],
+      "sha256": "946461c1119b9b63604eea4de22a72eefb3f228303bb2cdf05e295958c022290",
+      "licence": "Source attribution preserved; specific reuse terms not established."
+    }
+  ],
+  "inputSha256": {
+    "data/processed/checkpoints/stage21-identity-pilot/claim-ledger.json": "e22c7d6afc53bea43ad00c062fedf7cae9bac936811ba88348e05da903f15714",
+    "data/processed/checkpoints/stage21-identity-pilot/acquisition-plan.json": "23eaa23cf64c31a3f98f103e84b5aea7b817d1b1a79574bdf055bddaf929bf4d",
+    "data/processed/checkpoints/stage21-identity-pilot/preserved-review.json": "943856228614ed2ed79a419e06b303ab85f27ac000adf3085f76a2803dadceb5",
+    "data/processed/checkpoints/stage21-identity-pilot/search-attempts.json": "7dde63a80a013d092d2c3a7b387e0883368996ea9d6297eae7079d0cbebce449",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+  },
+  "generatorSha256": "f6ba737b7483767b0c96ebce920b0794213f4f8165d3598fe01101650d2d4020",
+  "outputSha256": {
+    "adjudication.json": "af03f403d8b57f2848e0bc55c4f9ee58ebae75ec1c6690d079172203edb5ac3a",
+    "coverage.json": "d26133204095bca31536150401780c49cfd26f823b083783a7776d49f0b8d48d"
+  }
+}
