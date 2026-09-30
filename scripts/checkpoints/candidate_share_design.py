@@ -3,6 +3,8 @@
 This module has no historical runner and does not fit the support floor. It
 accepts a supplied target-boundary party scenario and a positive floor so all
 standing candidates can receive candidate-share mass without person links.
+``partyKey=None`` requires ``noRegisteredPartyGroup=True`` from an independent
+classification; it cannot stand for a failed or ambiguous party mapping.
 """
 
 from math import isfinite
@@ -20,6 +22,12 @@ def candidate_shares(slate, party_support, support_floor):
     if len(ids) != len(set(ids)):
         raise ValueError('Duplicate candidate destination')
     party_keys = [candidate.get('partyKey') for candidate in slate]
+    if any(party is None and candidate.get('noRegisteredPartyGroup') is not True
+           for party, candidate in zip(party_keys, slate)):
+        raise ValueError('Unmapped candidate party category is unknown')
+    if any(party is not None and candidate.get('noRegisteredPartyGroup') is True
+           for party, candidate in zip(party_keys, slate)):
+        raise ValueError('Conflicting candidate party classification')
     if len([party for party in party_keys if party is not None]) != len(
             {party for party in party_keys if party is not None}):
         raise ValueError('Ambiguous multiple candidates of one party')

@@ -1,4 +1,10 @@
-# Current checkpoint: conditional NAT/LAB response review
+# Current checkpoint: target-boundary candidate-baseline design
+
+Stage16 PR #23 is verified merged. Stage17 inventories all 71 target-boundary seats and proposes a direct, identity-free candidate-share composition conditional on a complete target-boundary party scenario and slate. The preserved voting-place counts do not identify voter-residence candidate votes on changed boundaries. Historical 2023 candidate counts are geographically supported for only 117 target–predecessor leads on certified unchanged membership and are **not** 2026 nominee baselines. All 2026 slates and strict as-of input bundles are missing. The design and synthetic tests produce no fitted parameter, historical score, 2026 forecast or operational selection. See [the Stage17 design](candidate-baseline-complete-forecast-design.md) and D046.
+
+**Exact next action after independent review and separate authorization:** implement the one-parameter direct candidate-share **conditional** historical baseline on the frozen 213-contest frame, evaluating all 191 held general contests and their 1,313 candidates against full-frame uniform and restricted same-sample party-proportional benchmarks. No new acquisition is needed for that conditional test. Report abstention and stop on missing party/slate/denominator or training evidence. It would not validate an as-of forecast. Dated historical nomination-close inputs, a 2026 slate/party-support forecast, candidate-valid turnout and calibrated joint uncertainty remain separate prerequisites. Stage8–11,15,16 operational selections remain null; do not integrate views or set ensemble weights.
+
+## Historical Stage16 handoff
 
 Stage15 PR #22 is merged. Stage16 completes the separately authorized conditional Stage6 review on all 382 eligible general NAT/LAB pairs. Source party-seat victory supports a narrow conditional diagnostic; preserved evidence does not support broad prospective turnover or personal-incumbency conditioning. National's status gain is below 0.25pp; Labour reverses across folds and transforms. All operational selections remain null. See [Stage16 findings](conditional-nat-lab-response-review.md).
 

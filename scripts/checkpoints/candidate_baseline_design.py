@@ -11,6 +11,7 @@ from scripts.transform.modern_tables import candidate_table
 
 ROOT = Path(__file__).resolve().parents[2]
 DEST = ROOT / 'data/processed/checkpoints/candidate-baseline-design'
+CONTRACT = DEST / 'design-contract.json'
 SOURCE_PLAN = ROOT / 'data/source-plans/stage17-candidate-baseline-preserved-sources.json'
 RAW_ROOT = 'data/raw/elections/2023/statistics/csv'
 INPUTS = (
@@ -242,6 +243,7 @@ def build(registry=None):
         'inputSha256': {path: digest(ROOT / path) for path in INPUTS},
         'requiredRawSha256': {path: digest(ROOT / path) for path in required_raw_paths()},
         'sourceSnapshotSha256': sha256(encode(snapshot)).hexdigest(),
+        'designContractSha256': digest(CONTRACT),
         'codeSha256': digest(ROOT / 'scripts/checkpoints/candidate_baseline_design.py'),
         'outputSha256': {'target-inventory.json': sha256(encode(result)).hexdigest()},
     }

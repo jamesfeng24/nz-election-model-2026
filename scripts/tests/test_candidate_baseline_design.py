@@ -28,13 +28,18 @@ class CandidateBaselineDesignTests(unittest.TestCase):
     def test_entrant_independent_and_party_exit_preserve_positive_simplex(self):
         slate = [{'candidateId': 'standing', 'partyKey': 'a'},
                  {'candidateId': 'new_party', 'partyKey': 'new'},
-                 {'candidateId': 'independent', 'partyKey': None}]
+                 {'candidateId': 'independent', 'partyKey': None,
+                  'noRegisteredPartyGroup': True}]
         support = {'a': 0.45, 'departing': 0.55, 'new': 0.0}
         result = candidate_shares(slate, support, 0.02)['candidateShares']
         self.assertGreater(result['new_party'], 0)
         self.assertGreater(result['independent'], 0)
         self.assertEqual(result['new_party'], result['independent'])
         self.assertAlmostEqual(sum(result.values()), 1)
+        unknown = copy.deepcopy(slate)
+        del unknown[2]['noRegisteredPartyGroup']
+        with self.assertRaises(ValueError):
+            candidate_shares(unknown, support, 0.02)
 
     def test_changed_boundary_requires_target_party_scenario_not_candidate_transport(self):
         slate = [{'candidateId': 'x', 'partyKey': 'a', 'sourceSeat': 'old_1'},
@@ -73,7 +78,8 @@ class CandidateBaselineDesignTests(unittest.TestCase):
         first = [{'candidateId': 'a1', 'partyKey': 'a'},
                  {'candidateId': 'b1', 'partyKey': 'b'}]
         second = [{'candidateId': 'a2', 'partyKey': 'a'},
-                  {'candidateId': 'independent', 'partyKey': None}]
+                  {'candidateId': 'independent', 'partyKey': None,
+                   'noRegisteredPartyGroup': True}]
         low = {'a': 0.4, 'b': 0.6}
         high = {'a': 0.7, 'b': 0.3}
         for slate in (first, second):
@@ -87,7 +93,8 @@ class CandidateBaselineDesignTests(unittest.TestCase):
     def test_outcome_and_person_fields_never_enter_share_construction(self):
         slate = [{'candidateId': 'x', 'partyKey': 'a', 'personId': 'one',
                   'votes': 0, 'elected': False},
-                 {'candidateId': 'y', 'partyKey': None, 'personId': None,
+                 {'candidateId': 'y', 'partyKey': None,
+                  'noRegisteredPartyGroup': True, 'personId': None,
                   'votes': 100, 'elected': True}]
         original = candidate_shares(slate, {'a': 1.0}, 0.01)
         changed = copy.deepcopy(slate)
@@ -110,6 +117,9 @@ class CandidateBaselineDesignTests(unittest.TestCase):
                          ['observed_2023_count_on_certified_unchanged_geography'], 117)
         self.assertEqual(summary['historicalCandidateLeadGeography']
                          ['cancelled_source_no_valid_candidate_share'], 9)
+        contract = inventory.read('data/processed/checkpoints/candidate-baseline-design/design-contract.json')
+        self.assertIsNone(contract['selection']['selectedOperationalCandidateBaseline'])
+        self.assertIn('no_historical_prediction_or_score_in_stage17', contract['exclusions'])
 
     def test_source_snapshot_accepts_additions_but_rejects_required_changes(self):
         registry = inventory.read('data/sources.json')
