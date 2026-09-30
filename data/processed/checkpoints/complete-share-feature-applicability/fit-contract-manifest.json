@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "stage": 20,
+  "phase": "final_prefit_contract_no_fit_or_score",
+  "inputSha256": {
+    "data/processed/checkpoints/complete-share-feature-applicability/feature-inventory.json": "afa6bbb24de98909e505738cbd3fa3134a07db7b51b93002321be6e88dc3d486",
+    "data/processed/checkpoints/complete-share-feature-applicability/design-audit.json": "c5c11b0f3365d97aac04a05090ee0053ba0fe95015f864558316e5570b4b564a",
+    "data/processed/checkpoints/complete-share-feature-applicability/source-contract.json": "e93747a78be5d337e76808a5b1116c217ed2ac0c43c832508e8515cc758ec575",
+    "data/processed/checkpoints/complete-share-feature-applicability/manifest.json": "e723ab6d5bd669755502f755e701bd1e183823711089bffd295c287120e0feb9",
+    "data/processed/checkpoints/model-failure-diagnostics/proposed-experiments.json": "20eed054c793eff66f7b193d9b2c46123b8cc3c174c67c1e5eabbc7379a4c47b"
+  },
+  "generatorSha256": "7b5ca8c1d88e65f3bdc3da8c7c78c197b6b191c2e7afefa45960ed236b367c7a",
+  "outputSha256": {
+    "fit-contract.json": "642cb960eb1624408fa0a07f84190392a3047480bda7d710f325f4b6fd1ec101"
+  }
+}

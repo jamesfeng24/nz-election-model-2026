@@ -7,6 +7,7 @@ from tempfile import TemporaryDirectory
 import unittest
 
 from scripts.checkpoints import complete_share_feature_run as run
+from scripts.checkpoints import complete_share_fit_contract as fit_contract
 from scripts.checkpoints.complete_share_features import (
     _feature, build_feature_inventory, coupled_cell_percent, coupled_row_witness)
 from scripts.checkpoints.complete_share_feature_rank import (
@@ -189,6 +190,43 @@ class CompleteShareFeatureTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Checksum mismatch'):
                 verify_source_files(Path(directory),
                                     {'schemaVersion': 1, 'sources': [selected]})
+
+    def test_prefit_contract_pins_four_restrictions_and_exact_common_samples(self):
+        contract = fit_contract.build()['fit-contract.json']
+        self.assertEqual([item['jointParameters'] for item in contract['restrictions']],
+                         [['kappa'], ['kappa', 'thetaS'], ['kappa', 'thetaV'],
+                          ['kappa', 'thetaS', 'thetaV']])
+        self.assertEqual([(fold['trainingContests'], fold['trainingCandidates'],
+                           fold['evaluationContests'], fold['evaluationCandidates'])
+                          for fold in contract['folds']],
+                         [(63, 423, 64, 431), (127, 854, 44, 312)])
+        self.assertEqual(len(contract['earliestBenchmarkContestIds']), 63)
+        self.assertIsNone(contract['operationalSelection'])
+        for fold in contract['folds']:
+            self.assertEqual(len(fold['trainingCandidateOccurrenceIds']),
+                             fold['trainingCandidates'])
+            self.assertEqual(len(fold['commonEvaluationCandidateOccurrenceIds']),
+                             fold['evaluationCandidates'])
+            self.assertEqual(len(set(fold['trainingCandidateOccurrenceIds'])),
+                             fold['trainingCandidates'])
+            self.assertTrue(set(fold['trainingCandidateOccurrenceIds']).isdisjoint(
+                fold['commonEvaluationCandidateOccurrenceIds']))
+
+    def test_prefit_contract_rejects_changed_evidence_or_failed_gate(self):
+        original_read, original_digest = fit_contract.read, fit_contract.digest
+        try:
+            fit_contract.digest = lambda path: ('changed' if path == fit_contract.INVENTORY
+                                                 else original_digest(path))
+            with self.assertRaisesRegex(ValueError, 'Changed committed'):
+                fit_contract.build()
+            fit_contract.digest = original_digest
+            fit_contract.read = lambda path: ({'allFittingGatesPass': False}
+                                              if path == fit_contract.AUDIT
+                                              else original_read(path))
+            with self.assertRaisesRegex(ValueError, 'coverage or rank gate failed'):
+                fit_contract.build()
+        finally:
+            fit_contract.read, fit_contract.digest = original_read, original_digest
 
 
 if __name__ == '__main__':
