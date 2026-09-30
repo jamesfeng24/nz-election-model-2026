@@ -1,3 +1,13 @@
+# Stage 19 frozen-prediction diagnostic checkpoint — 2026-10-01
+
+The pre-diagnostic inventory and fixed analysis plan were committed/pushed before any new subgroup summaries. The diagnostic implementation now pairs saved Stage18, Stage16 and Stage6 predictions with their frozen controls on exact IDs, verifies pinned input hashes, and writes unsmoothed plots and machine-readable summaries. Stage8–10 have only aggregate saved scores, Stage11 has a different matched-ballot outcome, and Stage15 has no point predictions; none is reconstructed or pooled into the point-share diagnostics.
+
+The reproducible exploratory outputs contain 1,719 Stage18 candidate-comparison rows, 2,048 Stage16 party-seat-comparison rows across separately labelled party-input modes, and 256 Stage6 party-seat-comparison rows. Seven focused tests and deterministic output reproduction pass. These are diagnostics only: no source acquisition, model refit, prior prediction change or operational selection has occurred.
+
+**Exact next action:** interpret the fixed summaries, freeze at most two proposed future experiment families, update findings and roadmap, then run final validation and open an unmerged PR. Do not implement or fit those experiments in Stage19.
+
+---
+
 # Stage 17 candidate-baseline and complete-forecast design — final handoff, 2026-09-30
 
 PR #23 was verified **MERGED** as `47c782f37df883f4143ff6cc95086c6d37407e94`, with reviewed head `2251f6b113cebf592c423672f8f19e72d57033c0` in fetched main. The old Stage 16 checkout was clean. `stage/17-candidate-baseline-complete-forecast-design` starts directly from merged main; no earlier artifact was rewritten. The [Stage 17 plan](docs/candidate-baseline-design-plan.md) limits work to a preserved-source inventory, concrete complete-share specification and synthetic accounting tests. First read-only boundary audit found 14 general and three Māori targets with certified identity membership, one officially unchanged but technically uncertain seat in each scope, and 49 general/three Māori changed targets. The preserved voting-place candidate tables include out-of-electorate places and aggregate special-vote rows; they do not identify residential votes on target boundaries.
