@@ -65,6 +65,35 @@ class ModelFailureDiagnosticTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Duplicate'):
             diagnostics.stage16_rows(self.pinned, analysis, duplicate)
 
+    def test_stage16_target_outcome_changes_errors_not_saved_predictions(self):
+        analysis = inventory.read(inventory.PATHS['stage16Analysis'])
+        inputs = inventory.read(inventory.PATHS['stage16Inputs'])
+        original = diagnostics.stage16_rows(self.pinned, analysis, inputs)
+        changed = deepcopy(inputs)
+        next(r for r in changed['records'] if r['id'] == original[0]['id'])['c1'] += .001
+        updated = diagnostics.stage16_rows(self.pinned, analysis, changed)
+        self.assertEqual([(r['id'], r['modelShare'], r['controlShare']) for r in original],
+                         [(r['id'], r['modelShare'], r['controlShare']) for r in updated])
+        self.assertNotEqual(original[0]['modelErrorPP'], updated[0]['modelErrorPP'])
+
+    def test_stage6_target_outcome_changes_errors_not_saved_predictions(self):
+        backtests = inventory.read(inventory.PATHS['stage6Backtests'])
+        records = inventory.read(inventory.PATHS['stage6Records'])
+        original = diagnostics.stage6_rows(self.pinned, backtests, records)
+        changed_backtests = deepcopy(backtests)
+        changed_records = deepcopy(records)
+        target = original[0]['id']
+        next(r for r in changed_records['records'] if r['id'] == target)[
+            'targetCandidateShare'] += .001
+        for group in changed_backtests['records']:
+            for point in group['predictions']:
+                if point['recordId'] == target:
+                    point['actual'] += .001
+        updated = diagnostics.stage6_rows(self.pinned, changed_backtests, changed_records)
+        self.assertEqual([(r['id'], r['modelShare'], r['controlShare']) for r in original],
+                         [(r['id'], r['modelShare'], r['controlShare']) for r in updated])
+        self.assertNotEqual(original[0]['modelErrorPP'], updated[0]['modelErrorPP'])
+
     def test_stage6_and_stage11_units_remain_distinct(self):
         stage6 = diagnostics.stage6_rows(
             self.pinned, inventory.read(inventory.PATHS['stage6Backtests']),
