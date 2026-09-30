@@ -5,6 +5,7 @@ from hashlib import sha256
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 
@@ -81,6 +82,10 @@ class CandidateShareTests(unittest.TestCase):
         low = model.fit_floor([low_case] * 20)
         self.assertEqual(low['boundary'], 'lower')
         self.assertEqual(low['kappa'], 0.0001)
+        with patch.object(model, 'shgo', return_value=type('Failed', (), {
+                'success': False, 'fun': float('nan')})()):
+            with self.assertRaisesRegex(ValueError, 'did not converge'):
+                model.fit_floor([case] * 20)
 
     def test_transform_requires_complete_joint_point(self):
         seat = {'parties': [{'partyKey': 'a'}, {'partyKey': 'b'}]}
@@ -96,6 +101,10 @@ class CandidateShareTests(unittest.TestCase):
         bad[1]['predictions']['additive']['point'] = 0.5
         self.assertEqual(model.transformed_party_vector(seat, bad, 'additive')[1],
                          'party_vector_not_jointly_normalized')
+        wide = deepcopy(rows)
+        wide[0]['predictions']['additive']['upper'] = 0.61
+        self.assertEqual(model.transformed_party_vector(seat, wide, 'additive')[1],
+                         'nondegenerate_or_invalid_party_input')
 
     def test_target_outcomes_and_identity_do_not_change_holdout_construction(self):
         base_inventory = inventory.build_inventory(self.elections, self.frame)

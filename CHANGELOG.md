@@ -201,3 +201,8 @@ Preserved recovered official split CSV; added immutable import/checksum-pinned f
 ## 2026-09-26 — Complete candidate-baseline design checkpoint
 
 Added a deterministic 213-contest input-availability inventory, proposed interval-valued ballot-accounting specification, machine-readable contracts and synthetic accounting tests. No source acquisition, model fit, historical prediction, operational selection or prior numerical output changed.
+# Unreleased — Stage18 conditional candidate-share diagnostics — 2026-09-30
+
+- Added pre-fit election-local party-group mapping inventory and 420-record/raw-byte source contract on the fixed 213-contest frame.
+- Fitted one common support floor chronologically, constructed complete candidate-share vectors, then separately evaluated identical-sample uniform and restricted zero-floor comparisons.
+- Recorded 171 constructed held general contests, 20 ambiguous held 2023 abstentions, 21 Māori coverage-only contests and cancelled Port Waikato. Stage5 point sensitivities abstain for incomplete full-party vectors; operational selection remains null. Preserved all earlier sources and numerical outputs.
