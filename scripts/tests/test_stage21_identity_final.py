@@ -86,6 +86,11 @@ class IdentityFinalTests(unittest.TestCase):
         with patch.object(final, 'digest', return_value='0' * 64):
             with self.assertRaisesRegex(ValueError, 'Changed pilot raw source'):
                 final.source_contract(self.registry)
+        metadata_change = copy.deepcopy(self.registry)
+        next(s for s in metadata_change['sources']
+             if s['id'] == final.SOURCE_IDS[0])['organisation'] = 'changed'
+        pinned = final.read('data/processed/checkpoints/stage21-identity-pilot/final-source-contract.json')
+        self.assertNotEqual(final.source_contract(metadata_change), pinned['sourceRecords'])
 
 
 if __name__ == '__main__':

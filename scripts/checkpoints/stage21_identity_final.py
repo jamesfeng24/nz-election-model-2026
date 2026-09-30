@@ -4,7 +4,7 @@ import argparse
 from collections import Counter, defaultdict
 from hashlib import sha256
 
-from scripts.checkpoints.stage21_identity_pilot import DEST, digest, encode, read
+from scripts.checkpoints.stage21_identity_pilot import DEST, ROOT, digest, encode, read
 
 
 CLAIMS = 'data/processed/checkpoints/stage21-identity-pilot/claim-ledger.json'
@@ -43,7 +43,7 @@ def source_contract(registry):
         if digest(record['rawPath']) != record['sha256']:
             raise ValueError(f'Changed pilot raw source: {source_id}')
         passage = CAREER_PASSAGES[source_id]['exactPassage']
-        if passage not in (DEST.parents[3] / record['rawPath']).read_text():
+        if passage not in (ROOT / record['rawPath']).read_text():
             raise ValueError(f'Pilot evidence passage not present: {source_id}')
         records.append(record)
     return records
@@ -106,6 +106,7 @@ def adjudicate(claims, plan, preserved, searches, winners, sources):
                 'availableBeforeTargetNominationClose': 'unknown',
                 'careerHistoryCompleteness': 'unknown',
                 'scopeLimit': 'Historical service only; not an exact source-to-target nomination bridge.',
+                'supportsSelectedOccurrenceRole': 'source',
             })
         results.append({
             'position': position, 'caseId': case_id,
@@ -114,7 +115,9 @@ def adjudicate(claims, plan, preserved, searches, winners, sources):
             'transition': case['transition'], 'scope': case['scope'],
             'partyKey': case['partyKey'], 'ambiguityType': case['ambiguityType'],
             'personExistence': {'source': case['existingEvidence']['sourcePersonExistence'],
-                                'target': case['existingEvidence']['targetPersonExistence']},
+                                'target': case['existingEvidence']['targetPersonExistence'],
+                                'newPassSourcePerson': 'official_party_biography' if career else None,
+                                'newPassTargetPerson': None},
             'occurrenceLink': {
                 'sourceInherited': review['sourceStage8']['confidence'],
                 'targetInherited': review['targetStage8']['confidence'],
@@ -171,6 +174,8 @@ def coverage(rows, claims, searches):
         'differentPersonNewRelations': 0,
         'unresolvedRelations': sum(r['relationship'] == 'unresolved' for r in rows),
         'careerClaimsFromNewResources': sum(len(r['careerClaims']) for r in rows),
+        'newPersonExistenceClaims': sum(bool(r['personExistence']['newPassSourcePerson']) for r in rows),
+        'newOccurrenceToPersonLinks': 0,
         'collectionQueries': len(searches['collectionQueries']),
         'targetedQueries': sum(map(len, searches['caseQueries'].values())),
         'newUniqueResources': len(searches['resources']),
