@@ -1,0 +1,1176 @@
+{
+  "schemaVersion": 1,
+  "stage": 21,
+  "phase": "uniform_selected_case_preserved_review",
+  "reviewedCases": 24,
+  "records": [
+    {
+      "caseId": "nz-general-2008-electorate-54-candidate-07->nz-general-2011-electorate-54-candidate-07",
+      "sourceOfficialCandidatureIds": [
+        "ec-2008-e9-csv-e9_part9_1.csv",
+        "ec-2008-e9-csv-e9_part9_2.csv",
+        "ec-2008-e9-csv-e9_part4.csv",
+        "ec-2008-e9-csv-e9_part8_cand_54.csv",
+        "ec-2008-e9-csv-e9_part6.csv",
+        "ec-2008-e9-csv-e9_part5.csv",
+        "ec-2008-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2011-e9-csv-e9_part9_1.csv",
+        "ec-2011-e9-csv-e9_part9_2.csv",
+        "ec-2011-e9-csv-e9_part4.csv",
+        "ec-2011-e9-csv-e9_part8_cand_54.csv",
+        "ec-2011-e9-csv-e9_part6.csv",
+        "ec-2011-e9-csv-e9_part5.csv",
+        "ec-2011-e9-csv-e9_part1.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [
+        "parliament-former-profile-tisch-lindsay-2026-09-23"
+      ],
+      "preservedProfileServiceRows": {
+        "parliament-former-profile-tisch-lindsay-2026-09-23": [
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Waikato",
+            "party": "National Party",
+            "startDate": "2008-11-08",
+            "endDate": "2017-09-23"
+          },
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Piako",
+            "party": "National Party",
+            "startDate": "2002-07-27",
+            "endDate": "2008-11-08"
+          },
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Karapiro",
+            "party": "National Party",
+            "startDate": "1999-11-27",
+            "endDate": "2002-07-27"
+          }
+        ]
+      },
+      "priorStage10Class": "retrospective_or_ambiguous_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2008-electorate-09-candidate-02->nz-general-2011-electorate-09-candidate-01",
+      "sourceOfficialCandidatureIds": [
+        "ec-2008-e9-csv-e9_part9_1.csv",
+        "ec-2008-e9-csv-e9_part9_2.csv",
+        "ec-2008-e9-csv-e9_part4.csv",
+        "ec-2008-e9-csv-e9_part8_cand_9.csv",
+        "ec-2008-e9-csv-e9_part6.csv",
+        "ec-2008-e9-csv-e9_part5.csv",
+        "ec-2008-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2011-e9-csv-e9_part9_1.csv",
+        "ec-2011-e9-csv-e9_part9_2.csv",
+        "ec-2011-e9-csv-e9_part4.csv",
+        "ec-2011-e9-csv-e9_part8_cand_9.csv",
+        "ec-2011-e9-csv-e9_part6.csv",
+        "ec-2011-e9-csv-e9_part5.csv",
+        "ec-2011-e9-csv-e9_part1.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "confirmed",
+        "method": "official_profile_observed_winner",
+        "anchorOccurrenceIds": [
+          "nz-general-2008-electorate-09-candidate-02",
+          "nz-general-2011-electorate-09-candidate-01",
+          "nz-general-2014-electorate-09-candidate-02",
+          "nz-general-2017-electorate-09-candidate-01"
+        ]
+      },
+      "targetStage8": {
+        "confidence": "confirmed",
+        "method": "official_profile_observed_winner",
+        "anchorOccurrenceIds": [
+          "nz-general-2008-electorate-09-candidate-02",
+          "nz-general-2011-electorate-09-candidate-01",
+          "nz-general-2014-electorate-09-candidate-02",
+          "nz-general-2017-electorate-09-candidate-01"
+        ]
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [
+        "parliament-former-profile-curran-clare-2026-09-23"
+      ],
+      "preservedProfileServiceRows": {
+        "parliament-former-profile-curran-clare-2026-09-23": [
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Dunedin South",
+            "party": "Labour Party",
+            "startDate": "2008-11-08",
+            "endDate": "2020-10-17"
+          }
+        ]
+      },
+      "priorStage10Class": "supported_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2008-electorate-02-candidate-02->nz-general-2011-electorate-02-candidate-01",
+      "sourceOfficialCandidatureIds": [
+        "ec-2008-e9-csv-e9_part9_1.csv",
+        "ec-2008-e9-csv-e9_part9_2.csv",
+        "ec-2008-e9-csv-e9_part4.csv",
+        "ec-2008-e9-csv-e9_part8_cand_2.csv",
+        "ec-2008-e9-csv-e9_part6.csv",
+        "ec-2008-e9-csv-e9_part5.csv",
+        "ec-2008-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2011-e9-csv-e9_part9_1.csv",
+        "ec-2011-e9-csv-e9_part9_2.csv",
+        "ec-2011-e9-csv-e9_part4.csv",
+        "ec-2011-e9-csv-e9_part8_cand_2.csv",
+        "ec-2011-e9-csv-e9_part6.csv",
+        "ec-2011-e9-csv-e9_part5.csv",
+        "ec-2011-e9-csv-e9_part1.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": "unresolved",
+      "stage13PrimaryTargetOccurrence": "confirmed",
+      "stage13PrimaryRelation": "unresolved",
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "retrospective_or_ambiguous_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2008-electorate-32-candidate-09->nz-general-2011-electorate-32-candidate-07",
+      "sourceOfficialCandidatureIds": [
+        "ec-2008-e9-csv-e9_part9_1.csv",
+        "ec-2008-e9-csv-e9_part9_2.csv",
+        "ec-2008-e9-csv-e9_part4.csv",
+        "ec-2008-e9-csv-e9_part8_cand_32.csv",
+        "ec-2008-e9-csv-e9_part6.csv",
+        "ec-2008-e9-csv-e9_part5.csv",
+        "ec-2008-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2011-e9-csv-e9_part9_1.csv",
+        "ec-2011-e9-csv-e9_part9_2.csv",
+        "ec-2011-e9-csv-e9_part4.csv",
+        "ec-2011-e9-csv-e9_part8_cand_32.csv",
+        "ec-2011-e9-csv-e9_part6.csv",
+        "ec-2011-e9-csv-e9_part5.csv",
+        "ec-2011-e9-csv-e9_part1.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "The lexical name variant is an alias lead only; no exact-occurrence bridge is established by the string.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2008-electorate-54-candidate-03->nz-general-2011-electorate-54-candidate-03",
+      "sourceOfficialCandidatureIds": [
+        "ec-2008-e9-csv-e9_part9_1.csv",
+        "ec-2008-e9-csv-e9_part9_2.csv",
+        "ec-2008-e9-csv-e9_part4.csv",
+        "ec-2008-e9-csv-e9_part8_cand_54.csv",
+        "ec-2008-e9-csv-e9_part6.csv",
+        "ec-2008-e9-csv-e9_part5.csv",
+        "ec-2008-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2011-e9-csv-e9_part9_1.csv",
+        "ec-2011-e9-csv-e9_part9_2.csv",
+        "ec-2011-e9-csv-e9_part4.csv",
+        "ec-2011-e9-csv-e9_part8_cand_54.csv",
+        "ec-2011-e9-csv-e9_part6.csv",
+        "ec-2011-e9-csv-e9_part5.csv",
+        "ec-2011-e9-csv-e9_part1.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "The lexical name variant is an alias lead only; no exact-occurrence bridge is established by the string.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2008-electorate-30-candidate-03->nz-general-2011-electorate-30-candidate-06",
+      "sourceOfficialCandidatureIds": [
+        "ec-2008-e9-csv-e9_part9_1.csv",
+        "ec-2008-e9-csv-e9_part9_2.csv",
+        "ec-2008-e9-csv-e9_part4.csv",
+        "ec-2008-e9-csv-e9_part8_cand_30.csv",
+        "ec-2008-e9-csv-e9_part6.csv",
+        "ec-2008-e9-csv-e9_part5.csv",
+        "ec-2008-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2011-e9-csv-e9_part9_1.csv",
+        "ec-2011-e9-csv-e9_part9_2.csv",
+        "ec-2011-e9-csv-e9_part4.csv",
+        "ec-2011-e9-csv-e9_part8_cand_30.csv",
+        "ec-2011-e9-csv-e9_part6.csv",
+        "ec-2011-e9-csv-e9_part5.csv",
+        "ec-2011-e9-csv-e9_part1.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2008-electorate-01-candidate-12->nz-general-2011-electorate-01-candidate-06",
+      "sourceOfficialCandidatureIds": [
+        "ec-2008-e9-csv-e9_part9_1.csv",
+        "ec-2008-e9-csv-e9_part9_2.csv",
+        "ec-2008-e9-csv-e9_part4.csv",
+        "ec-2008-e9-csv-e9_part8_cand_1.csv",
+        "ec-2008-e9-csv-e9_part6.csv",
+        "ec-2008-e9-csv-e9_part5.csv",
+        "ec-2008-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2011-e9-csv-e9_part9_1.csv",
+        "ec-2011-e9-csv-e9_part9_2.csv",
+        "ec-2011-e9-csv-e9_part4.csv",
+        "ec-2011-e9-csv-e9_part8_cand_1.csv",
+        "ec-2011-e9-csv-e9_part6.csv",
+        "ec-2011-e9-csv-e9_part5.csv",
+        "ec-2011-e9-csv-e9_part1.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2008-electorate-65-candidate-01->nz-general-2011-electorate-65-candidate-03",
+      "sourceOfficialCandidatureIds": [
+        "ec-2008-e9-csv-e9_part8_cand_65.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2011-e9-csv-e9_part8_cand_65.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": "unresolved",
+      "stage13PrimaryTargetOccurrence": "confirmed",
+      "stage13PrimaryRelation": "unresolved",
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "no_prior_event_join",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2014-electorate-40-candidate-02->nz-general-2017-electorate-40-candidate-02",
+      "sourceOfficialCandidatureIds": [
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part8_cand_40.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-candidate-votes-by-voting-place-40.csv",
+        "ec-2017-statistics-csv-overall-results-summary.csv",
+        "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "confirmed",
+        "method": "official_profile_observed_winner",
+        "anchorOccurrenceIds": [
+          "nz-general-2008-electorate-39-candidate-02",
+          "nz-general-2011-electorate-39-candidate-02",
+          "nz-general-2014-electorate-40-candidate-02",
+          "nz-general-2017-electorate-40-candidate-02",
+          "nz-general-2020-electorate-38-candidate-02",
+          "nz-general-2023-electorate-38-candidate-01"
+        ]
+      },
+      "targetStage8": {
+        "confidence": "confirmed",
+        "method": "official_profile_observed_winner",
+        "anchorOccurrenceIds": [
+          "nz-general-2008-electorate-39-candidate-02",
+          "nz-general-2011-electorate-39-candidate-02",
+          "nz-general-2014-electorate-40-candidate-02",
+          "nz-general-2017-electorate-40-candidate-02",
+          "nz-general-2020-electorate-38-candidate-02",
+          "nz-general-2023-electorate-38-candidate-01"
+        ]
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [
+        "parliament-former-profile-collins-judith-2026-09-23"
+      ],
+      "preservedProfileServiceRows": {
+        "parliament-former-profile-collins-judith-2026-09-23": [
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Papakura",
+            "party": "National Party",
+            "startDate": "2008-11-08",
+            "endDate": "2026-05-14"
+          },
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Clevedon",
+            "party": "National Party",
+            "startDate": "2002-07-27",
+            "endDate": "2008-11-08"
+          }
+        ]
+      },
+      "priorStage10Class": "supported_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2014-electorate-12-candidate-10->nz-general-2017-electorate-12-candidate-06",
+      "sourceOfficialCandidatureIds": [
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part8_cand_12.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-candidate-votes-by-voting-place-12.csv",
+        "ec-2017-statistics-csv-overall-results-summary.csv",
+        "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "profile_anchored_exact_chain_projection",
+        "anchorOccurrenceIds": [
+          "nz-general-2023-electorate-11-candidate-04"
+        ]
+      },
+      "targetStage8": {
+        "confidence": "probable",
+        "method": "profile_anchored_exact_chain_projection",
+        "anchorOccurrenceIds": [
+          "nz-general-2023-electorate-11-candidate-04"
+        ]
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [
+        "parliament-current-profile-seymour-david-2026-09-23"
+      ],
+      "preservedProfileServiceRows": {
+        "parliament-current-profile-seymour-david-2026-09-23": [
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Epsom",
+            "party": "ACT Party",
+            "startDate": "2014-09-20",
+            "endDate": null
+          }
+        ]
+      },
+      "priorStage10Class": "retrospective_or_ambiguous_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2014-electorate-17-candidate-01->nz-general-2017-electorate-17-candidate-03",
+      "sourceOfficialCandidatureIds": [
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part8_cand_17.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-candidate-votes-by-voting-place-17.csv",
+        "ec-2017-statistics-csv-overall-results-summary.csv",
+        "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": "unresolved",
+      "stage13PrimaryTargetOccurrence": "unresolved",
+      "stage13PrimaryRelation": "unresolved",
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "retrospective_or_ambiguous_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2014-electorate-64-candidate-06->nz-general-2017-electorate-64-candidate-06",
+      "sourceOfficialCandidatureIds": [
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part8_cand_64.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-candidate-votes-by-voting-place-64.csv",
+        "ec-2017-statistics-csv-overall-results-summary.csv",
+        "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "The lexical name variant is an alias lead only; no exact-occurrence bridge is established by the string.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2014-electorate-10-candidate-07->nz-general-2017-electorate-10-candidate-06",
+      "sourceOfficialCandidatureIds": [
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part8_cand_10.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-candidate-votes-by-voting-place-10.csv",
+        "ec-2017-statistics-csv-overall-results-summary.csv",
+        "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [
+        "parliament-former-profile-tolley-anne-2026-09-23"
+      ],
+      "preservedProfileServiceRows": {
+        "parliament-former-profile-tolley-anne-2026-09-23": [
+          {
+            "serviceKind": "electorate",
+            "electorateName": "East Coast",
+            "party": "National Party",
+            "startDate": "2005-09-17",
+            "endDate": "2020-10-17"
+          },
+          {
+            "serviceKind": "list",
+            "electorateName": null,
+            "party": "National Party",
+            "startDate": "1999-11-27",
+            "endDate": "2002-07-27"
+          }
+        ]
+      },
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "The lexical name variant is an alias lead only; no exact-occurrence bridge is established by the string.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2014-electorate-46-candidate-04->nz-general-2017-electorate-46-candidate-02",
+      "sourceOfficialCandidatureIds": [
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part8_cand_46.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-candidate-votes-by-voting-place-46.csv",
+        "ec-2017-statistics-csv-overall-results-summary.csv",
+        "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "confirmed",
+        "method": "official_profile_observed_winner",
+        "anchorOccurrenceIds": [
+          "nz-general-2008-electorate-45-candidate-04",
+          "nz-general-2011-electorate-45-candidate-02",
+          "nz-general-2014-electorate-46-candidate-04"
+        ]
+      },
+      "targetStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [
+        "parliament-former-profile-king-annette-2026-09-23"
+      ],
+      "preservedProfileServiceRows": {
+        "parliament-former-profile-king-annette-2026-09-23": [
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Rongotai",
+            "party": "Labour Party",
+            "startDate": "1996-10-12",
+            "endDate": "2017-09-23"
+          },
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Miramar",
+            "party": "Labour Party",
+            "startDate": "1993-11-03",
+            "endDate": "1996-10-12"
+          },
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Horowhenua",
+            "party": "Labour Party",
+            "startDate": "1984-07-14",
+            "endDate": "1990-10-27"
+          }
+        ]
+      },
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2014-electorate-59-candidate-03->nz-general-2017-electorate-59-candidate-07",
+      "sourceOfficialCandidatureIds": [
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part8_cand_59.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part1.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-candidate-votes-by-voting-place-59.csv",
+        "ec-2017-statistics-csv-overall-results-summary.csv",
+        "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2014-electorate-70-candidate-02->nz-general-2017-electorate-70-candidate-02",
+      "sourceOfficialCandidatureIds": [
+        "ec-2014-e9-csv-e9_part8_cand_70.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2017-statistics-csv-candidate-votes-by-voting-place-70.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": "unresolved",
+      "stage13PrimaryTargetOccurrence": "unresolved",
+      "stage13PrimaryRelation": "unresolved",
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2020-electorate-43-candidate-05->nz-general-2023-electorate-43-candidate-05",
+      "sourceOfficialCandidatureIds": [
+        "ec-2020-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-candidate-votes-by-voting-place-43.csv",
+        "ec-2020-statistics-csv-overall-results-summary.csv",
+        "ec-2020-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2020-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2020-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-43.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "retrospective_or_ambiguous_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2020-electorate-08-candidate-08->nz-general-2023-electorate-08-candidate-11",
+      "sourceOfficialCandidatureIds": [
+        "ec-2020-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-candidate-votes-by-voting-place-8.csv",
+        "ec-2020-statistics-csv-overall-results-summary.csv",
+        "ec-2020-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2020-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2020-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-8.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "retrospective_or_ambiguous_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2020-electorate-32-candidate-09->nz-general-2023-electorate-32-candidate-09",
+      "sourceOfficialCandidatureIds": [
+        "ec-2020-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-candidate-votes-by-voting-place-32.csv",
+        "ec-2020-statistics-csv-overall-results-summary.csv",
+        "ec-2020-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2020-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2020-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-32.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "probable",
+        "method": "exact_full_name_party_seat_chain",
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [
+        "parliament-current-profile-prime-willow-jean-2026-09-23"
+      ],
+      "preservedProfileServiceRows": {
+        "parliament-current-profile-prime-willow-jean-2026-09-23": [
+          {
+            "serviceKind": "list",
+            "electorateName": null,
+            "party": "Labour Party",
+            "startDate": "2023-10-14",
+            "endDate": null
+          },
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Northland",
+            "party": "Labour Party",
+            "startDate": "2020-10-17",
+            "endDate": "2023-10-14"
+          },
+          {
+            "serviceKind": "list",
+            "electorateName": null,
+            "party": "Labour Party",
+            "startDate": "2017-09-23",
+            "endDate": "2020-10-17"
+          }
+        ]
+      },
+      "priorStage10Class": "retrospective_or_ambiguous_continuation",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Matching election-local labels or a prior winner/profile anchor do not independently bridge this target candidacy to the source person.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2020-electorate-54-candidate-02->nz-general-2023-electorate-54-candidate-03",
+      "sourceOfficialCandidatureIds": [
+        "ec-2020-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-candidate-votes-by-voting-place-54.csv",
+        "ec-2020-statistics-csv-overall-results-summary.csv",
+        "ec-2020-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2020-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2020-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-54.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "confirmed",
+        "method": "official_profile_observed_winner",
+        "anchorOccurrenceIds": [
+          "nz-general-2020-electorate-54-candidate-02"
+        ]
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "The lexical name variant is an alias lead only; no exact-occurrence bridge is established by the string.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2020-electorate-63-candidate-07->nz-general-2023-electorate-63-candidate-03",
+      "sourceOfficialCandidatureIds": [
+        "ec-2020-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-candidate-votes-by-voting-place-63.csv",
+        "ec-2020-statistics-csv-overall-results-summary.csv",
+        "ec-2020-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2020-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2020-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-63.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "confirmed",
+        "method": "official_profile_observed_winner",
+        "anchorOccurrenceIds": [
+          "nz-general-2023-electorate-63-candidate-03"
+        ]
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [
+        "parliament-current-profile-mitchell-mark-2026-09-23"
+      ],
+      "preservedProfileServiceRows": {
+        "parliament-current-profile-mitchell-mark-2026-09-23": [
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Whangaparāoa",
+            "party": "National Party",
+            "startDate": "2020-10-17",
+            "endDate": null
+          },
+          {
+            "serviceKind": "electorate",
+            "electorateName": "Rodney",
+            "party": "National Party",
+            "startDate": "2011-11-26",
+            "endDate": "2020-10-17"
+          }
+        ]
+      },
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "The lexical name variant is an alias lead only; no exact-occurrence bridge is established by the string.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2020-electorate-20-candidate-05->nz-general-2023-electorate-20-candidate-07",
+      "sourceOfficialCandidatureIds": [
+        "ec-2020-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-candidate-votes-by-voting-place-20.csv",
+        "ec-2020-statistics-csv-overall-results-summary.csv",
+        "ec-2020-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2020-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2020-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-20.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2020-electorate-33-candidate-08->nz-general-2023-electorate-33-candidate-06",
+      "sourceOfficialCandidatureIds": [
+        "ec-2020-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-candidate-votes-by-voting-place-33.csv",
+        "ec-2020-statistics-csv-overall-results-summary.csv",
+        "ec-2020-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2020-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2020-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2020-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-33.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    },
+    {
+      "caseId": "nz-general-2020-electorate-66-candidate-04->nz-general-2023-electorate-66-candidate-02",
+      "sourceOfficialCandidatureIds": [
+        "ec-2020-statistics-csv-candidate-votes-by-voting-place-66.csv"
+      ],
+      "targetOfficialCandidatureIds": [
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-66.csv"
+      ],
+      "sourceStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "targetStage8": {
+        "confidence": "unresolved",
+        "method": null,
+        "anchorOccurrenceIds": []
+      },
+      "stage10OccurrenceRoutes": [],
+      "stage13PrimarySourceOccurrence": null,
+      "stage13PrimaryTargetOccurrence": null,
+      "stage13PrimaryRelation": null,
+      "preservedProfileIds": [],
+      "preservedProfileServiceRows": {},
+      "priorStage10Class": "unresolved_identity",
+      "relationshipFinding": "unresolved_explicit_cross_occurrence_bridge",
+      "why": "Different election-local labels do not establish that two distinct people stood; an explicit bridge or independently corroborated distinct-person evidence is needed.",
+      "careerFinding": "retain_prior_dated_service_if_supported;_otherwise_unknown;_no_complete_career_inference",
+      "timing": "official_election_fact_precedes_target;_profile_or_prior_review_retrieval_retrospective;_historical_publication_by_target_cutoff_unverified"
+    }
+  ],
+  "interpretation": "Preserved official candidature confirms each occurrence; inherited profile/name chains and direct one-occurrence facts do not by themselves bridge exact source and target nominations."
+}

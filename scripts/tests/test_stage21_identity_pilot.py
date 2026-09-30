@@ -4,6 +4,7 @@ from copy import deepcopy
 import unittest
 
 from scripts.checkpoints import stage21_identity_pilot as pilot
+from scripts.checkpoints import stage21_identity_preserved as preserved
 
 
 class IdentityPilotTests(unittest.TestCase):
@@ -78,6 +79,15 @@ class IdentityPilotTests(unittest.TestCase):
         self.assertEqual(searches['newResourceIds'], [])
         self.assertEqual(len(searches['caseQueries']), 24)
         self.assertTrue(all(not entries for entries in searches['caseQueries'].values()))
+
+    def test_preserved_profiles_do_not_promote_pair_relationships(self):
+        review = preserved.build()['preserved-review.json']
+        self.assertEqual(review['reviewedCases'], 24)
+        self.assertEqual(len(review['records']), 24)
+        self.assertTrue(any(r['preservedProfileIds'] for r in review['records']))
+        self.assertTrue(all(r['relationshipFinding'] ==
+                            'unresolved_explicit_cross_occurrence_bridge'
+                            for r in review['records']))
 
 
 if __name__ == '__main__':

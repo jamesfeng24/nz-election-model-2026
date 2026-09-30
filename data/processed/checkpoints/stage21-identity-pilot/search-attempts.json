@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "stage": 21,
+  "phase": "bounded_acquisition_in_progress",
+  "collectionQueries": [
+    {
+      "queryNumber": 1,
+      "query": "site:vote.nz election candidate lists 2008 2011 electorate archived nominations",
+      "queriedAtApproxUTC": "2026-09-30T20:59:00Z",
+      "resultAssessment": "Official election and electorate profile leads repeat candidate/result records; no explicit selected cross-election relationship bridge. Snippets are not confirmation.",
+      "leadUrls": ["https://www3.parliament.nz/en/mps-and-electorates/historical-electorate-profiles/"],
+      "newResourceIds": []
+    },
+    {
+      "queryNumber": 2,
+      "query": "site:elections.nz 2014 2017 electorate candidate nomination lists archive",
+      "queriedAtApproxUTC": "2026-09-30T20:59:00Z",
+      "resultAssessment": "Official 2017 candidature listing was found; it establishes election-local nominations only and does not connect selected source and target occurrences.",
+      "leadUrls": ["https://elections.nz/media-and-news/2017/party-and-candidate-lists-for-2017-election"],
+      "newResourceIds": []
+    },
+    {
+      "queryNumber": 3,
+      "query": "site:parliament.nz former members electorates historical candidacies profiles",
+      "queriedAtApproxUTC": "2026-09-30T20:59:00Z",
+      "resultAssessment": "Former-member index and archived biography leads were found; profiles may identify service but a name/index entry alone cannot bridge two exact nominations. Relevant profiles are already preserved in Stage9/13.",
+      "leadUrls": ["https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/"],
+      "newResourceIds": []
+    },
+    {
+      "queryNumber": 4,
+      "query": "site:greens.org.nz archived candidate profiles electorate 2008 2011 2014 2017",
+      "queriedAtApproxUTC": "2026-09-30T20:59:00Z",
+      "resultAssessment": "No retrieved collection document explicitly bridging a selected pair was identified in this batch; do not infer a relation from an index or result snippet.",
+      "leadUrls": [],
+      "newResourceIds": []
+    }
+  ],
+  "caseQueries": {},
+  "resources": [],
+  "knownTimestampLimitation": "Search endpoint did not return exact per-query timestamps; the UTC time is the recorded batch minute, not a fabricated precise instant."
+}
