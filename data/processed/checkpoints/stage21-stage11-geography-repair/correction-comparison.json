@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "originalCommonCandidateCount": 803,
+  "newlyAdmittedCandidateCount": 33,
+  "correctedFullCandidateCount": 836,
+  "originalCommonScores": [
+    {
+      "targetYear": 2011,
+      "n": 247,
+      "local": {
+        "n": 247,
+        "maeLowerPP": 2.243786145459814,
+        "maeUpperPP": 2.2630692004158632,
+        "rmseLowerPP": 3.8879299332252306,
+        "rmseUpperPP": 3.8991503650384662,
+        "biasLowerPP": 0.013481190094105972,
+        "biasUpperPP": 0.0328340920162417
+      },
+      "pooled": {
+        "n": 247,
+        "maeLowerPP": 3.6589019566812224,
+        "maeUpperPP": 3.676806942023355,
+        "rmseLowerPP": 5.646311640852726,
+        "rmseUpperPP": 5.658559493971214,
+        "biasLowerPP": -0.5379565226153593,
+        "biasUpperPP": -0.5200374975477504
+      },
+      "partyOnly": {
+        "n": 247,
+        "maeLowerPP": 3.855386423188569,
+        "maeUpperPP": 3.8650666655807684,
+        "rmseLowerPP": 6.47572090348096,
+        "rmseUpperPP": 6.4815164925944035,
+        "biasLowerPP": -0.43815901044095695,
+        "biasUpperPP": -0.4284787680487575
+      }
+    },
+    {
+      "targetYear": 2017,
+      "n": 285,
+      "local": {
+        "n": 285,
+        "maeLowerPP": 2.4230241293681694,
+        "maeUpperPP": 2.4424543612918828,
+        "rmseLowerPP": 4.339578962294712,
+        "rmseUpperPP": 4.350466246227843,
+        "biasLowerPP": 0.4960135944434867,
+        "biasUpperPP": 0.5154768766423554
+      },
+      "pooled": {
+        "n": 285,
+        "maeLowerPP": 3.8535223333065205,
+        "maeUpperPP": 3.871265764210006,
+        "rmseLowerPP": 5.848042385527937,
+        "rmseUpperPP": 5.86026608192041,
+        "biasLowerPP": -0.24382800528130183,
+        "biasUpperPP": -0.22606944294475542
+      },
+      "partyOnly": {
+        "n": 285,
+        "maeLowerPP": 2.9426391138656416,
+        "maeUpperPP": 2.9523514556514128,
+        "rmseLowerPP": 5.064348203715853,
+        "rmseUpperPP": 5.070002882220891,
+        "biasLowerPP": 0.32289287619546136,
+        "biasUpperPP": 0.33262017491325546
+      }
+    },
+    {
+      "targetYear": 2023,
+      "n": 271,
+      "local": {
+        "n": 271,
+        "maeLowerPP": 3.150701899890869,
+        "maeUpperPP": 3.170273962503772,
+        "rmseLowerPP": 5.454381973110377,
+        "rmseUpperPP": 5.465740199708274,
+        "biasLowerPP": 0.11533636182187716,
+        "biasUpperPP": 0.13490842443478032
+      },
+      "pooled": {
+        "n": 271,
+        "maeLowerPP": 4.0196686156770385,
+        "maeUpperPP": 4.038014377674309,
+        "rmseLowerPP": 7.046157030048123,
+        "rmseUpperPP": 7.0568556237722815,
+        "biasLowerPP": -0.43136383799659644,
+        "biasUpperPP": -0.41299899525660677
+      },
+      "partyOnly": {
+        "n": 271,
+        "maeLowerPP": 4.64797025517946,
+        "maeUpperPP": 4.657759125655951,
+        "rmseLowerPP": 6.5677063569541785,
+        "rmseUpperPP": 6.574642514438924,
+        "biasLowerPP": -1.1034658384481295,
+        "biasUpperPP": -1.093676967971639
+      }
+    }
+  ],
+  "newAdmissionScores": [
+    {
+      "targetYear": 2011,
+      "n": 33,
+      "local": {
+        "n": 33,
+        "maeLowerPP": 2.5295486971478858,
+        "maeUpperPP": 2.5487202796589594,
+        "rmseLowerPP": 4.260958878425801,
+        "rmseUpperPP": 4.272498960260521,
+        "biasLowerPP": 0.08532470504367516,
+        "biasUpperPP": 0.10467462598186772
+      },
+      "pooled": {
+        "n": 33,
+        "maeLowerPP": 4.943536453847297,
+        "maeUpperPP": 4.962000973938702,
+        "rmseLowerPP": 9.075074620871277,
+        "rmseUpperPP": 9.085372085378284,
+        "biasLowerPP": -0.44299560932678833,
+        "biasUpperPP": -0.4245310892353828
+      },
+      "partyOnly": {
+        "n": 33,
+        "maeLowerPP": 4.546407672131028,
+        "maeUpperPP": 4.556089520610389,
+        "rmseLowerPP": 9.13463211687356,
+        "rmseUpperPP": 9.139484143306122,
+        "biasLowerPP": -0.5519280150576084,
+        "biasUpperPP": -0.5422461665782469
+      }
+    },
+    {
+      "targetYear": 2017,
+      "n": 0,
+      "local": null,
+      "pooled": null,
+      "partyOnly": null
+    },
+    {
+      "targetYear": 2023,
+      "n": 0,
+      "local": null,
+      "pooled": null,
+      "partyOnly": null
+    }
+  ],
+  "correctedFullScores": [
+    {
+      "targetYear": 2011,
+      "n": 280,
+      "local": {
+        "n": 280,
+        "maeLowerPP": 2.277465303337337,
+        "maeUpperPP": 2.2967352204695137,
+        "rmseLowerPP": 3.9337333333071767,
+        "rmseUpperPP": 3.9449893330683508,
+        "biasLowerPP": 0.021948461498876626,
+        "biasUpperPP": 0.0413010120907619
+      },
+      "pooled": {
+        "n": 280,
+        "maeLowerPP": 3.8103053081329383,
+        "maeUpperPP": 3.828276238641949,
+        "rmseLowerPP": 6.150594222258114,
+        "rmseUpperPP": 6.162304049549088,
+        "biasLowerPP": -0.5267647006920634,
+        "biasUpperPP": -0.5087813851395071
+      },
+      "partyOnly": {
+        "n": 280,
+        "maeLowerPP": 3.9368282132425017,
+        "maeUpperPP": 3.946508644923545,
+        "rmseLowerPP": 6.843011307253585,
+        "rmseUpperPP": 6.848612859081535,
+        "biasLowerPP": -0.4515675002707766,
+        "biasUpperPP": -0.44188706858973303
+      }
+    },
+    {
+      "targetYear": 2017,
+      "n": 285,
+      "local": {
+        "n": 285,
+        "maeLowerPP": 2.4230241293681694,
+        "maeUpperPP": 2.4424543612918828,
+        "rmseLowerPP": 4.339578962294712,
+        "rmseUpperPP": 4.350466246227843,
+        "biasLowerPP": 0.4960135944434867,
+        "biasUpperPP": 0.5154768766423554
+      },
+      "pooled": {
+        "n": 285,
+        "maeLowerPP": 3.8535223333065205,
+        "maeUpperPP": 3.871265764210006,
+        "rmseLowerPP": 5.848042385527937,
+        "rmseUpperPP": 5.86026608192041,
+        "biasLowerPP": -0.24382800528130183,
+        "biasUpperPP": -0.22606944294475542
+      },
+      "partyOnly": {
+        "n": 285,
+        "maeLowerPP": 2.9426391138656416,
+        "maeUpperPP": 2.9523514556514128,
+        "rmseLowerPP": 5.064348203715853,
+        "rmseUpperPP": 5.070002882220891,
+        "biasLowerPP": 0.32289287619546136,
+        "biasUpperPP": 0.33262017491325546
+      }
+    },
+    {
+      "targetYear": 2023,
+      "n": 271,
+      "local": {
+        "n": 271,
+        "maeLowerPP": 3.150701899890869,
+        "maeUpperPP": 3.170273962503772,
+        "rmseLowerPP": 5.454381973110377,
+        "rmseUpperPP": 5.465740199708274,
+        "biasLowerPP": 0.11533636182187716,
+        "biasUpperPP": 0.13490842443478032
+      },
+      "pooled": {
+        "n": 271,
+        "maeLowerPP": 4.0196686156770385,
+        "maeUpperPP": 4.038014377674309,
+        "rmseLowerPP": 7.046157030048123,
+        "rmseUpperPP": 7.0568556237722815,
+        "biasLowerPP": -0.43136383799659644,
+        "biasUpperPP": -0.41299899525660677
+      },
+      "partyOnly": {
+        "n": 271,
+        "maeLowerPP": 4.64797025517946,
+        "maeUpperPP": 4.657759125655951,
+        "rmseLowerPP": 6.5677063569541785,
+        "rmseUpperPP": 6.574642514438924,
+        "biasLowerPP": -1.1034658384481295,
+        "biasUpperPP": -1.093676967971639
+      }
+    }
+  ],
+  "originalCommonStage5Sensitivity": {
+    "schemaVersion": 1,
+    "scores": [
+      {
+        "targetYear": 2011,
+        "n": 247,
+        "observedValidPartyInput": {
+          "n": 247,
+          "maeLowerPP": 2.230027219655331,
+          "maeUpperPP": 2.249131904743523,
+          "rmseLowerPP": 3.8615223739639246,
+          "rmseUpperPP": 3.872662447410562,
+          "biasLowerPP": 0.06150528175161431,
+          "biasUpperPP": 0.08071341950083054
+        },
+        "additiveStage5Input": {
+          "n": 247,
+          "maeLowerPP": 2.369503177386589,
+          "maeUpperPP": 2.3886335886443044,
+          "rmseLowerPP": 3.9799401114696136,
+          "rmseUpperPP": 3.9913773321022905,
+          "biasLowerPP": 0.009382791180697783,
+          "biasUpperPP": 0.028568904251285485
+        },
+        "proportionalStage5Input": {
+          "n": 247,
+          "maeLowerPP": 2.4695993453997747,
+          "maeUpperPP": 2.488839271595287,
+          "rmseLowerPP": 4.262328456458037,
+          "rmseUpperPP": 4.2734766690873,
+          "biasLowerPP": 0.13816202316029558,
+          "biasUpperPP": 0.15741228266510549
+        }
+      },
+      {
+        "targetYear": 2017,
+        "n": 285,
+        "observedValidPartyInput": {
+          "n": 285,
+          "maeLowerPP": 2.41454308501116,
+          "maeUpperPP": 2.433920606811331,
+          "rmseLowerPP": 4.328129331873914,
+          "rmseUpperPP": 4.338968198639294,
+          "biasLowerPP": 0.49255872944123325,
+          "biasUpperPP": 0.51195147778809
+        },
+        "additiveStage5Input": {
+          "n": 285,
+          "maeLowerPP": 2.6818404512369076,
+          "maeUpperPP": 2.70128257670677,
+          "rmseLowerPP": 4.56629093860505,
+          "rmseUpperPP": 4.577757436681846,
+          "biasLowerPP": 0.6489510501767983,
+          "biasUpperPP": 0.6684264965808554
+        },
+        "proportionalStage5Input": {
+          "n": 285,
+          "maeLowerPP": 2.962172964364604,
+          "maeUpperPP": 2.9815564116465025,
+          "rmseLowerPP": 5.215844095374122,
+          "rmseUpperPP": 5.22697242821737,
+          "biasLowerPP": 0.5070818771835398,
+          "biasUpperPP": 0.5264779484731555
+        }
+      },
+      {
+        "targetYear": 2023,
+        "n": 271,
+        "observedValidPartyInput": {
+          "n": 271,
+          "maeLowerPP": 3.1415192003235144,
+          "maeUpperPP": 3.16099417520999,
+          "rmseLowerPP": 5.444205761365206,
+          "rmseUpperPP": 5.45549971591341,
+          "biasLowerPP": 0.11827028453832057,
+          "biasUpperPP": 0.13774525942479646
+        },
+        "additiveStage5Input": {
+          "n": 271,
+          "maeLowerPP": 3.4200816756210948,
+          "maeUpperPP": 3.4395595028170542,
+          "rmseLowerPP": 5.698270079726035,
+          "rmseUpperPP": 5.710023001508268,
+          "biasLowerPP": 0.08439386392733407,
+          "biasUpperPP": 0.10389015521722264
+        },
+        "proportionalStage5Input": {
+          "n": 271,
+          "maeLowerPP": 3.6592290752309977,
+          "maeUpperPP": 3.678649481314948,
+          "rmseLowerPP": 6.068679425856694,
+          "rmseUpperPP": 6.080475887051409,
+          "biasLowerPP": -0.014050166827616168,
+          "biasUpperPP": 0.0053702392563343415
+        }
+      }
+    ],
+    "excluded": {},
+    "interpretation": "Stage5 valid-party share predictions use observed target national party support and are scaled by observed target valid-party turnout. Informal-party rows, unmatched groups, target turnout forecasting and candidate denominator remain unresolved. Not a complete pre-election forecast or Stage5 transform selection."
+  },
+  "newAdmissionStage5Sensitivity": {
+    "schemaVersion": 1,
+    "scores": [
+      {
+        "targetYear": 2011,
+        "n": 33,
+        "observedValidPartyInput": {
+          "n": 33,
+          "maeLowerPP": 2.490810888952248,
+          "maeUpperPP": 2.509719729859562,
+          "rmseLowerPP": 4.170859787794529,
+          "rmseUpperPP": 4.182360751936357,
+          "biasLowerPP": 0.16254175000668436,
+          "biasUpperPP": 0.18170759337100093
+        },
+        "additiveStage5Input": {
+          "n": 33,
+          "maeLowerPP": 2.9865167211247035,
+          "maeUpperPP": 3.005405116604789,
+          "rmseLowerPP": 5.547041389363937,
+          "rmseUpperPP": 5.557259421477438,
+          "biasLowerPP": -0.03989671265893876,
+          "biasUpperPP": -0.020849409518290205
+        },
+        "proportionalStage5Input": {
+          "n": 33,
+          "maeLowerPP": 3.222153952796059,
+          "maeUpperPP": 3.240902206521295,
+          "rmseLowerPP": 6.318141227422285,
+          "rmseUpperPP": 6.327680495354727,
+          "biasLowerPP": -0.18752087401482448,
+          "biasUpperPP": -0.16854513416052674
+        }
+      },
+      {
+        "targetYear": 2017,
+        "n": 0,
+        "observedValidPartyInput": null,
+        "additiveStage5Input": null,
+        "proportionalStage5Input": null
+      },
+      {
+        "targetYear": 2023,
+        "n": 0,
+        "observedValidPartyInput": null,
+        "additiveStage5Input": null,
+        "proportionalStage5Input": null
+      }
+    ],
+    "excluded": {},
+    "interpretation": "Stage5 valid-party share predictions use observed target national party support and are scaled by observed target valid-party turnout. Informal-party rows, unmatched groups, target turnout forecasting and candidate denominator remain unresolved. Not a complete pre-election forecast or Stage5 transform selection."
+  },
+  "correctedFullStage5Sensitivity": {
+    "schemaVersion": 1,
+    "scores": [
+      {
+        "targetYear": 2011,
+        "n": 280,
+        "observedValidPartyInput": {
+          "n": 280,
+          "maeLowerPP": 2.2607624378224678,
+          "maeUpperPP": 2.279844041275056,
+          "rmseLowerPP": 3.8992559048461373,
+          "rmseUpperPP": 3.9104378329758958,
+          "biasLowerPP": 0.07341315122453328,
+          "biasUpperPP": 0.09261630427838632
+        },
+        "additiveStage5Input": {
+          "n": 280,
+          "maeLowerPP": 2.4422226307557238,
+          "maeUpperPP": 2.4613245187253616,
+          "rmseLowerPP": 4.195175844532615,
+          "rmseUpperPP": 4.20634017116005,
+          "biasLowerPP": 0.0035748496567406187,
+          "biasUpperPP": 0.022744602985585494
+        },
+        "proportionalStage5Input": {
+          "n": 280,
+          "maeLowerPP": 2.5582932812714794,
+          "maeUpperPP": 2.577475260354424,
+          "rmseLowerPP": 4.553131818112101,
+          "rmseUpperPP": 4.563898606250287,
+          "biasLowerPP": 0.09977796742179929,
+          "biasUpperPP": 0.1189958728249417
+        }
+      },
+      {
+        "targetYear": 2017,
+        "n": 285,
+        "observedValidPartyInput": {
+          "n": 285,
+          "maeLowerPP": 2.41454308501116,
+          "maeUpperPP": 2.433920606811331,
+          "rmseLowerPP": 4.328129331873914,
+          "rmseUpperPP": 4.338968198639294,
+          "biasLowerPP": 0.49255872944123325,
+          "biasUpperPP": 0.51195147778809
+        },
+        "additiveStage5Input": {
+          "n": 285,
+          "maeLowerPP": 2.6818404512369076,
+          "maeUpperPP": 2.70128257670677,
+          "rmseLowerPP": 4.56629093860505,
+          "rmseUpperPP": 4.577757436681846,
+          "biasLowerPP": 0.6489510501767983,
+          "biasUpperPP": 0.6684264965808554
+        },
+        "proportionalStage5Input": {
+          "n": 285,
+          "maeLowerPP": 2.962172964364604,
+          "maeUpperPP": 2.9815564116465025,
+          "rmseLowerPP": 5.215844095374122,
+          "rmseUpperPP": 5.22697242821737,
+          "biasLowerPP": 0.5070818771835398,
+          "biasUpperPP": 0.5264779484731555
+        }
+      },
+      {
+        "targetYear": 2023,
+        "n": 271,
+        "observedValidPartyInput": {
+          "n": 271,
+          "maeLowerPP": 3.1415192003235144,
+          "maeUpperPP": 3.16099417520999,
+          "rmseLowerPP": 5.444205761365206,
+          "rmseUpperPP": 5.45549971591341,
+          "biasLowerPP": 0.11827028453832057,
+          "biasUpperPP": 0.13774525942479646
+        },
+        "additiveStage5Input": {
+          "n": 271,
+          "maeLowerPP": 3.4200816756210948,
+          "maeUpperPP": 3.4395595028170542,
+          "rmseLowerPP": 5.698270079726035,
+          "rmseUpperPP": 5.710023001508268,
+          "biasLowerPP": 0.08439386392733407,
+          "biasUpperPP": 0.10389015521722264
+        },
+        "proportionalStage5Input": {
+          "n": 271,
+          "maeLowerPP": 3.6592290752309977,
+          "maeUpperPP": 3.678649481314948,
+          "rmseLowerPP": 6.068679425856694,
+          "rmseUpperPP": 6.080475887051409,
+          "biasLowerPP": -0.014050166827616168,
+          "biasUpperPP": 0.0053702392563343415
+        }
+      }
+    ],
+    "excluded": {},
+    "interpretation": "Stage5 valid-party share predictions use observed target national party support and are scaled by observed target valid-party turnout. Informal-party rows, unmatched groups, target turnout forecasting and candidate denominator remain unresolved. Not a complete pre-election forecast or Stage5 transform selection."
+  },
+  "originalRecordValuesPreserved": true,
+  "status": "retrospective_conditional_matched_party_ballot_component_only"
+}

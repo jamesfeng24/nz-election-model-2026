@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "selectedOperationalSplitView": null,
+  "gates": {
+    "matchedComponentImprovesBothBenchmarksEachHoldout": true,
+    "completePartyBallotMassMapping": false,
+    "candidateIdentityTransferValidated": false,
+    "outcomeIndependentComputationalEligibility": true
+  },
+  "reason": "Corrected matched-component diagnostics remain conditional on observed target party ballots. Incomplete matched mass and unvalidated candidate transfer prevent operational selection."
+}
