@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "stage": 17,
+  "status": "proposed_for_review_no_historical_fit_or_score",
+  "dataClass": "design_contract_not_prediction",
+  "recommendedDesign": "direct_party_anchored_candidate_share_composition",
+  "estimand": "conditional_share_of_valid_candidate_votes_for_every_standing_candidate",
+  "units": {
+    "partySupport": "share_of_valid_party_votes_on_target_boundary",
+    "candidateShare": "share_of_valid_candidate_votes_in_held_contest",
+    "candidateCount": "candidate_share_times_separately_forecast_valid_candidate_votes"
+  },
+  "inputs": {
+    "targetBoundary": "official_certified_target_electorate_id_and_scope",
+    "partySupport": "complete_nonnegative_joint_target_boundary_party_vector_summing_to_one",
+    "slate": "all_standing_candidates_with_unique_party_category_or_explicit_partyKey_null_and_noRegisteredPartyGroup_true",
+    "supportFloor": "positive_single_parameter_estimated_from_permitted_earlier_general_elections_only",
+    "countsOnly": "votes_cast_valid_candidate_informal_candidate_disallowed_candidate_controls",
+    "identity": "not_required_for_baseline_and_not_a_zero_personal_effect_claim"
+  },
+  "equation": {
+    "base": "p[e,party(c)] for mapped party candidate; 0 for explicitly independent_or_verified_unregistered_affiliation",
+    "weight": "base[c] + kappa",
+    "share": "weight[c] / sum(weight[d] for all standing candidates d)",
+    "partyWithoutCandidate": "mass_reallocated_by_normalization_as_explicit_model_assumption_not_ballot_identity"
+  },
+  "fitProposal": {
+    "parameter": "kappa",
+    "rangeInclusive": [0.0001, 0.1],
+    "objective": "equal_contest_mean_cross_entropy_of_earlier_observed_candidate_shares",
+    "minimumCompleteGeneralTrainingContests": 20,
+    "minimumIndependentOrZeroSupportTrainingContests": 5,
+    "boundarySolution": "report_and_do_not_expand_range_after_holdout_results",
+    "maori": "abstain_from_separately_fitted_coefficient_without_sufficient_prior_coverage"
+  },
+  "tasks": {
+    "conditionalHistorical": "observed_target_local_party_share_and_retrospective_slate_allowed_only_as_conditional_inputs",
+    "nationalScenario": "supplied_scenario_is_not_a_national_support_forecast",
+    "asOfHistorical": "official_nomination_close_instant_and_dated_party_slate_turnout_inputs_required",
+    "live2026": "certified_slate_target_boundary_party_forecast_turnout_validity_and_joint_uncertainty_required"
+  },
+  "abstain": [
+    "missing_or_ambiguous_target_candidate_or_party_category",
+    "incomplete_or_incompatible_target_party_support_vector",
+    "insufficient_earlier_training_for_fitted_floor",
+    "no_standing_candidates_or_cancelled_contest",
+    "count_output_without_separate_valid_candidate_ballot_scenario",
+    "winner_probability_without_calibrated_joint_scenario_distribution",
+    "strict_as_of_task_without_dated_pre_result_input_bundle",
+    "maori_specific_fit_without_sufficient_earlier_maori_coverage"
+  ],
+  "historicalFrame": {
+    "coverageContests": 213,
+    "conditionalHeldGeneralContests": 191,
+    "conditionalHeldGeneralCandidates": 1313,
+    "maoriCoverageOnlyContests": 21,
+    "cancelledCoverageOnlyContests": 1,
+    "holdouts": [2011, 2017, 2023],
+    "training": "only completed elections strictly earlier than target; 2008 for 2011, through 2014 for 2017, through 2020 for 2023"
+  },
+  "benchmarks": {
+    "fullFrame": "uniform_one_over_standing_candidate_count",
+    "restricted": "party_proportional_zero_floor_only_on_identical_supported_no_independent_subset",
+    "deferred": "candidate_carry_forward_requires_independently_supported_identity_and_geography"
+  },
+  "metrics": {
+    "primary": "contest_equal_candidate_share_MAE_RMSE_signed_bias_percentage_points",
+    "sensitivity": "candidate_equal_candidate_share_errors",
+    "coverage": "full_frame_applicability_abstentions_and_identical_evaluated_sample_ids",
+    "winner": "top_share_hit_rate_if_point_exists; probability_Brier_log_and_calibration_only_if_joint_distribution_validated",
+    "uncertainty": "joint_slate_and_shared_party_scenarios_only_no_independent_endpoint_clipping"
+  },
+  "selection": {
+    "materialityScreenPP": 0.25,
+    "requiresBothTrainedFoldsPositiveGain": true,
+    "conditionalDiagnosticCannotSelectOperational2026Model": true,
+    "selectedOperationalCandidateBaseline": null
+  },
+  "exclusions": [
+    "no_new_source_acquisition",
+    "no_historical_prediction_or_score_in_stage17",
+    "no_fitted_parameter_in_stage17",
+    "no_2026_candidate_forecast",
+    "no_stage6_refit_or_effect_bonus_stacking",
+    "no_model_integration_or_ensemble_weights"
+  ]
+}

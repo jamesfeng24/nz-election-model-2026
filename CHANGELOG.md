@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — Stage 17 candidate-baseline design — 2026-09-30
+
+- Verified Stage16 PR #23 merged and pinned a preserved 71-seat target-boundary candidate/party evidence inventory with 72 official candidate-file source records and exact raw checksums.
+- Compared geographic candidate transport, joint ballot routing and a direct complete candidate-share composition; proposed the identity-free direct-share baseline and chronological conditional validation contract without fitting or scoring.
+- Added synthetic conservation, entrant/independent, changed-boundary, denominator, shared-scenario and outcome-independence tests. Earlier numerical outputs and operational selections remain unchanged.
+
 ## Unreleased — Stage 15 conditional candidate interval ledger — 2026-09-27
 
 - Implemented the reviewed pooled-equality ballot ledger, separate source-seat convex-hull sensitivity, party-diagonal and unrestricted comparators on 191 held general contests, preserving the 213-contest coverage frame.

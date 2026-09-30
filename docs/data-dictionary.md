@@ -1,5 +1,11 @@
 # Data dictionary — draft exchange contracts v1
 
+## Stage 17 candidate-baseline design checkpoint — proposed, not a forecast
+
+`data/processed/checkpoints/candidate-baseline-design/target-inventory.json` has 71 `records`, one per 2025-boundary target electorate. `predecessorSeats` carries official 2023 source numbers and raw candidate-table paths. `historical2023PartyCategories` contains source-year synthetic target-boundary party-vote points or **coupled** bounds; they are not 2026 support. `historical2023CandidateLeads` contains immutable Stage7 occurrence IDs, observed 2023 counts, geographic availability, separate Stage8/Stage13 identity confidence and historical career evidence. A lead is not a 2026 nominee. A target candidate count is marked geographically supported only for certified unchanged membership and a held source contest; changed boundaries, technical uncertainty and cancellation remain explicit. `target2026CandidateSlate`, `asOf2026PartySupport` and `asOf2026CandidateTurnoutAndValidity` are null for all 71 seats. `manifest.json` pins processed/raw inputs, source snapshot, contract and generator; the 72-record snapshot lives under `data/source-plans/`.
+
+`design-contract.json` and the synthetic `candidate_share_design.py` propose a direct valid-candidate-share composition, not implemented historical scores. For a standing candidate, `partyKey:null` is allowed **only** with an affirmative `noRegisteredPartyGroup:true` classification for an independent or verified unregistered affiliation; an ambiguous mapping abstains. `supportFloor` is a future training-only parameter, not a personal coefficient or observed effect. Candidate shares sum to one over valid candidate votes. Counts need separately forecast candidate-valid, informal and disallowed ballots; party-valid ballots have their own denominator. Winner probabilities remain null without calibrated joint uncertainty. See [the design](candidate-baseline-complete-forecast-design.md).
+
 The Stage 1 contracts below describe intended model records. Actual Stage 2 historical exports have a separate contract documented at the end of this file. Runtime Zod schemas and inferred TypeScript types are in `src/types/domain.ts`; provenance schemas remain in `src/types/contracts.ts`. No model or electoral rule is implemented by schema validation.
 
 ## Conventions
