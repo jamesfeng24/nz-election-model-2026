@@ -5,6 +5,7 @@ import unittest
 
 from scripts.checkpoints import stage21_identity_pilot as pilot
 from scripts.checkpoints import stage21_identity_preserved as preserved
+from scripts.checkpoints import stage21_identity_queries as queries
 
 
 class IdentityPilotTests(unittest.TestCase):
@@ -88,6 +89,14 @@ class IdentityPilotTests(unittest.TestCase):
         self.assertTrue(all(r['relationshipFinding'] ==
                             'unresolved_explicit_cross_occurrence_bridge'
                             for r in review['records']))
+
+    def test_targeted_query_templates_are_fixed_and_bounded(self):
+        plan = queries.build()['targeted-query-plan.json']['records']
+        fixed = pilot.build(*self.inputs)['acquisition-plan.json']['selection']['selectedCaseIds']
+        self.assertEqual([r['caseId'] for r in plan], fixed)
+        self.assertEqual(len(plan), 24)
+        self.assertTrue(all(r['query1'] and r['query2IfNeeded'] and
+                            r['status'] == 'planned_not_attempted' for r in plan))
 
 
 if __name__ == '__main__':
