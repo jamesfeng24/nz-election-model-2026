@@ -25,7 +25,8 @@ def scatter(rows, x_field, title, x_label, filename, *, xmin=None, xmax=None):
     if xmin is not None and xmax is not None:
         ax.set_xlim(xmin, xmax)
     ax.grid(alpha=.16)
-    ax.legend(frameon=False, fontsize=8)
+    if ax.get_legend_handles_labels()[0]:
+        ax.legend(frameon=False, fontsize=8)
     buffer = BytesIO()
     fig.savefig(buffer, format='png', dpi=150, metadata={'Software': 'matplotlib'})
     plt.close(fig)

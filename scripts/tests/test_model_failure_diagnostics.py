@@ -114,6 +114,15 @@ class ModelFailureDiagnosticTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Changed frozen model artifact'):
             diagnostics.build(changed)
 
+    def test_fixed_plot_generation_is_deterministic(self):
+        from scripts.checkpoints.model_failure_plots import build
+
+        rows = [diagnostics.paired_row(
+            'synthetic', .4, .42, .5, component='stage18',
+            comparison='fitted_floor_vs_restricted_zero_floor', targetYear=2017,
+            contestId='seat')]
+        self.assertEqual(build(rows), build(rows))
+
 
 if __name__ == '__main__':
     unittest.main()
