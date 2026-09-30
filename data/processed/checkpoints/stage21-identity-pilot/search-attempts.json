@@ -8,7 +8,9 @@
       "query": "site:vote.nz election candidate lists 2008 2011 electorate archived nominations",
       "queriedAtApproxUTC": "2026-09-30T20:59:00Z",
       "resultAssessment": "Official election and electorate profile leads repeat candidate/result records; no explicit selected cross-election relationship bridge. Snippets are not confirmation.",
-      "leadUrls": ["https://www3.parliament.nz/en/mps-and-electorates/historical-electorate-profiles/"],
+      "leadUrls": [
+        "https://www3.parliament.nz/en/mps-and-electorates/historical-electorate-profiles/"
+      ],
       "newResourceIds": []
     },
     {
@@ -16,7 +18,9 @@
       "query": "site:elections.nz 2014 2017 electorate candidate nomination lists archive",
       "queriedAtApproxUTC": "2026-09-30T20:59:00Z",
       "resultAssessment": "Official 2017 candidature listing was found; it establishes election-local nominations only and does not connect selected source and target occurrences.",
-      "leadUrls": ["https://elections.nz/media-and-news/2017/party-and-candidate-lists-for-2017-election"],
+      "leadUrls": [
+        "https://elections.nz/media-and-news/2017/party-and-candidate-lists-for-2017-election"
+      ],
       "newResourceIds": []
     },
     {
@@ -24,7 +28,9 @@
       "query": "site:parliament.nz former members electorates historical candidacies profiles",
       "queriedAtApproxUTC": "2026-09-30T20:59:00Z",
       "resultAssessment": "Former-member index and archived biography leads were found; profiles may identify service but a name/index entry alone cannot bridge two exact nominations. Relevant profiles are already preserved in Stage9/13.",
-      "leadUrls": ["https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/"],
+      "leadUrls": [
+        "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/"
+      ],
       "newResourceIds": []
     },
     {
@@ -36,7 +42,393 @@
       "newResourceIds": []
     }
   ],
-  "caseQueries": {},
+  "caseQueries": {
+    "nz-general-2008-electorate-54-candidate-07->nz-general-2011-electorate-54-candidate-07": [
+      {
+        "attempt": 1,
+        "query": "\"William TISCH\" \"Waikato\" 2008 2011 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2008-electorate-09-candidate-02->nz-general-2011-electorate-09-candidate-01": [
+      {
+        "attempt": 1,
+        "query": "\"Clare CURRAN\" \"Dunedin South\" 2008 2011 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www.scoop.co.nz/stories/PO0809/S00067.htm",
+          "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/curran-clare/"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2008-electorate-02-candidate-02->nz-general-2011-electorate-02-candidate-01": [
+      {
+        "attempt": 1,
+        "query": "\"Brian CARTER\" \"Bay of Plenty\" 2008 2011 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2008-electorate-32-candidate-09->nz-general-2011-electorate-32-candidate-07": [
+      {
+        "attempt": 1,
+        "query": "\"Pieter WATSON\" \"North Shore\" 2008 2011 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www.electionresults.govt.nz/electionresults_2008/e9/html/e9_part8_cand_32.html"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2008-electorate-54-candidate-03->nz-general-2011-electorate-54-candidate-03": [
+      {
+        "attempt": 1,
+        "query": "\"Cameron HARPER\" \"Waikato\" 2008 2011 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://kiwi.itspektar.net/content/wikipedia_en_all_maxi/A/Candidates_in_the_2011_New_Zealand_general_election_by_electorate"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2008-electorate-30-candidate-03->nz-general-2011-electorate-30-candidate-06": [
+      {
+        "attempt": 1,
+        "query": "\"Katherine DEWAR\" \"Saffron TOMS\" \"New Lynn\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2008-electorate-01-candidate-12->nz-general-2011-electorate-01-candidate-06": [
+      {
+        "attempt": 1,
+        "query": "\"Scott UREN\" \"David SEYMOUR\" \"Auckland Central\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2008-electorate-65-candidate-01->nz-general-2011-electorate-65-candidate-03": [
+      {
+        "attempt": 1,
+        "query": "\"Derek FOX\" \"Na RAIHANIA\" \"Ikaroa-Rawhiti\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2014-electorate-40-candidate-02->nz-general-2017-electorate-40-candidate-02": [
+      {
+        "attempt": 1,
+        "query": "\"Judith COLLINS\" \"Papakura\" 2014 2017 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www.parliament.nz/en/mps-and-electorates/historical-electorate-profiles/document/DBHOH_Lib_EP_Papakura_Electoral_Profile/papakura-electoral-profile/"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2014-electorate-12-candidate-10->nz-general-2017-electorate-12-candidate-06": [
+      {
+        "attempt": 1,
+        "query": "\"David SEYMOUR\" \"Epsom\" 2014 2017 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www.scoop.co.nz/stories/PO1402/S00006/act-epsom-candidate-david-seymour.htm"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2014-electorate-17-candidate-01->nz-general-2017-electorate-17-candidate-03": [
+      {
+        "attempt": 1,
+        "query": "\"Christopher BISHOP\" \"Hutt South\" 2014 2017 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2014-electorate-64-candidate-06->nz-general-2017-electorate-64-candidate-06": [
+      {
+        "attempt": 1,
+        "query": "\"John RING\" \"Wigram\" 2014 2017 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2014-electorate-10-candidate-07->nz-general-2017-electorate-10-candidate-06": [
+      {
+        "attempt": 1,
+        "query": "\"Anne TOLLEY\" \"East Coast\" 2014 2017 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www3.parliament.nz/en/mps-and-electorates/historical-electorate-profiles/electorate-profiles-data/document/DBHOH_Lib_EP_East_Coast_Electoral_Profile/east-coast-electoral-profile"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2014-electorate-46-candidate-04->nz-general-2017-electorate-46-candidate-02": [
+      {
+        "attempt": 1,
+        "query": "\"Annette KING\" \"Tahere EAGLE\" \"Rongotai\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2014-electorate-59-candidate-03->nz-general-2017-electorate-59-candidate-07": [
+      {
+        "attempt": 1,
+        "query": "\"Susan COUTTS\" \"Patrick WALL\" \"Waitaki\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2014-electorate-70-candidate-02->nz-general-2017-electorate-70-candidate-02": [
+      {
+        "attempt": 1,
+        "query": "\"Ngaire BUTTON\" \"Mei TAARE\" \"Te Tai Tonga\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www3.parliament.nz/mi/mps-and-electorates/electorate-profiles/te-tai-tonga-electorate-profile/"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2020-electorate-43-candidate-05->nz-general-2023-electorate-43-candidate-05": [
+      {
+        "attempt": 1,
+        "query": "\"Nicole McKEE\" \"Rongotai\" 2020 2023 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://assets.nationbuilder.com/actnz/mailings/6116/attachments/original/230713_ACT_Party_List_A4_%283%29.pdf?1689474226="
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2020-electorate-08-candidate-08->nz-general-2023-electorate-08-candidate-11": [
+      {
+        "attempt": 1,
+        "query": "\"Michael WOODHOUSE\" \"Dunedin\" 2020 2023 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2020-electorate-32-candidate-09->nz-general-2023-electorate-32-candidate-09": [
+      {
+        "attempt": 1,
+        "query": "\"Willow-Jean PRIME\" \"Northland\" 2020 2023 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www.labour.org.nz/our-team/hon-willow-jean-prime/"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2020-electorate-54-candidate-02->nz-general-2023-electorate-54-candidate-03": [
+      {
+        "attempt": 1,
+        "query": "\"Anna LORCK\" \"Tukituki\" 2020 2023 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www3.parliament.nz/mi/mps-and-electorates/electorate-profiles/tukituki-electorate-profile/"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2020-electorate-63-candidate-07->nz-general-2023-electorate-63-candidate-03": [
+      {
+        "attempt": 1,
+        "query": "\"Mark MITCHELL\" \"Whangaparāoa\" 2020 2023 candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://www3.parliament.nz/mi/mps-and-electorates/electorate-profiles/whangapar%C4%81oa-electorate-profile/"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2020-electorate-20-candidate-05->nz-general-2023-electorate-20-candidate-07": [
+      {
+        "attempt": 1,
+        "query": "\"Joanne HAYES\" \"Frances HUGHES\" \"Mana\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2020-electorate-33-candidate-08->nz-general-2023-electorate-33-candidate-06": [
+      {
+        "attempt": 1,
+        "query": "\"John RANTA\" \"Stephanie RODGERS\" \"Ōhāriu\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ],
+    "nz-general-2020-electorate-66-candidate-04->nz-general-2023-electorate-66-candidate-02": [
+      {
+        "attempt": 1,
+        "query": "\"Donna POKERE-PHILLIPS\" \"Hana-Rawhiti MAIPI-CLARKE\" \"Hauraki-Waikato\" election candidate",
+        "disposition": "searched_no_accepted_exact_cross_election_bridge",
+        "leadUrls": [
+          "https://gazette.govt.nz/notice/id/2023-au5158"
+        ],
+        "assessment": "Leads are individual nominations, result/profile listings or non-primary snippets; no retrieved passage yet bridges these exact two occurrences. A second fixed query remains permitted.",
+        "acceptedResourceIds": [],
+        "queryTimeExactUTC": null,
+        "observedWindowUTC": [
+          "2026-09-30T20:59:21Z",
+          "2026-09-30T21:05:08Z"
+        ]
+      }
+    ]
+  },
   "resources": [],
-  "knownTimestampLimitation": "Search endpoint did not return exact per-query timestamps; the UTC time is the recorded batch minute, not a fabricated precise instant."
+  "knownTimestampLimitation": "Search endpoint returned no per-query timestamps. The collection batch has an approximate recorded minute; all 24 first targeted queries occurred within the recorded UTC window. Exact times remain null."
 }
