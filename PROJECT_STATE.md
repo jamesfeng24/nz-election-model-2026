@@ -623,3 +623,10 @@ Validation: 11 focused Stage18 tests include real adapter/holdout target-outcome
 **Exact next action:** independent review of the unmerged Stage18 PR after final CI verification. A later separately authorized decision may scope dated historical nomination/party/turnout inputs and coherent slate-level uncertainty for an as-of forecast. Do not tune another floor, acquire sources, score a live forecast, integrate model views or choose ensemble weights automatically.
 
 ---
+# Stage 19 model-failure diagnostic — pre-summary checkpoint, 2026-10-01
+
+Stage18 PR #25 is verified merged as `d51a088e1e9d91b12757241b3956dfed68d6043a`, containing corrected `a9c8b74080eb79ac23d9835e4d7af37ff38eb01a`. Clean main was synchronized and `stage/19-model-failure-diagnostics` created from merged main. No prior outputs or operational selections have been changed. The [Stage19 inventory](data/processed/checkpoints/model-failure-diagnostics/diagnostic-inventory.json) hashes frozen Stage6,8–11,15,16,18 artifacts and records valid point-pair sample IDs separately from aggregate-only or interval evidence. The [fixed plan](docs/model-failure-diagnostic-plan.md) predeclares signed-error conventions, paired controls, bins, sparse thresholds, plots, coverage and interpretation before any new subgroup summary.
+
+**Exact next action:** commit/push this inventory/plan checkpoint, then generate only authorized deterministic diagnostics and plots from the pinned saved predictions. Keep Stage8–10 aggregate-only limitations, Stage11 matched-component denominator and Stage15 nonpoint outputs separate. No model fitting, source acquisition, forecast production or integration is authorized.
+
+---
