@@ -81,7 +81,8 @@ def _stage16(analysis):
                         and row['mode'] == mode]
                 indexed = {row['model']: row for row in rows}
                 required = ('source_victory', 'common_intercept',
-                            'source_victory_beta1', 'beta1')
+                            'source_victory_beta1', 'common_intercept_beta1',
+                            'beta1')
                 if any(name not in indexed for name in required):
                     raise ValueError('Missing frozen Stage16 paired control')
                 ids = [[item['id'] for item in indexed[name]['predictions']]
