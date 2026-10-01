@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "stage": 21,
+  "coverage": {
+    "fullPairFrame": 888,
+    "selected": 24,
+    "selectedByTransitionScope": [
+      {
+        "transition": "2008-2011",
+        "scope": "general",
+        "count": 7
+      },
+      {
+        "transition": "2008-2011",
+        "scope": "maori",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "scope": "general",
+        "count": 7
+      },
+      {
+        "transition": "2014-2017",
+        "scope": "maori",
+        "count": 1
+      },
+      {
+        "transition": "2020-2023",
+        "scope": "general",
+        "count": 7
+      },
+      {
+        "transition": "2020-2023",
+        "scope": "maori",
+        "count": 1
+      }
+    ],
+    "selectedByTransitionParty": [
+      {
+        "transition": "2008-2011",
+        "partyKey": "actnewzealand",
+        "count": 1
+      },
+      {
+        "transition": "2008-2011",
+        "partyKey": "greenparty",
+        "count": 3
+      },
+      {
+        "transition": "2008-2011",
+        "partyKey": "labourparty",
+        "count": 1
+      },
+      {
+        "transition": "2008-2011",
+        "partyKey": "maoriparty",
+        "count": 1
+      },
+      {
+        "transition": "2008-2011",
+        "partyKey": "nationalparty",
+        "count": 1
+      },
+      {
+        "transition": "2008-2011",
+        "partyKey": "unitedfuture",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "partyKey": "actnewzealand",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "partyKey": "democratsforsocialcredit",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "partyKey": "greenparty",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "partyKey": "labourparty",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "partyKey": "maoriparty",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "partyKey": "nationalparty",
+        "count": 3
+      },
+      {
+        "transition": "2020-2023",
+        "partyKey": "actnewzealand",
+        "count": 1
+      },
+      {
+        "transition": "2020-2023",
+        "partyKey": "greenparty",
+        "count": 1
+      },
+      {
+        "transition": "2020-2023",
+        "partyKey": "labourparty",
+        "count": 2
+      },
+      {
+        "transition": "2020-2023",
+        "partyKey": "maoriparty",
+        "count": 1
+      },
+      {
+        "transition": "2020-2023",
+        "partyKey": "nationalparty",
+        "count": 3
+      }
+    ],
+    "selectedByObservedSourceTargetOutcome": [
+      {
+        "transition": "2008-2011",
+        "sourceWinner": "False",
+        "targetWinner": "False",
+        "count": 6
+      },
+      {
+        "transition": "2008-2011",
+        "sourceWinner": "True",
+        "targetWinner": "True",
+        "count": 2
+      },
+      {
+        "transition": "2014-2017",
+        "sourceWinner": "False",
+        "targetWinner": "False",
+        "count": 3
+      },
+      {
+        "transition": "2014-2017",
+        "sourceWinner": "False",
+        "targetWinner": "True",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "sourceWinner": "True",
+        "targetWinner": "True",
+        "count": 4
+      },
+      {
+        "transition": "2020-2023",
+        "sourceWinner": "False",
+        "targetWinner": "False",
+        "count": 4
+      },
+      {
+        "transition": "2020-2023",
+        "sourceWinner": "False",
+        "targetWinner": "True",
+        "count": 1
+      },
+      {
+        "transition": "2020-2023",
+        "sourceWinner": "True",
+        "targetWinner": "False",
+        "count": 2
+      },
+      {
+        "transition": "2020-2023",
+        "sourceWinner": "True",
+        "targetWinner": "True",
+        "count": 1
+      }
+    ],
+    "selectedByRoleScopeObservedOutcome": [
+      {
+        "transition": "2008-2011",
+        "scope": "general",
+        "role": "source",
+        "winner": "False",
+        "count": 5
+      },
+      {
+        "transition": "2008-2011",
+        "scope": "general",
+        "role": "source",
+        "winner": "True",
+        "count": 2
+      },
+      {
+        "transition": "2008-2011",
+        "scope": "general",
+        "role": "target",
+        "winner": "False",
+        "count": 5
+      },
+      {
+        "transition": "2008-2011",
+        "scope": "general",
+        "role": "target",
+        "winner": "True",
+        "count": 2
+      },
+      {
+        "transition": "2008-2011",
+        "scope": "maori",
+        "role": "source",
+        "winner": "False",
+        "count": 1
+      },
+      {
+        "transition": "2008-2011",
+        "scope": "maori",
+        "role": "target",
+        "winner": "False",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "scope": "general",
+        "role": "source",
+        "winner": "False",
+        "count": 3
+      },
+      {
+        "transition": "2014-2017",
+        "scope": "general",
+        "role": "source",
+        "winner": "True",
+        "count": 4
+      },
+      {
+        "transition": "2014-2017",
+        "scope": "general",
+        "role": "target",
+        "winner": "False",
+        "count": 2
+      },
+      {
+        "transition": "2014-2017",
+        "scope": "general",
+        "role": "target",
+        "winner": "True",
+        "count": 5
+      },
+      {
+        "transition": "2014-2017",
+        "scope": "maori",
+        "role": "source",
+        "winner": "False",
+        "count": 1
+      },
+      {
+        "transition": "2014-2017",
+        "scope": "maori",
+        "role": "target",
+        "winner": "False",
+        "count": 1
+      },
+      {
+        "transition": "2020-2023",
+        "scope": "general",
+        "role": "source",
+        "winner": "False",
+        "count": 4
+      },
+      {
+        "transition": "2020-2023",
+        "scope": "general",
+        "role": "source",
+        "winner": "True",
+        "count": 3
+      },
+      {
+        "transition": "2020-2023",
+        "scope": "general",
+        "role": "target",
+        "winner": "False",
+        "count": 6
+      },
+      {
+        "transition": "2020-2023",
+        "scope": "general",
+        "role": "target",
+        "winner": "True",
+        "count": 1
+      },
+      {
+        "transition": "2020-2023",
+        "scope": "maori",
+        "role": "source",
+        "winner": "False",
+        "count": 1
+      },
+      {
+        "transition": "2020-2023",
+        "scope": "maori",
+        "role": "target",
+        "winner": "True",
+        "count": 1
+      }
+    ],
+    "samplingFractionsByStratum": [
+      {
+        "transition": "2008-2011",
+        "ambiguityType": "different_label_general",
+        "fullFrame": 155,
+        "selected": 2,
+        "fraction": 0.012903225806451613
+      },
+      {
+        "transition": "2008-2011",
+        "ambiguityType": "different_label_maori",
+        "fullFrame": 8,
+        "selected": 1,
+        "fraction": 0.125
+      },
+      {
+        "transition": "2008-2011",
+        "ambiguityType": "exact_same_label_general",
+        "fullFrame": 110,
+        "selected": 3,
+        "fraction": 0.02727272727272727
+      },
+      {
+        "transition": "2008-2011",
+        "ambiguityType": "exact_same_label_maori",
+        "fullFrame": 8,
+        "selected": 0,
+        "fraction": 0.0
+      },
+      {
+        "transition": "2008-2011",
+        "ambiguityType": "name_variant_general",
+        "fullFrame": 15,
+        "selected": 2,
+        "fraction": 0.13333333333333333
+      },
+      {
+        "transition": "2008-2011",
+        "ambiguityType": "name_variant_maori",
+        "fullFrame": 1,
+        "selected": 0,
+        "fraction": 0.0
+      },
+      {
+        "transition": "2014-2017",
+        "ambiguityType": "different_label_general",
+        "fullFrame": 167,
+        "selected": 2,
+        "fraction": 0.011976047904191617
+      },
+      {
+        "transition": "2014-2017",
+        "ambiguityType": "different_label_maori",
+        "fullFrame": 7,
+        "selected": 1,
+        "fraction": 0.14285714285714285
+      },
+      {
+        "transition": "2014-2017",
+        "ambiguityType": "exact_same_label_general",
+        "fullFrame": 104,
+        "selected": 3,
+        "fraction": 0.028846153846153848
+      },
+      {
+        "transition": "2014-2017",
+        "ambiguityType": "exact_same_label_maori",
+        "fullFrame": 8,
+        "selected": 0,
+        "fraction": 0.0
+      },
+      {
+        "transition": "2014-2017",
+        "ambiguityType": "name_variant_general",
+        "fullFrame": 14,
+        "selected": 2,
+        "fraction": 0.14285714285714285
+      },
+      {
+        "transition": "2014-2017",
+        "ambiguityType": "name_variant_maori",
+        "fullFrame": 3,
+        "selected": 0,
+        "fraction": 0.0
+      },
+      {
+        "transition": "2020-2023",
+        "ambiguityType": "different_label_general",
+        "fullFrame": 161,
+        "selected": 2,
+        "fraction": 0.012422360248447204
+      },
+      {
+        "transition": "2020-2023",
+        "ambiguityType": "different_label_maori",
+        "fullFrame": 8,
+        "selected": 1,
+        "fraction": 0.125
+      },
+      {
+        "transition": "2020-2023",
+        "ambiguityType": "exact_same_label_general",
+        "fullFrame": 78,
+        "selected": 3,
+        "fraction": 0.038461538461538464
+      },
+      {
+        "transition": "2020-2023",
+        "ambiguityType": "exact_same_label_maori",
+        "fullFrame": 5,
+        "selected": 0,
+        "fraction": 0.0
+      },
+      {
+        "transition": "2020-2023",
+        "ambiguityType": "name_variant_general",
+        "fullFrame": 32,
+        "selected": 2,
+        "fraction": 0.0625
+      },
+      {
+        "transition": "2020-2023",
+        "ambiguityType": "name_variant_maori",
+        "fullFrame": 4,
+        "selected": 0,
+        "fraction": 0.0
+      }
+    ],
+    "sourceOccurrencesElectionLocalEstablished": 24,
+    "targetOccurrencesElectionLocalEstablished": 24,
+    "confirmedNewCrossElectionRelations": 0,
+    "differentPersonNewRelations": 0,
+    "unresolvedRelations": 24,
+    "careerClaimsFromNewResources": 2,
+    "newPersonExistenceClaims": 2,
+    "newOccurrenceToPersonLinks": 0,
+    "collectionQueries": 4,
+    "targetedQueries": 48,
+    "newUniqueResources": 2,
+    "resourcesPerUsableNewRelation": null,
+    "scopeWarning": "Stratified pilot fractions differ from the full pair frame; unweighted pilot coverage is not representative. Party biographies are retrospective and availability can depend on later prominence."
+  },
+  "unresolvedCaseIds": [
+    "nz-general-2008-electorate-54-candidate-07->nz-general-2011-electorate-54-candidate-07",
+    "nz-general-2008-electorate-09-candidate-02->nz-general-2011-electorate-09-candidate-01",
+    "nz-general-2008-electorate-02-candidate-02->nz-general-2011-electorate-02-candidate-01",
+    "nz-general-2008-electorate-32-candidate-09->nz-general-2011-electorate-32-candidate-07",
+    "nz-general-2008-electorate-54-candidate-03->nz-general-2011-electorate-54-candidate-03",
+    "nz-general-2008-electorate-30-candidate-03->nz-general-2011-electorate-30-candidate-06",
+    "nz-general-2008-electorate-01-candidate-12->nz-general-2011-electorate-01-candidate-06",
+    "nz-general-2008-electorate-65-candidate-01->nz-general-2011-electorate-65-candidate-03",
+    "nz-general-2014-electorate-40-candidate-02->nz-general-2017-electorate-40-candidate-02",
+    "nz-general-2014-electorate-12-candidate-10->nz-general-2017-electorate-12-candidate-06",
+    "nz-general-2014-electorate-17-candidate-01->nz-general-2017-electorate-17-candidate-03",
+    "nz-general-2014-electorate-64-candidate-06->nz-general-2017-electorate-64-candidate-06",
+    "nz-general-2014-electorate-10-candidate-07->nz-general-2017-electorate-10-candidate-06",
+    "nz-general-2014-electorate-46-candidate-04->nz-general-2017-electorate-46-candidate-02",
+    "nz-general-2014-electorate-59-candidate-03->nz-general-2017-electorate-59-candidate-07",
+    "nz-general-2014-electorate-70-candidate-02->nz-general-2017-electorate-70-candidate-02",
+    "nz-general-2020-electorate-43-candidate-05->nz-general-2023-electorate-43-candidate-05",
+    "nz-general-2020-electorate-08-candidate-08->nz-general-2023-electorate-08-candidate-11",
+    "nz-general-2020-electorate-32-candidate-09->nz-general-2023-electorate-32-candidate-09",
+    "nz-general-2020-electorate-54-candidate-02->nz-general-2023-electorate-54-candidate-03",
+    "nz-general-2020-electorate-63-candidate-07->nz-general-2023-electorate-63-candidate-03",
+    "nz-general-2020-electorate-20-candidate-05->nz-general-2023-electorate-20-candidate-07",
+    "nz-general-2020-electorate-33-candidate-08->nz-general-2023-electorate-33-candidate-06",
+    "nz-general-2020-electorate-66-candidate-04->nz-general-2023-electorate-66-candidate-02"
+  ],
+  "conflicts": [],
+  "rejectedLeadClasses": [
+    "matching labels",
+    "result snippets",
+    "single-election nomination",
+    "retrospective party biography without exact two-occurrence bridge"
+  ],
+  "sourceRoutes": {
+    "official_party_biography": {
+      "resources": 2,
+      "careerFacts": 2,
+      "exactRelations": 0
+    }
+  }
+}

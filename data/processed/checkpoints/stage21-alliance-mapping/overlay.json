@@ -1,0 +1,1875 @@
+{
+  "schemaVersion": 1,
+  "stage": 21,
+  "role": "supplemental_preserved_evidence_mapping_no_model_output_change",
+  "records": [
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-01",
+      "electorate": "Auckland Central",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 553,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_1.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-1.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-01-candidate-06",
+          "name": "PIERARD, Miriam Michal",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-08",
+      "electorate": "Dunedin North",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 603,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_8.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-8.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-08-candidate-07",
+          "name": "STEWART, Robert James",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-09",
+      "electorate": "Dunedin South",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 307,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_9.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-9.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-09-candidate-05",
+          "name": "LEPINE, Andrew Charles Edwin",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-10",
+      "electorate": "East Coast",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 413,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_10.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-10.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-10-candidate-04",
+          "name": "SALMON, Patrick",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-12",
+      "electorate": "Epsom",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 312,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_12.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-12.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-12-candidate-08",
+          "name": "O'DEA, Patrick John",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-13",
+      "electorate": "Hamilton East",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 348,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_13.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-13.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-13-candidate-03",
+          "name": "CALVER, Raymond John",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-15",
+      "electorate": "Helensville",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 338,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_15.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-15.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-15-candidate-05",
+          "name": "HARRÉ, Laila Jane",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-18",
+      "electorate": "Ilam",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 233,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_18.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-18.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-18-candidate-01",
+          "name": "BALLANTINE, Beverley June",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-21",
+      "electorate": "Kelston",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 432,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_21.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-21.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-06",
+          "name": "SAMI, Roshni Aasha Chettiar",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-23",
+      "electorate": "Māngere",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 324,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_23.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-23.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-23-candidate-01",
+          "name": "PAPALI'I, James Philip",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-24",
+      "electorate": "Manukau East",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 276,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_24.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-24.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-24-candidate-06",
+          "name": "TRINDER, Joseph Meihana",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-25",
+      "electorate": "Manurewa",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 315,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_25.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-25.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-25-candidate-03",
+          "name": "DAINTY, Yvonne",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-26",
+      "electorate": "Maungakiekie",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 377,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_26.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-26.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-03",
+          "name": "FINAU, Sitaleki",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-27",
+      "electorate": "Mt Albert",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 603,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_27.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-27.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-27-candidate-01",
+          "name": "CAROLAN, Joseph",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-28",
+      "electorate": "Mt Roskill",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 304,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_28.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-28.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-28-candidate-05",
+          "name": "MINTO, John Bernard",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-34",
+      "electorate": "Northcote",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 336,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_34.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-34.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-34-candidate-03",
+          "name": "HO, Gil",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-39",
+      "electorate": "Palmerston North",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 330,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_39.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-39.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-39-candidate-02",
+          "name": "FARVID, Pantea",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-40",
+      "electorate": "Papakura",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 275,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_40.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-40.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-40-candidate-04",
+          "name": "FOWLER, Roger Norman",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-46",
+      "electorate": "Rongotai",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 568,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_46.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-46.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-46-candidate-07",
+          "name": "PARETUTANGANUI-TAMATI, Ariana",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-49",
+      "electorate": "Tāmaki",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 263,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_49.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-49.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-49-candidate-01",
+          "name": "GIBSON, Lisa Belle",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-50",
+      "electorate": "Taranaki-King Country",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 191,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_50.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-50.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-50-candidate-04",
+          "name": "KEINZLEY, Grant Thomas",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-53",
+      "electorate": "Te Atatū",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 380,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_53.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-53.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-07",
+          "name": "YONG, Christopher Vun Han",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-55",
+      "electorate": "Upper Harbour",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 286,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_55.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-55.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-55-candidate-05",
+          "name": "NGATA, Makelesi Maxine",
+          "sourceAffiliation": "MANA Movement",
+          "sourcePartyKey": "manamovement",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-60",
+      "electorate": "Wellington Central",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 578,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_60.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-60.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-60-candidate-10",
+          "name": "VALENTINE, Callum Nicholas",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-63",
+      "electorate": "Whangarei",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 386,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_63.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-63.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-01",
+          "name": "CURRIN, David Brett",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2014,
+      "electorateId": "nz-general-2014-electorate-64",
+      "electorate": "Wigram",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Internet MANA",
+      "sharedPartyKey": "internetmana",
+      "sharedPartyVotes": 231,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2014-e9-csv-e9_part1.csv",
+        "ec-2014-e9-csv-e9_part4.csv",
+        "ec-2014-e9-csv-e9_part5.csv",
+        "ec-2014-e9-csv-e9_part6.csv",
+        "ec-2014-e9-csv-e9_part8_cand_64.csv",
+        "ec-2014-e9-csv-e9_part9_1.csv",
+        "ec-2014-e9-csv-e9_part9_2.csv",
+        "ec-2014-elect-splitvote-64.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2014-electorate-64-candidate-03",
+          "name": "McCLINTOCK, Lois Marie",
+          "sourceAffiliation": "Internet Party",
+          "sourcePartyKey": "internetparty",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-01",
+      "electorate": "Auckland Central",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 48,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-1.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-1.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-01-candidate-02",
+          "name": "DAVIE, Paul Clifford",
+          "sourceAffiliation": "Rock the Vote NZ",
+          "sourcePartyKey": "rockthevotenz",
+          "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-07",
+      "electorate": "Coromandel",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 126,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-7.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-7.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-07-candidate-06",
+          "name": "TEPOU, Sarai",
+          "sourceAffiliation": "NZ Outdoors & Freedom Party",
+          "sourcePartyKey": "nzoutdoorsfreedomparty",
+          "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-09",
+      "electorate": "East Coast",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 178,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-9.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-9.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-09-candidate-07",
+          "name": "PACKER, Leighton",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-13",
+      "electorate": "Hamilton West",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 141,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-13.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-13.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-13-candidate-02",
+          "name": "DU PLOOY, Rudolph Arnoldus",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-14",
+      "electorate": "Hutt South",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 99,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-14.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-14.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-14-candidate-07",
+          "name": "RANGITUTIA, Max",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-16",
+      "electorate": "Invercargill",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 137,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-16.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-16.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-16-candidate-06",
+          "name": "TERRILL, Judith Anne",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-21",
+      "electorate": "Māngere",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 266,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-21.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-21.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-21-candidate-01",
+          "name": "ALAILIMA, Fuiavailili",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-22",
+      "electorate": "Manurewa",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 362,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-22.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-22.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-22-candidate-03",
+          "name": "WARREN, Caine",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-23",
+      "electorate": "Maungakiekie",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 89,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-23.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-23.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-23-candidate-02",
+          "name": "CHUAH, Eric Boon Leong",
+          "sourceAffiliation": "Rock the Vote NZ",
+          "sourcePartyKey": "rockthevotenz",
+          "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-28",
+      "electorate": "New Lynn",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 104,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-28.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-28.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-28-candidate-04",
+          "name": "MANN, Phineas",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-31",
+      "electorate": "Northcote",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 103,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-31.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-31.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-31-candidate-02",
+          "name": "DONALDSON, Mark Andrew",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-33",
+      "electorate": "Ōhāriu",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 58,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-33.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-33.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-33-candidate-04",
+          "name": "LIM, Patrick",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-35",
+      "electorate": "Pakuranga",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 87,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-35.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-35.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-35-candidate-01",
+          "name": "ALCOCK, John Ronald",
+          "sourceAffiliation": "Rock the Vote NZ",
+          "sourcePartyKey": "rockthevotenz",
+          "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-37",
+      "electorate": "Panmure-Ōtāhuhu",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 222,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-37.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-37.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-37-candidate-03",
+          "name": "MOKARAKA, Karl",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-38",
+      "electorate": "Papakura",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 210,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-38.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-38.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-38-candidate-02",
+          "name": "HARVEY, Katherine Jane",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-39",
+      "electorate": "Port Waikato",
+      "scope": "general",
+      "held": false,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 150,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-39.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-39.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-39-candidate-08",
+          "name": "SUDHAMALLA, Vijayendra",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-40",
+      "electorate": "Rangitata",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 68,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-40.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-40.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-40-candidate-02",
+          "name": "CLARKSON, Michael David",
+          "sourceAffiliation": "Rock the Vote NZ",
+          "sourcePartyKey": "rockthevotenz",
+          "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-42",
+      "electorate": "Remutaka",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 147,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-42.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-42.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-42-candidate-06",
+          "name": "ROBERTSON, Heker Tony",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-43",
+      "electorate": "Rongotai",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 61,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-43.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-43.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-43-candidate-08",
+          "name": "ROA, Deanna Merania",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-46",
+      "electorate": "Southland",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 91,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-46.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-46.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-46-candidate-05",
+          "name": "MACLEAN, Naomi",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-50",
+      "electorate": "Taranaki-King Country",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 137,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-50.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-50.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-50-candidate-03",
+          "name": "RAISON, Daryl Morice William",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-52",
+      "electorate": "Tauranga",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 171,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-52.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-52.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-52-candidate-05",
+          "name": "SAMUELS, Leon Wharewehe",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-54",
+      "electorate": "Tukituki",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 123,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-54.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-54.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-54-candidate-05",
+          "name": "NGAHUKA, Michael Dane Joseph",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-55",
+      "electorate": "Upper Harbour",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 92,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-55.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-55.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-55-candidate-07",
+          "name": "SOARES, Bernadette",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-56",
+      "electorate": "Waikato",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 142,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-56.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-56.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-56-candidate-01",
+          "name": "DORNAN, Lois Emere",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-60",
+      "electorate": "Wellington Central",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 32,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-60.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-60.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-60-candidate-08",
+          "name": "LIM, Meg",
+          "sourceAffiliation": "Vision New Zealand",
+          "sourcePartyKey": "visionnewzealand",
+          "oldMappingStatus": "ambiguous_report_only_alliance",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    },
+    {
+      "year": 2023,
+      "electorateId": "nz-general-2023-electorate-61",
+      "electorate": "West Coast-Tasman",
+      "scope": "general",
+      "held": true,
+      "sharedPartyBallotGroup": "Freedoms NZ",
+      "sharedPartyKey": "freedomsnz",
+      "sharedPartyVotes": 289,
+      "candidateCountInGroup": 1,
+      "status": "shared_group_single_local_destination",
+      "sourceIds": [
+        "ec-2023-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-candidate-votes-by-voting-place-61.csv",
+        "ec-2023-statistics-csv-overall-results-summary.csv",
+        "ec-2023-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+        "ec-2023-statistics-csv-percentage-votes-for-registered-parties.csv",
+        "ec-2023-statistics-csv-split-votes-electorate-61.csv",
+        "ec-2023-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+        "ec-2023-statistics-csv-winning-electorate-candidates.csv"
+      ],
+      "candidates": [
+        {
+          "candidateOccurrenceId": "nz-general-2023-electorate-61-candidate-02",
+          "name": "GREY, Susan Jane",
+          "sourceAffiliation": "NZ Outdoors & Freedom Party",
+          "sourcePartyKey": "nzoutdoorsfreedomparty",
+          "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+          "oldPartyKey": null,
+          "officialSplitDestinationExists": true
+        }
+      ],
+      "evidenceInterpretation": "joint ballot category and local candidate destination; no constituent-specific party-vote allocation",
+      "modelEligibilityInterpretation": "single-destination group-level route is a modelling representation decision, not proof of constituent-specific votes"
+    }
+  ],
+  "summary": {
+    "affectedSeatCount": 53,
+    "byYearHeldStatus": {
+      "2014:held:shared_group_single_local_destination": 26,
+      "2023:cancelled:shared_group_single_local_destination": 1,
+      "2023:held:shared_group_single_local_destination": 26
+    },
+    "old2014AmbiguousTrainingSeats": 26,
+    "old2023AmbiguousHeldFrameSeats": 20,
+    "old2023IncorrectNoGroupHeldSeats": 6,
+    "potentialNew2014TrainingSeatsUnderSingleGroupRoute": 26,
+    "potentialNew2023FrameSeatsUnderSingleGroupRoute": 20
+  }
+}

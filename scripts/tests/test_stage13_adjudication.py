@@ -105,6 +105,21 @@ class Stage13AdjudicationTests(unittest.TestCase):
         for name, payload in built.items():
             self.assertEqual((stage.ROOT / stage.OUT / name).read_bytes(), stage.encode(payload))
 
+    def test_unrelated_source_registration_does_not_change_stage13(self):
+        original = stage.build()
+        self.assertNotIn('data/sources.json', original['manifest.json']['inputSha256'])
+        unchanged_read = stage.read
+
+        def registry_with_unrelated_addition(path):
+            value = unchanged_read(path)
+            if path == stage.REGISTRY:
+                value = copy.deepcopy(value)
+                value['sources'].append({'id': 'unrelated-future-stage-source'})
+            return value
+
+        with patch.object(stage, 'read', side_effect=registry_with_unrelated_addition):
+            self.assertEqual(stage.build(), original)
+
 
 if __name__ == '__main__':
     unittest.main()

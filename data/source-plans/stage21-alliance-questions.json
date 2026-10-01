@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "stage": 21,
+  "package": "alliance_category_mapping",
+  "status": "preserved_evidence_audit_before_any_external_search",
+  "searchBudget": {
+    "maximumQueries": 12,
+    "maximumNewResources": 10,
+    "attemptedQueries": 0,
+    "newResources": 0
+  },
+  "questions": [
+    {
+      "id": "2014-internet-mana",
+      "scope": "all 2014 general Internet Party and MANA Movement candidacies behind Stage18 exclusions",
+      "factsNeeded": [
+        "whether official party ballots report a joint Internet MANA category",
+        "whether both constituent affiliations are reported under that category",
+        "whether more than one constituent candidate stands in any affected electorate",
+        "whether official results separately allocate joint party votes to either constituent"
+      ],
+      "preservedFirst": [
+        "2014 official overall results, party votes by electorate, candidate result tables and local split matrices",
+        "2014 processed splitPartyGrouping and raw source contracts"
+      ],
+      "authoritativeExternalRouteIfMaterialFactMissing": [
+        "Electoral Commission 2014 election results and registration records",
+        "contemporaneous Internet MANA agreement or party announcements"
+      ]
+    },
+    {
+      "id": "2023-freedoms-nz",
+      "scope": "all 2023 general Vision New Zealand, Rock the Vote NZ and NZ Outdoors & Freedom Party candidacies, including cancelled Port Waikato",
+      "factsNeeded": [
+        "whether official party ballots report a joint Freedoms NZ category",
+        "whether official grouped results list all three constituent affiliations",
+        "whether more than one constituent candidate stands in any affected electorate",
+        "whether official results separately allocate joint party votes to a constituent"
+      ],
+      "preservedFirst": [
+        "2023 official overall results, party votes by electorate, candidate result tables and local and aggregate split matrices",
+        "2023 processed aggregateAffiliationMappings and raw source contracts"
+      ],
+      "authoritativeExternalRouteIfMaterialFactMissing": [
+        "Electoral Commission 2023 election results and registration records",
+        "contemporaneous Freedoms NZ alliance documentation"
+      ]
+    }
+  ],
+  "searchRule": "External search only for a material fact unresolved by the preserved sources. Log every query before inspecting its result; preserve any new raw resource and registry checksum. Do not search to invent an allocation of ballots that were recorded only for a joint group."
+}

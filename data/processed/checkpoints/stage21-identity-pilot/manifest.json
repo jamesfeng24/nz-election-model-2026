@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "stage": 21,
+  "phase": "pre_acquisition",
+  "inputSha256": {
+    "data/processed/checkpoints/complete-candidate-baseline/input-inventory.json": "28754731d7d3a2b237969e1e896e493f580a24ae55bfd8a061d4b73572567c39",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/models/party-vote-transform/party-continuity.json": "d3c6cfa63f59725cbc9276e2442f1f59eafe24a9526a4fbb9ca52d68fcb3071b",
+    "data/processed/models/replacement-candidate/inventory.json": "ba7d3244783942b406e8cba032947583c6463a2e11b13c2278449a9765ee2b52",
+    "data/processed/checkpoints/identity-evidence-pass/final/relations.json": "2c3fa9daf8f790d6ec37877da111bcc1760132fc50b10821cdf8580b4d59fe75"
+  },
+  "generatorSha256": "a144ad06e31f83c680efd8590fdb6b165bb63c45637f17c78da9175ae578e5c4",
+  "outputSha256": {
+    "claim-ledger.json": "e22c7d6afc53bea43ad00c062fedf7cae9bac936811ba88348e05da903f15714",
+    "acquisition-plan.json": "23eaa23cf64c31a3f98f103e84b5aea7b817d1b1a79574bdf055bddaf929bf4d",
+    "search-ledger.json": "5fbbd17374ea8812e0b36be5881f0c58c4339117b811e2f0ca18439dddd7837f"
+  }
+}

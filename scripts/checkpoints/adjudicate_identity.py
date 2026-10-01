@@ -330,7 +330,7 @@ def build():
                'unresolved-conflicts.json': {'schemaVersion': 1, 'stage': 13, 'records': unresolved},
                'coverage.json': coverage(records, outcomes, searches, new_plan['sources'])}
     inputs = [PRESERVED, SUPPLEMENT, ACTIVE, PREFLIGHT, COHORT, OCCURRENCES,
-              CLAIMS, NEW_SOURCES, SNAPSHOT, IDENTITY_SNAPSHOT, REGISTRY]
+              CLAIMS, NEW_SOURCES, SNAPSHOT, IDENTITY_SNAPSHOT]
     inputs += [path.relative_to(ROOT) for path in sorted((ROOT / BATCHES).glob('*.json'))]
     inputs += [Path(f'data/processed/elections/{year}.json') for year in (2008, 2011, 2014, 2017, 2020, 2023)]
     outputs['manifest.json'] = {'schemaVersion': 1, 'stage': 13,

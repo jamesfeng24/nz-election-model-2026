@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "stage": 21,
+  "role": "explicit_stage11_geographic_join_correction_existing_diagnostic_rules",
+  "inputHashes": {
+    "data/processed/checkpoints/stage21-stage11-geography-repair/corrected-applicability.json": "43822730ece320d509645365114b6b33f7dfd3a255214f958a95e4535f71eed1",
+    "data/processed/checkpoints/stage21-stage11-geography-repair/original-artifact-hashes.json": "6158d58ec32a7e9392b2f112616d782486ecadedec08949d9b34b8cb786462c5",
+    "data/processed/checkpoints/stage21-stage11-geography-repair/correction-scope.json": "664ba42246534e462946510525ce27235a1b742cb1960f7e97cbbd8c723ea7c5",
+    "data/processed/checkpoints/stage21-stage11-geography-repair/inventory-manifest.json": "1410941fcc40c322f6157a5781d556b0ee8ec64c2a916d46a1cef6a7cd7ccd9f",
+    "data/processed/models/historical-split-ticket/predictions.json": "3b4b380bf761a29d749a90c2682d4731d3a889638194cee01f621e96813acfdb",
+    "data/processed/models/historical-split-ticket/party-input-sensitivity.json": "b470f05361de577bbae8086bb5eb90b00b23725bc6a258c5e0729079da72e596",
+    "data/processed/models/party-vote-transform/backtest-records.json": "06464b70a46f4efd40297560d100ab969515b8a2f58a971ec6397d5dfbcea602",
+    "data/processed/models/replacement-candidate/inventory.json": "ba7d3244783942b406e8cba032947583c6463a2e11b13c2278449a9765ee2b52",
+    "data/processed/checkpoints/complete-candidate-baseline/input-inventory.json": "28754731d7d3a2b237969e1e896e493f580a24ae55bfd8a061d4b73572567c39",
+    "data/processed/models/party-vote-transform/party-continuity.json": "d3c6cfa63f59725cbc9276e2442f1f59eafe24a9526a4fbb9ca52d68fcb3071b",
+    "data/processed/models/historical-split-ticket/applicability.json": "14c8f235cd86ff94f9fd8d9e23c36b8605419cb3455fc6b100de9f069810d673",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e",
+    "data/processed/split-votes/2008.json": "3a9a763ef298ce894066982752bdc60627c14dd952b6a370ad196473f90bfc7a",
+    "data/processed/split-votes/2011.json": "3e503b3757380e63d3da795ea9506c3c3ba445b89f815f18b33343207d04514c",
+    "data/processed/split-votes/2014.json": "0388187be992b503c861ece81f8452322b8d404fa0709360fc77c6d31101e292",
+    "data/processed/split-votes/2017.json": "a9164c523df84aae1018d64d70255eaabdcbe780ff8d8a5f9bc46820a8c0f7ef",
+    "data/processed/split-votes/2020.json": "488e084feb5023aa5c9885965d4fdd121c8660235d6556bee486170ec77b1f10",
+    "data/processed/split-votes/2023.json": "81a6bdbc1ceedbf52436af45e6fdc0e979873f34b9427219124029f88b20203c"
+  },
+  "generatorHashes": {
+    "scripts/models/historical_split_ticket/corrected_analysis.py": "e90eb0d9ee97c2dab6d5a7eb386e944bb041e883999bdc5c12d6febe7252ebe4",
+    "scripts/models/historical_split_ticket/corrected_analysis_run.py": "14cfab59c70f85a39fe3e6f94061838f0bdd3d64a4a248a93d831294496e1735"
+  },
+  "outputHashes": {
+    "corrected-predictions.json": "5295e6bec0e57628a9ab35c55d0935ee4c4805044ff651f9d0bed75572f04742",
+    "corrected-party-input-sensitivity.json": "bad612acbb63be6250b255e9512a46ede038585c9c8244b4a1c8559297b4cc74",
+    "corrected-identity-diagnostics.json": "e47966b99fdc7e4e44c06ecbfc4f503d716581a6fe50bbd95b74df9f5771581c",
+    "corrected-selection.json": "c41039e4ddc518fb1582e65bfcccc4b0d22044ac00014bba648261099d152608",
+    "correction-comparison.json": "34d52cdc3b34e464ea9b1a97e43e9a8b49f82e3fe066578ce1e738207fcfef80"
+  }
+}
