@@ -93,6 +93,33 @@ class Stage24ConstructionTests(unittest.TestCase):
             construction.outputs()
         self.assertNotIn(common.STAGE22 + 'actuals.json', calls)
 
+    def test_observed_party_reference_cannot_change_predicted_branch(self):
+        contests = [{'targetElectorateId': 'synthetic', 'candidates': [
+            {'candidateOccurrenceId': 'major', 'observedTargetPartySupport': .5,
+             'predictedTargetPartySupport': .3, 's0Reported': .6,
+             'coupledSamePartyPercent': None},
+            {'candidateOccurrenceId': 'no_group', 'observedTargetPartySupport': 0,
+             'predictedTargetPartySupport': 0, 's0Reported': None,
+             'coupledSamePartyPercent': None}]}]
+        changed = copy.deepcopy(contests)
+        changed[0]['candidates'][0]['observedTargetPartySupport'] = .8
+        means = {'S': .4, 'V': 0}
+        baseline = {'status': 'fitted', 'kappa': .01, 'theta': []}
+        old_predicted = construction.model_predictions(
+            construction.adapter_rows(contests, 'predicted'), means,
+            'printed', 'baseline', baseline)
+        new_predicted = construction.model_predictions(
+            construction.adapter_rows(changed, 'predicted'), means,
+            'printed', 'baseline', baseline)
+        self.assertEqual(old_predicted, new_predicted)
+        old_reference = construction.model_predictions(
+            construction.adapter_rows(contests, 'observed'), means,
+            'printed', 'baseline', baseline)
+        new_reference = construction.model_predictions(
+            construction.adapter_rows(changed, 'observed'), means,
+            'printed', 'baseline', baseline)
+        self.assertNotEqual(old_reference, new_reference)
+
     def test_changed_required_dependency_rejected(self):
         real_digest = common.digest
 
