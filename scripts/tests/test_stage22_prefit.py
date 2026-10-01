@@ -131,6 +131,10 @@ class Stage22PrefitTests(unittest.TestCase):
         deleted['sources'] = [r for r in deleted['sources'] if r['id'] != required]
         with self.assertRaisesRegex(ValueError, 'Changed or missing'):
             prefit.source_contract(deleted, parents)
+        ambiguous = deepcopy(registry)
+        ambiguous['sources'].append(deepcopy(ambiguous['sources'][0]))
+        with self.assertRaisesRegex(ValueError, 'Ambiguous live'):
+            prefit.source_contract(ambiguous, parents)
         with TemporaryDirectory() as directory:
             selected = snapshot['sources'][0]
             path = Path(directory) / selected['rawPath']
