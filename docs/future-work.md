@@ -1,4 +1,10 @@
-# Current checkpoint: Stage23 complete local party-vector diagnostic
+# Current checkpoint: Stage24 fixed candidate input-substitution diagnostic
+
+The [Stage24 frozen contract](stage24-frozen-input-substitution.md) pins Stage22's saved baseline/S-only coefficients, training-only means, supported S features, exact 2017/2023 candidate slates and Stage23 complete party vectors. [Construction](../data/processed/checkpoints/stage24-party-input-substitution/predictions.json) was committed before [evaluation](stage24-party-input-substitution-results.md), with no candidate refit. On 64 identical held general contests per fold, substituting Stage23 local party inputs changes S-only minus baseline MAE from −0.213 to +0.101pp in 2017 and from −0.871 to −0.969pp in 2023. The paired descriptive interaction I is +0.314 and −0.099pp. Winner accuracy changes differently from share error. These development folds do not establish stable operational benefit, and all operational selections remain null. Both branches use retrospective slates; the substituted branch uses observed target national support, not an as-of forecast. Stage23's national gaps and entrant assumption remain.
+
+**One next bounded decision, requiring separate authorization:** inventory and verify dated pre-result national-support and nomination inputs for a genuinely historical as-of candidate-share test, with an explicit abstention rule where inputs cannot be reconstructed. Do not refit Stage22, retune Stage23, select ensemble weights or produce 2026 predictions from this checkpoint. National reconciliation, changed-boundary candidate evidence, Māori applicability and calibrated joint uncertainty remain separate prerequisites for any operational claim. No later stage begins automatically.
+
+## Previous Stage23 checkpoint
 
 The [Stage23 findings](stage23-complete-local-party-results.md) document a
 parameter-free conditional proportional composition over every registered

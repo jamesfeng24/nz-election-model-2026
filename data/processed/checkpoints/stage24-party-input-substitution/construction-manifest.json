@@ -1,0 +1,16 @@
+{
+  "codeSha256": {
+    "scripts/checkpoints/stage24_common.py": "13ac4588262037b1db11ef4e6b0a194b4b1b619d3b6265780283fe9450a64c8c",
+    "scripts/checkpoints/stage24_construction.py": "e9271933bc54e1bb569bb576e1928956cbb14f3da38ac544dc299a121b5f1213"
+  },
+  "inputSha256": {
+    "data/processed/checkpoints/stage22-shared-group-experiment/predictions.json": "0230e3f35ca06b4f54a1e89e0adb454804f270e3e04b4dfb4047d989fb8f9c94",
+    "data/processed/checkpoints/stage24-party-input-substitution/analysis-contract.json": "7ae9ac7a508d748d1b2215363a621e2b9465cf0b0ba2ce2efb589fe1b5385b15",
+    "data/processed/checkpoints/stage24-party-input-substitution/input-contract.json": "39cdba805e34d9ffc0487712798a593fe247a491615ec4f85da7d8d42073dfae",
+    "data/processed/checkpoints/stage24-party-input-substitution/input-inventory.json": "10cc2bb7a3276e2fabd41d07168bcfe33619ca4084365fa981932514683b2ab2"
+  },
+  "outputSha256": "a8e82acb13ae2891c0699737bbadbcac1cc2927691167a6b8d3efb8f6b7f01b9",
+  "phase": "construction_committed_before_target_candidate_evaluation",
+  "schemaVersion": 1,
+  "stage": 24
+}

@@ -29,3 +29,6 @@ jobs:
       - run: python3 -m scripts.models.complete_party_vector.inventory --check
       - run: python3 -m scripts.models.complete_party_vector.construction --check
       - run: python3 -m scripts.models.complete_party_vector.evaluation --check
+      - run: python3 -m scripts.checkpoints.stage24_inventory --check
+      - run: python3 -m scripts.checkpoints.stage24_construction --check
+      - run: python3 -m scripts.checkpoints.stage24_evaluation --check

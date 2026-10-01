@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — Stage 24 fixed candidate input substitution — 2026-10-02
+
+- Froze exact Stage22 baseline/S-only fits, means, source features, shared-group mappings and 2017/2023 common IDs before calculation; reproduced saved observed-input predictions exactly and committed construction before outcome evaluation.
+- Substituted Stage23 complete local party vectors without candidate refitting. The paired S-versus-baseline MAE interaction is +0.314pp in 2017 and −0.099pp in 2023; share and winner diagnostics differ, and operational selections remain null.
+- Added separated evaluation, category/ranking/influence/rounding diagnostics, source-pinned manifests, mutation and arithmetic tests, and deterministic CI checks. No earlier artifact, source or identity adjudication was changed.
+- Corrected post-evaluation cross-platform C/D serialization after CI exposed last-bit NumPy variation. Decimal evaluation of the same frozen formula differs by at most `2.22e−16` candidate share and changes no fit or conclusion; the original checkpoint remains in history.
+
 ## Unreleased — Stage 23 conditional complete local party vectors — 2026-10-02
 
 - Reused preserved official party ballots, Stage5 continuity, the validated 213-seat frame and Stage21 alliance overlay to inventory every source/target party category before scoring.
