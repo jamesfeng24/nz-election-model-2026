@@ -213,3 +213,27 @@ Both proposed trained folds pass the predeclared coverage gates and have full wi
 The independent certified source/target electorate-ID mapping replaces Stage11's exact label join for eight unchanged-boundary 2008→2011 seats with macron changes. The separate corrected companion admits 33 supported candidate categories and reruns only Stage11's existing conditional matched-component diagnostics; it does not overwrite original outputs. All 191 target contests retain unmatched party groups, so operational split selection remains null. The official alliance overlay distinguishes a shared party-ballot group from a constituent candidate affiliation: assigning that group to its only standing constituent candidate is a coherent **proposed representation**, not an observed constituent-level party-vote split. Stage18/20 original samples remain historical; six 2023 constructed candidates were factually misclassified as no-party-group and need a pre-fit correction or exclusion before any Stage20 fit.
 
 The Stage21 fixed pilot retains 888 historical pair questions and searches exactly 24 selected unresolved cases under a committed outcome-independent order. Election-local official candidate records establish occurrences, not cross-election identity. The bounded pass provides two new retrospective party-biography career facts and no exact two-occurrence relationship bridge. All 24 selected relations remain unresolved. Target winner status enters a separate coverage diagnostic after selection; it cannot promote a relationship. A failed search does not imply different people, complete career history or zero candidate strength. The unequal sampling fractions and retrospective source availability preclude population or prospective validation claims. See `docs/stage21-repair-decision.md` for correction results and the limited next-stage gate.
+## Stage23 complete local party-share input layer
+
+The Stage23 conditional party pipeline uses one supported party-ballot-group
+relationship per category, not candidate affiliation continuity. For each
+continuing target group its source electorate share is divided by source
+national share; a target entrant receives neutral affinity one. Each affinity
+is multiplied by supplied target national valid-party share and the complete
+target vector is jointly closed to one. Exits contribute no target category.
+An observed source zero remains zero under the point rule; missing source
+support triggers contest abstention. There is no fitted coefficient or
+post-score category exception. The rule differs from Stage5's separate
+unconstrained marginal predictions, which remain historical artifacts.
+
+The source and target party-valid denominators are distinct. Candidate votes
+and candidate-valid denominators never enter this party layer. Historical
+target national support is explicitly supplied; target local party shares and
+target valid-party turnout are evaluation-only. The model covers all 213
+unchanged-boundary party-vote seat pairs, including the Māori population and
+Port Waikato party ballots, but does not enforce a national weighted sum.
+Observed target valid-party totals are used only to diagnose that gap. Simplex
+conservation is mathematical feasibility, not local predictive accuracy.
+Stage23 errors, alignment limits and subsequent dependencies are in
+`docs/stage23-complete-local-party-results.md`. No operational selection,
+candidate pipeline, 2026 forecast or calibrated uncertainty was added.

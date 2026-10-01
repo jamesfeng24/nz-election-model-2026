@@ -178,3 +178,18 @@ The original Stage11 artifacts are hash-pinned in `data/processed/checkpoints/st
 The fixed identity-pilot execution ledger records all four collection and 48 case-level search queries. Two official party biographies were newly preserved under `data/raw/identity-stage21/`, registered as `stage21-identity-act-david-seymour-2026-09-30` and `stage21-identity-labour-willow-jean-prime-2026-09-30`. `final-source-contract.json` pins only these two consumed registry records and checks their raw bytes; unrelated registry additions remain valid, while missing, ambiguous or changed required records and changed raw bytes fail deterministic reproduction. Both pages are retrospective, with unknown original publication dates and unknown availability by the relevant target-election nomination close. Their exact passages support dated career facts but do not prove a connection between both selected election-local nominations. The local official candidature source IDs remain attached to every case; `adjudication.json` retains unresolved cross-election relationships without overwriting earlier identity layers. The later-observed winner diagnostics come from preserved Stage7 official candidate counts and agree with all 21 preserved Stage10 Māori winner-overlay records; they do not affect acquisition or adjudication.
 
 The appended Stage21 records also exposed an unrelated whole-registry hash in Stage13's final manifest. Stage13 already validates its saved required-record snapshots and raw bytes. The registry hash was removed from the Stage13 manifest input list, and only that manifest's provenance metadata was regenerated; Stage13 occurrence, person, relation, conflict and coverage outputs remain byte-identical. Its required-source checks still reject changed/deleted/ambiguous records and altered raw files. Unrelated future registrations no longer invalidate Stage13.
+## Stage23 preserved party-vector inputs
+
+No sources were acquired. The Stage23 `source-contract.json` under
+`data/processed/models/complete-party-vector/` pins exactly the Stage5
+official party-ballot tables and processed election/party panel files used
+for the six years, the validated fixed 213-seat frame, party continuity and
+Stage21 election-local alliance overlay. Required raw bytes and processed
+records are checked by SHA-256; unrelated source-registry additions are not
+part of the contract. The Stage23 inventory records exact source local party
+counts, source and target national category keys and conditional supplied
+target national support. The separate evaluation file contains target local
+party actuals and observed target valid-party weights. Port Waikato's 2023
+party ballot remains valid despite the cancelled candidate contest. No
+candidate result, identity evidence or geographic candidate baseline is
+derived from these party tables.

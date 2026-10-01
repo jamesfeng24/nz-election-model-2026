@@ -26,3 +26,6 @@ jobs:
       - run: python3 -m scripts.transform.historical_panel --check --verify-years
       - run: python3 -m scripts.transform.modern_election --check
       - run: python3 -m scripts.transform.modern_election --year 2020 --check
+      - run: python3 -m scripts.models.complete_party_vector.inventory --check
+      - run: python3 -m scripts.models.complete_party_vector.construction --check
+      - run: python3 -m scripts.models.complete_party_vector.evaluation --check

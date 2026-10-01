@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — Stage 23 conditional complete local party vectors — 2026-10-02
+
+- Reused preserved official party ballots, Stage5 continuity, the validated 213-seat frame and Stage21 alliance overlay to inventory every source/target party category before scoring.
+- Froze and implemented a parameter-free compositional proportional construction, producing coherent local vectors for all 213 party-ballot pairs conditional on supplied target national support; entrants use an explicit neutral national profile.
+- Evaluated party shares separately from construction against a flat national-vector benchmark, with full-population oracle-weight national-gap diagnostics. No exact national reconciliation, as-of forecast, candidate score or operational selection is claimed.
+- Added stage-specific source checks, deterministic regeneration and synthetic tests; earlier raw sources, numerical artifacts, identity evidence and operational selections remain unchanged.
+
 ## Unreleased — Stage 17 candidate-baseline design — 2026-09-30
 
 - Verified Stage16 PR #23 merged and pinned a preserved 71-seat target-boundary candidate/party evidence inventory with 72 official candidate-file source records and exact raw checksums.
