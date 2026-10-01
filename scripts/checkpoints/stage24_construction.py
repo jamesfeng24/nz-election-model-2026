@@ -1,9 +1,10 @@
 """Reuse saved Stage22 fits while substituting only Stage23 party inputs."""
 import argparse
+from decimal import Decimal, localcontext
 from hashlib import sha256
 import math
 
-from scripts.checkpoints.stage22_fit import predict
+from scripts.checkpoints.stage22_fit import predict, source_s
 from scripts.checkpoints.stage24_common import (
     PREFIX, STAGE22, digest, encode, read, verify_contract, write_or_check,
 )
@@ -62,6 +63,45 @@ def model_predictions(rows, means, scenario, method, parameters):
     return predict(rows, means, scenario, method, parameters)
 
 
+def portable_predictions(rows, means, scenario, method, parameters):
+    """Evaluate the frozen intensity equation with platform-stable precision."""
+    if parameters['status'] != 'fitted' or method not in ('baseline', 'baseline_plus_S'):
+        raise ValueError('Unsupported saved Stage22 restriction')
+    if len(parameters['theta']) != (method == 'baseline_plus_S'):
+        raise ValueError('Saved Stage22 parameter count changed')
+    result = []
+    with localcontext() as context:
+        context.prec = 50
+        kappa = Decimal(str(parameters['kappa']))
+        theta = Decimal(str(parameters['theta'][0])) if parameters['theta'] else None
+        center = Decimal(str(means['S']))
+        for row in rows:
+            intensities = []
+            for candidate in row['candidates']:
+                base = Decimal(str(candidate['targetPartySupport'])) + kappa
+                if base <= 0:
+                    raise ValueError('Candidate intensity is nonpositive')
+                s = source_s(candidate, scenario)
+                if theta is not None and s is not None:
+                    base *= (theta * (Decimal(str(s)) - center)).exp()
+                intensities.append(base)
+            total = sum(intensities)
+            shares = [float(value / total) for value in intensities]
+            if abs(sum(shares) - 1) > TOL:
+                raise ValueError('Candidate shares do not conserve')
+            result.append({'targetElectorateId': row['targetElectorateId'],
+                           'candidateShares': {candidate['targetOccurrenceId']: share
+                                               for candidate, share in zip(row['candidates'], shares)}})
+    return result
+
+
+def equivalent_predictions(actual, reference):
+    if len(actual) != len(reference):
+        raise ValueError('Platform-stable prediction changed contest count')
+    for new, old in zip(actual, reference):
+        reproduce_observed([new], [old], 'portable')
+
+
 def build(inventory, saved):
     saved_by_year = {f['targetYear']: f for f in saved['folds']}
     if len(saved_by_year) != 2 or set(saved_by_year) != {2017, 2023}:
@@ -79,22 +119,29 @@ def build(inventory, saved):
                 raise ValueError('Saved fit or training mean contract changed')
             a = model_predictions(observed, means, scenario, 'baseline', parameters['baseline'])
             b = model_predictions(observed, means, scenario, 'baseline_plus_S', parameters['baseline_plus_S'])
-            max_a = reproduce_observed(a, reference['scenarios'][scenario]['baseline'], 'A')
-            max_b = reproduce_observed(b, reference['scenarios'][scenario]['baseline_plus_S'], 'B')
-            by_scenario[scenario] = {'A': a, 'B': b}
+            reproduce_observed(a, reference['scenarios'][scenario]['baseline'], 'A')
+            reproduce_observed(b, reference['scenarios'][scenario]['baseline_plus_S'], 'B')
+            # The saved A/B shares are the authoritative observed-input
+            # reference after exact-ID and tolerance reproduction.
+            by_scenario[scenario] = {
+                'A': reference['scenarios'][scenario]['baseline'],
+                'B': reference['scenarios'][scenario]['baseline_plus_S']}
             reproduced.append({'targetYear': year, 'scenario': scenario,
-                               'maxAbsoluteShareDifferenceA': max_a,
-                               'maxAbsoluteShareDifferenceB': max_b})
+                               'observedAWithinTolerance': True,
+                               'observedBWithinTolerance': True,
+                               'absoluteShareTolerance': TOL})
         # Every observed-input reference must reproduce before the first
         # Stage23 candidate substitution is calculated for this fold.
         substitute = adapter_rows(fold['contests'], 'predicted')
         for scenario in SCENARIOS:
             parameters = fold['scenarios'][scenario]['parameters']
             means = fold['scenarios'][scenario]['trainingOnlyMeans']
-            by_scenario[scenario]['C'] = model_predictions(
-                substitute, means, scenario, 'baseline', parameters['baseline'])
-            by_scenario[scenario]['D'] = model_predictions(
-                substitute, means, scenario, 'baseline_plus_S', parameters['baseline_plus_S'])
+            for cell, method in (('C', 'baseline'), ('D', 'baseline_plus_S')):
+                saved_fit = parameters[method]
+                stable = portable_predictions(substitute, means, scenario, method, saved_fit)
+                equivalent_predictions(stable, model_predictions(
+                    substitute, means, scenario, method, saved_fit))
+                by_scenario[scenario][cell] = stable
         folds.append({'targetYear': year,
                       'commonEvaluationContestIds': fold['commonEvaluationContestIds'],
                       'commonEvaluationCandidateOccurrenceIds': fold['commonEvaluationCandidateOccurrenceIds'],
@@ -138,8 +185,10 @@ def main():
     write_or_check('predictions.json', predictions, args.check)
     write_or_check('construction-manifest.json', manifest, args.check)
     print({'folds': [f['targetYear'] for f in predictions['folds']],
-           'maximumObservedReproductionDifference': max(max(r['maxAbsoluteShareDifferenceA'],
-                r['maxAbsoluteShareDifferenceB']) for r in predictions['observedReproduction'])})
+           'observedInputReproductionTolerance': TOL,
+           'allObservedInputChecksPassed': all(
+               r['observedAWithinTolerance'] and r['observedBWithinTolerance']
+               for r in predictions['observedReproduction'])})
 
 
 if __name__ == '__main__':

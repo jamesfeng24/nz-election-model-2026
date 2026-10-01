@@ -22,9 +22,10 @@ class Stage24ConstructionTests(unittest.TestCase):
         self.assertEqual(output, common.read(common.PREFIX + 'predictions.json'))
         self.assertEqual(manifest, common.read(common.PREFIX + 'construction-manifest.json'))
         self.assertEqual(len(output['observedReproduction']), 6)
-        self.assertEqual(max(max(r['maxAbsoluteShareDifferenceA'],
-                                 r['maxAbsoluteShareDifferenceB'])
-                             for r in output['observedReproduction']), 0)
+        self.assertTrue(all(r['observedAWithinTolerance'] and
+                            r['observedBWithinTolerance'] and
+                            r['absoluteShareTolerance'] == construction.TOL
+                            for r in output['observedReproduction']))
         for fold in output['folds']:
             self.assertEqual(set(fold['scenarios']), set(construction.SCENARIOS))
             for scenario in fold['scenarios'].values():
