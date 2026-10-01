@@ -1,6 +1,5 @@
 """Evaluate fixed Stage24 four-cell candidate input substitution."""
 import argparse
-from collections import defaultdict
 from hashlib import sha256
 import math
 from statistics import mean
@@ -291,12 +290,18 @@ def evaluate_fold(fold, inventory, actuals, scenario):
         rows.append({'targetYear': fold['targetYear'], 'targetElectorateId': cid,
                      'cells': cells})
     score = score_cells(rows)
-    paired, paired_rows = paired_summary(rows, score)
+    paired, _ = paired_summary(rows, score)
     return {'targetYear': fold['targetYear'], 'scenario': scenario,
             'coverage': {'contests': len(rows),
                          'candidates': sum(len(r['cells']['A']['candidateErrors']) for r in rows),
                          'abstentions': []},
             'cells': score, 'paired': paired,
+            'fiveLargestAbsoluteMarginErrorContests': {
+                cell: [{'targetElectorateId': row['targetElectorateId'],
+                        'marginErrorPP': row['cells'][cell]['marginErrorPP']}
+                       for row in sorted(rows, key=lambda r: (
+                           -r['cells'][cell]['marginErrorPP'], r['targetElectorateId']))[:5]]
+                for cell in CELLS},
             'groups': group_summary(rows),
             'rankingTransitions': [ranking_transitions(rows, 'A', 'C'),
                                    ranking_transitions(rows, 'B', 'D')],
