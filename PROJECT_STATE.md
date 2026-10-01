@@ -1,3 +1,11 @@
+# Stage 22 shared-group pre-fit amendment — implementation plan, 2026-10-01
+
+Stage21 PR #28 is **MERGED** as `de4e7cd3f9068027d1ce40678239799112452201`, containing reviewed head `db60a9f38ff7a4f9ef3af9d45bff03cef6ca01c6`. The old Stage21 checkout was clean; main was fast-forwarded to the merge and `stage/22-shared-group-complete-share` created from merged main. The [Stage22 implementation plan](docs/stage22-implementation-plan.md) is written before any amended feature inventory, fit or score. It preserves Stage18/20 originals, applies the adopted single-local-destination group representation in a supplemental mapping, audits source continuity, freezes exact IDs and rank/coverage before fitting, then permits only four Stage20 restrictions and two coherent rounding sensitivities if all gates pass. No new source, identity adjudication or model result exists yet.
+
+**Next:** commit/push this plan, build and commit the outcome-blind amended mapping, feature inventory, source contract, exact sample and gate audit. Stop before fitting if any frozen gate fails. If gates pass, save construction before evaluation, then report conditional development results. Operational selections remain null; no Family A, Stage5 retuning, integration or forecast production is authorized.
+
+---
+
 # Stage 21 historical-data repair and fixed identity pilot — final handoff, 2026-10-01
 
 Stage20 PR #27 is merged as `649dddbb25c694b29827c20d1f9c9ce5f6ebccee`, containing reviewed head `a9878e6b08915112a60e55541930521c5f212234`. Stage21 runs on `stage/21-historical-data-repair-identity-pilot` from merged main. [Stage21 PR #28](https://github.com/jamesfeng24/nz-election-model-2026/pull/28) is open into main and must remain unmerged for independent review. The preserved geography inventory (`f151416`), original-rule corrected Stage11 companion (`905964c`), alliance overlay (`3fb1db9`), fixed identity plan (`a632ec5`), preserved review (`73588b4`), fixed queries (`28ee01b`), first-query ledger (`83f64fe`) and completed pilot (`854d8c4`) were committed/pushed in order. Original Stage11 and Stage8–20 outputs/adjudications remain untouched. The detailed [repair decision](docs/stage21-repair-decision.md) is authoritative for this checkpoint.
