@@ -1,11 +1,14 @@
 """Stage22 outcome-blind shared-group amendment and exact-sample checks."""
 
 from copy import deepcopy
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
 
 from scripts.checkpoints import stage22_prefit as prefit
 from scripts.checkpoints.stage22_mapping import amend_inventory, apply_group
 from scripts.checkpoints.complete_share_features import build_feature_inventory
+from scripts.validate.source_files import verify_source_files
 
 
 class Stage22PrefitTests(unittest.TestCase):
@@ -22,6 +25,9 @@ class Stage22PrefitTests(unittest.TestCase):
         self.assertEqual(len(changes['newlyAdmittedContestIds']), 20)
         self.assertEqual(len(changes['newlyAdmittedCandidateOccurrenceIds']), 147)
         self.assertEqual(len(changes['correctedExistingCandidateInputs']), 6)
+        self.assertTrue(all(row['oldTargetPartySupport'] == 0 and
+                            row['newTargetPartySupport'] > 0
+                            for row in changes['correctedExistingCandidateInputs']))
         self.assertEqual([summary[str(y)]['constructedContests'] for y in (2011, 2017, 2023)],
                          [63, 64, 64])
         self.assertEqual([summary[str(y)]['constructedCandidates'] for y in (2011, 2017, 2023)],
@@ -73,6 +79,20 @@ class Stage22PrefitTests(unittest.TestCase):
         duplicate['candidateCountInGroup'] = 2
         with self.assertRaisesRegex(ValueError, 'Duplicate'):
             apply_group(deepcopy(source), seat, duplicate)
+        second = deepcopy(source)
+        second_candidate = next(c for c in second['candidates']
+                                if c['candidateOccurrenceId'] !=
+                                record['candidates'][0]['candidateOccurrenceId'])
+        second_candidate['partyKey'] = None
+        multiple = deepcopy(record)
+        multiple['candidates'].append({
+            'candidateOccurrenceId': second_candidate['candidateOccurrenceId'],
+            'sourcePartyKey': second_candidate['sourcePartyKey'],
+            'sourceAffiliation': second_candidate['sourceAffiliation']})
+        multiple['candidateCountInGroup'] = 2
+        self.assertEqual(apply_group(second, seat, multiple),
+                         'multiple_destinations_abstain')
+        self.assertEqual(second['status'], 'ambiguous_mapping')
         changed = deepcopy(record)
         changed['sharedPartyVotes'] += 1
         with self.assertRaisesRegex(ValueError, 'changed'):
@@ -111,6 +131,14 @@ class Stage22PrefitTests(unittest.TestCase):
         deleted['sources'] = [r for r in deleted['sources'] if r['id'] != required]
         with self.assertRaisesRegex(ValueError, 'Changed or missing'):
             prefit.source_contract(deleted, parents)
+        with TemporaryDirectory() as directory:
+            selected = snapshot['sources'][0]
+            path = Path(directory) / selected['rawPath']
+            path.parent.mkdir(parents=True)
+            path.write_bytes(b'synthetic altered source')
+            with self.assertRaisesRegex(ValueError, 'Checksum mismatch'):
+                verify_source_files(Path(directory), {'schemaVersion': 1,
+                                                      'sources': [selected]})
 
 
 if __name__ == '__main__':
