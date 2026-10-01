@@ -1,0 +1,15 @@
+{
+  "inputSha256": {
+    "data/processed/boundaries/2011-2014/crosswalk.json": "1efa8b9c2d03471c09b57b03614a02fcb5378c85b5cb92496e2c4ab30c752725",
+    "data/processed/boundaries/2011-2014/manifest.json": "38c1a982f817df6e29b88b8026ffea7b68a01b0d64839ba478bb5c3aa178468b",
+    "data/processed/boundaries/2017-2020/crosswalk.json": "f39868460a56f9870e7868b77a62bf89393a6f3d02d20976be9fc266c52195d1",
+    "data/processed/boundaries/2017-2020/manifest.json": "b995a6cd492fe0b4f4bed2423bbf9480d545e73286258e929c481592e11af17f",
+    "data/processed/checkpoints/complete-candidate-baseline/input-inventory.json": "28754731d7d3a2b237969e1e896e493f580a24ae55bfd8a061d4b73572567c39",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+  },
+  "outputSha256": "998a4e1e85276bd8551f4bb6f2a8188db64af5e0346691f7485ba33b13340a1e",
+  "phase": "geography",
+  "schemaVersion": 1,
+  "sourceProtection": "both crosswalk manifests verify consumed raw and code bytes",
+  "stage": 25
+}
