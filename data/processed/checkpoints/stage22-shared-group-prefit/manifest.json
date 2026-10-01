@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "stage": 22,
+  "phase": "committed_before_any_stage22_fitting_or_scoring",
+  "inputSha256": {
+    "data/processed/checkpoints/complete-candidate-baseline/input-inventory.json": "28754731d7d3a2b237969e1e896e493f580a24ae55bfd8a061d4b73572567c39",
+    "data/processed/models/conditional-candidate-share/inventory.json": "f752a531202649653916acb492c8163b6ceb52e5fb6ab215eddc75c5622dca37",
+    "data/processed/checkpoints/complete-share-feature-applicability/feature-inventory.json": "afa6bbb24de98909e505738cbd3fa3134a07db7b51b93002321be6e88dc3d486",
+    "data/processed/checkpoints/complete-share-feature-applicability/fit-contract.json": "642cb960eb1624408fa0a07f84190392a3047480bda7d710f325f4b6fd1ec101",
+    "data/processed/checkpoints/complete-share-feature-applicability/source-contract.json": "e93747a78be5d337e76808a5b1116c217ed2ac0c43c832508e8515cc758ec575",
+    "data/processed/checkpoints/stage21-alliance-mapping/overlay.json": "247c59573d22b63ed1c957aea215e0832631d1483db7c1f5aac64f23928f4045",
+    "data/processed/checkpoints/stage21-alliance-mapping/source-contract.json": "6ff6d5b3f0f5bededa06a4afb3bf26d1a5e48e8b6354de2b06771d04cdcf5f0f",
+    "data/processed/models/party-vote-transform/party-continuity.json": "d3c6cfa63f59725cbc9276e2442f1f59eafe24a9526a4fbb9ca52d68fcb3071b",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e",
+    "data/processed/split-votes/2008.json": "3a9a763ef298ce894066982752bdc60627c14dd952b6a370ad196473f90bfc7a",
+    "data/processed/split-votes/2014.json": "0388187be992b503c861ece81f8452322b8d404fa0709360fc77c6d31101e292",
+    "data/processed/split-votes/2020.json": "488e084feb5023aa5c9885965d4fdd121c8660235d6556bee486170ec77b1f10"
+  },
+  "generatorSha256": {
+    "stage22_mapping.py": "d0ca94bf5676566e0803e3a9add0b0565dfc13b9d662853750807cf826549d43",
+    "stage22_prefit.py": "66b413cfc347a08686dccc6e28d49853095fc91275a5f8505d2708cd0267ff74"
+  },
+  "outputSha256": {
+    "amended-mapping.json": "6fd703178cc04a8f802371ee87b3138c5383ea2324701fd2744ba905c6518a7c",
+    "amended-features.json": "3d7b0d44cb7d5c5727a63cbf9efb64a13719e58d73eb20107cec2f0981dbbb32",
+    "amended-design-audit.json": "8962fc26413927def8e09ec7b337ede436e50ea761d1f4dd344642b203e9cf4d",
+    "amended-fit-contract.json": "2cef31d9db92aac2db3c39dff5a6933e58691f8567c7d2074ab995bbbde107ad",
+    "coverage-differences.json": "b7ba4de0918dfeedc66f49adf7934854bdc479cdece6eb074a9e9ce45e9d474c",
+    "source-contract.json": "170dece533547293f3275486240c7e03a8e9a9f8fbcc28e8a564f71cce426173"
+  }
+}
