@@ -116,7 +116,10 @@ def source_feature(candidate, source_seat, matrix, continuity, source_year, targ
     if not source_seat['validCandidateVotes'] or not source_seat['validPartyVotes']:
         return {'sStatus': 'missing_source_denominator', 'vStatus': 'missing_source_denominator'}
     result = {'sStatus': 'missing_source_split_table', 'vStatus': 'supported_source_gap',
-              'sourceCandidateId': prior[0]['id'], 'sourcePartyKey': party_key}
+              'sourceCandidateId': prior[0]['id'], 'sourcePartyKey': party_key,
+              'sourceCandidateShare': prior[0]['votes'] / source_seat['validCandidateVotes'],
+              'sourcePartyShare': source_parties[party_key]['votes'] / source_seat['validPartyVotes']}
+    result['v0'] = result['sourceCandidateShare'] - result['sourcePartyShare']
     if matrix is None:
         return result
     try:
@@ -125,8 +128,12 @@ def source_feature(candidate, source_seat, matrix, continuity, source_year, targ
         if party_row['totalPartyVotes'] == 0:
             result['sStatus'] = 'zero_mass_source_row'
         else:
-            coupled_cell_percent(party_row, prior[0]['id'])
+            printed, lower, upper = coupled_cell_percent(party_row, prior[0]['id'])
             result['sStatus'] = 'supported_rounded_source_split'
+            result['s0Printed'] = printed / 100
+            result['s0CoupledLower'] = str(lower / 100)
+            result['s0CoupledUpper'] = str(upper / 100)
+            result['sourcePartyRowMass'] = party_row['totalPartyVotes']
     except (ValueError, KeyError):
         result['sStatus'] = 'incomplete_or_ambiguous_source_split'
     return result
@@ -168,8 +175,11 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
                'sOnly': {'status': 'coverage_only_maori'},
                'partyVector': {'status': 'coverage_only_maori'},
                'splitTicket': {'status': 'coverage_only_maori'},
-               'identityEvidence': {'confirmed': 0, 'probable': 0, 'unresolved': 0,
-                                    'crossElectionRelation': 'not_adjudicated_here'},
+               'identityEvidence': {'sourceOccurrenceConfidence': {'confirmed': 0, 'probable': 0, 'unresolved': 0},
+                                    'targetOccurrenceConfidence': {'confirmed': 0, 'probable': 0, 'unresolved': 0},
+                                    'crossElectionRelation': 'not_adjudicated_here',
+                                    'careerHistoryCompleteness': 'not_assessed_here'},
+               'approximateTransportInventory': None,
                'identityDependentStudies': 'evidence_audit_only_no_inferred_new_relation'}
         if scope != 'general':
             records.append(row)
@@ -181,9 +191,24 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
         row['candidateMappingStatus'] = reason or 'complete'
         if target:
             row['candidateOccurrenceIds'] = [candidate['id'] for candidate in target['candidates']]
+        if source:
+            for candidate in source['candidates']:
+                confidence = identity.get(candidate['id'], {}).get('status', 'unresolved')
+                row['identityEvidence']['sourceOccurrenceConfidence'][confidence] += 1
+        if not geo['certifiedTwoSidedExact']:
+            row['approximateTransportInventory'] = {
+                'targetOverlap95': geo['targetOverlap95'], 'targetOverlap90': geo['targetOverlap90'],
+                'twoSided95': geo['twoSided95'], 'twoSided90': geo['twoSided90'],
+                'dominantSourceTablePresent': source is not None,
+                'targetPartyTablePresent': target is not None,
+                'targetCandidateMappingComplete': classified is not None,
+                'sourceSplitTablePresent': source_id in matrices[source_year],
+                'targetSplitTablePresent': target_id in matrices[target_year],
+                'candidateVotesTransported': False,
+                'status': 'inventory_only_requires_separate_approximate_rule'}
         for candidate_id in row['candidateOccurrenceIds']:
             confidence = identity.get(candidate_id, {}).get('status', 'unresolved')
-            row['identityEvidence'][confidence] += 1
+            row['identityEvidence']['targetOccurrenceConfidence'][confidence] += 1
         if not geo['certifiedTwoSidedExact']:
             reason = 'not_certified_two_sided_exact'
         elif source is None or target is None:
@@ -203,10 +228,24 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
             continue
         row['completeShare'] = {'status': 'available', 'candidateCount': len(classified),
                                 'noPartyGroupCandidates': sum(c['noRegisteredPartyGroup'] for c in classified)}
-        row['partyVector'] = {'status': 'source_and_target_party_categories_present',
+        category_relations = []
+        source_party_keys = {party['partyKey'] for party in source['parties']}
+        for party in target['parties']:
+            relation = continuity.get((source_year, target_year, party['partyKey']))
+            status = relation['status'] if relation else 'missing_relation'
+            if status == 'eligible' and relation['source']['sourceKey'] not in source_party_keys:
+                status = 'missing_source_category'
+            category_relations.append({'targetPartyKey': party['partyKey'],
+                                       'relationship': status,
+                                       'sourcePartyKey': relation['source']['sourceKey'] if relation and relation['source'] else None})
+        categories_supported = all(r['relationship'] in ('eligible', 'entrant') for r in category_relations)
+        national_present = bool(elections[target_year]['nationalControls']['parties'])
+        row['partyVector'] = {'status': ('source_and_target_party_categories_present'
+                                         if categories_supported and national_present else 'ambiguous_or_missing_category_relation'),
                               'sourceCategoryCount': len(source['parties']),
                               'targetCategoryCount': len(target['parties']),
-                              'nationalScenarioPresent': bool(elections[target_year]['nationalControls']['parties']),
+                              'targetCategoryRelationships': category_relations,
+                              'nationalScenarioPresent': national_present,
                               'constructionDeferred': True}
         source_matrix = matrices[source_year].get(source_id)
         target_matrix = matrices[target_year].get(target_id)
@@ -233,6 +272,10 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
                                                          f['sStatus'] in ('missing_source_destination',
                                                                           'zero_mass_source_row')
                                                          for f in row['candidateFeatures'])}
+        row['splitTicket']['supportedMatchedCategories'] = sum(
+            f['sStatus'] == 'supported_rounded_source_split' for f in row['candidateFeatures'])
+        row['splitTicket']['interpretation'] = (
+            'category_support_inventory_not_a_complete_candidate_vote_view')
         for party in ('nationalparty', 'labourparty'):
             previous = [c for c in source['candidates'] if c['partyKey'] == party]
             current = [c for c in classified if c['partyKey'] == party]

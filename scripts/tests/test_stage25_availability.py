@@ -21,6 +21,10 @@ class Stage25AvailabilityTests(unittest.TestCase):
                          [(63, 63), (20, 20), (64, 64), (34, 34), (64, 64)])
         self.assertEqual(sum(r['completeShare']['status'] == 'available' for r in rows), 245)
         self.assertEqual(sum(r['scope'] == 'maori' for r in rows), 35)
+        self.assertEqual(sum(r['splitTicket'].get('supportedMatchedCategories', 0)
+                             for r in rows if r['targetYear'] == 2014), 99)
+        self.assertTrue(all(r['identityEvidence']['crossElectionRelation'] == 'not_adjudicated_here'
+                            for r in rows))
 
     def test_model_specific_missingness_not_geographic_eligibility(self):
         rows = self.output['records']

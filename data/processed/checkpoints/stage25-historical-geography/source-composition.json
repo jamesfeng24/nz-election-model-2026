@@ -1,0 +1,67 @@
+{
+  "groups": [
+    {
+      "group": "strict_exact",
+      "sourceDescriptorCount": 20,
+      "sourceLabourShareMean": 0.2870554952898471,
+      "sourceNationalShareMean": 0.4769800412281273,
+      "sourceSlateSizeMean": 6.9,
+      "sourceValidPartyVotesMean": 33212.1,
+      "sourceWinnerPartyCounts": {
+        "labourparty": 7,
+        "nationalparty": 13
+      },
+      "targetCount": 20,
+      "targetYear": 2014
+    },
+    {
+      "group": "excluded",
+      "sourceDescriptorCount": 44,
+      "sourceLabourShareMean": 0.26313529736341595,
+      "sourceNationalShareMean": 0.5028959215125185,
+      "sourceSlateSizeMean": 6.613636363636363,
+      "sourceValidPartyVotesMean": 33632.318181818184,
+      "sourceWinnerPartyCounts": {
+        "actnewzealand": 1,
+        "labourparty": 12,
+        "nationalparty": 30,
+        "unitedfuture": 1
+      },
+      "targetCount": 44,
+      "targetYear": 2014
+    },
+    {
+      "group": "strict_exact",
+      "sourceDescriptorCount": 34,
+      "sourceLabourShareMean": 0.3586872789065712,
+      "sourceNationalShareMean": 0.46226731429820533,
+      "sourceSlateSizeMean": 6.882352941176471,
+      "sourceValidPartyVotesMean": 37704.58823529412,
+      "sourceWinnerPartyCounts": {
+        "actnewzealand": 1,
+        "labourparty": 12,
+        "nationalparty": 21
+      },
+      "targetCount": 34,
+      "targetYear": 2020
+    },
+    {
+      "group": "excluded",
+      "sourceDescriptorCount": 31,
+      "sourceLabourShareMean": 0.3589948773835812,
+      "sourceNationalShareMean": 0.469593223669307,
+      "sourceSlateSizeMean": 6.483870967741935,
+      "sourceValidPartyVotesMean": 38259.22580645161,
+      "sourceWinnerPartyCounts": {
+        "labourparty": 10,
+        "nationalparty": 21
+      },
+      "targetCount": 31,
+      "targetYear": 2020
+    }
+  ],
+  "limitations": "dominant_source_descriptors_for_excluded_seats_not_representativeness_weights",
+  "role": "pre_target_source_composition",
+  "schemaVersion": 1,
+  "stage": 25
+}

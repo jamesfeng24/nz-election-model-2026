@@ -1,0 +1,170 @@
+{
+  "developmentEvidence": "all_historical_elections_already_inspected_not_untouched_confirmation",
+  "records": [
+    {
+      "benchmarks": "Stage6_and_Stage16_existing_beta0_beta1_and_source_victory_controls",
+      "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "existingSpecification": "data/processed/models/conditional-nat-lab-response/specification.json",
+      "experimentId": "nat_lab_response",
+      "foldPlans": [
+        "nat_lab_response:2008-2011:two_sided_exact",
+        "nat_lab_response:2011-2014:two_sided_exact",
+        "nat_lab_response:2014-2017:two_sided_exact",
+        "nat_lab_response:2017-2020:two_sided_exact",
+        "nat_lab_response:2020-2023:two_sided_exact"
+      ],
+      "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
+      "metrics": [
+        "MAE",
+        "RMSE",
+        "party_or_category_signed_bias",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
+      "outcomeAndDenominator": "party_seat_candidate_share_of_valid_candidate_votes",
+      "question": "Existing NAT/LAB local-party response conditional on retained party baseline",
+      "status": "proposed_separate_authorization_required",
+      "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
+    },
+    {
+      "benchmarks": "Stage22_refitted_baseline_vs_S_only",
+      "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "existingSpecification": "data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json",
+      "experimentId": "complete_share_baseline_s",
+      "foldPlans": [
+        "complete_share_baseline_s:2008-2011:two_sided_exact",
+        "complete_share_baseline_s:2011-2014:two_sided_exact",
+        "complete_share_baseline_s:2014-2017:two_sided_exact",
+        "complete_share_baseline_s:2017-2020:two_sided_exact",
+        "complete_share_baseline_s:2020-2023:two_sided_exact"
+      ],
+      "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
+      "metrics": [
+        "MAE",
+        "RMSE",
+        "party_or_category_signed_bias",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
+      "outcomeAndDenominator": "complete_candidate_share_of_valid_candidate_votes",
+      "question": "Does existing S-only share allocation beat refitted baseline on added exact seats?",
+      "status": "proposed_separate_authorization_required",
+      "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
+    },
+    {
+      "benchmarks": "national_share_neutral_profile_and_existing_stage23_controls",
+      "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "existingSpecification": "data/processed/models/complete-party-vector/specification.json",
+      "experimentId": "complete_party_vector",
+      "foldPlans": [
+        "complete_party_vector:2008-2011:two_sided_exact",
+        "complete_party_vector:2011-2014:two_sided_exact",
+        "complete_party_vector:2014-2017:two_sided_exact",
+        "complete_party_vector:2017-2020:two_sided_exact",
+        "complete_party_vector:2020-2023:two_sided_exact"
+      ],
+      "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
+      "metrics": [
+        "MAE",
+        "RMSE",
+        "party_or_category_signed_bias",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
+      "outcomeAndDenominator": "complete_local_party_share_of_valid_party_votes",
+      "question": "Can Stage23 construct complete conditional local party vectors for added exact seats?",
+      "status": "proposed_separate_authorization_required",
+      "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
+    },
+    {
+      "benchmarks": "Stage16_source_victory_vs_no_source_victory",
+      "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "existingSpecification": "data/processed/models/conditional-nat-lab-response/specification.json",
+      "experimentId": "source_victory_comparison",
+      "foldPlans": [
+        "source_victory_comparison:2008-2011:two_sided_exact",
+        "source_victory_comparison:2011-2014:two_sided_exact",
+        "source_victory_comparison:2014-2017:two_sided_exact",
+        "source_victory_comparison:2017-2020:two_sided_exact",
+        "source_victory_comparison:2020-2023:two_sided_exact"
+      ],
+      "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
+      "metrics": [
+        "MAE",
+        "RMSE",
+        "party_or_category_signed_bias",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
+      "outcomeAndDenominator": "party_seat_candidate_share_of_valid_candidate_votes",
+      "question": "Existing source-victory response contrast on supported pairs",
+      "status": "proposed_separate_authorization_required",
+      "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
+    },
+    {
+      "benchmarks": "Stage11_corrected_matched_component_controls",
+      "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "existingSpecification": "data/processed/models/historical-split-ticket/specification.json",
+      "experimentId": "stage11_matched_split",
+      "foldPlans": [
+        "stage11_matched_split:2008-2011:two_sided_exact",
+        "stage11_matched_split:2011-2014:two_sided_exact",
+        "stage11_matched_split:2014-2017:two_sided_exact",
+        "stage11_matched_split:2017-2020:two_sided_exact",
+        "stage11_matched_split:2020-2023:two_sided_exact"
+      ],
+      "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
+      "metrics": [
+        "MAE",
+        "RMSE",
+        "party_or_category_signed_bias",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
+      "outcomeAndDenominator": "candidate_destination_fraction_of_matched_party_ballot_component",
+      "question": "Availability for existing matched-party-ballot split component",
+      "status": "proposed_separate_authorization_required",
+      "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
+    },
+    {
+      "benchmarks": "deferred_existing_comparator_only",
+      "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "existingSpecification": "data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json",
+      "experimentId": "v_deferred",
+      "foldPlans": [
+        "v_deferred:2008-2011:two_sided_exact",
+        "v_deferred:2011-2014:two_sided_exact",
+        "v_deferred:2014-2017:two_sided_exact",
+        "v_deferred:2017-2020:two_sided_exact",
+        "v_deferred:2020-2023:two_sided_exact"
+      ],
+      "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
+      "metrics": [
+        "MAE",
+        "RMSE",
+        "party_or_category_signed_bias",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
+      "outcomeAndDenominator": "complete_candidate_share_of_valid_candidate_votes",
+      "question": "Existing V feature availability; no automatic S+V repetition",
+      "status": "proposed_separate_authorization_required",
+      "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
+    }
+  ],
+  "role": "bounded_unfitted_experiment_register",
+  "schemaVersion": 1,
+  "stage": 25
+}
