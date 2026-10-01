@@ -1,0 +1,970 @@
+{
+  "schemaVersion": 1,
+  "stage": 20,
+  "role": "outcome_free_within_slate_feature_rank_and_fixed_sample_audit",
+  "rankRelativeTolerance": 1e-08,
+  "conditionWarningAbove": 1000000.0,
+  "floorProbes": [
+    0.0001,
+    0.01,
+    0.1
+  ],
+  "folds": [
+    {
+      "targetYear": 2017,
+      "trainingTargetYears": [
+        2011
+      ],
+      "trainingContestIds": [
+        "nz-general-2011-electorate-01",
+        "nz-general-2011-electorate-02",
+        "nz-general-2011-electorate-03",
+        "nz-general-2011-electorate-04",
+        "nz-general-2011-electorate-05",
+        "nz-general-2011-electorate-06",
+        "nz-general-2011-electorate-07",
+        "nz-general-2011-electorate-08",
+        "nz-general-2011-electorate-09",
+        "nz-general-2011-electorate-10",
+        "nz-general-2011-electorate-11",
+        "nz-general-2011-electorate-12",
+        "nz-general-2011-electorate-13",
+        "nz-general-2011-electorate-14",
+        "nz-general-2011-electorate-15",
+        "nz-general-2011-electorate-16",
+        "nz-general-2011-electorate-17",
+        "nz-general-2011-electorate-18",
+        "nz-general-2011-electorate-19",
+        "nz-general-2011-electorate-20",
+        "nz-general-2011-electorate-21",
+        "nz-general-2011-electorate-22",
+        "nz-general-2011-electorate-23",
+        "nz-general-2011-electorate-24",
+        "nz-general-2011-electorate-25",
+        "nz-general-2011-electorate-26",
+        "nz-general-2011-electorate-27",
+        "nz-general-2011-electorate-28",
+        "nz-general-2011-electorate-29",
+        "nz-general-2011-electorate-30",
+        "nz-general-2011-electorate-31",
+        "nz-general-2011-electorate-32",
+        "nz-general-2011-electorate-33",
+        "nz-general-2011-electorate-34",
+        "nz-general-2011-electorate-35",
+        "nz-general-2011-electorate-36",
+        "nz-general-2011-electorate-37",
+        "nz-general-2011-electorate-38",
+        "nz-general-2011-electorate-39",
+        "nz-general-2011-electorate-40",
+        "nz-general-2011-electorate-41",
+        "nz-general-2011-electorate-42",
+        "nz-general-2011-electorate-43",
+        "nz-general-2011-electorate-44",
+        "nz-general-2011-electorate-45",
+        "nz-general-2011-electorate-46",
+        "nz-general-2011-electorate-47",
+        "nz-general-2011-electorate-48",
+        "nz-general-2011-electorate-49",
+        "nz-general-2011-electorate-50",
+        "nz-general-2011-electorate-51",
+        "nz-general-2011-electorate-52",
+        "nz-general-2011-electorate-53",
+        "nz-general-2011-electorate-54",
+        "nz-general-2011-electorate-55",
+        "nz-general-2011-electorate-56",
+        "nz-general-2011-electorate-57",
+        "nz-general-2011-electorate-58",
+        "nz-general-2011-electorate-59",
+        "nz-general-2011-electorate-60",
+        "nz-general-2011-electorate-61",
+        "nz-general-2011-electorate-62",
+        "nz-general-2011-electorate-63"
+      ],
+      "evaluationContestIds": [
+        "nz-general-2017-electorate-01",
+        "nz-general-2017-electorate-02",
+        "nz-general-2017-electorate-03",
+        "nz-general-2017-electorate-04",
+        "nz-general-2017-electorate-05",
+        "nz-general-2017-electorate-06",
+        "nz-general-2017-electorate-07",
+        "nz-general-2017-electorate-08",
+        "nz-general-2017-electorate-09",
+        "nz-general-2017-electorate-10",
+        "nz-general-2017-electorate-11",
+        "nz-general-2017-electorate-12",
+        "nz-general-2017-electorate-13",
+        "nz-general-2017-electorate-14",
+        "nz-general-2017-electorate-15",
+        "nz-general-2017-electorate-16",
+        "nz-general-2017-electorate-17",
+        "nz-general-2017-electorate-18",
+        "nz-general-2017-electorate-19",
+        "nz-general-2017-electorate-20",
+        "nz-general-2017-electorate-21",
+        "nz-general-2017-electorate-22",
+        "nz-general-2017-electorate-23",
+        "nz-general-2017-electorate-24",
+        "nz-general-2017-electorate-25",
+        "nz-general-2017-electorate-26",
+        "nz-general-2017-electorate-27",
+        "nz-general-2017-electorate-28",
+        "nz-general-2017-electorate-29",
+        "nz-general-2017-electorate-30",
+        "nz-general-2017-electorate-31",
+        "nz-general-2017-electorate-32",
+        "nz-general-2017-electorate-33",
+        "nz-general-2017-electorate-34",
+        "nz-general-2017-electorate-35",
+        "nz-general-2017-electorate-36",
+        "nz-general-2017-electorate-37",
+        "nz-general-2017-electorate-38",
+        "nz-general-2017-electorate-39",
+        "nz-general-2017-electorate-40",
+        "nz-general-2017-electorate-41",
+        "nz-general-2017-electorate-42",
+        "nz-general-2017-electorate-43",
+        "nz-general-2017-electorate-44",
+        "nz-general-2017-electorate-45",
+        "nz-general-2017-electorate-46",
+        "nz-general-2017-electorate-47",
+        "nz-general-2017-electorate-48",
+        "nz-general-2017-electorate-49",
+        "nz-general-2017-electorate-50",
+        "nz-general-2017-electorate-51",
+        "nz-general-2017-electorate-52",
+        "nz-general-2017-electorate-53",
+        "nz-general-2017-electorate-54",
+        "nz-general-2017-electorate-55",
+        "nz-general-2017-electorate-56",
+        "nz-general-2017-electorate-57",
+        "nz-general-2017-electorate-58",
+        "nz-general-2017-electorate-59",
+        "nz-general-2017-electorate-60",
+        "nz-general-2017-electorate-61",
+        "nz-general-2017-electorate-62",
+        "nz-general-2017-electorate-63",
+        "nz-general-2017-electorate-64"
+      ],
+      "trainingOnlyMeans": {
+        "S": 0.563193225203327,
+        "V": 0.009708136590975518
+      },
+      "training": {
+        "status": "audited",
+        "contests": 63,
+        "features": {
+          "candidates": 423,
+          "sSupportedCandidates": 280,
+          "vSupportedCandidates": 280,
+          "sWithinSlateContrastContests": 63,
+          "vWithinSlateContrastContests": 63,
+          "topSupportedParties": [
+            {
+              "partyKey": "labourparty",
+              "candidateCount": 63
+            },
+            {
+              "partyKey": "nationalparty",
+              "candidateCount": 63
+            },
+            {
+              "partyKey": "greenparty",
+              "candidateCount": 51
+            },
+            {
+              "partyKey": "actnewzealand",
+              "candidateCount": 47
+            },
+            {
+              "partyKey": "unitedfuture",
+              "candidateCount": 18
+            },
+            {
+              "partyKey": "newzealandfirstparty",
+              "candidateCount": 14
+            },
+            {
+              "partyKey": "democratsforsocialcredit",
+              "candidateCount": 10
+            },
+            {
+              "partyKey": "libertarianz",
+              "candidateCount": 6
+            }
+          ]
+        },
+        "probeDesigns": [
+          {
+            "kappaProbe": 0.0001,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.842246,
+                0.39898
+              ],
+              "singularValues": [
+                1.216713,
+                0.720839
+              ],
+              "conditionRatio": 1.687913,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                16337.843835,
+                1.842246,
+                0.39898
+              ],
+              "singularValues": [
+                1.217111,
+                0.999545,
+                0.7208
+              ],
+              "conditionRatio": 1.688555,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.480391
+          },
+          {
+            "kappaProbe": 0.01,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.842246,
+                0.39898
+              ],
+              "singularValues": [
+                1.216713,
+                0.720839
+              ],
+              "conditionRatio": 1.687913,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                234.146881,
+                1.842246,
+                0.39898
+              ],
+              "singularValues": [
+                1.291303,
+                0.956434,
+                0.646351
+              ],
+              "conditionRatio": 1.997834,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.480391
+          },
+          {
+            "kappaProbe": 0.1,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.842246,
+                0.39898
+              ],
+              "singularValues": [
+                1.216713,
+                0.720839
+              ],
+              "conditionRatio": 1.687913,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                23.814018,
+                1.842246,
+                0.39898
+              ],
+              "singularValues": [
+                1.366845,
+                0.933819,
+                0.509623
+              ],
+              "conditionRatio": 2.68207,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.480391
+          }
+        ]
+      },
+      "evaluation": {
+        "status": "audited",
+        "contests": 64,
+        "features": {
+          "candidates": 431,
+          "sSupportedCandidates": 285,
+          "vSupportedCandidates": 285,
+          "sWithinSlateContrastContests": 64,
+          "vWithinSlateContrastContests": 64,
+          "topSupportedParties": [
+            {
+              "partyKey": "nationalparty",
+              "candidateCount": 64
+            },
+            {
+              "partyKey": "labourparty",
+              "candidateCount": 64
+            },
+            {
+              "partyKey": "greenparty",
+              "candidateCount": 51
+            },
+            {
+              "partyKey": "newzealandfirstparty",
+              "candidateCount": 30
+            },
+            {
+              "partyKey": "conservative",
+              "candidateCount": 27
+            },
+            {
+              "partyKey": "actnewzealand",
+              "candidateCount": 27
+            },
+            {
+              "partyKey": "democratsforsocialcredit",
+              "candidateCount": 9
+            },
+            {
+              "partyKey": "maoriparty",
+              "candidateCount": 5
+            }
+          ]
+        },
+        "probeDesigns": [
+          {
+            "kappaProbe": 0.0001,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.563875,
+                0.512085
+              ],
+              "singularValues": [
+                1.259494,
+                0.643175
+              ],
+              "conditionRatio": 1.958245,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                21376.210989,
+                1.563875,
+                0.512085
+              ],
+              "singularValues": [
+                1.261324,
+                0.997987,
+                0.642717
+              ],
+              "conditionRatio": 1.962488,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.586326
+          },
+          {
+            "kappaProbe": 0.01,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.563875,
+                0.512085
+              ],
+              "singularValues": [
+                1.259494,
+                0.643175
+              ],
+              "conditionRatio": 1.958245,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                272.500589,
+                1.563875,
+                0.512085
+              ],
+              "singularValues": [
+                1.330842,
+                0.957857,
+                0.558005
+              ],
+              "conditionRatio": 2.385001,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.586326
+          },
+          {
+            "kappaProbe": 0.1,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.563875,
+                0.512085
+              ],
+              "singularValues": [
+                1.259494,
+                0.643175
+              ],
+              "conditionRatio": 1.958245,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                24.954967,
+                1.563875,
+                0.512085
+              ],
+              "singularValues": [
+                1.417165,
+                0.900395,
+                0.425362
+              ],
+              "conditionRatio": 3.33167,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.586326
+          }
+        ]
+      },
+      "coverageGate": {
+        "training": true,
+        "evaluation": true
+      },
+      "trainingDesignIdentifiableAtAllProbes": true,
+      "passesProposedPreFitGates": true
+    },
+    {
+      "targetYear": 2023,
+      "trainingTargetYears": [
+        2011,
+        2017
+      ],
+      "trainingContestIds": [
+        "nz-general-2011-electorate-01",
+        "nz-general-2011-electorate-02",
+        "nz-general-2011-electorate-03",
+        "nz-general-2011-electorate-04",
+        "nz-general-2011-electorate-05",
+        "nz-general-2011-electorate-06",
+        "nz-general-2011-electorate-07",
+        "nz-general-2011-electorate-08",
+        "nz-general-2011-electorate-09",
+        "nz-general-2011-electorate-10",
+        "nz-general-2011-electorate-11",
+        "nz-general-2011-electorate-12",
+        "nz-general-2011-electorate-13",
+        "nz-general-2011-electorate-14",
+        "nz-general-2011-electorate-15",
+        "nz-general-2011-electorate-16",
+        "nz-general-2011-electorate-17",
+        "nz-general-2011-electorate-18",
+        "nz-general-2011-electorate-19",
+        "nz-general-2011-electorate-20",
+        "nz-general-2011-electorate-21",
+        "nz-general-2011-electorate-22",
+        "nz-general-2011-electorate-23",
+        "nz-general-2011-electorate-24",
+        "nz-general-2011-electorate-25",
+        "nz-general-2011-electorate-26",
+        "nz-general-2011-electorate-27",
+        "nz-general-2011-electorate-28",
+        "nz-general-2011-electorate-29",
+        "nz-general-2011-electorate-30",
+        "nz-general-2011-electorate-31",
+        "nz-general-2011-electorate-32",
+        "nz-general-2011-electorate-33",
+        "nz-general-2011-electorate-34",
+        "nz-general-2011-electorate-35",
+        "nz-general-2011-electorate-36",
+        "nz-general-2011-electorate-37",
+        "nz-general-2011-electorate-38",
+        "nz-general-2011-electorate-39",
+        "nz-general-2011-electorate-40",
+        "nz-general-2011-electorate-41",
+        "nz-general-2011-electorate-42",
+        "nz-general-2011-electorate-43",
+        "nz-general-2011-electorate-44",
+        "nz-general-2011-electorate-45",
+        "nz-general-2011-electorate-46",
+        "nz-general-2011-electorate-47",
+        "nz-general-2011-electorate-48",
+        "nz-general-2011-electorate-49",
+        "nz-general-2011-electorate-50",
+        "nz-general-2011-electorate-51",
+        "nz-general-2011-electorate-52",
+        "nz-general-2011-electorate-53",
+        "nz-general-2011-electorate-54",
+        "nz-general-2011-electorate-55",
+        "nz-general-2011-electorate-56",
+        "nz-general-2011-electorate-57",
+        "nz-general-2011-electorate-58",
+        "nz-general-2011-electorate-59",
+        "nz-general-2011-electorate-60",
+        "nz-general-2011-electorate-61",
+        "nz-general-2011-electorate-62",
+        "nz-general-2011-electorate-63",
+        "nz-general-2017-electorate-01",
+        "nz-general-2017-electorate-02",
+        "nz-general-2017-electorate-03",
+        "nz-general-2017-electorate-04",
+        "nz-general-2017-electorate-05",
+        "nz-general-2017-electorate-06",
+        "nz-general-2017-electorate-07",
+        "nz-general-2017-electorate-08",
+        "nz-general-2017-electorate-09",
+        "nz-general-2017-electorate-10",
+        "nz-general-2017-electorate-11",
+        "nz-general-2017-electorate-12",
+        "nz-general-2017-electorate-13",
+        "nz-general-2017-electorate-14",
+        "nz-general-2017-electorate-15",
+        "nz-general-2017-electorate-16",
+        "nz-general-2017-electorate-17",
+        "nz-general-2017-electorate-18",
+        "nz-general-2017-electorate-19",
+        "nz-general-2017-electorate-20",
+        "nz-general-2017-electorate-21",
+        "nz-general-2017-electorate-22",
+        "nz-general-2017-electorate-23",
+        "nz-general-2017-electorate-24",
+        "nz-general-2017-electorate-25",
+        "nz-general-2017-electorate-26",
+        "nz-general-2017-electorate-27",
+        "nz-general-2017-electorate-28",
+        "nz-general-2017-electorate-29",
+        "nz-general-2017-electorate-30",
+        "nz-general-2017-electorate-31",
+        "nz-general-2017-electorate-32",
+        "nz-general-2017-electorate-33",
+        "nz-general-2017-electorate-34",
+        "nz-general-2017-electorate-35",
+        "nz-general-2017-electorate-36",
+        "nz-general-2017-electorate-37",
+        "nz-general-2017-electorate-38",
+        "nz-general-2017-electorate-39",
+        "nz-general-2017-electorate-40",
+        "nz-general-2017-electorate-41",
+        "nz-general-2017-electorate-42",
+        "nz-general-2017-electorate-43",
+        "nz-general-2017-electorate-44",
+        "nz-general-2017-electorate-45",
+        "nz-general-2017-electorate-46",
+        "nz-general-2017-electorate-47",
+        "nz-general-2017-electorate-48",
+        "nz-general-2017-electorate-49",
+        "nz-general-2017-electorate-50",
+        "nz-general-2017-electorate-51",
+        "nz-general-2017-electorate-52",
+        "nz-general-2017-electorate-53",
+        "nz-general-2017-electorate-54",
+        "nz-general-2017-electorate-55",
+        "nz-general-2017-electorate-56",
+        "nz-general-2017-electorate-57",
+        "nz-general-2017-electorate-58",
+        "nz-general-2017-electorate-59",
+        "nz-general-2017-electorate-60",
+        "nz-general-2017-electorate-61",
+        "nz-general-2017-electorate-62",
+        "nz-general-2017-electorate-63",
+        "nz-general-2017-electorate-64"
+      ],
+      "evaluationContestIds": [
+        "nz-general-2023-electorate-01",
+        "nz-general-2023-electorate-02",
+        "nz-general-2023-electorate-03",
+        "nz-general-2023-electorate-04",
+        "nz-general-2023-electorate-05",
+        "nz-general-2023-electorate-06",
+        "nz-general-2023-electorate-07",
+        "nz-general-2023-electorate-08",
+        "nz-general-2023-electorate-09",
+        "nz-general-2023-electorate-10",
+        "nz-general-2023-electorate-11",
+        "nz-general-2023-electorate-12",
+        "nz-general-2023-electorate-13",
+        "nz-general-2023-electorate-14",
+        "nz-general-2023-electorate-15",
+        "nz-general-2023-electorate-16",
+        "nz-general-2023-electorate-17",
+        "nz-general-2023-electorate-18",
+        "nz-general-2023-electorate-19",
+        "nz-general-2023-electorate-20",
+        "nz-general-2023-electorate-21",
+        "nz-general-2023-electorate-22",
+        "nz-general-2023-electorate-23",
+        "nz-general-2023-electorate-24",
+        "nz-general-2023-electorate-25",
+        "nz-general-2023-electorate-26",
+        "nz-general-2023-electorate-27",
+        "nz-general-2023-electorate-28",
+        "nz-general-2023-electorate-29",
+        "nz-general-2023-electorate-30",
+        "nz-general-2023-electorate-31",
+        "nz-general-2023-electorate-32",
+        "nz-general-2023-electorate-33",
+        "nz-general-2023-electorate-34",
+        "nz-general-2023-electorate-35",
+        "nz-general-2023-electorate-36",
+        "nz-general-2023-electorate-37",
+        "nz-general-2023-electorate-38",
+        "nz-general-2023-electorate-40",
+        "nz-general-2023-electorate-41",
+        "nz-general-2023-electorate-42",
+        "nz-general-2023-electorate-43",
+        "nz-general-2023-electorate-44",
+        "nz-general-2023-electorate-45",
+        "nz-general-2023-electorate-46",
+        "nz-general-2023-electorate-47",
+        "nz-general-2023-electorate-48",
+        "nz-general-2023-electorate-49",
+        "nz-general-2023-electorate-50",
+        "nz-general-2023-electorate-51",
+        "nz-general-2023-electorate-52",
+        "nz-general-2023-electorate-53",
+        "nz-general-2023-electorate-54",
+        "nz-general-2023-electorate-55",
+        "nz-general-2023-electorate-56",
+        "nz-general-2023-electorate-57",
+        "nz-general-2023-electorate-58",
+        "nz-general-2023-electorate-59",
+        "nz-general-2023-electorate-60",
+        "nz-general-2023-electorate-61",
+        "nz-general-2023-electorate-62",
+        "nz-general-2023-electorate-63",
+        "nz-general-2023-electorate-64",
+        "nz-general-2023-electorate-65"
+      ],
+      "trainingOnlyMeans": {
+        "S": 0.5846963087601912,
+        "V": 0.012736793845387432
+      },
+      "training": {
+        "status": "audited",
+        "contests": 127,
+        "features": {
+          "candidates": 854,
+          "sSupportedCandidates": 565,
+          "vSupportedCandidates": 565,
+          "sWithinSlateContrastContests": 127,
+          "vWithinSlateContrastContests": 127,
+          "topSupportedParties": [
+            {
+              "partyKey": "labourparty",
+              "candidateCount": 127
+            },
+            {
+              "partyKey": "nationalparty",
+              "candidateCount": 127
+            },
+            {
+              "partyKey": "greenparty",
+              "candidateCount": 102
+            },
+            {
+              "partyKey": "actnewzealand",
+              "candidateCount": 74
+            },
+            {
+              "partyKey": "newzealandfirstparty",
+              "candidateCount": 44
+            },
+            {
+              "partyKey": "conservative",
+              "candidateCount": 27
+            },
+            {
+              "partyKey": "unitedfuture",
+              "candidateCount": 20
+            },
+            {
+              "partyKey": "democratsforsocialcredit",
+              "candidateCount": 19
+            }
+          ]
+        },
+        "probeDesigns": [
+          {
+            "kappaProbe": 0.0001,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                2.41044,
+                0.64859
+              ],
+              "singularValues": [
+                1.234171,
+                0.690523
+              ],
+              "conditionRatio": 1.787299,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                26904.786515,
+                2.41044,
+                0.64859
+              ],
+              "singularValues": [
+                1.234459,
+                0.999669,
+                0.690489
+              ],
+              "conditionRatio": 1.787804,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.523178
+          },
+          {
+            "kappaProbe": 0.01,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                2.41044,
+                0.64859
+              ],
+              "singularValues": [
+                1.234171,
+                0.690523
+              ],
+              "conditionRatio": 1.787299,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                359.278907,
+                2.41044,
+                0.64859
+              ],
+              "singularValues": [
+                1.300464,
+                0.962641,
+                0.618155
+              ],
+              "conditionRatio": 2.103784,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.523178
+          },
+          {
+            "kappaProbe": 0.1,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                2.41044,
+                0.64859
+              ],
+              "singularValues": [
+                1.234171,
+                0.690523
+              ],
+              "conditionRatio": 1.787299,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                34.494316,
+                2.41044,
+                0.64859
+              ],
+              "singularValues": [
+                1.380993,
+                0.921221,
+                0.494174
+              ],
+              "conditionRatio": 2.794547,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.523178
+          }
+        ]
+      },
+      "evaluation": {
+        "status": "audited",
+        "contests": 64,
+        "features": {
+          "candidates": 459,
+          "sSupportedCandidates": 271,
+          "vSupportedCandidates": 271,
+          "sWithinSlateContrastContests": 64,
+          "vWithinSlateContrastContests": 64,
+          "topSupportedParties": [
+            {
+              "partyKey": "nationalparty",
+              "candidateCount": 64
+            },
+            {
+              "partyKey": "labourparty",
+              "candidateCount": 64
+            },
+            {
+              "partyKey": "actnewzealand",
+              "candidateCount": 51
+            },
+            {
+              "partyKey": "greenparty",
+              "candidateCount": 47
+            },
+            {
+              "partyKey": "newzealandfirstparty",
+              "candidateCount": 18
+            },
+            {
+              "partyKey": "theopportunitiespartytop",
+              "candidateCount": 10
+            },
+            {
+              "partyKey": "newconservatives",
+              "candidateCount": 10
+            },
+            {
+              "partyKey": "aotearoalegalisecannabisparty",
+              "candidateCount": 5
+            }
+          ]
+        },
+        "probeDesigns": [
+          {
+            "kappaProbe": 0.0001,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.726256,
+                0.460533
+              ],
+              "singularValues": [
+                1.291596,
+                0.576004
+              ],
+              "conditionRatio": 2.242338,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                21553.698304,
+                1.726256,
+                0.460533
+              ],
+              "singularValues": [
+                1.291694,
+                0.999881,
+                0.575991
+              ],
+              "conditionRatio": 2.242558,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.668219
+          },
+          {
+            "kappaProbe": 0.01,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.726256,
+                0.460533
+              ],
+              "singularValues": [
+                1.291596,
+                0.576004
+              ],
+              "conditionRatio": 2.242338,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                262.067361,
+                1.726256,
+                0.460533
+              ],
+              "singularValues": [
+                1.293752,
+                0.997454,
+                0.57558
+              ],
+              "conditionRatio": 2.247738,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.668219
+          },
+          {
+            "kappaProbe": 0.1,
+            "featureTerms": {
+              "rank": 2,
+              "columns": 2,
+              "unscaledColumnNorms": [
+                1.726256,
+                0.460533
+              ],
+              "singularValues": [
+                1.291596,
+                0.576004
+              ],
+              "conditionRatio": 2.242338,
+              "weakCondition": false
+            },
+            "combinedWithFloor": {
+              "rank": 3,
+              "columns": 3,
+              "unscaledColumnNorms": [
+                23.252647,
+                1.726256,
+                0.460533
+              ],
+              "singularValues": [
+                1.350802,
+                0.925878,
+                0.56399
+              ],
+              "conditionRatio": 2.395082,
+              "weakCondition": false
+            },
+            "centeredFeatureCorrelation": 0.668219
+          }
+        ]
+      },
+      "coverageGate": {
+        "training": true,
+        "evaluation": true
+      },
+      "trainingDesignIdentifiableAtAllProbes": true,
+      "passesProposedPreFitGates": true
+    }
+  ],
+  "allFittingGatesPass": true
+}

@@ -1,0 +1,2523 @@
+{
+  "schemaVersion": 1,
+  "stage": 22,
+  "role": "before_any_stage22_fit_or_score",
+  "continuityAudit": {
+    "eligibleSharedSourceContinuities": [],
+    "recordedSharedSourceTransitions": [
+      {
+        "sourceYear": 2014,
+        "targetYear": 2017,
+        "sourceKey": "internetmana",
+        "status": "exit"
+      }
+    ],
+    "interpretation": "2014 Internet MANA exits; later Internet Party/MANA target categories are entrants. No source alliance S/V is transferred to a constituent."
+  },
+  "differences": {
+    "newlyAdmittedContestIds": [
+      "nz-general-2023-electorate-09",
+      "nz-general-2023-electorate-13",
+      "nz-general-2023-electorate-14",
+      "nz-general-2023-electorate-16",
+      "nz-general-2023-electorate-21",
+      "nz-general-2023-electorate-22",
+      "nz-general-2023-electorate-28",
+      "nz-general-2023-electorate-31",
+      "nz-general-2023-electorate-33",
+      "nz-general-2023-electorate-37",
+      "nz-general-2023-electorate-38",
+      "nz-general-2023-electorate-42",
+      "nz-general-2023-electorate-43",
+      "nz-general-2023-electorate-46",
+      "nz-general-2023-electorate-50",
+      "nz-general-2023-electorate-52",
+      "nz-general-2023-electorate-54",
+      "nz-general-2023-electorate-55",
+      "nz-general-2023-electorate-56",
+      "nz-general-2023-electorate-60"
+    ],
+    "newlyAdmittedCandidateOccurrenceIds": [
+      "nz-general-2023-electorate-09-candidate-01",
+      "nz-general-2023-electorate-09-candidate-02",
+      "nz-general-2023-electorate-09-candidate-03",
+      "nz-general-2023-electorate-09-candidate-04",
+      "nz-general-2023-electorate-09-candidate-05",
+      "nz-general-2023-electorate-09-candidate-06",
+      "nz-general-2023-electorate-09-candidate-07",
+      "nz-general-2023-electorate-09-candidate-08",
+      "nz-general-2023-electorate-09-candidate-09",
+      "nz-general-2023-electorate-09-candidate-10",
+      "nz-general-2023-electorate-09-candidate-11",
+      "nz-general-2023-electorate-13-candidate-01",
+      "nz-general-2023-electorate-13-candidate-02",
+      "nz-general-2023-electorate-13-candidate-03",
+      "nz-general-2023-electorate-13-candidate-04",
+      "nz-general-2023-electorate-13-candidate-05",
+      "nz-general-2023-electorate-13-candidate-06",
+      "nz-general-2023-electorate-13-candidate-07",
+      "nz-general-2023-electorate-13-candidate-08",
+      "nz-general-2023-electorate-14-candidate-01",
+      "nz-general-2023-electorate-14-candidate-02",
+      "nz-general-2023-electorate-14-candidate-03",
+      "nz-general-2023-electorate-14-candidate-04",
+      "nz-general-2023-electorate-14-candidate-05",
+      "nz-general-2023-electorate-14-candidate-06",
+      "nz-general-2023-electorate-14-candidate-07",
+      "nz-general-2023-electorate-14-candidate-08",
+      "nz-general-2023-electorate-16-candidate-01",
+      "nz-general-2023-electorate-16-candidate-02",
+      "nz-general-2023-electorate-16-candidate-03",
+      "nz-general-2023-electorate-16-candidate-04",
+      "nz-general-2023-electorate-16-candidate-05",
+      "nz-general-2023-electorate-16-candidate-06",
+      "nz-general-2023-electorate-21-candidate-01",
+      "nz-general-2023-electorate-21-candidate-02",
+      "nz-general-2023-electorate-21-candidate-03",
+      "nz-general-2023-electorate-21-candidate-04",
+      "nz-general-2023-electorate-21-candidate-05",
+      "nz-general-2023-electorate-21-candidate-06",
+      "nz-general-2023-electorate-21-candidate-07",
+      "nz-general-2023-electorate-22-candidate-01",
+      "nz-general-2023-electorate-22-candidate-02",
+      "nz-general-2023-electorate-22-candidate-03",
+      "nz-general-2023-electorate-22-candidate-04",
+      "nz-general-2023-electorate-28-candidate-01",
+      "nz-general-2023-electorate-28-candidate-02",
+      "nz-general-2023-electorate-28-candidate-03",
+      "nz-general-2023-electorate-28-candidate-04",
+      "nz-general-2023-electorate-28-candidate-05",
+      "nz-general-2023-electorate-28-candidate-06",
+      "nz-general-2023-electorate-31-candidate-01",
+      "nz-general-2023-electorate-31-candidate-02",
+      "nz-general-2023-electorate-31-candidate-03",
+      "nz-general-2023-electorate-31-candidate-04",
+      "nz-general-2023-electorate-31-candidate-05",
+      "nz-general-2023-electorate-31-candidate-06",
+      "nz-general-2023-electorate-33-candidate-01",
+      "nz-general-2023-electorate-33-candidate-02",
+      "nz-general-2023-electorate-33-candidate-03",
+      "nz-general-2023-electorate-33-candidate-04",
+      "nz-general-2023-electorate-33-candidate-05",
+      "nz-general-2023-electorate-33-candidate-06",
+      "nz-general-2023-electorate-33-candidate-07",
+      "nz-general-2023-electorate-37-candidate-01",
+      "nz-general-2023-electorate-37-candidate-02",
+      "nz-general-2023-electorate-37-candidate-03",
+      "nz-general-2023-electorate-37-candidate-04",
+      "nz-general-2023-electorate-37-candidate-05",
+      "nz-general-2023-electorate-37-candidate-06",
+      "nz-general-2023-electorate-38-candidate-01",
+      "nz-general-2023-electorate-38-candidate-02",
+      "nz-general-2023-electorate-38-candidate-03",
+      "nz-general-2023-electorate-38-candidate-04",
+      "nz-general-2023-electorate-38-candidate-05",
+      "nz-general-2023-electorate-38-candidate-06",
+      "nz-general-2023-electorate-38-candidate-07",
+      "nz-general-2023-electorate-42-candidate-01",
+      "nz-general-2023-electorate-42-candidate-02",
+      "nz-general-2023-electorate-42-candidate-03",
+      "nz-general-2023-electorate-42-candidate-04",
+      "nz-general-2023-electorate-42-candidate-05",
+      "nz-general-2023-electorate-42-candidate-06",
+      "nz-general-2023-electorate-43-candidate-01",
+      "nz-general-2023-electorate-43-candidate-02",
+      "nz-general-2023-electorate-43-candidate-03",
+      "nz-general-2023-electorate-43-candidate-04",
+      "nz-general-2023-electorate-43-candidate-05",
+      "nz-general-2023-electorate-43-candidate-06",
+      "nz-general-2023-electorate-43-candidate-07",
+      "nz-general-2023-electorate-43-candidate-08",
+      "nz-general-2023-electorate-43-candidate-09",
+      "nz-general-2023-electorate-46-candidate-01",
+      "nz-general-2023-electorate-46-candidate-02",
+      "nz-general-2023-electorate-46-candidate-03",
+      "nz-general-2023-electorate-46-candidate-04",
+      "nz-general-2023-electorate-46-candidate-05",
+      "nz-general-2023-electorate-46-candidate-06",
+      "nz-general-2023-electorate-46-candidate-07",
+      "nz-general-2023-electorate-50-candidate-01",
+      "nz-general-2023-electorate-50-candidate-02",
+      "nz-general-2023-electorate-50-candidate-03",
+      "nz-general-2023-electorate-50-candidate-04",
+      "nz-general-2023-electorate-52-candidate-01",
+      "nz-general-2023-electorate-52-candidate-02",
+      "nz-general-2023-electorate-52-candidate-03",
+      "nz-general-2023-electorate-52-candidate-04",
+      "nz-general-2023-electorate-52-candidate-05",
+      "nz-general-2023-electorate-52-candidate-06",
+      "nz-general-2023-electorate-52-candidate-07",
+      "nz-general-2023-electorate-52-candidate-08",
+      "nz-general-2023-electorate-52-candidate-09",
+      "nz-general-2023-electorate-52-candidate-10",
+      "nz-general-2023-electorate-54-candidate-01",
+      "nz-general-2023-electorate-54-candidate-02",
+      "nz-general-2023-electorate-54-candidate-03",
+      "nz-general-2023-electorate-54-candidate-04",
+      "nz-general-2023-electorate-54-candidate-05",
+      "nz-general-2023-electorate-54-candidate-06",
+      "nz-general-2023-electorate-54-candidate-07",
+      "nz-general-2023-electorate-54-candidate-08",
+      "nz-general-2023-electorate-54-candidate-09",
+      "nz-general-2023-electorate-54-candidate-10",
+      "nz-general-2023-electorate-55-candidate-01",
+      "nz-general-2023-electorate-55-candidate-02",
+      "nz-general-2023-electorate-55-candidate-03",
+      "nz-general-2023-electorate-55-candidate-04",
+      "nz-general-2023-electorate-55-candidate-05",
+      "nz-general-2023-electorate-55-candidate-06",
+      "nz-general-2023-electorate-55-candidate-07",
+      "nz-general-2023-electorate-55-candidate-08",
+      "nz-general-2023-electorate-55-candidate-09",
+      "nz-general-2023-electorate-56-candidate-01",
+      "nz-general-2023-electorate-56-candidate-02",
+      "nz-general-2023-electorate-56-candidate-03",
+      "nz-general-2023-electorate-56-candidate-04",
+      "nz-general-2023-electorate-56-candidate-05",
+      "nz-general-2023-electorate-60-candidate-01",
+      "nz-general-2023-electorate-60-candidate-02",
+      "nz-general-2023-electorate-60-candidate-03",
+      "nz-general-2023-electorate-60-candidate-04",
+      "nz-general-2023-electorate-60-candidate-05",
+      "nz-general-2023-electorate-60-candidate-06",
+      "nz-general-2023-electorate-60-candidate-07",
+      "nz-general-2023-electorate-60-candidate-08",
+      "nz-general-2023-electorate-60-candidate-09",
+      "nz-general-2023-electorate-60-candidate-10",
+      "nz-general-2023-electorate-60-candidate-11"
+    ],
+    "originalCommonContestIds": [
+      "nz-general-2011-electorate-01",
+      "nz-general-2011-electorate-02",
+      "nz-general-2011-electorate-03",
+      "nz-general-2011-electorate-04",
+      "nz-general-2011-electorate-05",
+      "nz-general-2011-electorate-06",
+      "nz-general-2011-electorate-07",
+      "nz-general-2011-electorate-08",
+      "nz-general-2011-electorate-09",
+      "nz-general-2011-electorate-10",
+      "nz-general-2011-electorate-11",
+      "nz-general-2011-electorate-12",
+      "nz-general-2011-electorate-13",
+      "nz-general-2011-electorate-14",
+      "nz-general-2011-electorate-15",
+      "nz-general-2011-electorate-16",
+      "nz-general-2011-electorate-17",
+      "nz-general-2011-electorate-18",
+      "nz-general-2011-electorate-19",
+      "nz-general-2011-electorate-20",
+      "nz-general-2011-electorate-21",
+      "nz-general-2011-electorate-22",
+      "nz-general-2011-electorate-23",
+      "nz-general-2011-electorate-24",
+      "nz-general-2011-electorate-25",
+      "nz-general-2011-electorate-26",
+      "nz-general-2011-electorate-27",
+      "nz-general-2011-electorate-28",
+      "nz-general-2011-electorate-29",
+      "nz-general-2011-electorate-30",
+      "nz-general-2011-electorate-31",
+      "nz-general-2011-electorate-32",
+      "nz-general-2011-electorate-33",
+      "nz-general-2011-electorate-34",
+      "nz-general-2011-electorate-35",
+      "nz-general-2011-electorate-36",
+      "nz-general-2011-electorate-37",
+      "nz-general-2011-electorate-38",
+      "nz-general-2011-electorate-39",
+      "nz-general-2011-electorate-40",
+      "nz-general-2011-electorate-41",
+      "nz-general-2011-electorate-42",
+      "nz-general-2011-electorate-43",
+      "nz-general-2011-electorate-44",
+      "nz-general-2011-electorate-45",
+      "nz-general-2011-electorate-46",
+      "nz-general-2011-electorate-47",
+      "nz-general-2011-electorate-48",
+      "nz-general-2011-electorate-49",
+      "nz-general-2011-electorate-50",
+      "nz-general-2011-electorate-51",
+      "nz-general-2011-electorate-52",
+      "nz-general-2011-electorate-53",
+      "nz-general-2011-electorate-54",
+      "nz-general-2011-electorate-55",
+      "nz-general-2011-electorate-56",
+      "nz-general-2011-electorate-57",
+      "nz-general-2011-electorate-58",
+      "nz-general-2011-electorate-59",
+      "nz-general-2011-electorate-60",
+      "nz-general-2011-electorate-61",
+      "nz-general-2011-electorate-62",
+      "nz-general-2011-electorate-63",
+      "nz-general-2017-electorate-01",
+      "nz-general-2017-electorate-02",
+      "nz-general-2017-electorate-03",
+      "nz-general-2017-electorate-04",
+      "nz-general-2017-electorate-05",
+      "nz-general-2017-electorate-06",
+      "nz-general-2017-electorate-07",
+      "nz-general-2017-electorate-08",
+      "nz-general-2017-electorate-09",
+      "nz-general-2017-electorate-10",
+      "nz-general-2017-electorate-11",
+      "nz-general-2017-electorate-12",
+      "nz-general-2017-electorate-13",
+      "nz-general-2017-electorate-14",
+      "nz-general-2017-electorate-15",
+      "nz-general-2017-electorate-16",
+      "nz-general-2017-electorate-17",
+      "nz-general-2017-electorate-18",
+      "nz-general-2017-electorate-19",
+      "nz-general-2017-electorate-20",
+      "nz-general-2017-electorate-21",
+      "nz-general-2017-electorate-22",
+      "nz-general-2017-electorate-23",
+      "nz-general-2017-electorate-24",
+      "nz-general-2017-electorate-25",
+      "nz-general-2017-electorate-26",
+      "nz-general-2017-electorate-27",
+      "nz-general-2017-electorate-28",
+      "nz-general-2017-electorate-29",
+      "nz-general-2017-electorate-30",
+      "nz-general-2017-electorate-31",
+      "nz-general-2017-electorate-32",
+      "nz-general-2017-electorate-33",
+      "nz-general-2017-electorate-34",
+      "nz-general-2017-electorate-35",
+      "nz-general-2017-electorate-36",
+      "nz-general-2017-electorate-37",
+      "nz-general-2017-electorate-38",
+      "nz-general-2017-electorate-39",
+      "nz-general-2017-electorate-40",
+      "nz-general-2017-electorate-41",
+      "nz-general-2017-electorate-42",
+      "nz-general-2017-electorate-43",
+      "nz-general-2017-electorate-44",
+      "nz-general-2017-electorate-45",
+      "nz-general-2017-electorate-46",
+      "nz-general-2017-electorate-47",
+      "nz-general-2017-electorate-48",
+      "nz-general-2017-electorate-49",
+      "nz-general-2017-electorate-50",
+      "nz-general-2017-electorate-51",
+      "nz-general-2017-electorate-52",
+      "nz-general-2017-electorate-53",
+      "nz-general-2017-electorate-54",
+      "nz-general-2017-electorate-55",
+      "nz-general-2017-electorate-56",
+      "nz-general-2017-electorate-57",
+      "nz-general-2017-electorate-58",
+      "nz-general-2017-electorate-59",
+      "nz-general-2017-electorate-60",
+      "nz-general-2017-electorate-61",
+      "nz-general-2017-electorate-62",
+      "nz-general-2017-electorate-63",
+      "nz-general-2017-electorate-64",
+      "nz-general-2023-electorate-01",
+      "nz-general-2023-electorate-02",
+      "nz-general-2023-electorate-03",
+      "nz-general-2023-electorate-04",
+      "nz-general-2023-electorate-05",
+      "nz-general-2023-electorate-06",
+      "nz-general-2023-electorate-07",
+      "nz-general-2023-electorate-08",
+      "nz-general-2023-electorate-10",
+      "nz-general-2023-electorate-11",
+      "nz-general-2023-electorate-12",
+      "nz-general-2023-electorate-15",
+      "nz-general-2023-electorate-17",
+      "nz-general-2023-electorate-18",
+      "nz-general-2023-electorate-19",
+      "nz-general-2023-electorate-20",
+      "nz-general-2023-electorate-23",
+      "nz-general-2023-electorate-24",
+      "nz-general-2023-electorate-25",
+      "nz-general-2023-electorate-26",
+      "nz-general-2023-electorate-27",
+      "nz-general-2023-electorate-29",
+      "nz-general-2023-electorate-30",
+      "nz-general-2023-electorate-32",
+      "nz-general-2023-electorate-34",
+      "nz-general-2023-electorate-35",
+      "nz-general-2023-electorate-36",
+      "nz-general-2023-electorate-40",
+      "nz-general-2023-electorate-41",
+      "nz-general-2023-electorate-44",
+      "nz-general-2023-electorate-45",
+      "nz-general-2023-electorate-47",
+      "nz-general-2023-electorate-48",
+      "nz-general-2023-electorate-49",
+      "nz-general-2023-electorate-51",
+      "nz-general-2023-electorate-53",
+      "nz-general-2023-electorate-57",
+      "nz-general-2023-electorate-58",
+      "nz-general-2023-electorate-59",
+      "nz-general-2023-electorate-61",
+      "nz-general-2023-electorate-62",
+      "nz-general-2023-electorate-63",
+      "nz-general-2023-electorate-64",
+      "nz-general-2023-electorate-65"
+    ],
+    "correctedExistingCandidateInputs": [
+      {
+        "targetYear": 2023,
+        "targetElectorateId": "nz-general-2023-electorate-01",
+        "candidateOccurrenceId": "nz-general-2023-electorate-01-candidate-02",
+        "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+        "newMappingStatus": "mapped_shared_group_single_local_destination",
+        "oldTargetPartySupport": 0,
+        "newTargetPartySupport": 0.0013567753971394651,
+        "oldFallbackReasons": [
+          "affirmative_no_party_group"
+        ],
+        "newFallbackReasons": [
+          "documented_party_category_entry"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "targetElectorateId": "nz-general-2023-electorate-07",
+        "candidateOccurrenceId": "nz-general-2023-electorate-07-candidate-06",
+        "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+        "newMappingStatus": "mapped_shared_group_single_local_destination",
+        "oldTargetPartySupport": 0,
+        "newTargetPartySupport": 0.0026870255054167024,
+        "oldFallbackReasons": [
+          "affirmative_no_party_group"
+        ],
+        "newFallbackReasons": [
+          "documented_party_category_entry"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "targetElectorateId": "nz-general-2023-electorate-23",
+        "candidateOccurrenceId": "nz-general-2023-electorate-23-candidate-02",
+        "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+        "newMappingStatus": "mapped_shared_group_single_local_destination",
+        "oldTargetPartySupport": 0,
+        "newTargetPartySupport": 0.0024796612058397413,
+        "oldFallbackReasons": [
+          "affirmative_no_party_group"
+        ],
+        "newFallbackReasons": [
+          "documented_party_category_entry"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "targetElectorateId": "nz-general-2023-electorate-35",
+        "candidateOccurrenceId": "nz-general-2023-electorate-35-candidate-01",
+        "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+        "newMappingStatus": "mapped_shared_group_single_local_destination",
+        "oldTargetPartySupport": 0,
+        "newTargetPartySupport": 0.0023652230650028547,
+        "oldFallbackReasons": [
+          "affirmative_no_party_group"
+        ],
+        "newFallbackReasons": [
+          "documented_party_category_entry"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "targetElectorateId": "nz-general-2023-electorate-40",
+        "candidateOccurrenceId": "nz-general-2023-electorate-40-candidate-02",
+        "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+        "newMappingStatus": "mapped_shared_group_single_local_destination",
+        "oldTargetPartySupport": 0,
+        "newTargetPartySupport": 0.0016806307308272163,
+        "oldFallbackReasons": [
+          "affirmative_no_party_group"
+        ],
+        "newFallbackReasons": [
+          "documented_party_category_entry"
+        ]
+      },
+      {
+        "targetYear": 2023,
+        "targetElectorateId": "nz-general-2023-electorate-61",
+        "candidateOccurrenceId": "nz-general-2023-electorate-61-candidate-02",
+        "oldMappingStatus": "verified_no_party_group_unregistered_affiliation",
+        "newMappingStatus": "mapped_shared_group_single_local_destination",
+        "oldTargetPartySupport": 0,
+        "newTargetPartySupport": 0.00688537869582827,
+        "oldFallbackReasons": [
+          "affirmative_no_party_group"
+        ],
+        "newFallbackReasons": [
+          "documented_party_category_entry"
+        ]
+      }
+    ],
+    "mappingDecisions": [
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-01",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-01-candidate-06"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-01-candidate-06",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-08",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-08-candidate-07"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-08-candidate-07",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-09",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-09-candidate-05"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-09-candidate-05",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-10",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-10-candidate-04"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-10-candidate-04",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-12",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-12-candidate-08"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-12-candidate-08",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-13",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-13-candidate-03"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-13-candidate-03",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-15",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-15-candidate-05"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-15-candidate-05",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-18",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-18-candidate-01"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-18-candidate-01",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-21",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-21-candidate-06"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-21-candidate-06",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-23",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-23-candidate-01"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-23-candidate-01",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-24",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-24-candidate-06"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-24-candidate-06",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-25",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-25-candidate-03"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-25-candidate-03",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-26",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-26-candidate-03"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-26-candidate-03",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-27",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-27-candidate-01"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-27-candidate-01",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-28",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-28-candidate-05"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-28-candidate-05",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-34",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-34-candidate-03"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-34-candidate-03",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-39",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-39-candidate-02"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-39-candidate-02",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-40",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-40-candidate-04"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-40-candidate-04",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-46",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-46-candidate-07"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-46-candidate-07",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-49",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-49-candidate-01"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-49-candidate-01",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-50",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-50-candidate-04"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-50-candidate-04",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-53",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-53-candidate-07"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-53-candidate-07",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-55",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-55-candidate-05"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-55-candidate-05",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-60",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-60-candidate-10"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-60-candidate-10",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-63",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-63-candidate-01"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-63-candidate-01",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "electorateId": "nz-general-2014-electorate-64",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2014-electorate-64-candidate-03"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-64-candidate-03",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "internetmana"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-01",
+        "decision": "single_local_destination",
+        "oldStatus": "complete",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-01-candidate-02"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-01-candidate-02",
+            "oldStatus": "verified_no_party_group_unregistered_affiliation",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-07",
+        "decision": "single_local_destination",
+        "oldStatus": "complete",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-07-candidate-06"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-07-candidate-06",
+            "oldStatus": "verified_no_party_group_unregistered_affiliation",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-09",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-09-candidate-07"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-09-candidate-07",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-13",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-13-candidate-02"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-13-candidate-02",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-14",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-14-candidate-07"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-14-candidate-07",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-16",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-16-candidate-06"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-16-candidate-06",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-21",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-21-candidate-01"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-21-candidate-01",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-22",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-22-candidate-03"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-22-candidate-03",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-23",
+        "decision": "single_local_destination",
+        "oldStatus": "complete",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-23-candidate-02"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-23-candidate-02",
+            "oldStatus": "verified_no_party_group_unregistered_affiliation",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-28",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-28-candidate-04"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-28-candidate-04",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-31",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-31-candidate-02"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-31-candidate-02",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-33",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-33-candidate-04"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-33-candidate-04",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-35",
+        "decision": "single_local_destination",
+        "oldStatus": "complete",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-35-candidate-01"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-35-candidate-01",
+            "oldStatus": "verified_no_party_group_unregistered_affiliation",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-37",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-37-candidate-03"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-37-candidate-03",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-38",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-38-candidate-02"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-38-candidate-02",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-39",
+        "decision": "cancelled_unchanged",
+        "candidateOccurrenceIds": []
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-40",
+        "decision": "single_local_destination",
+        "oldStatus": "complete",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-40-candidate-02"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-40-candidate-02",
+            "oldStatus": "verified_no_party_group_unregistered_affiliation",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-42",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-42-candidate-06"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-42-candidate-06",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-43",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-43-candidate-08"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-43-candidate-08",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-46",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-46-candidate-05"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-46-candidate-05",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-50",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-50-candidate-03"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-50-candidate-03",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-52",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-52-candidate-05"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-52-candidate-05",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-54",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-54-candidate-05"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-54-candidate-05",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-55",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-55-candidate-07"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-55-candidate-07",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-56",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-56-candidate-01"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-56-candidate-01",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-60",
+        "decision": "single_local_destination",
+        "oldStatus": "ambiguous_mapping",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-60-candidate-08"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-60-candidate-08",
+            "oldStatus": "ambiguous_report_only_alliance",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "electorateId": "nz-general-2023-electorate-61",
+        "decision": "single_local_destination",
+        "oldStatus": "complete",
+        "newStatus": "complete",
+        "candidateOccurrenceIds": [
+          "nz-general-2023-electorate-61-candidate-02"
+        ],
+        "candidateMappingChanges": [
+          {
+            "candidateOccurrenceId": "nz-general-2023-electorate-61-candidate-02",
+            "oldStatus": "verified_no_party_group_unregistered_affiliation",
+            "oldPartyKey": null,
+            "newStatus": "mapped_shared_group_single_local_destination",
+            "newPartyKey": "freedomsnz"
+          }
+        ]
+      }
+    ],
+    "oldSummary": {
+      "2011": {
+        "frameContests": 70,
+        "constructedContests": 63,
+        "constructedCandidates": 423,
+        "withS": 280,
+        "withV": 280,
+        "withBoth": 280,
+        "contestsWithS": 63,
+        "statusReasons": {
+          "constructed": 63,
+          "maori_source_local_split_unavailable": 7
+        },
+        "fallbackReasons": {
+          "affirmative_no_party_group": 26,
+          "documented_party_category_entry": 66,
+          "source_party_without_candidate_destination": 51
+        },
+        "featurePartyCounts": {
+          "actnewzealand": 47,
+          "alliance": 4,
+          "aotearoalegalisecannabisparty": 4,
+          "democratsforsocialcredit": 10,
+          "greenparty": 51,
+          "labourparty": 63,
+          "libertarianz": 6,
+          "nationalparty": 63,
+          "newzealandfirstparty": 14,
+          "unitedfuture": 18
+        },
+        "mappingStatusCounts": {
+          "mapped_registered_party_group": 397,
+          "verified_no_party_group_independent": 16,
+          "verified_no_party_group_unregistered_affiliation": 10
+        },
+        "sEvidenceTierCounts": {
+          "official_source_local_party_row_rounded_candidate_destination": 280,
+          "unavailable": 143
+        },
+        "vEvidenceTierCounts": {
+          "official_source_candidate_and_party_totals_distinct_denominators": 280,
+          "unavailable": 143
+        },
+        "partyCategoryCoverage": [
+          {
+            "partyKey": null,
+            "candidates": 26,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "affirmative_no_party_group": 26
+            }
+          },
+          {
+            "partyKey": "actnewzealand",
+            "candidates": 50,
+            "withS": 47,
+            "withV": 47,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 3
+            }
+          },
+          {
+            "partyKey": "alliance",
+            "candidates": 5,
+            "withS": 4,
+            "withV": 4,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 1
+            }
+          },
+          {
+            "partyKey": "aotearoalegalisecannabisparty",
+            "candidates": 15,
+            "withS": 4,
+            "withV": 4,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 11
+            }
+          },
+          {
+            "partyKey": "conservativeparty",
+            "candidates": 52,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 52
+            }
+          },
+          {
+            "partyKey": "democratsforsocialcredit",
+            "candidates": 14,
+            "withS": 10,
+            "withV": 10,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 4
+            }
+          },
+          {
+            "partyKey": "greenparty",
+            "candidates": 56,
+            "withS": 51,
+            "withV": 51,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 5
+            }
+          },
+          {
+            "partyKey": "labourparty",
+            "candidates": 63,
+            "withS": 63,
+            "withV": 63,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "libertarianz",
+            "candidates": 9,
+            "withS": 6,
+            "withV": 6,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 3
+            }
+          },
+          {
+            "partyKey": "mana",
+            "candidates": 14,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 14
+            }
+          },
+          {
+            "partyKey": "maoriparty",
+            "candidates": 4,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 4
+            }
+          },
+          {
+            "partyKey": "nationalparty",
+            "candidates": 63,
+            "withS": 63,
+            "withV": 63,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "newzealandfirstparty",
+            "candidates": 32,
+            "withS": 14,
+            "withV": 14,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 18
+            }
+          },
+          {
+            "partyKey": "unitedfuture",
+            "candidates": 20,
+            "withS": 18,
+            "withV": 18,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 2
+            }
+          }
+        ]
+      },
+      "2017": {
+        "frameContests": 71,
+        "constructedContests": 64,
+        "constructedCandidates": 431,
+        "withS": 285,
+        "withV": 285,
+        "withBoth": 285,
+        "contestsWithS": 64,
+        "statusReasons": {
+          "constructed": 64,
+          "maori_source_local_split_unavailable": 7
+        },
+        "fallbackReasons": {
+          "affirmative_no_party_group": 45,
+          "documented_party_category_entry": 26,
+          "source_party_without_candidate_destination": 75
+        },
+        "featurePartyCounts": {
+          "actnewzealand": 27,
+          "aotearoalegalisecannabisparty": 3,
+          "ban1080": 3,
+          "conservative": 27,
+          "democratsforsocialcredit": 9,
+          "greenparty": 51,
+          "labourparty": 64,
+          "maoriparty": 5,
+          "nationalparty": 64,
+          "newzealandfirstparty": 30,
+          "unitedfuture": 2
+        },
+        "mappingStatusCounts": {
+          "mapped_registered_party_group": 386,
+          "verified_no_party_group_independent": 29,
+          "verified_no_party_group_unregistered_affiliation": 16
+        },
+        "sEvidenceTierCounts": {
+          "official_source_local_party_row_rounded_candidate_destination": 285,
+          "unavailable": 146
+        },
+        "vEvidenceTierCounts": {
+          "official_source_candidate_and_party_totals_distinct_denominators": 285,
+          "unavailable": 146
+        },
+        "partyCategoryCoverage": [
+          {
+            "partyKey": null,
+            "candidates": 45,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "affirmative_no_party_group": 45
+            }
+          },
+          {
+            "partyKey": "actnewzealand",
+            "candidates": 41,
+            "withS": 27,
+            "withV": 27,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 14
+            }
+          },
+          {
+            "partyKey": "aotearoalegalisecannabisparty",
+            "candidates": 4,
+            "withS": 3,
+            "withV": 3,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 1
+            }
+          },
+          {
+            "partyKey": "ban1080",
+            "candidates": 3,
+            "withS": 3,
+            "withV": 3,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "conservative",
+            "candidates": 27,
+            "withS": 27,
+            "withV": 27,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "democratsforsocialcredit",
+            "candidates": 13,
+            "withS": 9,
+            "withV": 9,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 4
+            }
+          },
+          {
+            "partyKey": "greenparty",
+            "candidates": 61,
+            "withS": 51,
+            "withV": 51,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 10
+            }
+          },
+          {
+            "partyKey": "labourparty",
+            "candidates": 64,
+            "withS": 64,
+            "withV": 64,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "mana",
+            "candidates": 1,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 1
+            }
+          },
+          {
+            "partyKey": "maoriparty",
+            "candidates": 18,
+            "withS": 5,
+            "withV": 5,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 13
+            }
+          },
+          {
+            "partyKey": "nationalparty",
+            "candidates": 64,
+            "withS": 64,
+            "withV": 64,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "newzealandfirstparty",
+            "candidates": 57,
+            "withS": 30,
+            "withV": 30,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 27
+            }
+          },
+          {
+            "partyKey": "nzoutdoorsparty",
+            "candidates": 4,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 4
+            }
+          },
+          {
+            "partyKey": "theopportunitiespartytop",
+            "candidates": 21,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 21
+            }
+          },
+          {
+            "partyKey": "unitedfuture",
+            "candidates": 8,
+            "withS": 2,
+            "withV": 2,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 6
+            }
+          }
+        ]
+      },
+      "2023": {
+        "frameContests": 72,
+        "constructedContests": 44,
+        "constructedCandidates": 312,
+        "withS": 192,
+        "withV": 192,
+        "withBoth": 192,
+        "contestsWithS": 44,
+        "statusReasons": {
+          "cancelled_or_unheld": 1,
+          "constructed": 44,
+          "maori_source_local_split_unavailable": 7,
+          "stage18_ambiguous_mapping": 20
+        },
+        "fallbackReasons": {
+          "affirmative_no_party_group": 39,
+          "documented_party_category_entry": 54,
+          "source_party_without_candidate_destination": 27
+        },
+        "featurePartyCounts": {
+          "actnewzealand": 39,
+          "aotearoalegalisecannabisparty": 3,
+          "greenparty": 33,
+          "labourparty": 44,
+          "nationalparty": 44,
+          "newconservatives": 8,
+          "newzeal": 1,
+          "newzealandfirstparty": 14,
+          "theopportunitiespartytop": 6
+        },
+        "mappingStatusCounts": {
+          "mapped_registered_party_group": 273,
+          "verified_no_party_group_independent": 22,
+          "verified_no_party_group_unregistered_affiliation": 17
+        },
+        "sEvidenceTierCounts": {
+          "official_source_local_party_row_rounded_candidate_destination": 192,
+          "unavailable": 120
+        },
+        "vEvidenceTierCounts": {
+          "official_source_candidate_and_party_totals_distinct_denominators": 192,
+          "unavailable": 120
+        },
+        "partyCategoryCoverage": [
+          {
+            "partyKey": null,
+            "candidates": 39,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "affirmative_no_party_group": 39
+            }
+          },
+          {
+            "partyKey": "actnewzealand",
+            "candidates": 42,
+            "withS": 39,
+            "withV": 39,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 3
+            }
+          },
+          {
+            "partyKey": "animaljusticeparty",
+            "candidates": 12,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 12
+            }
+          },
+          {
+            "partyKey": "aotearoalegalisecannabisparty",
+            "candidates": 8,
+            "withS": 3,
+            "withV": 3,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 5
+            }
+          },
+          {
+            "partyKey": "democracynz",
+            "candidates": 11,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 11
+            }
+          },
+          {
+            "partyKey": "greenparty",
+            "candidates": 34,
+            "withS": 33,
+            "withV": 33,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 1
+            }
+          },
+          {
+            "partyKey": "labourparty",
+            "candidates": 44,
+            "withS": 44,
+            "withV": 44,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "leightonbakerparty",
+            "candidates": 3,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 3
+            }
+          },
+          {
+            "partyKey": "nationalparty",
+            "candidates": 44,
+            "withS": 44,
+            "withV": 44,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "newconservatives",
+            "candidates": 8,
+            "withS": 8,
+            "withV": 8,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "newnationparty",
+            "candidates": 3,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 3
+            }
+          },
+          {
+            "partyKey": "newzeal",
+            "candidates": 3,
+            "withS": 1,
+            "withV": 1,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 2
+            }
+          },
+          {
+            "partyKey": "newzealandfirstparty",
+            "candidates": 23,
+            "withS": 14,
+            "withV": 14,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 9
+            }
+          },
+          {
+            "partyKey": "newzealandloyal",
+            "candidates": 25,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 25
+            }
+          },
+          {
+            "partyKey": "tepatimaori",
+            "candidates": 6,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 6
+            }
+          },
+          {
+            "partyKey": "theopportunitiespartytop",
+            "candidates": 7,
+            "withS": 6,
+            "withV": 6,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 1
+            }
+          }
+        ]
+      }
+    },
+    "amendedSummary": {
+      "2011": {
+        "frameContests": 70,
+        "constructedContests": 63,
+        "constructedCandidates": 423,
+        "withS": 280,
+        "withV": 280,
+        "withBoth": 280,
+        "contestsWithS": 63,
+        "statusReasons": {
+          "constructed": 63,
+          "maori_source_local_split_unavailable": 7
+        },
+        "fallbackReasons": {
+          "affirmative_no_party_group": 26,
+          "documented_party_category_entry": 66,
+          "source_party_without_candidate_destination": 51
+        },
+        "featurePartyCounts": {
+          "actnewzealand": 47,
+          "alliance": 4,
+          "aotearoalegalisecannabisparty": 4,
+          "democratsforsocialcredit": 10,
+          "greenparty": 51,
+          "labourparty": 63,
+          "libertarianz": 6,
+          "nationalparty": 63,
+          "newzealandfirstparty": 14,
+          "unitedfuture": 18
+        },
+        "mappingStatusCounts": {
+          "mapped_registered_party_group": 397,
+          "verified_no_party_group_independent": 16,
+          "verified_no_party_group_unregistered_affiliation": 10
+        },
+        "sEvidenceTierCounts": {
+          "official_source_local_party_row_rounded_candidate_destination": 280,
+          "unavailable": 143
+        },
+        "vEvidenceTierCounts": {
+          "official_source_candidate_and_party_totals_distinct_denominators": 280,
+          "unavailable": 143
+        },
+        "partyCategoryCoverage": [
+          {
+            "partyKey": null,
+            "candidates": 26,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "affirmative_no_party_group": 26
+            }
+          },
+          {
+            "partyKey": "actnewzealand",
+            "candidates": 50,
+            "withS": 47,
+            "withV": 47,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 3
+            }
+          },
+          {
+            "partyKey": "alliance",
+            "candidates": 5,
+            "withS": 4,
+            "withV": 4,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 1
+            }
+          },
+          {
+            "partyKey": "aotearoalegalisecannabisparty",
+            "candidates": 15,
+            "withS": 4,
+            "withV": 4,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 11
+            }
+          },
+          {
+            "partyKey": "conservativeparty",
+            "candidates": 52,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 52
+            }
+          },
+          {
+            "partyKey": "democratsforsocialcredit",
+            "candidates": 14,
+            "withS": 10,
+            "withV": 10,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 4
+            }
+          },
+          {
+            "partyKey": "greenparty",
+            "candidates": 56,
+            "withS": 51,
+            "withV": 51,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 5
+            }
+          },
+          {
+            "partyKey": "labourparty",
+            "candidates": 63,
+            "withS": 63,
+            "withV": 63,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "libertarianz",
+            "candidates": 9,
+            "withS": 6,
+            "withV": 6,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 3
+            }
+          },
+          {
+            "partyKey": "mana",
+            "candidates": 14,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 14
+            }
+          },
+          {
+            "partyKey": "maoriparty",
+            "candidates": 4,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 4
+            }
+          },
+          {
+            "partyKey": "nationalparty",
+            "candidates": 63,
+            "withS": 63,
+            "withV": 63,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "newzealandfirstparty",
+            "candidates": 32,
+            "withS": 14,
+            "withV": 14,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 18
+            }
+          },
+          {
+            "partyKey": "unitedfuture",
+            "candidates": 20,
+            "withS": 18,
+            "withV": 18,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 2
+            }
+          }
+        ]
+      },
+      "2017": {
+        "frameContests": 71,
+        "constructedContests": 64,
+        "constructedCandidates": 431,
+        "withS": 285,
+        "withV": 285,
+        "withBoth": 285,
+        "contestsWithS": 64,
+        "statusReasons": {
+          "constructed": 64,
+          "maori_source_local_split_unavailable": 7
+        },
+        "fallbackReasons": {
+          "affirmative_no_party_group": 45,
+          "documented_party_category_entry": 26,
+          "source_party_without_candidate_destination": 75
+        },
+        "featurePartyCounts": {
+          "actnewzealand": 27,
+          "aotearoalegalisecannabisparty": 3,
+          "ban1080": 3,
+          "conservative": 27,
+          "democratsforsocialcredit": 9,
+          "greenparty": 51,
+          "labourparty": 64,
+          "maoriparty": 5,
+          "nationalparty": 64,
+          "newzealandfirstparty": 30,
+          "unitedfuture": 2
+        },
+        "mappingStatusCounts": {
+          "mapped_registered_party_group": 386,
+          "verified_no_party_group_independent": 29,
+          "verified_no_party_group_unregistered_affiliation": 16
+        },
+        "sEvidenceTierCounts": {
+          "official_source_local_party_row_rounded_candidate_destination": 285,
+          "unavailable": 146
+        },
+        "vEvidenceTierCounts": {
+          "official_source_candidate_and_party_totals_distinct_denominators": 285,
+          "unavailable": 146
+        },
+        "partyCategoryCoverage": [
+          {
+            "partyKey": null,
+            "candidates": 45,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "affirmative_no_party_group": 45
+            }
+          },
+          {
+            "partyKey": "actnewzealand",
+            "candidates": 41,
+            "withS": 27,
+            "withV": 27,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 14
+            }
+          },
+          {
+            "partyKey": "aotearoalegalisecannabisparty",
+            "candidates": 4,
+            "withS": 3,
+            "withV": 3,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 1
+            }
+          },
+          {
+            "partyKey": "ban1080",
+            "candidates": 3,
+            "withS": 3,
+            "withV": 3,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "conservative",
+            "candidates": 27,
+            "withS": 27,
+            "withV": 27,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "democratsforsocialcredit",
+            "candidates": 13,
+            "withS": 9,
+            "withV": 9,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 4
+            }
+          },
+          {
+            "partyKey": "greenparty",
+            "candidates": 61,
+            "withS": 51,
+            "withV": 51,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 10
+            }
+          },
+          {
+            "partyKey": "labourparty",
+            "candidates": 64,
+            "withS": 64,
+            "withV": 64,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "mana",
+            "candidates": 1,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 1
+            }
+          },
+          {
+            "partyKey": "maoriparty",
+            "candidates": 18,
+            "withS": 5,
+            "withV": 5,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 13
+            }
+          },
+          {
+            "partyKey": "nationalparty",
+            "candidates": 64,
+            "withS": 64,
+            "withV": 64,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "newzealandfirstparty",
+            "candidates": 57,
+            "withS": 30,
+            "withV": 30,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 27
+            }
+          },
+          {
+            "partyKey": "nzoutdoorsparty",
+            "candidates": 4,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 4
+            }
+          },
+          {
+            "partyKey": "theopportunitiespartytop",
+            "candidates": 21,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 21
+            }
+          },
+          {
+            "partyKey": "unitedfuture",
+            "candidates": 8,
+            "withS": 2,
+            "withV": 2,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 6
+            }
+          }
+        ]
+      },
+      "2023": {
+        "frameContests": 72,
+        "constructedContests": 64,
+        "constructedCandidates": 459,
+        "withS": 271,
+        "withV": 271,
+        "withBoth": 271,
+        "contestsWithS": 64,
+        "statusReasons": {
+          "cancelled_or_unheld": 1,
+          "constructed": 64,
+          "maori_source_local_split_unavailable": 7
+        },
+        "fallbackReasons": {
+          "affirmative_no_party_group": 50,
+          "documented_party_category_entry": 92,
+          "source_party_without_candidate_destination": 46
+        },
+        "featurePartyCounts": {
+          "actnewzealand": 51,
+          "aotearoalegalisecannabisparty": 5,
+          "greenparty": 47,
+          "labourparty": 64,
+          "nationalparty": 64,
+          "newconservatives": 10,
+          "newzeal": 2,
+          "newzealandfirstparty": 18,
+          "theopportunitiespartytop": 10
+        },
+        "mappingStatusCounts": {
+          "mapped_registered_party_group": 383,
+          "mapped_shared_group_single_local_destination": 26,
+          "verified_no_party_group_independent": 34,
+          "verified_no_party_group_unregistered_affiliation": 16
+        },
+        "sEvidenceTierCounts": {
+          "official_source_local_party_row_rounded_candidate_destination": 271,
+          "unavailable": 188
+        },
+        "vEvidenceTierCounts": {
+          "official_source_candidate_and_party_totals_distinct_denominators": 271,
+          "unavailable": 188
+        },
+        "partyCategoryCoverage": [
+          {
+            "partyKey": null,
+            "candidates": 50,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "affirmative_no_party_group": 50
+            }
+          },
+          {
+            "partyKey": "actnewzealand",
+            "candidates": 58,
+            "withS": 51,
+            "withV": 51,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 7
+            }
+          },
+          {
+            "partyKey": "animaljusticeparty",
+            "candidates": 16,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 16
+            }
+          },
+          {
+            "partyKey": "aotearoalegalisecannabisparty",
+            "candidates": 12,
+            "withS": 5,
+            "withV": 5,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 7
+            }
+          },
+          {
+            "partyKey": "democracynz",
+            "candidates": 12,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 12
+            }
+          },
+          {
+            "partyKey": "freedomsnz",
+            "candidates": 26,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 26
+            }
+          },
+          {
+            "partyKey": "greenparty",
+            "candidates": 49,
+            "withS": 47,
+            "withV": 47,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 2
+            }
+          },
+          {
+            "partyKey": "labourparty",
+            "candidates": 64,
+            "withS": 64,
+            "withV": 64,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "leightonbakerparty",
+            "candidates": 3,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 3
+            }
+          },
+          {
+            "partyKey": "nationalparty",
+            "candidates": 64,
+            "withS": 64,
+            "withV": 64,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "newconservatives",
+            "candidates": 10,
+            "withS": 10,
+            "withV": 10,
+            "fallbackReasons": {}
+          },
+          {
+            "partyKey": "newnationparty",
+            "candidates": 3,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 3
+            }
+          },
+          {
+            "partyKey": "newzeal",
+            "candidates": 4,
+            "withS": 2,
+            "withV": 2,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 2
+            }
+          },
+          {
+            "partyKey": "newzealandfirstparty",
+            "candidates": 33,
+            "withS": 18,
+            "withV": 18,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 15
+            }
+          },
+          {
+            "partyKey": "newzealandloyal",
+            "candidates": 32,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "documented_party_category_entry": 32
+            }
+          },
+          {
+            "partyKey": "tepatimaori",
+            "candidates": 10,
+            "withS": 0,
+            "withV": 0,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 10
+            }
+          },
+          {
+            "partyKey": "theopportunitiespartytop",
+            "candidates": 13,
+            "withS": 10,
+            "withV": 10,
+            "fallbackReasons": {
+              "source_party_without_candidate_destination": 3
+            }
+          }
+        ]
+      }
+    }
+  },
+  "fittingGatesPass": true,
+  "heldGeneralFrameContests": 191,
+  "mappingsByYear": {
+    "2014": {
+      "single_local_destination": 26
+    },
+    "2023": {
+      "cancelled_unchanged": 1,
+      "single_local_destination": 26
+    }
+  }
+}

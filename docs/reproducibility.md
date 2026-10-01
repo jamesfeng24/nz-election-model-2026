@@ -1,11 +1,15 @@
 # Reproducibility and session recovery
 
+## Stage 22 conditional complete-share checkpoints
+
+With Python 3.12 and pinned `requirements-boundaries.txt` installed, run the Stage22 commands **in historical checkpoint order**: `python3 -m scripts.checkpoints.stage22_prefit --check`, `python3 -m scripts.checkpoints.stage22_construction --check`, then `python3 -m scripts.checkpoints.stage22_evaluation --check`. The first verifies election-local shared-group routing, exact IDs, pre-fit gates, source registry metadata and consumed raw bytes; the second reruns all four restrictions and coherent rounding scenarios and requires byte-identical saved fits/predictions; the third checks the evaluation-only actuals/paired scores against the committed construction hash. New unrelated `data/sources.json` registrations are accepted. The independent 4,097-point κ profile makes construction checking more expensive than a routine source check; it should be run once for final validation, not repeatedly during unrelated work. The [Stage22 findings](stage22-conditional-complete-share-results.md) state conditional-only inputs, full-frame abstentions and the null operational selection. Earlier stage outputs are read, not regenerated.
+
 ## Fresh checkout
 
 1. Clone the canonical GitHub repository and inspect branch, HEAD and `git status`.
 2. Read AGENTS.md, PROJECT_STATE.md, DECISIONS.md, METHODOLOGY.md, DATA_SOURCES.md and docs/statistical-specification.md. Check the latest changelog and relevant schemas.
 3. Use the Node version in .nvmrc and npm 10.9.2; run `npm ci` from the committed lockfile.
-4. Use Python 3.12.2 (no third-party dependencies yet). Run `npm run check:all`. If results differ from PROJECT_STATE.md, investigate before major work.
+4. Use Python 3.12.2; install pinned `requirements-boundaries.txt` for numerical/model checks. Run `npm run check:all`. If results differ from PROJECT_STATE.md, investigate before major work.
 5. Confirm the user's authorized stage. Do not implement the backlog automatically.
 
 ## Stage close or interrupted session

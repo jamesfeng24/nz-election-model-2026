@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stage": 22,
+  "phase": "evaluation_after_committed_construction",
+  "inputSha256": {
+    "data/processed/checkpoints/stage22-shared-group-experiment/construction-manifest.json": "725bccab10881162d52070f2a864599fbe3e21600757ef155b8aee56a9902865",
+    "data/processed/checkpoints/stage22-shared-group-experiment/predictions.json": "0230e3f35ca06b4f54a1e89e0adb454804f270e3e04b4dfb4047d989fb8f9c94",
+    "data/processed/checkpoints/stage22-shared-group-prefit/amended-features.json": "3d7b0d44cb7d5c5727a63cbf9efb64a13719e58d73eb20107cec2f0981dbbb32",
+    "data/processed/checkpoints/stage22-shared-group-prefit/coverage-differences.json": "b7ba4de0918dfeedc66f49adf7934854bdc479cdece6eb074a9e9ce45e9d474c",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e"
+  },
+  "generatorSha256": "3dc364cab13a923909df9a8cd7703fa54d19e2459003186dc0c37769ed3746d3",
+  "outputSha256": {
+    "actuals.json": "1da61794077a57edc6dc04277c6b3c0c24579c659d19e0b7d92b114428b87254",
+    "diagnostics.json": "e06d2e93e8f46e90815a04feae506011f801bbfc4db94ec5fec0018db6cf0a94"
+  }
+}

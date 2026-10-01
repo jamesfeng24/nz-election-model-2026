@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "stage": 22,
+  "phase": "construction_committed_before_target_evaluation",
+  "inputSha256": {
+    "data/processed/checkpoints/stage22-shared-group-prefit/amended-features.json": "3d7b0d44cb7d5c5727a63cbf9efb64a13719e58d73eb20107cec2f0981dbbb32",
+    "data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json": "2cef31d9db92aac2db3c39dff5a6933e58691f8567c7d2074ab995bbbde107ad",
+    "data/processed/checkpoints/stage22-shared-group-prefit/manifest.json": "e21d088156271d57d28ef3ea43042d358e9fdfdac5e3a8dceefc57ce53cb17a0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8"
+  },
+  "generatorSha256": {
+    "stage22_fit.py": "28028b291a427fa107c6c00fc484ec48e5244becc640d1270227cc8756a3cf5b",
+    "stage22_construction.py": "992b7930a36201659b030cd1d012bf474b8330c9e401f69d6418862a329ab44c"
+  },
+  "outputSha256": {
+    "fitted-parameters.json": "c8f7f5973846e6d73c25e1f8a778dc91748c2d20d8b442d4e88d1d7f7a11e5d4",
+    "predictions.json": "0230e3f35ca06b4f54a1e89e0adb454804f270e3e04b4dfb4047d989fb8f9c94"
+  }
+}
