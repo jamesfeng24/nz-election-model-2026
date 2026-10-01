@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "stage": 23,
+  "frozenBeforeConstructionAndScoring": true,
+  "transitions": [[2008, 2011], [2014, 2017], [2020, 2023]],
+  "estimand": "target local share of valid party votes conditional on source local/national party shares and supplied target national support",
+  "construction": {
+    "continuingAffinity": "sourceLocalShare/sourceNationalShare",
+    "entrantAffinity": 1,
+    "unnormalized": "suppliedTargetNationalShare*affinity",
+    "closure": "divide all target-group unnormalized values by their joint sum",
+    "exit": "omit exited source ballot group",
+    "observedContinuingSourceZero": "zero under point assumption",
+    "missingOrAmbiguous": "whole-electorate abstention"
+  },
+  "benchmark": "flat supplied target national party vector in every electorate",
+  "nationalReconciliation": "not imposed; observed target valid-party counts are oracle evaluation weights for diagnostic only",
+  "primarySample": "all held general contests in fixed 213-row frame, with full-population construction including Maori and cancelled Port Waikato party ballot",
+  "mae": "100*equal-electorate mean of within-electorate equal-target-category absolute error",
+  "rmse": "100*sqrt(equal-electorate mean of within-electorate equal-target-category squared error)",
+  "bias": "100*equal-electorate mean predicted minus actual within target category",
+  "materiality": {"maeGainPercentagePointsEach2017And2023": 0.25, "maxRmseRegressionPercentagePoints": 0.25, "minimumHeldGeneralCoverageFraction": 0.95},
+  "conservationTolerance": 1e-12,
+  "informationSet": "conditional_observed_target_national_party_support",
+  "operationalSelection": null
+}
