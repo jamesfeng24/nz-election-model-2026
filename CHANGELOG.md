@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — Stage 25 historical geography applicability — 2026-10-02
+
+- Added one canonical 356-target geography layer, linking the original three comparable transitions and both preserved redistribution crosswalks with explicit predecessor and two-sided population bounds. The 2011→2014 one-sided 29 identity flags resolve to 20 strictly two-sided exact general targets; 2017→2020 has 34.
+- Added separate source-pinned candidate/party/split/identity availability, 30 unfitted family/fold plans, ten stable exact-seat chains, a source-only composition audit and a bounded experiment register. No historical fit, prediction, score, source, identity adjudication or operational selection changed.
+- Added focused certification, provenance, outcome-independence, chronology and sample tests, deterministic regeneration, migration guidance and a separately authorized exact-geography retest proposal.
+
 ## Unreleased — Stage 24 fixed candidate input substitution — 2026-10-02
 
 - Froze exact Stage22 baseline/S-only fits, means, source features, shared-group mappings and 2017/2023 common IDs before calculation; reproduced saved observed-input predictions exactly and committed construction before outcome evaluation.

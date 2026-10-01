@@ -32,3 +32,6 @@ jobs:
       - run: python3 -m scripts.checkpoints.stage24_inventory --check
       - run: python3 -m scripts.checkpoints.stage24_construction --check
       - run: python3 -m scripts.checkpoints.stage24_evaluation --check
+      - run: python3 -m scripts.checkpoints.stage25_geography --check
+      - run: python3 -m scripts.checkpoints.stage25_availability --check
+      - run: python3 -m scripts.checkpoints.stage25_design --check

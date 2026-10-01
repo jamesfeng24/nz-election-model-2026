@@ -196,6 +196,7 @@ def fold_plans(geography, availability, chains):
                                    'observed_target_national_party_conditional' if family == 'complete_party_vector'
                                    else 'matched_party_ballot_component_retrospective'),
                 'savedFixedFitTransport': saved_fit,
+                'sourceFeatureRankAudit': s_rank,
                 'expandedChronologicalFit': ('not_authorized; verify_full_rank_and_training_only_preprocessing'
                                             if family != 'complete_party_vector' else 'parameter_free_rule'),
                 'gates': gate,
@@ -237,6 +238,20 @@ def experiment_register(plans):
          'complete_candidate_share_of_valid_candidate_votes', 'deferred_existing_comparator_only')]
     records = []
     for family, question, outcome, benchmarks in definitions:
+        if family in ('nat_lab_response', 'source_victory_comparison'):
+            primary = 'equal_party_seat_MAE_percentage_points'
+            secondary = ['RMSE', 'party_specific_signed_bias', 'outside_unit_share_count']
+        elif family in ('complete_share_baseline_s', 'v_deferred'):
+            primary = 'equal_contest_candidate_share_MAE_percentage_points'
+            secondary = ['equal_contest_RMSE', 'candidate_equal_sensitivity',
+                         'party_category_bias', 'unique_winner_accuracy_and_ties', 'margin_error']
+        elif family == 'complete_party_vector':
+            primary = 'equal_electorate_equal_party_share_MAE_percentage_points'
+            secondary = ['RMSE', 'party_specific_signed_bias', 'national_gap_diagnostic_only']
+        else:
+            primary = 'matched_party_ballot_component_interval_error_percentage_points'
+            secondary = ['matched_component_RMSE', 'party_category_coverage',
+                         'unmatched_mass_and_full_vote_range_diagnostics']
         records.append({'experimentId': family, 'question': question,
             'existingSpecification': {'nat_lab_response': 'data/processed/models/conditional-nat-lab-response/specification.json',
                                       'complete_share_baseline_s': 'data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json',
@@ -246,8 +261,10 @@ def experiment_register(plans):
                                       'v_deferred': 'data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json'}[family],
             'outcomeAndDenominator': outcome, 'foldPlans': by_family[family],
             'benchmarks': benchmarks,
-            'metrics': ['MAE', 'RMSE', 'party_or_category_signed_bias', 'coverage', 'abstention',
-                        'worst_fold_deterioration', 'influence_retaining_primary_records'],
+            'primaryMetric': primary, 'secondaryMetrics': secondary,
+            'commonReporting': ['original_common_added_expanded_IDs', 'coverage', 'abstention',
+                                'worst_fold_deterioration', 'influence_retaining_primary_records'],
+            'coverageAndRankGates': 'use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation',
             'comparability': 'within_family_identical_ids_only; never_rank_incompatible_outcome_contracts',
             'materiality': 'retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies',
             'stopping': 'no_automatic_variants_or_broad_search_after_disappointing_results',

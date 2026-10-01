@@ -282,6 +282,7 @@
       ],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2008,
       "stableSeatSensitivityIds": [
         "2008-2011:general:nz-general-2011-electorate-20:labourparty",
@@ -597,6 +598,7 @@
       "originalEvaluationIds": [],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2011,
       "stableSeatSensitivityIds": [
         "2011-2014:general:nz-general-2014-electorate-20:labourparty",
@@ -1087,6 +1089,7 @@
         "rule": "existing_chronological_fit_only; later_retest_must_verify_saved_training_ids",
         "savedHoldoutYear": 2017
       },
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2014,
       "stableSeatSensitivityIds": [
         "2014-2017:general:nz-general-2017-electorate-20:labourparty",
@@ -2001,6 +2004,7 @@
         "rule": "fit_trained_before_2020_source_2017_result; verify_parameter_contract_before_use",
         "savedHoldoutYear": 2017
       },
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2017,
       "stableSeatSensitivityIds": [
         "2017-2020:general:nz-general-2020-electorate-17:labourparty",
@@ -3154,6 +3158,7 @@
         "rule": "existing_chronological_fit_only; later_retest_must_verify_saved_training_ids",
         "savedHoldoutYear": 2023
       },
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2020,
       "stableSeatSensitivityIds": [
         "2020-2023:general:nz-general-2023-electorate-17:labourparty",
@@ -4323,6 +4328,12 @@
       ],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": {
+        "fullIntensityConditioning": "requires_later_permitted_party_inputs",
+        "supportedS": 0,
+        "trainingOnlyMeanS": null,
+        "withinSlateContrastRankS": 0
+      },
       "sourceYear": 2008,
       "stableSeatSensitivityIds": [
         "nz-general-2011-electorate-20",
@@ -4527,6 +4538,12 @@
       "originalEvaluationIds": [],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": {
+        "fullIntensityConditioning": "requires_later_permitted_party_inputs",
+        "supportedS": 0,
+        "trainingOnlyMeanS": null,
+        "withinSlateContrastRankS": 0
+      },
       "sourceYear": 2011,
       "stableSeatSensitivityIds": [
         "nz-general-2014-electorate-20",
@@ -4797,6 +4814,13 @@
       "savedFixedFitTransport": {
         "rule": "existing_chronological_fit_only; later_retest_must_verify_saved_training_ids",
         "savedHoldoutYear": 2017
+      },
+      "sourceFeatureRankAudit": {
+        "fullIntensityConditioning": "requires_later_permitted_party_inputs",
+        "supportedS": 280,
+        "trainingOnlyMeanS": 0.563193225203328,
+        "withinSlateContrastEnergyS": 16.296799454650422,
+        "withinSlateContrastRankS": 1
       },
       "sourceYear": 2014,
       "stableSeatSensitivityIds": [
@@ -5299,6 +5323,13 @@
       "savedFixedFitTransport": {
         "rule": "fit_trained_before_2020_source_2017_result; verify_parameter_contract_before_use",
         "savedHoldoutYear": 2017
+      },
+      "sourceFeatureRankAudit": {
+        "fullIntensityConditioning": "requires_later_permitted_party_inputs",
+        "supportedS": 379,
+        "trainingOnlyMeanS": 0.5700317002881844,
+        "withinSlateContrastEnergyS": 9.965395088955727,
+        "withinSlateContrastRankS": 1
       },
       "sourceYear": 2017,
       "stableSeatSensitivityIds": [
@@ -5906,6 +5937,13 @@
       "savedFixedFitTransport": {
         "rule": "existing_chronological_fit_only; later_retest_must_verify_saved_training_ids",
         "savedHoldoutYear": 2023
+      },
+      "sourceFeatureRankAudit": {
+        "fullIntensityConditioning": "requires_later_permitted_party_inputs",
+        "supportedS": 664,
+        "trainingOnlyMeanS": 0.585524101404848,
+        "withinSlateContrastEnergyS": 20.699230930325083,
+        "withinSlateContrastRankS": 1
       },
       "sourceYear": 2020,
       "stableSeatSensitivityIds": [
@@ -6577,6 +6615,7 @@
       ],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2008,
       "stableSeatSensitivityIds": [
         "nz-general-2011-electorate-20",
@@ -6777,6 +6816,7 @@
       "originalEvaluationIds": [],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2011,
       "stableSeatSensitivityIds": [
         "nz-general-2014-electorate-20",
@@ -7041,6 +7081,7 @@
         "nz-general-2011-electorate-63"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2014,
       "stableSeatSensitivityIds": [
         "nz-general-2017-electorate-20",
@@ -7536,6 +7577,7 @@
         "nz-general-2011-electorate-63"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2017,
       "stableSeatSensitivityIds": [
         "nz-general-2020-electorate-17",
@@ -8136,6 +8178,7 @@
         "nz-general-2017-electorate-64"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2020,
       "stableSeatSensitivityIds": [
         "nz-general-2023-electorate-17",
@@ -8806,6 +8849,7 @@
       ],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2008,
       "stableSeatSensitivityIds": [
         "nz-general-2011-electorate-20",
@@ -9006,6 +9050,7 @@
       "originalEvaluationIds": [],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2011,
       "stableSeatSensitivityIds": [
         "nz-general-2014-electorate-20",
@@ -9270,6 +9315,7 @@
         "nz-general-2011-electorate-63"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2014,
       "stableSeatSensitivityIds": [
         "nz-general-2017-electorate-20",
@@ -9765,6 +9811,7 @@
         "nz-general-2011-electorate-63"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2017,
       "stableSeatSensitivityIds": [
         "nz-general-2020-electorate-17",
@@ -10365,6 +10412,7 @@
         "nz-general-2017-electorate-64"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2020,
       "stableSeatSensitivityIds": [
         "nz-general-2023-electorate-17",
@@ -11163,6 +11211,7 @@
       ],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2008,
       "stableSeatSensitivityIds": [
         "2008-2011:general:nz-general-2011-electorate-20:labourparty",
@@ -11478,6 +11527,7 @@
       "originalEvaluationIds": [],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2011,
       "stableSeatSensitivityIds": [
         "2011-2014:general:nz-general-2014-electorate-20:labourparty",
@@ -11968,6 +12018,7 @@
         "rule": "existing_chronological_fit_only; later_retest_must_verify_saved_training_ids",
         "savedHoldoutYear": 2017
       },
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2014,
       "stableSeatSensitivityIds": [
         "2014-2017:general:nz-general-2017-electorate-20:labourparty",
@@ -12882,6 +12933,7 @@
         "rule": "fit_trained_before_2020_source_2017_result; verify_parameter_contract_before_use",
         "savedHoldoutYear": 2017
       },
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2017,
       "stableSeatSensitivityIds": [
         "2017-2020:general:nz-general-2020-electorate-17:labourparty",
@@ -14035,6 +14087,7 @@
         "rule": "existing_chronological_fit_only; later_retest_must_verify_saved_training_ids",
         "savedHoldoutYear": 2023
       },
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2020,
       "stableSeatSensitivityIds": [
         "2020-2023:general:nz-general-2023-electorate-17:labourparty",
@@ -15200,6 +15253,7 @@
       ],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2008,
       "stableSeatSensitivityIds": [
         "nz-general-2011-electorate-20",
@@ -15400,6 +15454,7 @@
       "originalEvaluationIds": [],
       "originalTrainingIds": [],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2011,
       "stableSeatSensitivityIds": [
         "nz-general-2014-electorate-20",
@@ -15664,6 +15719,7 @@
         "nz-general-2011-electorate-63"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2014,
       "stableSeatSensitivityIds": [
         "nz-general-2017-electorate-20",
@@ -16159,6 +16215,7 @@
         "nz-general-2011-electorate-63"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2017,
       "stableSeatSensitivityIds": [
         "nz-general-2020-electorate-17",
@@ -16759,6 +16816,7 @@
         "nz-general-2017-electorate-64"
       ],
       "savedFixedFitTransport": null,
+      "sourceFeatureRankAudit": null,
       "sourceYear": 2020,
       "stableSeatSensitivityIds": [
         "nz-general-2023-electorate-17",

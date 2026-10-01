@@ -13,9 +13,10 @@ GEOGRAPHY = 'data/processed/checkpoints/stage25-historical-geography/geography.j
 MAPPING = 'data/processed/checkpoints/stage22-shared-group-prefit/amended-mapping.json'
 CONTINUITY = 'data/processed/models/party-vote-transform/party-continuity.json'
 LINKS = 'data/processed/models/candidate-persistence/person-links.json'
+HISTORY = 'data/processed/models/candidate-persistence/history-status.json'
 ELECTIONS = {year: f'data/processed/elections/{year}.json' for year in (2008, 2011, 2014, 2017, 2020, 2023)}
 SPLITS = {year: f'data/processed/split-votes/{year}.json' for year in ELECTIONS}
-INPUTS = (GEOGRAPHY, MAPPING, CONTINUITY, LINKS, *ELECTIONS.values(), *SPLITS.values())
+INPUTS = (GEOGRAPHY, MAPPING, CONTINUITY, LINKS, HISTORY, *ELECTIONS.values(), *SPLITS.values())
 
 
 def index(rows, field):
@@ -71,7 +72,7 @@ def mapped_contests(mapping):
     return unique
 
 
-def target_candidates(mapping, target_seat):
+def target_candidates(mapping, target_seat, registered_party_keys):
     if mapping is None or mapping['status'] != 'complete' or target_seat is None:
         return None, 'missing_or_incomplete_target_candidate_mapping'
     observed_ids = {candidate['id'] for candidate in target_seat['candidates']}
@@ -80,14 +81,13 @@ def target_candidates(mapping, target_seat):
         return None, 'mapped_slate_disagrees_with_official_candidacy'
     if not classified:
         return None, 'no_standing_candidates'
-    party_keys = {party['partyKey'] for party in target_seat['parties']}
     used = set()
     for candidate in classified:
         party = candidate['partyKey']
         if candidate['noRegisteredPartyGroup']:
             if party is not None:
                 return None, 'contradictory_no_party_group_mapping'
-        elif party not in party_keys or party in used:
+        elif party not in registered_party_keys or party in used:
             return None, 'missing_or_duplicate_target_party_group'
         else:
             used.add(party)
@@ -139,14 +139,41 @@ def source_feature(candidate, source_seat, matrix, continuity, source_year, targ
     return result
 
 
-def build(geography=None, mapping=None, elections=None, splits=None, continuity_rows=None, links=None):
+def category_relationships(geography, registered_parties, continuity):
+    """Store election-pair category evidence once, not once per seat."""
+    pairs = sorted({(row['sourceYear'], row['targetYear']) for row in geography['records']})
+    records = []
+    for source_year, target_year in pairs:
+        categories = []
+        for party_key in sorted(registered_parties[target_year]):
+            relation = continuity.get((source_year, target_year, party_key))
+            status = relation['status'] if relation else 'missing_relation'
+            source_key = relation['source']['sourceKey'] if relation and relation['source'] else None
+            if status == 'eligible' and source_key not in registered_parties[source_year]:
+                status = 'missing_source_category'
+            categories.append({'targetPartyKey': party_key, 'relationship': status,
+                               'sourcePartyKey': source_key})
+        records.append({'relationshipId': f'{source_year}-{target_year}',
+                        'sourceYear': source_year, 'targetYear': target_year,
+                        'categories': categories})
+    return index(records, 'relationshipId')
+
+
+def build(geography=None, mapping=None, elections=None, splits=None, continuity_rows=None,
+          links=None, history=None):
     geography = geography or read(GEOGRAPHY)
     mapping = mapping or read(MAPPING)
     elections = elections or {year: read(path) for year, path in ELECTIONS.items()}
     splits = splits or {year: read(path) for year, path in SPLITS.items()}
     continuity_rows = continuity_rows or read(CONTINUITY)['records']
     links = links or read(LINKS)['links']
+    history = history or read(HISTORY)['records']
     seats = {year: index(elections[year]['electorates'], 'id') for year in ELECTIONS}
+    # The election-local party-ballot header keys, not the numeric vote
+    # values, define the category roster. Some seats omit genuine local zeros.
+    registered_parties = {year: {party['partyKey'] for seat in elections[year]['electorates']
+                                 for party in seat['parties']}
+                          for year in ELECTIONS}
     matrices = {year: index(splits[year]['matrices'], 'electorateId') for year in SPLITS}
     mapped = mapped_contests(mapping)
     continuity = {}
@@ -157,7 +184,9 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
             if lookup in continuity:
                 raise ValueError('Ambiguous target party continuity')
             continuity[lookup] = relation
+    category_sets = category_relationships(geography, registered_parties, continuity)
     identity = index(links, 'candidateOccurrenceId')
+    histories = index(history, 'candidateOccurrenceId')
     records = []
     for geo in geography['records']:
         target_year, target_id = geo['targetYear'], geo['targetElectorateId']
@@ -178,7 +207,10 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
                'identityEvidence': {'sourceOccurrenceConfidence': {'confirmed': 0, 'probable': 0, 'unresolved': 0},
                                     'targetOccurrenceConfidence': {'confirmed': 0, 'probable': 0, 'unresolved': 0},
                                     'crossElectionRelation': 'not_adjudicated_here',
-                                    'careerHistoryCompleteness': 'not_assessed_here'},
+                                    'inheritedTargetStatusCounts': {},
+                                    'inheritedTargetCareerEvidenceCounts': {},
+                                    'targetLeftCensoredCount': 0,
+                                    'careerHistoryInterpretation': 'inherited_retropective_audit_not_complete_career_or_new_pair_proof'},
                'approximateTransportInventory': None,
                'identityDependentStudies': 'evidence_audit_only_no_inferred_new_relation'}
         if scope != 'general':
@@ -187,7 +219,7 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
         target = seats[target_year].get(target_id)
         source = seats[source_year].get(source_id) if source_id else None
         mapped_target = mapped.get((target_year, target_id))
-        classified, reason = target_candidates(mapped_target, target)
+        classified, reason = target_candidates(mapped_target, target, registered_parties[target_year])
         row['candidateMappingStatus'] = reason or 'complete'
         if target:
             row['candidateOccurrenceIds'] = [candidate['id'] for candidate in target['candidates']]
@@ -209,6 +241,13 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
         for candidate_id in row['candidateOccurrenceIds']:
             confidence = identity.get(candidate_id, {}).get('status', 'unresolved')
             row['identityEvidence']['targetOccurrenceConfidence'][confidence] += 1
+            prior = histories.get(candidate_id, {})
+            for key_name, field in (('inheritedTargetStatusCounts', 'status'),
+                                    ('inheritedTargetCareerEvidenceCounts', 'careerHistoryEvidenceStatus')):
+                label = prior.get(field, 'unknown')
+                counts = row['identityEvidence'][key_name]
+                counts[label] = counts.get(label, 0) + 1
+            row['identityEvidence']['targetLeftCensoredCount'] += bool(prior.get('leftCensored', True))
         if not geo['certifiedTwoSidedExact']:
             reason = 'not_certified_two_sided_exact'
         elif source is None or target is None:
@@ -226,25 +265,25 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
                 row['natLab'].append({'partyKey': party, 'status': 'abstain', 'reason': reason})
             records.append(row)
             continue
+        target_party_keys = {party['partyKey'] for party in target['parties']}
+        local_rows_complete = all(c['noRegisteredPartyGroup'] or c['partyKey'] in target_party_keys
+                                  for c in classified)
         row['completeShare'] = {'status': 'available', 'candidateCount': len(classified),
-                                'noPartyGroupCandidates': sum(c['noRegisteredPartyGroup'] for c in classified)}
-        category_relations = []
+                                'noPartyGroupCandidates': sum(c['noRegisteredPartyGroup'] for c in classified),
+                                'observedLocalPartyRowStatus': ('complete_for_mapped_candidates' if local_rows_complete
+                                                                else 'locally_omitted_group_needs_zero_vs_missing_audit'),
+                                'predictedCompletePartyVectorRequired': True}
+        category_relations = category_sets[f'{source_year}-{target_year}']['categories']
         source_party_keys = {party['partyKey'] for party in source['parties']}
-        for party in target['parties']:
-            relation = continuity.get((source_year, target_year, party['partyKey']))
-            status = relation['status'] if relation else 'missing_relation'
-            if status == 'eligible' and relation['source']['sourceKey'] not in source_party_keys:
-                status = 'missing_source_category'
-            category_relations.append({'targetPartyKey': party['partyKey'],
-                                       'relationship': status,
-                                       'sourcePartyKey': relation['source']['sourceKey'] if relation and relation['source'] else None})
         categories_supported = all(r['relationship'] in ('eligible', 'entrant') for r in category_relations)
         national_present = bool(elections[target_year]['nationalControls']['parties'])
         row['partyVector'] = {'status': ('source_and_target_party_categories_present'
                                          if categories_supported and national_present else 'ambiguous_or_missing_category_relation'),
-                              'sourceCategoryCount': len(source['parties']),
-                              'targetCategoryCount': len(target['parties']),
-                              'targetCategoryRelationships': category_relations,
+                              'sourceCategoryCount': len(registered_parties[source_year]),
+                              'targetCategoryCount': len(registered_parties[target_year]),
+                              'sourceLocallyReportedCategoryKeys': sorted(source_party_keys),
+                              'targetLocallyReportedCategoryKeys': sorted(target_party_keys),
+                              'categoryRelationshipId': f'{source_year}-{target_year}',
                               'nationalScenarioPresent': national_present,
                               'constructionDeferred': True}
         source_matrix = matrices[source_year].get(source_id)
@@ -258,6 +297,8 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
             feature = source_feature(candidate, source, source_matrix, continuity, source_year, target_year)
             row['candidateFeatures'].append({'targetOccurrenceId': candidate['candidateOccurrenceId'],
                 'targetPartyGroup': candidate['partyKey'], 'mappingStatus': candidate['mappingStatus'],
+                'targetLocalPartyRowPresent': (candidate['partyKey'] in {p['partyKey'] for p in target['parties']}
+                                               if candidate['partyKey'] is not None else None),
                 **feature})
         fatal = {'unresolved_party_continuity', 'missing_source_party_row',
                  'ambiguous_source_destination', 'missing_source_denominator',
@@ -301,7 +342,8 @@ def build(geography=None, mapping=None, elections=None, splits=None, continuity_
                         'supportedS': sum(f['sStatus'] == 'supported_rounded_source_split' for r in group for f in r['candidateFeatures']),
                         'supportedV': sum(f['vStatus'] == 'supported_source_gap' for r in group for f in r['candidateFeatures'])})
     return {'schemaVersion': 1, 'stage': 25, 'role': 'outcome_blind_linked_availability',
-            'records': records, 'summary': summary}
+            'records': records, 'partyCategoryRelationships': [category_sets[k] for k in sorted(category_sets)],
+            'summary': summary}
 
 
 def main():

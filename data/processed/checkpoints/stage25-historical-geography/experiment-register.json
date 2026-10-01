@@ -3,7 +3,15 @@
   "records": [
     {
       "benchmarks": "Stage6_and_Stage16_existing_beta0_beta1_and_source_victory_controls",
+      "commonReporting": [
+        "original_common_added_expanded_IDs",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
       "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/models/conditional-nat-lab-response/specification.json",
       "experimentId": "nat_lab_response",
       "foldPlans": [
@@ -14,23 +22,28 @@
         "nat_lab_response:2020-2023:two_sided_exact"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
-      "metrics": [
-        "MAE",
-        "RMSE",
-        "party_or_category_signed_bias",
-        "coverage",
-        "abstention",
-        "worst_fold_deterioration",
-        "influence_retaining_primary_records"
-      ],
       "outcomeAndDenominator": "party_seat_candidate_share_of_valid_candidate_votes",
+      "primaryMetric": "equal_party_seat_MAE_percentage_points",
       "question": "Existing NAT/LAB local-party response conditional on retained party baseline",
+      "secondaryMetrics": [
+        "RMSE",
+        "party_specific_signed_bias",
+        "outside_unit_share_count"
+      ],
       "status": "proposed_separate_authorization_required",
       "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
     },
     {
       "benchmarks": "Stage22_refitted_baseline_vs_S_only",
+      "commonReporting": [
+        "original_common_added_expanded_IDs",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
       "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json",
       "experimentId": "complete_share_baseline_s",
       "foldPlans": [
@@ -41,23 +54,30 @@
         "complete_share_baseline_s:2020-2023:two_sided_exact"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
-      "metrics": [
-        "MAE",
-        "RMSE",
-        "party_or_category_signed_bias",
-        "coverage",
-        "abstention",
-        "worst_fold_deterioration",
-        "influence_retaining_primary_records"
-      ],
       "outcomeAndDenominator": "complete_candidate_share_of_valid_candidate_votes",
+      "primaryMetric": "equal_contest_candidate_share_MAE_percentage_points",
       "question": "Does existing S-only share allocation beat refitted baseline on added exact seats?",
+      "secondaryMetrics": [
+        "equal_contest_RMSE",
+        "candidate_equal_sensitivity",
+        "party_category_bias",
+        "unique_winner_accuracy_and_ties",
+        "margin_error"
+      ],
       "status": "proposed_separate_authorization_required",
       "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
     },
     {
       "benchmarks": "national_share_neutral_profile_and_existing_stage23_controls",
+      "commonReporting": [
+        "original_common_added_expanded_IDs",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
       "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/models/complete-party-vector/specification.json",
       "experimentId": "complete_party_vector",
       "foldPlans": [
@@ -68,23 +88,28 @@
         "complete_party_vector:2020-2023:two_sided_exact"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
-      "metrics": [
-        "MAE",
-        "RMSE",
-        "party_or_category_signed_bias",
-        "coverage",
-        "abstention",
-        "worst_fold_deterioration",
-        "influence_retaining_primary_records"
-      ],
       "outcomeAndDenominator": "complete_local_party_share_of_valid_party_votes",
+      "primaryMetric": "equal_electorate_equal_party_share_MAE_percentage_points",
       "question": "Can Stage23 construct complete conditional local party vectors for added exact seats?",
+      "secondaryMetrics": [
+        "RMSE",
+        "party_specific_signed_bias",
+        "national_gap_diagnostic_only"
+      ],
       "status": "proposed_separate_authorization_required",
       "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
     },
     {
       "benchmarks": "Stage16_source_victory_vs_no_source_victory",
+      "commonReporting": [
+        "original_common_added_expanded_IDs",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
       "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/models/conditional-nat-lab-response/specification.json",
       "experimentId": "source_victory_comparison",
       "foldPlans": [
@@ -95,23 +120,28 @@
         "source_victory_comparison:2020-2023:two_sided_exact"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
-      "metrics": [
-        "MAE",
-        "RMSE",
-        "party_or_category_signed_bias",
-        "coverage",
-        "abstention",
-        "worst_fold_deterioration",
-        "influence_retaining_primary_records"
-      ],
       "outcomeAndDenominator": "party_seat_candidate_share_of_valid_candidate_votes",
+      "primaryMetric": "equal_party_seat_MAE_percentage_points",
       "question": "Existing source-victory response contrast on supported pairs",
+      "secondaryMetrics": [
+        "RMSE",
+        "party_specific_signed_bias",
+        "outside_unit_share_count"
+      ],
       "status": "proposed_separate_authorization_required",
       "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
     },
     {
       "benchmarks": "Stage11_corrected_matched_component_controls",
+      "commonReporting": [
+        "original_common_added_expanded_IDs",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
       "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/models/historical-split-ticket/specification.json",
       "experimentId": "stage11_matched_split",
       "foldPlans": [
@@ -122,23 +152,28 @@
         "stage11_matched_split:2020-2023:two_sided_exact"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
-      "metrics": [
-        "MAE",
-        "RMSE",
-        "party_or_category_signed_bias",
-        "coverage",
-        "abstention",
-        "worst_fold_deterioration",
-        "influence_retaining_primary_records"
-      ],
       "outcomeAndDenominator": "candidate_destination_fraction_of_matched_party_ballot_component",
+      "primaryMetric": "matched_party_ballot_component_interval_error_percentage_points",
       "question": "Availability for existing matched-party-ballot split component",
+      "secondaryMetrics": [
+        "matched_component_RMSE",
+        "party_category_coverage",
+        "unmatched_mass_and_full_vote_range_diagnostics"
+      ],
       "status": "proposed_separate_authorization_required",
       "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
     },
     {
       "benchmarks": "deferred_existing_comparator_only",
+      "commonReporting": [
+        "original_common_added_expanded_IDs",
+        "coverage",
+        "abstention",
+        "worst_fold_deterioration",
+        "influence_retaining_primary_records"
+      ],
       "comparability": "within_family_identical_ids_only; never_rank_incompatible_outcome_contracts",
+      "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json",
       "experimentId": "v_deferred",
       "foldPlans": [
@@ -149,17 +184,16 @@
         "v_deferred:2020-2023:two_sided_exact"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
-      "metrics": [
-        "MAE",
-        "RMSE",
-        "party_or_category_signed_bias",
-        "coverage",
-        "abstention",
-        "worst_fold_deterioration",
-        "influence_retaining_primary_records"
-      ],
       "outcomeAndDenominator": "complete_candidate_share_of_valid_candidate_votes",
+      "primaryMetric": "equal_contest_candidate_share_MAE_percentage_points",
       "question": "Existing V feature availability; no automatic S+V repetition",
+      "secondaryMetrics": [
+        "equal_contest_RMSE",
+        "candidate_equal_sensitivity",
+        "party_category_bias",
+        "unique_winner_accuracy_and_ties",
+        "margin_error"
+      ],
       "status": "proposed_separate_authorization_required",
       "stopping": "no_automatic_variants_or_broad_search_after_disappointing_results"
     }
