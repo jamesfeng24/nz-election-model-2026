@@ -1,0 +1,1019 @@
+{
+  "alignedStage5SelectedCategoryComparison": [
+    {
+      "alignedCategoryCells": 693,
+      "methodErrors": {
+        "flat_national": {
+          "maePP": 2.1075346713838767,
+          "rmsePP": 4.985179924695156
+        },
+        "stage23_complete_vector": {
+          "maePP": 0.5895545066763831,
+          "rmsePP": 1.4608724677009288
+        },
+        "stage5_additive": {
+          "maePP": 0.7193617513300151,
+          "rmsePP": 1.5918932678198838
+        },
+        "stage5_log_odds": {
+          "maePP": 0.5763907564038352,
+          "rmsePP": 1.5401919278244733
+        },
+        "stage5_proportional": {
+          "maePP": 0.6282084205966302,
+          "rmsePP": 1.752007906031277
+        }
+      },
+      "targetYear": 2011
+    },
+    {
+      "alignedCategoryCells": 704,
+      "methodErrors": {
+        "flat_national": {
+          "maePP": 1.981802332755634,
+          "rmsePP": 4.532582267560114
+        },
+        "stage23_complete_vector": {
+          "maePP": 0.6742548682478736,
+          "rmsePP": 1.5203244758654069
+        },
+        "stage5_additive": {
+          "maePP": 0.6804965299660689,
+          "rmsePP": 1.2992367063468488
+        },
+        "stage5_log_odds": {
+          "maePP": 0.5809534615737039,
+          "rmsePP": 1.3164367592667279
+        },
+        "stage5_proportional": {
+          "maePP": 0.7367560180590643,
+          "rmsePP": 2.2457995066915126
+        }
+      },
+      "targetYear": 2017
+    },
+    {
+      "alignedCategoryCells": 650,
+      "methodErrors": {
+        "flat_national": {
+          "maePP": 2.614949347465831,
+          "rmsePP": 4.748791500786392
+        },
+        "stage23_complete_vector": {
+          "maePP": 0.8269478214918017,
+          "rmsePP": 1.3986406310223762
+        },
+        "stage5_additive": {
+          "maePP": 0.9734239637543872,
+          "rmsePP": 1.5505597235664235
+        },
+        "stage5_log_odds": {
+          "maePP": 0.8012920268881871,
+          "rmsePP": 1.4253836682537773
+        },
+        "stage5_proportional": {
+          "maePP": 1.0200050947324073,
+          "rmsePP": 2.0129476978345773
+        }
+      },
+      "targetYear": 2023
+    }
+  ],
+  "developmentMateriality": {
+    "folds": [
+      {
+        "maeGainPP": 0.8996331628421768,
+        "rmseRegressionPP": -2.48485589671375,
+        "targetYear": 2017
+      },
+      {
+        "maeGainPP": 1.0499927566235647,
+        "rmseRegressionPP": -2.55388989657819,
+        "targetYear": 2023
+      }
+    ],
+    "interpretation": "descriptive only; no operational selection",
+    "screenPass": true
+  },
+  "fullPopulationNationalGaps": [
+    {
+      "categoryGapsPP": {
+        "actnewzealand": -0.0042482726351480635,
+        "alliance": -0.0007816211539287614,
+        "aotearoalegalisecannabisparty": 0.007517461669203328,
+        "conservative": 0.006440276558300831,
+        "democratsforsocialcredit": -0.0012703318186465433,
+        "greenparty": -0.1623531312962001,
+        "labourparty": 0.28771895106412537,
+        "libertarianz": -0.0006854127733945206,
+        "manamovement": 0.0026275571663151795,
+        "maoriparty": 0.12856206155622327,
+        "nationalparty": -0.29529879606964293,
+        "newzealandfirstparty": 0.03436265920692266,
+        "unitedfuture": -0.0025914014741173705
+      },
+      "electorates": 70,
+      "halfL1GapPP": 0.4672289672210845,
+      "maxAbsoluteCategoryGapPP": 0.29529879606964293,
+      "observedTargetValidPartyVotes": 2237464,
+      "status": "diagnostic_oracle_target_valid_party_weights_no_reconciliation_imposed"
+    },
+    {
+      "categoryGapsPP": {
+        "actnewzealand": -0.003044920849999775,
+        "aotearoalegalisecannabisparty": 0.0014161274417321713,
+        "ban1080": 0.0026892922605232378,
+        "conservative": 0.004152074658358203,
+        "democratsforsocialcredit": 0.000633511920290731,
+        "greenparty": 0.0504705162296587,
+        "internetparty": 8.259890579725461e-05,
+        "labourparty": -0.8716131676742012,
+        "manamovement": 0.0006028561421114178,
+        "maoriparty": -0.005775911145124157,
+        "nationalparty": 0.7393631088322639,
+        "newzealandfirstparty": 0.06921555432060772,
+        "newzealandpeoplesparty": 0.0003128495630396995,
+        "nzoutdoorsparty": 0.00026815676831973626,
+        "theopportunitiespartytop": 0.010471521802885714,
+        "unitedfuture": 0.0007558308237290358
+      },
+      "electorates": 71,
+      "halfL1GapPP": 0.8804339996693213,
+      "maxAbsoluteCategoryGapPP": 0.8716131676742012,
+      "observedTargetValidPartyVotes": 2591896,
+      "status": "diagnostic_oracle_target_valid_party_weights_no_reconciliation_imposed"
+    },
+    {
+      "categoryGapsPP": {
+        "actnewzealand": -0.0701694246777601,
+        "animaljusticeparty": 0.0006195927202313914,
+        "aotearoalegalisecannabisparty": 0.004599053988351733,
+        "conservative": 0.0010687347662410038,
+        "democracynz": 0.0008378948185512602,
+        "freedomsnz": 0.0011836221235826845,
+        "greenparty": -0.11470431001001785,
+        "labourparty": 0.3128152811148588,
+        "leightonbakerparty": 0.00025991284896114677,
+        "maoriparty": 0.046730148990015846,
+        "nationalparty": -0.2027949074952462,
+        "newnationparty": 0.00018891527739219125,
+        "newzealandfirstparty": 0.02817150527421111,
+        "newzealandloyal": 0.004257137865312441,
+        "oneparty": 0.005373921721145685,
+        "theopportunitiespartytop": -0.018747369582096038,
+        "womensrightsparty": 0.0003102902562657369
+      },
+      "electorates": 72,
+      "halfL1GapPP": 0.4064160117651206,
+      "maxAbsoluteCategoryGapPP": 0.3128152811148588,
+      "observedTargetValidPartyVotes": 2851211,
+      "status": "diagnostic_oracle_target_valid_party_weights_no_reconciliation_imposed"
+    }
+  ],
+  "heldGeneralCandidateFrame": {
+    "constructed": 191,
+    "contests": 191,
+    "flatNational": {
+      "contests": 191,
+      "maePP": 1.6381164839949662,
+      "partyCells": 2931,
+      "rmsePP": 4.022351513770594
+    },
+    "model": {
+      "contests": 191,
+      "maePP": 0.5650068449311118,
+      "partyCells": 2931,
+      "rmsePP": 1.2634899846551584
+    }
+  },
+  "maxLocalSimplexResidual": 2.220446049250313e-16,
+  "pooledByScope": [
+    {
+      "constructedContests": 192,
+      "flatNational": {
+        "contests": 192,
+        "maePP": 1.6401836829735135,
+        "partyCells": 2948,
+        "rmsePP": 4.022029680942383
+      },
+      "frameContests": 192,
+      "model": {
+        "contests": 192,
+        "maePP": 0.5640921801481368,
+        "partyCells": 2948,
+        "rmsePP": 1.261123519030089
+      },
+      "scope": "general"
+    },
+    {
+      "constructedContests": 21,
+      "flatNational": {
+        "contests": 21,
+        "maePP": 5.707009385248282,
+        "partyCells": 322,
+        "rmsePP": 11.947730292055084
+      },
+      "frameContests": 21,
+      "model": {
+        "contests": 21,
+        "maePP": 1.4470042268223464,
+        "partyCells": 322,
+        "rmsePP": 3.2774426174227957
+      },
+      "scope": "maori"
+    }
+  ],
+  "reports": [
+    {
+      "abstentions": [],
+      "categoryDiagnostics": {
+        "byCategory": {
+          "actnewzealand": {
+            "cells": 63,
+            "maePP": 0.20535472175297997,
+            "meanSignedBiasPP": -0.004399664499705995
+          },
+          "alliance": {
+            "cells": 63,
+            "maePP": 0.025718901893903058,
+            "meanSignedBiasPP": -0.0018624011888406576
+          },
+          "aotearoalegalisecannabisparty": {
+            "cells": 63,
+            "maePP": 0.06437578179967306,
+            "meanSignedBiasPP": -0.014416094409179361
+          },
+          "conservative": {
+            "cells": 63,
+            "maePP": 0.9042655096936072,
+            "meanSignedBiasPP": -0.1341041623134352
+          },
+          "democratsforsocialcredit": {
+            "cells": 63,
+            "maePP": 0.04128031048748077,
+            "meanSignedBiasPP": -0.0006067146362283051
+          },
+          "greenparty": {
+            "cells": 63,
+            "maePP": 0.7235786253842813,
+            "meanSignedBiasPP": 0.014977431660062714
+          },
+          "labourparty": {
+            "cells": 63,
+            "maePP": 2.3707808847343737,
+            "meanSignedBiasPP": -0.1808382326695237
+          },
+          "libertarianz": {
+            "cells": 63,
+            "maePP": 0.019998644612126346,
+            "meanSignedBiasPP": -0.0009604158159603933
+          },
+          "manamovement": {
+            "cells": 63,
+            "maePP": 0.7246532364364598,
+            "meanSignedBiasPP": 0.7166885231887764
+          },
+          "maoriparty": {
+            "cells": 63,
+            "maePP": 0.14247197461520134,
+            "meanSignedBiasPP": -0.12051268597672775
+          },
+          "nationalparty": {
+            "cells": 63,
+            "maePP": 2.2666223277556656,
+            "meanSignedBiasPP": -0.2002637185366701
+          },
+          "newzealandfirstparty": {
+            "cells": 63,
+            "maePP": 0.4511148815663756,
+            "meanSignedBiasPP": -0.07832514238565355
+          },
+          "unitedfuture": {
+            "cells": 63,
+            "maePP": 0.17380251883815395,
+            "meanSignedBiasPP": 0.004623277583085859
+          }
+        },
+        "byPredeclaredClass": {
+          "continuing": {
+            "cells": 693,
+            "maePP": 0.5895545066763831,
+            "meanSignedBiasPP": -0.05296221462503102
+          },
+          "entrant": {
+            "cells": 126,
+            "maePP": 0.8144593730650336,
+            "meanSignedBiasPP": 0.29129218043767063
+          },
+          "target_national_share_below_one_percent": {
+            "cells": 315,
+            "maePP": 0.06503523152626743,
+            "meanSignedBiasPP": -0.0026444696934245717
+          }
+        }
+      },
+      "constructedContests": 63,
+      "flatNational": {
+        "contests": 63,
+        "maePP": 1.9064333020188824,
+        "partyCells": 819,
+        "rmsePP": 4.600403509265828
+      },
+      "flatTargetValidPartyWeightedOracle": {
+        "contests": 63,
+        "maePP": 1.8761679277924788,
+        "partyCells": 819,
+        "rmsePP": 4.428972933879697
+      },
+      "frameContests": 63,
+      "model": {
+        "contests": 63,
+        "maePP": 0.6241552553515601,
+        "partyCells": 819,
+        "rmsePP": 1.3946804971442284
+      },
+      "modelTargetValidPartyWeightedOracle": {
+        "contests": 63,
+        "maePP": 0.6091002967747289,
+        "partyCells": 819,
+        "rmsePP": 1.329348251028421
+      },
+      "scope": "general",
+      "targetYear": 2011
+    },
+    {
+      "abstentions": [],
+      "categoryDiagnostics": {
+        "byCategory": {
+          "actnewzealand": {
+            "cells": 7,
+            "maePP": 0.05145189522851782,
+            "meanSignedBiasPP": -0.01804686950988172
+          },
+          "alliance": {
+            "cells": 7,
+            "maePP": 0.007023896364738678,
+            "meanSignedBiasPP": 0.004273068007654887
+          },
+          "aotearoalegalisecannabisparty": {
+            "cells": 7,
+            "maePP": 0.3978166929392783,
+            "meanSignedBiasPP": 0.3978166929392783
+          },
+          "conservative": {
+            "cells": 7,
+            "maePP": 2.573242320557976,
+            "meanSignedBiasPP": 2.573242320557976
+          },
+          "democratsforsocialcredit": {
+            "cells": 7,
+            "maePP": 0.015785317188821896,
+            "meanSignedBiasPP": 0.0003240443299711215
+          },
+          "greenparty": {
+            "cells": 7,
+            "maePP": 3.0797663509863265,
+            "meanSignedBiasPP": -3.0797663509863265
+          },
+          "labourparty": {
+            "cells": 7,
+            "maePP": 5.339194205939848,
+            "meanSignedBiasPP": 5.339194205939848
+          },
+          "libertarianz": {
+            "cells": 7,
+            "maePP": 0.01097326284633507,
+            "meanSignedBiasPP": 0.005653611392048803
+          },
+          "manamovement": {
+            "cells": 7,
+            "maePP": 11.587026362983675,
+            "meanSignedBiasPP": -11.587026362983675
+          },
+          "maoriparty": {
+            "cells": 7,
+            "maePP": 4.200902495178862,
+            "meanSignedBiasPP": 4.200902495178862
+          },
+          "nationalparty": {
+            "cells": 7,
+            "maePP": 0.9189454351726791,
+            "meanSignedBiasPP": 0.2989558626711407
+          },
+          "newzealandfirstparty": {
+            "cells": 7,
+            "maePP": 1.8852562847134737,
+            "meanSignedBiasPP": 1.8852562847134737
+          },
+          "unitedfuture": {
+            "cells": 7,
+            "maePP": 0.03745371372948037,
+            "meanSignedBiasPP": -0.02077900225036646
+          }
+        },
+        "byPredeclaredClass": {
+          "continuing": {
+            "cells": 77,
+            "maePP": 1.4495063227534875,
+            "meanSignedBiasPP": 0.8194349129477911
+          },
+          "entrant": {
+            "cells": 14,
+            "maePP": 7.080134341770825,
+            "meanSignedBiasPP": -4.50689202121285
+          },
+          "observed_source_zero": {
+            "cells": 1,
+            "maePP": 0.010725010725010725,
+            "meanSignedBiasPP": -0.010725010725010725
+          },
+          "target_national_share_below_one_percent": {
+            "cells": 35,
+            "maePP": 0.09381057661373086,
+            "meanSignedBiasPP": 0.07745768288371734
+          }
+        }
+      },
+      "constructedContests": 7,
+      "flatNational": {
+        "contests": 7,
+        "maePP": 6.7330688696424295,
+        "partyCells": 91,
+        "rmsePP": 12.781825958546326
+      },
+      "flatTargetValidPartyWeightedOracle": {
+        "contests": 7,
+        "maePP": 6.7423830985092215,
+        "partyCells": 91,
+        "rmsePP": 12.798024285071914
+      },
+      "frameContests": 7,
+      "model": {
+        "contests": 7,
+        "maePP": 2.315756787217693,
+        "partyCells": 91,
+        "rmsePP": 4.371365090268668
+      },
+      "modelTargetValidPartyWeightedOracle": {
+        "contests": 7,
+        "maePP": 2.342051753077712,
+        "partyCells": 91,
+        "rmsePP": 4.432464495394672
+      },
+      "scope": "maori",
+      "targetYear": 2011
+    },
+    {
+      "abstentions": [],
+      "categoryDiagnostics": {
+        "byCategory": {
+          "actnewzealand": {
+            "cells": 64,
+            "maePP": 0.22188825305601093,
+            "meanSignedBiasPP": 0.011193068839753979
+          },
+          "aotearoalegalisecannabisparty": {
+            "cells": 64,
+            "maePP": 0.046832807732956096,
+            "meanSignedBiasPP": 0.006490310151856854
+          },
+          "ban1080": {
+            "cells": 64,
+            "maePP": 0.034348886942769934,
+            "meanSignedBiasPP": 0.006070856818517463
+          },
+          "conservative": {
+            "cells": 64,
+            "maePP": 0.07515940228210904,
+            "meanSignedBiasPP": 0.002713959986123401
+          },
+          "democratsforsocialcredit": {
+            "cells": 64,
+            "maePP": 0.015307348427358944,
+            "meanSignedBiasPP": 0.00013903648319235612
+          },
+          "greenparty": {
+            "cells": 64,
+            "maePP": 0.6203244886291278,
+            "meanSignedBiasPP": 0.008640561459810698
+          },
+          "internetparty": {
+            "cells": 64,
+            "maePP": 0.007454469294611848,
+            "meanSignedBiasPP": -0.0001868020359398071
+          },
+          "labourparty": {
+            "cells": 64,
+            "maePP": 2.8163313230074913,
+            "meanSignedBiasPP": -0.6570738184828473
+          },
+          "manamovement": {
+            "cells": 64,
+            "maePP": 0.11131863525095646,
+            "meanSignedBiasPP": 0.10506043190920823
+          },
+          "maoriparty": {
+            "cells": 64,
+            "maePP": 0.1465485295949754,
+            "meanSignedBiasPP": -0.030906698959546917
+          },
+          "nationalparty": {
+            "cells": 64,
+            "maePP": 2.818947954062785,
+            "meanSignedBiasPP": 0.557326568876106
+          },
+          "newzealandfirstparty": {
+            "cells": 64,
+            "maePP": 0.6021436876443415,
+            "meanSignedBiasPP": -0.06926200046911878
+          },
+          "newzealandpeoplesparty": {
+            "cells": 64,
+            "maePP": 0.0400825129851048,
+            "meanSignedBiasPP": -0.00015714834879608825
+          },
+          "nzoutdoorsparty": {
+            "cells": 64,
+            "maePP": 0.02253293732904218,
+            "meanSignedBiasPP": -8.32307291750113e-05
+          },
+          "theopportunitiespartytop": {
+            "cells": 64,
+            "maePP": 0.6922493083896051,
+            "meanSignedBiasPP": 0.06001498142060136
+          },
+          "unitedfuture": {
+            "cells": 64,
+            "maePP": 0.01897086934668353,
+            "meanSignedBiasPP": 1.9923080252372258e-05
+          }
+        },
+        "byPredeclaredClass": {
+          "continuing": {
+            "cells": 704,
+            "maePP": 0.6742548682478735,
+            "meanSignedBiasPP": -0.014968021110536354
+          },
+          "entrant": {
+            "cells": 320,
+            "maePP": 0.17472757264986408,
+            "meanSignedBiasPP": 0.032929646443179736
+          },
+          "target_national_share_below_one_percent": {
+            "cells": 640,
+            "maePP": 0.059389612264760375,
+            "meanSignedBiasPP": 0.013126040615499376
+          }
+        }
+      },
+      "constructedContests": 64,
+      "flatNational": {
+        "contests": 64,
+        "maePP": 1.4177857512156724,
+        "partyCells": 1024,
+        "rmsePP": 3.7656111289242813
+      },
+      "flatTargetValidPartyWeightedOracle": {
+        "contests": 64,
+        "maePP": 1.3971827735525508,
+        "partyCells": 1024,
+        "rmsePP": 3.6582687178708846
+      },
+      "frameContests": 64,
+      "model": {
+        "contests": 64,
+        "maePP": 0.5181525883734956,
+        "partyCells": 1024,
+        "rmsePP": 1.2807552322105313
+      },
+      "modelTargetValidPartyWeightedOracle": {
+        "contests": 64,
+        "maePP": 0.5096317769581161,
+        "partyCells": 1024,
+        "rmsePP": 1.249311764187381
+      },
+      "scope": "general",
+      "targetYear": 2017
+    },
+    {
+      "abstentions": [],
+      "categoryDiagnostics": {
+        "byCategory": {
+          "actnewzealand": {
+            "cells": 7,
+            "maePP": 0.038426850087789684,
+            "meanSignedBiasPP": -0.02256493807283643
+          },
+          "aotearoalegalisecannabisparty": {
+            "cells": 7,
+            "maePP": 0.11567915277671034,
+            "meanSignedBiasPP": -0.11496170685678528
+          },
+          "ban1080": {
+            "cells": 7,
+            "maePP": 0.05775228604752689,
+            "meanSignedBiasPP": -0.053875593646814976
+          },
+          "conservative": {
+            "cells": 7,
+            "maePP": 0.038894703947240435,
+            "meanSignedBiasPP": -0.038894703947240435
+          },
+          "democratsforsocialcredit": {
+            "cells": 7,
+            "maePP": 0.010547859350179323,
+            "meanSignedBiasPP": -0.0022952524940756014
+          },
+          "greenparty": {
+            "cells": 7,
+            "maePP": 0.5145222729068366,
+            "meanSignedBiasPP": 0.3849431965979196
+          },
+          "internetparty": {
+            "cells": 7,
+            "maePP": 0.003584440670385898,
+            "meanSignedBiasPP": -0.001939061393852783
+          },
+          "labourparty": {
+            "cells": 7,
+            "maePP": 1.3781775071936024,
+            "meanSignedBiasPP": -0.7775930038967276
+          },
+          "manamovement": {
+            "cells": 7,
+            "maePP": 1.5587892660205245,
+            "meanSignedBiasPP": -1.5587892660205245
+          },
+          "maoriparty": {
+            "cells": 7,
+            "maePP": 1.3821240440201354,
+            "meanSignedBiasPP": 0.042867952813577824
+          },
+          "nationalparty": {
+            "cells": 7,
+            "maePP": 0.46207812247240837,
+            "meanSignedBiasPP": 0.3048101180837151
+          },
+          "newzealandfirstparty": {
+            "cells": 7,
+            "maePP": 2.1680053588716985,
+            "meanSignedBiasPP": 2.1680053588716985
+          },
+          "newzealandpeoplesparty": {
+            "cells": 7,
+            "maePP": 0.04481000015685976,
+            "meanSignedBiasPP": -0.04481000015685976
+          },
+          "nzoutdoorsparty": {
+            "cells": 7,
+            "maePP": 0.022364744702400796,
+            "meanSignedBiasPP": 0.022364744702400796
+          },
+          "theopportunitiespartytop": {
+            "cells": 7,
+            "maePP": 0.5069695700383446,
+            "meanSignedBiasPP": -0.30412055770399704
+          },
+          "unitedfuture": {
+            "cells": 7,
+            "maePP": 0.00626104778600555,
+            "meanSignedBiasPP": -0.0031472868795983946
+          }
+        },
+        "byPredeclaredClass": {
+          "continuing": {
+            "cells": 77,
+            "maePP": 0.5611335641327394,
+            "meanSignedBiasPP": 0.17157219459753023
+          },
+          "entrant": {
+            "cells": 35,
+            "maePP": 0.42730360431770315,
+            "meanSignedBiasPP": -0.37745882811456666
+          },
+          "target_national_share_below_one_percent": {
+            "cells": 70,
+            "maePP": 0.18971103515456234,
+            "meanSignedBiasPP": -0.18189130647661872
+          }
+        }
+      },
+      "constructedContests": 7,
+      "flatNational": {
+        "contests": 7,
+        "maePP": 4.841872521823464,
+        "partyCells": 112,
+        "rmsePP": 11.448635977627955
+      },
+      "flatTargetValidPartyWeightedOracle": {
+        "contests": 7,
+        "maePP": 4.839958237495114,
+        "partyCells": 112,
+        "rmsePP": 11.440934269948022
+      },
+      "frameContests": 7,
+      "model": {
+        "contests": 7,
+        "maePP": 0.5193117016905406,
+        "partyCells": 112,
+        "rmsePP": 1.0619347626706315
+      },
+      "modelTargetValidPartyWeightedOracle": {
+        "contests": 7,
+        "maePP": 0.5274563432732012,
+        "partyCells": 112,
+        "rmsePP": 1.0787828207745205
+      },
+      "scope": "maori",
+      "targetYear": 2017
+    },
+    {
+      "abstentions": [],
+      "categoryDiagnostics": {
+        "byCategory": {
+          "actnewzealand": {
+            "cells": 65,
+            "maePP": 0.6517422975734666,
+            "meanSignedBiasPP": -0.10911427295158856
+          },
+          "animaljusticeparty": {
+            "cells": 65,
+            "maePP": 0.03781083115620351,
+            "meanSignedBiasPP": -0.003071210267091159
+          },
+          "aotearoalegalisecannabisparty": {
+            "cells": 65,
+            "maePP": 0.08516883301742088,
+            "meanSignedBiasPP": -0.047250541997871764
+          },
+          "conservative": {
+            "cells": 65,
+            "maePP": 0.045935948948025565,
+            "meanSignedBiasPP": 0.0006057545086856176
+          },
+          "democracynz": {
+            "cells": 65,
+            "maePP": 0.1699349470946551,
+            "meanSignedBiasPP": 0.006083357884699997
+          },
+          "freedomsnz": {
+            "cells": 65,
+            "maePP": 0.14496866132942343,
+            "meanSignedBiasPP": 0.04501825703801453
+          },
+          "greenparty": {
+            "cells": 65,
+            "maePP": 0.9328048921417944,
+            "meanSignedBiasPP": -0.26966003039669567
+          },
+          "labourparty": {
+            "cells": 65,
+            "maePP": 2.2107994138390956,
+            "meanSignedBiasPP": 1.1087504737919605
+          },
+          "leightonbakerparty": {
+            "cells": 65,
+            "maePP": 0.04731737420082345,
+            "meanSignedBiasPP": 0.0021311167761747384
+          },
+          "maoriparty": {
+            "cells": 65,
+            "maePP": 0.24218654166267647,
+            "meanSignedBiasPP": -0.12102626688828114
+          },
+          "nationalparty": {
+            "cells": 65,
+            "maePP": 2.1836620494206653,
+            "meanSignedBiasPP": -0.32202017260697857
+          },
+          "newnationparty": {
+            "cells": 65,
+            "maePP": 0.02631259983370703,
+            "meanSignedBiasPP": -0.0016501109240844747
+          },
+          "newzealandfirstparty": {
+            "cells": 65,
+            "maePP": 1.3112877913245315,
+            "meanSignedBiasPP": -0.22997604654634385
+          },
+          "newzealandloyal": {
+            "cells": 65,
+            "maePP": 0.6592354375347118,
+            "meanSignedBiasPP": 0.036876125814798426
+          },
+          "oneparty": {
+            "cells": 65,
+            "maePP": 0.24996589274542858,
+            "meanSignedBiasPP": -0.03486101758650357
+          },
+          "theopportunitiespartytop": {
+            "cells": 65,
+            "maePP": 0.3559245542449118,
+            "meanSignedBiasPP": -0.060609109897786256
+          },
+          "womensrightsparty": {
+            "cells": 65,
+            "maePP": 0.013812416572987873,
+            "meanSignedBiasPP": -0.00022630575110828613
+          }
+        },
+        "byPredeclaredClass": {
+          "alliance_ballot_group": {
+            "cells": 65,
+            "maePP": 0.14496866132942343,
+            "meanSignedBiasPP": 0.04501825703801453
+          },
+          "continuing": {
+            "cells": 650,
+            "maePP": 0.8269478214918017,
+            "meanSignedBiasPP": -0.008516123057140336
+          },
+          "entrant": {
+            "cells": 455,
+            "maePP": 0.15705603824607317,
+            "meanSignedBiasPP": 0.01216589008162911
+          },
+          "target_national_share_below_one_percent": {
+            "cells": 585,
+            "maePP": 0.09124750054429727,
+            "meanSignedBiasPP": -0.0036911889243427085
+          }
+        }
+      },
+      "constructedContests": 65,
+      "flatNational": {
+        "contests": 65,
+        "maePP": 1.6011027850141841,
+        "partyCells": 1105,
+        "rmsePP": 3.6481985975363713
+      },
+      "flatTargetValidPartyWeightedOracle": {
+        "contests": 65,
+        "maePP": 1.5864378452770027,
+        "partyCells": 1105,
+        "rmsePP": 3.5700172282551406
+      },
+      "frameContests": 65,
+      "model": {
+        "contests": 65,
+        "maePP": 0.5511100283906194,
+        "partyCells": 1105,
+        "rmsePP": 1.0943087009581811
+      },
+      "modelTargetValidPartyWeightedOracle": {
+        "contests": 65,
+        "maePP": 0.548912835200601,
+        "partyCells": 1105,
+        "rmsePP": 1.0840544877713694
+      },
+      "scope": "general",
+      "targetYear": 2023
+    },
+    {
+      "abstentions": [],
+      "categoryDiagnostics": {
+        "byCategory": {
+          "actnewzealand": {
+            "cells": 7,
+            "maePP": 0.361243430053448,
+            "meanSignedBiasPP": 0.361243430053448
+          },
+          "animaljusticeparty": {
+            "cells": 7,
+            "maePP": 0.06775515437409609,
+            "meanSignedBiasPP": 0.06706746380874376
+          },
+          "aotearoalegalisecannabisparty": {
+            "cells": 7,
+            "maePP": 0.7625963407037323,
+            "meanSignedBiasPP": 0.7625963407037323
+          },
+          "conservative": {
+            "cells": 7,
+            "maePP": 0.018980497364373433,
+            "meanSignedBiasPP": -0.0011170511850326255
+          },
+          "democracynz": {
+            "cells": 7,
+            "maePP": 0.09599826099615531,
+            "meanSignedBiasPP": 0.08788112894232833
+          },
+          "freedomsnz": {
+            "cells": 7,
+            "maePP": 0.7199683933462905,
+            "meanSignedBiasPP": -0.7199683933462905
+          },
+          "greenparty": {
+            "cells": 7,
+            "maePP": 2.0340748946066003,
+            "meanSignedBiasPP": 2.0340748946066003
+          },
+          "labourparty": {
+            "cells": 7,
+            "maePP": 11.62935570398327,
+            "meanSignedBiasPP": -11.62935570398327
+          },
+          "leightonbakerparty": {
+            "cells": 7,
+            "maePP": 0.03871205051328792,
+            "meanSignedBiasPP": 0.008918457515076006
+          },
+          "maoriparty": {
+            "cells": 7,
+            "maePP": 2.807406893939485,
+            "meanSignedBiasPP": 2.588823545771564
+          },
+          "nationalparty": {
+            "cells": 7,
+            "maePP": 0.2693271205079838,
+            "meanSignedBiasPP": -0.09208591863763736
+          },
+          "newnationparty": {
+            "cells": 7,
+            "maePP": 0.02767892900997778,
+            "meanSignedBiasPP": 0.02767892900997778
+          },
+          "newzealandfirstparty": {
+            "cells": 7,
+            "maePP": 5.217340965791158,
+            "meanSignedBiasPP": 5.217340965791158
+          },
+          "newzealandloyal": {
+            "cells": 7,
+            "maePP": 0.28509403870572864,
+            "meanSignedBiasPP": 0.029768350795121783
+          },
+          "oneparty": {
+            "cells": 7,
+            "maePP": 0.5551101942224256,
+            "meanSignedBiasPP": 0.5551101942224256
+          },
+          "theopportunitiespartytop": {
+            "cells": 7,
+            "maePP": 0.6942007812444491,
+            "meanSignedBiasPP": 0.6942007812444491
+          },
+          "womensrightsparty": {
+            "cells": 7,
+            "maePP": 0.016207607137235864,
+            "meanSignedBiasPP": 0.007822584687602429
+          }
+        },
+        "byPredeclaredClass": {
+          "alliance_ballot_group": {
+            "cells": 7,
+            "maePP": 0.7199683933462905,
+            "meanSignedBiasPP": -0.7199683933462905
+          },
+          "continuing": {
+            "cells": 70,
+            "maePP": 2.4349636822416927,
+            "meanSignedBiasPP": 0.04908314785874362
+          },
+          "entrant": {
+            "cells": 49,
+            "maePP": 0.17877349058325318,
+            "meanSignedBiasPP": -0.07011878265534863
+          },
+          "target_national_share_below_one_percent": {
+            "cells": 63,
+            "maePP": 0.2558897141852861,
+            "meanSignedBiasPP": 0.08844329492872922
+          }
+        }
+      },
+      "constructedContests": 7,
+      "flatNational": {
+        "contests": 7,
+        "maePP": 5.546086764278954,
+        "partyCells": 119,
+        "rmsePP": 11.567127422669207
+      },
+      "flatTargetValidPartyWeightedOracle": {
+        "contests": 7,
+        "maePP": 5.542968034652856,
+        "partyCells": 119,
+        "rmsePP": 11.563704860943469
+      },
+      "frameContests": 7,
+      "model": {
+        "contests": 7,
+        "maePP": 1.5059441915588059,
+        "partyCells": 119,
+        "rmsePP": 3.4624199830334903
+      },
+      "modelTargetValidPartyWeightedOracle": {
+        "contests": 7,
+        "maePP": 1.5057617595604984,
+        "partyCells": 119,
+        "rmsePP": 3.4617985404548195
+      },
+      "scope": "maori",
+      "targetYear": 2023
+    }
+  ],
+  "role": "conditional_development_party_share_diagnostics_no_operational_selection",
+  "schemaVersion": 1,
+  "selectedOperationalPartyInput": null,
+  "stage": 23
+}

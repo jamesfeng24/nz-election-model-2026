@@ -1,4 +1,32 @@
-# Current checkpoint: Stage22 conditional complete-share development results
+# Current checkpoint: Stage23 complete local party-vector diagnostic
+
+The [Stage23 findings](stage23-complete-local-party-results.md) document a
+parameter-free conditional proportional composition over every registered
+target party-ballot group. Its preserved official inventory and frozen rule
+preceded construction and party-share scoring. All 213 unchanged-boundary
+party-seat pairs have a coherent vector, including the 191 held general
+candidate-comparison contests, 21 Māori seats and Port Waikato's party ballot.
+On general seats the model's MAE is 0.624/0.518/0.551pp in 2011/2017/2023,
+versus 1.906/1.418/1.601pp for the flat supplied-national benchmark.
+This clears a simple developmental screen; NAT/LAB category errors remain
+around 2–3pp, and weighted local shares do not exactly recover national
+shares (maximum 0.872pp category gap in 2017). Entrant affinity and exit
+redistribution are explicit assumptions. Observed target national support is
+the supplied scenario; no as-of party forecast or operational transform was
+selected. Earlier candidate and party operational nulls/unresolved selections
+remain unchanged.
+
+**Exact next decision, requiring separate authorization after Stage23 review:**
+run a fixed-common-sample Stage22 baseline-versus-S-only *input-substitution*
+diagnostic using these saved complete party vectors and its saved earlier-
+trained candidate parameters, without refitting or tuning. Label the result
+conditional on observed national support and retrospective candidature.
+National reconciliation, as-of support/turnout/nomination inputs, target-
+boundary party/candidate evidence, correlated uncertainty and operational
+integration remain separate needs. Do not begin a candidate test, acquire
+sources or produce a 2026 forecast automatically.
+
+## Previous Stage22 checkpoint
 
 The [Stage22 findings](stage22-conditional-complete-share-results.md) preserve the Stage21 official shared-group evidence through a committed pre-fit election-local mapping amendment. The repaired 2023 sample has 64 held general contests/459 candidates, including 20 newly admitted contests and six corrected earlier inputs; 2017 has 64/431. The Stage20 κ, κ+S, κ+V and κ+S+V restrictions were refitted chronologically on identical amended training/evaluation IDs, with coherent source-rounding witnesses. The combined model loses 0.386 pp MAE against the refitted baseline in 2017 and gains 0.324 pp in 2023; the frozen two-fold screen fails. S alone improves both development folds but falls short of 0.25 pp in 2017. All operational selections remain null. These are observed-local-party, retrospective-slate diagnostics, not as-of forecasts or transferable candidate effects. Earlier raw evidence and numerical checkpoints are preserved.
 
