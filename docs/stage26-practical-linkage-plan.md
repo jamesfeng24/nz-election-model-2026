@@ -10,3 +10,7 @@ Stage25 PR #32 is verified merged as `8fef8da6bfabf5dbb2f9b988a276ab8edd223804`,
 6. Freeze acceptance before outcome-stratified coverage/readiness reporting. Persistence needs accepted same-person links and eligible existing residuals; freshman needs separately reviewed tenure; replacement needs independently established distinct people. No model is fitted or scored. Test actual-adapter outcome/confidence independence, competitor scope, components, strict membership, caps, provenance, deterministic reproduction and prior-file preservation.
 
 Expected outputs live in `data/processed/evidence/practical-candidate-linkage/`; focused modules in `scripts/evidence/practical_candidate_linkage/`. Existing Stage25 geography/folds, all previous adjudications and all numerical/operational artifacts remain unchanged. The next separately authorized task is identity-free exact-geography retesting; linkage exceptions cannot block it.
+
+## Pre-coverage context amendment
+
+Initial construction is preserved at `162a565`. Its literal original-affiliation equality was narrower than documented single-party continuity. Before outcome diagnostics, allow ordinary single-party label changes supported by the existing explicit continuity contract. Reject shared-group cases without independently established constituent continuity. This changes neither names nor the finite alias list, and does not infer continuity from alliance membership.

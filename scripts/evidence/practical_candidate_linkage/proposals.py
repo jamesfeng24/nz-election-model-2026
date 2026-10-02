@@ -16,7 +16,8 @@ def adapt_occurrences(records, ballot_groups=None):
     for cid, source in sorted(records.items()):
         row = {field: source[field] for field in fields}
         row['parsedName'] = parse_name(source['sourceCandidateName'])
-        row['ballotGroupKey'] = (ballot_groups[cid] if ballot_groups is not None and cid in ballot_groups
+        row['sharedBallotGroup'] = bool(ballot_groups is not None and cid in ballot_groups and ballot_groups[cid]['shared'])
+        row['ballotGroupKey'] = (ballot_groups[cid]['partyKey'] if ballot_groups is not None and cid in ballot_groups
                                 else source['partyKey'] if source['eligible'] else None)
         row['ballotGroupMapping'] = ('validated_Stage22_election_local_mapping' if ballot_groups is not None and cid in ballot_groups
                                      else 'Stage7_exact_within_election_mapping' if source['eligible'] else
@@ -41,16 +42,18 @@ def continuity_index(records):
 
 
 def party_context(source, target, continuity):
-    if source['candidateAffiliationKey'] != target['candidateAffiliationKey']:
-        return False, 'party_change_or_unknown_continuity'
-    if source['candidateAffiliationKey'] == 'independent' and source['ballotGroupKey'] is None and target['ballotGroupKey'] is None:
+    if source.get('sharedBallotGroup') or target.get('sharedBallotGroup'):
+        return False, 'shared_group_not_constituent_continuity'
+    if source['candidateAffiliationKey'] == target['candidateAffiliationKey'] == 'independent' and source['ballotGroupKey'] is None and target['ballotGroupKey'] is None:
         return True, 'independent_no_party_context'
     relation = continuity.get((source['year'], target['year'], target['ballotGroupKey']))
     if not relation or relation['status'] != 'eligible' or not relation['source']:
         return False, 'party_change_or_unknown_continuity'
     if relation['source']['sourceKey'] != source['ballotGroupKey']:
         return False, 'party_change_or_unknown_continuity'
-    return True, 'documented_party_continuity_same_original_affiliation'
+    return True, ('documented_party_continuity_same_original_affiliation'
+                  if source['candidateAffiliationKey'] == target['candidateAffiliationKey']
+                  else 'documented_single_party_label_continuity')
 
 
 def election_competitors(rows, aliases):

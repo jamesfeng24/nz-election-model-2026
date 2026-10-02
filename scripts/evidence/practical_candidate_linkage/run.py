@@ -1,6 +1,5 @@
 """Reproduce supplemental linkage separately from outcome coverage diagnostics."""
 import argparse
-from collections import defaultdict
 from hashlib import sha256
 
 from scripts.checkpoints.stage25_availability import mapped_contests
@@ -19,7 +18,8 @@ def ballot_groups(mapping):
     for contest in mapped_contests(mapping).values():
         for candidate in contest['candidates']:
             cid = candidate['candidateOccurrenceId']
-            group = candidate['partyKey']
+            group = {'partyKey': candidate['partyKey'],
+                     'shared': bool(candidate.get('sharedPartyGroupEvidence'))}
             if cid in result and result[cid] != group:
                 raise ValueError('Conflicting ballot group')
             result[cid] = group
@@ -118,7 +118,7 @@ def main():
     hashes={name:save(name,value,args.check) for name,value in outputs.items()}
     if not args.construct_only:
         manual='data/processed/evidence/practical-candidate-linkage/manual-review.json'
-        scripts=sorted(Path.relative_to(ROOT).as_posix() for Path in (ROOT/'scripts/evidence/practical_candidate_linkage').glob('*.py'))
+        scripts=sorted(path.relative_to(ROOT).as_posix() for path in (ROOT/'scripts/evidence/practical_candidate_linkage').glob('*.py'))
         manifest={'inputSha256':{p:digest(p) for p in (*INPUTS,manual,str((DEST/'input-contract.json').relative_to(ROOT)))},
                   'generatorSha256':{p:digest(p) for p in scripts},'outputSha256':hashes}
         save('manifest.json',manifest,args.check)

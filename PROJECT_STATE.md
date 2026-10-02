@@ -1,3 +1,7 @@
+# Stage26 pre-coverage context amendment — 2026-10-03
+
+Initial outcome-free construction is preserved at `162a565` (480 broad/411 strict edges). Correct the overly literal affiliation equality to recognize existing documented single-party label continuity, while explicitly rejecting shared-group membership as constituent continuity. Contract amendment recorded before coverage and outcome joins. Next: regenerate proposals, inspect the stable exception prefix (cap60) using preserved evidence, freeze acceptance, then produce coverage/readiness and tests. No acquisition or model calculation authorized.
+
 # Stage26 practical candidate linkage — frozen contract checkpoint, 2026-10-03
 
 PR #32 is verified merged as `8fef8da6bfabf5dbb2f9b988a276ab8edd223804`, containing reviewed `033b010`. A clean main was fast-forwarded; branch `stage/26-practical-candidate-linkage` created. The [plan](docs/stage26-practical-linkage-plan.md), finite alias table, linkage contract and stage-specific consumed-input/source snapshot are frozen before accepted links. All 3,007 official source labels use surname-comma-given order. Global and older stage-specific source registries coexist; dependencies pin exact required records in their original registry plus raw checksums, not the whole registry.

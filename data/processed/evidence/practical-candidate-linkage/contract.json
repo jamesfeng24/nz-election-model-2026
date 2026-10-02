@@ -1,10 +1,18 @@
 {
+  "amendments": [
+    {
+      "checkpoint": "162a565",
+      "reason": "literal_affiliation_equality_excluded_documented_single_party_label_changes; explicit_shared_group_check_required",
+      "scope": "single_party_continuity_only; no_identity_or_outcome_dependent_rule",
+      "timing": "after_initial_construction_before_outcome_diagnostics"
+    }
+  ],
   "availability": "retrospective_linkage; source_fact_dates_publication_retrieval_separate; historical_forecast_cutoff_availability_unknown_unless_explicitly_documented",
   "baseCommit": "8fef8da6bfabf5dbb2f9b988a276ab8edd223804",
   "career": "reference_inherited_tenure_review_only; no_new_first_ever_service_or_complete_career_inference",
   "collision": "compatible_names_with_every_candidate_in_each_election_regardless_party_seat_geography_outcome; competing_candidates_on_either_side_or_within_same_year_reject",
   "components": "check_all_members_pairwise_and_same_year_uniqueness_and_explicit_distinct_or_rejected_edges_before_provisional_ID; quarantine_entire_conflicted_component; no_chain_projection_or_rewrite_old_person_IDs",
-  "context": "same_original_affiliation_and_explicit_ballot_party_continuity; original_affiliation_separate_from_shared_ballot_group; independently_recorded_independent_to_independent_context_requires_no_party_continuity; other_unregistered_context_unknown; seat_or_party_change_is_exception",
+  "context": "explicit_supported_single_party_ballot_continuity_allows_documented_label_changes; original_affiliation_preserved; shared_group_never_establishes_constituent_continuity; independent_to_independent_without_ballot_group_allowed; genuine_switch_unknown_or_shared_context_exception",
   "contradiction": "preserved_explicit_distinct_relations_and_incompatible_full_middle_names; inherited_person_ID_or_confidence_is_never_a_documentary_bridge",
   "documentary": "only_explicit_occurrence_relationship_passage_or_existing_independently_anchored_distinct_adjudication; profiles_and_winner_chains_alone_do_not_confirm_same_person; inherited_availability_selection_caveats_retained",
   "flags": [
