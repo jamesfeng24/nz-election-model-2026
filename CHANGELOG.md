@@ -1,3 +1,10 @@
+## Stage25 post-checkpoint amendment — 2026-10-03
+
+- Register expanding-window primary and inherited more-separated sensitivity with exact earlier ID selectors and training-only preprocessing contracts.
+- Preserve 20/34 strict exact geography and all original separated sample IDs; make a 2014 conditional fitted comparison chronologically available without fitting it.
+- Specify practical preserved-evidence candidate linkage as the next separately authorized task, keeping identity-free model interfaces independent.
+- No raw evidence, prior numerical output, identity adjudication or operational selection changed.
+
 # Changelog
 
 ## Unreleased — Stage 25 historical geography applicability — 2026-10-02

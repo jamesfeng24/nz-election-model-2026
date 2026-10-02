@@ -1,3 +1,7 @@
+## Stage25 chronology amendment — preserved evidence only
+
+The [amendment](docs/stage25-chronology-amendment.md) uses no new source and changes no evidence adjudication. `original-design-contract.json` pins the original Stage25 geography, linked availability, source-contract and composition bytes plus original separated fold IDs. Its dependency audit separates completed election fact dates from unverified historical publication and retrospective retrieval. The future practical-linkage proposal uses preserved evidence only, keeps original labels/provenance, separates documentary and algorithmic relationship claims, and authorizes no acquisition through this checkpoint.
+
 # Data sources and provenance standard
 
 ## Stage25 preserved geographic and election evidence

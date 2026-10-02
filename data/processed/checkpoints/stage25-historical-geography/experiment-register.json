@@ -1,8 +1,11 @@
 {
   "developmentEvidence": "all_historical_elections_already_inspected_not_untouched_confirmation",
+  "identityFreeDependency": "does_not_require_linkage; exceptions_cannot_block_identity_free_tests",
+  "nextSeparatelyAuthorizedTask": "practical_preserved_evidence_candidate_linkage; docs/stage25-chronology-amendment.md",
   "records": [
     {
       "benchmarks": "Stage6_and_Stage16_existing_beta0_beta1_and_source_victory_controls",
+      "chronologySensitivity": "more_separated",
       "commonReporting": [
         "original_common_added_expanded_IDs",
         "coverage",
@@ -14,15 +17,22 @@
       "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/models/conditional-nat-lab-response/specification.json",
       "experimentId": "nat_lab_response",
+      "familyAvailability": "earlier_completed_transition_fits_only; numerical_gates_pending",
       "foldPlans": [
-        "nat_lab_response:2008-2011:two_sided_exact",
-        "nat_lab_response:2011-2014:two_sided_exact",
-        "nat_lab_response:2014-2017:two_sided_exact",
-        "nat_lab_response:2017-2020:two_sided_exact",
-        "nat_lab_response:2020-2023:two_sided_exact"
+        "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+        "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+        "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+        "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+        "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+        "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+        "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+        "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+        "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+        "nat_lab_response:2020-2023:two_sided_exact:more_separated"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
       "outcomeAndDenominator": "party_seat_candidate_share_of_valid_candidate_votes",
+      "primaryChronology": "expanding_window",
       "primaryMetric": "equal_party_seat_MAE_percentage_points",
       "question": "Existing NAT/LAB local-party response conditional on retained party baseline",
       "secondaryMetrics": [
@@ -35,6 +45,7 @@
     },
     {
       "benchmarks": "Stage22_refitted_baseline_vs_S_only",
+      "chronologySensitivity": "more_separated",
       "commonReporting": [
         "original_common_added_expanded_IDs",
         "coverage",
@@ -46,15 +57,22 @@
       "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json",
       "experimentId": "complete_share_baseline_s",
+      "familyAvailability": "earlier_completed_transition_fits_only; numerical_gates_pending",
       "foldPlans": [
-        "complete_share_baseline_s:2008-2011:two_sided_exact",
-        "complete_share_baseline_s:2011-2014:two_sided_exact",
-        "complete_share_baseline_s:2014-2017:two_sided_exact",
-        "complete_share_baseline_s:2017-2020:two_sided_exact",
-        "complete_share_baseline_s:2020-2023:two_sided_exact"
+        "complete_share_baseline_s:2008-2011:two_sided_exact:expanding_window",
+        "complete_share_baseline_s:2011-2014:two_sided_exact:expanding_window",
+        "complete_share_baseline_s:2014-2017:two_sided_exact:expanding_window",
+        "complete_share_baseline_s:2017-2020:two_sided_exact:expanding_window",
+        "complete_share_baseline_s:2020-2023:two_sided_exact:expanding_window",
+        "complete_share_baseline_s:2008-2011:two_sided_exact:more_separated",
+        "complete_share_baseline_s:2011-2014:two_sided_exact:more_separated",
+        "complete_share_baseline_s:2014-2017:two_sided_exact:more_separated",
+        "complete_share_baseline_s:2017-2020:two_sided_exact:more_separated",
+        "complete_share_baseline_s:2020-2023:two_sided_exact:more_separated"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
       "outcomeAndDenominator": "complete_candidate_share_of_valid_candidate_votes",
+      "primaryChronology": "expanding_window",
       "primaryMetric": "equal_contest_candidate_share_MAE_percentage_points",
       "question": "Does existing S-only share allocation beat refitted baseline on added exact seats?",
       "secondaryMetrics": [
@@ -69,6 +87,7 @@
     },
     {
       "benchmarks": "national_share_neutral_profile_and_existing_stage23_controls",
+      "chronologySensitivity": "more_separated",
       "commonReporting": [
         "original_common_added_expanded_IDs",
         "coverage",
@@ -80,15 +99,22 @@
       "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/models/complete-party-vector/specification.json",
       "experimentId": "complete_party_vector",
+      "familyAvailability": "parameter_free_source_election_construction; no_fitted_holdout_invented",
       "foldPlans": [
-        "complete_party_vector:2008-2011:two_sided_exact",
-        "complete_party_vector:2011-2014:two_sided_exact",
-        "complete_party_vector:2014-2017:two_sided_exact",
-        "complete_party_vector:2017-2020:two_sided_exact",
-        "complete_party_vector:2020-2023:two_sided_exact"
+        "complete_party_vector:2008-2011:two_sided_exact:expanding_window",
+        "complete_party_vector:2011-2014:two_sided_exact:expanding_window",
+        "complete_party_vector:2014-2017:two_sided_exact:expanding_window",
+        "complete_party_vector:2017-2020:two_sided_exact:expanding_window",
+        "complete_party_vector:2020-2023:two_sided_exact:expanding_window",
+        "complete_party_vector:2008-2011:two_sided_exact:more_separated",
+        "complete_party_vector:2011-2014:two_sided_exact:more_separated",
+        "complete_party_vector:2014-2017:two_sided_exact:more_separated",
+        "complete_party_vector:2017-2020:two_sided_exact:more_separated",
+        "complete_party_vector:2020-2023:two_sided_exact:more_separated"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
       "outcomeAndDenominator": "complete_local_party_share_of_valid_party_votes",
+      "primaryChronology": "expanding_window",
       "primaryMetric": "equal_electorate_equal_party_share_MAE_percentage_points",
       "question": "Can Stage23 construct complete conditional local party vectors for added exact seats?",
       "secondaryMetrics": [
@@ -101,6 +127,7 @@
     },
     {
       "benchmarks": "Stage16_source_victory_vs_no_source_victory",
+      "chronologySensitivity": "more_separated",
       "commonReporting": [
         "original_common_added_expanded_IDs",
         "coverage",
@@ -112,15 +139,22 @@
       "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/models/conditional-nat-lab-response/specification.json",
       "experimentId": "source_victory_comparison",
+      "familyAvailability": "earlier_completed_transition_fits_only; numerical_gates_pending",
       "foldPlans": [
-        "source_victory_comparison:2008-2011:two_sided_exact",
-        "source_victory_comparison:2011-2014:two_sided_exact",
-        "source_victory_comparison:2014-2017:two_sided_exact",
-        "source_victory_comparison:2017-2020:two_sided_exact",
-        "source_victory_comparison:2020-2023:two_sided_exact"
+        "source_victory_comparison:2008-2011:two_sided_exact:expanding_window",
+        "source_victory_comparison:2011-2014:two_sided_exact:expanding_window",
+        "source_victory_comparison:2014-2017:two_sided_exact:expanding_window",
+        "source_victory_comparison:2017-2020:two_sided_exact:expanding_window",
+        "source_victory_comparison:2020-2023:two_sided_exact:expanding_window",
+        "source_victory_comparison:2008-2011:two_sided_exact:more_separated",
+        "source_victory_comparison:2011-2014:two_sided_exact:more_separated",
+        "source_victory_comparison:2014-2017:two_sided_exact:more_separated",
+        "source_victory_comparison:2017-2020:two_sided_exact:more_separated",
+        "source_victory_comparison:2020-2023:two_sided_exact:more_separated"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
       "outcomeAndDenominator": "party_seat_candidate_share_of_valid_candidate_votes",
+      "primaryChronology": "expanding_window",
       "primaryMetric": "equal_party_seat_MAE_percentage_points",
       "question": "Existing source-victory response contrast on supported pairs",
       "secondaryMetrics": [
@@ -133,6 +167,7 @@
     },
     {
       "benchmarks": "Stage11_corrected_matched_component_controls",
+      "chronologySensitivity": "more_separated",
       "commonReporting": [
         "original_common_added_expanded_IDs",
         "coverage",
@@ -144,15 +179,22 @@
       "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/models/historical-split-ticket/specification.json",
       "experimentId": "stage11_matched_split",
+      "familyAvailability": "parameter_free_source_election_construction; no_fitted_holdout_invented",
       "foldPlans": [
-        "stage11_matched_split:2008-2011:two_sided_exact",
-        "stage11_matched_split:2011-2014:two_sided_exact",
-        "stage11_matched_split:2014-2017:two_sided_exact",
-        "stage11_matched_split:2017-2020:two_sided_exact",
-        "stage11_matched_split:2020-2023:two_sided_exact"
+        "stage11_matched_split:2008-2011:two_sided_exact:expanding_window",
+        "stage11_matched_split:2011-2014:two_sided_exact:expanding_window",
+        "stage11_matched_split:2014-2017:two_sided_exact:expanding_window",
+        "stage11_matched_split:2017-2020:two_sided_exact:expanding_window",
+        "stage11_matched_split:2020-2023:two_sided_exact:expanding_window",
+        "stage11_matched_split:2008-2011:two_sided_exact:more_separated",
+        "stage11_matched_split:2011-2014:two_sided_exact:more_separated",
+        "stage11_matched_split:2014-2017:two_sided_exact:more_separated",
+        "stage11_matched_split:2017-2020:two_sided_exact:more_separated",
+        "stage11_matched_split:2020-2023:two_sided_exact:more_separated"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
       "outcomeAndDenominator": "candidate_destination_fraction_of_matched_party_ballot_component",
+      "primaryChronology": "expanding_window",
       "primaryMetric": "matched_party_ballot_component_interval_error_percentage_points",
       "question": "Availability for existing matched-party-ballot split component",
       "secondaryMetrics": [
@@ -165,6 +207,7 @@
     },
     {
       "benchmarks": "deferred_existing_comparator_only",
+      "chronologySensitivity": "more_separated",
       "commonReporting": [
         "original_common_added_expanded_IDs",
         "coverage",
@@ -176,15 +219,22 @@
       "coverageAndRankGates": "use_each_referenced_fold_plan_and_inherited_model_contract; no_relaxation",
       "existingSpecification": "data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json",
       "experimentId": "v_deferred",
+      "familyAvailability": "earlier_completed_transition_fits_only; numerical_gates_pending",
       "foldPlans": [
-        "v_deferred:2008-2011:two_sided_exact",
-        "v_deferred:2011-2014:two_sided_exact",
-        "v_deferred:2014-2017:two_sided_exact",
-        "v_deferred:2017-2020:two_sided_exact",
-        "v_deferred:2020-2023:two_sided_exact"
+        "v_deferred:2008-2011:two_sided_exact:expanding_window",
+        "v_deferred:2011-2014:two_sided_exact:expanding_window",
+        "v_deferred:2014-2017:two_sided_exact:expanding_window",
+        "v_deferred:2017-2020:two_sided_exact:expanding_window",
+        "v_deferred:2020-2023:two_sided_exact:expanding_window",
+        "v_deferred:2008-2011:two_sided_exact:more_separated",
+        "v_deferred:2011-2014:two_sided_exact:more_separated",
+        "v_deferred:2014-2017:two_sided_exact:more_separated",
+        "v_deferred:2017-2020:two_sided_exact:more_separated",
+        "v_deferred:2020-2023:two_sided_exact:more_separated"
       ],
       "materiality": "retained_0.25_percentage_point_development_diagnostic_where_existing_spec_applies",
       "outcomeAndDenominator": "complete_candidate_share_of_valid_candidate_votes",
+      "primaryChronology": "expanding_window",
       "primaryMetric": "equal_contest_candidate_share_MAE_percentage_points",
       "question": "Existing V feature availability; no automatic S+V repetition",
       "secondaryMetrics": [
@@ -200,5 +250,12 @@
   ],
   "role": "bounded_unfitted_experiment_register",
   "schemaVersion": 1,
+  "sequence": [
+    "finalize_geography_and_chronology",
+    "practical_linkage_and_coverage",
+    "registered_identity_free_exact_geography_tests",
+    "identity_effects_only_with_linkage_and_career_gates",
+    "dated_replay_national_reconciliation_joint_uncertainty"
+  ],
   "stage": 25
 }

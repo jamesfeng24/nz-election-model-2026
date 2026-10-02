@@ -4,16 +4,58 @@ import argparse
 from collections import Counter, defaultdict
 from hashlib import sha256
 import json
+from itertools import product
 
 from scripts.checkpoints.stage25_geography import ROOT, DEST, read, encode, write_or_check
 
 
 GEOGRAPHY = 'data/processed/checkpoints/stage25-historical-geography/geography.json'
 AVAILABILITY = 'data/processed/checkpoints/stage25-historical-geography/availability.json'
+ORIGINAL_DESIGN = 'data/processed/checkpoints/stage25-historical-geography/original-design-contract.json'
 ELECTIONS = {year: f'data/processed/elections/{year}.json' for year in (2008, 2011, 2014, 2017, 2020, 2023)}
-INPUTS = (GEOGRAPHY, AVAILABILITY, *ELECTIONS.values())
+INPUTS = (GEOGRAPHY, AVAILABILITY, ORIGINAL_DESIGN, *ELECTIONS.values())
 FAMILIES = ('nat_lab_response', 'complete_share_baseline_s', 'complete_party_vector',
             'stage11_matched_split', 'source_victory_comparison', 'v_deferred')
+PROTOCOLS = ('expanding_window', 'more_separated')
+
+
+def training_years(target_years, source_year, target_year, protocol):
+    """Select completed transitions; publication by a historical cutoff is not certified."""
+    if source_year >= target_year:
+        raise ValueError('Source must precede target election')
+    if protocol not in PROTOCOLS:
+        raise ValueError('Unknown chronology protocol')
+    return sorted(y for y in set(target_years) if y < target_year and
+                  (y <= source_year if protocol == 'expanding_window' else y < source_year))
+
+
+def preprocessing_plan(training_rows, training_ids, family):
+    admitted = [r for r in training_rows if r['targetElectorateId'] in training_ids or
+                any(p.get('recordId') in training_ids for p in r['natLab'])]
+    return {'trainingContestIds': [r['targetElectorateId'] for r in admitted],
+            'trainingCandidateOccurrenceIds': {
+                'artifact': AVAILABILITY, 'field': 'candidateOccurrenceIds',
+                'selector': 'exact_trainingContestIds_above; no_holdout_or_later_rows'},
+            'centering': ('supported_training_values_weight_1_over_slate_size_only; '
+                          'neutral_fallback_adjustment_zero; each_rounding_scenario_separate'
+                          if family in ('complete_share_baseline_s', 'v_deferred') else
+                          'no_feature_centering_in_inherited_specification'),
+            'holdoutContributionToFittedPreprocessing': 'forbidden',
+            'parameterFree': family in ('complete_party_vector', 'stage11_matched_split')}
+
+
+def response_training_gates(training_rows):
+    """Evidence/count gates only; permitted conditional party movement awaits an adapter."""
+    result = {}
+    for party in ('nationalparty', 'labourparty'):
+        records = [p for r in training_rows for p in r['natLab']
+                   if p['status'] == 'available' and p['partyKey'] == party]
+        winners = sum(p['sourceVictory'] for p in records)
+        result[party] = {'records': len(records), 'sourceWinners': winners,
+                         'sourceNonwinners': len(records) - winners,
+                         'minimumFiveRecordsPerCoefficientForThreeTermModel': len(records) >= 15,
+                         'minimumFiveInEachSourceVictoryGroup': min(winners, len(records)-winners) >= 5}
+    return result
 
 
 def ids_for_family(rows, family):
@@ -130,14 +172,14 @@ def fold_plans(geography, availability, chains):
         for year, target_id in zip(chain['targetYears'], chain['targetElectorateIds']):
             stable_by_year[year].add(target_id)
     plans = []
-    for family in FAMILIES:
+    for family, protocol in product(FAMILIES, PROTOCOLS):
         for year in target_years:
             here = by_year[year]
             source_years = {r['sourceYear'] for r in here}
             if len(source_years) != 1:
                 raise ValueError('Fold mixes source elections')
             source_year = next(iter(source_years))
-            prior_years = [y for y in target_years if y < source_year]
+            prior_years = training_years(target_years, source_year, year, protocol)
             training_rows = [r for y in prior_years for r in by_year[y]]
             eval_ids = ids_for_family(here, family)
             training_ids = ids_for_family(training_rows, family)
@@ -173,15 +215,22 @@ def fold_plans(geography, availability, chains):
                                   if p['status'] == 'available']
                 gate = {'evaluationSourceVictoryTrue': sum(source_winners),
                         'evaluationSourceVictoryFalse': len(source_winners) - sum(source_winners),
+                        'trainingByParty': response_training_gates(training_rows),
                         'partyMovementAndFullNumericalRank': 'pending_permitted_input_adapter'}
             else:
-                gate = {'fit': 'parameter_free_construction' if family == 'complete_party_vector'
+                gate = {'fit': 'parameter_free_source_election_construction' if family in
+                        ('complete_party_vector', 'stage11_matched_split')
                         else 'family_specific_future_gate'}
-            plans.append({'foldId': f'{family}:{source_year}-{year}:two_sided_exact',
+            plans.append({'foldId': f'{family}:{source_year}-{year}:two_sided_exact:{protocol}',
                 'family': family, 'targetYear': year, 'sourceYear': source_year,
+                'chronologyProtocol': protocol,
+                'protocolRole': 'primary' if protocol == 'expanding_window' else 'prespecified_sensitivity',
                 'geographyTier': 'certified_two_sided_exact',
                 'trainingTransitionTargetYears': prior_years,
                 'trainingIds': training_ids, 'evaluationIds': eval_ids,
+                'preprocessing': preprocessing_plan(training_rows, training_ids, family),
+                'overlappingTrainingTargetYears': [y for y in prior_years if y == source_year],
+                'historicalPublicationByForecastCutoff': 'not_verified; retrospective_conditional_only',
                 'originalTrainingIds': original_training, 'addedTrainingIds': added_training,
                 'originalEvaluationIds': original, 'addedEvaluationIds': added,
                 'stableSeatSensitivityIds': stable,
@@ -198,7 +247,8 @@ def fold_plans(geography, availability, chains):
                 'savedFixedFitTransport': saved_fit,
                 'sourceFeatureRankAudit': s_rank,
                 'expandedChronologicalFit': ('not_authorized; verify_full_rank_and_training_only_preprocessing'
-                                            if family != 'complete_party_vector' else 'parameter_free_rule'),
+                                            if family not in ('complete_party_vector', 'stage11_matched_split')
+                                            else 'parameter_free_rule'),
                 'gates': gate,
                 'abstentions': {'fullTargetFrameSeats': len(here),
                                 'generalTargetSeats': sum(r['scope'] == 'general' for r in here),
@@ -260,6 +310,11 @@ def experiment_register(plans):
                                       'source_victory_comparison': 'data/processed/models/conditional-nat-lab-response/specification.json',
                                       'v_deferred': 'data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json'}[family],
             'outcomeAndDenominator': outcome, 'foldPlans': by_family[family],
+            'primaryChronology': 'expanding_window',
+            'chronologySensitivity': 'more_separated',
+            'familyAvailability': ('parameter_free_source_election_construction; no_fitted_holdout_invented'
+                                   if family in ('complete_party_vector', 'stage11_matched_split') else
+                                   'earlier_completed_transition_fits_only; numerical_gates_pending'),
             'benchmarks': benchmarks,
             'primaryMetric': primary, 'secondaryMetrics': secondary,
             'commonReporting': ['original_common_added_expanded_IDs', 'coverage', 'abstention',
@@ -270,10 +325,21 @@ def experiment_register(plans):
             'stopping': 'no_automatic_variants_or_broad_search_after_disappointing_results',
             'status': 'proposed_separate_authorization_required'})
     return {'schemaVersion': 1, 'stage': 25, 'role': 'bounded_unfitted_experiment_register',
-            'records': records, 'developmentEvidence': 'all_historical_elections_already_inspected_not_untouched_confirmation'}
+            'records': records,
+            'nextSeparatelyAuthorizedTask': 'practical_preserved_evidence_candidate_linkage; docs/stage25-chronology-amendment.md',
+            'sequence': ['finalize_geography_and_chronology', 'practical_linkage_and_coverage',
+                         'registered_identity_free_exact_geography_tests',
+                         'identity_effects_only_with_linkage_and_career_gates',
+                         'dated_replay_national_reconciliation_joint_uncertainty'],
+            'identityFreeDependency': 'does_not_require_linkage; exceptions_cannot_block_identity_free_tests',
+            'developmentEvidence': 'all_historical_elections_already_inspected_not_untouched_confirmation'}
 
 
 def build():
+    original = read(ORIGINAL_DESIGN)
+    for path, expected in original['preservedArtifacts'].items():
+        if sha256((ROOT / path).read_bytes()).hexdigest() != expected:
+            raise ValueError(f'Changed original Stage25 evidence: {path}')
     geography = read(GEOGRAPHY)['records']
     availability = read(AVAILABILITY)['records']
     if {r['geographyId'] for r in geography} != {r['geographyId'] for r in availability}:
@@ -281,11 +347,25 @@ def build():
     elections = {year: read(path) for year, path in ELECTIONS.items()}
     chains = stable_chains(geography)
     plans = fold_plans(geography, availability, chains)
+    for plan in plans:
+        if plan['chronologyProtocol'] != 'more_separated':
+            continue
+        sample = {field: plan[field] for field in ('trainingIds', 'evaluationIds')}
+        raw = json.dumps(sample, sort_keys=True, separators=(',', ':')).encode()
+        key = plan['foldId'].removesuffix(':more_separated')
+        if sha256(raw).hexdigest() != original['originalFoldSampleSha256'][key]:
+            raise ValueError(f'Changed inherited separated sample: {key}')
     composition = source_composition(geography, elections)
     design = {'schemaVersion': 1, 'stage': 25, 'role': 'unfitted_chronological_fold_plan',
               'folds': plans, 'stableExactSeatChains': chains,
+              'chronologyAmendment': {'originalCommit': original['originalCommit'],
+                                     'originalDesignContract': ORIGINAL_DESIGN,
+                                     'dependencyAudit': 'docs/stage25-chronology-amendment.md',
+                                     'historicalStage16And22Artifacts': 'unchanged'},
               'stableSeatUse': 'sample_composition_sensitivity_only_not_primary_or_representative',
-              'chronology': 'training_target_year_strictly_before_holdout_source_year; no_target_outcomes_in_applicability',
+              'chronology': {'primary': 'expanding_window: training_target_year <= holdout_source_year and < holdout_target_year',
+                             'sensitivity': 'more_separated: training_target_year < holdout_source_year',
+                             'interpretation': 'retrospective_conditional_not_verified_as_of_forecast; overlapping_elections_induce_dependence'},
               'approximateTiers': 'inventory_only_no_candidate_vote_transport_or_prediction',
               'weights': 'equal_contest_or_party_seat_within_fold; report_folds_separately; pooled_contest_equal_sensitivity_only',
               'status': 'requires_separate_retest_authorization'}
