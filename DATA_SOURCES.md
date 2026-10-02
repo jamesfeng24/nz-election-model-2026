@@ -1,4 +1,12 @@
+## Stage25 chronology amendment — preserved evidence only
+
+The [amendment](docs/stage25-chronology-amendment.md) uses no new source and changes no evidence adjudication. `original-design-contract.json` pins the original Stage25 geography, linked availability, source-contract and composition bytes plus original separated fold IDs. Its dependency audit separates completed election fact dates from unverified historical publication and retrospective retrieval. The future practical-linkage proposal uses preserved evidence only, keeps original labels/provenance, separates documentary and algorithmic relationship claims, and authorizes no acquisition through this checkpoint.
+
 # Data sources and provenance standard
+
+## Stage25 preserved geographic and election evidence
+
+No new source was acquired or registered. The [canonical Stage25 geography](data/processed/checkpoints/stage25-historical-geography/geography.json) consumes the already certified 2011→2014 and 2017→2020 boundary crosswalks and the Stage14 original frame. Both crosswalk manifests verify their output hashes and exact raw/code dependencies. The linked availability layer consumes six processed general election tables, six processed general split tables, the Stage22 election-local shared-group mapping, Stage5 party continuity and Stage8 occurrence-link/history-status evidence. Its [stage-specific snapshot](data/processed/checkpoints/stage25-historical-geography/source-contract.json) protects **854 consumed** registry records and raw bytes; unrelated registrations remain acceptable, while changed/deleted/duplicate required records or altered raw bytes fail. Separate manifests hash the exact processed inputs and deterministic outputs. The one damaged 2014 crosswalk label remains preserved and flagged; it is not used to certify geography. No prior raw bytes, historical numerical outputs, identity adjudications or operational selections changed.
 
 ## Stage 24 saved-input substitution — no new acquisition
 
