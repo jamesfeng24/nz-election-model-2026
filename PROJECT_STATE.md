@@ -1,3 +1,13 @@
+# Stage26 final PR handoff — 2026-10-03
+
+[PR #33](https://github.com/jamesfeng24/nz-election-model-2026/pull/33) is open and must remain unmerged. Completed implementation `254f4a92582a2eb0597ba65f203f31502776c4fb` is pushed. Both push and PR GitHub frontend/Python jobs passed, including the full Python suite, source checks and Stage23–26 deterministic checks (runs37074435839 and37074497444). This final documentation checkpoint records those verified results; its final-head checks are verified through the PR before the user handoff. No code/data changes follow the validated implementation.
+
+Coverage: 496 broad /424 strict same-person edges,883 /761 linked occurrences,387 /337 reversible research groups. Middle concessions:71 omissions andone initial;one nickname (also an omission). No documentary same-person promotion;ten preserved distinct-person claims remain separate. 60 fixed-prefix exceptions inspected and unresolved;1,064 unreviewed. No source acquisition, historical adjudication change, fitting or scoring. Retrospective availability and incomplete careers remain explicit.
+
+Local verification:18 focused /464 full Python tests; independent graph/count checks; all926 global resources and581 consumed source/raw dependencies; Stage25/26 deterministic checks; compilation/whitespace checks. All1,344 earlier tracked data artifacts are byte-identical to merged Stage25. See [findings](docs/practical-candidate-linkage.md), D056 and the previous complete local handoff below for exact artifacts and limits.
+
+**Stop here. Exact next separately authorized task:** registered identity-free exact-geography NAT/LAB response and complete-share baseline/S retests with the expanding-window primary and separated sensitivity. Linkage exceptions cannot block them. Persistence/freshman/replacement refits require their own relationship, career, chronology and selection gates. All operational nulls/unresolved choices remain unchanged.
+
 # Stage26 practical candidate linkage — completed local handoff, 2026-10-03
 
 **Branch:** `stage/26-practical-candidate-linkage`. PR #32 verified merged at `8fef8da6bfabf5dbb2f9b988a276ab8edd223804`, containing reviewed `033b010`. Clean main synchronized without overwriting work. Contract checkpoint `c6a32fd` and shared-group pin `de9f2ad` precede construction; initial result `162a565` and pre-coverage context amendment `46bc526` remain historical. Corrected accepted relationships/manual prefix frozen and pushed at `e29cdbd` before outcome diagnostics. No acquisition or model fitting/scoring.

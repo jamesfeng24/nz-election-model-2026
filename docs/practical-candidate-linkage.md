@@ -71,3 +71,8 @@ Construction is separate from post-acceptance outcome coverage. `--check` checks
 Locally: **18 focused / 464 full Python tests pass**; source integrity verifies all **926** registered resources; all three Stage25 generators and the Stage26 generator reproduce bytes; compilation and whitespace checks pass. Independent saved-edge graph accounting agrees with 496/424 edges, 883 broad occurrences and 387 groups, with no accepted competitor/conflict. Actual adapter counterfactuals change candidate votes, denominators, shares, residuals, winner/identity labels and inherited confidence without changing proposals, acceptance, groups or priority. Tests also cover every nickname, middle conflicts, compounds/order, global competitors, duplicates, shared groups, explicit continuity, documentary conflicts, transitive rejection, strict membership, dates and review-prefix limits.
 
 **All 1,344 earlier tracked data files** remain byte-identical to merged Stage25, including raw sources, identity adjudications, geography/fold plans, numerical outputs and operational selections. No Python formatter/linter is configured; compilation and whitespace checks were run. No frontend files changed, so unrelated frontend checks were left to final-head GitHub CI. The PR remains unmerged for independent review.
+
+
+### GitHub handoff
+
+[PR #33](https://github.com/jamesfeng24/nz-election-model-2026/pull/33) is open and unmerged. Both push and PR frontend/Python validation passed on implementation `254f4a92582a2eb0597ba65f203f31502776c4fb` (runs37074435839 /37074497444). The final documentation head is checked on the same PR before handoff. All completed outputs remain research evidence; no later modelling begins automatically.
