@@ -15,8 +15,9 @@ PROFILES = 'data/processed/models/freshman-incumbency/tenure-evidence.json'
 DISTINCT = 'data/processed/models/replacement-candidate/identity-review.json'
 STAGE13 = 'data/processed/checkpoints/identity-evidence-pass/final/relations.json'
 STAGE21 = 'data/processed/checkpoints/stage21-identity-pilot/adjudication.json'
+MAPPING = 'data/processed/checkpoints/stage22-shared-group-prefit/amended-mapping.json'
 INPUTS = (OCCURRENCES, GEOGRAPHY, CONTINUITY, LINKS, HISTORY, TENURE, PROFILES,
-          DISTINCT, STAGE13, STAGE21,
+          DISTINCT, STAGE13, STAGE21, MAPPING,
           'data/processed/checkpoints/stage25-historical-geography/availability.json',
           'data/processed/checkpoints/stage25-historical-geography/fold-plan.json')
 
