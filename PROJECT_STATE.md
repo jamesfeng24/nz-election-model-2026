@@ -1,3 +1,11 @@
+# Stage26 practical candidate linkage — frozen contract checkpoint, 2026-10-03
+
+PR #32 is verified merged as `8fef8da6bfabf5dbb2f9b988a276ab8edd223804`, containing reviewed `033b010`. A clean main was fast-forwarded; branch `stage/26-practical-candidate-linkage` created. The [plan](docs/stage26-practical-linkage-plan.md), finite alias table, linkage contract and stage-specific consumed-input/source snapshot are frozen before accepted links. All 3,007 official source labels use surname-comma-given order. Global and older stage-specific source registries coexist; dependencies pin exact required records in their original registry plus raw checksums, not the whole registry.
+
+No accepted relationship, source acquisition, fitted coefficient, prediction, score or historical adjudication change has occurred. **Next within authorized Stage26:** implement outcome-free occurrence adapters, election-wide competitor checks, exact-geography proposals and component-safe reversible links, then bounded exception inspection, broad/strict coverage and readiness, validation and unmerged PR. Stop before modelling. The next separately authorized task after Stage26 remains registered identity-free exact-geography retests, independent of linkage exceptions.
+
+---
+
 # Stage25 PR #32 chronology amendment — 2026-10-03
 
 **Latest handoff; supersedes the original chronology/next-task statements below.** PR #32 was verified OPEN at expected `3e63f2472120dc49cef9313cfca2f26a6bf14064`, with all four prior CI checks successful; remote/local branch matched and working tree was clean. The existing `stage/25-historical-geography-applicability` branch is retained. No merge, fit, prediction, score, acquisition or linkage was performed.
