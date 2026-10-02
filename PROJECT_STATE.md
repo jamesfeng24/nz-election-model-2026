@@ -1,3 +1,7 @@
+# Stage26 acceptance checkpoint — 2026-10-03
+
+Corrected outcome-free construction: 3,007 occurrences,1,630 proposed edges,496 broad accepted algorithmic edges and424 strict exact-name edges. Ten preserved Stage10 documentary distinct-person claims retained separately; no inherited winner-chain projection promoted. Fixed first60 exceptions manually compared against preserved candidate labels and inherited relationship routes; all remain unresolved, including unfamiliar spelling/name-order conflicts. No searches or new resources. Acceptance frozen before coverage/winner diagnostics. Next: produce coverage/readiness, meaningful tests, deterministic/source/preservation verification, final PR.
+
 # Stage26 pre-coverage context amendment — 2026-10-03
 
 Initial outcome-free construction is preserved at `162a565` (480 broad/411 strict edges). Correct the overly literal affiliation equality to recognize existing documented single-party label continuity, while explicitly rejecting shared-group membership as constituent continuity. Contract amendment recorded before coverage and outcome joins. Next: regenerate proposals, inspect the stable exception prefix (cap60) using preserved evidence, freeze acceptance, then produce coverage/readiness and tests. No acquisition or model calculation authorized.
