@@ -1,0 +1,46 @@
+{
+  "generatorSha256": {
+    "scripts/evidence/practical_candidate_linkage/__init__.py": "2d4398b7c6fb3bc5d5d2bbe58e69ee0cd84caa3222e1c0194ad193c7d81fa009",
+    "scripts/evidence/practical_candidate_linkage/common.py": "b575fdf9206c5760f96fd6ab12d6b2cdc7a82b04ba829ea2fd813c00c544bee8",
+    "scripts/evidence/practical_candidate_linkage/components.py": "ad5e64adf6f3e8346ee654abb26f2f24eebe6a519e43546b694374a7bb64b72f",
+    "scripts/evidence/practical_candidate_linkage/evidence.py": "9f20d5400928c5b15b2beb8c0924f025b3ee3e56ff75b469e0e19adddd07af56",
+    "scripts/evidence/practical_candidate_linkage/names.py": "41aa3adf1a076fe0398bdd37ada994f1b276d7daccaccfe513b3a5f7aa6f90a9",
+    "scripts/evidence/practical_candidate_linkage/preservation.py": "ce87cb9f96e5a39ea97e781de41d0703830b237e1c89b62106d46bdd875d083e",
+    "scripts/evidence/practical_candidate_linkage/proposals.py": "23b5feddba73d7bdbc10bdd51cf0f3aa8d41694705a3bc38f9c6776088756953",
+    "scripts/evidence/practical_candidate_linkage/report.py": "4e2d01aeae812f9f24762534bd0db603c8d4acab4bf98483ccba58f701f09c67",
+    "scripts/evidence/practical_candidate_linkage/run.py": "4f5b735f3d30607753d40421b455d008344e586d78948daab9cdf45c63a52ab1"
+  },
+  "inputSha256": {
+    "data/processed/checkpoints/identity-evidence-pass/final/relations.json": "2c3fa9daf8f790d6ec37877da111bcc1760132fc50b10821cdf8580b4d59fe75",
+    "data/processed/checkpoints/stage21-identity-pilot/adjudication.json": "c67973e50417a1fbbcdf79fb46410b721cef87a09b908cbc5120c6d42e744497",
+    "data/processed/checkpoints/stage22-shared-group-prefit/amended-mapping.json": "6fd703178cc04a8f802371ee87b3138c5383ea2324701fd2744ba905c6518a7c",
+    "data/processed/checkpoints/stage25-historical-geography/availability.json": "99066719c843f89c8f4f60fd89c54339ce766c609f1f3a7804abb3252765b16c",
+    "data/processed/checkpoints/stage25-historical-geography/fold-plan.json": "494a76b779f14b3289ddd4a8940a3c4d421f261f76b9dc4cfce58c2db26e666e",
+    "data/processed/checkpoints/stage25-historical-geography/geography.json": "998a4e1e85276bd8551f4bb6f2a8188db64af5e0346691f7485ba33b13340a1e",
+    "data/processed/evidence/practical-candidate-linkage/input-contract.json": "d3c660f2bcdbe09519bba079f619f62becfa07016ca5f99e50849ea53ba4cd3e",
+    "data/processed/evidence/practical-candidate-linkage/manual-review.json": "86706d926ebf512df9e75d93c1309eb10ca459a2156402ec3755a084cf1aa545",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/models/candidate-persistence/history-status.json": "2fe2167a61e4768dfe69ff7fbb91eb3b3d74cef19ff25864df16ec93c445f3df",
+    "data/processed/models/candidate-persistence/person-links.json": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+    "data/processed/models/freshman-incumbency/inventory.json": "1b56201012dd01c40a2c44b5748dccfc1bf4eb2bc38f5983f4e406ef03f50021",
+    "data/processed/models/freshman-incumbency/tenure-evidence.json": "1995e2c832dbf9126ff32efc094f1cafd82191b41a48db6cae9bbb337d8505db",
+    "data/processed/models/party-vote-transform/party-continuity.json": "d3c6cfa63f59725cbc9276e2442f1f59eafe24a9526a4fbb9ca52d68fcb3071b",
+    "data/processed/models/replacement-candidate/identity-review.json": "2d55299d81887b2493fcc4e248e6de2902e4201e60d35c4a0b1cf0ed2fddb2b9"
+  },
+  "outputSha256": {
+    "accepted-relationships.json": "e83e863d595ffba0dcfb865fb18bde5a917b8749b5ba714f3f305916de32473d",
+    "coverage.json": "d96e5c0d5b205cdc4ce50e7951b5a7637880bcbecc87c4c2d8edaaf26837985e",
+    "documentary-claims.json": "37ca45379ee94969ff669786ab7c09e141afc36a903f2e94e44e8712b9964028",
+    "inherited-evidence-audit.json": "fdc0ba21a4b70a9a52ce5309a2e0ea27563fea52530ecbe0ed7c3d7dbc202c3c",
+    "occurrences.json": "4e9a1aa86c61c46190f3c1ff59f923074a083c1f0c086a4a745ddcf0803c1504",
+    "persons.json": "af2416f41da7197409e91e813c452937c01d5e11c7e268e0cc76a60c45482187",
+    "preservation.json": "6cc244a85bb5d0c60d6690cb111f03df2a042c41adbec1c7a0528b7f22608044",
+    "proposed-links.json": "d7847ea9747c3721b27a7de135f35799ebfb41314d9223a8664ff9035faaf410",
+    "readiness.json": "5ce4695cb277070ccfe4a55f88a9cba0bece53e4584ea9b20ca94647298083f5",
+    "review-queue.json": "27084f12316d9b962e693f430e31b5ac8a0aa4f7927786852eff745a9913e612",
+    "review-table.md": "4ef9f63c1ac3c98faa22b5e87f8f6a39091208048ffe787f3bcc1ff8d0ec46f9",
+    "review.json": "f1c1c73b40fb1c2e4c8478a4cd43b09bf75ff49235b62947a5d7c3de5387190e"
+  },
+  "schemaVersion": 1,
+  "stage": 26
+}

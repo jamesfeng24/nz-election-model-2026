@@ -54,7 +54,7 @@ def verify_inputs(root=ROOT, registry=None, raw_reader=None):
     for dependency in contract['requiredSources']:
         path, required = dependency['registryPath'], dependency['record']
         if path not in indexes:
-            document = registry if registry is not None and path == 'data/sources.json' else read(path)
+            document = registry if registry is not None and path == 'data/sources.json' else json.loads((root / path).read_bytes())
             live = document['sources']
             if len(live) != len({r['id'] for r in live}):
                 raise ValueError('Duplicate source ID')

@@ -109,7 +109,7 @@ def generate(rows, geography, continuity_rows, links, claims, aliases):
         if claim['sourceOccurrenceId'] in indexed and claim['targetOccurrenceId'] in indexed:
             candidates[claim['sourceOccurrenceId'], claim['targetOccurrenceId']].add('preserved_explicit_claim')
     continuity = continuity_index(continuity_rows)
-    by_claim = {(c['sourceOccurrenceId'], c['targetOccurrenceId']): c for c in claims}
+    by_claim = claim_index(claims)
     edges = []
     for (sid, tid), routes in sorted(candidates.items()):
         source, target = indexed[sid], indexed[tid]
@@ -149,3 +149,20 @@ def generate(rows, geography, continuity_rows, links, claims, aliases):
                 'careerCompleteness': 'not_established_by_linkage', 'reversible': True}
         edges.append(edge)
     return edges
+
+
+def claim_index(claims):
+    """Reject conflicting claims instead of silently taking the last copy."""
+    result = {}
+    for claim in claims:
+        key = claim['sourceOccurrenceId'], claim['targetOccurrenceId']
+        if key in result and result[key] != claim:
+            raise ValueError('Conflicting documentary relationship claims')
+        if claim['label'] not in ('documentary_same_person', 'documentary_distinct_people'):
+            raise ValueError('Unsupported documentary label')
+        if not claim.get('evidenceArtifact') or not claim.get('evidencePointer') or not claim.get('evidence'):
+            raise ValueError('Documentary claim requires pinned occurrence-specific evidence')
+        if claim['label'] == 'documentary_same_person' and not claim['evidence'].get('relationshipPassage'):
+            raise ValueError('Same-person claim requires an explicit relationship bridge')
+        result[key] = claim
+    return result

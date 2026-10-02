@@ -1,4 +1,13 @@
-# Current checkpoint: Stage25 geography and chronology amendment
+# Current checkpoint: Stage26 practical candidate linkage
+
+The [Stage26 layer](practical-candidate-linkage.md) provides496 broad and424 strict supplemental same-person edges,482/413 with usable residuals at both ends. No historical identity adjudication, numerical artifact or operational null changed. Ten preserved distinct-person claims remain separate; incomplete careers, aliases outside the frozen rules and unreviewed exceptions remain explicit. The fixed60-case preserved-evidence review does not measure precision or erase retrospective source selection.
+
+**Exact next separately authorized implementation:** execute the registered identity-free exact-geography comparisons for NAT/LAB response and complete-share baseline/S using Stage25's expanding-window primary and inherited separated sensitivity, reusing existing numerical functions and saving expanded results separately. Freeze each adapter's conditioning gates and permitted preprocessing before any new fitting. Practical linkage exceptions do not block this task. No new nonlinearities, covariates, coefficient searches, identity acquisition, approximate transport, integration or forecasts follow automatically.
+
+The bounded sequence remains A geography/chronology (complete), B practical linkage (complete), C separately authorized identity-free exact tests, D separately authorized identity-dependent tests only where relationship/tenure/selection evidence meets their contracts, then E dated replay, national reconciliation and parsimonious joint uncertainty. More rows do not create independent elections; null selections are not estimated zero effects.
+
+## Previous Stage25 checkpoint
+
 
 The [Stage25 findings](stage25-historical-geography-applicability.md) retain one canonical 356-target artifact and **20/34 two-sided exact** added general seats in 2014/2020. Geography, availability, source contracts, approximate tiers, original results and operational nulls are unchanged. The [post-checkpoint amendment](stage25-chronology-amendment.md) makes expanding-window training primary for retrospective conditional identity-free comparisons; completed training targets may equal the holdout source year, but must precede the holdout target. The inherited stricter gap is a prespecified sensitivity with pinned original IDs. Source/training election reuse creates dependence. Publication by historical forecast cutoffs remains unverified. A proposed fitted 2014 comparison now has earlier training; no fit or score has occurred.
 

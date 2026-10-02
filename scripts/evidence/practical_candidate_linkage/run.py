@@ -11,6 +11,7 @@ from .evidence import preserved_claims, inherited_audit
 from .names import alias_pairs, strict_member
 from .proposals import adapt_occurrences, generate
 from .report import coverage, readiness, table
+from .preservation import verify_prior_data
 
 
 def ballot_groups(mapping):
@@ -91,7 +92,7 @@ def reports(outputs):
     edges=outputs['proposed-links.json']['records']
     rows=outputs['occurrences.json']['records']
     review=apply_review(outputs['review-queue.json']['records'],read(str((DEST/'manual-review.json').relative_to(ROOT))))
-    return {'review.json':{'records':review,'automaticChecks':'rule_competitor_component_provenance_checks_not_documentary_validation'},
+    return {'preservation.json': verify_prior_data(), 'review.json':{'records':review,'automaticChecks':'rule_competitor_component_provenance_checks_not_documentary_validation'},
             'coverage.json':coverage(rows,edges,read(GEOGRAPHY)['records'],outputs['persons.json'],review,observed_winners(original)),
             'readiness.json':readiness(edges,original,read(TENURE)['records'])}
 

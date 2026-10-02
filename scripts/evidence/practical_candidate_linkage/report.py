@@ -2,7 +2,7 @@
 from collections import Counter, defaultdict
 
 from .components import SAME
-from .names import strict_member
+from .names import strict_member, parse_name
 
 
 def count_labels(edges):
@@ -15,9 +15,11 @@ def coverage(rows, edges, geography, groups, review, winners):
         by_seat[row['electorateId']].append(row['candidateOccurrenceId'])
     frame = []
     for geo in geography:
-        ids = set(by_seat[geo['targetElectorateId']]) | set(by_seat[geo['dominantPredecessorId']])
+        source_ids = [p['sourceElectorateId'] for p in geo['predecessors']]
+        ids = set(by_seat[geo['targetElectorateId']]) | {cid for sid in source_ids for cid in by_seat[sid]}
         frame.append({'geographyId': geo['geographyId'], 'scope': geo['scope'],
                       'certifiedTwoSidedExact': geo['certifiedTwoSidedExact'],
+                      'sourceElectorateIds': source_ids, 'targetElectorateId': geo['targetElectorateId'],
                       'candidateOccurrenceIds': sorted(ids),
                       'contestStatus': geo['contestStatus'],
                       'reason': None if geo['certifiedTwoSidedExact'] else 'nonexact_geography_no_primary_transport'})
@@ -49,7 +51,8 @@ def coverage(rows, edges, geography, groups, review, winners):
         if edge['primaryExactHeld']:
             for role, cid in (('source',source),('target',target)):
                 outcomes[transition,edge['scope'],role,str(winners.get(cid))].append(edge)
-    return {'universeOccurrences':len(rows), 'frame':frame, 'byTransitionScope':strata,
+    occurrence_outcomes = outcome_occurrence_coverage(rows, edges, geography, winners)
+    return {'byExactFrameOccurrenceOutcome': occurrence_outcomes, 'universeOccurrences':len(rows), 'frame':frame, 'byTransitionScope':strata,
             'overallLabels':count_labels(edges),
             'broadAcceptedEdges':sum(e['label'] in SAME for e in edges),
             'strictAcceptedEdges':sum(strict_member(e) for e in edges),
@@ -81,6 +84,7 @@ def readiness(edges, occurrences, tenure):
         records.append({'edgeId':edge['edgeId'],'transition':f'{edge["sourceYear"]}-{edge["targetYear"]}',
                         'scope':edge['scope'],'broadSamePerson':linked,'strictSamePerson':strict_member(edge),
                         'persistenceEvidenceReady':linked and residuals,
+                        'strictPersistenceEvidenceReady':strict_member(edge) and residuals,
                         'persistenceReason': 'available_for_separate_retrospective_research' if linked and residuals else
                             'missing_residual' if linked else 'relationship_not_accepted',
                         'existingTenureReview': {'artifact':'data/processed/models/freshman-incumbency/inventory.json',
@@ -95,7 +99,7 @@ def readiness(edges, occurrences, tenure):
         selected=[r for r in records if (r['transition'],r['scope'])==(transition,scope)]
         groups.append({'transition':transition,'scope':scope,'pairQuestions':len(selected),
                        **{field:sum(r[field] for r in selected) for field in
-                          ('broadSamePerson','strictSamePerson','persistenceEvidenceReady','freshmanExistingEvidenceReady','replacementDistinctEvidenceReady')}})
+                          ('broadSamePerson','strictSamePerson','persistenceEvidenceReady','strictPersistenceEvidenceReady','freshmanExistingEvidenceReady','replacementDistinctEvidenceReady')}})
     return {'records':records,'byTransitionScope':groups,
             'notModelAuthorization':True,'operationalSelections':'unchanged_null_or_unresolved',
             'nextTask':'registered_identity_free_exact_geography_retests; linkage_exceptions_do_not_block'}
@@ -104,12 +108,43 @@ def readiness(edges, occurrences, tenure):
 def table(edges):
     lines=['# Stage26 proposed relationship review table',
            '', 'Automated rule assessment; not independent documentary validation. Manual exceptions are in review.json.',
-           '', '| Edge IDs | Source → target names | Affiliation | Label / flags | Reason / competitors | Primary exact held |',
-           '|---|---|---|---|---|---|']
+           '', 'Timing: historical occurrence years are fact years; all adjudication is retrospective and publication by the historical cutoff is unknown. Exact documentary dates/passages are retained in documentary-claims.json; raw/source hashes are in input-contract.json.',
+           '', '| Edge IDs | Source → target names | Parsed tokens | Affiliation | Ballot groups / context | Label / flags | Reason / competitors | Primary exact held |',
+           '|---|---|---|---|---|---|---|---|']
     def cell(value):
         return str(value).replace('|','\\|').replace('\n',' ')
     for e in edges:
         lines.append('| '+' | '.join(cell(v) for v in (e['edgeId'],e['sourceOriginalName']+' → '+e['targetOriginalName'],
-            e['sourceOriginalAffiliation']+' → '+e['targetOriginalAffiliation'],e['label']+' / '+','.join(e['ruleFlags']),
+            str(parse_name(e['sourceOriginalName']))+' → '+str(parse_name(e['targetOriginalName'])),
+            e['sourceOriginalAffiliation']+' → '+e['targetOriginalAffiliation'],
+            str(e['sourcePartyBallotGroup'])+' → '+str(e['targetPartyBallotGroup'])+' / '+e['contextAssessment'],e['label']+' / '+','.join(e['ruleFlags']),
             str(e['ambiguityType'])+' / '+','.join(e['competingOccurrenceIds']),e['primaryExactHeld']))+' |')
     return ('\n'.join(lines)+'\n').encode()
+
+
+def outcome_occurrence_coverage(rows, edges, geography, winners):
+    """Count unique occurrences, including those with no proposed/accepted edge."""
+    by_seat = defaultdict(list)
+    for row in rows:
+        by_seat[row['electorateId']].append(row['candidateOccurrenceId'])
+    buckets = defaultdict(set)
+    linked = defaultdict(set)
+    strict_linked = defaultdict(set)
+    for geo in geography:
+        if not geo['certifiedTwoSidedExact']:
+            continue
+        transition = f"{geo['sourceYear']}-{geo['targetYear']}"
+        for role, seat in (('source', geo['dominantPredecessorId']), ('target', geo['targetElectorateId'])):
+            for cid in by_seat[seat]:
+                buckets[transition, geo['scope'], role, str(winners.get(cid))].add(cid)
+    for edge in edges:
+        if edge['label'] not in SAME or not edge['primaryExactHeld']:
+            continue
+        transition = f"{edge['sourceYear']}-{edge['targetYear']}"
+        for role, cid in (('source', edge['sourceOccurrenceId']), ('target', edge['targetOccurrenceId'])):
+            linked[transition, edge['scope'], role, str(winners.get(cid))].add(cid)
+            if strict_member(edge):
+                strict_linked[transition, edge['scope'], role, str(winners.get(cid))].add(cid)
+    return [{'transition': t, 'scope': s, 'role': r, 'observedWinner': w,
+             'occurrences': len(ids), 'broadLinkedOccurrences': len(linked[t,s,r,w]), 'strictLinkedOccurrences': len(strict_linked[t,s,r,w])}
+            for (t,s,r,w), ids in sorted(buckets.items())]
