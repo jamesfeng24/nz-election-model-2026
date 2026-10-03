@@ -161,3 +161,7 @@ Coefficients are unrestricted; intercepts and errors are in pp. Zero bias reflec
 |nationalparty|2020-2023|beta_one|1.100368|1.000000|1.000000|0.000000|4.693582|6.291893|0.000000|0|
 |nationalparty|2020-2023|constant|-0.903350|0.484972|0.484972|0.000000|3.192746|4.623963|-0.000000|0|
 |nationalparty|2020-2023|asymmetric|-1.030361|0.473714|0.578581|0.104867|3.185026|4.620559|0.000000|0|
+
+### CI serialization correction — same equations and tests
+
+The initial Linux CI passed all517 tests and every phase except exact supplemental-evaluation bytes. The independent six-decimal bias displays serialized signed zero differently across numerical backends (`-0.0`/`0.0`). Canonicalize positive zero after display rounding only. Locally18 serialized fields change; parsed objects remain equal, maximum numeric change is0, and raw parameters, predictions, scores, samples, formal abstentions, gates and1e−8 agreement remain unchanged. A byte-level regression covers both tiny bias signs. No tolerance or comparison is weakened. `portability-contract.json` pins the original result SHA and every serialized-only path. Final23 focused tests pass; final-head CI must pass.

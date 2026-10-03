@@ -8,6 +8,12 @@ from .evaluation import actuals, score_case
 from .numerics import RESTRICTIONS
 
 
+def display_metric(value):
+    """Canonicalize signed zero only in rounded independent-check displays."""
+    rounded=round(value,6)
+    return 0.0 if rounded==0 else rounded
+
+
 def independently_verify(case, actual):
     rows={r['id']:r for r in read('data/processed/models/exact-geography-retests/inventory.json')['responseRecords']}
     predictions=case['predictions']
@@ -39,7 +45,7 @@ def independently_verify(case, actual):
                 and all(abs(metrics[k]-score[k])<=1e-8 for k in metrics))
         if not passed:raise ValueError('Independent response fit/prediction/error disagreement')
         checks.append({'restriction':name,'independentCoefficientsPredictionsAndMetricsWithin1eMinus8':True,
-                       'independentMetricDisplay':{k:round(v,6) for k,v in metrics.items()}})
+                       'independentMetricDisplay':{k:display_metric(v) for k,v in metrics.items()}})
     return checks
 
 

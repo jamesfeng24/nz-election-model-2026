@@ -1,0 +1,28 @@
+{
+  "correction": "canonical_positive_zero_after_six_decimal_display_rounding; raw_models_predictions_metrics_gates_tolerances_unchanged",
+  "maxNumericChange": 0,
+  "numericAndNonNumericValuesEqual": true,
+  "originalCommit": "fbd051732d612109a94517c90159292095c9caf5",
+  "originalSupplementalEvaluationSha256": "192e4ed183db5655ec22d5eb0d491d698648d75c10c52dc4649d1e9960908979",
+  "reason": "Linux_CI_structural_equal_test_passed_but_exact_bytes_failed; signed_zero_of_six_decimal_independent_bias_display_depends_on_BLAS",
+  "serializedOnlyPaths": [
+    "/cases/0/independentChecks/1/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/0/independentChecks/1/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/0/independentChecks/2/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/1/independentChecks/1/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/1/independentChecks/2/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/2/independentChecks/0/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/2/independentChecks/1/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/2/independentChecks/2/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/4/independentChecks/1/independentMetricDisplay/biasPP",
+    "/cases/0/transitionDeletions/4/independentChecks/2/independentMetricDisplay/biasPP",
+    "/cases/1/independentChecks/0/independentMetricDisplay/biasPP",
+    "/cases/1/independentChecks/2/independentMetricDisplay/biasPP",
+    "/cases/1/transitionDeletions/0/independentChecks/0/independentMetricDisplay/biasPP",
+    "/cases/1/transitionDeletions/0/independentChecks/1/independentMetricDisplay/biasPP",
+    "/cases/1/transitionDeletions/1/independentChecks/2/independentMetricDisplay/biasPP",
+    "/cases/1/transitionDeletions/2/independentChecks/0/independentMetricDisplay/biasPP",
+    "/cases/1/transitionDeletions/3/independentChecks/0/independentMetricDisplay/biasPP",
+    "/cases/1/transitionDeletions/4/independentChecks/2/independentMetricDisplay/biasPP"
+  ]
+}

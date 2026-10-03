@@ -1,3 +1,9 @@
+# Stage29 PR36 — numerical-display serialization correction, 2026-10-03
+
+PR36 remains open/unmerged. Initial heads32fee85/fbd0517 passed frontend, all517 Python tests, source checks and all deterministic phases except supplemental evaluation byte reproduction. The correction canonicalizes signed zero only in six-decimal independent-check bias displays.18 local serialized-only fields change; parsed objects equal, numeric change0. Formal output bytes, raw fits/predictions/scores/samples/gates, all1,383 prior artifacts and1e−8 checks stay unchanged. Original supplemental result/hash and affected paths are preserved in `portability-contract.json`; byte-level regression added. No tolerance/test weakened.
+
+Final23 focused tests, independent verification, deterministic supplemental regeneration, full prior-data preservation and whitespace checks pass. **Next:** push this correction, verify final-head frontend/Python/deterministic CI, update PR description and leave PR36 unmerged for review. Stop; no later stage begins automatically.
+
 # Stage29 PR36 — review handoff, 2026-10-03
 
 [PR #36](https://github.com/jamesfeng24/nz-election-model-2026/pull/36) is open and must remain unmerged. Pre-calculationd373e4c, formal construction8b1a11c, post-result amendment327156c, supplemental construction507abb8 and findings32fee85 are pushed. Authorized formal and supplemental analyses, local validation and documentation are complete. Full original formal bytes and all1,383 prior data artifacts are preserved; no gate relaxation, alternative anchor or operational change. Final-head GitHub checks are tracked on PR36; frontend/full Python/deterministic checks must pass before final handoff. No approval-review restriction occurred.

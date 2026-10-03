@@ -246,6 +246,12 @@ class SupplementalDiagnosticTests(TestCase):
                 self.assertAlmostEqual(m['biasPP'],0,places=10)
             self.assertIsNone(self.evaluation['operationalSelection'])
 
+    def test_independent_display_signed_zero_has_one_byte_representation(self):
+        import json
+        from scripts.models.asymmetric_response_test.supplement_evaluation import display_metric
+        self.assertEqual(json.dumps(display_metric(-1e-15)),json.dumps(display_metric(1e-15)))
+        self.assertEqual(display_metric(1.23456789),1.234568)
+
     def test_supplement_cannot_rewrite_formal_result(self):
         from scripts.models.asymmetric_response_test.common import digest
         manifest=read(str((DEST/'supplement-prefit-manifest.json').relative_to(ROOT)))
