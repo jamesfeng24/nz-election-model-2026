@@ -1,3 +1,20 @@
+# Current checkpoint: Stage32 coherent complete-share joint design
+
+The [Stage32 specification and coverage](stage32-joint-candidate-share-design.md) settles four restrictions only: baseline, S, source-only prior normalized residual R, S+R. All standing candidates remain in common complete contests. Primary constructed-input training/evaluation, broad links and expanding chronology; strict/separated/rounding sensitivities are finite, and observed retraining is separate from fixed-fit substitution. S remains preferred development, baseline mandatory, prior residual retained for incremental research, partial-party response separate and parity paused. Earlier screens/null operational selections are unchanged. This checkpoint contains no fits, predictions or scores.
+
+**Exact next after independent review and separate authorization:** implement the frozen four restrictions on the pinned common IDs, reuse the existing numerical family with an explicit R adapter, independently refit ablations and training-only means, save construction before evaluation, and report the frozen paired comparisons/finite sensitivities. Primary2014/2017/2020/2023 and separated2017/2020/2023 are numerically fit-ready;2011 and separated2014 are benchmark-only. No further planning checkpoint or broad biography work is needed for this identity-supported source-only formulation.
+
+The revised finite forecast sequence is:
+
+1. Implement/evaluate the frozen four-model comparison.
+2. Choose one provisional complete-share development model using share accuracy, consistency/complexity and diagnostic coverage.
+3. Consider **at most one** targeted missing-feature fallback only if results expose a consequential weakness; freeze it separately. A no-person-history candidate may already have party-seat S. The generic split fallback interface applies only to explicitly unsupported S, records source pool/information timing/neutral alternatives and conserves intensity mass; no fallback estimate is authorized here.
+4. Build dated national support and **general direct electorate-poll** inputs (including Māori), live candidate slate and target-boundary evidence. Account for poll age/uncertainty/undecideds; preserve dated exceptional-seat rationale, uncertainty and raw versus adjusted archives.
+5. Resolve national reconciliation and coherent joint uncertainty. Propagate shared national error once, distinguish assumed from calibrated uncertainty and model correlated residuals without duplicating upstream variation. Nonlinear mean-input shares differ from simulated expected shares.
+6. Connect complete simulations to MMP and archived forecasts only after the corresponding validation/authorization.
+
+All historical elections are reused development evidence. The objective after the joint comparison is a working complete forecast; no automatic fallback search, response variants, earlier-election ingestion, identity queue, variance effects or acquisition. External implementations are possible later references, not acquired dependencies or authorities now. Prior roadmap entries below are historical handoffs.
+
 # Current checkpoint: Stage31 expanded complete party vectors and frozen input substitution
 
 [Stage31 findings](stage31-expanded-party-input-substitution-results.md) retain source party geography against flat national support on all five exact-seat transitions. Immutable expanded baseline/S fits show S share advantage under constructed inputs in2014/2020/2023 but a2017 reversal. The primary pooled advantage remains0.519pp; I+0.0485pp masks2017+0.2989pp. Winner/margin results differ. S remains preferred complete-share development with baseline mandatory; prior residual information remains retained, sub-one response possible later, parity paused. All operational nulls and frozen gates remain unchanged.

@@ -390,3 +390,16 @@ python -m unittest scripts.tests.test_stage31_construction scripts.tests.test_st
 All phases use preserved inputs and write only the Stage31 companion directory/report when `--check` is omitted. No fit function is invoked. Preconstructiona91cc7d precedes construction6e7a4dd, which precedes evaluation. Required Stage23/24/25/27 source/input and phase-code/output contracts reject tampering; the separate snapshot preserves1,414 earlier files without requiring old Git objects in shallow CI checkouts. Full-national source denominators include all electorates; exact-subset oracle target weights appear only in evaluation. No previous artifact is regenerated.
 
 The Decimal50 frozen Stage24 evaluator reproduces saved observed predictions to1e−12 before substitution. All36 bounded compatibility checks preserve their distinct exact/contextual tolerances. Independent Fraction ratios verify3,826 party cells; direct exponential arithmetic checks29,940 shares,178 metrics and21 I values at1e−8. New error MSE uses equivalent e×e multiplication for scalar serialization; no equation/tolerance/statistical change. Compact sorted JSON and four-decimal readable report are deterministic. The workflow runs these five checks plus the full test/source suite. No Python formatter/linter is configured; compilation and whitespace checks apply.
+
+## Stage32 complete-share joint-design checkpoint
+
+```sh
+python -m scripts.checkpoints.joint_candidate_share.run --check
+python -m scripts.checkpoints.joint_candidate_share.report --check
+python -m unittest scripts.tests.test_stage32_joint_design -v
+python scripts/validate/source_files.py
+```
+
+Omitting `--check` reproduces only Stage32 inventory/folds/coverage/contracts/report. It does not fit or calculate historical predictions/scores. Initial design4e0c013 precedes construction; source-only pre-fit refinements preserve documented Stage26 label continuity, source lookup and the fixed-to-observed training-regime reference. The run never calls the synthetic share helper or any optimizer. All1,427 earlier data bytes, raw inputs, residual normalization, identity adjudications, fold contracts, saved fits and operational selections stay unchanged. Future fitting requires separate authorization and pre-scoring saved construction.
+
+Focused tests cover synthetic nesting/conservation/missingness/rank/extremes, real Stage26 linkage counterfactuals and Stage27→Stage31 adapters, source-only residual joins, complete shared-group slates, canonical chronology, strict/common IDs and supported-training centering. Independent Fraction arithmetic checks earlier means. Required-source contracts are stage-specific, separate from the no-data-change audit; unconsumed registry additions do not invalidate earlier stages. No Python formatter/linter is configured; Python compilation and whitespace checks supplement tests. No unrelated numerical stage is regenerated locally.

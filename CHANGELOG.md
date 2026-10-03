@@ -266,3 +266,9 @@ Added a deterministic 213-contest input-availability inventory, proposed interva
 - Apply immutable expanded Stage27 baseline/S fits across both chronology protocols and three saved rounding scenarios; construction committed before scoring.
 - Report full party-vector/flat and paired four-cell candidate diagnostics, major-party errors, rankings, composition and fixed-fit influence; retain conditional limitations and operational nulls.
 - Add actual-adapter leakage checks, source/phase integrity, deterministic CI and independent arithmetic. No acquisition, fitting, reconciliation repair or joint implementation.
+
+## Stage32 — 2026-10-04
+
+- Freeze exactly baseline/S/prior-residual/S+prior-residual complete-share restrictions, source-only direct broad/strict evidence and neutral missing contributions.
+- Add reproducible complete-slate applicability, canonical common folds, training-only means/rank and full-frame coverage, with no fitting/prediction/scoring.
+- Retain documented renamed-party links, separate Māori evidence and all prior artifacts/nulls. Add synthetic/actual-path independence and preservation tests; record the finite implementation/forecast roadmap.

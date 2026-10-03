@@ -335,3 +335,15 @@ The strict view excludes nickname and middle-name concessions. Neither accepted 
 - `construction-manifest.json`, `evaluation-manifest.json`, `verification-manifest.json`: phase output and generator SHA-256.
 
 `operationalSelection` remains null. That is unresolved deployment selection, not an estimated zero effect. The generated report is `docs/stage31-expanded-party-input-substitution-results.md`; displayed four-decimal values do not alter machine precision.
+
+## Stage32 complete-share joint-design companions
+
+`data/processed/checkpoints/joint-candidate-share-design/` contains design/applicability, not historical model results:
+
+- `specification.json`: exact four restrictions, units/bounds/objective/solver, neutral missing contribution, finite branch matrix and later metrics/stopping.
+- `inventory.json`:245 complete general slates, constructed/observed mapped party support, source S and coherent witnesses, direct broad/strict source residual/value/reference/link IDs and fallback states; full356-seat and2,485-occurrence excluded/coverage ledger. No target residual or candidate actual value. Māori R evidence is audit-only.
+- `fold-plan.json`: exact canonical earlier train/common evaluation contest/candidate IDs; supported-training means, source R occurrence IDs, variation and SVD rank/conditioning by restriction/probe. Fixed-to-observed refers to the constructed primary fit, not a second fit. `historicalFitPerformed=false`.
+- `coverage.json`: fold/category/acceptance-tier coverage, missing-feature patterns and readiness, separate Māori evidence. `fitOrPredictionOrScoringPerformed=false`.
+- `input-contract.json` and `manifest.json`: consumed dependency and new generator/output SHA-256 contracts; `prior-data-contract.json` preserves1,427 earlier Git blobs in shallow checkouts.
+
+S and R are fractions; display residual pp=100×R. Centering uses each supported earlier candidate's1/slate-size weight; missing z=0 after centering. Person identity, residual support, retrospective availability and career completeness are separate. No-null-to-zero-strength conversion, no target outcomes, no confidence weights or operational selection. The synthetic kernel is called by fixtures only, never this historical inventory runner.

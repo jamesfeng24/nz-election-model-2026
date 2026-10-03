@@ -1,0 +1,221 @@
+# Stage32 — coherent baseline/S/prior-residual joint design
+
+**Design/applicability checkpoint only.** PR38 merged asff007d3, containing reviewed7962bbe. The initial design4e0c013 precedes source-only inventory construction. No historical fit, candidate prediction, error score, acquisition, adjudication or operational change is produced. The machine specification and exact samples live in `data/processed/checkpoints/joint-candidate-share-design/`. Ordinary pre-fit implementation refinements below distinguish documented party-label continuity from literal key equality; no outcome was examined to choose eligibility.
+
+## Estimand and one complete-slate family
+
+For every standing candidate c in a held exact-general contest e, predict share of **valid candidate votes**. Party input p is a share of **valid party votes**, with its distinct denominator. No joint ballot-count/turnout claim is needed for this direct share model.
+
+```text
+zS = S − muS if S supported; otherwise 0
+zR = R − muR if R supported; otherwise 0
+log w_c = log(p_group(c) + kappa) + thetaS*zS_c + thetaR*zR_c
+q_c = exp(log w_c − max_j log w_j) / sum_j exp(log w_j − max_j log w_j)
+```
+
+Exactly four independently refitted nested restrictions: baseline κ; κ+S; κ+R; κ+S+R. Omitted coefficients are zero, not imported from another fit. No global logit intercept is included because it cancels across the slate. Each restriction has its own κ. Bounds κ∈[0.0001,0.1], θS/θR∈[−4,4] retain the Stage22 intensity scale. Both features use fractions, not percent units: S is source same-party split percent/100; R is unchanged Stage7 additive normalizedPremium. No learned variance scaling, clipping, extra political covariate, status, interaction or coefficient sign restriction. θR is a log-intensity adjustment per unit source residual, **not** the Stage30 retention percentage.
+
+S uses Stage27’s exact source_s transformation and printed approximation/coherent row-witness sensitivities. Its source candidate is a party-seat destination; it may differ from the target person. R uses the target person’s uniquely accepted direct linked source occurrence on the exact certified predecessor. Changing one supported candidate’s intensity changes every share through the common denominator. Thus even a neutral missing feature does not imply its final share is unchanged.
+
+## Residual transport and missingness
+
+Use Stage26 broad accepted direct edges as primary and strict documentary/exact-name edges as sensitivity. Source-only R lookup requires an accepted same-person relation, consistent occurrence years/IDs, exact same-seat membership and a held source occurrence with finite additive Stage7 residual. It does **not** require target residuals, target references, victory, profile availability or complete careers. Stage30’s scored pair subset is never the admission frame.
+
+Honor Stage26’s documented party continuity, including13 supported links with changed canonical labels; do not require literal party-key equality. Accepted independent/no-party context also remains legitimate identity evidence, although the current Stage7 residual is unavailable for those candidates. A genuine party-change context outside the frozen accepted continuity and any seat-change/nonexact lead receives neutral fallback. No new continuity or identity is inferred. Direct conflicting/multiple links are unresolved; provisional person groups cannot interpolate missing edges. Nonmatch/different names are not replacement evidence, and no outgoing party-category residual transfers to an incoming person.
+
+Record source occurrence, source reference ID, label/rule flags, source IDs, historical election fact years, retrospective adjudication and unknown publication timing separately. The unchanged source-election whole-contest leave-one-out reference includes its original party/election matched universe, with general/Māori references as Stage7 defined; it is never rebuilt on this linked subset. Target residual/reference information stays outside predictor construction. Confidence and incomplete career history do not become arbitrary weights.
+
+μF = sum_supported_training(c)(F_c/n_e) / sum_supported_training(c)(1/n_e), independently for S and R. If no supported earlier value exists, μ is null and that coefficient is unidentified. Missing values receive z=0 **after** centering, not raw0−μ. This explicitly neutral contribution is a fallback assumption, not evidence that unknown incoming strength is zero. Means are frozen from permitted earlier records for each linkage/rounding view; target feature distributions do not fit them.
+
+## Complete frame and coverage
+
+All356 target seats and2485 target candidature occurrences are retained in candidateCoverageFrame.245 held exact-general complete slates contain1,742 candidates.35 Māori seats and75 nonexact general seats are coverage-only; cancelled Port Waikato’s candidature remains excluded even though its party ballot exists. Māori source-only R evidence is audited separately (broad30/strict27), without applying the general complete-share contract.
+
+| Target | Complete contests/candidates | S | Broad R | Strict R | Both / S only / R only / neither (broad) |
+| --- | --- | --- | --- | --- | --- |
+| 2011 | 63/423 | 280 | 120 | 112 | 120/160/0/143 |
+| 2014 | 20/143 | 99 | 47 | 42 | 47/52/0/44 |
+| 2017 | 64/431 | 285 | 116 | 104 | 116/169/0/146 |
+| 2020 | 34/286 | 159 | 61 | 50 | 61/98/0/127 |
+| 2023 | 64/459 | 271 | 108 | 78 | 108/163/0/188 |
+
+R coverage is452 broad/386 strict among1,742 general candidates; S coverage is1,094. The present R-supported candidates all also have S, so R-only count is zero. That is current data availability, not a rule forcing R to require S. The synthetic R-only case remains defined. Missing-S candidates, unsupported/new categories, affirmative no-group candidates and ambiguous links retain complete-slate membership. Fallback reasons and every unresolved/distinct proposal ID remain visible. Coverage is selected exact-geography research, not a representative national identity sample.
+
+| Year | Ballot group/category | Candidates | S | Broad R | Strict R |
+| --- | --- | --- | --- | --- | --- |
+| 2011 | actnewzealand | 50 | 47 | 10 | 10 |
+| 2011 | affirmative_no_party_group | 26 | 0 | 0 | 0 |
+| 2011 | alliance | 5 | 4 | 2 | 1 |
+| 2011 | aotearoalegalisecannabisparty | 15 | 4 | 3 | 3 |
+| 2011 | conservativeparty | 52 | 0 | 0 | 0 |
+| 2011 | democratsforsocialcredit | 14 | 10 | 8 | 8 |
+| 2011 | greenparty | 56 | 51 | 10 | 9 |
+| 2011 | labourparty | 63 | 63 | 26 | 26 |
+| 2011 | libertarianz | 9 | 6 | 5 | 3 |
+| 2011 | mana | 14 | 0 | 0 | 0 |
+| 2011 | maoriparty | 4 | 0 | 0 | 0 |
+| 2011 | nationalparty | 63 | 63 | 46 | 44 |
+| 2011 | newzealandfirstparty | 32 | 14 | 5 | 4 |
+| 2011 | unitedfuture | 20 | 18 | 5 | 4 |
+| 2014 | actnewzealand | 12 | 12 | 7 | 6 |
+| 2014 | affirmative_no_party_group | 9 | 0 | 0 | 0 |
+| 2014 | aotearoalegalisecannabisparty | 3 | 2 | 2 | 2 |
+| 2014 | ban1080 | 3 | 0 | 0 | 0 |
+| 2014 | conservative | 20 | 16 | 6 | 6 |
+| 2014 | democratsforsocialcredit | 11 | 6 | 3 | 3 |
+| 2014 | focusnewzealand | 2 | 0 | 0 | 0 |
+| 2014 | greenparty | 18 | 17 | 7 | 6 |
+| 2014 | internetmana | 8 | 0 | 0 | 0 |
+| 2014 | labourparty | 20 | 20 | 8 | 7 |
+| 2014 | maoriparty | 5 | 0 | 0 | 0 |
+| 2014 | nationalparty | 20 | 20 | 9 | 8 |
+| 2014 | newzealandfirstparty | 8 | 4 | 4 | 3 |
+| 2014 | nzindependentcoalition | 1 | 0 | 0 | 0 |
+| 2014 | unitedfuture | 3 | 2 | 1 | 1 |
+| 2017 | actnewzealand | 41 | 27 | 13 | 12 |
+| 2017 | affirmative_no_party_group | 45 | 0 | 0 | 0 |
+| 2017 | aotearoalegalisecannabisparty | 4 | 3 | 1 | 0 |
+| 2017 | ban1080 | 3 | 3 | 1 | 1 |
+| 2017 | conservative | 27 | 27 | 7 | 7 |
+| 2017 | democratsforsocialcredit | 13 | 9 | 7 | 6 |
+| 2017 | greenparty | 61 | 51 | 10 | 9 |
+| 2017 | labourparty | 64 | 64 | 22 | 22 |
+| 2017 | mana | 1 | 0 | 0 | 0 |
+| 2017 | maoriparty | 18 | 5 | 1 | 1 |
+| 2017 | nationalparty | 64 | 64 | 43 | 37 |
+| 2017 | newzealandfirstparty | 57 | 30 | 11 | 9 |
+| 2017 | nzoutdoorsparty | 4 | 0 | 0 | 0 |
+| 2017 | theopportunitiespartytop | 21 | 0 | 0 | 0 |
+| 2017 | unitedfuture | 8 | 2 | 0 | 0 |
+| 2020 | actnewzealand | 30 | 21 | 9 | 9 |
+| 2020 | advancenz | 22 | 0 | 0 | 0 |
+| 2020 | affirmative_no_party_group | 31 | 0 | 0 | 0 |
+| 2020 | aotearoalegalisecannabisparty | 4 | 2 | 0 | 0 |
+| 2020 | greenparty | 30 | 29 | 5 | 3 |
+| 2020 | labourparty | 34 | 34 | 19 | 17 |
+| 2020 | nationalparty | 34 | 34 | 19 | 14 |
+| 2020 | newconservative | 34 | 15 | 2 | 1 |
+| 2020 | newzealandfirstparty | 14 | 14 | 5 | 5 |
+| 2020 | nzoutdoorsparty | 9 | 1 | 1 | 0 |
+| 2020 | oneparty | 12 | 0 | 0 | 0 |
+| 2020 | socialcredit | 7 | 2 | 1 | 1 |
+| 2020 | sustainablenewzealandparty | 7 | 0 | 0 | 0 |
+| 2020 | teaparty | 4 | 0 | 0 | 0 |
+| 2020 | theopportunitiespartytop | 12 | 7 | 0 | 0 |
+| 2020 | visionnewzealand | 2 | 0 | 0 | 0 |
+| 2023 | actnewzealand | 58 | 51 | 11 | 10 |
+| 2023 | affirmative_no_party_group | 50 | 0 | 0 | 0 |
+| 2023 | animaljusticeparty | 16 | 0 | 0 | 0 |
+| 2023 | aotearoalegalisecannabisparty | 12 | 5 | 4 | 3 |
+| 2023 | democracynz | 12 | 0 | 0 | 0 |
+| 2023 | freedomsnz | 26 | 0 | 0 | 0 |
+| 2023 | greenparty | 49 | 47 | 13 | 9 |
+| 2023 | labourparty | 64 | 64 | 35 | 23 |
+| 2023 | leightonbakerparty | 3 | 0 | 0 | 0 |
+| 2023 | nationalparty | 64 | 64 | 30 | 22 |
+| 2023 | newconservatives | 10 | 10 | 3 | 2 |
+| 2023 | newnationparty | 3 | 0 | 0 | 0 |
+| 2023 | newzeal | 4 | 2 | 1 | 1 |
+| 2023 | newzealandfirstparty | 33 | 18 | 8 | 5 |
+| 2023 | newzealandloyal | 32 | 0 | 0 | 0 |
+| 2023 | tepatimaori | 10 | 0 | 0 | 0 |
+| 2023 | theopportunitiespartytop | 13 | 10 | 3 | 3 |
+
+All supported general R claims are accepted algorithmic links under the preserved Stage26 rules; no unmeasured precision rate or documentary promotion. Historical publication by a forecast cutoff remains unknown. The14 source-residual fallbacks and unaccepted hypotheses are retained; name/profile availability never chooses candidates. Person identity does not identify uniquely personal strength: stable seat conditions, tactical voting, shared references and candidate choice remain in R.
+
+## Party inputs and coherent mapping
+
+Primary uses Stage31’s saved complete constructed vectors for **both training and evaluation**, conditional on observed target national support. The complete party roster includes categories without a standing candidate. Do not normalize it over candidates first. Candidate affiliation is distinct from the election-local ballot group; one supported shared group with a single local destination supplies its support once. Multiple destinations/missing or ambiguous group mapping abstain the whole contest for all four restrictions. Affirmative no-group candidates get p=0 and positive κ mass; failed matching does not establish p=0. New parties retain the frozen Stage23 neutral entrant affinity and no new feature unless supported; absent destinations follow the existing direct-share baseline assumption.
+
+No outgoing personal premium is assigned to replacements. Unknown history remains missing and represented by the neutral exponent assumption. Complete intensity closure redistributes support from parties without a standing candidate under the reviewed baseline; it does not establish individual split transitions. No target candidate totals or winner flags construct inputs. National reconciliation is not imposed; target national results and retrospective slates prevent an as-of forecast claim.
+
+## Chronology, exact IDs and readiness
+
+Use Stage25 canonical fold IDs and certified two-sided exact general geography. Primary completed training targets may equal the holdout source year, but precede its target year; separated sensitivity requires training target strictly earlier than the source year. Overlapping elections are permitted information reuse and statistical dependence. Publication by a historical nomination-close cutoff is not verified merely by year ordering.
+
+| Target | Primary train/eval contests | Separated train/eval | Primary training S/R | Eval S/R contrast contests | Four-model numerical readiness |
+| --- | --- | --- | --- | --- | --- |
+| 2011 | 0/63 | 0/63 | 0/0 | None/None | no earlier fit; benchmarks only |
+| 2014 | 63/20 | 0/20 | 280/120 | 20/19 | yes; fitting not performed |
+| 2017 | 83/64 | 63/64 | 379/167 | 64/58 | yes; fitting not performed |
+| 2020 | 147/34 | 83/34 | 664/283 | 34/32 | yes; fitting not performed |
+| 2023 | 181/64 | 147/64 | 823/344 | 64/59 | yes; fitting not performed |
+
+Primary2014/2017/2020/2023 and separated2017/2020/2023 are numerically fit-ready. Primary training transition environments1/2/3/4 are warnings, not automatic evidence vetoes.2011 and separated2014 have no earlier training. The floor/S/R within-slate design has full rank3 at all three κ probes for every trained branch; maximum scaled condition ratio is2.320539. This is outcome-free local identifiability, not a likelihood optimum or accuracy finding. Check rank again at any eventual fitted κ. No minimum held-out support threshold removes difficult evaluation slates.
+
+The fold manifest records exact training/evaluation contest and occurrence IDs, source residual IDs, preprocessing means, supported-feature counts, variation and rank probes. All four use identical complete slates; strict sensitivity changes available R/means, not the evaluation population. If a method is unidentified, report its abstention and the identical common evaluated sample for each paired comparison; never trim by feature availability or use a pseudoinverse. No2011 or separated2014 full-panel substitute. Uniform benchmark remains available, and restricted zero-floor only on its documented no-independent positive-support subset.
+
+## Finite comparison matrix
+
+| Branch | Party inputs | Links | Chronology | S rounding | Fit rule |
+| --- | --- | --- | --- | --- | --- |
+| primary | constructed | broad | expanding_window | printed | independent earlier fit per restriction |
+| strict | constructed | strict | expanding_window | printed | refit same four on identical complete slates; no linked-only trimming |
+| separated | constructed | broad | more_separated | printed | refit same four on permitted earlier IDs |
+| rounded_lower | constructed | broad | expanding_window | selected_lower | refit same four and means on same IDs |
+| rounded_upper | constructed | broad | expanding_window | selected_upper | refit same four and means on same IDs |
+| observed_retrained | observed | broad | expanding_window | printed | separate earlier observed-input fits per restriction; diagnostic |
+| primary_fixed_to_observed | observed | broad | expanding_window | printed | reuse primary constructed-fit parameters/means/IDs unchanged; no refit; input substitution only |
+
+This is one-factor-at-a-time sensitivity, not their Cartesian product. Baseline/S fits can be reused across linkage or rounding branches only if training IDs, party inputs, selected feature arrays and preprocessing are exactly identical; do not reuse merely because method names match. Observed-input **retraining** estimates separate earlier parameters. The primary_fixed_to_observed branch instead applies the future primary constructed-fit parameters and means unchanged to observed inputs on the same complete slates; its fit audit/reference remains primary constructed, with no extra optimizer. Neither operation occurs in this checkpoint.
+
+## Estimation contract for later authorized implementation
+
+Use unrestricted-in-sign, **unpenalized** mean-contest natural-log cross entropy: L=(1/E) sum_e[−sum_c y_ec log q_ec]. y uses earlier valid-candidate shares; no ballot iid/binomial likelihood or electorate turnout weighting. MAE remains the primary evaluation metric, so fitting and evaluation objectives differ explicitly. At most three coefficients and the existing bounded family permit a small identifiable test without inventing a penalty magnitude or tuning grid. Coefficient uncertainty/limited elections are reported; a later fixed-shrinkage alternative would need separate authorization, not automatic salvage.
+
+For fixed κ, the multinomial-logit loss is convex in included θ; the profiled κ objective need not be globally convex. Reuse Stage22’s numerical Profile/fit functions through an explicit S/R column adapter, preserving old V semantics/files. Do not treat R as V in output metadata. Future fits start from scratch for each restriction; no Stage27 κ or Stage30 α/β imports.
+
+Frozen computation: θ L-BFGS-B analytic gradients; Cartesian starts{−2,0,2}; ftol1e−15, gtol1e−11, maxiter2000/maxls50. Projected gradient ≤1e−7; fixed-start objective spread ≤1e−8. Primary κ SHGO(Sobol n256,iters2,f_tol1e−12), with exact endpoints; independent4097-point inclusive profile grid and refinement of every interior minimum(xatol1e−14). Objectives agree≤1e−8; κ agrees≤1e−4 unless objective difference≤1e−12. Deterministic objective ties≤1e−12 choose smallest κ then lexicographic θ. Report boundary solutions within1e−7, unrounded parameters, both checks and failure reasons. Check optimizer status/finite losses rather than hide numerical failure as political evidence. Verify gradients by central differences(step1e−6, absolute agreement1e−8) on synthetic fixtures in the fitting stage; no fit is implemented here.
+
+Full within-slate rank is required for included floor/feature columns: subtract each slate’s column means and divide by sqrt(slate size), column-norm scale for SVD; relative tolerance1e−8 and absolute1e−12. Constant/redundant terms abstain, without fabricated unique slopes. Conditioning above1e6 is a warning with mandatory independent agreement, not an automatic evidence gate. Stable log-softmax protects extreme but valid inputs; simplex tolerance1e−12. Do not expand bounds or weaken gates after scores. Pre-scoring fit/prediction checkpoints and separate actuals are required later.
+
+## Later evaluation and stopping
+
+Signed error=100(q−actual), pp. Contest-equal MAE averages candidate absolute errors within each complete slate and then contests. RMSE is sqrt(mean_contests(mean_candidates(error²))), not mean contest RMSE. Candidate-equal sensitivity treats each candidate equally. Pool by eligible contest, not equal election: partial20-seat elections receive20 records. Report every fold, original2011/2017/2023 and added2014/2020, train/eval counts and abstentions. Full-slate signed bias cancels and is only accounting; report bias by party and feature support.
+
+Predeclare S−baseline, R−baseline, S+R−baseline, S+R−S and S+R−R paired MAE/MSE changes on identical IDs. Reduced models are independently refitted ablations, never zeroed combined-fit coefficients. Report magnitude, consistency, worst-fold deterioration and complexity. Label the historical0.25pp convention alongside graded development evidence; it is not a new every-fold gate or winner-count veto. No iid candidate-level significance or untouched-validation claim; reused dependent election environments remain development evidence.
+
+Groups: National, Labour, combined NAT/LAB, other mapped groups, affirmative no-group; both features/S only/R only/neither. Primary subgroup weighting is candidate-equal; present-contest-equal sensitivity names its denominator. Combined groups overlap and do not add up automatically. Group diagnostics never fit subgroup coefficients. Keep unknown career/entrant status unknown; party-category entry may be documented independently. Fixed-fit leave-one-contest-out paired-score ranges and five largest absolute influences retain every primary observation.
+
+Winner ties use1e−12. Report unique accuracy and tied-set inclusion without outcome/ID tie-breaking. Top-two margin diagnostic uses the observed ordered winner and runner-up: predicted share difference versus observed difference; tied observed runner-up pairs are averaged explicitly. Also report the predicted top-two gap separately. All are retrospective diagnostics, not calibrated winner probabilities. Rounded-source lower/upper are coherent all-row witness measurement scenarios, not exhaustive/calibrated uncertainty.
+
+Stop after the four models and frozen branches. Weak or mixed results do not authorize another threshold, feature, penalty, party slope, response form or missing-feature experiment. A future provisional choice weighs share accuracy, election consistency/complexity and the evidence limits; operational adoption remains a separate decision.
+
+## Dependency and overlap contract
+
+| Component | Information | Overlap/guard |
+| --- | --- | --- |
+| Party geography | source local/national party affinity → target national scenario | shared seat/party environment; upstream national uncertainty enters once |
+| S | source local party-row same-party candidate destination | party-seat/tactical routing, may transfer across same-party replacements; not a person premium |
+| R | linked source candidate share minus normalized party expectation | person/seat/tactical/reference mixture; only same-person exact transport; no causal decomposition |
+| Joint S/R | joint log-intensity coefficients/refitted ablations | tests incremental information, including their correlated evidence; no independent bonus stacking |
+| Candidate response | partial NAT/LAB ΔC versus ΔP from prior candidate baseline | may overlap party support movement and R/S source state; needs coherent slate embedding/unknown-history policy, identical inputs and joint fit before comparison |
+| Freshman/replacement/V/parity | distinct historical scoped diagnostics | not a fifth restriction; careers/distinct-person gates and old formal abstentions preserved |
+
+Correlation is not proof of double counting; summing separate fitted components without a common formulation would be unjustified. A residual coefficient here is neither a unique causal personal effect nor direct retention %. Sub-one response remains a possible later representation, not an operational adjustment; parity is documented/paused. All earlier null selections and frozen failed screens remain unchanged.
+
+## Revised finite forecast roadmap and deferred interfaces
+
+1. Separately authorize implementation/evaluation of this frozen four-model contract.
+2. Choose a provisional complete-share development model, distinct from operational adoption.
+3. Consider at most one targeted missing-feature fallback only if results reveal a consequential weakness.
+4. Build dated national-support and direct electorate-poll routes, live slate and target-boundary inputs.
+5. Resolve national reconciliation/minimum weights/denominators and joint uncertainty.
+6. Connect coherent simulations to MMP and archived raw/adjusted forecasts.
+
+A generic split-ticket fallback would supply a source-trained party/group-context S estimate plus evidence timing/uncertainty/applicability flags **only when local S is unsupported**. No-history candidates can already have local party-seat S; never add a second split bonus automatically. No fallback value/parameter is estimated now. Direct electorate polling is a general route, including Māori; later design must handle poll age, uncertain sampling, undecided respondents, incompatible denominators and shared information.
+
+Future simulation propagates shared national error once, separates local residual dependence from that upstream variation, and conserves candidate shares. Nonlinear transformations mean E[q(inputs)] need not equal q(E[inputs]); distinguish expected shares from plug-in mean scenarios. Exceptional seats need dated evidence/rationale/uncertainty and archived raw versus adjusted output. External polling/forecast implementations may be inspected later as references, not acquired dependencies or authority now.
+
+Earlier-election ingestion, broad biography/linkage exception searches, V, tenure/replacement expansion and new mean-effect searches remain deferred. The objective after the joint comparison is a working complete forecast, not an open-ended historical salvage cycle. None of these roadmap implementations is authorized by this design checkpoint.
+
+## Reproduction and validation
+
+```sh
+python -m scripts.checkpoints.joint_candidate_share.run --check
+python -m scripts.checkpoints.joint_candidate_share.report --check
+python -m unittest scripts.tests.test_stage32_joint_design -v
+python scripts/validate/source_files.py
+```
+
+The run builds source-only inventory, exact common folds, means/rank diagnostics and coverage; it never calls the synthetic share helper, a fit or a score. Required record/raw and consumed input contracts accept unrelated registry additions but reject changed/deleted evidence. All1,427 earlier tracked data artifacts are preserved; prior geography/fits/linkage/selection bytes are not regenerated. Synthetic fixtures establish arithmetic/design feasibility only. Actual Stage27→Stage31 adapters mutate held-out candidate outcomes/winners without changing this inventory; target residual deletion and preprocessing counterfactuals independently verify source-only roles. Final focused/full tests and final-head CI are recorded in PROJECT_STATE.md/PR.

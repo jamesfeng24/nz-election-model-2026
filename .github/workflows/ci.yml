@@ -56,3 +56,5 @@ jobs:
       - run: python3 -m scripts.models.expanded_party_substitution.evaluation --check
       - run: python3 -m scripts.models.expanded_party_substitution.verification --check
       - run: python3 -m scripts.models.expanded_party_substitution.report --check
+      - run: python3 -m scripts.checkpoints.joint_candidate_share.run --check
+      - run: python3 -m scripts.checkpoints.joint_candidate_share.report --check
