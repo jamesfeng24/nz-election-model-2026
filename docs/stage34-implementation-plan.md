@@ -1,0 +1,3 @@
+# Stage34 implementation plan
+
+Use a small `scripts/diagnostics/s_r_robustness/` package: category alignment/TV; consumed-input and preservation contract; outcome-independent movement construction; paired summaries/associations/robustness; readable report/scatters; independent arithmetic audit. Reuse saved Stage33 scores and full-slate prediction IDs, Stage31 category/vector inventory and official Stage5 party reader. No import or call of fitting/optimization routines. Freeze inventory/contract checkpoint before new diagnostics. Save companions in `data/processed/diagnostics/s-r-robustness/`, retaining every original fold/slate and explicit movement-only exclusions. No framework or historical implementation edits.

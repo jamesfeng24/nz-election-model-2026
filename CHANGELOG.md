@@ -1,3 +1,7 @@
+## Stage34 — bounded post-result diagnostic
+
+Added provenance-pinned whole-party TV/category audit, exact saved-expert common samples, per-election scatters/complete CSV, S/R and joint paired associations, equal-election robustness/baseline-relative controls, strict/chronology/observed-input sensitivities and independent arithmetic tests. No fitting or prior data changes. D066 retains S/S+R actively and recommends separately authorized dated-input readiness before any learned blend.
+
 ## Stage29 — 2026-10-03
 
 - Preserve gate-first asymmetric-response abstentions and all earlier outputs.
