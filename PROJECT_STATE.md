@@ -1,3 +1,9 @@
+# Stage29 — separately authorized descriptive extension, 2026-10-03
+
+Formal gate-first abstentions remain unchanged (20 chronological cases,2 full-panel cases;10 child deletions not attempted). After seeing these failures, the user explicitly authorized a central-anchor-only descriptive supplement. Its [post-result contract](data/processed/models/asymmetric-response-test/descriptive-diagnostic-contract.json) and [explanation](docs/stage29-descriptive-extension.md) are frozen before supplemental response calculation. Same parity estimator/equations/sample, unrestricted slopes, fixed central-anchor transition deletions; numerical rank/condition/agreement required. Formal stability/replication failures stay visible without vetoing this distinct descriptive view. No validation/operational pass or salvage specification.
+
+**Next:** commit this extension, then calculate exact anchor diagnostics, numerically estimable central-anchor descriptive restrictions/deletions and independent checks. Finish tests/source/preservation/final CI and PR. No persistence or later stage begins automatically.
+
 # Stage29 — construction checkpoint, 2026-10-03
 
 Pre-calculation contract `d373e4c` was committed/pushed before historical estimation. Separate chronological/descriptive construction now records every anchor fit and snapshot deletion. All20 chronological cases abstain:14 fewer than four snapshots,4 extrapolated crossing,2 no observed premium sign bracket. Both six-snapshot full-panel anchors fail extrapolation stability. Labour full crossing43.691% fails deletion of2020 (38.346% above retained36.891% maximum); National full47.696% exceeds observed47.314% maximum and several deletions also extrapolate. No response fit/prediction was admitted, and all ten transition-deletion children explicitly remain not attempted because parent identification fails. No substituted anchor, rule relaxation or alternative search.
