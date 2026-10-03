@@ -1,3 +1,13 @@
+# Current checkpoint: Stage31 expanded complete party vectors and frozen input substitution
+
+[Stage31 findings](stage31-expanded-party-input-substitution-results.md) retain source party geography against flat national support on all five exact-seat transitions. Immutable expanded baseline/S fits show S share advantage under constructed inputs in2014/2020/2023 but a2017 reversal. The primary pooled advantage remains0.519pp; I+0.0485pp masks2017+0.2989pp. Winner/margin results differ. S remains preferred complete-share development with baseline mandatory; prior residual information remains retained, sub-one response possible later, parity paused. All operational nulls and frozen gates remain unchanged.
+
+**Exact next, requiring separate authorization after independent review:** one bounded **pre-fit joint/regularized complete-share design**. Freeze baseline; S; supported prior normalized residual; S plus prior residual, with explicit all-standing-candidate/entrant/unknown-history fallbacks, coherent slate-wide embedding, joint coefficient estimation/refitted ablations, broad/strict linkage and observed/constructed-input interfaces. Include at most one response contribution only if a substantive coherent representation is justified before scores. Do not stack saved coefficients, search subsets, reopen identities or declare joint success. The current stage implements none of this.
+
+Then separately authorized dated-input replay, national reconciliation/minimum weights/denominators and parsimonious joint uncertainty/probability evaluation. Actual target national support and retrospective slates are conditional diagnostic inputs, not as-of forecasts. Propagate upstream national error once; failed mean effects do not establish variance effects. Earlier-election acquisition, broad identity searches, full split matrix, V, tenure/replacement expansion and response variants stay deferred. No reconciliation repair, party-transform choice, ensemble weights or forecast production follows automatically.
+
+## Previous Stage30 handoff (historical)
+
 # Current checkpoint: Stage30 expanded normalized-residual persistence
 
 [Stage30 findings](stage30-expanded-persistence-results.md) distinguish useful prior information from benefits of fitting its retention. Carry-forward beats zero in all five general development holdouts; fitted regression does not consistently beat carry. Retain prior residual for a later bounded incremental joint test, preserving Stage8's formal null and all other operational nulls. S remains preferred complete-share development, baseline mandatory; parity response is paused. No imported coefficients or false zero-effect conclusion.
