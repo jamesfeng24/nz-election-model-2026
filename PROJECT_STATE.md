@@ -1,3 +1,9 @@
+# Stage32 — design contract checkpoint, 2026-10-04
+
+Verified PR38 merged asff007d3ab59b6ce31bc873410c24259b5735c24e, containing reviewed7962bbe744b61150a9792a2da5e6dc492be35f93. Clean main safely synchronized; branch `stage/32-joint-candidate-share-design`. [Plan](docs/stage32-implementation-plan.md) and `data/processed/checkpoints/joint-candidate-share-design/specification.json` freeze exactly baseline/S/R/S+R, complete slates, source-only additive residual, neutral missing feature, earlier-only centering, existing unpenalized equal-contest CE and bounded profile solver. Primary constructed-input training/evaluation; sensitivities one factor at a time, observed retraining distinct from fixed-fit substitution. No historical calculation of coefficients/predictions/scores.
+
+**Next within authorized Stage32:** build deterministic source-only candidate/link/geography applicability and exact fold/common manifests, training-only means/rank coverage (no fitting), focused synthetic/actual-path independence tests, source/preservation/deterministic checks, finite design documentation/roadmap and unmerged PR. Do not acquire, adjudicate, fit, score, select operational effects or begin implementation of the future experiment.
+
 # Stage31 PR38 — review handoff, 2026-10-03
 
 [PR #38](https://github.com/jamesfeng24/nz-election-model-2026/pull/38) is open and must remain unmerged. Preconstruction `a91cc7d`, construction `6e7a4dd` and findings `b096e6e` were committed/pushed in order. All authorized construction/evaluation, local validation, independent arithmetic, preservation and documentation are complete. Final-head GitHub Python/frontend/source/deterministic checks are tracked on PR38 and must pass before the final response; their status is not presumed. Local branch matches pushed findings head and is clean before this handoff commit. No approval-review restriction occurred.
