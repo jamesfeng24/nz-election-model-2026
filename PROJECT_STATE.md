@@ -1,3 +1,11 @@
+# Stage31 PR38 — review handoff, 2026-10-03
+
+[PR #38](https://github.com/jamesfeng24/nz-election-model-2026/pull/38) is open and must remain unmerged. Preconstruction `a91cc7d`, construction `6e7a4dd` and findings `b096e6e` were committed/pushed in order. All authorized construction/evaluation, local validation, independent arithmetic, preservation and documentation are complete. Final-head GitHub Python/frontend/source/deterministic checks are tracked on PR38 and must pass before the final response; their status is not presumed. Local branch matches pushed findings head and is clean before this handoff commit. No approval-review restriction occurred.
+
+**Conclusion:**246 complete party vectors,245 held slates;182/162 primary/separated four-cell fitted contests. Source geography beats flat national in all five party folds. S preserves constructed-input share advantage except2017, with pooled advantage0.519pp and I+0.0485pp; rankings differ. Retain the bounded development signal without changing a historical screen or operational null. All1,414 prior data artifacts, required sources, saved coefficients/means and adjudications remain unchanged.
+
+**Stop here:** independent review of PR38. Next separately authorized decision is the finite coherent joint/regularized complete-share pre-fit contract, not automatic fitting: baseline/S/prior/S+prior; explicit all-candidate/missing-history fallbacks, broad/strict linkage and jointly estimated coefficients/refitted ablations. A response term requires a justified representation. No acquisition, new variants, national calibration, dated replay, integration or forecast production now.
+
 # Stage31 — completed local findings and validation, 2026-10-03
 
 **Branch:** `stage/31-expanded-party-input-substitution`, from verified PR37 mergeaa330f859/reviewed30b0e186. Preconstruction `a91cc7d` and construction `6e7a4dd` were committed/pushed before new calculations and scoring respectively. [Complete findings](docs/stage31-expanded-party-input-substitution-results.md), D062/D063 and `data/processed/models/expanded-party-substitution/` now record all authorized work. No refitting, new sources, identity change, party-transform choice, reconciliation, joint model or forecast.
