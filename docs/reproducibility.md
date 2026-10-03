@@ -375,3 +375,18 @@ python -m unittest scripts.tests.test_stage30_numerics scripts.tests.test_stage3
 The inventory/contract was committed before estimation (`d30f646`) and construction before scoring (`ba81f4e`). Ordinary generation omits `--check`; it writes only the new Stage30 directory/report. Do not rerun prior stages to expand their historical cohorts. Source checks protect required metadata/raw bytes without whole-registry coupling; the no-data-change preservation check additionally compares all1,402 prior data files against verified merge5c754823. Independent covariance verifies156 OLS solutions, direct arithmetic17,922 predictions/1,224 metrics/252 paired gains. All scales are pp residuals, because log-odds/proportional affect expected candidate-share normalization rather than the residual transform.
 
 The two numerical solvers must agree within1e−8; full rank is checked before solving, no pseudoinverse rank rescue. Center/RMS scaling solves the same intercept/slope equation; no new normalization/tuning. No framework formatter/linter is configured for Python; compilation and whitespace checks supplement tests.
+
+## Stage31 expanded party vectors and fixed-parameter substitution
+
+```sh
+python -m scripts.models.expanded_party_substitution.inventory --check
+python -m scripts.models.expanded_party_substitution.construction --check
+python -m scripts.models.expanded_party_substitution.evaluation --check
+python -m scripts.models.expanded_party_substitution.verification --check
+python -m scripts.models.expanded_party_substitution.report --check
+python -m unittest scripts.tests.test_stage31_construction scripts.tests.test_stage31_evaluation -v
+```
+
+All phases use preserved inputs and write only the Stage31 companion directory/report when `--check` is omitted. No fit function is invoked. Preconstructiona91cc7d precedes construction6e7a4dd, which precedes evaluation. Required Stage23/24/25/27 source/input and phase-code/output contracts reject tampering; the separate snapshot preserves1,414 earlier files without requiring old Git objects in shallow CI checkouts. Full-national source denominators include all electorates; exact-subset oracle target weights appear only in evaluation. No previous artifact is regenerated.
+
+The Decimal50 frozen Stage24 evaluator reproduces saved observed predictions to1e−12 before substitution. All36 bounded compatibility checks preserve their distinct exact/contextual tolerances. Independent Fraction ratios verify3,826 party cells; direct exponential arithmetic checks29,940 shares,178 metrics and21 I values at1e−8. New error MSE uses equivalent e×e multiplication for scalar serialization; no equation/tolerance/statistical change. Compact sorted JSON and four-decimal readable report are deterministic. The workflow runs these five checks plus the full test/source suite. No Python formatter/linter is configured; compilation and whitespace checks apply.

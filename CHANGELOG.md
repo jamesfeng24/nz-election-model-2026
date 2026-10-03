@@ -259,3 +259,10 @@ Added a deterministic 213-contest input-availability inventory, proposed interva
 - Froze broad/strict same-person-link/exact-geography cohorts and earlier-only construction before scoring; verified482/413 pairs with Māori separate.
 - Added unrestricted identifiable regression, zero/carry/mean benchmarks, chronology/normalization sensitivity, strict common-sample comparisons and descriptive transition influence.
 - Independently checked covariance/prediction/error arithmetic; preserved all earlier data and operational nulls. Prior residual beats zero consistently; fitted retention does not consistently beat carry. No acquisition, identity changes or candidate integration.
+
+## Stage31 — 2026-10-03
+
+- Extend the frozen complete party-vector rule to54 added exact general seats, preserving all historical artifacts.
+- Apply immutable expanded Stage27 baseline/S fits across both chronology protocols and three saved rounding scenarios; construction committed before scoring.
+- Report full party-vector/flat and paired four-cell candidate diagnostics, major-party errors, rankings, composition and fixed-fit influence; retain conditional limitations and operational nulls.
+- Add actual-adapter leakage checks, source/phase integrity, deterministic CI and independent arithmetic. No acquisition, fitting, reconciliation repair or joint implementation.
