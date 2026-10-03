@@ -1,3 +1,9 @@
+## Stage28 — asymmetric-response design checkpoint (2026-10-03)
+
+- Record post-result S development preference with baseline mandatory; preserve failed historical screens and operational nulls.
+- Add preserved aggregate-input/fold/provenance inventory and proposed guarded national-parity/asymmetric contract; defer unsupported personal baseline.
+- Add synthetic-only classification, anchor/regime/rank, chronology and preservation tests. No historical estimation/scoring/acquisition.
+
 # Changelog
 
 ## Stage27 — exact-geography conditional retests — 2026-10-03

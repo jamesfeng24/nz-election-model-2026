@@ -1,0 +1,141 @@
+{
+  "amendments": [
+    {
+      "correctedRule": "more_separated_learned_anchor_snapshots_strictly_before_source; primary_unchanged",
+      "originalRule": "both_protocols_anchor_snapshots_through_source; response_only_more_separated",
+      "reason": "align_all_learned_anchor_preprocessing_with_the_registered_more_separated_information_window",
+      "timing": "pre_fit_dependency_audit_after_initial_plan_46b48d3; no_anchor_or_response_estimation"
+    }
+  ],
+  "anchor": {
+    "aggregateCandidate": "C_G_q,t = sum_G(candidate_votes_q,t)/sum_G(valid_candidate_votes_t)",
+    "aggregateParty": "P_G_q,t = sum_G(party_votes_q,t)/sum_G(valid_party_votes_t)",
+    "availability": "retrospective_observed_controls; publication_by_historical_cutoff_not_verified; target_national_support_supplied_conditionally",
+    "chronology": "expanding_window: snapshot_year<=holdout_source_and<target; more_separated: snapshot_year<holdout_source; learned_anchor_preprocessing_obeys_the_protocol",
+    "deferredAlternative": "A_candidate_seat_baseline; no_independent_supported_B_exists; identity_does_not_establish_strength",
+    "futureEquation": "g_q,t = a_q + b_q*(N_q,t-mean_training_N_q) + error; A_q=mean_training_N_q-a_q/b_q",
+    "gates": {
+      "centeredDesignRank": 2,
+      "crossing": "full_and_each_leave_one_election_out_estimate_in_closed_training_N_range_and_[0,1]; observed_training_g_contains_both_signs; otherwise_abstain",
+      "maximumColumnScaledCondition": 1000000,
+      "minimumAbsoluteSlope": null,
+      "minimumCompletedElectionSnapshots": 4,
+      "stability": "all_full_and_leave_one_election_out_slopes_nonzero_same_sign; no_ratio_if_slope_zero; finite_crossings_required",
+      "zeroSlopeTolerance": "1e-12_computational_only; not_a_substantive_identification_threshold"
+    },
+    "labels": "fold_frozen_anchor_and_stability_set_applied_to_all_permitted_training_rows_and_holdout; not_historical_rolling_anchors",
+    "meaning": "national_valid_party_share_at_which_expected_general_held_candidate_minus_party_aggregate_share_is_zero; not_a_person_or_seat_strength",
+    "nationalSupport": "N_q,t = official_national_party_votes_q,t / official_national_valid_party_votes_t; general_plus_Maori_including_valid_specials",
+    "premium": "g_q,t = C_G_q,t-P_G_q,t; distinct_denominators_on_identical_general_contests; NOT_C_G_minus_N",
+    "premiumPopulation": "G_t = all_processed_held_general_contests; require_unique_NAT_and_LAB_candidates_and_party_rows_in_every_G_t_contest; no_selected_exact_subset",
+    "primaryProposal": "B_national_parity_environment",
+    "uncertainty": "full_plus_leave_one_election_out_crossings_as_finite_stability_set; NOT_confidence_interval_or_calibrated_prediction_interval; classification_must_agree_for_every_member",
+    "unsupported": "no_50_percent_anchor; no_full_sample_crossing_constant; no_Stage7_personal_strength_or_Stage26_strength_transport",
+    "weighting": "one_equal_weight_per_completed_party_election; separate_parties; never_one_regime_observation_per_seat"
+  },
+  "classification": {
+    "exactAnchor": "nonzero_movement_is_away_departure; T=0",
+    "nationalLocalDisagreement": "keep_national_regime; flag_opposite_signs; do_not_reclassify_using_local_movement",
+    "overshoot": "initially_toward_remains_T=1_even_if_ending_farther; flag_crossing_separately; never_switch_to_ending_closer",
+    "primary": "initial_direction: T=1 iff (N1-N0)*(A-N0)>0; T=0 iff negative_or_departure_from_exact_anchor",
+    "stabilityDisagreement": "unresolved_anchor_regime; whole_party_fold_abstention_on_identical_samples",
+    "ties": "exact_rational_control_shares; no_outcome_tuned_deadband",
+    "zeroLocalMovement": "keep_if_national_regime_supported; x=0_so_no_slope_information",
+    "zeroNationalMovement": "neutral; exclude_from_common_three_model_sample_even_if_local_party_moves; report_full_frame_abstention"
+  },
+  "deferred": [
+    "earlier_election_feasibility",
+    "full_split_matrix_expansion",
+    "V",
+    "tenure_expansion",
+    "replacement",
+    "Stage26_exception_queue"
+  ],
+  "developmentDecision": {
+    "historicalScreensChanged": false,
+    "mandatoryComparator": "baseline",
+    "operationalSelectionChanged": false,
+    "preferredCompleteShareDevelopmentCandidate": "S_only",
+    "requirementsBeforeDeployment": [
+      "constructed_party_input_testing",
+      "dated_input_replay",
+      "joint_probability_validation"
+    ],
+    "timing": "user_post_Stage27_result_preference_for_candidate_share_MAE",
+    "winnerAndMarginReporting": "retain"
+  },
+  "futureModels": {
+    "asymmetric": {
+      "columns": [
+        "intercept",
+        "x",
+        "xT"
+      ],
+      "fixedBeta": null
+    },
+    "beta1": {
+      "columns": [
+        "intercept"
+      ],
+      "fixedBeta": 1
+    },
+    "constantBeta": {
+      "columns": [
+        "intercept",
+        "x"
+      ],
+      "fixedBeta": null
+    }
+  },
+  "futureResponse": {
+    "chronology": [
+      "expanding_window_primary",
+      "more_separated_sensitivity"
+    ],
+    "developmentScreen": "report_MAE_gain_vs_each_control; >=0.25pp_pooled_vs_constant_beta_and_positive_in_every_identifiable_fold; no_>=0.25pp_RMSE_deterioration; at_least_two_identifiable_fitted_holdouts_needed_for_consistency_claim; full_coverage_report; no_operational_permission",
+    "equation": "C1_hat=C0+alpha+betaAway*x+delta*x*T; x=P1-P0; C uses valid_candidate_denominator; P uses valid_party_denominator",
+    "futureNumerics": "separate_party_OLS_with_registered_Stage16_rational_elimination; explicit_scaled_design_SVD_gate; independent_numpy_least_squares_agreement_1e-8_for_parameters_and_predictions; no_penalty_or_tuning_search",
+    "gates": {
+      "allThreeComparisonSamplePolicy": "if_asymmetric_or_anchor_gate_fails_no_fitted_three_model_comparison; parameter_free_reference_only_if_explicitly_reported_outside_comparison",
+      "asymmetricDesignRank": 3,
+      "maximumColumnScaledCondition": 1000000,
+      "minimumDistinctTransitionEnvironmentsPerRegime": 2,
+      "minimumNonzeroLocalMovementRowsPerRegime": 5,
+      "minimumRowsPerFreeCoefficient": 5
+    },
+    "inputSet": "observed_target_local_and_national_party_support_plus_source_results_and_retrospective_candidature; no_as_of_forecast",
+    "intercept": "one_common_party_intercept_refitted_independently_in_each_restriction_on_identical_training_IDs; captures_nonmovement_average_change; core_slope_hypothesis_is_conditional_on_this_nuisance",
+    "mechanism": "ordering_without_predictive_gain_is_insufficient; gain_without_ordering_does_not_confirm_asymmetric_hypothesis; no_causal_claim",
+    "metrics": [
+      "equal_record_MAE_pp",
+      "equal_record_RMSE_pp_sqrt_after_mean_squared_error",
+      "signed_bias_pp",
+      "fold_counts_coverage_abstentions",
+      "slope_ordering",
+      "out_of_range",
+      "all_observation_leave_one_contest_out_score_influence"
+    ],
+    "predictionPolicy": "raw_linear_unclipped; record_outside_[0,1]; no_independent_normalization_or_two_party_complete_ballot_claim; no_winner_probabilities",
+    "sample": "Stage25_nat_lab_response_two_sided_exact_general_IDs; no_identity_or_status_gate; all_three_models_same_anchor_classified_training_and_evaluation_IDs",
+    "stopping": "failed_anchor_regime_rank_or_numerical_gate_abstains; no_anchor_search_threshold_relaxation_source_victory_interaction_or_new_status_term",
+    "weighting": "equal_party_seat_records_within_separate_party; pooled_equal_records_not_equal_folds; anchor_equal_elections"
+  },
+  "hypothesis": {
+    "betaToward": "betaAway+delta",
+    "coreEquation": "deltaC = betaAway*deltaP + delta*deltaP*T",
+    "fitConstraints": "none_on_slopes; never_constrain_the_hypothesis_to_be_true",
+    "ordering": "0 < betaAway < 1 < betaToward"
+  },
+  "nextSequence": [
+    "this_checkpoint_review",
+    "separately_authorized_gate_first_asymmetric_test_if_definition_adopted",
+    "expanded_normalized_residual_persistence_broad_primary_strict_sensitivity",
+    "expanded_Stage23_party_vectors_and_fixed_parameter_baseline_S_substitution",
+    "one_small_prespecified_joint_comparison_fit_coefficients_jointly",
+    "dated_replay_reconciliation_joint_uncertainty"
+  ],
+  "preservation": "all_prior_outputs_and_null_selections_immutable; save_design_companions",
+  "scope": "preserved_input_design_and_synthetic_checks_only",
+  "stage": 28,
+  "status": "proposed_before_any_stage28_historical_estimation; awaiting_review_and_separate_fit_authorization"
+}

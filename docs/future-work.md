@@ -1,3 +1,22 @@
+# Current checkpoint: Stage28 asymmetric-response definition and baseline feasibility
+
+The user makes a transparent **post-result** preference for S-only complete-share development, with baseline mandatory. Stage27's frozen all-fold screen still fails; saved scores, winner/margin diagnostics, thresholds and operational nulls remain unchanged. Constructed-input testing and eventual joint probability validation are required. See [Stage28 design](stage28-asymmetric-response-design.md) and its machine specification.
+
+**Exact next decision:** independent review of this design. If the party-level national-parity interpretation and conservative anchor/regime gates are adopted, separately authorize one gate-first frozen asymmetric test on the existing exact panel. Only2023 primary could pass the count gates; actual anchor/stability/regime/rank identification is untested and may prevent every fit. No claim of two-fold consistency is feasible. A personal/seat-baseline interpretation instead requires a specific independent B and replacement policy; no preserved validated B exists. Do not manufacture an anchor or expand the sample automatically.
+
+Finite proposed sequence, with each implementation separately authorized:
+
+1. Complete/review this asymmetric-response definition and feasibility checkpoint.
+2. Frozen asymmetric test only if definition/evidence gates are defensible.
+3. Expanded normalized-residual persistence using Stage26 broad primary and strict sensitivity.
+4. Expanded Stage23 party vectors plus baseline/S input substitution, holding each saved model's parameters fixed within substitution.
+5. One small prespecified joint-model comparison with compatible components and jointly estimated coefficients. Individual failure is not an automatic veto; separately fitted coefficients must not be added.
+6. Dated-input replay, national reconciliation and parsimonious joint uncertainty/probability validation.
+
+Earlier-election feasibility, full split-matrix expansion, V, tenure expansion and replacement work are deferred without a defined decision benefit. Do not reopen Stage26's exception queue. Conditional observed-local/national inputs remain distinct from dated forecasts; few reused election environments and geographically selected samples constrain every claim. Propagate upstream national error once; failed mean effects do not establish variance effects.
+
+## Previous Stage27 checkpoint (superseded next-action recommendation)
+
 # Current checkpoint: Stage27 exact-geography conditional retests
 
 The [Stage27 findings](stage27-exact-geography-results.md) implement the registered identity-free response and baseline/S comparisons on Stage25 exact geography under both chronology protocols. Candidate evaluations63/20/64/34/64 and response126/40/128/68/128 reconcile. S improves share MAE directionally in every fitted fold but fails the all-fold screen and worsens2023 winner accuracy; source-victory gains remain immaterial/mixed. Keep baseline/S as conditional research comparators and all operational selections null/unresolved. No automatic response variant, new covariate or integration.
