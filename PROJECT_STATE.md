@@ -1,3 +1,9 @@
+# Stage31 — construction checkpoint, 2026-10-03
+
+Preconstruction `a91cc7d` was committed/pushed before any new calculation. Constructed246 complete exact-general party vectors, reproducing all192 matching Stage23 general vectors before the54 new2014/2020 cases. Candidate A/B reproduce saved Stage27 shares before C/D;21 fitted fold/scenario four-cell cases and9 explicit no-fit cases remain separate. All36 bounded Stage24/original-training compatibility checks pass; no expanded-fit equality is assumed. No fitting function was called, and saved parameters/means/source scenarios are unchanged. Ten focused construction tests and deterministic reconstruction pass.
+
+**Next:** commit/push construction before evaluation; then party-vector versus flat-national and same-ID four-cell candidate/group/composition/influence diagnostics, independent arithmetic and actual-adapter mutation tests, full checks/preservation/CI, final findings and unmerged PR. No candidate refit, reconciliation, joint model, acquisition or operational change.
+
 # Stage31 — preconstruction checkpoint, 2026-10-03
 
 Verified PR37 merged ataa330f859c6a75ae500209e45edbb0af4e745bbf, containing reviewed30b0e186; clean main synchronized and `stage/31-expanded-party-input-substitution` created. [Plan](docs/stage31-implementation-plan.md), D062 and new frozen specification/input inventory/contracts in `data/processed/models/expanded-party-substitution/` precede any new vector, candidate prediction or score.
