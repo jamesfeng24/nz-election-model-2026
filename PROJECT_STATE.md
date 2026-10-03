@@ -1,3 +1,11 @@
+# Stage29 PR36 — review handoff, 2026-10-03
+
+[PR #36](https://github.com/jamesfeng24/nz-election-model-2026/pull/36) is open and must remain unmerged. Pre-calculationd373e4c, formal construction8b1a11c, post-result amendment327156c, supplemental construction507abb8 and findings32fee85 are pushed. Authorized formal and supplemental analyses, local validation and documentation are complete. Full original formal bytes and all1,383 prior data artifacts are preserved; no gate relaxation, alternative anchor or operational change. Final-head GitHub checks are tracked on PR36; frontend/full Python/deterministic checks must pass before final handoff. No approval-review restriction occurred.
+
+**Conclusion:** formal chronological/full-panel setups all abstain. The central-anchor supplement identifies in-sample associations, not forecasting improvement: toward slopes remain below1, National classifications change in2/5 environments across snapshot roots, and Labour delta reverses on deletion of2020→2023. All response-deletion restrictions use identical retained rows/fixed central anchor; evidence-gate failures remain visible. See [complete tables and reproducibility](docs/stage29-asymmetric-response-results.md).
+
+**Stop here:** independently review PR36. Next separately authorized modelling task is expanded normalized-residual persistence using Stage26 broad/strict links. No automatic persistence, acquisition, linkage exception repair, response variant, integration or forecast. S remains preferred for complete-share development with baseline mandatory; every operational null remains unchanged.
+
 # Stage29 — completed local handoff, 2026-10-03
 
 **Branch:** `stage/29-asymmetric-response-test`, from verified Stage28 merge44fab0a / reviewedacafef0. Pre-calculationd373e4c, formal construction8b1a11c, post-result descriptive amendment327156c and supplemental construction507abb8 were pushed in order. See [findings](docs/stage29-asymmetric-response-results.md), D059 and `data/processed/models/asymmetric-response-test/`. All authorized historical/diagnostic work is complete. No source acquisition, alternative anchor, identity queue, persistence fit or operational change.
