@@ -1,3 +1,7 @@
+## Stage34 — preserved-input diagnostic companions
+
+No new resources acquired or sources/adjudications changed. `data/processed/diagnostics/s-r-robustness/` pins consumed Stage33 fits/predictions/scores, Stage32 features, Stage31 whole-group vectors/category relationships, Stage25 exact geography and official national/local valid-party tables through inherited stage-specific integrity contracts. Renames use documented panel aliases; alliances stay indivisible. Structural source/target category absence is distinct from missing evidence. A separate1,447-file Git-blob snapshot verifies historical preservation, not whole-registry scientific coupling. Candidate actuals use valid-candidate totals only in error diagnostics; target local party actuals enter the explanatory movement/error sensitivity only. Historical publication by a cutoff remains unverified.
+
 ## Stage33 — frozen joint comparison provenance
 
 No new source, registration or adjudication. `data/processed/models/joint-candidate-share/input-contract.json` pins Stage32's immutable inventory/specification/folds/means and six official election outcomes, with inherited required-source/raw contracts. Earlier outcomes fit only permitted later folds; held-out outcomes enter the separate evaluation phase. Exact-array signatures include training IDs, selected feature columns/means, candidate IDs, party inputs and outcomes, so cache reuse cannot conceal changed training evidence. Source-only joins do not require target residuals.

@@ -1,3 +1,9 @@
+## Stage34 subsequent development decision and finite next action
+
+[Post-result diagnostics](stage34-s-r-error-pattern-results.md), D066: keep S and S+R active alternatives, R-only meaningful challenger, baseline mandatory. Stage33's provisional S default and all frozen screens/nulls remain historical and unchanged. Movement/error association and joint lower election dispersion do not authorize adaptive weights. Recommend next **separately authorized bounded dated-input readiness/replay** with national support/direct electorate polls, live slates and target boundaries. Retain raw versus adjusted inputs and explicit dates, uncertainty/undecideds/denominators, including Māori applicability.
+
+A blend is deferred rather than forbidden. If later justified, freeze fixed-blend control, one slate-wide weight, separate national/local adaptation hypotheses and earlier out-of-time meta-training; four reused environments and2014 as first fitted expert severely limit learned-weight validation. Weighting uncertainty exceeds national-support uncertainty alone. No automatic blend or fallback. Reconciliation and shared uncertainty (upstream national error once), coherent candidate simulations/MMP and archives follow under their own authorization; no source/feature/bound search or expert rerun starts here.
+
 # Current checkpoint: Stage33 frozen four-model comparison
 
 [Stage33 findings](stage33-joint-candidate-share-results.md) retain useful R information versus baseline in every primary fitted fold, but only tiny/mixed joint incremental MAE gain over S, with separated chronology and fixed-fit influence reversals. Recommend S provisionally for complete-share development; baseline mandatory, R-only a useful research challenger, joint archived as mixed evidence. Bound contacts and conditional/reused-data limitations stay explicit. No operational selection or historical-screen rewrite.

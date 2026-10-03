@@ -62,3 +62,8 @@ jobs:
       - run: python3 -m scripts.models.joint_candidate_share.evaluation --check
       - run: python3 -m scripts.models.joint_candidate_share.verification --check
       - run: python3 -m scripts.models.joint_candidate_share.report --check
+      - run: python3 -m scripts.diagnostics.s_r_robustness.inventory --check
+      - run: python3 -m scripts.diagnostics.s_r_robustness.movement --check
+      - run: python3 -m scripts.diagnostics.s_r_robustness.analysis --check
+      - run: python3 -m scripts.diagnostics.s_r_robustness.verification --check
+      - run: python3 -m scripts.diagnostics.s_r_robustness.report --check

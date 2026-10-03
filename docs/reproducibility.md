@@ -417,3 +417,16 @@ python -m unittest scripts.tests.test_stage33_numerics scripts.tests.test_stage3
 Pre-fit0142d2f pins all inputs; constructionab3cf82 precedes any scoring. Check mode validates the exact-array saved-fit signatures, objective/gradient/actual fitted-point rank and phase hashes before reproducing predictions. It never imports a saved coefficient under a different training/preprocessing contract or re-estimates the fixed-to-observed branch. Ordinary construction resumes only matching stage-specific fits. Explicit `--refit` recomputes this stage's56 jobs; use BLAS one thread and at most three independent workers, not repeated unrelated historical regeneration. Optimizer failures remain failures unless the identical start/options succeeds under the documented same-objective precision evaluator; no tolerance change.
 
 Evaluation reads target actuals only after construction verification. Positive gains mean control minus model. Independent verification recalculates36,360 shares,432 metrics,135 paired gains and eight representative primary optima. Its joint-SLSQP checks use four frozen initial κ values and zero θ; iterates are numerically platform-dependent witnesses, so check mode re-enforces the objective gates/direct arithmetic and preserves saved witnesses rather than changing forecasts. Synthetic fixtures are separate from historical outputs. All1,434 earlier data files remain byte-identical; stage-specific required-source/raw contracts remain intact. No Python formatter/linter is configured; compilation and whitespace supplement tests.
+
+## Stage34 — saved-expert movement and robustness, without fitting
+
+```sh
+python -m scripts.diagnostics.s_r_robustness.inventory --check
+python -m scripts.diagnostics.s_r_robustness.movement --check
+python -m scripts.diagnostics.s_r_robustness.analysis --check
+python -m scripts.diagnostics.s_r_robustness.verification --check
+python -m scripts.diagnostics.s_r_robustness.report --check
+python -m unittest scripts.tests.test_stage34_diagnostics -v
+```
+
+Omit `--check` only to regenerate these companion diagnostics in that order; none invokes optimization or expert prediction. Initial contract/category/sample inventory208ea60 preceded all new associations. Checks pin consumed artifacts/raw-byte contracts and1,447 earlier tracked data bytes independently of unrelated registry additions. The verifier independently checks rational distances/raw denominators, saved-share error arithmetic, baseline-relative robustness and centered associations through an alternate per-environment covariance formula. CSV/figures/report derive from saved diagnostics; synthetic fixtures remain outside historical outputs. All Stage33 fits/predictions/operational nulls remain unchanged.
