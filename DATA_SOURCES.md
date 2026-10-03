@@ -1,3 +1,9 @@
+## Stage29 — preserved parity/response companions
+
+No source acquisition, registry change or identity adjudication. Stage29 pins the Stage28 six-election aggregate definitions/660 consumed source records and raw checksums, Stage25 canonical geography/folds, Stage27 outcome-separated response records, six processed elections and established numerical guards. The separate boundary snapshot verifies all1,383 prior tracked data files, including raw, identity, geography and numerical artifacts. Unrelated source registrations remain accepted by historical required-record contracts; changed/deleted/duplicate dependencies and changed raw bytes fail.
+
+Pre-calculation samples and later post-result descriptive extension have separate frozen manifests. Chronological construction excludes target candidate outcomes; full-panel anchor/response uses all historical aggregates explicitly descriptively. Fact date, retrieval and unverified publication by historical cutoffs retain Stage28’s meanings. See [Stage29 findings and reproduction](docs/stage29-asymmetric-response-results.md).
+
 ## Stage28 — preserved asymmetric-response feasibility inputs
 
 No acquisition, registration or identity promotion. Stage28's separate input inventory pins canonical Stage25 geography/folds, Stage27 permitted response IDs, six official election tables and original methodological/identity contracts.660 required source records and raw checksums are filtered from the preserved snapshot; unrelated registry additions are accepted, altered/deleted/ambiguous dependencies and altered raw bytes fail. The independent stage-boundary snapshot verifies all1,377 prior tracked data files without coupling historical source dependencies to the whole registry.

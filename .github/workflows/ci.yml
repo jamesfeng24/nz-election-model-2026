@@ -41,3 +41,8 @@ jobs:
       - run: python3 -m scripts.models.exact_geography_retests.evaluation --check
       - run: python3 -m scripts.validate.stage27_independent --check
       - run: python3 -m scripts.checkpoints.stage28_design --check
+      - run: python3 -m scripts.models.asymmetric_response_test.construction --check
+      - run: python3 -m scripts.models.asymmetric_response_test.evaluation --check
+      - run: python3 -m scripts.models.asymmetric_response_test.verification --check
+      - run: python3 -m scripts.models.asymmetric_response_test.descriptive_diagnostic --check
+      - run: python3 -m scripts.models.asymmetric_response_test.supplement_evaluation --check
