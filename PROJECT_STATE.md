@@ -1,3 +1,9 @@
+# Stage35 — revised national polling foundation, pre-acquisition checkpoint
+
+Verified Stage34 reviewed ef651185 and merge9dedccd in merged main; clean checkout and branch `stage/35-national-polling-foundation`. No earlier Stage35 work/resources found. [Source plan](docs/stage35-source-plan.md) freezes60-resource ceiling, bulk/source order and transparent metadata preflight. No polling fitting/scoring or candidate replay.
+
+**Next authorized:** checkpoint bounded raw resources, inspect actual requested implementations and lineage, normalize polls with availability/denominator/category limitations, freeze one model/benchmark/evaluation and test data/cutoff infrastructure. Final unmerged PR. Sequence supersedes earlier replay: polling foundation/design → national implementation/backtest → candidate replay → reconciliation/shared uncertainty/MMP. All old decisions/screens/selections remain unchanged.
+
 # Stage34 PR41 — completed diagnostic review handoff, 2026-10-04
 
 [PR #41](https://github.com/jamesfeng24/nz-election-model-2026/pull/41) is open and must remain unmerged. Branch `stage/34-s-r-error-diagnostics`; verified PR40 ancestry304de1fb/reviewed7fae468. Pre-analysis208ea60 and completed diagnostics3c04a99 pushed in order. All authorized analysis is complete; no next-stage task started. [Results](docs/stage34-s-r-error-pattern-results.md) and D066 retain S/S+R active, R meaningful challenger/baseline mandatory while leaving Stage33's historical default and operational nulls unchanged.
