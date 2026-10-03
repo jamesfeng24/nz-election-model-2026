@@ -40,3 +40,4 @@ jobs:
       - run: python3 -m scripts.models.exact_geography_retests.construction --check
       - run: python3 -m scripts.models.exact_geography_retests.evaluation --check
       - run: python3 -m scripts.validate.stage27_independent --check
+      - run: python3 -m scripts.checkpoints.stage28_design --check

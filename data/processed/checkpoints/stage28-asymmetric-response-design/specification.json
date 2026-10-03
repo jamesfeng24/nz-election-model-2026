@@ -1,9 +1,17 @@
 {
+  "amendments": [
+    {
+      "correctedRule": "more_separated_learned_anchor_snapshots_strictly_before_source; primary_unchanged",
+      "originalRule": "both_protocols_anchor_snapshots_through_source; response_only_more_separated",
+      "reason": "align_all_learned_anchor_preprocessing_with_the_registered_more_separated_information_window",
+      "timing": "pre_fit_dependency_audit_after_initial_plan_46b48d3; no_anchor_or_response_estimation"
+    }
+  ],
   "anchor": {
     "aggregateCandidate": "C_G_q,t = sum_G(candidate_votes_q,t)/sum_G(valid_candidate_votes_t)",
     "aggregateParty": "P_G_q,t = sum_G(party_votes_q,t)/sum_G(valid_party_votes_t)",
     "availability": "retrospective_observed_controls; publication_by_historical_cutoff_not_verified; target_national_support_supplied_conditionally",
-    "chronology": "anchor_snapshots_year<=holdout_source_year_and<holdout_target_year_for_both_protocols; response_transition_training_differs_by_protocol",
+    "chronology": "expanding_window: snapshot_year<=holdout_source_and<target; more_separated: snapshot_year<holdout_source; learned_anchor_preprocessing_obeys_the_protocol",
     "deferredAlternative": "A_candidate_seat_baseline; no_independent_supported_B_exists; identity_does_not_establish_strength",
     "futureEquation": "g_q,t = a_q + b_q*(N_q,t-mean_training_N_q) + error; A_q=mean_training_N_q-a_q/b_q",
     "gates": {
