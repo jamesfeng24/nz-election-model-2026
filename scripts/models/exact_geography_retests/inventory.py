@@ -4,7 +4,7 @@ from collections import Counter
 from scripts.checkpoints import stage25_availability as available
 from scripts.checkpoints.stage22_fit import SCENARIOS
 from . import adapters as a
-from .common import (GEO, INPUTS, OLD_RESPONSE, cli, digest, read,
+from .common import (DEST, ROOT, GEO, INPUTS, OLD_RESPONSE, cli, digest, read,
                      preservation_snapshot, save_outputs, verify_preservation)
 
 
@@ -56,7 +56,8 @@ def outputs():
                         'sSupportedCandidates': sum(c['s0Reported'] is not None for r in rows for c in r['candidates']),
                         'sFallbackCandidates': sum(c['s0Reported'] is None for r in rows for c in r['candidates']),
                         'responseRecords': sum(r['targetYear'] == year for r in data['responseRecords'])})
-    snapshot = preservation_snapshot()
+    snapshot_path = ROOT / DEST / 'prior-data-contract.json'
+    snapshot = read(DEST + 'prior-data-contract.json') if snapshot_path.exists() else preservation_snapshot()
     verify_preservation(snapshot)
     return {'input-contract.json': inputs, 'inventory.json': data,
             'folds.json': {'folds': folds, 'preFitGates': gates},

@@ -1,5 +1,12 @@
 # Changelog
 
+## Stage27 — exact-geography conditional retests — 2026-10-03
+
+- Freeze Stage25-based samples, both chronology protocols and only registered NAT/LAB / baseline-S formulations before numerical work; commit predictions before evaluation.
+- Add 20/34 exact 2014/2020 general seats, preserve explicit earliest/separated abstentions and reproduce original Stage16/22 results.
+- Report share/ranking, response/status, rounding/influence and original-versus-expanded training diagnostics; all-fold screens fail and operational selections remain unchanged.
+- Reuse Stage24 Decimal serialization transparently (2.22e−16 maximum share change), add full-adapter tests/independent arithmetic/CI checks and preserve all prior data/evidence artifacts.
+
 ## Stage25 post-checkpoint amendment — 2026-10-03
 
 - Register expanding-window primary and inherited more-separated sensitivity with exact earlier ID selectors and training-only preprocessing contracts.

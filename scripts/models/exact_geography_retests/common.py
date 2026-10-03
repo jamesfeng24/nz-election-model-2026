@@ -39,6 +39,12 @@ def encode(doc):
                        allow_nan=False) + '\n').encode()
 
 
+def encode_output(name, doc):
+    if name == 'results.json':
+        return (json.dumps(doc, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False) + '\n').encode()
+    return encode(doc)
+
+
 def digest(path):
     return sha256((ROOT / path).read_bytes()).hexdigest()
 
@@ -56,6 +62,25 @@ def verify_inputs():
         if digest(path) != expected:
             raise ValueError(f'Changed required input {path}')
     availability.verify_contract(read(GEO + 'source-contract.json'))
+    portability_path = ROOT / DEST / 'portability-contract.json'
+    if portability_path.exists():
+        for path, expected in read(DEST + 'portability-contract.json')['inputSha256'].items():
+            if digest(path) != expected:
+                raise ValueError(f'Changed portability dependency {path}')
+    manifest_path = ROOT / DEST / 'prefit-manifest.json'
+    if manifest_path.exists():
+        for path, expected in read(DEST + 'prefit-manifest.json')['inputSha256'].items():
+            if digest(path) != expected:
+                raise ValueError(f'Changed frozen pre-fit record {path}')
+
+
+
+def verify_outputs(manifest_path):
+    manifest = read(manifest_path)
+    directory = str(Path(manifest_path).parent) + '/'
+    for name, expected in manifest['outputSha256'].items():
+        if digest(directory + name) != expected:
+            raise ValueError(f'Changed constructed output {name}')
 
 
 def preservation_snapshot():
@@ -83,7 +108,7 @@ def save_outputs(outputs, check):
     (ROOT / DEST).mkdir(parents=True, exist_ok=True)
     for name, doc in outputs.items():
         path = ROOT / DEST / name
-        raw = encode(doc)
+        raw = encode_output(name, doc)
         if check:
             if path.read_bytes() != raw:
                 raise ValueError(f'Non-deterministic Stage27 {name}')
@@ -98,6 +123,8 @@ def cli():
 
 
 def phase_manifest(inputs, outputs):
-    return {'inputSha256': {p: digest(p) for p in inputs},
-            'outputSha256': {name: sha256(encode(doc)).hexdigest()
+    return {'generatorSha256': {str(p.relative_to(ROOT)): digest(str(p.relative_to(ROOT)))
+                                for p in sorted((ROOT / 'scripts/models/exact_geography_retests').glob('*.py'))},
+            'inputSha256': {p: digest(p) for p in inputs},
+            'outputSha256': {name: sha256(encode_output(name, doc)).hexdigest()
                              for name, doc in outputs.items()}}

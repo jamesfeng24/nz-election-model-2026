@@ -1,0 +1,2813 @@
+{
+  "allPassed": true,
+  "checks": [
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 63
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline_plus_S",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 63
+    },
+    {
+      "foldId": "complete_share_baseline_s:2011-2014:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.99872,
+      "method": "baseline",
+      "rmsePP": 4.900813,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2011-2014:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.978298,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.936319,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2014-2017:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.432577,
+      "method": "baseline",
+      "rmsePP": 4.708653,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2014-2017:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.219791,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.234796,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 127
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline_plus_S",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 127
+    },
+    {
+      "foldId": "complete_share_baseline_s:2017-2020:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 3.299328,
+      "method": "baseline",
+      "rmsePP": 5.787595,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2017-2020:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.240457,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.004823,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2020-2023:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 3.173359,
+      "method": "baseline",
+      "rmsePP": 5.356999,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2020-2023:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.302843,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.749794,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2014-2017:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.432577,
+      "method": "baseline",
+      "rmsePP": 4.708653,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2014-2017:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.219791,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.234796,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2017-2020:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 3.260805,
+      "method": "baseline",
+      "rmsePP": 5.758663,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2017-2020:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.080431,
+      "method": "baseline_plus_S",
+      "rmsePP": 3.809082,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2020-2023:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 3.173359,
+      "method": "baseline",
+      "rmsePP": 5.356999,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2020-2023:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.302843,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.749794,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2011-2014:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.99872,
+      "method": "baseline",
+      "rmsePP": 4.900813,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2011-2014:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.978298,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.936319,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 83
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline_plus_S",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 83
+    },
+    {
+      "foldId": "complete_share_baseline_s:2014-2017:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.432959,
+      "method": "baseline",
+      "rmsePP": 4.708619,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2014-2017:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.1822,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.207081,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 147
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline_plus_S",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 147
+    },
+    {
+      "foldId": "complete_share_baseline_s:2017-2020:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 3.293177,
+      "method": "baseline",
+      "rmsePP": 5.783249,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2017-2020:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.257454,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.050829,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 181
+    },
+    {
+      "kappaWithinFrozenTolerance": true,
+      "kind": "independent_direct_joint_fit",
+      "method": "baseline_plus_S",
+      "objectiveWithinFrozenTolerance": true,
+      "trainingContests": 181
+    },
+    {
+      "foldId": "complete_share_baseline_s:2020-2023:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 3.16158,
+      "method": "baseline",
+      "rmsePP": 5.342818,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2020-2023:two_sided_exact:expanding_window",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.355031,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.839883,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2014-2017:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.432577,
+      "method": "baseline",
+      "rmsePP": 4.708653,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2014-2017:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.219791,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.234796,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2017-2020:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 3.261339,
+      "method": "baseline",
+      "rmsePP": 5.759184,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2017-2020:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.143539,
+      "method": "baseline_plus_S",
+      "rmsePP": 3.923466,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2020-2023:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 3.168936,
+      "method": "baseline",
+      "rmsePP": 5.352204,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "complete_share_baseline_s:2020-2023:two_sided_exact:more_separated",
+      "kind": "candidate_arithmetic",
+      "maePP": 2.289202,
+      "method": "baseline_plus_S",
+      "rmsePP": 4.73081,
+      "shareArithmeticWithin1e12": true,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.563508,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 7.148296,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.663102,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 9.052734,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.565418,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.58356,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.712651,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 4.875771,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.813906,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 3.722032,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.131084,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 3.832051,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.594624,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 4.438482,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.815446,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 3.724186,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.341407,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 5.109915,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.84799,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 4.792109,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.740146,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 4.547159,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.376433,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 5.40565,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.705865,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 3.564678,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.343263,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.136915,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.126254,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 4.074037,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.053552,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 3.848772,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.630443,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.510683,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.75338,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 3.52713,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.053144,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 3.848504,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.580149,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.484264,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.798792,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 3.559429,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.254754,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 4.081381,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.92354,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 5.890124,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 7.873313,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 9.363296,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 8.743977,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 9.979731,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.915149,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 5.881123,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 13.988813,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 14.87848,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 7.766094,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 9.290073,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 5.153842,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 6.276191,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 14.071023,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 15.026293,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.023146,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 4.813325,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.591347,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.203599,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.477829,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 5.654904,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.58226,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.617287,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.955691,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.460909,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.833371,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.006513,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.582013,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 5.616988,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.935864,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.43505,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.858769,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.038742,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.857467,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.742885,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.227995,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 10.912474,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.636642,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 5.931409,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.30426,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 7.020841,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 8.688196,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 9.402238,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.108708,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 5.358244,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.379257,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 7.201169,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 8.682127,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 9.553234,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.095655,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 5.403218,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.841119,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 7.504905,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.301378,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 10.943986,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.390688,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 10.158042,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.010613,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 3.732786,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.443669,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 10.140774,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.008537,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 10.731804,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.195443,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 3.815738,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.495242,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 10.176481,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.965539,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 10.799332,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.853312,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 3.581513,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 17.143872,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 17.970006,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 7.38832,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 8.350841,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 12.395499,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 13.502099,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 18.888977,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 19.641849,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 8.147179,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 9.070033,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 13.021346,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 14.174554,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 19.486187,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 20.293422,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 7.919249,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 8.898349,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.608921,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 11.882796,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.691088,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 11.694511,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.20238,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.361197,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 5.008858,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 6.386265,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 11.468387,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 12.433851,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.934804,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.062416,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.786809,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 6.155763,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.96661,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 11.955454,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.993561,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.189572,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.43402,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.972955,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.563508,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 7.148296,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 6.663102,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 9.052734,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.565418,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.58356,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.712651,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 4.875771,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 2.813906,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 3.722032,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.131084,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 3.832051,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.343263,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.136915,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.126254,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 4.074037,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.92354,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 5.890124,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.873313,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 9.363296,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 8.743977,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 9.979731,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.915149,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 5.881123,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 13.988813,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 14.87848,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.766094,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 9.290073,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 5.153842,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 6.276191,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 14.071023,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 15.026293,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.023146,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 4.813325,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.591347,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.203599,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.477829,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 5.654904,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.58226,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.617287,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.955691,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.460909,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.833371,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.006513,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.582013,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 5.616988,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.935864,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.43505,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.858769,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.038742,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.857467,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.742885,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.227995,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 10.912474,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.636642,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 5.931409,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.529363,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 6.023945,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.214407,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 10.89884,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.046606,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 10.98464,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.310653,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 5.835087,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.118234,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 11.235705,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.205692,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 11.225336,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.615299,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 8.281311,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.301378,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 10.943986,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 9.390688,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 10.158042,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 2.61937,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 3.438102,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.922369,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 11.530419,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 11.049342,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 11.708491,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 2.619434,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 3.438319,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.929791,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 11.53242,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 11.057482,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 11.704776,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.450707,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 4.318351,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 17.143872,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 17.970006,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.38832,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 8.350841,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 12.395499,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 13.502099,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 18.888977,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 19.641849,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 8.147179,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 9.070033,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 13.021346,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 14.174554,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 19.486187,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 20.293422,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.919249,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 8.898349,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.608921,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 11.882796,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.691088,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 11.694511,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.20238,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.361197,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 5.008858,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 6.386265,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 11.468387,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 12.433851,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.934804,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.062416,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.786809,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 6.155763,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.96661,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 11.955454,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.993561,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.189572,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.43402,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.972955,
+      "trainingVariant": "original_only"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.563508,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 7.148296,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.663102,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 9.052734,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.565418,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.58356,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.712651,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 4.875771,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.813906,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 3.722032,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.131084,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 3.832051,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.594624,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 4.438482,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.815446,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 3.724186,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.341407,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 5.109915,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.84799,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 4.792109,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.740146,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 4.547159,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.376433,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 5.40565,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.705865,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 3.564678,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.343263,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.136915,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.126254,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 4.074037,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.053552,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 3.848772,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.630443,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.510683,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.75338,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 3.52713,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.053144,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 3.848504,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.580149,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.484264,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.798792,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 3.559429,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.254754,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 4.081381,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.92354,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 5.890124,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 7.873313,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 9.363296,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.404426,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 7.94237,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.986486,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 5.956318,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 13.026889,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 13.977915,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.088566,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 7.679013,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 5.114465,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 6.166153,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 13.059473,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 14.045956,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.993961,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 4.787221,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.591347,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.203599,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.477829,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 5.654904,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.459162,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.587335,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.548356,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.173879,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.87194,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.042391,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.400365,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 5.523712,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.461555,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.088295,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.84922,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.008664,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.842514,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.735244,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.227995,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 10.912474,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.636642,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 5.931409,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.302692,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 7.014533,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 8.959267,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 9.662367,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.312757,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 5.601549,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.357169,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 7.142101,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 8.941695,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 9.770393,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.312707,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 5.6405,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 6.816046,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 7.480368,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.301378,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 10.943986,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.390688,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 10.158042,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.06157,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 3.782815,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.248533,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 9.959307,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.207808,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 10.917882,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 3.233447,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 3.843845,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.303661,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 9.999337,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.162292,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 10.985991,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 2.86635,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 3.595403,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 17.143872,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 17.970006,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 7.38832,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 8.350841,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.763445,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 11.110389,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 20.126785,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 20.834976,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 8.330115,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 9.249151,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 9.952276,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 11.329983,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 20.325173,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 21.047416,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 8.180086,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 9.129668,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 7.179607,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 8.815547,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 10.691088,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 11.694511,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.20238,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.361197,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 5.885442,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 7.116617,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 13.275083,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 14.148639,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.806946,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.997595,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 5.656277,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 6.866262,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 12.787144,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 13.717001,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 5.016961,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 7.129216,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:expanding_window",
+      "kind": "response_arithmetic",
+      "maePP": 4.862696,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 6.285603,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.563508,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 7.148296,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 6.663102,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 9.052734,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.565418,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.58356,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2008-2011:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.712651,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 4.875771,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 2.813906,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 3.722032,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.131084,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 3.832051,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.343263,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 4.136915,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2011-2014:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.126254,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 4.074037,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.92354,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 5.890124,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.873313,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 9.363296,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 8.743977,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 9.979731,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.915149,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 5.881123,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 13.988813,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 14.87848,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.766094,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 9.290073,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 5.153842,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 6.276191,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 14.071023,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 15.026293,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.023146,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 4.813325,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.591347,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.203599,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.477829,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 5.654904,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.58226,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.617287,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.955691,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.460909,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.833371,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.006513,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.582013,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 5.616988,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.935864,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 6.43505,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.858769,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.038742,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2014-2017:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.857467,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.742885,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.227995,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 10.912474,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.636642,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 5.931409,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.223777,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 4.679044,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.326734,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 11.011686,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 9.084682,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 10.112343,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.450317,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 4.907727,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.273237,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 11.223932,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 9.171637,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 10.241846,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.493897,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 8.157355,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.301378,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 10.943986,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 9.390688,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 10.158042,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.359699,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 4.088095,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.220454,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 10.867847,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 11.151471,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 11.804919,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.330007,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 4.020152,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.245499,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 10.87773,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 11.142306,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 11.810523,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2017-2020:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.327744,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 4.203902,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 17.143872,
+      "method": "beta0",
+      "party": "labourparty",
+      "rmsePP": 17.970006,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.38832,
+      "method": "beta1",
+      "party": "labourparty",
+      "rmsePP": 8.350841,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 11.998141,
+      "method": "common_intercept",
+      "party": "labourparty",
+      "rmsePP": 13.13813,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 18.581764,
+      "method": "common_intercept_beta0",
+      "party": "labourparty",
+      "rmsePP": 19.346595,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.809191,
+      "method": "common_intercept_beta1",
+      "party": "labourparty",
+      "rmsePP": 8.744698,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 12.451597,
+      "method": "source_victory",
+      "party": "labourparty",
+      "rmsePP": 13.627204,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 19.028596,
+      "method": "source_victory_beta0",
+      "party": "labourparty",
+      "rmsePP": 19.831673,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 7.599117,
+      "method": "source_victory_beta1",
+      "party": "labourparty",
+      "rmsePP": 8.594949,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.55822,
+      "method": "stage6_zero_intercept",
+      "party": "labourparty",
+      "rmsePP": 11.837546,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 10.691088,
+      "method": "beta0",
+      "party": "nationalparty",
+      "rmsePP": 11.694511,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.20238,
+      "method": "beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.361197,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 5.176582,
+      "method": "common_intercept",
+      "party": "nationalparty",
+      "rmsePP": 6.517169,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 11.645229,
+      "method": "common_intercept_beta0",
+      "party": "nationalparty",
+      "rmsePP": 12.604151,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.85385,
+      "method": "common_intercept_beta1",
+      "party": "nationalparty",
+      "rmsePP": 5.976498,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.965461,
+      "method": "source_victory",
+      "party": "nationalparty",
+      "rmsePP": 6.286911,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 11.118892,
+      "method": "source_victory_beta0",
+      "party": "nationalparty",
+      "rmsePP": 12.101719,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 3.909791,
+      "method": "source_victory_beta1",
+      "party": "nationalparty",
+      "rmsePP": 6.097238,
+      "trainingVariant": "expanded"
+    },
+    {
+      "foldId": "nat_lab_response:2020-2023:two_sided_exact:more_separated",
+      "kind": "response_arithmetic",
+      "maePP": 4.415861,
+      "method": "stage6_zero_intercept",
+      "party": "nationalparty",
+      "rmsePP": 5.960608,
+      "trainingVariant": "expanded"
+    }
+  ],
+  "interpretation": "Independent numerical/arithmetic verification, not a new predictive formulation or uncertainty estimate",
+  "stage": 27
+}

@@ -6,6 +6,7 @@ import json
 import numpy as np
 
 from scripts.checkpoints.stage22_construction import contextual_predictions
+from scripts.checkpoints.stage24_construction import portable_predictions
 from scripts.checkpoints.stage22_fit import SCENARIOS, Profile, candidate_arrays, earlier_actuals, fit, predict
 from scripts.models.conditional_nat_lab_response import model as response
 from . import adapters as a
@@ -26,7 +27,7 @@ def candidate_fit(training, elections, scenario, method, cache, reuse=None):
                                'starts': starts.tolist(), 'actual': actual.tolist()})).hexdigest()
     profile = Profile(base, columns, starts, actual, method)
     if signature not in cache:
-        if reuse is not None and signature in reuse:
+        if reuse is not None and signature in reuse and reuse[signature]['status'] == 'fitted':
             fitted = reuse[signature]
             loss, gradient = profile.value_gradient(fitted['kappa'], np.array(fitted['theta']))
             if abs(loss - fitted['objective']) > 1e-12 or np.max(np.abs(gradient), initial=0) > 1e-7:
@@ -61,7 +62,7 @@ def candidate_case(fold, data, elections, training_variant, cache, reuse=None):
                 if not a.rank_gate(test, means, scenario)['passes']:
                     fitted = {'status': 'abstain', 'reason': 'evaluation_coverage_or_rank_gate'}
             fits[method] = fitted
-            predictions[method] = (predict(test, means, scenario, method, fitted)
+            predictions[method] = (portable_predictions(test, means, scenario, method, fitted)
                                    if fitted['status'] == 'fitted' else [])
         output['scenarios'][scenario] = {'trainingOnlyMeans': means, 'fits': fits, 'predictions': predictions}
     return output
@@ -109,7 +110,7 @@ def reproduce_original(candidate_cases, response_cases, data):
                 before, after = old['fits'][method], new['fits'][method]
                 if after['status'] != 'fitted':
                     raise ValueError('Original fit failed reproduction')
-                direct = predict(test, old['trainingOnlyMeans'], scenario, method, before)
+                direct = portable_predictions(test, old['trainingOnlyMeans'], scenario, method, before)
                 saved = old_predictions[year]['scenarios'][scenario][method]
                 direct_by_id = keyed(direct, 'targetElectorateId')
                 saved_by_id = keyed(saved, 'targetElectorateId')
@@ -184,9 +185,10 @@ def main():
             raise ValueError('Changed fit cache')
         reuse = cache_doc
     predictions, cache = build(data, folds, elections, read(DEST + 'input-contract.json')['responseModels'], reuse)
-    result = {'predictions.json': predictions, 'fit-cache.json': cache}
+    result = {'predictions.json': predictions, 'fit-cache.json': cache,
+              'portability-contract.json': read(DEST + 'portability-contract.json')}
     result['construction-manifest.json'] = phase_manifest(
-        [DEST + p for p in ('input-contract.json', 'inventory.json', 'folds.json')], result)
+        [DEST + p for p in ('input-contract.json', 'inventory.json', 'folds.json', 'prefit-manifest.json')], result)
     save_outputs(result, args.check)
     print(json.dumps({'distinctCandidateFits': len(cache), 'originalReproduction': predictions['originalReproduction']['passed']}))
 
