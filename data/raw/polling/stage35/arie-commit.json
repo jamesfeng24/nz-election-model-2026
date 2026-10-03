@@ -1,0 +1,137 @@
+{
+  "sha": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+  "node_id": "C_kwDOUgx4ANoAKGVmNzZjZjY1NjJlMWQwMjhiNGZmZjQ2ZDA2M2Y0YjkzOTQ1Mjk5ZGU",
+  "commit": {
+    "author": {
+      "name": "ariedotcodotnz",
+      "email": "ariedotcodotnz@users.noreply.github.com",
+      "date": "2026-09-29T03:22:12Z"
+    },
+    "committer": {
+      "name": "ariedotcodotnz",
+      "email": "ariedotcodotnz@users.noreply.github.com",
+      "date": "2026-09-29T03:22:12Z"
+    },
+    "message": "Catch misspelt sections and know past parliamentary parties\n\n- A misspelt top-level section in electorates.yml, such as `electroates`,\n  is now an error with a suggestion. Before, it read as an empty list,\n  silently dropping every electorate assumption while the check passed.\n  The electorates and coalitions sections must be present; an explicit\n  empty list is still allowed. Unknown balance_of_power keys are caught\n  too.\n- Parties from past parliaments (in_parliament, a top-level mapping in\n  elections.yml) are now known to the checks, so an untracked party such\n  as United Future or Mana is skipped with a note rather than rejected as\n  a misspelling.",
+    "tree": {
+      "sha": "19819a22ae94b8675c535179b65cf7ca3fa49a8d",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/19819a22ae94b8675c535179b65cf7ca3fa49a8d"
+    },
+    "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/commits/ef76cf6562e1d028b4fff46d063f4b93945299de",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/commits/ef76cf6562e1d028b4fff46d063f4b93945299de",
+  "html_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/commit/ef76cf6562e1d028b4fff46d063f4b93945299de",
+  "comments_url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/commits/ef76cf6562e1d028b4fff46d063f4b93945299de/comments",
+  "author": {
+    "login": "ariedotcodotnz",
+    "id": 78839335,
+    "node_id": "MDQ6VXNlcjc4ODM5MzM1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/78839335?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ariedotcodotnz",
+    "html_url": "https://github.com/ariedotcodotnz",
+    "followers_url": "https://api.github.com/users/ariedotcodotnz/followers",
+    "following_url": "https://api.github.com/users/ariedotcodotnz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ariedotcodotnz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ariedotcodotnz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ariedotcodotnz/subscriptions",
+    "organizations_url": "https://api.github.com/users/ariedotcodotnz/orgs",
+    "repos_url": "https://api.github.com/users/ariedotcodotnz/repos",
+    "events_url": "https://api.github.com/users/ariedotcodotnz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ariedotcodotnz/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ariedotcodotnz",
+    "id": 78839335,
+    "node_id": "MDQ6VXNlcjc4ODM5MzM1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/78839335?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ariedotcodotnz",
+    "html_url": "https://github.com/ariedotcodotnz",
+    "followers_url": "https://api.github.com/users/ariedotcodotnz/followers",
+    "following_url": "https://api.github.com/users/ariedotcodotnz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ariedotcodotnz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ariedotcodotnz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ariedotcodotnz/subscriptions",
+    "organizations_url": "https://api.github.com/users/ariedotcodotnz/orgs",
+    "repos_url": "https://api.github.com/users/ariedotcodotnz/repos",
+    "events_url": "https://api.github.com/users/ariedotcodotnz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ariedotcodotnz/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "c1bd5c562462a6bd38d8d58d79b0971fe796ec0f",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/commits/c1bd5c562462a6bd38d8d58d79b0971fe796ec0f",
+      "html_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/commit/c1bd5c562462a6bd38d8d58d79b0971fe796ec0f"
+    }
+  ],
+  "stats": {
+    "total": 47,
+    "additions": 46,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "75b67309993616f21c4cc4f8065c6bedee82de47",
+      "filename": "docs/electorates.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/blob/ef76cf6562e1d028b4fff46d063f4b93945299de/docs%2Felectorates.md",
+      "raw_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/raw/ef76cf6562e1d028b4fff46d063f4b93945299de/docs%2Felectorates.md",
+      "contents_url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/contents/docs%2Felectorates.md?ref=ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "patch": "@@ -170,6 +170,8 @@ Every problem is listed at once. Names match ignoring case and macrons, so `Te P\n | `unknown key `indpendent_p`; did you mean independent_p?` | fix the key |\n | `p (0.7) and independent_p (0.4) add up to more than 1` | the two are chances of different people winning the same seat |\n | `listed twice` | keep one entry per electorate |\n+| `unknown section `electroates`; did you mean electorates?` | a top-level heading is misspelt; the check refuses rather than treating it as empty |\n+| `the `coalitions` section is missing` | put the section back, or write `coalitions: []` if there should be none |\n | `NZ First is both a pivot and in Right bloc` | a pivot sits outside the blocs |\n \n Two things are notes rather than errors, so the same file works for a forecast of another election: a party the"
+    },
+    {
+      "sha": "1f90661939cbf14c90fa1817b5f1084ef9832ff7",
+      "filename": "src/pollofpolls/assumptions.py",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 0,
+      "changes": 16,
+      "blob_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/blob/ef76cf6562e1d028b4fff46d063f4b93945299de/src%2Fpollofpolls%2Fassumptions.py",
+      "raw_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/raw/ef76cf6562e1d028b4fff46d063f4b93945299de/src%2Fpollofpolls%2Fassumptions.py",
+      "contents_url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/contents/src%2Fpollofpolls%2Fassumptions.py?ref=ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "patch": "@@ -21,6 +21,9 @@\n ELECTORATE_KEYS = {\"electorate\", \"party\", \"p\", \"independent_p\", \"at_share\", \"slope\", \"group\", \"note\", \"source\",\n                    \"updated\"}\n DEFAULT_KEYS = {\"at_share\", \"slope\", \"group\"}\n+SECTIONS = {\"electorate_group_sd\", \"party_defaults\", \"electorates\", \"coalitions\", \"balance_of_power\"}\n+REQUIRED_SECTIONS = (\"electorates\", \"coalitions\")      # a misspelt section must not quietly mean \"none\"\n+BALANCE_KEYS = {\"blocs\", \"pivots\"}\n DEFAULT_SLOPE = 0.3\n OTHER = \"Other\"\n \n@@ -119,6 +122,17 @@ def load_assumptions(electorates_cfg: dict, boundaries_cfg: dict, parties: list[\n     named = [p for p in parties if p != OTHER]\n     vocabulary = list(dict.fromkeys([*named, *(p for p in known or [] if p != OTHER)]))\n \n+    for key in sorted(set(electorates_cfg) - SECTIONS):\n+        problems.append(f\"unknown section `{key}`{_suggest(key, sorted(SECTIONS))}\")\n+    for key in REQUIRED_SECTIONS:\n+        if key not in electorates_cfg:\n+            problems.append(f\"the `{key}` section is missing; write `{key}: []` if there should be none\")\n+    for key, kind in ((\"party_defaults\", dict), (\"electorates\", list), (\"coalitions\", list),\n+                      (\"balance_of_power\", dict)):\n+        if electorates_cfg.get(key) is not None and not isinstance(electorates_cfg[key], kind):\n+            problems.append(f\"`{key}` should be a {'list of entries' if kind is list else 'mapping'}\")\n+            electorates_cfg = {**electorates_cfg, key: kind()}\n+\n     def party(name: object, where: str) -> str | None:\n         \"\"\"The canonical name of a tracked or known party; None, with a problem recorded, for anything else.\"\"\"\n         found = _match(name, vocabulary)\n@@ -195,6 +209,8 @@ def party(name: object, where: str) -> str | None:\n         coalitions.append({**c, \"parties\": [m for m in members if m]})\n \n     bop = electorates_cfg.get(\"balance_of_power\") or {}\n+    for key in sorted(set(bop) - BALANCE_KEYS):\n+        problems.append(f\"balance_of_power: unknown key `{key}`{_suggest(key, sorted(BALANCE_KEYS))}\")\n     blocs = {name: [m for m in (party(p, f\"balance_of_power: {name}\") for p in members) if m]\n              for name, members in (bop.get(\"blocs\") or {}).items()}\n     pivots = [m for m in (party(p, \"balance_of_power: pivots\") for p in bop.get(\"pivots\") or []) if m]"
+    },
+    {
+      "sha": "704882c210fe71a42ce33a79819c29bd88ce32fb",
+      "filename": "src/pollofpolls/config.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "blob_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/blob/ef76cf6562e1d028b4fff46d063f4b93945299de/src%2Fpollofpolls%2Fconfig.py",
+      "raw_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/raw/ef76cf6562e1d028b4fff46d063f4b93945299de/src%2Fpollofpolls%2Fconfig.py",
+      "contents_url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/contents/src%2Fpollofpolls%2Fconfig.py?ref=ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "patch": "@@ -150,7 +150,8 @@ def assumptions(self, parties: list[str], year: int | None = None):\n         at the election of ``year`` (the forecast election by default). Raises AssumptionError listing every\n         problem.\"\"\"\n         from .assumptions import load_assumptions\n-        known = [*self.colours, *(p for e in self.elections_cfg.get(\"elections\", []) for p in e.get(\"in_parliament\", []))]\n+        parliaments = (self.elections_cfg.get(\"in_parliament\") or {}).values()\n+        known = [*self.colours, *(p for members in parliaments for p in members)]\n         return load_assumptions(self.electorates_cfg, self.boundaries_cfg, parties,\n                                 year or self.forecast_election.year, known=known)\n "
+    },
+    {
+      "sha": "e61c65628db4f2e1581cdb30cd113444e0a12c0c",
+      "filename": "tests/test_assumptions.py",
+      "status": "modified",
+      "additions": 26,
+      "deletions": 0,
+      "changes": 26,
+      "blob_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/blob/ef76cf6562e1d028b4fff46d063f4b93945299de/tests%2Ftest_assumptions.py",
+      "raw_url": "https://github.com/ariedotcodotnz/nz-poll-of-polls/raw/ef76cf6562e1d028b4fff46d063f4b93945299de/tests%2Ftest_assumptions.py",
+      "contents_url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/contents/tests%2Ftest_assumptions.py?ref=ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "patch": "@@ -98,6 +98,32 @@ def test_a_party_nobody_has_heard_of_is_still_an_error(cfg):\n                          known=list(cfg.colours))\n \n \n+def test_a_misspelt_section_is_an_error_not_an_empty_list(cfg):\n+    \"\"\"Renaming `electorates` by accident must not quietly drop every electorate assumption.\"\"\"\n+    bad = copy.deepcopy(cfg.electorates_cfg)\n+    bad[\"electroates\"] = bad.pop(\"electorates\")\n+    bad[\"balance_of_power\"][\"pivot\"] = bad[\"balance_of_power\"].pop(\"pivots\")\n+    with pytest.raises(AssumptionError) as err:\n+        load_assumptions(bad, cfg.boundaries_cfg, PARTIES, 2026)\n+    msg = str(err.value)\n+    assert \"unknown section `electroates`; did you mean electorates?\" in msg\n+    assert \"the `electorates` section is missing; write `electorates: []` if there should be none\" in msg\n+    assert \"balance_of_power: unknown key `pivot`; did you mean pivots?\" in msg\n+    empty = {**copy.deepcopy(cfg.electorates_cfg), \"electorates\": []}\n+    assert load_assumptions(empty, cfg.boundaries_cfg, PARTIES, 2026).electorates == []   # none, on purpose\n+\n+\n+def test_parties_from_past_parliaments_are_known_not_misspellings(cfg, monkeypatch):\n+    \"\"\"United Future and Mana have no colour but sat in Parliament: untracked now, so they hold no seats.\"\"\"\n+    edited = copy.deepcopy(cfg.electorates_cfg)\n+    edited[\"electorates\"].append({\"electorate\": \"Kenepuru\", \"party\": \"Mana\", \"p\": 0.1})\n+    edited[\"coalitions\"].append({\"name\": \"National + United Future\", \"parties\": [\"National\", \"United Future\"]})\n+    monkeypatch.setattr(cfg, \"electorates_cfg\", edited)\n+    a = cfg.assumptions(PARTIES)\n+    assert any(n.startswith(\"Mana is not tracked\") for n in a.notes)\n+    assert [\"National\", \"United Future\"] in [c[\"parties\"] for c in a.coalitions]\n+\n+\n def test_an_electorate_can_override_its_party_defaults(cfg):\n     entries = [{\"electorate\": \"Waiariki\", \"party\": \"Te Pāti Māori\", \"p\": 0.8, \"slope\": 0.1}]\n     e = _check(cfg, electorates=entries).electorates[0]"
+    }
+  ]
+}

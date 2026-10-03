@@ -1,1 +1,780 @@
-{"schemaVersion":1,"resourceLimit":60,"preflight":[{"url":"https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls","attempts":2,"timing":"pre-plan metadata reads; exact first timestamp not retained","purpose":"requested repository license and default branch","result":"GPL-3.0; main","countsAsResource":true}],"attempts":[],"resources":[]}
+{
+  "schemaVersion": 1,
+  "resourceLimit": 60,
+  "preflight": [
+    {
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls",
+      "attempts": 2,
+      "timing": "pre-plan metadata reads; exact first timestamp not retained",
+      "purpose": "requested repository license and default branch",
+      "result": "GPL-3.0; main",
+      "countsAsResource": true
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls",
+      "purpose": "repository/methodology audit; see preflight and source plan",
+      "retrievedAt": "2026-10-03T22:45:11.750174+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-metadata.json"
+    },
+    {
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/commits/main",
+      "purpose": "repository/methodology audit; see preflight and source plan",
+      "retrievedAt": "2026-10-03T22:45:11.750613+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-commit.json"
+    },
+    {
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/main?recursive=1",
+      "purpose": "repository/methodology audit; see preflight and source plan",
+      "retrievedAt": "2026-10-03T22:45:11.750934+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-tree.json"
+    },
+    {
+      "url": "https://abmvanhelsdingen.github.io/methodology.html",
+      "purpose": "repository/methodology audit; see preflight and source plan",
+      "retrievedAt": "2026-10-03T22:45:11.751280+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/abm-methodology.html"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/README.md",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:15.394254+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-README.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/LICENSE.md",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:19.278165+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-LICENSE.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/pyproject.toml",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:23.359081+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-pyproject.toml"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/data/wikipedia.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:26.649641+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_data_wikipedia.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/data/dates.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:30.081971+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_data_dates.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/prep/marshal.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:33.396388+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_prep_marshal.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/model/numpyro_model.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:36.232270+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_model_numpyro_model.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/eval/backtest.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:39.352713+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_eval_backtest.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/model/fit.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:43.217949+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_model_fit.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/config/pollsters.yml",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:46.609414+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-config_pollsters.yml"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/config/elections.yml",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:50.502028+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-config_elections.yml"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/legacy-r/stan/model2023.stan",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:53.903686+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-legacy-r_stan_model2023.stan"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/legacy-r/R/read-polls.R",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:57.397830+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-legacy-r_R_read-polls.R"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/legacy-r/README.md",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:46:00.690786+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/arie-legacy-r_README.md"
+    },
+    {
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/commits/master",
+      "purpose": "bulk source/lineage discovery",
+      "retrievedAt": "2026-10-03T22:46:34.116382+00:00",
+      "status": "failed",
+      "rawPath": "data/raw/polling/stage35/nixinova-commit.json"
+    },
+    {
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/trees/master?recursive=1",
+      "purpose": "bulk source/lineage discovery",
+      "retrievedAt": "2026-10-03T22:46:34.116936+00:00",
+      "status": "failed",
+      "rawPath": "data/raw/polling/stage35/nixinova-tree.json"
+    },
+    {
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/commits/master",
+      "purpose": "bulk source/lineage discovery",
+      "retrievedAt": "2026-10-03T22:46:34.117285+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/ellis-commit.json"
+    },
+    {
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/master?recursive=1",
+      "purpose": "bulk source/lineage discovery",
+      "retrievedAt": "2026-10-03T22:46:34.117666+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/ellis-tree.json"
+    },
+    {
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/commits/main",
+      "purpose": "resolve documented branch/implementation route",
+      "retrievedAt": "2026-10-03T22:46:56.012037+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/nixinova-commit.json"
+    },
+    {
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/trees/main?recursive=1",
+      "purpose": "resolve documented branch/implementation route",
+      "retrievedAt": "2026-10-03T22:47:00.968957+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/nixinova-tree.json"
+    },
+    {
+      "url": "https://api.github.com/repos/abmvanhelsdingen/abmvanhelsdingen.github.io/git/trees/main?recursive=1",
+      "purpose": "resolve documented branch/implementation route",
+      "retrievedAt": "2026-10-03T22:47:04.631606+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/abm-tree.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Nixinova/NZPolls/781f9eec93982eceeeac7f0ddf9fde649853b5ca/data.yml",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:26.347382+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/nixinova-data.yml"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Nixinova/NZPolls/781f9eec93982eceeeac7f0ddf9fde649853b5ca/docs.md",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:30.290590+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/nixinova-docs.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Nixinova/NZPolls/781f9eec93982eceeeac7f0ddf9fde649853b5ca/license.md",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:33.748327+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/nixinova-license.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Nixinova/NZPolls/781f9eec93982eceeeac7f0ddf9fde649853b5ca/readme.md",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:37.104197+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/nixinova-readme.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/LICENSE",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:40.926271+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/ellis-LICENSE"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/method-statespace/ss-vectorized.stan",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:44.719965+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/ellis-method-statespace_ss-vectorized.stan"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/method-statespace/prep.R",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:48.015926+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/ellis-method-statespace_prep.R"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/method-statespace/prior.R",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:51.671262+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/ellis-method-statespace_prior.R"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/README.md",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:54.750377+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/ellis-README.md"
+    },
+    {
+      "url": "https://www.roymorgan.com/findings/labour-support-drops-in-august-but-still-maintains-huge-lead-of-19-5-over-national",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:05.772462+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/rm2020.html"
+    },
+    {
+      "url": "https://www.scoop.co.nz/stories/PO1709/S00298/roy-morgan-poll-aug-28-to-sept-10.htm",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:08.924408+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/rm2017.html"
+    },
+    {
+      "url": "https://www.roymorgan.com/morgan-poll/new-zealand-party-voting-intention",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:15.005860+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/rm-series.html"
+    },
+    {
+      "url": "https://elections.nz/media-and-news/2026/key-dates-for-2026-general-election",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:18.142361+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/election2026.html"
+    },
+    {
+      "url": "https://www.veriangroup.com/hubfs/1News-Verian-Poll-FAQs.pdf",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:24.924023+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/verian-faq.pdf"
+    },
+    {
+      "url": "https://www.scoop.co.nz/stories/PO1408/S00334/roy-morgan-poll-august-20.htm",
+      "purpose": "bounded publication verification/current bulk freshness",
+      "retrievedAt": "2026-10-03T22:50:16.495854+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/rm2014.html"
+    },
+    {
+      "url": "https://www.roymorgan.com/findings/9332-nz-national-voting-intention-august-2023",
+      "purpose": "bounded publication verification/current bulk freshness",
+      "retrievedAt": "2026-10-03T22:50:21.363886+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/rm2023.html"
+    },
+    {
+      "url": "https://roymorgan-cms-prod.s3.ap-southeast-2.amazonaws.com/wp-content/uploads/2023/09/04070000/9332-NZ-National-Voting-Intention-August-2023.pdf",
+      "purpose": "bounded publication verification/current bulk freshness",
+      "retrievedAt": "2026-10-03T22:50:24.780292+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/rm2023.pdf"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
+      "purpose": "bounded publication verification/current bulk freshness",
+      "retrievedAt": "2026-10-03T22:50:29.398722+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/wiki2026.html"
+    },
+    {
+      "url": "https://www.1news.co.nz/2026/09/28/poll-greens-surge-to-best-result-ever-as-national-labour-slide-further/",
+      "purpose": "current original publication verification",
+      "retrievedAt": "2026-10-03T22:51:37.651279+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/verian2026.html"
+    }
+  ],
+  "resources": [
+    {
+      "id": "polling35-arie-metadata.json",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls",
+      "purpose": "repository/methodology audit; see preflight and source plan",
+      "retrievedAt": "2026-10-03T22:45:11.750174+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/arie-metadata.json",
+      "sha256": "6617ceb41e50e6fa00a5bca053426cb4abcc51ab7b9a42b587cf71753d0e950c",
+      "bytes": 6726
+    },
+    {
+      "id": "polling35-arie-commit.json",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/commits/main",
+      "purpose": "repository/methodology audit; see preflight and source plan",
+      "retrievedAt": "2026-10-03T22:45:11.750613+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/arie-commit.json",
+      "sha256": "8c88fd23b2c9e0940b2da8a140d2a11fb0256c58371483d566dce92ab42f1e47",
+      "bytes": 13574
+    },
+    {
+      "id": "polling35-arie-tree.json",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/main?recursive=1",
+      "purpose": "repository/methodology audit; see preflight and source plan",
+      "retrievedAt": "2026-10-03T22:45:11.750934+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/arie-tree.json",
+      "sha256": "5cbf1fffd691004c1dc2b563f1dd16f280cb31c5a96ee3b87fa6a79f926d6c86",
+      "bytes": 71311
+    },
+    {
+      "id": "polling35-abm-methodology.html",
+      "url": "https://abmvanhelsdingen.github.io/methodology.html",
+      "purpose": "repository/methodology audit; see preflight and source plan",
+      "retrievedAt": "2026-10-03T22:45:11.751280+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/abm-methodology.html",
+      "sha256": "accec69a3365abd92c35b4b5c771c2d539b94ab671c0e7dd41c7b12b0ac2af11",
+      "bytes": 7505
+    },
+    {
+      "id": "polling35-arie-README.md",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/README.md",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:15.394254+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-README.md",
+      "sha256": "1966c4d58ddaece4098a8de5e78943ded099459144646d282c85a408007f64b6",
+      "bytes": 14288
+    },
+    {
+      "id": "polling35-arie-LICENSE.md",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/LICENSE.md",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:19.278165+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-LICENSE.md",
+      "sha256": "585e25ef8f5946a52bf2aed68d5becfc38be94a8663aa01c1b31d88aa57f1de3",
+      "bytes": 34904
+    },
+    {
+      "id": "polling35-arie-pyproject.toml",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/pyproject.toml",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:23.359081+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-pyproject.toml",
+      "sha256": "0f025769fdd51cd4388a32126db5f57608f1a0bc649ef2a180d2e251b93ef8b4",
+      "bytes": 1091
+    },
+    {
+      "id": "polling35-arie-src_pollofpolls_data_wikipedia.py",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/data/wikipedia.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:26.649641+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_data_wikipedia.py",
+      "sha256": "499eb807e963df770000bc9e06fb2962347453414a9d3d7d4121f545fdf7e1d1",
+      "bytes": 7789
+    },
+    {
+      "id": "polling35-arie-src_pollofpolls_data_dates.py",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/data/dates.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:30.081971+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_data_dates.py",
+      "sha256": "0028380e3435f9e6dba240eec53347b370682b8564f099878d4e2f0e40eca16e",
+      "bytes": 3925
+    },
+    {
+      "id": "polling35-arie-src_pollofpolls_prep_marshal.py",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/prep/marshal.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:33.396388+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_prep_marshal.py",
+      "sha256": "8f7b96be82b36a0ea77b3a10230bd7e981caebf38bc1e89baf2b3453f0172e7e",
+      "bytes": 14624
+    },
+    {
+      "id": "polling35-arie-src_pollofpolls_model_numpyro_model.py",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/model/numpyro_model.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:36.232270+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_model_numpyro_model.py",
+      "sha256": "63cc1761894fae3540ed31b44ea7d8930b05a5360f3d0adf83069030404c65d7",
+      "bytes": 12673
+    },
+    {
+      "id": "polling35-arie-src_pollofpolls_eval_backtest.py",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/eval/backtest.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:39.352713+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_eval_backtest.py",
+      "sha256": "402e1a9133fee68b004d7812976bccddd8243a05d32cac2a63061828843853f2",
+      "bytes": 14346
+    },
+    {
+      "id": "polling35-arie-src_pollofpolls_model_fit.py",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/src/pollofpolls/model/fit.py",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:43.217949+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_model_fit.py",
+      "sha256": "a32982ea86db700304eb21788303e914e64470e8e303127214bba6359defd9bb",
+      "bytes": 10044
+    },
+    {
+      "id": "polling35-arie-config_pollsters.yml",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/config/pollsters.yml",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:46.609414+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-config_pollsters.yml",
+      "sha256": "a42401f9a901634ce8dea9998a56dacf89af08d819cd64db349c86b764625f4c",
+      "bytes": 2717
+    },
+    {
+      "id": "polling35-arie-config_elections.yml",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/config/elections.yml",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:50.502028+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-config_elections.yml",
+      "sha256": "4771d95e297a2cb988b4b102ebaa8d4bef07f07dad5de3f7d57c924059d980f3",
+      "bytes": 2941
+    },
+    {
+      "id": "polling35-arie-legacy-r_stan_model2023.stan",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/legacy-r/stan/model2023.stan",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:53.903686+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-legacy-r_stan_model2023.stan",
+      "sha256": "bced8005960a7a6d98abc537298e6e692b613baf7ef8ff0799005df69beeca9d",
+      "bytes": 4410
+    },
+    {
+      "id": "polling35-arie-legacy-r_R_read-polls.R",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/legacy-r/R/read-polls.R",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:45:57.397830+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-legacy-r_R_read-polls.R",
+      "sha256": "e9adf693d0a4dab16513b1e70dd196acfe5b99c952b0ff7864d51961b8b000b2",
+      "bytes": 7001
+    },
+    {
+      "id": "polling35-arie-legacy-r_README.md",
+      "url": "https://raw.githubusercontent.com/ariedotcodotnz/nz-poll-of-polls/ef76cf6562e1d028b4fff46d063f4b93945299de/legacy-r/README.md",
+      "purpose": "pinned implementation inspection",
+      "retrievedAt": "2026-10-03T22:46:00.690786+00:00",
+      "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage35/arie-legacy-r_README.md",
+      "sha256": "9d42b92063f3a2b5abf17fc63be3fe5de1b3a61570c4a5100b35f60908cf7793",
+      "bytes": 789
+    },
+    {
+      "id": "polling35-ellis-commit.json",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/commits/master",
+      "purpose": "bulk source/lineage discovery",
+      "retrievedAt": "2026-10-03T22:46:34.117285+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/ellis-commit.json",
+      "sha256": "76e2638ba79c6390b27c60b92a856eb12e6304601bad3a07e2f2efdd40b53c96",
+      "bytes": 4874
+    },
+    {
+      "id": "polling35-ellis-tree.json",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/master?recursive=1",
+      "purpose": "bulk source/lineage discovery",
+      "retrievedAt": "2026-10-03T22:46:34.117666+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/ellis-tree.json",
+      "sha256": "616a89ed1449d95ec64207c176650f27c3322093051d6b5d90208e6cc320b8dd",
+      "bytes": 22222
+    },
+    {
+      "id": "polling35-nixinova-commit.json",
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/commits/main",
+      "purpose": "resolve documented branch/implementation route",
+      "retrievedAt": "2026-10-03T22:46:56.012037+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/nixinova-commit.json",
+      "sha256": "45aacddb3e9669f6f59f260bc5f05e09ad5a1abef360f4aeca7a6a6c4c11375b",
+      "bytes": 4694
+    },
+    {
+      "id": "polling35-nixinova-tree.json",
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/trees/main?recursive=1",
+      "purpose": "resolve documented branch/implementation route",
+      "retrievedAt": "2026-10-03T22:47:00.968957+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/nixinova-tree.json",
+      "sha256": "96ee090dde61d1499bf19314a4ceecbececaa796951a427f30c45f338f3a0f00",
+      "bytes": 4648
+    },
+    {
+      "id": "polling35-abm-tree.json",
+      "url": "https://api.github.com/repos/abmvanhelsdingen/abmvanhelsdingen.github.io/git/trees/main?recursive=1",
+      "purpose": "resolve documented branch/implementation route",
+      "retrievedAt": "2026-10-03T22:47:04.631606+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/abm-tree.json",
+      "sha256": "148f7cf03e229a81ef7d6b0c7c8be48bcdd25ab5c97b61c2a2becc23ab44c299",
+      "bytes": 50949
+    },
+    {
+      "id": "polling35-nixinova-data.yml",
+      "url": "https://raw.githubusercontent.com/Nixinova/NZPolls/781f9eec93982eceeeac7f0ddf9fde649853b5ca/data.yml",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:26.347382+00:00",
+      "repositoryVersion": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+      "rawPath": "data/raw/polling/stage35/nixinova-data.yml",
+      "sha256": "a50b12ce3beed3dbbd2cc891df6bdad7ca5d24dbd561658433750e73cf50e71d",
+      "bytes": 61736
+    },
+    {
+      "id": "polling35-nixinova-docs.md",
+      "url": "https://raw.githubusercontent.com/Nixinova/NZPolls/781f9eec93982eceeeac7f0ddf9fde649853b5ca/docs.md",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:30.290590+00:00",
+      "repositoryVersion": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+      "rawPath": "data/raw/polling/stage35/nixinova-docs.md",
+      "sha256": "b3fad91d78da5b82a0ad271c80314b20333b68344e46725c893a2293c0fdecc5",
+      "bytes": 944
+    },
+    {
+      "id": "polling35-nixinova-license.md",
+      "url": "https://raw.githubusercontent.com/Nixinova/NZPolls/781f9eec93982eceeeac7f0ddf9fde649853b5ca/license.md",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:33.748327+00:00",
+      "repositoryVersion": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+      "rawPath": "data/raw/polling/stage35/nixinova-license.md",
+      "sha256": "901855a2f3237ef3546498171656092e711e6227ed18e66bb62a55397e3532e6",
+      "bytes": 1160
+    },
+    {
+      "id": "polling35-nixinova-readme.md",
+      "url": "https://raw.githubusercontent.com/Nixinova/NZPolls/781f9eec93982eceeeac7f0ddf9fde649853b5ca/readme.md",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:37.104197+00:00",
+      "repositoryVersion": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+      "rawPath": "data/raw/polling/stage35/nixinova-readme.md",
+      "sha256": "1afb33f838d14ec412ae1155ee603c44a19081954d95a43fd2aae322731a4362",
+      "bytes": 805
+    },
+    {
+      "id": "polling35-ellis-LICENSE",
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/LICENSE",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:40.926271+00:00",
+      "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+      "rawPath": "data/raw/polling/stage35/ellis-LICENSE",
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "bytes": 35141
+    },
+    {
+      "id": "polling35-ellis-method-statespace_ss-vectorized.stan",
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/method-statespace/ss-vectorized.stan",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:44.719965+00:00",
+      "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+      "rawPath": "data/raw/polling/stage35/ellis-method-statespace_ss-vectorized.stan",
+      "sha256": "8d729ee80aef013da4ca395f87636205300ef60b56a84d380a56b83a4ec494c1",
+      "bytes": 6120
+    },
+    {
+      "id": "polling35-ellis-method-statespace_prep.R",
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/method-statespace/prep.R",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:48.015926+00:00",
+      "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+      "rawPath": "data/raw/polling/stage35/ellis-method-statespace_prep.R",
+      "sha256": "ca2681b37385238bb6d5f9db55f3acc1ff0b92a20537b3553d60cdb0ccca9619",
+      "bytes": 5182
+    },
+    {
+      "id": "polling35-ellis-method-statespace_prior.R",
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/method-statespace/prior.R",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:51.671262+00:00",
+      "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+      "rawPath": "data/raw/polling/stage35/ellis-method-statespace_prior.R",
+      "sha256": "1bea51cc0cc0652a522051134f2933a244557080916191c7480ff7e27822fd80",
+      "bytes": 2563
+    },
+    {
+      "id": "polling35-ellis-README.md",
+      "url": "https://raw.githubusercontent.com/ellisp/nz-election-forecast/7aa741e78f52f38b020f4c7bc75fe294669abe2b/README.md",
+      "purpose": "bulk polling/lineage reference",
+      "retrievedAt": "2026-10-03T22:47:54.750377+00:00",
+      "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+      "rawPath": "data/raw/polling/stage35/ellis-README.md",
+      "sha256": "24b4ec35b1fd1a05d9e772d6915e0b61809670ee550de75df5f1033e91706c75",
+      "bytes": 235
+    },
+    {
+      "id": "polling35-rm2020.html",
+      "url": "https://www.roymorgan.com/findings/labour-support-drops-in-august-but-still-maintains-huge-lead-of-19-5-over-national",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:05.772462+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/rm2020.html",
+      "sha256": "85d61fffd46c045c2eedef92441d458de1b4d6835ba4bd4a9538aaf991dba81a",
+      "bytes": 152323
+    },
+    {
+      "id": "polling35-rm2017.html",
+      "url": "https://www.scoop.co.nz/stories/PO1709/S00298/roy-morgan-poll-aug-28-to-sept-10.htm",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:08.924408+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/rm2017.html",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "contentStatus": "empty_unavailable"
+    },
+    {
+      "id": "polling35-rm-series.html",
+      "url": "https://www.roymorgan.com/morgan-poll/new-zealand-party-voting-intention",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:15.005860+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/rm-series.html",
+      "sha256": "f7997512390264f718c174359b6283aad48e641d10f6399b479b4bf77e9ed60e",
+      "bytes": 162752
+    },
+    {
+      "id": "polling35-election2026.html",
+      "url": "https://elections.nz/media-and-news/2026/key-dates-for-2026-general-election",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:18.142361+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/election2026.html",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "bytes": 212
+    },
+    {
+      "id": "polling35-verian-faq.pdf",
+      "url": "https://www.veriangroup.com/hubfs/1News-Verian-Poll-FAQs.pdf",
+      "purpose": "bounded original publication/measurement/date verification",
+      "retrievedAt": "2026-10-03T22:49:24.924023+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/verian-faq.pdf",
+      "sha256": "cf1e14e0ae65af8de585d08ceb00c78b361c75760a5547f611392c40d56811b7",
+      "bytes": 3920468
+    },
+    {
+      "id": "polling35-rm2014.html",
+      "url": "https://www.scoop.co.nz/stories/PO1408/S00334/roy-morgan-poll-august-20.htm",
+      "purpose": "bounded publication verification/current bulk freshness",
+      "retrievedAt": "2026-10-03T22:50:16.495854+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/rm2014.html",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "contentStatus": "empty_unavailable"
+    },
+    {
+      "id": "polling35-rm2023.html",
+      "url": "https://www.roymorgan.com/findings/9332-nz-national-voting-intention-august-2023",
+      "purpose": "bounded publication verification/current bulk freshness",
+      "retrievedAt": "2026-10-03T22:50:21.363886+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/rm2023.html",
+      "sha256": "e1b82fa712aa609190113fa0793570d6625400983ab547e0f99392ebf22f6abc",
+      "bytes": 190298
+    },
+    {
+      "id": "polling35-rm2023.pdf",
+      "url": "https://roymorgan-cms-prod.s3.ap-southeast-2.amazonaws.com/wp-content/uploads/2023/09/04070000/9332-NZ-National-Voting-Intention-August-2023.pdf",
+      "purpose": "bounded publication verification/current bulk freshness",
+      "retrievedAt": "2026-10-03T22:50:24.780292+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/rm2023.pdf",
+      "sha256": "740780d237bdcfc6a0c43bd717525c40dad47dcaeb5d59e1b15dbc8d598c8939",
+      "bytes": 912223
+    },
+    {
+      "id": "polling35-wiki2026.html",
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
+      "purpose": "bounded publication verification/current bulk freshness",
+      "retrievedAt": "2026-10-03T22:50:29.398722+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/wiki2026.html",
+      "sha256": "65b96be9fb6f9ce4a82df15067f57276df3dcc117a2e1ed0c1e4164119819058",
+      "bytes": 783585
+    },
+    {
+      "id": "polling35-verian2026.html",
+      "url": "https://www.1news.co.nz/2026/09/28/poll-greens-surge-to-best-result-ever-as-national-labour-slide-further/",
+      "purpose": "current original publication verification",
+      "retrievedAt": "2026-10-03T22:51:37.651279+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/verian2026.html",
+      "sha256": "d0d34cc0660173f0f159d89a442caff7508a453f607195e441f8dfc6fafac627",
+      "bytes": 789831
+    }
+  ],
+  "discoveryLog": [
+    {
+      "kind": "web_open",
+      "urls": [
+        "https://github.com/ariedotcodotnz/nz-poll-of-polls",
+        "https://abmvanhelsdingen.github.io/methodology.html",
+        "https://github.com/Nixinova/NZPolls",
+        "https://github.com/ellisp/nz-election-forecast"
+      ],
+      "timing": "after plan; exact individual timestamp unavailable"
+    },
+    {
+      "kind": "web_search",
+      "queries": [
+        "site.1news.co.nz 2023 September 27 Verian poll 36 26",
+        "site.roymorgan.com 2014 September New Zealand National Labour September 8 poll",
+        "site.roymorgan.com 2017 September New Zealand poll August",
+        "site.roymorgan.com 2020 September New Zealand Labour poll",
+        "site.roymorgan.com 2014 September 47 voting intention",
+        "site.1news.co.nz 2023/09/27 poll",
+        "site.roymorgan.com 102 September 2026 New Zealand poll",
+        "site.elections.nz 7 November 2026",
+        "Roy Morgan New Zealand September 2014 poll release",
+        "Verian 27 September 2023 report pdf",
+        "site.roymorgan.com/findings August 2026 New Zealand",
+        "site.roymorgan.com/findings September 2017 40% Labour",
+        "site.roymorgan.com/findings August 2023 49%",
+        "site.veriangroup.com September 2023 27 1News"
+      ],
+      "timing": "after plan; tool transcript retained, exact timestamps unavailable"
+    }
+  ]
+}

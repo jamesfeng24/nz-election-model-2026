@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta name="author" content="Alec van Helsdingen">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Methodology</title>
+
+    <script> $(function(){$("#header").load("header.html");});</script>
+
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="column">
+
+﻿       <h1>Election Forecasts Methodology</h1>
+       <h2>New Zealand</h2>
+       <p>The Party Vote estimates come from a Bayesian State Space Model. This model predicts the support for each party each week going back to the 2017 election. Only on election day do we get an exact and accurate reading of the support for each party. Between elections we must rely on polls whose estimates are uncertain (depending on sample size) and biased (varying by pollster and party). Our model gives us 7,500 samples of party votes for an election held this week. We acknowledge inspiration from <a href="https://github.com/ellisp/nz-election-forecast"> the work of Peter Ellis.</a></p>
+
+       <p>In the background, we predict the party vote and candidate vote in each electorate. Boundaries have changed in some electorates, and we are grateful to <a href="https://theoverhangaonz.substack.com/p/the-overhang-26-boundary-issues-part"> The Overhang</a> who has estimated how the 2023 election would have gone if those new boundaries were in place.</p>  
+
+<p>We take incumbency into account but not individual candidates or the history of a particular electorate. We assume until announced otherwise that the same parties who ran candidates in 2023 will run candidates again in 2026. In M&#257;ori electorates this means that Labour and TPM will always stand candidates, NZF and ACT will not, and that National and the Greens may or may not. We do not forecast TPM in general electorates, or TOP in any electorate. Special Adjustments are made for the three Green-held electorates and Epsom.</p>
+
+	<p> Special Adjustments have been made in Te Tai Tokerau and Te Tai Tonga due to their incumbent MPs leaving TPM. We assume that Kapa-Kingi for run for the Te Tai Tokerau Party and Ferris as an independent. We assume that the TTTP party will not get enough party votes to avoid an overhang if Kapa-Kingi wins.</p>
+
+       <p> These predictions gives us estimates of electorates won by each party, which is taken into account for distributing seats. For instance we can forecast overhangs, or that a party which falls below 5% wins an electorate and thus avoids being eliminated from Parliament. We do not consider the possibility that an independent (besides Ferris) or a candidate another party wins an electorate.</p>
+
+       <p>Our electorate predictions rely heavily on Dirichlet distributions, which are used to predict both party votes and the proportions of "split" votes. We are indebted to the Split Vote Reports produced by the Electoral Commission. Note that the denominator for candidate vote percentages is the total number of valid (including informal) party votes in an electorate.</p>
+
+       <p>Currently, New Zealand politics appears divided into two clear left and right blocs for the first time since the start of MMP. Only TOP sits outside this system. Our coalition outcome probabilities are based on an expectation that if one of these blocs has a majority, that bloc will form the next government. Cross-bloc coalitions such as a National-Greens coalition or a Labour-NZF coalition would only be formed if there was a tie or a coalition could not be formed. All assumptions about electorates and coalitions will revised as necessary.</p>
+
+       <h2>Netherlands</h2>
+       <p>Our vote predictions are based on a Bayesian State Model similar to our model for New Zealand elections. An added complication is that many polls release only the number of seats each party is projected to win. We convert these figures into percentages, by reverse engineering the formula used for assigning seats.</p>
+
+       <p>There are 65,535 possible coalitions of 16 parties, in theory. In practice, our list of 39 incompatible pairs of parties means there are 1055 feasible coalitions. We also ignore coalitions with 7 or more parties, and those with 6 parties that have no Eerste Kamer majority.</p>
+
+       <p>In a given simulation, if a coalition has a majority in the Tweede Kamer and every party is needed for that majority, the coalition is possible. If taking away the smallest party still results in a majority, every party must contribute in some way to the viability of the coalition for it to be possible. We define three ways this can be done:</p>
+
+       <ul>
+       <li><p>Giving the coalition a comfortable 78/150 majority in the TK</p></li>
+       <li><p>Giving the coalition a majority (38/75) in the EK</p></li>
+       <li><p>Having 10+ EK seats, while the other parties between them have 38 or fewer</p></li>
+       </ul>
+
+       <h2>Ireland</h2>
+       <p>The predictions for each constituency uses the same basic approach as our predictions for New Zealand electorates. However the overall predictions come from weighted averages of polls rather than from a SSM. Ireland uses the Single Transferable Vote (STV) electoral system, which requires estimating transfers of votes when candidates are elected or eliminated. These transfer flows are estimated using data from the 2020 and 2024 general elections as well as the 2024 European elections, and are done with a model similar to our forecasts for split votes in New Zealand elections. We place candidates into five categories- Fine Gael, Fianna Fáil, Sinn Féin, left-wing parties (Labour, Greens, SD and S-PBP) and others (Aontú, Independent Ireland, minor parties and independents). For each of those categories, the proportions of transfers that go to each of those five categories when <em>they are all available options</em> are estimated, as well as the proportion that are exhausted. A Markovian model is used to adjust the proportions when one or more categories are unavailable, i.e. all the candidates of that category are either elected or eliminated.</p> 
+
+       <p> Until parties announce otherwise, we assume they will run the same number of the candidates as in 2024 and that the existing constituency 	boundaries will be used.</p>
+       <p> We are grateful to the <a href="https://github.com/Irish-Dem-Polling/datasets">Irish Demographic Polling Datasets</a> by Stefan Müller for past 	polling results, especially breakdowns by region.</p>
+       <h2> Note</h2>
+       <p>The author discloses that he has a political party membership in both New Zealand and the Netherlands.</p>
+    </div>
+</body>

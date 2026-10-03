@@ -1,0 +1,578 @@
+{
+  "sha": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+  "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b27fdbf8623468b1df3d5dbb3bb41828b0424c4",
+      "size": 637,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/4b27fdbf8623468b1df3d5dbb3bb41828b0424c4"
+    },
+    {
+      "path": "2017",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ed342b5ff10b811112677631a88bd00633cb99a",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/6ed342b5ff10b811112677631a88bd00633cb99a"
+    },
+    {
+      "path": "2017/method-gam",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94cdbb3c1d3734d53c0da82d3341558fc4aea2a5",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/94cdbb3c1d3734d53c0da82d3341558fc4aea2a5"
+    },
+    {
+      "path": "2017/method-gam/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe03d8a0fb96759bb1e24af8b29572dc4e3f3583",
+      "size": 283,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/fe03d8a0fb96759bb1e24af8b29572dc4e3f3583"
+    },
+    {
+      "path": "2017/method-gam/Retro-2014-1week",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cacf3c5a0baf1b0c7f9c7c4d40ddc9e419342ab6",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/cacf3c5a0baf1b0c7f9c7c4d40ddc9e419342ab6"
+    },
+    {
+      "path": "2017/method-gam/Retro-2014-1week/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1315efa799c3f9e73f1bdb48a6bdfe3ca4185b78",
+      "size": 446,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/1315efa799c3f9e73f1bdb48a6bdfe3ca4185b78"
+    },
+    {
+      "path": "2017/method-gam/Retro-2014-1week/estimate-house-effects.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c15a4cc5786ab7b280d034e671d79253223db778",
+      "size": 3747,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/c15a4cc5786ab7b280d034e671d79253223db778"
+    },
+    {
+      "path": "2017/method-gam/Retro-2014-1week/fit-gam.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "898e088320327ecbd49ce2be71c42bde57ca708f",
+      "size": 3831,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/898e088320327ecbd49ce2be71c42bde57ca708f"
+    },
+    {
+      "path": "2017/method-gam/Retro-2014-1week/retro-data.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a6f7d20c722c40626d24e99258a7c908ba4654f",
+      "size": 194,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/1a6f7d20c722c40626d24e99258a7c908ba4654f"
+    },
+    {
+      "path": "2017/method-gam/Retro-2014-1week/retro-integrate.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1593ddf211ec8356b712ca8a9155299c95af3191",
+      "size": 222,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/1593ddf211ec8356b712ca8a9155299c95af3191"
+    },
+    {
+      "path": "2017/method-gam/Retro-2014-1week/simulations.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bf3dea1ffd8f360add47ba907297b6451b335bf",
+      "size": 6306,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/9bf3dea1ffd8f360add47ba907297b6451b335bf"
+    },
+    {
+      "path": "2017/method-gam/estimate-election-variance.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d20aed94b5b64d01ce42d4fe60d389a8c6c26b3c",
+      "size": 2870,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/d20aed94b5b64d01ce42d4fe60d389a8c6c26b3c"
+    },
+    {
+      "path": "2017/method-gam/estimate-house-effects.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0f5f61456b12ff5855ca45d55fd6a10cf79b0ec",
+      "size": 4031,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/c0f5f61456b12ff5855ca45d55fd6a10cf79b0ec"
+    },
+    {
+      "path": "2017/method-gam/estimate-house-effects.rds",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0407f0ec9b18376c7712f41b90fed29816a5173e",
+      "size": 1184234,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/0407f0ec9b18376c7712f41b90fed29816a5173e"
+    },
+    {
+      "path": "2017/method-gam/estimate-house-effects.stan",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daa3faa3da9c20efa177e12ed6ac8e672d3ce04a",
+      "size": 313,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/daa3faa3da9c20efa177e12ed6ac8e672d3ce04a"
+    },
+    {
+      "path": "2017/method-gam/fit-gam.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94b5c68b9d2c1a3e7b76b1baca68f11882b39872",
+      "size": 5121,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/94b5c68b9d2c1a3e7b76b1baca68f11882b39872"
+    },
+    {
+      "path": "2017/method-gam/gam-driver.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cde7f96d3db07f83f11fcaf1922b5f71ab10c808",
+      "size": 946,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/cde7f96d3db07f83f11fcaf1922b5f71ab10c808"
+    },
+    {
+      "path": "2017/method-gam/retro-2014",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7aa0c055435d9cdc52360a78ebbc565977fefa4d",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/7aa0c055435d9cdc52360a78ebbc565977fefa4d"
+    },
+    {
+      "path": "2017/method-gam/retro-2014/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1315efa799c3f9e73f1bdb48a6bdfe3ca4185b78",
+      "size": 446,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/1315efa799c3f9e73f1bdb48a6bdfe3ca4185b78"
+    },
+    {
+      "path": "2017/method-gam/retro-2014/estimate-house-effects.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c15a4cc5786ab7b280d034e671d79253223db778",
+      "size": 3747,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/c15a4cc5786ab7b280d034e671d79253223db778"
+    },
+    {
+      "path": "2017/method-gam/retro-2014/fit-gam.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "929716cde691a27d5214fa9be1d6b51bfc2ed994",
+      "size": 5258,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/929716cde691a27d5214fa9be1d6b51bfc2ed994"
+    },
+    {
+      "path": "2017/method-gam/retro-2014/retro-data.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38832c779456c8ca8dfef94f65c940535a18c9cc",
+      "size": 170,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/38832c779456c8ca8dfef94f65c940535a18c9cc"
+    },
+    {
+      "path": "2017/method-gam/retro-2014/retro-integrate.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8824706bd9b2feb1bd9aa35484867ed1a0636112",
+      "size": 198,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/8824706bd9b2feb1bd9aa35484867ed1a0636112"
+    },
+    {
+      "path": "2017/method-gam/retro-2014/simulations.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d624afcf2b477adfa209e6241da53580e4fa239f",
+      "size": 6833,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/d624afcf2b477adfa209e6241da53580e4fa239f"
+    },
+    {
+      "path": "2017/method-gam/simulations.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4d5f023f0d6435c6e8fa22134963a7d1f4dd700",
+      "size": 2590,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/f4d5f023f0d6435c6e8fa22134963a7d1f4dd700"
+    },
+    {
+      "path": "2017/method-statespace",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13418109bba31c2856c95dc54492cf31d56a36ba",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/13418109bba31c2856c95dc54492cf31d56a36ba"
+    },
+    {
+      "path": "2017/method-statespace/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fca57bdaf699966619c8fb688ac8c96db59e073",
+      "size": 210,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/8fca57bdaf699966619c8fb688ac8c96db59e073"
+    },
+    {
+      "path": "2017/method-statespace/prep-and-fit.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f494997a821ef72d692b9255b2f8be7a87097d9",
+      "size": 5409,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/5f494997a821ef72d692b9255b2f8be7a87097d9"
+    },
+    {
+      "path": "2017/method-statespace/ss-diagnostics.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "632da1196fe246da5be8e7264b3fa2627e27c3f4",
+      "size": 447,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/632da1196fe246da5be8e7264b3fa2627e27c3f4"
+    },
+    {
+      "path": "2017/method-statespace/ss-main.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2204389f004392efd6543d123ab7f34ca457cfe4",
+      "size": 9389,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/2204389f004392efd6543d123ab7f34ca457cfe4"
+    },
+    {
+      "path": "2017/method-statespace/ss-vectorized.rds",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2fe0694a765b61c106cedb12a1c3be847f9420d",
+      "size": 1396459,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/c2fe0694a765b61c106cedb12a1c3be847f9420d"
+    },
+    {
+      "path": "2017/method-statespace/ss-vectorized.stan",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc75fc36a38ef4eb603592c25f65b184d8b52cce",
+      "size": 5524,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/cc75fc36a38ef4eb603592c25f65b184d8b52cce"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cecc1d4669ee8af2ca727a5d8cde10cd8b2d7cc",
+      "size": 35141,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/9cecc1d4669ee8af2ca727a5d8cde10cd8b2d7cc"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c5ee84d9b65a075caace772fbf5d830fcc73666",
+      "size": 235,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/3c5ee84d9b65a075caace772fbf5d830fcc73666"
+    },
+    {
+      "path": "build.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "190144b1e9d90c889c2cfbf55ba51997fc19c766",
+      "size": 636,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/190144b1e9d90c889c2cfbf55ba51997fc19c766"
+    },
+    {
+      "path": "build_presentations.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0819ed8ed452d7d73dcd340684e50182d962a5c8",
+      "size": 237,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/0819ed8ed452d7d73dcd340684e50182d962a5c8"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4715672c1065837e8256f4e71e5a2cb0ea447c77",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/4715672c1065837e8256f4e71e5a2cb0ea447c77"
+    },
+    {
+      "path": "data/tracking.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "123133bd402657ec189c3285539b184617af9812",
+      "size": 584,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/123133bd402657ec189c3285539b184617af9812"
+    },
+    {
+      "path": "method-statespace",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fac02512eb62794823c71eea76807e6c32ae6a6e",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/fac02512eb62794823c71eea76807e6c32ae6a6e"
+    },
+    {
+      "path": "method-statespace/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fca57bdaf699966619c8fb688ac8c96db59e073",
+      "size": 210,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/8fca57bdaf699966619c8fb688ac8c96db59e073"
+    },
+    {
+      "path": "method-statespace/fit.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5939d4e3411e295d5ae6763010ea0382ee6e706f",
+      "size": 1688,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/5939d4e3411e295d5ae6763010ea0382ee6e706f"
+    },
+    {
+      "path": "method-statespace/prep.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69f28a5901bb3305b2a6b4e30cc5213a98f06a4e",
+      "size": 5182,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/69f28a5901bb3305b2a6b4e30cc5213a98f06a4e"
+    },
+    {
+      "path": "method-statespace/prior.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6bf39079cf5c761b35ccfbea4da452eb4caa951",
+      "size": 2563,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/b6bf39079cf5c761b35ccfbea4da452eb4caa951"
+    },
+    {
+      "path": "method-statespace/results.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bb5c7280969041224e5fb5dee6afb0524ca6de2",
+      "size": 3954,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/0bb5c7280969041224e5fb5dee6afb0524ca6de2"
+    },
+    {
+      "path": "method-statespace/ss-diagnostics.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e40025d522626684e56c3bec904b2b81d451b8c3",
+      "size": 690,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/e40025d522626684e56c3bec904b2b81d451b8c3"
+    },
+    {
+      "path": "method-statespace/ss-vectorized.stan",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0843684fcf5ac30e8f4076c5c38a1b94d3c75ba",
+      "size": 6120,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/f0843684fcf5ac30e8f4076c5c38a1b94d3c75ba"
+    },
+    {
+      "path": "nz-election-forecast.Rproj",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d063e8bc7af719bae7c8eb42a8bc12891480f305",
+      "size": 204,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/d063e8bc7af719bae7c8eb42a8bc12891480f305"
+    },
+    {
+      "path": "output",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7bff27e81c2106b85206e67577bad6230ec4ae71",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/7bff27e81c2106b85206e67577bad6230ec4ae71"
+    },
+    {
+      "path": "output/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa7af5cf1c94faef75ea70f1e04ab63dd9622ef3",
+      "size": 168,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/aa7af5cf1c94faef75ea70f1e04ab63dd9622ef3"
+    },
+    {
+      "path": "presentations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20b3e3d9afe48f90757d006b6d8bf133d5ef92fb",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/20b3e3d9afe48f90757d006b6d8bf133d5ef92fb"
+    },
+    {
+      "path": "presentations/newshub-20170829",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "014626f23ceff9ad5d666c231959ad020d5edc69",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/014626f23ceff9ad5d666c231959ad020d5edc69"
+    },
+    {
+      "path": "presentations/newshub-20170829/ellis-forecasting-elections.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd2fd85f21d0a5eaddcfaf22d5bb078b676aafad",
+      "size": 9638,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/fd2fd85f21d0a5eaddcfaf22d5bb078b676aafad"
+    },
+    {
+      "path": "presentations/newshub-20170829/images.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1a42b3b440e4d95188c2a9190b0acac30e7b500",
+      "size": 1165,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/e1a42b3b440e4d95188c2a9190b0acac30e7b500"
+    },
+    {
+      "path": "presentations/prediction-intervals-election-eve.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "841c71d5565481366a9cdf430c243d34f878c41b",
+      "size": 1043,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/841c71d5565481366a9cdf430c243d34f878c41b"
+    },
+    {
+      "path": "presentations/wrug-20170816",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9524030bd98a6913fa491f28a434d13073b79782",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/9524030bd98a6913fa491f28a434d13073b79782"
+    },
+    {
+      "path": "presentations/wrug-20170816/header.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c47999fa158618c52cd7940870d2c7cda5af2c",
+      "size": 54,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/40c47999fa158618c52cd7940870d2c7cda5af2c"
+    },
+    {
+      "path": "presentations/wrug-20170816/wikipedia-2005.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a5a2dbcfb2a3fe87baae91393f5524d494d95e3",
+      "size": 43630,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/4a5a2dbcfb2a3fe87baae91393f5524d494d95e3"
+    },
+    {
+      "path": "presentations/wrug-20170816/wrug2017.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94064fc9e775598d21688a56f3889e164e855107",
+      "size": 5007,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/94064fc9e775598d21688a56f3889e164e855107"
+    },
+    {
+      "path": "presentations/wrug-20170816/wrug2017.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15f8b017d3682f1a0a08d020c8b941d621a17633",
+      "size": 7431343,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/15f8b017d3682f1a0a08d020c8b941d621a17633"
+    },
+    {
+      "path": "setup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f821909b260f854f87022ef8b5d0a4f9d9723908",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/f821909b260f854f87022ef8b5d0a4f9d9723908"
+    },
+    {
+      "path": "setup/copy-files.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48f5b94f05e43c1b59c5f78be0326dee86891003",
+      "size": 387,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/48f5b94f05e43c1b59c5f78be0326dee86891003"
+    },
+    {
+      "path": "setup/functionality.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "139ef930aaeb90e8e51d8587e4bbaf4a66f168fa",
+      "size": 1291,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/139ef930aaeb90e8e51d8587e4bbaf4a66f168fa"
+    },
+    {
+      "path": "setup/functions.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6e3a93ecdf671c1f41fd7c1b6ffd45d99345f03",
+      "size": 724,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/f6e3a93ecdf671c1f41fd7c1b6ffd45d99345f03"
+    },
+    {
+      "path": "setup/set-fonts.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d64e2a98e2c40d95ad5cea85672965460ddcd21",
+      "size": 323,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/6d64e2a98e2c40d95ad5cea85672965460ddcd21"
+    },
+    {
+      "path": "setup/shiny-prep.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3704b331bbc2bdb4849a05af6a477eb69b69eab4",
+      "size": 504,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/3704b331bbc2bdb4849a05af6a477eb69b69eab4"
+    },
+    {
+      "path": "setup/simulate-seats.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c7ab5ae1f12a753dc164cb91da8df6559d80739",
+      "size": 9275,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/3c7ab5ae1f12a753dc164cb91da8df6559d80739"
+    },
+    {
+      "path": "shiny",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "077467d05592b6787c90f3d92938ca5b54403d44",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/077467d05592b6787c90f3d92938ca5b54403d44"
+    },
+    {
+      "path": "shiny/parties.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31eb20296dad893670f9380641af601927b9bbbe",
+      "size": 155,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/31eb20296dad893670f9380641af601927b9bbbe"
+    },
+    {
+      "path": "shiny/parties_ordered.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bc964c6bf66825d3c85cec08fd33e0278a2faad",
+      "size": 460,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/9bc964c6bf66825d3c85cec08fd33e0278a2faad"
+    },
+    {
+      "path": "shiny/server.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb968c6abd3a9abd368fdf22e94ca935547fd432",
+      "size": 5164,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/bb968c6abd3a9abd368fdf22e94ca935547fd432"
+    },
+    {
+      "path": "shiny/sims.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffcea503903234180f31dcb8ed9dce264d4e1f00",
+      "size": 324675,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/ffcea503903234180f31dcb8ed9dce264d4e1f00"
+    },
+    {
+      "path": "shiny/ui.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d5c5ad54cf85b7879750208ad78eb4643cf4060",
+      "size": 4609,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/9d5c5ad54cf85b7879750208ad78eb4643cf4060"
+    },
+    {
+      "path": "tracking-plot.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1c15dc5b75e20999e71c852fd2351eaa2a835d9",
+      "size": 1588,
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/blobs/a1c15dc5b75e20999e71c852fd2351eaa2a835d9"
+    }
+  ],
+  "truncated": false
+}
