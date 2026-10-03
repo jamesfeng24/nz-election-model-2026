@@ -1,3 +1,11 @@
+# Stage34 — frozen post-result diagnostic checkpoint, 2026-10-04
+
+Verified PR40 MERGED at304de1fb9b78bf617d6856ec995ca562c84d53ea containing reviewed7fae468629aa4e13d3bfab9675be544967257e6f. Clean checkout safely synchronized; branch `stage/34-s-r-error-diagnostics`. [Frozen short analysis contract](docs/stage34-analysis-contract.md) and [implementation plan](docs/stage34-implementation-plan.md) pin only saved Stage33 four-model predictions and preserved Stage31 whole-party inputs/continuity.
+
+Preanalysis inventory records five complete canonical group alignments,25 branch/fold manifests and the full356-seat geography ledger. Renames remain one dimension, ballot-group alliances are indivisible entry/exits without constituent allocation; no candidate-roster normalization. Denominators/common slates and inherited consumed-input/phase contracts verified. All1,447 prior tracked data artifacts remain byte-identical. No new movement/error associations, candidate fits or predictions calculated.
+
+**Next within authorized Stage34:** commit/push this checkpoint, then only frozen TV movement, G/J paired errors, within-election/equal-election associations, finite strict/chronology/observed sensitivities, competing explanations and error-dispersion/influence. No optimization, acquisition or adaptive weights. Subsequent development decision will retain S and S+R active alternatives, R challenger, baseline mandatory without rewriting Stage33. Complete tests/independent arithmetic/deterministic/provenance/CI; open one unmerged PR and stop before later forecast tasks.
+
 # Stage33 PR40 — completed comparison review handoff, 2026-10-04
 
 [PR #40](https://github.com/jamesfeng24/nz-election-model-2026/pull/40) is open and must remain unmerged for independent review. Branch `stage/33-joint-candidate-share-comparison` from verified merged Stage32. Pre-fit0142d2f → constructionab3cf82 → findings42b8245 were committed/pushed in order. The complete Stage32 frozen four-model comparison is implemented and evaluated; no additional statistical/source/forecast task started.
