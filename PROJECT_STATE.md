@@ -1,3 +1,11 @@
+# Stage31 — preconstruction checkpoint, 2026-10-03
+
+Verified PR37 merged ataa330f859c6a75ae500209e45edbb0af4e745bbf, containing reviewed30b0e186; clean main synchronized and `stage/31-expanded-party-input-substitution` created. [Plan](docs/stage31-implementation-plan.md), D062 and new frozen specification/input inventory/contracts in `data/processed/models/expanded-party-substitution/` precede any new vector, candidate prediction or score.
+
+Canonical full356 target frame retained by reference. Held-general candidate contests63/20/64/34/64, occurrences423/143/431/286/459;246 exact general party ballots include separately cancelled Port Waikato,245 held candidate contests.35 Māori coverage-only and75 nonexact general records remain explicit. Saved Stage27 expanded folds/means/three scenarios pinned: primary2014/2017/2020/2023 fitted;2011 no fit; more-separated also2014 no fit. All1,414 earlier data artifacts and source/input contracts pass. No coefficients refitted or selections changed.
+
+**Next within Stage31:** commit/push this contract, reproduce original Stage23 vectors before extension and Stage27 A/B before C/D, apply saved parameters only, commit construction before scoring. Then paired party/candidate/group/rounding/influence diagnostics, Stage24 bounded compatibility, independent verification, focused/full tests/provenance/CI, final documentation and unmerged PR. Stop before joint modelling, variants, acquisition, reconciliation or forecasts.
+
 # Stage30 PR37 — review handoff, 2026-10-03
 
 [PR #37](https://github.com/jamesfeng24/nz-election-model-2026/pull/37) is open/unmerged. Pre-fit `d30f646`, construction `ba81f4e` and findings `e1d9e6b` were committed/pushed in order. All authorized analysis, local tests, independent arithmetic, deterministic/source checks and documentation are complete; all1,402 earlier data files and null selections are preserved. No approval-review restriction occurred. Final-head GitHub frontend/full Python/deterministic checks are tracked on PR37 and must pass before final response. Local branch matches pushed findings head and is clean before this handoff commit.
