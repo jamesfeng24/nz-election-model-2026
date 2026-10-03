@@ -430,3 +430,9 @@ python -m unittest scripts.tests.test_stage34_diagnostics -v
 ```
 
 Omit `--check` only to regenerate these companion diagnostics in that order; none invokes optimization or expert prediction. Initial contract/category/sample inventory208ea60 preceded all new associations. Checks pin consumed artifacts/raw-byte contracts and1,447 earlier tracked data bytes independently of unrelated registry additions. The verifier independently checks rational distances/raw denominators, saved-share error arithmetic, baseline-relative robustness and centered associations through an alternate per-environment covariance formula. CSV/figures/report derive from saved diagnostics; synthetic fixtures remain outside historical outputs. All Stage33 fits/predictions/operational nulls remain unchanged.
+
+## Stage35 national polling foundation (offline, no posterior)
+
+Run `.venv/bin/python -m scripts.polling.national_foundation.run --check`, `design --check` and `verification --check` with the same module prefix. Regeneration omits `--check`; input raw bytes are never fetched by Python. The source ledger is independent of unrelated central registry additions. Historical results live in an isolated artifact and must be filtered by election and availability before training; held-out results never enter a fold. Read Stage35's specification before inference: no historical fit/score is part of these commands.
+
+Stage35’s separate `data/source-plans/stage35-prior-data-preservation.json` freezes1,461 base9ded Git-blob checksums. It verifies prior bytes in shallow CI checkouts without fetching history; it is separate from the consumed polling-source contract.

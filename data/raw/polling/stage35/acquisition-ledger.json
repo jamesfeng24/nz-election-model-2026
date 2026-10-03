@@ -143,14 +143,16 @@
       "purpose": "bulk source/lineage discovery",
       "retrievedAt": "2026-10-03T22:46:34.116382+00:00",
       "status": "failed",
-      "rawPath": "data/raw/polling/stage35/nixinova-commit.json"
+      "rawPath": "data/raw/polling/stage35/nixinova-commit.json",
+      "failureDetail": "no successful raw resource; command failure diagnostics not retained; no factual verification from this route"
     },
     {
       "url": "https://api.github.com/repos/Nixinova/NZPolls/git/trees/master?recursive=1",
       "purpose": "bulk source/lineage discovery",
       "retrievedAt": "2026-10-03T22:46:34.116936+00:00",
       "status": "failed",
-      "rawPath": "data/raw/polling/stage35/nixinova-tree.json"
+      "rawPath": "data/raw/polling/stage35/nixinova-tree.json",
+      "failureDetail": "no successful raw resource; command failure diagnostics not retained; no factual verification from this route"
     },
     {
       "url": "https://api.github.com/repos/ellisp/nz-election-forecast/commits/master",
@@ -319,6 +321,60 @@
       "retrievedAt": "2026-10-03T22:51:37.651279+00:00",
       "status": "success",
       "rawPath": "data/raw/polling/stage35/verian2026.html"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2011/",
+      "purpose": "official election calendar/earlier result availability",
+      "retrievedAt": "2026-10-03T23:01:02.406547+00:00",
+      "status": "failed",
+      "rawPath": "data/raw/polling/stage35/ec-2011-summary.html",
+      "failureDetail": "no successful raw resource; command failure diagnostics not retained; no factual verification from this route"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2014/",
+      "purpose": "official election calendar/earlier result availability",
+      "retrievedAt": "2026-10-03T23:01:08.708393+00:00",
+      "status": "failed",
+      "rawPath": "data/raw/polling/stage35/ec-2014-summary.html",
+      "failureDetail": "no successful raw resource; command failure diagnostics not retained; no factual verification from this route"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2017/",
+      "purpose": "official election calendar/earlier result availability",
+      "retrievedAt": "2026-10-03T23:01:15.550930+00:00",
+      "status": "failed",
+      "rawPath": "data/raw/polling/stage35/ec-2017-summary.html",
+      "failureDetail": "no successful raw resource; command failure diagnostics not retained; no factual verification from this route"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2020/",
+      "purpose": "official election calendar/earlier result availability",
+      "retrievedAt": "2026-10-03T23:01:21.120581+00:00",
+      "status": "failed",
+      "rawPath": "data/raw/polling/stage35/ec-2020-summary.html",
+      "failureDetail": "no successful raw resource; command failure diagnostics not retained; no factual verification from this route"
+    },
+    {
+      "url": "https://www.electionresults.govt.nz/electionresults_2023/",
+      "purpose": "official election calendar/earlier result availability",
+      "retrievedAt": "2026-10-03T23:01:26.939839+00:00",
+      "status": "failed",
+      "rawPath": "data/raw/polling/stage35/ec-2023-summary.html",
+      "failureDetail": "no successful raw resource; command failure diagnostics not retained; no factual verification from this route"
+    },
+    {
+      "url": "https://pypi.org/pypi/numpyro/0.19.0/json",
+      "purpose": "minimal future inference dependency compatibility metadata",
+      "retrievedAt": "2026-10-03T23:14:08.696794+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/numpyro-0.19.0.json"
+    },
+    {
+      "url": "https://pypi.org/pypi/jax/0.6.2/json",
+      "purpose": "minimal future inference dependency compatibility metadata",
+      "retrievedAt": "2026-10-03T23:14:15.286880+00:00",
+      "status": "success",
+      "rawPath": "data/raw/polling/stage35/jax-0.6.2.json"
     }
   ],
   "resources": [
@@ -330,7 +386,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/arie-metadata.json",
       "sha256": "6617ceb41e50e6fa00a5bca053426cb4abcc51ab7b9a42b587cf71753d0e950c",
-      "bytes": 6726
+      "bytes": 6726,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-commit.json",
@@ -340,7 +398,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/arie-commit.json",
       "sha256": "8c88fd23b2c9e0940b2da8a140d2a11fb0256c58371483d566dce92ab42f1e47",
-      "bytes": 13574
+      "bytes": 13574,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-tree.json",
@@ -350,7 +410,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/arie-tree.json",
       "sha256": "5cbf1fffd691004c1dc2b563f1dd16f280cb31c5a96ee3b87fa6a79f926d6c86",
-      "bytes": 71311
+      "bytes": 71311,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-abm-methodology.html",
@@ -360,7 +422,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/abm-methodology.html",
       "sha256": "accec69a3365abd92c35b4b5c771c2d539b94ab671c0e7dd41c7b12b0ac2af11",
-      "bytes": 7505
+      "bytes": 7505,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-README.md",
@@ -370,7 +434,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-README.md",
       "sha256": "1966c4d58ddaece4098a8de5e78943ded099459144646d282c85a408007f64b6",
-      "bytes": 14288
+      "bytes": 14288,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-LICENSE.md",
@@ -380,7 +446,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-LICENSE.md",
       "sha256": "585e25ef8f5946a52bf2aed68d5becfc38be94a8663aa01c1b31d88aa57f1de3",
-      "bytes": 34904
+      "bytes": 34904,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-pyproject.toml",
@@ -390,7 +458,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-pyproject.toml",
       "sha256": "0f025769fdd51cd4388a32126db5f57608f1a0bc649ef2a180d2e251b93ef8b4",
-      "bytes": 1091
+      "bytes": 1091,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-src_pollofpolls_data_wikipedia.py",
@@ -400,7 +470,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_data_wikipedia.py",
       "sha256": "499eb807e963df770000bc9e06fb2962347453414a9d3d7d4121f545fdf7e1d1",
-      "bytes": 7789
+      "bytes": 7789,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-src_pollofpolls_data_dates.py",
@@ -410,7 +482,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_data_dates.py",
       "sha256": "0028380e3435f9e6dba240eec53347b370682b8564f099878d4e2f0e40eca16e",
-      "bytes": 3925
+      "bytes": 3925,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-src_pollofpolls_prep_marshal.py",
@@ -420,7 +494,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_prep_marshal.py",
       "sha256": "8f7b96be82b36a0ea77b3a10230bd7e981caebf38bc1e89baf2b3453f0172e7e",
-      "bytes": 14624
+      "bytes": 14624,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-src_pollofpolls_model_numpyro_model.py",
@@ -430,7 +506,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_model_numpyro_model.py",
       "sha256": "63cc1761894fae3540ed31b44ea7d8930b05a5360f3d0adf83069030404c65d7",
-      "bytes": 12673
+      "bytes": 12673,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-src_pollofpolls_eval_backtest.py",
@@ -440,7 +518,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_eval_backtest.py",
       "sha256": "402e1a9133fee68b004d7812976bccddd8243a05d32cac2a63061828843853f2",
-      "bytes": 14346
+      "bytes": 14346,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-src_pollofpolls_model_fit.py",
@@ -450,7 +530,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-src_pollofpolls_model_fit.py",
       "sha256": "a32982ea86db700304eb21788303e914e64470e8e303127214bba6359defd9bb",
-      "bytes": 10044
+      "bytes": 10044,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-config_pollsters.yml",
@@ -460,7 +542,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-config_pollsters.yml",
       "sha256": "a42401f9a901634ce8dea9998a56dacf89af08d819cd64db349c86b764625f4c",
-      "bytes": 2717
+      "bytes": 2717,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-config_elections.yml",
@@ -470,7 +554,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-config_elections.yml",
       "sha256": "4771d95e297a2cb988b4b102ebaa8d4bef07f07dad5de3f7d57c924059d980f3",
-      "bytes": 2941
+      "bytes": 2941,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-legacy-r_stan_model2023.stan",
@@ -480,7 +566,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-legacy-r_stan_model2023.stan",
       "sha256": "bced8005960a7a6d98abc537298e6e692b613baf7ef8ff0799005df69beeca9d",
-      "bytes": 4410
+      "bytes": 4410,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-legacy-r_R_read-polls.R",
@@ -490,7 +578,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-legacy-r_R_read-polls.R",
       "sha256": "e9adf693d0a4dab16513b1e70dd196acfe5b99c952b0ff7864d51961b8b000b2",
-      "bytes": 7001
+      "bytes": 7001,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-arie-legacy-r_README.md",
@@ -500,7 +590,9 @@
       "repositoryVersion": "ef76cf6562e1d028b4fff46d063f4b93945299de",
       "rawPath": "data/raw/polling/stage35/arie-legacy-r_README.md",
       "sha256": "9d42b92063f3a2b5abf17fc63be3fe5de1b3a61570c4a5100b35f60908cf7793",
-      "bytes": 789
+      "bytes": 789,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-ellis-commit.json",
@@ -510,7 +602,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/ellis-commit.json",
       "sha256": "76e2638ba79c6390b27c60b92a856eb12e6304601bad3a07e2f2efdd40b53c96",
-      "bytes": 4874
+      "bytes": 4874,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-ellis-tree.json",
@@ -520,7 +614,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/ellis-tree.json",
       "sha256": "616a89ed1449d95ec64207c176650f27c3322093051d6b5d90208e6cc320b8dd",
-      "bytes": 22222
+      "bytes": 22222,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-nixinova-commit.json",
@@ -530,7 +626,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/nixinova-commit.json",
       "sha256": "45aacddb3e9669f6f59f260bc5f05e09ad5a1abef360f4aeca7a6a6c4c11375b",
-      "bytes": 4694
+      "bytes": 4694,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-nixinova-tree.json",
@@ -540,7 +638,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/nixinova-tree.json",
       "sha256": "96ee090dde61d1499bf19314a4ceecbececaa796951a427f30c45f338f3a0f00",
-      "bytes": 4648
+      "bytes": 4648,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-abm-tree.json",
@@ -550,7 +650,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/abm-tree.json",
       "sha256": "148f7cf03e229a81ef7d6b0c7c8be48bcdd25ab5c97b61c2a2becc23ab44c299",
-      "bytes": 50949
+      "bytes": 50949,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-nixinova-data.yml",
@@ -560,7 +662,9 @@
       "repositoryVersion": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
       "rawPath": "data/raw/polling/stage35/nixinova-data.yml",
       "sha256": "a50b12ce3beed3dbbd2cc891df6bdad7ca5d24dbd561658433750e73cf50e71d",
-      "bytes": 61736
+      "bytes": 61736,
+      "licence": "Unlicense; Nixinova; transcribed Wikipedia observations",
+      "processingScript": "scripts/polling/national_foundation/run.py"
     },
     {
       "id": "polling35-nixinova-docs.md",
@@ -570,7 +674,9 @@
       "repositoryVersion": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
       "rawPath": "data/raw/polling/stage35/nixinova-docs.md",
       "sha256": "b3fad91d78da5b82a0ad271c80314b20333b68344e46725c893a2293c0fdecc5",
-      "bytes": 944
+      "bytes": 944,
+      "licence": "Unlicense; Nixinova; transcribed Wikipedia observations",
+      "processingScript": null
     },
     {
       "id": "polling35-nixinova-license.md",
@@ -580,7 +686,9 @@
       "repositoryVersion": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
       "rawPath": "data/raw/polling/stage35/nixinova-license.md",
       "sha256": "901855a2f3237ef3546498171656092e711e6227ed18e66bb62a55397e3532e6",
-      "bytes": 1160
+      "bytes": 1160,
+      "licence": "Unlicense; Nixinova; transcribed Wikipedia observations",
+      "processingScript": null
     },
     {
       "id": "polling35-nixinova-readme.md",
@@ -590,7 +698,9 @@
       "repositoryVersion": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
       "rawPath": "data/raw/polling/stage35/nixinova-readme.md",
       "sha256": "1afb33f838d14ec412ae1155ee603c44a19081954d95a43fd2aae322731a4362",
-      "bytes": 805
+      "bytes": 805,
+      "licence": "Unlicense; Nixinova; transcribed Wikipedia observations",
+      "processingScript": null
     },
     {
       "id": "polling35-ellis-LICENSE",
@@ -600,7 +710,9 @@
       "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
       "rawPath": "data/raw/polling/stage35/ellis-LICENSE",
       "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
-      "bytes": 35141
+      "bytes": 35141,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-ellis-method-statespace_ss-vectorized.stan",
@@ -610,7 +722,9 @@
       "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
       "rawPath": "data/raw/polling/stage35/ellis-method-statespace_ss-vectorized.stan",
       "sha256": "8d729ee80aef013da4ca395f87636205300ef60b56a84d380a56b83a4ec494c1",
-      "bytes": 6120
+      "bytes": 6120,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-ellis-method-statespace_prep.R",
@@ -620,7 +734,9 @@
       "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
       "rawPath": "data/raw/polling/stage35/ellis-method-statespace_prep.R",
       "sha256": "ca2681b37385238bb6d5f9db55f3acc1ff0b92a20537b3553d60cdb0ccca9619",
-      "bytes": 5182
+      "bytes": 5182,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-ellis-method-statespace_prior.R",
@@ -630,7 +746,9 @@
       "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
       "rawPath": "data/raw/polling/stage35/ellis-method-statespace_prior.R",
       "sha256": "1bea51cc0cc0652a522051134f2933a244557080916191c7480ff7e27822fd80",
-      "bytes": 2563
+      "bytes": 2563,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-ellis-README.md",
@@ -640,7 +758,9 @@
       "repositoryVersion": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
       "rawPath": "data/raw/polling/stage35/ellis-README.md",
       "sha256": "24b4ec35b1fd1a05d9e772d6915e0b61809670ee550de75df5f1033e91706c75",
-      "bytes": 235
+      "bytes": 235,
+      "licence": "GPL-3.0 reference preservation; upstream attribution/licenses retained; not imported code",
+      "processingScript": null
     },
     {
       "id": "polling35-rm2020.html",
@@ -650,7 +770,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/rm2020.html",
       "sha256": "85d61fffd46c045c2eedef92441d458de1b4d6835ba4bd4a9538aaf991dba81a",
-      "bytes": 152323
+      "bytes": 152323,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": "scripts/polling/national_foundation/run.py"
     },
     {
       "id": "polling35-rm2017.html",
@@ -661,7 +783,9 @@
       "rawPath": "data/raw/polling/stage35/rm2017.html",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
-      "contentStatus": "empty_unavailable"
+      "contentStatus": "empty_unavailable",
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-rm-series.html",
@@ -671,7 +795,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/rm-series.html",
       "sha256": "f7997512390264f718c174359b6283aad48e641d10f6399b479b4bf77e9ed60e",
-      "bytes": 162752
+      "bytes": 162752,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-election2026.html",
@@ -681,7 +807,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/election2026.html",
       "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
-      "bytes": 212
+      "bytes": 212,
+      "licence": "Crown copyright; attributed reference",
+      "processingScript": null
     },
     {
       "id": "polling35-verian-faq.pdf",
@@ -691,7 +819,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/verian-faq.pdf",
       "sha256": "cf1e14e0ae65af8de585d08ceb00c78b361c75760a5547f611392c40d56811b7",
-      "bytes": 3920468
+      "bytes": 3920468,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-rm2014.html",
@@ -702,7 +832,9 @@
       "rawPath": "data/raw/polling/stage35/rm2014.html",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
-      "contentStatus": "empty_unavailable"
+      "contentStatus": "empty_unavailable",
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-rm2023.html",
@@ -712,7 +844,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/rm2023.html",
       "sha256": "e1b82fa712aa609190113fa0793570d6625400983ab547e0f99392ebf22f6abc",
-      "bytes": 190298
+      "bytes": 190298,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": "scripts/polling/national_foundation/run.py"
     },
     {
       "id": "polling35-rm2023.pdf",
@@ -722,7 +856,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/rm2023.pdf",
       "sha256": "740780d237bdcfc6a0c43bd717525c40dad47dcaeb5d59e1b15dbc8d598c8939",
-      "bytes": 912223
+      "bytes": 912223,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": null
     },
     {
       "id": "polling35-wiki2026.html",
@@ -732,7 +868,9 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/wiki2026.html",
       "sha256": "65b96be9fb6f9ce4a82df15067f57276df3dcc117a2e1ed0c1e4164119819058",
-      "bytes": 783585
+      "bytes": 783585,
+      "licence": "Wikipedia CC BY-SA; article revision snapshot; source attribution retained",
+      "processingScript": "scripts/polling/national_foundation/run.py"
     },
     {
       "id": "polling35-verian2026.html",
@@ -742,7 +880,31 @@
       "repositoryVersion": null,
       "rawPath": "data/raw/polling/stage35/verian2026.html",
       "sha256": "d0d34cc0660173f0f159d89a442caff7508a453f607195e441f8dfc6fafac627",
-      "bytes": 789831
+      "bytes": 789831,
+      "licence": "Publisher copyright; public reference/raw evidence only; redistribution permission not asserted",
+      "processingScript": "scripts/polling/national_foundation/run.py"
+    },
+    {
+      "id": "polling35-numpyro-0.19.0.json",
+      "url": "https://pypi.org/pypi/numpyro/0.19.0/json",
+      "purpose": "minimal future inference dependency compatibility metadata",
+      "retrievedAt": "2026-10-03T23:14:08.696794+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/numpyro-0.19.0.json",
+      "sha256": "75b077e79c374fc2439b8856b4695a8f0ef41a9ece18053b92d303dccf11dd8b",
+      "bytes": 39169,
+      "license": "Apache-2.0 package metadata; reference only, no package installed"
+    },
+    {
+      "id": "polling35-jax-0.6.2.json",
+      "url": "https://pypi.org/pypi/jax/0.6.2/json",
+      "purpose": "minimal future inference dependency compatibility metadata",
+      "retrievedAt": "2026-10-03T23:14:15.286880+00:00",
+      "repositoryVersion": null,
+      "rawPath": "data/raw/polling/stage35/jax-0.6.2.json",
+      "sha256": "e53f0c2266eb601ba14c07d90a21f1ce084a9ffe27e1ba9a38dcd2e8932e5082",
+      "bytes": 15320,
+      "license": "Apache-2.0 package metadata; reference only, no package installed"
     }
   ],
   "discoveryLog": [
@@ -776,5 +938,10 @@
       ],
       "timing": "after plan; tool transcript retained, exact timestamps unavailable"
     }
+  ],
+  "stoppingReason": "44 preserved unique resources, including2 empty Scoop responses;7 failed routes (wrong branch2, official summaries5) remain unavailable. Bulk history/current snapshot and actual primary/lineage inspection sufficient for this bounded design; stop below60.",
+  "protocolNotes": [
+    "Fourteen discovery queries include repeated original-release routes beyond the planned one-search-per-missing-route wording. This deviation is recorded; no model scores or candidate outcomes guided acquisition. No additional searches are authorized or needed.",
+    "Seven failed retrieval routes have no preserved response bytes or exact failure diagnostics. Two successful Scoop retrievals returned empty bytes, separately preserved. Discovery query timestamps are unavailable beyond their post-plan ordering."
   ]
 }

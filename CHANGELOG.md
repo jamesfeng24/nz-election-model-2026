@@ -282,3 +282,7 @@ Added a deterministic 213-contest input-availability inventory, proposed interva
 - Independently fit the four frozen complete-share restrictions and finite evidence/input/chronology/rounding branches using exact Stage32 IDs; save verified predictions before evaluation.
 - Preserve numerical failures and document same-objective precision retries without changing bounds/tolerances; all56 final jobs pass independent checks.
 - Report useful R-alone and mixed S+R incremental development evidence, full slates/groups/influence/winners, independent arithmetic and byte-preserved prior artifacts. Keep S provisionally preferred and all operational nulls unchanged; stop before later inputs, fallback or integration.
+
+## Stage35 — national polling foundation/design
+
+Added versioned496-wave polling foundation, bounded raw/reference provenance, publication-cutoff/revision/duplicate/rounding infrastructure, audited reuse decision, one frozen national joint model/benchmark and eight-case chronological evaluation contract. D067 corrects active replay interpretation without altering historical decisions/numerical outputs. No fitting, forecast score, candidate replay or operational change.
