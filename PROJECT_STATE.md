@@ -1,3 +1,11 @@
+# Stage30 PR37 — review handoff, 2026-10-03
+
+[PR #37](https://github.com/jamesfeng24/nz-election-model-2026/pull/37) is open/unmerged. Pre-fit `d30f646`, construction `ba81f4e` and findings `e1d9e6b` were committed/pushed in order. All authorized analysis, local tests, independent arithmetic, deterministic/source checks and documentation are complete; all1,402 earlier data files and null selections are preserved. No approval-review restriction occurred. Final-head GitHub frontend/full Python/deterministic checks are tracked on PR37 and must pass before final response. Local branch matches pushed findings head and is clean before this handoff commit.
+
+**Conclusion:** broad482/strict413 supported residual pairs; carry-forward beats zero in all five general development holdouts, while fitted intercept/slope fails to consistently improve carry-forward. Prior residual merits a later incremental joint research test; no fitted coefficient is operationally selected or stacked onto S. Same-person linkage does not identify personal causality or historical prospective availability. General/Māori, chronology, normalization, own-population versus common-strict and descriptive influence are separate.
+
+**Stop here:** independent review. The next separately authorized task is expanded Stage23 party-vector construction and fixed-parameter baseline/S input substitution, followed by one small predeclared joint/regularized complete-share comparison once interfaces are frozen. No automatic candidate integration, new variant, acquisition, tenure/replacement expansion or linkage queue reopening.
+
 # Stage30 — completed local findings and validation, 2026-10-03
 
 **Branch:** `stage/30-expanded-candidate-persistence`, from verified PR36 merge5c754823/reviewed22ad3b6. Pre-fit `d30f646` and construction `ba81f4e` were pushed in order. [Findings](docs/stage30-expanded-persistence-results.md), D060/D061 and new companion artifacts are complete. No acquisition, adjudication, queue repair, candidate predictions, new model variants or operational change.
