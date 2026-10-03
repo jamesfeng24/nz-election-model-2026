@@ -1,0 +1,2536 @@
+{
+  "acceptanceFrozenBeforeOutcomeCoverage": true,
+  "cap": 60,
+  "inspectionLimit": "fixed first60; no replacement; not exhaustive biography review; later exceptions unreviewed",
+  "newSources": 0,
+  "records": [
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-18-candidate-07->nz-general-2011-electorate-18-candidate-04",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "YAU, Seam Kheon (Sam)",
+            "PARSONS, John Francis"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-18-candidate-07",
+            "nz-general-2011-electorate-18-candidate-04"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-18-candidate-07",
+            "nz-general-2011-electorate-18-candidate-04"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-18-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-18-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 1,
+      "reason": "Parenthesized source alias is not in the frozen parser; candidature evidence does not connect Yau and Parsons."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-37-candidate-04->nz-general-2011-electorate-37-candidate-02",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "KELLY, Brian",
+            "KAUSHAL, Sushil Kumar (Sunny)"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-37-candidate-04",
+            "nz-general-2011-electorate-37-candidate-02"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-37-candidate-04",
+            "nz-general-2011-electorate-37-candidate-02"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-37-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-37-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 2,
+      "reason": "Parenthesized target alias is not in the frozen parser; candidature evidence does not connect Kelly and Kaushal."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-25-candidate-08->nz-general-2011-electorate-25-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "LOTU-IIGA, Peseta Samuela Masunu",
+            "LOTU-IIGA, Peseta Samuelu Masunu"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-25-candidate-08",
+            "nz-general-2011-electorate-25-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-25-candidate-08",
+            "nz-general-2011-electorate-25-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-25-candidate-08",
+              "inheritedMethod": "official_profile_observed_winner",
+              "personExistenceEvidence": "official_profile_corroborated"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-25-candidate-05",
+              "inheritedMethod": "official_profile_observed_winner",
+              "personExistenceEvidence": "official_profile_corroborated"
+            }
+          ]
+        },
+        {
+          "artifact": "data/raw/identity-parliament-profiles/former-lotu-iiga-peseta-sam.html",
+          "limitation": "service and existence, not an exact nomination-label bridge",
+          "passage": "Date first elected: 8 November 2008; Maungakiekie; 8/11/2008; 23/09/2017",
+          "sha256": "40cbe88060de49186284ae696b7cfdb3c27528a0bd428dd8c53cb85d3138983a"
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 3,
+      "reason": "Samuela versus Samuelu conflicts. Parliament profile shows Maungakiekie service 2008-11-08 to 2017-09-23 and person existence, but does not supply a passage connecting the two differently labelled nominations without inherited winner-chain inference."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-32-candidate-09->nz-general-2011-electorate-32-candidate-07",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "WATSON, Pieter Rowley Burgess",
+            "WATSON, Pieter Rowley Burges"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-32-candidate-09",
+            "nz-general-2011-electorate-32-candidate-07"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-32-candidate-09",
+            "nz-general-2011-electorate-32-candidate-07"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-32-candidate-09",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-32-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 4,
+      "reason": "Expanded Burgess versus Burges is an unfamiliar spelling discrepancy, not a frozen nickname or initial. No relationship bridge in inspected inherited evidence."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-35-candidate-06->nz-general-2011-electorate-35-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "HUGHES, Gareth Thomas Llewelyn",
+            "HUGHES, Gareth Thomas Llewellyn"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-35-candidate-06",
+            "nz-general-2011-electorate-35-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-35-candidate-06",
+            "nz-general-2011-electorate-35-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-35-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-35-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 5,
+      "reason": "Expanded Llewelyn versus Llewellyn is a spelling discrepancy; no inherited occurrence bridge."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-64-candidate-01->nz-general-2011-electorate-64-candidate-01",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "GREENSILL, Angeline Elizabeth Ngahina",
+            "GREENSILL, Angeline Ngahina"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-64-candidate-01",
+            "nz-general-2011-electorate-64-candidate-01"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-64-candidate-01",
+            "nz-general-2011-electorate-64-candidate-01"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-64-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-64-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 6,
+      "reason": "Elizabeth omitted in an interior position and party context changes; neither token rearrangement nor MANA/Green continuity is authorized."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-01-candidate-08->nz-general-2011-electorate-01-candidate-07",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "RAVLICH, Anthony George",
+            "VAN DEN HEUVEL, Anthony Joseph James"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-01-candidate-08",
+            "nz-general-2011-electorate-01-candidate-07"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-01-candidate-08",
+            "nz-general-2011-electorate-01-candidate-07"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-01-candidate-08",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-01-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 7,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-01-candidate-11->nz-general-2011-electorate-01-candidate-01",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "TIZARD, Judith Ngaire",
+            "ARDERN, Jacinda Kate Laurell"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-01-candidate-11",
+            "nz-general-2011-electorate-01-candidate-01"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-01-candidate-11",
+            "nz-general-2011-electorate-01-candidate-01"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-01-candidate-11",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-01-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 8,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-01-candidate-12->nz-general-2011-electorate-01-candidate-06",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "UREN, Scott",
+            "SEYMOUR, David Breen"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-01-candidate-12",
+            "nz-general-2011-electorate-01-candidate-06"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-01-candidate-12",
+            "nz-general-2011-electorate-01-candidate-06"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-01-candidate-12",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-01-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 9,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-02-candidate-01->nz-general-2011-electorate-02-candidate-03",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "BROWN, Peter Alfred",
+            "DOLMAN, Raymond"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-02-candidate-01",
+            "nz-general-2011-electorate-02-candidate-03"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-02-candidate-01",
+            "nz-general-2011-electorate-02-candidate-03"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-02-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-02-candidate-03",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 10,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-03-candidate-01->nz-general-2011-electorate-03-candidate-02",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "CARTER, Judy Ann",
+            "PARKASH, Ram"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-03-candidate-01",
+            "nz-general-2011-electorate-03-candidate-02"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-03-candidate-01",
+            "nz-general-2011-electorate-03-candidate-02"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-03-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-03-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 11,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-03-candidate-06->nz-general-2011-electorate-03-candidate-04",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "TAWA, Koro Alaster Richard",
+            "WU, Chao-Fu"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-03-candidate-06",
+            "nz-general-2011-electorate-03-candidate-04"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-03-candidate-06",
+            "nz-general-2011-electorate-03-candidate-04"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-03-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-03-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 12,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-03-candidate-07->nz-general-2011-electorate-03-candidate-01",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "WANG, Kenneth",
+            "MURPHY, Lynette Mary"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-03-candidate-07",
+            "nz-general-2011-electorate-03-candidate-01"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-03-candidate-07",
+            "nz-general-2011-electorate-03-candidate-01"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-03-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-03-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 13,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-04-candidate-07->nz-general-2011-electorate-04-candidate-04",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "McLAUCHLAN, Jan Ailsa",
+            "MOORHOUSE, David Peter"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-04-candidate-07",
+            "nz-general-2011-electorate-04-candidate-04"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-04-candidate-07",
+            "nz-general-2011-electorate-04-candidate-04"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-04-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-04-candidate-04",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 14,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-05-candidate-04->nz-general-2011-electorate-05-candidate-02",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "LAMBERT, Paula",
+            "BRITNELL, Michael Allan"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-05-candidate-04",
+            "nz-general-2011-electorate-05-candidate-02"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-05-candidate-04",
+            "nz-general-2011-electorate-05-candidate-02"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-05-candidate-04",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-05-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 15,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-05-candidate-06->nz-general-2011-electorate-05-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "MATHERS, Celeste Mojo",
+            "MATHERS, Mojo Celeste"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-05-candidate-06",
+            "nz-general-2011-electorate-05-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-05-candidate-06",
+            "nz-general-2011-electorate-05-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-05-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-05-candidate-05",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 16,
+      "reason": "Celeste Mojo versus Mojo Celeste reverses given/middle order. No documented name-order bridge in inspected preserved evidence."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-05-candidate-11->nz-general-2011-electorate-05-candidate-06",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "SOLOMON, Maretta Tuasivi",
+            "MILLER, Johnny Isaac"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-05-candidate-11",
+            "nz-general-2011-electorate-05-candidate-06"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-05-candidate-11",
+            "nz-general-2011-electorate-05-candidate-06"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-05-candidate-11",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-05-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 17,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-06-candidate-02->nz-general-2011-electorate-06-candidate-04",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "GOW, Timothy Robert",
+            "GOLDSMITH, Rachael Louise"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-06-candidate-02",
+            "nz-general-2011-electorate-06-candidate-04"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-06-candidate-02",
+            "nz-general-2011-electorate-06-candidate-04"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-06-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-06-candidate-04",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 18,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-06-candidate-03->nz-general-2011-electorate-06-candidate-07",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "HENDERSON, Roland James",
+            "NICOLSON, Donald Owen"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-06-candidate-03",
+            "nz-general-2011-electorate-06-candidate-07"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-06-candidate-03",
+            "nz-general-2011-electorate-06-candidate-07"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-06-candidate-03",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-06-candidate-07",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 19,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-06-candidate-05->nz-general-2011-electorate-06-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "PRYDE, Donald Stuart",
+            "LOO, Tat Ang"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-06-candidate-05",
+            "nz-general-2011-electorate-06-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-06-candidate-05",
+            "nz-general-2011-electorate-06-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-06-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-06-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 20,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-07-candidate-04->nz-general-2011-electorate-07-candidate-01",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "REDWOOD, James Nelson",
+            "DELAHUNTY, Catherine"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-07-candidate-04",
+            "nz-general-2011-electorate-07-candidate-01"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-07-candidate-04",
+            "nz-general-2011-electorate-07-candidate-01"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-07-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-07-candidate-01",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 21,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-08-candidate-02->nz-general-2011-electorate-08-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "CALVERT, Hilary Jane",
+            "McCALLUM, Guy Daniel"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-08-candidate-02",
+            "nz-general-2011-electorate-08-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-08-candidate-02",
+            "nz-general-2011-electorate-08-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-08-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-08-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 22,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-08-candidate-04->nz-general-2011-electorate-08-candidate-04",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "EDWARDS, Mary Lloyd",
+            "GEORGE, Peter Don"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-08-candidate-04",
+            "nz-general-2011-electorate-08-candidate-04"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-08-candidate-04",
+            "nz-general-2011-electorate-08-candidate-04"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-08-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-08-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 23,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-08-candidate-05->nz-general-2011-electorate-08-candidate-02",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "HODGSON, Peter Colin",
+            "CLARK, David Scott"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-08-candidate-05",
+            "nz-general-2011-electorate-08-candidate-02"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-08-candidate-05",
+            "nz-general-2011-electorate-08-candidate-02"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-08-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-08-candidate-02",
+              "inheritedMethod": "official_profile_observed_winner",
+              "personExistenceEvidence": "official_profile_corroborated"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 24,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-08-candidate-06->nz-general-2011-electorate-08-candidate-06",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "McRAE, Olive Jessie",
+            "NOBLE, Jeremy Kenneth"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-08-candidate-06",
+            "nz-general-2011-electorate-08-candidate-06"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-08-candidate-06",
+            "nz-general-2011-electorate-08-candidate-06"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-08-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-08-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 25,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-09-candidate-05->nz-general-2011-electorate-09-candidate-07",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "McINTOSH, Dawn Shirley",
+            "VOIGHT, Warren Raymond"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-09-candidate-05",
+            "nz-general-2011-electorate-09-candidate-07"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-09-candidate-05",
+            "nz-general-2011-electorate-09-candidate-07"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-09-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-09-candidate-07",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 26,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-09-candidate-08->nz-general-2011-electorate-09-candidate-03",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "NICHOLLS, Colin William",
+            "HANNAH, Kimberly Joanne"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-09-candidate-08",
+            "nz-general-2011-electorate-09-candidate-03"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-09-candidate-08",
+            "nz-general-2011-electorate-09-candidate-03"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-09-candidate-08",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-09-candidate-03",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 27,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-09-candidate-09->nz-general-2011-electorate-09-candidate-04",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "POWELL, Conway Llewelyn",
+            "HAYES, Joanne Kowhai"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-09-candidate-09",
+            "nz-general-2011-electorate-09-candidate-04"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-09-candidate-09",
+            "nz-general-2011-electorate-09-candidate-04"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-09-candidate-09",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-09-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 28,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-10-candidate-01->nz-general-2011-electorate-10-candidate-04",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "DELAHUNTY, Catherine",
+            "MONTEITH, Darryl Stuart"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-10-candidate-01",
+            "nz-general-2011-electorate-10-candidate-04"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-10-candidate-01",
+            "nz-general-2011-electorate-10-candidate-04"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-10-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-10-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 29,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-10-candidate-02->nz-general-2011-electorate-10-candidate-06",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "HORAN, Brendan Francis John",
+            "REID, Tamati Kaiwai"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-10-candidate-02",
+            "nz-general-2011-electorate-10-candidate-06"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-10-candidate-02",
+            "nz-general-2011-electorate-10-candidate-06"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-10-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-10-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 30,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-10-candidate-05->nz-general-2011-electorate-10-candidate-01",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "TURNER, Judith Anne",
+            "GIBSON, Martin James"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-10-candidate-05",
+            "nz-general-2011-electorate-10-candidate-01"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-10-candidate-05",
+            "nz-general-2011-electorate-10-candidate-01"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-10-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-10-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 31,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-11-candidate-02->nz-general-2011-electorate-11-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "BRADFORD, Susan",
+            "STANSFIELD, Brett Thomas"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-11-candidate-02",
+            "nz-general-2011-electorate-11-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-11-candidate-02",
+            "nz-general-2011-electorate-11-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-11-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-11-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 32,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-11-candidate-06->nz-general-2011-electorate-11-candidate-03",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "KRONFELD, Timothy Paul",
+            "HUTTON, Toby James"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-11-candidate-06",
+            "nz-general-2011-electorate-11-candidate-03"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-11-candidate-06",
+            "nz-general-2011-electorate-11-candidate-03"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-11-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-11-candidate-03",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 33,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-12-candidate-04->nz-general-2011-electorate-12-candidate-01",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "HIDE, Rodney Philip",
+            "BANKS, John"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-12-candidate-04",
+            "nz-general-2011-electorate-12-candidate-01"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-12-candidate-04",
+            "nz-general-2011-electorate-12-candidate-01"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-12-candidate-04",
+              "inheritedMethod": "official_profile_observed_winner",
+              "personExistenceEvidence": "official_profile_corroborated"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-12-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 34,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-12-candidate-05->nz-general-2011-electorate-12-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "LOCKE, Keith James",
+            "HAY, David Robert"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-12-candidate-05",
+            "nz-general-2011-electorate-12-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-12-candidate-05",
+            "nz-general-2011-electorate-12-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-12-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-12-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 35,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-12-candidate-06->nz-general-2011-electorate-12-candidate-08",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "SUTTON, Kate Anna",
+            "PARKER, David William"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-12-candidate-06",
+            "nz-general-2011-electorate-12-candidate-08"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-12-candidate-06",
+            "nz-general-2011-electorate-12-candidate-08"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-12-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-12-candidate-08",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 36,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-12-candidate-08->nz-general-2011-electorate-12-candidate-03",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "WORTH, Richard Westwood",
+            "GOLDSMITH, Paul Jonathan"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-12-candidate-08",
+            "nz-general-2011-electorate-12-candidate-03"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-12-candidate-08",
+            "nz-general-2011-electorate-12-candidate-03"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-12-candidate-08",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-12-candidate-03",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 37,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-13-candidate-06->nz-general-2011-electorate-13-candidate-07",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "MORONEY, Suzanne Mary",
+            "SCHOENBERGER-ORGAD, Sehai"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-13-candidate-06",
+            "nz-general-2011-electorate-13-candidate-07"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-13-candidate-06",
+            "nz-general-2011-electorate-13-candidate-07"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-13-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-13-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 38,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-13-candidate-07->nz-general-2011-electorate-13-candidate-06",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "PERSSON, Linda",
+            "MARRYATT, Nicholas John"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-13-candidate-07",
+            "nz-general-2011-electorate-13-candidate-06"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-13-candidate-07",
+            "nz-general-2011-electorate-13-candidate-06"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-13-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-13-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 39,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-13-candidate-09->nz-general-2011-electorate-13-candidate-08",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "WOOLERTON, Robert Douglas",
+            "STEWART, Gordon James"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-13-candidate-09",
+            "nz-general-2011-electorate-13-candidate-08"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-13-candidate-09",
+            "nz-general-2011-electorate-13-candidate-08"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-13-candidate-09",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-13-candidate-08",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 40,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-14-candidate-01->nz-general-2011-electorate-14-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "GALLAGHER, Martin Owen",
+            "MORONEY, Suzanne Mary"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-14-candidate-01",
+            "nz-general-2011-electorate-14-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-14-candidate-01",
+            "nz-general-2011-electorate-14-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-14-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-14-candidate-05",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 41,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-14-candidate-06->nz-general-2011-electorate-14-candidate-01",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "VATSYAYANN, Suresh Kumar",
+            "CURTIS, Robert Ashmore"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-14-candidate-06",
+            "nz-general-2011-electorate-14-candidate-01"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-14-candidate-06",
+            "nz-general-2011-electorate-14-candidate-01"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-14-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-14-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 42,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-14-candidate-06->nz-general-2011-electorate-14-candidate-07",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "VATSYAYANN, Suresh Kumar",
+            "WIKIRIWHI, Timothy Denis"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-14-candidate-06",
+            "nz-general-2011-electorate-14-candidate-07"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-14-candidate-06",
+            "nz-general-2011-electorate-14-candidate-07"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-14-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-14-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 43,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-15-candidate-01->nz-general-2011-electorate-15-candidate-02",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "CLENDON, David James",
+            "ELLEY, Jeanette Susan"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-15-candidate-01",
+            "nz-general-2011-electorate-15-candidate-02"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-15-candidate-01",
+            "nz-general-2011-electorate-15-candidate-02"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-15-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-15-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 44,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-15-candidate-02->nz-general-2011-electorate-15-candidate-03",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "FENTON, Darien Elizabeth",
+            "GREENBROOK-HELD, Piers Jeremy"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-15-candidate-02",
+            "nz-general-2011-electorate-15-candidate-03"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-15-candidate-02",
+            "nz-general-2011-electorate-15-candidate-03"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-15-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-15-candidate-03",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 45,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-15-candidate-03->nz-general-2011-electorate-15-candidate-04",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "GARRETT, David Arthur",
+            "KEARNEY, Nicholas Norman"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-15-candidate-03",
+            "nz-general-2011-electorate-15-candidate-04"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-15-candidate-03",
+            "nz-general-2011-electorate-15-candidate-04"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-15-candidate-03",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-15-candidate-04",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 46,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-16-candidate-01->nz-general-2011-electorate-16-candidate-03",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "CARTER, Jordan Tracy",
+            "HILLS, Richard Brian"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-16-candidate-01",
+            "nz-general-2011-electorate-16-candidate-03"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-16-candidate-01",
+            "nz-general-2011-electorate-16-candidate-03"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-16-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-16-candidate-03",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 47,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-16-candidate-02->nz-general-2011-electorate-16-candidate-02",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "DOUGLAS, Roger Owen",
+            "CUMMINGS, Ian James"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-16-candidate-02",
+            "nz-general-2011-electorate-16-candidate-02"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-16-candidate-02",
+            "nz-general-2011-electorate-16-candidate-02"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-16-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-16-candidate-02",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 48,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-16-candidate-05->nz-general-2011-electorate-16-candidate-08",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "KENWORTHY, Fiona Marie",
+            "WATTS, Charmaine Anthea"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-16-candidate-05",
+            "nz-general-2011-electorate-16-candidate-08"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-16-candidate-05",
+            "nz-general-2011-electorate-16-candidate-08"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-16-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-16-candidate-08",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 49,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-16-candidate-06->nz-general-2011-electorate-16-candidate-06",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "MULFORD - TYLER, Helen Jane",
+            "NABBS, Douglas William John"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-16-candidate-06",
+            "nz-general-2011-electorate-16-candidate-06"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-16-candidate-06",
+            "nz-general-2011-electorate-16-candidate-06"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-16-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-16-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 50,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-17-candidate-02->nz-general-2011-electorate-17-candidate-06",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "HORROCKS, Virginia Jacqueline Ormond",
+            "WALKER, Holly Ruth Haines"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-17-candidate-02",
+            "nz-general-2011-electorate-17-candidate-06"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-17-candidate-02",
+            "nz-general-2011-electorate-17-candidate-06"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-17-candidate-02",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-17-candidate-06",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 51,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-17-candidate-05->nz-general-2011-electorate-17-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "MITCHELL, Lindsay Susan",
+            "SPEIRS, Richard Alexander"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-17-candidate-05",
+            "nz-general-2011-electorate-17-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-17-candidate-05",
+            "nz-general-2011-electorate-17-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-17-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-17-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 52,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-17-candidate-07->nz-general-2011-electorate-17-candidate-02",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "SMITH, Murray Vaughan",
+            "EADDY, Robert Raymond"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-17-candidate-07",
+            "nz-general-2011-electorate-17-candidate-02"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-17-candidate-07",
+            "nz-general-2011-electorate-17-candidate-02"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-17-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-17-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 53,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-18-candidate-02->nz-general-2011-electorate-18-candidate-06",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "DAVIDSON, Brian Matthew",
+            "VEALE, Gareth Rhys"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-18-candidate-02",
+            "nz-general-2011-electorate-18-candidate-06"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-18-candidate-02",
+            "nz-general-2011-electorate-18-candidate-06"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-18-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-18-candidate-06",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 54,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-18-candidate-05->nz-general-2011-electorate-18-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "PICKERING, John William",
+            "ROBERTS, Vanessa Joy"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-18-candidate-05",
+            "nz-general-2011-electorate-18-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-18-candidate-05",
+            "nz-general-2011-electorate-18-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-18-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-18-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 55,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-19-candidate-02->nz-general-2011-electorate-19-candidate-03",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "CARSON, Craig William",
+            "KENNEDY, David John"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-19-candidate-02",
+            "nz-general-2011-electorate-19-candidate-03"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-19-candidate-02",
+            "nz-general-2011-electorate-19-candidate-03"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-19-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-19-candidate-03",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 56,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-20-candidate-05->nz-general-2011-electorate-20-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "KING, Linda Waimarie",
+            "KING, Colin McDonald"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-20-candidate-05",
+            "nz-general-2011-electorate-20-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-20-candidate-05",
+            "nz-general-2011-electorate-20-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-20-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-20-candidate-05",
+              "inheritedMethod": "official_profile_observed_winner",
+              "personExistenceEvidence": "official_profile_corroborated"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 57,
+      "reason": "Same surname with different substantive given names is not a same-person match; failed matching does not establish distinct people."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-20-candidate-07->nz-general-2011-electorate-20-candidate-02",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "McNAMARA, Brian Lawrence",
+            "COLLYNS, Elizabeth Julia"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-20-candidate-07",
+            "nz-general-2011-electorate-20-candidate-02"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-20-candidate-07",
+            "nz-general-2011-electorate-20-candidate-02"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-20-candidate-07",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-20-candidate-02",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 58,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-20-candidate-08->nz-general-2011-electorate-20-candidate-03",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "TATTERSFIELD, David John",
+            "EVANS, Richard Warwick"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-20-candidate-08",
+            "nz-general-2011-electorate-20-candidate-03"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-20-candidate-08",
+            "nz-general-2011-electorate-20-candidate-03"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-20-candidate-08",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-20-candidate-03",
+              "inheritedMethod": "exact_full_name_party_seat_chain",
+              "personExistenceEvidence": "unverified_chain"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 59,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    },
+    {
+      "disposition": "unresolved",
+      "edgeId": "nz-general-2008-electorate-21-candidate-01->nz-general-2011-electorate-21-candidate-05",
+      "inspectionDate": "2026-10-03",
+      "inspectionEvidence": [
+        {
+          "artifact": "data/processed/models/candidate-overperformance/occurrences.json",
+          "observedLabels": [
+            "COLLINS, Michael Allan",
+            "WARREN, Michael John"
+          ],
+          "pointers": [
+            "nz-general-2008-electorate-21-candidate-01",
+            "nz-general-2011-electorate-21-candidate-05"
+          ],
+          "sha256": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5"
+        },
+        {
+          "artifact": "data/processed/models/candidate-persistence/person-links.json",
+          "pointers": [
+            "nz-general-2008-electorate-21-candidate-01",
+            "nz-general-2011-electorate-21-candidate-05"
+          ],
+          "sha256": "4ab96f75dc1df71e71bf3ccd253126618954c45769eb9524495b476045404560",
+          "supportSummary": [
+            {
+              "candidateOccurrenceId": "nz-general-2008-electorate-21-candidate-01",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            },
+            {
+              "candidateOccurrenceId": "nz-general-2011-electorate-21-candidate-05",
+              "inheritedMethod": null,
+              "personExistenceEvidence": "unknown"
+            }
+          ]
+        }
+      ],
+      "inspectionType": "manual_comparison_of_preserved_candidature_labels_and_inherited_relationship_routes",
+      "position": 60,
+      "reason": "Different recorded substantive names. Election-local candidature and any profile/chain routes inspected do not independently establish same-person or distinct-person relationship. No promotion from nonmatch."
+    }
+  ],
+  "schemaVersion": 1,
+  "stage": 26
+}

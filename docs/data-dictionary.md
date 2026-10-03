@@ -267,3 +267,25 @@ The original pre-fit `specification.json` and its first zero-replacement invento
 # Stage18 conditional candidate-share artifacts
 
 `data/processed/models/conditional-candidate-share/inventory.json` stores the complete earlier general training pool and fixed 213-contest frame, with immutable occurrence IDs, source affiliation, exact mapped party key, affirmative no-party-group status or explicit ambiguity. `construction.json` stores three chronological κ fits, complete observed-party candidate-share predictions, uniform and restricted comparator predictions, full-frame abstentions and Stage5 point-substitution reasons; it contains no target candidate outcome fields. `actuals.json` stores target valid-candidate denominators, shares and winners separately. `diagnostics.json` stores common-sample errors, candidate/category and slate-size breakdowns, winner ties, coverage and operational null. Phase-specific manifests hash inputs/code/outputs. Party and candidate shares have **different valid-ballot denominators**; no candidate vote counts are forecast. These are conditional historical diagnostics only. See `docs/conditional-candidate-share-results.md`.
+
+
+## Stage26 practical candidate-linkage evidence
+
+Under `data/processed/evidence/practical-candidate-linkage/`:
+
+| Artifact | Contract |
+|---|---|
+| contract.json / aliases.json | Frozen universe, parsing, finite12 aliases, context, review and broad/strict rules; explicit pre-coverage amendment history |
+| input-contract.json | Exact consumed processed/contract hashes and581 `(registryPath, record)` raw-byte dependencies; no whole-registry coupling |
+| prior-data-contract.json / preservation.json | Merged-base path/Git-blob snapshot and deterministic verification of1,344 earlier data files |
+| occurrences.json | Immutable source ID/Unicode labels, election-local party mapping/shared flag, parsed tokens, occurrence-only evidence and separate unknown cutoff timing |
+| proposed-links.json / review-table.md | Every proposed edge, routes, subrules, context, election-wide competitors, scope/geography, relationship evidence, component conflicts and reversible status |
+| accepted-relationships.json | Broad/strict same-person edge IDs and separate documentary distinct-person IDs; no original adjudication overwrite |
+| persons.json | Broad/strict provisional component IDs, original aliases, immutable member/edge IDs; career completeness and cutoff availability unknown |
+| inherited-evidence-audit.json / documentary-claims.json | Earlier person-existence/history confidence audit separate from exact relationship claims, original passages/provenance/timing retained |
+| review-queue.json / manual-review.json / review.json | Stable all-exception order, first60 inspected dispositions/evidence hashes, explicit unresolved/unreviewed states |
+| coverage.json | Transition/scope/affiliation/observed-outcome coverage; unique occurrence and edge denominators separately named; outcomes joined after acceptance |
+| readiness.json | Exact-held pair gates for same-person residuals, inherited tenure review and separately documented distinct people; no model authorization |
+| manifest.json | Generator, pinned-input and deterministic-output SHA-256 hashes |
+
+The strict view excludes nickname and middle-name concessions. Neither accepted identity nor an absent link establishes first-ever service, replacement or prospective evidence availability. Names/persons never acquire fitted personal effects in this stage.

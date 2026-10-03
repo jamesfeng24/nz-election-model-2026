@@ -353,3 +353,8 @@ Run `python3 -m scripts.checkpoints.identity_evidence_pass --check`, `python3 -m
 ## Complete candidate-baseline specification checkpoint
 
 Run `python3 -m scripts.checkpoints.complete_candidate_baseline --check` to verify the deterministic 213-contest availability inventory and pinned source-artifact hashes. Run `python3 -m unittest scripts.tests.test_complete_candidate_baseline_checkpoint -v` for synthetic mass-conservation, missing-destination, denominator and target-outcome-invariance contracts. The unmodified input files are Stage 12's full frame and the six preserved election/split files. This command creates no historical candidate predictions or scores; its synthetic fixtures remain tests only.
+
+
+## Stage26 practical linkage
+
+Run `python3 -m scripts.evidence.practical_candidate_linkage.run --construct-only` to reproduce outcome-free proposals and component/research views; full generation additionally reproduces the committed manual-review application, post-acceptance coverage/readiness and prior-data verification. `python3 -m scripts.evidence.practical_candidate_linkage.run --check` verifies all bytes without overwriting them. The manual ledger is a preserved inspection checkpoint, not generated documentary validation. Focused checks: `python3 -m unittest scripts.tests.test_practical_candidate_linkage -v`. Consumed source/raw records are stage-specific; unrelated registry additions do not break them. The prior-data snapshot supports clean/shallow checkouts. Use the committed finite aliases and contract; do not regenerate earlier effect cohorts or use outcomes to adjust linkage. No acquisition, fitting or prediction command is part of this stage.

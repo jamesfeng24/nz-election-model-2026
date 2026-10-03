@@ -35,3 +35,4 @@ jobs:
       - run: python3 -m scripts.checkpoints.stage25_geography --check
       - run: python3 -m scripts.checkpoints.stage25_availability --check
       - run: python3 -m scripts.checkpoints.stage25_design --check
+      - run: python3 -m scripts.evidence.practical_candidate_linkage.run --check

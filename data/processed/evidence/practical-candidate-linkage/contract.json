@@ -1,0 +1,74 @@
+{
+  "amendments": [
+    {
+      "checkpoint": "162a565",
+      "reason": "literal_affiliation_equality_excluded_documented_single_party_label_changes; explicit_shared_group_check_required",
+      "scope": "single_party_continuity_only; no_identity_or_outcome_dependent_rule",
+      "timing": "after_initial_construction_before_outcome_diagnostics"
+    }
+  ],
+  "availability": "retrospective_linkage; source_fact_dates_publication_retrieval_separate; historical_forecast_cutoff_availability_unknown_unless_explicitly_documented",
+  "baseCommit": "8fef8da6bfabf5dbb2f9b988a276ab8edd223804",
+  "career": "reference_inherited_tenure_review_only; no_new_first_ever_service_or_complete_career_inference",
+  "collision": "compatible_names_with_every_candidate_in_each_election_regardless_party_seat_geography_outcome; competing_candidates_on_either_side_or_within_same_year_reject",
+  "components": "check_all_members_pairwise_and_same_year_uniqueness_and_explicit_distinct_or_rejected_edges_before_provisional_ID; quarantine_entire_conflicted_component; no_chain_projection_or_rewrite_old_person_IDs",
+  "context": "explicit_supported_single_party_ballot_continuity_allows_documented_label_changes; original_affiliation_preserved; shared_group_never_establishes_constituent_continuity; independent_to_independent_without_ballot_group_allowed; genuine_switch_unknown_or_shared_context_exception",
+  "contradiction": "preserved_explicit_distinct_relations_and_incompatible_full_middle_names; inherited_person_ID_or_confidence_is_never_a_documentary_bridge",
+  "documentary": "only_explicit_occurrence_relationship_passage_or_existing_independently_anchored_distinct_adjudication; profiles_and_winner_chains_alone_do_not_confirm_same_person; inherited_availability_selection_caveats_retained",
+  "flags": [
+    "exact_name",
+    "frozen_nickname",
+    "middle_omission",
+    "middle_initial"
+  ],
+  "labels": [
+    "documentary_same_person",
+    "accepted_algorithmic_same_person",
+    "unresolved_ambiguous",
+    "documentary_distinct_people"
+  ],
+  "outcomeBoundary": "results_votes_residuals_and_inherited_confidence_excluded_from_matching_and_priority; after_acceptance_diagnostics_only",
+  "outputs": [
+    "occurrences.json",
+    "proposed-links.json",
+    "accepted-relationships.json",
+    "persons.json",
+    "review.json",
+    "review-table.md",
+    "coverage.json",
+    "readiness.json",
+    "manifest.json"
+  ],
+  "parsing": {
+    "comma": "exactly_one; entire_left_segment_is_surname; first_right_token_given; remaining_ordered_middle",
+    "givenInitial": "not_substantive_not_automatically_accepted",
+    "middle": "ordered_common_prefix; full_names_must_match_or_initial_expand; missing_suffix_or_all_middle_tokens_flagged_omission; conflicting_expanded_tokens_reject",
+    "normalization": "Unicode_NFC_casefold; whitespace_collapse; dots_removed; apostrophe_and_hyphen_glyphs_standardized; accents_and_compound_hyphens_preserved",
+    "officialOrder": "surname_comma_given",
+    "otherOrder": "explicit_given_surname_only_two_tokens_or_separate_structured_surname; otherwise_unresolved"
+  },
+  "primaryFrame": "certified_two_sided_exact_Stage25_predecessor_pairs; held_candidates; general_and_maori_separate; all_geography_targets_retained_in_coverage",
+  "proposals": [
+    "same_original_affiliation_within_exact_seat_pair_including_nonmatches",
+    "same_surname_within_exact_pair_including_given_or_middle_conflicts",
+    "electionwide_compatible_name_pairs_for_competitors_and_seat_party_changes",
+    "preserved_person_ID_leads_or_explicit_relationship_claims; no_inherited_confidence_gate"
+  ],
+  "review": {
+    "cap": 60,
+    "inspection": "one_preserved_evidence_inspection_per_selected_exception; prefix_only_no_replacement_or_topup; manual_dispositions_separate_from_automated_checks",
+    "order": [
+      "sourceYear",
+      "targetYear",
+      "ambiguityType",
+      "sourceOccurrenceId",
+      "targetOccurrenceId"
+    ]
+  },
+  "schemaVersion": 1,
+  "scope": "no_acquisition_fitting_prediction_scoring_or_operational_change",
+  "stage": 26,
+  "status": "frozen_before_relationship_generation",
+  "strict": "documentary_same_person_or_algorithmic_exact_name_with_no_nickname_middle_omission_middle_initial_flags",
+  "universe": "all_3007_preserved_occurrences_deduplicated_by_immutable_ID; adjacent_transitions_derived_from_Stage25; all_electionwide_candidates_in_collision_checks"
+}

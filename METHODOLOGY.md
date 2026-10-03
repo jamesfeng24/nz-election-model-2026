@@ -1,3 +1,7 @@
+## Stage26 supplemental practical candidate linkage
+
+The [findings](docs/practical-candidate-linkage.md) describe outcome-free, election-wide collision checks and frozen nickname/middle-name rules on Stage25 exact geography. Broad algorithmic research acceptance (496 edges) is separate from documentary evidence and strict exact-name sensitivity (424). Inherited confidence is not confirming evidence. Documented single-party label continuity is allowed; shared-group membership does not establish constituent continuity. Complete components are checked before reversible research IDs. Retrospective identity, career completeness and historical publication availability remain separate. Coverage diagnostics use outcomes only after acceptance; no effects are fitted and all operational nulls remain.
+
 # Methodology
 
 ## Stage 25 — historical geography applicability and unfitted expansion design
