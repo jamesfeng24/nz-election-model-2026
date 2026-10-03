@@ -1,0 +1,21 @@
+{
+  "generatorSha256": {
+    "scripts/models/exact_geography_retests/adapters.py": "399b08d6cf54c4e40b5709008528662e0d503483d290b9dcf43faaad7db2b28b",
+    "scripts/models/exact_geography_retests/common.py": "d77f85e92f29d9bcda6572ac82b9103a4685beac3c851cde80f72b664095232b",
+    "scripts/models/exact_geography_retests/construction.py": "0e395155d353542a99a78852ac81ed56a525796114ded9c3b3686aec8bc72e44",
+    "scripts/models/exact_geography_retests/evaluation.py": "ef4c88134ba608458042be7b43bf0410c055914d460f9b82239fb6f6261e30dc",
+    "scripts/models/exact_geography_retests/inventory.py": "f6d5c1388493e69e729fe81416db1b2b8be84363767954e2342775820b304d8b",
+    "scripts/models/exact_geography_retests/training_comparison.py": "15cec33d8eeace657036592f9c1c7c706ffe808ceb00bd9b10e85a777fcfe4d5"
+  },
+  "inputSha256": {
+    "data/processed/models/exact-geography-retests/folds.json": "8494911f02cc8ca7a783271e7bf73df97718a415fc9a39e1355cfc3d3f4f3c98",
+    "data/processed/models/exact-geography-retests/input-contract.json": "5685813d5ba012dc387334ca5f79d7668326efc851f9aa35933654ebba600b8c",
+    "data/processed/models/exact-geography-retests/inventory.json": "2d2ef38896d9529ef8c63455457036672df60061359be9bda30e3b4dc36ccdb7",
+    "data/processed/models/exact-geography-retests/prefit-manifest.json": "cf78a2be07f297e8cbb114479e692f5f8354174ed220e1a42192abc93b9d0aa4"
+  },
+  "outputSha256": {
+    "fit-cache.json": "c8f0953e383b9a980a2db3a2923d1783b24d0d27935e2f48bddeb8f3c205c9bf",
+    "portability-contract.json": "7136efe10ae7a7055df13768b20f75c26d9b928c81031e0be15ff0d5dbe4b888",
+    "predictions.json": "b253c5c7daba6065541b7f26e75183b8667a45619670ec12fdee159c3c563b2d"
+  }
+}

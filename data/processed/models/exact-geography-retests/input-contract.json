@@ -1,0 +1,102 @@
+{
+  "candidateModels": [
+    "baseline",
+    "baseline_plus_S"
+  ],
+  "informationSet": "retrospective_conditional_observed_target_local_party",
+  "inputSha256": {
+    "data/processed/checkpoints/stage22-shared-group-experiment/fitted-parameters.json": "c8f7f5973846e6d73c25e1f8a778dc91748c2d20d8b442d4e88d1d7f7a11e5d4",
+    "data/processed/checkpoints/stage22-shared-group-experiment/predictions.json": "0230e3f35ca06b4f54a1e89e0adb454804f270e3e04b4dfb4047d989fb8f9c94",
+    "data/processed/checkpoints/stage22-shared-group-prefit/amended-features.json": "3d7b0d44cb7d5c5727a63cbf9efb64a13719e58d73eb20107cec2f0981dbbb32",
+    "data/processed/checkpoints/stage22-shared-group-prefit/amended-fit-contract.json": "2cef31d9db92aac2db3c39dff5a6933e58691f8567c7d2074ab995bbbde107ad",
+    "data/processed/checkpoints/stage22-shared-group-prefit/amended-mapping.json": "6fd703178cc04a8f802371ee87b3138c5383ea2324701fd2744ba905c6518a7c",
+    "data/processed/checkpoints/stage25-historical-geography/availability.json": "99066719c843f89c8f4f60fd89c54339ce766c609f1f3a7804abb3252765b16c",
+    "data/processed/checkpoints/stage25-historical-geography/experiment-register.json": "61a02db3faaad9aa4386598fca4f24cd80b5280077625fe48086a4a40fd3f756",
+    "data/processed/checkpoints/stage25-historical-geography/fold-plan.json": "494a76b779f14b3289ddd4a8940a3c4d421f261f76b9dc4cfce58c2db26e666e",
+    "data/processed/checkpoints/stage25-historical-geography/geography.json": "998a4e1e85276bd8551f4bb6f2a8188db64af5e0346691f7485ba33b13340a1e",
+    "data/processed/checkpoints/stage25-historical-geography/source-contract.json": "ba5e7c72615b9187d92fa87a02cca26f854ab4b193169f0cdd2ff73d7e501d25",
+    "data/processed/elections/2008.json": "15eb63c45984177b21b964c4580102a2e5b54879316143e64684f13753dd86d0",
+    "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+    "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+    "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+    "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+    "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e",
+    "data/processed/models/conditional-nat-lab-response/analysis.json": "a5d6367c834f56c864781cb6dd0403cb80dab95b478770c9552becf1d86f7f6a",
+    "data/processed/models/conditional-nat-lab-response/numerical-inputs.json": "422f6678edce0607b2943774ffb2f30f04f01f6f659db3a733a070d0212179ab",
+    "data/processed/models/conditional-nat-lab-response/specification.json": "fa751fc103aba6f95f56b3a54eee7b1ff198ae4c2346c55f5236cd11c5161bfb",
+    "data/processed/models/party-vote-transform/party-continuity.json": "d3c6cfa63f59725cbc9276e2442f1f59eafe24a9526a4fbb9ca52d68fcb3071b",
+    "data/processed/split-votes/2008.json": "3a9a763ef298ce894066982752bdc60627c14dd952b6a370ad196473f90bfc7a",
+    "data/processed/split-votes/2011.json": "3e503b3757380e63d3da795ea9506c3c3ba445b89f815f18b33343207d04514c",
+    "data/processed/split-votes/2014.json": "0388187be992b503c861ece81f8452322b8d404fa0709360fc77c6d31101e292",
+    "data/processed/split-votes/2017.json": "a9164c523df84aae1018d64d70255eaabdcbe780ff8d8a5f9bc46820a8c0f7ef",
+    "data/processed/split-votes/2020.json": "488e084feb5023aa5c9885965d4fdd121c8660235d6556bee486170ec77b1f10",
+    "data/processed/split-votes/2023.json": "81a6bdbc1ceedbf52436af45e6fdc0e979873f34b9427219124029f88b20203c",
+    "scripts/checkpoints/complete_share_feature_rank.py": "e6c8f30ac1e58cd78d106696f3e6b863a254df467f152cb22caef6e446ba736c",
+    "scripts/checkpoints/complete_share_features.py": "8b80b394ad19b3d70102ad286fb2f5111aa1bfc8f31344305d27d665e2960419",
+    "scripts/checkpoints/stage22_evaluation.py": "3dc364cab13a923909df9a8cd7703fa54d19e2459003186dc0c37769ed3746d3",
+    "scripts/checkpoints/stage22_fit.py": "28028b291a427fa107c6c00fc484ec48e5244becc640d1270227cc8756a3cf5b",
+    "scripts/models/conditional_nat_lab_response/model.py": "bb6c40c57981eb44b1b3fa171586a171c0eefec5b1ba1903c7a61a0b35c76a65"
+  },
+  "operationalSelection": null,
+  "planSha256": "e26d583240e6680b7c0692cf1345267f848e3b7ca48a20bda0d90ca979d7df92",
+  "responseModels": {
+    "beta0": {
+      "columns": [],
+      "fixedBeta": 0
+    },
+    "beta1": {
+      "columns": [],
+      "fixedBeta": 1
+    },
+    "common_intercept": {
+      "columns": [
+        "intercept",
+        "x"
+      ],
+      "fixedBeta": null
+    },
+    "common_intercept_beta0": {
+      "columns": [
+        "intercept"
+      ],
+      "fixedBeta": 0
+    },
+    "common_intercept_beta1": {
+      "columns": [
+        "intercept"
+      ],
+      "fixedBeta": 1
+    },
+    "source_victory": {
+      "columns": [
+        "intercept",
+        "x",
+        "sourceWon"
+      ],
+      "fixedBeta": null
+    },
+    "source_victory_beta0": {
+      "columns": [
+        "intercept",
+        "sourceWon"
+      ],
+      "fixedBeta": 0
+    },
+    "source_victory_beta1": {
+      "columns": [
+        "intercept",
+        "sourceWon"
+      ],
+      "fixedBeta": 1
+    },
+    "stage6_zero_intercept": {
+      "columns": [
+        "x"
+      ],
+      "fixedBeta": null
+    }
+  },
+  "sourceDependencies": "data/processed/checkpoints/stage25-historical-geography/source-contract.json",
+  "stage": 27,
+  "status": "frozen_before_fits_and_scores"
+}

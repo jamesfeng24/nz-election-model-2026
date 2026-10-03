@@ -1,4 +1,12 @@
-# Current checkpoint: Stage26 practical candidate linkage
+# Current checkpoint: Stage27 exact-geography conditional retests
+
+The [Stage27 findings](stage27-exact-geography-results.md) implement the registered identity-free response and baseline/S comparisons on Stage25 exact geography under both chronology protocols. Candidate evaluations63/20/64/34/64 and response126/40/128/68/128 reconcile. S improves share MAE directionally in every fitted fold but fails the all-fold screen and worsens2023 winner accuracy; source-victory gains remain immaterial/mixed. Keep baseline/S as conditional research comparators and all operational selections null/unresolved. No automatic response variant, new covariate or integration.
+
+**Exact next action:** independent review of the unmerged Stage27 PR. Recommended subsequent bounded scope, requiring separate authorization: an earlier-election **preserved-input feasibility inventory** for the existing response/baseline/S questions, with certified geography, complete group/slate/denominator and source-split availability. Report unsupported inputs rather than constructing scores or searching broadly. This is not authority to fit or acquire. Persistence can follow a separately frozen design using Stage26 broad/strict relationships; freshman/replacement remain gated by complete tenure / independently distinct-person evidence. Interior-middle-name recall and the1,064 exception queue stay deferred.
+
+Sequence: geography/chronology and practical linkage are complete; registered identity-free exact retests are complete. Bounded earlier-election feasibility precedes further expansion; evidence-supported identity-dependent tests remain a separate route. Then one-horizon dated-input readiness/replay, national reconciliation/minimum denominators/weights, parsimonious joint uncertainty/probability assessment (including Māori/changed-boundary coverage), architecture freeze and prospective archives. Upstream national error must enter uncertainty once; failed mean effects do not establish variance effects. Stage23 substitution, new evidence, nonlinearities, ensemble decisions and live forecasts are not authorized automatically.
+
+## Previous Stage26 checkpoint
 
 The [Stage26 layer](practical-candidate-linkage.md) provides496 broad and424 strict supplemental same-person edges,482/413 with usable residuals at both ends. No historical identity adjudication, numerical artifact or operational null changed. Ten preserved distinct-person claims remain separate; incomplete careers, aliases outside the frozen rules and unreviewed exceptions remain explicit. The fixed60-case preserved-evidence review does not measure precision or erase retrospective source selection.
 

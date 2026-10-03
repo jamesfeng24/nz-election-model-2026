@@ -36,3 +36,7 @@ jobs:
       - run: python3 -m scripts.checkpoints.stage25_availability --check
       - run: python3 -m scripts.checkpoints.stage25_design --check
       - run: python3 -m scripts.evidence.practical_candidate_linkage.run --check
+      - run: python3 -m scripts.models.exact_geography_retests.inventory --check
+      - run: python3 -m scripts.models.exact_geography_retests.construction --check
+      - run: python3 -m scripts.models.exact_geography_retests.evaluation --check
+      - run: python3 -m scripts.validate.stage27_independent --check
