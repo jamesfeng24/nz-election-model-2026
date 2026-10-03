@@ -1,0 +1,12 @@
+# Stage28 implementation plan — asymmetric-response design only
+
+PR34 is verified merged at `cb1ca8fe1a50a5df4b8f6f4336b4ecc7072595ae`, containing reviewed `15baafc1371e25b82573b0b9b248a64764e3bd26`. Clean main was fast-forwarded; work uses `stage/28-asymmetric-response-design`.
+
+1. Preserve original Stage6/16/27 results and Stage25/26 geography/linkage. Record the user's **post-result** preference for S development, with a mandatory baseline comparator, without changing any screen or operational selection.
+2. Audit preserved hypothesis passages and six election-local/national controls. Recommend a national parity environment as a **party-level alternative**, not an identified candidate baseline. Freeze denominators, earlier-only anchor inputs, initial-direction classification, ambiguity/overshoot handling, equal-election anchor weighting and explicit identification gates before any later estimation.
+3. Produce a separate, provenance-pinned feasibility inventory and fold register from Stage25 IDs. No anchor or response estimates, historical predictions, regime labels or scores. Distinguish count-gate feasibility from untested anchor/rank/regime gates. Preserve unknown historical publication timing.
+4. Add small synthetic-only classifier, uncertainty, chronology and rank checks. Validate deterministic generation, consumed records/raw bytes and preservation; run configured Python checks and final CI. Commit/push checkpoints and leave a PR unmerged.
+
+The proposed minimal test has separately refitted common intercepts in beta=1, constant-beta and asymmetric restrictions; no source-victory/status terms. Slopes are unrestricted. A fold-frozen earlier-election anchor labels both training and evaluation regimes; this is retrospective training classification, not rolling historical availability. At least four earlier election snapshots and two distinct nonneutral transition environments per regime are required. These gates can make the experiment unidentifiable; do not relax them or search another anchor.
+
+No source acquisition, new identity adjudication, fitting, historical scoring, model integration or forecasts. Candidate/seat anchor A remains unsupported without an independent defensible B. National parity interpretation B is a proposal for review, not a claim that the original conversation chose it. The synchronized `sources/` directory is empty; the supplied prompt is authoritative current context.

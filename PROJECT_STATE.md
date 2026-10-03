@@ -1,3 +1,11 @@
+# Stage28 asymmetric-response design — plan checkpoint, 2026-10-03
+
+Verified PR34 merged at `cb1ca8f`, containing reviewed `15baafc`; clean main synchronized and `stage/28-asymmetric-response-design` created. [Plan](docs/stage28-implementation-plan.md) and proposed machine specification are recorded before inventory/synthetic implementation. No fit, historical score or source acquisition. The user makes a transparent post-result development preference for S with baseline mandatory; historical screens and operational selections stay unchanged.
+
+Proposed primary: party-level national parity environment, with general-held matched candidate/party aggregates and separately defined full-national support, earlier-only fold-frozen anchor/stability labels and unrestricted response slopes. This is a different mechanism from a personal/seat baseline; no original conversation establishes either. Four earlier election snapshots and two transition environments per regime are proposed gates. Only2023 primary could satisfy count gates; all identification/actual regime gates remain unevaluated.
+
+**Next within authorized Stage28:** build pinned input/coverage/fold inventories, synthetic classification/rank/preservation tests, document limitations and finite roadmap, validate and open an unmerged design PR. No anchor/response estimation, historical predictions/scoring, identity repair or operational changes. Stage26 queue remains deferred.
+
 # Stage27 completion — PR34 handoff, 2026-10-03
 
 [PR #34](https://github.com/jamesfeng24/nz-election-model-2026/pull/34) is open and must remain unmerged for independent review. Pre-fit `3b03120`, construction `ae826f4`, findings `8390150` and computational correction `f8f0707` preserve a transparent sequence. The authorized response/baseline/S retests and documentation are complete. All operational selections remain null/unresolved; no acquisition, identity effect, new equation, Stage23 substitution or forecast.
