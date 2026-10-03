@@ -4,7 +4,7 @@
 
 ## Decision and direct answers
 
-Prior normalized R contains useful information against the baseline: MAE gains0.4179/0.3266/0.2562/0.3803 pp in2014/2017/2020/2023, pooled0.3424 pp. R-only is better than S in2014/2017 and worse in2020/2023. The independently refitted joint model gains over S0.3972/−0.0263/−0.2476/+0.0701 pp; pooled improvement is only0.0128 pp. The strict view gives0.0156 pp, while separated chronology reverses it to−0.0881 pp. This does not justify replacing S with the extra joint coefficient as the default development model.
+Prior normalized R contains useful information against the baseline: MAE gains 0.4179/0.3267/0.2562/0.3804 pp in 2014/2017/2020/2023, pooled 0.3424 pp. R-only is better than S in 2014/2017 and worse in 2020/2023. The independently refitted joint model gains over S 0.3971/-0.0263/-0.2477/0.0701 pp; pooled improvement is only 0.0128 pp. The strict view gives 0.0158 pp, while separated chronology reverses it to -0.0881 pp. This does not justify replacing S with the extra joint coefficient as the default development model.
 
 **Provisional development recommendation:** retain S as the preferred complete-share candidate, baseline mandatory; retain R-only as a useful research challenger with stronger early-fold share performance. Archive S+R as mixed incremental evidence, not a failed real-world personal effect or a proven improvement. Joint estimates should not be imported into S independently. Winner counts favor joint in some folds, but share MAE is primary and its pooled advantage is small/influence-sensitive. All operational selections and historical failed screens remain unchanged.
 
