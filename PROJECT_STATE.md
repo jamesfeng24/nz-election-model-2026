@@ -1,3 +1,9 @@
+# Stage30 — construction checkpoint, 2026-10-03
+
+Pre-fit `d30f646` was committed/pushed before coefficients. Separate construction now records120 fold cases across broad/strict, general/Māori, three scales and two chronologies:84 regression fits identified,36 explicit earliest/no-training abstentions. All72 full-panel/fixed-transition-deletion descriptive cases are separate. Zero/carry remain available without training; mean is independent of slope identification. Five synthetic numerical tests and deterministic construction pass. Broad general additive expanding slopes2014/2017/2020/2023:1.013/1.019/0.834/0.874; no score inspected yet. These are unconstrained fold estimates, not operational selections.
+
+**Next:** commit/push construction before held-out scoring, then finish same-ID benchmark/strict/composition comparisons, influence, independent tests, full validation and final findings/PR. All prior artifacts and null selections remain protected. Stop before any candidate integration or new formulation.
+
 # Stage30 — pre-fit checkpoint, 2026-10-03
 
 PR36 verified merged at `5c754823110073d479016fc993108eb33989589a`, containing reviewed `22ad3b6`; clean main synchronized and `stage/30-expanded-candidate-persistence` created. [Plan](docs/stage30-implementation-plan.md), D060 and the frozen specification/inventory/fold/input contracts in `data/processed/models/expanded-candidate-persistence/` precede estimation. All3,007 occurrences,1,630 proposals and356 geographic records are retained. Residual-supported broad482 (452 general/30 Māori), strict413 (386/27); all three frozen Stage7 scales have identical support. No winner/profile/tenure admission; Stage26 accepted algorithmic relations remain supplemental. Stage25 certifies exact membership; preserved candidature records separately establish held contests, including geography-layer unadjudicated statuses.
