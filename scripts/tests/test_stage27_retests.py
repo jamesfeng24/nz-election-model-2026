@@ -222,6 +222,20 @@ class Stage27Tests(unittest.TestCase):
         self.assertEqual(generated['inventory.json'], self.data)
         self.assertEqual(generated['prior-data-contract.json'], read(DEST + 'prior-data-contract.json'))
 
+    def test_squared_errors_use_portable_multiplication(self):
+        from statistics import mean
+        actual = keyed(e.actuals(self.data, self.elections)['candidateActuals'], 'targetElectorateId')
+        by_id = keyed(self.data['shareRecords'], 'targetElectorateId')
+        for case in self.predictions['candidateCases']:
+            if case['trainingVariant'] != 'expanded':
+                continue
+            rows = e.share_rows(case, 'printed', by_id, actual)
+            for row in rows:
+                for score in row['methods'].values():
+                    if score is not None:
+                        errors = [c['errorPP'] for c in score['candidateErrors']]
+                        self.assertEqual(score['contestMsePP2'], mean(x * x for x in errors))
+
     def test_provenance_and_preservation(self):
         verify_inputs()
         self.assertEqual(verify_preservation(), 1362)

@@ -104,6 +104,24 @@ def verify_preservation(snapshot=None):
     return len(snapshot['gitBlobSha1'])
 
 
+
+def first_differences(expected, actual, prefix='root', limit=8):
+    if expected == actual:
+        return []
+    if isinstance(expected, dict) and isinstance(actual, dict) and set(expected) == set(actual):
+        keys = sorted(expected)
+    elif isinstance(expected, list) and isinstance(actual, list) and len(expected) == len(actual):
+        keys = range(len(expected))
+    else:
+        return [{'path': prefix, 'expected': expected, 'actual': actual}]
+    result = []
+    for key in keys:
+        result.extend(first_differences(expected[key], actual[key], f'{prefix}.{key}', limit - len(result)))
+        if len(result) >= limit:
+            break
+    return result
+
+
 def save_outputs(outputs, check):
     (ROOT / DEST).mkdir(parents=True, exist_ok=True)
     for name, doc in outputs.items():
@@ -111,6 +129,7 @@ def save_outputs(outputs, check):
         raw = encode_output(name, doc)
         if check:
             if path.read_bytes() != raw:
+                print(json.dumps({'differences': first_differences(json.loads(path.read_bytes()), doc)}))
                 raise ValueError(f'Non-deterministic Stage27 {name}')
         else:
             path.write_bytes(raw)

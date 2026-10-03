@@ -3,11 +3,44 @@ from collections import defaultdict
 from math import sqrt
 from statistics import mean
 
-from scripts.checkpoints.stage22_evaluation import contest_error, score_rows, paired
+from scripts.checkpoints.stage22_evaluation import (
+    contest_error as inherited_contest_error, score_rows as inherited_score_rows,
+    paired as inherited_paired)
 from scripts.checkpoints.stage22_fit import SCENARIOS
 from . import adapters as a
 from .common import (DEST, METHODS, OLD_RESPONSE, cli, keyed, read, save_outputs,
                      verify_inputs, verify_outputs, phase_manifest)
+
+
+
+def contest_error(predicted, actual, candidates):
+    result = inherited_contest_error(predicted, actual, candidates)
+    # Explicit multiplication avoids platform-dependent libm pow(x, 2) tails.
+    result['contestMsePP2'] = mean(c['errorPP'] * c['errorPP'] for c in result['candidateErrors'])
+    return result
+
+
+def score_rows(rows, method):
+    result = inherited_score_rows(rows, method)
+    if result is not None:
+        errors = [c['errorPP'] for r in rows for c in r['methods'][method]['candidateErrors']]
+        result['candidateEqualRmsePP'] = sqrt(mean(x * x for x in errors))
+    return result
+
+
+def paired(rows, model, control):
+    result = inherited_paired(rows, model, control)
+    if result is None:
+        return None
+    by_id = {r['targetElectorateId']: r for r in rows}
+    for difference in result['contestDifferences']:
+        row = by_id[difference['targetElectorateId']]
+        reference = {c['candidateOccurrenceId']: c['errorPP'] for c in row['methods'][control]['candidateErrors']}
+        difference['meanSquaredErrorDifferencePP2'] = mean(
+            c['errorPP'] * c['errorPP'] - reference[c['candidateOccurrenceId']] * reference[c['candidateOccurrenceId']]
+            for c in row['methods'][model]['candidateErrors'])
+    result['modelMinusControlMsePP2'] = mean(r['meanSquaredErrorDifferencePP2'] for r in result['contestDifferences'])
+    return result
 
 
 def actuals(data, elections):

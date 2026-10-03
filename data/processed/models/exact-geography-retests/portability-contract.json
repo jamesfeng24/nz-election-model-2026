@@ -1,4 +1,14 @@
 {
+  "evaluationAmendment": {
+    "CIruns": [
+      37105489219,
+      37105527611
+    ],
+    "localEvidence": "39 raw errors have different pow/multiply last bits; maximum squared-error difference 4.55e-13 pp squared",
+    "originalEvaluationCommit": "8390150",
+    "originalResultsSha256": "0388b8b4692d33ae0b1972061fb4326652dc7cd6abd5e51b68034d9d6bbed63c",
+    "rule": "same squared-error equations evaluated by x*x, as Stage24, instead of platform libm pow(x,2); no score rounding or changed tolerances"
+  },
   "independentVerificationReporting": "checks retain tolerance decisions and six-decimal displayed pp metrics, not platform-dependent solver discrepancy tails",
   "inputSha256": {
     "scripts/checkpoints/stage24_construction.py": "e9271933bc54e1bb569bb576e1928956cbb14f3da38ac544dc299a121b5f1213"
