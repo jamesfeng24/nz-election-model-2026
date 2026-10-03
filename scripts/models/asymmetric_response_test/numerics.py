@@ -75,6 +75,11 @@ def fit_restrictions(rows):
     gate = regime_rank_guard(rows)
     if gate['status']!='available':
         return {'status':'abstain','reason':gate['reason'],'regimeRankGate':gate,'fits':{}}
+    return {**solve_restrictions(rows), 'regimeRankGate':gate}
+
+
+def solve_restrictions(rows):
+    """Solve registered restrictions; callers apply their explicitly labelled gates."""
     fits = {}
     for name in RESTRICTIONS:
         design, outcome = response_design(rows, name)
@@ -87,7 +92,7 @@ def fit_restrictions(rows):
         fits[name] = {'alpha':values[0],'betaAway':beta,'delta':delta,'betaToward':beta+delta,
                       'hypothesizedOrdering':bool(0<beta<1<beta+delta),
                       'independentAgreementWithin1eMinus8':True}
-    return {'status':'available','fits':fits,'regimeRankGate':gate}
+    return {'status':'available','fits':fits}
 
 
 def prediction(row, fit):

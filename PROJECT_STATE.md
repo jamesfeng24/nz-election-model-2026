@@ -1,3 +1,11 @@
+# Stage29 — central-anchor supplemental construction, 2026-10-03
+
+Post-result descriptive amendment `327156c` was frozen/pushed before supplemental response estimation. Both245-record party panels and all ten fixed-central-anchor transition deletions are numerically identifiable; each independently refits beta=1, constant and asymmetric restrictions. Four deletion cases fail the original two-environments-per-regime requirement and remain explicitly descriptive only. Original20 chronological /2 full-panel formal abstentions and10 unattempted formal deletions are unchanged.
+
+Central-anchor asymmetric slopes: National away0.462/toward0.832; Labour away0.055/toward0.646. Neither meets the stated0<away<1<toward ordering. Labour delta changes sign on deletion of2020→2023. National classification changes in2 of5 transitions across finite snapshot roots; Labour0 of5. These are preliminary descriptive coefficients/classification diagnostics, not scores or validation. Original geography/identity/raw/numerical artifacts remain preserved.
+
+**Next:** commit supplemental construction before scoring, then calculate retained-sample in-sample errors, independent verification, tests/source/preservation, final documentation and CI/unmerged PR. No alternative anchor or gate relaxation; next separately authorized task remains residual persistence.
+
 # Stage29 — separately authorized descriptive extension, 2026-10-03
 
 Formal gate-first abstentions remain unchanged (20 chronological cases,2 full-panel cases;10 child deletions not attempted). After seeing these failures, the user explicitly authorized a central-anchor-only descriptive supplement. Its [post-result contract](data/processed/models/asymmetric-response-test/descriptive-diagnostic-contract.json) and [explanation](docs/stage29-descriptive-extension.md) are frozen before supplemental response calculation. Same parity estimator/equations/sample, unrestricted slopes, fixed central-anchor transition deletions; numerical rank/condition/agreement required. Formal stability/replication failures stay visible without vetoing this distinct descriptive view. No validation/operational pass or salvage specification.

@@ -1,12 +1,11 @@
 """Chronological and retrospective descriptive construction, without holdout scoring."""
 import argparse
 from collections import Counter
-from fractions import Fraction
 
 from scripts.models.asymmetric_response.design import national_regime
 from scripts.models.asymmetric_response.inputs import election_inputs, fold_inventory, unique
 from scripts.models.exact_geography_retests.adapters import response_training, permitted_fold
-from .common import DEST, DESIGN, read, verify_inputs, phase_write, phase_manifest
+from .common import DEST, ROOT, DESIGN, read, verify_inputs, phase_write, phase_manifest
 from .numerics import estimate_anchor, fit_restrictions, prediction
 
 
@@ -95,18 +94,25 @@ def descriptive_case(spec, records, aggregates, elections):
             result.update(classified)
         else:
             result.update(response_case(classified['rows'],classified['rows'],elections))
-    for deletion in spec['transitionDeletions']:
-        child = {**deletion,'anchorPolicy':'fixed_parent_full_and_snapshot_deletion_stability_set',
-                 'deletedTransitionScored':False}
-        if result['status']!='available':
-            child.update(status='not_attempted',reason='parent_descriptive_setup_unavailable')
-        else:
-            kept = unique(result['classifiedTraining'],'id')
-            retained = [kept[i] for i in deletion['retainedIds']]
-            child.update(response_case(retained,retained,elections))
-        result['deletions'].append(child)
+    result['deletions'] = transition_deletions(result,spec['transitionDeletions'],elections)
     return result
 
+
+
+def transition_deletions(parent, deletions, elections):
+    """Reuse classifications exactly; never estimate or read a replacement anchor."""
+    children=[]
+    for deletion in deletions:
+        child = {**deletion,'anchorPolicy':'fixed_parent_full_and_snapshot_deletion_stability_set',
+                 'deletedTransitionScored':False}
+        if parent['status']!='available':
+            child.update(status='not_attempted',reason='parent_descriptive_setup_unavailable')
+        else:
+            kept = unique(parent['classifiedTraining'],'id')
+            retained = [kept[i] for i in deletion['retainedIds']]
+            child.update(response_case(retained,retained,elections))
+        children.append(child)
+    return children
 
 def build(elections=None, records=None):
     inventory = read('data/processed/models/exact-geography-retests/inventory.json')
@@ -116,7 +122,7 @@ def build(elections=None, records=None):
     aggregates = [r for election in elections.values() for r in election_inputs(election)]
     canonical = read('data/processed/checkpoints/stage25-historical-geography/fold-plan.json')['folds']
     folds = fold_inventory(canonical,records,aggregates)
-    pinned = read(str((DEST/'sample-inventory.json').relative_to(DEST.parents[3])))
+    pinned = read(str((DEST/'sample-inventory.json').relative_to(ROOT)))
     if folds!=pinned['chronologicalFolds']:
         raise ValueError('Frozen chronological sample changed')
     return ({'stage':29,'informationSet':'earlier_only_anchors_and_response; target_party_results_supplied; no_as_of_forecast',
