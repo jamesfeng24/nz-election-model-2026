@@ -253,3 +253,9 @@ Added a deterministic 213-contest input-availability inventory, proposed interva
 - Added pre-fit election-local party-group mapping inventory and 420-record/raw-byte source contract on the fixed 213-contest frame.
 - Fitted one common support floor chronologically, constructed complete candidate-share vectors, then separately evaluated identical-sample uniform and restricted zero-floor comparisons.
 - Recorded 171 constructed held general contests, 20 ambiguous held 2023 abstentions, 21 Māori coverage-only contests and cancelled Port Waikato. Stage5 point sensitivities abstain for incomplete full-party vectors; operational selection remains null. Preserved all earlier sources and numerical outputs.
+
+## 2026-10-03 — Stage30 expanded normalized-residual persistence
+
+- Froze broad/strict same-person-link/exact-geography cohorts and earlier-only construction before scoring; verified482/413 pairs with Māori separate.
+- Added unrestricted identifiable regression, zero/carry/mean benchmarks, chronology/normalization sensitivity, strict common-sample comparisons and descriptive transition influence.
+- Independently checked covariance/prediction/error arithmetic; preserved all earlier data and operational nulls. Prior residual beats zero consistently; fitted retention does not consistently beat carry. No acquisition, identity changes or candidate integration.

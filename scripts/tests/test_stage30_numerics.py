@@ -17,3 +17,13 @@ class PersistenceNumerics(unittest.TestCase):
         self.assertEqual(mean_fit([])['status'],'abstain')
     def test_no_clipping(self):
         f=fit([0,1],[2,4]);self.assertAlmostEqual(f['alpha']+f['beta']*2,6)
+
+class NumericalFailureHandling(unittest.TestCase):
+    def test_independent_solver_failure_abstains(self):
+        from unittest.mock import patch
+        with patch('scripts.models.expanded_candidate_persistence.numerics.checked_ols',return_value={'status':'abstain','reason':'independent_solver_disagreement'}):
+            self.assertEqual(fit([0,1],[1,2])['reason'],'independent_solver_disagreement')
+    def test_rank_failure_never_rescued(self):
+        from unittest.mock import patch
+        with patch('scripts.models.expanded_candidate_persistence.numerics.rank_details',return_value={'rank':1,'weakCondition':True}):
+            self.assertEqual(fit([0,1],[1,2])['reason'],'rank_or_condition_failure')
