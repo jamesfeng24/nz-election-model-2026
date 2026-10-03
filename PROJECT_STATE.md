@@ -1,3 +1,9 @@
+# Stage29 — pre-calculation checkpoint, 2026-10-03
+
+PR35 verified merged as `44fab0a`, containing reviewed `acafef0`; clean main synchronized and `stage/29-asymmetric-response-test` created. The user adopts national parity (not personal/seat recovery). [Plan](docs/stage29-implementation-plan.md) and frozen specification/sample/input contracts in `data/processed/models/asymmetric-response-test/` precede any calculation. Twenty chronological party cases, two full-panel descriptive cases and ten fixed-anchor transition deletions are registered; 490 canonical response records and all1,383 prior data files are pinned. Stage28 gates and chronology stay unchanged. Full-panel fitting/deletion is a separately authorized descriptive extension. No source acquisition or operational change.
+
+**Next within Stage29:** implement equal-election anchor/full-delete-one diagnostics and the three independently fitted response restrictions only where all gates pass; commit separate construction before target scoring. Then bounded fixed-anchor deletion, tests/independent arithmetic, preservation, findings and final unmerged PR. S remains development-preferred with baseline mandatory. Stop after Stage29; broad/strict normalized persistence requires separate authorization.
+
 # Stage28 PR35 — final design handoff, 2026-10-03
 
 [PR #35](https://github.com/jamesfeng24/nz-election-model-2026/pull/35) is open and must remain unmerged for independent review. Proposed plan `46b48d3` and implementation `e7dd52a` are pushed. All authorized design/inventory/synthetic work is complete; no historical anchor/response coefficient, prediction or score has been calculated. The pre-fit anchor chronology clarification remains explicit, and all earlier outputs/selections remain unchanged.
