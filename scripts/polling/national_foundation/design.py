@@ -50,7 +50,7 @@ def specification():
                         'completedElectionShareObservationSD':0.0005},
       'likelihood':{'name':'conditional_independent_gaussian_interval_probability',
         'variance':'2*mu*(1-mu)/n_decided + 0.005^2','rounding':'published cell intervals, no pseudo-counts',
-        'fieldwork':'uniform day-weighted probability vector average','missing':'unobserved, not zero',
+        'fieldwork':'uniform day-weighted probability vector average; NZ noon, x linearly interpolated between weekly nodes, exact cutoff final node','missing':'unobserved, not zero',
         'aggregate':'exclusive supported group once; unidentified subcategories not duplicated'},
       'priors':{'sigmaWeeklyHalfNormal':0.035,'houseScaleHalfNormal':0.12,
         'methodBreakNormalSD':0.05,'commonCycleBiasScaleHalfNormal':0.08,
