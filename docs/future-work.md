@@ -1,3 +1,13 @@
+# Current checkpoint: Stage29 asymmetric-response formal abstention and descriptive supplement
+
+[Stage29 findings](stage29-asymmetric-response-results.md) preserve every frozen gate failure: no chronological or formal full-panel response comparison is admitted. The separately authorized post-result central-anchor supplement reports in-sample associations and fixed-anchor structural influence. Neither party exhibits the stated amplified-above-one toward slope; Labour delta changes sign on removal of2020→2023. Do not search another anchor or describe these fits as forecasting validation. All operational selections remain null/unresolved. S stays the preferred complete-share development candidate, with baseline mandatory.
+
+**Exact next separately authorized task:** expanded normalized-residual persistence using Stage26 broad primary and strict sensitivity links on Stage25 exact geography, with a frozen earlier-only contract and source-reference dependence/selection limits. Do not reopen the linkage queue or infer careers/replacements from links. This handoff does not authorize that implementation.
+
+Finite sequence thereafter (each separately authorized): expanded Stage23 vectors and fixed-parameter baseline/S substitution; one small substantively justified joint comparison with coefficients fitted jointly; dated replay, reconciliation and parsimonious joint uncertainty/probability validation. No importing separately fitted response bonuses into S. Older-election acquisition remains deferred until forecast architecture is completed. Earlier-election expansion, full split matrices, V, tenure/replacement and exceptions remain deferred without a concrete decision benefit.
+
+## Previous Stage28 proposal (preserved historical record)
+
 # Current checkpoint: Stage28 asymmetric-response definition and baseline feasibility
 
 The user makes a transparent **post-result** preference for S-only complete-share development, with baseline mandatory. Stage27's frozen all-fold screen still fails; saved scores, winner/margin diagnostics, thresholds and operational nulls remain unchanged. Constructed-input testing and eventual joint probability validation are required. See [Stage28 design](stage28-asymmetric-response-design.md) and its machine specification.

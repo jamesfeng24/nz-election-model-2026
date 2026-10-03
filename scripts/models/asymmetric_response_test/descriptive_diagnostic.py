@@ -134,6 +134,9 @@ def main():
     expected=json.loads((DEST/'supplement-prefit-manifest.json').read_bytes())
     if digest(str((DEST/CONTRACT).relative_to(ROOT)))!=expected['contractSha256']:
         raise ValueError('Changed supplemental pre-fit contract')
+    for name, original in expected['formalConstructionSha256'].items():
+        if digest(str((DEST/name).relative_to(ROOT)))!=original:
+            raise ValueError('Formal gate-first construction changed: '+name)
     phase_write('supplemental-construction.json',build(),args.check)
     phase_manifest('supplemental-construction',['supplemental-construction.json'],CODE,args.check)
 

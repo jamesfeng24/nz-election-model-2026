@@ -299,3 +299,18 @@ Under `data/processed/evidence/practical-candidate-linkage/`:
 | manifest.json | Generator, pinned-input and deterministic-output SHA-256 hashes |
 
 The strict view excludes nickname and middle-name concessions. Neither accepted identity nor an absent link establishes first-ever service, replacement or prospective evidence availability. Names/persons never acquire fitted personal effects in this stage.
+
+## Stage29 asymmetric-response companions
+
+`data/processed/models/asymmetric-response-test/`:
+
+- `specification.json`, `sample-inventory.json`, `input-contract.json`, `prefit-manifest.json`: original pre-calculation rules, canonical IDs and hashes; no outcome-selected sample.
+- `chronological-construction.json`, `descriptive-construction.json`: formal anchor estimates, accepted-set gates, case abstentions and formal child deletion states; no response result on failed setup.
+- `evaluation.json`: formal scores or explicit null metrics, chronological screen and null selection.
+- `independent-anchor-audit.json`: independent covariance checks, finite-root diagnostic classifications separate from accepted labels.
+- `descriptive-diagnostic-contract.json`, `supplement-prefit-manifest.json`: user-authorized **post-result** central-anchor extension; original contract preserved.
+- `supplemental-construction.json`: all central/delete-one snapshot roots and observed ranges, independently assessable gate failures, extrapolation distances/validity flags, label-change counts; central-anchor response fits/predictions and fixed-anchor response-transition deletions. `formalResponseGate` distinguishes original evidence requirements from `numericalDesign`.
+- `supplemental-evaluation.json`: in-sample equal-record MAE/RMSE/bias in pp, coefficients (intercepts in share units), ordering/range counts, retained-sample deletion comparisons and independent agreement checks. Deleted transitions are never scored. Finite deletion sets are not confidence intervals.
+- `prior-data-contract.json` and phase manifests: protected historical data Git-blob checksums, phase/code SHA-256; boundary audit is separate from required-source dependencies.
+
+`environmentCounts` counts distinct party-transition regimes, `recordCounts` counts party-seat observations. `T=1` means initial national movement toward parity; overshoot retains that label. Source and target candidate denominators differ from party denominators. Supplemental results never replace the formal abstention or an operational null.

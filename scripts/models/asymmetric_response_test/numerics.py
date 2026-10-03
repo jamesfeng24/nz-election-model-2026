@@ -11,11 +11,16 @@ RESTRICTIONS = ('beta_one', 'constant', 'asymmetric')
 
 
 def checked_ols(design, outcome):
+    if not design or not all(isfinite(float(v)) for row in design for v in row) or not all(isfinite(float(v)) for v in outcome):
+        return {'status':'abstain','reason':'nonfinite_or_empty_solver_input'}
     coefficients = solve_normal_equations(design, outcome)
     if coefficients is None:
         return {'status':'abstain','reason':'rational_solver_rank_failure'}
     x, y = np.asarray(design, dtype=float), np.asarray(outcome, dtype=float)
-    independent = np.linalg.lstsq(x, y, rcond=None)[0]
+    try:
+        independent = np.linalg.lstsq(x, y, rcond=None)[0]
+    except np.linalg.LinAlgError:
+        return {'status':'abstain','reason':'independent_solver_numerical_failure'}
     if not all(isfinite(v) for v in coefficients):
         return {'status':'abstain','reason':'nonfinite_solver'}
     difference = max(float(np.max(np.abs(independent-coefficients))),
@@ -72,7 +77,10 @@ def response_design(rows, restriction):
 
 
 def fit_restrictions(rows):
-    gate = regime_rank_guard(rows)
+    try:
+        gate = regime_rank_guard(rows)
+    except np.linalg.LinAlgError:
+        return {'status':'abstain','reason':'numerical_rank_diagnostic_failure','fits':{}}
     if gate['status']!='available':
         return {'status':'abstain','reason':gate['reason'],'regimeRankGate':gate,'fits':{}}
     return {**solve_restrictions(rows), 'regimeRankGate':gate}

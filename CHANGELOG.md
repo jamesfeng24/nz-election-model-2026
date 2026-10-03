@@ -1,3 +1,9 @@
+## Stage29 — 2026-10-03
+
+- Preserve gate-first asymmetric-response abstentions and all earlier outputs.
+- Add separately authorized central-anchor descriptive response and fixed-anchor deletion diagnostics; all anchor failures/classification changes visible.
+- Add independent arithmetic, outcome-boundary/identification tests and deterministic CI checks. No acquisition, alternative model or operational change.
+
 ## Stage28 — asymmetric-response design checkpoint (2026-10-03)
 
 - Record post-result S development preference with baseline mandatory; preserve failed historical screens and operational nulls.
