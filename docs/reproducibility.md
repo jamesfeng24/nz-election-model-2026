@@ -403,3 +403,17 @@ python scripts/validate/source_files.py
 Omitting `--check` reproduces only Stage32 inventory/folds/coverage/contracts/report. It does not fit or calculate historical predictions/scores. Initial design4e0c013 precedes construction; source-only pre-fit refinements preserve documented Stage26 label continuity, source lookup and the fixed-to-observed training-regime reference. The run never calls the synthetic share helper or any optimizer. All1,427 earlier data bytes, raw inputs, residual normalization, identity adjudications, fold contracts, saved fits and operational selections stay unchanged. Future fitting requires separate authorization and pre-scoring saved construction.
 
 Focused tests cover synthetic nesting/conservation/missingness/rank/extremes, real Stage26 linkage counterfactuals and Stage27→Stage31 adapters, source-only residual joins, complete shared-group slates, canonical chronology, strict/common IDs and supported-training centering. Independent Fraction arithmetic checks earlier means. Required-source contracts are stage-specific, separate from the no-data-change audit; unconsumed registry additions do not invalidate earlier stages. No Python formatter/linter is configured; Python compilation and whitespace checks supplement tests. No unrelated numerical stage is regenerated locally.
+
+## Stage33 frozen complete-share joint comparison
+
+```sh
+python -m scripts.models.joint_candidate_share.construction --check
+python -m scripts.models.joint_candidate_share.evaluation --check
+python -m scripts.models.joint_candidate_share.verification --check
+python -m scripts.models.joint_candidate_share.report --check
+python -m unittest scripts.tests.test_stage33_numerics scripts.tests.test_stage33_pipeline -v
+```
+
+Pre-fit0142d2f pins all inputs; constructionab3cf82 precedes any scoring. Check mode validates the exact-array saved-fit signatures, objective/gradient/actual fitted-point rank and phase hashes before reproducing predictions. It never imports a saved coefficient under a different training/preprocessing contract or re-estimates the fixed-to-observed branch. Ordinary construction resumes only matching stage-specific fits. Explicit `--refit` recomputes this stage's56 jobs; use BLAS one thread and at most three independent workers, not repeated unrelated historical regeneration. Optimizer failures remain failures unless the identical start/options succeeds under the documented same-objective precision evaluator; no tolerance change.
+
+Evaluation reads target actuals only after construction verification. Positive gains mean control minus model. Independent verification recalculates36,360 shares,432 metrics,135 paired gains and eight representative primary optima. Its joint-SLSQP checks use four frozen initial κ values and zero θ; iterates are numerically platform-dependent witnesses, so check mode re-enforces the objective gates/direct arithmetic and preserves saved witnesses rather than changing forecasts. Synthetic fixtures are separate from historical outputs. All1,434 earlier data files remain byte-identical; stage-specific required-source/raw contracts remain intact. No Python formatter/linter is configured; compilation and whitespace supplement tests.

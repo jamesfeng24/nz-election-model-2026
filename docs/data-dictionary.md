@@ -347,3 +347,17 @@ The strict view excludes nickname and middle-name concessions. Neither accepted 
 - `input-contract.json` and `manifest.json`: consumed dependency and new generator/output SHA-256 contracts; `prior-data-contract.json` preserves1,427 earlier Git blobs in shallow checkouts.
 
 S and R are fractions; display residual pp=100×R. Centering uses each supported earlier candidate's1/slate-size weight; missing z=0 after centering. Person identity, residual support, retrospective availability and career completeness are separate. No-null-to-zero-strength conversion, no target outcomes, no confidence weights or operational selection. The synthetic kernel is called by fixtures only, never this historical inventory runner.
+
+## Stage33 complete-share joint comparison companions
+
+`data/processed/models/joint-candidate-share/`:
+
+- `input-contract.json`, `prefit-manifest.json`: consumed Stage32 design/evidence and six-election outcome hashes; `prior-data-contract.json` preserves1,434 earlier tracked data files separately from source validity.
+- `fit-cache.json`:56 exact-training-signature restrictions, original candidate/contest IDs, κ and selected θS/θR, training cross entropy, independent κ/objective, projected gradients, bound/rank/conditioning and successful precision-retry counts. No V or imported persistence coefficient.
+- `construction.json`: all35 branch/fold cases, exact earlier/common evaluation IDs, frozen means/features/coverage, independent fit references, complete candidate-share predictions with feature/source occurrence flags, no-fit/mapping reasons and uniform/restricted-zero context. No held-out candidate actuals/errors.
+- `initial-numerical-attempt.json`, `second-numerical-attempt.json`, `numerical-audit-manifest.json`: unaltered pre-scoring failed fit ledgers, code-hash limitations and raw output integrity. Higher-precision retries preserve success gates/options.
+- `evaluation.json`: evaluation-only valid-candidate actual shares/winners,27 fitted branch/fold common comparisons, every method/paired contest pp metric, category/support groups, original/added composition, contextual supported samples, margins/ties and fixed-fit influence. Positive improvement=control error−model error. R-only feature group is visibly empty, not excluded.
+- `independent-verification.json`: direct scalar predictions/metric/gain coverage and eight representative independently optimized objective witnesses/tolerances. Independent iterates are diagnostics, never alternative predictions.
+- construction/evaluation/verification manifests: phase output/generator SHA-256. `operationalSelection=null`; no deployment model selected.
+
+S/R internal units remain fractions; θR is log intensity per residual fraction, not a retention percentage. Complete shares sum to one over valid candidate votes; party-support denominator remains distinct. Report: `docs/stage33-joint-candidate-share-results.md`.
