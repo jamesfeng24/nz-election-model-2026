@@ -1,3 +1,9 @@
+# Stage33 — pre-fit implementation checkpoint, 2026-10-04
+
+Verified PR39 merged at c612c953c567b1fa8ba76e0db675cba63a1d81f5 with reviewed d53740a5d30b53d9d67280874024943a27c68617 ancestry. Clean main synchronized safely; branch `stage/33-joint-candidate-share-comparison`. [Implementation plan](docs/stage33-implementation-plan.md) and new `data/processed/models/joint-candidate-share/` consumed-input/preservation contracts pin Stage32's exact four restrictions/IDs/means/finite branches and preserved six-election outcomes. No fitting or scoring yet; old Stage32 specification is unchanged.
+
+**Next within Stage33:** explicit S/R numerical adapter, frozen optimizer/independent checks, unique-array fit cache and complete predictions; commit/push construction before evaluation. Then frozen paired scores, independent arithmetic/counterfactuals, preservation, configured tests and unmerged PR. Primary constructed-input/broad/expanding, neutral missing features; strict/separated/rounding/observed branches exactly Stage32. No new feature, penalty, acquisition, identity promotion, fallback estimate, operational selection or subsequent implementation. All historical screens remain.
+
 # Stage32 PR39 — completed design and validation handoff, 2026-10-04
 
 **Branch:** `stage/32-joint-candidate-share-design`; [PR #39](https://github.com/jamesfeng24/nz-election-model-2026/pull/39) is open and must remain unmerged for independent review. Verified prerequisite PR38 mergeff007d3/reviewed7962bbe. Initial contract `4e0c013` and fit-ready inventory `0ab8c58` were committed/pushed in order. [Design/coverage](docs/stage32-joint-candidate-share-design.md), D064, companion inventory/folds/contracts and synthetic tests complete the authorized checkpoint. No historical fit, candidate prediction, score, acquisition, adjudication or operational change occurred.
