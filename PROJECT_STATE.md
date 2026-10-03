@@ -1,3 +1,11 @@
+# Stage28 PR35 — final design handoff, 2026-10-03
+
+[PR #35](https://github.com/jamesfeng24/nz-election-model-2026/pull/35) is open and must remain unmerged for independent review. Proposed plan `46b48d3` and implementation `e7dd52a` are pushed. All authorized design/inventory/synthetic work is complete; no historical anchor/response coefficient, prediction or score has been calculated. The pre-fit anchor chronology clarification remains explicit, and all earlier outputs/selections remain unchanged.
+
+Local495 full /14 focused Python tests pass, independent20 fold and12 aggregate audits agree, deterministic/source/preservation checks pass (660 consumed records,926 global resources,1,377 earlier files), and compilation/whitespace checks pass. Final-head frontend/Python CI is the remaining handoff gate and is tracked on PR35. The proposed party-level parity anchor and three-model test await review/adoption and separate fitting authorization. Only2023 primary could satisfy count gates; actual identification is unknown and all fits may abstain. S is development-preferred with baseline mandatory, never operationally selected or historically screen-passing.
+
+**Stop here:** review this design and decide whether to authorize its gate-first asymmetric test. Personal/seat recovery requires an independently defined B instead. Broad/strict residual persistence, expanded fixed-parameter Stage23/S substitution, one justified joint fit, dated replay/reconciliation/uncertainty are later separately authorized stages. No acquisition, queue reopening or automatic model fitting.
+
 # Stage28 asymmetric-response checkpoint — completed local validation, 2026-10-03
 
 **Branch:** `stage/28-asymmetric-response-design`, from verified Stage27 merge `cb1ca8f` / reviewed `15baafc`. Plan/proposed contract `46b48d3` precedes inventory and synthetic implementation. See [design](docs/stage28-asymmetric-response-design.md), D058 and `data/processed/checkpoints/stage28-asymmetric-response-design/`. No historical anchor/response estimation, prediction, score, acquisition or operational selection.
