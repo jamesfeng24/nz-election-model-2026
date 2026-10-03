@@ -277,3 +277,11 @@ conservation is mathematical feasibility, not local predictive accuracy.
 Stage23 errors, alignment limits and subsequent dependencies are in
 `docs/stage23-complete-local-party-results.md`. No operational selection,
 candidate pipeline, 2026 forecast or calibrated uncertainty was added.
+
+## Stage30 — forecast-oriented expanded residual persistence
+
+D060 separates numerical estimability, descriptive evidence, retrospective/chronological predictive evidence, development retention and operational selection. Hard leakage, outcome-admission, join/unit/dedup and rank protections remain; small samples and accepted algorithmic linkage warn rather than veto identified development estimates. Null selections are not estimated zero effects.
+
+Stage26 broad primary/strict sensitivity on Stage25 certified exact geography joins unchanged Stage7 residuals, without a winner/profile/career gate. Parties pool within separate general/Māori scopes. Unrestricted equal-record intercept/slope uses expanding earlier-only training, with more-separated chronology and frozen proportional/log-odds normalization sensitivities. Candidate-share residual units stay pp for all methods. Zero/carry/independent earlier mean share identical evaluation IDs; earliest regression/mean abstain. General carry beats zero in every fold; fitting retention does not consistently beat carry. Full-panel/transition-deletion fits and fixed-fit record influence are descriptions, not extra forecasts. See [Stage30 complete findings](docs/stage30-expanded-persistence-results.md).
+
+Retain prior residual for a later incremental complete-share joint test, without adding its separately fitted coefficient onto S. Shared LOO references, repeated persons/seats, overlapping transitions, selective exact geography and retrospective algorithmic linkage constrain inference. No personal causality, calibrated uncertainty or operational selection follows.

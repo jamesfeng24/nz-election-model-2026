@@ -225,3 +225,9 @@ party actuals and observed target valid-party weights. Port Waikato's 2023
 party ballot remains valid despite the cancelled candidate contest. No
 candidate result, identity evidence or geographic candidate baseline is
 derived from these party tables.
+
+## Stage30 preserved persistence inputs
+
+No acquisition or adjudication. The new `expanded-candidate-persistence/input-contract.json` pins Stage7 occurrence/reference/normalization contracts, Stage26 supplemental accepted/proposed/group evidence, Stage25 geography/fold/source contracts and numerical dependencies. Required historical raw records are validated by the existing stage-specific record contracts; unrelated registry additions remain accepted. The separate prior-data contract freezes all1,402 earlier tracked data files for this no-data-change stage.
+
+Source residuals use only their completed election's unchanged whole-contest LOO reference; holdout residual/reference values reside in evaluation, never prediction construction. Accepted links are reversible algorithmic research claims with historical publication availability separate, not newly documentary-confirmed identities or full career histories. Earlier stages, raw sources and operational selections stay unchanged.

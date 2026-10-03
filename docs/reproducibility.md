@@ -358,3 +358,20 @@ Run `python3 -m scripts.checkpoints.complete_candidate_baseline --check` to veri
 ## Stage26 practical linkage
 
 Run `python3 -m scripts.evidence.practical_candidate_linkage.run --construct-only` to reproduce outcome-free proposals and component/research views; full generation additionally reproduces the committed manual-review application, post-acceptance coverage/readiness and prior-data verification. `python3 -m scripts.evidence.practical_candidate_linkage.run --check` verifies all bytes without overwriting them. The manual ledger is a preserved inspection checkpoint, not generated documentary validation. Focused checks: `python3 -m unittest scripts.tests.test_practical_candidate_linkage -v`. Consumed source/raw records are stage-specific; unrelated registry additions do not break them. The prior-data snapshot supports clean/shallow checkouts. Use the committed finite aliases and contract; do not regenerate earlier effect cohorts or use outcomes to adjust linkage. No acquisition, fitting or prediction command is part of this stage.
+
+## Stage30 expanded normalized-residual persistence
+
+Using the pinned Python environment, reproduce only these companions:
+
+```sh
+python -m scripts.models.expanded_candidate_persistence.inventory --check
+python -m scripts.models.expanded_candidate_persistence.construction --check
+python -m scripts.models.expanded_candidate_persistence.evaluation --check
+python -m scripts.models.expanded_candidate_persistence.verification --check
+python -m scripts.models.expanded_candidate_persistence.report --check
+python -m unittest scripts.tests.test_stage30_numerics scripts.tests.test_stage30_persistence -v
+```
+
+The inventory/contract was committed before estimation (`d30f646`) and construction before scoring (`ba81f4e`). Ordinary generation omits `--check`; it writes only the new Stage30 directory/report. Do not rerun prior stages to expand their historical cohorts. Source checks protect required metadata/raw bytes without whole-registry coupling; the no-data-change preservation check additionally compares all1,402 prior data files against verified merge5c754823. Independent covariance verifies156 OLS solutions, direct arithmetic17,922 predictions/1,224 metrics/252 paired gains. All scales are pp residuals, because log-odds/proportional affect expected candidate-share normalization rather than the residual transform.
+
+The two numerical solvers must agree within1e−8; full rank is checked before solving, no pseudoinverse rank rescue. Center/RMS scaling solves the same intercept/slope equation; no new normalization/tuning. No framework formatter/linter is configured for Python; compilation and whitespace checks supplement tests.

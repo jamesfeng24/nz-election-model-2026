@@ -46,3 +46,8 @@ jobs:
       - run: python3 -m scripts.models.asymmetric_response_test.verification --check
       - run: python3 -m scripts.models.asymmetric_response_test.descriptive_diagnostic --check
       - run: python3 -m scripts.models.asymmetric_response_test.supplement_evaluation --check
+      - run: python3 -m scripts.models.expanded_candidate_persistence.inventory --check
+      - run: python3 -m scripts.models.expanded_candidate_persistence.construction --check
+      - run: python3 -m scripts.models.expanded_candidate_persistence.evaluation --check
+      - run: python3 -m scripts.models.expanded_candidate_persistence.verification --check
+      - run: python3 -m scripts.models.expanded_candidate_persistence.report --check

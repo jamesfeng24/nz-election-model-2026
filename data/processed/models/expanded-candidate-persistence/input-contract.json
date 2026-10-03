@@ -1,0 +1,35 @@
+{
+  "inputSha256": {
+    "data/processed/checkpoints/stage25-historical-geography/fold-plan.json": "494a76b779f14b3289ddd4a8940a3c4d421f261f76b9dc4cfce58c2db26e666e",
+    "data/processed/checkpoints/stage25-historical-geography/geography.json": "998a4e1e85276bd8551f4bb6f2a8188db64af5e0346691f7485ba33b13340a1e",
+    "data/processed/checkpoints/stage25-historical-geography/source-contract.json": "ba5e7c72615b9187d92fa87a02cca26f854ab4b193169f0cdd2ff73d7e501d25",
+    "data/processed/evidence/practical-candidate-linkage/accepted-relationships.json": "e83e863d595ffba0dcfb865fb18bde5a917b8749b5ba714f3f305916de32473d",
+    "data/processed/evidence/practical-candidate-linkage/aliases.json": "2bd6e0d0cc3e8f081ad6fd77c371852499c07de6582c5da6ddad33c114d01449",
+    "data/processed/evidence/practical-candidate-linkage/contract.json": "c054360c9825b8c9ee3bd00b7414ab218bc71eaa6ddfb7c5ee154932982db677",
+    "data/processed/evidence/practical-candidate-linkage/input-contract.json": "d3c660f2bcdbe09519bba079f619f62becfa07016ca5f99e50849ea53ba4cd3e",
+    "data/processed/evidence/practical-candidate-linkage/persons.json": "af2416f41da7197409e91e813c452937c01d5e11c7e268e0cc76a60c45482187",
+    "data/processed/evidence/practical-candidate-linkage/proposed-links.json": "d7847ea9747c3721b27a7de135f35799ebfb41314d9223a8664ff9035faaf410",
+    "data/processed/evidence/practical-candidate-linkage/readiness.json": "5ce4695cb277070ccfe4a55f88a9cba0bece53e4584ea9b20ca94647298083f5",
+    "data/processed/models/candidate-overperformance/input-contract.json": "acea7f454a8c089eaf201aa6322cc99cce8515c702a0bac37c474bef8c7584ad",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/models/candidate-overperformance/references.json": "f950e1d680eaf986e21967f7a396023fe10cc271aa904021fe7ed035b500b4eb",
+    "data/processed/models/candidate-overperformance/specification.json": "3e1ac1bf45f6a24575b9010b4961eeda6408f1cb707fb3cf274413a6df81fe28",
+    "data/processed/models/candidate-persistence/selection.json": "21eb251563b040666d585d8f35645d5b6ea2f302b06ab73f877fb748b6f7c55a",
+    "data/processed/models/candidate-persistence/specification.json": "8f73698ed0e69def9221eebf93b539b1be50dc342887fc72cfec1f58809a8b97",
+    "data/processed/models/expanded-candidate-persistence/specification.json": "9cd944fec83f883af0f867c68950cd9779d1371b42610abeafcc9b9a8a9e62b3",
+    "data/source-plans/stage6-7-supporting-candidate-sources.json": "811222d43222de826c532957ad9fe8f57e1ff519a0de637bd0e7450ab47873b5",
+    "requirements-boundaries.txt": "ccf1fa47ac8d11829296e33ad53ed863fc6d7ed0b16701941f9219c6d16424c6",
+    "scripts/checkpoints/complete_share_feature_rank.py": "e6c8f30ac1e58cd78d106696f3e6b863a254df467f152cb22caef6e446ba736c",
+    "scripts/models/asymmetric_response_test/numerics.py": "1cb01975efb6fcee1f99996ed6ad63480f57f899e150f930c12ab66f5e3cbc58",
+    "scripts/models/candidate_overperformance/normalize.py": "a3606360b993a48a8adf88bd82dfd8c467cce8f34c767547957c8057389042b6",
+    "scripts/models/candidate_persistence/model.py": "3e52a7c87575336eb7e3ff3743f68313f5e2355e128a584b3c153796c8b8f04d",
+    "scripts/models/conditional_nat_lab_response/model.py": "bb6c40c57981eb44b1b3fa171586a171c0eefec5b1ba1903c7a61a0b35c76a65"
+  },
+  "sourceDependencyContracts": [
+    "data/processed/evidence/practical-candidate-linkage/input-contract.json",
+    "data/processed/checkpoints/stage25-historical-geography/source-contract.json",
+    "data/processed/models/candidate-overperformance/input-contract.json",
+    "data/source-plans/stage6-7-supporting-candidate-sources.json"
+  ],
+  "wholeRegistryPinned": false
+}

@@ -1,3 +1,13 @@
+# Current checkpoint: Stage30 expanded normalized-residual persistence
+
+[Stage30 findings](stage30-expanded-persistence-results.md) distinguish useful prior information from benefits of fitting its retention. Carry-forward beats zero in all five general development holdouts; fitted regression does not consistently beat carry. Retain prior residual for a later bounded incremental joint test, preserving Stage8's formal null and all other operational nulls. S remains preferred complete-share development, baseline mandatory; parity response is paused. No imported coefficients or false zero-effect conclusion.
+
+**Exact next:** independently review Stage30. Then separately authorize expanded Stage23 coherent party vectors on Stage25 exact geography plus fixed-parameter baseline/S input substitution using the saved earlier-trained fold fits; compare share/ranking errors on identical samples. No refit inside substitution, reconciliation repair or new candidate effect.
+
+After that, separately specify one small substantive joint/regularized complete-share comparison with compatible inputs, joint coefficient estimation/refitted ablations and broad/strict linkage sensitivity. Individual failure does not veto a justified combination, but do not conduct a subset/threshold search. Dated historical replay, national reconciliation/denominators and parsimonious joint uncertainty/probability validation follow under separate authorization. Propagate national uncertainty once; failed mean effects do not establish variance effects. Older-election acquisition, full split matrix, V, tenure/replacement expansion and the Stage26 exception queue remain deferred.
+
+## Previous Stage29 handoff (historical)
+
 # Current checkpoint: Stage29 asymmetric-response formal abstention and descriptive supplement
 
 [Stage29 findings](stage29-asymmetric-response-results.md) preserve every frozen gate failure: no chronological or formal full-panel response comparison is admitted. The separately authorized post-result central-anchor supplement reports in-sample associations and fixed-anchor structural influence. Neither party exhibits the stated amplified-above-one toward slope; Labour delta changes sign on removal of2020→2023. Do not search another anchor or describe these fits as forecasting validation. All operational selections remain null/unresolved. S stays the preferred complete-share development candidate, with baseline mandatory.
