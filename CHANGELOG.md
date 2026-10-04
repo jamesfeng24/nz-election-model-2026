@@ -305,3 +305,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Freeze/reconstruct three pinned gauss56-day cases, isolated locked environment and one numerical retry budget; all first attempts accepted, no retry.
 - Preserve joint draws and full-coordinate diagnostics before six-category point/proper distribution scoring; independently verify arithmetic and1,621 prior datafiles.
 - Record mixed ownership-neutral development decision and separate Māori electorate polling/replay requirements, without candidate work or operational changes.
+
+## Stage39
+
+- Connected three cached external gauss56-day forecasts to fixed baseline/S/S+R candidates on162 complete exact-general contests, through two mass-conservingOther policies.
+- Added reusable raw-national adapter, deterministic shared-draw propagation, conditional intervals, paired/context metrics, independent checks and bounded forecast-readiness roadmap.
+- Recorded provisional external/S+R development preferences without rewriting any prior screen, fit, identity, numerical artifact or operational selection. No inference/acquisition/liveforecast.
