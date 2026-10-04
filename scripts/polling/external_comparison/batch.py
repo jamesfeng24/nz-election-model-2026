@@ -8,6 +8,8 @@ from .common import ROOT,OUT,CASES,read,save
 
 
 def run():
+    from .runtime import validate_runtime,validate_cached_record
+    validate_runtime()
     spec=read(OUT/'specification.json')['numerical'];started=time.monotonic();history=read(OUT/'batch.json') if (OUT/'batch.json').exists() else {'attempts':[]}
     spent=sum(x['wallSeconds'] for x in history['attempts']);limit=spec['maxTotalWorkerSeconds']
     for year,_ in CASES:
@@ -16,6 +18,7 @@ def run():
             output=OUT/f'fits/{year}/attempt{attempt}.json'
             if output.exists():
                 record=read(output)
+                validate_cached_record(record,year,attempt)
                 if record['status']=='accepted':break
                 continue
             prior=[x for x in history['attempts'] if x['year']==year and x['attempt']==attempt]
@@ -28,7 +31,7 @@ def run():
             log=OUT/f'fits/{year}/attempt{attempt}.txt';log.parent.mkdir(parents=True,exist_ok=True);t=time.monotonic()
             with log.open('w') as f:
                 try:
-                    done=subprocess.run([sys.executable,'-m','scripts.polling.external_comparison.inference','--year',str(year),'--attempt',str(attempt)],cwd=ROOT,env=env,stdout=f,stderr=subprocess.STDOUT,timeout=remaining)
+                    done=subprocess.run([sys.executable,'-m','scripts.polling.external_comparison.guarded','--year',str(year),'--attempt',str(attempt)],cwd=ROOT,env=env,stdout=f,stderr=subprocess.STDOUT,timeout=remaining)
                     status='finished' if done.returncode==0 else 'runtime_error';code=done.returncode
                 except subprocess.TimeoutExpired:status='compute_cap';code=None
             elapsed=time.monotonic()-t;spent+=elapsed;used+=elapsed

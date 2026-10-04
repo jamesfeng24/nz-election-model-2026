@@ -246,3 +246,31 @@ class ActualPinnedAdapterTests(unittest.TestCase):
         ds=earlier_dataset(table,results,cfg,year,cutoff)
         changed={**results,2020:{**results[2020],'National':results[2020]['National']+.01,'Labour':results[2020]['Labour']-.01}}
         self.assertNotEqual(ds.fingerprint(),earlier_dataset(table,changed,cfg,year,cutoff).fingerprint())
+
+class ExtractedSourceGuardTests(unittest.TestCase):
+    def test_changed_extracted_code_rejected_before_cache_or_sampling(self):
+        from scripts.polling.external_comparison import runtime
+        import hashlib
+        with TemporaryDirectory() as temp:
+            root=Path(temp);(root/'src').mkdir();p=root/'src/model.py';p.write_text('synthetic = True\n')
+            expected=hashlib.sha256(p.read_bytes()).hexdigest()
+            contract={'upstreamSource':{'src/model.py':expected},'runnerCode':{}}
+            with patch.object(runtime,'UPSTREAM',root),patch.object(runtime,'validate_inputs'),patch.object(runtime,'read',return_value=contract),patch.dict('os.environ',{'POLLOFPOLLS_ROOT':''}):
+                runtime.validate_files();p.write_text('synthetic = False\n')
+                with self.assertRaisesRegex(ValueError,'Extracted upstream'):runtime.validate_files()
+
+    def test_configuration_root_override_cannot_change_pinned_priors(self):
+        from scripts.polling.external_comparison import runtime
+        with patch.object(runtime,'validate_inputs'),patch.object(runtime,'read',return_value={'upstreamSource':{},'runnerCode':{}}),patch.dict('os.environ',{'POLLOFPOLLS_ROOT':'/private/tmp/synthetic-different-root'}):
+            with self.assertRaisesRegex(ValueError,'configuration-root override'):runtime.validate_files()
+
+class BatchCacheGuardTests(unittest.TestCase):
+    def test_batch_skip_compares_the_actual_full_signature(self):
+        from scripts.polling.external_comparison import runtime
+        from types import ModuleType
+        fake=ModuleType('pollofpolls.prep.marshal');fake.Dataset=SimpleNamespace(load=lambda path:object())
+        expected={'syntheticDataset':'fixed','cutoff':'2020-08-22'}
+        with patch.dict('sys.modules',{'pollofpolls.prep.marshal':fake}),patch('scripts.polling.external_comparison.inference.signature',return_value=expected):
+            runtime.validate_cached_record({'signature':expected},2020,1)
+            with self.assertRaisesRegex(ValueError,'cache signature'):
+                runtime.validate_cached_record({'signature':{'syntheticDataset':'changed'}},2020,1)
