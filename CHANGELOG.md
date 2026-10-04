@@ -299,3 +299,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Preserve20 bounded official external resources; audit exact56-day ensemble/gauss references, score only supported2017/2023 point subsets and abstain for2020 missing MRI.
 - Add ownership-neutral adoption criterion, independent arithmetic/provenance, focused actual-adapter tests and conditional replay handoff.
 - No inference, candidate predictions/scores, prior-data changes, recalibration or operational selection.
+
+## Stage38 — bounded external national distributions, 2026-10-05
+
+- Freeze/reconstruct three pinned gauss56-day cases, isolated locked environment and one numerical retry budget; all first attempts accepted, no retry.
+- Preserve joint draws and full-coordinate diagnostics before six-category point/proper distribution scoring; independently verify arithmetic and1,621 prior datafiles.
+- Record mixed ownership-neutral development decision and separate Māori electorate polling/replay requirements, without candidate work or operational changes.

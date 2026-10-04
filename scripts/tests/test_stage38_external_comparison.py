@@ -202,3 +202,47 @@ class DiagnosticConstantTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+class OutcomeValidationTests(unittest.TestCase):
+    def test_invalid_actual_or_interval_values_rejected(self):
+        draws=[[.4,.3,.1,.05,.05,.1]]
+        for actual in ([.4,.3,.1,.05,.05,.05],[.4,.3,.1,.05,.05,float('nan')]):
+            with self.assertRaises(ValueError):distribution(draws,actual)
+        for bounds in [(float('nan'),.4,.3),(.2,float('inf'),.3),(.2,.4,float('nan'))]:
+            with self.assertRaises(ValueError):interval_score(*bounds,.5)
+
+
+class RecordedInputBoundaryTests(unittest.TestCase):
+    def test_actual_cached_cases_have_exact_cutoffs_and_only_earlier_result_anchors(self):
+        from scripts.polling.external_comparison.common import OUT, read
+        dates={2017:date(2017,9,23),2020:date(2020,10,17),2023:date(2023,10,14)}
+        cases=read(OUT/'inventory.json')['cases']
+        self.assertEqual([r['year'] for r in cases],[2017,2020,2023])
+        for r in cases:
+            self.assertEqual((dates[r['year']]-date.fromisoformat(r['cutoff'])).days,56)
+            self.assertTrue(all(y<r['year'] for y in r['resultAnchors']))
+            self.assertTrue(all(p['available']<=r['cutoff'] for p in r['polls']))
+            self.assertEqual(len({p['id'] for p in r['polls']}),r['pollCount'])
+            self.assertTrue(r['counterfactualsPassed'])
+
+
+# Upstream imports are isolated; routine CI checks saved inputs without installing inference packages.
+import importlib.util
+from scripts.polling.external_comparison.common import UPSTREAM
+@unittest.skipUnless(importlib.util.find_spec('polars') is not None and (UPSTREAM/'src').exists(),
+                     'requires isolated external preparation environment and pinned checkout')
+class ActualPinnedAdapterTests(unittest.TestCase):
+    def test_heldout_results_postcutoff_polls_and_future_revisions_do_not_change_inputs(self):
+        from scripts.polling.external_comparison.prepare import source_table, earlier_dataset, check_counterfactuals
+        from scripts.polling.external_comparison.common import CASES
+        cfg,table,results=source_table()
+        for year,cutoff in CASES:
+            ds=earlier_dataset(table,results,cfg,year,cutoff)
+            check_counterfactuals(table,results,cfg,year,cutoff,ds)
+
+    def test_permitted_earlier_results_can_change_anchor_inputs(self):
+        from scripts.polling.external_comparison.prepare import source_table,earlier_dataset
+        cfg,table,results=source_table();year=2023;cutoff='2023-08-19'
+        ds=earlier_dataset(table,results,cfg,year,cutoff)
+        changed={**results,2020:{**results[2020],'National':results[2020]['National']+.01,'Labour':results[2020]['Labour']-.01}}
+        self.assertNotEqual(ds.fingerprint(),earlier_dataset(table,changed,cfg,year,cutoff).fingerprint())

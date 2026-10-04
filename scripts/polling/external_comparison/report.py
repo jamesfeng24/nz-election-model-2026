@@ -1,0 +1,79 @@
+"""Reproduce Stage38 findings from cached forecasts and scores."""
+import argparse
+from .common import ROOT,OUT,CASES,read
+
+
+def render():
+    ev=read(OUT/'evaluation.json');pool=ev['pooledCommon'];batch=read(OUT/'batch.json');iv=read(OUT/'information-audit.json');verification=read(OUT/'independent-verification.json')
+    lines=['# Stage38 — bounded external joint national comparison','',
+           '2026-10-05. Source protocol3d76c77/preservation47dfce8, frozen executionfa08640, accepted forecast checkpoints42d9ba6/eff424a precede scoring. No owned inference, candidate replay, parameter tuning or operational selection. Upstream gauss pin `ef76cf6562e1d028b4fff46d063f4b93945299de`.', '',
+           '## Coverage and information sets','',
+           'All three2017/2020/2023 cases at exactly56 days are accepted. Primary common partition: National, Labour, Green, ACT, NZ First, all remaining parties. Every complete draw, mean, official outcome and average uses this partition; no subset normalization or Stage37 fine allocation. Te Pāti Māori/TOP remain in raw schemas wherever upstream models them. Aggregation is benchmark-only and does not remove TPM from eventual forecasts. No richer secondary partition was added.', '',
+           '| Election | Cutoff | Eligible polls | Missing published n | Earlier result anchors | External schema |',
+           '|---|---|---:|---:|---|---|']
+    inventory=read(OUT/'inventory.json')['cases']
+    for r in iv['cases']:
+        c=next(x for x in inventory if x['year']==r['year'])
+        lines.append(f"| {r['year']} | {c['cutoff']} | {r['polls']} | {r['missingPublishedSampleSize']} | {','.join(map(str,c['resultAnchors']))} | {', '.join(r['trackedParties'])} |")
+    lines+=['','Five new resources (cap6): pinned official repository archive plus four bulk historical Wikipedia pages. GPL-3.0-or-later upstream code/config/notices are retained separately; Wikipedia source attribution/URLs/raw bytes/checksums/retrieval dates remain. No wider search or individual poll acquisition. Prepared snapshots are reconstructed from2026 retrievals under pinned rules, not claimed identical to inaccessible archived input fingerprints.', '',
+            'Inputs respect case cutoffs and exclude target/later results: adapter passes only earlier outcomes; result rows never become polls. Actual-pipeline mutations of held-out results, post-cutoff poll shares and future-only publication revisions leave dataset fingerprints unchanged. Permitted earlier results can change anchors. Earlier anchors use upstream rounded reference results; all systems are scored against the same exact preserved official national outcomes.', '',
+            'Retrospective limitations: fixed2.5 minor-party error factor/8% threshold explicitly developed from2011–2023 misses; its cutoff-derived scale affects all cycle industry offsets. No direct held-out fitting, but not wholly chronological prior development. Publication day is fieldwork end plus pollster-specific lag, not verified hour/timezone. Schema uses prior parliament and pre-cutoff auto-tracking. Source-specific sample defaults, missing denominators, midpoint/Sunday-week fieldwork, parser threshold midpoint and inferred rounding, residualOther differ from our Gaussian interval/censoring/daily-fieldwork model. This is a national system comparison, not a matched-input architecture experiment or certified as-of validation. No ensemble/spread calibration or extra common-error draw.', '',
+            'The source-only reported-row audit retains3/1/6 overfull observed rows in2017/2020/2023, maximum0.4/0.3/1.2pp excess. These remain unchanged Gaussian measurement observations, not an exactly normalized source simplex; every posterior draw remains coherent. Wave-level rounding precision is inferred from all cells, so minor tenths can imply tenths for whole-percent major observations. This differs from owned per-cell rounding intervals and is a measurement-approximation limitation, not a reason to silently normalize, delete rows or change the external model. See reported-row-audit.json.', '',
+            '## Point accuracy — percentage points','',
+            'Equal election weights1/3. RMSE pools squared category errors before taking the root. Global signed share bias cancels by construction; category bias is below.', '',
+            '| Election | Our MAE / RMSE | Gauss MAE / RMSE | Average MAE / RMSE | Our minus gauss MAE |', '|---|---:|---:|---:|---:|']
+    for r in ev['cases']:
+        p={n:s['point'] for n,s in r['systems'].items()}
+        lines.append(f"| {r['year']} | {p['owned']['MAEpp']:.4f} / {p['owned']['RMSEpp']:.4f} | {p['gauss']['MAEpp']:.4f} / {p['gauss']['RMSEpp']:.4f} | {p['average']['MAEpp']:.4f} / {p['average']['RMSEpp']:.4f} | {r['paired']['ownedMinusGaussMAEpp']:.4f} |")
+    s=pool['systems'];lines.append(f"| Equal-election pool | {s['owned']['MAEpp']:.4f} / {s['owned']['RMSEpp']:.4f} | {s['gauss']['MAEpp']:.4f} / {s['gauss']['RMSEpp']:.4f} | {s['average']['MAEpp']:.4f} / {s['average']['RMSEpp']:.4f} | {pool['paired']['ownedMinusGaussMAEpp']:.4f} |")
+    lines+=['','### National/Labour on original national-share denominator','',
+            '| Election | Our NAT / LAB signed error | Gauss NAT / LAB signed error | Average NAT / LAB signed error |','|---|---:|---:|---:|']
+    for r in ev['cases']:
+        errors={n:[x['biasPP'] for x in t['major']['parties']] for n,t in r['systems'].items()}
+        lines.append(f"| {r['year']} | {errors['owned'][0]:.4f} / {errors['owned'][1]:.4f} | {errors['gauss'][0]:.4f} / {errors['gauss'][1]:.4f} | {errors['average'][0]:.4f} / {errors['average'][1]:.4f} |")
+    lines+=['',f"Major-party pooled MAE / RMSE: ours {s['owned']['majorMAEpp']:.4f} / {s['owned']['majorRMSEpp']:.4f}; gauss {s['gauss']['majorMAEpp']:.4f} / {s['gauss']['majorRMSEpp']:.4f}; average {s['average']['majorMAEpp']:.4f} / {s['average']['majorRMSEpp']:.4f}. Six major-party cases; no two-party renormalization.", '',
+            '| Category | Our signed bias | Gauss signed bias | Average signed bias |','|---|---:|---:|---:|']
+    for i,r in enumerate(s['owned']['partyBias']):
+        lines.append(f"| {r['category']} | {r['biasPP']:.4f} | {s['gauss']['partyBias'][i]['biasPP']:.4f} | {s['average']['partyBias'][i]['biasPP']:.4f} |")
+    lines+=['','## Joint forecast distributions','',
+            'Election-day joint draws,8,000 per case/model. Expected shares average transformed draws. CRPS exact empirical univariate; intervals central linear quantiles; proper interval score penalizes both width and misses. Energy uses the frozen deterministic2,000-draw subset/128-block empirical V-statistic, not invented independent party draws. Scores/widths below use pp units. The average has point forecasts only.', '',
+            '| Election / system | CRPS | Energy | 50% covered / 6 | 90% covered / 6 | 50% width / interval score | 90% width / interval score |','|---|---:|---:|---:|---:|---:|---:|']
+    for r in ev['cases']:
+        for name in ('owned','gauss'):
+            p=r['systems'][name]['probability']
+            lines.append(f"| {r['year']} / {name} | {p['meanCRPSpp']:.4f} | {p['energyScorePP']:.4f} | {p['coveredCount50']} | {p['coveredCount90']} | {p['width50PP']:.4f} / {p['intervalScore50PP']:.4f} | {p['width90PP']:.4f} / {p['intervalScore90PP']:.4f} |")
+    lines+=['','| System, pooled | CRPS | Energy | 50% covered / 18 | 90% covered / 18 | 50% width / interval score | 90% width / interval score |','|---|---:|---:|---:|---:|---:|---:|']
+    for name in ('owned','gauss'):
+        p=s[name]['probability'];lines.append(f"| {name} | {p['meanCRPSpp']:.4f} | {p['energyScorePP']:.4f} | {p['coveredCount50']} | {p['coveredCount90']} | {p['width50PP']:.4f} / {p['intervalScore50PP']:.4f} | {p['width90PP']:.4f} / {p['intervalScore90PP']:.4f} |")
+    lines+=['','Gauss90% misses:2017 Labour and Green. Owned90% misses:2017 Labour/Green/NZFirst/remainder,2020 Green/ACT/remainder. Both miss2017 Labour by about10pp and both cover5/6 major-party90% cases. Gauss coverage gains therefore occur mainly in minors/remainder; neither model resolves the major2017 shock. At50%,4/18 owned and6/18 gauss remain below nominal. Three elections and dependent categories cannot establish calibration. Wider intervals alone would not establish quality; lower pooled CRPS/energy/proper interval scores provide the additional evidence, with2023 favouring ours.', '',
+            '### Fixed-forecast election influence','',
+            '| Omitted election | Our pooled MAE | Gauss pooled MAE | Average pooled MAE | Our CRPS | Gauss CRPS |','|---|---:|---:|---:|---:|---:|']
+    for r in ev['leaveOneElectionOut']:
+        p=r['pool']['systems'];lines.append(f"| {r['omitted']} | {p['owned']['MAEpp']:.4f} | {p['gauss']['MAEpp']:.4f} | {p['average']['MAEpp']:.4f} | {p['owned']['probability']['meanCRPSpp']:.4f} | {p['gauss']['probability']['meanCRPSpp']:.4f} |")
+    lines+=['','These are fixed-prediction influence summaries, not new forecasts/refits. MAE ordering changes with the retained elections. Few environments, retrospective fixed calibration and data differences prevent strong generalization claims. Stage36/37 historical comparisons remain unchanged; their headline pools use different categories/cases and are not substituted here.', '',
+            '## Numerical reliability and reproducibility','',
+            '| Election | Attempt | Seconds (sampling + full diagnostics) | Active audited coordinates | Maximum rank R-hat | Minimum bulk / tail ESS | Divergences / depth contacts |','|---|---:|---:|---:|---:|---:|---:|']
+    for y,_ in CASES:
+        f=read(OUT/f'fits/{y}/attempt1.json');d=f['diagnostics'];lines.append(f"| {y} | 1 accepted | {f['runtimeSeconds']:.1f} | {sum(len(v['coordinates']) for v in d['variables'])} | {d['maxRhat']:.6f} | {d['minBulkESS']:.1f} / {d['minTailESS']:.1f} | {d['divergences']} / {d['treeDepthContacts']} |")
+    lines+=['',f"All three first attempts accepted; zero numerical failures/retries. Supervisor compute {batch['summedWorkerSeconds']:.1f}sec ({batch['summedWorkerSeconds']/3600:.3f} worker-hours), versus six-hour total/two-hour case cap.18 stochastic/derived sites including full free theta/pi,z,Lcorr,raw house/industry and hyperparameters were audited; counts are diagnostic coordinates, not independent political observations. Only mathematically fixed anchored states/triangular constants are exempt. All-chain BFMI passes. ARM64/Python3.12.2, NumPyro0.19/JAX0.6.2 with four CPU devices/x64; full transitive requirements-external.lock/environment/source signatures saved.", '',
+            'Exact compatible cache reuse verified; no finished inference rerun. Archives keep joint current-last-data/election-day draws, chain IDs, hyperparameter chains and every active diagnostic statistic. Last-data support is not claimed an exact cutoff nowcast. High-dimensional raw samples remain in isolated runtime cache for local independent audit, with checksums recorded; CI validates sealed forecasts/diagnostic dispositions and recorded audits without requiring that local cache. Upstream equations/config/code remain byte-pinned in the separate GPL archive. No statistical changes or tolerances relaxed.', '',
+            f"Independent verification: {verification['independentScalarChecks']} point/CRPS/quantile/interval/energy/pooling identities; {verification['jointDrawsChecked']:,} model joint vectors; all {verification['priorDataFilesByteIdentical']:,} prior data files byte-identical; five new resources verified. Separate raw-cache audit checks48 latent-to-simplex transformations and cached hyper Rhat/bulk/tail ESS. Actual preparation counterfactuals and synthetic schema/metric/cache tests pass. Final-head CI status is reported separately at completion; it does not rerun MCMC. No configured Python formatter/linter; compile/whitespace/source and deterministic checks apply.", '',
+            '## Ownership-neutral decision and next boundary','',
+            'Retain both national systems for development. External gauss is an active distribution alternative: pooled proper scores and coverage improve materially, not just through a point-error accident. The point difference0.018pp is too small to select either, the average is slightly better on point MAE, and major-party accuracy/2023 proper scores favour ours on some metrics. Evidence does not justify automatic operational replacement or uncertainty recalibration. No ownership preference or significance/causality hurdle is imposed.', '',
+            'External adoption would require only a narrow national-output adapter and maintained pinned preparation/inference environment, with GPL attribution/licensing reviewed for distribution. Emit stable common draw IDs, cutoff/horizon/schema metadata, separate current/election support, explicit TPM wherever modeled, and mass-conserving conditional fine-category mapping. Do not copy upstream electorate/MMP assumptions. The external complete historical schemas differ from ours: Other allocation must respect explicit NewConservative/UnitedFuture versus TOP/MRI withinOther. No constituent allocation or live-output guarantee is inferred. Its richer covariance/campaign/cycle effects increase maintenance complexity, while these three runs were practical; prior archived reproducibility was weaker but this reconstruction now has precise fingerprints and diagnostics.', '',
+            '**Next separately authorized task:** fixed-candidate conditional replay through preserved complete local affinity and saved Stage33 baseline/S/R/S+R fits. Use existing owned14-day primary/56-day diagnostic archives; a matched external reference is available only for2017/2020/2023 at56 days. Freeze a minimal schema adapter under Stage37 allocation policies before applying external draws, and label this subset rather than manufacture14-day/2014 external fits. Every national draw stays shared across seats; average transformed candidate shares, retain all slates/features/fallbacks, and do not add national uncertainty twice. Model alternatives/specifications stay fixed. This stage ran no candidate predictions or scores. National results are not isolated evidence for/against S or R; component, substitution and end-to-end evidence remain distinct (D067).', '',
+            '### Māori electorate polls — planned, not implemented','',
+            'For2026 incorporate available Māori electorate polls through a separately designed layer alongside an explicit Māori-seat baseline. National Te Pāti Māori party-vote support and local candidate-vote support are distinct. Preserve each poll question (candidate/localparty/both), denominator, fieldwork/publication/sample and uncertainty; connect slate/identity/target boundaries and shared national support without double-counting. Treat polls as noisy evidence, not exact results. Unpolled/stale seats require a documented fallback with wider uncertainty. Design its dependence and joint uncertainty before live integration. No such acquisition or implementation occurred here.', '',
+            'Roadmap: Stage38 review → bounded fixed-alternative candidate replay → deployment decision and fine-category/national reconciliation work → separately designed Māori/direct electorate polling and dated live inputs → coherent joint uncertainty/MMP/archive outputs. No new national variants, learned blend, candidate refit, acquisition or live2026 forecast starts automatically.']
+    return '\n'.join(lines)+'\n'
+
+
+def run(check=False):
+    p=ROOT/'docs/stage38-external-national-results.md';text=render()
+    if check:
+        if p.read_text()!=text:raise ValueError('Changed deterministic Stage38 report')
+    else:p.write_text(text)
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');run(p.parse_args().check)
