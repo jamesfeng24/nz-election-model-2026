@@ -1,0 +1,13 @@
+# Stage37 completed national interface / bounded external decision boundary
+
+The [two-policy allocation](stage37-category-allocation-contract.md) and [supported external comparison](stage37-national-interface-results.md) are companion outputs, preserving every prior national/candidate result. Whole Other scenarios expose unresolved allocation assumptions. The external benchmark cannot reconstruct2020 MRI or probabilistic scores from published marginal summaries. Adoption is ownership-neutral (D070); current point evidence does not justify superiority or automatic replacement.
+
+Active sequence: polling data/design → national implementation/backtest (completed Stage35/36) → category interface/external bounded comparison (Stage37) → **separately authorized** fixed-alternative end-to-end replay with dated-input/roster assumptions → deployment decision/reconciliation/joint uncertainty/MMP. A small independent external gauss distribution comparison may be authorized in parallel once its data/schema/diagnostic contract is concrete; it is not a prerequisite for recognizing candidate-component evidence or using the completed conditional interface. S/S+R active, R challenger, baseline control remain fixed. National development must not be tuned to favour a candidate alternative; shared national uncertainty propagates once and mean transformed predictions differ from predictions at mean inputs. No subsequent implementation is authorized by this roadmap.
+
+## Preservation note
+
+The historical statistical-specification.md is a consumed Stage28 input with an immutable hash. Initial Stage37 documentation appended a roadmap section there, causing the earlier deterministic test to fail. That Stage37-only addition is moved here; the historical file returns byte-identically to merged main. No historical generator, data artifact, numerical output or test/tolerance is changed. Active roadmap updates remain in PROJECT_STATE.md and this companion, linked by METHODOLOGY.md.
+
+## Portable gzip companion
+
+Final2079623 CI passed all698 tests and earlier deterministic stages, but compressed Stage37 regeneration differed because Python3.12 uses zlib's platform marker: byte9=19 on macOS versus3 on Linux. Canonical byte9=255 (unknown platform) now fixes that metadata only. All32 decompressed allocation records, numeric values, units, precision, gates and tolerances are unchanged; strict byte reproduction remains required. The original construction contract and a reversible original-header/SHA manifest preserve the initial checkpoint exactly without duplicating its compressed payloads. No national/candidate fit or prior artifact changes. No historical inference is rerun.

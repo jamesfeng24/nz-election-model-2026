@@ -1,0 +1,51 @@
+{
+  "cache": "exact dataset/priors/variant/model/settings/dependency signature; one archive per case; no whole suite",
+  "cases": [
+    {
+      "cutoff": "2017-07-29",
+      "year": 2017
+    },
+    {
+      "cutoff": "2020-08-22",
+      "year": 2020
+    },
+    {
+      "cutoff": "2023-08-19",
+      "year": 2023
+    }
+  ],
+  "categoryLimitation": "unchanged upstream2020 folds MRI into Other; three-case six/seven-category comparison still requires a separate schema decision",
+  "commit": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+  "comparisonType": "external_system_reference; matched_input_architecture requires a separately frozen data adapter",
+  "convergenceRequirements": "Rhat<=1.01; bulk/tail ESS>=400; zero divergences; all relevant coordinates, no scores from failed fits",
+  "estimatedRuntimeHours": [
+    0.5,
+    3
+  ],
+  "executionAuthorizedNow": false,
+  "licence": "GPL-3.0-or-later upstream; preserve attribution/notices and distribution obligations",
+  "operationalSelection": null,
+  "politicalAcquisitionNow": false,
+  "priorRuntimeEvidenceSeconds": [
+    110.1,
+    151.2,
+    240.6
+  ],
+  "requiredBeforeExecution": [
+    "separate_authorization",
+    "pinned_prepared_poll_snapshot_and_result_inputs",
+    "isolated_transitive_dependency_lock",
+    "frozen_category_contract_for_2020_MRI",
+    "expanded_all_coordinate_diagnostics"
+  ],
+  "settings": {
+    "chains": 4,
+    "max_tree_depth": 12,
+    "samples": 2000,
+    "seed": 2026,
+    "target_accept": 0.95,
+    "warmup": 2000
+  },
+  "stage": 37,
+  "variant": "gauss"
+}
