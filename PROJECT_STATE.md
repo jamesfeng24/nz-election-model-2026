@@ -1,3 +1,13 @@
+# Stage36 — final two new fits running, 2026-10-04
+
+All eight primary cases accepted; last2023/56 took2286.6s with maxRhat1.004582/minbulk1715.26/mintail3775.75 and0divergences/depth contacts. Three distinct lag10 fits accepted (2014both,2020/14);2017both and2020/56 reuse exact primary signatures. Seven missing-n1000 fits accepted;2023/14 took2590.7s. Two verified-only retries accepted/six data abstentions. **20 distinct accepted fits/two failed first attempts**. Remaining new fits: lag10-2023/14 (2b512913…) and missing-n2023/56 (8e6890ef…). Main later fills all cached cases/root32-case ledger; do not duplicate fits.
+
+Main session50114/PID68619/log `/tmp/stage36-remaining-inference.log`; secondary session52535/PID70692/log `/tmp/stage36-missing-n-inference.log`. Approved scheduler session88744 runs `/tmp/stage36-cache-scheduler.py`, log `/tmp/stage36-cache-scheduler.log`: after final timing fit is saved, it pauses only our exact main command if the secondary8-case ledger is unfinished, and resumes after completion. If an interruption occurs, inspect that log/process state before launching another inference command. Never blindly duplicate a running signature or signal a reused PID. No numerical code/settings/priors changed.
+
+Intermediate GitHub CI passed forad94f5e and3a4cd7d; final-headCI remains. Independent current-root checks88paired draws/22mean vectors,485 benchmark projections/26means,1,514 earlier files unchanged. Full675 local suite/926source checks and isolated25focused+20pure adapters passed. No historical scores. Evaluation labels now distinguish verified-only publication from inferred timing; report exposes fineTOP and scale/prior diagnostics separately.
+
+**Exact next:** finish both fits and let main consume caches; archive complete32-case forecasts and commit/push before scoring; independently score/verify/report, update final docs/roadmap, finalCI and unmergedPR. No candidate replay, newsource, Other allocation, changedprior/variant, model selection or liveforecast.
+
 # Stage36 — seventh primary forecast checkpoint, 2026-10-04
 
 Seven primary cases accepted;2023/14 took2570.8s, all-coordinate maxRhat1.0095657/minbulk703.43/mintail460.46,0divergences/depth contacts. Five missing-n1000 cases accepted, including2020/14 in1228.9s. Two verified-only retries accepted; six data abstentions. **14 distinct accepted fits / two failed first attempts** are preserved. Primary2023/56 and missing-n2020/56 running under existing sessions/logs; remaining lag10/missing-n cases not all done. Keep two-worker signature scheduling disjoint; watch before main reaches missing-n unfinished signatures.

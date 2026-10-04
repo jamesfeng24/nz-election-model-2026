@@ -24,7 +24,8 @@ def evaluate():
              'cutoff':entry['cutoff'],'status':c['status'] if c else 'not_run','reason':c.get('reason') if c else 'unfinished',
              'benchmarkStatus':b['status'],'benchmark':None,'model':None,'coarseComparison':None,
              'currentCyclePolls':len(entry['cycles'][-1]['pollIds']),'earlierCompletedCycles':len(entry['cycles'])-1,
-             'informationSet':'conditional inferred historical availability; not verified archived as-of'}
+             'pollPublicationPolicy':'verified_only' if entry['branch']=='verified_only' else 'verified_plus_'+str(10 if entry['branch']=='publication_lag10' else 5)+'_day_inference',
+             'informationSet':('verified poll publication dates; assumed earlier-result timing; retrospective source versions' if entry['branch']=='verified_only' else 'conditional inferred historical availability; not verified archived as-of')}
         if b['status']=='constructed':row['benchmark']=point(b['shares'],actual_coarse,COARSE)
         if c and c['status']=='accepted':
             fit=read(OUT/c['attempts'][-1]);cats=fit['categories'];draws=np.asarray(fit['draws']['electionDay']);observed=[actual[p] for p in cats]
