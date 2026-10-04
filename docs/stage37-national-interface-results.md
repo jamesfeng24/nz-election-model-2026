@@ -74,6 +74,8 @@ All external categories outside the six named parties are aggregated once into O
 
 ## Numerical/calibration and decision limits
 
+Artifact commits pin the published records and inspected code, but cached case run fingerprints, exact prepared polling snapshots, dependency/seed/settings manifests are not archived. Configuration comments do not prove every cached case was generated under the current settings; exact reproduction and chronology of development choices remain unverified.
+
 External gauss R-hat/ESS:2017 1.02656/94.66;2020 1.01536/218.08;2023 1.01561/179.92, zero reported divergences. Only107/93/164 parameters were summarized; full latent mixing and tail ESS are unavailable. Record these limitations rather than pretending archived estimates pass our inference checks. No external joint samples or matching interval endpoints support harmonized CRPS/coverage/width/energy. Standard deviations/PIT/aggregate scores are not pseudo-distributions. Our Stage36 undercoverage (90%44/56;50%20/56) remains unchanged and unresolved.
 
 The supported point subset modestly favours our model, but two elections, missing2020, different data/calibration and numerical limitations do not establish superiority or calibration. D070 gives ownership no preference. A sufficiently fair future comparison may justify adopting external code with licensing/attribution, preserving ours as a benchmark. No replacement or automatic protective hurdle is imposed here.
