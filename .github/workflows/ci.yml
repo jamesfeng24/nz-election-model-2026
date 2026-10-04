@@ -21,6 +21,7 @@ jobs:
         with:
           python-version-file: .python-version
       - run: python3 -m pip install -r requirements-boundaries.txt
+      - run: python3 -m scripts.polling.national_model.evaluation --check
       - run: python3 -m unittest discover -s scripts/tests -v
       - run: python3 scripts/validate/source_files.py
       - run: python3 -m scripts.transform.historical_panel --check --verify-years
@@ -70,3 +71,8 @@ jobs:
       - run: python3 -m scripts.polling.national_foundation.run --check
       - run: python3 -m scripts.polling.national_foundation.design --check
       - run: python3 -m scripts.polling.national_foundation.verification --check
+      - run: python3 -m scripts.polling.national_model.inventory --check
+      - run: python3 -m scripts.polling.national_model.archive --check
+      - run: python3 -m scripts.polling.national_model.verification --check
+      - run: python3 -m scripts.polling.national_model.report --check
+      - run: python3 -m scripts.polling.national_model.outputs --check

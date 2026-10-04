@@ -1,0 +1,47 @@
+# Stage36 pre-inference implementation contract
+
+Stage35's original design remains unchanged. This companion freezes implementation details before any posterior or forecast score. The only observation-operator clarification is explicitly identified below; it supplies no constituent allocation or new political feature.
+
+## Coordinates and cycles
+
+The canonical party order is NAT,LAB,GRN,ACT,NZF,MRI,TOP,OTH. Seven-category2014 cycles omit TOP; later cycles use all eight. Use Stage35's exact Helmert construction. Persistent house effects and the one Reid method segment are generated in the canonical eight-category zero-sum subspace. Each earlier schema selects its seven coordinates and recenters them. Projection into that schema's Helmert coordinates has exactly the frozen identity covariance; this preserves historical log-contrast meaning and creates no TOP observations in2014. Pollsters are the fixed roster actually admitted by that prefix, centered equally, not by volume. Independent cycle biases are generated in each cycle's own Helmert coordinates with the shared frozen scale.
+
+Each cycle begins at its previous election, initialized from the previous permitted full national result. The2017 TOP seed0.002 comes from Other, with the frozen category-log covariance. Weekly nodes use calendar-day offsets from the previous election's end-of-day, ending exactly at the completed election or current cutoff. Fieldwork observations use NZ noon interpolated between enclosing nodes, then average probabilities; before-start days are excluded, not clamped. Calendar days, including DST days, are the diffusion time unit. Completed endpoint likelihoods apply only to results admitted before the cutoff. The held-out election has no endpoint anchor or later node. All paths/hyperparameters/house effects are fitted jointly using the permitted prefix; no full-panel posterior is imported.
+
+For numerical efficiency an endpoint-first Brownian-bridge transform of independent standard normals may replace raw cumulative normals. Its Gaussian covariance is exactly min(t,u)/7; this is the same noncentered random walk, not a bridge conditioned on a held-out result. Dense adapted mass is restricted to global/house/method/cycle-bias/initial/endpoint coordinates; bridge-detail innovations remain diagonal. Four independent chains use the frozen seeds, never a shared chain. This computational parameterization is fixed before accuracy evaluation.
+
+## Observation clarification
+
+Individual modeled parties retain Gaussian rounding/censoring intervals with variance2*mu*(1-mu)/n_decided+0.005². Missing categories have no row. A verified exclusive aggregate is one summed operator, never duplicated with its constituents. The preserved panel has no historically verified exclusive Other definitions, so printed Other alone stays data-only. The source-documented unmodeled ballot groups UNF,NCP,MNA,INT,INM can give a single lower-censored Other observation: sum their rounding lower limits, interval[sum, +infinity). This explicitly resolves Stage35's "supported aggregate lower constraints" as a measurement constraint, not a hard bound on true support. If alliance and constituent entries overlap, that minor aggregate is unavailable; retain the major rows. No independent allocation of Other is inferred. Rounded zero contributes its interval; a zero lower bound alone contributes no informative aggregate row.
+
+Undocumented denominators use the frozen decided-voter assumption. An explicit all-respondent figure needs a documented decided fraction; transform intervals coherently before admission. Nominal n is multiplied by the documented named-party fraction (or0.85), with750 primary/missing-n1000 sensitivity. No raw field is filled. Declared design inflation2 is unchanged.
+
+## Benchmark projection
+
+Require all six core printed point shares. Minimize unweighted squared distance from those six printed values subject to their rounding box, nonnegativity and sum<=1; Other is the unique remainder. Include a verified exclusive Other constraint if present. The strict convex six-dimensional objective has a unique projection. Threshold-only/missing core cells abstain. A scalar Lagrange multiplier with deterministic bisection projects to an active sum constraint; no independently normalized poll vector. Coarsen TOP into Other for all model/benchmark comparisons. Use the same cutoff/overlap selector and exact Stage35 recency/sample/pollster weights. Benchmark has no probability distribution.
+
+## Finite runs, diagnostics and resume
+
+Eight primary cases, eight publication-lag10 cases, eight missing-n1000 cases. Verified-only has eight recorded cases, with a fit only if at least one usable current-cycle poll remains; otherwise explicit coverage-only abstention. Proper priors make sparse partial current evidence estimable but prior-dominated; no invented frequentist sample gate. Four2000-warmup/2000-draw chains; retry4000-warmup at0.99/depth15 only after a numerical/diagnostic failure. Diagnose rank-normalized split Rhat and bulk/tail ESS for every sampled scalar coordinate, current/election-day shares, bias/house and path states; deterministic constant coordinates are recorded separately. Gate Rhat<=1.01, bulk/tail ESS>=400, zero divergences. Report depth contacts and all failures. Do not discard chains.
+
+Signatures pin selected observations/operators/earlier anchors, cutoff/schema/configuration, source hashes, model code, exact dependencies/platform and seeds. Cached completed attempts are reusable only for that signature. Each attempt saves diagnostics and paired draws before evaluation, including failed attempts. Projection draws use fresh seeded future increments once; no second common-error draw. Scores read only accepted attempts. CI checks signatures, saved draws, arithmetic and preservation; it never reruns historical MCMC.
+
+Scoring and pooled weighting follow Stage35 exactly. Energy score uses a fixed evenly spaced2,000-draw subsample with all-pairs distances (finite estimator), not random outcome-dependent selection. Empirical CRPS uses sorted-draw arithmetic. Stable draw IDs identify chain/iteration/case and pair current with election-day draws. No support accuracy is claimed for current states against election-day actuals.
+
+## Fixed numerical details
+
+Future draws use seed360000+100*election_year+horizon_days and standard normal increments paired by chain/iteration. The seed is shared across sensitivity branches to reduce unrelated Monte Carlo variation; the full fit-key plus local draw ID is the unique namespace. Missing-n1000 changes the statistical model's effective n only; the separately frozen benchmark keeps its750 missing-n weight assumption. No benchmark parameter is refitted. The initialization seed0.002 is the composition at the mean log-state; nonlinear prior mean shares need not equal that seed. This preserves Stage35's exact equations.
+
+Use 8-point Gauss–Legendre log integration when the standardized finite interval width is below0.001; otherwise stable tail-CDF differences. The threshold is a numerical arithmetic choice, not a data or political threshold. Within valid share inputs and the0.005 error floor, this avoids tiny-cell cancellation without adding a probability floor. Infinity-censored rows use the explicit one-sided log CDF so inactive derivatives remain finite.
+
+## Pre-score benchmark constraint correction
+
+The initial benchmark checkpoint omitted supported lower bounds on its coarse Other remainder. Before any forecast errors were examined, a source-consistency audit found violations in three distinct waves (15 poll/case instances). Preserve that initial output as `benchmark-unconstrained-remainder-checkpoint.json`; the authoritative benchmark is corrected to include TOP and disjoint documented unmodeled-group lower rounding bounds once. The six-core projection therefore has sum<=1−supported_Other_lower. Overlapping alliance/constituent lower bounds remain unavailable. This enforces Stage35's aggregate-bound requirement; it introduces no new predictive assumption, changes no MCMC inputs/parameters, and is not chosen through performance.
+
+## Reporting arithmetic fixed before scoring
+
+Central quantiles use linear interpolation. Report all eight planned cases per branch with1/8 weights; where failures make the full plan incomplete, report that full pooled metric unavailable and explicitly label an available-only renormalized summary. Pooled RMSE takes the square root after averaging case/category squared errors, not the average of fold RMSEs. Party-specific metrics retain their actual category/case denominator; coarse Other includes TOP and fine Other does not. Display major-party errors separately. There is no scoring of earlier current support against election-day truth.
+
+## Pre-score diagnostic serialization
+
+Before historical accuracy inspection, deterministic evaluation serialization is fixed at12 decimal places for computed diagnostics in percentage-point units, and15 places for share values, interval bounds, expected-share vectors and covariance arrays. This removes immaterial architecture-dependent reduction bits from saved tables. Calculations, archived draws/fits, convergence gates and independent-check tolerances remain unchanged; the archive retains full float64 outputs. This is a reporting serialization rule, not a statistical or numerical-tolerance amendment.

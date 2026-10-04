@@ -146,3 +146,6 @@ vite.config.ts.timestamp-*
 .venv/
 __pycache__/
 *.py[cod]
+
+# Isolated Stage36 inference environment
+.venv-polling/

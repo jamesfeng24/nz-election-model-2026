@@ -1,10 +1,10 @@
-# Active Stage35 sequence — D067 clarification, 2026-10-04
+# Active Stage36 sequence — D067/D069, 2026-10-04
 
 [Owned polling foundation/design](stage35-national-model-design.md) supersedes the earlier dated-input-first readiness plan. Component validation, fixed-fit input substitution and end-to-end replay are distinct. Polling replay is not a prerequisite for recognizing candidate information and isolated polling-error cancellation cannot overturn that evidence. Retain S and S+R active, R meaningful challenger/baseline control; no definitive choice required before PoP. Historical records below remain unchanged.
 
-1. Complete/review Stage35 polling data/design.
-2. Separately implement/backtest the frozen national model and benchmark on national share accuracy, joint/marginal calibration and chronology, including inferred-availability limitations. No candidate replay first.
-3. Separately replay fixed candidate alternatives end-to-end using the intended national component (average may accompany the same evaluation). Preserve specifications; do not tune polling to favour them. Resolve fine Other-to-local allocation through an explicit interface before complete replay.
+1. Review completed Stage36 national implementation/backtest: mixed point gains, undercoverage and consequential timing/sample assumptions remain explicit. Stage35 data/design is preserved. No operational national choice or candidate replay.
+2. Separately authorize the narrow Other-to-local-category replay contract using preserved evidence, explicit uncertain allocation and frozen samples. Complete draws do not yet identify fine ballot groups.
+3. Separately replay fixed candidate alternatives end-to-end using the saved national component and average control. Preserve specifications; do not tune polling to favour them or treat isolated error cancellation as component validation.
 4. Deployment decision and further integration: national reconciliation, dated slates/target boundaries/direct electorate polls including Māori, shared joint uncertainty/MMP/archive. Every national draw enters all electorates once; nonlinear means require transformed-draw averaging.
 
 No additional fitting/scoring/acquisition/replay/model selection is authorized by this roadmap. Earlier-election/identity/mean-variant searches remain deferred. Prior roadmap/decisions are historical planning, superseded only where D067 states.
