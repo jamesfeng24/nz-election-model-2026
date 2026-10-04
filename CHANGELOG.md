@@ -292,3 +292,10 @@ Added versioned496-wave polling foundation, bounded raw/reference provenance, pu
 Implemented the frozen compositional national model, explicit observation/schema operators, isolated transitive dependency lock, exact-signature resumable inference, all-coordinate numerical diagnostics, paired joint support draws and pollster-balanced benchmark. Forecast archival precedes separate national evaluation. Added synthetic gradient/likelihood/cutoff tests and independent deterministic arithmetic/preservation checks. No political acquisition, candidate change/replay, fine Other allocation or operational choice. Completed findings and final check status are recorded in the Stage36 report/handoff.
 
 Completed Stage36:26 accepted forecast cases/six data abstentions, archived before scoring; independent national score/interval checks, branch-specific output manifest, mixed benchmark findings and uncertainty/availability limitations. D069 retains national development with the average control; fine Other interface remains a separately authorized prerequisite. Final CI/PR handoff is recorded in PROJECT_STATE and GitHub.
+
+## Stage37 — 2026-10-04
+
+- Freeze and construct two explicit Other-allocation scenarios for eight primary national cases and independent average benchmarks; conserve every draw/explicit category.
+- Preserve20 bounded official external resources; audit exact56-day ensemble/gauss references, score only supported2017/2023 point subsets and abstain for2020 missing MRI.
+- Add ownership-neutral adoption criterion, independent arithmetic/provenance, focused actual-adapter tests and conditional replay handoff.
+- No inference, candidate predictions/scores, prior-data changes, recalibration or operational selection.
