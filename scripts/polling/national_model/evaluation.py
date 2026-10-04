@@ -92,7 +92,20 @@ def serialized_metrics(value,key=''):
 
 
 def run(check=False):
-    result=serialized_metrics(evaluate());save('evaluation.json',result,check)
+    result=serialized_metrics(evaluate())
+    if check:
+        previous=read(OUT/'evaluation.json')
+        differences=[]
+        def inspect(a,b,path):
+            if len(differences)>=20:return
+            if isinstance(a,dict) and isinstance(b,dict):
+                for k in a:inspect(a[k],b.get(k),path+'.'+k)
+            elif isinstance(a,list) and isinstance(b,list):
+                for i,(x,y) in enumerate(zip(a,b)):inspect(x,y,path+f'[{i}]')
+            elif a!=b:differences.append((path,a,b))
+        inspect(previous,result,'evaluation')
+        for path,old,new in differences:print('DETERMINISTIC_DIFF',path,repr(old),repr(new))
+    save('evaluation.json',result,check)
     print('Evaluated',sum(r['model'] is not None for r in result['cases']),'saved accepted forecasts; no inference')
 
 

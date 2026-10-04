@@ -1,3 +1,7 @@
+# Stage36 — CI portability investigation, 2026-10-04
+
+PR43 is open/unmerged. Artifacthead d75e4c3 passes frontend and the full Python/source/prior deterministic suite, but Linux fails byte-exact Stage36 `evaluation --check`. Local independent numeric checks and archival checks pass; no inference failure or statistical change. Added precise differing-field logging and moved this deterministic gate earlier in CI for fast diagnosis. Do not weaken tolerances, change model code/priors or rerun MCMC. Investigate the exact fields, make only a documented same-equation arithmetic/serialization correction if warranted, then verify final-headCI/clean remote match. All original forecasts and pre-score archive0d07043 remain unchanged. No later modelling.
+
 # Stage36 — completed national backtest, final CI/PR handoff pending, 2026-10-04
 
 Verified Stage35 reviewed9f4ff027 and merge19be252 ancestry; branch `stage/36-national-polling-backtest` preserves every earlier source/candidate/linkage/output/null selection. Pre-inferencec948d8f and complete pre-score archive0d07043 separate construction from evaluation. [Results](docs/stage36-national-polling-results.md), [development assessment](docs/stage36-national-polling-decision.md), D068/D069 and `data/processed/polling/national-backtest/` record the exact frozen implementation, outputs and findings.
