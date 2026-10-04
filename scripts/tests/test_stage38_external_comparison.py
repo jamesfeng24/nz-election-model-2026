@@ -1,9 +1,18 @@
 """Synthetic Stage38 interfaces: complete partitions, no inferred fine detail."""
 import unittest
+from datetime import date
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from types import SimpleNamespace
+from unittest.mock import patch
 
 import numpy as np
 
 from scripts.polling.external_comparison.common import coarsen, digest
+from scripts.polling.external_comparison.metrics import distribution, interval_score, major
+from scripts.polling.external_comparison.evaluation import pool
+from scripts.polling.external_comparison.inference import constant_mask, signature
+from scripts.polling.national_model.metrics import point
 
 
 class CompletePartitionTests(unittest.TestCase):
@@ -80,6 +89,115 @@ class ProvenanceEncodingTests(unittest.TestCase):
     def test_nonfinite_cache_contract_cannot_be_encoded(self):
         with self.assertRaises(ValueError):
             digest({'input': float('nan')})
+
+    def test_actual_cache_signature_pins_cutoff_settings_inputs_and_config(self):
+        from scripts.polling.external_comparison import inference
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root/'config').mkdir()
+            (root/'config/model.yml').write_text('synthetic: true\n')
+            (root/'specification.json').write_text('{"synthetic":true}')
+            (root/'input-contract.json').write_text('{"sha256":{}}')
+            (root/'environment.json').write_text('{"packages":{"synthetic":"1"}}')
+            ds = SimpleNamespace(cutoff=date(2020, 8, 22), fingerprint=lambda: 'fixed-array-hash')
+            settings = {'seed': 2034, 'chains': 4, 'samples': 2000}
+            with patch.object(inference, 'OUT', root), patch.object(inference, 'UPSTREAM', root):
+                base = signature(ds, settings)
+                self.assertEqual(base, signature(ds, dict(settings)))
+                ds.cutoff = date(2020, 8, 23)
+                self.assertNotEqual(base, signature(ds, settings))
+                ds.cutoff = date(2020, 8, 22)
+                self.assertNotEqual(base, signature(ds, dict(settings, seed=2035)))
+                (root/'input-contract.json').write_text('{"sha256":{"new":"input"}}')
+                self.assertNotEqual(base, signature(ds, settings))
+                (root/'input-contract.json').write_text('{"sha256":{}}')
+                (root/'config/model.yml').write_text('synthetic: changed\n')
+                self.assertNotEqual(base, signature(ds, settings))
+
+
+class ForecastScoreTests(unittest.TestCase):
+    def test_exact_two_draw_crps_energy_and_intervals(self):
+        draws = np.array([[1., 0., 0., 0., 0., 0.],
+                          [0., 1., 0., 0., 0., 0.]])
+        actual = np.array([.25, .75, 0., 0., 0., 0.])
+        result = distribution(draws, actual)
+        # CRPS = E|X-y| - E|X-X'|/2 using the empirical joint distribution.
+        self.assertAlmostEqual(result['parties'][0]['CRPSpp'], 25.)
+        self.assertAlmostEqual(result['parties'][1]['CRPSpp'], 25.)
+        self.assertAlmostEqual(result['meanCRPSpp'], 50./6)
+        self.assertAlmostEqual(result['energyScorePP'], 25.*2**.5)
+        self.assertEqual(result['subsampleIndices'], [0, 1])
+        for label, width in [('50', 100./6), ('90', 30.)]:
+            self.assertEqual(result['coveredCount'+label], 6)
+            self.assertEqual(result['coverage'+label], 1)
+            self.assertAlmostEqual(result['width'+label+'PP'], width)
+            self.assertAlmostEqual(result['intervalScore'+label+'PP'], width)
+
+    def test_interval_score_penalizes_misses_and_rejects_invalid_levels(self):
+        self.assertAlmostEqual(interval_score(.2, .4, .3, .5), 20.)
+        self.assertAlmostEqual(interval_score(.2, .4, .1, .5), 60.)
+        self.assertAlmostEqual(interval_score(.2, .4, .5, .5), 60.)
+        self.assertAlmostEqual(interval_score(.2, .4, .1, .9), 220.)
+        for level in (0, 1, -.1, 1.1):
+            with self.subTest(level=level), self.assertRaises(ValueError):
+                interval_score(.2, .4, .3, level)
+        with self.assertRaises(ValueError):
+            interval_score(.4, .2, .3, .5)
+
+    def test_point_mass_has_no_invented_forecast_spread(self):
+        forecast = np.array([[1., 0., 0., 0., 0., 0.]])
+        actual = np.array([0., 1., 0., 0., 0., 0.])
+        result = distribution(forecast, actual)
+        self.assertAlmostEqual(result['energyScorePP'], 100.*2**.5)
+        self.assertAlmostEqual(result['meanCRPSpp'], 200./6)
+        self.assertEqual(result['width90PP'], 0)
+        self.assertEqual(result['coveredCount90'], 4)
+        self.assertAlmostEqual(result['intervalScore90PP'], 4000./6)
+
+    def test_equal_election_pool_averages_squared_errors_before_root(self):
+        names = ['NAT', 'LAB', 'GRN', 'ACT', 'NZF', 'REST']
+        actual = [.4, .4, .05, .05, .05, .05]
+        rows = []
+        for year, delta, draw_count in [(2017, .1, 10), (2023, .2, 10000)]:
+            forecast = [.4+delta, .4-delta, .05, .05, .05, .05]
+            score = point(forecast, actual, names)
+            rows.append({'year': year, 'systems': {'average': {
+                'point': score, 'major': major(score),
+                'probability': None, 'drawCount': draw_count}}})
+        result = pool(rows, ['average'])
+        self.assertEqual(result['weightPerElection'], .5)
+        self.assertEqual(result['categoryCases'], 12)
+        self.assertEqual(result['majorPartyCases'], 4)
+        score = result['systems']['average']
+        self.assertAlmostEqual(score['MAEpp'], 5)
+        self.assertAlmostEqual(score['RMSEpp'], (1000./12)**.5)
+        self.assertAlmostEqual(score['majorMAEpp'], 15)
+        self.assertAlmostEqual(score['majorRMSEpp'], 250.**.5)
+        self.assertAlmostEqual(score['partyBias'][0]['biasPP'], 15)
+        self.assertAlmostEqual(score['partyBias'][1]['biasPP'], -15)
+        self.assertIsNone(score['probability'])
+
+    def test_distribution_requires_complete_joint_schema(self):
+        for draws in ([[.5, .5]], [[.5, .4, 0., 0., 0., 0.]],
+                      [[.5, .5, 0., 0., 0., float('nan')]]):
+            with self.subTest(draws=draws), self.assertRaises(ValueError):
+                distribution(draws, [.4, .4, .05, .05, .05, .05])
+
+
+class DiagnosticConstantTests(unittest.TestCase):
+    def test_only_structural_cholesky_coordinates_exempted(self):
+        ds = SimpleNamespace(K=4, T=5, anchors_t=(0, 2))
+        mask = constant_mask('L_corr', np.zeros((4, 2000, 9)), ds)
+        self.assertEqual(np.flatnonzero(mask).tolist(), [0, 1, 2, 5])
+        self.assertFalse(constant_mask('sigma', np.zeros((4, 2000, 3)), ds).any())
+        self.assertFalse(constant_mask('industry_end_raw', np.zeros((4, 2000, 12)), ds).any())
+
+    def test_fixed_anchor_path_exemptions_do_not_hide_future_state(self):
+        ds = SimpleNamespace(K=4, T=5, anchors_t=(0, 2))
+        for name, width in [('theta', 3), ('pi', 4)]:
+            mask = constant_mask(name, np.zeros((4, 2000, 5*width)), ds).reshape(5, width)
+            self.assertTrue(mask[[0, 2]].all())
+            self.assertFalse(mask[[1, 3, 4]].any())
 
 
 if __name__ == '__main__':

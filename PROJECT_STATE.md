@@ -1,3 +1,7 @@
+# Stage38 — two accepted external cases, 2026-10-05
+
+Frozen pre-inferencefa08640 is pushed. First attempts2017 (146sec) and2020 (122sec) passed all-coordinate gates, no retries/divergences/depthcontacts.2023 is running in the same serial capped batch. Jointdraws/hyperchains/full diagnostic coordinates save immediately; rawhighdimensional samples stay isolated in .cache. No scores yet. Six-category scoring implementation and16 focused tests are ready. Actualmarshal outcome/postcutoff/revision independence passes; five acquiredresources, unchangedfixedretrospectivegauss specification. Next: finish/cache2023, seal and commit forecasts before evaluation, independent score/provenance/preservation validation, finalCI/unmergedPR. AllStage36inference/candidate work remains unchanged.
+
 # Stage38 — frozen pre-inference checkpoint, 2026-10-05
 
 Source plan3d76c77/preservation47dfce8 precede five resources (cap6). Pinned upstream ef76cf6 unchanged source/config/GPL archive; prepared199/250/358 polls, exact56-day2017/2020/2023 cases. Held-out results/postcutoff polls/future-only revisions counterfactuals pass at actual marshal. Reconstructed snapshots, inferred pollster lags and retrospective minor-error factor2.5 are explicit. Six-category fullbenchmark partition preserves TPM in underlying outputs.
