@@ -93,3 +93,11 @@ jobs:
       - run: python3 -m scripts.readiness.run --check
       - run: python3 -m scripts.readiness.report --check
       - run: python3 -m scripts.readiness.verification --check
+      - run: python3 -m scripts.transport.freeze --check
+      - run: python3 -m scripts.transport.party --check
+      - run: python3 -m scripts.transport.construction --check
+      - run: python3 -m scripts.transport.evaluation --check
+      - run: python3 -m scripts.transport.readiness --check
+      - run: python3 -m scripts.transport.verification --check
+      - run: python3 -m scripts.transport.report --check
+      - run: python3 -m scripts.transport.manifest --check

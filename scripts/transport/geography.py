@@ -55,3 +55,32 @@ def canonical_2026(frame):
 def all_rows():
     historical = read('data/processed/checkpoints/stage25-historical-geography/geography.json')['records']
     return [dict(r, transportTier=classification(r)) for r in historical] + canonical_2026(read(SNAPSHOT+'target-frame.json')['records'])
+
+
+def relationship_records(rows, occurrences):
+    """Linked candidature status for every predecessor, separate from geography."""
+    statuses={}
+    for occurrence in occurrences:
+        statuses.setdefault(occurrence['electorateId'],set()).add(occurrence['candidateContestStatus'])
+    result=[]
+    for row in rows:
+        for predecessor in row['predecessors']:
+            sid=predecessor['sourceElectorateId']
+            incoming=predecessor.get('targetIncomingPopulationShareBounds') or [predecessor.get('targetInheritanceLower'),predecessor.get('targetInheritanceUpper')]
+            retained=predecessor.get('sourceRetainedPopulationShareBounds') or [predecessor.get('sourceRetentionLower'),predecessor.get('sourceRetentionUpper')]
+            result.append({'relationshipId':row['geographyId']+':'+sid,'geographyId':row['geographyId'],
+                'sourceElectorateId':sid,'targetElectorateId':row['targetElectorateId'],
+                'sourceYear':row['sourceYear'],'targetYear':row['targetYear'],'scope':row['scope'],
+                'sourceBoundaryVersion':row['sourceBoundaryVersion'],'targetBoundaryVersion':row['targetBoundaryVersion'],
+                'selectedDominantPredecessor':sid==row['dominantPredecessorId'],
+                'certifiedTwoSidedExact':row['certifiedTwoSidedExact'],
+                'targetTier':classification(row),'targetInheritanceBounds':incoming,'sourceRetentionBounds':retained,
+                'sourceCandidateContestStatuses':sorted(statuses.get(sid,{'missing_candidature_status'})),
+                'targetCandidateContestStatuses':sorted(statuses.get(row['targetElectorateId'],{'pending_complete2026_slate'})),
+                'jointConstraints':'retained complete crosswalk population groups/control equations; marginal bounds are not independent endpoints',
+                'units':'electoral population fractions; not candidate ballots or candidate-error bounds',
+                'geographyRecordPath':'data/processed/forecast-transport/geography.json',
+                'sourceCandidaturePath':'data/processed/evidence/practical-candidate-linkage/occurrences.json'})
+    if len({r['relationshipId'] for r in result})!=len(result):
+        raise ValueError('Duplicate canonical predecessor relationship')
+    return result
