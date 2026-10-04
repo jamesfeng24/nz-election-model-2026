@@ -1,3 +1,14 @@
+# Active Stage35 sequence — D067 clarification, 2026-10-04
+
+[Owned polling foundation/design](stage35-national-model-design.md) supersedes the earlier dated-input-first readiness plan. Component validation, fixed-fit input substitution and end-to-end replay are distinct. Polling replay is not a prerequisite for recognizing candidate information and isolated polling-error cancellation cannot overturn that evidence. Retain S and S+R active, R meaningful challenger/baseline control; no definitive choice required before PoP. Historical records below remain unchanged.
+
+1. Complete/review Stage35 polling data/design.
+2. Separately implement/backtest the frozen national model and benchmark on national share accuracy, joint/marginal calibration and chronology, including inferred-availability limitations. No candidate replay first.
+3. Separately replay fixed candidate alternatives end-to-end using the intended national component (average may accompany the same evaluation). Preserve specifications; do not tune polling to favour them. Resolve fine Other-to-local allocation through an explicit interface before complete replay.
+4. Deployment decision and further integration: national reconciliation, dated slates/target boundaries/direct electorate polls including Māori, shared joint uncertainty/MMP/archive. Every national draw enters all electorates once; nonlinear means require transformed-draw averaging.
+
+No additional fitting/scoring/acquisition/replay/model selection is authorized by this roadmap. Earlier-election/identity/mean-variant searches remain deferred. Prior roadmap/decisions are historical planning, superseded only where D067 states.
+
 ## Stage34 subsequent development decision and finite next action
 
 [Post-result diagnostics](stage34-s-r-error-pattern-results.md), D066: keep S and S+R active alternatives, R-only meaningful challenger, baseline mandatory. Stage33's provisional S default and all frozen screens/nulls remain historical and unchanged. Movement/error association and joint lower election dispersion do not authorize adaptive weights. Recommend next **separately authorized bounded dated-input readiness/replay** with national support/direct electorate polls, live slates and target boundaries. Retain raw versus adjusted inputs and explicit dates, uncertainty/undecideds/denominators, including Māori applicability.

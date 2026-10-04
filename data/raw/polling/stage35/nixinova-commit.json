@@ -1,0 +1,101 @@
+{
+  "sha": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+  "node_id": "C_kwDOFbSbctoAKDc4MWY5ZWVjOTM5ODJlY2VlZWFjN2YwZGRmOWZkZTY0OTg1M2I1Y2E",
+  "commit": {
+    "author": {
+      "name": "Nixinova",
+      "email": "nixinova@gmail.com",
+      "date": "2026-08-22T04:58:43Z"
+    },
+    "committer": {
+      "name": "Nixinova",
+      "email": "nixinova@gmail.com",
+      "date": "2026-08-22T04:58:43Z"
+    },
+    "message": "graphing: TOP renamed",
+    "tree": {
+      "sha": "8a29cfdf74deb43554d6caf44d8a1ecd030d0b75",
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/trees/8a29cfdf74deb43554d6caf44d8a1ecd030d0b75"
+    },
+    "url": "https://api.github.com/repos/Nixinova/NZPolls/git/commits/781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/Nixinova/NZPolls/commits/781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+  "html_url": "https://github.com/Nixinova/NZPolls/commit/781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+  "comments_url": "https://api.github.com/repos/Nixinova/NZPolls/commits/781f9eec93982eceeeac7f0ddf9fde649853b5ca/comments",
+  "author": {
+    "login": "Nixinova",
+    "id": 42429413,
+    "node_id": "MDQ6VXNlcjQyNDI5NDEz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/42429413?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Nixinova",
+    "html_url": "https://github.com/Nixinova",
+    "followers_url": "https://api.github.com/users/Nixinova/followers",
+    "following_url": "https://api.github.com/users/Nixinova/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Nixinova/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Nixinova/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Nixinova/subscriptions",
+    "organizations_url": "https://api.github.com/users/Nixinova/orgs",
+    "repos_url": "https://api.github.com/users/Nixinova/repos",
+    "events_url": "https://api.github.com/users/Nixinova/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Nixinova/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "Nixinova",
+    "id": 42429413,
+    "node_id": "MDQ6VXNlcjQyNDI5NDEz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/42429413?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Nixinova",
+    "html_url": "https://github.com/Nixinova",
+    "followers_url": "https://api.github.com/users/Nixinova/followers",
+    "following_url": "https://api.github.com/users/Nixinova/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Nixinova/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Nixinova/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Nixinova/subscriptions",
+    "organizations_url": "https://api.github.com/users/Nixinova/orgs",
+    "repos_url": "https://api.github.com/users/Nixinova/repos",
+    "events_url": "https://api.github.com/users/Nixinova/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Nixinova/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "1c4016ecb960341190378ea16faa4d7e8a5ce789",
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/commits/1c4016ecb960341190378ea16faa4d7e8a5ce789",
+      "html_url": "https://github.com/Nixinova/NZPolls/commit/1c4016ecb960341190378ea16faa4d7e8a5ce789"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 1,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "5aa98b2b709d3f7bcd992f48c6f6471caaabe55c",
+      "filename": "graphing/graph-parties.r",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/Nixinova/NZPolls/blob/781f9eec93982eceeeac7f0ddf9fde649853b5ca/graphing%2Fgraph-parties.r",
+      "raw_url": "https://github.com/Nixinova/NZPolls/raw/781f9eec93982eceeeac7f0ddf9fde649853b5ca/graphing%2Fgraph-parties.r",
+      "contents_url": "https://api.github.com/repos/Nixinova/NZPolls/contents/graphing%2Fgraph-parties.r?ref=781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+      "patch": "@@ -65,7 +65,7 @@ ggplot(pollingData, aes(x = as.Date(endDate, '%Y-%m-%d'))) +\n       \"GRN\" = \"Greens\",\n       \"NZF\" = \"NZ First\",\n       \"MRI\" = \"Maori\",\n-      \"TOP\"\n+      \"TOP\" = \"Opportunity\"\n     ),\n     # Color mapping\n     values = c("
+    }
+  ]
+}

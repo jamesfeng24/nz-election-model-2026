@@ -1,0 +1,101 @@
+{
+  "sha": "7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+  "node_id": "MDY6Q29tbWl0ODYxMDUwODU6N2FhNzQxZTc4ZjUyZjM4YjAyMGY0YzdiYzc1ZmUyOTQ2NjlhYmUyYg==",
+  "commit": {
+    "author": {
+      "name": "Peter Ellis",
+      "email": "peter.ellis2013nz@gmail.com",
+      "date": "2020-10-15T00:23:39Z"
+    },
+    "committer": {
+      "name": "Peter Ellis",
+      "email": "peter.ellis2013nz@gmail.com",
+      "date": "2020-10-15T00:23:39Z"
+    },
+    "message": "No longer assume NZ First get an electorate seat",
+    "tree": {
+      "sha": "984bb1e2f934ad45b30c306504f658e5e1b0c94d",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/trees/984bb1e2f934ad45b30c306504f658e5e1b0c94d"
+    },
+    "url": "https://api.github.com/repos/ellisp/nz-election-forecast/git/commits/7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/ellisp/nz-election-forecast/commits/7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+  "html_url": "https://github.com/ellisp/nz-election-forecast/commit/7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+  "comments_url": "https://api.github.com/repos/ellisp/nz-election-forecast/commits/7aa741e78f52f38b020f4c7bc75fe294669abe2b/comments",
+  "author": {
+    "login": "ellisp",
+    "id": 5740570,
+    "node_id": "MDQ6VXNlcjU3NDA1NzA=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5740570?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ellisp",
+    "html_url": "https://github.com/ellisp",
+    "followers_url": "https://api.github.com/users/ellisp/followers",
+    "following_url": "https://api.github.com/users/ellisp/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ellisp/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ellisp/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ellisp/subscriptions",
+    "organizations_url": "https://api.github.com/users/ellisp/orgs",
+    "repos_url": "https://api.github.com/users/ellisp/repos",
+    "events_url": "https://api.github.com/users/ellisp/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ellisp/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ellisp",
+    "id": 5740570,
+    "node_id": "MDQ6VXNlcjU3NDA1NzA=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5740570?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ellisp",
+    "html_url": "https://github.com/ellisp",
+    "followers_url": "https://api.github.com/users/ellisp/followers",
+    "following_url": "https://api.github.com/users/ellisp/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ellisp/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ellisp/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ellisp/subscriptions",
+    "organizations_url": "https://api.github.com/users/ellisp/orgs",
+    "repos_url": "https://api.github.com/users/ellisp/repos",
+    "events_url": "https://api.github.com/users/ellisp/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ellisp/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "857ec74727475c354066d7bf14bc11ef2d46215f",
+      "url": "https://api.github.com/repos/ellisp/nz-election-forecast/commits/857ec74727475c354066d7bf14bc11ef2d46215f",
+      "html_url": "https://github.com/ellisp/nz-election-forecast/commit/857ec74727475c354066d7bf14bc11ef2d46215f"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 1,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "3c7ab5ae1f12a753dc164cb91da8df6559d80739",
+      "filename": "setup/simulate-seats.R",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/ellisp/nz-election-forecast/blob/7aa741e78f52f38b020f4c7bc75fe294669abe2b/setup%2Fsimulate-seats.R",
+      "raw_url": "https://github.com/ellisp/nz-election-forecast/raw/7aa741e78f52f38b020f4c7bc75fe294669abe2b/setup%2Fsimulate-seats.R",
+      "contents_url": "https://api.github.com/repos/ellisp/nz-election-forecast/contents/setup%2Fsimulate-seats.R?ref=7aa741e78f52f38b020f4c7bc75fe294669abe2b",
+      "patch": "@@ -58,7 +58,7 @@ simulate_seats <- function(sims, prefix, ThisElection, seed = 123){\n   # almost certainly above the 5% threshold anyway, so we don't bother to simulate Northland\n   filler <- data.frame(\n     party = c(\"Green\", \"NZ First\"),\n-    seats = c(0, 1),\n+    seats = c(0, 0),\n     sim = rep(1:n, each = 2)\n   )\n   "
+    }
+  ]
+}

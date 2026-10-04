@@ -67,3 +67,6 @@ jobs:
       - run: python3 -m scripts.diagnostics.s_r_robustness.analysis --check
       - run: python3 -m scripts.diagnostics.s_r_robustness.verification --check
       - run: python3 -m scripts.diagnostics.s_r_robustness.report --check
+      - run: python3 -m scripts.polling.national_foundation.run --check
+      - run: python3 -m scripts.polling.national_foundation.design --check
+      - run: python3 -m scripts.polling.national_foundation.verification --check

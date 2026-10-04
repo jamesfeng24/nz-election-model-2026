@@ -1,0 +1,133 @@
+{
+  "sha": "781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+  "url": "https://api.github.com/repos/Nixinova/NZPolls/git/trees/781f9eec93982eceeeac7f0ddf9fde649853b5ca",
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61b4f9bddd8408355ce897628df21d823baf2cb3",
+      "size": 22,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/61b4f9bddd8408355ce897628df21d823baf2cb3"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a71c1491c4d667b78304ac7dbea84f9a673e0fc7",
+      "size": 87,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/a71c1491c4d667b78304ac7dbea84f9a673e0fc7"
+    },
+    {
+      "path": "data.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fba5923a09603b4fdbffad966a82a0f5f8d184ec",
+      "size": 61736,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/fba5923a09603b4fdbffad966a82a0f5f8d184ec"
+    },
+    {
+      "path": "docs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc7e0bd270a6df7b09cc73807e523fb920899f24",
+      "size": 944,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/dc7e0bd270a6df7b09cc73807e523fb920899f24"
+    },
+    {
+      "path": "graphing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5f0ec6987a40cbff4244ac1675d8031973db245",
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/trees/a5f0ec6987a40cbff4244ac1675d8031973db245"
+    },
+    {
+      "path": "graphing/generate-latest.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0f1c60c0b5cf9b6ea106a01959013739fb1b417",
+      "size": 22,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/f0f1c60c0b5cf9b6ea106a01959013739fb1b417"
+    },
+    {
+      "path": "graphing/graph-blocs.r",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ef127d91814bda38128988557ae9173195fff72",
+      "size": 1829,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/0ef127d91814bda38128988557ae9173195fff72"
+    },
+    {
+      "path": "graphing/graph-parties.r",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aa98b2b709d3f7bcd992f48c6f6471caaabe55c",
+      "size": 2634,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/5aa98b2b709d3f7bcd992f48c6f6471caaabe55c"
+    },
+    {
+      "path": "graphing/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8102f3acaca5aa11ee7e0c51cd0af9867b392bcf",
+      "size": 3055,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/8102f3acaca5aa11ee7e0c51cd0af9867b392bcf"
+    },
+    {
+      "path": "graphing/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f73c81a02116181afb402ceac7c16c71fdfffaa",
+      "size": 81,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/6f73c81a02116181afb402ceac7c16c71fdfffaa"
+    },
+    {
+      "path": "graphing/readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53a3123e90ee6c01a7d7364bf2ed388d3e4025c8",
+      "size": 1394,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/53a3123e90ee6c01a7d7364bf2ed388d3e4025c8"
+    },
+    {
+      "path": "license.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edd0d3613ddc0da25b8c3d54ec8f7ab3159d92cd",
+      "size": 1160,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/edd0d3613ddc0da25b8c3d54ec8f7ab3159d92cd"
+    },
+    {
+      "path": "readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "126be46339214a8f38ad670798f8ef2eae4471ea",
+      "size": 805,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/126be46339214a8f38ad670798f8ef2eae4471ea"
+    },
+    {
+      "path": "scraper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c238ce1110dbe033032946326c869cf336b93023",
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/trees/c238ce1110dbe033032946326c869cf336b93023"
+    },
+    {
+      "path": "scraper/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6be2e6925a7bfa6005617a3fb55f856da8185a72",
+      "size": 1431,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/6be2e6925a7bfa6005617a3fb55f856da8185a72"
+    },
+    {
+      "path": "scraper/scrape.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "676198bd7fc3792265392276c492aef24943cf20",
+      "size": 2455,
+      "url": "https://api.github.com/repos/Nixinova/NZPolls/git/blobs/676198bd7fc3792265392276c492aef24943cf20"
+    }
+  ],
+  "truncated": false
+}

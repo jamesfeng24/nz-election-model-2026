@@ -1,3 +1,3 @@
-# National support and pollster effects
+# Owned national polling component
 
-Reserved for a later, explicitly authorized stage. No model implemented. Keep statistical logic independent of React. Document inputs, outputs, estimands, uncertainty, validation and overlap with other effects before implementation.
+Stage35 provides offline data/cutoff infrastructure under `scripts/polling/national_foundation/` and the frozen national design in `docs/stage35-national-model-design.md`. No inference or frontend polling forecast is implemented yet. Next separately authorized task is the single national model/benchmark and chronological national backtest, then fixed candidate-alternative end-to-end replay. Keep statistical logic independent of React; eventual versioned JSON carries current/election-day paired joint draws, source/availability/config versions and shared downstream draw IDs. No backend.

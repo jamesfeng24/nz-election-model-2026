@@ -1,0 +1,1832 @@
+{
+  "sha": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+  "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/ef76cf6562e1d028b4fff46d063f4b93945299de",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0747323f1d430de9e070a833518b965f145bc22",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/a0747323f1d430de9e070a833518b965f145bc22"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b3761826ecf6a120db2ca3ba58baa22b5f14fc3",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/0b3761826ecf6a120db2ca3ba58baa22b5f14fc3"
+    },
+    {
+      "path": ".github/workflows/pipeline.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfcf4dee0bbaa84d8a3114dda7d3943932765033",
+      "size": 5903,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/cfcf4dee0bbaa84d8a3114dda7d3943932765033"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9335ba87cfc14580b03fbd2a82cae7d27645889",
+      "size": 656,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/b9335ba87cfc14580b03fbd2a82cae7d27645889"
+    },
+    {
+      "path": ".idea",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37ef8b2f07d38e4d4cefa17c1026927056ada08b",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/37ef8b2f07d38e4d4cefa17c1026927056ada08b"
+    },
+    {
+      "path": ".idea/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30cf57ed7cba5157ad5f7c05ede08adde945ada6",
+      "size": 228,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/30cf57ed7cba5157ad5f7c05ede08adde945ada6"
+    },
+    {
+      "path": ".idea/forwardedPorts.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "034e067023240fd2c279e8f5ede0373b0e8ec5b8",
+      "size": 353,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/034e067023240fd2c279e8f5ede0373b0e8ec5b8"
+    },
+    {
+      "path": ".idea/inspectionProfiles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97824ec9b0149e48c91dce4fee530335b327c686",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/97824ec9b0149e48c91dce4fee530335b327c686"
+    },
+    {
+      "path": ".idea/inspectionProfiles/profiles_settings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "105ce2da2d6447d11dfe32bfb846c3d5b199fc99",
+      "size": 174,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/105ce2da2d6447d11dfe32bfb846c3d5b199fc99"
+    },
+    {
+      "path": ".idea/modules.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98145185044556ef2da60c1a97e61fddf8706fbf",
+      "size": 274,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/98145185044556ef2da60c1a97e61fddf8706fbf"
+    },
+    {
+      "path": ".idea/pollofpolls.iml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6308270cbcc6ce9d2446b9bc2832e13013a47e78",
+      "size": 559,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/6308270cbcc6ce9d2446b9bc2832e13013a47e78"
+    },
+    {
+      "path": ".idea/vcs.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35eb1ddfbbc029bcab630581847471d7f238ec53",
+      "size": 167,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/35eb1ddfbbc029bcab630581847471d7f238ec53"
+    },
+    {
+      "path": "LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "175443ce8855883fcbf0122a6bfba12ac4cfb49d",
+      "size": 34904,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/175443ce8855883fcbf0122a6bfba12ac4cfb49d"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09181d191bd12d2119ea0dd1e8a1e7494015a6f2",
+      "size": 14288,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/09181d191bd12d2119ea0dd1e8a1e7494015a6f2"
+    },
+    {
+      "path": "config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f659bd5cc85ef4579a7a4e80106bc3fb62930cd8",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/f659bd5cc85ef4579a7a4e80106bc3fb62930cd8"
+    },
+    {
+      "path": "config/boundaries.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdc78baaff968b6512cc95587d8884c10f34e944",
+      "size": 3802,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/cdc78baaff968b6512cc95587d8884c10f34e944"
+    },
+    {
+      "path": "config/elections.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ac14b8633f0988c864433548c9a54eaf1780cef",
+      "size": 2941,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/6ac14b8633f0988c864433548c9a54eaf1780cef"
+    },
+    {
+      "path": "config/electorates.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7de7d104106c609016ac097bc69b1265d4710e5c",
+      "size": 7898,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/7de7d104106c609016ac097bc69b1265d4710e5c"
+    },
+    {
+      "path": "config/model.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54715705c97d2c5339877f147bd26c76776f4f52",
+      "size": 4334,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/54715705c97d2c5339877f147bd26c76776f4f52"
+    },
+    {
+      "path": "config/pollsters.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d685cb756fcd72418c1c3596b14e06c65872cb43",
+      "size": 2717,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d685cb756fcd72418c1c3596b14e06c65872cb43"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9ebdeb84ac02292e1af3ffd54a5f27d213ab1be",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/f9ebdeb84ac02292e1af3ffd54a5f27d213ab1be"
+    },
+    {
+      "path": "data/reference",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "861f78c8ca01b0d00f4b5214f442060292857fb1",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/861f78c8ca01b0d00f4b5214f442060292857fb1"
+    },
+    {
+      "path": "data/reference/election_results.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46e27f6af269b1255fcc3c641d2b0623ef61f484",
+      "size": 1350,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/46e27f6af269b1255fcc3c641d2b0623ef61f484"
+    },
+    {
+      "path": "data/reference/electorate_seats.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dee0c2c4818e141c3370c324b0e9678230aaf59",
+      "size": 410,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/4dee0c2c4818e141c3370c324b0e9678230aaf59"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "010aa0718cc8e58afd597cd9d4e4a285f0de0e0c",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/010aa0718cc8e58afd597cd9d4e4a285f0de0e0c"
+    },
+    {
+      "path": "docs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc63435519c9646ac4e92c360353ca2bb7528e95",
+      "size": 1524,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/bc63435519c9646ac4e92c360353ca2bb7528e95"
+    },
+    {
+      "path": "docs/configuration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47e7120a0f14a2b13c364c7276a633b4a55a0e7f",
+      "size": 9779,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/47e7120a0f14a2b13c364c7276a633b4a55a0e7f"
+    },
+    {
+      "path": "docs/data.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c34f1f0ca405fa7ac10636a417cad8a811228fd",
+      "size": 5928,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/8c34f1f0ca405fa7ac10636a417cad8a811228fd"
+    },
+    {
+      "path": "docs/development.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3214e9c6b936ef85c47443e65ef4ac077679f8e",
+      "size": 8105,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/f3214e9c6b936ef85c47443e65ef4ac077679f8e"
+    },
+    {
+      "path": "docs/electorates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75b67309993616f21c4cc4f8065c6bedee82de47",
+      "size": 9301,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/75b67309993616f21c4cc4f8065c6bedee82de47"
+    },
+    {
+      "path": "docs/getting-started.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99a25a9f3a565efd9bcd6bc2ca44041bd33d4991",
+      "size": 3262,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/99a25a9f3a565efd9bcd6bc2ca44041bd33d4991"
+    },
+    {
+      "path": "docs/operations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "042e25f1872a5e1438fdef5314321d07726224a8",
+      "size": 6232,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/042e25f1872a5e1438fdef5314321d07726224a8"
+    },
+    {
+      "path": "docs/outputs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be2f22d5e8c1c4cebddc7945671988d40c7d2b0d",
+      "size": 6507,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/be2f22d5e8c1c4cebddc7945671988d40c7d2b0d"
+    },
+    {
+      "path": "docs/pipeline.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b9f671ad693632ca9f57f4f53af84a5ef5e4d80",
+      "size": 5678,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0b9f671ad693632ca9f57f4f53af84a5ef5e4d80"
+    },
+    {
+      "path": "legacy-r",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de93805355de7342cd4bce74a53c7bf609bc0e25",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/de93805355de7342cd4bce74a53c7bf609bc0e25"
+    },
+    {
+      "path": "legacy-r/.Rbuildignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3ddafe82a206078be208d8ea96085966f912b90",
+      "size": 34,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d3ddafe82a206078be208d8ea96085966f912b90"
+    },
+    {
+      "path": "legacy-r/.Rprofile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81b960f5c6a8ee40840badd620f8af9743787730",
+      "size": 26,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/81b960f5c6a8ee40840badd620f8af9743787730"
+    },
+    {
+      "path": "legacy-r/.stan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+    },
+    {
+      "path": "legacy-r/.stan/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "legacy-r/R",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "546df31cf32c02a15630f2f9b12ec3932200d04f",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/546df31cf32c02a15630f2f9b12ec3932200d04f"
+    },
+    {
+      "path": "legacy-r/R/fetch-results.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b8c49542855ca2fcd8159fdb56371ade75e4197",
+      "size": 538,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0b8c49542855ca2fcd8159fdb56371ade75e4197"
+    },
+    {
+      "path": "legacy-r/R/read-polls.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "441f7c730848ebc547ae06f01abbdf1db728216f",
+      "size": 7001,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/441f7c730848ebc547ae06f01abbdf1db728216f"
+    },
+    {
+      "path": "legacy-r/R/urls.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ee6a563cca93420bc8a84f729954c2034a76a23",
+      "size": 525,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/9ee6a563cca93420bc8a84f729954c2034a76a23"
+    },
+    {
+      "path": "legacy-r/R/utlity.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc8975f5f922cbcec5135cbc13b3babd1cd88839",
+      "size": 592,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/fc8975f5f922cbcec5135cbc13b3babd1cd88839"
+    },
+    {
+      "path": "legacy-r/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3765511443f481b612e60e8853101fcb93774ead",
+      "size": 789,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/3765511443f481b612e60e8853101fcb93774ead"
+    },
+    {
+      "path": "legacy-r/_quarto.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6c75d4d8075f26300a4246681adc6cfa4b71eaf",
+      "size": 336,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d6c75d4d8075f26300a4246681adc6cfa4b71eaf"
+    },
+    {
+      "path": "legacy-r/_targets.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f860cffb34f19ebd32165132ce65d317d1277964",
+      "size": 769,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/f860cffb34f19ebd32165132ce65d317d1277964"
+    },
+    {
+      "path": "legacy-r/_targets_r",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3647b23dde7c28d18b1ed4468180521f94be595a",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/3647b23dde7c28d18b1ed4468180521f94be595a"
+    },
+    {
+      "path": "legacy-r/_targets_r/globals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9559b378716fc4300817a5ac8f4d3af5eda369a4",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/9559b378716fc4300817a5ac8f4d3af5eda369a4"
+    },
+    {
+      "path": "legacy-r/_targets_r/globals/example-globals.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4717bfe859193ecf6eb58e49d351296f0cbd90d",
+      "size": 352,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e4717bfe859193ecf6eb58e49d351296f0cbd90d"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "717763d37eef54161a157df136b2ac9763305c23",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/717763d37eef54161a157df136b2ac9763305c23"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/charts.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b5b1c6f84bb8e65a92143b395bcaa9163725d0a",
+      "size": 2378,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/6b5b1c6f84bb8e65a92143b395bcaa9163725d0a"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/coalition-plot.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a975af4b41a226b00ed0961d5e3620b1cf54c8b6",
+      "size": 2745,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a975af4b41a226b00ed0961d5e3620b1cf54c8b6"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/modelling.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc77cca9ce9970688d014b6e8ddc5aa6c26a447d",
+      "size": 444,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/cc77cca9ce9970688d014b6e8ddc5aa6c26a447d"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/params.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3f8481cb0c0b7f197d930177d9d174a03835f51",
+      "size": 1575,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e3f8481cb0c0b7f197d930177d9d174a03835f51"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/polls.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe8127beb210a55b0c0d2c3ecb2459dcf7076679",
+      "size": 429,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/fe8127beb210a55b0c0d2c3ecb2459dcf7076679"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/prep.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc498614cf1149e4797479c2bef05026efa230ed",
+      "size": 3612,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/dc498614cf1149e4797479c2bef05026efa230ed"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/prep2020.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ae3006d3d746fdece60be1b796d13fafa18f83f",
+      "size": 3653,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/4ae3006d3d746fdece60be1b796d13fafa18f83f"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/results.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "375c7ec7f8869e4e3b8943617ce1c84a4e822bc2",
+      "size": 508,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/375c7ec7f8869e4e3b8943617ce1c84a4e822bc2"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/seats.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e59fc6365f84cb496077260b032c3910614118f2",
+      "size": 1032,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e59fc6365f84cb496077260b032c3910614118f2"
+    },
+    {
+      "path": "legacy-r/_targets_r/targets/urls.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f51c220bc41356cfecc670e9c49e327f9801d4aa",
+      "size": 951,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/f51c220bc41356cfecc670e9c49e327f9801d4aa"
+    },
+    {
+      "path": "legacy-r/about.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70a1cc5db0f69d4f6c5e7578e35eee0bf2da35e7",
+      "size": 78,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/70a1cc5db0f69d4f6c5e7578e35eee0bf2da35e7"
+    },
+    {
+      "path": "legacy-r/github-workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d621d9b144327c61a797050818f550de8e5c190b",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/d621d9b144327c61a797050818f550de8e5c190b"
+    },
+    {
+      "path": "legacy-r/github-workflows/publish.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7724f008038b79b72e55dc470195d6ccebf20bb3",
+      "size": 900,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/7724f008038b79b72e55dc470195d6ccebf20bb3"
+    },
+    {
+      "path": "legacy-r/index.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "579dc696a57f398b1f6facc50f0f71ec2e900b5a",
+      "size": 4148,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/579dc696a57f398b1f6facc50f0f71ec2e900b5a"
+    },
+    {
+      "path": "legacy-r/nzh-poll-of-polls.Rproj",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e83436a3e91c411cd8248fbcb264b123dcb748f2",
+      "size": 258,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e83436a3e91c411cd8248fbcb264b123dcb748f2"
+    },
+    {
+      "path": "legacy-r/pipeline.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a659c91eb11b056e27417d02d4e6f96f7f6d2df5",
+      "size": 22157,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a659c91eb11b056e27417d02d4e6f96f7f6d2df5"
+    },
+    {
+      "path": "legacy-r/renv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e64349449cbba76949bb70dd79654db3c095963e",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/e64349449cbba76949bb70dd79654db3c095963e"
+    },
+    {
+      "path": "legacy-r/renv/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec0cbba2d7755cbd91956afaa585449906a1e16",
+      "size": 56,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0ec0cbba2d7755cbd91956afaa585449906a1e16"
+    },
+    {
+      "path": "legacy-r/renv/activate.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8fdc3201b754a88577e2d8431be3fc9218592a9",
+      "size": 27992,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a8fdc3201b754a88577e2d8431be3fc9218592a9"
+    },
+    {
+      "path": "legacy-r/renv/profile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2ae6545c70fcda2a861544a531dc3ee63651185",
+      "size": 10,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d2ae6545c70fcda2a861544a531dc3ee63651185"
+    },
+    {
+      "path": "legacy-r/renv/profiles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d33d645cb64f42f45b39aa4f89dc638c0fb9a1d3",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/d33d645cb64f42f45b39aa4f89dc638c0fb9a1d3"
+    },
+    {
+      "path": "legacy-r/renv/profiles/buildsite",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffb7ec79e2b16cf6447e9f5dd3953697efbf4acd",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/ffb7ec79e2b16cf6447e9f5dd3953697efbf4acd"
+    },
+    {
+      "path": "legacy-r/renv/profiles/buildsite/renv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41cad621588aaaf3546047a9b34ca9dbc9ef8d4e",
+      "size": 26104,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/41cad621588aaaf3546047a9b34ca9dbc9ef8d4e"
+    },
+    {
+      "path": "legacy-r/renv/profiles/buildsite/renv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0c0e847bbca2ec222d217d04122d98e7a1071b5",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/d0c0e847bbca2ec222d217d04122d98e7a1071b5"
+    },
+    {
+      "path": "legacy-r/renv/profiles/buildsite/renv/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec0cbba2d7755cbd91956afaa585449906a1e16",
+      "size": 56,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0ec0cbba2d7755cbd91956afaa585449906a1e16"
+    },
+    {
+      "path": "legacy-r/renv/profiles/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f06df63b3af3839969a12b8607a0704d9b456427",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/f06df63b3af3839969a12b8607a0704d9b456427"
+    },
+    {
+      "path": "legacy-r/renv/profiles/model/renv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1b072ca908d8230060f9dc3222d95e4676361cd",
+      "size": 34975,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/c1b072ca908d8230060f9dc3222d95e4676361cd"
+    },
+    {
+      "path": "legacy-r/renv/profiles/model/renv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0c0e847bbca2ec222d217d04122d98e7a1071b5",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/d0c0e847bbca2ec222d217d04122d98e7a1071b5"
+    },
+    {
+      "path": "legacy-r/renv/profiles/model/renv/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec0cbba2d7755cbd91956afaa585449906a1e16",
+      "size": 56,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0ec0cbba2d7755cbd91956afaa585449906a1e16"
+    },
+    {
+      "path": "legacy-r/renv/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a06760b4329a034fa0fc7ee148e87706ac835dc",
+      "size": 363,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1a06760b4329a034fa0fc7ee148e87706ac835dc"
+    },
+    {
+      "path": "legacy-r/run.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e4fdba03cd78e6c743ed051c291a15d05401693",
+      "size": 318,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/7e4fdba03cd78e6c743ed051c291a15d05401693"
+    },
+    {
+      "path": "legacy-r/run.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea3b29c808ffda9ef0c756de86fc677af5f898ef",
+      "size": 295,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/ea3b29c808ffda9ef0c756de86fc677af5f898ef"
+    },
+    {
+      "path": "legacy-r/setup.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f545007eee2b9408c31f0cacfaa8381ccb5117a1",
+      "size": 1650,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/f545007eee2b9408c31f0cacfaa8381ccb5117a1"
+    },
+    {
+      "path": "legacy-r/stan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "009a7557f69f86448e1acf9c0a0422676bf99ad9",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/009a7557f69f86448e1acf9c0a0422676bf99ad9"
+    },
+    {
+      "path": "legacy-r/stan/model2020.stan",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57ab675ef01971f57a25c64af82df54aeda2d93f",
+      "size": 4144,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/57ab675ef01971f57a25c64af82df54aeda2d93f"
+    },
+    {
+      "path": "legacy-r/stan/model2023.stan",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb099602f47064e45ae2fff3a0b1c3249b95a54a",
+      "size": 4410,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/cb099602f47064e45ae2fff3a0b1c3249b95a54a"
+    },
+    {
+      "path": "legacy-r/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdf5a0f2dbe928815bb98a87d5578d7af5d71520",
+      "size": 206,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/bdf5a0f2dbe928815bb98a87d5578d7af5d71520"
+    },
+    {
+      "path": "output",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e85ab13d644bd5624baf3459f3af6d280481eb45",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/e85ab13d644bd5624baf3459f3af6d280481eb45"
+    },
+    {
+      "path": "output/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "output/backtest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29469dd724663f8c0bea417cb1455c1c5c96e6ba",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/29469dd724663f8c0bea417cb1455c1c5c96e6ba"
+    },
+    {
+      "path": "output/backtest/cases",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bdd3d4aa97fcb7053bc3052ffcb48acbe571e3da",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/bdd3d4aa97fcb7053bc3052ffcb48acbe571e3da"
+    },
+    {
+      "path": "output/backtest/cases/base_2017_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c729477d3f0b597644a2b0f3d3478a6b383d18f",
+      "size": 2541,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/9c729477d3f0b597644a2b0f3d3478a6b383d18f"
+    },
+    {
+      "path": "output/backtest/cases/base_2017_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dd40f8aee53442ace738e395cc51bb093049144",
+      "size": 2542,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/5dd40f8aee53442ace738e395cc51bb093049144"
+    },
+    {
+      "path": "output/backtest/cases/base_2017_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e1010dba3d43afbc0459573ba5f38b9bdd43f7e",
+      "size": 2541,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0e1010dba3d43afbc0459573ba5f38b9bdd43f7e"
+    },
+    {
+      "path": "output/backtest/cases/base_2017_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43f793dc27ce7eaab7927f38bd6bcd8e2393b806",
+      "size": 2535,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/43f793dc27ce7eaab7927f38bd6bcd8e2393b806"
+    },
+    {
+      "path": "output/backtest/cases/base_2020_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ab4dc0ca803e662731b530876688f58aab581ec",
+      "size": 1710,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1ab4dc0ca803e662731b530876688f58aab581ec"
+    },
+    {
+      "path": "output/backtest/cases/base_2020_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53d65d275af3184fccca2a0af9221347b9672172",
+      "size": 1726,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/53d65d275af3184fccca2a0af9221347b9672172"
+    },
+    {
+      "path": "output/backtest/cases/base_2020_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d6373d99cd976bc0ffa8283558c682caa9624d2",
+      "size": 1715,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/6d6373d99cd976bc0ffa8283558c682caa9624d2"
+    },
+    {
+      "path": "output/backtest/cases/base_2020_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b55010e7a8eaa64ccaf93de5f9827194fc427b6",
+      "size": 1711,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1b55010e7a8eaa64ccaf93de5f9827194fc427b6"
+    },
+    {
+      "path": "output/backtest/cases/base_2023_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03f4cff9c402defbf722d8ac4f3447564d35fa82",
+      "size": 2203,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/03f4cff9c402defbf722d8ac4f3447564d35fa82"
+    },
+    {
+      "path": "output/backtest/cases/base_2023_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4615784b3a0e07ad6ca07c67f73895e496484d5e",
+      "size": 2208,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/4615784b3a0e07ad6ca07c67f73895e496484d5e"
+    },
+    {
+      "path": "output/backtest/cases/base_2023_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e886f5f0fa9b4b1457b9a38e7a3f51187b10599e",
+      "size": 2187,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e886f5f0fa9b4b1457b9a38e7a3f51187b10599e"
+    },
+    {
+      "path": "output/backtest/cases/base_2023_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37217bed3cd3b9177fa196f34032497f463001e8",
+      "size": 2186,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/37217bed3cd3b9177fa196f34032497f463001e8"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2017_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e2794c653b6dc4ec81afcd1a1d4578dc9af2f89",
+      "size": 2549,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/9e2794c653b6dc4ec81afcd1a1d4578dc9af2f89"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2017_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf9591cd5547dec5e7c7c4b2a851eab36468f399",
+      "size": 2538,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/cf9591cd5547dec5e7c7c4b2a851eab36468f399"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2017_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7973aae38374e402738d4153c5fbf21ac623ad17",
+      "size": 2526,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/7973aae38374e402738d4153c5fbf21ac623ad17"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2017_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "885bee90f252baab1aab596b32a95a4c2dafdb07",
+      "size": 2532,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/885bee90f252baab1aab596b32a95a4c2dafdb07"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2020_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eda72526fe4e96f276263fbd819761a1c6d2ed63",
+      "size": 1717,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/eda72526fe4e96f276263fbd819761a1c6d2ed63"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2020_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "151f61b89b23fef134d2e656bb1594fd67bcaf95",
+      "size": 1719,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/151f61b89b23fef134d2e656bb1594fd67bcaf95"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2020_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "928b93f59d5a5b010d5fb65edad1e7e909373652",
+      "size": 1735,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/928b93f59d5a5b010d5fb65edad1e7e909373652"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2020_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d8132e6814ee375f27c0e5cc46057a1d0db3346",
+      "size": 1727,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1d8132e6814ee375f27c0e5cc46057a1d0db3346"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2023_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65d03a5c74739294b81854aaf5e239c2c5cb642d",
+      "size": 2204,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/65d03a5c74739294b81854aaf5e239c2c5cb642d"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2023_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2837f00d3fdb5fcf1801e565063ab285f822e530",
+      "size": 2212,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/2837f00d3fdb5fcf1801e565063ab285f822e530"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2023_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8349138e983c52e3b40b968f047d1effd7168f9",
+      "size": 2207,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d8349138e983c52e3b40b968f047d1effd7168f9"
+    },
+    {
+      "path": "output/backtest/cases/gauss_2023_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "241ae27e7b89f2811dfe4245694b5cdb9d91b368",
+      "size": 2189,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/241ae27e7b89f2811dfe4245694b5cdb9d91b368"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2017_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12b2166890847c005297661c5804a685fce61aec",
+      "size": 2560,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/12b2166890847c005297661c5804a685fce61aec"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2017_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53d6f716bc3a665f160127fa0c1bbce65fc96319",
+      "size": 2537,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/53d6f716bc3a665f160127fa0c1bbce65fc96319"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2017_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7290858f0baed4b2b8a06e5e991223de84125ecd",
+      "size": 2546,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/7290858f0baed4b2b8a06e5e991223de84125ecd"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2017_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a18f1ff92d03385f252c8f8a9ec5d3fe43bc4ac",
+      "size": 2545,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/9a18f1ff92d03385f252c8f8a9ec5d3fe43bc4ac"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2020_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b25f0bc8469e762786bc3b58cef3c95c2d0452f",
+      "size": 1732,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/6b25f0bc8469e762786bc3b58cef3c95c2d0452f"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2020_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6b9e2e5994a15d25a63c282c843d0312d347130",
+      "size": 1714,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/b6b9e2e5994a15d25a63c282c843d0312d347130"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2020_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b74cb8c7aaf0f73ba6d125016df6e6d94da32d87",
+      "size": 1714,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/b74cb8c7aaf0f73ba6d125016df6e6d94da32d87"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2020_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57ccd2827dbb60bb3a8f1a8999798ca7baefcc61",
+      "size": 1728,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/57ccd2827dbb60bb3a8f1a8999798ca7baefcc61"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2023_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cadc5f735fbc9d0660756440d3fdbe9033f9920f",
+      "size": 2208,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/cadc5f735fbc9d0660756440d3fdbe9033f9920f"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2023_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e86a6562f90fc370557ad9931fe390ee9aab70a6",
+      "size": 2210,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e86a6562f90fc370557ad9931fe390ee9aab70a6"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2023_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0cc83e9ccb74b8932c756a602a397f2979cd289",
+      "size": 2199,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/f0cc83e9ccb74b8932c756a602a397f2979cd289"
+    },
+    {
+      "path": "output/backtest/cases/heavy_2023_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bd771b3756d7969f5506163cae472932eb9df64",
+      "size": 2187,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/4bd771b3756d7969f5506163cae472932eb9df64"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2017_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1e5d75be2306346056df64e3df2710793add0e6",
+      "size": 2545,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/f1e5d75be2306346056df64e3df2710793add0e6"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2017_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c638ab65bdb1bde051433f93284e7d2e7b541ec",
+      "size": 2530,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/3c638ab65bdb1bde051433f93284e7d2e7b541ec"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2017_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0722cee46722fbf241841df8bb37a110e5aceb67",
+      "size": 2540,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0722cee46722fbf241841df8bb37a110e5aceb67"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2017_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ff5d0b6d5a0ecde67079b35ce5d3f6803d178e5",
+      "size": 2524,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/5ff5d0b6d5a0ecde67079b35ce5d3f6803d178e5"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2020_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "545ee18c64c7a38cf97d62afe6fc5efbf5d880d3",
+      "size": 1709,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/545ee18c64c7a38cf97d62afe6fc5efbf5d880d3"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2020_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c3a10a7939663b04b1063a7f6bbdba8d118f627",
+      "size": 1705,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/3c3a10a7939663b04b1063a7f6bbdba8d118f627"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2020_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cf18a9a978f61481a0c61744c0ad6a502734858",
+      "size": 1702,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/3cf18a9a978f61481a0c61744c0ad6a502734858"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2020_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cc1f5ae8a3efc6491a1297f864e4ca10c144e2c",
+      "size": 1705,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/6cc1f5ae8a3efc6491a1297f864e4ca10c144e2c"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2023_h1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b676ec45fcf2da53a275909eef1e4de90f0bb94",
+      "size": 2216,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1b676ec45fcf2da53a275909eef1e4de90f0bb94"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2023_h26.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c75347eaeae72d1bbb633ff0941bf128fe4f8b12",
+      "size": 2216,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/c75347eaeae72d1bbb633ff0941bf128fe4f8b12"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2023_h4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6ba68764981e0feaf10af3923705279f50261ae",
+      "size": 2218,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a6ba68764981e0feaf10af3923705279f50261ae"
+    },
+    {
+      "path": "output/backtest/cases/legacy_2023_h8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20e3719d8f7b08cbc8959233b4333fe921079846",
+      "size": 2208,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/20e3719d8f7b08cbc8959233b4333fe921079846"
+    },
+    {
+      "path": "output/backtest/ensemble.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba65c778b5a2d9b76f2e31c7888f0656a78ec1be",
+      "size": 21426,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/ba65c778b5a2d9b76f2e31c7888f0656a78ec1be"
+    },
+    {
+      "path": "output/backtest/head_to_head.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3e9c600f70260f6a94a940784daf70f570f48b6",
+      "size": 1291,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a3e9c600f70260f6a94a940784daf70f570f48b6"
+    },
+    {
+      "path": "output/backtest/probe_fundamentals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d9a1995e29cda6e2052516040fdaa8e577110b2",
+      "size": 2229,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0d9a1995e29cda6e2052516040fdaa8e577110b2"
+    },
+    {
+      "path": "output/backtest/scores.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f6b213194412e1ae798a04fc4dbf5d72f411627",
+      "size": 49089,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/3f6b213194412e1ae798a04fc4dbf5d72f411627"
+    },
+    {
+      "path": "output/backtest/stacking.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf8afb9f731d0f9dad5a27ac3c5887d1f4707328",
+      "size": 816,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/bf8afb9f731d0f9dad5a27ac3c5887d1f4707328"
+    },
+    {
+      "path": "output/backtest/summary.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce576efde9c019ec2f6baa632d0a4452159d3742",
+      "size": 1083,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/ce576efde9c019ec2f6baa632d0a4452159d3742"
+    },
+    {
+      "path": "output/backtest/summary_by_horizon.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "363fd4a2f6b28627cec156fbd3f720d26792ea96",
+      "size": 3944,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/363fd4a2f6b28627cec156fbd3f720d26792ea96"
+    },
+    {
+      "path": "output/coalitions.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48113753128b2055216b5d0fe57ea412ee00610c",
+      "size": 1551,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/48113753128b2055216b5d0fe57ea412ee00610c"
+    },
+    {
+      "path": "output/forecast.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1219c1c30822ab23dde4763d0ea870fde1d68604",
+      "size": 2316,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1219c1c30822ab23dde4763d0ea870fde1d68604"
+    },
+    {
+      "path": "output/house_effects.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62db1696d113078687b55d16bb6fc2e5f5f77376",
+      "size": 4006,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/62db1696d113078687b55d16bb6fc2e5f5f77376"
+    },
+    {
+      "path": "output/seats.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d802e7be39c9f5adcfd8bc867a1fad0e470987cb",
+      "size": 754,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d802e7be39c9f5adcfd8bc867a1fad0e470987cb"
+    },
+    {
+      "path": "output/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f80dc299eda4536bedb08a74b4081caec9eff1d",
+      "size": 12162,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/4f80dc299eda4536bedb08a74b4081caec9eff1d"
+    },
+    {
+      "path": "output/trend.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce04a37964efa07fefa86b9c99694b73ae9d6f0",
+      "size": 406037,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1ce04a37964efa07fefa86b9c99694b73ae9d6f0"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6fc14a427b91ea03c61f4a273f3117aeb0c877d",
+      "size": 1091,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/c6fc14a427b91ea03c61f4a273f3117aeb0c877d"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84c2290e2402a5ebf3299174f34dc5c3fcae1210",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/84c2290e2402a5ebf3299174f34dc5c3fcae1210"
+    },
+    {
+      "path": "src/pollofpolls",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "172c5e66441eb3112e79efa76cd16a05b7c055d2",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/172c5e66441eb3112e79efa76cd16a05b7c055d2"
+    },
+    {
+      "path": "src/pollofpolls/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3579c31aa679f6ed583d2bdd4ce521dabcc2b6dd",
+      "size": 131,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/3579c31aa679f6ed583d2bdd4ce521dabcc2b6dd"
+    },
+    {
+      "path": "src/pollofpolls/assumptions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f90661939cbf14c90fa1817b5f1084ef9832ff7",
+      "size": 15269,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1f90661939cbf14c90fa1817b5f1084ef9832ff7"
+    },
+    {
+      "path": "src/pollofpolls/cache.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "554896dd4c5d427ae8b48f2a78f95ee199495501",
+      "size": 1987,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/554896dd4c5d427ae8b48f2a78f95ee199495501"
+    },
+    {
+      "path": "src/pollofpolls/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96aac2b8934ae6fe12e6b7d834e151cd43c75810",
+      "size": 4075,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/96aac2b8934ae6fe12e6b7d834e151cd43c75810"
+    },
+    {
+      "path": "src/pollofpolls/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "704882c210fe71a42ce33a79819c29bd88ce32fb",
+      "size": 5601,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/704882c210fe71a42ce33a79819c29bd88ce32fb"
+    },
+    {
+      "path": "src/pollofpolls/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c5ff429f9947f5fb38a42bcbbc2a903145f2816",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/5c5ff429f9947f5fb38a42bcbbc2a903145f2816"
+    },
+    {
+      "path": "src/pollofpolls/data/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/pollofpolls/data/dates.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d66bee5227dc289e9cc5ced1638f227d287aa41",
+      "size": 3925,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/4d66bee5227dc289e9cc5ced1638f227d287aa41"
+    },
+    {
+      "path": "src/pollofpolls/data/parties.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17c98958d7c61f3d5f5e86e2bb2bc638cecaa8df",
+      "size": 2192,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/17c98958d7c61f3d5f5e86e2bb2bc638cecaa8df"
+    },
+    {
+      "path": "src/pollofpolls/data/pollsters.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "978ffcf54df81a3cc975ff000f7bc51e58c22c9f",
+      "size": 2651,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/978ffcf54df81a3cc975ff000f7bc51e58c22c9f"
+    },
+    {
+      "path": "src/pollofpolls/data/results.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07dab88537c05f91c981dcdd25d0e71c9a2fe84b",
+      "size": 2666,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/07dab88537c05f91c981dcdd25d0e71c9a2fe84b"
+    },
+    {
+      "path": "src/pollofpolls/data/wikipedia.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17c30c976b72b30aeaf76a191c48bb20321738b6",
+      "size": 7789,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/17c30c976b72b30aeaf76a191c48bb20321738b6"
+    },
+    {
+      "path": "src/pollofpolls/eval",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36891ac81a457bd4e62ae9de37e68d99fdf011ef",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/36891ac81a457bd4e62ae9de37e68d99fdf011ef"
+    },
+    {
+      "path": "src/pollofpolls/eval/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/pollofpolls/eval/backtest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f608e659fcbfee747026950d9ce14cecd61f92a",
+      "size": 14346,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/3f608e659fcbfee747026950d9ce14cecd61f92a"
+    },
+    {
+      "path": "src/pollofpolls/eval/calibration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61ca11a923741bf35988aecb5f6666cf1136ee72",
+      "size": 1990,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/61ca11a923741bf35988aecb5f6666cf1136ee72"
+    },
+    {
+      "path": "src/pollofpolls/eval/scoring.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c768e33ee45da25516fddfda94c09348aee95636",
+      "size": 5337,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/c768e33ee45da25516fddfda94c09348aee95636"
+    },
+    {
+      "path": "src/pollofpolls/forecast",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "811763c4a549e268dbd484aa285832cce383622e",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/811763c4a549e268dbd484aa285832cce383622e"
+    },
+    {
+      "path": "src/pollofpolls/forecast/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/pollofpolls/forecast/coalitions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88c0e90db492457c103f6bd5d6b9fde7b77223ca",
+      "size": 3475,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/88c0e90db492457c103f6bd5d6b9fde7b77223ca"
+    },
+    {
+      "path": "src/pollofpolls/forecast/seats.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c26ff2adec72aeeec99e631854b388b5f6c79891",
+      "size": 2925,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/c26ff2adec72aeeec99e631854b388b5f6c79891"
+    },
+    {
+      "path": "src/pollofpolls/forecast/simulate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27b912395803d12c6e60a2d70bc138a2d2496482",
+      "size": 4727,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/27b912395803d12c6e60a2d70bc138a2d2496482"
+    },
+    {
+      "path": "src/pollofpolls/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9923f4dad32c749efd22fa1805187631f6440fa5",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/9923f4dad32c749efd22fa1805187631f6440fa5"
+    },
+    {
+      "path": "src/pollofpolls/model/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d01f9f65ab7e0e430ee05e2015b558602e5e5035",
+      "size": 198,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d01f9f65ab7e0e430ee05e2015b558602e5e5035"
+    },
+    {
+      "path": "src/pollofpolls/model/fit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3f7edbd845542556090969f2634591d09a634e8",
+      "size": 10044,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a3f7edbd845542556090969f2634591d09a634e8"
+    },
+    {
+      "path": "src/pollofpolls/model/kalman.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90625c604cc34f4621234a00ba73bfe33ebfee70",
+      "size": 9575,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/90625c604cc34f4621234a00ba73bfe33ebfee70"
+    },
+    {
+      "path": "src/pollofpolls/model/legacy.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "561edbf1352b473115c860b30853b3cb48e6fef7",
+      "size": 3929,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/561edbf1352b473115c860b30853b3cb48e6fef7"
+    },
+    {
+      "path": "src/pollofpolls/model/numpyro_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a44723a7f290d8870a6a1f9d59dd95d2a041a96f",
+      "size": 12673,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a44723a7f290d8870a6a1f9d59dd95d2a041a96f"
+    },
+    {
+      "path": "src/pollofpolls/pipeline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a73208aee7b6175af48f991e4ef896ece63aa27b",
+      "size": 15811,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a73208aee7b6175af48f991e4ef896ece63aa27b"
+    },
+    {
+      "path": "src/pollofpolls/prep",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8b7112e1b112dc17c7fdc23fbe8ee08b52c0e3ab",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/8b7112e1b112dc17c7fdc23fbe8ee08b52c0e3ab"
+    },
+    {
+      "path": "src/pollofpolls/prep/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/pollofpolls/prep/marshal.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "186adbd3f7813c508bd095951564db2049273ee1",
+      "size": 14624,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/186adbd3f7813c508bd095951564db2049273ee1"
+    },
+    {
+      "path": "src/pollofpolls/prep/polls_table.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5edcfe229342428c894fe1269fb09aa4bab7bbe0",
+      "size": 3957,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/5edcfe229342428c894fe1269fb09aa4bab7bbe0"
+    },
+    {
+      "path": "src/pollofpolls/report",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9367947d5a50ffc6bf17737feff0cb1a1185b6f5",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/9367947d5a50ffc6bf17737feff0cb1a1185b6f5"
+    },
+    {
+      "path": "src/pollofpolls/report/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/pollofpolls/report/charts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec760035bac9cd9a1bc50d367330f73762b02b0",
+      "size": 20910,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/7ec760035bac9cd9a1bc50d367330f73762b02b0"
+    },
+    {
+      "path": "src/pollofpolls/report/render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e99110c0518e067f33f8a645978f5785d16c433",
+      "size": 4450,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1e99110c0518e067f33f8a645978f5785d16c433"
+    },
+    {
+      "path": "src/pollofpolls/report/site.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8efc2614cf17d8080a20d6a9ff15027f615e04c2",
+      "size": 24506,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/8efc2614cf17d8080a20d6a9ff15027f615e04c2"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70ca5331906f43aab1dedee034641192399c5dce",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/70ca5331906f43aab1dedee034641192399c5dce"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18c43a2c0219a366b827ffcb19787c1e2f77daf8",
+      "size": 280,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/18c43a2c0219a366b827ffcb19787c1e2f77daf8"
+    },
+    {
+      "path": "tests/fixtures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e297b139d74fe73800a6d1d728f42fd9b2c0b2d",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/9e297b139d74fe73800a6d1d728f42fd9b2c0b2d"
+    },
+    {
+      "path": "tests/fixtures/2011_party_vote.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d828a162e02b8ddaac3e131da5784d362c9cb870",
+      "size": 238008,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d828a162e02b8ddaac3e131da5784d362c9cb870"
+    },
+    {
+      "path": "tests/fixtures/2014_party_vote.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a342b8217d1c23ef1648928452433495351671a",
+      "size": 274793,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/7a342b8217d1c23ef1648928452433495351671a"
+    },
+    {
+      "path": "tests/fixtures/2017_party_vote.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "609709667ed88c8083f1dcecc1647c2b03d970d1",
+      "size": 114703,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/609709667ed88c8083f1dcecc1647c2b03d970d1"
+    },
+    {
+      "path": "tests/fixtures/2020_party_vote.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98adb310349b60337c6b41ad2d354f4a15f578de",
+      "size": 67373,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/98adb310349b60337c6b41ad2d354f4a15f578de"
+    },
+    {
+      "path": "tests/fixtures/2023_party_vote.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af0bb41830b110839f9b97540b0d0b3c0c85e648",
+      "size": 102900,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/af0bb41830b110839f9b97540b0d0b3c0c85e648"
+    },
+    {
+      "path": "tests/fixtures/2026_party_vote.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2a2197b11999af7b29e9fdaee9bd5e21644dee1",
+      "size": 127018,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/c2a2197b11999af7b29e9fdaee9bd5e21644dee1"
+    },
+    {
+      "path": "tests/test_assumptions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e61c65628db4f2e1581cdb30cd113444e0a12c0c",
+      "size": 7670,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e61c65628db4f2e1581cdb30cd113444e0a12c0c"
+    },
+    {
+      "path": "tests/test_dates.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e619b846ebbbebfc6e15cb31e74b1739966ccd3e",
+      "size": 1395,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/e619b846ebbbebfc6e15cb31e74b1739966ccd3e"
+    },
+    {
+      "path": "tests/test_fixes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cb0762be19f96e428226f04d07ea1a69386c417",
+      "size": 12857,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/5cb0762be19f96e428226f04d07ea1a69386c417"
+    },
+    {
+      "path": "tests/test_kalman.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "617fc17302046f85a757ab822b444c3cd1eaa770",
+      "size": 3762,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/617fc17302046f85a757ab822b444c3cd1eaa770"
+    },
+    {
+      "path": "tests/test_marshal.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79c8fa9d8f17a771b227b1a96c79ccfb1ed7420e",
+      "size": 7078,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/79c8fa9d8f17a771b227b1a96c79ccfb1ed7420e"
+    },
+    {
+      "path": "tests/test_model_smoke.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fbfdeee906d9f81f266d71a884274de283bceca",
+      "size": 3563,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/5fbfdeee906d9f81f266d71a884274de283bceca"
+    },
+    {
+      "path": "tests/test_parties.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a878ccf0cde0b6675f27c1571068e76ef63bd682",
+      "size": 899,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/a878ccf0cde0b6675f27c1571068e76ef63bd682"
+    },
+    {
+      "path": "tests/test_pipeline_e2e.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7520abb695e494972d56df65908431e286768cca",
+      "size": 7565,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/7520abb695e494972d56df65908431e286768cca"
+    },
+    {
+      "path": "tests/test_scoring.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d0dcb4b52f84b7a8779036165b587426500a405",
+      "size": 2077,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0d0dcb4b52f84b7a8779036165b587426500a405"
+    },
+    {
+      "path": "tests/test_seats.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "275194340d3584850ae4891129f0499f93372d4b",
+      "size": 2368,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/275194340d3584850ae4891129f0499f93372d4b"
+    },
+    {
+      "path": "tests/test_site.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f2d569b5355a05819c3c2a09a988334da74ef76",
+      "size": 7003,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/2f2d569b5355a05819c3c2a09a988334da74ef76"
+    },
+    {
+      "path": "tests/test_wikipedia.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64de245352afc41c27d9cea5b8b0739907a5752d",
+      "size": 3951,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/64de245352afc41c27d9cea5b8b0739907a5752d"
+    },
+    {
+      "path": "website",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2beb70c19bd8bcfd578cdb56ee29d5ee888e5eac",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/2beb70c19bd8bcfd578cdb56ee29d5ee888e5eac"
+    },
+    {
+      "path": "website/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad293093b07ce949885da1fddaa7f52bfa6c4ce7",
+      "size": 28,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/ad293093b07ce949885da1fddaa7f52bfa6c4ce7"
+    },
+    {
+      "path": "website/_partials",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67d3e4c1570d20fb23e421e4b4d924209dcdb4b1",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/67d3e4c1570d20fb23e421e4b4d924209dcdb4b1"
+    },
+    {
+      "path": "website/_partials/_backtest-tables.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1120cea2465a52fc8436e9eaf5ec639b652cec9b",
+      "size": 144,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/1120cea2465a52fc8436e9eaf5ec639b652cec9b"
+    },
+    {
+      "path": "website/_partials/_setup.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c68f9f9dab005ce2cdd3f465483db47ad6688790",
+      "size": 184,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/c68f9f9dab005ce2cdd3f465483db47ad6688790"
+    },
+    {
+      "path": "website/_partials/charts.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da77659798842459e6a170a87f65825abdb4845d",
+      "size": 1183,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/da77659798842459e6a170a87f65825abdb4845d"
+    },
+    {
+      "path": "website/_partials/fonts.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d085652cc34c4dd34a2d347a1d20d3d5e2527db3",
+      "size": 298,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d085652cc34c4dd34a2d347a1d20d3d5e2527db3"
+    },
+    {
+      "path": "website/_quarto.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4148342b57dfa0f3ea74882b0f1ad5ba6a362159",
+      "size": 1787,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/4148342b57dfa0f3ea74882b0f1ad5ba6a362159"
+    },
+    {
+      "path": "website/_scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6058114eb6c07d085676b7bda1bc25940789a4fd",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/6058114eb6c07d085676b7bda1bc25940789a4fd"
+    },
+    {
+      "path": "website/_scripts/post-render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0dc51dc21e56ecedefe0bf464855bc030f1ed71",
+      "size": 169,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/d0dc51dc21e56ecedefe0bf464855bc030f1ed71"
+    },
+    {
+      "path": "website/_scripts/pre-render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b1e06dd01d86c5138d5301d420c00b8eafd316e",
+      "size": 155,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/3b1e06dd01d86c5138d5301d420c00b8eafd316e"
+    },
+    {
+      "path": "website/_styles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c158153946194720908642b3f627c09fefece95b",
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/trees/c158153946194720908642b3f627c09fefece95b"
+    },
+    {
+      "path": "website/_styles/dark.scss",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b14ffd95ff6b97ab43e5bb2eac5ed279c57c9cb5",
+      "size": 285,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/b14ffd95ff6b97ab43e5bb2eac5ed279c57c9cb5"
+    },
+    {
+      "path": "website/_styles/light.scss",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6fab092779f725fdd928c297f15f2545fb4a137",
+      "size": 132,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/b6fab092779f725fdd928c297f15f2545fb4a137"
+    },
+    {
+      "path": "website/_styles/theme.scss",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b78473188e06324e3c4a58034928d93b2f5001b",
+      "size": 1658,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/4b78473188e06324e3c4a58034928d93b2f5001b"
+    },
+    {
+      "path": "website/evaluation.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b255d02922e2860605bab9938220169a9ef4c9b",
+      "size": 7891,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/0b255d02922e2860605bab9938220169a9ef4c9b"
+    },
+    {
+      "path": "website/index.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d9cb9d631b7a5f3aabb035461c7c673ce964f88",
+      "size": 4647,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/2d9cb9d631b7a5f3aabb035461c7c673ce964f88"
+    },
+    {
+      "path": "website/model.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb6a69e84abf63c5b7a750fb1a9782f72079f711",
+      "size": 15668,
+      "url": "https://api.github.com/repos/ariedotcodotnz/nz-poll-of-polls/git/blobs/cb6a69e84abf63c5b7a750fb1a9782f72079f711"
+    }
+  ],
+  "truncated": false
+}
