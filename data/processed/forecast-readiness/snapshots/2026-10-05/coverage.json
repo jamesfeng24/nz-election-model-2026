@@ -1,0 +1,71 @@
+{
+  "RReadiness": {
+    "neutral_fallback": 198,
+    "supported": 8
+  },
+  "SReadiness": {
+    "neutral_fallback": 174,
+    "supported": 30,
+    "unavailable": 2
+  },
+  "acceptedRuleFlags": {
+    "exact_name": 14,
+    "frozen_nickname": 5,
+    "middle_omission": 27
+  },
+  "broadLinks": 41,
+  "candidateOccurrences": 206,
+  "candidateSeatsByScope": {
+    "general": 64,
+    "maori": 6
+  },
+  "candidateStatuses": {
+    "party_announced": 205,
+    "party_selected": 1
+  },
+  "candidatesByParty": {
+    "actnewzealand": 43,
+    "greenparty": 54,
+    "nationalparty": 25,
+    "newzealandfirstparty": 40,
+    "opportunity": 42,
+    "tepatimaori": 2
+  },
+  "claims": 206,
+  "exactSeatsByScope": {
+    "general": 14,
+    "maori": 2
+  },
+  "heldExactGeneralSeats": 13,
+  "linkExceptions": {
+    "no_compatible_source_name_not_proof_of_replacement": 163,
+    "party_change_or_unsupported_continuity_exception": 2,
+    "unresolved_name_parse": 12
+  },
+  "seatsByScope": {
+    "general": 64,
+    "maori": 7
+  },
+  "slateStatuses": {
+    "incomplete_known_announcements": 70,
+    "unknown": 1
+  },
+  "sourceBudget": {
+    "queries": 12,
+    "queryCap": 12,
+    "resourceCap": 24,
+    "resources": 24
+  },
+  "sourcePartySeatSReadiness": {
+    "neutral_fallback": 1103,
+    "supported": 70,
+    "unavailable": 34
+  },
+  "strictLinks": 14,
+  "strictRReadiness": {
+    "neutral_fallback": 202,
+    "supported": 4
+  },
+  "unidentifiedSlateMemberCount": null,
+  "unmatchedClaims": 0
+}

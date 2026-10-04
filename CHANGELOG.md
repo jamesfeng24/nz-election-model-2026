@@ -311,3 +311,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Connected three cached external gauss56-day forecasts to fixed baseline/S/S+R candidates on162 complete exact-general contests, through two mass-conservingOther policies.
 - Added reusable raw-national adapter, deterministic shared-draw propagation, conditional intervals, paired/context metrics, independent checks and bounded forecast-readiness roadmap.
 - Recorded provisional external/S+R development preferences without rewriting any prior screen, fit, identity, numerical artifact or operational selection. No inference/acquisition/liveforecast.
+
+## Stage40
+
+- Added dated2026 target-frame/slate/source/identity/party/S/R readiness for all71seats, with206party assertions and explicit incomplete slates.
+- Preserved finite24-resource/12-query acquisition, official dates/current roster verification, conflict/withdrawal/cutoff safeguards and reversible practical links.
+- Added offline refresh/change/invalidation, readable review table, deterministic checks and independent source/geography/rounding/residual preservation audits. No fits, predictions, MCMC or operational changes.

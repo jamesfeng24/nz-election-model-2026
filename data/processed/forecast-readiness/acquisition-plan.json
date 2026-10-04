@@ -1,0 +1,28 @@
+{
+  "stage": 40,
+  "resourceCap": 24,
+  "queryCap": 12,
+  "counting": "each distinct response preserved; failed retrievals and all search queries separately logged",
+  "acquisitionCutoffRule": "UTC acquisition-close timestamp, snapshot NZ date; no assertion that undated pages were published earlier",
+  "routes": [
+    "Electoral Commission current2026 election calendar, official final electorate list and nomination status",
+    "official registration/alliance lists",
+    "official National/Labour/Green/ACT/NZFirst/TePatiMaori/TOP bulk candidates pages",
+    "individual official statements only for material bulk gaps or conflicts"
+  ],
+  "stoppingRule": "stop at24 resources or exhaustion of official bulk routes; do not search biographies or fill missing slates as absent",
+  "missingFacts": [
+    "current election date and nomination window",
+    "2025 boundary inventory still governing2026",
+    "selected/announced candidates and withdrawals",
+    "current affiliation versus party-ballot groups"
+  ],
+  "preservedAudit": "71 targets=64general+7Maori; preserved final2025 crosswalk/notional party bounds; Stage26 normalization/aliases reused; no preserved2026 live candidate registry",
+  "permissions": "readiness only; no predictions/fits/polls campaign",
+  "preservedInputHashes": {
+    "data/processed/boundaries/2023-2026/crosswalk.json": "72dde71fa9dd8916916d78130482a19d6941ec32b97be7aee8eef7f464c2caae",
+    "data/processed/boundaries/2023-2026/party-votes.json": "6f5991b0383a845b1b9cbe91548cbe593cbc04d461aae90eab226a931961164a",
+    "data/controls/boundaries/2025-change-controls.json": "781eb1f22749ec1f4ba195dcf88277560a467d554604b059e5167eabbafc267e",
+    "data/processed/evidence/practical-candidate-linkage/occurrences.json": "4e9a1aa86c61c46190f3c1ff59f923074a083c1f0c086a4a745ddcf0803c1504"
+  }
+}

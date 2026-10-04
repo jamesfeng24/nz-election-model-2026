@@ -90,3 +90,6 @@ jobs:
       - run: python3 -m scripts.polling.candidate_integration.evaluation --check
       - run: python3 -m scripts.polling.candidate_integration.verification --check
       - run: python3 -m scripts.polling.candidate_integration.report --check
+      - run: python3 -m scripts.readiness.run --check
+      - run: python3 -m scripts.readiness.report --check
+      - run: python3 -m scripts.readiness.verification --check
