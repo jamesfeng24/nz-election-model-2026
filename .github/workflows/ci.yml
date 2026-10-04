@@ -21,6 +21,7 @@ jobs:
         with:
           python-version-file: .python-version
       - run: python3 -m pip install -r requirements-boundaries.txt
+      - run: python3 -m scripts.polling.category_interface.run --check
       - run: python3 -m scripts.polling.national_model.evaluation --check
       - run: python3 -m unittest discover -s scripts/tests -v
       - run: python3 scripts/validate/source_files.py
@@ -76,7 +77,6 @@ jobs:
       - run: python3 -m scripts.polling.national_model.verification --check
       - run: python3 -m scripts.polling.national_model.report --check
       - run: python3 -m scripts.polling.national_model.outputs --check
-      - run: python3 -m scripts.polling.category_interface.run --check
       - run: python3 -m scripts.polling.category_interface.verification --check
       - run: python3 -m scripts.polling.category_interface.report --check
       - run: python3 -m scripts.polling.category_interface.handoff --check

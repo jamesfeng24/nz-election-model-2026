@@ -28,6 +28,21 @@ def check_construction():
             raise ValueError('Changed frozen construction code: ' + name)
 
 
+def check_serialization_amendment():
+    import gzip
+    manifest=read(OUT/'serialization-amendment.json')
+    original=read(OUT/'construction-contract-initial-checkpoint.json')
+    for row in manifest['records']:
+        raw=(OUT/row['path']).read_bytes()
+        if raw[9]!=255 or hashlib.sha256(raw).hexdigest()!=row['canonicalSha256']:
+            raise ValueError('Noncanonical gzip metadata')
+        prior=raw[:9]+bytes([row['originalOSByte']])+raw[10:]
+        if hashlib.sha256(prior).hexdigest()!=row['originalSha256'] or row['originalSha256']!=original['sha256'][row['path']]:
+            raise ValueError('Original archive is not exactly recoverable')
+        if hashlib.sha256(gzip.decompress(raw)).hexdigest()!=row['decompressedSha256']:
+            raise ValueError('Allocation payload changed in serialization correction')
+
+
 def independent_weight(reports):
     if not reports:
         return None
@@ -142,7 +157,7 @@ def external_checks():
 
 
 def run(check=False):
-    verify_inputs();check_construction()
+    verify_inputs();check_construction();check_serialization_amendment()
     for name,expected in read(OUT/'external-source-contract.json')['consumedSha256'].items():
         if sha(ROOT/name)!=expected:
             raise ValueError('Changed supplemental consumed source: '+name)

@@ -23,11 +23,17 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def portable_gzip(raw):
+    """Canonical unknown-platform marker; compressed content is unchanged."""
+    encoded = gzip.compress(raw, mtime=0)
+    return encoded[:9] + bytes([255]) + encoded[10:]
+
+
 def save(name, value, check=False):
     raw = (json.dumps(value, sort_keys=True, ensure_ascii=False,
                       separators=(',', ':'), allow_nan=False) + '\n').encode()
     if name.endswith('.gz'):
-        raw = gzip.compress(raw, mtime=0)
+        raw = portable_gzip(raw)
     path = OUT / name
     if check:
         if path.read_bytes() != raw:

@@ -7,3 +7,7 @@ Active sequence: polling data/design → national implementation/backtest (compl
 ## Preservation note
 
 The historical statistical-specification.md is a consumed Stage28 input with an immutable hash. Initial Stage37 documentation appended a roadmap section there, causing the earlier deterministic test to fail. That Stage37-only addition is moved here; the historical file returns byte-identically to merged main. No historical generator, data artifact, numerical output or test/tolerance is changed. Active roadmap updates remain in PROJECT_STATE.md and this companion, linked by METHODOLOGY.md.
+
+## Portable gzip companion
+
+Final2079623 CI passed all698 tests and earlier deterministic stages, but compressed Stage37 regeneration differed because Python3.12 uses zlib's platform marker: byte9=19 on macOS versus3 on Linux. Canonical byte9=255 (unknown platform) now fixes that metadata only. All32 decompressed allocation records, numeric values, units, precision, gates and tolerances are unchanged; strict byte reproduction remains required. The original construction contract and a reversible original-header/SHA manifest preserve the initial checkpoint exactly without duplicating its compressed payloads. No national/candidate fit or prior artifact changes. No historical inference is rerun.

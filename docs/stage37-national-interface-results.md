@@ -88,6 +88,8 @@ The [precise replay contract](stage37-candidate-replay-contract.md) and pinned c
 
 Independent arithmetic verifies316 policy weights,360 report conversions,256,016 full vectors,48 expected vectors,21 point/pooling checks; all1,552 prior data files byte-identical and20 resources checksummed.
 
+The portable gzip companion changes only header byte9 to255: all32 decompressed allocation payloads and numerical values remain unchanged. Original headers/SHA and construction contract preserve exact reversibility; no tolerance or byte-check relaxation. The historical statistical-document appendix was moved into a companion to preserve Stage28 input bytes. See [preservation details](stage37-research-handoff.md).
+
 Focused synthetic/actual-adapter tests cover conservation, zeros/missingness, TOP, whole alliances/renames, cutoff/outcome independence, exact dates and subset-score arithmetic. Deterministic `python -m scripts.polling.category_interface.run --check`, `verification --check` and `report --check` use saved archives only; no MCMC or candidate runner. Final-head GitHub CI is reported separately in the handoff and runs the configured full tests/source checks/earlier deterministic checks/frontend. No configured Python formatter/linter; compilation and whitespace checks apply.
 
 **Next decision:** separately authorize cached-draw fixed-candidate conditional replay through this two-policy interface; independently decide whether the small external distribution run warrants authorization before deployment. Preserve national model plus average and S/S+R active/R challenger/baseline control. No new model, allocation tuning, inference, live forecast or MMP begins automatically.

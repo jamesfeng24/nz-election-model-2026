@@ -206,3 +206,21 @@ class HandoffAndProvenanceTests(unittest.TestCase):
         with patch('scripts.polling.category_interface.common.read',return_value=excessive):
             with self.assertRaisesRegex(ValueError,'budget'):
                 verify_inputs()
+
+
+class PortableSerializationTests(unittest.TestCase):
+    def test_canonical_header_and_payload(self):
+        import gzip
+        from scripts.polling.category_interface.common import portable_gzip
+        raw=b'synthetic joint support records'
+        encoded=portable_gzip(raw)
+        self.assertEqual(encoded[9],255)
+        self.assertEqual(gzip.decompress(encoded),raw)
+        self.assertEqual(encoded,portable_gzip(raw))
+        for os_byte in (3,19,255):
+            variant=encoded[:9]+bytes([os_byte])+encoded[10:]
+            self.assertEqual(gzip.decompress(variant),raw)
+
+    def test_original_archives_exactly_recoverable(self):
+        from scripts.polling.category_interface.verification import check_serialization_amendment
+        check_serialization_amendment()
