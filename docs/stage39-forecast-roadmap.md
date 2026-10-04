@@ -1,3 +1,13 @@
+# Active roadmap after Stage40
+
+Stage40 delivers the dated 2026 boundary/slate foundation, all71 seats, source-only feature readiness, conflict checks and a reproducible refresh path. The source snapshot closes5October before nominationclose8October; zero slates are complete. Refresh official bulk nominations after publication, without carrying incumbent MPs into unverified seats or reopening biography queues. [Readiness report](stage40-target-boundary-slate-readiness.md).
+
+**Next bounded implementation:** coherent joint local-party/candidate uncertainty around the existing complete-share adapters. Keep shared national error once, make local/candidate residual dependence and parameter/identity/fallback/transport uncertainty explicit, and separate assumed uncertainty from validated calibration. This is not another mean-model tournament. General exact evidence can inform the layer; changed-boundary and Māori gaps remain explicit rather than silently transported. No implementation begins under Stage40.
+
+Then separately design/implement the Māori electorate-poll layer with its explicit Māori baseline, candidate/local-party question and denominator, dates/age/sample/undecideds, poll error/dependence, and documented wider unpolled/stale fallback. National TPM party support is a different quantity. National reconciliation requires all electorates, supplied turnout/valid-vote weights and distinct party/candidate denominators. Finally MMP shared simulations, static versioned outputs and forecast publication/archive. Externalgauss provisional; S+Rpreferred/Sactive/baselinecontrol; prior screens/operational nulls remain.
+
+The prior Stage39 dependency record below is retained as history; its target/slate task is now completed, with ongoing dated refresh as an input-maintenance dependency.
+
 # Practical forecast dependencies after Stage39
 
 Stage39 connects cached external national draws to fixed complete-share candidates; it does not supply a working live forecast or calibrated local uncertainty. External gauss provisional, ownednational cache fallback/averagecontrol; S+Rdevelopmentpreferred/Sactive/baselinecontrol. Preserve prior evidence independently of these preferences.

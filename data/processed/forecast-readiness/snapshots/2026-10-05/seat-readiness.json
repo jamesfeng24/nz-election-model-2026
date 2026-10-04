@@ -1,0 +1,4278 @@
+{
+  "records": [
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-001-candidate-49768477809fa2b8",
+        "nz-general-2026-boundary-001-candidate-6887936d95dd2738",
+        "nz-general-2026-boundary-001-candidate-b92a15121207d779",
+        "nz-general-2026-boundary-001-candidate-feb4cef38fefdb34"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/001",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-001",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 2
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-002-candidate-a6d860992d397be0",
+        "nz-general-2026-boundary-002-candidate-ed4408bf8e824745"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/002",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 11,
+        "supported": 6
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 8,
+        "occurrences": 9,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-003-candidate-36c5418f7c771e97",
+        "nz-general-2026-boundary-003-candidate-9b012490b80d8e80"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/003",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-003",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-004-candidate-1c5c7cbff5268726",
+        "nz-general-2026-boundary-004-candidate-3c0880e39baeca38",
+        "nz-general-2026-boundary-004-candidate-464ee5284f6ad842",
+        "nz-general-2026-boundary-004-candidate-75149f73413d4987"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/004",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-005-candidate-60ad0f156eb20fcf",
+        "nz-general-2026-boundary-005-candidate-8dd344f33591f0fb",
+        "nz-general-2026-boundary-005-candidate-97150ca9e8ae950d",
+        "nz-general-2026-boundary-005-candidate-af0fab828ca92bb9"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/005",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 1
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 2
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-006-candidate-88fde87e4abf43fb",
+        "nz-general-2026-boundary-006-candidate-e8aab05ee4b29a8a"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/006",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 12,
+        "supported": 5
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 6,
+        "occurrences": 7,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 1,
+      "targetElectorateId": "nz-general-2026-boundary-006",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 1
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 4
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-007-candidate-34963f9ebf338dbe",
+        "nz-general-2026-boundary-007-candidate-527f104b1128ed61",
+        "nz-general-2026-boundary-007-candidate-9194dab49efc9706",
+        "nz-general-2026-boundary-007-candidate-9620d9d2f087c95a"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/007",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 9,
+        "supported": 8
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 9,
+        "occurrences": 11,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-008-candidate-b77b1af6401c3455",
+        "nz-general-2026-boundary-008-candidate-c3c7ca8425bfc66a",
+        "nz-general-2026-boundary-008-candidate-ea8ec04bacc190bd"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/008",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-008",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-009-candidate-2151e80cb00c01eb",
+        "nz-general-2026-boundary-009-candidate-5578f91d564bab63",
+        "nz-general-2026-boundary-009-candidate-8236124cf5e2bd3f"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/009",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-009",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-010-candidate-13fbf864ed43733e",
+        "nz-general-2026-boundary-010-candidate-14ec2cf89aaaf19e",
+        "nz-general-2026-boundary-010-candidate-cd5a2c02d4f89d6d"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/010",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-010",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-011-candidate-12bc8c1cedeec27b",
+        "nz-general-2026-boundary-011-candidate-2dc6f0f223c83908",
+        "nz-general-2026-boundary-011-candidate-3c9ac5c1e0ed9d06",
+        "nz-general-2026-boundary-011-candidate-a7b708e8ebbb6e21",
+        "nz-general-2026-boundary-011-candidate-df72b17cadce7eb2"
+      ],
+      "knownCandidateCount": 5,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/011",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 2
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-012-candidate-46fcee5e39f37920",
+        "nz-general-2026-boundary-012-candidate-c13bb6e626330bb3"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/012",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 10,
+        "supported": 7
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 8,
+        "occurrences": 10,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-012",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 1
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 3
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-013-candidate-4a2384d409968bd9",
+        "nz-general-2026-boundary-013-candidate-607cc44ea54fedd0",
+        "nz-general-2026-boundary-013-candidate-6b2dc01749216bef"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/013",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 10,
+        "supported": 7
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 7,
+        "occurrences": 8,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 1,
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-014-candidate-6014a8bf2419233f",
+        "nz-general-2026-boundary-014-candidate-878d8c61ff733801",
+        "nz-general-2026-boundary-014-candidate-c2ec8bdc3628c942",
+        "nz-general-2026-boundary-014-candidate-ed18a4a7ddb8d2f1"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/014",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-015-candidate-3103cd06fcf9f672",
+        "nz-general-2026-boundary-015-candidate-9f11f4e07409ec68",
+        "nz-general-2026-boundary-015-candidate-e231a688f53523d4"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/015",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-016-candidate-18218869b7ec5d58",
+        "nz-general-2026-boundary-016-candidate-40b09c32727536c3",
+        "nz-general-2026-boundary-016-candidate-6ac75d77505806f3"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/016",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-016",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-017-candidate-7fe9b5d506f4f4cd"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/017",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-017",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 1
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-018-candidate-bd3f1629c9635422"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/018",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 11,
+        "supported": 6
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 8,
+        "occurrences": 11,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-018",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-019-candidate-2a523eed51895259",
+        "nz-general-2026-boundary-019-candidate-9f6d49c11195546c",
+        "nz-general-2026-boundary-019-candidate-a60339c39cdec31f",
+        "nz-general-2026-boundary-019-candidate-fa1b16e70dc82a0e"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/019",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-020-candidate-4eab8580c6474d7f",
+        "nz-general-2026-boundary-020-candidate-93c919c1f39fa0ac",
+        "nz-general-2026-boundary-020-candidate-c027988dd8a1d5bb"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/020",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-020",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-021-candidate-3ff5b7c4f711c904",
+        "nz-general-2026-boundary-021-candidate-69a37be6a170833c",
+        "nz-general-2026-boundary-021-candidate-6e72af9d5dee6bda",
+        "nz-general-2026-boundary-021-candidate-8bffcefa793d76a1"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/021",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-021",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-022-candidate-14130e122b9ef70f",
+        "nz-general-2026-boundary-022-candidate-1994ba4d70ed3226",
+        "nz-general-2026-boundary-022-candidate-4726cd70879d1398",
+        "nz-general-2026-boundary-022-candidate-66ab95afa822d2f1",
+        "nz-general-2026-boundary-022-candidate-968a1e176b8a0f51"
+      ],
+      "knownCandidateCount": 5,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/022",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-023-candidate-1bc8a03fea78d568",
+        "nz-general-2026-boundary-023-candidate-6fe6b315c67d76f5"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/023",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-023",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-024-candidate-2305a95714b899eb",
+        "nz-general-2026-boundary-024-candidate-25cbd7a553cb15f2",
+        "nz-general-2026-boundary-024-candidate-4c3c668b448902cb",
+        "nz-general-2026-boundary-024-candidate-a56d8ce9200aa873"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/024",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-024",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-025-candidate-53e7094a1fdbf8e0",
+        "nz-general-2026-boundary-025-candidate-d72bc1b8375eb949",
+        "nz-general-2026-boundary-025-candidate-d9c755bfd8618652",
+        "nz-general-2026-boundary-025-candidate-dd58f12784ff8ff7"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/025",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-025",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-026-candidate-1edc9bd4b9b6d339",
+        "nz-general-2026-boundary-026-candidate-b1b5402428a8b122",
+        "nz-general-2026-boundary-026-candidate-e2ed710c1c2b423a"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/026",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-026",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-027-candidate-4e60b4b070da8f33",
+        "nz-general-2026-boundary-027-candidate-5a2500ca4e88a752"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/027",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-027",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-028-candidate-1fed3314dbf94688",
+        "nz-general-2026-boundary-028-candidate-9a4db6af85d093d5",
+        "nz-general-2026-boundary-028-candidate-9ff61b830fda83d0"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/028",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-028",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 2
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 3
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-029-candidate-6e940cd0561d9be4",
+        "nz-general-2026-boundary-029-candidate-72cb822be917df93",
+        "nz-general-2026-boundary-029-candidate-9b222bff149cffd9",
+        "nz-general-2026-boundary-029-candidate-a600360ad42fbd5e"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/029",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 13,
+        "supported": 4
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 5,
+        "occurrences": 6,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 1,
+      "targetElectorateId": "nz-general-2026-boundary-029",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-030-candidate-df6a950658c7fee9"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/030",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-030",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-031-candidate-dd91155df53f747f",
+        "nz-general-2026-boundary-031-candidate-f40a2395ff980c7c",
+        "nz-general-2026-boundary-031-candidate-fc22a5b81faa862e"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/031",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-031",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-032-candidate-5ee34d8dcab1f619",
+        "nz-general-2026-boundary-032-candidate-7e24888da76a6368",
+        "nz-general-2026-boundary-032-candidate-90e6d0a0b8f1aafc",
+        "nz-general-2026-boundary-032-candidate-c2a1af2c8456e79e"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/032",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-033-candidate-0b1f1bd14c5cfd57"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/033",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-034-candidate-265e0d7834ab0e21",
+        "nz-general-2026-boundary-034-candidate-55425c12e65976ae",
+        "nz-general-2026-boundary-034-candidate-baa59a05479a7153",
+        "nz-general-2026-boundary-034-candidate-dd4f480f16ca3542"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/034",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-035-candidate-1e0bf83279759308",
+        "nz-general-2026-boundary-035-candidate-204f669aac00fabc"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/035",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-035",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-036-candidate-379c40f91d38f8f8",
+        "nz-general-2026-boundary-036-candidate-5d3e660c650b69fe",
+        "nz-general-2026-boundary-036-candidate-6f34fac042b3e7b3"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/036",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-036",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-037-candidate-020180e441fd0800",
+        "nz-general-2026-boundary-037-candidate-3c5b8fb2f7fd0f49",
+        "nz-general-2026-boundary-037-candidate-4724bf0d9f6b7fcb"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/037",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-037",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-038-candidate-053a9b0938f013b0",
+        "nz-general-2026-boundary-038-candidate-286b9881f40734a8",
+        "nz-general-2026-boundary-038-candidate-9d5de9e646090115"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/038",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 9,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-038",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 2
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-039-candidate-325e51bfc1c96b06",
+        "nz-general-2026-boundary-039-candidate-374fd44ead09ae07",
+        "nz-general-2026-boundary-039-candidate-6fa66a618d74a048",
+        "nz-general-2026-boundary-039-candidate-d2c73e588ce1b5f0"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/039",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 12,
+        "supported": 5
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 7,
+        "occurrences": 8,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-040-candidate-5cd2d84ad8c78115",
+        "nz-general-2026-boundary-040-candidate-6c5bfed665b28f27",
+        "nz-general-2026-boundary-040-candidate-8b821dec6b68282a"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/040",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-040",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-041-candidate-0c1eda64de9f5377",
+        "nz-general-2026-boundary-041-candidate-135af1e8eb82dcba",
+        "nz-general-2026-boundary-041-candidate-1d255c61ad06c23e",
+        "nz-general-2026-boundary-041-candidate-64373a801f5d7ef3"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/041",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-041",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-042-candidate-4103ead3fca7f662",
+        "nz-general-2026-boundary-042-candidate-f895a9332ab6358c"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/042",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-042",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-043-candidate-6b599855fdae0c0b",
+        "nz-general-2026-boundary-043-candidate-ab60abeee70211d5",
+        "nz-general-2026-boundary-043-candidate-b237c9a95f741b3f",
+        "nz-general-2026-boundary-043-candidate-c1dc61c8d8566814"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/043",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-044-candidate-0c67314d3acc3237",
+        "nz-general-2026-boundary-044-candidate-3c2e3c9fffd720bc",
+        "nz-general-2026-boundary-044-candidate-a54098582614fad6"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/044",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-044",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 2
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 3
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-045-candidate-0079f99824399676",
+        "nz-general-2026-boundary-045-candidate-385a3de16fe9406e",
+        "nz-general-2026-boundary-045-candidate-5437b0eec8861d79"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/045",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 12,
+        "supported": 5
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 6,
+        "occurrences": 9,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 1,
+      "targetElectorateId": "nz-general-2026-boundary-045",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-046-candidate-12603369c51eb2d5"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/046",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-046",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-047-candidate-3c87c4c19dfa0fe4",
+        "nz-general-2026-boundary-047-candidate-449547e784a7c6c9",
+        "nz-general-2026-boundary-047-candidate-5a090fbe7f459fab",
+        "nz-general-2026-boundary-047-candidate-9773b985d02e97f3"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/047",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-047",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-048-candidate-7af36503f85cb5d6",
+        "nz-general-2026-boundary-048-candidate-dacd5255d3aab14d"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/048",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-048",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-049-candidate-6449255c20fe18d1",
+        "nz-general-2026-boundary-049-candidate-7ef892833dec474d"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/049",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-049",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-050-candidate-10bbd1f7ea8969fa",
+        "nz-general-2026-boundary-050-candidate-9861b956ae5a9bb5",
+        "nz-general-2026-boundary-050-candidate-c08ae997d5daab54"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/050",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-050",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-051-candidate-1f2b936f62d2f659",
+        "nz-general-2026-boundary-051-candidate-3002357a5bd258ab",
+        "nz-general-2026-boundary-051-candidate-4c47db8f0235137c"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/051",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-052-candidate-94e0901af6c58ea9",
+        "nz-general-2026-boundary-052-candidate-966c65a7e3b2897a",
+        "nz-general-2026-boundary-052-candidate-9ea4a99b356509c7",
+        "nz-general-2026-boundary-052-candidate-cef8a679390dc12d"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/052",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-052",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 1
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-053-candidate-37df98a66be0d344",
+        "nz-general-2026-boundary-053-candidate-c774f6ba593a6fad"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/053",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 13,
+        "supported": 4
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 4,
+        "occurrences": 5,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-053",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 1
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-054-candidate-8a44319df2a3ada0",
+        "nz-general-2026-boundary-054-candidate-b3f62ae11661e8df",
+        "nz-general-2026-boundary-054-candidate-c042e4ae7839bbe8"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/054",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 14,
+        "supported": 3
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 5,
+        "occurrences": 5,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-054",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 3,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-055-candidate-36de9d087a11792a",
+        "nz-general-2026-boundary-055-candidate-b1c4f92d4d1bfb16",
+        "nz-general-2026-boundary-055-candidate-cfdccab44723017d"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/055",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-056-candidate-020079b12e855565",
+        "nz-general-2026-boundary-056-candidate-f6a7adf7f9a7173a",
+        "nz-general-2026-boundary-056-candidate-f81d2a9f84876a29",
+        "nz-general-2026-boundary-056-candidate-fbfee5ec196fdd86"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/056",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-056",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 1
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 2
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-057-candidate-5f3ba81a612b8c28",
+        "nz-general-2026-boundary-057-candidate-b3850c093239cbdc",
+        "nz-general-2026-boundary-057-candidate-b59c3a345b1f92dc"
+      ],
+      "knownCandidateCount": 3,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/057",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 12,
+        "supported": 5
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 7,
+        "occurrences": 8,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-058-candidate-26be7927977dabcb",
+        "nz-general-2026-boundary-058-candidate-74b6d9c20bf52df8",
+        "nz-general-2026-boundary-058-candidate-8b978714cc0a5d6b",
+        "nz-general-2026-boundary-058-candidate-a2b06a2aee460a3a",
+        "nz-general-2026-boundary-058-candidate-ded8e5c3c1c95ccf"
+      ],
+      "knownCandidateCount": 5,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/058",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-059-candidate-223c3e4fa9e8e1a8",
+        "nz-general-2026-boundary-059-candidate-24578736a6b47d19",
+        "nz-general-2026-boundary-059-candidate-276059ef93d6748d",
+        "nz-general-2026-boundary-059-candidate-498c57c2ec695d64",
+        "nz-general-2026-boundary-059-candidate-efe18889937ba04a"
+      ],
+      "knownCandidateCount": 5,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/059",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 5,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 4
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-060-candidate-1360ad9912617145",
+        "nz-general-2026-boundary-060-candidate-394c43365501d92f",
+        "nz-general-2026-boundary-060-candidate-550b767e1620191c",
+        "nz-general-2026-boundary-060-candidate-9aea9eda20cbb18c",
+        "nz-general-2026-boundary-060-candidate-f7bbb655e28ef633"
+      ],
+      "knownCandidateCount": 5,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/general/targets/060",
+        "status": "exact_source_geography"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 12,
+        "supported": 5
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 6,
+        "occurrences": 9,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-061-candidate-4a42a138c5cf0e5e"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/061",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-061",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-062-candidate-1117543c3a1f5a02"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/062",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-062",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-063-candidate-2b940dcab1e40cd2",
+        "nz-general-2026-boundary-063-candidate-3491cce23b337231",
+        "nz-general-2026-boundary-063-candidate-4d667f1d0189e368",
+        "nz-general-2026-boundary-063-candidate-d5756c269a8a5690"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/063",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 4,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-general-2026-boundary-064-candidate-55d628e4fe25ca95",
+        "nz-general-2026-boundary-064-candidate-55f2927a4fa88324",
+        "nz-general-2026-boundary-064-candidate-a4454a6784f60ada",
+        "nz-general-2026-boundary-064-candidate-d6fc4d0e5156fb3a"
+      ],
+      "knownCandidateCount": 4,
+      "maoriPollingInterface": null,
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/general/targets/064",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "general",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-general-2026-boundary-064",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 0,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [],
+      "knownCandidateCount": 0,
+      "maoriPollingInterface": {
+        "acquisitionStarted": false,
+        "nationalTPMIsCandidateSupport": false,
+        "required": [
+          "actual_candidate_or_party_question",
+          "valid_vote_or_respondent_denominator",
+          "target_boundary_and_candidate_ids",
+          "fieldwork_dates",
+          "publication_dates",
+          "sample_size",
+          "polling_error",
+          "dependence_with_other_inputs"
+        ],
+        "status": "separate_planned_component",
+        "unpolledOrStaleFallback": "explicit_maori_seat_baseline_with_wider_joint_uncertainty"
+      },
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/maori/targets/1",
+        "status": "exact_source_geography"
+      },
+      "scope": "maori",
+      "slateComplete": false,
+      "slateStatus": "unknown",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "unavailable": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 2,
+        "occurrences": 3,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-maori-2026-boundary-1",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "maori_candidate_baseline_and_poll_layer"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-maori-2026-boundary-2-candidate-0c8c920bff15ac43",
+        "nz-maori-2026-boundary-2-candidate-21348d59b9a9b9ce"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": {
+        "acquisitionStarted": false,
+        "nationalTPMIsCandidateSupport": false,
+        "required": [
+          "actual_candidate_or_party_question",
+          "valid_vote_or_respondent_denominator",
+          "target_boundary_and_candidate_ids",
+          "fieldwork_dates",
+          "publication_dates",
+          "sample_size",
+          "polling_error",
+          "dependence_with_other_inputs"
+        ],
+        "status": "separate_planned_component",
+        "unpolledOrStaleFallback": "explicit_maori_seat_baseline_with_wider_joint_uncertainty"
+      },
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/maori/targets/2",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "maori",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-maori-2026-boundary-2",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport",
+        "maori_candidate_baseline_and_poll_layer"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-maori-2026-boundary-3-candidate-0438a5a003766081"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": {
+        "acquisitionStarted": false,
+        "nationalTPMIsCandidateSupport": false,
+        "required": [
+          "actual_candidate_or_party_question",
+          "valid_vote_or_respondent_denominator",
+          "target_boundary_and_candidate_ids",
+          "fieldwork_dates",
+          "publication_dates",
+          "sample_size",
+          "polling_error",
+          "dependence_with_other_inputs"
+        ],
+        "status": "separate_planned_component",
+        "unpolledOrStaleFallback": "explicit_maori_seat_baseline_with_wider_joint_uncertainty"
+      },
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/maori/targets/3",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "maori",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-maori-2026-boundary-3",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport",
+        "maori_candidate_baseline_and_poll_layer"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-maori-2026-boundary-4-candidate-99392b57fdf89761"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": {
+        "acquisitionStarted": false,
+        "nationalTPMIsCandidateSupport": false,
+        "required": [
+          "actual_candidate_or_party_question",
+          "valid_vote_or_respondent_denominator",
+          "target_boundary_and_candidate_ids",
+          "fieldwork_dates",
+          "publication_dates",
+          "sample_size",
+          "polling_error",
+          "dependence_with_other_inputs"
+        ],
+        "status": "separate_planned_component",
+        "unpolledOrStaleFallback": "explicit_maori_seat_baseline_with_wider_joint_uncertainty"
+      },
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/maori/targets/4",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "maori",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-maori-2026-boundary-4",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport",
+        "maori_candidate_baseline_and_poll_layer"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 1,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-maori-2026-boundary-5-candidate-99156e91b13dda14"
+      ],
+      "knownCandidateCount": 1,
+      "maoriPollingInterface": {
+        "acquisitionStarted": false,
+        "nationalTPMIsCandidateSupport": false,
+        "required": [
+          "actual_candidate_or_party_question",
+          "valid_vote_or_respondent_denominator",
+          "target_boundary_and_candidate_ids",
+          "fieldwork_dates",
+          "publication_dates",
+          "sample_size",
+          "polling_error",
+          "dependence_with_other_inputs"
+        ],
+        "status": "separate_planned_component",
+        "unpolledOrStaleFallback": "explicit_maori_seat_baseline_with_wider_joint_uncertainty"
+      },
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/maori/targets/5",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "maori",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-maori-2026-boundary-5",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport",
+        "maori_candidate_baseline_and_poll_layer"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-maori-2026-boundary-6-candidate-e81da62948c06d8b",
+        "nz-maori-2026-boundary-6-candidate-e9ef7c70e062fdb4"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": {
+        "acquisitionStarted": false,
+        "nationalTPMIsCandidateSupport": false,
+        "required": [
+          "actual_candidate_or_party_question",
+          "valid_vote_or_respondent_denominator",
+          "target_boundary_and_candidate_ids",
+          "fieldwork_dates",
+          "publication_dates",
+          "sample_size",
+          "polling_error",
+          "dependence_with_other_inputs"
+        ],
+        "status": "separate_planned_component",
+        "unpolledOrStaleFallback": "explicit_maori_seat_baseline_with_wider_joint_uncertainty"
+      },
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent",
+        "joint_population_to_party_vote_transport; no_selected_point"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": false,
+        "recordKey": "scopes/maori/targets/6",
+        "status": "joint_bounded_notional_party_transport"
+      },
+      "scope": "maori",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "neutral_fallback": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 0,
+        "occurrences": 0,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-maori-2026-boundary-6",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "authorized_changed_boundary_S_R_transport",
+        "maori_candidate_baseline_and_poll_layer"
+      ]
+    },
+    {
+      "RCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "SCounts": {
+        "fallbackOrUnavailable": 2,
+        "supported": 0
+      },
+      "conditionalOn": [
+        "supplied_coherent_national_vector",
+        "confirmed2026_party_ballot_roster",
+        "complete_target_candidate_slate"
+      ],
+      "constructionNow": "source_party_evidence_and_partial_candidate_features; no_complete_forecast",
+      "knownActiveCandidateIds": [
+        "nz-maori-2026-boundary-7-candidate-19b11b859e10b57f",
+        "nz-maori-2026-boundary-7-candidate-9d101cf4b78eae0e"
+      ],
+      "knownCandidateCount": 2,
+      "maoriPollingInterface": {
+        "acquisitionStarted": false,
+        "nationalTPMIsCandidateSupport": false,
+        "required": [
+          "actual_candidate_or_party_question",
+          "valid_vote_or_respondent_denominator",
+          "target_boundary_and_candidate_ids",
+          "fieldwork_dates",
+          "publication_dates",
+          "sample_size",
+          "polling_error",
+          "dependence_with_other_inputs"
+        ],
+        "status": "separate_planned_component",
+        "unpolledOrStaleFallback": "explicit_maori_seat_baseline_with_wider_joint_uncertainty"
+      },
+      "mappingStatus": "known_destinations_unique; unknown_slate_members_pending",
+      "modellingAssumptions": [
+        "neutral_entrant_geographic_profile_from_existing_rule",
+        "missing_feature_neutral_exponent"
+      ],
+      "officialNominationCount": 0,
+      "partyAffinity": {
+        "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
+        "basis": "population-weighted source party vote transport; not candidate ballots",
+        "categories": 17,
+        "jointConstraintPath": "data/processed/boundaries/2023-2026/crosswalk.json",
+        "nominalAllocation": null,
+        "pointOutputPermitted": true,
+        "recordKey": "scopes/maori/targets/7",
+        "status": "exact_source_geography"
+      },
+      "scope": "maori",
+      "slateComplete": false,
+      "slateStatus": "incomplete_known_announcements",
+      "smallestNextAction": "refresh_official_nominations_after8October; preserve conflicts and recheck affected links",
+      "sourcePartySeatSCounts": {
+        "unavailable": 17
+      },
+      "sourceResidualEvidenceCounts": {
+        "finiteResiduals": 2,
+        "occurrences": 3,
+        "targetIdentityStillRequired": true
+      },
+      "strictRSupported": 0,
+      "targetElectorateId": "nz-maori-2026-boundary-7",
+      "unavailable": [
+        "complete_candidate_uncertainty",
+        "parameter_uncertainty",
+        "maori_candidate_baseline_and_poll_layer"
+      ]
+    }
+  ]
+}

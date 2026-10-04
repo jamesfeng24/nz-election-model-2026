@@ -1,0 +1,36 @@
+{
+  "consumedCode": {
+    "scripts/readiness/common.py": "b98eaf8dd65dc92784673537782add6047aebaf2ca3d413a50ae3f1743be720d",
+    "scripts/readiness/features.py": "5ab67adde70d224eb252ca65d07c67660afac41083a2baad44cfe88eb12b51cf",
+    "scripts/readiness/geography.py": "5f66276af0c8bb4d34aaa87f24deed01dd0e26dc2d957c080f4e2306f20e4b1a",
+    "scripts/readiness/linkage.py": "79cbc11a5af5c162a2ec8606049123441daa9e35dc807ff5ff7fa5be8808f56d",
+    "scripts/readiness/registry.py": "e5a206261ad1a1d0f8b4fd40207484f43ee237fa8608211be6132b3a5f33ca16",
+    "scripts/readiness/report.py": "2edfcd1fab11b199403a75289936e5f8ad6dd76f0d7142e693e0cd51818352ee",
+    "scripts/readiness/run.py": "ec99bde224529348052705adf8a85c7f4ca0c323a370e5cd4b8236a81231e3ce",
+    "scripts/readiness/slate_sources.py": "6ae474bcde5bc87a2086b8145c35ca1584ab0df1c875ada0ef35817f6949b8cf",
+    "scripts/readiness/verification.py": "8541d48535f6e2b8ebf2bf6dd9f80a678b566765d1619ab0c650387cdb915c1d"
+  },
+  "consumedInputs": {
+    "data/processed/boundaries/2023-2026/crosswalk.json": "72dde71fa9dd8916916d78130482a19d6941ec32b97be7aee8eef7f464c2caae",
+    "data/processed/boundaries/2023-2026/party-votes.json": "6f5991b0383a845b1b9cbe91548cbe593cbc04d461aae90eab226a931961164a",
+    "data/processed/evidence/practical-candidate-linkage/aliases.json": "2bd6e0d0cc3e8f081ad6fd77c371852499c07de6582c5da6ddad33c114d01449",
+    "data/processed/evidence/practical-candidate-linkage/occurrences.json": "4e9a1aa86c61c46190f3c1ff59f923074a083c1f0c086a4a745ddcf0803c1504",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/split-votes/2023.json": "81a6bdbc1ceedbf52436af45e6fdc0e979873f34b9427219124029f88b20203c"
+  },
+  "dataAvailability": "raw responses and declared tool-rendered extraction; undated publication not certified",
+  "manifestPath": "data/processed/forecast-readiness/acquisition-manifest.json",
+  "manifestSha256": "5da8f11ddf12b232523cb7b8ea05576879ee4e1be2c44a052f2748562433df2c",
+  "noPredictionsOrFitting": true,
+  "preservation": {
+    "priorDataFilesUnchanged": 1686,
+    "priorSourceRecordsUnchanged": 926
+  },
+  "refreshInputs": {},
+  "reusedHelperCode": {
+    "scripts/checkpoints/complete_share_features.py": "8b80b394ad19b3d70102ad286fb2f5111aa1bfc8f31344305d27d665e2960419",
+    "scripts/evidence/practical_candidate_linkage/names.py": "41aa3adf1a076fe0398bdd37ada994f1b276d7daccaccfe513b3a5f7aa6f90a9",
+    "scripts/transform/historical.py": "8104ec5402834f15050ec11e0b48c474ddeaf754fca1e8942ebc64a16904b208"
+  },
+  "stage": 40
+}
