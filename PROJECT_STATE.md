@@ -1,3 +1,7 @@
+# Stage38 — source audit checkpoint, 2026-10-05
+
+Stage37 PR44 merged; reviewed1912c5a and mergef61a659 ancestry verified. Clean main synchronized; branch `stage/38-external-national-comparison`. Acquisition plan3d76c77 caps six resources; pinned code plus four historical bulk polling pages, then freeze execution/scoring before inference. Six worker-hour cap; three56-day cases and one numerical retry each. Owned Stage36/candidate inference untouched. Next: acquire bounded inputs, audit dependencies and freeze execution contract. Māori electorate polling remains a separate future design requirement. Preservation manifest pins every prior data file.
+
 # Stage37 — completed / PR44, 2026-10-05
 
 [PR44](https://github.com/jamesfeng24/nz-election-model-2026/pull/44) is open and must remain unmerged for independent review. Branch `stage/37-national-category-interface`. Stage36 reviewed3e8e1fc/merge33b1c6d ancestry verified. Protocol e65a5d5, raw/schema82d412e, pre-score constructionaa74719, external resultsd338318, precise handoff2079623 and metadata-only portabilityc6990b2 are preserved. D070/D071 give implementation ownership no preference; component/replay/adoption remain distinct.
