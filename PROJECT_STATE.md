@@ -1,3 +1,9 @@
+# Stage37 — bounded acquisition/schema checkpoint, 2026-10-04
+
+Pre-output protocole65a5d5 pushed. Exactly20 official resources acquired and checksummed; current Arie main matches preserved pin ef76cf6. Three gauss cases and ensemble case-level signed errors exist, joint draws/interval endpoints absent.2020 omits Māori party inside Other: requested six/seven-category comparison must abstain for that case;2017/2023 supported two-case subsets are labelled, no five-party fallback. Ensemble named means may be recovered only from audited case signed errors plus exact archived scoring outcomes; no aggregate-score inversion or probabilistic reconstruction. Roster/Other allocation and all earlier bytes remain intact.
+
+**Next:** commit/push raw audit and pre-score schema clarification, finish source-only inventory/allocations, supported point comparisons and independent checks. No new inference, candidate prediction/score, additional acquisition or model selection. D070 ownership-neutral criterion applies to a future fair decision.
+
 # Stage37 — frozen interface/external-benchmark plan, 2026-10-04
 
 Stage36 PR43 merged; reviewed3e8e1fc/merge33b1c6d ancestry verified, clean main synchronized and branch `stage/37-national-category-interface` created. Stage37 contracts/input hashes/preservation and20-resource external plan are frozen before allocation/acquisition/scores. D070 records no ownership preference in eventual national-model choice. Primary recent-report/prior allocation and prior-only sensitivity preserve every Other draw; rosters retrospective, entrant0.001 weight explicit. Eight primary cases only; exact56-day2017/2020/2023 external ensemble/gauss selected before comparison. No inference/candidate replay or model replacement.
