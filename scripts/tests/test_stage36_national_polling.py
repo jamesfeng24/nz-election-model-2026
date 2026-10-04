@@ -88,6 +88,15 @@ class Stage36Contracts(unittest.TestCase):
         r['estimates']['ACT']['status']='threshold'
         with self.assertRaises(ValueError):poll_vector(r)
 
+    def test_benchmark_other_lower_constraint(self):
+        from scripts.polling.national_foundation.records import observation
+        from scripts.polling.national_model.benchmark import other_lower
+        r=synthetic_poll()
+        for p,v in zip(COARSE[:-1],['50','40','5','2','2','1']):r['estimates'][p]=observation(v)
+        r['estimates']['TOP']=observation('1');r['additionalPublishedCategories']['NCP']=observation('2')
+        v=poll_vector(r);self.assertGreaterEqual(v[-1]+1e-12,other_lower(r));self.assertAlmostEqual(sum(v),1)
+        self.assertFalse(np.allclose(v[:6],np.array([.5,.4,.05,.02,.02,.01])))
+
     def test_exact_manifest_and_verified_no_data(self):
         inv=read(FOUNDATION.parent/'national-backtest/inventory.json')
         self.assertEqual(len(inv['cases']),32);self.assertEqual(sum(x['status']=='ready' for x in inv['cases']),26)

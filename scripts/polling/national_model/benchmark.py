@@ -6,6 +6,18 @@ from .common import COARSE,FOUNDATION,read
 from .transforms import project_box
 
 
+def other_lower(record):
+    """Lower rounding constraints on categories inside coarse Other, once."""
+    from .prepare import MINORS
+    minor=record['additionalPublishedCategories']
+    present={p for p,o in minor.items() if p in MINORS and o['bounds'] and o['bounds'][0]>0}
+    lower=0 if 'INM' in present and present&{'MNA','INT'} else sum(minor[p]['bounds'][0] for p in present)
+    top=record['estimates'].get('TOP')
+    if top and top['bounds']:lower+=top['bounds'][0]
+    if record['denominator']=='all_respondents':lower/=1-record['nonresponseCombined']
+    return lower
+
+
 def poll_vector(record):
     points=[];lower=[];upper=[]
     for p in COARSE[:-1]:
@@ -16,7 +28,7 @@ def poll_vector(record):
             if record.get('nonresponseCombined') is None:raise ValueError('all_respondent_denominator_unresolved')
             factor=1-record['nonresponseCombined']
         points.append(o['share']/factor);lower.append(o['bounds'][0]/factor);upper.append(min(1,o['bounds'][1]/factor))
-    projected=project_box(points,lower,upper)
+    projected=project_box(points,lower,upper,max_sum=1-other_lower(record))
     return np.r_[projected,1-sum(projected)]
 
 
