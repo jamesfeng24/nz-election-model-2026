@@ -1,3 +1,9 @@
+# Stage41 — fixed-fit construction sealed, 2026-10-05
+
+Frozen checkpoint5bcdd4f is pushed before any point construction, candidate prediction or score. Historical predictions now saved in `data/processed/forecast-transport/construction.json`: six bounded broad/strict/tier/fallback branches on identical37/47 complete slates; saved primary S+R coefficients and means unchanged, no fitting. Exact observed-input predictions reproduce saved Stage33 references to the frozen tolerance. No evaluation scores yet. All1731 prior datafiles remain byte-identical.
+
+Next: commit/push this prediction checkpoint BEFORE scoring; finish joint feasible party scenarios,2026 readiness companion, paired evaluation and independent checks. Do not acquire sources, produce2026 candidate predictions or refit models. The original Stage40 exact-only snapshot and all historical identities/selections remain untouched.
+
 # Stage41 — frozen pre-scoring checkpoint, 2026-10-05
 
 Branch `stage/41-boundary-party-feature-transport`. PR47 MERGED; reviewed `7dceb33` and merge `6a0cf19` ancestry verified; clean main safely fast-forwarded. No acquisition, fitting, prediction or scoring performed in Stage41 yet.
