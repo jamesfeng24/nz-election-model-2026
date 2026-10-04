@@ -109,6 +109,10 @@ class ReadinessTests(unittest.TestCase):
         c['factDate']='2026-10-06';self.assertFalse(claim_available(c,source,cut))
         c['factDate']=None;c['publicationDate']='2026-10-05'
         self.assertTrue(claim_available(c,source,cut)) # explicitly date-only, retrieved before cutoff
+        c['publicationDate']='2026-10-05T07:00:00'
+        with self.assertRaises(ValueError):claim_available(c,source,cut)
+        c['publicationDate']='2026-99-05'
+        with self.assertRaises(ValueError):claim_available(c,source,cut)
 
     def test_party_sources_cannot_assert_official_nominations(self):
         with self.assertRaises(ValueError):self.registry([self.claims(status='official_nomination')])

@@ -1,6 +1,6 @@
 """Reversible dated candidate claims; missing candidates never imply absence."""
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, date
 import hashlib
 import re
 from urllib.parse import urlparse
@@ -62,7 +62,10 @@ def seat_key(label):
 
 
 def utc(value):
-    return datetime.fromisoformat(value.replace('Z', '+00:00'))
+    parsed = datetime.fromisoformat(value.replace('Z', '+00:00'))
+    if parsed.tzinfo is None:
+        raise ValueError('Timestamp requires explicit timezone')
+    return parsed
 
 
 def claim_available(claim, source, cutoff):
@@ -79,7 +82,7 @@ def claim_available(claim, source, cutoff):
                 raise ValueError('Timestamp lacks publication timezone')
             if utc(value) > instant:
                 return False
-        elif value > local_day:
+        elif date.fromisoformat(value).isoformat() > local_day:
             return False
     return True
 

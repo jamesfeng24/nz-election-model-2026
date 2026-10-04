@@ -45,6 +45,11 @@ def verify_preservation():
 
 
 def verify_sources(manifest):
+    from scripts.validate.source_files import verify_source_files
+    registry = load(manifest['sourceRegistryPath'])
+    verify_source_files(ROOT, registry)
+    if {s['id'] for s in registry['sources']} != {s['id'] for s in manifest['sources']}:
+        raise ValueError('Stage40 manifest/registry membership mismatch')
     if len(manifest['sources']) > manifest['resourceCap'] or len(manifest['queries']) > manifest['queryCap']:
         raise ValueError('Acquisition budget exceeded')
     if len({s['url'] for s in manifest['sources']}) != len(manifest['sources']):

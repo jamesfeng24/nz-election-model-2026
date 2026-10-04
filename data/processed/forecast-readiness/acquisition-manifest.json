@@ -497,5 +497,7 @@
     "Final Electoral Commission nominations unpublished at cutoff",
     "Minor registered-party and independent candidacies incomplete; absence is not nonparticipation",
     "JavaScript directory infrastructure did not supply electorate records; no endpoint guessing"
-  ]
+  ],
+  "sourceRegistryPath": "data/processed/forecast-readiness/source-registry.json",
+  "resourceCountingClarification": "distinct requested source URLs; repeated reads and separate representations of the same URL do not count again; failed responses count"
 }

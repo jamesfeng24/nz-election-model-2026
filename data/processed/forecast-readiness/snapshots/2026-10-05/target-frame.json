@@ -27,6 +27,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N14",
       "officialName": "Auckland Central",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -37,6 +38,7 @@
         "recordKey": "scopes/general/targets/001",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -127,7 +129,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-001"
     },
     {
@@ -157,6 +162,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S08",
       "officialName": "Banks Peninsula",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -167,6 +173,7 @@
         "recordKey": "scopes/general/targets/002",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -199,9 +206,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-002"
     },
     {
@@ -231,6 +241,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N21",
       "officialName": "Botany",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -241,6 +252,7 @@
         "recordKey": "scopes/general/targets/003",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -331,7 +343,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-003"
     },
     {
@@ -361,6 +376,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "S06",
       "officialName": "Christchurch Central",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -371,6 +387,7 @@
         "recordKey": "scopes/general/targets/004",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -432,7 +449,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-004"
     },
     {
@@ -462,6 +482,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "S05",
       "officialName": "Christchurch East",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -472,6 +493,7 @@
         "recordKey": "scopes/general/targets/005",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -533,7 +555,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-005"
     },
     {
@@ -563,6 +588,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "N25",
       "officialName": "Coromandel",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -573,6 +599,7 @@
         "recordKey": "scopes/general/targets/006",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -605,9 +632,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-006"
     },
     {
@@ -637,6 +667,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S13",
       "officialName": "Dunedin",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -647,6 +678,7 @@
         "recordKey": "scopes/general/targets/007",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -679,9 +711,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-007"
     },
     {
@@ -711,6 +746,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "N34",
       "officialName": "East Cape",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -721,6 +757,7 @@
         "recordKey": "scopes/general/targets/008",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -782,7 +819,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-008"
     },
     {
@@ -812,6 +852,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N05",
       "officialName": "East Coast Bays",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -822,6 +863,7 @@
         "recordKey": "scopes/general/targets/009",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -883,7 +925,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-009"
     },
     {
@@ -913,6 +958,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N15",
       "officialName": "Epsom",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -923,6 +969,7 @@
         "recordKey": "scopes/general/targets/010",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1013,7 +1060,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-010"
     },
     {
@@ -1043,6 +1093,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N11",
       "officialName": "Glendene",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1053,6 +1104,7 @@
         "recordKey": "scopes/general/targets/011",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1172,7 +1224,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-011"
     },
     {
@@ -1202,6 +1257,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "N29",
       "officialName": "Hamilton East",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1212,6 +1268,7 @@
         "recordKey": "scopes/general/targets/012",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1244,9 +1301,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-012"
     },
     {
@@ -1276,6 +1336,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "N28",
       "officialName": "Hamilton West",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1286,6 +1347,7 @@
         "recordKey": "scopes/general/targets/013",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1318,9 +1380,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-013"
     },
     {
@@ -1350,6 +1415,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N10",
       "officialName": "Henderson",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1360,6 +1426,7 @@
         "recordKey": "scopes/general/targets/014",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1479,7 +1546,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-014"
     },
     {
@@ -1509,6 +1579,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N46",
       "officialName": "Hutt South",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1519,6 +1590,7 @@
         "recordKey": "scopes/general/targets/015",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1580,7 +1652,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-015"
     },
     {
@@ -1610,6 +1685,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "S07",
       "officialName": "Ilam",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1620,6 +1696,7 @@
         "recordKey": "scopes/general/targets/016",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1681,7 +1758,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-016"
     },
     {
@@ -1711,6 +1791,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "S16",
       "officialName": "Invercargill",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1721,6 +1802,7 @@
         "recordKey": "scopes/general/targets/017",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1782,7 +1864,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-017"
     },
     {
@@ -1812,6 +1897,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S03",
       "officialName": "Kaikōura",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1822,6 +1908,7 @@
         "recordKey": "scopes/general/targets/018",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1854,9 +1941,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-018"
     },
     {
@@ -1886,6 +1976,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N03",
       "officialName": "Kaipara ki Mahurangi",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1896,6 +1987,7 @@
         "recordKey": "scopes/general/targets/019",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -1957,7 +2049,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-019"
     },
     {
@@ -1987,6 +2082,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N43",
       "officialName": "Kapiti",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -1997,6 +2093,7 @@
         "recordKey": "scopes/general/targets/020",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2058,7 +2155,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-020"
     },
     {
@@ -2088,6 +2188,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N44",
       "officialName": "Kenepuru",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -2098,6 +2199,7 @@
         "recordKey": "scopes/general/targets/021",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2159,7 +2261,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-021"
     },
     {
@@ -2189,6 +2294,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N20",
       "officialName": "Māngere",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -2199,6 +2305,7 @@
         "recordKey": "scopes/general/targets/022",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2260,7 +2367,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-022"
     },
     {
@@ -2290,6 +2400,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N23",
       "officialName": "Manurewa",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -2300,6 +2411,7 @@
         "recordKey": "scopes/general/targets/023",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2390,7 +2502,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-023"
     },
     {
@@ -2420,6 +2535,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N17",
       "officialName": "Maungakiekie",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -2430,6 +2546,7 @@
         "recordKey": "scopes/general/targets/024",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2491,7 +2608,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-024"
     },
     {
@@ -2521,6 +2641,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N13",
       "officialName": "Mt Albert",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -2531,6 +2652,7 @@
         "recordKey": "scopes/general/targets/025",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2650,7 +2772,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-025"
     },
     {
@@ -2680,6 +2805,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N31",
       "officialName": "Mt Maunganui",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -2690,6 +2816,7 @@
         "recordKey": "scopes/general/targets/026",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2751,7 +2878,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-026"
     },
     {
@@ -2781,6 +2911,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N12",
       "officialName": "Mt Roskill",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -2791,6 +2922,7 @@
         "recordKey": "scopes/general/targets/027",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2881,7 +3013,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-027"
     },
     {
@@ -2911,6 +3046,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N36",
       "officialName": "Napier",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -2921,6 +3057,7 @@
         "recordKey": "scopes/general/targets/028",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -2982,7 +3119,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-028"
     },
     {
@@ -3012,6 +3152,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S01",
       "officialName": "Nelson",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3022,6 +3163,7 @@
         "recordKey": "scopes/general/targets/029",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3054,9 +3196,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-029"
     },
     {
@@ -3086,6 +3231,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N37",
       "officialName": "New Plymouth",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3096,6 +3242,7 @@
         "recordKey": "scopes/general/targets/030",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3157,7 +3304,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-030"
     },
     {
@@ -3187,6 +3337,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N06",
       "officialName": "North Shore",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3197,6 +3348,7 @@
         "recordKey": "scopes/general/targets/031",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3258,7 +3410,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-031"
     },
     {
@@ -3288,6 +3443,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N08",
       "officialName": "Northcote",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3298,6 +3454,7 @@
         "recordKey": "scopes/general/targets/032",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3359,7 +3516,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-032"
     },
     {
@@ -3389,6 +3549,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N01",
       "officialName": "Northland",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3399,6 +3560,7 @@
         "recordKey": "scopes/general/targets/033",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3431,7 +3593,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-033"
     },
     {
@@ -3461,6 +3626,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N19",
       "officialName": "Ōtāhuhu",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3471,6 +3637,7 @@
         "recordKey": "scopes/general/targets/034",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3561,7 +3728,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-034"
     },
     {
@@ -3591,6 +3761,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N18",
       "officialName": "Pakuranga",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3601,6 +3772,7 @@
         "recordKey": "scopes/general/targets/035",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3662,7 +3834,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-035"
     },
     {
@@ -3692,6 +3867,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N41",
       "officialName": "Palmerston North",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3702,6 +3878,7 @@
         "recordKey": "scopes/general/targets/036",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3763,7 +3940,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-036"
     },
     {
@@ -3793,6 +3973,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N24",
       "officialName": "Papakura",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3803,6 +3984,7 @@
         "recordKey": "scopes/general/targets/037",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3864,7 +4046,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-037"
     },
     {
@@ -3894,6 +4079,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "N26",
       "officialName": "Port Waikato",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3904,6 +4090,7 @@
         "recordKey": "scopes/general/targets/038",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -3936,9 +4123,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "cancelled"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-038"
     },
     {
@@ -3968,6 +4158,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S11",
       "officialName": "Rangitata",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -3978,6 +4169,7 @@
         "recordKey": "scopes/general/targets/039",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4010,9 +4202,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-039"
     },
     {
@@ -4042,6 +4237,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N39",
       "officialName": "Rangitīkei",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4052,6 +4248,7 @@
         "recordKey": "scopes/general/targets/040",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4113,7 +4310,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-040"
     },
     {
@@ -4143,6 +4343,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N45",
       "officialName": "Remutaka",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4153,6 +4354,7 @@
         "recordKey": "scopes/general/targets/041",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4214,7 +4416,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-041"
     },
     {
@@ -4244,6 +4449,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N32",
       "officialName": "Rotorua",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4254,6 +4460,7 @@
         "recordKey": "scopes/general/targets/042",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4315,7 +4522,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-042"
     },
     {
@@ -4345,6 +4555,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "S10",
       "officialName": "Selwyn",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4355,6 +4566,7 @@
         "recordKey": "scopes/general/targets/043",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4387,7 +4599,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-043"
     },
     {
@@ -4417,6 +4632,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "S15",
       "officialName": "Southland",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4427,6 +4643,7 @@
         "recordKey": "scopes/general/targets/044",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4459,7 +4676,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-044"
     },
     {
@@ -4489,6 +4709,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S14",
       "officialName": "Taieri",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4499,6 +4720,7 @@
         "recordKey": "scopes/general/targets/045",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4531,9 +4753,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-045"
     },
     {
@@ -4563,6 +4788,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N22",
       "officialName": "Takanini",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4573,6 +4799,7 @@
         "recordKey": "scopes/general/targets/046",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4634,7 +4861,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-046"
     },
     {
@@ -4664,6 +4894,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N16",
       "officialName": "Tāmaki",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4674,6 +4905,7 @@
         "recordKey": "scopes/general/targets/047",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4764,7 +4996,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-047"
     },
     {
@@ -4794,6 +5029,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N33",
       "officialName": "Taranaki-King Country",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4804,6 +5040,7 @@
         "recordKey": "scopes/general/targets/048",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4865,7 +5102,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-048"
     },
     {
@@ -4895,6 +5135,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N35",
       "officialName": "Taupō",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4905,6 +5146,7 @@
         "recordKey": "scopes/general/targets/049",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -4937,7 +5179,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-049"
     },
     {
@@ -4967,6 +5212,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N30",
       "officialName": "Tauranga",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -4977,6 +5223,7 @@
         "recordKey": "scopes/general/targets/050",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5038,7 +5285,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-050"
     },
     {
@@ -5068,6 +5318,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N40",
       "officialName": "Tukituki",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5078,6 +5329,7 @@
         "recordKey": "scopes/general/targets/051",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5110,7 +5362,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-051"
     },
     {
@@ -5140,6 +5395,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N07",
       "officialName": "Upper Harbour",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5150,6 +5406,7 @@
         "recordKey": "scopes/general/targets/052",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5240,7 +5497,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-052"
     },
     {
@@ -5270,6 +5530,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "N27",
       "officialName": "Waikato",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5280,6 +5541,7 @@
         "recordKey": "scopes/general/targets/053",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5312,9 +5574,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-053"
     },
     {
@@ -5344,6 +5609,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S04",
       "officialName": "Waimakariri",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5354,6 +5620,7 @@
         "recordKey": "scopes/general/targets/054",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5386,9 +5653,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-054"
     },
     {
@@ -5418,6 +5688,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N42",
       "officialName": "Wairarapa",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5428,6 +5699,7 @@
         "recordKey": "scopes/general/targets/055",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5489,7 +5761,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-055"
     },
     {
@@ -5519,6 +5794,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N09",
       "officialName": "Waitākere",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5529,6 +5805,7 @@
         "recordKey": "scopes/general/targets/056",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5590,7 +5867,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-056"
     },
     {
@@ -5620,6 +5900,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S12",
       "officialName": "Waitaki",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5630,6 +5911,7 @@
         "recordKey": "scopes/general/targets/057",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5662,9 +5944,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-057"
     },
     {
@@ -5694,6 +5979,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N48",
       "officialName": "Wellington Bays",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5704,6 +5990,7 @@
         "recordKey": "scopes/general/targets/058",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5765,7 +6052,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-058"
     },
     {
@@ -5795,6 +6085,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N47",
       "officialName": "Wellington North",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5805,6 +6096,7 @@
         "recordKey": "scopes/general/targets/059",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5866,7 +6158,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-059"
     },
     {
@@ -5896,6 +6191,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "S02",
       "officialName": "West Coast-Tasman",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5906,6 +6202,7 @@
         "recordKey": "scopes/general/targets/060",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -5938,9 +6235,12 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-060"
     },
     {
@@ -5970,6 +6270,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N38",
       "officialName": "Whanganui",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -5980,6 +6281,7 @@
         "recordKey": "scopes/general/targets/061",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6070,7 +6372,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-061"
     },
     {
@@ -6100,6 +6405,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N04",
       "officialName": "Whangaparāoa",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6110,6 +6416,7 @@
         "recordKey": "scopes/general/targets/062",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6142,7 +6449,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-062"
     },
     {
@@ -6172,6 +6482,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "N02",
       "officialName": "Whangārei",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6182,6 +6493,7 @@
         "recordKey": "scopes/general/targets/063",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6243,7 +6555,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-063"
     },
     {
@@ -6273,6 +6588,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "S09",
       "officialName": "Wigram",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6283,6 +6599,7 @@
         "recordKey": "scopes/general/targets/064",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6344,7 +6661,10 @@
         }
       ],
       "scope": "general",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-general-2026-boundary-064"
     },
     {
@@ -6374,6 +6694,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "M03",
       "officialName": "Hauraki-Waikato",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6384,6 +6705,7 @@
         "recordKey": "scopes/maori/targets/1",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6416,9 +6738,12 @@
         }
       ],
       "scope": "maori",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-maori-2026-boundary-1"
     },
     {
@@ -6448,6 +6773,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "M06",
       "officialName": "Ikaroa-Rāwhiti",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6458,6 +6784,7 @@
         "recordKey": "scopes/maori/targets/2",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6519,7 +6846,10 @@
         }
       ],
       "scope": "maori",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-maori-2026-boundary-2"
     },
     {
@@ -6549,6 +6879,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "M02",
       "officialName": "Tāmaki Makaurau",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6559,6 +6890,7 @@
         "recordKey": "scopes/maori/targets/3",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6620,7 +6952,10 @@
         }
       ],
       "scope": "maori",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-maori-2026-boundary-3"
     },
     {
@@ -6650,6 +6985,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "M05",
       "officialName": "Te Tai Hauāuru",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6660,6 +6996,7 @@
         "recordKey": "scopes/maori/targets/4",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6692,7 +7029,10 @@
         }
       ],
       "scope": "maori",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-maori-2026-boundary-4"
     },
     {
@@ -6722,6 +7062,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "M01",
       "officialName": "Te Tai Tokerau",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6732,6 +7073,7 @@
         "recordKey": "scopes/maori/targets/5",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6764,7 +7106,10 @@
         }
       ],
       "scope": "maori",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-maori-2026-boundary-5"
     },
     {
@@ -6794,6 +7139,7 @@
       "officialChangeStatus": "changed",
       "officialDisplayCode": "M07",
       "officialName": "Te Tai Tonga",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6804,6 +7150,7 @@
         "recordKey": "scopes/maori/targets/6",
         "status": "joint_bounded_notional_party_transport"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6865,7 +7212,10 @@
         }
       ],
       "scope": "maori",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-maori-2026-boundary-6"
     },
     {
@@ -6895,6 +7245,7 @@
       "officialChangeStatus": "unchanged",
       "officialDisplayCode": "M04",
       "officialName": "Waiariki",
+      "overlapUnits": "fraction of electoral population; not vote shares or candidate ballots",
       "partyReconstruction": {
         "artifactPath": "data/processed/boundaries/2023-2026/party-votes.json",
         "basis": "population-weighted source party vote transport; not candidate ballots",
@@ -6905,6 +7256,7 @@
         "recordKey": "scopes/maori/targets/7",
         "status": "exact_source_geography"
       },
+      "populationVintage": "2023 Census electoral population, final August 2025 release",
       "predecessors": [
         {
           "jointPopulationEdgeBounds": [
@@ -6937,9 +7289,12 @@
         }
       ],
       "scope": "maori",
+      "sourceBoundaryVersionId": "stats-nz-electorates-2020",
       "sourceCandidateContestStatus": [
         "held"
       ],
+      "sourceElectionYear": 2023,
+      "targetElectionYear": 2026,
       "targetElectorateId": "nz-maori-2026-boundary-7"
     }
   ]

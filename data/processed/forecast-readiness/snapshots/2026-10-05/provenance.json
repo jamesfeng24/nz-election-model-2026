@@ -1,12 +1,12 @@
 {
   "consumedCode": {
-    "scripts/readiness/common.py": "b98eaf8dd65dc92784673537782add6047aebaf2ca3d413a50ae3f1743be720d",
+    "scripts/readiness/common.py": "ed5d27f38c5fae0da55e5c531ea94774deb630b50c45fe1ba03d25bca6324631",
     "scripts/readiness/features.py": "5ab67adde70d224eb252ca65d07c67660afac41083a2baad44cfe88eb12b51cf",
-    "scripts/readiness/geography.py": "5f66276af0c8bb4d34aaa87f24deed01dd0e26dc2d957c080f4e2306f20e4b1a",
+    "scripts/readiness/geography.py": "c7f02bf87c4cb0326f4169bf8e3fe757010cc1ec3b62a0cd8780e799ed92691c",
     "scripts/readiness/linkage.py": "79cbc11a5af5c162a2ec8606049123441daa9e35dc807ff5ff7fa5be8808f56d",
-    "scripts/readiness/registry.py": "e5a206261ad1a1d0f8b4fd40207484f43ee237fa8608211be6132b3a5f33ca16",
-    "scripts/readiness/report.py": "2edfcd1fab11b199403a75289936e5f8ad6dd76f0d7142e693e0cd51818352ee",
-    "scripts/readiness/run.py": "ec99bde224529348052705adf8a85c7f4ca0c323a370e5cd4b8236a81231e3ce",
+    "scripts/readiness/registry.py": "d3074145f1896e8c98c4b959b9c0ec1ce70560dfcf678945fa1ba6b9079081f0",
+    "scripts/readiness/report.py": "62769f17fe8dbc21c2909f360a8019bf2662ac056fe32664ed9e3e93241ec99f",
+    "scripts/readiness/run.py": "5acff31a2d6e6ba0d00393620e9d8cddd3981e30e200d042c0c76d34bddd251c",
     "scripts/readiness/slate_sources.py": "6ae474bcde5bc87a2086b8145c35ca1584ab0df1c875ada0ef35817f6949b8cf",
     "scripts/readiness/verification.py": "8541d48535f6e2b8ebf2bf6dd9f80a678b566765d1619ab0c650387cdb915c1d"
   },
@@ -20,10 +20,10 @@
   },
   "dataAvailability": "raw responses and declared tool-rendered extraction; undated publication not certified",
   "manifestPath": "data/processed/forecast-readiness/acquisition-manifest.json",
-  "manifestSha256": "5da8f11ddf12b232523cb7b8ea05576879ee4e1be2c44a052f2748562433df2c",
+  "manifestSha256": "0fb5af1a5dcefd72e23b71a0227d1bb33aa521f82317bbd8bbbe7b9b98bce308",
   "noPredictionsOrFitting": true,
   "preservation": {
-    "priorDataFilesUnchanged": 1686,
+    "priorDataFilesUnchanged": 1687,
     "priorSourceRecordsUnchanged": 926
   },
   "refreshInputs": {},
@@ -32,5 +32,7 @@
     "scripts/evidence/practical_candidate_linkage/names.py": "41aa3adf1a076fe0398bdd37ada994f1b276d7daccaccfe513b3a5f7aa6f90a9",
     "scripts/transform/historical.py": "8104ec5402834f15050ec11e0b48c474ddeaf754fca1e8942ebc64a16904b208"
   },
-  "stage": 40
+  "stage": 40,
+  "standaloneSourceRegistryPath": "data/processed/forecast-readiness/source-registry.json",
+  "standaloneSourceRegistrySha256": "75af3ae8c862bc37ec1fdd3e42b939e5572a044f4c645d78ff6346ad8716d2b0"
 }

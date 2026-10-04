@@ -121,7 +121,7 @@ def main():
     results=build(manifest,previous=load(args.previous) if args.previous else None,
         claims=load(args.claim_events)['claims'] if args.claim_events else None,
         completeness=load(args.completeness)['records'] if args.completeness else ())
-    results['provenance.json']={'stage':40,'manifestPath':args.manifest,'manifestSha256':digest(args.manifest),
+    results['provenance.json']={'stage':40,'standaloneSourceRegistryPath':manifest['sourceRegistryPath'],'standaloneSourceRegistrySha256':digest(manifest['sourceRegistryPath']),'manifestPath':args.manifest,'manifestSha256':digest(args.manifest),
         'consumedInputs':{p:digest(p) for p in INPUTS},
         'refreshInputs':{p:digest(p) for p in (args.previous,args.claim_events,args.completeness) if p},
         'reusedHelperCode':{p:digest(p) for p in ('scripts/evidence/practical_candidate_linkage/names.py','scripts/checkpoints/complete_share_features.py','scripts/transform/historical.py')},
