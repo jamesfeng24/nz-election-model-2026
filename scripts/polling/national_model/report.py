@@ -57,6 +57,31 @@ def availability_table(cases):
     return lines
 
 
+def fine_top_table(cases):
+    lines=['| Case | TOP expected share (%) | TOP actual (%) | TOP bias | TOP CRPS |',
+           '| --- | ---: | ---: | ---: | ---: |']
+    for r in cases:
+        if not r['model']:continue
+        for i,p in enumerate(r['model']['point']['parties']):
+            if p['category']=='TOP':
+                crps=r['model']['probability']['parties'][i]['CRPSpp']
+                lines.append(f"| {r['year']} / {r['horizonDays']}d | {number(100*p['prediction'])} | {number(100*p['actual'])} | {number(p['biasPP'])} | {number(crps)} |")
+    return lines
+
+
+def scale_table(cases):
+    lines=['| Case | Weekly σ mean [5%,95%] | House scale mean [5%,95%] | Common-bias scale mean [5%,95%] |',
+           '| --- | ---: | ---: | ---: |']
+    for r in cases:
+        if not r['model']:continue
+        entries=[]
+        for name in ('sigma','house_scale','bias_scale'):
+            p=r['model']['parameterSummary'][name]
+            entries.append(f"{number(p['mean'])} [{number(p['quantiles'][0])},{number(p['quantiles'][2])}]")
+        lines.append(f"| {r['year']} / {r['horizonDays']}d | "+' | '.join(entries)+' |')
+    return lines
+
+
 def numerical_table(index):
     lines=['| Saved case | Attempt | Status | Seconds | Max R-hat | Min bulk / tail ESS | Divergences | Depth contacts |',
            '| --- | ---: | --- | ---: | ---: | ---: | ---: | ---: |'];seen=set()
@@ -77,10 +102,12 @@ def text_report():
     primary=[r for r in result['cases'] if r['branch']=='primary'];lines+=point_table(primary)
     lines+=['', '### Uncertainty', '']+uncertainty_table(primary)
     lines+=['', 'Major-party uncertainty is displayed separately. Election-day SD includes future movement; current SD is not an election-day interval. Error is prediction minus actual.', '']+major_uncertainty_table(primary)
+    lines+=['', 'Scale parameters are in orthonormal log-contrast units; the fixed HalfNormal prior scales are0.035 weekly,0.12 house and0.08 common bias. With few completed polling cycles, hyperparameter learning and common error remain prior-sensitive; this is not a calibrated covariance estimate.', '']+scale_table(primary)
     lines+=['', '### Historical availability', '', 'These counts describe admitted current-cycle waves, not verified historical archives. Earlier endpoints obey the frozen next-January availability assumption.', '']+availability_table(primary)
     lines+=['', '### Major-party and small-party accounting', '',
             'Each category below receives equal case weight (four elections, two horizons each). Overall signed bias cancels on the complete simplex; party bias is informative. Many small categories must not conceal National/Labour errors.', '']
     primary_pool=next(p for p in result['pooled'] if p['branch']=='primary');lines+=party_table(primary_pool)
+    lines+=['', 'Fine TOP output is separate from the coarse benchmark comparison. It supplies no allocation of the remaining Other category.', '']+fine_top_table(primary)
     lines+=['', '## Finite sensitivities and coverage', '',
             'Primary uses verified publication plus the declared five-day inference. Timing sensitivity substitutes ten days; missing-n sensitivity substitutes 1,000 for 750 in the model only. Verified-only never silently promotes inferred dates. No sensitivity Cartesian product or score-guided adjustment.', '',
             '| Branch | Model / 8 | Average / 8 | Common | Model MAE | Average MAE | MAE gain | Model RMSE | Average RMSE |',

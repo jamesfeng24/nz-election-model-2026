@@ -26,6 +26,14 @@ def synthetic_case():
 
 
 class Stage36Contracts(unittest.TestCase):
+    def test_diagnostic_serialization_preserves_share_precision_and_inputs(self):
+        from scripts.polling.national_model.evaluation import serialized_metrics
+        value={'MAEpp':1/3,'prediction':1/3,'currentMean':[1/3],'covered':True}
+        before=copy.deepcopy(value);output=serialized_metrics(value)
+        self.assertEqual(value,before);self.assertEqual(output['MAEpp'],round(1/3,12))
+        self.assertEqual(output['prediction'],round(1/3,15));self.assertEqual(output['currentMean'],[round(1/3,15)])
+        self.assertIs(output['covered'],True)
+
     def test_archive_requires_complete_frame_and_finished_attempts(self):
         from scripts.polling.national_model.archive import validate_completion
         inventory=[{'id':'a'},{'id':'b'}];cases=[{'id':'a','status':'accepted'},{'id':'b','status':'data_abstention'}]

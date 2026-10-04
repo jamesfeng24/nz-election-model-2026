@@ -1,3 +1,11 @@
+# Stage36 — pre-score serialization/checkpoint, 2026-10-04
+
+Latest pushed8e14570 contains12 accepted distinct fits and two failed first attempts. Primary2023/14 and missing-n2020/14 are near completion; neither has a final status yet. Existing main/secondary logs/commands/session IDs remain valid. Every other remaining declared case must still be attempted under the frozen settings. Do not score before the complete32-case archive/commit.
+
+**Pre-score reporting rule:** evaluation diagnostic serialization12 decimal places, share/bound/vector/covariance15, retaining full raw float64 fits/draws. This removes immaterial architecture-dependent reduction bits without altering equations, gates or independent tolerances. Input contract refreshed for the explicit documentation amendment; inference numerical code/configuration/signatures are unchanged.20 pure adapter tests now pass, including complete-frame archival and serialization; isolated25-test suite already passed including all seven generative tests. Full675 earlier suite/926 sources remain verified; no expensive unrelated rerun.
+
+**Next:** finish and checkpoint all MCMC cases, numerical failures/retries preserved; archive forecasts, independent arithmetic, evaluation/report, final CI/unmergedPR. No source, candidate replay, fine Other allocation, liveforecast, newvariant or operational work.
+
 # Stage36 — larger-fold inference checkpoint, 2026-10-04
 
 Primary2014/2017/2020 at both horizons accepted: six completed primary cases. Four missing-n1000 cases (2014/2017 both horizons) accepted. Two verified-only cases accepted after frozen retries; six verified-only data abstentions. **12 accepted distinct fits / two preserved failed first attempts**. Primary2023/14 is in warmup, and missing-n2020/14 is running concurrently; both retain four chains and all frozen settings. Main log `/tmp/stage36-remaining-inference.log`/session50114; secondary `/tmp/stage36-missing-n-inference.log`/session52535. Watch queue boundaries: do not start a second worker on an unfinished identical signature. Exact caches resume through the existing commands; no sampler-code changes or recomputation.

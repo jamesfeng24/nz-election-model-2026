@@ -80,8 +80,18 @@ def pooled(rows):
     return out
 
 
+def serialized_metrics(value,key=''):
+    """Stable diagnostic serialization; archived fits/draws remain untouched."""
+    if isinstance(value,dict):return {k:serialized_metrics(v,k) for k,v in value.items()}
+    if isinstance(value,list):return [serialized_metrics(v,key) for v in value]
+    if isinstance(value,float):
+        probability_fields={'prediction','actual','lower','upper','currentMean','electionDayMean','currentCovariance','electionDayCovariance'}
+        return round(value,15 if key in probability_fields else 12)
+    return value
+
+
 def run(check=False):
-    result=evaluate();save('evaluation.json',result,check)
+    result=serialized_metrics(evaluate());save('evaluation.json',result,check)
     print('Evaluated',sum(r['model'] is not None for r in result['cases']),'saved accepted forecasts; no inference')
 
 

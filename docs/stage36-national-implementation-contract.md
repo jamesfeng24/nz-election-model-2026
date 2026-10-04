@@ -41,3 +41,7 @@ The initial benchmark checkpoint omitted supported lower bounds on its coarse Ot
 ## Reporting arithmetic fixed before scoring
 
 Central quantiles use linear interpolation. Report all eight planned cases per branch with1/8 weights; where failures make the full plan incomplete, report that full pooled metric unavailable and explicitly label an available-only renormalized summary. Pooled RMSE takes the square root after averaging case/category squared errors, not the average of fold RMSEs. Party-specific metrics retain their actual category/case denominator; coarse Other includes TOP and fine Other does not. Display major-party errors separately. There is no scoring of earlier current support against election-day truth.
+
+## Pre-score diagnostic serialization
+
+Before historical accuracy inspection, deterministic evaluation serialization is fixed at12 decimal places for computed diagnostics in percentage-point units, and15 places for share values, interval bounds, expected-share vectors and covariance arrays. This removes immaterial architecture-dependent reduction bits from saved tables. Calculations, archived draws/fits, convergence gates and independent-check tolerances remain unchanged; the archive retains full float64 outputs. This is a reporting serialization rule, not a statistical or numerical-tolerance amendment.
