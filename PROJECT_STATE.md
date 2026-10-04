@@ -1,3 +1,9 @@
+# Stage40 — source-plan checkpoint, 2026-10-05
+
+Stage39 PR46 MERGED at5e0e763; reviewedaf989b3 ancestry verified from clean safely synchronized main. Branch `stage/40-target-boundary-slate-readiness`. Preserved geography has64general+7Maori targets. No external query/acquisition yet. Frozen plan caps24 resources/12queries and prioritizes official bulk election/party sources; complete slates are not assumed. Provisional externalgauss/S+Rpreferred/Sactive/baselinecontrol and old operational records remain.
+
+Next: commit/push plan before acquisition; preserve raw responses/manifests in bounded batches; implement canonical dated frame/candidate/linkage/feature readiness and refresh/invalidation path, focused checks, prior-byte preservation, unmerged PR/finalCI. No fits/MCMC/livepredictions/Maori polling campaign.
+
 # Stage39 — completed / PR46 awaiting independent review, 2026-10-05
 
 [PR46](https://github.com/jamesfeng24/nz-election-model-2026/pull/46) is OPEN on `stage/39-national-candidate-integration` and must remain unmerged. Stage38 reviewed15936fe/merge5f58f14 ancestry verified. Frozen a8cf66a → prediction seal5b864f2 → scores e0d3f0a → completed handoff471d1d6 are pushed in order. All four GitHub checks on471d1d6 passed. The final metadata companion distinguishes raw/source and fine chain dimensions, array dimensions, schemas and support targets. It changes no allocation arrays, candidate predictions, intervals, scores, equations or tolerances; machine-readable unchanged-array/construction/arithmetic proofs accompany it. The independent checker now reads the clarified metadata key. Final companion-head CI is verified before the final response.
