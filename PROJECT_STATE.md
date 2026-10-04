@@ -1,3 +1,11 @@
+# Stage36 — seventh primary forecast checkpoint, 2026-10-04
+
+Seven primary cases accepted;2023/14 took2570.8s, all-coordinate maxRhat1.0095657/minbulk703.43/mintail460.46,0divergences/depth contacts. Five missing-n1000 cases accepted, including2020/14 in1228.9s. Two verified-only retries accepted; six data abstentions. **14 distinct accepted fits / two failed first attempts** are preserved. Primary2023/56 and missing-n2020/56 running under existing sessions/logs; remaining lag10/missing-n cases not all done. Keep two-worker signature scheduling disjoint; watch before main reaches missing-n unfinished signatures.
+
+Pre-score serialization3a4cd7d pushed. Latest20 pure tests pass, isolated25 tests (all seven generative) pass; full675 earlier suite and926source integrity already verified. Independent current-root56 paired draws/14 mean vectors/485benchmark poll vectors/26benchmark averages/1,514 prior files unchanged. No historical scores. Numerical signature files are unchanged.
+
+**Next:** finish all32 cases, checkpoint forecasts/diagnostics, complete archive and commit before evaluation; independent scores/report, final checks/CI/unmergedPR. Preserve all candidate research choices and operational nulls; no source, Other allocation, candidate replay or liveforecast.
+
 # Stage36 — pre-score serialization/checkpoint, 2026-10-04
 
 Latest pushed8e14570 contains12 accepted distinct fits and two failed first attempts. Primary2023/14 and missing-n2020/14 are near completion; neither has a final status yet. Existing main/secondary logs/commands/session IDs remain valid. Every other remaining declared case must still be attempted under the frozen settings. Do not score before the complete32-case archive/commit.
