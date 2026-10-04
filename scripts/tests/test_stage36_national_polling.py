@@ -26,6 +26,16 @@ def synthetic_case():
 
 
 class Stage36Contracts(unittest.TestCase):
+    def test_population_covariance_convention_and_conservation(self):
+        from scripts.polling.national_model.metrics import population_covariance
+        rows=[[0.,1.],[1.,0.]]
+        self.assertEqual(population_covariance(rows),[[.25,-.25],[-.25,.25]])
+        rows=[[.1,.2,.7],[.4,.1,.5],[.3,.5,.2]]
+        covariance=np.array(population_covariance(rows))
+        np.testing.assert_allclose(covariance,np.cov(rows,rowvar=False,ddof=0),atol=1e-16)
+        np.testing.assert_allclose(covariance.sum(axis=0),0,atol=1e-16)
+        self.assertGreaterEqual(np.linalg.eigvalsh(covariance).min(),-1e-16)
+
     def test_output_interface_keeps_availability_and_paired_draws_explicit(self):
         from unittest.mock import patch
         from scripts.polling.national_model import outputs

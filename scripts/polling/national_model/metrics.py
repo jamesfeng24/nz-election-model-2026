@@ -1,4 +1,5 @@
 """Frozen national metrics; probability scores apply to election-day draws only."""
+import math
 import numpy as np
 from .common import COARSE,coarsen
 
@@ -49,3 +50,11 @@ def grouped(point_result):
         out.append({'group':name,'categories':[r['category'] for r in rows],'count':len(rows),
                     'MAEpp':float(np.mean(abs(e))),'RMSEpp':float(np.sqrt(np.mean(e**2))),'biasPP':float(np.mean(e))})
     return out
+
+
+def population_covariance(draws):
+    """Same ddof=0 covariance using architecture-independent scalar reductions."""
+    rows=np.asarray(draws).tolist();n=len(rows);k=len(rows[0])
+    means=[math.fsum(row[i] for row in rows)/n for i in range(k)]
+    return [[math.fsum((row[i]-means[i])*(row[j]-means[j]) for row in rows)/n
+             for j in range(k)] for i in range(k)]

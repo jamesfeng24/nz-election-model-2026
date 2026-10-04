@@ -201,7 +201,7 @@ Archived sampling time summed over distinct attempts: 6.05 worker-hours. Two dis
 
 ## Independent verification and preservation
 
-Independent arithmetic checked 485 poll projections, 26 average vectors, 192 paired transformed draws, 48 expected-share vectors, 68 point/pooling checks and 410 probability/interval/aggregation checks. All 1514 earlier data artifacts remain byte-identical.
+Independent arithmetic checked 485 poll projections, 26 average vectors, 192 paired transformed draws, 48 expected-share vectors, 68 point/pooling checks and 410 probability/interval/aggregation checks and 52 independent covariance identities. All 1514 earlier data artifacts remain byte-identical.
 
 The check uses independent constrained SLSQP projections, scalar Helmert/exp calculations and compensated summation, prefix-pair CRPS, manual linear quantiles and SciPy pair distances. Routine CI verifies saved outputs without historical MCMC; isolated local synthetic tests validate likelihoods/gradients and a four-chain smoke run. Neither the smoke run nor saved-output reproduction establishes empirical calibration.
 
@@ -212,6 +212,7 @@ The check uses independent constrained SLSQP projections, scalar Helmert/exp cal
 - The first holdout has no earlier completed polling-cycle anchor to estimate common error; its uncertainty is especially prior-driven. Reported hyperparameter summaries are not proof of calibration.
 - Gaussian interval observations are conditionally independent approximations, not multinomial ballots. Nominal n and assumed decided fractions are not measured effective sample sizes.
 - Future diffusion is additional to current-state uncertainty; common polling error is already in the latent posterior and must not be drawn a second time downstream.
+- Linux CI exposed a last-decimal BLAS population-covariance difference. Compensated scalar summation preserves the ddof=0 equation and fixed serialization/tolerances. The initial evaluation checkpoint remains saved; only two symmetric covariance entries change by about1e-15, with all scores/forecasts unchanged.
 - NumPy emitted floating-status matmul warnings after JAX. Finite/conservation checks and independent scalar reconstructions verify the saved values; no equation or tolerance was altered to suppress warnings.
 - A pre-score source audit corrected three distinct benchmark waves (15 case instances) to obey supported coarse-Other lower rounding bounds. The original unconstrained-remainder checkpoint is retained. No MCMC inputs or historical target errors informed this correction.
 - Fine-party allocation within Other remains unavailable. Joint national draws cannot yet feed a complete candidate replay without a separately authorized allocation/interface decision.

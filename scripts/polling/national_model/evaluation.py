@@ -3,7 +3,7 @@ import argparse
 import hashlib
 import numpy as np
 from .common import FOUNDATION,OUT,read,save,COARSE,coarsen
-from .metrics import point,probabilities,grouped
+from .metrics import point,probabilities,grouped,population_covariance
 
 
 def validate_archive():
@@ -36,8 +36,8 @@ def evaluate():
                          'coarsePoint':cp,'coarseProbability':probabilities(coarse_draws,actual_coarse,COARSE),
                          'uncertainty':{'currentStdPP':(100*current.std(axis=0)).tolist(),'electionDayStdPP':(100*draws.std(axis=0)).tolist(),
                            'currentMean':fit['draws']['expectedCurrent'],'electionDayMean':pred,
-                           'currentCovariance':np.cov(current,rowvar=False,ddof=0).tolist(),
-                           'electionDayCovariance':np.cov(draws,rowvar=False,ddof=0).tolist(),
+                           'currentCovariance':population_covariance(current),
+                           'electionDayCovariance':population_covariance(draws),
                            'initialCommonBiasPriorWarning':entry['year']==2014},
                          'fitKey':c['fitKey'],'attempt':fit['attempt'],'diagnosticsSummary':{k:fit['diagnostics'][k] for k in ['maxRhat','minBulkESS','minTailESS','divergences','treeDepthContacts','energyBFMI']},
                          'parameterSummary':fit['parameterSummary']}

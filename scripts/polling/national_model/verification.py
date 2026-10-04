@@ -112,7 +112,7 @@ def run(check=False):
                 if not dg['passed'] or dg['divergences'] or dg['maxRhat']>1.01 or min(dg['minBulkESS'],dg['minTailESS'])<400:raise ValueError('Accepted invalid numerical fit')
                 if any(r['failedCoordinates'] for r in dg['variables']):raise ValueError('Concealed latent diagnostic failure')
             verified_fits.add(path)
-    point_checks=0;probability_checks=0
+    point_checks=0;probability_checks=0;covariance_checks=0
     if (OUT/'evaluation.json').exists():
         from .evaluation import validate_archive
         validate_archive()
@@ -120,6 +120,13 @@ def run(check=False):
         for row in result['cases']:
             if not row['model']:continue
             entry=next(c for c in index if c['id']==row['id']);fit=read(OUT/entry['attempts'][-1]);d=fit['draws']
+            for field,label in [('current','currentCovariance'),('electionDay','electionDayCovariance')]:
+                values=d[field];n=len(values)
+                ex=math.fsum(v[0] for v in values)/n;ey=math.fsum(v[1] for v in values)/n
+                covariance=math.fsum(v[0]*v[1] for v in values)/n-ex*ey
+                if abs(covariance-row['model']['uncertainty'][label][0][1])>1e-12:
+                    raise ValueError('Independent uncentered covariance identity')
+                covariance_checks+=1
             metrics=row['model']['point'];parties=metrics['parties'];error=[100*(p['prediction']-p['actual']) for p in parties]
             if abs(math.fsum(abs(e) for e in error)/len(error)-metrics['MAEpp'])>1e-11:raise ValueError('Independent national MAE')
             if abs(math.sqrt(math.fsum(e*e for e in error)/len(error))-metrics['RMSEpp'])>1e-11:raise ValueError('Independent national RMSE')
@@ -157,7 +164,7 @@ def run(check=False):
                 point_checks+=2
     save('independent-verification.json',{'benchmarkPollVectors':waves,'benchmarkCaseMeans':means,'uniqueAttempts':attempt_count,
          'representativeTransformedDraws':draws_checked,'posteriorMeanVectors':vector_means,
-         'pointMetrics':point_checks,'probabilityMetrics':probability_checks,'priorFilesPreserved':preserved(),
+         'pointMetrics':point_checks,'probabilityMetrics':probability_checks,'covarianceMetrics':covariance_checks,'priorFilesPreserved':preserved(),
          'method':'independent SLSQP projections/math weights; scalar Helmert/exp and fsum; prefix-pair CRPS; SciPy pdist energy; signatures/membership/diagnostic gates'},check)
     print('Independent verification:',waves,'poll vectors;',draws_checked,'paired draws;',point_checks,'point /',probability_checks,'probability metrics;',preserved(),'prior files unchanged')
 
