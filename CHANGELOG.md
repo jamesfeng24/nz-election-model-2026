@@ -317,3 +317,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Added dated2026 target-frame/slate/source/identity/party/S/R readiness for all71seats, with206party assertions and explicit incomplete slates.
 - Preserved finite24-resource/12-query acquisition, official dates/current roster verification, conflict/withdrawal/cutoff safeguards and reversible practical links.
 - Added offline refresh/change/invalidation, readable review table, deterministic checks and independent source/geography/rounding/residual preservation audits. No fits, predictions, MCMC or operational changes.
+
+## Stage41
+
+- Added a pre-scoring two-sided exact/95/90 candidate-feature transport contract and fixed Stage33 S+R historical diagnostic, retaining identical complete slates and neutral fallback controls.
+- Constructed coherent complete source-party vectors from one integral coupled population scenario, preserving category/source mass without imposing future national reconciliation.
+- Added a separate all71-seat/206-candidate2026 readiness companion, source party-seat S inventory, focused tests, independent arithmetic and preservation checks. No new fitting, acquisition or live forecast.

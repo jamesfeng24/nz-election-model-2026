@@ -1,3 +1,13 @@
+# Active roadmap after Stage41
+
+Stage41 supplies one feasible complete source-party geography scenario for all71 current targets and graded source S/R reuse: exact, guaranteed two-sided95, broader90 and neutral fallback. It preserves Stage40's exact-only snapshot as history. The historical fixed-fit diagnostic supports retaining the broader development scenario with material seat-level losses and additional uncertainty, not calibrated transport. [Contract](stage41-transport-specification.md); [findings](stage41-transport-findings.md).
+
+**Next bounded implementation:** coherent joint local-party/candidate uncertainty around the existing national-to-local and complete-share adapters. Shared national error enters once. Represent local-party/candidate residual dependence, fixed-fit parameter uncertainty, incomplete identity/history, fine-party allocation and source-to-target transport assumptions. Overlap is not candidate-error variance; distinguish assumed distributions from historical calibration. This is not another mean-model or threshold search.
+
+Official bulk nomination refresh after publication and the separately planned Māori electorate-poll/unpolled-seat baseline remain bounded input tasks. National Te Pāti Māori support is distinct from Māori candidate support; retain actual poll question, denominator, fieldwork/publication, sample and dependence. Then national reconciliation with all-seat turnout/valid-vote weights, MMP shared simulations and archived static outputs. External gauss provisional; S+R preferred, S active, baseline mandatory. No subsequent implementation is authorized by Stage41.
+
+The prior roadmap below is retained as history; Stage40's exact-only transport gap is addressed by the labelled Stage41 companion.
+
 # Active roadmap after Stage40
 
 Stage40 delivers the dated 2026 boundary/slate foundation, all71 seats, source-only feature readiness, conflict checks and a reproducible refresh path. The source snapshot closes5October before nominationclose8October; zero slates are complete. Refresh official bulk nominations after publication, without carrying incumbent MPs into unverified seats or reopening biography queues. [Readiness report](stage40-target-boundary-slate-readiness.md).
