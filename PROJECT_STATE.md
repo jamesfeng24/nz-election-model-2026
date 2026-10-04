@@ -1,3 +1,11 @@
+# Stage39 — frozen pre-construction integration checkpoint, 2026-10-05
+
+Stage38PR45 merged; reviewed15936fe/merge5f58f14 ancestry verified from clean synchronized main. Branch `stage/39-national-candidate-integration`. D073 records provisional external gauss/S+R development preferences, S active/baseline control; operational selections and R-only findings unchanged.
+
+Frozen inventory64/34/64 exact-general contests,431/286/459 candidates (162/1176), S support285/159/271 and R116/61/108. Saved Stage33 fits/means/IDs and raw Stage38 schemas/chainIDs pinned; wider geography ledger retained. Sole allocation routing amendment: preserve explicit2017Conservative/UF,2023TOP, and use existing Stage37 eligible-report arithmetic for nonexplicit2020MRI under recent-report policy; prior-only unchanged. No coefficients, candidate forecasts or scores generated yet. Input/preservation contracts, finite specification, implementation plan and integration contract ready.
+
+Next authorized unit: commit/push frozen checkpoint, then batch cached joint draws through frozen affinity/candidate formulas, reproduce conditional saved predictions, seal/commit construction before scores, independent focused tests/preservation/deterministic/finalCI/unmergedPR. No inference/newsources/refit/owned replay/R-only replay/liveforecast. Māori polling and full joint uncertainty remain planned separate dependencies.
+
 # Stage38 — completed / PR45 awaiting independent review, 2026-10-05
 
 [PR45](https://github.com/jamesfeng24/nz-election-model-2026/pull/45) remains OPEN on `stage/38-external-national-comparison`. Reviewed Stage37 ancestry is verified. Acquisition plan3d76c77, pre-inference contractfa08640 and complete forecast sealeff424a precede scoring; artifacts46979b9 and guarded resume994fcb7 are pushed. All four GitHub checks on994fcb7 passed (push37209716022 and PR37209718028): 723 Python tests with nine intentional isolated-environment skips, frontend checks, source integrity and deterministic historical/new companion regeneration. This final documentation checkpoint clarifies the preserved election-week approximation; no data, inference, score, signature or model changes.

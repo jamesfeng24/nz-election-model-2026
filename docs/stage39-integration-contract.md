@@ -1,0 +1,35 @@
+# Stage39 frozen national-to-candidate integration contract
+
+2026-10-05. This post-result development implementation adopts external gauss provisionally and S+R as preferred candidate development model, S active alternative, baseline mandatory control. Original national model remains cached fallback; average remains control. R-only findings are preserved but not replayed. Neither preference changes historical screens or operational selections (D073).
+
+## Finite cases and samples
+
+Exactly2017/2020/2023 at calendar56 days, accepted raw Stage38 attempt1 gauss archives, upstream ef76cf6562e1d028b4fff46d063f4b93945299de. Election-support state uses upstream Sunday-start election-week approximation; last-data support is distinct and never used as election forecast. No2014/14-day/owned branches. Stage33 primary expanding-window, broad linkage, printed S features and constructed-input trained coefficients are fixed. Common complete exact-general slates64/34/64 contests and431/286/459 candidates (162/1176total), wider Stage31 geography/exclusion ledger preserved. Actual counts/IDs and saved fit/mean copies are in inventory.json; fail inconsistent IDs or mapping rather than forcing counts.
+
+## Raw schema amendment, before new candidate predictions
+
+Raw labels map to canonical party categories: National→nationalparty, Labour→labourparty, Green→greenparty, ACT→actnewzealand, NZFirst→newzealandfirstparty, TePātiMāori→maoriparty, TOP→theopportunitiespartytop, NewConservative→conservative, UnitedFuture→unitedfuture. Target ballot-group keys use existing election-local Stage31 relationship records (e.g.2023TPM→tepatimaori). The2017 Conservative label is the upstream historical label, not a new constituent/party allocation. No name matching of candidates.
+
+Keep every explicit share unchanged. Remove explicit categories from Other recipients, including2017Conservative/UF and2023TOP. Allocate entire Other mass once across remaining retrospective target ballot roster. Whole alliances remain indivisible; group without candidate remains in national/local simplex. Duplicate/missing or multi-destination candidate group mapping rejects the complete common contest, never one-model trimming.
+
+Two existing policies: `recent_report_prior` and `prior_only`. Reuse Stage37 exact report eligibility, five-day inferred timing,180-day age window,30-day decay/sqrt capped nominal sample weighting and pollster balance; prior continuing shares otherwise,0.001 neutral entrant weight and all-zero prior/seed fallback. For2020MRI (now nonexplicit), add already-preserved MRI estimate observations to the report inventory under that same arithmetic. This is the sole evidence-routing amendment, not a new weight search. TOP already has preserved reports. Prior-only uses no reports. Poll rounding/denominator assumptions, retrospective roster availability and reuse of polling evidence already informing gauss remain declared; no fine-party posterior is claimed. Unknown support is not observed zero. No held-out final shares inform allocation.
+
+## Draw propagation and frozen family
+
+For each of8,000 chain-paired national draws, derive complete local support with frozen Stage23/31 rule: continuing affinity sourceLocal/sourceNational, entrant affinity1, exits absent; multiply national shares by affinities and close jointly over every target ballot group. Missing source evidence abstains; structural source zeros remain zero. No reconciliation, turnout control or selected-seat national recalibration.
+
+Map each unique standing party destination once; affirmative no-party-group candidates use p=0 and floorκ. Apply saved complete family q∝(p+κ)exp(θS zS+θR zR), using exact saved κ/coefficients, supported-training means, source features and missing-feature neutral exponent0. No outgoing residual transfer, scaling/refit or independent bonus. The same draw/chain identity is shared across all seats/models/scenarios, with no resampling or second common-error draw.
+
+Expected candidate shares average transformed q across all draws, not q at mean inputs. Batch256 by default; alternate batching must reproduce within1e−12. Save per-draw candidate vectors as deterministic gzipJSON and compact per-contest summaries; validate complete national/local/candidate simplexes tolerance1e−12. Construction signature pins specification, source hashes, inventory, generator code and batch size; exact-cache reuse only. Independently reproduce matching conditional predictions against Stage33 within1e−12 before replay. Seal/commit construction before evaluation.
+
+## Evaluation and stopping
+
+Use Stage33 contest-equal MAE; RMSE=sqrt(mean_contests(mean_candidates(errorPP²))). Pooled scores weight all162 contests equally, separately by policy, not each election equally. Candidate-equal sensitivity, National/Labour/combined/other mapped/no-group and supported-feature bias with explicit denominators, winner ties tolerance1e−12 and inherited actual-top-two signed/absolute margin diagnostics. Paired improvements always control error minus model error; S−baseline, joint−baseline, joint−S on identical slates. Include per-election, original2017/2023 versus added2020, fixed-fit contest influence. Compare matching saved Stage33 primary conditional predictions only; combined input/averaging effects are not a causal decomposition or new four-cell experiment.
+
+These draws represent national-input-only conditional uncertainty. They omit local-party errors, candidate residual errors, fitted parameter uncertainty, changed-boundary transport and probabilistic fine allocation. The two policies are scenarios, not a distribution. Do not present conditional intervals/winner frequencies as calibrated electorate probabilities or inflate national uncertainty from their misses. No draw winner frequencies need be published in this stage.
+
+Held-out candidate votes/winner flags affect evaluation only. Target local party outcomes are absent from the predicted-input branch; source records, fitted values and rosters remain pinned. Independent representative arithmetic tolerance2e−9pp; no tolerance relaxation. Synthetic stress cases stay separate. No inference, coefficients, adaptive weights, acquisition, R-only branch, owned replay or live output. Stop after integration/findings/unmerged PR.
+
+## Practical forecast roadmap
+
+After review/separate authorization:2026 target-boundary and live candidate-slate readiness adapter, explicitly representing unknown candidates and refusing unsupported residual transport; coherent joint local/candidate uncertainty; separately designed Māori electorate polls and unpolled-seat baseline; national reconciliation and turnout/valid-vote denominator requirements; MMP allocation and archived publication. National TPM party votes remain distinct from Māori candidate votes. Poll ingestion must preserve question, denominator, fieldwork/publication,n, age/noise/dependence and slate/identity context; no such acquisition/implementation here. Nonlinear simulations average transformed shares, propagate shared national error once and retain raw/adjusted dated exceptional-seat rationale.
