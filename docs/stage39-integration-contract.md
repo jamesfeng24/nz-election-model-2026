@@ -33,3 +33,7 @@ Held-out candidate votes/winner flags affect evaluation only. Target local party
 ## Practical forecast roadmap
 
 After review/separate authorization:2026 target-boundary and live candidate-slate readiness adapter, explicitly representing unknown candidates and refusing unsupported residual transport; coherent joint local/candidate uncertainty; separately designed Māori electorate polls and unpolled-seat baseline; national reconciliation and turnout/valid-vote denominator requirements; MMP allocation and archived publication. National TPM party votes remain distinct from Māori candidate votes. Poll ingestion must preserve question, denominator, fieldwork/publication,n, age/noise/dependence and slate/identity context; no such acquisition/implementation here. Nonlinear simulations average transformed shares, propagate shared national error once and retain raw/adjusted dated exceptional-seat rationale.
+
+## Output metadata clarification
+
+The final interface audit separates `sourceChainShape` from `fineChainShape` and flat `drawArrayShape`, includes original `rawCategories`/`explicitMapping` and `currentSupportField` beside election-target metadata. This corrects an ambiguous dimension label only. `metadata-amendment.json` proves all allocation arrays, candidate predictions/intervals/draw caches and evaluation values are unchanged; no model, weight, cutoff or tolerance changes.

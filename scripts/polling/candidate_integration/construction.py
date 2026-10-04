@@ -78,7 +78,11 @@ def build(check=False, batch_size=256):
                             'system': 'external_gauss', 'version': case['nationalSignature']['pin'],
                             'categories': [r['categoryId'] for r in case['roster']],
                             'ballotGroupKeys': [r['ballotGroupKey'] for r in case['roster']],
-                            'drawIds': case['nationalDrawIds'], 'chainShape': case['chainShape'],
+                            'drawIds': case['nationalDrawIds'], 'sourceChainShape': case['chainShape'],
+                            'fineChainShape': case['chainShape'][:2] + [len(case['roster'])],
+                            'drawArrayShape': list(fine.shape), 'rawCategories': case['rawCategories'],
+                            'explicitMapping': case['explicitMapping'],
+                            'currentSupportField': case['currentSupportField'],
                             'forecastTarget': case['forecastTarget'], 'arrays': fine.tolist(),
                             'sourceAttribution': 'Arie/ariedotcodotnz nz-poll-of-polls; GPL-3.0-or-later; unchanged statistical code retained in Stage38 archive',
                             'availability': ['reconstructed_input_snapshot', 'inferred_publication', 'retrospective_roster', 'conditional_other_allocation']}, check)

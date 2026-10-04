@@ -352,5 +352,37 @@ class ActualInventoryTests(unittest.TestCase):
         self.assertEqual(other_states, states)
 
 
+class FineOutputMetadataTests(unittest.TestCase):
+    def test_raw_and_fine_dimensions_and_support_targets_are_explicit(self):
+        from scripts.polling.candidate_integration.common import OUT, read
+        inventory = read(OUT / 'inventory.json')
+        for case in inventory['cases']:
+            for policy in ('recent_report_prior', 'prior_only'):
+                output = read(OUT / f'national/{case["year"]}-{policy}.json.gz')
+                self.assertEqual(output['rawCategories'], case['rawCategories'])
+                self.assertEqual(output['sourceChainShape'], case['chainShape'])
+                self.assertEqual(output['fineChainShape'], [4, 2000, len(case['roster'])])
+                self.assertEqual(output['drawArrayShape'], [8000, len(case['roster'])])
+                self.assertEqual(output['drawIds'], case['nationalDrawIds'])
+                self.assertEqual(output['currentSupportField'], 'lastDataSupport_not_exact_cutoff_nowcast')
+                self.assertEqual(output['forecastTarget'], case['forecastTarget'])
+                self.assertEqual(output['explicitMapping'], case['explicitMapping'])
+
+        from scripts.polling.candidate_integration.construction import sha_value
+        from scripts.polling.candidate_integration.common import sha
+        amendment = read(OUT / 'metadata-amendment.json')
+        for item in amendment['arraysUnchanged']:
+            current = read(OUT / item['path'])
+            self.assertEqual(sha_value(current['arrays']), item['unchangedArraySha256'])
+        construction = read(OUT / 'construction.json')
+        construction.pop('signature')
+        self.assertEqual(sha_value(construction), amendment['unchangedConstructionExceptSignatureSha256'])
+        verification = read(OUT / 'independent-verification.json')
+        verification.pop('verificationCodeSha256')
+        self.assertEqual(sha_value(verification), amendment['unchangedIndependentArithmeticExceptCodeHashSha256'])
+        for name, expected in amendment['scoresUnchangedSha256'].items():
+            self.assertEqual(sha(OUT / name), expected)
+
+
 if __name__ == '__main__':
     unittest.main()

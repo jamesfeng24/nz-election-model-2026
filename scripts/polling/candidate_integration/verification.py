@@ -59,7 +59,7 @@ def verify_allocations(inventory, counts):
             coarse = data['electionDay'].reshape(-1, len(case['rawCategories']))
         for policy, weights in case['weights'].items():
             saved = read(OUT/f"national/{case['year']}-{policy}.json.gz")
-            if saved['drawIds'] != case['nationalDrawIds'] or saved['chainShape'] != case['chainShape']:
+            if saved['drawIds'] != case['nationalDrawIds'] or saved['sourceChainShape'] != case['chainShape']:
                 raise ValueError('Independent national draw identity disagreement')
             raw_index = {cid: case['rawCategories'].index(label) for label, cid in case['explicitMapping'].items()}
             fractions = {r['categoryId']: r['allocationFraction'] for r in weights}
