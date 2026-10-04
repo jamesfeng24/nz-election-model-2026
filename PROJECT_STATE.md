@@ -1,3 +1,9 @@
+# Stage37 — complete category/point construction before scores, 2026-10-04
+
+Eight primary national cases allocated under two fixed policies, model current/election-day8,000 paired draws each plus independent average points.32 archives preserve fine rosters, exact explicit shares, complete Other mass and draw namespace/IDs. Roster sizes15/16/17/17; policy TV differences about0.55–2.55pp (model),0.81–1.87pp (average), no calibrated fine-party posterior claim.15 focused synthetic/actual-adapter checks passed; deterministic construction reproduces. Case-level external point inventory supports2017/2023,2020 explicitly unavailable due MRI coarsening. No external scores yet. All earlier fits/outputs untouched.
+
+**Next:** commit/push source-only inventory and pre-score construction contracts, calculate only supported harmonized point comparisons, independent verification and findings/handoff/final CI. No inference/candidate replay or additional resources.
+
 # Stage37 — bounded acquisition/schema checkpoint, 2026-10-04
 
 Pre-output protocole65a5d5 pushed. Exactly20 official resources acquired and checksummed; current Arie main matches preserved pin ef76cf6. Three gauss cases and ensemble case-level signed errors exist, joint draws/interval endpoints absent.2020 omits Māori party inside Other: requested six/seven-category comparison must abstain for that case;2017/2023 supported two-case subsets are labelled, no five-party fallback. Ensemble named means may be recovered only from audited case signed errors plus exact archived scoring outcomes; no aggregate-score inversion or probabilistic reconstruction. Roster/Other allocation and all earlier bytes remain intact.
