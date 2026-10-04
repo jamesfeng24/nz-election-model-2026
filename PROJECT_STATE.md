@@ -1,3 +1,11 @@
+# Stage36 — pre-inference checkpoint, 2026-10-04
+
+Verified PR42 merged19be252 containing reviewed9f4ff02; clean main synchronized and branch `stage/36-national-polling-backtest`. [Plan](docs/stage36-implementation-plan.md) and [implementation contract](docs/stage36-national-implementation-contract.md) resolve schema projection, cycle/anchor roles, censored Other lower constraint and benchmark projection before fitting. Stage35 originals remain untouched. D067 preserves independent national development and active S/S+R/R/baseline alternatives.
+
+**Completed:** isolated `.venv-polling` installs/locks NumPyro0.19.0/JAX-JAXlib0.6.2/numpy2.2.6/scipy1.16.0 plus ArviZ0.22 diagnostics/transitives. Runtime imports, four CPU devices and64-bit gradient pass. Existing `.venv` unchanged.32 exact cases retained;26 current-evidence fit-ready,6 verified-only coverage abstentions. Input/source contract and1,514-prior-file preservation pass; no posterior/forecast score yet.
+
+**Exact next authorized:** validate generative model/gradients and synthetic fixtures, checkpoint code, run/cache four-chain historical primary and finite sensitivities with one frozen numerical retry, save draws before evaluation, independently audit/score national results and final checks/unmerged PR. No candidate replay, fine Other allocation, source acquisition, new variant, MMP or live2026 forecast. Commands/resume keys will be recorded with each completed inference unit. Do not rerun finished MCMC for tables.
+
 # Stage35 — foundation/design checkpoint, 2026-10-04
 
 Branch `stage/35-national-polling-foundation`, verified Stage34 reviewed ef651185/merge9dedccd. Pre-acquisitionfff0b4b and raw checkpoint853b425 pushed. [Design](docs/stage35-national-model-design.md), [reuse audit](docs/stage35-reuse-audit.md), [coverage](docs/stage35-polling-foundation-results.md) and machine contracts are complete in [PR42](https://github.com/jamesfeng24/nz-election-model-2026/pull/42), left unmerged; no fits/scores/candidate replay. D067 records latest user clarification without rewriting earlier findings: component validation vs fixed-fit substitution vs end-to-end replay; S/S+R active, R challenger/baseline mandatory; no expert choice before PoP.
