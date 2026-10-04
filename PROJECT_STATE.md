@@ -1,3 +1,13 @@
+# Stage41 — frozen pre-scoring checkpoint, 2026-10-05
+
+Branch `stage/41-boundary-party-feature-transport`. PR47 MERGED; reviewed `7dceb33` and merge `6a0cf19` ancestry verified; clean main safely fast-forwarded. No acquisition, fitting, prediction or scoring performed in Stage41 yet.
+
+Frozen `docs/stage41-transport-specification.md` and `data/processed/forecast-transport/{specification,input-contract,geography,historical-inventory,sample-manifest,preservation}.json` pin both overlap directions, exact/95/90 tiers, source-only features, complete historical slates and saved Stage33 primary S+R fits/means. Historical common90:2014 37 contests/265 candidates;2020 47/409. Exact20/34, approximate95 additions8/7, approximate90-only9/6. Broad source S/R181/84 and224/87; strict R77/71. No target residual requirement.
+
+Party scenario is one predeclared lexicographically minimum integral feasible population-network vertex, all coupled group/suppression/destination constraints retained; population-to-party vote uniform-within-source assumption, not an observed reconstruction or expected value. No point scenario existed previously. Reversible supplemental links remove only Stage26's nonexact geographic refusal on admitted predecessor pairs using unchanged name/context/competitor/component guards; prior adjudications remain untouched.
+
+Next within authorized stage: commit/push this checkpoint BEFORE feasible-party construction and candidate predictions; implement party scenarios and fixed-fit observed-input historical branches; save predictions before scoring; write separate2026 readiness companion; focused tests/independent arithmetic/preservation/reproduction, final CI and unmerged PR. No live2026 candidate shares or Māori general-coefficient extension. Expected next separately authorized task remains joint local/candidate uncertainty, nomination refresh and Māori poll layer separately bounded.
+
 # Stage40 — completed / PR47 awaiting independent review, 2026-10-05
 
 Branch `stage/40-target-boundary-slate-readiness`. Stage39 PR46 merged/reviewed ancestry verified. Plan a469421 → acquisition e5492ef → implementation85a8607 are pushed. Dated cutoff2026-10-04T18:56:03.039501Z; finite24URL/12querycap exhausted. Current official2025 names/codes/populations match71preserved targets; election7Nov2026/nominationclose noon8OctNZ verified. Five direct official downloads return protection pages; preserved readabletool extracts are not originalHTML/PDF. No acquisition remains authorized.
