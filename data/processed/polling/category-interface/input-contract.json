@@ -1,0 +1,32 @@
+{
+  "baseCommit": "33b1c6dfa76c41d7cdf11b12b41368627f133ffa",
+  "evaluationOnly": [
+    "national-backtest/evaluation.json",
+    "national-foundation/official-results-isolated.json"
+  ],
+  "heldOutFineSharesConsumed": false,
+  "inputSha256": {
+    "data/processed/models/expanded-party-substitution/input-inventory.json": "1c941bef6b34286acb1a4eff9851e481537ee298a003dc0fe7fb424f535dec2b",
+    "data/processed/polling/national-backtest/benchmark.json": "50ad9f5d3b6f77bcca550b46b664276e86f3f94200a27f833946e702edbed6f9",
+    "data/processed/polling/national-backtest/evaluation.json": "6d3b0385904013d00feb17e87d4068712097875de936115afefc67e36fee8950",
+    "data/processed/polling/national-backtest/fits/03489baf89cd7f4a813dfec0fe2dfb5f9d3bedd803ccdf196e41760ceffbc5bd/attempt1.json.gz": "3c70562c0bca9ffb505a9f0fb28dec54beaabde00139cdd8f48255282568b826",
+    "data/processed/polling/national-backtest/fits/5fd8f47365d670a95c2d82a8bf2280f3d735c71c9948cbfd4bd2a9e71dcbcbfc/attempt1.json.gz": "08274f3a44815f4a968e26a412e3fe52318f636bfc9e03403bdcb925ba1faad6",
+    "data/processed/polling/national-backtest/fits/81ba91ce78eea41a33af6c8bcce901981cd247cdb8ae91f0f0e010ef29b3fe5c/attempt1.json.gz": "ddd9ffa606ac3bcc4685f1bd7048e51eb1a2b14e9f8cca4bf90cb667edc78681",
+    "data/processed/polling/national-backtest/fits/b6007f809206417019c892d454a7bce3af504b8f978d496c8b203cca97fd8d43/attempt1.json.gz": "efc604ab40e2fe9e11a049fa4729f33e7a41291395ca6f22483164ba3210e7fc",
+    "data/processed/polling/national-backtest/fits/bd273ff1dd282f01148ee0c480c316eb5872f3534d44b18d72dac411be7bab9d/attempt1.json.gz": "05345e66b83d85797f475de5d8bd4c1abcd2d50dba5f1200fbd39c7d7b63a80c",
+    "data/processed/polling/national-backtest/fits/d6370bb536b93fe903ecca036ea89a796689b8127f5277e55d24c0f4279dbfd9/attempt1.json.gz": "6bd501876458571b4090f61510a4bb38dd6b60e02688e32c6d6c2d4ba04d2217",
+    "data/processed/polling/national-backtest/fits/e2169d6c003dd14a363efdd7b583eb35df579951240467d1883aec4736130e08/attempt1.json.gz": "d7e14b256746ee60c09850f188341e9f1899991325d9a6cbbd14b3dcad2dee33",
+    "data/processed/polling/national-backtest/fits/f5255297ffabef338500e4743fae75573233f5e665d08fa11e4c3e0d15711106/attempt1.json.gz": "d0c4f67259c33ea8db8a95034b66b028822a5549fd1bc4ab2a5a5bd3e0f5a913",
+    "data/processed/polling/national-backtest/output-manifest.json": "9b040a6623ea621933fc97cd5ce0ee5a033563365d7e9bbb85755f7c03d658cf",
+    "data/processed/polling/national-foundation/official-results-isolated.json": "e3a89151a70a7bbe5d11779ecd03f846ed10f87c83e27850314210e7e59333ea",
+    "data/processed/polling/national-foundation/polls.json": "bc7ec14105c9147e67105cc074883df3ef2d8c55c18b3ed12c623d00dce46188",
+    "data/raw/polling/stage35/arie-LICENSE.md": "585e25ef8f5946a52bf2aed68d5becfc38be94a8663aa01c1b31d88aa57f1de3",
+    "data/raw/polling/stage35/arie-config_elections.yml": "4771d95e297a2cb988b4b102ebaa8d4bef07f07dad5de3f7d57c924059d980f3",
+    "data/raw/polling/stage35/arie-src_pollofpolls_eval_backtest.py": "402e1a9133fee68b004d7812976bccddd8243a05d32cac2a63061828843853f2",
+    "data/raw/polling/stage35/arie-src_pollofpolls_prep_marshal.py": "8f7b96be82b36a0ea77b3a10230bd7e981caebf38bc1e89baf2b3453f0172e7e",
+    "data/raw/polling/stage35/arie-tree.json": "5cbf1fffd691004c1dc2b563f1dd16f280cb31c5a96ee3b87fa6a79f926d6c86",
+    "scripts/polling/national_foundation/timing.py": "34e4301aada70bc08d571ac670d029533b93f124df4eb4531babb6b8f4b2215a"
+  },
+  "stage": 37,
+  "wholeRegistryPinned": false
+}

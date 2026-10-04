@@ -1,3 +1,9 @@
+# Stage37 — frozen interface/external-benchmark plan, 2026-10-04
+
+Stage36 PR43 merged; reviewed3e8e1fc/merge33b1c6d ancestry verified, clean main synchronized and branch `stage/37-national-category-interface` created. Stage37 contracts/input hashes/preservation and20-resource external plan are frozen before allocation/acquisition/scores. D070 records no ownership preference in eventual national-model choice. Primary recent-report/prior allocation and prior-only sensitivity preserve every Other draw; rosters retrospective, entrant0.001 weight explicit. Eight primary cases only; exact56-day2017/2020/2023 external ensemble/gauss selected before comparison. No inference/candidate replay or model replacement.
+
+**Next:** commit/push this pre-output checkpoint, acquire only specified official pinned archive/semantics resources, implement inventory/allocation and supported comparison, focused/independent validation, final CI and unmerged PR. Prior bytes/nulls preserved; no new outputs/scores yet.
+
 # Stage36 — national implementation/backtest completed, PR43, 2026-10-04
 
 [Stage36 PR43](https://github.com/jamesfeng24/nz-election-model-2026/pull/43) is open into main and must remain unmerged for independent review. Branch `stage/36-national-polling-backtest`. Reviewed Stage35 ancestry9f4ff027/19be252 verified. Frozen pre-inferencec948d8f and pre-score archive0d07043 precede scores; numerical portability companionc8833a0 changes only two covariance rounding entries. No inference or statistical redesign remains. The original benchmark/evaluation checkpoints, all failed attempts, earlier artifacts and operational nulls are preserved.

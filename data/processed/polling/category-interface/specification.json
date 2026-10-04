@@ -1,0 +1,37 @@
+{
+  "candidateReplayAuthorized": false,
+  "entrantWeight": 0.001,
+  "externalCommit": "ef76cf6562e1d028b4fff46d063f4b93945299de",
+  "externalHorizonDays": 56,
+  "externalResourceCap": 20,
+  "externalVariants": [
+    "ensemble",
+    "gauss"
+  ],
+  "externalYears": [
+    2017,
+    2020,
+    2023
+  ],
+  "halfLifeDays": 30,
+  "inferenceAuthorized": false,
+  "missingN": 750,
+  "modelCases": [
+    "primary-2014-14",
+    "primary-2014-56",
+    "primary-2017-14",
+    "primary-2017-56",
+    "primary-2020-14",
+    "primary-2020-56",
+    "primary-2023-14",
+    "primary-2023-56"
+  ],
+  "operationalSelection": null,
+  "policies": [
+    "recent_report_prior",
+    "prior_only"
+  ],
+  "publicationLagDays": 5,
+  "stage": 37,
+  "windowDays": 180
+}
