@@ -92,6 +92,8 @@ def build(manifest, *, evidence=None, occurrences=None, residuals=None, claims=N
         'candidateSeatsByScope':dict(Counter(s['scope'] for s in readiness if s['knownCandidateCount'])),
         'slateStatuses':dict(Counter(s['slateStatus'] for s in readiness)),
         'broadLinks':sum(e['broadAccepted'] for e in links),'strictLinks':sum(e['strictAccepted'] for e in links),
+        'acceptedRuleFlags':dict(Counter(flag for e in links if e['broadAccepted'] for flag in e['ruleFlags'])),
+        'unidentifiedSlateMemberCount':None,
         'linkExceptions':dict(Counter(reason for e in links for reason in e['exceptionReasons'])),
         'SReadiness':dict(Counter(r['S']['status'] for r in features)),
         'sourcePartySeatSReadiness':dict(Counter(r['S']['status'] for r in source_features)),

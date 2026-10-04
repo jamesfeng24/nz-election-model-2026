@@ -218,6 +218,13 @@ class ReadinessTests(unittest.TestCase):
         self.assertEqual(same['changes.json']['records'],[])
         self.assertEqual(same['snapshot.json'],self.snapshot)
 
+    def test_boundary_change_does_not_assert_person_seat_change(self):
+        links=self.results['identity-links.json']['records']
+        changed=[e for e in links if e['broadAccepted'] and e['sourceSeatRelation']=='supported_nonexact_predecessor']
+        self.assertTrue(changed)
+        self.assertFalse(any(e['seatChangeLead'] for e in changed))
+        self.assertFalse(any(e['geographyCompatible'] for e in changed))
+
     def test_source_occurrence_corruption_rejected(self):
         seat=next(s for s in self.frame if s['canonicalName']=='Coromandel')
         e={'broadAccepted':True,'strictAccepted':True,'geographyCompatible':True,'sourceOccurrenceId':'synthetic','label':'accepted_algorithmic_same_person'}

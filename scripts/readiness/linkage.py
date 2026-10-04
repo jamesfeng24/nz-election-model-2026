@@ -38,13 +38,15 @@ def build_links(candidates, historical, aliases, frame, parties):
         seat=seats[target['targetElectorateId']]
         # Geography is deliberately separate: accepted same-person leads may change seats.
         exact=bool(selected and seat['exactSourceElectorateId']==selected['electorateId'])
+        within_predecessors=bool(selected and selected['electorateId'] in {p['sourceElectorateId'] for p in seat['predecessors']})
         accepted=not reasons
         proposals.append({'targetOccurrenceId':tid,'sourceOccurrenceId':selected['candidateOccurrenceId'] if selected else None,
             'proposedSourceOccurrenceIds':sorted(o['candidateOccurrenceId'] for o,_ in matching),
             'competingTargetOccurrenceIds':sorted(competitors),'parsedTargetName':parsed[tid],
             'label':'accepted_algorithmic_same_person' if accepted else 'unresolved_ambiguous',
             'ruleFlags':flags,'broadAccepted':accepted,'strictAccepted':accepted and flags==['exact_name'],
-            'exceptionReasons':reasons,'geographyCompatible':exact,'seatChangeLead':bool(selected and not exact),
+            'exceptionReasons':reasons,'geographyCompatible':exact,'seatChangeLead':bool(selected and not within_predecessors),
+            'sourceSeatRelation':'exact_predecessor' if exact else 'supported_nonexact_predecessor' if within_predecessors else 'outside_target_predecessors' if selected else 'unknown',
             'sourceOfficialSourceIds':selected['officialSourceIds'] if selected else [],
             'targetSourceIds':sorted({c['sourceId'] for c in target['claims']}),
             'confidence':'unique_in_observed_election_wide_universe; pending_complete2026_nomination_refresh' if accepted else 'unresolved',
