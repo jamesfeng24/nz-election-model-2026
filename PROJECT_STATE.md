@@ -1,3 +1,9 @@
+# Stage36 — final focused validation checkpoint, 2026-10-04
+
+All27 focused tests passed in the pinned inference environment (24.240s), including all seven generative checks. Base-environment27 tests pass with seven intentional inference-environment skips. Latest pushed5e16ccc CI passed. Final lag10-2023/14 and missing-n2023/56 continue under the existing queues/scheduling guard; do not rerun their signatures or inspect scores before the complete archive. Earlier20 distinct accepted fits and two failed first attempts remain preserved.
+
+Deterministic final CI steps are staged locally but will be committed only with the completed archive/evaluation/report they verify. Final reporting will expose sensitivity uncertainty metrics and summed distinct-attempt runtime. **Next:** complete both fits, let the main queue fill all32 cases, independent forecast checks/archive/commit before scoring, then final findings/CI/unmergedPR. No candidate replay, acquisition, Other allocation, new priors/variants or operational change.
+
 # Stage36 — final two new fits running, 2026-10-04
 
 All eight primary cases accepted; last2023/56 took2286.6s with maxRhat1.004582/minbulk1715.26/mintail3775.75 and0divergences/depth contacts. Three distinct lag10 fits accepted (2014both,2020/14);2017both and2020/56 reuse exact primary signatures. Seven missing-n1000 fits accepted;2023/14 took2590.7s. Two verified-only retries accepted/six data abstentions. **20 distinct accepted fits/two failed first attempts**. Remaining new fits: lag10-2023/14 (2b512913…) and missing-n2023/56 (8e6890ef…). Main later fills all cached cases/root32-case ledger; do not duplicate fits.

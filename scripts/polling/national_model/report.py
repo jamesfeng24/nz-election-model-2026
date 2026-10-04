@@ -114,11 +114,17 @@ def text_report():
             '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     for p in result['pooled']:
         lines.append(f"| {p['branch']} | {p['modelCases']} | {p['benchmarkCases']} | {p['commonCases']} | {number(p.get('modelMAEpp'))} | {number(p.get('benchmarkMAEpp'))} | {number(p.get('MAEImprovementPP'))} | {number(p.get('modelRMSEpp'))} | {number(p.get('benchmarkRMSEpp'))} |")
+    lines+=['', '| Branch | CRPS | Energy | 50% coverage | 90% coverage | 50% width | 90% width |', '| --- | ---: | ---: | ---: | ---: | ---: | ---: |']
+    for p in result['pooled']:
+        lines.append('| '+p['branch']+' | '+' | '.join(number(p.get(k)) for k in ('meanCRPSpp','energyScorePP','coverage50','coverage90','width50PP','width90PP'))+' |')
     lines+=['', 'Full pools require eight cases. Incomplete available-only pools renormalize the frozen 1/8 case weights and are labelled accordingly; they are not equivalent to complete coverage. Pooled RMSE takes the square root after pooling squared errors, never averages fold RMSEs.', '']
     for branch in ('publication_lag10','missing_n1000','verified_only'):
         lines+=['### '+branch,'']+point_table([r for r in result['cases'] if r['branch']==branch])+['']
     lines+=['## Numerical attempts', '',
             'All relevant sampled paths, initial states, house/method effects, cycle biases and election-day outputs are checked coordinate by coordinate. The frozen gates are rank R-hat ≤1.01, bulk/tail ESS ≥400 and no divergences. Exact constants are identified separately. Failed first attempts remain saved; only the frozen retry was allowed. Depth contacts and BFMI remain visible. Identical complete signatures reuse the same fit, not a fresh run.', '']+numerical_table(index)
+    attempts={path:read(OUT/path) for case in index for path in case.get('attempts',[])}
+    total=sum(a.get('runtimeSeconds',0) for a in attempts.values())
+    lines+=['', f"Archived sampling time summed over distinct attempts: {total/3600:.2f} worker-hours. Two disjoint queues overlapped in wall time; cache reuse is excluded. Recorded platform/dependencies are in `environment.json`; exact run signatures and seeds are archived with each attempt.", '']
     lines+=['', '## Independent verification and preservation', '',
             f"Independent arithmetic checked {verification['benchmarkPollVectors']} poll projections, {verification['benchmarkCaseMeans']} average vectors, {verification['representativeTransformedDraws']} paired transformed draws, {verification['posteriorMeanVectors']} expected-share vectors, {verification['pointMetrics']} point/pooling checks and {verification['probabilityMetrics']} probability/interval/aggregation checks. All {verification['priorFilesPreserved']} earlier data artifacts remain byte-identical.", '',
             'The check uses independent constrained SLSQP projections, scalar Helmert/exp calculations and compensated summation, prefix-pair CRPS, manual linear quantiles and SciPy pair distances. Routine CI verifies saved outputs without historical MCMC; isolated local synthetic tests validate likelihoods/gradients and a four-chain smoke run. Neither the smoke run nor saved-output reproduction establishes empirical calibration.', '',
