@@ -1,0 +1,33 @@
+# Stage38 — frozen execution and scoring contract
+
+2026-10-05. Three cases2017-07-29/2020-08-22/2023-08-19, each56 calendar days before election. Pinned gauss ef76cf6562e1d028b4fff46d063f4b93945299de; no ensemble, other variant, calibrated spread, MMP or candidate work.
+
+## Inputs/information set
+
+Five new resources: pinned source archive and four Wikipedia historical bulk pages. Preserve bytes/URLs/time/SHA/license. Reconstructed through pinned upstream parse_page_file, build_polls_table and build_dataset; exact archived fingerprints unavailable. Poll result rows excluded from poll table. Reference/scraped result agreement is an acquisition-integrity audit, not a fit-admission rule chosen using errors. Inference adapter passes only result years<target; target/future results absent. Initial anchor2011 and completed earlier anchors remain. Pollster default n, publication lag, method segments, auto-tracking, '<x'→x/2, residualOther and globally inferred rounding precision stay unchanged. Dates are inferred publication days, not verified timestamps. Multi-day fieldwork uses midpoint weekly placement rather than our fieldwork averaging. Current code/data versions are retrospectively reconstructed, not archived as-of.
+
+The fixed minor error multiplier2.5/8% threshold explicitly uses2011–2023 error development. This is disclosed retrospective calibration, not direct held-out-result conditioning. Its cutoff-derived party scale is applied across all cycle industry offsets by the pinned model. Preserve it. No score-guided chronology edits. Gauss has Gaussian observations plus Student-t(df4) industry errors, correlated weekly movements, campaign multiplier, cycle house effects and learned design effects; priors/config exactly pinned. Full code/license remain in separate raw archive/cache; independently owned candidate code is untouched.
+
+## Inference/numerical budget
+
+Proposal sampling settings fixed before inference:4 parallelCPU chains, x64,2,000 warmup+2,000 samples perchain, acceptance.95, depth12, diagonal mass, upstream init_to_median20. Seed2034 (=base2026+horizon8), resolving proposal's display2026 versus executable2034 explicitly. Statistical specification unchanged. Isolated `.venv-external`, transitive requirements-external.lock/runtime fingerprint; no existing environment changes. Save each case/attempt, joint election-day draws, chain IDs, full coordinate diagnostics and exact input/config/code/environment signatures before scoring. High-dimensional raw samples retained in local runtime cache; full-coordinate Rhat/ESS and lower-dimensional chain draws archived in repository.
+
+Acceptance: every mathematically nonfixed stochastic/derived coordinate rankRhat≤1.01, bulk/tailESS≥400, no nonfinite diagnostics,0divergences,0depthcontacts, eachchainBFMI≥.3. Skip only explicitly triangular-fixed Lcorr and exact earlier-anchor theta/pi coordinates, never small variance or an inconvenient parameter. Include z/Lcorr/raw bias/house parameters and all freepaths/election outputs. Upstream headline-only summaries are insufficient.
+
+One numerical retry per failed case: same model/data/seed/draws,4,000warmup,acceptance.99,depth15. Preserve original failure; no other retries or bound/prior/data changes. Cap six total worker-hours and two worker-hours per case including diagnostics/attempts; timed-out or cap-limited runs explicit. Three primary attempts, at mostthree retries. Resume exact completed signatures only; do not regenerate MCMC for tables. Implementation errors require investigation before counting a fit as substantive failure.
+
+`pi_target` is election-week support: free future path after latest earlier result carries future movement and posterior common-error uncertainty. `pi_last` is last data week, not claimed cutoff nowcast. Never add a second industry-error draw or invoke publication/ensemble helpers.
+
+## Frozen harmonization and scores
+
+Primary fullpartition for allsystems/elections: National,Labour,Green,ACT,NZFirst,REST. REST aggregates MRI/TOP/other explicit/external residualcategories exactly once, without fine allocation. Same operation on jointdraws/means/outcomes/average. No subset normalization. This benchmark partition does not delete Te Pāti Māori from eventualforecast. Secondary: only National/Labour on original national-share denominator; no additional richpartition scoring.
+
+Official outcome values from Stage35 isolated full valid-party national results, identical acrosssystems. Owned forecasts/average are saved Stage36 primary archives, neverrefit. Forecast expectedshares average transformed jointdraws. PointMAE=100mean|q−y|,RMSE=100sqrt(mean(q−y)^2);bias bycategory and accountingglobalbias. Equal election1/3; pooledRMSE roots averagecaseMSE, notaverageRMSE. Show everycase,NAT/LABerrors and paired ownminusgauss differences.
+
+CRPS empirical exact allunivariate draws: mean|X−y|−0.5mean|X−X'| (sorted formula). Central50/90% intervals linear empiricalquantiles; inclusivecoverage,widthpp and proper intervalscore IS_alpha=(u−l)+2/alpha(l−y)1[y<l]+2/alpha(y−u)1[y>u], multiplied100. Jointenergyscore uses same deterministiclinspace2,000joint draws permodel, bounded block128 pairwiseEuclideanVstatistic:100(E||X−y||−.5E||X−X'||), exact empiricalsum withinselecteddraws. Save indices/size. Benchmarkpointsonly; no fabricateddistribution. Report18category-cases and6majorparty-cases; threeelections do not establishcalibration. Incompleteacceptedmodels haveavailable-onlycomparisons and no fullthreecase superiorityclaim. Failedrunrawdraws neverenter acceptedprimaryscores.
+
+Freeze fixed-prediction leave-one-election-out pooledscore influence, with identical retainedcases; no outoftimevalidation or fitdeletion. Numerical and information differences make this a systemcomparison, not matchedinputarchitecturecausality. No automaticoperationalselection or learnedblend. Ownership-neutral recommendation judgesaccuracy/uncertainty/integrity/reproducibility/maintenance/licensing/compatibility together.
+
+## Planned Māori electorate interface, outside Stage38
+
+National TPM partyvote and Māori-seat candidatevote are distinct. Future layer must preserve pollquestion(candidate/localparty/both), validdenominator, fieldwork/publication/sample/uncertainty, link to explicit Māori-seat baseline/currentslate/identity and sharednationaldraws, account for dependence, avoid duplicateevidence, and document unpolled/stalepoll fallback with wideruncertainty. Separately design beforeliveintegration; no acquisition/implementation here. Component,substitution,endtoendreplay evidence stays distinct; S/S+R active,Rchallenger,baselinecontrol unchanged.

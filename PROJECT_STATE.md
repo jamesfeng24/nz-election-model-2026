@@ -1,3 +1,9 @@
+# Stage38 — frozen pre-inference checkpoint, 2026-10-05
+
+Source plan3d76c77/preservation47dfce8 precede five resources (cap6). Pinned upstream ef76cf6 unchanged source/config/GPL archive; prepared199/250/358 polls, exact56-day2017/2020/2023 cases. Held-out results/postcutoff polls/future-only revisions counterfactuals pass at actual marshal. Reconstructed snapshots, inferred pollster lags and retrospective minor-error factor2.5 are explicit. Six-category fullbenchmark partition preserves TPM in underlying outputs.
+
+Execution/scoring contract freezes4x2000/2000,.95/depth12/seed2034, all-coordinate diagnostics; one same-model retry4000/.99/depth15, six summed worker-hour/two-hour-case cap. Isolated .venv-external and transitive lock installed; no historical inference or new scores yet. Eight focused synthetic tests passed; deterministic preparation passes. Next: commit/push this exact pre-inference checkpoint; run serial resumable batch, save forecasts/diagnostics before scores; independent cached arithmetic and final validation. Owned Stage36/candidate fits and earlier artifacts remain untouched. Māori electorate polls remain planned separatebaseline/question/denominator/date/dependence/fallback layer.
+
 # Stage38 — source audit checkpoint, 2026-10-05
 
 Stage37 PR44 merged; reviewed1912c5a and mergef61a659 ancestry verified. Clean main synchronized; branch `stage/38-external-national-comparison`. Acquisition plan3d76c77 caps six resources; pinned code plus four historical bulk polling pages, then freeze execution/scoring before inference. Six worker-hour cap; three56-day cases and one numerical retry each. Owned Stage36/candidate inference untouched. Next: acquire bounded inputs, audit dependencies and freeze execution contract. Māori electorate polling remains a separate future design requirement. Preservation manifest pins every prior data file.
