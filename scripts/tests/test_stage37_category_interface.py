@@ -184,3 +184,25 @@ class ExternalContractTests(unittest.TestCase):
         result=coarsen_means(case)
         self.assertAlmostEqual(result['OTH'],.4)
         self.assertAlmostEqual(fsum(result.values()),1)
+
+
+class HandoffAndProvenanceTests(unittest.TestCase):
+    def test_future_replay_only_references_saved_fits(self):
+        from scripts.polling.category_interface.handoff import build
+        plan=build()
+        self.assertFalse(plan['implementationAuthorizedNow'])
+        self.assertFalse(plan['parameterRefitting'])
+        self.assertEqual([len(f['evaluationIds']) for f in plan['folds']],[20,64,34,64])
+        self.assertTrue(all(f['trainingOnlyMeans'] for f in plan['folds']))
+        self.assertEqual(set(plan['restrictions']),{'baseline','baseline_plus_S','baseline_plus_R','baseline_plus_S_plus_R'})
+
+    def test_budget_and_consumed_provenance(self):
+        from unittest.mock import patch
+        from scripts.polling.category_interface.common import verify_inputs
+        ledger=read(RAW/'acquisition-ledger.json')
+        self.assertEqual(len({r['url'] for r in ledger['attempts']}),20)
+        verify_inputs()
+        excessive=copy.deepcopy(ledger);excessive['distinctResources']=21
+        with patch('scripts.polling.category_interface.common.read',return_value=excessive):
+            with self.assertRaisesRegex(ValueError,'budget'):
+                verify_inputs()

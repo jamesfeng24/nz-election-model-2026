@@ -79,3 +79,4 @@ jobs:
       - run: python3 -m scripts.polling.category_interface.run --check
       - run: python3 -m scripts.polling.category_interface.verification --check
       - run: python3 -m scripts.polling.category_interface.report --check
+      - run: python3 -m scripts.polling.category_interface.handoff --check
