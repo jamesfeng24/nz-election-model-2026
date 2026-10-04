@@ -1,3 +1,9 @@
+# Stage38 — all forecasts sealed before scoring, 2026-10-05
+
+Frozen pre-inferencefa08640; accepted2017/2020checkpoint42d9ba6. Allthree56-day gaussfirstattempts pass fullcoordinategates; zero retries/divergences/depthcontacts. Sampler+audit seconds146/122/320; supervisor total601.9sec, below six-hour cap. Saved8,000election-dayjointdraws/case, hyperchains, fullcoordinate diagnostics, fixedseed/settings/environment/input signatures. Forecast-contract.json seals completedarchives before any scores. Local independentrawchaintransform/hyperdiagnosticchecks completed; no MCMC regeneration.
+
+Next: commit/push completeforecast checkpoint, then score exactly sixcompletecategories using ownedStage36/average savedoutputs; independentpoint/CRPS/interval/energycheck, preservation/deterministic/fullsuite/CI, findings/ownership-neutralrecommendation/unmergedPR. No candidate work, prior-output changes or new modelvariants. Future Māori electoratepolling remains separate.
+
 # Stage38 — two accepted external cases, 2026-10-05
 
 Frozen pre-inferencefa08640 is pushed. First attempts2017 (146sec) and2020 (122sec) passed all-coordinate gates, no retries/divergences/depthcontacts.2023 is running in the same serial capped batch. Jointdraws/hyperchains/full diagnostic coordinates save immediately; rawhighdimensional samples stay isolated in .cache. No scores yet. Six-category scoring implementation and16 focused tests are ready. Actualmarshal outcome/postcutoff/revision independence passes; five acquiredresources, unchangedfixedretrospectivegauss specification. Next: finish/cache2023, seal and commit forecasts before evaluation, independent score/provenance/preservation validation, finalCI/unmergedPR. AllStage36inference/candidate work remains unchanged.
