@@ -37,3 +37,7 @@ Use 8-point Gauss–Legendre log integration when the standardized finite interv
 ## Pre-score benchmark constraint correction
 
 The initial benchmark checkpoint omitted supported lower bounds on its coarse Other remainder. Before any forecast errors were examined, a source-consistency audit found violations in three distinct waves (15 poll/case instances). Preserve that initial output as `benchmark-unconstrained-remainder-checkpoint.json`; the authoritative benchmark is corrected to include TOP and disjoint documented unmodeled-group lower rounding bounds once. The six-core projection therefore has sum<=1−supported_Other_lower. Overlapping alliance/constituent lower bounds remain unavailable. This enforces Stage35's aggregate-bound requirement; it introduces no new predictive assumption, changes no MCMC inputs/parameters, and is not chosen through performance.
+
+## Reporting arithmetic fixed before scoring
+
+Central quantiles use linear interpolation. Report all eight planned cases per branch with1/8 weights; where failures make the full plan incomplete, report that full pooled metric unavailable and explicitly label an available-only renormalized summary. Pooled RMSE takes the square root after averaging case/category squared errors, not the average of fold RMSEs. Party-specific metrics retain their actual category/case denominator; coarse Other includes TOP and fine Other does not. Display major-party errors separately. There is no scoring of earlier current support against election-day truth.

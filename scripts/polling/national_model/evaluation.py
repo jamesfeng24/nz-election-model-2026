@@ -64,6 +64,15 @@ def pooled(rows):
             # Pool squared party errors before square root, not fold RMSEs.
             result['modelRMSEpp']=float(np.sqrt(np.mean([r['coarseComparison']['modelRMSEpp']**2 for r in common])))
             result['benchmarkRMSEpp']=float(np.sqrt(np.mean([r['coarseComparison']['benchmarkRMSEpp']**2 for r in common])))
+            result['RMSEImprovementPP']=result['benchmarkRMSEpp']-result['modelRMSEpp']
+            result['partyMetrics']=[]
+            for i,party in enumerate(COARSE):
+                errors_model=[r['model']['coarsePoint']['parties'][i]['biasPP'] for r in common]
+                errors_bench=[r['benchmark']['parties'][i]['biasPP'] for r in common]
+                result['partyMetrics'].append({'category':party,'caseCount':len(common),
+                    'modelMAEpp':float(np.mean(np.abs(errors_model))),'benchmarkMAEpp':float(np.mean(np.abs(errors_bench))),
+                    'modelRMSEpp':float(np.sqrt(np.mean(np.square(errors_model)))),'benchmarkRMSEpp':float(np.sqrt(np.mean(np.square(errors_bench)))),
+                    'modelBiasPP':float(np.mean(errors_model)),'benchmarkBiasPP':float(np.mean(errors_bench))})
         if model:
             for k in ('meanCRPSpp','coverage50','coverage90','width50PP','width90PP','energyScorePP'):
                 result[k]=float(np.mean([r['model']['coarseProbability'][k] for r in model]))

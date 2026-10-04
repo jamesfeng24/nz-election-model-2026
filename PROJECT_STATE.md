@@ -1,3 +1,11 @@
+# Stage36 — resumed inference checkpoint, 2026-10-04
+
+Five primary fits accepted (2014/14+56,2017/14+56,2020/14). Both available verified-only fits accepted after the single frozen retry; first failed attempts retained. Main session50114/log `/tmp/stage36-remaining-inference.log` continues2020/56 then remaining cases. Verified queue session19092 completed. Bounded second queue session52535/log `/tmp/stage36-missing-n-inference.log` now runs `-m scripts.polling.national_model.sensitivity_queue missing_n1000`, keeping a private index; main reuses exact archives. Neither schedule changes model/settings/signatures.
+
+Full base Python suite **675 tests passed/6 isolated-inference skips**,268.105s (`/tmp/stage36-full-tests.log`). Isolated21-test suite passed before two additional metric tests; final isolated focused run remains. Source integrity926 passes. Independent pre-score audit485 poll vectors/26 benchmark means/40 paired draws/10 expected vectors,1,514 prior files unchanged. No historical scores calculated. Deterministic evaluation/report code may be completed while inference runs; do not edit numerical signature files or rerun accepted MCMC.
+
+**Exact next:** finish remaining registered attempts, checkpoint/archive every forecast before scoring; independent scoring/uncertainty/aggregation checks and generated report; final tests/CI/unmerged PR. No candidate replay, acquisition, Other allocation, live forecast, tuning or operational changes. No unresolved approval-review rejection.
+
 # Stage36 — inference in progress / pre-score benchmark repair
 
 Primary2014/14 and56-day, and2017/14-day fits accepted; all first attempts so far. Main inference runs `/tmp/stage36-remaining-inference.log` (session50114; PID68619), exact resume command is default `-m scripts.polling.national_model.inference`. A bounded second process runs only verified-only cases via `-m scripts.polling.national_model.verified_queue`, logging `/tmp/stage36-verified-inference.log`; its private queue ledger avoids concurrent case-index writes, while fit signatures/files are shared unchanged. Main later reuses those completed fits. Hardware audit10CPUs/16GB; measured main worker49% CPU/204MB during post-processing motivated only this two-process schedule, not altered statistical settings.

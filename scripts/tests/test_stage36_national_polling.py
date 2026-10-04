@@ -26,6 +26,16 @@ def synthetic_case():
 
 
 class Stage36Contracts(unittest.TestCase):
+    def test_independent_interval_and_coarsening_arithmetic(self):
+        from scripts.polling.national_model.verification import independent_quantile,verify_intervals
+        from scripts.polling.national_model.metrics import probabilities
+        values=[0.,.2,.4,.6,.8,1.]
+        self.assertAlmostEqual(independent_quantile(values,.25),.25)
+        draws=np.array([[x,1-x] for x in values]);result=probabilities(draws,[.3,.7],['a','b'])
+        verify_intervals(values,.3,result['parties'][0]['intervals'])
+        changed=copy.deepcopy(result['parties'][0]['intervals']);changed['0.5']['covered']=False
+        with self.assertRaisesRegex(ValueError,'coverage'):verify_intervals(values,.3,changed)
+
     def test_helmert_and_category_projection(self):
         for k in (7,8):
             h=helmert(k);np.testing.assert_allclose(h.T@h,np.eye(k-1),atol=1e-15);np.testing.assert_allclose(h.sum(axis=0),0,atol=1e-15)
@@ -96,6 +106,20 @@ class Stage36Contracts(unittest.TestCase):
         r['estimates']['TOP']=observation('1');r['additionalPublishedCategories']['NCP']=observation('2')
         v=poll_vector(r);self.assertGreaterEqual(v[-1]+1e-12,other_lower(r));self.assertAlmostEqual(sum(v),1)
         self.assertFalse(np.allclose(v[:6],np.array([.5,.4,.05,.02,.02,.01])))
+
+    def test_score_arithmetic_on_synthetic_draws(self):
+        from scripts.polling.national_model.metrics import point,crps,energy,probabilities
+        q=np.array([.6,.4]);actual=np.array([.5,.5]);draws=np.tile(q,(8,1))
+        p=point(q,actual,['NAT','LAB']);self.assertAlmostEqual(p['MAEpp'],10);self.assertAlmostEqual(p['RMSEpp'],10);self.assertAlmostEqual(p['accountingBiasPP'],0)
+        self.assertAlmostEqual(crps(draws[:,0],.5),10);self.assertAlmostEqual(energy(draws,actual)['energyScorePP'],np.sqrt(200))
+        result=probabilities(draws,actual,['NAT','LAB']);self.assertEqual(result['coverage90'],0);self.assertEqual(result['width90PP'],0)
+
+    def test_pooled_rmse_uses_squared_errors(self):
+        from scripts.polling.national_model.evaluation import pooled
+        rows=[]
+        for x in (1,3):
+            rows.append({'branch':'primary','coarseComparison':{'modelMAEpp':x,'benchmarkMAEpp':4,'MAEImprovementPP':4-x,'modelRMSEpp':x,'benchmarkRMSEpp':4},'model':{'coarsePoint':{'parties':[{'biasPP':x} for _ in COARSE]},'coarseProbability':{k:0 for k in ['meanCRPSpp','coverage50','coverage90','width50PP','width90PP','energyScorePP']}},'benchmark':{'parties':[{'biasPP':4} for _ in COARSE]}})
+        p=pooled(rows)[0];self.assertAlmostEqual(p['modelMAEpp'],2);self.assertAlmostEqual(p['modelRMSEpp'],np.sqrt(5));self.assertFalse(p['fullPlannedPoolAvailable']);self.assertEqual(p['plannedWeightPerCase'],.125);self.assertEqual(p['partyMetrics'][0]['modelBiasPP'],2)
 
     def test_exact_manifest_and_verified_no_data(self):
         inv=read(FOUNDATION.parent/'national-backtest/inventory.json')
