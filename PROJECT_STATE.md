@@ -1,3 +1,11 @@
+# Stage36 — complete pre-score forecast archive, 2026-10-04
+
+All32 declared cases are terminal:26 accepted forecasts and six verified-only no-current-evidence abstentions.22 distinct accepted fits plus two failed verified-only first attempts (successful frozen retries) are preserved in24 attempt archives. Last timing fit2715.7s/maxRhat1.003690/minbulk1685.67/mintail3287.72/0div; last missing-n fit2382.0s/maxRhat1.004578/minbulk2207.76/mintail3538.11/0div. Main/secondary/guard exited0. The guard found the secondary cache complete and never paused a process; no duplicate inference occurred.
+
+**Before any historical score:** complete `forecast-contract.json` pins26 forecast/attempt artifacts. Independent verification checked485 poll projections,26 benchmark means,192 paired transformed draws and48 expected-share vectors;1,514 prior data artifacts byte-identical. All27 isolated focused tests pass. Forecasts/diagnostics and this handoff are committed/pushed before evaluation. No scores or candidate calculations exist yet.
+
+**Exact next:** evaluate archived national forecasts, independently verify point/probabilistic arithmetic and deterministic report; finish findings/decision/roadmap, configured final checks/CI and unmergedPR. Routine reproduction never reruns completed MCMC. No new national variants, acquisition, fine Other allocation, candidate replay or operational/liveforecast work.
+
 # Stage36 — final focused validation checkpoint, 2026-10-04
 
 All27 focused tests passed in the pinned inference environment (24.240s), including all seven generative checks. Base-environment27 tests pass with seven intentional inference-environment skips. Latest pushed5e16ccc CI passed. Final lag10-2023/14 and missing-n2023/56 continue under the existing queues/scheduling guard; do not rerun their signatures or inspect scores before the complete archive. Earlier20 distinct accepted fits and two failed first attempts remain preserved.

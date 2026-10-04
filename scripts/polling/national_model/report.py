@@ -83,13 +83,15 @@ def scale_table(cases):
 
 
 def numerical_table(index):
-    lines=['| Saved case | Attempt | Status | Seconds | Max R-hat | Min bulk / tail ESS | Divergences | Depth contacts |',
-           '| --- | ---: | --- | ---: | ---: | ---: | ---: | ---: |'];seen=set()
+    lines=['| Saved case | Attempt | Status | Seconds | Max R-hat | Min bulk / tail ESS | Divergences | Depth contacts | BFMI range |',
+           '| --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: |'];seen=set()
     for case in index:
         for path in case.get('attempts',[]):
             if path in seen:continue
             seen.add(path);a=read(OUT/path);d=a.get('diagnostics',{})
-            lines.append(f"| {a.get('sourceCaseId',case['id'])} | {a['attempt']} | {a['status']} | {number(a.get('runtimeSeconds'))} | {number(d.get('maxRhat'))} | {number(d.get('minBulkESS'))} / {number(d.get('minTailESS'))} | {d.get('divergences','unavailable')} | {d.get('treeDepthContacts','unavailable')} |")
+            bfmi=d.get('energyBFMI',[])
+            energy_range=f'{min(bfmi):.3f}–{max(bfmi):.3f}' if bfmi else 'unavailable'
+            lines.append(f"| {a.get('sourceCaseId',case['id'])} | {a['attempt']} | {a['status']} | {number(a.get('runtimeSeconds'))} | {number(d.get('maxRhat'))} | {number(d.get('minBulkESS'))} / {number(d.get('minTailESS'))} | {d.get('divergences','unavailable')} | {d.get('treeDepthContacts','unavailable')} | {energy_range} |")
     return lines
 
 
