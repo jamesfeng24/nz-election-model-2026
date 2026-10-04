@@ -1,0 +1,48 @@
+{
+  "resourceCap": 6,
+  "resources": [
+    {
+      "url": "https://codeload.github.com/ariedotcodotnz/nz-poll-of-polls/tar.gz/ef76cf6562e1d028b4fff46d063f4b93945299de",
+      "rawPath": "data/raw/polling/stage38/upstream.tar.gz",
+      "sha256": "a949954d14c75791d8ea2cc4d595e8d6f61d6ee1631911f0878492af1a709db9",
+      "retrievedAt": "2026-10-04T13:49:40Z",
+      "bytes": 454328,
+      "status": "success",
+      "license": "GPL-3.0-or-later",
+      "attribution": "Arie (ariedotcodotnz), NZ poll of polls; upstream notices retained in pinned archive"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2014_New_Zealand_general_election",
+      "rawPath": "data/raw/polling/stage38/2014.html",
+      "sha256": "7319458acc229e54c85a5bad436cc09878a59ed6b1e61b2c32f4d36472a5e36c",
+      "retrievedAt": "2026-10-04T13:49:42Z",
+      "bytes": 769685,
+      "status": "success"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2017_New_Zealand_general_election",
+      "rawPath": "data/raw/polling/stage38/2017.html",
+      "sha256": "bb608611d98b1ae4652fadcd89ae2abaa9a96eecd9bf73e1f1dea9c95b19fceb",
+      "retrievedAt": "2026-10-04T13:49:45Z",
+      "bytes": 905784,
+      "status": "success"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2020_New_Zealand_general_election",
+      "rawPath": "data/raw/polling/stage38/2020.html",
+      "sha256": "c59bcfa4c7e039d4ccce7585574d5697ba4fac8ce1e6903e7f2f527d3dd6cc76",
+      "retrievedAt": "2026-10-04T13:49:46Z",
+      "bytes": 385771,
+      "status": "success"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2023_New_Zealand_general_election",
+      "rawPath": "data/raw/polling/stage38/2023.html",
+      "sha256": "a4bdc2fcf2c9f0b05da5c8f9d6dd978ae2181e9d721ec04ee3e3fe1691fe85e4",
+      "retrievedAt": "2026-10-04T13:49:49Z",
+      "bytes": 472125,
+      "status": "success"
+    }
+  ],
+  "resourceCount": 5
+}
