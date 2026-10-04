@@ -1,3 +1,9 @@
+# Stage40 — finite acquisition sealed, 2026-10-05
+
+Plan a469421 pushed before acquisition. All24 resources/12queries consumed; raw bytes and tool-readable official extractions distinguished, five direct official protection responses retained. Cutoff and all retrieval dates recorded in acquisition-manifest.json; no further acquisition. Official7November election/noon8October nominationclose verified. Boundary2025 report still governing; currentScheduleC readable roster available while rawPDF download blocked. Candidate bulk/explicit selection sources acquired, Labour list lacks seat assignments, no incumbent inference. Independent audit:16 two-sidedexact seats (14general includingcancelledPortWaikato,2Maori); incoming-onlyTeTaiTokerau notexact. All prior1,682? datafiles hash-pinned byactualpreservationcontract; original926registryrecords protected individually.
+
+Next: implement offline slate/geography/linkage/feature readiness and deterministic refresh/change/invalidation; tests/preservation; docs/unmergedPR/finalCI. No fits or forecasts.
+
 # Stage40 — source-plan checkpoint, 2026-10-05
 
 Stage39 PR46 MERGED at5e0e763; reviewedaf989b3 ancestry verified from clean safely synchronized main. Branch `stage/40-target-boundary-slate-readiness`. Preserved geography has64general+7Maori targets. No external query/acquisition yet. Frozen plan caps24 resources/12queries and prioritizes official bulk election/party sources; complete slates are not assumed. Provisional externalgauss/S+Rpreferred/Sactive/baselinecontrol and old operational records remain.

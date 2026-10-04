@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 1,
+  "stage": 40,
+  "snapshotDateNZ": "2026-10-05",
+  "acquisitionCutoffUTC": "2026-10-04T18:56:03.039501Z",
+  "resourceCap": 24,
+  "resourceCount": 24,
+  "queryCap": 12,
+  "queries": [
+    {
+      "sequence": 1,
+      "query": "site.elections.nz 2026 general election 7 November candidate nominations electorates",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 2,
+      "query": "site.national.org.nz 2026 candidates",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 3,
+      "query": "site.labour.org.nz candidates 2026",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 4,
+      "query": "site.greens.org.nz 2026 candidates electorates list",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 5,
+      "query": "site.act.org.nz 2026 candidates electorate",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 6,
+      "query": "site.nzfirst.nz 2026 candidates",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 7,
+      "query": "site.maoriparty.org.nz 2026 candidates",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 8,
+      "query": "site.maoriparty.org.nz OR site.maoriparty.org 2026 candidates",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 9,
+      "query": "site.top.org.nz OR site.opportunity.org.nz candidates 2026",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 10,
+      "query": "site.elections.nz register political parties 2026",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 11,
+      "query": "site.national.org.nz 2026 party list electorate candidates",
+      "route": "web search; only official results promoted"
+    },
+    {
+      "sequence": 12,
+      "query": "site.maoriparty.org.nz 2026 candidate selected",
+      "route": "web search; only official results promoted"
+    }
+  ],
+  "sources": [
+    {
+      "id": "stage40-2026-election-dates",
+      "key": "election-dates",
+      "url": "https://elections.nz/guidance-and-rules/candidate-hub/key-information-and-dates",
+      "retrievedAt": "2026-10-04T18:43:52.683940Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/election-dates.html",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "contentStatus": "protection_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": "data/raw/forecast-readiness/2026-10-05/official-readable-tool-response.json"
+    },
+    {
+      "id": "stage40-2026-nominations",
+      "key": "nominations",
+      "url": "https://elections.nz/guidance-and-rules/candidate-hub/becoming-a-candidate/standing-as-a-candidate-for-the-2026-general-election",
+      "retrievedAt": "2026-10-04T18:43:52.830881Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/nominations.html",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "contentStatus": "protection_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": "data/raw/forecast-readiness/2026-10-05/official-readable-tool-response.json"
+    },
+    {
+      "id": "stage40-2026-boundary-report",
+      "key": "boundary-report",
+      "url": "https://elections.nz/democracy-in-nz/historical-events/boundary-review-2025/report-of-the-representation-commission-2025",
+      "retrievedAt": "2026-10-04T18:43:52.876707Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/boundary-report.html",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "contentStatus": "protection_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": "data/raw/forecast-readiness/2026-10-05/current-boundary-readable.json"
+    },
+    {
+      "id": "stage40-2026-party-register",
+      "key": "party-register",
+      "url": "https://elections.nz/democracy-in-nz/political-parties-in-new-zealand/register-of-political-parties",
+      "retrievedAt": "2026-10-04T18:43:52.913427Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/party-register.html",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "contentStatus": "protection_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": "data/raw/forecast-readiness/2026-10-05/party-register-readable.json"
+    },
+    {
+      "id": "stage40-2026-national-team",
+      "key": "national-team",
+      "url": "https://www.national.org.nz/team",
+      "retrievedAt": "2026-10-04T18:43:53.013990Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/national-team.html",
+      "sha256": "b6bc4b1eda378e9d64b51b16daf6ee0a4c1aee8144b735972d0008a81c75dce7",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-labour-candidates",
+      "key": "labour-candidates",
+      "url": "https://www.labour.org.nz/2026-campaign/our-candidates/",
+      "retrievedAt": "2026-10-04T18:43:53.649649Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/labour-candidates.html",
+      "sha256": "44667236b60601ecbf1056e73234d9f967436e06e4ca925733b18713c3363634",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-green-home",
+      "key": "green-home",
+      "url": "https://www.greens.org.nz/",
+      "retrievedAt": "2026-10-04T18:43:57.093883Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/green-home.html",
+      "sha256": "f53df50f438ab13a185b1b70775cda761aa7a024dbafd1337611b73482631453",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-act-people",
+      "key": "act-people",
+      "url": "https://www.act.org.nz/people",
+      "retrievedAt": "2026-10-04T18:43:57.574801Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/act-people.html",
+      "sha256": "080606d7eb10c769c9fd69f67bb501dec8e6c3503b330f17a6d9093487c1751e",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-nzfirst-home",
+      "key": "nzfirst-home",
+      "url": "https://www.nzfirst.nz/",
+      "retrievedAt": "2026-10-04T18:43:59.106606Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/nzfirst-home.html",
+      "sha256": "66829ddc34b3572400b5895360f2496ddf2edb23c8e929bc5486db1b92309dff",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-maori-home",
+      "key": "maori-home",
+      "url": "https://www.maoriparty.org.nz/",
+      "retrievedAt": "2026-10-04T18:44:00.940954Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/maori-home.html",
+      "sha256": "69fb3a0d6db744d587a91fc018dc6954c758a317e8599982b73876fcf6696432",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-opportunity-home",
+      "key": "opportunity-home",
+      "url": "https://www.opportunity.org.nz/",
+      "retrievedAt": "2026-10-04T18:44:02.707455Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/opportunity-home.html",
+      "sha256": "2f2e1cbb7fc3deea4c5c26ed2ce03c9e93e166c83face57523caea5d7228e258",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-green-candidates",
+      "key": "green-candidates",
+      "url": "https://www.greens.org.nz/candidates_2026",
+      "retrievedAt": "2026-10-04T18:45:44.714987Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/green-candidates.html",
+      "sha256": "c891fe4d6ba278da12a97e5a8e975f1adccdf4984b78a98ca420dde036abfdee",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-nzfirst-team",
+      "key": "nzfirst-team",
+      "url": "https://www.nzfirst.nz/our-team",
+      "retrievedAt": "2026-10-04T18:45:46.450815Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/nzfirst-team.html",
+      "sha256": "12d793420393deae93feb0119f379fe8db27a0f4e304f9e5437bafa61dd8a556",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-opportunity-team",
+      "key": "opportunity-team",
+      "url": "https://www.opportunity.org.nz/team",
+      "retrievedAt": "2026-10-04T18:45:48.358762Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/opportunity-team.html",
+      "sha256": "9408a842bfb2e669e43066a67a83d62dcc6be3309bd722014ccc5adeddd976e9",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-maori-people",
+      "key": "maori-people",
+      "url": "https://www.maoriparty.org.nz/our-people",
+      "retrievedAt": "2026-10-04T18:45:49.720812Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/maori-people.html",
+      "sha256": "da9f08e60b310b7683867218589343e7ba32586e1072e552c80f344e4729e325",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-labour-list",
+      "key": "labour-list",
+      "url": "https://www.labour.org.nz/news/release-labour-announces-party-list-for-2026-election/",
+      "retrievedAt": "2026-10-04T18:47:57.104385Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/labour-list.html",
+      "sha256": "2d4a2190ea2f28fa8472d89694e52a246ad7bfca2467b9887653169c1d9a9fc3",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-labour-list-pdf",
+      "key": "labour-list",
+      "url": "https://drive.google.com/uc?export=download&id=1oKeJBM78qgZC-Bes80yS10pCVnm_lNrF",
+      "retrievedAt": "2026-10-04T18:52:35.108127Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/labour-list.pdf",
+      "sha256": "0423b36c666c50b65c6c8268ee8ba7358a2265febbe6135514f5cd02f3bd30db",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-maori-panui",
+      "key": "maori-panui",
+      "url": "https://www.maoriparty.org.nz/panui",
+      "retrievedAt": "2026-10-04T18:52:45.924053Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/maori-panui.html",
+      "sha256": "4f5adb099e8136277c5958f761cacc8381c0d14a0841dee6e032153e385e76bd",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-labour-directory-code",
+      "key": "labour-directory-code",
+      "url": "https://static.sfox.au/web-js/90501/entry.js",
+      "retrievedAt": "2026-10-04T18:53:29.861621Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/labour-directory-code.js",
+      "sha256": "9dfbbd95588ad079f51b19cd18cd4f723bf6e3da2d5b7df690017f9d4a46a5f6",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-maori-haley",
+      "key": "maori-haley",
+      "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_confirms_haley_maxwell_to_contest_ikaroa_r_whiti_in_the_2026_general_election",
+      "retrievedAt": "2026-10-04T18:53:36.692135Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/maori-haley.html",
+      "sha256": "ef09a788f30c6ba14c6bd9cf03768688be2dcfcb17d0fda8a40f718c80104f2c",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-maori-lisa",
+      "key": "maori-lisa",
+      "url": "https://www.maoriparty.org.nz/lisa_marie_murch_as_te_tai_tonga_candidate_for_2026",
+      "retrievedAt": "2026-10-04T18:53:59.483103Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/maori-lisa.html",
+      "sha256": "dca7f663d635ba1805706604f31c0d2a1fe79842b6794b42afd1b68f1a2507e4",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-national-willis",
+      "key": "national-willis",
+      "url": "https://www.national.org.nz/news/20251222-hon-nicola-willis-nicola-willis-to-stand-as-a-list-only-candidate-in-2026",
+      "retrievedAt": "2026-10-04T18:55:13.131008Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/national-willis.html",
+      "sha256": "afc822f72528b3bd471a924620a7de0bd79ba55fb3374c07a1e17ffb87eb4227",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    },
+    {
+      "id": "stage40-2026-schedule-c-pdf",
+      "key": "schedule-c",
+      "url": "https://elections.nz/assets/pagecomponent-file-files/SCHEDULE-C-TABLES-OF-THE-ELECTORATES-AND-POPULATIONS.pdf",
+      "retrievedAt": "2026-10-04T18:56:02.998003Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/schedule-c.pdf",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "contentStatus": "protection_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": "data/raw/forecast-readiness/2026-10-05/schedule-c-readable.json"
+    },
+    {
+      "id": "stage40-2026-labour-current-list-pdf",
+      "key": "labour-current-list",
+      "url": "https://drive.google.com/uc?export=download&id=1ynHjc6UVqJvA0t3cB1Csfw1jeCUJ4TL4",
+      "retrievedAt": "2026-10-04T18:55:43.127290Z",
+      "rawPath": "data/raw/forecast-readiness/2026-10-05/labour-current-list.pdf",
+      "sha256": "0423b36c666c50b65c6c8268ee8ba7358a2265febbe6135514f5cd02f3bd30db",
+      "contentStatus": "preserved_response",
+      "availability": "retrieved_by_snapshot_cutoff; publication separately unknown unless dated",
+      "readableExtractionPath": null
+    }
+  ],
+  "readableExtractions": [
+    {
+      "path": "data/raw/forecast-readiness/2026-10-05/current-boundary-readable.json",
+      "sha256": "2ad02ca29ab3dc790eab3231197ce454b5417a959a1c1dbbbf496300284b8f5c",
+      "representation": "tool_rendered_readable_extraction; not original HTML/PDF bytes",
+      "retrievedAt": "2026-10-04T18:55:34.272069Z"
+    },
+    {
+      "path": "data/raw/forecast-readiness/2026-10-05/official-readable-tool-response.json",
+      "sha256": "581d5a35e32e5499103250d859d2e296d85aced231b6a41ae6ed44683ce43049",
+      "representation": "tool_rendered_readable_extraction; not original HTML/PDF bytes",
+      "retrievedAt": "2026-10-04T18:45:38.747659Z"
+    },
+    {
+      "path": "data/raw/forecast-readiness/2026-10-05/party-register-readable.json",
+      "sha256": "d259870b360d4a688579330b1143bb6b912535570b584705ac24e072716f3065",
+      "representation": "tool_rendered_readable_extraction; not original HTML/PDF bytes",
+      "retrievedAt": "2026-10-04T18:51:55.373452Z"
+    },
+    {
+      "path": "data/raw/forecast-readiness/2026-10-05/schedule-c-readable.json",
+      "sha256": "25f266d3cf784f0dbd91195e606cfeb6da974d06547c0f77d721bf3392bf3ee4",
+      "representation": "tool_rendered_readable_extraction; not original HTML/PDF bytes",
+      "retrievedAt": "2026-10-04T18:56:03.039501Z"
+    }
+  ],
+  "responseMetadata": [
+    {
+      "key": "act-people",
+      "headers": [
+        "HTTP/2 200 ",
+        "content-type: text/html",
+        "date: Sun, 04 Oct 2026 18:43:57 GMT",
+        "etag: \"2200567165440e414a0714143d39dc48\"",
+        "last-modified: Thu, 01 Oct 2026 02:58:46 GMT"
+      ]
+    },
+    {
+      "key": "boundary-report",
+      "headers": [
+        "HTTP/1.1 200 OK",
+        "Content-Type: text/html"
+      ]
+    },
+    {
+      "key": "election-dates",
+      "headers": [
+        "HTTP/1.1 200 OK",
+        "Content-Type: text/html"
+      ]
+    },
+    {
+      "key": "green-candidates",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:45:44 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "green-home",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:43:56 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "labour-candidates",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:43:53 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "labour-list",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:47:57 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "maori-home",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:44:00 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "maori-people",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:45:49 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "national-team",
+      "headers": [
+        "HTTP/2 200 ",
+        "content-type: text/html; charset=utf-8",
+        "date: Sun, 04 Oct 2026 18:32:31 GMT",
+        "etag: \"12gr8vy0j9t5ci6\""
+      ]
+    },
+    {
+      "key": "nominations",
+      "headers": [
+        "HTTP/1.1 200 OK",
+        "Content-Type: text/html"
+      ]
+    },
+    {
+      "key": "nzfirst-home",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:43:58 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "nzfirst-team",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:45:45 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "opportunity-home",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:44:02 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "opportunity-team",
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 04 Oct 2026 18:45:47 GMT",
+        "content-type: text/html; charset=utf-8"
+      ]
+    },
+    {
+      "key": "party-register",
+      "headers": [
+        "HTTP/1.1 200 OK",
+        "Content-Type: text/html"
+      ]
+    }
+  ],
+  "stopReason": "resource and query caps reached; no additional acquisition",
+  "failedRetrievalCount": 5,
+  "unresolved": [
+    "Labour bulk page exposes list candidates but no electorate assignments; no incumbent inference",
+    "TPM bulk page lists MPs; only explicit 2026 confirmations admitted",
+    "Final Electoral Commission nominations unpublished at cutoff",
+    "Minor registered-party and independent candidacies incomplete; absence is not nonparticipation",
+    "JavaScript directory infrastructure did not supply electorate records; no endpoint guessing"
+  ]
+}
