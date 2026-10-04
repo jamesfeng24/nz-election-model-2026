@@ -26,6 +26,26 @@ def synthetic_case():
 
 
 class Stage36Contracts(unittest.TestCase):
+    def test_output_interface_keeps_availability_and_paired_draws_explicit(self):
+        from unittest.mock import patch
+        from scripts.polling.national_model import outputs
+        original=outputs.read
+        def source(path):
+            self.assertNotIn('evaluation',str(path))
+            self.assertNotIn('official-results',str(path))
+            return original(path)
+        with patch.object(outputs,'read',side_effect=source):value=outputs.build()
+        self.assertEqual(len(value['cases']),32)
+        for row in value['cases']:
+            self.assertFalse(row['fineOtherAllocationAvailable'])
+            if row['publicationPolicy']=='verified_only':
+                self.assertNotIn('inferred_publication_admitted',row['availabilityFlags'])
+            if row['status']=='accepted':
+                self.assertEqual(row['drawCount'],8000)
+                self.assertEqual(row['drawNamespace'],row['fitKey'])
+                self.assertAlmostEqual(sum(row['expectedCurrent']),1,places=12)
+                self.assertAlmostEqual(sum(row['expectedElectionDay']),1,places=12)
+
     def test_diagnostic_serialization_preserves_share_precision_and_inputs(self):
         from scripts.polling.national_model.evaluation import serialized_metrics
         value={'MAEpp':1/3,'prediction':1/3,'currentMean':[1/3],'covered':True}

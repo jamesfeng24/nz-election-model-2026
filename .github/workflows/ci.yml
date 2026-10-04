@@ -70,3 +70,9 @@ jobs:
       - run: python3 -m scripts.polling.national_foundation.run --check
       - run: python3 -m scripts.polling.national_foundation.design --check
       - run: python3 -m scripts.polling.national_foundation.verification --check
+      - run: python3 -m scripts.polling.national_model.inventory --check
+      - run: python3 -m scripts.polling.national_model.archive --check
+      - run: python3 -m scripts.polling.national_model.evaluation --check
+      - run: python3 -m scripts.polling.national_model.verification --check
+      - run: python3 -m scripts.polling.national_model.report --check
+      - run: python3 -m scripts.polling.national_model.outputs --check
