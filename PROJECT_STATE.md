@@ -1,3 +1,9 @@
+# Stage39 — complete prediction archive before scoring, 2026-10-05
+
+Pre-construction a8cf66a is pushed. All six external-gauss/policy cases constructed on exact64/34/64 contests (162/1176 candidates); no construction abstentions. Every saved Stage33 conditional vector reproduces within1e−12. Fixed Decimal50 exponent factors reused across draws preserve the intensity equation and portable numerical behaviour; no model/tolerance changes. Complete national fine archives, expected shares, national-input-only intervals, fits/source-affinity references and per-draw local-cache checksums are sealed. Local deterministic candidate transforms occupy about458MiB and are reproducible from committed inputs; no redundant large candidate archive is committed. Exact-source/signature cache reuse passes; no MCMC or fitting.
+
+24 focused synthetic/actual-path tests pass, including target-outcome independence, sharedgroup/no-group handling, nonlinear expectations, frozen means and independent representative vectors. All1,671 prior datafiles remain unchanged. Next: commit/push this prediction checkpoint before evaluation; run bounded scores/independent verification, source/deterministic/fullconfigured checks, findings/handoff/unmergedPR/finalCI. No owned replay/R-only/new uncertainty fitting/acquisition/liveoutput. D073 development preferences and operational null preservation remain.
+
 # Stage39 — frozen pre-construction integration checkpoint, 2026-10-05
 
 Stage38PR45 merged; reviewed15936fe/merge5f58f14 ancestry verified from clean synchronized main. Branch `stage/39-national-candidate-integration`. D073 records provisional external gauss/S+R development preferences, S active/baseline control; operational selections and R-only findings unchanged.
