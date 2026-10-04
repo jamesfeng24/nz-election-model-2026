@@ -1,3 +1,11 @@
+# Stage36 — larger-fold inference checkpoint, 2026-10-04
+
+Primary2014/2017/2020 at both horizons accepted: six completed primary cases. Four missing-n1000 cases (2014/2017 both horizons) accepted. Two verified-only cases accepted after frozen retries; six verified-only data abstentions. **12 accepted distinct fits / two preserved failed first attempts**. Primary2023/14 is in warmup, and missing-n2020/14 is running concurrently; both retain four chains and all frozen settings. Main log `/tmp/stage36-remaining-inference.log`/session50114; secondary `/tmp/stage36-missing-n-inference.log`/session52535. Watch queue boundaries: do not start a second worker on an unfinished identical signature. Exact caches resume through the existing commands; no sampler-code changes or recomputation.
+
+**Validation:** full base675 tests passed (6 original isolated skips); final isolated25 focused tests passed in22.913s, plus the new pure archive-completeness guard passes with19 adapter tests.926 sources unchanged. Independent current-root pre-score audit485 projections/26 benchmark averages/48 paired transformed draws/12 mean vectors;1,514 prior data files unchanged. Complete32-case manifest is now required by archival before evaluation. No historical scores calculated. New deterministic report/verification code does not change inference signatures.
+
+**Next:** finish all registered attempts, archive and commit forecasts before scoring, independently verify scores and uncertainty, generate findings/final handoff, final-headCI and unmergedPR. Fine Other allocation, candidate replay, acquisition, new priors/variants and live forecast remain outside scope.
+
 # Stage36 — resumed inference checkpoint, 2026-10-04
 
 Five primary fits accepted (2014/14+56,2017/14+56,2020/14). Both available verified-only fits accepted after the single frozen retry; first failed attempts retained. Main session50114/log `/tmp/stage36-remaining-inference.log` continues2020/56 then remaining cases. Verified queue session19092 completed. Bounded second queue session52535/log `/tmp/stage36-missing-n-inference.log` now runs `-m scripts.polling.national_model.sensitivity_queue missing_n1000`, keeping a private index; main reuses exact archives. Neither schedule changes model/settings/signatures.

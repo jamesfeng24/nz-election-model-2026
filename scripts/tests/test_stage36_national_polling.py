@@ -26,6 +26,13 @@ def synthetic_case():
 
 
 class Stage36Contracts(unittest.TestCase):
+    def test_archive_requires_complete_frame_and_finished_attempts(self):
+        from scripts.polling.national_model.archive import validate_completion
+        inventory=[{'id':'a'},{'id':'b'}];cases=[{'id':'a','status':'accepted'},{'id':'b','status':'data_abstention'}]
+        validate_completion(cases,inventory)
+        for changed in (cases[:1],cases+[cases[0]], [{'id':'a','status':'numerical_failure','attempts':['one']},cases[1]]):
+            with self.assertRaises(ValueError):validate_completion(changed,inventory)
+
     def test_independent_interval_and_coarsening_arithmetic(self):
         from scripts.polling.national_model.verification import independent_quantile,verify_intervals
         from scripts.polling.national_model.metrics import probabilities
@@ -133,6 +140,19 @@ class Stage36Contracts(unittest.TestCase):
 
 @unittest.skipUnless(importlib.util.find_spec('jax') and importlib.util.find_spec('numpyro'),'isolated polling inference environment required')
 class Stage36Generative(unittest.TestCase):
+    def test_all_latent_coordinates_are_gated_not_only_headlines(self):
+        from scripts.polling.national_model.inference import diagnostics
+        rng=np.random.default_rng(36036)
+        latent=rng.normal(size=(4,2000,2));latent[:,:,0]+=np.arange(4)[:,None]*10
+        latent[:,:,1]=0
+        shares=softmax(rng.normal(size=(4,2000,7)))
+        extra={'diverging':np.zeros((4,2000),bool),'num_steps':np.ones((4,2000)),
+               'accept_prob':np.ones((4,2000))*.98,'energy':rng.normal(size=(4,2000))}
+        d=diagnostics({'poorly_mixed_latent':latent},{'electionDay':shares.reshape(-1,7)},extra,12)
+        self.assertFalse(d['passed']);self.assertEqual(d['divergences'],0)
+        self.assertEqual(d['failedVariables'],[{'variable':'poorly_mixed_latent','count':1}])
+        self.assertEqual(d['constants'][0]['exactConstantCoordinates'],[1])
+
     def test_interval_values_and_gradients(self):
         import jax
         import jax.numpy as jnp

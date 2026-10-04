@@ -286,3 +286,7 @@ Added a deterministic 213-contest input-availability inventory, proposed interva
 ## Stage35 — national polling foundation/design
 
 Added versioned496-wave polling foundation, bounded raw/reference provenance, publication-cutoff/revision/duplicate/rounding infrastructure, audited reuse decision, one frozen national joint model/benchmark and eight-case chronological evaluation contract. D067 corrects active replay interpretation without altering historical decisions/numerical outputs. No fitting, forecast score, candidate replay or operational change.
+
+## Stage36 — isolated national polling inference/backtest
+
+Implemented the frozen compositional national model, explicit observation/schema operators, isolated transitive dependency lock, exact-signature resumable inference, all-coordinate numerical diagnostics, paired joint support draws and pollster-balanced benchmark. Forecast archival precedes separate national evaluation. Added synthetic gradient/likelihood/cutoff tests and independent deterministic arithmetic/preservation checks. No political acquisition, candidate change/replay, fine Other allocation or operational choice. Completed findings and final check status are recorded in the Stage36 report/handoff.

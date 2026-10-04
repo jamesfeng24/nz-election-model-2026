@@ -33,6 +33,30 @@ def party_table(pool):
     return lines
 
 
+def major_uncertainty_table(cases):
+    lines=['| Case | Party | Current SD | Election-day SD | 90% width | 90% covered | Error |',
+           '| --- | --- | ---: | ---: | ---: | --- | ---: |']
+    for r in cases:
+        if not r['model']:continue
+        for i,party in enumerate(('NAT','LAB')):
+            m=r['model'];interval=m['probability']['parties'][i]['intervals']['0.9']
+            lines.append(f"| {r['year']} / {r['horizonDays']}d | {party} | {number(m['uncertainty']['currentStdPP'][i])} | {number(m['uncertainty']['electionDayStdPP'][i])} | {number(interval['widthPP'])} | {interval['covered']} | {number(m['point']['parties'][i]['biasPP'])} |")
+    return lines
+
+
+def availability_table(cases):
+    from .prepare import prepare
+    lines=['| Case | Current waves | Verified | Inferred | Missing n | Earlier anchored cycles |',
+           '| --- | ---: | ---: | ---: | ---: | ---: |']
+    for r in cases:
+        c=prepare(r['year'],r['horizonDays'],r['branch']);polls=c['cycles'][-1]['polls']
+        verified=sum(p['publicationQuality']=='verified' for p in polls)
+        raw={p['id']:p for p in read(OUT.parent/'national-foundation/polls.json')['records']}
+        missing=sum(raw[p['id']]['sampleSize'] is None for p in polls)
+        lines.append(f"| {r['year']} / {r['horizonDays']}d | {len(polls)} | {verified} | {len(polls)-verified} | {missing} | {len(c['cycles'])-1} |")
+    return lines
+
+
 def numerical_table(index):
     lines=['| Saved case | Attempt | Status | Seconds | Max R-hat | Min bulk / tail ESS | Divergences | Depth contacts |',
            '| --- | ---: | --- | ---: | ---: | ---: | ---: | ---: |'];seen=set()
@@ -52,6 +76,8 @@ def text_report():
            'All share/error/width/CRPS/energy quantities below are percentage points. Positive MAE gain means the model beats the average. Seven common categories include TOP within Other; eight-category fine results retain TOP separately from 2017 onward. Complete per-party errors, intervals, uncertainty covariances and diagnostics are in `evaluation.json`.', '']
     primary=[r for r in result['cases'] if r['branch']=='primary'];lines+=point_table(primary)
     lines+=['', '### Uncertainty', '']+uncertainty_table(primary)
+    lines+=['', 'Major-party uncertainty is displayed separately. Election-day SD includes future movement; current SD is not an election-day interval. Error is prediction minus actual.', '']+major_uncertainty_table(primary)
+    lines+=['', '### Historical availability', '', 'These counts describe admitted current-cycle waves, not verified historical archives. Earlier endpoints obey the frozen next-January availability assumption.', '']+availability_table(primary)
     lines+=['', '### Major-party and small-party accounting', '',
             'Each category below receives equal case weight (four elections, two horizons each). Overall signed bias cancels on the complete simplex; party bias is informative. Many small categories must not conceal National/Labour errors.', '']
     primary_pool=next(p for p in result['pooled'] if p['branch']=='primary');lines+=party_table(primary_pool)
