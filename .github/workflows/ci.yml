@@ -113,3 +113,11 @@ jobs:
       - run: python3 -m scripts.transport.comparison.verification --check
       - run: python3 -m scripts.transport.comparison.report --check
       - run: python3 -m scripts.transport.comparison.manifest --check
+      - run: python3 -m scripts.uncertainty.inventory --check
+      - run: python3 -m scripts.uncertainty.estimation --check
+      - run: python3 -m scripts.uncertainty.construction --check
+      - run: python3 -m scripts.uncertainty.evaluation --check
+      - run: python3 -m scripts.uncertainty.precision --check
+      - run: python3 -m scripts.uncertainty.verification --check
+      - run: python3 -m scripts.uncertainty.report --check
+      - run: python3 -m scripts.uncertainty.manifest --check

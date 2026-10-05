@@ -1,3 +1,16 @@
+# Active roadmap after Stage44
+
+One pooled coherent uncertainty implementation is complete around continuous S+R and cached externalgauss. Retain S+R preferred, S active and baseline mandatory; no mean-model search/refit. Its major-party intervals are too broad for a calibration claim; keep the versioned development scenario, the reported proper scores and finite precision rather than declaring operational probabilities. No automatic variance-family search follows.
+
+1. **Bounded official nomination refresh** after bulk publication, preserving dated snapshots, incomplete slates, withdrawals/conflicts and source-only histories. No live shares from partial slates.
+2. **Separately authorized Māori baseline/electorate-polling layer:** candidate/local-party question, denominator, boundary/candidate mapping, fieldwork/publication, sample/undecideds, age, uncertainty and dependence; explicit unpolled/stale fallback. National Te Pāti Māori party support remains distinct. General coefficients/error scales are not automatically extended.
+3. **National reconciliation and denominator/turnout decisions:** complete electoral population and defensible weights, shared national error once and coherent local/candidate dependence. Explicitly decide probability readiness given Stage44 sharpness, omitted parameter/scale uncertainty, cross-layer approximation and finite draw precision; no unrequested model tournament.
+4. **Final MMP/live assembly and publication archives**, only after input and probability-readiness requirements are resolved. Expected shares average transformed shared draws; scenarios/feasible bounds are not calibrated distributions.
+
+This records remaining dependencies, not authorization to begin them. Stage44 [findings](stage44-uncertainty-findings.md) preserve component, substitution and end-to-end evidence distinctions. Earlier roadmap sections below are historical; all earlier decisions/results/operational nulls remain unchanged.
+
+---
+
 # Active roadmap after Stage43
 
 The bounded continuous-transport S versus S+R comparison is complete. Retain S+R preferred, S active and baseline mandatory: joint gains in 2014 and modest pooled MAE/RMSE, but loses share accuracy in 2020. Strict linkage does not reverse that trade-off. No further mean-model experiment is automatically authorized. External gauss remains provisional; earlier screens/operational records remain unchanged.

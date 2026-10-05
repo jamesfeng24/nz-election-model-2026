@@ -1,7 +1,9 @@
 """Save uncertainty draws/metadata before any held-out evaluation."""
 import hashlib
+import sys
+import scipy
 import numpy as np
-from .common import *
+from .common import PREFIX, YEARS, DRAWS, SEED, ROOT, read, save, verify, arguments, digest, encode, cache
 from .simulation import component,compose
 from .streams import national_indices
 
@@ -25,7 +27,7 @@ def signature():
     paths=[str(p.relative_to(ROOT)) for p in sorted((ROOT/'scripts/uncertainty').glob('*.py')) if p.stem in ('common','inventory','transforms','estimation','streams','simulation','construction')]
     return hashlib.sha256(encode({'inputs':read(PREFIX+'/input-contract.json'),'specification':digest(PREFIX+'/specification.json'),
         'inventory':digest(PREFIX+'/inventory.json'),'scales':digest(PREFIX+'/scales.json'),
-        'code':{p:digest(p) for p in paths},'numpy':np.__version__,'draws':DRAWS,'seed':SEED})).hexdigest()
+        'code':{p:digest(p) for p in paths},'dependencies':{'numpy':np.__version__,'scipy':scipy.__version__,'python':list(sys.version_info[:2]),'lockHash':digest('requirements-boundaries.txt')},'draws':DRAWS,'seed':SEED})).hexdigest()
 
 
 def restore_case(case_id, run_signature):

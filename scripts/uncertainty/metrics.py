@@ -32,7 +32,7 @@ def energy(draws, actual, limit=128):
     return float(np.mean(np.linalg.norm(x-y,axis=1))-distance/(2*len(x)**2))
 
 
-def ranking(draws, actual, ids):
+def ranking(draws, actual, ids, pair_mean=None):
     q=np.asarray(draws);y=np.asarray(actual);mean=q.mean(axis=0)
     tied=np.abs(q-q.max(axis=1,keepdims=True))<=1e-12
     probabilities=(tied/tied.sum(axis=1,keepdims=True)).mean(axis=0)
@@ -42,7 +42,8 @@ def ranking(draws, actual, ids):
         p=float(probabilities[winner]);brier=float(np.sum((probabilities-truth)**2));logloss=None if p==0 else float(-np.log(p))
     else:winner=None;p=None;brier=None;logloss=None
     predicted=np.flatnonzero(np.abs(mean-mean.max())<=1e-12)
-    order=sorted(range(len(ids)),key=lambda i:(-mean[i],ids[i]));a,b=order[:2]
+    selection=mean if pair_mean is None else validate(pair_mean)
+    order=sorted(range(len(ids)),key=lambda i:(-selection[i],ids[i]));a,b=order[:2]
     margin_draws=100*(q[:,a]-q[:,b]);margin_actual=100*(y[a]-y[b])
     # A tie has half credit in the prediction-time pair's binary forecast.
     win=float(np.mean((margin_draws>1e-10)+.5*(np.abs(margin_draws)<=1e-10)))
@@ -67,7 +68,7 @@ def ranking(draws, actual, ids):
         'observedTopTwoEvaluationOnly':observed_pairs}
 
 
-def record(row,draws):
+def record(row,draws,pair_mean=None):
     q=validate(draws);y=validate(row['actual']);mean=q.mean(axis=0);error=100*(mean-y)
     result={'id':row['targetElectorateId'],'name':row['name'],'year':row['targetYear'],'geography':row['geography'],
         'ids':row['ids'],'groups':row['groups'],'denominator':row['denominator'],'actual':y.tolist(),
@@ -76,7 +77,7 @@ def record(row,draws):
         'crpsPP':crps(100*q,100*y).tolist(),'interval50':interval(100*q,100*y,.5),
         'interval90':interval(100*q,100*y,.9),'energyPP':energy(100*q,100*y),
         'positiveOutcomeOnMeanZero':int(np.sum((np.array(row['mean'])==0)&(y>0)))}
-    if row['layer']=='candidate':result['ranking']=ranking(q,y,row['ids'])
+    if row['layer']=='candidate':result['ranking']=ranking(q,y,row['ids'],pair_mean)
     return result
 
 
@@ -87,6 +88,7 @@ def distribution_summary(rows):
         'candidateCategoryEqualMAEPP':float(np.mean(np.abs([v for r in rows for v in r['errorPP']]))),
         'candidateCategoryEqualRMSEPP':float(np.sqrt(np.mean([v*v for r in rows for v in r['errorPP']]))),
         'fullSlateBiasAccountingPP':float(np.mean([r['biasPP'] for r in rows])),
+        'degenerateMeanCRPSReferencePP':float(np.mean([r['maePP'] for r in rows])),
         'contestEqualCRPSPP':float(np.mean([np.mean(r['crpsPP']) for r in rows])),
         'energyPP':float(np.mean([r['energyPP'] for r in rows])),
         'positiveOutcomeOnMeanZero':sum(r['positiveOutcomeOnMeanZero'] for r in rows)}

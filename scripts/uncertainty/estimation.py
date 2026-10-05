@@ -1,7 +1,7 @@
 """Earlier-only equal-environment pooled shared/seat moments, not mean fitting."""
 import numpy as np
 from scipy.linalg import helmert
-from .common import *
+from .common import PREFIX, YEARS, read, save, verify, arguments
 from .transforms import residual
 
 

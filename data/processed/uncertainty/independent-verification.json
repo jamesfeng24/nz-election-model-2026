@@ -12,7 +12,24 @@
   "momentAndScaleIdentities": 157,
   "residualCoordinates": 6915,
   "residualVectors": 578,
-  "simulationAndScoreChecks": "pending construction/evaluation archives",
+  "simulationAndScoreChecks": {
+    "archivedSimplexDrawVectors": 625152,
+    "balancedRawNationalCases": 3,
+    "composedJensenIdentities": 6,
+    "crpsAllPairDrawCap": 512,
+    "energyAllPairDrawCap": 128,
+    "independentScoringMethods": [
+      "all-pair empirical CRPS",
+      "scalar all-pair Euclidean energy",
+      "manual linear quantiles and proper interval score",
+      "fsum contest metrics"
+    ],
+    "maximumArithmeticDifferenceRounded12Decimals": 0.0,
+    "meanPreservationWithinFrozenTolerance": true,
+    "means": "finite-bank marginal preservation; composed nonlinear local-input shift separately verified",
+    "representativePredictionAndScoreVectors": 24,
+    "status": "verified"
+  },
   "stage": 44,
   "tolerance": 1e-10
 }

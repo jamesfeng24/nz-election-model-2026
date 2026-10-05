@@ -1,12 +1,16 @@
 """Frozen CLR uncertainty, chronological adapters and stable stream safeguards."""
 from copy import deepcopy
+import hashlib
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 
-from scripts.uncertainty.common import PREFIX, YEARS, read, verify
+from scripts.uncertainty.common import PREFIX, YEARS, read, verify, equivalent
 from scripts.uncertainty.inventory import build, simplex
-from scripts.uncertainty import estimation, streams, transforms, simulation
+from scripts.uncertainty import common, estimation, streams, transforms, simulation, metrics
 
 
 def synthetic_row(layer='local_party', year=2014, seat='synthetic', groups=None):
@@ -303,6 +307,163 @@ class FrozenSimulationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             simulation.compose(self.party, self.candidate, zero_minor,
                                self.scales, self.scales, batch_size=0)
+
+
+class ProperScoreTests(unittest.TestCase):
+    def test_crps_matches_independent_all_pairs_arithmetic(self):
+        x = np.array([[.2, .8], [.4, .6], [.7, .3]])
+        y = np.array([.3, .7])
+        expected = []
+        for k in range(2):
+            first = sum(abs(v[k]-y[k]) for v in x)/len(x)
+            second = sum(abs(a[k]-b[k]) for a in x for b in x)/(2*len(x)**2)
+            expected.append(first-second)
+        self.assertTrue(np.allclose(metrics.crps(x, y), expected, rtol=0, atol=1e-15))
+        self.assertEqual(float(metrics.crps([.2, .4], [.3])[0]), .05)
+        self.assertEqual(float(metrics.crps([.3, .3], [.3])[0]), 0.)
+
+    def test_interval_scores_include_miss_penalties_not_only_width(self):
+        x = np.array([[.2, .8], [.4, .6]])
+        y = np.array([.6, .4])
+        for level, lower, upper in ((.5, [.25, .65], [.35, .75]),
+                                    (.9, [.21, .61], [.39, .79])):
+            result = metrics.interval(x, y, level)
+            self.assertTrue(np.allclose(result['lower'], lower, rtol=0, atol=1e-15))
+            self.assertTrue(np.allclose(result['upper'], upper, rtol=0, atol=1e-15))
+            expected = [hi-lo+2/(1-level)*(max(lo-actual, 0)+max(actual-hi, 0))
+                        for lo, hi, actual in zip(lower, upper, y)]
+            self.assertTrue(np.allclose(result['scores'], expected, rtol=0, atol=1e-14))
+            self.assertEqual(result['covered'], [False, False])
+            self.assertTrue(all(a > b for a, b in zip(result['scores'], result['widths'])))
+        with self.assertRaises(ValueError):
+            metrics.interval(x, y, .8)
+
+    def test_energy_is_a_complete_joint_vector_score_with_fixed_prefix(self):
+        x = np.array([[.2, .8], [.4, .6], [.9, .1]])
+        y = np.array([.3, .7])
+        subset = x[:2]
+        expected = sum(np.linalg.norm(v-y) for v in subset)/2
+        expected -= sum(np.linalg.norm(a-b) for a in subset for b in subset)/8
+        self.assertAlmostEqual(metrics.energy(x, y, limit=2), float(expected), places=15)
+        self.assertAlmostEqual(metrics.energy(x[:, ::-1], y[::-1], limit=2), float(expected), places=15)
+        with self.assertRaises(ValueError):
+            metrics.energy([], y)
+
+    def test_ties_get_fractional_probability_and_zero_truth_probability_is_explicit(self):
+        x = np.array([[.5, .5], [.6, .4]])
+        result = metrics.ranking(x, [.55, .45], ['nat', 'lab'])
+        self.assertEqual(result['winnerProbabilities'], [.75, .25])
+        self.assertEqual(result['drawTieCount'], 1)
+        self.assertAlmostEqual(result['winnerBrier'], .125, places=15)
+        self.assertAlmostEqual(result['winnerLogLoss'], -np.log(.75), places=15)
+        self.assertEqual(result['predictionTimePair']['firstBeatsSecondProbability'], .75)
+        zero = metrics.ranking([[.9, .1], [.8, .2]], [.2, .8], ['nat', 'lab'])
+        self.assertTrue(zero['zeroObservedWinnerProbability'])
+        self.assertIsNone(zero['winnerLogLoss'])
+        self.assertEqual(zero['winnerBrier'], 2.)
+        observed_tie = metrics.ranking(x, [.5, .5], ['nat', 'lab'])
+        self.assertFalse(observed_tie['uniqueObservedWinner'])
+        self.assertIsNone(observed_tie['winnerBrier'])
+        self.assertIsNone(observed_tie['winnerLogLoss'])
+
+    def test_prediction_time_pair_cannot_be_chosen_by_actual_winner(self):
+        q = [[.5, .4, .1], [.4, .5, .1]]
+        first = metrics.ranking(q, [.6, .3, .1], ['b', 'a', 'c'])
+        second = metrics.ranking(q, [.1, .2, .7], ['b', 'a', 'c'])
+        self.assertEqual(first['predictionTimePair']['ids'], ['a', 'b'])
+        self.assertEqual(first['predictionTimePair']['ids'], second['predictionTimePair']['ids'])
+        self.assertNotEqual(first['observedTopTwoEvaluationOnly'][0]['ids'],
+                            second['observedTopTwoEvaluationOnly'][0]['ids'])
+
+    def test_complete_scores_use_percentage_points_and_explicit_weighting(self):
+        first = synthetic_row(seat='two-option', groups=['national', 'labour'])
+        first.update(name='synthetic two', denominator=100, actual=[.6, .4], mean=[.5, .5])
+        second = synthetic_row(seat='three-option')
+        second.update(name='synthetic three', denominator=100, actual=[.1, .2, .7], mean=[.2, .3, .5])
+        records = [metrics.record(first, np.tile(first['mean'], (4, 1))),
+                   metrics.record(second, np.tile(second['mean'], (4, 1)))]
+        summary = metrics.distribution_summary(records)
+        self.assertEqual(summary['coordinates'], 5)
+        self.assertEqual(summary['contests'], 2)
+        expected_contest = (10 + (10+10+20)/3)/2
+        expected_coordinate = (10+10+10+10+20)/5
+        self.assertAlmostEqual(summary['contestEqualMAEPP'], expected_contest, places=12)
+        self.assertAlmostEqual(summary['candidateCategoryEqualMAEPP'], expected_coordinate, places=12)
+        self.assertAlmostEqual(summary['contestEqualRMSEPP'], np.sqrt((100+200)/2), places=12)
+        self.assertAlmostEqual(summary['fullSlateBiasAccountingPP'], 0., places=12)
+        self.assertEqual(summary['groups']['national']['coordinates'], 2)
+        self.assertEqual(summary['groups']['national']['containingContests'], 2)
+        self.assertEqual(summary['interval90']['total'], 5)
+        self.assertEqual(summary['interval90']['covered'], 0)
+        self.assertAlmostEqual(summary['contestEqualCRPSPP'], expected_contest, places=12)
+
+    def test_zero_prediction_face_positive_actual_is_counted_as_explicit_miss(self):
+        row = synthetic_row()
+        row.update(name='synthetic zero', denominator=100, actual=[.3, .3, .4], mean=[.5, .5, 0])
+        result = metrics.record(row, np.tile(row['mean'], (4, 1)))
+        self.assertEqual(result['positiveOutcomeOnMeanZero'], 1)
+        self.assertFalse(result['interval90']['covered'][2])
+        self.assertEqual(result['interval90']['widths'][2], 0.)
+        self.assertGreater(result['interval90']['scores'][2], 0.)
+
+
+class PortableContractTests(unittest.TestCase):
+    def test_frozen_float_tolerance_and_exact_contract_fields(self):
+        self.assertTrue(equivalent({'value': .2}, {'value': .2+5e-11}))
+        self.assertFalse(equivalent({'value': .2}, {'value': .2+2e-10}))
+        self.assertFalse(equivalent({'value': .2}, {'value': float('nan')}))
+        self.assertFalse(equivalent({'flag': False}, {'flag': 0}))
+        self.assertFalse(equivalent({'count': 3}, {'count': 3.0}))
+        self.assertFalse(equivalent({'id': 'three'}, {'id': 'four'}))
+        self.assertFalse(equivalent({'ids': ['a', 'b']}, {'ids': ['b', 'a']}))
+        self.assertFalse(equivalent({'value': 1.0}, {'value': True}))
+
+    def test_only_local_draw_cache_checksum_metadata_may_be_platform_specific(self):
+        expected = {'drawCache': {'sha256': 'original', 'path': '.cache/stage44/one.json.gz'},
+                    'inputHash': 'same', 'ids': ['stable-id']}
+        same_contract = deepcopy(expected)
+        same_contract['drawCache']['sha256'] = 'platform-last-bits'
+        self.assertTrue(equivalent(expected, same_contract))
+        changed = deepcopy(same_contract)
+        changed['inputHash'] = 'different'
+        self.assertFalse(equivalent(expected, changed))
+        changed = deepcopy(same_contract)
+        changed['drawCache']['path'] = '.cache/stage44/another.json.gz'
+        self.assertFalse(equivalent(expected, changed))
+        self.assertFalse(equivalent({'sha256': 'source'}, {'sha256': 'changed-source'}))
+
+    def test_real_local_cache_checksums_and_exact_reuse_are_enforced(self):
+        with TemporaryDirectory(prefix='stage44-synthetic-cache-') as directory:
+            with patch.object(common, 'ROOT', Path(directory)):
+                record = common.cache('synthetic.json.gz', {'draws': [[.4, .6]], 'ids': ['synthetic:0']})
+                file = Path(directory)/record['path']
+                self.assertEqual(hashlib.sha256(file.read_bytes()).hexdigest(), record['sha256'])
+                self.assertEqual(common.cache('synthetic.json.gz', {'draws': [[.4, .6]], 'ids': ['synthetic:0']}), record)
+                with self.assertRaisesRegex(ValueError, 'Changed deterministic uncertainty cache'):
+                    common.cache('synthetic.json.gz', {'draws': [[.5, .5]], 'ids': ['synthetic:0']})
+                file.write_bytes(b'corrupt cached bytes')
+                with self.assertRaisesRegex(ValueError, 'Changed deterministic uncertainty cache'):
+                    common.cache('synthetic.json.gz', {'draws': [[.4, .6]], 'ids': ['synthetic:0']})
+
+    def test_frozen_fit_semantics_reject_corrupt_or_mismatched_inputs(self):
+        source = FrozenSimulationTests()
+        source.setUp()
+        changed = deepcopy(source.candidate)
+        changed['parameters']['theta'][1] = 4.01
+        with self.assertRaises(ValueError):
+            simulation.candidate_inputs(changed, source.party)
+        changed = deepcopy(source.candidate)
+        changed['features'][0]['id'] = 'different-person'
+        with self.assertRaises(ValueError):
+            simulation.candidate_inputs(changed, source.party)
+        changed = deepcopy(source.candidate)
+        changed['parameters']['coefficients']['R'] = .6
+        with self.assertRaises(ValueError):
+            simulation.candidate_inputs(changed, source.party)
+        changed = deepcopy(source.candidate)
+        changed['features'][0]['centered'] = [0., float('nan')]
+        with self.assertRaises(ValueError):
+            simulation.candidate_inputs(changed, source.party)
 
 
 class ActualUncertaintyAdaptersTests(unittest.TestCase):

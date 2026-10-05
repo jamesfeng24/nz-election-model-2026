@@ -4,7 +4,7 @@ import numpy as np
 from scripts.transport.geography import all_rows
 from scripts.models.complete_party_vector.construction import construct_vector
 from scripts.checkpoints.joint_candidate_share.kernel import centered
-from .common import *
+from .common import PREFIX, METHOD, YEARS, read, save, verify, arguments
 
 PARTY = 'data/processed/models/expanded-party-substitution/'
 CANDIDATE = 'data/processed/models/joint-candidate-share/construction.json'

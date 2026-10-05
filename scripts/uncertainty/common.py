@@ -26,7 +26,7 @@ def equivalent(expected, actual, path=''):
         return all(k=='sha256' and path.endswith('drawCache') or equivalent(v,actual[k],path+'.'+k) for k,v in expected.items())
     if isinstance(expected, list):
         return isinstance(actual,list) and len(expected)==len(actual) and all(equivalent(a,b,path) for a,b in zip(expected,actual))
-    if isinstance(expected,float) and isinstance(actual,(float,int)):
+    if isinstance(expected,float) and isinstance(actual,(float,int)) and not isinstance(actual,bool):
         return math.isfinite(actual) and abs(expected-actual)<=1e-10
     return type(expected)==type(actual) and expected==actual
 
