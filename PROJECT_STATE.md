@@ -1,3 +1,15 @@
+# Stage43 checkpoint — implementation and results complete, 2026-10-05
+
+Branch `stage/43-continuous-s-joint-comparison`; Stage42 reviewed/merged ancestry verified. Frozen contract `e9e93f6`, predictions `c7748a1` before scoring. New companions: `data/processed/continuous-candidate-comparison/`; code `scripts/transport/comparison/`; contract/findings docs. No existing uncertainty work was present. No fitting/acquisition/MCMC/live shares or operational changes.
+
+**Results:** all 64/451 and 65/561 complete held general slates; exact IDs preserved; no general abstentions. Own Stage33 S/joint floors/coefficient vectors, shared fold training means independently verified, centered continuous source features and all predecessor mass retained. Broad/strict joint predictions reproduce Stage42 within 1e-12. MAE S→joint:2014 3.087985→2.717275 pp (joint-minus-S −0.370711),2020 1.985299→2.132448 (+0.147149). Strict joint MAE2.748319/2.175199. Contest-pooled2.532368→2.422595, equal-election2.536642→2.424862. Joint winner counts49→56 and52→55;2020 major-party and margin losses remain. D077 retains joint preferred/S active/baseline mandatory, without claiming consistent superiority.
+
+**Validation completed:**19 focused tests; deterministic construction/evaluation/verification/report/manifest reproduction; compile/whitespace;926 central-source checks; frontend31 tests/typecheck/build. Independent raw-component arithmetic387 vectors/3036 predictions,8447 metric identities and387 winner/tie/margin checks agrees within1e-12. All1756 prior data files remain byte-identical. No configured Python formatter/linter. Full Python suite still running in `/tmp/stage43-full-python.log`; next recover its result, commit/push, open PR and verify final-head CI. No expensive inference reruns.
+
+**Limits and next action after review:** conditional observed local party inputs, uniform within-source flow, practical identity and two reused environments; candidate uncertainty not calibrated, Māori remains separate. Do not pool Stage33–34/39 overlapping forecasts. Next separately authorized implementation is coherent local-party/candidate uncertainty using retained continuous mean-model preference; nomination refresh and Māori polling/baseline separately bounded. Stop further mean experiments.
+
+---
+
 # Stage43 checkpoint — frozen comparison, 2026-10-05
 
 PR49 merge613ec78 and reviewedc75a4c4 ancestry verified; clean checkout advanced safely. Branch stage/43-continuous-s-joint-comparison. No uncertainty work existed to preserve separately. Contract and exact64/451 and65/561 sample IDs pinned before calculation. Each Stage33 primary S/joint fit independently selected; saved training means verified shared within folds and unchanged from Stage42. Next: construct and seal fixed-fit predictions, reproduce joint references, then evaluate. No fitting/acquisition/operational change.

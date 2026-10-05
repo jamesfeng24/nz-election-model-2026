@@ -1,3 +1,16 @@
+# Active roadmap after Stage43
+
+The bounded continuous-transport S versus S+R comparison is complete. Retain S+R preferred, S active and baseline mandatory: joint gains in 2014 and modest pooled MAE/RMSE, but loses share accuracy in 2020. Strict linkage does not reverse that trade-off. No further mean-model experiment is automatically authorized. External gauss remains provisional; earlier screens/operational records remain unchanged.
+
+1. Separately authorize one coherent local-party/candidate uncertainty implementation around continuous transport and the retained mean preference. Propagate shared national error once, distinguish local-party/candidate/transport/parameter/feature assumptions from calibrated uncertainty.
+2. Bounded official nomination refresh, preserving dated snapshots, withdrawals/conflicts and incomplete slates.
+3. Separately implement Māori candidate/local-party polling and explicit unpolled/stale baseline, preserving question, denominator, boundary/candidate mapping, dates, sample and dependence. National Te Pāti Māori party support remains a distinct quantity; no automatic general-coefficient extension.
+4. National reconciliation with complete turnout/valid-vote weights, then coherent MMP simulations and dated static forecast archives.
+
+These remain separately authorized dependencies. Component validation, input substitution and end-to-end replay remain distinct; expected shares average transformed shared draws. The Stage42 roadmap below is retained as history; this bounded comparison superseded its proposed immediate uncertainty stage.
+
+---
+
 # Active forecast roadmap after Stage42
 
 Stage42 audit/continuous transport is complete: preferred continuous mean-feature scenario, frozenStage41/exact controls preserved, fragment party composition unobserved. No further mean-feature or threshold search is planned. External gauss provisional, S+Rpreferred/Sactive/baseline mandatory; earlier operational records unchanged.

@@ -108,3 +108,8 @@ jobs:
       - run: python3 -m scripts.transport.continuous.verification --check
       - run: python3 -m scripts.transport.continuous.report --check
       - run: python3 -m scripts.transport.continuous.manifest --check
+      - run: python3 -m scripts.transport.comparison.construction --check
+      - run: python3 -m scripts.transport.comparison.evaluation --check
+      - run: python3 -m scripts.transport.comparison.verification --check
+      - run: python3 -m scripts.transport.comparison.report --check
+      - run: python3 -m scripts.transport.comparison.manifest --check

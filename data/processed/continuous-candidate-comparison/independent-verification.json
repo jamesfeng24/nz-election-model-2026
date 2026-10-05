@@ -1,0 +1,37 @@
+{
+  "agreementWithin1eMinus12": true,
+  "counts": {
+    "arithmeticChecks": 8447,
+    "candidatePredictions": 3036,
+    "rankingSets": 387,
+    "vectors": 387
+  },
+  "foldSummariesRounded12Decimals": [
+    {
+      "jointMinusSMaePP": -0.370710559995,
+      "maePP": {
+        "S": 3.087985446813,
+        "joint": 2.717274886818,
+        "joint_strict": 2.748318586931
+      },
+      "targetYear": 2014
+    },
+    {
+      "jointMinusSMaePP": 0.147149237128,
+      "maePP": {
+        "S": 1.985299099133,
+        "joint": 2.132448336261,
+        "joint_strict": 2.175199052774
+      },
+      "targetYear": 2020
+    }
+  ],
+  "maximumDifferencesRounded12Decimals": {
+    "arithmetic": 0.0,
+    "prediction": 0.0
+  },
+  "method": "raw exact party masses and source values; plain math.exp; independently implemented metrics/groups/rankings/margins",
+  "principalConstructionOrEvaluationFunctionsImported": false,
+  "stage": 43,
+  "tolerance": 1e-12
+}

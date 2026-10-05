@@ -330,3 +330,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Frozen unchanged Stage41 party flows and all129 complete historical general slates before fixed-fit S+R scoring.
 - Implemented centered, all-predecessor party-mass S/R weighting, neutral unsupported mass and genuine-predecessor practical identity safeguards; preserved three-policy controls and strict sensitivity.
 - Added separate2026 readiness, independent arithmetic, provenance/preservation, tests and bounded next-stage uncertainty handoff. No refitting/MCMC/live forecast or historical output rewrite.
+
+## Stage43 — 2026-10-05
+
+- Frozen, independently saved S versus S+R comparison under continuous transport; all 129 complete general slates retained.
+- Reproduced Stage42 joint predictions, strict sensitivity, paired groups/rankings/margins and two declared pooling views.
+- Retained joint preference with active S alternative; next remains coherent local/candidate uncertainty. No fitting, acquisition or live predictions.
