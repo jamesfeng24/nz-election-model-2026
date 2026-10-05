@@ -1,3 +1,13 @@
+# Stage42 — frozen audit and continuous transport contract, 2026-10-05
+
+Branch `stage/42-continuous-feature-transport`. PR48 MERGED; reviewed f0022fc and merge6b41536 ancestry verified; clean main fast-forwarded safely. No acquisition/predictions/scores/fitting in this checkpoint.
+
+Preserved within-seat audit concludes residential fragment National/Labour leaning is not identified: acquired voting-place tables contain candidate counts, not residential party allocations; advance/special/overseas prevent booth catchment inference. Zero discovery queries/resources; no finer flow. Reuse exact Stage41 conserved feasible party flows.
+
+Frozen specification/plan and consumed inputs under `data/processed/continuous-transport/` specify centering before all-predecessor party-mass weighting, neutral unsupported mass without renormalization, unique practical source R from any genuine predecessor, full conflict graph and held-contest safeguards. Supplemental geographic-only links do not overwrite identity adjudications. Full common frame2014=64/451,2020=65/561, with all14 Māori targets coverage-only. Compare exact fallback, frozen90 and continuous, plus strict R availability using identical primary earlier Stage33 S+R fits/means. Deterministic freeze/check passes; no candidate predictions yet.
+
+Exact next action: commit/push this audit/specification/ID checkpoint BEFORE construction; implement/save fixed-fit predictions and reproduce Stage41; then score paired results, create2026 readiness, focused/independent tests and preservation, finalCI and unmergedPR. Stop after this refinement; next is joint local/candidate uncertainty, no further mean search or acquisition.
+
 # Stage41 — completed / PR48 awaiting independent review, 2026-10-05
 
 Branch `stage/41-boundary-party-feature-transport`. [PR48](https://github.com/jamesfeng24/nz-election-model-2026/pull/48) is open and must remain unmerged. Stage40 reviewed7dceb33/merge6a0cf19 ancestry verified; frozen policy5bcdd4f, prediction seal8ec3c23 and implementation/results02c284d are pushed. No existing work discarded.
