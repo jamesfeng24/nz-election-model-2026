@@ -1,3 +1,13 @@
+# Active Stage45 uncertainty handoff — 2026-10-05
+
+Carry the aggregate/within residual allocation forward for development, preserving original Stage44 as control. Proper scores improve materially; numerical cap, conditional minor distortion, zero finite-bank winner miss, few reused environments and omitted components prevent a calibrated-probability claim. External gauss provisional, continuous S+R preferred/S active/baseline mandatory unchanged. No new family or mean search follows automatically.
+
+Next separately bounded implementation: official nomination refresh from bulk publication, then Māori baseline/electorate-poll integration with candidate/local-party question, denominator, dates, sample, dependence and stale/unpolled fallback. National Te Pāti Māori support remains distinct from Māori candidate votes. All-population reconciliation/turnout and denominator decisions, adequate numerical integration, then MMP/live assembly remain explicit dependencies. No live partial slate is normalized.
+
+Local commits now provide resumable checkpoints; do not assume unpushed work is on GitHub. Full final review-head Ubuntu validation and main verification remain required. Dependency-aware CI integrity is distinct from archived Linux reproduction. No scheduled cost-consuming workflow or automatic next-stage acquisition.
+
+---
+
 # Active roadmap after Stage44
 
 One pooled coherent uncertainty implementation is complete around continuous S+R and cached externalgauss. Retain S+R preferred, S active and baseline mandatory; no mean-model search/refit. Its major-party intervals are too broad for a calibration claim; keep the versioned development scenario, the reported proper scores and finite precision rather than declaring operational probabilities. No automatic variance-family search follows.

@@ -1,3 +1,71 @@
+# Stage45 complete — review-ready correction and bounded CI, 2026-10-05
+
+Branch `stage/45-residual-scale-allocation`. Reviewed Stage44 `5283e7c` and merge `35f8806` ancestry verified. Pre-scoring `ed300e4`, sealed draws `e9fd69c`, results `61e5f19`, identifiable CI commits `e8984af`/`814e23c`/`624cb34`, producer-provenance correction `79fb1c9`. At local validation the last remote head was `e9fd69c`; subsequent commits are not remote backups until the final review push. This checkpoint is ready for that one unskipped push and PR. Exact published SHA, PR and hosted check status are recorded in the PR/handoff; leave unmerged. Do not merge before both required jobs pass on that SHA.
+
+Carry the single aggregate/within uncertainty correction forward for development, preserving Stage44 as a control. Revised CRPS improves over unchanged Stage44 and point references in all12 component/composed cases; major-party distributions sharpen materially. All original mean coefficients, continuous transport, identities, failed screens and operational nulls are unchanged. Conditional aggregate arithmetic means use GH41 locations/GH81 verification; remainder mean preservation remains marginal. Numerical8000 cap fails its frozen gates, some smaller groups worsen slightly, and Tāmaki2023 has zero finite-bank winner frequency/infinite empirical log loss. This is useful but incomplete calibration evidence, not deployment approval. No added primary transport variance or other family search.
+
+Local validation complete:973Python tests pass/nine intentional optional-environment skips (167.590s), all100 existing workflow Python command checks pass;31frontendtests/typecheck/build;926source files;53focused CI/uncertainty tests; final16CI tests after stricter environment guard; YAML/compile/whitespace. Fresh complete8000 reconstruction after17transitive helper pins reproduces every numerical value exactly; only cache signatures/paths change. Eight Stage45 deterministic post-processing checks pass, and earlier full nine-module reproduction passed before the provenance-only extension. Independent11scale fits,54GH81checks,12,336,000simplexvectors,72two-policy+36pointrecords and all group/paired/pooled arithmetic agree within1e-10. All1774prior datafiles and consumed historical helpers unchanged. Local logs `/tmp/stage45-full-local.log`, `/tmp/stage45-provenance-verification.log`; caches `.cache/stage45/<signature>/` are resumable, not committed or off-device backups.
+
+CI now uses PR/main-only pushes/manual dispatch and workflow/event/PR-or-ref cancellation. Local checkpoints replace routine pushes; every unskipped PR update still runs. Optional requested remote backups may skip CI, never final review/merge heads or titles. All behavioural/default discovery tests, frontend/source checks and non-Stage39 full pipelines remain mandatory. Stage39 alone may reuse exact previously successful Linux state via conservative consumed/code/output/environment signatures; missing/changed runner image, packages, comparison history, shared code, tests, CI or unknown inputs force full. Stage24 archival classification remains always-run. First restructuring PR and all main/manual runs are full. No extra hosted benchmarking, generated-output cache, scheduled run, MCMC, acquisition or statistical/tolerance change for CI.
+
+Exact remaining action: final review push, create/attach Stage45 PR, verify normal complete Ubuntu required checks on exact unskipped SHA, update PR validation and report clean matching local/remote status. No automatic further modelling. Next separately bounded implementation: official nomination refresh; Māori baseline/electorate-polling interface; reconciliation/turnout/denominator design; MMP/live assembly. Mean/national development preferences remain externalgauss provisional, S+R preferred, S active, baseline mandatory. Poor diagnostics do not authorize another uncertainty-family search.
+
+---
+
+# Stage45 final local validation and bounded CI checkpoint — 2026-10-05
+
+Branch `stage/45-residual-scale-allocation`. Last remote head `e9fd69c`; results commit `61e5f19`, CI commits `e8984af`/`814e23c` and subsequent provenance work are local only. No Stage45 PR yet. Updated authorization: local checkpoints, one review-ready push; unpushed work is not on GitHub. All modelling results and original numerical limits below are retained.
+
+CI change is limited: PR plus main-only push/manual Verify, workflow/event/PR-or-ref concurrency, full default behavioural discovery, all other historical commands unchanged. Only five Stage39 full reconstruction commands may later reuse exact prior Linux validation through a conservative dependency/runtime attestation and a distinct lightweight integrity path. First revised PR, main, manual, CI/test/shared/unknown changes remain full. Stage24 archival regeneration is classified but still always run; new tests default behavioural and force full. No hosted benchmark run, inference cache or schedule. See `docs/ci-validation.md`.
+
+53 focused CI/uncertainty tests pass; full973-test local suite passes (nine intentional environment skips,167.590s); original100-command standalone sequence is currently running in `/tmp/stage45-full-local.log`. Earlier frontend31tests/typecheck/build and926source checks passed. Exact transitive producer-helper audit identified17 unchanged historical modules omitted from Stage45 cache identity. Expanded hashes and reconstructed draw companions change provenance only; recursive numerical comparison and independent verification passed in `/tmp/stage45-provenance-verification.log`: every number and score exactly unchanged; only25construction signature/cache-path fields and one evaluation signature changed. Preserve caches; no MCMC/mean refit/sources/tolerance changes.
+
+Resume: inspect local/remote status, finish those two local logs, verify all numerical values unchanged, commit remaining provenance/output updates locally. Complete new deterministic Stage45 checks and preservation. Push one unskipped final review head, create Stage45 PR, attach it, verify full Ubuntu jobs on exact SHA and leave unmerged. No further uncertainty family or forecast task authorized. Official nominations, Māori baseline/polls, reconciliation/turnout and MMP remain separate.
+
+---
+
+# Stage45 uncertainty results complete locally; CI restructuring in progress — 2026-10-05
+
+Branch `stage/45-residual-scale-allocation`. Pre-scoring `ed300e4`, first CI-only `e5b1d1e`, sealed draws `e9fd69c`; remote last pushed `e9fd69c`. Current results/verification/docs are LOCAL work, not yet on GitHub. Updated user authorization supersedes checkpoint-push rules: meaningful local commits, push at review readiness; skip markers only optional non-review backups. Final head/merge unskipped. No additional PR for CI.
+
+Revised/unchangedStage44/point exact-common comparison: revisedCRPS party2011/14/17/20/23=.5306/.3975/.4126/.4398/.4858; candidate2014/17/20/23=2.0028/1.8352/1.4730/1.8320; composed2017/20/23=2.5120/1.5948/2.3017pp. All12 improve over old and point. Major widths materially sharper, some other-candidate groups worsen slightly. Tāmaki2023 has zero empirical winner frequency/infinite bank logloss. Mean coefficients unmodified. New conditional major means preserved analytically/GH81; minor conditional distortion up to1.06pp; maxcomposed shift1.513pp/meanabs.012–.022pp. All1774prior datafiles unchanged.
+
+8000draw cap remains numerically unresolved: last representative max mean/CRPS/90width changes.168/.189/1.195pp, no gates relaxed. Energy128→256 sensitivity .656pp. Independent audit11fits/54GHchecks/12,336,000simplexvectors/72two-policy+36pointrecords and all aggregates, disagreements<=1e-10. Full local956Python tests pass/nineintentionalenvironment skips;36uncertainty+6diagnosis focused tests;31frontendtests/typecheck/build;926sources;compile/whitespace. No configuredPythonformatter/linter. No sources/MCMC/mean refit/live/Māori extension.
+
+Exact next action: finish bounded conservative Stage39 CI integrity/reproduction separation and explicit semantic test registry, local dependency-selector checks and full first restructuring validation; deterministic Stage45 reproduction; local commit outcomes, then one unskipped final review-head push/PR/fullUbuntu run. Preserve expensive caches `.cache/stage45/<signature>/`; no inference rerun. Do not claim unpushed results backed up remotely. Stop after correction. Next bounded nomination/Māori/reconciliation/MMP tasks remain separate; revised uncertainty development recommendation is not calibrated probability approval.
+
+---
+
+# Stage45 scales and draws sealed — 2026-10-05
+
+Pre-scoring diagnosis/spec `ed300e4`, bounded CI-only checkpoint `e5b1d1e` pushed. Revised earlier-only aggregate/within scales and all12 component/composed cases sealed, both revised and unchanged Stage44 companions, exact common IDs at8000draws. No mean/national refit. Numerical sequence1024/2048/4096/8000 reached cap: last maximum changes0.167925pp expected share,0.189365ppCRPS,1.194817pp90width exceed frozen tolerances. Retain explicit cap/precision failure; no tolerance/count adjustment or fine superiority claims. Full final evaluation not yet calculated.
+
+Independent scalar/QR11 fits and54GH81 direction checks agree within1e-10; original Stage44 implementation/scales retained. 40 focused tests include pipeline outcome independence, zero locks, shared streams, rank fallback and exact cache corruption. Explicit einsum/sum implements unchanged finite dot arithmetic to avoid platform Accelerate false floating-status warnings, not a statistical/tolerance change.
+
+Exact next action: push this sealed checkpoint [skip ci], then evaluate saved draws; audit remainder conditional distortion/shared dependence/nonlinear means, independent proper scores and precision; full relevant local tests/source/preservation, docs/state/roadmap; unskipped final PR head complete Ubuntu gate. No acquisition/MCMC/extra transportvariance/family search. All1774previous datafiles pinned unchanged. Nomination/Māori/reconciliation/MMP remain separate.
+
+---
+
+# Stage45 pre-scoring checkpoint and bounded CI adjustment — 2026-10-05
+
+Frozen diagnosis/specification checkpoint `ed300e4` precedes revised estimation/scoring. Independent diagnosis and six tests pass; synthetic priors generated. Authorized CI-only addition on this branch: one Verify workflow inspected, standalone feature-push trigger removed, PR plus push-main retained; workflow/event/PR-or-ref concurrency cancels superseded same-ref work. All job names, permissions and validation commands unchanged. Existing PyYAML parse, exact event/expression checks, unchanged jobs/permissions assertions and whitespace pass. No hosted runs launched or cancelled to measure savings.
+
+Intermediate checkpoints may use [skip ci] after local checks; pending required checks are acceptable only there. Final review/merge heads must be unskipped and fully verified. PR titles/default merge messages must not carry skip markers. Latest main commit still receives full gate even when older main runs are superseded. No protection/caching/job redesign.
+
+Exact next action: push this combined checkpoint, then continue Stage45 earlier-only scale correction/integration/score audit, final complete local checks, one unskipped PR-head Ubuntu run, leave unmerged. No fitting of mean coefficients, sources/MCMC or later work.
+
+---
+
+# Stage45 frozen scale-allocation correction — 2026-10-05
+
+PR51 reviewed5283e7c/merge35f8806 ancestry verified from clean safely synchronized main. Branch `stage/45-residual-scale-allocation`; prior work preserved. Independent pre-scoring diagnosis578vectors confirms local nonmajor CLR squared contribution97.05–98.43%, N/L residual RMS0.1102–0.1928 versus2023 old impliedSD0.7650. More coordinates alone are not proof; per-option heterogeneity and contrast covariance verify poor statistical allocation, not a numerical bug. Original Stage44 remains unchanged.
+
+Frozen one arithmetic major/remainder tree: independent N/L and aggregate-major raw log odds plus projected exchangeable remainder effects, earlier-only scalar/within moments, three prior environments, fixed interpretable priors and synthetic implications. Retain1e-6 zeros, zero lock, shared effects/nationaldraws once, cross-layer independence and omitted parameter/scale uncertainty. Conditional GH41 top-level means; explicitly limited marginal remainder adjustment. Fixed1024→2048→4096→8000 integration/convergence cap and common-policy comparisons. All1774prior datafiles pinned; no source/MCMC/mean refit/live/Māori extension.
+
+Completed inventory/diagnosis/spec/source hashes/synthetic prior outputs; NO revised historical scales/scores yet. Six independent diagnosis tests pass; deterministic diagnosis checked. Exact next action: commit/push this pre-scoring checkpoint, then earlier-only scales, integration/mean audit, sealed full draws, revised/unchanged/point comparisons, independent checks/focused/full configured checks, docs/PR/finalCI. Do not change family/priors after scores. Stop after one correction. Nomination/Māori/reconciliation/MMP remain separate.
+
+---
+
 # Stage44 — concrete CI cache-provenance correction, 2026-10-05
 
 PR51 remains open/unmerged on `stage/44-local-candidate-uncertainty`. Final-head d311690's frontend/fullPython tests, source/legacy checks and Stage44 construction reproduction passed, but evaluation rejected Linux-generated bytes against the committed macOS cache SHA (run37273698465). This is a runtime-cache checksum comparison defect, not a statistical/numerical gate failure. The original CI failure remains recorded.

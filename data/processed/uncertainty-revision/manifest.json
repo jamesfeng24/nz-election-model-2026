@@ -1,0 +1,22 @@
+{
+  "integrityIsNotIndependentNumericalReproduction": true,
+  "noAcquisition": true,
+  "noMCMC": true,
+  "noMeanRefit": true,
+  "operationalSelection": null,
+  "outputHashes": {
+    "data/processed/uncertainty-revision/construction.json": "95c4bb62002c506767d66a59f700980db8969aafd3648d0c1d45bd4c3fd046c7",
+    "data/processed/uncertainty-revision/convergence.json": "50ab7d5e74c22aa32f2f4766661c7c7114b3c9576fdf3563dde3b449c6ce0604",
+    "data/processed/uncertainty-revision/diagnosis.json": "9480c8b7325481f1633af761e338115140c2169921baba849cbb25f8d9bb8761",
+    "data/processed/uncertainty-revision/evaluation.json": "7de397aa28c12ff31deb50cf8bed723080b3aefc8b52ba2868ef1993e670dc34",
+    "data/processed/uncertainty-revision/independent-verification.json": "d7476c4db34c976d89133e1849605f9899fd59689d31789065e66a0c9333dda7",
+    "data/processed/uncertainty-revision/input-contract.json": "f77b28b26ca88783727ace382cb8a359bf04afcd1f0aaf7da5cbc828766f5c7b",
+    "data/processed/uncertainty-revision/mean-audit.json": "71c69f4d6e55e8afc20ca3be2df427f737a7d898942b6daefa21dc515ff415f9",
+    "data/processed/uncertainty-revision/prior-implications.json": "52871d2433b7ccd59a655d91d23b5b0d15753b31e8b086c2cfff59f68582aae8",
+    "data/processed/uncertainty-revision/scales.json": "4be4940be1c944fa432246f156f5b422bf757c8e3cbc59e840fe5c23e01a1cf5",
+    "data/processed/uncertainty-revision/specification.json": "fc887ba9c6d750d59aa4330020d007587d066ec9bb0298dc411dae0fe97d7e89"
+  },
+  "priorFilesPreserved": 1774,
+  "reproductionCommand": "scripts.uncertainty_revision modules --check",
+  "stage": 45
+}
