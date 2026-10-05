@@ -1,0 +1,58 @@
+{
+  "block": 128,
+  "capDraws": 32768,
+  "conditionalExpectationTolerancePP": 0.05,
+  "conditionalNodes": 64,
+  "conditionalValidationNodes": [
+    128,
+    256
+  ],
+  "convergence": {
+    "crpsPP": 0.05,
+    "energyPP": 0.1,
+    "meanPP": 0.05,
+    "width50PP": 0.5,
+    "width80PP": 0.5,
+    "width90PP": 0.5
+  },
+  "drawCounts": [
+    8192,
+    16384,
+    32768
+  ],
+  "intervalLevels": [
+    0.5,
+    0.8,
+    0.9
+  ],
+  "locationGridCount": 1025,
+  "locationGridLogitBounds": [
+    -20,
+    20
+  ],
+  "locationTolerance": 1e-10,
+  "maximumIterations": 200,
+  "meanCoefficientsRefit": false,
+  "methods": [
+    "stage45",
+    "robust_gaussian",
+    "student"
+  ],
+  "nationalDraws": 4096,
+  "nationalInference": false,
+  "nu": 4,
+  "priorMADGaussianSD": 0.35,
+  "priorOnlyPermitted": true,
+  "pseudoEnvironments": 3,
+  "scaleRule": "equal-election squared inverse-CDF MAD, same saved shared subtraction",
+  "seatStudentDirections": {
+    "candidate": [
+      "balance"
+    ],
+    "local_party": []
+  },
+  "seed": 460046,
+  "stage": 46,
+  "studentLocationCheckNodes": 8192,
+  "studentLocationNodes": 4096
+}

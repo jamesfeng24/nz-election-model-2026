@@ -1,0 +1,41 @@
+{
+  "stage": 46,
+  "attempts": [
+    {
+      "signature": "9392fabeb0673e9d26169472f2c46dc7b061c85e9f906775541277ebd7f67f71",
+      "status": "failed exact-zero Sobol inverse transform",
+      "evidence": "initial-failure.txt"
+    },
+    {
+      "signature": "9183cf345edaed4b347724bf991212ed18490482211e9629fc471d87841897d4",
+      "status": "completed unscored, conditional covariance superseded",
+      "evidence": "pre-covariance-construction.json",
+      "affected": "new conditional locations/draws/means; Stage45 control unchanged",
+      "precisionEvidence": "pre-covariance-convergence.json"
+    },
+    {
+      "status": "all 12 corrected distributions sealed before scoring",
+      "sameStatisticalFamily": true,
+      "noToleranceRelaxation": true,
+      "stage45ControlUnchanged": true,
+      "signature": "b1b2124fa822efaf784bbfd664e37b1dd70c34e7f9d45d3e2bc4ce7bd64af9a5",
+      "evidence": "construction.json",
+      "draws": 32768,
+      "representativePrecision": "passed",
+      "conditionalPrecision": "unmet; not relaxed",
+      "sealedCommit": "a036d4a",
+      "scoringStartedAfterSeal": true
+    }
+  ],
+  "environmentNote": "An unpinned system-Python signature assertion failed during state update; pinned .venv signature matches all sealed banks. No producer change or scoring before seal.",
+  "completedScoring": "evaluation.json, after corrected seal a036d4a",
+  "conditionalIntegrationGate": {
+    "tolerancePP": 0.05,
+    "maximumHistoricalCheckPP": 0.7389283386093156,
+    "passed": false
+  },
+  "noStatisticalChangesAfterScores": true,
+  "fullPredictiveEvaluationBeforeCorrection": false,
+  "outcomeBasedPrecisionMonitorsBeforeCorrection": true,
+  "precisionMonitorPurpose": "Frozen numerical draw-count convergence only, including CRPS/energy on first/middle/last seats; not full comparative evaluation or scale/df selection"
+}

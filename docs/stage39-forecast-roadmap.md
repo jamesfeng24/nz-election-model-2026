@@ -1,3 +1,13 @@
+# Active roadmap after Stage46 — 6 October 2026
+
+The bounded central/tail comparison is complete. Retain Stage45 Gaussian development default; matched robust Gaussian remains a diagnostic, Studentnu4 is not adopted. Preserve S+R mean preference, S active/baseline mandatory and externalgauss provisional. No mean-model tournament or further uncertainty family starts automatically. [Stage46 assessment](stage46-development-assessment.md).
+
+Before deployment, separately resolve the documented numerical conditional-mean preservation gap; passing representative simulation doubling does not certify this. Keep calibration/omitted uncertainty limits explicit. Remaining practical tasks: official nomination/slate refresh; an explicit Māori-seat baseline and noisy electorate-poll measurement layer; full-population turnout/valid-vote denominators and reconciliation; dated manual-adjustment interface; coherent MMP and static publication/archive assembly. None is implemented or authorized by this roadmap. Māori candidate polling is distinct from national Te Pāti Māori support and retains question, denominator, dates, sample and dependence. Manual evidence preserves both adjusted and unadjusted forecasts, never retrospectively cleans the residual sample.
+
+Earlier roadmaps remain historical records below.
+
+---
+
 # Active Stage45 uncertainty handoff — 2026-10-05
 
 Carry the aggregate/within residual allocation forward for development, preserving original Stage44 as control. Proper scores improve materially; numerical cap, conditional minor distortion, zero finite-bank winner miss, few reused environments and omitted components prevent a calibrated-probability claim. External gauss provisional, continuous S+R preferred/S active/baseline mandatory unchanged. No new family or mean search follows automatically.

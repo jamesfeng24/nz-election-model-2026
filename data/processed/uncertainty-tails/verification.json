@@ -1,0 +1,103 @@
+{
+  "completeSimplexVectors": 75792384,
+  "conditionalIntegrationPassed": false,
+  "earlierOnlyScaleMembership": true,
+  "independentScaleFolds": 4,
+  "independentScoreRecords": 108,
+  "independentStudentExpectations": [
+    {
+      "conditionalMean": 0.1,
+      "gapPP": 0.0008095979134536968,
+      "independentExpectation": 0.10000809597913454,
+      "quadratureAbsoluteError": 8.54144807368216e-12,
+      "year": 2014
+    },
+    {
+      "conditionalMean": 0.5,
+      "gapPP": 6.772360450213455e-12,
+      "independentExpectation": 0.5000000000000677,
+      "quadratureAbsoluteError": 3.0843297666553696e-12,
+      "year": 2014
+    },
+    {
+      "conditionalMean": 0.9,
+      "gapPP": 0.0008095979134425946,
+      "independentExpectation": 0.8999919040208656,
+      "quadratureAbsoluteError": 8.68385316523929e-13,
+      "year": 2014
+    },
+    {
+      "conditionalMean": 0.1,
+      "gapPP": 0.0010216833726692243,
+      "independentExpectation": 0.1000102168337267,
+      "quadratureAbsoluteError": 9.966315263473095e-12,
+      "year": 2017
+    },
+    {
+      "conditionalMean": 0.5,
+      "gapPP": 6.794564910705958e-12,
+      "independentExpectation": 0.49999999999993205,
+      "quadratureAbsoluteError": 3.084331494687885e-12,
+      "year": 2017
+    },
+    {
+      "conditionalMean": 0.9,
+      "gapPP": 0.001021683372670612,
+      "independentExpectation": 0.8999897831662733,
+      "quadratureAbsoluteError": 1.9259285297208696e-12,
+      "year": 2017
+    },
+    {
+      "conditionalMean": 0.1,
+      "gapPP": 0.00138032120278464,
+      "independentExpectation": 0.10001380321202785,
+      "quadratureAbsoluteError": 3.3937543210001413e-12,
+      "year": 2020
+    },
+    {
+      "conditionalMean": 0.5,
+      "gapPP": 6.8334227165678385e-12,
+      "independentExpectation": 0.49999999999993167,
+      "quadratureAbsoluteError": 3.084330958992466e-12,
+      "year": 2020
+    },
+    {
+      "conditionalMean": 0.9,
+      "gapPP": 0.0013803212027818645,
+      "independentExpectation": 0.8999861967879722,
+      "quadratureAbsoluteError": 3.885165361746703e-12,
+      "year": 2020
+    },
+    {
+      "conditionalMean": 0.1,
+      "gapPP": 0.0016218657090283362,
+      "independentExpectation": 0.10001621865709029,
+      "quadratureAbsoluteError": 5.696538388147472e-12,
+      "year": 2023
+    },
+    {
+      "conditionalMean": 0.5,
+      "gapPP": 6.850076061937216e-12,
+      "independentExpectation": 0.4999999999999315,
+      "quadratureAbsoluteError": 3.084333587507742e-12,
+      "year": 2023
+    },
+    {
+      "conditionalMean": 0.9,
+      "gapPP": 0.0016218657090116828,
+      "independentExpectation": 0.8999837813429099,
+      "quadratureAbsoluteError": 5.861561281368674e-12,
+      "year": 2023
+    }
+  ],
+  "independentlyComparedPreCorrectionControlRecords": 771,
+  "largestTotalMeanShiftPP": 1.8360676019342659,
+  "maximumConditionalIntegrationGapPP": 0.7389283386093156,
+  "maximumEnergyPairDifferencePP": 0.09088565690580808,
+  "noMeanRefitOrAcquisition": true,
+  "precisionStatus": "precision_gates_passed",
+  "priorArtifactsPreserved": true,
+  "stage": 46,
+  "stage45ControlPreserved": true,
+  "tolerance": 1e-10
+}

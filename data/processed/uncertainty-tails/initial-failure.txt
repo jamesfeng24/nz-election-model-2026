@@ -1,0 +1,72 @@
+Sealed precision local_party:2011 8192 3
+Sealed precision local_party:2014 8192 3
+Sealed precision local_party:2017 8192 3
+Sealed precision local_party:2020 8192 3
+Sealed precision local_party:2023 8192 3
+Sealed precision candidate:2014 8192 3
+Sealed precision candidate:2017 8192 3
+Sealed precision candidate:2020 8192 3
+Sealed precision candidate:2023 8192 3
+Sealed precision composed:2017 8192 3
+Sealed precision composed:2020 8192 3
+Sealed precision composed:2023 8192 3
+Sealed precision local_party:2011 16384 3
+Sealed precision local_party:2014 16384 3
+Sealed precision local_party:2017 16384 3
+Sealed precision local_party:2020 16384 3
+Sealed precision local_party:2023 16384 3
+Sealed precision candidate:2014 16384 3
+Sealed precision candidate:2017 16384 3
+Sealed precision candidate:2020 16384 3
+Sealed precision candidate:2023 16384 3
+Sealed precision composed:2017 16384 3
+Sealed precision composed:2020 16384 3
+Sealed precision composed:2023 16384 3
+Sealed precision local_party:2011 32768 3
+Sealed precision local_party:2014 32768 3
+Sealed precision local_party:2017 32768 3
+Sealed precision local_party:2020 32768 3
+Sealed precision local_party:2023 32768 3
+Sealed precision candidate:2014 32768 3
+Sealed precision candidate:2017 32768 3
+Sealed precision candidate:2020 32768 3
+Sealed precision candidate:2023 32768 3
+Sealed precision composed:2017 32768 3
+Sealed precision composed:2020 32768 3
+Sealed precision composed:2023 32768 3
+Sealed full local_party:2011 32768 63
+Sealed full local_party:2014 32768 64
+Sealed full local_party:2017 32768 64
+Sealed full local_party:2020 32768 65
+Sealed full local_party:2023 32768 65
+Sealed full candidate:2014 32768 64
+Sealed full candidate:2017 32768 64
+/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_tails/streams.py:51: RuntimeWarning: invalid value encountered in subtract
+  result['within']=eta-eta.mean(axis=1,keepdims=True)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_tails/construction.py", line 123, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_tails/construction.py", line 119, in main
+    args=arguments();verify();save('construction.json',build(args.check),args.check)
+                                                       ^^^^^^^^^^^^^^^^^
+  File "/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_tails/construction.py", line 113, in build
+    completed=[case_build(layer,year,rows,count,'full',scales,parties,regenerate) for layer,year,rows in cases(inventory)]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_tails/construction.py", line 61, in case_build
+    if layer!='composed':q,meta=component(row,fit,count,method)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_tails/simulation.py", line 19, in component
+    q,location,total=invert(row['mean'],row,scales,count,method)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_tails/simulation.py", line 13, in invert
+    if method=='stage45':q,location=inverse(base,row['groups'],eta,total)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_revision/coordinates.py", line 123, in inverse
+    conditional, location = within_adjust(within, 1 - mass, noise['within'], target)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jamesfeng/.codex/.chatgpt-projects/g-p-6a9e7b5899988191b79fcb0f8bd325a3/nz-election-model-2026/scripts/uncertainty_revision/coordinates.py", line 87, in within_adjust
+    raise ValueError('Within-remainder adjustment failed')
+ValueError: Within-remainder adjustment failed

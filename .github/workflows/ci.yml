@@ -154,3 +154,12 @@ jobs:
       - run: python3 -m scripts.uncertainty_revision.verification --check
       - run: python3 -m scripts.uncertainty_revision.report --check
       - run: python3 -m scripts.uncertainty_revision.manifest --check
+      - run: python3 -m scripts.uncertainty_tails.diagnosis --check
+      - run: python3 -m scripts.uncertainty_tails.estimation --check
+      - run: python3 -m scripts.uncertainty_tails.numerics --check
+      - run: python3 -m scripts.uncertainty_tails.construction --check
+      - run: python3 -m scripts.uncertainty_tails.evaluation --check
+      - run: python3 -m scripts.uncertainty_tails.verification --check
+      - run: python3 -m scripts.diagnostics.uncertainty_tails_reference --check
+      - run: python3 -m scripts.diagnostics.uncertainty_tails_report --check
+      - run: python3 -m scripts.diagnostics.uncertainty_tails_manifest --check

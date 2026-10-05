@@ -309,3 +309,7 @@ No new sources or statistical dependencies acquired. `data/processed/uncertainty
 ## Stage45 preservation and uncertainty companions
 
 No new political sources or inference. `data/processed/uncertainty-revision/` pins Stage44's residual/mean inventory, frozen old scales/spec/code and three cached Stage39 fine national8000draw archives. Separate1774file preservation hashes protect all earlier raw/numerical/identity/operational data. Revised scales use earlier residual target years only; outcomes score sealed forecasts, not locations or preprocessing. Independent diagnosis/verification is numerical rather than documentary validation. Stage44 original outputs remain unchanged; synthetic prior fixtures remain explicitly synthetic.
+
+## Stage46 preserved-evidence-only uncertainty test
+
+No political/source resources acquired. `data/processed/uncertainty-tails/input-contract.json` pins consumed Stage44/45 residual, mean-model and cached-national dependencies; preservation.json verifies1786 prior data files (raw, processed, controls and source records). Source integrity remains926 registered resources. Completed unscored/superseded numerical attempts are identified in attempt-ledger.json; their local cache hashes and producer commits preserve lineage without treating them as scored evidence. Use the pinned boundary Python environment and exact run signatures; national MCMC is not needed for reproduction.

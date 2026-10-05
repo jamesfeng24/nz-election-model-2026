@@ -1,0 +1,43 @@
+# Stage46 frozen post-Stage45 central/tail test
+
+Frozen before estimation or predictive scoring, 2026-10-05. Diagnosis `280b14d`. This is one development correction, not untouched validation. Preserve all Stage44/45 results and precision failures.
+
+## Distribution and scale
+
+Change **candidate seat-specific National/Labour log balance only**. Shared balance Gaussian, major/remainder mass and within-remainder Gaussian structure retain Stage45 estimates and priors. For each permitted earlier election, subtract its Stage45 arithmetic shared log-balance effect; compute empirical inverse-CDF MAD about the seat residual median. Median is a dispersion statistic, not a forecast bias correction. All observations enter; no exclusion or exceptional-seat labels.
+
+Pool squared MAD across earlier elections with three pseudo-election contributions. Prior MAD = .35 × Phi-inverse(.75), derived from the existing candidate-seat balance prior. Central MAD = sqrt((sum earlier MAD² + 3 prior MAD²)/(earlier environments + 3)). No later election or held-out outcome enters. Strictly targetYear earlier than holdout. With no history, explicitly prior-only.
+
+Student seat scale = pooled MAD / t4-inverse(.75); nu=4 is one **assumed** finite-variance tail value, not identifiable from four inspected environments. Implied seat SD = scale × sqrt(4/2). Matched robust Gaussian SD = pooled MAD / Phi-inverse(.75). Shared variance is added separately; do not equate Student scale with SD or preserve old Gaussian variance mechanically. Missing one major candidate omits balance, preserving other directions. Exact zeros remain locked. EPSILON=1e-6 only for residual coordinate measurement remains unchanged.
+
+Three distribution methods: untouched Stage45 control; matched robust-scale Gaussian diagnostic; robust Student candidate balance. Point forecast is degenerate reference. No additional variance, transport stress, coefficient noise, distribution or df search.
+
+## Outcome-free conditional expectation integration
+
+Stage45 companion retains its original GH41 aggregate and marginal remainder location equations, with unchanged scales. Revised two methods retain GH41 Gaussian aggregates. Student balance location is found using fixed antithetic scrambled Sobol4096 integration of independent shared normal and seat t4, a monotone logit grid[-20,20] of1025 points, bisection tolerance1e-12 and PCHIP interpolation. Validate representative grid/interpolation expectations with8192 independent quadrature nodes; extreme probabilities use direct bisection. This is numerical integration, not historical bias fitting.
+
+Revised remainder offsets use a deterministic64-node antithetic scrambled Sobol normal bank, marginal combined shared/seat SD, conditional on **each supplied input vector**, block128. Solve conditional softmax expectation to1e-10, max200 iterations. No target outcome. Check128/256-node independent integration on fixed synthetic scenarios and first/middle/last historical inputs. Report failure above .05pp; no silent precision upgrade/threshold relaxation. Unlike Stage45's one marginal offset, this addresses varying-input remainder distortion. Revised Gaussian and Student share this numerical treatment, so their comparison isolates distribution shape at matched central MAD; comparison with Stage45 also includes the disclosed numerical location correction.
+
+## Simulation and compute cap
+
+One canonical Sobol dimension registry includes all shared and seat keys across both layers of each election; independently scrambled multidimensional uniforms, fixed seed460046. Common uniforms across methods, shared keys across seats, separate layer/seat keys. No independent one-dimensional Sobol streams that could accidentally align shared/seat effects. Draw prefixes8192→16384→32768. Composed cases use4096 cached, chain-balanced external national draws, each repeated2/4/8 times; weights equal, repeated national IDs plus distinct local replicate IDs. Local replicates are not new independent national scenarios. National enters once; no MCMC. Remainder and scalar streams distinct; t inverse-CDF only on declared seat balance coordinate. Three representative seats (first/middle/last canonical IDs) in each of12 cases determine convergence before full construction.
+
+Frozen maximum last-doubling changes: expected share .05pp, CRPS .05pp, 50/80/90 widths .5pp, energy .10pp. Monitored target outcomes enter precision reporting only, never scales/locations or sample selection. Stop at first passing count or32768 cap; report unmet gates. No adaptive precision chosen from relative model scores. Approximate energy uses two fixed seeded disjoint permutations over all draws, excluding self-pairs; numerical sensitivity between permutations/doublings reported. It is a bounded U-statistic pair estimate, not pseudo-independent elections. Components/composition share this standard. At most12×3 representative banks per count plus12×complete banks selected count; no new inference.
+
+## Identical samples and reporting
+
+Frozen321 local-party records2011/14/17/20/23,257 candidate records2014/17/20/23,193 composed records2017/20/23 from Stage44 inventory and continuous S+R earlier fits. No2011 candidate fit, no Māori general-error extrapolation. All retained, including Tāmaki. Earlier uncertainty residual windows only, priors explicit. Identical complete slates/weights for all methods, equal contests within election; pooled contest and equal-election summaries distinct.
+
+Report50/80/90 marginal coverage/counts/widths and proper interval scores; CRPS, complete-vector energy, expected-share MAE/RMSE, National/Labour versus remainder, prediction-time top-two margins, observed top-two separately, diagnostic winner Brier/log loss. Empirical zero winner frequency is not mathematically zero probability; no artificial floor. Save forecasts before scoring. Conditional local errors exclude polling misses; conditional candidate errors exclude upstream local errors. Cross-layer independence remains assumed. National reconciliation, parameter/scale-estimation uncertainty, fragment composition, fine-party allocation uncertainty and Māori baseline/polls remain limitations.
+
+No automatic success from narrower intervals or coverage alone. If mixed, retain best-supported development distribution without another family. Future dated manual adjustments preserve raw/adjusted forecasts, affected candidates, cutoff evidence, author/rationale/expiry and coherent normalization; no retrospective overrides here. Māori polls remain a separate question/denominator/date/sample/dependence-aware measurement layer.
+
+## Pre-scoring numerical correction
+
+Full-frame2020 construction exposed an exact zero in a30-bit Sobol uniform, yielding an infinite Gaussian quantile and failed remainder adjustment. No predictive scores had been calculated. Use the midpoint of **every**30-bit cell: u + 0.5/2^30, with bits=30 explicit, before inverse CDFs. This is a finite integration convention, not a winner-probability floor, zero-vote replacement or statistical scale change. Original failed cache signatures remain recorded; regenerated companions use a new code signature. Priors, nu, tolerances, samples and compute count cap remain unchanged.
+
+## Pre-score conditional covariance correction
+
+The completed 9183cf simulation bank is retained as an unscored numerical checkpoint. Inspection before predictive scoring found that the new conditional remainder-location integration assumed independent option effects while the preserved simulation shares election effects among identical ballot labels (including multiple independents). Correct the integration covariance to shared-label plus individual-seat effects; preserve the actual stochastic family and Stage45 control. The same-label contrast has variance 2 seatSD²; a distinct-label contrast has variance 2(sharedSD² + seatSD²). No target outcomes determine this correction. Existing 64-node construction, 128/256-node checks, .05pp conditional tolerance and 32,768 simulation cap remain frozen. Report any remaining failure.
+
+Reuse identical Gaussian/Student local inputs and mass/remainder predictions only after comparison with independently composed arrays. Exact repeated 4,096-row national inputs may reuse their conditional offsets; any difference requires full calculation. This is arithmetic reuse, not a new statistical branch.

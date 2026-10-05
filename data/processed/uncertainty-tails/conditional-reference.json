@@ -1,0 +1,176 @@
+{
+  "conditionalGatePP": 0.05,
+  "maximumConditionalGapPP": 0.14146335474416738,
+  "maximumReferenceChangePP": 1.5543122344752192e-13,
+  "noToleranceRelaxation": true,
+  "orders": [
+    41,
+    81
+  ],
+  "purpose": "independent contrast-covariance Gauss-Hermite reference, synthetic only",
+  "records": [
+    {
+      "expectationGH81": [
+        0.4994937518593046,
+        0.3006678252874307,
+        0.1998384228532637
+      ],
+      "labels": [
+        "a",
+        "b",
+        "c"
+      ],
+      "maximumConditionalGapPP": 0.06678252874307011,
+      "maximumReferenceChangePP": 3.885780586188048e-14,
+      "offset": [
+        0.023361705716379026,
+        -0.002396198847442045,
+        -0.020965506868936983
+      ],
+      "probability": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "seatSD": 0.25,
+      "sharedSD": 0.3,
+      "synthetic": true
+    },
+    {
+      "expectationGH81": [
+        0.9697051493615584,
+        0.020268528018169522,
+        0.010026322620271852
+      ],
+      "labels": [
+        "a",
+        "b",
+        "c"
+      ],
+      "maximumConditionalGapPP": 0.029485063844159054,
+      "maximumReferenceChangePP": 1.1102230246251565e-14,
+      "offset": [
+        0.09094877428249795,
+        -0.03915987830975135,
+        -0.0517888959727466
+      ],
+      "probability": [
+        0.97,
+        0.02,
+        0.01
+      ],
+      "seatSD": 0.25,
+      "sharedSD": 0.3,
+      "synthetic": true
+    },
+    {
+      "expectationGH81": [
+        0.49951279530568754,
+        0.29907257114686947,
+        0.20141463354744168
+      ],
+      "labels": [
+        "a",
+        "a",
+        "c"
+      ],
+      "maximumConditionalGapPP": 0.14146335474416738,
+      "maximumReferenceChangePP": 7.771561172376096e-14,
+      "offset": [
+        0.02524609140675965,
+        0.010755482039670906,
+        -0.036001573446430554
+      ],
+      "probability": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "seatSD": 0.25,
+      "sharedSD": 0.3,
+      "synthetic": true
+    },
+    {
+      "expectationGH81": [
+        0.9699148940130694,
+        0.01994670309583192,
+        0.010138402891100054
+      ],
+      "labels": [
+        "a",
+        "a",
+        "c"
+      ],
+      "maximumConditionalGapPP": 0.013840289110005413,
+      "maximumReferenceChangePP": 1.5543122344752192e-13,
+      "offset": [
+        0.06519723648317195,
+        0.003408262070378767,
+        -0.06860549855355073
+      ],
+      "probability": [
+        0.97,
+        0.02,
+        0.01
+      ],
+      "seatSD": 0.25,
+      "sharedSD": 0.3,
+      "synthetic": true
+    },
+    {
+      "expectationGH81": [
+        0.4999128247996921,
+        0.3008165198928454,
+        0.19927065530746044
+      ],
+      "labels": [
+        "a",
+        "a",
+        "a"
+      ],
+      "maximumConditionalGapPP": 0.08165198928454243,
+      "maximumReferenceChangePP": 9.992007221626409e-14,
+      "offset": [
+        0.010461510332371677,
+        0.001148360663617057,
+        -0.011609870995988734
+      ],
+      "probability": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "seatSD": 0.25,
+      "sharedSD": 0.3,
+      "synthetic": true
+    },
+    {
+      "expectationGH81": [
+        0.9699574157725454,
+        0.020120878252693656,
+        0.009921705974760725
+      ],
+      "labels": [
+        "a",
+        "a",
+        "a"
+      ],
+      "maximumConditionalGapPP": 0.012087825269365554,
+      "maximumReferenceChangePP": 1.1102230246251565e-14,
+      "offset": [
+        0.04027905307329215,
+        -0.012849083975437381,
+        -0.027429969097854768
+      ],
+      "probability": [
+        0.97,
+        0.02,
+        0.01
+      ],
+      "seatSD": 0.25,
+      "sharedSD": 0.3,
+      "synthetic": true
+    }
+  ],
+  "stage": 46
+}

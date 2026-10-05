@@ -1,3 +1,67 @@
+# Stage46 complete locally — review-ready bounded tail comparison, 2026-10-06
+
+Branch `stage/46-residual-tail-diagnosis`; prerequisite PR52/reviewed49385c9/merge34bc83bb verified. Pre-fit280b14d/e02dc92; corrected integration29315a7; corrected full-bank seal a036d4a precedes full comparative scoring. Earlier outcome-based numerical precision monitors are explicitly preserved in pre-covariance-convergence.json. All257 candidate residual seats retained;321party/193composed records. No sources, national MCMC, mean refit, new directions, df/scale search or historical overrides.
+
+**Retain Stage45 Gaussian development default; do not adopt Studentnu4.** Matched robust Gaussian remains informative: small major-party gains but no pooled composed advantage and unresolved numerical remainder means. Student CRPS/energy are worse than matched Gaussian in all7candidate/composed cases and central intervals widen. Candidate pooledCRPS Stage45/Gaussian/Student1.7853/1.7807/1.8003pp; composed2.1305/2.1309/2.1488. Every difficult case remains; conditionalTāmaki2023 winner0/32768 is finite-bank zero, not mathematical impossibility. Mean/national preferences and operational records unchanged. [Assessment](docs/stage46-development-assessment.md), D080, deterministic tables and attempt ledger contain limits.
+
+Numerical signature b1b2124fa822efaf784bbfd664e37b1dd70c34e7f9d45d3e2bc4ce7bd64af9a5: all12 corrected distributions sealed at32768; original failed/superseded caches retained. Representative last-doubling gates pass; **conditional.05pp gate fails**, maximumhistoricalcheck.73893pp. Candidate remainder mean drift up to.5585pp, composedtotalshift1.8361pp; no tolerance/cap relaxation or target-based bias adjustment. Independent synthetic GH41/81 reference change<=1.6e-13pp; Student binary referencegap<=.001622pp. Full-frame energy pairdifference<=.09089pp. Gaussian/Student reuse equals standalone calculation; shared national scenarios remain4096 with2/4/8 local replicas, not extra national forecasts. Current-cache creation span15.4min is a filesystem measure, not total stage/runtime accounting.
+
+Local checks: corrected full1009tests/nine intentional optional-env skips182.956s, final37focused tests including the additional independent repeated-label inverse fixture (final discovery1010);31frontendtests/typecheck/build;926source files;1786prior raw/processed/control/source data files and consumed helpers unchanged; four independent scale folds,108score records and75,792,384simplex vectors verified;771pre-correction control expectations unchanged. Cached evaluation/verification/report/reference/manifest checks pass, six32768-draw representative records regenerated, compile/YAML/whitespace pass. No configuredPythonformatter/linter. Full Linux construction is delegated to the normal final review-head gate, not claimed from hashes or local cache checks.
+
+Publication/resume: work through this checkpoint is LOCAL until the consolidated final push. Remote main last verified34bc83bb; no Stage46 PR at the time this file is committed. Published SHA/PR and exact requiredUbuntu results are recorded in the GitHub PR/app handoff. Routine checkpoint pushes were avoided; final review head is unskipped. Both requiredjobs check/python remain, PR+push-main/manual events and workflow/event/PR-or-ref cancellation unchanged. No extra hosted benchmark run. Leave PR unmerged. Ignored `.cache/stage46/<signature>/` banks are local, not off-device backups; all contracts/derived outputs/code/attempt evidence are committed.
+
+Exact reproduction: use pinned `.venv/bin/python`; diagnosis/estimation/numerics --check, then `scripts.uncertainty_tails.construction --check` for explicit FULL reconstruction (expensive; cached manifests are not a substitute), evaluation/verification --check, and scripts.diagnostics.uncertainty_tails_reference/report/manifest --check. Normal `construction` resumes exact-compatible completed banks; do not edit producers while it runs or rerun national inference. Logs `/tmp/stage46-{corrected-construction,evaluation,verification,final-tests,final-focused,frontend-check}.log`. Stage46 stops here. Numerical conditional-mean readiness, official nomination refresh, Māori baseline/poll measurement, dated manual adjustments, reconciliation/denominators and MMP remain separately authorized tasks, not a new family search.
+
+---
+
+# Stage46 corrected forecasts sealed; evaluation in progress — 2026-10-06
+
+Branch `stage/46-residual-tail-diagnosis`; all12 corrected banks committed a036d4a before scoring at32768 under b1b2124fa822efaf784bbfd664e37b1dd70c34e7f9d45d3e2bc4ce7bd64af9a5. Local only; no Stage46 PR/remote branch. No score entered fitting or numerical choices. Prior completed unscored banks and Sobol-zero failure remain in attempt-ledger.json/original caches. Stage45 control equations/scales untouched. Use .venv/bin/python, not unpinned systemPython, for signature checks.
+
+Corrected full1009 tests pass/nine optional skips (182.956s); additional independent GH81 repeated-label inverse test passes, future suite1010. Representative last-doubling gates pass at32768; separate conditional.05pp gate remains unmet (.14146pp synthetic reference; GH41→81 change<=1.6e-13pp). All257 candidate seats retained;926source checks/1786prior-artifact preservation pass. No MCMC or acquisition.
+
+Resume: evaluation running in `/tmp/stage46-evaluation.log` session41863. Finish `.venv/bin/python -m scripts.uncertainty_tails.evaluation`, then verification/report/reference/manifest checks; cached generation remains complete. Audit scores and means, document recommendation/decision/roadmap. One consolidated unskipped review push/PR, complete required Ubuntu validation, leave unmerged. Local caches are not off-device backups. No new family, df, scale multipliers, mean features, retrospective overrides or subsequent task.
+
+---
+
+# Stage46 corrected integration checkpoint — 2026-10-06
+
+Existing branch `stage/46-residual-tail-diagnosis`, prerequisite main34bc83bb/reviewed49385c9 verified. Local commits through d946fad; no Stage46 remote branch/PR. Work and caches are LOCAL, not off-device backups.
+
+All12 unscored 32,768 banks completed under9183cf; retained pre-covariance-construction.json and original cache. Before any predictive scoring, corrected conditional remainder quadrature to the actual shared-ballot-label covariance. Shared/no_group duplicate effects cancel in same-label contrasts; individual effects remain. No statistical law, mean coefficient, sample, gate or cap changes. Untouched Stage45 control stays separate. Finite contractions use explicit einsum to avoid previously documented Apple Accelerate false status warnings. Gaussian/Student pair reuse equals independent compositions within1e-10; exact repeated4096 national inputs reuse offsets only when every row matches.
+
+Corrected9 component banks and composed2017 bank are sealed; remaining composed cases running. Exact producer signature b1b2124fa822efaf784bbfd664e37b1dd70c34e7f9d45d3e2bc4ce7bd64af9a5. Corrected generation currently running: `/tmp/stage46-corrected-construction.log` (session21511). Resume with `.venv/bin/python -m scripts.uncertainty_tails.construction`; exact signatures cache completed cases. Do not edit producer modules while it runs. New independent synthetic contrast covariance GH41/81 reference saved: reference change<=1.6e-13pp, conditional gap up to.14146pp remains above.05pp. Corrected full1009-test suite passes/nine intentional optional-environment skips (182.956s),28 focused corrected tests pass,926source integrity and1786prior consumed-artifact preservation pass. Earlier31frontendtests/typecheck/build are unchanged-dependency checks; finalUbuntu will run them again. All257 candidate residual seats retained; no new scores yet.
+
+Next: complete sealed distributions, verify new representative precision and separate conditional .05pp gate without relaxation, local commit, evaluate/independently verify, full final local checks, updated findings/decision/roadmap. One consolidated unskipped push/PR/full required Ubuntu run, leave unmerged. No MCMC, acquisition, new family, historical overrides, Māori implementation or subsequent task.
+
+---
+
+# Stage46 full construction in progress — 2026-10-06
+
+PR52 merge34bc83bb/reviewed49385c9 verified; branch `stage/46-residual-tail-diagnosis`. Local checkpoints280b14d/e02dc92/d631db5/acf809a, no remote Stage46 branch or PR. These commits and cached banks are not off-device backups. Remote main remains prerequisite34bc83bb at initial verification.
+
+321 local-party,257 candidate,193 composed complete-general records fixed; no mean/national refit or acquisition. Candidate seat N/L Studentnu4 uses earlier-only pooled central MAD with correct t quantile conversion and implied SD, matched robust Gaussian and untouched Stage45 control. Shared and other directions unchanged. Heterogeneity audit retains all257 and qualifies tail interpretation; no exception labels. All9 component full banks sealed at32768; three composed cases currently running. Initial exact Sobol-zero failure corrected pre-scoring by30-bit cell midpoints; original failure/log/signature retained. Last-doubling representative precision gates pass at32768; separate conditional quadrature .05pp gate fails (synthetic max.1567pp). Do not relax it.
+
+Local full998Python tests pass/nine intentional skips, plus26focused tests including newly added endpoint case; frontend31tests/typecheck/build and926source checks pass. Full runtime approximately9seconds per representative composed seat across three methods. No hosted runs. Exact resume: inspect `/tmp/stage46-construction.log` and existing session, resume `.venv/bin/python -m scripts.uncertainty_tails.construction` with exact-signature caches if interrupted. Only after all12 distributions sealed, commit construction/scales, run evaluation then independent verification/report. Finish deterministic reproduction/full final Ubuntu gates once, one consolidated unskipped push/PR left unmerged. No further family, overrides, polls, MCMC or live forecasts.
+
+---
+
+# Stage46 simulation checkpoint — 2026-10-05
+
+Diagnostic280b14d, pre-fit e02dc92, implementation d631db5 are LOCAL ONLY. Original remote main34bc83bb; no Stage46 push/PR. Earlier-only central fits and robust Student/ Gaussian priors are frozen. Last-doubling precision passed at32768 on36representative seats; conditional remainder quadrature remains above its separate.05pp gate, explicitly unresolved.
+
+Full-frame candidate2020 exposed exact-zero Sobol uniform/infinite inverse-normal. Corrected before any new predictive scoring using30-bit digital cell midpoints; no statistical/scale/tolerance change. Original partial cache signatures/log remain. Resume after numerical-fix local commit: regenerate `.venv/bin/python -m scripts.uncertainty_tails.numerics` then `.venv/bin/python -m scripts.uncertainty_tails.construction`, save complete forecasts before evaluation. Caches `.cache/stage46/` are resumable local files, not off-device backups. Finish independent checks, complete required local/Ubuntu final head once, PR unmerged. No further family or acquisition.
+
+---
+
+# Stage46 diagnostic checkpoint — 2026-10-05
+
+PR52 merged at34bc83bb; reviewed49385c9 ancestry verified. Clean main synchronized; branch `stage/46-residual-tail-diagnosis`. Stage46 work is LOCAL, not pushed or backed up on GitHub. Preserved1786 prior data files, consumed historical helpers and ignored national/uncertainty caches.
+
+Saved shared-effect shape audit complete before new fitting/scoring. Candidate seat National/Labour balance supports a tighter centre/occasional tails; local/mass directions are inconsistent and remainder heterogeneity explains much pooled concentration. Every observation retained. Next: freeze one earlier-only robust central MAD rule and assumed nu4 candidate-seat-balance Student correction, matched robust Gaussian diagnostic, untouched Stage45 control; bounded integration and conditional mean checks. Commit specification before fitting. No sources/MCMC/mean refit/exception labels. Local checkpoints only; one final unskipped review push/PR and required full Linux validation. Exact resume: run `.venv/bin/python -m scripts.uncertainty_tails.diagnosis --check`, inspect local status, continue frozen numerical contract. Existing remote main is34bc83bb; no Stage46 remote branch.
+
+---
+
 # Stage45 complete — review-ready correction and bounded CI, 2026-10-05
 
 Branch `stage/45-residual-scale-allocation`. Reviewed Stage44 `5283e7c` and merge `35f8806` ancestry verified. Pre-scoring `ed300e4`, sealed draws `e9fd69c`, results `61e5f19`, identifiable CI commits `e8984af`/`814e23c`/`624cb34`, producer-provenance correction `79fb1c9`. At local validation the last remote head was `e9fd69c`; subsequent commits are not remote backups until the final review push. This checkpoint is ready for that one unskipped push and PR. Exact published SHA, PR and hosted check status are recorded in the PR/handoff; leave unmerged. Do not merge before both required jobs pass on that SHA.
