@@ -1,3 +1,13 @@
+# Stage47 pre-score companion budget frozen — 6 October 2026
+
+Local checkpoints9d4daa6/7d86a90/d09fe71; no remoteStage47branch/PR. Numerical repair uses exact active-face shared-label/individual Gaussian covariance, converged independent references. 578components tested, allpassstricter.02pp referenceagreement (.05pp comparison retained); worstStage46 reportedgap .73893 reconstructed, highprecisionoldlocationerror .58945 with.000157refspread. Allprioroutputs unchanged. Structuralamendment is committed beforetables; no newidentity, mean orvariancefitting.
+
+Measured27composedcalls at16/64/256 vectors (maximum3.410s/256) informs companion-contract.json, frozen beforenewpredictions/scoring. Newcomponentbank32768all321party/257candidate; composed512all193 withmatchingcachedcontrolindices and explicitfiniteprecisionlimitations; representative256/512/1024 checks stop atfixedcap, notselectcountsby scores. Eightone-at-atime effect removals onfirst/mid/last ninecomposedseats only, nofactorial. Allfullframeanalytic major-product variance/prior audits remain. RaoBlackwellconditionalexpectedcandidate means preservegenuine nonlinear localinput shifts, notforcednationalpoint. NominalCPUcaps/newsignaturesresume, nooldfull reconstruction/MCMC.
+
+Exactnextaction: sealnewGaussian numericalcompanion beforeevaluation; finishsource-only structural audit andwidthdrivers, independentlycheck arithmetic/chronology, decideoneboundednextaction/designwithoutfitting. Thenalllocal relevantchecks, oneunskippedpush/PR/finalLinuxvalidation/unmerged. Work/ignoredbanks localonly untilreviewpush.
+
+---
+
 # Stage47 numerical pilot and structural amendment checkpoint — 6 October 2026
 
 Local branch stage/47-expectation-width-diagnostic, plan9d4daa6 and numerical7d86a90; no remoteStage47branch/PR. Existing work preserved. New deterministic active-face conditional solver checks578component means; no failures, maxindependent gap.01994pp under .05pp criterion. Actual largestStage46 .73893pp input recreated; larger independent references estimateold error.58945pp with.000157ppspread, confirming substantive numerical error. No newpredictive scores. Batched composed16/64/256 timing pilot completed27calls; use its measuredcost to freeze bounded corrected-companion/attribution budget before scoring. Deterministic Cholesky/Helmert covariance replaces numerical eigenbasis to ensure portability, preserving repeatedlabel Gaussian law. Binary GH errors negligible; remainder responsible. Originalwidth/prior/crosslayer audits usevalid caches only.

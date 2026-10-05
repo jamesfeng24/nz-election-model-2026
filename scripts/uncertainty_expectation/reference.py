@@ -1,7 +1,7 @@
 """Independent low-dimensional Gaussian contrast quadrature for synthetic checks.
 
 These numerical references use a raw-covariance Cholesky factor, separately from
-producer eigendecomposition and QMC. The finite-order differences are reported;
+producer factor helper and QMC. The finite-order differences are reported;
 no finite quadrature rule is claimed to be exact.
 """
 import numpy as np

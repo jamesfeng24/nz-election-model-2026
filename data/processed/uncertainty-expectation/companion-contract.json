@@ -1,0 +1,61 @@
+{
+  "attribution": {
+    "composedCases": "first/middle/last canonicalseat eachyear, same512national/shared/seatstream indices",
+    "fullFrameAnalytic": "conditionalN/L productvar decompositions acrossall578componentvectors",
+    "locations": "recompute underchangedcovariance, neverzeroeffectwithfullvarianceoffset",
+    "policies": [
+      "full",
+      "national_at_mean",
+      "no_local_shared",
+      "no_local_seat",
+      "no_candidate_shared",
+      "no_candidate_seat",
+      "no_candidate_balance",
+      "no_candidate_mass",
+      "no_candidate_within"
+    ],
+    "totalVariance": "analytic EVarCandidate|national,local + VarConditionalCandidateMean forfinite upstreamsample; no unreliable national/localpercentages without nestedlocalreplication",
+    "weights": "equaldraws; widthchangesnonadditive"
+  },
+  "componentDraws": 32768,
+  "componentSamples": {
+    "candidate": 257,
+    "local_party": 321
+  },
+  "composedDrawSelection": "first512 of preserved Stage46 4096 national permutation, identical acrossseats; pairedcontrolusesexact same Stage46rowindices",
+  "composedDraws": 512,
+  "composedInformation": "cached externalgauss56day only, recent_report_prior, continuous fixedS+R",
+  "composedSamples": {
+    "2017": 64,
+    "2020": 65,
+    "2023": 64
+  },
+  "computeCap": "40localCPUminutes fornew complete/representative banks plus30minutesattribution; exact-signature resume; stopanddocumentuncompleted scope, nofulloldbankregen orMCMC",
+  "expectationReporting": {
+    "component": "frozen conditional arithmeticmean plus simulatedmean/referror",
+    "composed": "RaoBlackwell candidateconditionalmeans averaged overlocaldraws; retain genuine nonlinear shift, separate candidate finite-bank shift; no forcebacktonationalpoint",
+    "properScores": "actualcorrectedsimplexdraws; same sampledids/weights/control"
+  },
+  "failureAction": "report finite-bank nonconvergence, keepfixed counts; no fine improvement/calibrationclaim",
+  "frozenBeforeCorrectedForecastsOrScores": true,
+  "methods": [
+    "unchanged_Gaussian_common_draw_control",
+    "conditional_location_repaired_Gaussian"
+  ],
+  "noNewStatisticalFit": true,
+  "numericalCostBasis": "27timed16/64/256 calls; maximum3.410s at256 onlocalplatform. Full32768composed repair wouldmultiplycost unnecessarily. Fixed512 allseats with explicitlylimited simulationprecision; no score-driven counts",
+  "precisionGatesPP": {
+    "crps": 0.05,
+    "energy": 0.1,
+    "means": 0.05,
+    "width50": 0.5,
+    "width80": 0.5,
+    "width90": 0.5
+  },
+  "precisionRepresentatives": "first/middle/last canonical complete seat of eachcomposedyear;256/512/1024, cap1024 representative only",
+  "scales": "exact saved Stage45 earlier-only folds; no variance changes",
+  "scoresAndMetrics": "existing Stage46 proper/energy/margin metrics,50/80/90 fullwidths; originalStage45reportedseparately, unequalprecision explicit",
+  "sharedIdentifiers": "sameStage46canonicaldimensionalregistry/seeds acrossseats, layer/seatkeys distinct; national entersonce",
+  "stage": 47,
+  "zeroSemantics": "Stage45 structuralabsence/predictedzero unchanged"
+}
