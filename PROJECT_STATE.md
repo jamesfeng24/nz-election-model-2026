@@ -1,3 +1,11 @@
+# Stage47 numerical companion producer frozen — 6 October 2026
+
+Measured budget/contract 10c069c, prior578vectors and structural257seat denominators preserved. Numerical producer now frozen before forecasts/scoring; components32768, composed512,9representatives256/512/1024. Conditional locations use actual shared ballot-label covariance; originalGaussiancontrols reused by exact streams, never refitted. Structural rules and inputhashes saved before newtables. Local only, no remoteStage47branch/PR.
+
+Resume: `.venv/bin/python -m scripts.uncertainty_expectation.construction` resumes exact-signature banks; log `/tmp/stage47-construction.log`. Do not edit producer common/integration/simulation/construction while running. All bank manifests must seal before scoring. Then attribution/evaluation/precision/independentverification, findings/nextcontract if justified, finallocalchecks and one consolidated unskipped PR head. No newlaw/source/MCMC/mean orvariance fit.
+
+---
+
 # Stage47 pre-score companion budget frozen — 6 October 2026
 
 Local checkpoints9d4daa6/7d86a90/d09fe71; no remoteStage47branch/PR. Numerical repair uses exact active-face shared-label/individual Gaussian covariance, converged independent references. 578components tested, allpassstricter.02pp referenceagreement (.05pp comparison retained); worstStage46 reportedgap .73893 reconstructed, highprecisionoldlocationerror .58945 with.000157refspread. Allprioroutputs unchanged. Structuralamendment is committed beforetables; no newidentity, mean orvariancefitting.

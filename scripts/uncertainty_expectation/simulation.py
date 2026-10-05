@@ -61,12 +61,17 @@ def component(row, scales, count):
               'meanShiftPP':(100*(q.mean(axis=0)-row['mean'])).tolist()}
 
 
-def composed(party,candidate,national,party_scales,candidate_scales):
+def upstream(party,candidate,national,party_scales):
     deterministic=local_vectors(national,party['affinities'])
     local,local_meta=invert(deterministic,party,party_scales,len(national))
     destinations,exponent,floor=candidate_inputs(candidate,party)
     conditional=candidate_vectors(local,destinations,exponent,floor)
     control=candidate_vectors(deterministic,destinations,exponent,floor)
+    return local,conditional,control,local_meta
+
+
+def composed(party,candidate,national,party_scales,candidate_scales):
+    local,conditional,control,local_meta=upstream(party,candidate,national,party_scales)
     q,candidate_meta=invert(conditional,candidate,candidate_scales,len(national))
     return q,{'local':local_meta,'candidate':candidate_meta,
               'deterministicNationalOnlyMean':control.mean(axis=0).tolist(),
