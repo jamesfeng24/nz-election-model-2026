@@ -1,3 +1,11 @@
+# Stage46 diagnostic checkpoint — 2026-10-05
+
+PR52 merged at34bc83bb; reviewed49385c9 ancestry verified. Clean main synchronized; branch `stage/46-residual-tail-diagnosis`. Stage46 work is LOCAL, not pushed or backed up on GitHub. Preserved1786 prior data files, consumed historical helpers and ignored national/uncertainty caches.
+
+Saved shared-effect shape audit complete before new fitting/scoring. Candidate seat National/Labour balance supports a tighter centre/occasional tails; local/mass directions are inconsistent and remainder heterogeneity explains much pooled concentration. Every observation retained. Next: freeze one earlier-only robust central MAD rule and assumed nu4 candidate-seat-balance Student correction, matched robust Gaussian diagnostic, untouched Stage45 control; bounded integration and conditional mean checks. Commit specification before fitting. No sources/MCMC/mean refit/exception labels. Local checkpoints only; one final unskipped review push/PR and required full Linux validation. Exact resume: run `.venv/bin/python -m scripts.uncertainty_tails.diagnosis --check`, inspect local status, continue frozen numerical contract. Existing remote main is34bc83bb; no Stage46 remote branch.
+
+---
+
 # Stage45 complete — review-ready correction and bounded CI, 2026-10-05
 
 Branch `stage/45-residual-scale-allocation`. Reviewed Stage44 `5283e7c` and merge `35f8806` ancestry verified. Pre-scoring `ed300e4`, sealed draws `e9fd69c`, results `61e5f19`, identifiable CI commits `e8984af`/`814e23c`/`624cb34`, producer-provenance correction `79fb1c9`. At local validation the last remote head was `e9fd69c`; subsequent commits are not remote backups until the final review push. This checkpoint is ready for that one unskipped push and PR. Exact published SHA, PR and hosted check status are recorded in the PR/handoff; leave unmerged. Do not merge before both required jobs pass on that SHA.

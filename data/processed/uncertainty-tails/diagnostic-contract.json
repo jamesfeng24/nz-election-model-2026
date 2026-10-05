@@ -1,0 +1,28 @@
+{
+  "distributionChoice": "none until audit committed",
+  "heterogeneity": "within election x preserved group, n>=8 RMS standardization, smaller strata election RMS fallback; keep all observations",
+  "noExceptionAdmission": true,
+  "noForecastScoreYet": true,
+  "noNewMeanFit": true,
+  "pooling": "equal elections, seats, df-corrected within coordinates",
+  "quantiles": [
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    0.95,
+    0.975,
+    0.99
+  ],
+  "shared": "saved per-election Stage45 decomposition, descriptive only",
+  "squaredTailFractions": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "stage": 46
+}

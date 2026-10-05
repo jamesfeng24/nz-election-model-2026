@@ -1,0 +1,7 @@
+# Stage46 bounded implementation plan
+
+1. Verified PR52 merge34bc83b and reviewed49385c9 ancestry; safely synchronized clean main, created stage/46-residual-tail-diagnosis. Local checkpoints only; one consolidated final review push.
+2. Audit saved Stage45 residual coordinates and saved per-election shared effects. Keep every seat/option. Freeze quantiles, equal-election/seat weights, df normalization, exact weighted squared-tail fractions and preserved-group heterogeneity checks. Commit diagnostic before new uncertainty fits or scores.
+3. Only if supported, freeze one Student-t seat-direction correction, robust central quantile conversion, strongly pooled earlier-only scales and one finite-variance tail assumption. Retain Stage45 shared structure. Include matched robust-scale Gaussian, preserving original Stage45 control; no df/scale search.
+4. Commit outcome-free numerical plan separating distribution, Monte Carlo and conditional mean error. Use cached national draws, stable shared streams, bounded convergence and explicit cap failure. No national MCMC.
+5. Seal predictions before scoring identical complete samples; 50/80/90 intervals, proper/joint scores and centre/tail misses. Independently verify, preserve all prior outputs, document future dated manual/Māori interfaces, final checks/PR unmerged. If tails unsupported, stop with diagnostic-only conclusion. No other family/mean/exception search.
