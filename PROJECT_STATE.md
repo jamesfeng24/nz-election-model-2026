@@ -1,3 +1,7 @@
+# Stage44 frozen uncertainty checkpoint — 2026-10-05
+
+PR50 merge95dfcc7/reviewedbdac621 ancestry verified; clean main safely synchronized. Branch stage/44-local-candidate-uncertainty. Inventory321 party/257 candidate residual-ready vectors, complete IDs and separate conditional information sets pinned. Specification freezes CLR resolution replacement, pooled shared-class/seat log error, three-prior-environment shrinkage, earlier-only scales, mean preservation,512draws/1024bounded precision, one1.5variance transport stress and threecached56day composition cases. No uncertainty fitting/scoring yet; no mean refit/acquisition. Frozen zero mean remains zero and its target-positive miss is explicit. Next: estimate earlier-only scales and residual association, implement shared seeded simulation, seal predictions before scores, validate. Māori separate; parameter/cross-layer/reconciliation limits explicit.
+
 # Stage43 completion handoff — 2026-10-05
 
 Branch `stage/43-continuous-s-joint-comparison`; Stage42 reviewed/merged ancestry verified. Frozen contract `e9e93f6`, predictions `c7748a1` before scoring. New companions: `data/processed/continuous-candidate-comparison/`; code `scripts/transport/comparison/`; contract/findings docs. No existing uncertainty work was present. No fitting/acquisition/MCMC/live shares or operational changes.
