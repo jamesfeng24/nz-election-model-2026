@@ -1,3 +1,7 @@
+# Stage43 checkpoint — frozen comparison, 2026-10-05
+
+PR49 merge613ec78 and reviewedc75a4c4 ancestry verified; clean checkout advanced safely. Branch stage/43-continuous-s-joint-comparison. No uncertainty work existed to preserve separately. Contract and exact64/451 and65/561 sample IDs pinned before calculation. Each Stage33 primary S/joint fit independently selected; saved training means verified shared within folds and unchanged from Stage42. Next: construct and seal fixed-fit predictions, reproduce joint references, then evaluate. No fitting/acquisition/operational change.
+
 # Stage42 — completed implementation / PR49 awaiting review, 2026-10-05
 
 Branch `stage/42-continuous-feature-transport`. [PR49](https://github.com/jamesfeng24/nz-election-model-2026/pull/49) is open and must remain unmerged. Stage41 merge/reviewed ancestry verified; frozen audit/contract66b033a → predictions8365b92 → implementation/results e3dabc8 are pushed. All existing work preserved.
