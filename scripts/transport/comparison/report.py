@@ -11,9 +11,9 @@ def build():
     value = read(PREFIX + '/evaluation.json')
     samples = read(PREFIX + '/sample-manifest.json')['folds']
     lines = ['# Stage43 continuous S versus S+R comparison', '',
-        'Contract e9e93f6 was committed before calculation; predictions c7748a1 were committed before scoring. PR49 merge613ec78 and reviewedc75a4c4 ancestry verified from a clean checkout. No uncertainty work existed locally. No fitting, acquisition, new flow, MCMC or live predictions.', '',
+        'Contract e9e93f6 was committed before calculation; predictions c7748a1 were committed before scoring. PR49 merge 613ec78 and reviewed c75a4c4 ancestry verified from a clean checkout. No uncertainty work existed locally. No fitting, acquisition, new flow, MCMC or live predictions.', '',
         '## Inputs and independent saved fits', '',
-        'Fixed primary expanding-window Stage33 constructed-input-trained fits, applied to observed target local party support. Every predecessor uses the frozen Stage42 party mass; supported source features are centered before weighting. Unsupported mass stays in the denominator, contributing neutral exponent. No outgoing residual transfer. All complete slates and ID orders reproduce Stage42; broad and strict joint predictions agree within1e-12.', '']
+        'Fixed primary expanding-window Stage33 constructed-input-trained fits, applied to observed target local party support. Every predecessor uses the frozen Stage42 party mass; supported source features are centered before weighting. Unsupported mass stays in the denominator, contributing neutral exponent. No outgoing residual transfer. All complete slates and ID orders reproduce Stage42; broad and strict joint predictions agree within 1e-12.', '']
     rows = []
     for f in samples:
         for model in ('S', 'joint'):
@@ -30,14 +30,14 @@ def build():
             m = s['metrics'][b]
             rows.append([f['targetYear'], b, f'{s["contests"]}/{s["candidates"]}', f'{m["contestEqualMaePP"]:.5f}', f'{m["contestEqualRmsePP"]:.5f}', f'{m["candidateEqualMaePP"]:.5f}', '—' if b == 'S' else f'{s["pairs"][b]["jointMinusSMaePP"]:+.5f}', f'{m["uniqueCorrect"]}/{s["contests"]}', f'{m["actualTopTwoMarginMaePP"]:.5f}'])
     lines += table(['Election', 'Model', 'Contests/candidates', 'MAE', 'RMSE', 'Candidate-equal MAE', 'Joint−S MAE', 'Unique correct', 'Actual-top-two margin MAE'], rows)
-    lines += ['', 'All129 held general contests/1012 candidates constructed; zero general abstentions. The seven Māori seats per election remain coverage-only, preserving separate candidate-model requirements. No predicted ties in these samples; tie tolerance1e-12 and tied-set inclusion remain explicit in the machine output. Full-slate signed bias is essentially zero by conservation, an accounting check. Margins use predicted shares of the actual winner and runner(s), averaging tied runners without ID tie-breaking. Predicted-top-two gap errors are separately saved.', '']
+    lines += ['', 'All 129 held general contests/1012 candidates constructed; zero general abstentions. The seven Māori seats per election remain coverage-only, preserving separate candidate-model requirements. No predicted ties in these samples; tie tolerance1e-12 and tied-set inclusion remain explicit in the machine output. Full-slate signed bias is essentially zero by conservation, an accounting check. Margins use predicted shares of the actual winner and runner(s), averaging tied runners without ID tie-breaking. Predicted-top-two gap errors are separately saved.', '']
     rows = []
     for b in BRANCHES:
         p = value['pooled']['metrics'][b]
         e = value['equalElection']['metrics'][b]
         rows.append([b, f'{p["contestEqualMaePP"]:.5f}', f'{p["contestEqualRmsePP"]:.5f}', f'{e["maePP"]:.5f}', f'{e["rmsePP"]:.5f}'])
     lines += table(['Model', 'Contest-pooled MAE', 'Contest-pooled RMSE', 'Equal-election MAE', 'Equal-election RMSE'], rows)
-    lines += ['', 'Contest pooling weights elections64/129 and65/129; equal-election view weights each1/2 and takes root mean election MSE for RMSE. Joint pooled MAE gain over S is0.10977pp; strict0.07283pp. Equal-election gains0.11178/0.07488pp. These two MAEs and their dispersion cannot estimate future robustness.', '',
+    lines += ['', 'Contest pooling weights elections 64/129 and65/129; equal-election view weights each 1/2 and takes root mean election MSE for RMSE. Joint pooled MAE gain over S is 0.10977pp; strict0.07283pp. Equal-election gains 0.11178/0.07488pp. These two MAEs and their dispersion cannot estimate future robustness.', '',
         '## Frozen geographic strata', '']
     rows = []
     for f in value['folds']:
@@ -54,7 +54,7 @@ def build():
             g = f['samples']['full']['groups'][group]
             rows.append([f['targetYear'], group, g['counts']['S']['candidates'], *[f'{g["metrics"][b]["maePP"]:.4f}/{g["metrics"][b]["rmsePP"]:.4f}/{g["metrics"][b]["biasPP"]:+.4f}' for b in BRANCHES]])
     lines += table(['Election', 'Category', 'Candidates', 'S MAE/RMSE/bias', 'Joint MAE/RMSE/bias', 'Strict joint MAE/RMSE/bias'], rows)
-    lines += ['', 'Joint improves National and Labour in2014, while both worsen in2020; other mapped/no-group errors improve in both primary folds. Winner counts improve49→56 and52→55, but actual-top-two margin MAE improves15.27→12.73 in2014 and worsens9.04→9.91 in2020. Share accuracy remains primary; winners do not override the2020 share loss.', '',
+    lines += ['', 'Joint improves National and Labour in 2014, while both worsen in 2020; other mapped/no-group errors improve in both primary folds. Winner counts improve49→56 and52→55, but actual-top-two margin MAE improves 15.27→12.73 in 2014 and worsens 9.04→9.91 in 2020. Share accuracy remains primary; winners do not override the2020 share loss.', '',
         '## Supported mass and no-history effects', '']
     rows = []
     for f in value['folds']:
@@ -86,11 +86,15 @@ def build():
     lines += table(['Election', 'Direction', 'Contest', 'Joint−S MAE'], rows)
     for f in value['folds']:
         pair = f['samples']['full']['pairs']['joint']
-        lines += ['', f'{f["targetYear"]}: joint improves{pair["improvedContests"]}, worsens{pair["worsenedContests"]} contests; fixed-fit leave-one-contest-out mean-difference range {pair["leaveOneContestOutDifferenceRangePP"]}. All observations remain in primary scores.']
+        lines += ['', f'{f["targetYear"]}: joint improves {pair["improvedContests"]}, worsens {pair["worsenedContests"]} contests; fixed-fit leave-one-contest-out mean-difference range {pair["leaveOneContestOutDifferenceRangePP"]}. All observations remain in primary scores.']
     lines += ['', '## Recommendation and limits', '',
-        '**Retain S+R preferred and S active.** Continuous transport does not establish consistent superiority: joint gains0.37071pp in2014 but loses0.14715pp in2020, and strict preserves this direction. The modest pooled gain and RMSE improvement support keeping the existing preference without discarding the simpler S alternative.2020 major-party/margin losses remain substantive. No new threshold or tuning follows.', '',
+        '**Retain S+R preferred and S active.** Continuous transport does not establish consistent superiority: joint gains 0.37071pp in 2014 but loses 0.14715pp in 2020, and strict preserves this direction. The modest pooled gain and RMSE improvement support keeping the existing preference without discarding the simpler S alternative.2020 major-party/margin losses remain substantive. No new threshold or tuning follows.', '',
         'Stage33–34 and Stage39 remain separate evidence with overlapping elections and different samples/information sets; their forecasts are not naively pooled here. Fixed earlier fits, conditional observed local party inputs, selected historical geography, algorithmic identity, uniform within-source party transport and only two reused environments limit interpretation. Population overlap does not reconstruct candidate votes or bound candidate error. θR is a log-intensity coefficient, not personal-vote retention. No causal or operational claim, electorate probabilities or uncertainty calibration.', '',
         'Next separately authorized task: one coherent local-party/candidate uncertainty implementation around continuous transport and the retained mean-model preference, sharing national error once and making local/transport/feature/parameter uncertainty explicit. Official nominations and Māori electorate polling remain separately bounded. Stop further candidate mean-model experiments here.']
+    lines += ['', '## Validation and reproducibility', '',
+        'Local: 19 focused tests and full 870-test Python suite pass (nine intentional isolated-environment skips); 31 frontend tests, typecheck and build pass; 926 registered raw-source checks pass. Compile and whitespace checks pass; no Python formatter/linter is configured. Five deterministic commands below reproduce without fitting.', '',
+        'Independent raw-component implementation checks 387 vectors/3,036 candidate predictions, 8,447 metric identities and 387 winner/tie/margin sets within 1e-12. Both Stage42 joint branches reproduce exactly. Actual-adapter counterfactuals change held-out candidate votes, winners and target residual/reference records without changing links, membership, features or predictions; scoring alone changes. All 1,756 prior data files are byte-identical, including raw evidence, historical fits/identity/geography and operational records.', '',
+        'Run `.venv/bin/python -m scripts.transport.comparison.NAME --check` for construction, evaluation, verification, report and manifest. Sample manifests regenerate from pinned Stage33/42 inputs; cached predictions are scored separately. CI runs these deterministic checks alongside configured tests; final-head CI status is verified in the PR handoff. No historical inference is repeated.']
     return '\n'.join(lines) + '\n'
 
 
