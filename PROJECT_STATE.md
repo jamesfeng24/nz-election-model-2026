@@ -1,3 +1,9 @@
+# Stage42 — fixed-fit predictions sealed before scoring, 2026-10-05
+
+Frozen audit/specification/ID checkpoint66b033a pushed before predictions. `scripts.transport.continuous.construction` saves all six bounded policies on64/65 identical complete slates, saved Stage33 primary S+R coefficients/means unchanged. Original Stage41 four broad/strict reference branches reproduce within1e-12; exact centered features equivalent. All1744 prior datafiles byte-identical. No scores yet, no fitting/acquisition/2026predictions.
+
+Exact next action: commit/push this construction checkpoint BEFORE evaluation, then paired full/exclusive-band errors,2026 readiness, independent checks/tests, docs/PR/finalCI. Next separately authorized stage remains coherent local/candidate uncertainty.
+
 # Stage42 — frozen audit and continuous transport contract, 2026-10-05
 
 Branch `stage/42-continuous-feature-transport`. PR48 MERGED; reviewed f0022fc and merge6b41536 ancestry verified; clean main fast-forwarded safely. No acquisition/predictions/scores/fitting in this checkpoint.
