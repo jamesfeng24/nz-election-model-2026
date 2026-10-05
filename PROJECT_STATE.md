@@ -1,3 +1,13 @@
+# Stage46 full construction in progress — 2026-10-06
+
+PR52 merge34bc83bb/reviewed49385c9 verified; branch `stage/46-residual-tail-diagnosis`. Local checkpoints280b14d/e02dc92/d631db5/acf809a, no remote Stage46 branch or PR. These commits and cached banks are not off-device backups. Remote main remains prerequisite34bc83bb at initial verification.
+
+321 local-party,257 candidate,193 composed complete-general records fixed; no mean/national refit or acquisition. Candidate seat N/L Studentnu4 uses earlier-only pooled central MAD with correct t quantile conversion and implied SD, matched robust Gaussian and untouched Stage45 control. Shared and other directions unchanged. Heterogeneity audit retains all257 and qualifies tail interpretation; no exception labels. All9 component full banks sealed at32768; three composed cases currently running. Initial exact Sobol-zero failure corrected pre-scoring by30-bit cell midpoints; original failure/log/signature retained. Last-doubling representative precision gates pass at32768; separate conditional quadrature .05pp gate fails (synthetic max.1567pp). Do not relax it.
+
+Local full998Python tests pass/nine intentional skips, plus26focused tests including newly added endpoint case; frontend31tests/typecheck/build and926source checks pass. Full runtime approximately9seconds per representative composed seat across three methods. No hosted runs. Exact resume: inspect `/tmp/stage46-construction.log` and existing session, resume `.venv/bin/python -m scripts.uncertainty_tails.construction` with exact-signature caches if interrupted. Only after all12 distributions sealed, commit construction/scales, run evaluation then independent verification/report. Finish deterministic reproduction/full final Ubuntu gates once, one consolidated unskipped push/PR left unmerged. No further family, overrides, polls, MCMC or live forecasts.
+
+---
+
 # Stage46 simulation checkpoint — 2026-10-05
 
 Diagnostic280b14d, pre-fit e02dc92, implementation d631db5 are LOCAL ONLY. Original remote main34bc83bb; no Stage46 push/PR. Earlier-only central fits and robust Student/ Gaussian priors are frozen. Last-doubling precision passed at32768 on36representative seats; conditional remainder quadrature remains above its separate.05pp gate, explicitly unresolved.

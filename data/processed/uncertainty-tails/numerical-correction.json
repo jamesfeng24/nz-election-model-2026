@@ -1,9 +1,11 @@
 {
   "action": "explicit30bit cell midpoints for all integration uniforms, exact code-signature invalidation",
+  "correctedSignature": "9183cf345edaed4b347724bf991212ed18490482211e9629fc471d87841897d4",
   "failure": "exact Sobol zero caused infinite inverse-CDF value in full candidate2020 construction",
   "modelChanged": false,
-  "originalLog": "/tmp/stage46-construction.log",
-  "originalSignature": "9183cf345edaed4b347724bf991212ed18490482211e9629fc471d87841897d4",
+  "originalLog": "data/processed/uncertainty-tails/initial-failure.txt",
+  "originalLogSha256": "0d6c0d61399582a494cad83c23d32c3ca204fc49f66ca13faf47ffa2e851c82c",
+  "originalSignature": "9392fabeb0673e9d26169472f2c46dc7b061c85e9f906775541277ebd7f67f71",
   "phase": "before predictive scoring",
   "stage": 46,
   "tolerancesChanged": false

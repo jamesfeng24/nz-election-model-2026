@@ -2,6 +2,9 @@
 import math
 import numpy as np
 from scipy.stats import norm,t
+from scipy.integrate import quad
+from scipy.special import expit,roots_hermitenorm
+from .integration import student_location
 from .common import PREFIX,INVENTORY,CONTROL,read,save,verify,arguments,signature
 from .construction import arrays,METHODS
 from .streams import permutation
@@ -37,6 +40,20 @@ def scores(q,y,key):
         second=math.fsum(math.sqrt(math.fsum((100*(a-b))**2 for a,b in zip(q[order[j]],q[order[j-1]]))) for j in range(n))/n
         energies.append(first-second/2)
     return np.array(means),crps,intervals,math.fsum(energies)/2
+
+
+def independent_student_expectations(scales):
+    nodes,weights=roots_hermitenorm(41);weights=weights/np.sqrt(2*np.pi);checks=[]
+    for central in scales['centralFits']:
+        old=next(f for f in scales['methods']['stage45']['folds']['candidate'] if f['targetYear']==central['targetYear'])
+        shared=old['scales']['balance']['shared'];seat=central['studentScale']
+        for probability in (.1,.5,.9):
+            location=float(student_location(np.array([probability]),shared,seat)[0])
+            def integrand(x):return float(np.sum(expit(location+shared*nodes+seat*x)*weights))*t.pdf(x,4)
+            expected,error=quad(integrand,-np.inf,np.inf,epsabs=1e-11,epsrel=1e-11)
+            checks.append({'year':central['targetYear'],'conditionalMean':probability,'independentExpectation':expected,
+                           'gapPP':100*abs(expected-probability),'quadratureAbsoluteError':error})
+    return checks
 
 
 def build():
@@ -105,7 +122,7 @@ def build():
             'maximumConditionalIntegrationGapPP':max(conditional_gaps),'conditionalIntegrationPassed':max(conditional_gaps)<=.05,
             'maximumEnergyPairDifferencePP':max(energy_gaps),'precisionStatus':construction['precisionStatus'],
             'earlierOnlyScaleMembership':True,'stage45ControlPreserved':True,'priorArtifactsPreserved':True,
-            'noMeanRefitOrAcquisition':True}
+            'noMeanRefitOrAcquisition':True,'independentStudentExpectations':independent_student_expectations(scales)}
 
 
 def main():
