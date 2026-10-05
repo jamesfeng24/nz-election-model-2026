@@ -1,7 +1,7 @@
 {
   "failureAction": "report integration limitation; no tolerance, family or mean change",
   "gatePP": 0.05,
-  "maximumConditionalExpectationGapPP": 0.1566583050670863,
+  "maximumConditionalExpectationGapPP": 0.15665830623528756,
   "passed": false,
   "reports": [
     {
@@ -27,7 +27,7 @@
       "syntheticChecks": [
         {
           "checks": {
-            "balanceMaximumGapPP": 6.772360450213455e-12
+            "balanceMaximumGapPP": 6.7834626804597065e-12
           },
           "groups": [
             "national",
@@ -43,9 +43,9 @@
         },
         {
           "checks": {
-            "balanceMaximumGapPP": 2.7377608124989905e-05,
-            "withinMaximumGapPP128": 0.11898378156293668,
-            "withinMaximumGapPP256": 0.14862785752242916
+            "balanceMaximumGapPP": 2.7377340905410108e-05,
+            "withinMaximumGapPP128": 0.11898378422796653,
+            "withinMaximumGapPP256": 0.1486278585875638
           },
           "groups": [
             "national",
@@ -67,9 +67,9 @@
         },
         {
           "checks": {
-            "balanceMaximumGapPP": 6.772360450213455e-12,
+            "balanceMaximumGapPP": 6.7834626804597065e-12,
             "withinMaximumGapPP128": 1.1102230246251566e-17,
-            "withinMaximumGapPP256": 1.1102230246251566e-17
+            "withinMaximumGapPP256": 2.2204460492503132e-17
           },
           "groups": [
             "national",
@@ -87,8 +87,8 @@
         },
         {
           "checks": {
-            "withinMaximumGapPP128": 0.13020169615062108,
-            "withinMaximumGapPP256": 0.12423548050867537
+            "withinMaximumGapPP128": 0.13020169952958321,
+            "withinMaximumGapPP256": 0.12423547709768387
           },
           "groups": [
             "national",
@@ -128,7 +128,7 @@
       "syntheticChecks": [
         {
           "checks": {
-            "balanceMaximumGapPP": 6.794564910705958e-12
+            "balanceMaximumGapPP": 6.789013795582832e-12
           },
           "groups": [
             "national",
@@ -144,9 +144,9 @@
         },
         {
           "checks": {
-            "balanceMaximumGapPP": 4.4168098345398477e-05,
-            "withinMaximumGapPP128": 0.11305931306301227,
-            "withinMaximumGapPP256": 0.1408497057850459
+            "balanceMaximumGapPP": 4.4167756474422504e-05,
+            "withinMaximumGapPP128": 0.11305931550940436,
+            "withinMaximumGapPP256": 0.140849706752298
           },
           "groups": [
             "national",
@@ -168,9 +168,9 @@
         },
         {
           "checks": {
-            "balanceMaximumGapPP": 6.794564910705958e-12,
-            "withinMaximumGapPP128": 4.4408920985006264e-17,
-            "withinMaximumGapPP256": 6.661338147750939e-17
+            "balanceMaximumGapPP": 6.789013795582832e-12,
+            "withinMaximumGapPP128": 2.2204460492503132e-17,
+            "withinMaximumGapPP256": 4.4408920985006264e-17
           },
           "groups": [
             "national",
@@ -188,8 +188,8 @@
         },
         {
           "checks": {
-            "withinMaximumGapPP128": 0.12487876579527933,
-            "withinMaximumGapPP256": 0.12046463183323475
+            "withinMaximumGapPP128": 0.12487876925136976,
+            "withinMaximumGapPP256": 0.12046462831584336
           },
           "groups": [
             "national",
@@ -229,7 +229,7 @@
       "syntheticChecks": [
         {
           "checks": {
-            "balanceMaximumGapPP": 6.8334227165678385e-12
+            "balanceMaximumGapPP": 6.827871601444713e-12
           },
           "groups": [
             "national",
@@ -245,9 +245,9 @@
         },
         {
           "checks": {
-            "balanceMaximumGapPP": 3.372332013640289e-05,
-            "withinMaximumGapPP128": 0.11375969624994219,
-            "withinMaximumGapPP256": 0.1417657797972806
+            "balanceMaximumGapPP": 3.372294550274546e-05,
+            "withinMaximumGapPP128": 0.1137596987219353,
+            "withinMaximumGapPP256": 0.14176578077594879
           },
           "groups": [
             "national",
@@ -269,9 +269,9 @@
         },
         {
           "checks": {
-            "balanceMaximumGapPP": 6.8334227165678385e-12,
-            "withinMaximumGapPP128": 2.2204460492503132e-17,
-            "withinMaximumGapPP256": 4.4408920985006264e-17
+            "balanceMaximumGapPP": 6.827871601444713e-12,
+            "withinMaximumGapPP128": 1.1102230246251566e-17,
+            "withinMaximumGapPP256": 1.1102230246251566e-17
           },
           "groups": [
             "national",
@@ -289,8 +289,8 @@
         },
         {
           "checks": {
-            "withinMaximumGapPP128": 0.12551482202909192,
-            "withinMaximumGapPP256": 0.12091926639787975
+            "withinMaximumGapPP128": 0.12551482547627446,
+            "withinMaximumGapPP256": 0.12091926289214402
           },
           "groups": [
             "national",
@@ -330,7 +330,7 @@
       "syntheticChecks": [
         {
           "checks": {
-            "balanceMaximumGapPP": 6.850076061937216e-12
+            "balanceMaximumGapPP": 6.84452494681409e-12
           },
           "groups": [
             "national",
@@ -346,9 +346,9 @@
         },
         {
           "checks": {
-            "balanceMaximumGapPP": 3.790678838599959e-05,
-            "withinMaximumGapPP128": 0.12504482960331442,
-            "withinMaximumGapPP256": 0.1566583050670863
+            "balanceMaximumGapPP": 3.790636198264252e-05,
+            "withinMaximumGapPP128": 0.12504483249657142,
+            "withinMaximumGapPP256": 0.15665830623528756
           },
           "groups": [
             "national",
@@ -370,9 +370,9 @@
         },
         {
           "checks": {
-            "balanceMaximumGapPP": 6.850076061937216e-12,
-            "withinMaximumGapPP128": 0.0,
-            "withinMaximumGapPP256": 2.2204460492503132e-17
+            "balanceMaximumGapPP": 6.84452494681409e-12,
+            "withinMaximumGapPP128": 6.661338147750939e-17,
+            "withinMaximumGapPP256": 4.4408920985006264e-17
           },
           "groups": [
             "national",
@@ -390,8 +390,8 @@
         },
         {
           "checks": {
-            "withinMaximumGapPP128": 0.1355115366162657,
-            "withinMaximumGapPP256": 0.12792267990821504
+            "withinMaximumGapPP128": 0.13551153991351939,
+            "withinMaximumGapPP256": 0.12792267662436557
           },
           "groups": [
             "national",

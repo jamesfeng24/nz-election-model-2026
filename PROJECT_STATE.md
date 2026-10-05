@@ -1,3 +1,11 @@
+# Stage46 simulation checkpoint — 2026-10-05
+
+Diagnostic280b14d, pre-fit e02dc92, implementation d631db5 are LOCAL ONLY. Original remote main34bc83bb; no Stage46 push/PR. Earlier-only central fits and robust Student/ Gaussian priors are frozen. Last-doubling precision passed at32768 on36representative seats; conditional remainder quadrature remains above its separate.05pp gate, explicitly unresolved.
+
+Full-frame candidate2020 exposed exact-zero Sobol uniform/infinite inverse-normal. Corrected before any new predictive scoring using30-bit digital cell midpoints; no statistical/scale/tolerance change. Original partial cache signatures/log remain. Resume after numerical-fix local commit: regenerate `.venv/bin/python -m scripts.uncertainty_tails.numerics` then `.venv/bin/python -m scripts.uncertainty_tails.construction`, save complete forecasts before evaluation. Caches `.cache/stage46/` are resumable local files, not off-device backups. Finish independent checks, complete required local/Ubuntu final head once, PR unmerged. No further family or acquisition.
+
+---
+
 # Stage46 diagnostic checkpoint — 2026-10-05
 
 PR52 merged at34bc83bb; reviewed49385c9 ancestry verified. Clean main synchronized; branch `stage/46-residual-tail-diagnosis`. Stage46 work is LOCAL, not pushed or backed up on GitHub. Preserved1786 prior data files, consumed historical helpers and ignored national/uncertainty caches.

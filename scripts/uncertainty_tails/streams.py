@@ -6,6 +6,7 @@ from scipy.stats import norm,t,qmc
 from scripts.uncertainty_revision.coordinates import partition
 from scripts.uncertainty_revision.estimation import labels
 from .common import INVENTORY,read
+from .integration import open_unit
 
 
 def keys(row):
@@ -32,7 +33,7 @@ def uniforms(year,count):
     rows=[r for key in ('partyRecords','candidateRecords') for r in inventory[key] if r['targetYear']==year]
     names=registry(rows)
     if count & (count-1):raise ValueError('Simulation count must be power of two')
-    bank=qmc.Sobol(len(names),scramble=True,seed=460046+year).random_base2(int(np.log2(count)))
+    bank=open_unit(qmc.Sobol(len(names),scramble=True,bits=30,seed=460046+year).random_base2(int(np.log2(count))))
     return names,bank
 
 

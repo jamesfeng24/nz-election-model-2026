@@ -8,10 +8,15 @@ from scripts.uncertainty_revision.coordinates import partition, binary_draw
 from scripts.uncertainty.transforms import validate
 
 
+def open_unit(u):
+    """Midpoints of Sobol's 30-bit cells, including the cell beginning at zero."""
+    return np.asarray(u,float)+.5/(2**30)
+
+
 @lru_cache(maxsize=32)
 def quadrature(dimension, count):
     if count<2 or count & (count-1): raise ValueError('Quadrature count must be a power of two')
-    u=qmc.Sobol(dimension,scramble=True,seed=460046+dimension).random_base2(int(np.log2(count))-1)
+    u=open_unit(qmc.Sobol(dimension,scramble=True,bits=30,seed=460046+dimension).random_base2(int(np.log2(count))-1))
     return np.concatenate((u,1-u))
 
 
@@ -118,7 +123,7 @@ def conditional_check(base, groups, scales, student=False):
         offset=conditional_offsets(p,scales['within']);logs=np.full(p.shape,-np.inf);np.log(p,out=logs,where=p>0)
         for count in (128,256):
             # Different scrambling, not merely another prefix of the construction bank.
-            u=qmc.Sobol(len(other),scramble=True,seed=460146+count).random_base2(int(np.log2(count))-1)
+            u=open_unit(qmc.Sobol(len(other),scramble=True,bits=30,seed=460146+count).random_base2(int(np.log2(count))-1))
             z=scales['within']*norm.ppf(np.concatenate((u,1-u)));z-=z.mean(axis=1,keepdims=True)
             expected=softmax(logs[:,None,:]+offset[:,None,:]+z,axis=-1).mean(axis=1)
             results[f'withinMaximumGapPP{count}']=float(100*np.max(np.abs(expected-p)*mass[:,None]))
