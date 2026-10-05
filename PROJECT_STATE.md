@@ -1,3 +1,15 @@
+# Stage42 — completed implementation / PR49 awaiting review, 2026-10-05
+
+Branch `stage/42-continuous-feature-transport`. [PR49](https://github.com/jamesfeng24/nz-election-model-2026/pull/49) is open and must remain unmerged. Stage41 merge/reviewed ancestry verified; frozen audit/contract66b033a → predictions8365b92 → implementation/results e3dabc8 are pushed. All existing work preserved.
+
+**Delivered and findings:** continuous centered all-predecessor party-mass S/R transport under unchanged Stage41 feasible flows, full2014/2020 fixed-fit comparison, independent audit and2026 companion. Full-frame MAEpp exactfallback/90/continuous:2014 3.45472/3.32429/2.71727 (64contests/451candidates);2020 2.56619/2.41396/2.13245 (65/561). Continuous gains over90=0.60702/0.28151; strict0.56632/0.27538. Main benefit below90; individual/2014National failures remain. D076 prefers continuous development mean inputs with oldcontrols, not an operational or calibrated claim.
+
+**Evidence/readiness:** fragment party composition remains unidentified; acquired casting-place candidate ballots are not residence party votes. No finerflow or acquisition (0queries/0resources). All71seats/206knowncandidates retained,0complete slates, known generalS154/R32/strictR11 and independent sourcepartyseatS372. Unsupported mass stays neutral and explicit; unique sourceR can come from any genuine predecessor; no outgoing transfer/adjudication overwrite. Māori separatebaseline/polls,confirmedtargetroster/slate and jointuncertainty remain gaps. No2026candidate shares,fit,MCMC,nationalcomparison or newthreshold.
+
+**Validation complete locally:**34focusedtests;851Python tests/nineintentionalskips;31frontendtests/typecheck/build;926rawsources;seven deterministic companions;compile/whitespace. Independent3036features,1495rawlookups,774vectors,3282partyrows,858exactequivalences,336Stage41reference rows,4386scoreidentities,all supplementalguards/readiness checked. All1744prior datafiles/identity/numerical/operationalartifacts unchanged. NoPythonformatter/linter configured, no tolerance/equation change.
+
+**Final completion action:** push this handoff, verify every final-head GitHub check and clean local/remote matching head, update PR validation and leave unmerged. CI is pending at this commit; final verified status is reported in PR49 and the user handoff, without redoing inference. **Next separatelyauthorized task:** coherent local-party/candidate uncertainty around existing adapters, nationalerror sharedonce and flow/feature/residual/history/parameter assumptions distinct from calibration. NominationrefreshandMāoripoll/unpolledbaseline separatelybounded; no furthermean-featuresearch or subsequent work starts automatically.
+
 # Stage42 — implemented and validated locally, 2026-10-05
 
 Branch `stage/42-continuous-feature-transport`; Stage41 reviewedf0022fc/merge6b41536 ancestry verified, clean main safely synchronized. Frozen audit/specification/inputs/IDs66b033a precedes predictions;8365b92 predictions pushed before evaluation. No acquisition/fitting/MCMC/liveforecast or old artifact changes.
