@@ -1,0 +1,3444 @@
+{
+  "denominator": "two prediction-time selected candidates per contest; average their widths/scores within contest, then declared weights",
+  "noNewForecastOrScoreBank": true,
+  "notMarginWidth": "Individual share spans are separate from correlated difference intervals; no renormalization of the pair.",
+  "originalSelectionCaveat": "Original8000bank keeps own saved prediction-time pair; common-control/corrected share identical fixed512 composed selections.",
+  "sources": {
+    "common_control": {
+      "cases": [
+        {
+          "id": "candidate:2014",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 4.387666816986504,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 4.387666816986503,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.3671875,
+                "covered": 47,
+                "intervalScorePP": 19.663106913260776,
+                "optionWidthDistribution": {
+                  "maximumPP": 11.983290403013747,
+                  "minimumPP": 4.491088552433058,
+                  "quantilesPP": {
+                    "10": 6.405971470721493,
+                    "25": 8.151038311038963,
+                    "50": 10.016415900088907,
+                    "75": 11.05200388879475,
+                    "90": 11.515289759513204
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 11.968701026748231,
+                  "minimumPP": 6.193303129135318,
+                  "quantilesPP": {
+                    "10": 6.949405027403826,
+                    "25": 8.028077371493405,
+                    "50": 9.789521711634327,
+                    "75": 10.972234384365123,
+                    "90": 11.5039076186824
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.3671875,
+                "widthPP": 9.435211078212603
+              },
+              "80": {
+                "coverage": 0.8203125,
+                "covered": 105,
+                "intervalScorePP": 25.21400612231144,
+                "optionWidthDistribution": {
+                  "maximumPP": 21.970583899235386,
+                  "minimumPP": 8.640941246634195,
+                  "quantilesPP": {
+                    "10": 12.194345951407279,
+                    "25": 15.502585800212675,
+                    "50": 18.895712081275157,
+                    "75": 20.813998042688908,
+                    "90": 21.401732769272353
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 21.89773098071062,
+                  "minimumPP": 11.816675888802896,
+                  "quantilesPP": {
+                    "10": 13.286528655799577,
+                    "25": 15.217034113936872,
+                    "50": 18.461001543244308,
+                    "75": 20.641935823737803,
+                    "90": 21.497940062281415
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.8203125,
+                "widthPP": 17.79313531634351
+              },
+              "90": {
+                "coverage": 0.8984375,
+                "covered": 115,
+                "intervalScorePP": 30.33542730431318,
+                "optionWidthDistribution": {
+                  "maximumPP": 27.890412374010673,
+                  "minimumPP": 11.164833545963077,
+                  "quantilesPP": {
+                    "10": 15.744820261129387,
+                    "25": 19.8424386668499,
+                    "50": 24.064900559105684,
+                    "75": 26.425312819822597,
+                    "90": 27.207102823355495
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 27.767610860815715,
+                  "minimumPP": 15.223615969016251,
+                  "quantilesPP": {
+                    "10": 17.05880711500739,
+                    "25": 19.506909622691328,
+                    "50": 23.574218965104777,
+                    "75": 26.200166587911138,
+                    "90": 27.128879738391255
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.8984375,
+                "widthPP": 22.68461910313588
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2014
+        },
+        {
+          "id": "candidate:2017",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.504913512682668,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.5049135126826676,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.6796875,
+                "covered": 87,
+                "intervalScorePP": 15.74481513936264,
+                "optionWidthDistribution": {
+                  "maximumPP": 11.918218077016988,
+                  "minimumPP": 6.012758733621492,
+                  "quantilesPP": {
+                    "10": 8.365868104928197,
+                    "25": 9.46488305054831,
+                    "50": 10.676086721133544,
+                    "75": 11.31191036626144,
+                    "90": 11.611262866557656
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 11.886549956056033,
+                  "minimumPP": 7.512012992965891,
+                  "quantilesPP": {
+                    "10": 8.562815605325781,
+                    "25": 9.623847985731667,
+                    "50": 10.602945244006323,
+                    "75": 11.32203105287895,
+                    "90": 11.601237055275899
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.6796875,
+                "widthPP": 10.306483278021098
+              },
+              "80": {
+                "coverage": 0.90625,
+                "covered": 116,
+                "intervalScorePP": 23.861475627767277,
+                "optionWidthDistribution": {
+                  "maximumPP": 22.36342780772509,
+                  "minimumPP": 11.503247110422121,
+                  "quantilesPP": {
+                    "10": 15.770253209179218,
+                    "25": 17.963532822571555,
+                    "50": 20.126535630947682,
+                    "75": 21.239920885250317,
+                    "90": 21.82777521724296
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 22.294285672790036,
+                  "minimumPP": 14.293630468246242,
+                  "quantilesPP": {
+                    "10": 16.21923064294044,
+                    "25": 18.210984081055397,
+                    "50": 19.97854003630641,
+                    "75": 21.282247137156133,
+                    "90": 21.779073181497726
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.90625,
+                "widthPP": 19.425227420268776
+              },
+              "90": {
+                "coverage": 0.9609375,
+                "covered": 123,
+                "intervalScorePP": 29.672066115501657,
+                "optionWidthDistribution": {
+                  "maximumPP": 28.4191613002415,
+                  "minimumPP": 14.880311888287501,
+                  "quantilesPP": {
+                    "10": 20.29542860265082,
+                    "25": 22.93449645073225,
+                    "50": 25.68430959856322,
+                    "75": 26.970223706396425,
+                    "90": 27.71373630068962
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 28.312890020929004,
+                  "minimumPP": 18.365812236520192,
+                  "quantilesPP": {
+                    "10": 20.80498524045673,
+                    "25": 23.272918806463895,
+                    "50": 25.436023535825644,
+                    "75": 27.002350495341744,
+                    "90": 27.66734747735636
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9609375,
+                "widthPP": 24.751233741415884
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2017
+        },
+        {
+          "id": "candidate:2020",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.6906930233698745,
+            "contests": 65,
+            "coordinates": 130,
+            "crpsPP": 3.6906930233698754,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.5153846153846153,
+                "covered": 67,
+                "intervalScorePP": 16.348965876962875,
+                "optionWidthDistribution": {
+                  "maximumPP": 15.716584323232318,
+                  "minimumPP": 4.212076076231252,
+                  "quantilesPP": {
+                    "10": 7.425070088459572,
+                    "25": 9.36870373060297,
+                    "50": 10.614631432277523,
+                    "75": 11.010758281202067,
+                    "90": 11.115787462842583
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.471217654174493,
+                  "minimumPP": 4.938170776537907,
+                  "quantilesPP": {
+                    "10": 7.790445929719273,
+                    "25": 9.130180553588884,
+                    "50": 10.621587042992985,
+                    "75": 10.881517939068662,
+                    "90": 11.046068561159489
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.5153846153846153,
+                "widthPP": 9.946418055424763
+              },
+              "80": {
+                "coverage": 0.9,
+                "covered": 117,
+                "intervalScorePP": 22.175312481226257,
+                "optionWidthDistribution": {
+                  "maximumPP": 29.551086821666622,
+                  "minimumPP": 8.085047591007605,
+                  "quantilesPP": {
+                    "10": 14.075883145284385,
+                    "25": 17.87956461053023,
+                    "50": 20.010089694650503,
+                    "75": 20.69448834610283,
+                    "90": 20.940872465045153
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.275611770924158,
+                  "minimumPP": 9.523250776836944,
+                  "quantilesPP": {
+                    "10": 14.786160833283528,
+                    "25": 17.266610311658276,
+                    "50": 20.0221248759307,
+                    "75": 20.484865477794468,
+                    "90": 20.76052667712884
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.8999999999999999,
+                "widthPP": 18.770505186702508
+              },
+              "90": {
+                "coverage": 0.9461538461538461,
+                "covered": 123,
+                "intervalScorePP": 26.701733588164124,
+                "optionWidthDistribution": {
+                  "maximumPP": 37.01846509262192,
+                  "minimumPP": 10.53310342225684,
+                  "quantilesPP": {
+                    "10": 18.119146723340993,
+                    "25": 22.68139292731615,
+                    "50": 25.484286163629022,
+                    "75": 26.32627983121373,
+                    "90": 26.60192110196806
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 31.792647290356015,
+                  "minimumPP": 12.276052231179518,
+                  "quantilesPP": {
+                    "10": 18.969699391278862,
+                    "25": 22.074168334579273,
+                    "50": 25.489657846548763,
+                    "75": 26.065079517289696,
+                    "90": 26.346483344562657
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9461538461538461,
+                "widthPP": 23.904278073941406
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2020
+        },
+        {
+          "id": "candidate:2023",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.1314953090842197,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.1314953090842197,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.6796875,
+                "covered": 87,
+                "intervalScorePP": 14.175627888831954,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.16279120930156,
+                  "minimumPP": 4.663427321495668,
+                  "quantilesPP": {
+                    "10": 7.433086593505848,
+                    "25": 8.80017490361395,
+                    "50": 10.076751719726587,
+                    "75": 10.736754332124713,
+                    "90": 10.893601881219858
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.066103125167537,
+                  "minimumPP": 5.35966416371534,
+                  "quantilesPP": {
+                    "10": 8.209385097596401,
+                    "25": 9.101394847239277,
+                    "50": 9.965433829507994,
+                    "75": 10.48493565389218,
+                    "90": 10.812439906173326
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.6796875,
+                "widthPP": 9.709094091667
+              },
+              "80": {
+                "coverage": 0.9453125,
+                "covered": 121,
+                "intervalScorePP": 21.84665996267493,
+                "optionWidthDistribution": {
+                  "maximumPP": 34.24471165672037,
+                  "minimumPP": 8.975824226978492,
+                  "quantilesPP": {
+                    "10": 14.156311571646704,
+                    "25": 16.71828928725254,
+                    "50": 19.028620140237457,
+                    "75": 20.108161560615113,
+                    "90": 20.451212162443923
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 24.667366099312844,
+                  "minimumPP": 10.274880942747737,
+                  "quantilesPP": {
+                    "10": 15.565981583220669,
+                    "25": 17.183461465560693,
+                    "50": 18.769915597963834,
+                    "75": 19.732056537735204,
+                    "90": 20.29816357327287
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9453125,
+                "widthPP": 18.310731359343677
+              },
+              "90": {
+                "coverage": 0.9765625,
+                "covered": 125,
+                "intervalScorePP": 28.505292225336948,
+                "optionWidthDistribution": {
+                  "maximumPP": 43.40255163181848,
+                  "minimumPP": 11.633087067811395,
+                  "quantilesPP": {
+                    "10": 18.117069860109485,
+                    "25": 21.24171649637524,
+                    "50": 24.274523227024446,
+                    "75": 25.639793484965082,
+                    "90": 26.1081254744076
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 31.368156548940323,
+                  "minimumPP": 13.232999858792258,
+                  "quantilesPP": {
+                    "10": 19.94365271732453,
+                    "25": 21.987949096830096,
+                    "50": 23.959754679219312,
+                    "75": 25.117524129255152,
+                    "90": 25.86851535243024
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9765625,
+                "widthPP": 23.364472367626284
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2023
+        },
+        {
+          "id": "composed:2017",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 5.513552934429385,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 5.513552934429384,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.3828125,
+                "covered": 49,
+                "intervalScorePP": 24.850044264403547,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.48378732713909,
+                  "minimumPP": 5.049009033434757,
+                  "quantilesPP": {
+                    "10": 7.758258174676585,
+                    "25": 9.829678592832412,
+                    "50": 11.55899998115152,
+                    "75": 12.898237114791254,
+                    "90": 13.407815896156272
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 14.662366818962237,
+                  "minimumPP": 6.955137968579621,
+                  "quantilesPP": {
+                    "10": 8.469636792362024,
+                    "25": 9.462967150656336,
+                    "50": 11.539113373117113,
+                    "75": 12.905667455828675,
+                    "90": 13.32905223075987
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.3828125,
+                "widthPP": 11.155801309633631
+              },
+              "80": {
+                "coverage": 0.6953125,
+                "covered": 89,
+                "intervalScorePP": 31.17720685156406,
+                "optionWidthDistribution": {
+                  "maximumPP": 35.563657914962334,
+                  "minimumPP": 9.073464415989271,
+                  "quantilesPP": {
+                    "10": 14.453576789129938,
+                    "25": 18.63043245632385,
+                    "50": 21.535853313800175,
+                    "75": 24.340991929480627,
+                    "90": 25.50154907580231
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 28.49909782831081,
+                  "minimumPP": 13.009705405197192,
+                  "quantilesPP": {
+                    "10": 16.220896649578826,
+                    "25": 17.79870641618699,
+                    "50": 21.890759220576694,
+                    "75": 24.283528815063658,
+                    "90": 25.00432571307725
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.6953125,
+                "widthPP": 21.024739025985426
+              },
+              "90": {
+                "coverage": 0.875,
+                "covered": 112,
+                "intervalScorePP": 33.446762232908455,
+                "optionWidthDistribution": {
+                  "maximumPP": 42.562608057889754,
+                  "minimumPP": 12.526562902155574,
+                  "quantilesPP": {
+                    "10": 18.956071308866832,
+                    "25": 24.543663762171796,
+                    "50": 27.778111232715027,
+                    "75": 30.97801995998539,
+                    "90": 32.15365442092833
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 34.75205112634511,
+                  "minimumPP": 16.868508423842627,
+                  "quantilesPP": {
+                    "10": 20.807538279474848,
+                    "25": 23.31845368107827,
+                    "50": 27.72237217226048,
+                    "75": 30.40345532110617,
+                    "90": 31.784289999119412
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.875,
+                "widthPP": 26.833761592305745
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2017
+        },
+        {
+          "id": "composed:2020",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 4.0707206715632,
+            "contests": 65,
+            "coordinates": 130,
+            "crpsPP": 4.0707206715632,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.7384615384615385,
+                "covered": 96,
+                "intervalScorePP": 18.625366728440756,
+                "optionWidthDistribution": {
+                  "maximumPP": 30.48370773703407,
+                  "minimumPP": 5.4565297232252,
+                  "quantilesPP": {
+                    "10": 9.982077407206287,
+                    "25": 13.144464305812717,
+                    "50": 14.524670418872962,
+                    "75": 15.537976217380626,
+                    "90": 16.39733418244759
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.905480243125865,
+                  "minimumPP": 6.49743001101945,
+                  "quantilesPP": {
+                    "10": 10.734527461236466,
+                    "25": 12.58958431973694,
+                    "50": 14.483670071938631,
+                    "75": 15.28385646829615,
+                    "90": 16.1566530664361
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.7384615384615385,
+                "widthPP": 13.989784530518953
+              },
+              "80": {
+                "coverage": 0.9307692307692308,
+                "covered": 121,
+                "intervalScorePP": 29.263718303544124,
+                "optionWidthDistribution": {
+                  "maximumPP": 53.02401006193791,
+                  "minimumPP": 10.416992392517946,
+                  "quantilesPP": {
+                    "10": 18.752788387237537,
+                    "25": 24.32094580842901,
+                    "50": 27.448527521983365,
+                    "75": 29.141408597606627,
+                    "90": 30.171729296388726
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 44.51065840447362,
+                  "minimumPP": 12.149371554966125,
+                  "quantilesPP": {
+                    "10": 20.039548503956755,
+                    "25": 23.839481191354817,
+                    "50": 27.42104085415425,
+                    "75": 28.95153897045011,
+                    "90": 30.121253207797196
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9307692307692308,
+                "widthPP": 26.214106194495123
+              },
+              "90": {
+                "coverage": 0.9615384615384616,
+                "covered": 125,
+                "intervalScorePP": 34.24475608226815,
+                "optionWidthDistribution": {
+                  "maximumPP": 64.8253798541796,
+                  "minimumPP": 13.911298126694875,
+                  "quantilesPP": {
+                    "10": 24.343700845144205,
+                    "25": 30.66507333418684,
+                    "50": 34.33621186075658,
+                    "75": 36.52451392835785,
+                    "90": 38.08174178305275
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 55.231126061138625,
+                  "minimumPP": 16.3669390785521,
+                  "quantilesPP": {
+                    "10": 25.87956469711263,
+                    "25": 29.938930485903697,
+                    "50": 34.51913692156719,
+                    "75": 36.075082963962146,
+                    "90": 37.42679192976816
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9615384615384617,
+                "widthPP": 33.08880184799154
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2020
+        },
+        {
+          "id": "composed:2023",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 3.6915278575665935,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.6915278575665935,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.765625,
+                "covered": 98,
+                "intervalScorePP": 16.561415136861633,
+                "optionWidthDistribution": {
+                  "maximumPP": 25.872088940999333,
+                  "minimumPP": 8.381828112235977,
+                  "quantilesPP": {
+                    "10": 11.136747863404363,
+                    "25": 12.173536997486936,
+                    "50": 13.658372790959302,
+                    "75": 14.382525462045358,
+                    "90": 15.04711521683444
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 17.753242235615282,
+                  "minimumPP": 10.279629377693752,
+                  "quantilesPP": {
+                    "10": 11.947958634950455,
+                    "25": 12.778759977816284,
+                    "50": 13.424677407739322,
+                    "75": 14.028721188275291,
+                    "90": 14.798441350179171
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.765625,
+                "widthPP": 13.400045094872475
+              },
+              "80": {
+                "coverage": 0.984375,
+                "covered": 126,
+                "intervalScorePP": 26.465084488043008,
+                "optionWidthDistribution": {
+                  "maximumPP": 47.257149675531565,
+                  "minimumPP": 16.87513256688606,
+                  "quantilesPP": {
+                    "10": 21.118546526767442,
+                    "25": 22.9490813236596,
+                    "50": 25.64806753240125,
+                    "75": 26.75530937669929,
+                    "90": 27.42639667636079
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 32.267894801661065,
+                  "minimumPP": 19.597533158431705,
+                  "quantilesPP": {
+                    "10": 22.764384696195354,
+                    "25": 23.859228049370987,
+                    "50": 25.131307982161967,
+                    "75": 26.158996675149176,
+                    "90": 27.060721854032714
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.984375,
+                "widthPP": 25.03356121340893
+              },
+              "90": {
+                "coverage": 0.9921875,
+                "covered": 127,
+                "intervalScorePP": 33.63812916986713,
+                "optionWidthDistribution": {
+                  "maximumPP": 60.620058153735094,
+                  "minimumPP": 21.823245912184497,
+                  "quantilesPP": {
+                    "10": 26.53283592762919,
+                    "25": 29.760164108884325,
+                    "50": 32.26663253547218,
+                    "75": 33.55026622389201,
+                    "90": 35.187508282373166
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 41.43216006884661,
+                  "minimumPP": 25.08981918134479,
+                  "quantilesPP": {
+                    "10": 28.827832604761678,
+                    "25": 30.31326683976583,
+                    "50": 31.80789458725384,
+                    "75": 32.945422201411574,
+                    "90": 34.35050762869806
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9921875,
+                "widthPP": 31.720272460265114
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2023
+        }
+      ],
+      "pooled": {
+        "candidate": {
+          "contestWeighted": {
+            "candidateEqualCRPSPP": 3.6787388614757157,
+            "contests": 257,
+            "coordinates": 514,
+            "crpsPP": 3.6787388614757153,
+            "environments": 4,
+            "intervals": {
+              "50": {
+                "coverage": 0.5603112840466926,
+                "covered": 288,
+                "intervalScorePP": 16.482606919283,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.16279120930156,
+                  "minimumPP": 4.212076076231252,
+                  "quantilesPP": {
+                    "10": 7.41309587762366,
+                    "25": 8.996538710300761,
+                    "50": 10.401646489903323,
+                    "75": 10.986066728812942,
+                    "90": 11.44059043881337
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.471217654174493,
+                  "minimumPP": 4.938170776537907,
+                  "quantilesPP": {
+                    "10": 7.685650872728165,
+                    "25": 8.872324065475294,
+                    "50": 10.216226974919714,
+                    "75": 10.929267898559266,
+                    "90": 11.420773539470526
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.5603112840466926,
+                "widthPP": 9.849679510771416
+              },
+              "80": {
+                "coverage": 0.8929961089494164,
+                "covered": 459,
+                "intervalScorePP": 23.27008708519821,
+                "optionWidthDistribution": {
+                  "maximumPP": 34.24471165672037,
+                  "minimumPP": 8.085047591007605,
+                  "quantilesPP": {
+                    "10": 14.053870118510018,
+                    "25": 17.029595921767786,
+                    "50": 19.598987377816172,
+                    "75": 20.6566435164526,
+                    "90": 21.372226790071792
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.275611770924158,
+                  "minimumPP": 9.523250776836944,
+                  "quantilesPP": {
+                    "10": 14.605409333816754,
+                    "25": 16.878020792401518,
+                    "50": 19.19214404735642,
+                    "75": 20.51856694918035,
+                    "90": 21.46003468543486
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.8929961089494163,
+                "widthPP": 18.575660931038307
+              },
+              "90": {
+                "coverage": 0.9455252918287937,
+                "covered": 486,
+                "intervalScorePP": 28.795451223814716,
+                "optionWidthDistribution": {
+                  "maximumPP": 43.40255163181848,
+                  "minimumPP": 10.53310342225684,
+                  "quantilesPP": {
+                    "10": 18.05889250574145,
+                    "25": 21.75732151655118,
+                    "50": 24.954534207951163,
+                    "75": 26.298548481846645,
+                    "90": 27.16251676893034
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 31.792647290356015,
+                  "minimumPP": 12.276052231179518,
+                  "quantilesPP": {
+                    "10": 18.740173570216044,
+                    "25": 21.547985939791232,
+                    "50": 24.537802498842527,
+                    "75": 26.125930198629806,
+                    "90": 27.176277629519728
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.9455252918287937,
+                "widthPP": 23.67703847620851
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "equalElection": {
+            "candidateEqualCRPSPP": 3.6787388614757157,
+            "contests": 257,
+            "coordinates": 514,
+            "crpsPP": 3.6786921655308165,
+            "environments": 4,
+            "intervals": {
+              "50": {
+                "coverage": 0.5603112840466926,
+                "covered": 288,
+                "intervalScorePP": 16.48312895460456,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.16279120930156,
+                  "minimumPP": 4.212076076231252,
+                  "quantilesPP": {
+                    "10": 7.41309587762366,
+                    "25": 8.996538710300761,
+                    "50": 10.401646489903323,
+                    "75": 10.986066728812942,
+                    "90": 11.44059043881337
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.471217654174493,
+                  "minimumPP": 4.938170776537907,
+                  "quantilesPP": {
+                    "10": 7.685650872728165,
+                    "25": 8.872324065475294,
+                    "50": 10.216226974919714,
+                    "75": 10.929267898559266,
+                    "90": 11.420773539470526
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.5604867788461538,
+                "widthPP": 9.849301625831366
+              },
+              "80": {
+                "coverage": 0.8929961089494164,
+                "covered": 459,
+                "intervalScorePP": 23.274363548494975,
+                "optionWidthDistribution": {
+                  "maximumPP": 34.24471165672037,
+                  "minimumPP": 8.085047591007605,
+                  "quantilesPP": {
+                    "10": 14.053870118510018,
+                    "25": 17.029595921767786,
+                    "50": 19.598987377816172,
+                    "75": 20.6566435164526,
+                    "90": 21.372226790071792
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.275611770924158,
+                  "minimumPP": 9.523250776836944,
+                  "quantilesPP": {
+                    "10": 14.605409333816754,
+                    "25": 16.878020792401518,
+                    "50": 19.19214404735642,
+                    "75": 20.51856694918035,
+                    "90": 21.46003468543486
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.89296875,
+                "widthPP": 18.57489982066462
+              },
+              "90": {
+                "coverage": 0.9455252918287937,
+                "covered": 486,
+                "intervalScorePP": 28.803629808328978,
+                "optionWidthDistribution": {
+                  "maximumPP": 43.40255163181848,
+                  "minimumPP": 10.53310342225684,
+                  "quantilesPP": {
+                    "10": 18.05889250574145,
+                    "25": 21.75732151655118,
+                    "50": 24.954534207951163,
+                    "75": 26.298548481846645,
+                    "90": 27.16251676893034
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 31.792647290356015,
+                  "minimumPP": 12.276052231179518,
+                  "quantilesPP": {
+                    "10": 18.740173570216044,
+                    "25": 21.547985939791232,
+                    "50": 24.537802498842527,
+                    "75": 26.125930198629806,
+                    "90": 27.176277629519728
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.9455228365384616,
+                "widthPP": 23.676150821529863
+              }
+            },
+            "weighting": "equal election, equal contests, equal selected options within contest"
+          }
+        },
+        "composed": {
+          "contestWeighted": {
+            "candidateEqualCRPSPP": 4.423430126110625,
+            "contests": 193,
+            "coordinates": 386,
+            "crpsPP": 4.423430126110626,
+            "environments": 3,
+            "intervals": {
+              "50": {
+                "coverage": 0.6295336787564767,
+                "covered": 243,
+                "intervalScorePP": 20.005089321396998,
+                "optionWidthDistribution": {
+                  "maximumPP": 30.48370773703407,
+                  "minimumPP": 5.049009033434757,
+                  "quantilesPP": {
+                    "10": 9.140683764756881,
+                    "25": 11.31002224191849,
+                    "50": 13.167269175437973,
+                    "75": 14.526500971008135,
+                    "90": 15.544421049960366
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.905480243125865,
+                  "minimumPP": 6.49743001101945,
+                  "quantilesPP": {
+                    "10": 9.44608070171757,
+                    "25": 11.512061695174255,
+                    "50": 13.159124655583394,
+                    "75": 14.301870915241809,
+                    "90": 15.31386561781421
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.6295336787564767,
+                "widthPP": 12.854456810218252
+              },
+              "80": {
+                "coverage": 0.8704663212435233,
+                "covered": 336,
+                "intervalScorePP": 28.970198629353472,
+                "optionWidthDistribution": {
+                  "maximumPP": 53.02401006193791,
+                  "minimumPP": 9.073464415989271,
+                  "quantilesPP": {
+                    "10": 17.240343601659397,
+                    "25": 21.405192223440896,
+                    "50": 24.774052843237044,
+                    "75": 26.958136173447713,
+                    "90": 29.100243786610434
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 44.51065840447362,
+                  "minimumPP": 12.149371554966125,
+                  "quantilesPP": {
+                    "10": 17.664687603931675,
+                    "25": 21.973668900595595,
+                    "50": 24.64365255629146,
+                    "75": 27.00072451259551,
+                    "90": 28.705064534054387
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.8704663212435233,
+                "widthPP": 24.101803720017728
+              },
+              "90": {
+                "coverage": 0.9430051813471503,
+                "covered": 364,
+                "intervalScorePP": 33.778975104274956,
+                "optionWidthDistribution": {
+                  "maximumPP": 64.8253798541796,
+                  "minimumPP": 12.526562902155574,
+                  "quantilesPP": {
+                    "10": 22.713047120606998,
+                    "25": 27.455528620679836,
+                    "50": 31.341954183402013,
+                    "75": 34.181528376104524,
+                    "90": 36.51596743087012
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 55.231126061138625,
+                  "minimumPP": 16.3669390785521,
+                  "quantilesPP": {
+                    "10": 22.916873381929463,
+                    "25": 27.795218222406355,
+                    "50": 31.323816965538054,
+                    "75": 33.96023332813972,
+                    "90": 36.06610249926146
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.9430051813471502,
+                "widthPP": 30.560778753803035
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "equalElection": {
+            "candidateEqualCRPSPP": 4.423430126110625,
+            "contests": 193,
+            "coordinates": 386,
+            "crpsPP": 4.425267154519726,
+            "environments": 3,
+            "intervals": {
+              "50": {
+                "coverage": 0.6295336787564767,
+                "covered": 243,
+                "intervalScorePP": 20.012275376568645,
+                "optionWidthDistribution": {
+                  "maximumPP": 30.48370773703407,
+                  "minimumPP": 5.049009033434757,
+                  "quantilesPP": {
+                    "10": 9.140683764756881,
+                    "25": 11.31002224191849,
+                    "50": 13.167269175437973,
+                    "75": 14.526500971008135,
+                    "90": 15.544421049960366
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.905480243125865,
+                  "minimumPP": 6.49743001101945,
+                  "quantilesPP": {
+                    "10": 9.44608070171757,
+                    "25": 11.512061695174255,
+                    "50": 13.159124655583394,
+                    "75": 14.301870915241809,
+                    "90": 15.31386561781421
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.6289663461538462,
+                "widthPP": 12.848543645008352
+              },
+              "80": {
+                "coverage": 0.8704663212435233,
+                "covered": 336,
+                "intervalScorePP": 28.968669881050396,
+                "optionWidthDistribution": {
+                  "maximumPP": 53.02401006193791,
+                  "minimumPP": 9.073464415989271,
+                  "quantilesPP": {
+                    "10": 17.240343601659397,
+                    "25": 21.405192223440896,
+                    "50": 24.774052843237044,
+                    "75": 26.958136173447713,
+                    "90": 29.100243786610434
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 44.51065840447362,
+                  "minimumPP": 12.149371554966125,
+                  "quantilesPP": {
+                    "10": 17.664687603931675,
+                    "25": 21.973668900595595,
+                    "50": 24.64365255629146,
+                    "75": 27.00072451259551,
+                    "90": 28.705064534054387
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.8701522435897437,
+                "widthPP": 24.090802144629826
+              },
+              "90": {
+                "coverage": 0.9430051813471503,
+                "covered": 364,
+                "intervalScorePP": 33.776549161681245,
+                "optionWidthDistribution": {
+                  "maximumPP": 64.8253798541796,
+                  "minimumPP": 12.526562902155574,
+                  "quantilesPP": {
+                    "10": 22.713047120606998,
+                    "25": 27.455528620679836,
+                    "50": 31.341954183402013,
+                    "75": 34.181528376104524,
+                    "90": 36.51596743087012
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 55.231126061138625,
+                  "minimumPP": 16.3669390785521,
+                  "quantilesPP": {
+                    "10": 22.916873381929463,
+                    "25": 27.795218222406355,
+                    "50": 31.323816965538054,
+                    "75": 33.96023332813972,
+                    "90": 36.06610249926146
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.942908653846154,
+                "widthPP": 30.547611966854134
+              }
+            },
+            "weighting": "equal election, equal contests, equal selected options within contest"
+          }
+        }
+      }
+    },
+    "corrected": {
+      "cases": [
+        {
+          "id": "candidate:2014",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 4.3876739218156064,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 4.3876739218156064,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.3671875,
+                "covered": 47,
+                "intervalScorePP": 19.663171977070828,
+                "optionWidthDistribution": {
+                  "maximumPP": 11.983290403013747,
+                  "minimumPP": 4.491088552433058,
+                  "quantilesPP": {
+                    "10": 6.405971470721493,
+                    "25": 8.151038311038963,
+                    "50": 10.016415900088907,
+                    "75": 11.05200388879475,
+                    "90": 11.515289759513204
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 11.968701026748231,
+                  "minimumPP": 6.193303129135318,
+                  "quantilesPP": {
+                    "10": 6.949405027403826,
+                    "25": 8.028077371493405,
+                    "50": 9.789521711634327,
+                    "75": 10.972234384365123,
+                    "90": 11.5039076186824
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.3671875,
+                "widthPP": 9.435208572702525
+              },
+              "80": {
+                "coverage": 0.8203125,
+                "covered": 105,
+                "intervalScorePP": 25.213998704446077,
+                "optionWidthDistribution": {
+                  "maximumPP": 21.970583899235386,
+                  "minimumPP": 8.640941246634195,
+                  "quantilesPP": {
+                    "10": 12.194345951407279,
+                    "25": 15.502585800212675,
+                    "50": 18.895712081275157,
+                    "75": 20.813998042688908,
+                    "90": 21.401732769272353
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 21.89773098071062,
+                  "minimumPP": 11.816675888802896,
+                  "quantilesPP": {
+                    "10": 13.286528655799577,
+                    "25": 15.217034113936872,
+                    "50": 18.461001543244308,
+                    "75": 20.641935823737803,
+                    "90": 21.497940062281415
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.8203125,
+                "widthPP": 17.793127898478144
+              },
+              "90": {
+                "coverage": 0.8984375,
+                "covered": 115,
+                "intervalScorePP": 30.335409791593097,
+                "optionWidthDistribution": {
+                  "maximumPP": 27.890412374010673,
+                  "minimumPP": 11.164833545963077,
+                  "quantilesPP": {
+                    "10": 15.744820261129387,
+                    "25": 19.8424386668499,
+                    "50": 24.064900559105684,
+                    "75": 26.425312819822597,
+                    "90": 27.207102823355495
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 27.767610860815715,
+                  "minimumPP": 15.223615969016251,
+                  "quantilesPP": {
+                    "10": 17.05880711500739,
+                    "25": 19.506909622691328,
+                    "50": 23.574218965104777,
+                    "75": 26.200166587911138,
+                    "90": 27.128879738391255
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.8984375,
+                "widthPP": 22.684601590415795
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2014
+        },
+        {
+          "id": "candidate:2017",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.504913512682668,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.5049135126826676,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.6796875,
+                "covered": 87,
+                "intervalScorePP": 15.74481513936264,
+                "optionWidthDistribution": {
+                  "maximumPP": 11.918218077016988,
+                  "minimumPP": 6.012758733621492,
+                  "quantilesPP": {
+                    "10": 8.365868104928197,
+                    "25": 9.46488305054831,
+                    "50": 10.676086721133544,
+                    "75": 11.31191036626144,
+                    "90": 11.611262866557656
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 11.886549956056033,
+                  "minimumPP": 7.512012992965891,
+                  "quantilesPP": {
+                    "10": 8.562815605325781,
+                    "25": 9.623847985731667,
+                    "50": 10.602945244006323,
+                    "75": 11.32203105287895,
+                    "90": 11.601237055275899
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.6796875,
+                "widthPP": 10.306483278021098
+              },
+              "80": {
+                "coverage": 0.90625,
+                "covered": 116,
+                "intervalScorePP": 23.861475627767277,
+                "optionWidthDistribution": {
+                  "maximumPP": 22.36342780772509,
+                  "minimumPP": 11.503247110422121,
+                  "quantilesPP": {
+                    "10": 15.770253209179218,
+                    "25": 17.963532822571555,
+                    "50": 20.126535630947682,
+                    "75": 21.239920885250317,
+                    "90": 21.82777521724296
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 22.294285672790036,
+                  "minimumPP": 14.293630468246242,
+                  "quantilesPP": {
+                    "10": 16.21923064294044,
+                    "25": 18.210984081055397,
+                    "50": 19.97854003630641,
+                    "75": 21.282247137156133,
+                    "90": 21.779073181497726
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.90625,
+                "widthPP": 19.425227420268776
+              },
+              "90": {
+                "coverage": 0.9609375,
+                "covered": 123,
+                "intervalScorePP": 29.672066115501657,
+                "optionWidthDistribution": {
+                  "maximumPP": 28.4191613002415,
+                  "minimumPP": 14.880311888287501,
+                  "quantilesPP": {
+                    "10": 20.29542860265082,
+                    "25": 22.93449645073225,
+                    "50": 25.68430959856322,
+                    "75": 26.970223706396425,
+                    "90": 27.71373630068962
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 28.312890020929004,
+                  "minimumPP": 18.365812236520192,
+                  "quantilesPP": {
+                    "10": 20.80498524045673,
+                    "25": 23.272918806463895,
+                    "50": 25.436023535825644,
+                    "75": 27.002350495341744,
+                    "90": 27.66734747735636
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9609375,
+                "widthPP": 24.751233741415884
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2017
+        },
+        {
+          "id": "candidate:2020",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.6906969313049656,
+            "contests": 65,
+            "coordinates": 130,
+            "crpsPP": 3.6906969313049656,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.5153846153846153,
+                "covered": 67,
+                "intervalScorePP": 16.34903023013079,
+                "optionWidthDistribution": {
+                  "maximumPP": 15.716195759432537,
+                  "minimumPP": 4.212076076231252,
+                  "quantilesPP": {
+                    "10": 7.425070088459572,
+                    "25": 9.36870373060297,
+                    "50": 10.614631432277523,
+                    "75": 11.010758281202067,
+                    "90": 11.115787462842583
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.471023372274603,
+                  "minimumPP": 4.938170776537907,
+                  "quantilesPP": {
+                    "10": 7.790445929719273,
+                    "25": 9.130180553588884,
+                    "50": 10.621587042992985,
+                    "75": 10.881517939068662,
+                    "90": 11.046068561159489
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.5153846153846153,
+                "widthPP": 9.946428352085503
+              },
+              "80": {
+                "coverage": 0.9,
+                "covered": 117,
+                "intervalScorePP": 22.17536273504993,
+                "optionWidthDistribution": {
+                  "maximumPP": 29.553075066805036,
+                  "minimumPP": 8.085047591007605,
+                  "quantilesPP": {
+                    "10": 14.075883145284385,
+                    "25": 17.87956461053023,
+                    "50": 20.010089694650503,
+                    "75": 20.69448834610283,
+                    "90": 20.940872465045153
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.276605893493368,
+                  "minimumPP": 9.523250776836944,
+                  "quantilesPP": {
+                    "10": 14.786160833283528,
+                    "25": 17.266610311658276,
+                    "50": 20.0221248759307,
+                    "75": 20.484865477794468,
+                    "90": 20.76052667712884
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.8999999999999999,
+                "widthPP": 18.770555440526174
+              },
+              "90": {
+                "coverage": 0.9461538461538461,
+                "covered": 123,
+                "intervalScorePP": 26.701689655674564,
+                "optionWidthDistribution": {
+                  "maximumPP": 37.01539593700015,
+                  "minimumPP": 10.53310342225684,
+                  "quantilesPP": {
+                    "10": 18.119146723340993,
+                    "25": 22.68139292731615,
+                    "50": 25.484286163629022,
+                    "75": 26.32627983121373,
+                    "90": 26.60192110196806
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 31.79111271254513,
+                  "minimumPP": 12.276052231179518,
+                  "quantilesPP": {
+                    "10": 18.969699391278862,
+                    "25": 22.074168334579273,
+                    "50": 25.489657846548763,
+                    "75": 26.065079517289696,
+                    "90": 26.346483344562657
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9461538461538461,
+                "widthPP": 23.904234141451845
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2020
+        },
+        {
+          "id": "candidate:2023",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.131492399721638,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.1314923997216377,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.6796875,
+                "covered": 87,
+                "intervalScorePP": 14.175565057425798,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.163214539192417,
+                  "minimumPP": 4.663427321495668,
+                  "quantilesPP": {
+                    "10": 7.433086593505848,
+                    "25": 8.80017490361395,
+                    "50": 10.076751719726587,
+                    "75": 10.736754332124713,
+                    "90": 10.893601881219858
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.066314790112965,
+                  "minimumPP": 5.35966416371534,
+                  "quantilesPP": {
+                    "10": 8.209385097596401,
+                    "25": 9.101394847239277,
+                    "50": 9.965433829507994,
+                    "75": 10.48493565389218,
+                    "90": 10.812439906173326
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.6796875,
+                "widthPP": 9.709093839435726
+              },
+              "80": {
+                "coverage": 0.9453125,
+                "covered": 121,
+                "intervalScorePP": 21.8468687698821,
+                "optionWidthDistribution": {
+                  "maximumPP": 34.24382506452889,
+                  "minimumPP": 8.975824226978492,
+                  "quantilesPP": {
+                    "10": 14.156311571646704,
+                    "25": 16.71828928725254,
+                    "50": 19.028620140237457,
+                    "75": 20.108161560615113,
+                    "90": 20.451212162443923
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 24.666922803217105,
+                  "minimumPP": 10.274880942747737,
+                  "quantilesPP": {
+                    "10": 15.565981583220669,
+                    "25": 17.183461465560693,
+                    "50": 18.769915597963834,
+                    "75": 19.732056537735204,
+                    "90": 20.29816357327287
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9453125,
+                "widthPP": 18.310729164570674
+              },
+              "90": {
+                "coverage": 0.9765625,
+                "covered": 125,
+                "intervalScorePP": 28.505248974130147,
+                "optionWidthDistribution": {
+                  "maximumPP": 43.40241077806836,
+                  "minimumPP": 11.633087067811395,
+                  "quantilesPP": {
+                    "10": 18.117069860109485,
+                    "25": 21.24171649637524,
+                    "50": 24.274523227024446,
+                    "75": 25.639793484965082,
+                    "90": 26.1081254744076
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 31.36808612206526,
+                  "minimumPP": 13.232999858792258,
+                  "quantilesPP": {
+                    "10": 19.94365271732453,
+                    "25": 21.987949096830096,
+                    "50": 23.959754679219312,
+                    "75": 25.117524129255152,
+                    "90": 25.86851535243024
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9765625,
+                "widthPP": 23.36442911641948
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2023
+        },
+        {
+          "id": "composed:2017",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 5.514535204325654,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 5.514535204325654,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.3828125,
+                "covered": 49,
+                "intervalScorePP": 24.861784678309707,
+                "optionWidthDistribution": {
+                  "maximumPP": 19.43003185374681,
+                  "minimumPP": 5.0421533695250496,
+                  "quantilesPP": {
+                    "10": 7.76986972449525,
+                    "25": 9.886416515326935,
+                    "50": 11.546276445141476,
+                    "75": 12.89575009400094,
+                    "90": 13.417221330902688
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 15.21431612212554,
+                  "minimumPP": 6.94774503701233,
+                  "quantilesPP": {
+                    "10": 8.474747919386942,
+                    "25": 9.458570787992635,
+                    "50": 11.5291922973659,
+                    "75": 12.912512361522783,
+                    "90": 13.31860293487921
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.3828125,
+                "widthPP": 11.173234731216713
+              },
+              "80": {
+                "coverage": 0.6953125,
+                "covered": 89,
+                "intervalScorePP": 31.22203925560937,
+                "optionWidthDistribution": {
+                  "maximumPP": 37.37034089365375,
+                  "minimumPP": 9.074480517350196,
+                  "quantilesPP": {
+                    "10": 14.451339040388,
+                    "25": 18.618540864652353,
+                    "50": 21.610251311531094,
+                    "75": 24.34121390261881,
+                    "90": 25.49409811011786
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 29.425023719862295,
+                  "minimumPP": 13.027417741609,
+                  "quantilesPP": {
+                    "10": 16.206783426618504,
+                    "25": 17.801309148677344,
+                    "50": 21.892681462798954,
+                    "75": 24.282616778295534,
+                    "90": 24.996743842368573
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.6953125,
+                "widthPP": 21.0531078028661
+              },
+              "90": {
+                "coverage": 0.875,
+                "covered": 112,
+                "intervalScorePP": 33.47102242322475,
+                "optionWidthDistribution": {
+                  "maximumPP": 44.477274657545934,
+                  "minimumPP": 12.526282097643747,
+                  "quantilesPP": {
+                    "10": 18.965922771091375,
+                    "25": 24.546573856136686,
+                    "50": 27.749401123679384,
+                    "75": 30.985371730933096,
+                    "90": 32.15662306190172
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 35.723988320192305,
+                  "minimumPP": 16.861558639206066,
+                  "quantilesPP": {
+                    "10": 20.801466835926917,
+                    "25": 23.313271218964964,
+                    "50": 27.856556925028357,
+                    "75": 30.40689865202173,
+                    "90": 31.786240946096015
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.875,
+                "widthPP": 26.862939242443336
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2017
+        },
+        {
+          "id": "composed:2020",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 4.073455426756965,
+            "contests": 65,
+            "coordinates": 130,
+            "crpsPP": 4.073455426756964,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.7384615384615385,
+                "covered": 96,
+                "intervalScorePP": 18.636803543952787,
+                "optionWidthDistribution": {
+                  "maximumPP": 32.14462643151595,
+                  "minimumPP": 5.46944700487617,
+                  "quantilesPP": {
+                    "10": 9.99291405184367,
+                    "25": 13.16597394591018,
+                    "50": 14.558867021513588,
+                    "75": 15.546912757645744,
+                    "90": 16.384994169131605
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 26.891980057287235,
+                  "minimumPP": 6.4964661962476296,
+                  "quantilesPP": {
+                    "10": 10.730922406511493,
+                    "25": 12.600310606528927,
+                    "50": 14.497785361880624,
+                    "75": 15.272872424745998,
+                    "90": 16.170842089954974
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.7384615384615385,
+                "widthPP": 14.009351402279883
+              },
+              "80": {
+                "coverage": 0.9307692307692308,
+                "covered": 121,
+                "intervalScorePP": 29.291699681029844,
+                "optionWidthDistribution": {
+                  "maximumPP": 55.96772850208098,
+                  "minimumPP": 10.404119214495854,
+                  "quantilesPP": {
+                    "10": 18.751416360552064,
+                    "25": 24.30538971049537,
+                    "50": 27.479251825505386,
+                    "75": 29.15325906449607,
+                    "90": 30.15712162972339
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 46.258102711723204,
+                  "minimumPP": 12.153054302920154,
+                  "quantilesPP": {
+                    "10": 20.039923117783218,
+                    "25": 23.83901134170402,
+                    "50": 27.408119502043135,
+                    "75": 28.946704899052357,
+                    "90": 30.110334326231282
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9307692307692308,
+                "widthPP": 26.242632060770877
+              },
+              "90": {
+                "coverage": 0.9615384615384616,
+                "covered": 125,
+                "intervalScorePP": 34.281864258795444,
+                "optionWidthDistribution": {
+                  "maximumPP": 68.06354300553198,
+                  "minimumPP": 13.89983395747342,
+                  "quantilesPP": {
+                    "10": 24.38068224960485,
+                    "25": 30.651768502247386,
+                    "50": 34.378335133275634,
+                    "75": 36.484539572639456,
+                    "90": 38.070250546533295
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 57.01772569279061,
+                  "minimumPP": 16.341187866265763,
+                  "quantilesPP": {
+                    "10": 25.883235346527833,
+                    "25": 29.937838665787833,
+                    "50": 34.516741311778375,
+                    "75": 36.075592808179664,
+                    "90": 37.42516818585661
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9615384615384617,
+                "widthPP": 33.12066736680692
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2020
+        },
+        {
+          "id": "composed:2023",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 3.6914830316940765,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.6914830316940765,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.765625,
+                "covered": 98,
+                "intervalScorePP": 16.569825057989163,
+                "optionWidthDistribution": {
+                  "maximumPP": 28.226083698319577,
+                  "minimumPP": 8.380902829544548,
+                  "quantilesPP": {
+                    "10": 11.153969846387898,
+                    "25": 12.235595443476646,
+                    "50": 13.650659332301174,
+                    "75": 14.376237349920867,
+                    "90": 15.050289971089919
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 18.995120075827618,
+                  "minimumPP": 10.320420205309272,
+                  "quantilesPP": {
+                    "10": 12.00256307504449,
+                    "25": 12.791664440558815,
+                    "50": 13.389055440429097,
+                    "75": 14.04784181953336,
+                    "90": 14.754905263193521
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.765625,
+                "widthPP": 13.43463170490187
+              },
+              "80": {
+                "coverage": 0.984375,
+                "covered": 126,
+                "intervalScorePP": 26.5195107040535,
+                "optionWidthDistribution": {
+                  "maximumPP": 50.39596613426993,
+                  "minimumPP": 16.909503431000637,
+                  "quantilesPP": {
+                    "10": 21.117489426560926,
+                    "25": 22.960185994264602,
+                    "50": 25.66277923934736,
+                    "75": 26.70060358347263,
+                    "90": 27.466967265255306
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 33.929631613958854,
+                  "minimumPP": 19.61901427529299,
+                  "quantilesPP": {
+                    "10": 22.808250869175247,
+                    "25": 23.835142527905433,
+                    "50": 25.12429289905131,
+                    "75": 26.238415849184733,
+                    "90": 27.060206417387352
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.984375,
+                "widthPP": 25.085291582222588
+              },
+              "90": {
+                "coverage": 0.9921875,
+                "covered": 127,
+                "intervalScorePP": 33.66318842338555,
+                "optionWidthDistribution": {
+                  "maximumPP": 62.02668896076085,
+                  "minimumPP": 21.828708060592533,
+                  "quantilesPP": {
+                    "10": 26.581314352342307,
+                    "25": 29.73474192097615,
+                    "50": 32.268426918714425,
+                    "75": 33.59555673195206,
+                    "90": 35.18918940446961
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 42.29226035434628,
+                  "minimumPP": 25.182508631467513,
+                  "quantilesPP": {
+                    "10": 28.836818730124065,
+                    "25": 30.359721907250037,
+                    "50": 31.805297382491275,
+                    "75": 32.9373418973882,
+                    "90": 34.36456199842748
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9921875,
+                "widthPP": 31.763254871410595
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2023
+        }
+      ],
+      "pooled": {
+        "candidate": {
+          "contestWeighted": {
+            "candidateEqualCRPSPP": 3.678740894649405,
+            "contests": 257,
+            "coordinates": 514,
+            "crpsPP": 3.678740894649405,
+            "environments": 4,
+            "intervals": {
+              "50": {
+                "coverage": 0.5603112840466926,
+                "covered": 288,
+                "intervalScorePP": 16.482623751305425,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.163214539192417,
+                  "minimumPP": 4.212076076231252,
+                  "quantilesPP": {
+                    "10": 7.41309587762366,
+                    "25": 8.996538710300761,
+                    "50": 10.401646489903323,
+                    "75": 10.986066728812942,
+                    "90": 11.44059043881337
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.471023372274603,
+                  "minimumPP": 4.938170776537907,
+                  "quantilesPP": {
+                    "10": 7.685650872728165,
+                    "25": 8.872324065475294,
+                    "50": 10.216226974919714,
+                    "75": 10.929267898559266,
+                    "90": 11.420773539470526
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.5603112840466926,
+                "widthPP": 9.849681428232515
+              },
+              "80": {
+                "coverage": 0.8929961089494164,
+                "covered": 459,
+                "intervalScorePP": 23.270149946740677,
+                "optionWidthDistribution": {
+                  "maximumPP": 34.24382506452889,
+                  "minimumPP": 8.085047591007605,
+                  "quantilesPP": {
+                    "10": 14.053870118510018,
+                    "25": 17.029595921767786,
+                    "50": 19.598987377816172,
+                    "75": 20.6566435164526,
+                    "90": 21.372226790071792
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.276605893493368,
+                  "minimumPP": 9.523250776836944,
+                  "quantilesPP": {
+                    "10": 14.605409333816754,
+                    "25": 16.878020792401518,
+                    "50": 19.19214404735642,
+                    "75": 20.51856694918035,
+                    "90": 21.46003468543486
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.8929961089494163,
+                "widthPP": 18.575671247340573
+              },
+              "90": {
+                "coverage": 0.9455252918287937,
+                "covered": 486,
+                "intervalScorePP": 28.795424980611827,
+                "optionWidthDistribution": {
+                  "maximumPP": 43.40241077806836,
+                  "minimumPP": 10.53310342225684,
+                  "quantilesPP": {
+                    "10": 18.05889250574145,
+                    "25": 21.75732151655118,
+                    "50": 24.954534207951163,
+                    "75": 26.298548481846645,
+                    "90": 27.16251676893034
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 31.79111271254513,
+                  "minimumPP": 12.276052231179518,
+                  "quantilesPP": {
+                    "10": 18.740173570216044,
+                    "25": 21.547985939791232,
+                    "50": 24.537802498842527,
+                    "75": 26.125930198629806,
+                    "90": 27.176277629519728
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.9455252918287937,
+                "widthPP": 23.67701223300562
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "equalElection": {
+            "candidateEqualCRPSPP": 3.678740894649405,
+            "contests": 257,
+            "coordinates": 514,
+            "crpsPP": 3.6786941913812194,
+            "environments": 4,
+            "intervals": {
+              "50": {
+                "coverage": 0.5603112840466926,
+                "covered": 288,
+                "intervalScorePP": 16.48314560099751,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.163214539192417,
+                  "minimumPP": 4.212076076231252,
+                  "quantilesPP": {
+                    "10": 7.41309587762366,
+                    "25": 8.996538710300761,
+                    "50": 10.401646489903323,
+                    "75": 10.986066728812942,
+                    "90": 11.44059043881337
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.471023372274603,
+                  "minimumPP": 4.938170776537907,
+                  "quantilesPP": {
+                    "10": 7.685650872728165,
+                    "25": 8.872324065475294,
+                    "50": 10.216226974919714,
+                    "75": 10.929267898559266,
+                    "90": 11.420773539470526
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.5604867788461538,
+                "widthPP": 9.849303510561214
+              },
+              "80": {
+                "coverage": 0.8929961089494164,
+                "covered": 459,
+                "intervalScorePP": 23.274426459286346,
+                "optionWidthDistribution": {
+                  "maximumPP": 34.24382506452889,
+                  "minimumPP": 8.085047591007605,
+                  "quantilesPP": {
+                    "10": 14.053870118510018,
+                    "25": 17.029595921767786,
+                    "50": 19.598987377816172,
+                    "75": 20.6566435164526,
+                    "90": 21.372226790071792
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.276605893493368,
+                  "minimumPP": 9.523250776836944,
+                  "quantilesPP": {
+                    "10": 14.605409333816754,
+                    "25": 16.878020792401518,
+                    "50": 19.19214404735642,
+                    "75": 20.51856694918035,
+                    "90": 21.46003468543486
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.89296875,
+                "widthPP": 18.574909980960943
+              },
+              "90": {
+                "coverage": 0.9455252918287937,
+                "covered": 486,
+                "intervalScorePP": 28.803603634224867,
+                "optionWidthDistribution": {
+                  "maximumPP": 43.40241077806836,
+                  "minimumPP": 10.53310342225684,
+                  "quantilesPP": {
+                    "10": 18.05889250574145,
+                    "25": 21.75732151655118,
+                    "50": 24.954534207951163,
+                    "75": 26.298548481846645,
+                    "90": 27.16251676893034
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 31.79111271254513,
+                  "minimumPP": 12.276052231179518,
+                  "quantilesPP": {
+                    "10": 18.740173570216044,
+                    "25": 21.547985939791232,
+                    "50": 24.537802498842527,
+                    "75": 26.125930198629806,
+                    "90": 27.176277629519728
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.9455228365384616,
+                "widthPP": 23.676124647425752
+              }
+            },
+            "weighting": "equal election, equal contests, equal selected options within contest"
+          }
+        },
+        "composed": {
+          "contestWeighted": {
+            "candidateEqualCRPSPP": 4.42466201991951,
+            "contests": 193,
+            "coordinates": 386,
+            "crpsPP": 4.42466201991951,
+            "environments": 3,
+            "intervals": {
+              "50": {
+                "coverage": 0.6295336787564767,
+                "covered": 243,
+                "intervalScorePP": 20.015623075026213,
+                "optionWidthDistribution": {
+                  "maximumPP": 32.14462643151595,
+                  "minimumPP": 5.0421533695250496,
+                  "quantilesPP": {
+                    "10": 9.13116553462212,
+                    "25": 11.319320909387237,
+                    "50": 13.174409120143025,
+                    "75": 14.553885231249893,
+                    "90": 15.578367917646188
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 26.891980057287235,
+                  "minimumPP": 6.4964661962476296,
+                  "quantilesPP": {
+                    "10": 9.4066366637876,
+                    "25": 11.501811538572266,
+                    "50": 13.174916302771173,
+                    "75": 14.329969818897153,
+                    "90": 15.354379061125037
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.6295336787564767,
+                "widthPP": 12.87829685523203
+              },
+              "80": {
+                "coverage": 0.8704663212435233,
+                "covered": 336,
+                "intervalScorePP": 29.012537184898253,
+                "optionWidthDistribution": {
+                  "maximumPP": 55.96772850208098,
+                  "minimumPP": 9.074480517350196,
+                  "quantilesPP": {
+                    "10": 17.29274710176498,
+                    "25": 21.40701339926668,
+                    "50": 24.7595153153177,
+                    "75": 26.97038745507126,
+                    "90": 29.150310541545178
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 46.258102711723204,
+                  "minimumPP": 12.153054302920154,
+                  "quantilesPP": {
+                    "10": 17.671653469884703,
+                    "25": 21.97136225242373,
+                    "50": 24.669584862973586,
+                    "75": 26.980837704772867,
+                    "90": 28.958679451979826
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.8704663212435233,
+                "widthPP": 24.137972251791624
+              },
+              "90": {
+                "coverage": 0.9430051813471503,
+                "covered": 364,
+                "intervalScorePP": 33.80782731090551,
+                "optionWidthDistribution": {
+                  "maximumPP": 68.06354300553198,
+                  "minimumPP": 12.526282097643747,
+                  "quantilesPP": {
+                    "10": 22.723058566088056,
+                    "25": 27.46848457408542,
+                    "50": 31.38453665052024,
+                    "75": 34.181069593697615,
+                    "90": 36.50950361689985
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 57.01772569279061,
+                  "minimumPP": 16.341187866265763,
+                  "quantilesPP": {
+                    "10": 22.9044134353797,
+                    "25": 27.901478669254306,
+                    "50": 31.322393201204104,
+                    "75": 33.919528744965135,
+                    "90": 36.07029739252676
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.9430051813471502,
+                "widthPP": 30.59543938926996
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "equalElection": {
+            "candidateEqualCRPSPP": 4.42466201991951,
+            "contests": 193,
+            "coordinates": 386,
+            "crpsPP": 4.4264912209255645,
+            "environments": 3,
+            "intervals": {
+              "50": {
+                "coverage": 0.6295336787564767,
+                "covered": 243,
+                "intervalScorePP": 20.02280442675055,
+                "optionWidthDistribution": {
+                  "maximumPP": 32.14462643151595,
+                  "minimumPP": 5.0421533695250496,
+                  "quantilesPP": {
+                    "10": 9.13116553462212,
+                    "25": 11.319320909387237,
+                    "50": 13.174409120143025,
+                    "75": 14.553885231249893,
+                    "90": 15.578367917646188
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 26.891980057287235,
+                  "minimumPP": 6.4964661962476296,
+                  "quantilesPP": {
+                    "10": 9.4066366637876,
+                    "25": 11.501811538572266,
+                    "50": 13.174916302771173,
+                    "75": 14.329969818897153,
+                    "90": 15.354379061125037
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.6289663461538462,
+                "widthPP": 12.87240594613282
+              },
+              "80": {
+                "coverage": 0.8704663212435233,
+                "covered": 336,
+                "intervalScorePP": 29.011083213564234,
+                "optionWidthDistribution": {
+                  "maximumPP": 55.96772850208098,
+                  "minimumPP": 9.074480517350196,
+                  "quantilesPP": {
+                    "10": 17.29274710176498,
+                    "25": 21.40701339926668,
+                    "50": 24.7595153153177,
+                    "75": 26.97038745507126,
+                    "90": 29.150310541545178
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 46.258102711723204,
+                  "minimumPP": 12.153054302920154,
+                  "quantilesPP": {
+                    "10": 17.671653469884703,
+                    "25": 21.97136225242373,
+                    "50": 24.669584862973586,
+                    "75": 26.980837704772867,
+                    "90": 28.958679451979826
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.8701522435897437,
+                "widthPP": 24.12701048195319
+              },
+              "90": {
+                "coverage": 0.9430051813471503,
+                "covered": 364,
+                "intervalScorePP": 33.805358368468575,
+                "optionWidthDistribution": {
+                  "maximumPP": 68.06354300553198,
+                  "minimumPP": 12.526282097643747,
+                  "quantilesPP": {
+                    "10": 22.723058566088056,
+                    "25": 27.46848457408542,
+                    "50": 31.38453665052024,
+                    "75": 34.181069593697615,
+                    "90": 36.50950361689985
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 57.01772569279061,
+                  "minimumPP": 16.341187866265763,
+                  "quantilesPP": {
+                    "10": 22.9044134353797,
+                    "25": 27.901478669254306,
+                    "50": 31.322393201204104,
+                    "75": 33.919528744965135,
+                    "90": 36.07029739252676
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.942908653846154,
+                "widthPP": 30.582287160220282
+              }
+            },
+            "weighting": "equal election, equal contests, equal selected options within contest"
+          }
+        }
+      }
+    },
+    "originalStage45_8000": {
+      "cases": [
+        {
+          "id": "candidate:2014",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 4.381319512947773,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 4.381319512947773,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.3515625,
+                "covered": 45,
+                "intervalScorePP": 19.606013964261514,
+                "optionWidthDistribution": {
+                  "maximumPP": 12.017165553618717,
+                  "minimumPP": 4.443671594361277,
+                  "quantilesPP": {
+                    "10": 6.446949097736125,
+                    "25": 8.07695140713042,
+                    "50": 9.965753881506055,
+                    "75": 11.070753136886903,
+                    "90": 11.587160864502387
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 11.955344160605492,
+                  "minimumPP": 6.196814556257571,
+                  "quantilesPP": {
+                    "10": 7.008579112814293,
+                    "25": 7.989691588684273,
+                    "50": 9.827391534914991,
+                    "75": 10.928518815948694,
+                    "90": 11.545012631861484
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.3515625,
+                "widthPP": 9.4436321057225
+              },
+              "80": {
+                "coverage": 0.8203125,
+                "covered": 105,
+                "intervalScorePP": 25.14654783682437,
+                "optionWidthDistribution": {
+                  "maximumPP": 22.43266578629695,
+                  "minimumPP": 8.455731705673664,
+                  "quantilesPP": {
+                    "10": 12.397907758941422,
+                    "25": 15.369405030619212,
+                    "50": 18.91857460168037,
+                    "75": 20.736814864639637,
+                    "90": 21.518133347141475
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 22.383069571058115,
+                  "minimumPP": 11.805143110297859,
+                  "quantilesPP": {
+                    "10": 13.277466148328982,
+                    "25": 15.259652675672573,
+                    "50": 18.42936642524281,
+                    "75": 20.48968885089677,
+                    "90": 21.517899375145777
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.8203125,
+                "widthPP": 17.802836261310613
+              },
+              "90": {
+                "coverage": 0.890625,
+                "covered": 114,
+                "intervalScorePP": 30.17113634496131,
+                "optionWidthDistribution": {
+                  "maximumPP": 28.273635240263648,
+                  "minimumPP": 11.062802697370524,
+                  "quantilesPP": {
+                    "10": 16.00204458261916,
+                    "25": 19.7401768491324,
+                    "50": 24.043716029246603,
+                    "75": 26.634646284669053,
+                    "90": 27.237933554043
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 28.24875658058584,
+                  "minimumPP": 15.011471116697034,
+                  "quantilesPP": {
+                    "10": 17.086875192226845,
+                    "25": 19.639934839810206,
+                    "50": 23.408729733446272,
+                    "75": 26.193525725684026,
+                    "90": 27.113585677830315
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.890625,
+                "widthPP": 22.70118013472031
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2014
+        },
+        {
+          "id": "candidate:2017",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.500964582807814,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.5009645828078146,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.671875,
+                "covered": 86,
+                "intervalScorePP": 15.709152377232536,
+                "optionWidthDistribution": {
+                  "maximumPP": 12.12767888870819,
+                  "minimumPP": 6.050080250701349,
+                  "quantilesPP": {
+                    "10": 8.402292468818265,
+                    "25": 9.398485605095075,
+                    "50": 10.621553802242063,
+                    "75": 11.279249004484193,
+                    "90": 11.663724347566456
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 12.05901539259991,
+                  "minimumPP": 7.558847463444011,
+                  "quantilesPP": {
+                    "10": 8.429543538136018,
+                    "25": 9.6333492213115,
+                    "50": 10.561763788302354,
+                    "75": 11.241907497950093,
+                    "90": 11.637837274269442
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.671875,
+                "widthPP": 10.282596290282177
+              },
+              "80": {
+                "coverage": 0.8984375,
+                "covered": 115,
+                "intervalScorePP": 23.7416740154462,
+                "optionWidthDistribution": {
+                  "maximumPP": 22.505394594574888,
+                  "minimumPP": 11.421070147092584,
+                  "quantilesPP": {
+                    "10": 15.89270767563571,
+                    "25": 17.81880322778884,
+                    "50": 20.011152454610812,
+                    "75": 21.18132124645663,
+                    "90": 21.863670368863794
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 22.296079274704162,
+                  "minimumPP": 14.407960538881817,
+                  "quantilesPP": {
+                    "10": 16.097520057219622,
+                    "25": 18.20477056377492,
+                    "50": 19.958889167644962,
+                    "75": 21.031097036362915,
+                    "90": 21.750019073924904
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.8984375,
+                "widthPP": 19.389478698569633
+              },
+              "90": {
+                "coverage": 0.9609375,
+                "covered": 123,
+                "intervalScorePP": 29.60668007136097,
+                "optionWidthDistribution": {
+                  "maximumPP": 28.57864693355441,
+                  "minimumPP": 14.562806317035331,
+                  "quantilesPP": {
+                    "10": 20.35934420808107,
+                    "25": 22.668752432007203,
+                    "50": 25.635364575285294,
+                    "75": 26.91120516585285,
+                    "90": 27.620317490041845
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 28.268277737153863,
+                  "minimumPP": 18.557498127974267,
+                  "quantilesPP": {
+                    "10": 20.854438332723166,
+                    "25": 23.11263252442827,
+                    "50": 25.288702067526103,
+                    "75": 26.863561157811223,
+                    "90": 27.41593539534756
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9609375,
+                "widthPP": 24.675126500905023
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2017
+        },
+        {
+          "id": "candidate:2020",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.692324726251954,
+            "contests": 65,
+            "coordinates": 130,
+            "crpsPP": 3.692324726251954,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.5230769230769231,
+                "covered": 68,
+                "intervalScorePP": 16.36589582826295,
+                "optionWidthDistribution": {
+                  "maximumPP": 16.132492666717592,
+                  "minimumPP": 4.236005288802103,
+                  "quantilesPP": {
+                    "10": 7.372478255576817,
+                    "25": 9.391877669651645,
+                    "50": 10.648540326693077,
+                    "75": 11.05314869642372,
+                    "90": 11.208792502286455
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.673289137877783,
+                  "minimumPP": 5.00406195103018,
+                  "quantilesPP": {
+                    "10": 7.780635808282451,
+                    "25": 9.126137072444953,
+                    "50": 10.65575314570362,
+                    "75": 10.884210574596052,
+                    "90": 11.109434935948332
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.5230769230769231,
+                "widthPP": 9.953082135461429
+              },
+              "80": {
+                "coverage": 0.8923076923076924,
+                "covered": 116,
+                "intervalScorePP": 22.23344841631812,
+                "optionWidthDistribution": {
+                  "maximumPP": 29.404690797565017,
+                  "minimumPP": 8.124740625429723,
+                  "quantilesPP": {
+                    "10": 13.978461993820478,
+                    "25": 17.840634234289716,
+                    "50": 20.00490721608797,
+                    "75": 20.67246732693583,
+                    "90": 21.040094031807374
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.3451152318057,
+                  "minimumPP": 9.52959722224871,
+                  "quantilesPP": {
+                    "10": 14.871488032204283,
+                    "25": 17.12919004009401,
+                    "50": 19.944718458605177,
+                    "75": 20.404849536098382,
+                    "90": 20.77981722264581
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.8923076923076922,
+                "widthPP": 18.731344380300516
+              },
+              "90": {
+                "coverage": 0.9384615384615385,
+                "covered": 122,
+                "intervalScorePP": 26.710670259967696,
+                "optionWidthDistribution": {
+                  "maximumPP": 37.23504410385338,
+                  "minimumPP": 10.596603118107865,
+                  "quantilesPP": {
+                    "10": 18.02592115818866,
+                    "25": 22.61273623489523,
+                    "50": 25.31323641353849,
+                    "75": 26.366618488790156,
+                    "90": 26.671797588371444
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 32.10907080534098,
+                  "minimumPP": 12.406665992537384,
+                  "quantilesPP": {
+                    "10": 19.001748000547753,
+                    "25": 21.853929380128058,
+                    "50": 25.37251769217258,
+                    "75": 25.876758856402116,
+                    "90": 26.500078821492174
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9384615384615385,
+                "widthPP": 23.867920718799066
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2020
+        },
+        {
+          "id": "candidate:2023",
+          "layer": "candidate",
+          "summary": {
+            "candidateEqualCRPSPP": 3.129495281468701,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.1294952814687007,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.6796875,
+                "covered": 87,
+                "intervalScorePP": 14.170144188544107,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.26311118906665,
+                  "minimumPP": 4.600101544011725,
+                  "quantilesPP": {
+                    "10": 7.4108016903806755,
+                    "25": 8.734376943456095,
+                    "50": 10.205794339378436,
+                    "75": 10.657174316224994,
+                    "90": 10.87979330368903
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.003062570843714,
+                  "minimumPP": 5.386725119902993,
+                  "quantilesPP": {
+                    "10": 8.096438710791269,
+                    "25": 9.107473092467224,
+                    "50": 10.018467077966417,
+                    "75": 10.450146494102828,
+                    "90": 10.649057592066239
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.6796875,
+                "widthPP": 9.672912514549157
+              },
+              "80": {
+                "coverage": 0.9453125,
+                "covered": 121,
+                "intervalScorePP": 21.828125585672694,
+                "optionWidthDistribution": {
+                  "maximumPP": 33.77388656853861,
+                  "minimumPP": 9.02598687799238,
+                  "quantilesPP": {
+                    "10": 13.985398250209602,
+                    "25": 16.703908320398114,
+                    "50": 19.116901652610956,
+                    "75": 20.025369593407024,
+                    "90": 20.497759402661625
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 24.34729741481375,
+                  "minimumPP": 10.277391198630689,
+                  "quantilesPP": {
+                    "10": 15.525679040706303,
+                    "25": 17.054261141177918,
+                    "50": 18.76314932715889,
+                    "75": 19.67730279587169,
+                    "90": 20.100000154867164
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9453125,
+                "widthPP": 18.24707587668859
+              },
+              "90": {
+                "coverage": 0.9765625,
+                "covered": 125,
+                "intervalScorePP": 28.37331537109902,
+                "optionWidthDistribution": {
+                  "maximumPP": 42.65718968870493,
+                  "minimumPP": 11.49191980559046,
+                  "quantilesPP": {
+                    "10": 17.73430611320063,
+                    "25": 21.38549199155572,
+                    "50": 24.19959111343153,
+                    "75": 25.424229871763266,
+                    "90": 26.08176443943672
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 30.927702439507655,
+                  "minimumPP": 13.252550727052126,
+                  "quantilesPP": {
+                    "10": 19.827714544245456,
+                    "25": 21.59188187056168,
+                    "50": 23.859571375529782,
+                    "75": 24.949976165774213,
+                    "90": 25.683289728989873
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9765625,
+                "widthPP": 23.22135215345851
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2023
+        },
+        {
+          "id": "composed:2017",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 5.4603033600975115,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 5.460303360097512,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.3828125,
+                "covered": 49,
+                "intervalScorePP": 24.61416157503195,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.819727954278882,
+                  "minimumPP": 4.877865529690692,
+                  "quantilesPP": {
+                    "10": 7.910266351587681,
+                    "25": 9.976702650129923,
+                    "50": 11.72485341473667,
+                    "75": 13.211322738332381,
+                    "90": 13.749628917862053
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 15.134201207194392,
+                  "minimumPP": 6.8803779540332055,
+                  "quantilesPP": {
+                    "10": 8.412915134472899,
+                    "25": 9.509868134750226,
+                    "50": 11.38076178353052,
+                    "75": 13.189766131822118,
+                    "90": 13.753544839318131
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.3828125,
+                "widthPP": 11.300957030502609
+              },
+              "80": {
+                "coverage": 0.71875,
+                "covered": 92,
+                "intervalScorePP": 30.840687299182655,
+                "optionWidthDistribution": {
+                  "maximumPP": 35.43833524601638,
+                  "minimumPP": 9.421017818189954,
+                  "quantilesPP": {
+                    "10": 15.133846200923221,
+                    "25": 18.89621831427755,
+                    "50": 21.980279685936278,
+                    "75": 24.725778358084217,
+                    "90": 25.749511201648644
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 28.216903800672107,
+                  "minimumPP": 13.185004310093412,
+                  "quantilesPP": {
+                    "10": 15.932755815310449,
+                    "25": 18.160981786901722,
+                    "50": 21.529107988352717,
+                    "75": 24.66503503060093,
+                    "90": 25.436015908197295
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.71875,
+                "widthPP": 21.23131115055613
+              },
+              "90": {
+                "coverage": 0.859375,
+                "covered": 110,
+                "intervalScorePP": 33.69976036699625,
+                "optionWidthDistribution": {
+                  "maximumPP": 44.271450031608786,
+                  "minimumPP": 12.160859103940542,
+                  "quantilesPP": {
+                    "10": 19.508559442821625,
+                    "25": 24.33099856413557,
+                    "50": 27.893844137567644,
+                    "75": 31.21798226283579,
+                    "90": 32.4394433013046
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 35.579411664733186,
+                  "minimumPP": 16.817928052219884,
+                  "quantilesPP": {
+                    "10": 20.44508737356722,
+                    "25": 23.285865573870296,
+                    "50": 27.490515908486152,
+                    "75": 31.174164320701298,
+                    "90": 32.023680701530445
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.859375,
+                "widthPP": 27.034793804886316
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2017
+        },
+        {
+          "id": "composed:2020",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 4.085973599294511,
+            "contests": 65,
+            "coordinates": 130,
+            "crpsPP": 4.085973599294511,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.7615384615384615,
+                "covered": 99,
+                "intervalScorePP": 18.74451617055315,
+                "optionWidthDistribution": {
+                  "maximumPP": 29.2309363046351,
+                  "minimumPP": 5.395776280068496,
+                  "quantilesPP": {
+                    "10": 10.053166401354785,
+                    "25": 13.048499669455962,
+                    "50": 15.288925105782367,
+                    "75": 16.031988878233175,
+                    "90": 16.512917035042822
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 24.72630110492711,
+                  "minimumPP": 6.059307892229267,
+                  "quantilesPP": {
+                    "10": 10.866382991208221,
+                    "25": 12.965767369494385,
+                    "50": 15.35226717859029,
+                    "75": 15.877683134651338,
+                    "90": 16.386660784235936
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.7615384615384615,
+                "widthPP": 14.358909011246428
+              },
+              "80": {
+                "coverage": 0.9307692307692308,
+                "covered": 121,
+                "intervalScorePP": 29.797826519518974,
+                "optionWidthDistribution": {
+                  "maximumPP": 52.162139707320705,
+                  "minimumPP": 10.45073880704769,
+                  "quantilesPP": {
+                    "10": 19.26700879890722,
+                    "25": 24.620355201871323,
+                    "50": 28.428394659205754,
+                    "75": 29.79234084915239,
+                    "90": 30.578477088806274
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 44.48471964832522,
+                  "minimumPP": 11.609703563673737,
+                  "quantilesPP": {
+                    "10": 20.78524373399662,
+                    "25": 24.35609296938237,
+                    "50": 28.385363495666958,
+                    "75": 29.504987290847296,
+                    "90": 30.050647009167797
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9307692307692308,
+                "widthPP": 26.794363865519312
+              },
+              "90": {
+                "coverage": 0.9538461538461539,
+                "covered": 124,
+                "intervalScorePP": 35.25239553233782,
+                "optionWidthDistribution": {
+                  "maximumPP": 63.78410701525835,
+                  "minimumPP": 13.878849828109093,
+                  "quantilesPP": {
+                    "10": 24.624304322437034,
+                    "25": 31.549366923394913,
+                    "50": 35.952252342583584,
+                    "75": 37.645007026561615,
+                    "90": 38.285237247135015
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 54.783677459132605,
+                  "minimumPP": 15.326232136692552,
+                  "quantilesPP": {
+                    "10": 26.522664969930357,
+                    "25": 31.079518327019816,
+                    "50": 35.997136700764244,
+                    "75": 37.14837872485978,
+                    "90": 37.7514965236068
+                  }
+                },
+                "total": 130,
+                "weightedCoverage": 0.9538461538461538,
+                "widthPP": 33.891148303925185
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2020
+        },
+        {
+          "id": "composed:2023",
+          "layer": "composed",
+          "summary": {
+            "candidateEqualCRPSPP": 3.701831244176227,
+            "contests": 64,
+            "coordinates": 128,
+            "crpsPP": 3.701831244176227,
+            "environments": 1,
+            "intervals": {
+              "50": {
+                "coverage": 0.7578125,
+                "covered": 97,
+                "intervalScorePP": 16.589870536962135,
+                "optionWidthDistribution": {
+                  "maximumPP": 26.620858823025202,
+                  "minimumPP": 8.80209626631392,
+                  "quantilesPP": {
+                    "10": 11.665775906286843,
+                    "25": 12.613074732947705,
+                    "50": 13.938440309638937,
+                    "75": 14.475235855864755,
+                    "90": 15.113372709870461
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 18.103751132173258,
+                  "minimumPP": 10.217244379829316,
+                  "quantilesPP": {
+                    "10": 12.339913090321836,
+                    "25": 13.001527400006463,
+                    "50": 13.659725421897186,
+                    "75": 14.157156848915541,
+                    "90": 14.738850665392633
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.7578125,
+                "widthPP": 13.625533110558077
+              },
+              "80": {
+                "coverage": 0.984375,
+                "covered": 126,
+                "intervalScorePP": 26.962826522854144,
+                "optionWidthDistribution": {
+                  "maximumPP": 47.953145644736765,
+                  "minimumPP": 16.527896713477844,
+                  "quantilesPP": {
+                    "10": 21.96031906427895,
+                    "25": 23.75797920025427,
+                    "50": 26.06379469758651,
+                    "75": 27.19730063514926,
+                    "90": 28.149921039950883
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 33.09687266596909,
+                  "minimumPP": 19.610534620536544,
+                  "quantilesPP": {
+                    "10": 23.337814998311924,
+                    "25": 24.35541038893968,
+                    "50": 25.4221707524629,
+                    "75": 26.54667150993893,
+                    "90": 27.43545427791564
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.984375,
+                "widthPP": 25.53486592176671
+              },
+              "90": {
+                "coverage": 0.9921875,
+                "covered": 127,
+                "intervalScorePP": 34.32779080006777,
+                "optionWidthDistribution": {
+                  "maximumPP": 59.411058097636996,
+                  "minimumPP": 21.343084973656858,
+                  "quantilesPP": {
+                    "10": 27.957673823123397,
+                    "25": 30.116730420703846,
+                    "50": 32.93908252893877,
+                    "75": 34.35215732176269,
+                    "90": 35.769316284124535
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 41.415452883144525,
+                  "minimumPP": 25.26864879459846,
+                  "quantilesPP": {
+                    "10": 29.75484847049549,
+                    "25": 31.066560134110414,
+                    "50": 32.2363029846688,
+                    "75": 33.70983790437839,
+                    "90": 34.84749429606494
+                  }
+                },
+                "total": 128,
+                "weightedCoverage": 0.9921875,
+                "widthPP": 32.38765130575218
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "year": 2023
+        }
+      ],
+      "pooled": {
+        "candidate": {
+          "contestWeighted": {
+            "candidateEqualCRPSPP": 3.676089444936698,
+            "contests": 257,
+            "coordinates": 514,
+            "crpsPP": 3.6760894449366983,
+            "environments": 4,
+            "intervals": {
+              "50": {
+                "coverage": 0.556420233463035,
+                "covered": 286,
+                "intervalScorePP": 16.462424524356162,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.26311118906665,
+                  "minimumPP": 4.236005288802103,
+                  "quantilesPP": {
+                    "10": 7.309720959008666,
+                    "25": 8.903742780478655,
+                    "50": 10.392227090137652,
+                    "75": 10.993830594463722,
+                    "90": 11.40975371799438
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.673289137877783,
+                  "minimumPP": 5.00406195103018,
+                  "quantilesPP": {
+                    "10": 7.732004395689647,
+                    "25": 8.912502101492272,
+                    "50": 10.208432680137985,
+                    "75": 10.884210574596052,
+                    "90": 11.38940696267348
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.556420233463035,
+                "widthPP": 9.83850333494334
+              },
+              "80": {
+                "coverage": 0.8891050583657587,
+                "covered": 457,
+                "intervalScorePP": 23.233542346649987,
+                "optionWidthDistribution": {
+                  "maximumPP": 33.77388656853861,
+                  "minimumPP": 8.124740625429723,
+                  "quantilesPP": {
+                    "10": 13.973679876623914,
+                    "25": 16.86525008546557,
+                    "50": 19.53894812078496,
+                    "75": 20.644408694656494,
+                    "90": 21.406837734291702
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.3451152318057,
+                  "minimumPP": 9.52959722224871,
+                  "quantilesPP": {
+                    "10": 14.532271797872692,
+                    "25": 16.90195367936351,
+                    "50": 19.20295812387713,
+                    "75": 20.404849536098382,
+                    "90": 21.460091090012593
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.8891050583657587,
+                "widthPP": 18.54341789206202
+              },
+              "90": {
+                "coverage": 0.9416342412451362,
+                "covered": 484,
+                "intervalScorePP": 28.707649810478067,
+                "optionWidthDistribution": {
+                  "maximumPP": 42.65718968870493,
+                  "minimumPP": 10.596603118107865,
+                  "quantilesPP": {
+                    "10": 17.84784174128744,
+                    "25": 21.632186172877027,
+                    "50": 24.866628130367637,
+                    "75": 26.30594453105325,
+                    "90": 27.082289169817045
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 32.10907080534098,
+                  "minimumPP": 12.406665992537384,
+                  "quantilesPP": {
+                    "10": 18.71637559287658,
+                    "25": 21.437596926406975,
+                    "50": 24.439608312244278,
+                    "75": 26.094664046856963,
+                    "90": 27.12477119164233
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.9416342412451362,
+                "widthPP": 23.617373576744377
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "equalElection": {
+            "candidateEqualCRPSPP": 3.676089444936698,
+            "contests": 257,
+            "coordinates": 514,
+            "crpsPP": 3.676026025869061,
+            "environments": 4,
+            "intervals": {
+              "50": {
+                "coverage": 0.556420233463035,
+                "covered": 286,
+                "intervalScorePP": 16.462801589575278,
+                "optionWidthDistribution": {
+                  "maximumPP": 18.26311118906665,
+                  "minimumPP": 4.236005288802103,
+                  "quantilesPP": {
+                    "10": 7.309720959008666,
+                    "25": 8.903742780478655,
+                    "50": 10.392227090137652,
+                    "75": 10.993830594463722,
+                    "90": 11.40975371799438
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 13.673289137877783,
+                  "minimumPP": 5.00406195103018,
+                  "quantilesPP": {
+                    "10": 7.732004395689647,
+                    "25": 8.912502101492272,
+                    "50": 10.208432680137985,
+                    "75": 10.884210574596052,
+                    "90": 11.38940696267348
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.5565504807692307,
+                "widthPP": 9.838055761503815
+              },
+              "80": {
+                "coverage": 0.8891050583657587,
+                "covered": 457,
+                "intervalScorePP": 23.23744896356535,
+                "optionWidthDistribution": {
+                  "maximumPP": 33.77388656853861,
+                  "minimumPP": 8.124740625429723,
+                  "quantilesPP": {
+                    "10": 13.973679876623914,
+                    "25": 16.86525008546557,
+                    "50": 19.53894812078496,
+                    "75": 20.644408694656494,
+                    "90": 21.406837734291702
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 25.3451152318057,
+                  "minimumPP": 9.52959722224871,
+                  "quantilesPP": {
+                    "10": 14.532271797872692,
+                    "25": 16.90195367936351,
+                    "50": 19.20295812387713,
+                    "75": 20.404849536098382,
+                    "90": 21.460091090012593
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.8890925480769231,
+                "widthPP": 18.54268380421734
+              },
+              "90": {
+                "coverage": 0.9416342412451362,
+                "covered": 484,
+                "intervalScorePP": 28.715450511847244,
+                "optionWidthDistribution": {
+                  "maximumPP": 42.65718968870493,
+                  "minimumPP": 10.596603118107865,
+                  "quantilesPP": {
+                    "10": 17.84784174128744,
+                    "25": 21.632186172877027,
+                    "50": 24.866628130367637,
+                    "75": 26.30594453105325,
+                    "90": 27.082289169817045
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 32.10907080534098,
+                  "minimumPP": 12.406665992537384,
+                  "quantilesPP": {
+                    "10": 18.71637559287658,
+                    "25": 21.437596926406975,
+                    "50": 24.439608312244278,
+                    "75": 26.094664046856963,
+                    "90": 27.12477119164233
+                  }
+                },
+                "total": 514,
+                "weightedCoverage": 0.9416466346153847,
+                "widthPP": 23.616394876970727
+              }
+            },
+            "weighting": "equal election, equal contests, equal selected options within contest"
+          }
+        },
+        "composed": {
+          "contestWeighted": {
+            "candidateEqualCRPSPP": 4.414325899625195,
+            "contests": 193,
+            "coordinates": 386,
+            "crpsPP": 4.414325899625194,
+            "environments": 3,
+            "intervals": {
+              "50": {
+                "coverage": 0.6347150259067358,
+                "covered": 245,
+                "intervalScorePP": 19.976433193023713,
+                "optionWidthDistribution": {
+                  "maximumPP": 29.2309363046351,
+                  "minimumPP": 4.877865529690692,
+                  "quantilesPP": {
+                    "10": 9.329311973781326,
+                    "25": 11.708833386886598,
+                    "50": 13.5708197861162,
+                    "75": 14.925114162372882,
+                    "90": 15.948062163997573
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 24.72630110492711,
+                  "minimumPP": 6.059307892229267,
+                  "quantilesPP": {
+                    "10": 9.472409679583155,
+                    "25": 11.881040824358104,
+                    "50": 13.378137019223814,
+                    "75": 14.664135842475268,
+                    "90": 15.803148227558237
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.6347150259067358,
+                "widthPP": 13.101681112740422
+              },
+              "80": {
+                "coverage": 0.8782383419689119,
+                "covered": 339,
+                "intervalScorePP": 29.203542012326885,
+                "optionWidthDistribution": {
+                  "maximumPP": 52.162139707320705,
+                  "minimumPP": 9.421017818189954,
+                  "quantilesPP": {
+                    "10": 17.754950981972797,
+                    "25": 22.056966952040966,
+                    "50": 25.309564500221338,
+                    "75": 27.744338324421737,
+                    "90": 29.590739396924064
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 44.48471964832522,
+                  "minimumPP": 11.609703563673737,
+                  "quantilesPP": {
+                    "10": 18.029224010519588,
+                    "25": 22.340854174768587,
+                    "50": 25.045648463171048,
+                    "75": 27.438289717628805,
+                    "90": 29.442875627145195
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.8782383419689118,
+                "widthPP": 24.531963647085064
+              },
+              "90": {
+                "coverage": 0.9352331606217616,
+                "covered": 361,
+                "intervalScorePP": 34.43092737976195,
+                "optionWidthDistribution": {
+                  "maximumPP": 63.78410701525835,
+                  "minimumPP": 12.160859103940542,
+                  "quantilesPP": {
+                    "10": 22.809981945851312,
+                    "25": 27.99794555184879,
+                    "50": 31.995750504958366,
+                    "75": 35.19147710926463,
+                    "90": 37.48794927577898
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 54.783677459132605,
+                  "minimumPP": 15.326232136692552,
+                  "quantilesPP": {
+                    "10": 23.216713999478724,
+                    "25": 28.490322840524897,
+                    "50": 31.775950995662562,
+                    "75": 34.69205579259993,
+                    "90": 37.14486357964097
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.9352331606217616,
+                "widthPP": 31.118969569098446
+              }
+            },
+            "weighting": "equal contests, equal selected options within contest"
+          },
+          "equalElection": {
+            "candidateEqualCRPSPP": 4.414325899625195,
+            "contests": 193,
+            "coordinates": 386,
+            "crpsPP": 4.416036067856083,
+            "environments": 3,
+            "intervals": {
+              "50": {
+                "coverage": 0.6347150259067358,
+                "covered": 245,
+                "intervalScorePP": 19.982849427515745,
+                "optionWidthDistribution": {
+                  "maximumPP": 29.2309363046351,
+                  "minimumPP": 4.877865529690692,
+                  "quantilesPP": {
+                    "10": 9.329311973781326,
+                    "25": 11.708833386886598,
+                    "50": 13.5708197861162,
+                    "75": 14.925114162372882,
+                    "90": 15.948062163997573
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 24.72630110492711,
+                  "minimumPP": 6.059307892229267,
+                  "quantilesPP": {
+                    "10": 9.472409679583155,
+                    "25": 11.881040824358104,
+                    "50": 13.378137019223814,
+                    "75": 14.664135842475268,
+                    "90": 15.803148227558237
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.6340544871794872,
+                "widthPP": 13.095133050769036
+              },
+              "80": {
+                "coverage": 0.8782383419689119,
+                "covered": 339,
+                "intervalScorePP": 29.20044678051859,
+                "optionWidthDistribution": {
+                  "maximumPP": 52.162139707320705,
+                  "minimumPP": 9.421017818189954,
+                  "quantilesPP": {
+                    "10": 17.754950981972797,
+                    "25": 22.056966952040966,
+                    "50": 25.309564500221338,
+                    "75": 27.744338324421737,
+                    "90": 29.590739396924064
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 44.48471964832522,
+                  "minimumPP": 11.609703563673737,
+                  "quantilesPP": {
+                    "10": 18.029224010519588,
+                    "25": 22.340854174768587,
+                    "50": 25.045648463171048,
+                    "75": 27.438289717628805,
+                    "90": 29.442875627145195
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.8779647435897436,
+                "widthPP": 24.520180312614052
+              },
+              "90": {
+                "coverage": 0.9352331606217616,
+                "covered": 361,
+                "intervalScorePP": 34.42664889980061,
+                "optionWidthDistribution": {
+                  "maximumPP": 63.78410701525835,
+                  "minimumPP": 12.160859103940542,
+                  "quantilesPP": {
+                    "10": 22.809981945851312,
+                    "25": 27.99794555184879,
+                    "50": 31.995750504958366,
+                    "75": 35.19147710926463,
+                    "90": 37.48794927577898
+                  }
+                },
+                "seatMeanWidthDistribution": {
+                  "maximumPP": 54.783677459132605,
+                  "minimumPP": 15.326232136692552,
+                  "quantilesPP": {
+                    "10": 23.216713999478724,
+                    "25": 28.490322840524897,
+                    "50": 31.775950995662562,
+                    "75": 34.69205579259993,
+                    "90": 37.14486357964097
+                  }
+                },
+                "total": 386,
+                "weightedCoverage": 0.935136217948718,
+                "widthPP": 31.1045311381879
+              }
+            },
+            "weighting": "equal election, equal contests, equal selected options within contest"
+          }
+        }
+      }
+    }
+  },
+  "stage": 47
+}

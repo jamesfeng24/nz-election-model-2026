@@ -1,3 +1,15 @@
+# Stage47 diagnostics complete; final verification in progress — 6 October 2026
+
+Branch stage/47-expectation-width-diagnostic; local8a7a37b/4c4fef0 checkpoints, no remoteStage47branch/PR. All corrected distributions sealed before evaluation under74e9a613 signature.0.05pp integrationgate passes checked578component+197632composed inputs (maximumreferencegap.019999957pp); independent12large rawcov references gap<=.009564pp/spread<=.000190pp. Oldreported.738928 is.589445 atbetterreference, unchangedpriorartifact.
+
+Numerical repair leaves all578component major draws exactlyunchanged. Candidate90full N/Lmeanwidthsabout21–25pp; composed25–35pp, margin41–63pp. Candidatebalance/seat, national/local propagation andprior matter;2023candidatebalanceprior55.1714% (weight50%).512/1024representativecomposedprecisionfails(.561ppmean,.233ppCRPS,2.255pp90width,.212ppenergy); cap/tolerancesretained. Conditionalintegration, finitebank andnonlinear shift1.8073pp separated; no forced mean correction.
+
+Full257structural audit preservesunknowns, source supportno viabilitythreshold, no outgoingR; Dunneretirementafter56daycutoff, newstrength/verifiedrostersmissing. ObsoleteS continuity is a separatefuturehypothesis, notreset. Bnextdesign freezesexactlycorrectedcontrol/constantdispersion/stronglypooledconditionalcandidate-seatbalance; Rdeficit+sourceNonmajorSupport replacesfragmentation. No challengersfit. Allprior1804datafiles/109consumedinputhashespreserved,926sourcescheck.
+
+Local1054tests/9intentional optionalskips passed beforeadditionalfour tests, new13focusedtests andfreshfinal1058suite pending/running.31frontendtests/typecheck/build pass. Attribution--check passed after same-equation explicitcontractionavoidsApple BLAS false warnings. Independentproper-score/conservation19,038,720vectors checks pass. FullnewStage47construction--check running log/tmp/stage47-reconstruction-check.log; nooldbankregenerationlocally/MCMC/acquisition. Derivedchecks/report/manifestfinalstillneeded. Resumeexistingprocess/cache, do noteditproducer. FinalUbuntu retainsallpreviouscommands andaddsStage47 checks. Pushonlyconsolidatedunskippedhead, PRunmerged; localbanksnotGitHubbackups.
+
+---
+
 # Stage47 corrected Gaussian distributions sealed before scoring — 6 October 2026
 
 Localproducer8a7a37b/signature74e9a61321315b1c98776135a07ce2fef3c21f63769edeebee3220ad314973e2. All12cases plus9representative banks completed;578component conditionalvectors and197632composed local/candidate conditionalvectors pass the unchanged.05pp requirement using stricter.02pp independent-referenceagreement, maximum.019999957pp. Statisticalscales andmeans unchanged; originalcontrols remaincache references. No new score yet. Originaloldworst gap.738928pp vs highprecision.589445pp/refspread.000157 preserved. Fullcomposed512,component32768; finite-bank precision distinct and notyet evaluated.

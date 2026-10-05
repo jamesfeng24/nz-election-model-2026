@@ -163,3 +163,15 @@ jobs:
       - run: python3 -m scripts.diagnostics.uncertainty_tails_reference --check
       - run: python3 -m scripts.diagnostics.uncertainty_tails_report --check
       - run: python3 -m scripts.diagnostics.uncertainty_tails_manifest --check
+      - run: python3 -m scripts.uncertainty_expectation.pilot --check
+      - run: python3 -m scripts.uncertainty_expectation.prior --check
+      - run: python3 -m scripts.uncertainty_expectation.audits --check
+      - run: python3 -m scripts.uncertainty_expectation.structure --check
+      - run: python3 -m scripts.uncertainty_expectation.structural_diagnostics --check
+      - run: python3 -m scripts.uncertainty_expectation.construction --check
+      - run: python3 -m scripts.uncertainty_expectation.evaluation --check
+      - run: python3 -m scripts.uncertainty_expectation.pair_widths --check
+      - run: python3 -m scripts.uncertainty_expectation.attribution --check
+      - run: python3 -m scripts.uncertainty_expectation.verification --check
+      - run: python3 -m scripts.uncertainty_expectation.report --check
+      - run: python3 -m scripts.uncertainty_expectation.manifest --check

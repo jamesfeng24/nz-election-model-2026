@@ -1,3 +1,19 @@
+# Active roadmap after Stage47 — 6 October 2026
+
+Numerical Gaussian conditional-location repair is complete on the constructed scope; originalStage44–46 outputs/failures remain. Stage45 Gaussian law remains the default, continuous S+R preferred/S active/baseline mandatory and externalgauss provisional. Conditional N/L widths were already accurate; candidate-balance/seat scales, priors and national/local propagation matter. Finite composed simulation precision and calibration remain blockers.
+
+1. If separately authorized, implement exactly the [frozen three-restriction candidate-balance scale comparison](stage47-next-gaussian-scale-contract.md), with constant versus strongly pooled conditional adjustments, proper scores and unchanged means/shared laws. Address numerical precision under a pre-scoring cap; no new family, prior grid or political acquisition.
+2. Official nomination/slate refresh, retaining dated evidence, conflicts and incomplete-slates; no live shares from partial lists.
+3. Separate Māori-seat baseline and electorate-poll measurement route, preserving actual candidate/local-party question, denominator, dates, sample/error/dependence, stale/unpolled fallback. National Te Pāti Māori support is distinct.
+4. Complete-population turnout/valid-vote reconciliation, shared national draws once and joint uncertainty, without constraining candidate totals by party-vote totals.
+5. Dated manual-adjustment interface preserving author/reasons/expiry and unadjusted outputs; a mean change does not itself justify reduced variance. Then MMP and static publication/archive assembly after readiness.
+
+Structural audit identifies a separately scoped candidate-continuity/S-obsolescence mean hypothesis, not an automatic reset or an added next-stage fit. Historical rosters/new-strength timing are mostly unknown; stable tactical contests do not imply universal higher variance. Remaining persistence and cross-layer association do not justify another latent/covariance stage automatically. These are boundaries and recommendations, not authorization to begin later work. Full findings/D081 preserve component versus substitution versus end-to-end evidence.
+
+Earlier roadmaps remain historical records below.
+
+---
+
 # Active roadmap after Stage46 — 6 October 2026
 
 The bounded central/tail comparison is complete. Retain Stage45 Gaussian development default; matched robust Gaussian remains a diagnostic, Studentnu4 is not adopted. Preserve S+R mean preference, S active/baseline mandatory and externalgauss provisional. No mean-model tournament or further uncertainty family starts automatically. [Stage46 assessment](stage46-development-assessment.md).

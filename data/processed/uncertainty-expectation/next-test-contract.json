@@ -1,0 +1,53 @@
+{
+  "affectedDirection": "candidate seat National/Labour balance ONLY; shared candidate Gaussian and all local/mass/remainder/national laws unchanged",
+  "characteristics": {
+    "centering": "permitted training-only equal-election/equal-seat means; no scaling estimated from holdout",
+    "missing": "unknown if either major candidate absent, input unresolved or any required predecessor support unknown. Absent pair -> unchanged law for applicable mass/remainder; unknown predictor -> neutral centered0 and explicit flag. Never silently known zero.",
+    "whyGeographyDeferred": "weak/inconsistent within-election fragmentation association; structural source support replaces geography rather than adding a third feature",
+    "x_R": "1 - mean supportedMass.R of the unique standing National/Labour pair; source-only same-person residual transport; partial support continuous",
+    "x_T": "continuous sourceNonmajorSupportProxy in structural inventory: all non-NAT/LAB source candidate shares weighted by frozen target-incoming population point; no viability threshold, no target results, no dated retirement/new-strength labels"
+  },
+  "chronology": "primary expanding earlier residual elections only, same257candidate evidence IDs;2014 no earlier candidate residual ->a=b=0 labelled prior/control.2017 train2014,2020 train2014/17,2023 train2014/17/20. All saved mean predictions/centering retain their earlier Stage33 fit.",
+  "decision": "magnitude/proper scores/width-coverage/fold robustness and complexity; no arbitrary every-fold gain gate. Narrowing alone not success; constant must be refitted control for feature incremental value. Prior-driven and repeatedly reused elections limit calibration.",
+  "developmentDefault": "numerically corrected Stage45 Gaussian; unchanged S+R means/scales in Stage47",
+  "equations": {
+    "balanceObservation": "v_i = log((y_N+epsilon)/(y_L+epsilon)), using unchanged Stage45 observation replacement",
+    "constant": "b_R=b_T=0, independently fit a",
+    "control": "a=b_R=b_T=0",
+    "jointElectionLikelihood": "v_e ~ Normal(ell_e, diag(sigma_seat_i^2)+sigma_shared_e^2 11^T); shared election shock integrated, not subtracted using holdout outcomes",
+    "location": "ell_i = converged Gaussian logistic mean-location for frozen mean ratio and sqrt(sigma_shared_e^2+sigma_seat_i^2)",
+    "objective": "0.5 * mean_e[(logdet(Sigma_e)+(v_e-ell_e)^T Sigma_e^-1(v_e-ell_e))/n_e] + 0.5*((a/0.5)^2+(b_R/0.5)^2+(b_T/0.5)^2)",
+    "scale": "sigma_seat_i = frozen_sigma_seat_e * exp(a + b_R*(x_R_i-m_R_train) + b_T*(x_T_i-m_T_train))",
+    "weighting": "equal historical election environments, equal seat contribution within election, determinant normalized by n_e; outcome-independent complete sample"
+  },
+  "numerics": "same corrected conditional Gaussian integration0.05pp criterion, active zero faces and repeated-label covariance; GH81/161 balance check. Common streams and weighted cached national scenarios. Freeze nested draw/precision budget before evaluation; simulation precision failure reported separately, not relaxed.",
+  "omissions": "scale/parameter posterior uncertainty remains omitted and explicit; no independent coefficient jitter. Roster timing, fragment composition and separate Maori/poll/reconciliation interfaces remain deployment blockers.",
+  "parameters": {
+    "aBounds": [
+      -1.3862943611198906,
+      1.3862943611198906
+    ],
+    "bBounds": [
+      -1.3862943611198906,
+      1.3862943611198906
+    ],
+    "boundaryInterpretation": "constrained estimate reported; never expand after scores",
+    "initializations": [
+      "all0",
+      "a=-0.2,b=0",
+      "a=+0.2,b=0"
+    ],
+    "rank": "ridge can define a strongly prior-based fit despite data feature constancy; report likelihood information rank/conditioning independently, do not claim identified subgroup effect from penalty",
+    "solver": "L-BFGS-B, ftol1e-12, gtol1e-8, maxiter1000; analytic/automatic gradient checked against synthetic central differences; independent Powell at chosen start ftol/xtol1e-10,maxiter2000; objective agreement<=1e-6, gradient/projectedgradient<=1e-6"
+  },
+  "restrictions": [
+    "corrected control",
+    "earlier-trained constant candidate-seat balance dispersion adjustment",
+    "strongly pooled conditional candidate-seat balance Gaussian"
+  ],
+  "samples": "all257 complete component candidate slates; bounded cached gauss56day composed2017/20/23(193seats), same allocation scenario asStage47. No extra horizon, S/R competition or new inference.",
+  "scores": "50/80/90 full widths+counts/coverage/proper interval scores, marginal CRPS, complete energy, major/other groups, prediction-time margins/winner diagnostics, expected-share MAE/RMSE and mean shifts. Contest equal primary plus equal-election; identical complete records. No target-error exclusions.",
+  "shrinkage": "Gaussian ridge targets no adjustment; SD0.5 log scale per full unit of each proportion. Fixed substantive strong pooling (one prior SD factor1.65 across entire predictor range), not score-tuned.",
+  "status": "frozen future design only; NOT fitted or authorized for implementation in Stage47",
+  "stopping": "exactly these three Gaussian restrictions, no family/prior-strength/feature/grid search; no structural S reset or covariance model. Mixed results preserve useful controls rather than launch variants."
+}
