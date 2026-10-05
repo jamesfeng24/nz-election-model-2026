@@ -1,0 +1,42 @@
+{
+  "chronology": "completed earlier targets strictly before holdout target; expanding window",
+  "crossLayerDependence": "conditional independence approximation, descriptive NAT/LAB correlation audit; no cross-layer covariance fitted",
+  "draws": 512,
+  "energyDraws": 128,
+  "maxLocationIterations": 1000,
+  "meanTolerance": 1e-10,
+  "noLiveForecast": true,
+  "operationalSelection": null,
+  "parameterUncertainty": "omitted; predictive residuals include earlier fixed-fit estimation error; no independent coefficient jitter",
+  "precisionDraws": 1024,
+  "primaryAllocation": "recent_report_prior",
+  "priorPseudoEnvironments": 3,
+  "priorScales": {
+    "candidate": {
+      "seat": 0.5,
+      "shared": 0.2
+    },
+    "local_party": {
+      "seat": 0.35,
+      "shared": 0.15
+    }
+  },
+  "seed": 20261005,
+  "sharedClasses": {
+    "candidate": [
+      "national",
+      "labour",
+      "other",
+      "no_group"
+    ],
+    "local_party": [
+      "national",
+      "labour",
+      "other"
+    ]
+  },
+  "simplexTolerance": 1e-12,
+  "stage": 44,
+  "transportStressCandidateSeatVarianceMultiplier": 1.5,
+  "zeroReplacement": 1e-06
+}

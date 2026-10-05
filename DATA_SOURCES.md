@@ -301,3 +301,7 @@ No sources acquired: zero discovery queries and zero bulk resources. [Audit](doc
 ### Stage43 source reuse
 
 Zero acquisition. Separate continuous-candidate-comparison companions pin Stage33 saved primary fits, Stage42 inventories/flows/predictions and official evaluation-only target elections. Prior-data preservation hashes are a separate immutability audit, not a whole-registry model dependency. No changes to raw bytes, identity adjudications or operational records.
+
+## Stage44 preserved-input uncertainty inventory
+
+No new sources or statistical dependencies acquired. `data/processed/uncertainty/input-contract.json` pins only consumed Stage31/33/39/41–43, canonical geography and official election records, separately from all-prior byte preservation. The321 party/257 candidate vectors retain prediction/outcome references and original valid-vote denominators.2014/2020 continuous candidate predictions are companions, not replacements for older threshold outputs. Cached national2017/2020/2023 raw chain/draw identities and externalgauss attribution remain unchanged; fineOther allocation is the preserved recent_report_prior scenario. The new `.cache/stage44/<signature>/` draw caches are derived, reproducible without external inference and verified by local checksums. No raw source, identity bridge/adjudication or operational-selection artifact is rewritten.

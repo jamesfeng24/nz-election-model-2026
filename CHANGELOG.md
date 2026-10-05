@@ -336,3 +336,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Frozen, independently saved S versus S+R comparison under continuous transport; all 129 complete general slates retained.
 - Reproduced Stage42 joint predictions, strict sensitivity, paired groups/rankings/margins and two declared pooling views.
 - Retained joint preference with active S alternative; next remains coherent local/candidate uncertainty. No fitting, acquisition or live predictions.
+
+## Stage44 — coherent local/candidate uncertainty, 2026-10-05
+
+- Frozen residual inventory, earlier-only pooled projected log-ratio uncertainty and arithmetic-mean preservation around continuous S+R, without mean refitting.
+- Shared national scenarios once; resumable component/composed draws and one labelled transport stress; proper scores, finite precision and independent arithmetic audit.
+- Records poor major-party sharpness, dependence/parameter/reconciliation/Māori/slate limits; no calibrated probabilities, acquisition, MCMC, live forecasts or operational changes.
