@@ -1,3 +1,11 @@
+# Stage47 corrected Gaussian distributions sealed before scoring — 6 October 2026
+
+Localproducer8a7a37b/signature74e9a61321315b1c98776135a07ce2fef3c21f63769edeebee3220ad314973e2. All12cases plus9representative banks completed;578component conditionalvectors and197632composed local/candidate conditionalvectors pass the unchanged.05pp requirement using stricter.02pp independent-referenceagreement, maximum.019999957pp. Statisticalscales andmeans unchanged; originalcontrols remaincache references. No new score yet. Originaloldworst gap.738928pp vs highprecision.589445pp/refspread.000157 preserved. Fullcomposed512,component32768; finite-bank precision distinct and notyet evaluated.
+
+35focused tests pass. AllworkLOCAL, no remoteStage47branch/PR. Next: evaluation/precision on sealedbanks;9seat boundedattribution with same randomstreams; finishstructural/audit/independentverification; nextdecision+docs/finalchecks. Resume construction only for exactcache dependency loss; no routine rerun. Logs `/tmp/stage47-construction.log`. One finalunskippedpush/fullUbuntu gate, PRunmerged.
+
+---
+
 # Stage47 numerical companion producer frozen — 6 October 2026
 
 Measured budget/contract 10c069c, prior578vectors and structural257seat denominators preserved. Numerical producer now frozen before forecasts/scoring; components32768, composed512,9representatives256/512/1024. Conditional locations use actual shared ballot-label covariance; originalGaussiancontrols reused by exact streams, never refitted. Structural rules and inputhashes saved before newtables. Local only, no remoteStage47branch/PR.
