@@ -1,0 +1,3469 @@
+{
+  "descriptive": {
+    "candidate": {
+      "contributions": {
+        "balance": {
+          "seat": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.038119604977880375,
+            "priorSD": 0.35,
+            "priorVarianceContribution": 0.05249999999999999
+          },
+          "shared": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.023053673722048168,
+            "priorSD": 0.15,
+            "priorVarianceContribution": 0.009642857142857144
+          }
+        },
+        "mass": {
+          "seat": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.08011356389807574,
+            "priorSD": 0.4,
+            "priorVarianceContribution": 0.06857142857142859
+          },
+          "shared": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.02042027918280139,
+            "priorSD": 0.15,
+            "priorVarianceContribution": 0.009642857142857144
+          }
+        },
+        "within": {
+          "seat": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.12143841208221003,
+            "priorSD": 0.7,
+            "priorVarianceContribution": 0.20999999999999996
+          },
+          "shared": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.19037453701435383,
+            "priorSD": 0.2,
+            "priorVarianceContribution": 0.017142857142857147
+          }
+        }
+      },
+      "layer": "candidate",
+      "moments": [
+        {
+          "contests": 64,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": -0.28184833507109713,
+              "records": 64,
+              "seat": 0.08344227121957239,
+              "shared": 0.07943848398234944,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": -0.07280122972259445,
+              "records": 64,
+              "seat": 0.13057114217633461,
+              "shared": 0.00530001904912197,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": 0.0695654269097575,
+                "aotearoalegalisecannabisparty": 0.5034528366736694,
+                "ban1080": 0.3345939897299969,
+                "conservative": 0.05453344697153084,
+                "democratsforsocialcredit": -0.693629673382099,
+                "focusnewzealand": 0.4309086550189943,
+                "greenparty": 0.3512784411369729,
+                "internetmana": -0.30208692239747875,
+                "maoriparty": -0.2551571273924033,
+                "newzealandfirstparty": 0.2415516396985683,
+                "no_group": -0.7745378306996339,
+                "nzindependentcoalition": 0.37931895823446543,
+                "unitedfuture": -0.33979184050234046
+              },
+              "columns": 12,
+              "rank": 12,
+              "records": 64,
+              "seat": 0.20862733590267796,
+              "shared": 0.18644926327239386,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2014
+        },
+        {
+          "contests": 64,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": 0.03167882410679862,
+              "records": 64,
+              "seat": 0.08300813903603747,
+              "shared": 0.0010035478967894854,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": -0.2558520065464853,
+              "records": 64,
+              "seat": 0.16352065777828803,
+              "shared": 0.06546024925386276,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": -0.3377939012046434,
+                "aotearoalegalisecannabisparty": 0.47465354783918784,
+                "ban1080": 0.6426183517838955,
+                "conservative": -0.21766176970880982,
+                "democratsforsocialcredit": -0.947424019901544,
+                "greenparty": 0.44038000983269215,
+                "mana": 0.5293915377827145,
+                "maoriparty": 0.3317546166117384,
+                "newzealandfirstparty": 0.09918036442961041,
+                "no_group": -0.7187862995756235,
+                "nzoutdoorsparty": -0.044389698286444304,
+                "theopportunitiespartytop": 0.41071676134267693,
+                "unitedfuture": -0.6626395009454505
+              },
+              "columns": 12,
+              "rank": 12,
+              "records": 64,
+              "seat": 0.23106049042724386,
+              "shared": 0.28481994628303475,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2017
+        },
+        {
+          "contests": 65,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": 0.2601872391284814,
+              "records": 65,
+              "seat": 0.03886280787266898,
+              "shared": 0.06769739940530156,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": 0.25527881460258484,
+              "records": 65,
+              "seat": 0.08713106535420137,
+              "shared": 0.06516727318490088,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": -0.49910252856707316,
+                "advancenz": -0.27601776067732886,
+                "aotearoalegalisecannabisparty": 0.5365946338349831,
+                "greenparty": 0.20761963018697693,
+                "heartlandnz": 2.700367702451686,
+                "newconservative": -0.03584893986264477,
+                "newzealandfirstparty": -0.08181474145784537,
+                "no_group": -0.7682928235666927,
+                "nzoutdoorsparty": -0.11057043283583243,
+                "oneparty": -0.4965308189479877,
+                "socialcredit": -0.9132620852539735,
+                "sustainablenewzealandparty": -0.17690771226505378,
+                "teaparty": -0.14112716800571837,
+                "theopportunitiespartytop": 0.3339812413650109,
+                "visionnewzealand": -0.2790881963985065
+              },
+              "columns": 14,
+              "rank": 14,
+              "records": 65,
+              "seat": 0.18866204749052554,
+              "shared": 0.705716461288155,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2020
+        },
+        {
+          "contests": 64,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": -0.11504905375489491,
+              "records": 64,
+              "seat": 0.061524016716883775,
+              "shared": 0.013236284769896698,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": -0.08375209126776542,
+              "records": 64,
+              "seat": 0.17957208197770605,
+              "shared": 0.007014412791724109,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": -0.2203243345972936,
+                "animaljusticeparty": 0.04872997010775549,
+                "aotearoalegalisecannabisparty": 0.4476767467117859,
+                "democracynz": 0.4635942025421451,
+                "freedomsnz": -0.4759078817886532,
+                "greenparty": 0.08887363256988735,
+                "leightonbakerparty": 0.6566255950801373,
+                "newconservatives": -0.2553131984920602,
+                "newnationparty": -0.8088356741594588,
+                "newzeal": 0.11157100627576576,
+                "newzealandfirstparty": -0.15552505671366823,
+                "newzealandloyal": 0.030302002444581713,
+                "no_group": -0.3562367699395411,
+                "tepatimaori": 0.02128788828833096,
+                "theopportunitiespartytop": 0.40348187167028554
+              },
+              "columns": 14,
+              "rank": 14,
+              "records": 64,
+              "seat": 0.22171901075502276,
+              "shared": 0.15563608825689318,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2023
+        }
+      ],
+      "scales": {
+        "balance": {
+          "seat": 0.30103090369242885,
+          "shared": 0.18082182076537473
+        },
+        "mass": {
+          "seat": 0.3855969300571574,
+          "shared": 0.17338724383777065
+        },
+        "within": {
+          "seat": 0.5757068803498965,
+          "shared": 0.45554077112505637
+        }
+      },
+      "status": "strongly_pooled_earlier_elections",
+      "targetYear": null,
+      "trainingIds": [
+        "nz-general-2014-electorate-01",
+        "nz-general-2014-electorate-02",
+        "nz-general-2014-electorate-03",
+        "nz-general-2014-electorate-04",
+        "nz-general-2014-electorate-05",
+        "nz-general-2014-electorate-06",
+        "nz-general-2014-electorate-07",
+        "nz-general-2014-electorate-08",
+        "nz-general-2014-electorate-09",
+        "nz-general-2014-electorate-10",
+        "nz-general-2014-electorate-11",
+        "nz-general-2014-electorate-12",
+        "nz-general-2014-electorate-13",
+        "nz-general-2014-electorate-14",
+        "nz-general-2014-electorate-15",
+        "nz-general-2014-electorate-16",
+        "nz-general-2014-electorate-17",
+        "nz-general-2014-electorate-18",
+        "nz-general-2014-electorate-19",
+        "nz-general-2014-electorate-20",
+        "nz-general-2014-electorate-21",
+        "nz-general-2014-electorate-22",
+        "nz-general-2014-electorate-23",
+        "nz-general-2014-electorate-24",
+        "nz-general-2014-electorate-25",
+        "nz-general-2014-electorate-26",
+        "nz-general-2014-electorate-27",
+        "nz-general-2014-electorate-28",
+        "nz-general-2014-electorate-29",
+        "nz-general-2014-electorate-30",
+        "nz-general-2014-electorate-31",
+        "nz-general-2014-electorate-32",
+        "nz-general-2014-electorate-33",
+        "nz-general-2014-electorate-34",
+        "nz-general-2014-electorate-35",
+        "nz-general-2014-electorate-36",
+        "nz-general-2014-electorate-37",
+        "nz-general-2014-electorate-38",
+        "nz-general-2014-electorate-39",
+        "nz-general-2014-electorate-40",
+        "nz-general-2014-electorate-41",
+        "nz-general-2014-electorate-42",
+        "nz-general-2014-electorate-43",
+        "nz-general-2014-electorate-44",
+        "nz-general-2014-electorate-45",
+        "nz-general-2014-electorate-46",
+        "nz-general-2014-electorate-47",
+        "nz-general-2014-electorate-48",
+        "nz-general-2014-electorate-49",
+        "nz-general-2014-electorate-50",
+        "nz-general-2014-electorate-51",
+        "nz-general-2014-electorate-52",
+        "nz-general-2014-electorate-53",
+        "nz-general-2014-electorate-54",
+        "nz-general-2014-electorate-55",
+        "nz-general-2014-electorate-56",
+        "nz-general-2014-electorate-57",
+        "nz-general-2014-electorate-58",
+        "nz-general-2014-electorate-59",
+        "nz-general-2014-electorate-60",
+        "nz-general-2014-electorate-61",
+        "nz-general-2014-electorate-62",
+        "nz-general-2014-electorate-63",
+        "nz-general-2014-electorate-64",
+        "nz-general-2017-electorate-01",
+        "nz-general-2017-electorate-02",
+        "nz-general-2017-electorate-03",
+        "nz-general-2017-electorate-04",
+        "nz-general-2017-electorate-05",
+        "nz-general-2017-electorate-06",
+        "nz-general-2017-electorate-07",
+        "nz-general-2017-electorate-08",
+        "nz-general-2017-electorate-09",
+        "nz-general-2017-electorate-10",
+        "nz-general-2017-electorate-11",
+        "nz-general-2017-electorate-12",
+        "nz-general-2017-electorate-13",
+        "nz-general-2017-electorate-14",
+        "nz-general-2017-electorate-15",
+        "nz-general-2017-electorate-16",
+        "nz-general-2017-electorate-17",
+        "nz-general-2017-electorate-18",
+        "nz-general-2017-electorate-19",
+        "nz-general-2017-electorate-20",
+        "nz-general-2017-electorate-21",
+        "nz-general-2017-electorate-22",
+        "nz-general-2017-electorate-23",
+        "nz-general-2017-electorate-24",
+        "nz-general-2017-electorate-25",
+        "nz-general-2017-electorate-26",
+        "nz-general-2017-electorate-27",
+        "nz-general-2017-electorate-28",
+        "nz-general-2017-electorate-29",
+        "nz-general-2017-electorate-30",
+        "nz-general-2017-electorate-31",
+        "nz-general-2017-electorate-32",
+        "nz-general-2017-electorate-33",
+        "nz-general-2017-electorate-34",
+        "nz-general-2017-electorate-35",
+        "nz-general-2017-electorate-36",
+        "nz-general-2017-electorate-37",
+        "nz-general-2017-electorate-38",
+        "nz-general-2017-electorate-39",
+        "nz-general-2017-electorate-40",
+        "nz-general-2017-electorate-41",
+        "nz-general-2017-electorate-42",
+        "nz-general-2017-electorate-43",
+        "nz-general-2017-electorate-44",
+        "nz-general-2017-electorate-45",
+        "nz-general-2017-electorate-46",
+        "nz-general-2017-electorate-47",
+        "nz-general-2017-electorate-48",
+        "nz-general-2017-electorate-49",
+        "nz-general-2017-electorate-50",
+        "nz-general-2017-electorate-51",
+        "nz-general-2017-electorate-52",
+        "nz-general-2017-electorate-53",
+        "nz-general-2017-electorate-54",
+        "nz-general-2017-electorate-55",
+        "nz-general-2017-electorate-56",
+        "nz-general-2017-electorate-57",
+        "nz-general-2017-electorate-58",
+        "nz-general-2017-electorate-59",
+        "nz-general-2017-electorate-60",
+        "nz-general-2017-electorate-61",
+        "nz-general-2017-electorate-62",
+        "nz-general-2017-electorate-63",
+        "nz-general-2017-electorate-64",
+        "nz-general-2020-electorate-01",
+        "nz-general-2020-electorate-02",
+        "nz-general-2020-electorate-03",
+        "nz-general-2020-electorate-04",
+        "nz-general-2020-electorate-05",
+        "nz-general-2020-electorate-06",
+        "nz-general-2020-electorate-07",
+        "nz-general-2020-electorate-08",
+        "nz-general-2020-electorate-09",
+        "nz-general-2020-electorate-10",
+        "nz-general-2020-electorate-11",
+        "nz-general-2020-electorate-12",
+        "nz-general-2020-electorate-13",
+        "nz-general-2020-electorate-14",
+        "nz-general-2020-electorate-15",
+        "nz-general-2020-electorate-16",
+        "nz-general-2020-electorate-17",
+        "nz-general-2020-electorate-18",
+        "nz-general-2020-electorate-19",
+        "nz-general-2020-electorate-20",
+        "nz-general-2020-electorate-21",
+        "nz-general-2020-electorate-22",
+        "nz-general-2020-electorate-23",
+        "nz-general-2020-electorate-24",
+        "nz-general-2020-electorate-25",
+        "nz-general-2020-electorate-26",
+        "nz-general-2020-electorate-27",
+        "nz-general-2020-electorate-28",
+        "nz-general-2020-electorate-29",
+        "nz-general-2020-electorate-30",
+        "nz-general-2020-electorate-31",
+        "nz-general-2020-electorate-32",
+        "nz-general-2020-electorate-33",
+        "nz-general-2020-electorate-34",
+        "nz-general-2020-electorate-35",
+        "nz-general-2020-electorate-36",
+        "nz-general-2020-electorate-37",
+        "nz-general-2020-electorate-38",
+        "nz-general-2020-electorate-39",
+        "nz-general-2020-electorate-40",
+        "nz-general-2020-electorate-41",
+        "nz-general-2020-electorate-42",
+        "nz-general-2020-electorate-43",
+        "nz-general-2020-electorate-44",
+        "nz-general-2020-electorate-45",
+        "nz-general-2020-electorate-46",
+        "nz-general-2020-electorate-47",
+        "nz-general-2020-electorate-48",
+        "nz-general-2020-electorate-49",
+        "nz-general-2020-electorate-50",
+        "nz-general-2020-electorate-51",
+        "nz-general-2020-electorate-52",
+        "nz-general-2020-electorate-53",
+        "nz-general-2020-electorate-54",
+        "nz-general-2020-electorate-55",
+        "nz-general-2020-electorate-56",
+        "nz-general-2020-electorate-57",
+        "nz-general-2020-electorate-58",
+        "nz-general-2020-electorate-59",
+        "nz-general-2020-electorate-60",
+        "nz-general-2020-electorate-61",
+        "nz-general-2020-electorate-62",
+        "nz-general-2020-electorate-63",
+        "nz-general-2020-electorate-64",
+        "nz-general-2020-electorate-65",
+        "nz-general-2023-electorate-01",
+        "nz-general-2023-electorate-02",
+        "nz-general-2023-electorate-03",
+        "nz-general-2023-electorate-04",
+        "nz-general-2023-electorate-05",
+        "nz-general-2023-electorate-06",
+        "nz-general-2023-electorate-07",
+        "nz-general-2023-electorate-08",
+        "nz-general-2023-electorate-09",
+        "nz-general-2023-electorate-10",
+        "nz-general-2023-electorate-11",
+        "nz-general-2023-electorate-12",
+        "nz-general-2023-electorate-13",
+        "nz-general-2023-electorate-14",
+        "nz-general-2023-electorate-15",
+        "nz-general-2023-electorate-16",
+        "nz-general-2023-electorate-17",
+        "nz-general-2023-electorate-18",
+        "nz-general-2023-electorate-19",
+        "nz-general-2023-electorate-20",
+        "nz-general-2023-electorate-21",
+        "nz-general-2023-electorate-22",
+        "nz-general-2023-electorate-23",
+        "nz-general-2023-electorate-24",
+        "nz-general-2023-electorate-25",
+        "nz-general-2023-electorate-26",
+        "nz-general-2023-electorate-27",
+        "nz-general-2023-electorate-28",
+        "nz-general-2023-electorate-29",
+        "nz-general-2023-electorate-30",
+        "nz-general-2023-electorate-31",
+        "nz-general-2023-electorate-32",
+        "nz-general-2023-electorate-33",
+        "nz-general-2023-electorate-34",
+        "nz-general-2023-electorate-35",
+        "nz-general-2023-electorate-36",
+        "nz-general-2023-electorate-37",
+        "nz-general-2023-electorate-38",
+        "nz-general-2023-electorate-40",
+        "nz-general-2023-electorate-41",
+        "nz-general-2023-electorate-42",
+        "nz-general-2023-electorate-43",
+        "nz-general-2023-electorate-44",
+        "nz-general-2023-electorate-45",
+        "nz-general-2023-electorate-46",
+        "nz-general-2023-electorate-47",
+        "nz-general-2023-electorate-48",
+        "nz-general-2023-electorate-49",
+        "nz-general-2023-electorate-50",
+        "nz-general-2023-electorate-51",
+        "nz-general-2023-electorate-52",
+        "nz-general-2023-electorate-53",
+        "nz-general-2023-electorate-54",
+        "nz-general-2023-electorate-55",
+        "nz-general-2023-electorate-56",
+        "nz-general-2023-electorate-57",
+        "nz-general-2023-electorate-58",
+        "nz-general-2023-electorate-59",
+        "nz-general-2023-electorate-60",
+        "nz-general-2023-electorate-61",
+        "nz-general-2023-electorate-62",
+        "nz-general-2023-electorate-63",
+        "nz-general-2023-electorate-64",
+        "nz-general-2023-electorate-65"
+      ],
+      "trainingYears": [
+        2014,
+        2017,
+        2020,
+        2023
+      ]
+    },
+    "local_party": {
+      "contributions": {
+        "balance": {
+          "seat": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.013253258996807295,
+            "priorSD": 0.15,
+            "priorVarianceContribution": 0.0084375
+          },
+          "shared": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.0013603440080685164,
+            "priorSD": 0.08,
+            "priorVarianceContribution": 0.0024000000000000002
+          }
+        },
+        "mass": {
+          "seat": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.00996688964089398,
+            "priorSD": 0.2,
+            "priorVarianceContribution": 0.015000000000000003
+          },
+          "shared": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.0004081891940301174,
+            "priorSD": 0.1,
+            "priorVarianceContribution": 0.0037500000000000007
+          }
+        },
+        "within": {
+          "seat": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.1744135256304546,
+            "priorSD": 0.5,
+            "priorVarianceContribution": 0.09375
+          },
+          "shared": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.080090518527431,
+            "priorSD": 0.15,
+            "priorVarianceContribution": 0.0084375
+          }
+        }
+      },
+      "layer": "local_party",
+      "moments": [
+        {
+          "contests": 63,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": 0.013547750426759103,
+              "records": 63,
+              "seat": 0.03254195349963594,
+              "shared": 0.00018354154162575145,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": 0.02205393344804664,
+              "records": 63,
+              "seat": 0.011014777495841498,
+              "shared": 0.0004863759805308703,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": 0.10281877516501292,
+                "alliance": 0.07258622060490688,
+                "aotearoalegalisecannabisparty": 0.14002535470057162,
+                "conservativeparty": 0.07032511298925526,
+                "democratsforsocialcredit": 0.011347364766694727,
+                "greenparty": 0.12412235676458885,
+                "libertarianz": 0.13459621038482977,
+                "mana": -1.192339888338268,
+                "maoriparty": 0.35851078558895566,
+                "newzealandfirstparty": 0.1276445819803241,
+                "unitedfuture": 0.050363125393128275
+              },
+              "columns": 10,
+              "rank": 10,
+              "records": 63,
+              "seat": 0.19238017760046916,
+              "shared": 0.16430784198244314,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2011
+        },
+        {
+          "contests": 64,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": 0.02385122183547625,
+              "records": 64,
+              "seat": 0.014252318118160929,
+              "shared": 0.000568880783045099,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": 0.025102214029686678,
+              "records": 64,
+              "seat": 0.007122988250398378,
+              "shared": 0.0006301211491921987,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": 0.04736387167765059,
+                "aotearoalegalisecannabisparty": 0.15560238557818426,
+                "ban1080": -0.4378284270046041,
+                "conservative": 0.23309952119181457,
+                "democratsforsocialcredit": 0.3652889437868409,
+                "focusnewzealand": -0.5720002361014582,
+                "greenparty": 0.1839372516606249,
+                "internetmana": -0.3904363497654483,
+                "maoriparty": 0.12296126765479959,
+                "newzealandfirstparty": 0.19719846924318254,
+                "nzindependentcoalition": -0.26862778423380435,
+                "thecivilianparty": 0.12385687064827655,
+                "unitedfuture": 0.23958421566394103
+              },
+              "columns": 12,
+              "rank": 12,
+              "records": 64,
+              "seat": 0.4233727914144182,
+              "shared": 0.09319058435086185,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2014
+        },
+        {
+          "contests": 64,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": -0.040812066499023,
+              "records": 64,
+              "seat": 0.035506777275918236,
+              "shared": 0.0016656247719206753,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": 0.011344807036264289,
+              "records": 64,
+              "seat": 0.010070442403472386,
+              "shared": 0.0001287046466900717,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": 0.2865723111615602,
+                "aotearoalegalisecannabisparty": 0.11525095503910641,
+                "ban1080": 0.23591036038854526,
+                "conservative": 0.13933335448736492,
+                "democratsforsocialcredit": 0.14385933927637706,
+                "greenparty": 0.13478853390524342,
+                "internetparty": 0.032583064776601715,
+                "mana": -1.5539466169193585,
+                "maoriparty": 0.1341223549375736,
+                "newzealandfirstparty": 0.14900384710972447,
+                "newzealandpeoplesparty": -0.056359663671695114,
+                "nzoutdoorsparty": 0.026955235986760192,
+                "theopportunitiespartytop": 0.04631350870493852,
+                "unitedfuture": 0.16561341481725814
+              },
+              "columns": 13,
+              "rank": 13,
+              "records": 64,
+              "seat": 0.21461281384470576,
+              "shared": 0.20760121922521227,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2017
+        },
+        {
+          "contests": 65,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": -0.05828555281981088,
+              "records": 65,
+              "seat": 0.008739553929858231,
+              "shared": 0.0033972056675109644,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": 0.030266578917277423,
+              "records": 65,
+              "seat": 0.02826914651883793,
+              "shared": 0.0009160657993557822,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": 0.2844817453392369,
+                "advancenz": 0.048794952840564294,
+                "aotearoalegalisecannabisparty": 0.11216247896127982,
+                "greenparty": 0.2249780520679579,
+                "heartlandnz": -0.954558127932168,
+                "maoriparty": 0.08843328458842609,
+                "newconservative": 0.2505983359070372,
+                "newzealandfirstparty": 0.25363013404598056,
+                "nzoutdoorsparty": 0.08003438372665263,
+                "oneparty": 0.01159537017087591,
+                "socialcredit": 0.1657013272115785,
+                "sustainablenewzealandparty": 0.2087603913028852,
+                "teaparty": -0.3762289617469483,
+                "theopportunitiespartytop": 0.2819230619568704,
+                "visionnewzealand": -0.6803064284402291
+              },
+              "columns": 14,
+              "rank": 14,
+              "records": 65,
+              "seat": 0.3625076825762581,
+              "shared": 0.1395756614167833,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2020
+        },
+        {
+          "contests": 65,
+          "moments": {
+            "balance": {
+              "descriptiveElectionEffect": 0.07118637018731634,
+              "records": 65,
+              "seat": 0.014985469150885024,
+              "shared": 0.005067499300445641,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "mass": {
+              "descriptiveElectionEffect": -0.03323019675644452,
+              "records": 65,
+              "seat": 0.02325776245860165,
+              "shared": 0.001104245976472016,
+              "units": "raw log odds; one scalar degree of freedom"
+            },
+            "within": {
+              "classEffects": {
+                "actnewzealand": 0.07259574350413242,
+                "animaljusticeparty": 0.06039654888032604,
+                "aotearoalegalisecannabisparty": 0.24941301960874404,
+                "democracynz": -0.32724042916275026,
+                "freedomsnz": -0.23586051212022213,
+                "greenparty": 0.13037784389111387,
+                "leightonbakerparty": -0.33532749466512213,
+                "newconservatives": 0.06107553660952508,
+                "newnationparty": -0.09577427000922756,
+                "newzeal": 0.2051070403948806,
+                "newzealandfirstparty": 0.07241696168350349,
+                "newzealandloyal": -0.18130250323119615,
+                "tepatimaori": 0.20197634240879858,
+                "theopportunitiespartytop": 0.0664914287313115,
+                "womensrightsparty": 0.055654743476182475
+              },
+              "columns": 14,
+              "rank": 14,
+              "records": 65,
+              "seat": 0.2024347396077854,
+              "shared": 0.03604884124414747,
+              "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+            }
+          },
+          "year": 2023
+        }
+      ],
+      "scales": {
+        "balance": {
+          "seat": 0.14727782927788993,
+          "shared": 0.06132164387937196
+        },
+        "mass": {
+          "seat": 0.1580091441686018,
+          "shared": 0.06448402278107437
+        },
+        "within": {
+          "seat": 0.517845078793315,
+          "shared": 0.297536583511055
+        }
+      },
+      "status": "strongly_pooled_earlier_elections",
+      "targetYear": null,
+      "trainingIds": [
+        "nz-general-2011-electorate-01",
+        "nz-general-2011-electorate-02",
+        "nz-general-2011-electorate-03",
+        "nz-general-2011-electorate-04",
+        "nz-general-2011-electorate-05",
+        "nz-general-2011-electorate-06",
+        "nz-general-2011-electorate-07",
+        "nz-general-2011-electorate-08",
+        "nz-general-2011-electorate-09",
+        "nz-general-2011-electorate-10",
+        "nz-general-2011-electorate-11",
+        "nz-general-2011-electorate-12",
+        "nz-general-2011-electorate-13",
+        "nz-general-2011-electorate-14",
+        "nz-general-2011-electorate-15",
+        "nz-general-2011-electorate-16",
+        "nz-general-2011-electorate-17",
+        "nz-general-2011-electorate-18",
+        "nz-general-2011-electorate-19",
+        "nz-general-2011-electorate-20",
+        "nz-general-2011-electorate-21",
+        "nz-general-2011-electorate-22",
+        "nz-general-2011-electorate-23",
+        "nz-general-2011-electorate-24",
+        "nz-general-2011-electorate-25",
+        "nz-general-2011-electorate-26",
+        "nz-general-2011-electorate-27",
+        "nz-general-2011-electorate-28",
+        "nz-general-2011-electorate-29",
+        "nz-general-2011-electorate-30",
+        "nz-general-2011-electorate-31",
+        "nz-general-2011-electorate-32",
+        "nz-general-2011-electorate-33",
+        "nz-general-2011-electorate-34",
+        "nz-general-2011-electorate-35",
+        "nz-general-2011-electorate-36",
+        "nz-general-2011-electorate-37",
+        "nz-general-2011-electorate-38",
+        "nz-general-2011-electorate-39",
+        "nz-general-2011-electorate-40",
+        "nz-general-2011-electorate-41",
+        "nz-general-2011-electorate-42",
+        "nz-general-2011-electorate-43",
+        "nz-general-2011-electorate-44",
+        "nz-general-2011-electorate-45",
+        "nz-general-2011-electorate-46",
+        "nz-general-2011-electorate-47",
+        "nz-general-2011-electorate-48",
+        "nz-general-2011-electorate-49",
+        "nz-general-2011-electorate-50",
+        "nz-general-2011-electorate-51",
+        "nz-general-2011-electorate-52",
+        "nz-general-2011-electorate-53",
+        "nz-general-2011-electorate-54",
+        "nz-general-2011-electorate-55",
+        "nz-general-2011-electorate-56",
+        "nz-general-2011-electorate-57",
+        "nz-general-2011-electorate-58",
+        "nz-general-2011-electorate-59",
+        "nz-general-2011-electorate-60",
+        "nz-general-2011-electorate-61",
+        "nz-general-2011-electorate-62",
+        "nz-general-2011-electorate-63",
+        "nz-general-2014-electorate-01",
+        "nz-general-2014-electorate-02",
+        "nz-general-2014-electorate-03",
+        "nz-general-2014-electorate-04",
+        "nz-general-2014-electorate-05",
+        "nz-general-2014-electorate-06",
+        "nz-general-2014-electorate-07",
+        "nz-general-2014-electorate-08",
+        "nz-general-2014-electorate-09",
+        "nz-general-2014-electorate-10",
+        "nz-general-2014-electorate-11",
+        "nz-general-2014-electorate-12",
+        "nz-general-2014-electorate-13",
+        "nz-general-2014-electorate-14",
+        "nz-general-2014-electorate-15",
+        "nz-general-2014-electorate-16",
+        "nz-general-2014-electorate-17",
+        "nz-general-2014-electorate-18",
+        "nz-general-2014-electorate-19",
+        "nz-general-2014-electorate-20",
+        "nz-general-2014-electorate-21",
+        "nz-general-2014-electorate-22",
+        "nz-general-2014-electorate-23",
+        "nz-general-2014-electorate-24",
+        "nz-general-2014-electorate-25",
+        "nz-general-2014-electorate-26",
+        "nz-general-2014-electorate-27",
+        "nz-general-2014-electorate-28",
+        "nz-general-2014-electorate-29",
+        "nz-general-2014-electorate-30",
+        "nz-general-2014-electorate-31",
+        "nz-general-2014-electorate-32",
+        "nz-general-2014-electorate-33",
+        "nz-general-2014-electorate-34",
+        "nz-general-2014-electorate-35",
+        "nz-general-2014-electorate-36",
+        "nz-general-2014-electorate-37",
+        "nz-general-2014-electorate-38",
+        "nz-general-2014-electorate-39",
+        "nz-general-2014-electorate-40",
+        "nz-general-2014-electorate-41",
+        "nz-general-2014-electorate-42",
+        "nz-general-2014-electorate-43",
+        "nz-general-2014-electorate-44",
+        "nz-general-2014-electorate-45",
+        "nz-general-2014-electorate-46",
+        "nz-general-2014-electorate-47",
+        "nz-general-2014-electorate-48",
+        "nz-general-2014-electorate-49",
+        "nz-general-2014-electorate-50",
+        "nz-general-2014-electorate-51",
+        "nz-general-2014-electorate-52",
+        "nz-general-2014-electorate-53",
+        "nz-general-2014-electorate-54",
+        "nz-general-2014-electorate-55",
+        "nz-general-2014-electorate-56",
+        "nz-general-2014-electorate-57",
+        "nz-general-2014-electorate-58",
+        "nz-general-2014-electorate-59",
+        "nz-general-2014-electorate-60",
+        "nz-general-2014-electorate-61",
+        "nz-general-2014-electorate-62",
+        "nz-general-2014-electorate-63",
+        "nz-general-2014-electorate-64",
+        "nz-general-2017-electorate-01",
+        "nz-general-2017-electorate-02",
+        "nz-general-2017-electorate-03",
+        "nz-general-2017-electorate-04",
+        "nz-general-2017-electorate-05",
+        "nz-general-2017-electorate-06",
+        "nz-general-2017-electorate-07",
+        "nz-general-2017-electorate-08",
+        "nz-general-2017-electorate-09",
+        "nz-general-2017-electorate-10",
+        "nz-general-2017-electorate-11",
+        "nz-general-2017-electorate-12",
+        "nz-general-2017-electorate-13",
+        "nz-general-2017-electorate-14",
+        "nz-general-2017-electorate-15",
+        "nz-general-2017-electorate-16",
+        "nz-general-2017-electorate-17",
+        "nz-general-2017-electorate-18",
+        "nz-general-2017-electorate-19",
+        "nz-general-2017-electorate-20",
+        "nz-general-2017-electorate-21",
+        "nz-general-2017-electorate-22",
+        "nz-general-2017-electorate-23",
+        "nz-general-2017-electorate-24",
+        "nz-general-2017-electorate-25",
+        "nz-general-2017-electorate-26",
+        "nz-general-2017-electorate-27",
+        "nz-general-2017-electorate-28",
+        "nz-general-2017-electorate-29",
+        "nz-general-2017-electorate-30",
+        "nz-general-2017-electorate-31",
+        "nz-general-2017-electorate-32",
+        "nz-general-2017-electorate-33",
+        "nz-general-2017-electorate-34",
+        "nz-general-2017-electorate-35",
+        "nz-general-2017-electorate-36",
+        "nz-general-2017-electorate-37",
+        "nz-general-2017-electorate-38",
+        "nz-general-2017-electorate-39",
+        "nz-general-2017-electorate-40",
+        "nz-general-2017-electorate-41",
+        "nz-general-2017-electorate-42",
+        "nz-general-2017-electorate-43",
+        "nz-general-2017-electorate-44",
+        "nz-general-2017-electorate-45",
+        "nz-general-2017-electorate-46",
+        "nz-general-2017-electorate-47",
+        "nz-general-2017-electorate-48",
+        "nz-general-2017-electorate-49",
+        "nz-general-2017-electorate-50",
+        "nz-general-2017-electorate-51",
+        "nz-general-2017-electorate-52",
+        "nz-general-2017-electorate-53",
+        "nz-general-2017-electorate-54",
+        "nz-general-2017-electorate-55",
+        "nz-general-2017-electorate-56",
+        "nz-general-2017-electorate-57",
+        "nz-general-2017-electorate-58",
+        "nz-general-2017-electorate-59",
+        "nz-general-2017-electorate-60",
+        "nz-general-2017-electorate-61",
+        "nz-general-2017-electorate-62",
+        "nz-general-2017-electorate-63",
+        "nz-general-2017-electorate-64",
+        "nz-general-2020-electorate-01",
+        "nz-general-2020-electorate-02",
+        "nz-general-2020-electorate-03",
+        "nz-general-2020-electorate-04",
+        "nz-general-2020-electorate-05",
+        "nz-general-2020-electorate-06",
+        "nz-general-2020-electorate-07",
+        "nz-general-2020-electorate-08",
+        "nz-general-2020-electorate-09",
+        "nz-general-2020-electorate-10",
+        "nz-general-2020-electorate-11",
+        "nz-general-2020-electorate-12",
+        "nz-general-2020-electorate-13",
+        "nz-general-2020-electorate-14",
+        "nz-general-2020-electorate-15",
+        "nz-general-2020-electorate-16",
+        "nz-general-2020-electorate-17",
+        "nz-general-2020-electorate-18",
+        "nz-general-2020-electorate-19",
+        "nz-general-2020-electorate-20",
+        "nz-general-2020-electorate-21",
+        "nz-general-2020-electorate-22",
+        "nz-general-2020-electorate-23",
+        "nz-general-2020-electorate-24",
+        "nz-general-2020-electorate-25",
+        "nz-general-2020-electorate-26",
+        "nz-general-2020-electorate-27",
+        "nz-general-2020-electorate-28",
+        "nz-general-2020-electorate-29",
+        "nz-general-2020-electorate-30",
+        "nz-general-2020-electorate-31",
+        "nz-general-2020-electorate-32",
+        "nz-general-2020-electorate-33",
+        "nz-general-2020-electorate-34",
+        "nz-general-2020-electorate-35",
+        "nz-general-2020-electorate-36",
+        "nz-general-2020-electorate-37",
+        "nz-general-2020-electorate-38",
+        "nz-general-2020-electorate-39",
+        "nz-general-2020-electorate-40",
+        "nz-general-2020-electorate-41",
+        "nz-general-2020-electorate-42",
+        "nz-general-2020-electorate-43",
+        "nz-general-2020-electorate-44",
+        "nz-general-2020-electorate-45",
+        "nz-general-2020-electorate-46",
+        "nz-general-2020-electorate-47",
+        "nz-general-2020-electorate-48",
+        "nz-general-2020-electorate-49",
+        "nz-general-2020-electorate-50",
+        "nz-general-2020-electorate-51",
+        "nz-general-2020-electorate-52",
+        "nz-general-2020-electorate-53",
+        "nz-general-2020-electorate-54",
+        "nz-general-2020-electorate-55",
+        "nz-general-2020-electorate-56",
+        "nz-general-2020-electorate-57",
+        "nz-general-2020-electorate-58",
+        "nz-general-2020-electorate-59",
+        "nz-general-2020-electorate-60",
+        "nz-general-2020-electorate-61",
+        "nz-general-2020-electorate-62",
+        "nz-general-2020-electorate-63",
+        "nz-general-2020-electorate-64",
+        "nz-general-2020-electorate-65",
+        "nz-general-2023-electorate-01",
+        "nz-general-2023-electorate-02",
+        "nz-general-2023-electorate-03",
+        "nz-general-2023-electorate-04",
+        "nz-general-2023-electorate-05",
+        "nz-general-2023-electorate-06",
+        "nz-general-2023-electorate-07",
+        "nz-general-2023-electorate-08",
+        "nz-general-2023-electorate-09",
+        "nz-general-2023-electorate-10",
+        "nz-general-2023-electorate-11",
+        "nz-general-2023-electorate-12",
+        "nz-general-2023-electorate-13",
+        "nz-general-2023-electorate-14",
+        "nz-general-2023-electorate-15",
+        "nz-general-2023-electorate-16",
+        "nz-general-2023-electorate-17",
+        "nz-general-2023-electorate-18",
+        "nz-general-2023-electorate-19",
+        "nz-general-2023-electorate-20",
+        "nz-general-2023-electorate-21",
+        "nz-general-2023-electorate-22",
+        "nz-general-2023-electorate-23",
+        "nz-general-2023-electorate-24",
+        "nz-general-2023-electorate-25",
+        "nz-general-2023-electorate-26",
+        "nz-general-2023-electorate-27",
+        "nz-general-2023-electorate-28",
+        "nz-general-2023-electorate-29",
+        "nz-general-2023-electorate-30",
+        "nz-general-2023-electorate-31",
+        "nz-general-2023-electorate-32",
+        "nz-general-2023-electorate-33",
+        "nz-general-2023-electorate-34",
+        "nz-general-2023-electorate-35",
+        "nz-general-2023-electorate-36",
+        "nz-general-2023-electorate-37",
+        "nz-general-2023-electorate-38",
+        "nz-general-2023-electorate-39",
+        "nz-general-2023-electorate-40",
+        "nz-general-2023-electorate-41",
+        "nz-general-2023-electorate-42",
+        "nz-general-2023-electorate-43",
+        "nz-general-2023-electorate-44",
+        "nz-general-2023-electorate-45",
+        "nz-general-2023-electorate-46",
+        "nz-general-2023-electorate-47",
+        "nz-general-2023-electorate-48",
+        "nz-general-2023-electorate-49",
+        "nz-general-2023-electorate-50",
+        "nz-general-2023-electorate-51",
+        "nz-general-2023-electorate-52",
+        "nz-general-2023-electorate-53",
+        "nz-general-2023-electorate-54",
+        "nz-general-2023-electorate-55",
+        "nz-general-2023-electorate-56",
+        "nz-general-2023-electorate-57",
+        "nz-general-2023-electorate-58",
+        "nz-general-2023-electorate-59",
+        "nz-general-2023-electorate-60",
+        "nz-general-2023-electorate-61",
+        "nz-general-2023-electorate-62",
+        "nz-general-2023-electorate-63",
+        "nz-general-2023-electorate-64",
+        "nz-general-2023-electorate-65"
+      ],
+      "trainingYears": [
+        2011,
+        2014,
+        2017,
+        2020,
+        2023
+      ]
+    }
+  },
+  "folds": {
+    "candidate": [
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.35,
+              "priorVarianceContribution": 0.12249999999999998
+            },
+            "shared": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.022500000000000003
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.4,
+              "priorVarianceContribution": 0.16000000000000003
+            },
+            "shared": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.022500000000000003
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.7,
+              "priorVarianceContribution": 0.48999999999999994
+            },
+            "shared": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.04000000000000001
+            }
+          }
+        },
+        "layer": "candidate",
+        "moments": [],
+        "scales": {
+          "balance": {
+            "seat": 0.35,
+            "shared": 0.15000000000000002
+          },
+          "mass": {
+            "seat": 0.4,
+            "shared": 0.15000000000000002
+          },
+          "within": {
+            "seat": 0.7,
+            "shared": 0.2
+          }
+        },
+        "status": "assumed_prior_only",
+        "targetYear": 2014,
+        "trainingIds": [],
+        "trainingYears": []
+      },
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.020860567804893097,
+              "priorSD": 0.35,
+              "priorVarianceContribution": 0.09187499999999998
+            },
+            "shared": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.01985962099558736,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.016875
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.032642785544083654,
+              "priorSD": 0.4,
+              "priorVarianceContribution": 0.12000000000000002
+            },
+            "shared": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.0013250047622804925,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.016875
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.05215683397566949,
+              "priorSD": 0.7,
+              "priorVarianceContribution": 0.36749999999999994
+            },
+            "shared": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.046612315818098465,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.030000000000000006
+            }
+          }
+        },
+        "layer": "candidate",
+        "moments": [
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": -0.28184833507109713,
+                "records": 64,
+                "seat": 0.08344227121957239,
+                "shared": 0.07943848398234944,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": -0.07280122972259445,
+                "records": 64,
+                "seat": 0.13057114217633461,
+                "shared": 0.00530001904912197,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.0695654269097575,
+                  "aotearoalegalisecannabisparty": 0.5034528366736694,
+                  "ban1080": 0.3345939897299969,
+                  "conservative": 0.05453344697153084,
+                  "democratsforsocialcredit": -0.693629673382099,
+                  "focusnewzealand": 0.4309086550189943,
+                  "greenparty": 0.3512784411369729,
+                  "internetmana": -0.30208692239747875,
+                  "maoriparty": -0.2551571273924033,
+                  "newzealandfirstparty": 0.2415516396985683,
+                  "no_group": -0.7745378306996339,
+                  "nzindependentcoalition": 0.37931895823446543,
+                  "unitedfuture": -0.33979184050234046
+                },
+                "columns": 12,
+                "rank": 12,
+                "records": 64,
+                "seat": 0.20862733590267796,
+                "shared": 0.18644926327239386,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2014
+          }
+        ],
+        "scales": {
+          "balance": {
+            "seat": 0.3357611767386055,
+            "shared": 0.1916627793693584
+          },
+          "mass": {
+            "seat": 0.39069525917789644,
+            "shared": 0.13490739328250506
+          },
+          "within": {
+            "seat": 0.6478092574019527,
+            "shared": 0.2767892985975044
+          }
+        },
+        "status": "strongly_pooled_earlier_elections",
+        "targetYear": 2017,
+        "trainingIds": [
+          "nz-general-2014-electorate-01",
+          "nz-general-2014-electorate-02",
+          "nz-general-2014-electorate-03",
+          "nz-general-2014-electorate-04",
+          "nz-general-2014-electorate-05",
+          "nz-general-2014-electorate-06",
+          "nz-general-2014-electorate-07",
+          "nz-general-2014-electorate-08",
+          "nz-general-2014-electorate-09",
+          "nz-general-2014-electorate-10",
+          "nz-general-2014-electorate-11",
+          "nz-general-2014-electorate-12",
+          "nz-general-2014-electorate-13",
+          "nz-general-2014-electorate-14",
+          "nz-general-2014-electorate-15",
+          "nz-general-2014-electorate-16",
+          "nz-general-2014-electorate-17",
+          "nz-general-2014-electorate-18",
+          "nz-general-2014-electorate-19",
+          "nz-general-2014-electorate-20",
+          "nz-general-2014-electorate-21",
+          "nz-general-2014-electorate-22",
+          "nz-general-2014-electorate-23",
+          "nz-general-2014-electorate-24",
+          "nz-general-2014-electorate-25",
+          "nz-general-2014-electorate-26",
+          "nz-general-2014-electorate-27",
+          "nz-general-2014-electorate-28",
+          "nz-general-2014-electorate-29",
+          "nz-general-2014-electorate-30",
+          "nz-general-2014-electorate-31",
+          "nz-general-2014-electorate-32",
+          "nz-general-2014-electorate-33",
+          "nz-general-2014-electorate-34",
+          "nz-general-2014-electorate-35",
+          "nz-general-2014-electorate-36",
+          "nz-general-2014-electorate-37",
+          "nz-general-2014-electorate-38",
+          "nz-general-2014-electorate-39",
+          "nz-general-2014-electorate-40",
+          "nz-general-2014-electorate-41",
+          "nz-general-2014-electorate-42",
+          "nz-general-2014-electorate-43",
+          "nz-general-2014-electorate-44",
+          "nz-general-2014-electorate-45",
+          "nz-general-2014-electorate-46",
+          "nz-general-2014-electorate-47",
+          "nz-general-2014-electorate-48",
+          "nz-general-2014-electorate-49",
+          "nz-general-2014-electorate-50",
+          "nz-general-2014-electorate-51",
+          "nz-general-2014-electorate-52",
+          "nz-general-2014-electorate-53",
+          "nz-general-2014-electorate-54",
+          "nz-general-2014-electorate-55",
+          "nz-general-2014-electorate-56",
+          "nz-general-2014-electorate-57",
+          "nz-general-2014-electorate-58",
+          "nz-general-2014-electorate-59",
+          "nz-general-2014-electorate-60",
+          "nz-general-2014-electorate-61",
+          "nz-general-2014-electorate-62",
+          "nz-general-2014-electorate-63",
+          "nz-general-2014-electorate-64"
+        ],
+        "trainingYears": [
+          2014
+        ]
+      },
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.03329008205112197,
+              "priorSD": 0.35,
+              "priorVarianceContribution": 0.07349999999999998
+            },
+            "shared": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.016088406375827785,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.013500000000000002
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.05881835999092453,
+              "priorSD": 0.4,
+              "priorVarianceContribution": 0.09600000000000002
+            },
+            "shared": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.014152053660596946,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.013500000000000002
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.08793756526598437,
+              "priorSD": 0.7,
+              "priorVarianceContribution": 0.29399999999999993
+            },
+            "shared": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.09425384191108573,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.024000000000000004
+            }
+          }
+        },
+        "layer": "candidate",
+        "moments": [
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": -0.28184833507109713,
+                "records": 64,
+                "seat": 0.08344227121957239,
+                "shared": 0.07943848398234944,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": -0.07280122972259445,
+                "records": 64,
+                "seat": 0.13057114217633461,
+                "shared": 0.00530001904912197,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.0695654269097575,
+                  "aotearoalegalisecannabisparty": 0.5034528366736694,
+                  "ban1080": 0.3345939897299969,
+                  "conservative": 0.05453344697153084,
+                  "democratsforsocialcredit": -0.693629673382099,
+                  "focusnewzealand": 0.4309086550189943,
+                  "greenparty": 0.3512784411369729,
+                  "internetmana": -0.30208692239747875,
+                  "maoriparty": -0.2551571273924033,
+                  "newzealandfirstparty": 0.2415516396985683,
+                  "no_group": -0.7745378306996339,
+                  "nzindependentcoalition": 0.37931895823446543,
+                  "unitedfuture": -0.33979184050234046
+                },
+                "columns": 12,
+                "rank": 12,
+                "records": 64,
+                "seat": 0.20862733590267796,
+                "shared": 0.18644926327239386,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2014
+          },
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.03167882410679862,
+                "records": 64,
+                "seat": 0.08300813903603747,
+                "shared": 0.0010035478967894854,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": -0.2558520065464853,
+                "records": 64,
+                "seat": 0.16352065777828803,
+                "shared": 0.06546024925386276,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": -0.3377939012046434,
+                  "aotearoalegalisecannabisparty": 0.47465354783918784,
+                  "ban1080": 0.6426183517838955,
+                  "conservative": -0.21766176970880982,
+                  "democratsforsocialcredit": -0.947424019901544,
+                  "greenparty": 0.44038000983269215,
+                  "mana": 0.5293915377827145,
+                  "maoriparty": 0.3317546166117384,
+                  "newzealandfirstparty": 0.09918036442961041,
+                  "no_group": -0.7187862995756235,
+                  "nzoutdoorsparty": -0.044389698286444304,
+                  "theopportunitiespartytop": 0.41071676134267693,
+                  "unitedfuture": -0.6626395009454505
+                },
+                "columns": 12,
+                "rank": 12,
+                "records": 64,
+                "seat": 0.23106049042724386,
+                "shared": 0.28481994628303475,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2017
+          }
+        ],
+        "scales": {
+          "balance": {
+            "seat": 0.32678751819970414,
+            "shared": 0.17201280875512667
+          },
+          "mass": {
+            "seat": 0.3934696430360601,
+            "shared": 0.1662890665696243
+          },
+          "within": {
+            "seat": 0.6180109750368389,
+            "shared": 0.3438805634389442
+          }
+        },
+        "status": "strongly_pooled_earlier_elections",
+        "targetYear": 2020,
+        "trainingIds": [
+          "nz-general-2014-electorate-01",
+          "nz-general-2014-electorate-02",
+          "nz-general-2014-electorate-03",
+          "nz-general-2014-electorate-04",
+          "nz-general-2014-electorate-05",
+          "nz-general-2014-electorate-06",
+          "nz-general-2014-electorate-07",
+          "nz-general-2014-electorate-08",
+          "nz-general-2014-electorate-09",
+          "nz-general-2014-electorate-10",
+          "nz-general-2014-electorate-11",
+          "nz-general-2014-electorate-12",
+          "nz-general-2014-electorate-13",
+          "nz-general-2014-electorate-14",
+          "nz-general-2014-electorate-15",
+          "nz-general-2014-electorate-16",
+          "nz-general-2014-electorate-17",
+          "nz-general-2014-electorate-18",
+          "nz-general-2014-electorate-19",
+          "nz-general-2014-electorate-20",
+          "nz-general-2014-electorate-21",
+          "nz-general-2014-electorate-22",
+          "nz-general-2014-electorate-23",
+          "nz-general-2014-electorate-24",
+          "nz-general-2014-electorate-25",
+          "nz-general-2014-electorate-26",
+          "nz-general-2014-electorate-27",
+          "nz-general-2014-electorate-28",
+          "nz-general-2014-electorate-29",
+          "nz-general-2014-electorate-30",
+          "nz-general-2014-electorate-31",
+          "nz-general-2014-electorate-32",
+          "nz-general-2014-electorate-33",
+          "nz-general-2014-electorate-34",
+          "nz-general-2014-electorate-35",
+          "nz-general-2014-electorate-36",
+          "nz-general-2014-electorate-37",
+          "nz-general-2014-electorate-38",
+          "nz-general-2014-electorate-39",
+          "nz-general-2014-electorate-40",
+          "nz-general-2014-electorate-41",
+          "nz-general-2014-electorate-42",
+          "nz-general-2014-electorate-43",
+          "nz-general-2014-electorate-44",
+          "nz-general-2014-electorate-45",
+          "nz-general-2014-electorate-46",
+          "nz-general-2014-electorate-47",
+          "nz-general-2014-electorate-48",
+          "nz-general-2014-electorate-49",
+          "nz-general-2014-electorate-50",
+          "nz-general-2014-electorate-51",
+          "nz-general-2014-electorate-52",
+          "nz-general-2014-electorate-53",
+          "nz-general-2014-electorate-54",
+          "nz-general-2014-electorate-55",
+          "nz-general-2014-electorate-56",
+          "nz-general-2014-electorate-57",
+          "nz-general-2014-electorate-58",
+          "nz-general-2014-electorate-59",
+          "nz-general-2014-electorate-60",
+          "nz-general-2014-electorate-61",
+          "nz-general-2014-electorate-62",
+          "nz-general-2014-electorate-63",
+          "nz-general-2014-electorate-64",
+          "nz-general-2017-electorate-01",
+          "nz-general-2017-electorate-02",
+          "nz-general-2017-electorate-03",
+          "nz-general-2017-electorate-04",
+          "nz-general-2017-electorate-05",
+          "nz-general-2017-electorate-06",
+          "nz-general-2017-electorate-07",
+          "nz-general-2017-electorate-08",
+          "nz-general-2017-electorate-09",
+          "nz-general-2017-electorate-10",
+          "nz-general-2017-electorate-11",
+          "nz-general-2017-electorate-12",
+          "nz-general-2017-electorate-13",
+          "nz-general-2017-electorate-14",
+          "nz-general-2017-electorate-15",
+          "nz-general-2017-electorate-16",
+          "nz-general-2017-electorate-17",
+          "nz-general-2017-electorate-18",
+          "nz-general-2017-electorate-19",
+          "nz-general-2017-electorate-20",
+          "nz-general-2017-electorate-21",
+          "nz-general-2017-electorate-22",
+          "nz-general-2017-electorate-23",
+          "nz-general-2017-electorate-24",
+          "nz-general-2017-electorate-25",
+          "nz-general-2017-electorate-26",
+          "nz-general-2017-electorate-27",
+          "nz-general-2017-electorate-28",
+          "nz-general-2017-electorate-29",
+          "nz-general-2017-electorate-30",
+          "nz-general-2017-electorate-31",
+          "nz-general-2017-electorate-32",
+          "nz-general-2017-electorate-33",
+          "nz-general-2017-electorate-34",
+          "nz-general-2017-electorate-35",
+          "nz-general-2017-electorate-36",
+          "nz-general-2017-electorate-37",
+          "nz-general-2017-electorate-38",
+          "nz-general-2017-electorate-39",
+          "nz-general-2017-electorate-40",
+          "nz-general-2017-electorate-41",
+          "nz-general-2017-electorate-42",
+          "nz-general-2017-electorate-43",
+          "nz-general-2017-electorate-44",
+          "nz-general-2017-electorate-45",
+          "nz-general-2017-electorate-46",
+          "nz-general-2017-electorate-47",
+          "nz-general-2017-electorate-48",
+          "nz-general-2017-electorate-49",
+          "nz-general-2017-electorate-50",
+          "nz-general-2017-electorate-51",
+          "nz-general-2017-electorate-52",
+          "nz-general-2017-electorate-53",
+          "nz-general-2017-electorate-54",
+          "nz-general-2017-electorate-55",
+          "nz-general-2017-electorate-56",
+          "nz-general-2017-electorate-57",
+          "nz-general-2017-electorate-58",
+          "nz-general-2017-electorate-59",
+          "nz-general-2017-electorate-60",
+          "nz-general-2017-electorate-61",
+          "nz-general-2017-electorate-62",
+          "nz-general-2017-electorate-63",
+          "nz-general-2017-electorate-64"
+        ],
+        "trainingYears": [
+          2014,
+          2017
+        ]
+      },
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.03421886968804647,
+              "priorSD": 0.35,
+              "priorVarianceContribution": 0.06124999999999999
+            },
+            "shared": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.024689905214073413,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.011250000000000001
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.06353714421813733,
+              "priorSD": 0.4,
+              "priorVarianceContribution": 0.08000000000000002
+            },
+            "shared": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.022654590247980933,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.011250000000000001
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.10472497897007456,
+              "priorSD": 0.7,
+              "priorVarianceContribution": 0.24499999999999997
+            },
+            "shared": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.1961642784739306,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.020000000000000004
+            }
+          }
+        },
+        "layer": "candidate",
+        "moments": [
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": -0.28184833507109713,
+                "records": 64,
+                "seat": 0.08344227121957239,
+                "shared": 0.07943848398234944,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": -0.07280122972259445,
+                "records": 64,
+                "seat": 0.13057114217633461,
+                "shared": 0.00530001904912197,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.0695654269097575,
+                  "aotearoalegalisecannabisparty": 0.5034528366736694,
+                  "ban1080": 0.3345939897299969,
+                  "conservative": 0.05453344697153084,
+                  "democratsforsocialcredit": -0.693629673382099,
+                  "focusnewzealand": 0.4309086550189943,
+                  "greenparty": 0.3512784411369729,
+                  "internetmana": -0.30208692239747875,
+                  "maoriparty": -0.2551571273924033,
+                  "newzealandfirstparty": 0.2415516396985683,
+                  "no_group": -0.7745378306996339,
+                  "nzindependentcoalition": 0.37931895823446543,
+                  "unitedfuture": -0.33979184050234046
+                },
+                "columns": 12,
+                "rank": 12,
+                "records": 64,
+                "seat": 0.20862733590267796,
+                "shared": 0.18644926327239386,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2014
+          },
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.03167882410679862,
+                "records": 64,
+                "seat": 0.08300813903603747,
+                "shared": 0.0010035478967894854,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": -0.2558520065464853,
+                "records": 64,
+                "seat": 0.16352065777828803,
+                "shared": 0.06546024925386276,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": -0.3377939012046434,
+                  "aotearoalegalisecannabisparty": 0.47465354783918784,
+                  "ban1080": 0.6426183517838955,
+                  "conservative": -0.21766176970880982,
+                  "democratsforsocialcredit": -0.947424019901544,
+                  "greenparty": 0.44038000983269215,
+                  "mana": 0.5293915377827145,
+                  "maoriparty": 0.3317546166117384,
+                  "newzealandfirstparty": 0.09918036442961041,
+                  "no_group": -0.7187862995756235,
+                  "nzoutdoorsparty": -0.044389698286444304,
+                  "theopportunitiespartytop": 0.41071676134267693,
+                  "unitedfuture": -0.6626395009454505
+                },
+                "columns": 12,
+                "rank": 12,
+                "records": 64,
+                "seat": 0.23106049042724386,
+                "shared": 0.28481994628303475,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2017
+          },
+          {
+            "contests": 65,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.2601872391284814,
+                "records": 65,
+                "seat": 0.03886280787266898,
+                "shared": 0.06769739940530156,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.25527881460258484,
+                "records": 65,
+                "seat": 0.08713106535420137,
+                "shared": 0.06516727318490088,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": -0.49910252856707316,
+                  "advancenz": -0.27601776067732886,
+                  "aotearoalegalisecannabisparty": 0.5365946338349831,
+                  "greenparty": 0.20761963018697693,
+                  "heartlandnz": 2.700367702451686,
+                  "newconservative": -0.03584893986264477,
+                  "newzealandfirstparty": -0.08181474145784537,
+                  "no_group": -0.7682928235666927,
+                  "nzoutdoorsparty": -0.11057043283583243,
+                  "oneparty": -0.4965308189479877,
+                  "socialcredit": -0.9132620852539735,
+                  "sustainablenewzealandparty": -0.17690771226505378,
+                  "teaparty": -0.14112716800571837,
+                  "theopportunitiespartytop": 0.3339812413650109,
+                  "visionnewzealand": -0.2790881963985065
+                },
+                "columns": 14,
+                "rank": 14,
+                "records": 65,
+                "seat": 0.18866204749052554,
+                "shared": 0.705716461288155,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2020
+          }
+        ],
+        "scales": {
+          "balance": {
+            "seat": 0.30898037104004916,
+            "shared": 0.18957822979992564
+          },
+          "mass": {
+            "seat": 0.37886296232033206,
+            "shared": 0.1841319913757002
+          },
+          "within": {
+            "seat": 0.5913754974380275,
+            "shared": 0.4649347034519263
+          }
+        },
+        "status": "strongly_pooled_earlier_elections",
+        "targetYear": 2023,
+        "trainingIds": [
+          "nz-general-2014-electorate-01",
+          "nz-general-2014-electorate-02",
+          "nz-general-2014-electorate-03",
+          "nz-general-2014-electorate-04",
+          "nz-general-2014-electorate-05",
+          "nz-general-2014-electorate-06",
+          "nz-general-2014-electorate-07",
+          "nz-general-2014-electorate-08",
+          "nz-general-2014-electorate-09",
+          "nz-general-2014-electorate-10",
+          "nz-general-2014-electorate-11",
+          "nz-general-2014-electorate-12",
+          "nz-general-2014-electorate-13",
+          "nz-general-2014-electorate-14",
+          "nz-general-2014-electorate-15",
+          "nz-general-2014-electorate-16",
+          "nz-general-2014-electorate-17",
+          "nz-general-2014-electorate-18",
+          "nz-general-2014-electorate-19",
+          "nz-general-2014-electorate-20",
+          "nz-general-2014-electorate-21",
+          "nz-general-2014-electorate-22",
+          "nz-general-2014-electorate-23",
+          "nz-general-2014-electorate-24",
+          "nz-general-2014-electorate-25",
+          "nz-general-2014-electorate-26",
+          "nz-general-2014-electorate-27",
+          "nz-general-2014-electorate-28",
+          "nz-general-2014-electorate-29",
+          "nz-general-2014-electorate-30",
+          "nz-general-2014-electorate-31",
+          "nz-general-2014-electorate-32",
+          "nz-general-2014-electorate-33",
+          "nz-general-2014-electorate-34",
+          "nz-general-2014-electorate-35",
+          "nz-general-2014-electorate-36",
+          "nz-general-2014-electorate-37",
+          "nz-general-2014-electorate-38",
+          "nz-general-2014-electorate-39",
+          "nz-general-2014-electorate-40",
+          "nz-general-2014-electorate-41",
+          "nz-general-2014-electorate-42",
+          "nz-general-2014-electorate-43",
+          "nz-general-2014-electorate-44",
+          "nz-general-2014-electorate-45",
+          "nz-general-2014-electorate-46",
+          "nz-general-2014-electorate-47",
+          "nz-general-2014-electorate-48",
+          "nz-general-2014-electorate-49",
+          "nz-general-2014-electorate-50",
+          "nz-general-2014-electorate-51",
+          "nz-general-2014-electorate-52",
+          "nz-general-2014-electorate-53",
+          "nz-general-2014-electorate-54",
+          "nz-general-2014-electorate-55",
+          "nz-general-2014-electorate-56",
+          "nz-general-2014-electorate-57",
+          "nz-general-2014-electorate-58",
+          "nz-general-2014-electorate-59",
+          "nz-general-2014-electorate-60",
+          "nz-general-2014-electorate-61",
+          "nz-general-2014-electorate-62",
+          "nz-general-2014-electorate-63",
+          "nz-general-2014-electorate-64",
+          "nz-general-2017-electorate-01",
+          "nz-general-2017-electorate-02",
+          "nz-general-2017-electorate-03",
+          "nz-general-2017-electorate-04",
+          "nz-general-2017-electorate-05",
+          "nz-general-2017-electorate-06",
+          "nz-general-2017-electorate-07",
+          "nz-general-2017-electorate-08",
+          "nz-general-2017-electorate-09",
+          "nz-general-2017-electorate-10",
+          "nz-general-2017-electorate-11",
+          "nz-general-2017-electorate-12",
+          "nz-general-2017-electorate-13",
+          "nz-general-2017-electorate-14",
+          "nz-general-2017-electorate-15",
+          "nz-general-2017-electorate-16",
+          "nz-general-2017-electorate-17",
+          "nz-general-2017-electorate-18",
+          "nz-general-2017-electorate-19",
+          "nz-general-2017-electorate-20",
+          "nz-general-2017-electorate-21",
+          "nz-general-2017-electorate-22",
+          "nz-general-2017-electorate-23",
+          "nz-general-2017-electorate-24",
+          "nz-general-2017-electorate-25",
+          "nz-general-2017-electorate-26",
+          "nz-general-2017-electorate-27",
+          "nz-general-2017-electorate-28",
+          "nz-general-2017-electorate-29",
+          "nz-general-2017-electorate-30",
+          "nz-general-2017-electorate-31",
+          "nz-general-2017-electorate-32",
+          "nz-general-2017-electorate-33",
+          "nz-general-2017-electorate-34",
+          "nz-general-2017-electorate-35",
+          "nz-general-2017-electorate-36",
+          "nz-general-2017-electorate-37",
+          "nz-general-2017-electorate-38",
+          "nz-general-2017-electorate-39",
+          "nz-general-2017-electorate-40",
+          "nz-general-2017-electorate-41",
+          "nz-general-2017-electorate-42",
+          "nz-general-2017-electorate-43",
+          "nz-general-2017-electorate-44",
+          "nz-general-2017-electorate-45",
+          "nz-general-2017-electorate-46",
+          "nz-general-2017-electorate-47",
+          "nz-general-2017-electorate-48",
+          "nz-general-2017-electorate-49",
+          "nz-general-2017-electorate-50",
+          "nz-general-2017-electorate-51",
+          "nz-general-2017-electorate-52",
+          "nz-general-2017-electorate-53",
+          "nz-general-2017-electorate-54",
+          "nz-general-2017-electorate-55",
+          "nz-general-2017-electorate-56",
+          "nz-general-2017-electorate-57",
+          "nz-general-2017-electorate-58",
+          "nz-general-2017-electorate-59",
+          "nz-general-2017-electorate-60",
+          "nz-general-2017-electorate-61",
+          "nz-general-2017-electorate-62",
+          "nz-general-2017-electorate-63",
+          "nz-general-2017-electorate-64",
+          "nz-general-2020-electorate-01",
+          "nz-general-2020-electorate-02",
+          "nz-general-2020-electorate-03",
+          "nz-general-2020-electorate-04",
+          "nz-general-2020-electorate-05",
+          "nz-general-2020-electorate-06",
+          "nz-general-2020-electorate-07",
+          "nz-general-2020-electorate-08",
+          "nz-general-2020-electorate-09",
+          "nz-general-2020-electorate-10",
+          "nz-general-2020-electorate-11",
+          "nz-general-2020-electorate-12",
+          "nz-general-2020-electorate-13",
+          "nz-general-2020-electorate-14",
+          "nz-general-2020-electorate-15",
+          "nz-general-2020-electorate-16",
+          "nz-general-2020-electorate-17",
+          "nz-general-2020-electorate-18",
+          "nz-general-2020-electorate-19",
+          "nz-general-2020-electorate-20",
+          "nz-general-2020-electorate-21",
+          "nz-general-2020-electorate-22",
+          "nz-general-2020-electorate-23",
+          "nz-general-2020-electorate-24",
+          "nz-general-2020-electorate-25",
+          "nz-general-2020-electorate-26",
+          "nz-general-2020-electorate-27",
+          "nz-general-2020-electorate-28",
+          "nz-general-2020-electorate-29",
+          "nz-general-2020-electorate-30",
+          "nz-general-2020-electorate-31",
+          "nz-general-2020-electorate-32",
+          "nz-general-2020-electorate-33",
+          "nz-general-2020-electorate-34",
+          "nz-general-2020-electorate-35",
+          "nz-general-2020-electorate-36",
+          "nz-general-2020-electorate-37",
+          "nz-general-2020-electorate-38",
+          "nz-general-2020-electorate-39",
+          "nz-general-2020-electorate-40",
+          "nz-general-2020-electorate-41",
+          "nz-general-2020-electorate-42",
+          "nz-general-2020-electorate-43",
+          "nz-general-2020-electorate-44",
+          "nz-general-2020-electorate-45",
+          "nz-general-2020-electorate-46",
+          "nz-general-2020-electorate-47",
+          "nz-general-2020-electorate-48",
+          "nz-general-2020-electorate-49",
+          "nz-general-2020-electorate-50",
+          "nz-general-2020-electorate-51",
+          "nz-general-2020-electorate-52",
+          "nz-general-2020-electorate-53",
+          "nz-general-2020-electorate-54",
+          "nz-general-2020-electorate-55",
+          "nz-general-2020-electorate-56",
+          "nz-general-2020-electorate-57",
+          "nz-general-2020-electorate-58",
+          "nz-general-2020-electorate-59",
+          "nz-general-2020-electorate-60",
+          "nz-general-2020-electorate-61",
+          "nz-general-2020-electorate-62",
+          "nz-general-2020-electorate-63",
+          "nz-general-2020-electorate-64",
+          "nz-general-2020-electorate-65"
+        ],
+        "trainingYears": [
+          2014,
+          2017,
+          2020
+        ]
+      }
+    ],
+    "local_party": [
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.022500000000000003
+            },
+            "shared": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.08,
+              "priorVarianceContribution": 0.0064
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.04000000000000001
+            },
+            "shared": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.1,
+              "priorVarianceContribution": 0.010000000000000002
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.5,
+              "priorVarianceContribution": 0.25
+            },
+            "shared": {
+              "environments": 0,
+              "historicalVarianceContribution": 0.0,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.022500000000000003
+            }
+          }
+        },
+        "layer": "local_party",
+        "moments": [],
+        "scales": {
+          "balance": {
+            "seat": 0.15000000000000002,
+            "shared": 0.08
+          },
+          "mass": {
+            "seat": 0.2,
+            "shared": 0.1
+          },
+          "within": {
+            "seat": 0.5,
+            "shared": 0.15000000000000002
+          }
+        },
+        "status": "assumed_prior_only",
+        "targetYear": 2011,
+        "trainingIds": [],
+        "trainingYears": []
+      },
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.008135488374908986,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.016875
+            },
+            "shared": {
+              "environments": 1,
+              "historicalVarianceContribution": 4.588538540643786e-05,
+              "priorSD": 0.08,
+              "priorVarianceContribution": 0.0048000000000000004
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.0027536943739603745,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.030000000000000006
+            },
+            "shared": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.00012159399513271758,
+              "priorSD": 0.1,
+              "priorVarianceContribution": 0.0075000000000000015
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.04809504440011729,
+              "priorSD": 0.5,
+              "priorVarianceContribution": 0.1875
+            },
+            "shared": {
+              "environments": 1,
+              "historicalVarianceContribution": 0.041076960495610784,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.016875
+            }
+          }
+        },
+        "layer": "local_party",
+        "moments": [
+          {
+            "contests": 63,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.013547750426759103,
+                "records": 63,
+                "seat": 0.03254195349963594,
+                "shared": 0.00018354154162575145,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.02205393344804664,
+                "records": 63,
+                "seat": 0.011014777495841498,
+                "shared": 0.0004863759805308703,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.10281877516501292,
+                  "alliance": 0.07258622060490688,
+                  "aotearoalegalisecannabisparty": 0.14002535470057162,
+                  "conservativeparty": 0.07032511298925526,
+                  "democratsforsocialcredit": 0.011347364766694727,
+                  "greenparty": 0.12412235676458885,
+                  "libertarianz": 0.13459621038482977,
+                  "mana": -1.192339888338268,
+                  "maoriparty": 0.35851078558895566,
+                  "newzealandfirstparty": 0.1276445819803241,
+                  "unitedfuture": 0.050363125393128275
+                },
+                "columns": 10,
+                "rank": 10,
+                "records": 63,
+                "seat": 0.19238017760046916,
+                "shared": 0.16430784198244314,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2011
+          }
+        ],
+        "scales": {
+          "balance": {
+            "seat": 0.15814704668411922,
+            "shared": 0.06961239390659137
+          },
+          "mass": {
+            "seat": 0.18097981758737736,
+            "shared": 0.08730174107732742
+          },
+          "within": {
+            "seat": 0.4853813391552227,
+            "shared": 0.24073213432280033
+          }
+        },
+        "status": "strongly_pooled_earlier_elections",
+        "targetYear": 2014,
+        "trainingIds": [
+          "nz-general-2011-electorate-01",
+          "nz-general-2011-electorate-02",
+          "nz-general-2011-electorate-03",
+          "nz-general-2011-electorate-04",
+          "nz-general-2011-electorate-05",
+          "nz-general-2011-electorate-06",
+          "nz-general-2011-electorate-07",
+          "nz-general-2011-electorate-08",
+          "nz-general-2011-electorate-09",
+          "nz-general-2011-electorate-10",
+          "nz-general-2011-electorate-11",
+          "nz-general-2011-electorate-12",
+          "nz-general-2011-electorate-13",
+          "nz-general-2011-electorate-14",
+          "nz-general-2011-electorate-15",
+          "nz-general-2011-electorate-16",
+          "nz-general-2011-electorate-17",
+          "nz-general-2011-electorate-18",
+          "nz-general-2011-electorate-19",
+          "nz-general-2011-electorate-20",
+          "nz-general-2011-electorate-21",
+          "nz-general-2011-electorate-22",
+          "nz-general-2011-electorate-23",
+          "nz-general-2011-electorate-24",
+          "nz-general-2011-electorate-25",
+          "nz-general-2011-electorate-26",
+          "nz-general-2011-electorate-27",
+          "nz-general-2011-electorate-28",
+          "nz-general-2011-electorate-29",
+          "nz-general-2011-electorate-30",
+          "nz-general-2011-electorate-31",
+          "nz-general-2011-electorate-32",
+          "nz-general-2011-electorate-33",
+          "nz-general-2011-electorate-34",
+          "nz-general-2011-electorate-35",
+          "nz-general-2011-electorate-36",
+          "nz-general-2011-electorate-37",
+          "nz-general-2011-electorate-38",
+          "nz-general-2011-electorate-39",
+          "nz-general-2011-electorate-40",
+          "nz-general-2011-electorate-41",
+          "nz-general-2011-electorate-42",
+          "nz-general-2011-electorate-43",
+          "nz-general-2011-electorate-44",
+          "nz-general-2011-electorate-45",
+          "nz-general-2011-electorate-46",
+          "nz-general-2011-electorate-47",
+          "nz-general-2011-electorate-48",
+          "nz-general-2011-electorate-49",
+          "nz-general-2011-electorate-50",
+          "nz-general-2011-electorate-51",
+          "nz-general-2011-electorate-52",
+          "nz-general-2011-electorate-53",
+          "nz-general-2011-electorate-54",
+          "nz-general-2011-electorate-55",
+          "nz-general-2011-electorate-56",
+          "nz-general-2011-electorate-57",
+          "nz-general-2011-electorate-58",
+          "nz-general-2011-electorate-59",
+          "nz-general-2011-electorate-60",
+          "nz-general-2011-electorate-61",
+          "nz-general-2011-electorate-62",
+          "nz-general-2011-electorate-63"
+        ],
+        "trainingYears": [
+          2011
+        ]
+      },
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.009358854323559374,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.013500000000000002
+            },
+            "shared": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.0001504844649341701,
+              "priorSD": 0.08,
+              "priorVarianceContribution": 0.0038400000000000005
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.003627553149247975,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.024000000000000004
+            },
+            "shared": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.0002232994259446138,
+              "priorSD": 0.1,
+              "priorVarianceContribution": 0.006000000000000001
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.12315059380297746,
+              "priorSD": 0.5,
+              "priorVarianceContribution": 0.15
+            },
+            "shared": {
+              "environments": 2,
+              "historicalVarianceContribution": 0.051499685266661,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.013500000000000002
+            }
+          }
+        },
+        "layer": "local_party",
+        "moments": [
+          {
+            "contests": 63,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.013547750426759103,
+                "records": 63,
+                "seat": 0.03254195349963594,
+                "shared": 0.00018354154162575145,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.02205393344804664,
+                "records": 63,
+                "seat": 0.011014777495841498,
+                "shared": 0.0004863759805308703,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.10281877516501292,
+                  "alliance": 0.07258622060490688,
+                  "aotearoalegalisecannabisparty": 0.14002535470057162,
+                  "conservativeparty": 0.07032511298925526,
+                  "democratsforsocialcredit": 0.011347364766694727,
+                  "greenparty": 0.12412235676458885,
+                  "libertarianz": 0.13459621038482977,
+                  "mana": -1.192339888338268,
+                  "maoriparty": 0.35851078558895566,
+                  "newzealandfirstparty": 0.1276445819803241,
+                  "unitedfuture": 0.050363125393128275
+                },
+                "columns": 10,
+                "rank": 10,
+                "records": 63,
+                "seat": 0.19238017760046916,
+                "shared": 0.16430784198244314,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2011
+          },
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.02385122183547625,
+                "records": 64,
+                "seat": 0.014252318118160929,
+                "shared": 0.000568880783045099,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.025102214029686678,
+                "records": 64,
+                "seat": 0.007122988250398378,
+                "shared": 0.0006301211491921987,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.04736387167765059,
+                  "aotearoalegalisecannabisparty": 0.15560238557818426,
+                  "ban1080": -0.4378284270046041,
+                  "conservative": 0.23309952119181457,
+                  "democratsforsocialcredit": 0.3652889437868409,
+                  "focusnewzealand": -0.5720002361014582,
+                  "greenparty": 0.1839372516606249,
+                  "internetmana": -0.3904363497654483,
+                  "maoriparty": 0.12296126765479959,
+                  "newzealandfirstparty": 0.19719846924318254,
+                  "nzindependentcoalition": -0.26862778423380435,
+                  "thecivilianparty": 0.12385687064827655,
+                  "unitedfuture": 0.23958421566394103
+                },
+                "columns": 12,
+                "rank": 12,
+                "records": 64,
+                "seat": 0.4233727914144182,
+                "shared": 0.09319058435086185,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2014
+          }
+        ],
+        "scales": {
+          "balance": {
+            "seat": 0.1511914492408859,
+            "shared": 0.06317028150114713
+          },
+          "mass": {
+            "seat": 0.1662153818070036,
+            "shared": 0.07888789150398567
+          },
+          "within": {
+            "seat": 0.5226381097881951,
+            "shared": 0.25495035843603164
+          }
+        },
+        "status": "strongly_pooled_earlier_elections",
+        "targetYear": 2017,
+        "trainingIds": [
+          "nz-general-2011-electorate-01",
+          "nz-general-2011-electorate-02",
+          "nz-general-2011-electorate-03",
+          "nz-general-2011-electorate-04",
+          "nz-general-2011-electorate-05",
+          "nz-general-2011-electorate-06",
+          "nz-general-2011-electorate-07",
+          "nz-general-2011-electorate-08",
+          "nz-general-2011-electorate-09",
+          "nz-general-2011-electorate-10",
+          "nz-general-2011-electorate-11",
+          "nz-general-2011-electorate-12",
+          "nz-general-2011-electorate-13",
+          "nz-general-2011-electorate-14",
+          "nz-general-2011-electorate-15",
+          "nz-general-2011-electorate-16",
+          "nz-general-2011-electorate-17",
+          "nz-general-2011-electorate-18",
+          "nz-general-2011-electorate-19",
+          "nz-general-2011-electorate-20",
+          "nz-general-2011-electorate-21",
+          "nz-general-2011-electorate-22",
+          "nz-general-2011-electorate-23",
+          "nz-general-2011-electorate-24",
+          "nz-general-2011-electorate-25",
+          "nz-general-2011-electorate-26",
+          "nz-general-2011-electorate-27",
+          "nz-general-2011-electorate-28",
+          "nz-general-2011-electorate-29",
+          "nz-general-2011-electorate-30",
+          "nz-general-2011-electorate-31",
+          "nz-general-2011-electorate-32",
+          "nz-general-2011-electorate-33",
+          "nz-general-2011-electorate-34",
+          "nz-general-2011-electorate-35",
+          "nz-general-2011-electorate-36",
+          "nz-general-2011-electorate-37",
+          "nz-general-2011-electorate-38",
+          "nz-general-2011-electorate-39",
+          "nz-general-2011-electorate-40",
+          "nz-general-2011-electorate-41",
+          "nz-general-2011-electorate-42",
+          "nz-general-2011-electorate-43",
+          "nz-general-2011-electorate-44",
+          "nz-general-2011-electorate-45",
+          "nz-general-2011-electorate-46",
+          "nz-general-2011-electorate-47",
+          "nz-general-2011-electorate-48",
+          "nz-general-2011-electorate-49",
+          "nz-general-2011-electorate-50",
+          "nz-general-2011-electorate-51",
+          "nz-general-2011-electorate-52",
+          "nz-general-2011-electorate-53",
+          "nz-general-2011-electorate-54",
+          "nz-general-2011-electorate-55",
+          "nz-general-2011-electorate-56",
+          "nz-general-2011-electorate-57",
+          "nz-general-2011-electorate-58",
+          "nz-general-2011-electorate-59",
+          "nz-general-2011-electorate-60",
+          "nz-general-2011-electorate-61",
+          "nz-general-2011-electorate-62",
+          "nz-general-2011-electorate-63",
+          "nz-general-2014-electorate-01",
+          "nz-general-2014-electorate-02",
+          "nz-general-2014-electorate-03",
+          "nz-general-2014-electorate-04",
+          "nz-general-2014-electorate-05",
+          "nz-general-2014-electorate-06",
+          "nz-general-2014-electorate-07",
+          "nz-general-2014-electorate-08",
+          "nz-general-2014-electorate-09",
+          "nz-general-2014-electorate-10",
+          "nz-general-2014-electorate-11",
+          "nz-general-2014-electorate-12",
+          "nz-general-2014-electorate-13",
+          "nz-general-2014-electorate-14",
+          "nz-general-2014-electorate-15",
+          "nz-general-2014-electorate-16",
+          "nz-general-2014-electorate-17",
+          "nz-general-2014-electorate-18",
+          "nz-general-2014-electorate-19",
+          "nz-general-2014-electorate-20",
+          "nz-general-2014-electorate-21",
+          "nz-general-2014-electorate-22",
+          "nz-general-2014-electorate-23",
+          "nz-general-2014-electorate-24",
+          "nz-general-2014-electorate-25",
+          "nz-general-2014-electorate-26",
+          "nz-general-2014-electorate-27",
+          "nz-general-2014-electorate-28",
+          "nz-general-2014-electorate-29",
+          "nz-general-2014-electorate-30",
+          "nz-general-2014-electorate-31",
+          "nz-general-2014-electorate-32",
+          "nz-general-2014-electorate-33",
+          "nz-general-2014-electorate-34",
+          "nz-general-2014-electorate-35",
+          "nz-general-2014-electorate-36",
+          "nz-general-2014-electorate-37",
+          "nz-general-2014-electorate-38",
+          "nz-general-2014-electorate-39",
+          "nz-general-2014-electorate-40",
+          "nz-general-2014-electorate-41",
+          "nz-general-2014-electorate-42",
+          "nz-general-2014-electorate-43",
+          "nz-general-2014-electorate-44",
+          "nz-general-2014-electorate-45",
+          "nz-general-2014-electorate-46",
+          "nz-general-2014-electorate-47",
+          "nz-general-2014-electorate-48",
+          "nz-general-2014-electorate-49",
+          "nz-general-2014-electorate-50",
+          "nz-general-2014-electorate-51",
+          "nz-general-2014-electorate-52",
+          "nz-general-2014-electorate-53",
+          "nz-general-2014-electorate-54",
+          "nz-general-2014-electorate-55",
+          "nz-general-2014-electorate-56",
+          "nz-general-2014-electorate-57",
+          "nz-general-2014-electorate-58",
+          "nz-general-2014-electorate-59",
+          "nz-general-2014-electorate-60",
+          "nz-general-2014-electorate-61",
+          "nz-general-2014-electorate-62",
+          "nz-general-2014-electorate-63",
+          "nz-general-2014-electorate-64"
+        ],
+        "trainingYears": [
+          2011,
+          2014
+        ]
+      },
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.01371684148228585,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.011250000000000001
+            },
+            "shared": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.00040300784943192095,
+              "priorSD": 0.08,
+              "priorVarianceContribution": 0.0032
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.004701368024952044,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.020000000000000004
+            },
+            "shared": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.00020753362940219015,
+              "priorSD": 0.1,
+              "priorVarianceContribution": 0.005000000000000001
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.13839429714326554,
+              "priorSD": 0.5,
+              "priorVarianceContribution": 0.125
+            },
+            "shared": {
+              "environments": 3,
+              "historicalVarianceContribution": 0.0775166075930862,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.011250000000000001
+            }
+          }
+        },
+        "layer": "local_party",
+        "moments": [
+          {
+            "contests": 63,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.013547750426759103,
+                "records": 63,
+                "seat": 0.03254195349963594,
+                "shared": 0.00018354154162575145,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.02205393344804664,
+                "records": 63,
+                "seat": 0.011014777495841498,
+                "shared": 0.0004863759805308703,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.10281877516501292,
+                  "alliance": 0.07258622060490688,
+                  "aotearoalegalisecannabisparty": 0.14002535470057162,
+                  "conservativeparty": 0.07032511298925526,
+                  "democratsforsocialcredit": 0.011347364766694727,
+                  "greenparty": 0.12412235676458885,
+                  "libertarianz": 0.13459621038482977,
+                  "mana": -1.192339888338268,
+                  "maoriparty": 0.35851078558895566,
+                  "newzealandfirstparty": 0.1276445819803241,
+                  "unitedfuture": 0.050363125393128275
+                },
+                "columns": 10,
+                "rank": 10,
+                "records": 63,
+                "seat": 0.19238017760046916,
+                "shared": 0.16430784198244314,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2011
+          },
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.02385122183547625,
+                "records": 64,
+                "seat": 0.014252318118160929,
+                "shared": 0.000568880783045099,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.025102214029686678,
+                "records": 64,
+                "seat": 0.007122988250398378,
+                "shared": 0.0006301211491921987,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.04736387167765059,
+                  "aotearoalegalisecannabisparty": 0.15560238557818426,
+                  "ban1080": -0.4378284270046041,
+                  "conservative": 0.23309952119181457,
+                  "democratsforsocialcredit": 0.3652889437868409,
+                  "focusnewzealand": -0.5720002361014582,
+                  "greenparty": 0.1839372516606249,
+                  "internetmana": -0.3904363497654483,
+                  "maoriparty": 0.12296126765479959,
+                  "newzealandfirstparty": 0.19719846924318254,
+                  "nzindependentcoalition": -0.26862778423380435,
+                  "thecivilianparty": 0.12385687064827655,
+                  "unitedfuture": 0.23958421566394103
+                },
+                "columns": 12,
+                "rank": 12,
+                "records": 64,
+                "seat": 0.4233727914144182,
+                "shared": 0.09319058435086185,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2014
+          },
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": -0.040812066499023,
+                "records": 64,
+                "seat": 0.035506777275918236,
+                "shared": 0.0016656247719206753,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.011344807036264289,
+                "records": 64,
+                "seat": 0.010070442403472386,
+                "shared": 0.0001287046466900717,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.2865723111615602,
+                  "aotearoalegalisecannabisparty": 0.11525095503910641,
+                  "ban1080": 0.23591036038854526,
+                  "conservative": 0.13933335448736492,
+                  "democratsforsocialcredit": 0.14385933927637706,
+                  "greenparty": 0.13478853390524342,
+                  "internetparty": 0.032583064776601715,
+                  "mana": -1.5539466169193585,
+                  "maoriparty": 0.1341223549375736,
+                  "newzealandfirstparty": 0.14900384710972447,
+                  "newzealandpeoplesparty": -0.056359663671695114,
+                  "nzoutdoorsparty": 0.026955235986760192,
+                  "theopportunitiespartytop": 0.04631350870493852,
+                  "unitedfuture": 0.16561341481725814
+                },
+                "columns": 13,
+                "rank": 13,
+                "records": 64,
+                "seat": 0.21461281384470576,
+                "shared": 0.20760121922521227,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2017
+          }
+        ],
+        "scales": {
+          "balance": {
+            "seat": 0.15800899177668926,
+            "shared": 0.060025060178494793
+          },
+          "mass": {
+            "seat": 0.1571666886619173,
+            "shared": 0.072163242924651
+          },
+          "within": {
+            "seat": 0.5132195408821312,
+            "shared": 0.29793725445651503
+          }
+        },
+        "status": "strongly_pooled_earlier_elections",
+        "targetYear": 2020,
+        "trainingIds": [
+          "nz-general-2011-electorate-01",
+          "nz-general-2011-electorate-02",
+          "nz-general-2011-electorate-03",
+          "nz-general-2011-electorate-04",
+          "nz-general-2011-electorate-05",
+          "nz-general-2011-electorate-06",
+          "nz-general-2011-electorate-07",
+          "nz-general-2011-electorate-08",
+          "nz-general-2011-electorate-09",
+          "nz-general-2011-electorate-10",
+          "nz-general-2011-electorate-11",
+          "nz-general-2011-electorate-12",
+          "nz-general-2011-electorate-13",
+          "nz-general-2011-electorate-14",
+          "nz-general-2011-electorate-15",
+          "nz-general-2011-electorate-16",
+          "nz-general-2011-electorate-17",
+          "nz-general-2011-electorate-18",
+          "nz-general-2011-electorate-19",
+          "nz-general-2011-electorate-20",
+          "nz-general-2011-electorate-21",
+          "nz-general-2011-electorate-22",
+          "nz-general-2011-electorate-23",
+          "nz-general-2011-electorate-24",
+          "nz-general-2011-electorate-25",
+          "nz-general-2011-electorate-26",
+          "nz-general-2011-electorate-27",
+          "nz-general-2011-electorate-28",
+          "nz-general-2011-electorate-29",
+          "nz-general-2011-electorate-30",
+          "nz-general-2011-electorate-31",
+          "nz-general-2011-electorate-32",
+          "nz-general-2011-electorate-33",
+          "nz-general-2011-electorate-34",
+          "nz-general-2011-electorate-35",
+          "nz-general-2011-electorate-36",
+          "nz-general-2011-electorate-37",
+          "nz-general-2011-electorate-38",
+          "nz-general-2011-electorate-39",
+          "nz-general-2011-electorate-40",
+          "nz-general-2011-electorate-41",
+          "nz-general-2011-electorate-42",
+          "nz-general-2011-electorate-43",
+          "nz-general-2011-electorate-44",
+          "nz-general-2011-electorate-45",
+          "nz-general-2011-electorate-46",
+          "nz-general-2011-electorate-47",
+          "nz-general-2011-electorate-48",
+          "nz-general-2011-electorate-49",
+          "nz-general-2011-electorate-50",
+          "nz-general-2011-electorate-51",
+          "nz-general-2011-electorate-52",
+          "nz-general-2011-electorate-53",
+          "nz-general-2011-electorate-54",
+          "nz-general-2011-electorate-55",
+          "nz-general-2011-electorate-56",
+          "nz-general-2011-electorate-57",
+          "nz-general-2011-electorate-58",
+          "nz-general-2011-electorate-59",
+          "nz-general-2011-electorate-60",
+          "nz-general-2011-electorate-61",
+          "nz-general-2011-electorate-62",
+          "nz-general-2011-electorate-63",
+          "nz-general-2014-electorate-01",
+          "nz-general-2014-electorate-02",
+          "nz-general-2014-electorate-03",
+          "nz-general-2014-electorate-04",
+          "nz-general-2014-electorate-05",
+          "nz-general-2014-electorate-06",
+          "nz-general-2014-electorate-07",
+          "nz-general-2014-electorate-08",
+          "nz-general-2014-electorate-09",
+          "nz-general-2014-electorate-10",
+          "nz-general-2014-electorate-11",
+          "nz-general-2014-electorate-12",
+          "nz-general-2014-electorate-13",
+          "nz-general-2014-electorate-14",
+          "nz-general-2014-electorate-15",
+          "nz-general-2014-electorate-16",
+          "nz-general-2014-electorate-17",
+          "nz-general-2014-electorate-18",
+          "nz-general-2014-electorate-19",
+          "nz-general-2014-electorate-20",
+          "nz-general-2014-electorate-21",
+          "nz-general-2014-electorate-22",
+          "nz-general-2014-electorate-23",
+          "nz-general-2014-electorate-24",
+          "nz-general-2014-electorate-25",
+          "nz-general-2014-electorate-26",
+          "nz-general-2014-electorate-27",
+          "nz-general-2014-electorate-28",
+          "nz-general-2014-electorate-29",
+          "nz-general-2014-electorate-30",
+          "nz-general-2014-electorate-31",
+          "nz-general-2014-electorate-32",
+          "nz-general-2014-electorate-33",
+          "nz-general-2014-electorate-34",
+          "nz-general-2014-electorate-35",
+          "nz-general-2014-electorate-36",
+          "nz-general-2014-electorate-37",
+          "nz-general-2014-electorate-38",
+          "nz-general-2014-electorate-39",
+          "nz-general-2014-electorate-40",
+          "nz-general-2014-electorate-41",
+          "nz-general-2014-electorate-42",
+          "nz-general-2014-electorate-43",
+          "nz-general-2014-electorate-44",
+          "nz-general-2014-electorate-45",
+          "nz-general-2014-electorate-46",
+          "nz-general-2014-electorate-47",
+          "nz-general-2014-electorate-48",
+          "nz-general-2014-electorate-49",
+          "nz-general-2014-electorate-50",
+          "nz-general-2014-electorate-51",
+          "nz-general-2014-electorate-52",
+          "nz-general-2014-electorate-53",
+          "nz-general-2014-electorate-54",
+          "nz-general-2014-electorate-55",
+          "nz-general-2014-electorate-56",
+          "nz-general-2014-electorate-57",
+          "nz-general-2014-electorate-58",
+          "nz-general-2014-electorate-59",
+          "nz-general-2014-electorate-60",
+          "nz-general-2014-electorate-61",
+          "nz-general-2014-electorate-62",
+          "nz-general-2014-electorate-63",
+          "nz-general-2014-electorate-64",
+          "nz-general-2017-electorate-01",
+          "nz-general-2017-electorate-02",
+          "nz-general-2017-electorate-03",
+          "nz-general-2017-electorate-04",
+          "nz-general-2017-electorate-05",
+          "nz-general-2017-electorate-06",
+          "nz-general-2017-electorate-07",
+          "nz-general-2017-electorate-08",
+          "nz-general-2017-electorate-09",
+          "nz-general-2017-electorate-10",
+          "nz-general-2017-electorate-11",
+          "nz-general-2017-electorate-12",
+          "nz-general-2017-electorate-13",
+          "nz-general-2017-electorate-14",
+          "nz-general-2017-electorate-15",
+          "nz-general-2017-electorate-16",
+          "nz-general-2017-electorate-17",
+          "nz-general-2017-electorate-18",
+          "nz-general-2017-electorate-19",
+          "nz-general-2017-electorate-20",
+          "nz-general-2017-electorate-21",
+          "nz-general-2017-electorate-22",
+          "nz-general-2017-electorate-23",
+          "nz-general-2017-electorate-24",
+          "nz-general-2017-electorate-25",
+          "nz-general-2017-electorate-26",
+          "nz-general-2017-electorate-27",
+          "nz-general-2017-electorate-28",
+          "nz-general-2017-electorate-29",
+          "nz-general-2017-electorate-30",
+          "nz-general-2017-electorate-31",
+          "nz-general-2017-electorate-32",
+          "nz-general-2017-electorate-33",
+          "nz-general-2017-electorate-34",
+          "nz-general-2017-electorate-35",
+          "nz-general-2017-electorate-36",
+          "nz-general-2017-electorate-37",
+          "nz-general-2017-electorate-38",
+          "nz-general-2017-electorate-39",
+          "nz-general-2017-electorate-40",
+          "nz-general-2017-electorate-41",
+          "nz-general-2017-electorate-42",
+          "nz-general-2017-electorate-43",
+          "nz-general-2017-electorate-44",
+          "nz-general-2017-electorate-45",
+          "nz-general-2017-electorate-46",
+          "nz-general-2017-electorate-47",
+          "nz-general-2017-electorate-48",
+          "nz-general-2017-electorate-49",
+          "nz-general-2017-electorate-50",
+          "nz-general-2017-electorate-51",
+          "nz-general-2017-electorate-52",
+          "nz-general-2017-electorate-53",
+          "nz-general-2017-electorate-54",
+          "nz-general-2017-electorate-55",
+          "nz-general-2017-electorate-56",
+          "nz-general-2017-electorate-57",
+          "nz-general-2017-electorate-58",
+          "nz-general-2017-electorate-59",
+          "nz-general-2017-electorate-60",
+          "nz-general-2017-electorate-61",
+          "nz-general-2017-electorate-62",
+          "nz-general-2017-electorate-63",
+          "nz-general-2017-electorate-64"
+        ],
+        "trainingYears": [
+          2011,
+          2014,
+          2017
+        ]
+      },
+      {
+        "contributions": {
+          "balance": {
+            "seat": {
+              "environments": 4,
+              "historicalVarianceContribution": 0.013005800403367618,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.009642857142857144
+            },
+            "shared": {
+              "environments": 4,
+              "historicalVarianceContribution": 0.0008307503948717844,
+              "priorSD": 0.08,
+              "priorVarianceContribution": 0.0027428571428571432
+            }
+          },
+          "mass": {
+            "seat": {
+              "environments": 4,
+              "historicalVarianceContribution": 0.0080681935240786,
+              "priorSD": 0.2,
+              "priorVarianceContribution": 0.017142857142857147
+            },
+            "shared": {
+              "environments": 4,
+              "historicalVarianceContribution": 0.00030875251082413183,
+              "priorSD": 0.1,
+              "priorVarianceContribution": 0.004285714285714287
+            }
+          },
+          "within": {
+            "seat": {
+              "environments": 4,
+              "historicalVarianceContribution": 0.17041049506226447,
+              "priorSD": 0.5,
+              "priorVarianceContribution": 0.10714285714285714
+            },
+            "shared": {
+              "environments": 4,
+              "historicalVarianceContribution": 0.08638218671075723,
+              "priorSD": 0.15,
+              "priorVarianceContribution": 0.009642857142857144
+            }
+          }
+        },
+        "layer": "local_party",
+        "moments": [
+          {
+            "contests": 63,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.013547750426759103,
+                "records": 63,
+                "seat": 0.03254195349963594,
+                "shared": 0.00018354154162575145,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.02205393344804664,
+                "records": 63,
+                "seat": 0.011014777495841498,
+                "shared": 0.0004863759805308703,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.10281877516501292,
+                  "alliance": 0.07258622060490688,
+                  "aotearoalegalisecannabisparty": 0.14002535470057162,
+                  "conservativeparty": 0.07032511298925526,
+                  "democratsforsocialcredit": 0.011347364766694727,
+                  "greenparty": 0.12412235676458885,
+                  "libertarianz": 0.13459621038482977,
+                  "mana": -1.192339888338268,
+                  "maoriparty": 0.35851078558895566,
+                  "newzealandfirstparty": 0.1276445819803241,
+                  "unitedfuture": 0.050363125393128275
+                },
+                "columns": 10,
+                "rank": 10,
+                "records": 63,
+                "seat": 0.19238017760046916,
+                "shared": 0.16430784198244314,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2011
+          },
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": 0.02385122183547625,
+                "records": 64,
+                "seat": 0.014252318118160929,
+                "shared": 0.000568880783045099,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.025102214029686678,
+                "records": 64,
+                "seat": 0.007122988250398378,
+                "shared": 0.0006301211491921987,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.04736387167765059,
+                  "aotearoalegalisecannabisparty": 0.15560238557818426,
+                  "ban1080": -0.4378284270046041,
+                  "conservative": 0.23309952119181457,
+                  "democratsforsocialcredit": 0.3652889437868409,
+                  "focusnewzealand": -0.5720002361014582,
+                  "greenparty": 0.1839372516606249,
+                  "internetmana": -0.3904363497654483,
+                  "maoriparty": 0.12296126765479959,
+                  "newzealandfirstparty": 0.19719846924318254,
+                  "nzindependentcoalition": -0.26862778423380435,
+                  "thecivilianparty": 0.12385687064827655,
+                  "unitedfuture": 0.23958421566394103
+                },
+                "columns": 12,
+                "rank": 12,
+                "records": 64,
+                "seat": 0.4233727914144182,
+                "shared": 0.09319058435086185,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2014
+          },
+          {
+            "contests": 64,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": -0.040812066499023,
+                "records": 64,
+                "seat": 0.035506777275918236,
+                "shared": 0.0016656247719206753,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.011344807036264289,
+                "records": 64,
+                "seat": 0.010070442403472386,
+                "shared": 0.0001287046466900717,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.2865723111615602,
+                  "aotearoalegalisecannabisparty": 0.11525095503910641,
+                  "ban1080": 0.23591036038854526,
+                  "conservative": 0.13933335448736492,
+                  "democratsforsocialcredit": 0.14385933927637706,
+                  "greenparty": 0.13478853390524342,
+                  "internetparty": 0.032583064776601715,
+                  "mana": -1.5539466169193585,
+                  "maoriparty": 0.1341223549375736,
+                  "newzealandfirstparty": 0.14900384710972447,
+                  "newzealandpeoplesparty": -0.056359663671695114,
+                  "nzoutdoorsparty": 0.026955235986760192,
+                  "theopportunitiespartytop": 0.04631350870493852,
+                  "unitedfuture": 0.16561341481725814
+                },
+                "columns": 13,
+                "rank": 13,
+                "records": 64,
+                "seat": 0.21461281384470576,
+                "shared": 0.20760121922521227,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2017
+          },
+          {
+            "contests": 65,
+            "moments": {
+              "balance": {
+                "descriptiveElectionEffect": -0.05828555281981088,
+                "records": 65,
+                "seat": 0.008739553929858231,
+                "shared": 0.0033972056675109644,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "mass": {
+                "descriptiveElectionEffect": 0.030266578917277423,
+                "records": 65,
+                "seat": 0.02826914651883793,
+                "shared": 0.0009160657993557822,
+                "units": "raw log odds; one scalar degree of freedom"
+              },
+              "within": {
+                "classEffects": {
+                  "actnewzealand": 0.2844817453392369,
+                  "advancenz": 0.048794952840564294,
+                  "aotearoalegalisecannabisparty": 0.11216247896127982,
+                  "greenparty": 0.2249780520679579,
+                  "heartlandnz": -0.954558127932168,
+                  "maoriparty": 0.08843328458842609,
+                  "newconservative": 0.2505983359070372,
+                  "newzealandfirstparty": 0.25363013404598056,
+                  "nzoutdoorsparty": 0.08003438372665263,
+                  "oneparty": 0.01159537017087591,
+                  "socialcredit": 0.1657013272115785,
+                  "sustainablenewzealandparty": 0.2087603913028852,
+                  "teaparty": -0.3762289617469483,
+                  "theopportunitiespartytop": 0.2819230619568704,
+                  "visionnewzealand": -0.6803064284402291
+                },
+                "columns": 14,
+                "rank": 14,
+                "records": 65,
+                "seat": 0.3625076825762581,
+                "shared": 0.1395756614167833,
+                "units": "projected exchangeable remainder log intensity; K_remainder-1 df"
+              }
+            },
+            "year": 2020
+          }
+        ],
+        "scales": {
+          "balance": {
+            "seat": 0.1504947093629034,
+            "shared": 0.059779658226933076
+          },
+          "mass": {
+            "seat": 0.1587798811781132,
+            "shared": 0.06778249624009444
+          },
+          "within": {
+            "seat": 0.5268333248809548,
+            "shared": 0.3098790794061683
+          }
+        },
+        "status": "strongly_pooled_earlier_elections",
+        "targetYear": 2023,
+        "trainingIds": [
+          "nz-general-2011-electorate-01",
+          "nz-general-2011-electorate-02",
+          "nz-general-2011-electorate-03",
+          "nz-general-2011-electorate-04",
+          "nz-general-2011-electorate-05",
+          "nz-general-2011-electorate-06",
+          "nz-general-2011-electorate-07",
+          "nz-general-2011-electorate-08",
+          "nz-general-2011-electorate-09",
+          "nz-general-2011-electorate-10",
+          "nz-general-2011-electorate-11",
+          "nz-general-2011-electorate-12",
+          "nz-general-2011-electorate-13",
+          "nz-general-2011-electorate-14",
+          "nz-general-2011-electorate-15",
+          "nz-general-2011-electorate-16",
+          "nz-general-2011-electorate-17",
+          "nz-general-2011-electorate-18",
+          "nz-general-2011-electorate-19",
+          "nz-general-2011-electorate-20",
+          "nz-general-2011-electorate-21",
+          "nz-general-2011-electorate-22",
+          "nz-general-2011-electorate-23",
+          "nz-general-2011-electorate-24",
+          "nz-general-2011-electorate-25",
+          "nz-general-2011-electorate-26",
+          "nz-general-2011-electorate-27",
+          "nz-general-2011-electorate-28",
+          "nz-general-2011-electorate-29",
+          "nz-general-2011-electorate-30",
+          "nz-general-2011-electorate-31",
+          "nz-general-2011-electorate-32",
+          "nz-general-2011-electorate-33",
+          "nz-general-2011-electorate-34",
+          "nz-general-2011-electorate-35",
+          "nz-general-2011-electorate-36",
+          "nz-general-2011-electorate-37",
+          "nz-general-2011-electorate-38",
+          "nz-general-2011-electorate-39",
+          "nz-general-2011-electorate-40",
+          "nz-general-2011-electorate-41",
+          "nz-general-2011-electorate-42",
+          "nz-general-2011-electorate-43",
+          "nz-general-2011-electorate-44",
+          "nz-general-2011-electorate-45",
+          "nz-general-2011-electorate-46",
+          "nz-general-2011-electorate-47",
+          "nz-general-2011-electorate-48",
+          "nz-general-2011-electorate-49",
+          "nz-general-2011-electorate-50",
+          "nz-general-2011-electorate-51",
+          "nz-general-2011-electorate-52",
+          "nz-general-2011-electorate-53",
+          "nz-general-2011-electorate-54",
+          "nz-general-2011-electorate-55",
+          "nz-general-2011-electorate-56",
+          "nz-general-2011-electorate-57",
+          "nz-general-2011-electorate-58",
+          "nz-general-2011-electorate-59",
+          "nz-general-2011-electorate-60",
+          "nz-general-2011-electorate-61",
+          "nz-general-2011-electorate-62",
+          "nz-general-2011-electorate-63",
+          "nz-general-2014-electorate-01",
+          "nz-general-2014-electorate-02",
+          "nz-general-2014-electorate-03",
+          "nz-general-2014-electorate-04",
+          "nz-general-2014-electorate-05",
+          "nz-general-2014-electorate-06",
+          "nz-general-2014-electorate-07",
+          "nz-general-2014-electorate-08",
+          "nz-general-2014-electorate-09",
+          "nz-general-2014-electorate-10",
+          "nz-general-2014-electorate-11",
+          "nz-general-2014-electorate-12",
+          "nz-general-2014-electorate-13",
+          "nz-general-2014-electorate-14",
+          "nz-general-2014-electorate-15",
+          "nz-general-2014-electorate-16",
+          "nz-general-2014-electorate-17",
+          "nz-general-2014-electorate-18",
+          "nz-general-2014-electorate-19",
+          "nz-general-2014-electorate-20",
+          "nz-general-2014-electorate-21",
+          "nz-general-2014-electorate-22",
+          "nz-general-2014-electorate-23",
+          "nz-general-2014-electorate-24",
+          "nz-general-2014-electorate-25",
+          "nz-general-2014-electorate-26",
+          "nz-general-2014-electorate-27",
+          "nz-general-2014-electorate-28",
+          "nz-general-2014-electorate-29",
+          "nz-general-2014-electorate-30",
+          "nz-general-2014-electorate-31",
+          "nz-general-2014-electorate-32",
+          "nz-general-2014-electorate-33",
+          "nz-general-2014-electorate-34",
+          "nz-general-2014-electorate-35",
+          "nz-general-2014-electorate-36",
+          "nz-general-2014-electorate-37",
+          "nz-general-2014-electorate-38",
+          "nz-general-2014-electorate-39",
+          "nz-general-2014-electorate-40",
+          "nz-general-2014-electorate-41",
+          "nz-general-2014-electorate-42",
+          "nz-general-2014-electorate-43",
+          "nz-general-2014-electorate-44",
+          "nz-general-2014-electorate-45",
+          "nz-general-2014-electorate-46",
+          "nz-general-2014-electorate-47",
+          "nz-general-2014-electorate-48",
+          "nz-general-2014-electorate-49",
+          "nz-general-2014-electorate-50",
+          "nz-general-2014-electorate-51",
+          "nz-general-2014-electorate-52",
+          "nz-general-2014-electorate-53",
+          "nz-general-2014-electorate-54",
+          "nz-general-2014-electorate-55",
+          "nz-general-2014-electorate-56",
+          "nz-general-2014-electorate-57",
+          "nz-general-2014-electorate-58",
+          "nz-general-2014-electorate-59",
+          "nz-general-2014-electorate-60",
+          "nz-general-2014-electorate-61",
+          "nz-general-2014-electorate-62",
+          "nz-general-2014-electorate-63",
+          "nz-general-2014-electorate-64",
+          "nz-general-2017-electorate-01",
+          "nz-general-2017-electorate-02",
+          "nz-general-2017-electorate-03",
+          "nz-general-2017-electorate-04",
+          "nz-general-2017-electorate-05",
+          "nz-general-2017-electorate-06",
+          "nz-general-2017-electorate-07",
+          "nz-general-2017-electorate-08",
+          "nz-general-2017-electorate-09",
+          "nz-general-2017-electorate-10",
+          "nz-general-2017-electorate-11",
+          "nz-general-2017-electorate-12",
+          "nz-general-2017-electorate-13",
+          "nz-general-2017-electorate-14",
+          "nz-general-2017-electorate-15",
+          "nz-general-2017-electorate-16",
+          "nz-general-2017-electorate-17",
+          "nz-general-2017-electorate-18",
+          "nz-general-2017-electorate-19",
+          "nz-general-2017-electorate-20",
+          "nz-general-2017-electorate-21",
+          "nz-general-2017-electorate-22",
+          "nz-general-2017-electorate-23",
+          "nz-general-2017-electorate-24",
+          "nz-general-2017-electorate-25",
+          "nz-general-2017-electorate-26",
+          "nz-general-2017-electorate-27",
+          "nz-general-2017-electorate-28",
+          "nz-general-2017-electorate-29",
+          "nz-general-2017-electorate-30",
+          "nz-general-2017-electorate-31",
+          "nz-general-2017-electorate-32",
+          "nz-general-2017-electorate-33",
+          "nz-general-2017-electorate-34",
+          "nz-general-2017-electorate-35",
+          "nz-general-2017-electorate-36",
+          "nz-general-2017-electorate-37",
+          "nz-general-2017-electorate-38",
+          "nz-general-2017-electorate-39",
+          "nz-general-2017-electorate-40",
+          "nz-general-2017-electorate-41",
+          "nz-general-2017-electorate-42",
+          "nz-general-2017-electorate-43",
+          "nz-general-2017-electorate-44",
+          "nz-general-2017-electorate-45",
+          "nz-general-2017-electorate-46",
+          "nz-general-2017-electorate-47",
+          "nz-general-2017-electorate-48",
+          "nz-general-2017-electorate-49",
+          "nz-general-2017-electorate-50",
+          "nz-general-2017-electorate-51",
+          "nz-general-2017-electorate-52",
+          "nz-general-2017-electorate-53",
+          "nz-general-2017-electorate-54",
+          "nz-general-2017-electorate-55",
+          "nz-general-2017-electorate-56",
+          "nz-general-2017-electorate-57",
+          "nz-general-2017-electorate-58",
+          "nz-general-2017-electorate-59",
+          "nz-general-2017-electorate-60",
+          "nz-general-2017-electorate-61",
+          "nz-general-2017-electorate-62",
+          "nz-general-2017-electorate-63",
+          "nz-general-2017-electorate-64",
+          "nz-general-2020-electorate-01",
+          "nz-general-2020-electorate-02",
+          "nz-general-2020-electorate-03",
+          "nz-general-2020-electorate-04",
+          "nz-general-2020-electorate-05",
+          "nz-general-2020-electorate-06",
+          "nz-general-2020-electorate-07",
+          "nz-general-2020-electorate-08",
+          "nz-general-2020-electorate-09",
+          "nz-general-2020-electorate-10",
+          "nz-general-2020-electorate-11",
+          "nz-general-2020-electorate-12",
+          "nz-general-2020-electorate-13",
+          "nz-general-2020-electorate-14",
+          "nz-general-2020-electorate-15",
+          "nz-general-2020-electorate-16",
+          "nz-general-2020-electorate-17",
+          "nz-general-2020-electorate-18",
+          "nz-general-2020-electorate-19",
+          "nz-general-2020-electorate-20",
+          "nz-general-2020-electorate-21",
+          "nz-general-2020-electorate-22",
+          "nz-general-2020-electorate-23",
+          "nz-general-2020-electorate-24",
+          "nz-general-2020-electorate-25",
+          "nz-general-2020-electorate-26",
+          "nz-general-2020-electorate-27",
+          "nz-general-2020-electorate-28",
+          "nz-general-2020-electorate-29",
+          "nz-general-2020-electorate-30",
+          "nz-general-2020-electorate-31",
+          "nz-general-2020-electorate-32",
+          "nz-general-2020-electorate-33",
+          "nz-general-2020-electorate-34",
+          "nz-general-2020-electorate-35",
+          "nz-general-2020-electorate-36",
+          "nz-general-2020-electorate-37",
+          "nz-general-2020-electorate-38",
+          "nz-general-2020-electorate-39",
+          "nz-general-2020-electorate-40",
+          "nz-general-2020-electorate-41",
+          "nz-general-2020-electorate-42",
+          "nz-general-2020-electorate-43",
+          "nz-general-2020-electorate-44",
+          "nz-general-2020-electorate-45",
+          "nz-general-2020-electorate-46",
+          "nz-general-2020-electorate-47",
+          "nz-general-2020-electorate-48",
+          "nz-general-2020-electorate-49",
+          "nz-general-2020-electorate-50",
+          "nz-general-2020-electorate-51",
+          "nz-general-2020-electorate-52",
+          "nz-general-2020-electorate-53",
+          "nz-general-2020-electorate-54",
+          "nz-general-2020-electorate-55",
+          "nz-general-2020-electorate-56",
+          "nz-general-2020-electorate-57",
+          "nz-general-2020-electorate-58",
+          "nz-general-2020-electorate-59",
+          "nz-general-2020-electorate-60",
+          "nz-general-2020-electorate-61",
+          "nz-general-2020-electorate-62",
+          "nz-general-2020-electorate-63",
+          "nz-general-2020-electorate-64",
+          "nz-general-2020-electorate-65"
+        ],
+        "trainingYears": [
+          2011,
+          2014,
+          2017,
+          2020
+        ]
+      }
+    ]
+  },
+  "stage": 45
+}

@@ -1,0 +1,736 @@
+{
+  "conditionalLocationAudit": {
+    "maximumAbsoluteGap": 6.0285110237146e-14,
+    "method": "independent physicists Hermite81 rule, scalar logistic versus production normal-Hermite41 location",
+    "records": [
+      {
+        "GH81Expectation": 0.6638764190541767,
+        "absoluteGap": 1.432187701766452e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.223606797749979,
+        "seatId": "nz-general-2011-electorate-01",
+        "target": 0.6638764190541624,
+        "year": 2011
+      },
+      {
+        "GH81Expectation": 0.601693114204696,
+        "absoluteGap": 6.439293542825908e-15,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.17,
+        "seatId": "nz-general-2011-electorate-01",
+        "target": 0.6016931142046895,
+        "year": 2011
+      },
+      {
+        "GH81Expectation": 0.7725624207822371,
+        "absoluteGap": 3.4083846855992306e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.223606797749979,
+        "seatId": "nz-general-2011-electorate-32",
+        "target": 0.772562420782203,
+        "year": 2011
+      },
+      {
+        "GH81Expectation": 0.77940712585859,
+        "absoluteGap": 2.886579864025407e-15,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.17,
+        "seatId": "nz-general-2011-electorate-32",
+        "target": 0.7794071258585871,
+        "year": 2011
+      },
+      {
+        "GH81Expectation": 0.7637971907299411,
+        "absoluteGap": 4.5630166312093934e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.223606797749979,
+        "seatId": "nz-general-2011-electorate-63",
+        "target": 0.7637971907298955,
+        "year": 2011
+      },
+      {
+        "GH81Expectation": 0.5512612049312738,
+        "absoluteGap": 1.7985612998927536e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.17,
+        "seatId": "nz-general-2011-electorate-63",
+        "target": 0.5512612049312918,
+        "year": 2011
+      },
+      {
+        "GH81Expectation": 0.665147662293701,
+        "absoluteGap": 4.6629367034256575e-15,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.20093603053980413,
+        "seatId": "nz-general-2014-electorate-01",
+        "target": 0.6651476622937057,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.6571567437642023,
+        "absoluteGap": 8.881784197001252e-15,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.17278997008019714,
+        "seatId": "nz-general-2014-electorate-01",
+        "target": 0.6571567437641934,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.7595583777149987,
+        "absoluteGap": 3.68594044175552e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.20093603053980413,
+        "seatId": "nz-general-2014-electorate-33",
+        "target": 0.7595583777149618,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.8063206800124615,
+        "absoluteGap": 2.7977620220553945e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.17278997008019714,
+        "seatId": "nz-general-2014-electorate-33",
+        "target": 0.8063206800124335,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.7235625837923606,
+        "absoluteGap": 2.475797344914099e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.20093603053980413,
+        "seatId": "nz-general-2014-electorate-64",
+        "target": 0.7235625837923358,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.6127216725101446,
+        "absoluteGap": 2.3869795029440866e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.17278997008019714,
+        "seatId": "nz-general-2014-electorate-64",
+        "target": 0.6127216725101208,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.7732674780605836,
+        "absoluteGap": 1.5654144647214707e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.183986011900885,
+        "seatId": "nz-general-2017-electorate-01",
+        "target": 0.773267478060568,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.5717247106084452,
+        "absoluteGap": 3.452793606584237e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.16385767845448546,
+        "seatId": "nz-general-2017-electorate-01",
+        "target": 0.5717247106084797,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.8330531796788467,
+        "absoluteGap": 2.864375403532904e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.183986011900885,
+        "seatId": "nz-general-2017-electorate-33",
+        "target": 0.8330531796788181,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.7364871301407288,
+        "absoluteGap": 3.0531133177191805e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.16385767845448546,
+        "seatId": "nz-general-2017-electorate-33",
+        "target": 0.7364871301406982,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.8105516684036131,
+        "absoluteGap": 5.329070518200751e-15,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.183986011900885,
+        "seatId": "nz-general-2017-electorate-64",
+        "target": 0.8105516684036078,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.49069744255037,
+        "absoluteGap": 4.624078897563777e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.16385767845448546,
+        "seatId": "nz-general-2017-electorate-64",
+        "target": 0.49069744255032377,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.6504592007323469,
+        "absoluteGap": 7.438494264988549e-15,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.17294190254057643,
+        "seatId": "nz-general-2020-electorate-01",
+        "target": 0.6504592007323543,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.30588299257168616,
+        "absoluteGap": 5.92303983637521e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.1690261794270869,
+        "seatId": "nz-general-2020-electorate-01",
+        "target": 0.3058829925717454,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.7231014076856218,
+        "absoluteGap": 2.6756374893466273e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.17294190254057643,
+        "seatId": "nz-general-2020-electorate-33",
+        "target": 0.7231014076856486,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.35161542603305695,
+        "absoluteGap": 4.8183679268731794e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.1690261794270869,
+        "seatId": "nz-general-2020-electorate-33",
+        "target": 0.35161542603310514,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.7721262649257504,
+        "absoluteGap": 4.0523140398818214e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.17294190254057643,
+        "seatId": "nz-general-2020-electorate-65",
+        "target": 0.772126264925791,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.30717825427083617,
+        "absoluteGap": 2.3647750424515834e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.1690261794270869,
+        "seatId": "nz-general-2020-electorate-65",
+        "target": 0.3071782542708125,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.5432611235983089,
+        "absoluteGap": 5.662137425588298e-15,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.17264274518054376,
+        "seatId": "nz-general-2023-electorate-01",
+        "target": 0.5432611235983146,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.5591297821487328,
+        "absoluteGap": 5.3179682879545e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.16193290303071112,
+        "seatId": "nz-general-2023-electorate-01",
+        "target": 0.559129782148786,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.6048770647369778,
+        "absoluteGap": 4.873879078104437e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.17264274518054376,
+        "seatId": "nz-general-2023-electorate-33",
+        "target": 0.6048770647370265,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.5471370383002349,
+        "absoluteGap": 4.1522341120980855e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.16193290303071112,
+        "seatId": "nz-general-2023-electorate-33",
+        "target": 0.5471370383002764,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.6527513157627677,
+        "absoluteGap": 3.3861802251067274e-14,
+        "direction": "mass",
+        "layer": "local_party",
+        "sd": 0.17264274518054376,
+        "seatId": "nz-general-2023-electorate-65",
+        "target": 0.6527513157628015,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.5195801041336374,
+        "absoluteGap": 4.551914400963142e-14,
+        "direction": "balance",
+        "layer": "local_party",
+        "sd": 0.16193290303071112,
+        "seatId": "nz-general-2023-electorate-65",
+        "target": 0.5195801041335919,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.8566235340198322,
+        "absoluteGap": 1.099120794378905e-14,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4272001872658766,
+        "seatId": "nz-general-2014-electorate-01",
+        "target": 0.8566235340198212,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.6101709160082217,
+        "absoluteGap": 4.285460875053104e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3807886552931954,
+        "seatId": "nz-general-2014-electorate-01",
+        "target": 0.6101709160081789,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.8620794746870719,
+        "absoluteGap": 2.6978419498391304e-14,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4272001872658766,
+        "seatId": "nz-general-2014-electorate-33",
+        "target": 0.8620794746870449,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.8142220280223101,
+        "absoluteGap": 1.965094753586527e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3807886552931954,
+        "seatId": "nz-general-2014-electorate-33",
+        "target": 0.8142220280222905,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.842759584390605,
+        "absoluteGap": 0.0,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4272001872658766,
+        "seatId": "nz-general-2014-electorate-64",
+        "target": 0.842759584390605,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.5223614962328041,
+        "absoluteGap": 4.551914400963142e-15,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3807886552931954,
+        "seatId": "nz-general-2014-electorate-64",
+        "target": 0.5223614962328087,
+        "year": 2014
+      },
+      {
+        "GH81Expectation": 0.8567086255992962,
+        "absoluteGap": 5.329070518200751e-15,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4133313323550057,
+        "seatId": "nz-general-2017-electorate-01",
+        "target": 0.8567086255992908,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.5109023556693091,
+        "absoluteGap": 1.1546319456101628e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3866137462642533,
+        "seatId": "nz-general-2017-electorate-01",
+        "target": 0.5109023556693206,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.9105633668914883,
+        "absoluteGap": 7.771561172376096e-15,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4133313323550057,
+        "seatId": "nz-general-2017-electorate-33",
+        "target": 0.9105633668914805,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.7153552698017344,
+        "absoluteGap": 4.296563105299356e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3866137462642533,
+        "seatId": "nz-general-2017-electorate-33",
+        "target": 0.7153552698017773,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.8969658715801908,
+        "absoluteGap": 6.106226635438361e-15,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4133313323550057,
+        "seatId": "nz-general-2017-electorate-64",
+        "target": 0.8969658715801847,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.37316103155179464,
+        "absoluteGap": 1.2545520178264269e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3866137462642533,
+        "seatId": "nz-general-2017-electorate-64",
+        "target": 0.3731610315518072,
+        "year": 2017
+      },
+      {
+        "GH81Expectation": 0.7208057786132571,
+        "absoluteGap": 4.196643033083092e-14,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.42716555766063524,
+        "seatId": "nz-general-2020-electorate-01",
+        "target": 0.7208057786132152,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.35249691680235007,
+        "absoluteGap": 4.518607710224387e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3692945821792539,
+        "seatId": "nz-general-2020-electorate-01",
+        "target": 0.35249691680239525,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.7820720323384203,
+        "absoluteGap": 8.881784197001252e-16,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.42716555766063524,
+        "seatId": "nz-general-2020-electorate-33",
+        "target": 0.7820720323384212,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.23962893672924737,
+        "absoluteGap": 3.502753642692369e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3692945821792539,
+        "seatId": "nz-general-2020-electorate-33",
+        "target": 0.2396289367292824,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.8532912645961517,
+        "absoluteGap": 2.7755575615628914e-14,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.42716555766063524,
+        "seatId": "nz-general-2020-electorate-65",
+        "target": 0.8532912645961239,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.23289629847195065,
+        "absoluteGap": 1.7708057242771247e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3692945821792539,
+        "seatId": "nz-general-2020-electorate-65",
+        "target": 0.23289629847196835,
+        "year": 2020
+      },
+      {
+        "GH81Expectation": 0.5313948696102587,
+        "absoluteGap": 3.3861802251067274e-14,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4212383345163617,
+        "seatId": "nz-general-2023-electorate-01",
+        "target": 0.5313948696102926,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.6560669144819941,
+        "absoluteGap": 1.0769163338864018e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3625034826068846,
+        "seatId": "nz-general-2023-electorate-01",
+        "target": 0.6560669144820048,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.7480222470584863,
+        "absoluteGap": 4.75175454539567e-14,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4212383345163617,
+        "seatId": "nz-general-2023-electorate-33",
+        "target": 0.7480222470585338,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.5300474398721339,
+        "absoluteGap": 9.103828801926284e-15,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3625034826068846,
+        "seatId": "nz-general-2023-electorate-33",
+        "target": 0.530047439872143,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.8101296097047211,
+        "absoluteGap": 2.0317081350640365e-14,
+        "direction": "mass",
+        "layer": "candidate",
+        "sd": 0.4212383345163617,
+        "seatId": "nz-general-2023-electorate-65",
+        "target": 0.8101296097047415,
+        "year": 2023
+      },
+      {
+        "GH81Expectation": 0.4771195030251941,
+        "absoluteGap": 6.0285110237146e-14,
+        "direction": "balance",
+        "layer": "candidate",
+        "sd": 0.3625034826068846,
+        "seatId": "nz-general-2023-electorate-65",
+        "target": 0.47711950302513384,
+        "year": 2023
+      }
+    ]
+  },
+  "drawScoreAudit": {
+    "newScoring": false,
+    "status": "pending sealed construction/evaluation"
+  },
+  "majorCategorySplitAudit": {
+    "examples": [
+      {
+        "layer": "local_party",
+        "majorCovariance": {
+          "LABVariance": 0.001476,
+          "NATLABCovariance": -0.0010935000000000005,
+          "NATVariance": 0.0015238125000000002,
+          "NLLogRatioVariance": 0.0289
+        },
+        "remainderOptions": 2
+      },
+      {
+        "layer": "local_party",
+        "majorCovariance": {
+          "LABVariance": 0.001476,
+          "NATLABCovariance": -0.0010935000000000005,
+          "NATVariance": 0.0015238125000000002,
+          "NLLogRatioVariance": 0.0289
+        },
+        "remainderOptions": 10
+      },
+      {
+        "layer": "local_party",
+        "majorCovariance": {
+          "LABVariance": 0.001476,
+          "NATLABCovariance": -0.0010935000000000005,
+          "NATVariance": 0.0015238125000000002,
+          "NLLogRatioVariance": 0.0289
+        },
+        "remainderOptions": 100
+      },
+      {
+        "layer": "candidate",
+        "majorCovariance": {
+          "LABVariance": 0.007159422145328721,
+          "NATLABCovariance": -0.005763297145328722,
+          "NATVariance": 0.0073339377703287205,
+          "NLLogRatioVariance": 0.145
+        },
+        "remainderOptions": 2
+      },
+      {
+        "layer": "candidate",
+        "majorCovariance": {
+          "LABVariance": 0.007159422145328721,
+          "NATLABCovariance": -0.005763297145328722,
+          "NATVariance": 0.0073339377703287205,
+          "NLLogRatioVariance": 0.145
+        },
+        "remainderOptions": 10
+      },
+      {
+        "layer": "candidate",
+        "majorCovariance": {
+          "LABVariance": 0.007159422145328721,
+          "NATLABCovariance": -0.005763297145328722,
+          "NATVariance": 0.0073339377703287205,
+          "NLLogRatioVariance": 0.145
+        },
+        "remainderOptions": 100
+      }
+    ],
+    "interpretation": "Delta covariance for arithmetic aggregate balances; within-remainder uncertainty cannot affect major mass/balance."
+  },
+  "operationalSelection": null,
+  "scaleAudit": {
+    "fits": [
+      {
+        "layer": "local_party",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2011,
+        "trainingYears": []
+      },
+      {
+        "layer": "local_party",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2014,
+        "trainingYears": [
+          2011
+        ]
+      },
+      {
+        "layer": "local_party",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2017,
+        "trainingYears": [
+          2011,
+          2014
+        ]
+      },
+      {
+        "layer": "local_party",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2020,
+        "trainingYears": [
+          2011,
+          2014,
+          2017
+        ]
+      },
+      {
+        "layer": "local_party",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2023,
+        "trainingYears": [
+          2011,
+          2014,
+          2017,
+          2020
+        ]
+      },
+      {
+        "layer": "local_party",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": null,
+        "trainingYears": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      },
+      {
+        "layer": "candidate",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2014,
+        "trainingYears": []
+      },
+      {
+        "layer": "candidate",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2017,
+        "trainingYears": [
+          2014
+        ]
+      },
+      {
+        "layer": "candidate",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2020,
+        "trainingYears": [
+          2014,
+          2017
+        ]
+      },
+      {
+        "layer": "candidate",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": 2023,
+        "trainingYears": [
+          2014,
+          2017,
+          2020
+        ]
+      },
+      {
+        "layer": "candidate",
+        "remainderFit": "independent QR, no normal-equation reuse",
+        "scalarDirections": 2,
+        "targetYear": null,
+        "trainingYears": [
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    ],
+    "maximumAbsoluteDifference": 3.530509218307998e-14,
+    "methods": "math.log/fsum scalar odds and independent QR; equal-election shrinkage reconstructed"
+  },
+  "stage": 45
+}

@@ -35,25 +35,32 @@ def environment(rows):
                          'units': 'raw log odds; one scalar degree of freedom'}
     unique = sorted({label for _, tags in remainder for label in tags})
     if len(unique) < 2:
-        moments['within'] = {'shared': None, 'seat': None, 'records': len(remainder), 'rank': 0}
+        seat = [float(np.sum(e * e) / (len(e) - 1)) for e, _ in remainder]
+        moments['within'] = {'shared': None, 'seat': float(np.mean(seat)) if seat else None,
+                             'records': len(remainder), 'rank': 0}
     else:
         h = helmert(len(unique), full=False).T
         matrices, response = [], []
         for e, tags in remainder:
             x = np.array([[float(t == u) for u in unique] for t in tags])
             x -= x.mean(axis=0)
-            matrices.append(x @ h / np.sqrt(len(e) - 1))
+            matrices.append(np.einsum('ij,jk->ik', x, h) / np.sqrt(len(e) - 1))
             response.append(e / np.sqrt(len(e) - 1))
         x, y = np.concatenate(matrices), np.concatenate(response)
         singular = np.linalg.svd(x, compute_uv=False)
         full = singular[-1] > max(1e-12, singular[0] * 1e-10)
-        effects = h @ np.linalg.solve(x.T @ x, x.T @ y) if full else np.zeros(len(unique))
+        if full:
+            gram = np.einsum('ij,ik->jk', x, x)
+            rhs = np.einsum('ij,i->j', x, y)
+            effects = np.einsum('ij,j->i', h, np.linalg.solve(gram, rhs))
+        else:
+            effects = np.zeros(len(unique))
         seat = []
         for e, tags in remainder:
             b = np.array([effects[unique.index(t)] for t in tags])
             left = e - (b - b.mean())
-            seat.append(float(left @ left / (len(e) - 1)))
-        moments['within'] = {'shared': float(effects @ effects / (len(unique) - 1)) if full else None,
+            seat.append(float(np.sum(left * left) / (len(e) - 1)))
+        moments['within'] = {'shared': float(np.sum(effects * effects) / (len(unique) - 1)) if full else None,
                              'seat': float(np.mean(seat)), 'records': len(remainder),
                              'rank': int(np.sum(singular > max(1e-12, singular[0] * 1e-10))),
                              'columns': len(unique) - 1, 'classEffects': dict(zip(unique, effects.tolist())),

@@ -44,7 +44,7 @@ def mean_logit_location(probability, sd, order=41, tolerance=1e-12):
         return location
     nodes, weights = roots_hermitenorm(order)
     weights = weights / np.sqrt(2 * np.pi)
-    target = p[active]
+    target, lookup = np.unique(p[active], return_inverse=True)
     center = logit(target)
     low, high = center - 2 * sd * sd - 20, center + 2 * sd * sd + 20
     for _ in range(100):
@@ -54,7 +54,7 @@ def mean_logit_location(probability, sd, order=41, tolerance=1e-12):
         high = np.where(expected >= target, midpoint, high)
         if np.max(high - low) < tolerance:
             break
-    location[active] = (low + high) / 2
+    location[active] = ((low + high) / 2)[lookup]
     return location
 
 

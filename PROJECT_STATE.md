@@ -1,3 +1,13 @@
+# Stage45 scales and draws sealed — 2026-10-05
+
+Pre-scoring diagnosis/spec `ed300e4`, bounded CI-only checkpoint `e5b1d1e` pushed. Revised earlier-only aggregate/within scales and all12 component/composed cases sealed, both revised and unchanged Stage44 companions, exact common IDs at8000draws. No mean/national refit. Numerical sequence1024/2048/4096/8000 reached cap: last maximum changes0.167925pp expected share,0.189365ppCRPS,1.194817pp90width exceed frozen tolerances. Retain explicit cap/precision failure; no tolerance/count adjustment or fine superiority claims. Full final evaluation not yet calculated.
+
+Independent scalar/QR11 fits and54GH81 direction checks agree within1e-10; original Stage44 implementation/scales retained. 40 focused tests include pipeline outcome independence, zero locks, shared streams, rank fallback and exact cache corruption. Explicit einsum/sum implements unchanged finite dot arithmetic to avoid platform Accelerate false floating-status warnings, not a statistical/tolerance change.
+
+Exact next action: push this sealed checkpoint [skip ci], then evaluate saved draws; audit remainder conditional distortion/shared dependence/nonlinear means, independent proper scores and precision; full relevant local tests/source/preservation, docs/state/roadmap; unskipped final PR head complete Ubuntu gate. No acquisition/MCMC/extra transportvariance/family search. All1774previous datafiles pinned unchanged. Nomination/Māori/reconciliation/MMP remain separate.
+
+---
+
 # Stage45 pre-scoring checkpoint and bounded CI adjustment — 2026-10-05
 
 Frozen diagnosis/specification checkpoint `ed300e4` precedes revised estimation/scoring. Independent diagnosis and six tests pass; synthetic priors generated. Authorized CI-only addition on this branch: one Verify workflow inspected, standalone feature-push trigger removed, PR plus push-main retained; workflow/event/PR-or-ref concurrency cancels superseded same-ref work. All job names, permissions and validation commands unchanged. Existing PyYAML parse, exact event/expression checks, unchanged jobs/permissions assertions and whitespace pass. No hosted runs launched or cancelled to measure savings.
