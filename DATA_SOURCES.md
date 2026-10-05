@@ -297,3 +297,7 @@ Stage40 source-registry companion: the full suite exposed historical whole-file 
 ## Stage42 preserved within-seat geography audit
 
 No sources acquired: zero discovery queries and zero bulk resources. [Audit](docs/stage42-within-seat-evidence-audit.md) pins original Electoral Commission and boundary evidence and distinguishes complete electorate party counts from candidate ballots at voting places. These files have no residential fragment party-vote allocation. The exact cached Stage41 feasible party flows remain the primary scenario; no finer flow is fabricated. Stage42 source/feature/input/preservation contracts are separate companions in `data/processed/continuous-transport/`; prior raw bytes and source registry remain unchanged. Cutoffs/publication limitations remain those of the consumed historical and5October2026 snapshots.
+
+### Stage43 source reuse
+
+Zero acquisition. Separate continuous-candidate-comparison companions pin Stage33 saved primary fits, Stage42 inventories/flows/predictions and official evaluation-only target elections. Prior-data preservation hashes are a separate immutability audit, not a whole-registry model dependency. No changes to raw bytes, identity adjudications or operational records.

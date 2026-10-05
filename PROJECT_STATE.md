@@ -1,3 +1,19 @@
+# Stage43 completion handoff — 2026-10-05
+
+Branch `stage/43-continuous-s-joint-comparison`; Stage42 reviewed/merged ancestry verified. Frozen contract `e9e93f6`, predictions `c7748a1` before scoring. New companions: `data/processed/continuous-candidate-comparison/`; code `scripts/transport/comparison/`; contract/findings docs. No existing uncertainty work was present. No fitting/acquisition/MCMC/live shares or operational changes.
+
+**Results:** all 64/451 and 65/561 complete held general slates; exact IDs preserved; no general abstentions. Own Stage33 S/joint floors/coefficient vectors, shared fold training means independently verified, centered continuous source features and all predecessor mass retained. Broad/strict joint predictions reproduce Stage42 within 1e-12. MAE S→joint:2014 3.087985→2.717275 pp (joint-minus-S −0.370711),2020 1.985299→2.132448 (+0.147149). Strict joint MAE2.748319/2.175199. Contest-pooled2.532368→2.422595, equal-election2.536642→2.424862. Joint winner counts49→56 and52→55;2020 major-party and margin losses remain. D077 retains joint preferred/S active/baseline mandatory, without claiming consistent superiority.
+
+**Validation completed:**19 focused tests; deterministic construction/evaluation/verification/report/manifest reproduction; compile/whitespace;926 central-source checks; frontend31 tests/typecheck/build. Independent raw-component arithmetic387 vectors/3036 predictions,8447 metric identities and387 winner/tie/margin checks agrees within1e-12. All1756 prior data files remain byte-identical. No configured Python formatter/linter. Full Python suite passes: 870 tests in 164.9 seconds, nine intentional isolated-environment skips (`/tmp/stage43-full-python.log`). Completed result checkpoint `edaa0df` and validation checkpoint `5a025f4` pushed. [PR #50](https://github.com/jamesfeng24/nz-election-model-2026/pull/50) is open and must remain unmerged. Implementation, documentation and local checks are complete; final-head GitHub checks are pending at this committed handoff. Exact next action: verify PR50 checks on the current pushed HEAD, report the final SHA/clean tracking state, then stop. No reruns of completed local validation are needed. No expensive inference reruns.
+
+**Limits and next action after review:** conditional observed local party inputs, uniform within-source flow, practical identity and two reused environments; candidate uncertainty not calibrated, Māori remains separate. Do not pool Stage33–34/39 overlapping forecasts. Next separately authorized implementation is coherent local-party/candidate uncertainty using retained continuous mean-model preference; nomination refresh and Māori polling/baseline separately bounded. Stop further mean experiments.
+
+---
+
+# Stage43 checkpoint — frozen comparison, 2026-10-05
+
+PR49 merge613ec78 and reviewedc75a4c4 ancestry verified; clean checkout advanced safely. Branch stage/43-continuous-s-joint-comparison. No uncertainty work existed to preserve separately. Contract and exact64/451 and65/561 sample IDs pinned before calculation. Each Stage33 primary S/joint fit independently selected; saved training means verified shared within folds and unchanged from Stage42. Next: construct and seal fixed-fit predictions, reproduce joint references, then evaluate. No fitting/acquisition/operational change.
+
 # Stage42 — completed implementation / PR49 awaiting review, 2026-10-05
 
 Branch `stage/42-continuous-feature-transport`. [PR49](https://github.com/jamesfeng24/nz-election-model-2026/pull/49) is open and must remain unmerged. Stage41 merge/reviewed ancestry verified; frozen audit/contract66b033a → predictions8365b92 → implementation/results e3dabc8 are pushed. All existing work preserved.

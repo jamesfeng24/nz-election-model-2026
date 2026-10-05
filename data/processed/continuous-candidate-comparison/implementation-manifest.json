@@ -1,0 +1,32 @@
+{
+  "codeAndSpecificationHashes": {
+    "docs/stage43-comparison-contract.md": "72abe269b65be78fbfdd3b1e2b471d05edc160cade06b4f2f09c9186d0c94a12",
+    "docs/stage43-comparison-findings.md": "75226ff18c0037d723d60dde07e111af566d322338a9b2d938e34c4e6d099c3d",
+    "scripts/checkpoints/stage24_evaluation.py": "2bdb7f08476608d15d28e6a957b4785f0e6439794c4e9f09f291f3156aeec13b",
+    "scripts/models/joint_candidate_share/metrics.py": "f24beaaa86c7cea7ded6fdd9408d6aea35f499052c18aac554655627cf6154fb",
+    "scripts/tests/test_stage43_comparison.py": "91d94a8347c44f50542a25314d7fdd3960ea89a925c7fcdc575ac4bf99c7c207",
+    "scripts/transport/common.py": "3f19bc51e7895bc7f9f3c00ebe916ad73552fd9431930d3677c596e9e6801f77",
+    "scripts/transport/comparison/__init__.py": "1ef57203ed51c7a8bbdd06d895e48fc680a2e92b6fd9a37206d6714e6174de0e",
+    "scripts/transport/comparison/common.py": "f72834ec5fb615ed6082d3bc850a38321ca7ae6c2e5e305e55cf790e7034bab7",
+    "scripts/transport/comparison/construction.py": "9bc70e54adc3389510cec0d6ff83eb6de3cfba790066681083ef03f793345431",
+    "scripts/transport/comparison/evaluation.py": "5c15575c60e464081d07351f23627287c6519c9473cd249bed36dbe482c80cf5",
+    "scripts/transport/comparison/manifest.py": "1b60d3eb5d93f733456dc4659b80ca545c00bd87daaff46e90de82fcda43311c",
+    "scripts/transport/comparison/report.py": "9af5a4bf02f84268b18b37d62a9be1523d22a61a7d040531ba8c6ccd314fe3ba",
+    "scripts/transport/comparison/verification.py": "5989d1cb20168143ecf1e93b5ad61c8d0889218fa5d23e0e6790e67b422252ca",
+    "scripts/transport/continuous/features.py": "bbbdbb1217d278d32352d045566557cc2267129926eb9b9066e45b41aa175610"
+  },
+  "fittingPerformed": false,
+  "newSources": 0,
+  "operationalSelection": null,
+  "outputHashes": {
+    "data/processed/continuous-candidate-comparison/construction.json": "7f4cdea8d41243f89262ad18595d6aac0eb885e68919de6e6f6ff2a684b8ee4a",
+    "data/processed/continuous-candidate-comparison/evaluation.json": "3ad0cfbc0459902d06a9d6e7919b85e00090b8429dd38969a9333bcd7ae94c9f",
+    "data/processed/continuous-candidate-comparison/independent-verification.json": "3b3b078f711c95f6820bcbc4680f04b61dba35d7755c10a807691bf7fe31f755",
+    "data/processed/continuous-candidate-comparison/input-contract.json": "0040a14403a3f94e7efeef92b3bd185140311d08ac2e8c354e7aea4e0abb8b69",
+    "data/processed/continuous-candidate-comparison/preservation.json": "9322e8f57234d8db31c07d89050c87253a5bb32a1c3ea97d0da5fe26edd7b816",
+    "data/processed/continuous-candidate-comparison/sample-manifest.json": "05124e7287a3438d546ba9b65771930aaf24c2413814a881c84e052ec753419c",
+    "data/processed/continuous-candidate-comparison/specification.json": "02f646978498cf1a06e297ebb4773c3f1a36efb2cb302c6488fbc2b8d3cde673"
+  },
+  "reproduction": "construction, evaluation, verification, report, manifest --check",
+  "stage": 43
+}
