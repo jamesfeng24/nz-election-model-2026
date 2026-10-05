@@ -35,3 +35,9 @@ No automatic success from narrower intervals or coverage alone. If mixed, retain
 ## Pre-scoring numerical correction
 
 Full-frame2020 construction exposed an exact zero in a30-bit Sobol uniform, yielding an infinite Gaussian quantile and failed remainder adjustment. No predictive scores had been calculated. Use the midpoint of **every**30-bit cell: u + 0.5/2^30, with bits=30 explicit, before inverse CDFs. This is a finite integration convention, not a winner-probability floor, zero-vote replacement or statistical scale change. Original failed cache signatures remain recorded; regenerated companions use a new code signature. Priors, nu, tolerances, samples and compute count cap remain unchanged.
+
+## Pre-score conditional covariance correction
+
+The completed 9183cf simulation bank is retained as an unscored numerical checkpoint. Inspection before predictive scoring found that the new conditional remainder-location integration assumed independent option effects while the preserved simulation shares election effects among identical ballot labels (including multiple independents). Correct the integration covariance to shared-label plus individual-seat effects; preserve the actual stochastic family and Stage45 control. The same-label contrast has variance 2 seatSD²; a distinct-label contrast has variance 2(sharedSD² + seatSD²). No target outcomes determine this correction. Existing 64-node construction, 128/256-node checks, .05pp conditional tolerance and 32,768 simulation cap remain frozen. Report any remaining failure.
+
+Reuse identical Gaussian/Student local inputs and mass/remainder predictions only after comparison with independently composed arrays. Exact repeated 4,096-row national inputs may reuse their conditional offsets; any difference requires full calculation. This is arithmetic reuse, not a new statistical branch.
