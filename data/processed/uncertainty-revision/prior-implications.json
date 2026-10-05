@@ -1,0 +1,700 @@
+{
+  "calibrationEvidence": false,
+  "fixtures": [
+    {
+      "expectedPP": [
+        50.999013743655475,
+        49.000986256344525
+      ],
+      "fixture": "competitive_two",
+      "groups": [
+        "national",
+        "labour"
+      ],
+      "interval90PP": [
+        [
+          35.74178184339194,
+          33.86303568666598
+        ],
+        [
+          66.13696431333402,
+          64.25821815660807
+        ]
+      ],
+      "layer": "candidate",
+      "mean": [
+        0.51,
+        0.49
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.51,
+          0.49
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": null,
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          -0.000986256344526204,
+          0.000986256344526204
+        ],
+        "simulatedMean": [
+          0.5099901374365547,
+          0.49000986256344525
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        40.001610849607644,
+        34.99344118831628,
+        15.002968768985331,
+        8.001583355732075,
+        2.000395837358668
+      ],
+      "fixture": "multi_party",
+      "groups": [
+        "national",
+        "labour",
+        "other",
+        "other",
+        "no_group"
+      ],
+      "interval90PP": [
+        [
+          26.857104561566814,
+          22.5584746321147,
+          5.189037255431614,
+          1.5904061971089134,
+          0.2999463890021578
+        ],
+        [
+          53.78873295288034,
+          48.473205745215445,
+          27.733092115703183,
+          18.59003850194563,
+          5.860941270526481
+        ]
+      ],
+      "layer": "candidate",
+      "mean": [
+        0.4,
+        0.35,
+        0.15,
+        0.08,
+        0.02
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.4,
+          0.35,
+          0.15,
+          0.08,
+          0.02
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": {
+            "iterations": 10,
+            "locationOffset": [
+              0.12703226010890342,
+              -0.0023683720162214505,
+              -0.12466388809268196
+            ],
+            "maximumMarginalGapPP": 8.260270245585843e-09,
+            "scope": "remainder marginal only; per-input remainder allocation not preserved"
+          },
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          0.0016108496076416845,
+          -0.006558811683715637,
+          0.0029687689853313826,
+          0.0015833557320751868,
+          0.0003958373586677305
+        ],
+        "simulatedMean": [
+          0.40001610849607644,
+          0.3499344118831628,
+          0.1500296876898533,
+          0.08001583355732075,
+          0.020003958373586678
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        44.99393897305805,
+        40.00586776481768,
+        10.00012883767182,
+        4.00005154002707,
+        0.9000115959878733,
+        0.10000128843751267
+      ],
+      "fixture": "small_options",
+      "groups": [
+        "national",
+        "labour",
+        "other",
+        "other",
+        "other",
+        "no_group"
+      ],
+      "interval90PP": [
+        [
+          31.462840196940128,
+          26.94267610091094,
+          3.6405005215849613,
+          0.7204121281749747,
+          0.12171675259538042,
+          0.012608199130391955
+        ],
+        [
+          58.69361370965688,
+          53.70013441803535,
+          18.766397794338904,
+          9.937977739084273,
+          2.6751242573619285,
+          0.3077568742914319
+        ]
+      ],
+      "layer": "candidate",
+      "mean": [
+        0.45,
+        0.4,
+        0.1,
+        0.04,
+        0.009,
+        0.001
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.45,
+          0.4,
+          0.1,
+          0.04,
+          0.009,
+          0.001
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": {
+            "iterations": 10,
+            "locationOffset": [
+              0.20369474943774224,
+              0.03477617853950232,
+              -0.09926772753365343,
+              -0.13920320044359114
+            ],
+            "maximumMarginalGapPP": 3.744343723965926e-09,
+            "scope": "remainder marginal only; per-input remainder allocation not preserved"
+          },
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          -0.0060610269419503204,
+          0.005867764817674148,
+          0.0001288376718200368,
+          5.1540027070501315e-05,
+          1.1595987873397329e-05,
+          1.2884375126705205e-06
+        ],
+        "simulatedMean": [
+          0.4499393897305805,
+          0.40005867764817676,
+          0.1000012883767182,
+          0.040000515400270706,
+          0.009000115959878733,
+          0.0010000128843751267
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        54.99869230191792,
+        30.000871797018757,
+        10.000290600884458,
+        5.000145300178872
+      ],
+      "fixture": "missing_labour",
+      "groups": [
+        "national",
+        "other",
+        "other",
+        "no_group"
+      ],
+      "interval90PP": [
+        [
+          37.81509414237274,
+          12.658675984011639,
+          1.8266083013029362,
+          0.7689333416647057
+        ],
+        [
+          71.42785559427438,
+          48.714651551607105,
+          24.569685255603176,
+          13.94342258858227
+        ]
+      ],
+      "layer": "candidate",
+      "mean": [
+        0.55,
+        0.3,
+        0.1,
+        0.05
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.55,
+          0.3,
+          0.1,
+          0.05
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": {
+            "iterations": 11,
+            "locationOffset": [
+              0.16022487365775584,
+              -0.04270938775594369,
+              -0.11751548590181216
+            ],
+            "maximumMarginalGapPP": 1.702682439486125e-09,
+            "scope": "remainder marginal only; per-input remainder allocation not preserved"
+          },
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          -0.0013076980820869721,
+          0.0008717970187588353,
+          0.00029060088445748145,
+          0.00014530017887134927
+        ],
+        "simulatedMean": [
+          0.5499869230191792,
+          0.3000087179701876,
+          0.10000290600884458,
+          0.050001453001788716
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        49.99999999791539,
+        30.00000000151946,
+        20.00000000056516
+      ],
+      "fixture": "no_majors",
+      "groups": [
+        "other",
+        "other",
+        "no_group"
+      ],
+      "interval90PP": [
+        [
+          18.261375655646177,
+          7.467608137230959,
+          4.194945360472689
+        ],
+        [
+          81.3940680645088,
+          62.26215425910975,
+          47.794487881383745
+        ]
+      ],
+      "layer": "candidate",
+      "mean": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.5,
+          0.3,
+          0.2
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": {
+            "iterations": 11,
+            "locationOffset": [
+              0.07984693060874955,
+              -0.010474798984229566,
+              -0.06937213162451998
+            ],
+            "maximumMarginalGapPP": 2.08456585326644e-09,
+            "scope": "remainder marginal only; per-input remainder allocation not preserved"
+          },
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          -2.084610262187425e-09,
+          1.5194623337322355e-09,
+          5.651590306854359e-10
+        ],
+        "simulatedMean": [
+          0.4999999999791539,
+          0.3000000000151946,
+          0.2000000000056516
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        50.99993817161599,
+        49.00006182838401
+      ],
+      "fixture": "competitive_two",
+      "groups": [
+        "national",
+        "labour"
+      ],
+      "interval90PP": [
+        [
+          43.955947844957194,
+          41.981456817726134
+        ],
+        [
+          58.01854318227386,
+          56.0440521550428
+        ]
+      ],
+      "layer": "local_party",
+      "mean": [
+        0.51,
+        0.49
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.51,
+          0.49
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": null,
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          -6.18283840125855e-05,
+          6.18283840125855e-05
+        ],
+        "simulatedMean": [
+          0.5099993817161599,
+          0.4900006182838401
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        40.00318748499193,
+        35.00056721869457,
+        14.997747175529435,
+        7.998798496945667,
+        1.9996996238383895
+      ],
+      "fixture": "multi_party",
+      "groups": [
+        "national",
+        "labour",
+        "other",
+        "other",
+        "no_group"
+      ],
+      "interval90PP": [
+        [
+          33.86238899704415,
+          29.048333925221637,
+          7.8807971322821775,
+          2.8729027131073317,
+          0.5814943443184761
+        ],
+        [
+          46.25049104766109,
+          41.146379006011344,
+          22.64402721508593,
+          15.07287670872833,
+          4.520714862535195
+        ]
+      ],
+      "layer": "local_party",
+      "mean": [
+        0.4,
+        0.35,
+        0.15,
+        0.08,
+        0.02
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.4,
+          0.35,
+          0.15,
+          0.08,
+          0.02
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": {
+            "iterations": 8,
+            "locationOffset": [
+              0.0686883888749592,
+              0.0006017910000812934,
+              -0.06929017987504049
+            ],
+            "maximumMarginalGapPP": 2.258768172502812e-09,
+            "scope": "remainder marginal only; per-input remainder allocation not preserved"
+          },
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          0.0031874849919344417,
+          0.0005672186945693269,
+          -0.0022528244705638523,
+          -0.0012015030543335858,
+          -0.00030037616161049385
+        ],
+        "simulatedMean": [
+          0.40003187484991937,
+          0.35000567218694567,
+          0.14997747175529436,
+          0.07998798496945667,
+          0.019996996238383895
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        44.99932067641646,
+        39.99858808326244,
+        10.00139415888905,
+        4.000557665291998,
+        0.9001254745287787,
+        0.1000139416112665
+      ],
+      "fixture": "small_options",
+      "groups": [
+        "national",
+        "labour",
+        "other",
+        "other",
+        "other",
+        "no_group"
+      ],
+      "interval90PP": [
+        [
+          38.552639762616515,
+          33.70391102463157,
+          5.542433767984168,
+          1.2965229445885587,
+          0.23719722825076253,
+          0.02598247191880257
+        ],
+        [
+          51.47476512901476,
+          46.47737072803004,
+          14.895732067099054,
+          7.926693766542736,
+          2.1286202436284287,
+          0.2443499527682243
+        ]
+      ],
+      "layer": "local_party",
+      "mean": [
+        0.45,
+        0.4,
+        0.1,
+        0.04,
+        0.009,
+        0.001
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.45,
+          0.4,
+          0.1,
+          0.04,
+          0.009,
+          0.001
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": {
+            "iterations": 8,
+            "locationOffset": [
+              0.11162517146921003,
+              0.012220063299232198,
+              -0.05796795690838685,
+              -0.06587727786005537
+            ],
+            "maximumMarginalGapPP": 1.3250039954115778e-09,
+            "scope": "remainder marginal only; per-input remainder allocation not preserved"
+          },
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          -0.0006793235835411693,
+          -0.001411916737559249,
+          0.0013941588890509227,
+          0.0005576652919982161,
+          0.00012547452877872262,
+          1.3941611266506983e-05
+        ],
+        "simulatedMean": [
+          0.4499932067641646,
+          0.39998588083262443,
+          0.10001394158889051,
+          0.04000557665291998,
+          0.009001254745287787,
+          0.001000139416112665
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        55.00307612703816,
+        29.997949246084985,
+        9.999316418314368,
+        4.999658208562485
+      ],
+      "fixture": "missing_labour",
+      "groups": [
+        "national",
+        "other",
+        "other",
+        "no_group"
+      ],
+      "interval90PP": [
+        [
+          46.08651304946384,
+          18.098169430328106,
+          3.229084830263298,
+          1.5315236079064374
+        ],
+        [
+          63.71791745300407,
+          41.46217005956502,
+          20.191001674608803,
+          10.786105104869682
+        ]
+      ],
+      "layer": "local_party",
+      "mean": [
+        0.55,
+        0.3,
+        0.1,
+        0.05
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.55,
+          0.3,
+          0.1,
+          0.05
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": {
+            "iterations": 8,
+            "locationOffset": [
+              0.08346400315650179,
+              -0.03143234063846061,
+              -0.052031662518041186
+            ],
+            "maximumMarginalGapPP": 2.5562607586238073e-09,
+            "scope": "remainder marginal only; per-input remainder allocation not preserved"
+          },
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          0.003076127038159626,
+          -0.0020507539150116383,
+          -0.0006835816856315402,
+          -0.0003417914375150599
+        ],
+        "simulatedMean": [
+          0.5500307612703816,
+          0.2999794924608499,
+          0.09999316418314369,
+          0.04999658208562485
+        ]
+      },
+      "syntheticOnly": true
+    },
+    {
+      "expectedPP": [
+        49.99999999532799,
+        30.00000000340019,
+        20.000000001271815
+      ],
+      "fixture": "no_majors",
+      "groups": [
+        "other",
+        "other",
+        "no_group"
+      ],
+      "interval90PP": [
+        [
+          25.811635377636083,
+          11.863612701000386,
+          7.042124486007609
+        ],
+        [
+          73.95715713551209,
+          53.498936427460606,
+          39.531746681736216
+        ]
+      ],
+      "layer": "local_party",
+      "mean": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "metadata": {
+        "deterministicMean": [
+          0.5,
+          0.3,
+          0.2
+        ],
+        "location": {
+          "topLocation": "conditional Gauss-Hermite41 arithmetic expectation",
+          "withinLocation": {
+            "iterations": 8,
+            "locationOffset": [
+              0.043660157742398065,
+              -0.006513278303344254,
+              -0.037146879439053815
+            ],
+            "maximumMarginalGapPP": 4.672057185572953e-09,
+            "scope": "remainder marginal only; per-input remainder allocation not preserved"
+          },
+          "zeroFacePreserved": true
+        },
+        "meanShiftPP": [
+          -4.672007225536845e-09,
+          3.400191239677497e-09,
+          1.2718132103017865e-09
+        ],
+        "simulatedMean": [
+          0.4999999999532799,
+          0.3000000000340019,
+          0.20000000001271814
+        ]
+      },
+      "syntheticOnly": true
+    }
+  ],
+  "stage": 45
+}

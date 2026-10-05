@@ -1,0 +1,21 @@
+{
+  "inputHashes": {
+    "data/processed/polling/candidate-integration/national/2017-recent_report_prior.json.gz": "5989a5a72dc929cbca19043a2854b4d5204d1c8d3a225a51924bcc31ed7640f9",
+    "data/processed/polling/candidate-integration/national/2020-recent_report_prior.json.gz": "e5a22a198ebc32658bf7d5c028663a4947f1d0164c051ab6aac28871ae8485f9",
+    "data/processed/polling/candidate-integration/national/2023-recent_report_prior.json.gz": "384b651ffb2119aa5713854d6ba956b2b00e72c0fd7643c30183e7687572f4fa",
+    "data/processed/uncertainty/input-contract.json": "4b2638124d34a9c02f4514106d99556cd7574a331e22b21f86baa4bf07e21001",
+    "data/processed/uncertainty/inventory.json": "ef03dd9dd60130a8adc70901a931b6f481921661773c0f214343c8006de6e44f",
+    "data/processed/uncertainty/scales.json": "5772a57d7a2585721cb0a3e177db5ab4142e3c5a5a096d759283f425594597c6",
+    "data/processed/uncertainty/specification.json": "a6418cfa5f923009b48dc73f00bf2b3c7de8989cfeab77190aeec08a3d4aa664",
+    "scripts/uncertainty/estimation.py": "6ea4b6cf3ddb0fd1066905c025a73cfc399d8d6a0c9e64face3abff1e367f141",
+    "scripts/uncertainty/inventory.py": "36bd578925f08fbb0027823be4745867d315fbeb8f89842087b048ec15f076a0",
+    "scripts/uncertainty/metrics.py": "f7f105dd0d8397a5e4180b4fabd1605b64c00a8c9ba1ce3d5b529c96d3147bf4",
+    "scripts/uncertainty/simulation.py": "b24f58b4664b817fd7dde1147d5292457a9edae98286d3c71eae835b4103852b",
+    "scripts/uncertainty/streams.py": "b23b4e13a08ac3aec7daef7e34888782d795801679232a23ed2fa6ccc77eef0b",
+    "scripts/uncertainty/transforms.py": "30158b52dae16a3ae52f218c5f13428899bcd734ce6c279ce58717d0d2c43a2b"
+  },
+  "meanContracts": "pinned Stage44 source inventories, frozen Stage33 earlier fits and continuous Stage42/43; no refitting",
+  "noAcquisition": true,
+  "priorUse": "post-Stage44 correction design using repeatedly inspected historical elections",
+  "stage": 45
+}

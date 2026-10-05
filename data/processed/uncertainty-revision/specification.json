@@ -1,0 +1,72 @@
+{
+  "allocation": "recent_report_prior",
+  "capDraws": 8000,
+  "chronology": "earlier residual target elections only, primary expanding",
+  "comparison": [
+    "revised",
+    "unchanged_stage44",
+    "point"
+  ],
+  "convergence": {
+    "action": "same common selected draw count for every policy; cap failure labelled numerically unresolved, no further count or tolerance change",
+    "maximum90WidthChangePP": 0.5,
+    "maximumCRPSChangePP": 0.05,
+    "maximumMeanChangePP": 0.05,
+    "representatives": "first, middle, last sorted seat ID per layer/election"
+  },
+  "drawCounts": [
+    1024,
+    2048,
+    4096,
+    8000
+  ],
+  "energyDraws": 128,
+  "extraTransportVariance": false,
+  "family": "arithmetic major/remainder tree; independent NL balance, major mass, projected exchangeable within remainder",
+  "gaussHermiteOrder": 41,
+  "locationTolerance": 1e-10,
+  "meanPolicy": "conditional GH41 for aggregate balances; outcome-free finite-bank marginal remainder adjustment; explicitly limited conditional remainder preservation",
+  "nationalCases": [
+    2017,
+    2020,
+    2023
+  ],
+  "nationalHorizon": 56,
+  "operationalSelection": null,
+  "parameterUncertainty": "omitted",
+  "priorPseudoEnvironments": 3,
+  "priors": {
+    "candidate": {
+      "balance": {
+        "seat": 0.35,
+        "shared": 0.15
+      },
+      "mass": {
+        "seat": 0.4,
+        "shared": 0.15
+      },
+      "within": {
+        "seat": 0.7,
+        "shared": 0.2
+      }
+    },
+    "local_party": {
+      "balance": {
+        "seat": 0.15,
+        "shared": 0.08
+      },
+      "mass": {
+        "seat": 0.2,
+        "shared": 0.1
+      },
+      "within": {
+        "seat": 0.5,
+        "shared": 0.15
+      }
+    }
+  },
+  "seed": 20261005,
+  "sharedDependence": "two shared scalar aggregate effects plus exchangeable shared remainder ballot-group effects; independent layers",
+  "stage": 45,
+  "zeroReplacement": 1e-06
+}
