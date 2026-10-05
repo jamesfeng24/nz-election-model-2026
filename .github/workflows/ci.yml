@@ -1,6 +1,7 @@
 name: Verify
 on:
   pull_request:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -24,10 +25,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version-file: .python-version
       - run: python3 -m pip install -r requirements-boundaries.txt
+      - name: Select bounded Stage39 validation
+        id: stage39
+        env:
+          CI_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          CI_EVENT_NAME: ${{ github.event_name }}
+        run: python3 -m scripts.validate.ci_selection --base "$CI_BASE_SHA" --event "$CI_EVENT_NAME" --github-output "$GITHUB_OUTPUT"
       - run: python3 -m scripts.polling.external_comparison.archive --check
       - run: python3 -m scripts.polling.external_comparison.evaluation --check
       - run: python3 -m scripts.polling.category_interface.run --check
@@ -92,11 +101,19 @@ jobs:
       - run: python3 -m scripts.polling.external_comparison.numerical_audit --check
       - run: python3 -m scripts.polling.external_comparison.verification --check
       - run: python3 -m scripts.polling.external_comparison.report --check
+      - name: Verify previously validated Stage39 sealed integrity
+        if: steps.stage39.outputs.mode == 'integrity'
+        run: python3 -m scripts.validate.ci_stage39 --check
       - run: python3 -m scripts.polling.candidate_integration.inventory --check
+        if: steps.stage39.outputs.mode != 'integrity'
       - run: python3 -m scripts.polling.candidate_integration.construction --check
+        if: steps.stage39.outputs.mode != 'integrity'
       - run: python3 -m scripts.polling.candidate_integration.evaluation --check
+        if: steps.stage39.outputs.mode != 'integrity'
       - run: python3 -m scripts.polling.candidate_integration.verification --check
+        if: steps.stage39.outputs.mode != 'integrity'
       - run: python3 -m scripts.polling.candidate_integration.report --check
+        if: steps.stage39.outputs.mode != 'integrity'
       - run: python3 -m scripts.readiness.run --check
       - run: python3 -m scripts.readiness.report --check
       - run: python3 -m scripts.readiness.verification --check
@@ -128,3 +145,12 @@ jobs:
       - run: python3 -m scripts.uncertainty.verification --check
       - run: python3 -m scripts.uncertainty.report --check
       - run: python3 -m scripts.uncertainty.manifest --check
+      - run: python3 -m scripts.uncertainty_revision.diagnosis --check
+      - run: python3 -m scripts.uncertainty_revision.priors --check
+      - run: python3 -m scripts.uncertainty_revision.estimation --check
+      - run: python3 -m scripts.uncertainty_revision.construction --check
+      - run: python3 -m scripts.uncertainty_revision.evaluation --check
+      - run: python3 -m scripts.uncertainty_revision.mean_audit --check
+      - run: python3 -m scripts.uncertainty_revision.verification --check
+      - run: python3 -m scripts.uncertainty_revision.report --check
+      - run: python3 -m scripts.uncertainty_revision.manifest --check

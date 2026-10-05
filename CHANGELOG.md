@@ -349,3 +349,11 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Added earlier-only scales, interpretable synthetic priors, conditional major mean adjustment, shared dependence, resumable8000draw companions and independent arithmetic.
 - Reported improved proper scores with small-group losses, conditional minor distortions, zero winner-frequency miss and unmet numerical cap; no calibrated deployment claim or mean refit.
 - Preserved all previous data, coefficients, identities and operational nulls. Bounded CI cost controls remain separately identified and fully validated on the final review head.
+
+## Stage45 bounded CI cost control — 2026-10-05
+
+- Replace routine checkpoint pushes with local resumable commits; final review heads remain unskipped.
+- Remove duplicate standalone feature-push runs; retain PR/main/manual events and cancellation of superseded same workflow/event/ref runs.
+- Add one conservative Stage39 integrity path tied to actual prior full Linux evidence and complete reviewed dependency/runtime fingerprints; preserve unchanged full reconstruction commands.
+- Keep every behavioural/default discovery test and all other historical gates. First revised PR and all main/manual runs are full. Semantic archival classification does not omit tests.
+- Measured original Linux Stage39 construction about143s; new integrity1.697s on different local hardware, not a matched savings benchmark. No hosted measurement run or inference/cache changes.

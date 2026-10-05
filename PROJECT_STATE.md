@@ -1,3 +1,15 @@
+# Stage45 final local validation and bounded CI checkpoint — 2026-10-05
+
+Branch `stage/45-residual-scale-allocation`. Last remote head `e9fd69c`; results commit `61e5f19` and subsequent CI/provenance work are local only. No Stage45 PR yet. Updated authorization: local checkpoints, one review-ready push; unpushed work is not on GitHub. All modelling results and original numerical limits below are retained.
+
+CI change is limited: PR plus main-only push/manual Verify, workflow/event/PR-or-ref concurrency, full default behavioural discovery, all other historical commands unchanged. Only five Stage39 full reconstruction commands may later reuse exact prior Linux validation through a conservative dependency/runtime attestation and a distinct lightweight integrity path. First revised PR, main, manual, CI/test/shared/unknown changes remain full. Stage24 archival regeneration is classified but still always run; new tests default behavioural and force full. No hosted benchmark run, inference cache or schedule. See `docs/ci-validation.md`.
+
+53 focused CI/uncertainty tests pass; full local suite and original standalone command sequence are currently running in `/tmp/stage45-full-local.log`. Earlier frontend31tests/typecheck/build and926source checks passed. Exact transitive producer-helper audit identified17 unchanged historical modules omitted from Stage45 cache identity. Expanded hashes and reconstructed draw companions change provenance only; numerical comparison/verification is completing in `/tmp/stage45-provenance-verification.log`. Preserve caches; no MCMC/mean refit/sources/tolerance changes.
+
+Resume: inspect local/remote status, finish those two local logs, verify all numerical values unchanged, commit remaining provenance/output updates locally. Complete new deterministic Stage45 checks and preservation. Push one unskipped final review head, create Stage45 PR, attach it, verify full Ubuntu jobs on exact SHA and leave unmerged. No further uncertainty family or forecast task authorized. Official nominations, Māori baseline/polls, reconciliation/turnout and MMP remain separate.
+
+---
+
 # Stage45 uncertainty results complete locally; CI restructuring in progress — 2026-10-05
 
 Branch `stage/45-residual-scale-allocation`. Pre-scoring `ed300e4`, first CI-only `e5b1d1e`, sealed draws `e9fd69c`; remote last pushed `e9fd69c`. Current results/verification/docs are LOCAL work, not yet on GitHub. Updated user authorization supersedes checkpoint-push rules: meaningful local commits, push at review readiness; skip markers only optional non-review backups. Final head/merge unskipped. No additional PR for CI.

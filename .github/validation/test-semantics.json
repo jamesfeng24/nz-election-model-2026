@@ -1,0 +1,29 @@
+{
+  "default": "behavioural",
+  "entries": [
+    {
+      "class": "Stage24EvaluationTests",
+      "classification": "archival_reproduction_kept_full",
+      "equivalentStandalone": "python3 -m scripts.checkpoints.stage24_evaluation --check",
+      "execution": "always",
+      "file": "scripts/tests/test_stage24_evaluation.py",
+      "id": "scripts/tests/test_stage24_evaluation.py:Stage24EvaluationTests.test_deterministic_regeneration_and_scenarios",
+      "method": "test_deterministic_regeneration_and_scenarios",
+      "methodSourceSha256": "f2b493ffbae011502cdc8091569f910dad2313fccbb3d06189b2337c67383d2b",
+      "reason": "The body only regenerates the frozen Stage24 evaluation/manifest and verifies saved bytes/scenario coverage. Its dependency closure is not yet registered, so it remains mandatory."
+    },
+    {
+      "class": "ActualInventoryTests",
+      "classification": "behavioural",
+      "equivalentStandalone": "not a substitute for standalone Stage39 construction",
+      "execution": "always",
+      "file": "scripts/tests/test_stage39_candidate_integration.py",
+      "id": "scripts/tests/test_stage39_candidate_integration.py:ActualInventoryTests.test_actual_original_conditional_predictions_reproduce",
+      "method": "test_actual_original_conditional_predictions_reproduce",
+      "methodSourceSha256": "4ba630d91f40862ea2d8669f520bd3502ce46b0122fa709f63fc488061b19dea",
+      "reason": "The body checks bounded original conditional compatibility on representative slates. It does not reconstruct the 8000-draw integration; never skip based on the word reproduce."
+    }
+  ],
+  "skipPolicy": "none; standard discovery remains full",
+  "version": 1
+}
