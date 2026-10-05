@@ -1,0 +1,415 @@
+{
+  "failureAction": "report integration limitation; no tolerance, family or mean change",
+  "gatePP": 0.05,
+  "maximumConditionalExpectationGapPP": 0.1566583050670863,
+  "passed": false,
+  "reports": [
+    {
+      "gaussianSD": 0.35,
+      "nu": 4,
+      "pooledMAD": 0.23607141256862857,
+      "seatCentralIntervalsLogBalance": {
+        "0.5": {
+          "gaussianWidth": 0.47214282513725714,
+          "studentWidth": 0.4721428251372572
+        },
+        "0.8": {
+          "gaussianWidth": 0.8970860958812202,
+          "studentWidth": 0.9773122606582415
+        },
+        "0.9": {
+          "gaussianWidth": 1.1513975388660302,
+          "studentWidth": 1.3589039109566066
+        }
+      },
+      "studentSD": 0.45073134550819727,
+      "studentScale": 0.318715190902183,
+      "syntheticChecks": [
+        {
+          "checks": {
+            "balanceMaximumGapPP": 6.772360450213455e-12
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other"
+          ],
+          "mean": [
+            0.48,
+            0.48,
+            0.04
+          ],
+          "name": "competitive"
+        },
+        {
+          "checks": {
+            "balanceMaximumGapPP": 2.7377608124989905e-05,
+            "withinMaximumGapPP128": 0.11898378156293668,
+            "withinMaximumGapPP256": 0.14862785752242916
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other",
+            "other",
+            "other",
+            "no_group"
+          ],
+          "mean": [
+            0.37,
+            0.32,
+            0.15,
+            0.08,
+            0.04,
+            0.04
+          ],
+          "name": "multi"
+        },
+        {
+          "checks": {
+            "balanceMaximumGapPP": 6.772360450213455e-12,
+            "withinMaximumGapPP128": 1.1102230246251566e-17,
+            "withinMaximumGapPP256": 1.1102230246251566e-17
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other",
+            "other"
+          ],
+          "mean": [
+            0.499,
+            0.499,
+            0.001,
+            0.001
+          ],
+          "name": "tiny"
+        },
+        {
+          "checks": {
+            "withinMaximumGapPP128": 0.13020169615062108,
+            "withinMaximumGapPP256": 0.12423548050867537
+          },
+          "groups": [
+            "national",
+            "other",
+            "no_group"
+          ],
+          "mean": [
+            0.55,
+            0.35,
+            0.1
+          ],
+          "name": "missing_major"
+        }
+      ],
+      "year": 2014
+    },
+    {
+      "gaussianSD": 0.3254122293959259,
+      "nu": 4,
+      "pooledMAD": 0.2194872133160081,
+      "seatCentralIntervalsLogBalance": {
+        "0.5": {
+          "gaussianWidth": 0.4389744266320162,
+          "studentWidth": 0.43897442663201613
+        },
+        "0.8": {
+          "gaussianWidth": 0.8340651040594149,
+          "studentWidth": 0.9086553187336303
+        },
+        "0.9": {
+          "gaussianWidth": 1.0705109715525063,
+          "studentWidth": 1.2634398605692345
+        }
+      },
+      "studentSD": 0.4190671200012795,
+      "studentScale": 0.29632520232522136,
+      "syntheticChecks": [
+        {
+          "checks": {
+            "balanceMaximumGapPP": 6.794564910705958e-12
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other"
+          ],
+          "mean": [
+            0.48,
+            0.48,
+            0.04
+          ],
+          "name": "competitive"
+        },
+        {
+          "checks": {
+            "balanceMaximumGapPP": 4.4168098345398477e-05,
+            "withinMaximumGapPP128": 0.11305931306301227,
+            "withinMaximumGapPP256": 0.1408497057850459
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other",
+            "other",
+            "other",
+            "no_group"
+          ],
+          "mean": [
+            0.37,
+            0.32,
+            0.15,
+            0.08,
+            0.04,
+            0.04
+          ],
+          "name": "multi"
+        },
+        {
+          "checks": {
+            "balanceMaximumGapPP": 6.794564910705958e-12,
+            "withinMaximumGapPP128": 4.4408920985006264e-17,
+            "withinMaximumGapPP256": 6.661338147750939e-17
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other",
+            "other"
+          ],
+          "mean": [
+            0.499,
+            0.499,
+            0.001,
+            0.001
+          ],
+          "name": "tiny"
+        },
+        {
+          "checks": {
+            "withinMaximumGapPP128": 0.12487876579527933,
+            "withinMaximumGapPP256": 0.12046463183323475
+          },
+          "groups": [
+            "national",
+            "other",
+            "no_group"
+          ],
+          "mean": [
+            0.55,
+            0.35,
+            0.1
+          ],
+          "name": "missing_major"
+        }
+      ],
+      "year": 2017
+    },
+    {
+      "gaussianSD": 0.30415416731313255,
+      "nu": 4,
+      "pooledMAD": 0.20514886833213203,
+      "seatCentralIntervalsLogBalance": {
+        "0.5": {
+          "gaussianWidth": 0.410297736664264,
+          "studentWidth": 0.41029773666426406
+        },
+        "0.8": {
+          "gaussianWidth": 0.7795784985741187,
+          "studentWidth": 0.8492959909869218
+        },
+        "0.9": {
+          "gaussianWidth": 1.0005781705148218,
+          "studentWidth": 1.1809036785587599
+        }
+      },
+      "studentSD": 0.39169090592849604,
+      "studentScale": 0.2769672957111416,
+      "syntheticChecks": [
+        {
+          "checks": {
+            "balanceMaximumGapPP": 6.8334227165678385e-12
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other"
+          ],
+          "mean": [
+            0.48,
+            0.48,
+            0.04
+          ],
+          "name": "competitive"
+        },
+        {
+          "checks": {
+            "balanceMaximumGapPP": 3.372332013640289e-05,
+            "withinMaximumGapPP128": 0.11375969624994219,
+            "withinMaximumGapPP256": 0.1417657797972806
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other",
+            "other",
+            "other",
+            "no_group"
+          ],
+          "mean": [
+            0.37,
+            0.32,
+            0.15,
+            0.08,
+            0.04,
+            0.04
+          ],
+          "name": "multi"
+        },
+        {
+          "checks": {
+            "balanceMaximumGapPP": 6.8334227165678385e-12,
+            "withinMaximumGapPP128": 2.2204460492503132e-17,
+            "withinMaximumGapPP256": 4.4408920985006264e-17
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other",
+            "other"
+          ],
+          "mean": [
+            0.499,
+            0.499,
+            0.001,
+            0.001
+          ],
+          "name": "tiny"
+        },
+        {
+          "checks": {
+            "withinMaximumGapPP128": 0.12551482202909192,
+            "withinMaximumGapPP256": 0.12091926639787975
+          },
+          "groups": [
+            "national",
+            "other",
+            "no_group"
+          ],
+          "mean": [
+            0.55,
+            0.35,
+            0.1
+          ],
+          "name": "missing_major"
+        }
+      ],
+      "year": 2020
+    },
+    {
+      "gaussianSD": 0.2836704244871433,
+      "nu": 4,
+      "pooledMAD": 0.19133279375034973,
+      "seatCentralIntervalsLogBalance": {
+        "0.5": {
+          "gaussianWidth": 0.3826655875006995,
+          "studentWidth": 0.3826655875006994
+        },
+        "0.8": {
+          "gaussianWidth": 0.7270765532003997,
+          "studentWidth": 0.792098810964037
+        },
+        "0.9": {
+          "gaussianWidth": 0.9331926531530826,
+          "studentWidth": 1.1013738550237133
+        }
+      },
+      "studentSD": 0.3653118631713473,
+      "studentScale": 0.25831449569635184,
+      "syntheticChecks": [
+        {
+          "checks": {
+            "balanceMaximumGapPP": 6.850076061937216e-12
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other"
+          ],
+          "mean": [
+            0.48,
+            0.48,
+            0.04
+          ],
+          "name": "competitive"
+        },
+        {
+          "checks": {
+            "balanceMaximumGapPP": 3.790678838599959e-05,
+            "withinMaximumGapPP128": 0.12504482960331442,
+            "withinMaximumGapPP256": 0.1566583050670863
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other",
+            "other",
+            "other",
+            "no_group"
+          ],
+          "mean": [
+            0.37,
+            0.32,
+            0.15,
+            0.08,
+            0.04,
+            0.04
+          ],
+          "name": "multi"
+        },
+        {
+          "checks": {
+            "balanceMaximumGapPP": 6.850076061937216e-12,
+            "withinMaximumGapPP128": 0.0,
+            "withinMaximumGapPP256": 2.2204460492503132e-17
+          },
+          "groups": [
+            "national",
+            "labour",
+            "other",
+            "other"
+          ],
+          "mean": [
+            0.499,
+            0.499,
+            0.001,
+            0.001
+          ],
+          "name": "tiny"
+        },
+        {
+          "checks": {
+            "withinMaximumGapPP128": 0.1355115366162657,
+            "withinMaximumGapPP256": 0.12792267990821504
+          },
+          "groups": [
+            "national",
+            "other",
+            "no_group"
+          ],
+          "mean": [
+            0.55,
+            0.35,
+            0.1
+          ],
+          "name": "missing_major"
+        }
+      ],
+      "year": 2023
+    }
+  ],
+  "scaleAndSDDistinguished": true,
+  "stage": 46,
+  "syntheticOnly": true
+}

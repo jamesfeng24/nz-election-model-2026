@@ -27,3 +27,15 @@ def save(name, value, check=False):
 def arguments():
     p = argparse.ArgumentParser(); p.add_argument('--check', action='store_true')
     return p.parse_args()
+
+
+def signature():
+    import hashlib
+    import sys
+    import numpy as np
+    import scipy
+    paths=sorted((ROOT/'scripts/uncertainty_tails').glob('*.py'))
+    return hashlib.sha256(encode({'inputs':read(PREFIX+'/input-contract.json'),
+        'specification':digest(PREFIX+'/specification.json'),'scales':digest(PREFIX+'/scales.json'),
+        'code':{str(p.relative_to(ROOT)):digest(str(p.relative_to(ROOT))) for p in paths if p.stem not in ('diagnosis','evaluation','verification')},
+        'runtime':{'python':list(sys.version_info[:2]),'numpy':np.__version__,'scipy':scipy.__version__,'lock':digest('requirements-boundaries.txt')}})).hexdigest()
