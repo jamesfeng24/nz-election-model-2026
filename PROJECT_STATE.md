@@ -1,3 +1,13 @@
+# Stage45 pre-scoring checkpoint and bounded CI adjustment — 2026-10-05
+
+Frozen diagnosis/specification checkpoint `ed300e4` precedes revised estimation/scoring. Independent diagnosis and six tests pass; synthetic priors generated. Authorized CI-only addition on this branch: one Verify workflow inspected, standalone feature-push trigger removed, PR plus push-main retained; workflow/event/PR-or-ref concurrency cancels superseded same-ref work. All job names, permissions and validation commands unchanged. Existing PyYAML parse, exact event/expression checks, unchanged jobs/permissions assertions and whitespace pass. No hosted runs launched or cancelled to measure savings.
+
+Intermediate checkpoints may use [skip ci] after local checks; pending required checks are acceptable only there. Final review/merge heads must be unskipped and fully verified. PR titles/default merge messages must not carry skip markers. Latest main commit still receives full gate even when older main runs are superseded. No protection/caching/job redesign.
+
+Exact next action: push this combined checkpoint, then continue Stage45 earlier-only scale correction/integration/score audit, final complete local checks, one unskipped PR-head Ubuntu run, leave unmerged. No fitting of mean coefficients, sources/MCMC or later work.
+
+---
+
 # Stage45 frozen scale-allocation correction — 2026-10-05
 
 PR51 reviewed5283e7c/merge35f8806 ancestry verified from clean safely synchronized main. Branch `stage/45-residual-scale-allocation`; prior work preserved. Independent pre-scoring diagnosis578vectors confirms local nonmajor CLR squared contribution97.05–98.43%, N/L residual RMS0.1102–0.1928 versus2023 old impliedSD0.7650. More coordinates alone are not proof; per-option heterogeneity and contrast covariance verify poor statistical allocation, not a numerical bug. Original Stage44 remains unchanged.
