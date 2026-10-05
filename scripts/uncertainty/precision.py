@@ -1,7 +1,7 @@
 """Frozen first/last-seat 512 versus1024 numerical precision diagnostic."""
 import numpy as np
 from .common import PREFIX, read, save, verify, arguments
-from .construction import scale_for,national_case
+from .construction import scale_for,national_case,audited_cache
 from .simulation import component,compose
 from .metrics import crps,interval
 
@@ -21,7 +21,7 @@ def build():
     for case in construction['cases']:
         rows=inv['partyRecords'] if case['layer']=='local_party' else inv['candidateRecords']
         eligible=sorted([r for r in rows if r['targetYear']==case['year']],key=lambda r:r['targetElectorateId'])
-        small=read(case['drawCache']['path'])['vectors']
+        small=audited_cache(case,construction['signature'])['vectors']
         if case['layer']=='composed':
             national,ids,provenance=national_case(case['year'],parties[eligible[0]['targetElectorateId']]['ids'],1024)
         for row in (eligible[0],eligible[-1]):

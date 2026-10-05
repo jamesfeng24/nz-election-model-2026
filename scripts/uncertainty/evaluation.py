@@ -1,7 +1,7 @@
 """Evaluate sealed Stage44 draws without feeding outcomes back into simulation."""
 import numpy as np
 from .common import PREFIX, read, save, verify, arguments, digest
-from .construction import signature
+from .construction import signature,audited_cache
 from .metrics import record,distribution_summary
 
 
@@ -13,8 +13,7 @@ def build():
     candidates={r['targetElectorateId']:r for r in inv['candidateRecords']}
     cases=[]
     for case in construction['cases']:
-        archive=read(case['drawCache']['path'])
-        if digest(case['drawCache']['path'])!=case['drawCache']['sha256']:raise ValueError('Corrupt draw cache')
+        archive=audited_cache(case,construction['signature'])
         lookup=parties if case['layer']=='local_party' else candidates
         records=[record(lookup[r['id']],archive['vectors'][r['id']],r['metadata'].get('deterministicNationalOnlyMean',lookup[r['id']]['mean'])) for r in case['records']]
         value={'id':case['id'],'layer':case['layer'],'year':case['year'],'records':records,

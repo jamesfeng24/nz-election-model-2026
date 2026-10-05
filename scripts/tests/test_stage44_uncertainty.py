@@ -10,7 +10,8 @@ import numpy as np
 
 from scripts.uncertainty.common import PREFIX, YEARS, read, verify, equivalent
 from scripts.uncertainty.inventory import build, simplex
-from scripts.uncertainty import common, estimation, streams, transforms, simulation, metrics
+from scripts.uncertainty import common, construction, estimation, streams, transforms, simulation, metrics
+from scripts.transport import common as transport_common
 
 
 def synthetic_row(layer='local_party', year=2014, seat='synthetic', groups=None):
@@ -444,6 +445,38 @@ class PortableContractTests(unittest.TestCase):
                 file.write_bytes(b'corrupt cached bytes')
                 with self.assertRaisesRegex(ValueError, 'Changed deterministic uncertainty cache'):
                     common.cache('synthetic.json.gz', {'draws': [[.4, .6]], 'ids': ['synthetic:0']})
+
+    def test_cross_runtime_cache_requires_verified_exact_signature_and_compatible_metadata(self):
+        with TemporaryDirectory(prefix='stage44-synthetic-portability-') as directory:
+            root = Path(directory)
+            with patch.object(common, 'ROOT', root), patch.object(construction, 'ROOT', root), patch.object(transport_common, 'ROOT', root):
+                run_signature = 'synthetic-compatible-signature'
+                archive = {'drawIds': ['synthetic:0', 'synthetic:1'],
+                           'vectors': {'synthetic-seat': [[.4, .6], [.6, .4]]}}
+                cached = common.cache(run_signature+'/synthetic-2014.json.gz', archive)
+                runtime = {'id': 'local_party:2014', 'layer': 'local_party', 'year': 2014,
+                           'records': [{'id': 'synthetic-seat', 'metadata': {'simulatedMean': [.5, .5]}}],
+                           'drawCache': cached, 'outcomesConsumed': False}
+                construction.checkpoint(runtime, run_signature)
+                committed = deepcopy(runtime)
+                committed['drawCache']['sha256'] = 'other-platform-compressed-last-bits'
+                committed['records'][0]['metadata']['simulatedMean'][0] += 5e-11
+                self.assertEqual(construction.audited_cache(committed, run_signature), archive)
+                self.assertNotEqual(committed['drawCache']['sha256'],
+                                    hashlib.sha256((root/cached['path']).read_bytes()).hexdigest())
+                with self.assertRaisesRegex(ValueError, 'exact signature first'):
+                    construction.audited_cache(committed, 'wrong-signature')
+                changed = deepcopy(committed)
+                changed['records'][0]['metadata']['simulatedMean'][0] += 2e-10
+                with self.assertRaisesRegex(ValueError, 'metadata differs'):
+                    construction.audited_cache(changed, run_signature)
+                changed = deepcopy(committed)
+                changed['records'][0]['id'] = 'different-seat'
+                with self.assertRaisesRegex(ValueError, 'metadata differs'):
+                    construction.audited_cache(changed, run_signature)
+                (root/cached['path']).write_bytes(b'corrupt local draw archive')
+                with self.assertRaisesRegex(ValueError, 'Corrupt exact-signature draw cache'):
+                    construction.audited_cache(committed, run_signature)
 
     def test_frozen_fit_semantics_reject_corrupt_or_mismatched_inputs(self):
         source = FrozenSimulationTests()

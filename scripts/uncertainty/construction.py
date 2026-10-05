@@ -3,7 +3,7 @@ import hashlib
 import sys
 import scipy
 import numpy as np
-from .common import PREFIX, YEARS, DRAWS, SEED, ROOT, read, save, verify, arguments, digest, encode, cache
+from .common import PREFIX, YEARS, DRAWS, SEED, ROOT, read, save, verify, arguments, digest, encode, cache, equivalent
 from .simulation import component,compose
 from .streams import national_indices
 
@@ -37,6 +37,14 @@ def restore_case(case_id, run_signature):
     if digest(value['drawCache']['path'])!=value['drawCache']['sha256']:
         raise ValueError('Corrupt exact-signature draw cache')
     return value
+
+
+def audited_cache(case,run_signature):
+    """Check runtime bytes exactly and portable metadata at frozen precision."""
+    runtime=restore_case(case['id'],run_signature)
+    if runtime is None:raise ValueError('Run uncertainty construction for this exact signature first')
+    if not equivalent(case,runtime):raise ValueError('Runtime cache metadata differs from frozen case')
+    return read(runtime['drawCache']['path'])
 
 
 def checkpoint(value,run_signature):

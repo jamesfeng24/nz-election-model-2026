@@ -4,6 +4,7 @@ import hashlib
 
 import numpy as np
 
+from .construction import audited_cache
 from .common import PREFIX, ROOT, arguments, digest, read, save, verify
 
 TOLERANCE = 1e-10
@@ -220,9 +221,7 @@ def simulation_checks(inventory, spec):
     gap, vectors, score_vectors, composed, national_cases = 0., 0, 0, 0, 0
     mean_preservation_gap = 0.
     for case in construction['cases']:
-        if digest(case['drawCache']['path']) != case['drawCache']['sha256']:
-            raise ValueError('Independent cache checksum mismatch')
-        cache = read(case['drawCache']['path'])
+        cache = audited_cache(case, construction['signature'])
         if len(cache['drawIds']) != spec['draws'] or len(set(cache['drawIds'])) != spec['draws']:
             raise ValueError('Independent draw identity failure')
         for value in cache['vectors'].values():
