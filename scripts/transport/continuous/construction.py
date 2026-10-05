@@ -78,7 +78,7 @@ def build(inv=None, samples=None, saved=None, old=None):
                             raise ValueError('Exact centered feature equivalence failed')
         folds.append({'targetYear':sample['targetYear'],'savedFoldId':sample['savedFoldId'],
             'savedFit':sample['savedFit'],'trainingOnlyMeans':sample['trainingOnlyMeans'],'trainingIds':sample['trainingIds'],
-            'predictions':predictions,'stage41ReproductionWithin1e12':True,
+            'predictions':predictions,'stage41ReproductionWithin1eMinus12':True,
             'fittingPerformed':False,'heldoutCandidateOutcomesConsumed':False})
     return {'stage':42,'folds':folds,'operationalSelection':None,'informationSet':'conditional observed target local parties; retrospective slates; fixed earlier fits'}
 

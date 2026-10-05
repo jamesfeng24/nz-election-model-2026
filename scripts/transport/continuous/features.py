@@ -56,6 +56,7 @@ def flow_index(geography, occurrences, scenario=None):
             names={v['code']:v['name'] for v in cross['scopes'][scope]['sources']}
             ids={code:seat_id(sy,scope,code,name,local) for code,name in names.items()}
             targets={g['targetElectorateId']:g for g in geography if (g['sourceYear'],g['targetYear'],g['scope'])==(sy,ty,scope)}
+            if not targets:continue
             target_codes={g.get('boundaryCode',str(int(g['targetElectorateId'].split('-')[-1])).zfill(3)):g for g in targets.values()}
             # Māori canonical historical IDs use official names, not general-seat numbers.
             if ty!=2026 and scope=='maori':
@@ -67,6 +68,8 @@ def flow_index(geography, occurrences, scenario=None):
                 weight=Fraction(edge['weight']['numerator'],edge['weight']['denominator'])
                 source=party['scopes'][scope]['sources'][edge['sourceCode']]
                 votes={p['partyKey']:p['votes'] for p in source['parties']}
+                if any(x['sourceElectorateId']==sid for x in result.get(g['targetElectorateId'],[])):
+                    raise ValueError('Duplicate source-target party flow')
                 result.setdefault(g['targetElectorateId'],[]).append({'sourceElectorateId':sid,
                     'sourceCode':edge['sourceCode'],'populationWeightExact':str(weight),
                     'partyMassExact':{p:str(v*weight) for p,v in votes.items()},
@@ -124,7 +127,9 @@ def source_r(ctx, source_id, edge):
 
 def weighted(components, center):
     """Missing evidence shrinks to neutral; never renormalize supported mass."""
-    total=sum((Fraction(c['partyMassExact']) for c in components),Fraction(0))
+    masses=[Fraction(c['partyMassExact']) for c in components]
+    if any(m<0 for m in masses):raise ValueError('Negative party mass')
+    total=sum(masses,Fraction(0))
     if total<=0:
         return {'contribution':0.0,'supportedWeight':0.0,'unsupportedWeight':1.0,
             'totalMassExact':str(total),'reason':'zero_or_undefined_transported_party_mass','components':components}
@@ -134,7 +139,7 @@ def weighted(components, center):
         if mass<0:raise ValueError('Negative party mass')
         weight=mass/total;value=c['valueFraction']
         if value is not None:
-            if not isfinite(value) or center is None:raise ValueError('Nonfinite source feature or missing frozen mean')
+            if not isfinite(value) or center is None or not isfinite(center):raise ValueError('Nonfinite source feature or missing frozen mean')
             supported+=weight;z=value-center
         else:z=0.0
         terms.append(float(weight)*z)
@@ -145,6 +150,7 @@ def weighted(components, center):
 
 
 def candidate_features(ctx, g, candidate, target, flows, edges, means):
+    if len({f['sourceElectorateId'] for f in flows})!=len(flows):raise ValueError('Duplicate predecessor party mass')
     sy,ty=g['sourceYear'],g['targetYear'];group,reason=source_group(ctx,sy,ty,candidate['partyKey'])
     if group is None:
         return {n:{'contribution':0.0,'supportedWeight':0.0,'unsupportedWeight':1.0,

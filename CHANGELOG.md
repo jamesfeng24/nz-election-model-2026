@@ -323,3 +323,10 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Added a pre-scoring two-sided exact/95/90 candidate-feature transport contract and fixed Stage33 S+R historical diagnostic, retaining identical complete slates and neutral fallback controls.
 - Constructed coherent complete source-party vectors from one integral coupled population scenario, preserving category/source mass without imposing future national reconciliation.
 - Added a separate all71-seat/206-candidate2026 readiness companion, source party-seat S inventory, focused tests, independent arithmetic and preservation checks. No new fitting, acquisition or live forecast.
+
+## Stage42 — continuous predecessor feature transport
+
+- Audited preserved within-seat evidence; no residential fragment party composition identified or acquired.
+- Frozen unchanged Stage41 party flows and all129 complete historical general slates before fixed-fit S+R scoring.
+- Implemented centered, all-predecessor party-mass S/R weighting, neutral unsupported mass and genuine-predecessor practical identity safeguards; preserved three-policy controls and strict sensitivity.
+- Added separate2026 readiness, independent arithmetic, provenance/preservation, tests and bounded next-stage uncertainty handoff. No refitting/MCMC/live forecast or historical output rewrite.

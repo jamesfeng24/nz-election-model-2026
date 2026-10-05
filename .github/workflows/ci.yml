@@ -101,3 +101,10 @@ jobs:
       - run: python3 -m scripts.transport.verification --check
       - run: python3 -m scripts.transport.report --check
       - run: python3 -m scripts.transport.manifest --check
+      - run: python3 -m scripts.transport.continuous.freeze --check
+      - run: python3 -m scripts.transport.continuous.construction --check
+      - run: python3 -m scripts.transport.continuous.evaluation --check
+      - run: python3 -m scripts.transport.continuous.readiness --check
+      - run: python3 -m scripts.transport.continuous.verification --check
+      - run: python3 -m scripts.transport.continuous.report --check
+      - run: python3 -m scripts.transport.continuous.manifest --check

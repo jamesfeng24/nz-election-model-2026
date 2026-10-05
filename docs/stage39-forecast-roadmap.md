@@ -1,3 +1,16 @@
+# Active forecast roadmap after Stage42
+
+Stage42 audit/continuous transport is complete: preferred continuous mean-feature scenario, frozenStage41/exact controls preserved, fragment party composition unobserved. No further mean-feature or threshold search is planned. External gauss provisional, S+Rpreferred/Sactive/baseline mandatory; earlier operational records unchanged.
+
+1. Separately authorize coherent joint local-party/candidate uncertainty around existing national/party/candidate adapters: shared national error once; uniform population-to-vote allocation and continuous feature transport; local/candidate residual dependence, missing-history and parameter assumptions; distinguish assumed from empirically calibrated uncertainty.
+2. Bounded official nomination refresh, preserving prior snapshots, withdrawals/conflicts and complete/incomplete slate distinction. Current206candidate snapshot is not final.
+3. Separately design/ingest Māori candidate/local-party electorate polls with the actual question, denominator, fieldwork/publication dates, sample uncertainty, candidate/boundary mapping and dependence; explicit unpolled/stale-seat baseline. National TPM party support is a distinct quantity; general coefficients are not automatically applied.
+4. National reconciliation and complete turnout/valid-denominator weights, then MMP simulations/static forecast archives with dated assumptions. Nonlinear expected shares average transformed shared draws, never duplicate national uncertainty.
+
+This roadmap authorizes none of these subsequent implementations. Preserve component validation, input substitution and end-to-end replay as distinct evidence layers.
+
+---
+
 # Active roadmap after Stage41
 
 Stage41 supplies one feasible complete source-party geography scenario for all71 current targets and graded source S/R reuse: exact, guaranteed two-sided95, broader90 and neutral fallback. It preserves Stage40's exact-only snapshot as history. The historical fixed-fit diagnostic supports retaining the broader development scenario with material seat-level losses and additional uncertainty, not calibrated transport. [Contract](stage41-transport-specification.md); [findings](stage41-transport-findings.md).
