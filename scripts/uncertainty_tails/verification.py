@@ -86,9 +86,16 @@ def build():
             close(a['scales']['balance']['shared'],b['scales']['balance']['shared'],'shared untouched')
     construction=read(PREFIX+'/construction.json');evaluation=read(PREFIX+'/evaluation.json')
     if construction['signature']!=signature() or evaluation['constructionSignature']!=signature():raise ValueError('Stale sealed forecasts')
+    old_construction=read(PREFIX+'/pre-covariance-construction.json')
+    old_cases={c['id']:c for c in old_construction['cases']}
+    preserved_controls=0
     total_vectors=0;representatives=0;largest_mean_shift=0.;conditional_gaps=[];energy_gaps=[]
     for case,result in zip(construction['cases'],evaluation['cases']):
         if case['id']!=result['id']:raise ValueError('Different case ordering')
+        old_records={r['id']:r for r in old_cases[case['id']]['records']}
+        for item in case['records']:
+            close(item['metadata']['stage45']['simulatedMean'],old_records[item['id']]['metadata']['stage45']['simulatedMean'],'unchanged Stage45 control expectation')
+            preserved_controls+=1
         rows=result['methods']['stage45']['records'];selected=sorted({0,len(rows)//2,len(rows)-1})
         with arrays(case) as bank:
             for method in METHODS:
@@ -121,7 +128,7 @@ def build():
             'completeSimplexVectors':total_vectors,'largestTotalMeanShiftPP':largest_mean_shift,
             'maximumConditionalIntegrationGapPP':max(conditional_gaps),'conditionalIntegrationPassed':max(conditional_gaps)<=.05,
             'maximumEnergyPairDifferencePP':max(energy_gaps),'precisionStatus':construction['precisionStatus'],
-            'earlierOnlyScaleMembership':True,'stage45ControlPreserved':True,'priorArtifactsPreserved':True,
+            'earlierOnlyScaleMembership':True,'stage45ControlPreserved':True,'independentlyComparedPreCorrectionControlRecords':preserved_controls,'priorArtifactsPreserved':True,
             'noMeanRefitOrAcquisition':True,'independentStudentExpectations':independent_student_expectations(scales)}
 
 

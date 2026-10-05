@@ -27,6 +27,14 @@ def build():
         ids=[r['id'] for r in results['point']]
         if any([r['id'] for r in records]!=ids for records in results.values()):raise ValueError('Unequal scoring records')
         summaries={m:summarize(records) for m,records in results.items()}
+        if case['layer']!='local_party':
+            for method,records in results.items():
+                pairs=[r['ranking']['predictionTimePair'] for r in records]
+                summaries[method]['predictionTimeMarginIntervals']={str(level):{
+                    'covered':sum(p['interval'+str(level)]['covered'][0] for p in pairs),'total':len(pairs),
+                    'widthPP':float(np.mean([p['interval'+str(level)]['widths'][0] for p in pairs])),
+                    'scorePP':float(np.mean([p['interval'+str(level)]['scores'][0] for p in pairs]))}
+                    for level in (50,80,90)}
         paired={m:{control:float(np.mean([np.mean(r['crpsPP'])-np.mean(c['crpsPP']) for r,c in zip(results[m],results[control])]))
                    for control in ('stage45','robust_gaussian','point') if control!=m} for m in ('student','robust_gaussian')}
         misses={m:sorted([{'id':r['id'],'name':r['name'],'option':r['ids'][i],'group':r['groups'][i],

@@ -31,6 +31,32 @@ def support_audit():
             'noVariancePredictorOrSampleChange':True}
 
 
+def detailed_tables(evaluation):
+    lines=['','## Central/tail intervals and complete-vector scores','',
+           'Entries are covered/total option observations; widths and interval scores use contest-equal means in pp. Category observations are correlated. Lower proper scores are better.',
+           '', '| Case | Method | 50% count / width / score | 80% count / width / score | 90% count / width / score | Energy | Expected-share MAE / RMSE |',
+           '|---|---|---|---|---|---:|---:|']
+    for case in evaluation['cases']:
+        for method,r in case['methods'].items():
+            a=r['summary'];cells=[]
+            for level in (50,80,90):
+                v=a['interval'+str(level)]
+                cells.append(f"{v['covered']}/{v['total']} / {v['contestEqualWidthPP']:.3f} / {v['contestEqualScorePP']:.3f}")
+            lines.append(f"| {case['id']} | {method} | "+' | '.join(cells)+f" | {a['energyPP']:.3f} | {a['contestEqualMAEPP']:.3f} / {a['contestEqualRMSEPP']:.3f} |")
+    lines+=['','## Group diagnostics','', 'Group CRPS uses equal selected options on their original share denominator; complete slates remain primary. No subgroup coefficients or outcome-selected admission.',
+            '', '| Candidate/composed case | Method | National CRPS | Labour CRPS | Other mapped CRPS | No-group CRPS | Winner zero-bank count | Prediction-time margin CRPS |',
+            '|---|---|---:|---:|---:|---:|---:|---:|']
+    for case in evaluation['cases']:
+        if case['layer']=='local_party':continue
+        for method,r in case['methods'].items():
+            a=r['summary'];g=a['groups'];cells=[f"{g[k]['crpsPP']:.4f} (n={g[k]['coordinates']})" if k in g else 'unavailable' for k in ('national','labour','other','no_group')]
+            rank=a['ranking'];lines.append(f"| {case['id']} | {method} | "+' | '.join(cells)+f" | {rank['zeroWinnerProbabilityCount']} | {rank['forecastPairMarginCRPSPP']:.3f} |")
+    lines+=['','## Pooled descriptive weighting','', '| Layer | Method | Contest-weighted CRPS | Equal-election CRPS |','|---|---|---:|---:|']
+    for layer,methods in evaluation['pooled'].items():
+        for method,a in methods.items():lines.append(f"| {layer} | {method} | {a['contestWeighted']['contestEqualCRPSPP']:.4f} | {a['equalElectionCRPSPP']:.4f} |")
+    return lines
+
+
 def text():
     evaluation=read(PREFIX+'/evaluation.json');v=read(PREFIX+'/verification.json');lines=[
         '# Stage46 bounded robust centre/tail findings','',
@@ -40,6 +66,7 @@ def text():
     for case in evaluation['cases']:
         s={m:r['summary']['contestEqualCRPSPP'] for m,r in case['methods'].items()}
         lines.append(f"| {case['layer']} {case['year']} | {s['stage45']:.4f} | {s['robust_gaussian']:.4f} | {s['student']:.4f} | {s['point']:.4f} | {s['student']-s['robust_gaussian']:+.4f} |")
+    lines += detailed_tables(evaluation)
     lines += ['', 'CRPS is in percentage points, lower is better. Equal contests within each election; pooled and equal-election views are saved separately. Gaussian/Student share robust central MAD and conditional remainder integration. Their difference isolates the tail law; differences from Stage45 include the disclosed numerical location correction.',
               '',f"Representative draw-doubling status: **{evaluation['precisionStatus']}**, {evaluation['draws']} draws. Independent conditional-location maximum gap **{v['maximumConditionalIntegrationGapPP']:.4f}pp**, separate .05pp gate {'passed' if v['conditionalIntegrationPassed'] else '**unmet**'}. Maximum energy pair-estimate difference {v['maximumEnergyPairDifferencePP']:.4f}pp. No tolerance relaxation.",
               '', 'Full per-candidate records, 50/80/90 intervals, group counts, proper interval and energy scores, margin/winner diagnostics and substantial misses are in evaluation.json. Winner frequencies are finite-bank diagnostics, not calibrated probabilities. Zero observed-winner frequency is not mathematically zero probability; no floor.',
