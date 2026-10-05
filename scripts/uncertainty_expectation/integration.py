@@ -28,14 +28,18 @@ def factor(tags, shared, seat):
     k = len(tags)
     if k < 2:
         return np.zeros((k, 0))
+    if seat == 0:
+        names = sorted(set(tags))
+        if len(names) < 2 or shared == 0:
+            return np.zeros((k, 0))
+        # Removing one common group effect leaves all softmax probabilities invariant.
+        group_factor = shared * helmert(len(names), full=False).T
+        return np.array([group_factor[names.index(tag)] for tag in tags])
     contrast = contrast_covariance(tags, shared, seat)
-    values, vectors = np.linalg.eigh(contrast)
-    if np.min(values) < -1e-12:
-        raise ValueError('Nonpositive Gaussian covariance')
-    active = values > 1e-14
-    result = np.zeros((k, int(active.sum())))
-    result[:-1] = vectors[:, active] * np.sqrt(values[active])
+    result = np.zeros((k, k-1))
+    result[:-1] = np.linalg.cholesky(contrast)
     return result
+
 
 
 @lru_cache(maxsize=128)

@@ -1,3 +1,11 @@
+# Stage47 numerical pilot and structural amendment checkpoint — 6 October 2026
+
+Local branch stage/47-expectation-width-diagnostic, plan9d4daa6 and numerical7d86a90; no remoteStage47branch/PR. Existing work preserved. New deterministic active-face conditional solver checks578component means; no failures, maxindependent gap.01994pp under .05pp criterion. Actual largestStage46 .73893pp input recreated; larger independent references estimateold error.58945pp with.000157ppspread, confirming substantive numerical error. No newpredictive scores. Batched composed16/64/256 timing pilot completed27calls; use its measuredcost to freeze bounded corrected-companion/attribution budget before scoring. Deterministic Cholesky/Helmert covariance replaces numerical eigenbasis to ensure portability, preserving repeatedlabel Gaussian law. Binary GH errors negligible; remainder responsible. Originalwidth/prior/crosslayer audits usevalid caches only.
+
+User structural-continuity amendment is recorded in structural-contract.json before its tables: full denominator, sourcehistorical support, acceptedidentity/turnover evidence, explicit56dayavailability/unknowns, saved S/R behaviour; no acquisitions/fits/exclusions. Next: numerical companion budget/specification and seal; widthattribution, structural audit, one bounded nextrecommendation/design, local checks and single unskipped review push/Ubuntu gate. Allwork local, not yetGitHubbackup; no nationalMCMC/oldbankrebuild or futuremodelling.
+
+---
+
 # Stage47 research/plan checkpoint — 6 October 2026
 
 Verified PR53 merged d0fa5a6 containing reviewed0ee8ad4. Clean main safely refreshed; branch stage/47-expectation-width-diagnostic. Plan docs/stage47-implementation-plan.md and consumed/preservation manifests are frozen before implementation. Existing Gaussian default, continuous S+R means and all prior outputs preserved. Original8000 and common-stream32768 banks available locally; no historical/national reconstruction needed for original widths/prior attribution.
