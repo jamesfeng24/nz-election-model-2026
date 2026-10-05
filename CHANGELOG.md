@@ -342,3 +342,10 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Frozen residual inventory, earlier-only pooled projected log-ratio uncertainty and arithmetic-mean preservation around continuous S+R, without mean refitting.
 - Shared national scenarios once; resumable component/composed draws and one labelled transport stress; proper scores, finite precision and independent arithmetic audit.
 - Records poor major-party sharpness, dependence/parameter/reconciliation/Māori/slate limits; no calibrated probabilities, acquisition, MCMC, live forecasts or operational changes.
+
+## Stage45 — residual-scale allocation correction
+
+- Verified major/minor contrast heterogeneity and froze one aggregate/within uncertainty structure before scoring.
+- Added earlier-only scales, interpretable synthetic priors, conditional major mean adjustment, shared dependence, resumable8000draw companions and independent arithmetic.
+- Reported improved proper scores with small-group losses, conditional minor distortions, zero winner-frequency miss and unmet numerical cap; no calibrated deployment claim or mean refit.
+- Preserved all previous data, coefficients, identities and operational nulls. Bounded CI cost controls remain separately identified and fully validated on the final review head.

@@ -1,3 +1,15 @@
+# Stage45 uncertainty results complete locally; CI restructuring in progress — 2026-10-05
+
+Branch `stage/45-residual-scale-allocation`. Pre-scoring `ed300e4`, first CI-only `e5b1d1e`, sealed draws `e9fd69c`; remote last pushed `e9fd69c`. Current results/verification/docs are LOCAL work, not yet on GitHub. Updated user authorization supersedes checkpoint-push rules: meaningful local commits, push at review readiness; skip markers only optional non-review backups. Final head/merge unskipped. No additional PR for CI.
+
+Revised/unchangedStage44/point exact-common comparison: revisedCRPS party2011/14/17/20/23=.5306/.3975/.4126/.4398/.4858; candidate2014/17/20/23=2.0028/1.8352/1.4730/1.8320; composed2017/20/23=2.5120/1.5948/2.3017pp. All12 improve over old and point. Major widths materially sharper, some other-candidate groups worsen slightly. Tāmaki2023 has zero empirical winner frequency/infinite bank logloss. Mean coefficients unmodified. New conditional major means preserved analytically/GH81; minor conditional distortion up to1.06pp; maxcomposed shift1.513pp/meanabs.012–.022pp. All1774prior datafiles unchanged.
+
+8000draw cap remains numerically unresolved: last representative max mean/CRPS/90width changes.168/.189/1.195pp, no gates relaxed. Energy128→256 sensitivity .656pp. Independent audit11fits/54GHchecks/12,336,000simplexvectors/72two-policy+36pointrecords and all aggregates, disagreements<=1e-10. Full local956Python tests pass/nineintentionalenvironment skips;36uncertainty+6diagnosis focused tests;31frontendtests/typecheck/build;926sources;compile/whitespace. No configuredPythonformatter/linter. No sources/MCMC/mean refit/live/Māori extension.
+
+Exact next action: finish bounded conservative Stage39 CI integrity/reproduction separation and explicit semantic test registry, local dependency-selector checks and full first restructuring validation; deterministic Stage45 reproduction; local commit outcomes, then one unskipped final review-head push/PR/fullUbuntu run. Preserve expensive caches `.cache/stage45/<signature>/`; no inference rerun. Do not claim unpushed results backed up remotely. Stop after correction. Next bounded nomination/Māori/reconciliation/MMP tasks remain separate; revised uncertainty development recommendation is not calibrated probability approval.
+
+---
+
 # Stage45 scales and draws sealed — 2026-10-05
 
 Pre-scoring diagnosis/spec `ed300e4`, bounded CI-only checkpoint `e5b1d1e` pushed. Revised earlier-only aggregate/within scales and all12 component/composed cases sealed, both revised and unchanged Stage44 companions, exact common IDs at8000draws. No mean/national refit. Numerical sequence1024/2048/4096/8000 reached cap: last maximum changes0.167925pp expected share,0.189365ppCRPS,1.194817pp90width exceed frozen tolerances. Retain explicit cap/precision failure; no tolerance/count adjustment or fine superiority claims. Full final evaluation not yet calculated.

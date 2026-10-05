@@ -50,7 +50,8 @@ def independent_moments(rows):
             'seat': math.fsum((v-center)**2 for v in data)/len(data)}
     unique = sorted({tag for _, tags in remainder for tag in tags})
     if len(unique) < 2:
-        moments['within'] = {'shared': None, 'seat': None}
+        seats = [math.fsum(float(v)**2 for v in residual)/(len(residual)-1) for residual, _ in remainder]
+        moments['within'] = {'shared': None, 'seat': math.fsum(seats)/len(seats) if seats else None}
         return moments
     basis = helmert(len(unique), full=False).T
     matrices, responses = [], []
@@ -96,6 +97,10 @@ def check_scales(inventory, scales, specification):
         moments = {year: independent_moments([r for r in rows if r['targetYear'] == year])
                    for year in sorted({r['targetYear'] for r in rows})}
         for fit in scales['folds'][layer]+[scales['descriptive'][layer]]:
+            expected_rows = [r for r in rows if fit['targetYear'] is None or r['targetYear'] < fit['targetYear']]
+            expected_years = sorted({r['targetYear'] for r in expected_rows})
+            if fit['trainingYears'] != expected_years or fit['trainingIds'] != [r['targetElectorateId'] for r in expected_rows]:
+                raise ValueError('Independent exact training membership mismatch')
             if fit['targetYear'] is not None and any(y >= fit['targetYear'] for y in fit['trainingYears']):
                 raise ValueError('Nonchronological residual scales')
             for m in fit['moments']:
@@ -185,12 +190,193 @@ def check_category_splitting(spec):
     return {'examples': examples, 'interpretation': 'Delta covariance for arithmetic aggregate balances; within-remainder uncertainty cannot affect major mass/balance.'}
 
 
+def scalar_quantile(values, probability):
+    ordered = sorted(map(float, values))
+    position = (len(ordered)-1)*probability
+    lower = int(position);upper = min(lower+1, len(ordered)-1)
+    return ordered[lower]+(position-lower)*(ordered[upper]-ordered[lower])
+
+
+def cdf_crps(values, outcome):
+    """Integrate squared empirical CDF error, independently of rank shortcut."""
+    ordered = sorted(map(float, values));n = len(ordered)
+    cuts = sorted(set(ordered+[float(outcome)]))
+    count, areas = 0, []
+    for lower, upper in zip(cuts, cuts[1:]):
+        while count < n and ordered[count] <= lower:
+            count += 1
+        cdf = count/n
+        truth = float(lower >= outcome)
+        areas.append((upper-lower)*(cdf-truth)**2)
+    return math.fsum(areas)
+
+
+def scalar_energy(draws, actual, limit):
+    selected = draws[:limit]
+    def distance(a, b):
+        return math.sqrt(math.fsum((float(v)-float(w))**2 for v, w in zip(a, b)))
+    first = math.fsum(distance(row, actual) for row in selected)/len(selected)
+    second = math.fsum(distance(a, b) for a in selected for b in selected)/(2*len(selected)**2)
+    return first-second
+
+
+def check_record(row, q, recorded, energy_limit):
+    means = [math.fsum(map(float, q[:, i]))/len(q) for i in range(q.shape[1])]
+    errors = [100*(m-a) for m, a in zip(means, row['actual'])]
+    gaps = [close(m, v, 'arithmetic mean') for m, v in zip(means, recorded['simulatedMean'])]
+    gaps += [close(e, v, 'share error') for e, v in zip(errors, recorded['errorPP'])]
+    gaps += [close(math.fsum(map(abs, errors))/len(errors), recorded['maePP'], 'MAE'),
+             close(math.fsum(e*e for e in errors)/len(errors), recorded['msePP2'], 'MSE'),
+             close(math.fsum(errors)/len(errors), recorded['biasPP'], 'bias')]
+    for i, truth in enumerate(row['actual']):
+        values = 100*q[:, i];outcome = 100*truth
+        gaps.append(close(cdf_crps(values, outcome), recorded['crpsPP'][i], 'CDF-integral CRPS'))
+        for level, key in ((.5, 'interval50'), (.9, 'interval90')):
+            alpha = 1-level
+            lower, upper = scalar_quantile(values, alpha/2), scalar_quantile(values, 1-alpha/2)
+            score = upper-lower+2/alpha*(max(lower-outcome, 0)+max(outcome-upper, 0))
+            for name, value in [('lower', lower), ('upper', upper), ('widths', upper-lower), ('scores', score)]:
+                gaps.append(close(value, recorded[key][name][i], 'proper interval '+name))
+            if (lower <= outcome <= upper) != recorded[key]['covered'][i]:
+                raise ValueError('Independent interval coverage disagreement')
+    energy = scalar_energy(100*q, [100*a for a in row['actual']], energy_limit)
+    gaps.append(close(energy, recorded['energyPP'], 'scalar energy'))
+    if 'ranking' in recorded:
+        ranking = recorded['ranking'];counts = [0.]*q.shape[1]
+        for draw in q:
+            maximum = max(draw);tied = [i for i, v in enumerate(draw) if abs(v-maximum) <= 1e-12]
+            for i in tied:
+                counts[i] += 1/len(tied)
+        probabilities = [c/len(q) for c in counts]
+        gaps += [close(p, v, 'fractional winner probability') for p, v in zip(probabilities, ranking['winnerProbabilities'])]
+        actual = row['actual'];winners = [i for i, v in enumerate(actual) if abs(v-max(actual)) <= 1e-12]
+        if len(winners) == 1:
+            winner = winners[0]
+            brier = math.fsum((p-float(i == winner))**2 for i, p in enumerate(probabilities))
+            gaps.append(close(brier, ranking['winnerBrier'], 'winner Brier'))
+            logloss = -math.log(probabilities[winner]) if probabilities[winner] else None
+            gaps.append(close(logloss, ranking['winnerLogLoss'], 'winner log loss'))
+        pair = ranking['predictionTimePair'];a, b = [row['ids'].index(i) for i in pair['ids']]
+        margins = 100*(q[:, a]-q[:, b]);truth = 100*(actual[a]-actual[b])
+        gaps.append(close(cdf_crps(margins, truth), pair['crpsPP'], 'competitive pair CRPS'))
+        gaps.append(close(math.fsum(map(float, margins))/len(q), pair['meanSignedMarginPP'], 'competitive pair mean'))
+    return max(gaps)
+
+
+def scalar_summary(rows):
+    average = lambda values: math.fsum(values)/len(values)
+    result = {'contests': len(rows), 'coordinates': sum(len(r['ids']) for r in rows),
+        'contestEqualMAEPP': average([r['maePP'] for r in rows]),
+        'contestEqualRMSEPP': math.sqrt(average([r['msePP2'] for r in rows])),
+        'contestEqualCRPSPP': average([average(r['crpsPP']) for r in rows]),
+        'candidateCategoryEqualMAEPP': average([abs(e) for r in rows for e in r['errorPP']]),
+        'candidateCategoryEqualRMSEPP': math.sqrt(average([e*e for r in rows for e in r['errorPP']])),
+        'fullSlateBiasAccountingPP': average([r['biasPP'] for r in rows]),
+        'energyPP': average([r['energyPP'] for r in rows])}
+    for key in ('interval50', 'interval90'):
+        covers = [v for r in rows for v in r[key]['covered']]
+        result[key] = {'covered': sum(covers), 'total': len(covers), 'coverage': sum(covers)/len(covers),
+            'contestEqualWidthPP': average([average(r[key]['widths']) for r in rows]),
+            'contestEqualScorePP': average([average(r[key]['scores']) for r in rows])}
+    result['groups'] = {}
+    for group in sorted({g for r in rows for g in r['groups']}):
+        selected = [(r, i) for r in rows for i, g in enumerate(r['groups']) if g == group]
+        errors = [r['errorPP'][i] for r, i in selected]
+        value = {'coordinates': len(selected), 'containingContests': len({r['id'] for r, _ in selected}),
+                 'maePP': average(list(map(abs, errors))), 'rmsePP': math.sqrt(average([e*e for e in errors])),
+                 'biasPP': average(errors), 'crpsPP': average([r['crpsPP'][i] for r, i in selected])}
+        for key in ('interval50', 'interval90'):
+            covers = [r[key]['covered'][i] for r, i in selected]
+            value[key] = {'covered': sum(covers), 'total': len(covers), 'coverage': sum(covers)/len(covers),
+                          'widthPP': average([r[key]['widths'][i] for r, i in selected]),
+                          'scorePP': average([r[key]['scores'][i] for r, i in selected])}
+        result['groups'][group] = value
+    return result
+
+
+def compare_subset(value, recorded, label='summary'):
+    if isinstance(value, dict):
+        return max([compare_subset(v, recorded[k], label+'.'+k) for k, v in value.items()], default=0)
+    if isinstance(value, int):
+        if value != recorded:
+            raise ValueError('Independent denominator mismatch: '+label)
+        return 0.
+    return close(value, recorded, label)
+
+
+def check_draw_scores(inventory, specification):
+    from .construction import arrays
+    construction, evaluation = read(PREFIX+'/construction.json'), read(PREFIX+'/evaluation.json')
+    evaluated = {c['id']: c for c in evaluation['cases']}
+    party = {r['targetElectorateId']: r for r in inventory['partyRecords']}
+    candidate = {r['targetElectorateId']: r for r in inventory['candidateRecords']}
+    gap, vectors, selected, energy_changes, point_count = 0., 0, [], [], 0
+    for case in construction['cases']:
+        records = sorted(case['records'], key=lambda r: r['id'])
+        choices = [records[i] for i in sorted({0, len(records)//2, len(records)-1})]
+        lookup = party if case['layer'] == 'local_party' else candidate
+        with arrays(case) as bank:
+            for item in records:
+                for policy in ('revised', 'unchanged_stage44'):
+                    q = bank[policy+':'+item['id']]
+                    if q.shape != (case['draws'], len(lookup[item['id']]['ids'])) or not np.isfinite(q).all() or np.any(q < 0) or np.max(abs(q.sum(axis=1)-1)) > 1e-12:
+                        raise ValueError('Independent cached simplex failure')
+                    vectors += len(q)
+            for policy in ('revised', 'unchanged_stage44'):
+                scored = {r['id']: r for r in evaluated[case['id']]['methods'][policy]['records']}
+                for item in choices:
+                    row = lookup[item['id']];q = bank[policy+':'+item['id']]
+                    gap = max(gap, check_record(row, q, scored[item['id']], specification['energyDraws']))
+                    energy128 = scored[item['id']]['energyPP']
+                    energy256 = scalar_energy(100*q, [100*a for a in row['actual']], 256)
+                    energy_changes.append({'case': case['id'], 'seatId': item['id'], 'policy': policy,
+                                          'energy128PP': energy128, 'energy256PP': energy256,
+                                          'changePP': energy256-energy128})
+                    selected.append({'case': case['id'], 'seatId': item['id'], 'policy': policy})
+            point_records = {r['id']: r for r in evaluated[case['id']]['methods']['point']['records']}
+            for item in choices:
+                row = lookup[item['id']]
+                metadata = item['metadata']['unchanged_stage44']
+                point = metadata.get('deterministicNationalOnlyMean', row['mean'])
+                q = np.broadcast_to(np.array(point), (128, len(point)))
+                gap = max(gap, check_record(row, q, point_records[item['id']], specification['energyDraws']))
+                point_count += 1
+        for policy in ('revised', 'unchanged_stage44', 'point'):
+            result = evaluated[case['id']]['methods'][policy]
+            gap = max(gap, compare_subset(scalar_summary(result['records']), result['summary']))
+        r = evaluated[case['id']]['methods']['revised']['records']
+        for policy in ('unchanged_stage44', 'point'):
+            c = evaluated[case['id']]['methods'][policy]['records']
+            paired = math.fsum(math.fsum(a-b for a, b in zip(x['crpsPP'], y['crpsPP']))/len(x['ids']) for x, y in zip(r, c))/len(r)
+            gap = max(gap, close(paired, evaluated[case['id']]['revisedMinusComparatorCRPSPP'][policy], 'paired CRPS'))
+    for layer in ('local_party', 'candidate', 'composed'):
+        subset = [c for c in evaluation['cases'] if c['layer'] == layer]
+        for policy in ('revised', 'unchanged_stage44', 'point'):
+            rows = [r for c in subset for r in c['methods'][policy]['records']]
+            pooled = evaluation['pooled'][layer][policy]
+            gap = max(gap, compare_subset(scalar_summary(rows), pooled['contestWeighted']))
+            equal = math.fsum(c['methods'][policy]['summary']['contestEqualCRPSPP'] for c in subset)/len(subset)
+            gap = max(gap, close(equal, pooled['equalElectionCRPSPP'], 'equal-election weighting'))
+    convergence = read(PREFIX+'/convergence.json')
+    if construction['draws'] != convergence['selectedDraws'] or construction['precisionStatus'] != convergence['status']:
+        raise ValueError('Independent integration status mismatch')
+    return {'status': 'sealed outputs independently verified', 'simplexDrawVectors': vectors,
+            'pointReferenceRecords': point_count,
+            'representativeRecords': selected, 'maximumAbsoluteDifference': gap,
+            'integrationPrecision': {'draws': construction['draws'], 'frozenConvergencePassed': convergence['converged'],
+                'status': construction['precisionStatus'],
+                'interpretation': 'Numerically audited arithmetic does not overturn failed finite-integration precision gates.'},
+            'methods': 'scalar empirical-CDF CRPS integral, quantiles, interval scores, Euclidean energy, winner probabilities, fsum group/pool arithmetic',
+            'energyNumericalSensitivity': {'estimatorUnchanged': True, 'energy128Versus256': energy_changes,
+                'maximumAbsoluteChangePP': max(abs(r['changePP']) for r in energy_changes)}}
+
+
 def build():
     inventory, scales, spec = read(OLD+'/inventory.json'), read(PREFIX+'/scales.json'), read(PREFIX+'/specification.json')
     return {'stage': 45, 'scaleAudit': check_scales(inventory, scales, spec),
             'conditionalLocationAudit': check_locations(inventory, scales),
             'majorCategorySplitAudit': check_category_splitting(spec),
-            'drawScoreAudit': {'status': 'pending sealed construction/evaluation', 'newScoring': False},
+            'drawScoreAudit': check_draw_scores(inventory, spec),
             'operationalSelection': None}
 
 

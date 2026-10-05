@@ -546,8 +546,961 @@
     ]
   },
   "drawScoreAudit": {
-    "newScoring": false,
-    "status": "pending sealed construction/evaluation"
+    "energyNumericalSensitivity": {
+      "energy128Versus256": [
+        {
+          "case": "local_party:2011",
+          "changePP": 0.0033465883107179906,
+          "energy128PP": 2.9243300660471894,
+          "energy256PP": 2.9276766543579074,
+          "policy": "revised",
+          "seatId": "nz-general-2011-electorate-01"
+        },
+        {
+          "case": "local_party:2011",
+          "changePP": 0.08706230147813265,
+          "energy128PP": 2.1418371591547416,
+          "energy256PP": 2.2288994606328743,
+          "policy": "revised",
+          "seatId": "nz-general-2011-electorate-32"
+        },
+        {
+          "case": "local_party:2011",
+          "changePP": -0.0356212080928584,
+          "energy128PP": 3.419727144536547,
+          "energy256PP": 3.3841059364436887,
+          "policy": "revised",
+          "seatId": "nz-general-2011-electorate-63"
+        },
+        {
+          "case": "local_party:2011",
+          "changePP": -0.10158419174465294,
+          "energy128PP": 4.423445376512847,
+          "energy256PP": 4.321861184768194,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2011-electorate-01"
+        },
+        {
+          "case": "local_party:2011",
+          "changePP": 0.16919354397822062,
+          "energy128PP": 3.130405554048223,
+          "energy256PP": 3.2995990980264436,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2011-electorate-32"
+        },
+        {
+          "case": "local_party:2011",
+          "changePP": -0.4956626275291178,
+          "energy128PP": 5.09868753198278,
+          "energy256PP": 4.603024904453662,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2011-electorate-63"
+        },
+        {
+          "case": "local_party:2014",
+          "changePP": 0.04177240631447354,
+          "energy128PP": 2.4474692143352286,
+          "energy256PP": 2.489241620649702,
+          "policy": "revised",
+          "seatId": "nz-general-2014-electorate-01"
+        },
+        {
+          "case": "local_party:2014",
+          "changePP": -0.04488463443714519,
+          "energy128PP": 2.081924866041959,
+          "energy256PP": 2.0370402316048137,
+          "policy": "revised",
+          "seatId": "nz-general-2014-electorate-33"
+        },
+        {
+          "case": "local_party:2014",
+          "changePP": 0.0657239251621986,
+          "energy128PP": 2.3200386589938136,
+          "energy256PP": 2.385762584156012,
+          "policy": "revised",
+          "seatId": "nz-general-2014-electorate-64"
+        },
+        {
+          "case": "local_party:2014",
+          "changePP": -0.027052354970606984,
+          "energy128PP": 4.618316915695672,
+          "energy256PP": 4.591264560725065,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2014-electorate-01"
+        },
+        {
+          "case": "local_party:2014",
+          "changePP": -0.08952649784801814,
+          "energy128PP": 3.989115226402255,
+          "energy256PP": 3.899588728554237,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2014-electorate-33"
+        },
+        {
+          "case": "local_party:2014",
+          "changePP": 0.2733098469173125,
+          "energy128PP": 4.4378265012994085,
+          "energy256PP": 4.711136348216721,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2014-electorate-64"
+        },
+        {
+          "case": "local_party:2017",
+          "changePP": -0.016161338506051948,
+          "energy128PP": 4.687124187288985,
+          "energy256PP": 4.670962848782933,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-01"
+        },
+        {
+          "case": "local_party:2017",
+          "changePP": 0.013029564664454707,
+          "energy128PP": 3.6144129531440856,
+          "energy256PP": 3.6274425178085403,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-33"
+        },
+        {
+          "case": "local_party:2017",
+          "changePP": -0.01355986754888594,
+          "energy128PP": 2.0273738578151663,
+          "energy256PP": 2.0138139902662804,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-64"
+        },
+        {
+          "case": "local_party:2017",
+          "changePP": -0.1183661135516143,
+          "energy128PP": 6.4451704750053995,
+          "energy256PP": 6.326804361453785,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-01"
+        },
+        {
+          "case": "local_party:2017",
+          "changePP": -0.05776574834885473,
+          "energy128PP": 5.239711336277454,
+          "energy256PP": 5.181945587928599,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-33"
+        },
+        {
+          "case": "local_party:2017",
+          "changePP": -0.3049456310458787,
+          "energy128PP": 5.460471822150648,
+          "energy256PP": 5.155526191104769,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-64"
+        },
+        {
+          "case": "local_party:2020",
+          "changePP": -0.022915447505548414,
+          "energy128PP": 4.94814899000494,
+          "energy256PP": 4.925233542499392,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-01"
+        },
+        {
+          "case": "local_party:2020",
+          "changePP": 0.05504935910571884,
+          "energy128PP": 4.194095945037027,
+          "energy256PP": 4.249145304142746,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-33"
+        },
+        {
+          "case": "local_party:2020",
+          "changePP": -0.007972523468947834,
+          "energy128PP": 2.56402745006066,
+          "energy256PP": 2.5560549265917123,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-65"
+        },
+        {
+          "case": "local_party:2020",
+          "changePP": 0.14882488153061324,
+          "energy128PP": 6.408635331080452,
+          "energy256PP": 6.5574602126110655,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-01"
+        },
+        {
+          "case": "local_party:2020",
+          "changePP": -0.0451149613317714,
+          "energy128PP": 6.226485576362311,
+          "energy256PP": 6.18137061503054,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-33"
+        },
+        {
+          "case": "local_party:2020",
+          "changePP": -0.3840221182799013,
+          "energy128PP": 4.679736885396874,
+          "energy256PP": 4.295714767116973,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-65"
+        },
+        {
+          "case": "local_party:2023",
+          "changePP": -0.013775695259255372,
+          "energy128PP": 3.9654234106730817,
+          "energy256PP": 3.9516477154138263,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-01"
+        },
+        {
+          "case": "local_party:2023",
+          "changePP": -0.07838535598752294,
+          "energy128PP": 3.2848317772386517,
+          "energy256PP": 3.2064464212511288,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-33"
+        },
+        {
+          "case": "local_party:2023",
+          "changePP": 0.005785352064656024,
+          "energy128PP": 2.8126085263548077,
+          "energy256PP": 2.8183938784194638,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-65"
+        },
+        {
+          "case": "local_party:2023",
+          "changePP": 0.0371461912945481,
+          "energy128PP": 6.034349515912512,
+          "energy256PP": 6.07149570720706,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-01"
+        },
+        {
+          "case": "local_party:2023",
+          "changePP": -0.1590972278945948,
+          "energy128PP": 5.680325864506521,
+          "energy256PP": 5.5212286366119265,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-33"
+        },
+        {
+          "case": "local_party:2023",
+          "changePP": -0.19317038876792125,
+          "energy128PP": 5.833800572570453,
+          "energy256PP": 5.640630183802532,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-65"
+        },
+        {
+          "case": "candidate:2014",
+          "changePP": 0.009669689263810177,
+          "energy128PP": 7.95355252952567,
+          "energy256PP": 7.96322221878948,
+          "policy": "revised",
+          "seatId": "nz-general-2014-electorate-01"
+        },
+        {
+          "case": "candidate:2014",
+          "changePP": -0.08684106640299394,
+          "energy128PP": 5.808890166270234,
+          "energy256PP": 5.72204909986724,
+          "policy": "revised",
+          "seatId": "nz-general-2014-electorate-33"
+        },
+        {
+          "case": "candidate:2014",
+          "changePP": -0.021638859650080278,
+          "energy128PP": 6.773770347058209,
+          "energy256PP": 6.752131487408128,
+          "policy": "revised",
+          "seatId": "nz-general-2014-electorate-64"
+        },
+        {
+          "case": "candidate:2014",
+          "changePP": 0.1681892933279041,
+          "energy128PP": 8.557130123195742,
+          "energy256PP": 8.725319416523647,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2014-electorate-01"
+        },
+        {
+          "case": "candidate:2014",
+          "changePP": -0.09606542589789235,
+          "energy128PP": 6.8466332840267015,
+          "energy256PP": 6.750567858128809,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2014-electorate-33"
+        },
+        {
+          "case": "candidate:2014",
+          "changePP": -0.02022179387593681,
+          "energy128PP": 8.155178904493136,
+          "energy256PP": 8.134957110617199,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2014-electorate-64"
+        },
+        {
+          "case": "candidate:2017",
+          "changePP": -0.25700871767034705,
+          "energy128PP": 5.225216093767827,
+          "energy256PP": 4.96820737609748,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-01"
+        },
+        {
+          "case": "candidate:2017",
+          "changePP": -0.013164787082073026,
+          "energy128PP": 4.125296478940907,
+          "energy256PP": 4.112131691858834,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-33"
+        },
+        {
+          "case": "candidate:2017",
+          "changePP": 0.07867007778514434,
+          "energy128PP": 4.604869148281737,
+          "energy256PP": 4.683539226066881,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-64"
+        },
+        {
+          "case": "candidate:2017",
+          "changePP": 0.1023520226479846,
+          "energy128PP": 7.622326001003113,
+          "energy256PP": 7.724678023651098,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-01"
+        },
+        {
+          "case": "candidate:2017",
+          "changePP": 0.20444780647384775,
+          "energy128PP": 6.597739705888483,
+          "energy256PP": 6.80218751236233,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-33"
+        },
+        {
+          "case": "candidate:2017",
+          "changePP": -0.2082269946115911,
+          "energy128PP": 7.023182976370284,
+          "energy256PP": 6.814955981758693,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-64"
+        },
+        {
+          "case": "candidate:2020",
+          "changePP": -0.36093401404383485,
+          "energy128PP": 20.035998503897154,
+          "energy256PP": 19.67506448985332,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-01"
+        },
+        {
+          "case": "candidate:2020",
+          "changePP": -0.02664821226526115,
+          "energy128PP": 8.876529460092936,
+          "energy256PP": 8.849881247827675,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-33"
+        },
+        {
+          "case": "candidate:2020",
+          "changePP": -0.0011427319419938797,
+          "energy128PP": 4.065555801309429,
+          "energy256PP": 4.064413069367435,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-65"
+        },
+        {
+          "case": "candidate:2020",
+          "changePP": 0.5387321865642747,
+          "energy128PP": 18.792550003789415,
+          "energy256PP": 19.33128219035369,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-01"
+        },
+        {
+          "case": "candidate:2020",
+          "changePP": -0.21414586184064177,
+          "energy128PP": 9.73428092312721,
+          "energy256PP": 9.520135061286569,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-33"
+        },
+        {
+          "case": "candidate:2020",
+          "changePP": -0.03066142163720542,
+          "energy128PP": 6.065856147157927,
+          "energy256PP": 6.0351947255207214,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-65"
+        },
+        {
+          "case": "candidate:2023",
+          "changePP": -0.028353611770361553,
+          "energy128PP": 11.521450005527615,
+          "energy256PP": 11.493096393757254,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-01"
+        },
+        {
+          "case": "candidate:2023",
+          "changePP": -0.18938131788395296,
+          "energy128PP": 5.648716214123194,
+          "energy256PP": 5.459334896239241,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-33"
+        },
+        {
+          "case": "candidate:2023",
+          "changePP": 0.052029048968590175,
+          "energy128PP": 3.563383275091791,
+          "energy256PP": 3.6154123240603813,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-65"
+        },
+        {
+          "case": "candidate:2023",
+          "changePP": -0.02158058366775073,
+          "energy128PP": 11.833242996594269,
+          "energy256PP": 11.811662412926518,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-01"
+        },
+        {
+          "case": "candidate:2023",
+          "changePP": 0.030391097116392984,
+          "energy128PP": 7.817952665170235,
+          "energy256PP": 7.848343762286628,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-33"
+        },
+        {
+          "case": "candidate:2023",
+          "changePP": 0.4421758265281355,
+          "energy128PP": 6.004261618928274,
+          "energy256PP": 6.446437445456409,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-65"
+        },
+        {
+          "case": "composed:2017",
+          "changePP": 0.3347404308947066,
+          "energy128PP": 9.598925468662614,
+          "energy256PP": 9.93366589955732,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-01"
+        },
+        {
+          "case": "composed:2017",
+          "changePP": 0.3922585688654632,
+          "energy128PP": 12.39475041560117,
+          "energy256PP": 12.787008984466633,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-33"
+        },
+        {
+          "case": "composed:2017",
+          "changePP": 0.16249590691831273,
+          "energy128PP": 5.7917315679351,
+          "energy256PP": 5.954227474853413,
+          "policy": "revised",
+          "seatId": "nz-general-2017-electorate-64"
+        },
+        {
+          "case": "composed:2017",
+          "changePP": -0.1448006570850211,
+          "energy128PP": 11.333267849965484,
+          "energy256PP": 11.188467192880463,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-01"
+        },
+        {
+          "case": "composed:2017",
+          "changePP": -0.08129103148155004,
+          "energy128PP": 12.907971623926958,
+          "energy256PP": 12.826680592445408,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-33"
+        },
+        {
+          "case": "composed:2017",
+          "changePP": -0.17441901414726146,
+          "energy128PP": 9.383538506655622,
+          "energy256PP": 9.20911949250836,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2017-electorate-64"
+        },
+        {
+          "case": "composed:2020",
+          "changePP": 0.5199292606590262,
+          "energy128PP": 26.583315135001087,
+          "energy256PP": 27.103244395660113,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-01"
+        },
+        {
+          "case": "composed:2020",
+          "changePP": 0.23394599272432437,
+          "energy128PP": 8.789604209086438,
+          "energy256PP": 9.023550201810762,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-33"
+        },
+        {
+          "case": "composed:2020",
+          "changePP": 0.30942510973060333,
+          "energy128PP": 4.116425314238777,
+          "energy256PP": 4.42585042396938,
+          "policy": "revised",
+          "seatId": "nz-general-2020-electorate-65"
+        },
+        {
+          "case": "composed:2020",
+          "changePP": 0.6561865182428512,
+          "energy128PP": 25.317838886964523,
+          "energy256PP": 25.974025405207374,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-01"
+        },
+        {
+          "case": "composed:2020",
+          "changePP": 0.21093485534709444,
+          "energy128PP": 10.14473282416531,
+          "energy256PP": 10.355667679512404,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-33"
+        },
+        {
+          "case": "composed:2020",
+          "changePP": -0.11096653221155783,
+          "energy128PP": 8.217315534207252,
+          "energy256PP": 8.106349001995694,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2020-electorate-65"
+        },
+        {
+          "case": "composed:2023",
+          "changePP": -0.40857328305629004,
+          "energy128PP": 15.244983440768282,
+          "energy256PP": 14.836410157711992,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-01"
+        },
+        {
+          "case": "composed:2023",
+          "changePP": -0.2627886964473962,
+          "energy128PP": 6.864962902508321,
+          "energy256PP": 6.6021742060609245,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-33"
+        },
+        {
+          "case": "composed:2023",
+          "changePP": -0.3673985419591972,
+          "energy128PP": 7.34812149241489,
+          "energy256PP": 6.980722950455693,
+          "policy": "revised",
+          "seatId": "nz-general-2023-electorate-65"
+        },
+        {
+          "case": "composed:2023",
+          "changePP": -0.20150251979674394,
+          "energy128PP": 15.889462604302857,
+          "energy256PP": 15.687960084506113,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-01"
+        },
+        {
+          "case": "composed:2023",
+          "changePP": -0.09500094728961983,
+          "energy128PP": 9.62209011066997,
+          "energy256PP": 9.52708916338035,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-33"
+        },
+        {
+          "case": "composed:2023",
+          "changePP": -0.47310631874210785,
+          "energy128PP": 10.77551422063743,
+          "energy256PP": 10.302407901895322,
+          "policy": "unchanged_stage44",
+          "seatId": "nz-general-2023-electorate-65"
+        }
+      ],
+      "estimatorUnchanged": true,
+      "maximumAbsoluteChangePP": 0.6561865182428512
+    },
+    "integrationPrecision": {
+      "draws": 8000,
+      "frozenConvergencePassed": false,
+      "interpretation": "Numerically audited arithmetic does not overturn failed finite-integration precision gates.",
+      "status": "cap_used_precision_gate_unmet"
+    },
+    "maximumAbsoluteDifference": 8.952838470577262e-13,
+    "methods": "scalar empirical-CDF CRPS integral, quantiles, interval scores, Euclidean energy, winner probabilities, fsum group/pool arithmetic",
+    "pointReferenceRecords": 36,
+    "representativeRecords": [
+      {
+        "case": "local_party:2011",
+        "policy": "revised",
+        "seatId": "nz-general-2011-electorate-01"
+      },
+      {
+        "case": "local_party:2011",
+        "policy": "revised",
+        "seatId": "nz-general-2011-electorate-32"
+      },
+      {
+        "case": "local_party:2011",
+        "policy": "revised",
+        "seatId": "nz-general-2011-electorate-63"
+      },
+      {
+        "case": "local_party:2011",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2011-electorate-01"
+      },
+      {
+        "case": "local_party:2011",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2011-electorate-32"
+      },
+      {
+        "case": "local_party:2011",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2011-electorate-63"
+      },
+      {
+        "case": "local_party:2014",
+        "policy": "revised",
+        "seatId": "nz-general-2014-electorate-01"
+      },
+      {
+        "case": "local_party:2014",
+        "policy": "revised",
+        "seatId": "nz-general-2014-electorate-33"
+      },
+      {
+        "case": "local_party:2014",
+        "policy": "revised",
+        "seatId": "nz-general-2014-electorate-64"
+      },
+      {
+        "case": "local_party:2014",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2014-electorate-01"
+      },
+      {
+        "case": "local_party:2014",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2014-electorate-33"
+      },
+      {
+        "case": "local_party:2014",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2014-electorate-64"
+      },
+      {
+        "case": "local_party:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-01"
+      },
+      {
+        "case": "local_party:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-33"
+      },
+      {
+        "case": "local_party:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-64"
+      },
+      {
+        "case": "local_party:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-01"
+      },
+      {
+        "case": "local_party:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-33"
+      },
+      {
+        "case": "local_party:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-64"
+      },
+      {
+        "case": "local_party:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-01"
+      },
+      {
+        "case": "local_party:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-33"
+      },
+      {
+        "case": "local_party:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-65"
+      },
+      {
+        "case": "local_party:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-01"
+      },
+      {
+        "case": "local_party:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-33"
+      },
+      {
+        "case": "local_party:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-65"
+      },
+      {
+        "case": "local_party:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-01"
+      },
+      {
+        "case": "local_party:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-33"
+      },
+      {
+        "case": "local_party:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-65"
+      },
+      {
+        "case": "local_party:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-01"
+      },
+      {
+        "case": "local_party:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-33"
+      },
+      {
+        "case": "local_party:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-65"
+      },
+      {
+        "case": "candidate:2014",
+        "policy": "revised",
+        "seatId": "nz-general-2014-electorate-01"
+      },
+      {
+        "case": "candidate:2014",
+        "policy": "revised",
+        "seatId": "nz-general-2014-electorate-33"
+      },
+      {
+        "case": "candidate:2014",
+        "policy": "revised",
+        "seatId": "nz-general-2014-electorate-64"
+      },
+      {
+        "case": "candidate:2014",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2014-electorate-01"
+      },
+      {
+        "case": "candidate:2014",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2014-electorate-33"
+      },
+      {
+        "case": "candidate:2014",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2014-electorate-64"
+      },
+      {
+        "case": "candidate:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-01"
+      },
+      {
+        "case": "candidate:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-33"
+      },
+      {
+        "case": "candidate:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-64"
+      },
+      {
+        "case": "candidate:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-01"
+      },
+      {
+        "case": "candidate:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-33"
+      },
+      {
+        "case": "candidate:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-64"
+      },
+      {
+        "case": "candidate:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-01"
+      },
+      {
+        "case": "candidate:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-33"
+      },
+      {
+        "case": "candidate:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-65"
+      },
+      {
+        "case": "candidate:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-01"
+      },
+      {
+        "case": "candidate:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-33"
+      },
+      {
+        "case": "candidate:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-65"
+      },
+      {
+        "case": "candidate:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-01"
+      },
+      {
+        "case": "candidate:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-33"
+      },
+      {
+        "case": "candidate:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-65"
+      },
+      {
+        "case": "candidate:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-01"
+      },
+      {
+        "case": "candidate:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-33"
+      },
+      {
+        "case": "candidate:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-65"
+      },
+      {
+        "case": "composed:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-01"
+      },
+      {
+        "case": "composed:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-33"
+      },
+      {
+        "case": "composed:2017",
+        "policy": "revised",
+        "seatId": "nz-general-2017-electorate-64"
+      },
+      {
+        "case": "composed:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-01"
+      },
+      {
+        "case": "composed:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-33"
+      },
+      {
+        "case": "composed:2017",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2017-electorate-64"
+      },
+      {
+        "case": "composed:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-01"
+      },
+      {
+        "case": "composed:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-33"
+      },
+      {
+        "case": "composed:2020",
+        "policy": "revised",
+        "seatId": "nz-general-2020-electorate-65"
+      },
+      {
+        "case": "composed:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-01"
+      },
+      {
+        "case": "composed:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-33"
+      },
+      {
+        "case": "composed:2020",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2020-electorate-65"
+      },
+      {
+        "case": "composed:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-01"
+      },
+      {
+        "case": "composed:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-33"
+      },
+      {
+        "case": "composed:2023",
+        "policy": "revised",
+        "seatId": "nz-general-2023-electorate-65"
+      },
+      {
+        "case": "composed:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-01"
+      },
+      {
+        "case": "composed:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-33"
+      },
+      {
+        "case": "composed:2023",
+        "policy": "unchanged_stage44",
+        "seatId": "nz-general-2023-electorate-65"
+      }
+    ],
+    "simplexDrawVectors": 12336000,
+    "status": "sealed outputs independently verified"
   },
   "majorCategorySplitAudit": {
     "examples": [
