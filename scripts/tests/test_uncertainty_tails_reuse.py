@@ -160,6 +160,28 @@ class RemainderContrastDependenceTests(unittest.TestCase):
                 self.assertTrue(metadata['zeroLock'])
                 self.assertTrue(np.all(q[:, np.asarray(base) == 0.] == 0.))
 
+    def test_inverse_uses_repeated_label_covariance_for_conditional_location(self):
+        from scripts.diagnostics.uncertainty_tails_reference import expectation
+        from scipy.special import roots_hermitenorm
+        labels=['same','same','other'];p=np.array([.5,.3,.2]);shared,seat=.3,.25
+        raw=np.array([[shared**2*(a==b)+seat**2*(i==j) for j,b in enumerate(labels)] for i,a in enumerate(labels)])
+        difference=np.array([[1.,0.,-1.],[0.,1.,-1.]])
+        covariance=np.einsum('ij,jk,lk->il',difference,raw,difference,optimize=False)
+        root=np.linalg.cholesky(covariance);nodes,weights=roots_hermitenorm(81)
+        grid=np.stack(np.meshgrid(nodes,nodes,indexing='ij'),axis=-1).reshape(-1,2)
+        normals=np.einsum('ij,kj->ik',grid,root,optimize=False)
+        eta={'within':np.column_stack((normals,np.zeros(len(grid)))), 'balance':np.zeros(len(grid)), 'mass':np.zeros(len(grid))}
+        scales={'balance':0.,'mass':0.,'within':np.hypot(shared,seat),'withinShared':shared,'withinSeat':seat}
+        q,_=integration.conditional_inverse(p,['other']*3,eta,scales,tags=labels)
+        weight=np.outer(weights,weights).ravel()/(2*np.pi)
+        simulated=np.sum(q*weight[:,None],axis=0)
+        offset=integration.conditional_offsets(p,scales['within'],tags=labels,shared=shared,seat=seat)
+        reference=expectation(p,offset,labels,shared,seat,81)
+        np.testing.assert_allclose(simulated,reference,rtol=0,atol=1e-14)
+        # Record the real quadrature limitation rather than making this fixture
+        # a claim that the frozen 0.05pp gate passed.
+        self.assertGreater(float(100*np.max(np.abs(reference-p))),.05)
+
     def test_quadrature_factor_matches_shared_label_covariance(self):
         factor=integration.within_factor(['same','same','other'],.3,.2)
         covariance=np.einsum('ij,kj->ik',factor,factor,optimize=False)
