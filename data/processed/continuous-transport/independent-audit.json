@@ -1,0 +1,28 @@
+{
+  "agreementWithinFrozen1eMinus12": true,
+  "allSixStage41PartyScopesMassConserved": true,
+  "cancelled2023SourceFeaturesUnsupported": true,
+  "consumedInputContractSha256": "38e0001004783511bee197ccbc5eeb15593ae8df0ab597fdafbe0bb0f1490787",
+  "fixedFitsAndMeansVerified": true,
+  "historicalPairedErrors": "full/exclusive/common/pooled scores and paired gains independently verified",
+  "metrics": {
+    "candidateVectors": 774,
+    "exactFeatureComparisons": 858,
+    "featureComponents": 1495,
+    "geographicOnlySupplementEdgesChecked": 163,
+    "independentMetricIdentities": 4386,
+    "partyVectorRows": 3282,
+    "readiness2026SourcePartySeatWeightedFeaturesChecked": 1207,
+    "readiness2026WeightedFeaturesChecked": 618,
+    "shares": 6072,
+    "stage41CommonPredictions": 336,
+    "weightedFeatures": 3036
+  },
+  "notes": [
+    "No transport implementation numerical functions imported.",
+    "All feature support contributions retain all predecessor mass in denominator."
+  ],
+  "rawSourceResidualAndSplitLookupsChecked": true,
+  "readiness2026": "all candidate weighted feature arithmetic, raw source lookups, same-person guards, all predecessor flows and coverage counts checked",
+  "scope": "read-only independent direct-arithmetic audit"
+}

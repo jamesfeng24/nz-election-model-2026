@@ -1,3 +1,45 @@
+# Stage42 — completed implementation / PR49 awaiting review, 2026-10-05
+
+Branch `stage/42-continuous-feature-transport`. [PR49](https://github.com/jamesfeng24/nz-election-model-2026/pull/49) is open and must remain unmerged. Stage41 merge/reviewed ancestry verified; frozen audit/contract66b033a → predictions8365b92 → implementation/results e3dabc8 are pushed. All existing work preserved.
+
+**Delivered and findings:** continuous centered all-predecessor party-mass S/R transport under unchanged Stage41 feasible flows, full2014/2020 fixed-fit comparison, independent audit and2026 companion. Full-frame MAEpp exactfallback/90/continuous:2014 3.45472/3.32429/2.71727 (64contests/451candidates);2020 2.56619/2.41396/2.13245 (65/561). Continuous gains over90=0.60702/0.28151; strict0.56632/0.27538. Main benefit below90; individual/2014National failures remain. D076 prefers continuous development mean inputs with oldcontrols, not an operational or calibrated claim.
+
+**Evidence/readiness:** fragment party composition remains unidentified; acquired casting-place candidate ballots are not residence party votes. No finerflow or acquisition (0queries/0resources). All71seats/206knowncandidates retained,0complete slates, known generalS154/R32/strictR11 and independent sourcepartyseatS372. Unsupported mass stays neutral and explicit; unique sourceR can come from any genuine predecessor; no outgoing transfer/adjudication overwrite. Māori separatebaseline/polls,confirmedtargetroster/slate and jointuncertainty remain gaps. No2026candidate shares,fit,MCMC,nationalcomparison or newthreshold.
+
+**Validation complete locally:**34focusedtests;851Python tests/nineintentionalskips;31frontendtests/typecheck/build;926rawsources;seven deterministic companions;compile/whitespace. Independent3036features,1495rawlookups,774vectors,3282partyrows,858exactequivalences,336Stage41reference rows,4386scoreidentities,all supplementalguards/readiness checked. All1744prior datafiles/identity/numerical/operationalartifacts unchanged. NoPythonformatter/linter configured, no tolerance/equation change.
+
+**Final completion action:** push this handoff, verify every final-head GitHub check and clean local/remote matching head, update PR validation and leave unmerged. CI is pending at this commit; final verified status is reported in PR49 and the user handoff, without redoing inference. **Next separatelyauthorized task:** coherent local-party/candidate uncertainty around existing adapters, nationalerror sharedonce and flow/feature/residual/history/parameter assumptions distinct from calibration. NominationrefreshandMāoripoll/unpolledbaseline separatelybounded; no furthermean-featuresearch or subsequent work starts automatically.
+
+# Stage42 — implemented and validated locally, 2026-10-05
+
+Branch `stage/42-continuous-feature-transport`; Stage41 reviewedf0022fc/merge6b41536 ancestry verified, clean main safely synchronized. Frozen audit/specification/inputs/IDs66b033a precedes predictions;8365b92 predictions pushed before evaluation. No acquisition/fitting/MCMC/liveforecast or old artifact changes.
+
+**Delivered:** `scripts/transport/continuous`, separate artifacts `data/processed/continuous-transport`, evidenceaudit/specification/findings/plan, D076 and active roadmap. Frozen conservedStage41 flows; all-predecessor party mass weights, center supported sources before weighting, neutral unsupported mass without renormalization; unique practical R from any genuine predecessor with complete graph/held/conflict safeguards. Supplemental labels reversible; old identities remain unchanged. Metadata field spelling changed from Within1e12 to Within1eMinus12 only, no prediction/equation/tolerance change.
+
+**Historical:** all64/451 general2014 and65/561 general2020 complete slates;14Māori coverage-only. MAEpp exactfallback3.45472/2.56619,Stage41 90=3.32429/2.41396,continuous2.71727/2.13245. Gains against90=0.60702/0.28151; strict0.56632/0.27538. Gains mainly below90; oldcommon subsetdifference−0.00437/+0.00591. Individual failures (EastCoastBays−2.26484,Dunedin−1.55433pp) and2014National deterioration reported. Prefer continuous development mean scenario withStage41/exact controls preserved; no calibrated/as-of or causal claim.
+
+**2026:**71seats/206knowncandidates/zero complete slates. GeneralS154/R32/strictR11; sourcepartyseatS372 independentlyofannouncements; partialsupport42/23/7. Allpredecessors/weights/sourceevidence/missingness retained; no candidate shares. MāoriS unavailable, oneR evidence-only,separatebaseline/polls. Fragment political composition is not identified by preserved voting-place/population data;0queries/0resources,no finerflow. Targetroster/slate/nationalscenarioandjointuncertaintyremainmaterial gaps.
+
+**Validation:**34focusedtests and full851Python tests pass (nineintentionalisolatedenvironment skips);31frontendtests/typecheck/build;926rawsources;seven deterministic commands;compile/whitespace pass. No configuredPythonformatter/linter. Independent3036weightedfeatures,1495rawlookups,774vectors/6072shares,3282partyrows,858exactequivalences,336Stage41reference rows,4386scoreidentities,163supplementaledges,618knowncandidate/1207sourcepartyseatreadinessfeatures checked within1e-12; maxdirectpredictiondifference1.11e-16. All1744prior datafiles/identities/numericaloutputs/operationalrecords unchanged. Corruptnegative/duplicate masses/nonfinite centers rejected without equation/gate changes.
+
+**Exact remaining stage action:** commit/push implementation/results, openunmergedPR, recordactualPR andverifyfinalheadCI/cleanmatchingremote. **Next separatelyauthorized implementation:** coherent local-party/candidate uncertainty around existing adapters, sharingnationalerroronce andcovering flow/feature/residual/history/parameter assumptions. NominationrefreshandMāoripoll/unpolledbaseline separatelybounded. Stop mean-feature searches; no next work begins automatically.
+
+# Stage42 — fixed-fit predictions sealed before scoring, 2026-10-05
+
+Frozen audit/specification/ID checkpoint66b033a pushed before predictions. `scripts.transport.continuous.construction` saves all six bounded policies on64/65 identical complete slates, saved Stage33 primary S+R coefficients/means unchanged. Original Stage41 four broad/strict reference branches reproduce within1e-12; exact centered features equivalent. All1744 prior datafiles byte-identical. No scores yet, no fitting/acquisition/2026predictions.
+
+Exact next action: commit/push this construction checkpoint BEFORE evaluation, then paired full/exclusive-band errors,2026 readiness, independent checks/tests, docs/PR/finalCI. Next separately authorized stage remains coherent local/candidate uncertainty.
+
+# Stage42 — frozen audit and continuous transport contract, 2026-10-05
+
+Branch `stage/42-continuous-feature-transport`. PR48 MERGED; reviewed f0022fc and merge6b41536 ancestry verified; clean main fast-forwarded safely. No acquisition/predictions/scores/fitting in this checkpoint.
+
+Preserved within-seat audit concludes residential fragment National/Labour leaning is not identified: acquired voting-place tables contain candidate counts, not residential party allocations; advance/special/overseas prevent booth catchment inference. Zero discovery queries/resources; no finer flow. Reuse exact Stage41 conserved feasible party flows.
+
+Frozen specification/plan and consumed inputs under `data/processed/continuous-transport/` specify centering before all-predecessor party-mass weighting, neutral unsupported mass without renormalization, unique practical source R from any genuine predecessor, full conflict graph and held-contest safeguards. Supplemental geographic-only links do not overwrite identity adjudications. Full common frame2014=64/451,2020=65/561, with all14 Māori targets coverage-only. Compare exact fallback, frozen90 and continuous, plus strict R availability using identical primary earlier Stage33 S+R fits/means. Deterministic freeze/check passes; no candidate predictions yet.
+
+Exact next action: commit/push this audit/specification/ID checkpoint BEFORE construction; implement/save fixed-fit predictions and reproduce Stage41; then score paired results, create2026 readiness, focused/independent tests and preservation, finalCI and unmergedPR. Stop after this refinement; next is joint local/candidate uncertainty, no further mean search or acquisition.
+
 # Stage41 — completed / PR48 awaiting independent review, 2026-10-05
 
 Branch `stage/41-boundary-party-feature-transport`. [PR48](https://github.com/jamesfeng24/nz-election-model-2026/pull/48) is open and must remain unmerged. Stage40 reviewed7dceb33/merge6a0cf19 ancestry verified; frozen policy5bcdd4f, prediction seal8ec3c23 and implementation/results02c284d are pushed. No existing work discarded.
