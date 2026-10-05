@@ -18,11 +18,24 @@ def read(path):
     return json.loads(gzip.decompress(raw) if str(path).endswith('.gz') else raw)
 
 
+def equivalent(expected, actual, path=''):
+    """Exact contracts with frozen numerical tolerance for platform last bits."""
+    import math
+    if isinstance(expected, dict):
+        if not isinstance(actual, dict) or expected.keys()!=actual.keys():return False
+        return all(k=='sha256' and path.endswith('drawCache') or equivalent(v,actual[k],path+'.'+k) for k,v in expected.items())
+    if isinstance(expected, list):
+        return isinstance(actual,list) and len(expected)==len(actual) and all(equivalent(a,b,path) for a,b in zip(expected,actual))
+    if isinstance(expected,float) and isinstance(actual,(float,int)):
+        return math.isfinite(actual) and abs(expected-actual)<=1e-10
+    return type(expected)==type(actual) and expected==actual
+
+
 def save(name, value, check=False):
     path = ROOT / PREFIX / name
     raw = encode(value)
     if check:
-        if not path.exists() or path.read_bytes() != raw:
+        if not path.exists() or not equivalent(read(str(path.relative_to(ROOT))), value):
             raise ValueError('Stale Stage44 artifact: ' + name)
     else:
         path.parent.mkdir(parents=True, exist_ok=True)

@@ -1,3 +1,13 @@
+# Stage44 — uncertainty draws sealed before evaluation, 2026-10-05
+
+Branch `stage/44-local-candidate-uncertainty`; reviewed PR50 ancestry verified. Pre-fit inventory/specification `57ad9a0` pushed. Frozen scales use earlier residual environments with three prior pseudo-environments; 2011 party/2014 candidate are prior-based. Independent scalar CLR/QR audit checks578 vectors/6915 coordinates and157 moment/scale identities across11 fits within1e-10. No mean coefficients refitted.
+
+Completed deterministic512-draw component construction (321 party vectors;257 candidate vectors/1902 candidates) and three cached-national composed cases2017/20/23 (64/65/64 slates). Stable shared national IDs, separate shared/seat layer streams, coherent mean-preserved vectors and one frozen nonexact1.5-variance stress. Caches `.cache/stage44/<exact-signature>/` retain per-case resumable manifests; `scripts.uncertainty.construction --check` regenerates without MCMC. Cross-platform last-bit checks use frozen1e-10, source IDs/hashes exact; documented implementation notes leave statistical specification unchanged.
+
+Exact next action: commit/push this draw checkpoint before evaluating; then proper component/composed scores, frozen1024-draw precision subset, independent score arithmetic, remaining focused/full configured checks, findings/decision/roadmap, PR and final CI. No uncertainty scores calculated yet. No sources acquired, live partial slates normalized, historical artifacts or operational selections changed. Next later work remains nomination refresh, Māori baseline/poll layer, reconciliation and MMP, separately authorized.
+
+---
+
 # Stage44 frozen uncertainty checkpoint — 2026-10-05
 
 PR50 merge95dfcc7/reviewedbdac621 ancestry verified; clean main safely synchronized. Branch stage/44-local-candidate-uncertainty. Inventory321 party/257 candidate residual-ready vectors, complete IDs and separate conditional information sets pinned. Specification freezes CLR resolution replacement, pooled shared-class/seat log error, three-prior-environment shrinkage, earlier-only scales, mean preservation,512draws/1024bounded precision, one1.5variance transport stress and threecached56day composition cases. No uncertainty fitting/scoring yet; no mean refit/acquisition. Frozen zero mean remains zero and its target-positive miss is explicit. Next: estimate earlier-only scales and residual association, implement shared seeded simulation, seal predictions before scores, validate. Māori separate; parameter/cross-layer/reconciliation limits explicit.
