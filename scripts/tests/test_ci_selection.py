@@ -138,11 +138,16 @@ class EvidenceFingerprintTests(unittest.TestCase):
 
     def test_runtime_must_match_previously_validated_linux_environment(self):
         registry = selection.load_registry()
-        with patch.object(selection.sys, 'version', '3.12.2 synthetic'), \
+        with patch.dict(selection.os.environ, {'ImageVersion': '20260927.320.1'}), \
+                patch.object(selection.sys, 'version', '3.12.2 synthetic'), \
                 patch.object(selection.platform, 'system', return_value='Linux'), \
                 patch.object(selection.platform, 'machine', return_value='x86_64'), \
                 patch.object(selection.platform, 'freedesktop_os_release', return_value={'ID':'ubuntu', 'VERSION_ID':'24.04'}):
             self.assertEqual(selection.runtime_errors(registry), [])
+            with patch.dict(selection.os.environ, {'ImageVersion': 'changed-image'}):
+                self.assertIn('unattested runtime: imageVersion', selection.runtime_errors(registry))
+            with patch.object(selection, 'version', return_value='unknown-version'):
+                self.assertIn('unattested runtime: packages', selection.runtime_errors(registry))
             with patch.object(selection.sys, 'version', '3.13.0 synthetic'):
                 self.assertIn('unattested runtime: python', selection.runtime_errors(registry))
             with patch.object(selection.platform, 'machine', return_value='aarch64'):

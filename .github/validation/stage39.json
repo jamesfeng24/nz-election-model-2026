@@ -16,9 +16,16 @@
       "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37275906724"
     ],
     "runtime": {
+      "imageVersion": "20260927.320.1",
       "machine": "x86_64",
       "osId": "ubuntu",
       "osVersionId": "24.04",
+      "packages": {
+        "matplotlib": "3.10.6",
+        "numpy": "2.2.6",
+        "scipy": "1.16.0",
+        "shapely": "2.1.2"
+      },
       "python": "3.12.2",
       "system": "Linux"
     },

@@ -2,6 +2,8 @@
 import argparse
 import hashlib
 import json
+import os
+from importlib.metadata import version, PackageNotFoundError
 from pathlib import Path
 import platform
 import subprocess
@@ -38,7 +40,13 @@ def fingerprint_errors(registry, root=ROOT):
 def runtime_errors(registry):
     """Different inference runtime/platform has no automatic prior attestation."""
     expected = registry['attestation']['runtime']
-    actual = {'python': sys.version.split()[0], 'system': platform.system(), 'machine': platform.machine()}
+    actual = {'python': sys.version.split()[0], 'system': platform.system(), 'machine': platform.machine(),
+              'imageVersion': os.environ.get('ImageVersion'), 'packages': {}}
+    for package in expected.get('packages', {}):
+        try:
+            actual['packages'][package] = version(package)
+        except PackageNotFoundError:
+            actual['packages'][package] = None
     if actual['system'] == 'Linux':
         release = platform.freedesktop_os_release()
         actual.update(osId=release.get('ID'), osVersionId=release.get('VERSION_ID'))
