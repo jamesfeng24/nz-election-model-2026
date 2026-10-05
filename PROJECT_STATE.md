@@ -1,3 +1,11 @@
+# Stage47 research/plan checkpoint — 6 October 2026
+
+Verified PR53 merged d0fa5a6 containing reviewed0ee8ad4. Clean main safely refreshed; branch stage/47-expectation-width-diagnostic. Plan docs/stage47-implementation-plan.md and consumed/preservation manifests are frozen before implementation. Existing Gaussian default, continuous S+R means and all prior outputs preserved. Original8000 and common-stream32768 banks available locally; no historical/national reconstruction needed for original widths/prior attribution.
+
+Exact next action: implement/reference-check Gaussian conditional location machinery under frozen .05pp comparison/stricter solver-reference targets; measure bounded numerical pilot before freezing companion/attribution compute. Then numerical-only companion seal, width/prior/dependence/heterogeneity inventory, next-test design if justified, local validation and one final unskipped review push/Ubuntu gate/PR unmerged. No new variances, means, t/mixture, MCMC, sources or later stages. This checkpoint is local, not yet a GitHub backup.
+
+---
+
 # Stage46 complete locally — review-ready bounded tail comparison, 2026-10-06
 
 Branch `stage/46-residual-tail-diagnosis`; prerequisite PR52/reviewed49385c9/merge34bc83bb verified. Pre-fit280b14d/e02dc92; corrected integration29315a7; corrected full-bank seal a036d4a precedes full comparative scoring. Earlier outcome-based numerical precision monitors are explicitly preserved in pre-covariance-convergence.json. All257 candidate residual seats retained;321party/193composed records. No sources, national MCMC, mean refit, new directions, df/scale search or historical overrides.
