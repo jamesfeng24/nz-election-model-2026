@@ -35,6 +35,8 @@ def signature():
     paths = sorted((ROOT / 'scripts/uncertainty_revision').glob('*.py'))
     return hashlib.sha256(encode({
         'inputs': read(PREFIX + '/input-contract.json'),
+        'consumedCode': {p: digest(p) for p in sorted(read(PREFIX + '/input-contract.json')['inputHashes'])
+                         if p.startswith('scripts/')},
         'specification': digest(PREFIX + '/specification.json'),
         'scales': digest(PREFIX + '/scales.json'),
         'code': {str(p.relative_to(ROOT)): digest(str(p.relative_to(ROOT))) for p in paths

@@ -370,6 +370,17 @@ class ActualAdapterTests(unittest.TestCase):
         self.assertIn(common.OLD+'/inventory.json', contract['inputHashes'])
         self.assertIn(common.OLD+'/scales.json', contract['inputHashes'])
 
+    def test_transitive_helper_changes_invalidate_the_signature(self):
+        path = 'scripts/polling/candidate_integration/propagation.py'
+        contract = read(common.PREFIX+'/input-contract.json')
+        self.assertIn(path, contract['producerDependencyAudit']['helperPaths'])
+        before = common.signature()
+        original = common.digest
+        with patch.object(common, 'digest', side_effect=lambda p: 'synthetic-changed-byte' if p == path else original(p)):
+            self.assertNotEqual(before, common.signature())
+            with self.assertRaisesRegex(ValueError, 'Changed consumed input'):
+                common.verify()
+
 
 class FrozenConvergenceTests(unittest.TestCase):
     def run_synthetic_convergence(self, values):
