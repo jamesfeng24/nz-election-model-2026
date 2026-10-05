@@ -1,3 +1,15 @@
+# Stage46 corrected integration checkpoint — 2026-10-06
+
+Existing branch `stage/46-residual-tail-diagnosis`, prerequisite main34bc83bb/reviewed49385c9 verified. Local commits through d946fad; no Stage46 remote branch/PR. Work and caches are LOCAL, not off-device backups.
+
+All12 unscored 32,768 banks completed under9183cf; retained pre-covariance-construction.json and original cache. Before any predictive scoring, corrected conditional remainder quadrature to the actual shared-ballot-label covariance. Shared/no_group duplicate effects cancel in same-label contrasts; individual effects remain. No statistical law, mean coefficient, sample, gate or cap changes. Untouched Stage45 control stays separate. Finite contractions use explicit einsum to avoid previously documented Apple Accelerate false status warnings. Gaussian/Student pair reuse equals independent compositions within1e-10; exact repeated4096 national inputs reuse offsets only when every row matches.
+
+Corrected generation currently running: `/tmp/stage46-corrected-construction.log` (session21511). Resume with `.venv/bin/python -m scripts.uncertainty_tails.construction`; exact signatures cache completed cases. Do not edit producer modules while it runs. New independent synthetic contrast covariance GH41/81 reference saved; 28 corrected integration/pipeline tests pass. Existing full998 tests/frontend/source checks preceded this correction and are not claimed as final corrected validation. All257 candidate residual seats retained; no new scores yet.
+
+Next: complete sealed distributions, verify new representative precision and separate conditional .05pp gate without relaxation, local commit, evaluate/independently verify, full final local checks, updated findings/decision/roadmap. One consolidated unskipped push/PR/full required Ubuntu run, leave unmerged. No MCMC, acquisition, new family, historical overrides, Māori implementation or subsequent task.
+
+---
+
 # Stage46 full construction in progress — 2026-10-06
 
 PR52 merge34bc83bb/reviewed49385c9 verified; branch `stage/46-residual-tail-diagnosis`. Local checkpoints280b14d/e02dc92/d631db5/acf809a, no remote Stage46 branch or PR. These commits and cached banks are not off-device backups. Remote main remains prerequisite34bc83bb at initial verification.

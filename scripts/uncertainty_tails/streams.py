@@ -45,13 +45,14 @@ def noise(row,scales,count,student=False):
         shared,seat=k[name];s=scales[name]
         z=t.ppf(u(seat),4) if student and name=='balance' else norm.ppf(u(seat))
         result[name]=s['shared']*norm.ppf(u(shared))+s['seat']*z
-        total[name]=float(np.hypot(s['shared'],s['seat']))
+        total[name]=float(np.hypot(s['shared'],s['seat']*(np.sqrt(2) if student and name=='balance' else 1)))
     other=k['within']
     if other:
         eta=np.column_stack([scales['within']['shared']*norm.ppf(u(shared))+scales['within']['seat']*norm.ppf(u(seat)) for shared,seat in other])
         result['within']=eta-eta.mean(axis=1,keepdims=True)
     else:result['within']=np.empty((count,0))
     total['within']=float(np.hypot(scales['within']['shared'],scales['within']['seat']))
+    total['withinShared']=scales['within']['shared'];total['withinSeat']=scales['within']['seat']
     total['balanceShared']=scales['balance']['shared'];total['balanceSeat']=scales['balance']['seat']
     return result,total
 

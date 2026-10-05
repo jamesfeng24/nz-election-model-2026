@@ -281,10 +281,13 @@ class ActualPipelineAndMetricsTests(unittest.TestCase):
         def fake_compose(party_row, candidate_row, national, *args):
             banks.append(national.copy())
             return np.tile(candidate_row['mean'], (len(national), 1)), {'nationalRedrawn': False}
+        def fake_pair(party_row, candidate_row, national, *args):
+            return {method:fake_compose(party_row,candidate_row,national) for method in ('robust_gaussian','student')}
         def fake_seal(case_id, count, kind, vectors, metadata):
             return metadata
         with patch.object(construction, 'national_case', return_value=(base, ids, {'cached': True})) as national_call, \
                 patch.object(construction, 'compose', side_effect=fake_compose), \
+                patch.object(construction, 'compose_pair', side_effect=fake_pair), \
                 patch.object(construction, 'seal', side_effect=fake_seal):
             result = construction.case_build('composed', 2020, [candidate], 8192, 'synthetic',
                                              estimation.build(), {party['targetElectorateId']: party}, regenerate=True)

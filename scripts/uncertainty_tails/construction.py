@@ -5,7 +5,7 @@ from scripts.uncertainty_revision.construction import cases
 from scripts.uncertainty.construction import national_case,scale_for
 from scripts.uncertainty.metrics import crps
 from .common import ROOT,PREFIX,INVENTORY,read,save,verify,arguments,signature,digest,encode,equivalent
-from .simulation import component,compose
+from .simulation import component,compose,compose_pair
 from .streams import permutation
 from .metrics import energy
 METHODS=('stage45','robust_gaussian','student')
@@ -56,12 +56,17 @@ def case_build(layer,year,rows,count,kind,scales,parties,regenerate=False):
     vectors={};records=[]
     for row in rows:
         metadata={}
+        paired=None
+        if layer=='composed':
+            party=parties[row['targetElectorateId']]
+            fits={m:scale_for(scales['methods'][m],row['layer'],year)['scales'] for m in METHODS}
+            pfits={m:scale_for(scales['methods'][m],'local_party',year)['scales'] for m in METHODS}
+            paired=compose_pair(party,row,national,pfits['robust_gaussian'],fits['robust_gaussian'],pfits['student'],fits['student'])
         for method in METHODS:
             fit=scale_for(scales['methods'][method],row['layer'],year)['scales']
             if layer!='composed':q,meta=component(row,fit,count,method)
-            else:
-                party=parties[row['targetElectorateId']];pfit=scale_for(scales['methods'][method],'local_party',year)['scales']
-                q,meta=compose(party,row,national,pfit,fit,method)
+            elif method=='stage45':q,meta=compose(party,row,national,pfits[method],fits[method],method)
+            else:q,meta=paired[method]
             vectors[method+':'+row['targetElectorateId']]=q;metadata[method]=meta
         records.append({'id':row['targetElectorateId'],'metadata':metadata})
     value=seal(cid,count,kind,vectors,{'layer':layer,'year':year,'records':records,'nationalDrawIds':identifiers,

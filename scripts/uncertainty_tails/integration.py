@@ -55,12 +55,40 @@ def student_location(p, shared, seat):
     return out
 
 
-def conditional_offsets(base, sd, count=64, block=128):
+def within_factor(tags, shared, seat):
+    """Label-specific shared effects plus independent seat effects."""
+    names=sorted(set(tags));factor=np.zeros((len(tags),len(names)+len(tags)))
+    for i,tag in enumerate(tags):factor[i,names.index(tag)]=shared;factor[i,len(names)+i]=seat
+    return factor-factor.mean(axis=0,keepdims=True)
+
+
+def within_nodes(dimension, sd, count, tags=None, shared=None, seat=None, seed=None):
+    factor=None if tags is None or len(set(tags))==dimension else within_factor(tags,shared,seat)
+    width=dimension if factor is None else factor.shape[1]
+    if seed is None:u=quadrature(width,count)
+    else:
+        u=open_unit(qmc.Sobol(width,scramble=True,bits=30,seed=seed).random_base2(int(np.log2(count))-1))
+        u=np.concatenate((u,1-u))
+    normal=norm.ppf(u)
+    if factor is not None:return np.einsum('ij,kj->ik',normal,factor,optimize=False)
+    normal*=sd
+    return normal-normal.mean(axis=1,keepdims=True)
+
+
+def within_offsets(base, sd, count=64, tags=None, shared=None, seat=None):
+    b=np.asarray(base,float)
+    options={} if tags is None else {'count':count,'tags':tags,'shared':shared,'seat':seat}
+    if b.ndim==2 and len(b)>4096 and len(b)%4096==0 and np.array_equal(b,np.tile(b[:4096],(len(b)//4096,1))):
+        return np.tile(conditional_offsets(b[:4096],sd,**options),(len(b)//4096,1))
+    return conditional_offsets(b,sd,**options)
+
+
+def conditional_offsets(base, sd, count=64, block=128, tags=None, shared=None, seat=None):
     """Solve each conditional remainder composition, never a target-outcome correction."""
     b=np.asarray(base,float); one=b.ndim==1
     if one:b=b[None,:]
     if b.shape[1]==1 or sd==0: return np.zeros_like(b)[0] if one else np.zeros_like(b)
-    nodes=sd*norm.ppf(quadrature(b.shape[1],count));nodes-=nodes.mean(axis=1,keepdims=True)
+    nodes=within_nodes(b.shape[1],sd,count,tags,shared,seat)
     output=np.empty_like(b)
     for start in range(0,len(b),block):
         p=b[start:start+block];positive=p>0
@@ -77,7 +105,7 @@ def conditional_offsets(base, sd, count=64, block=128):
     return output[0] if one else output
 
 
-def conditional_inverse(base, groups, eta, scales, student=False, nodes=64):
+def conditional_inverse(base, groups, eta, scales, student=False, nodes=64, tags=None):
     b=validate(base);draws=len(eta['balance']);constant=b.ndim==1
     n,l,other=partition(groups);major=n+l
     if constant:b=np.broadcast_to(b,(draws,len(b)))
@@ -98,8 +126,9 @@ def conditional_inverse(base, groups, eta, scales, student=False, nodes=64):
         original=b[:,other];total=original.sum(axis=1)
         p=np.divide(original,total[:,None],out=np.zeros_like(original),where=total[:,None]>0)
         p[total==0,0]=1
-        if constant:offset=conditional_offsets(p[0],scales['within'],nodes)
-        else:offset=conditional_offsets(p,scales['within'],nodes)
+        options={'count':nodes,'tags':None if tags is None else [tags[i] for i in other],
+                 'shared':scales.get('withinShared'),'seat':scales.get('withinSeat')}
+        offset=within_offsets(p[0] if constant else p,scales['within'],**options)
         logs=np.full(p.shape,-np.inf);np.log(p,out=logs,where=p>0)
         q[:,other]=(1-mass)[:,None]*softmax(logs+offset+eta['within'],axis=-1)
     validate(q)
@@ -107,7 +136,7 @@ def conditional_inverse(base, groups, eta, scales, student=False, nodes=64):
               'zeroLock':bool(np.all(q[:,np.all(b==0,axis=0)]==0))}
 
 
-def conditional_check(base, groups, scales, student=False):
+def conditional_check(base, groups, scales, student=False, tags=None):
     """Independent larger-node expectation checks, without target outcomes."""
     b=validate(base);b=b[None,:] if b.ndim==1 else b
     n,l,other=partition(groups);results={}
@@ -120,11 +149,11 @@ def conditional_check(base, groups, scales, student=False):
     if len(other)>1:
         raw=b[:,other];mass=raw.sum(axis=1)
         p=np.divide(raw,mass[:,None],out=np.zeros_like(raw),where=mass[:,None]>0);p[mass==0,0]=1
-        offset=conditional_offsets(p,scales['within']);logs=np.full(p.shape,-np.inf);np.log(p,out=logs,where=p>0)
+        within_tags=None if tags is None else [tags[i] for i in other]
+        offset=within_offsets(p,scales['within'],tags=within_tags,shared=scales.get('withinShared'),seat=scales.get('withinSeat'));logs=np.full(p.shape,-np.inf);np.log(p,out=logs,where=p>0)
         for count in (128,256):
             # Different scrambling, not merely another prefix of the construction bank.
-            u=open_unit(qmc.Sobol(len(other),scramble=True,bits=30,seed=460146+count).random_base2(int(np.log2(count))-1))
-            z=scales['within']*norm.ppf(np.concatenate((u,1-u)));z-=z.mean(axis=1,keepdims=True)
+            z=within_nodes(len(other),scales['within'],count,within_tags,scales.get('withinShared'),scales.get('withinSeat'),460146+count)
             expected=softmax(logs[:,None,:]+offset[:,None,:]+z,axis=-1).mean(axis=1)
             results[f'withinMaximumGapPP{count}']=float(100*np.max(np.abs(expected-p)*mass[:,None]))
     return results
