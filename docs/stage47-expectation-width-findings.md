@@ -29,6 +29,8 @@ Components use 32,768 draws; composed cases use the prespecified 512 common stre
 | width80 | 2.164639 |
 | width90 | 2.255378 |
 
+Full-frame composed energy-score permutation-pair disagreement reaches **0.762469pp**; this separately limits joint-score precision. The small repaired-versus-control energy differences must not be interpreted as resolved improvements.
+
 Maximum component simulated mean shift **0.008847pp**. Composed candidate finite-bank shift **0.557030pp**, while genuine local-to-candidate nonlinear expectation shift reaches **1.807275pp**. The latter is retained: no final mean is forced back to the national-input-only deterministic prediction. Component expected shares remain frozen arithmetic means; composed expected shares use averaged conditional candidate means (Rao–Blackwell), with finite upstream precision explicit. Ordinary paired MAE compares both finite-bank means; separate expected-share summaries are not falsely presented as a pure numerical-effect comparison against an exact control expectation.
 
 ## Major-candidate full interval widths
@@ -269,7 +271,7 @@ Implement the frozen three-restriction Gaussian candidate-seat balance scale com
 
 Current blockers remain finite composed simulation precision, scarce repeatedly reused election environments, prior/parameter uncertainty, fragment composition and fine-party allocation assumptions, historical cutoff/roster availability, complete live nominations, separate Māori baseline and electorate-poll measurement, turnout/reconciliation and MMP assembly. Winner frequencies are development diagnostics; finite-bank zero is not mathematical impossibility.
 
-Manual adjustments must keep dated reasons, unadjusted outputs, author/review/expiry and coherent slate changes; a mean change does not justify lower variance. Electorate polls are uncertain measurements (question, denominator, dates, sample and dependence), with Māori polls separately scoped. National Te Pāti Māori party support differs from Māori candidate support. Party-vote reconciliation must not constrain candidate-vote totals.
+Manual adjustments must keep dated reasons, unadjusted outputs, author/review/expiry and coherent slate changes; a mean change does not justify lower variance. They cannot be assumed to identify every future surprise and do not justify narrowing all remaining seats. Electorate polls are uncertain measurements (question, denominator, dates, sample and dependence), with Māori polls separately scoped. National Te Pāti Māori party support differs from Māori candidate support. Party-vote reconciliation must not constrain candidate-vote totals.
 
 ## Validation and reproduction
 

@@ -1,0 +1,58 @@
+{
+  "attempts": [
+    {
+      "higherReferenceGapPP": 0.589445,
+      "higherReferenceSpreadPP": 0.000157,
+      "kind": "reference audit",
+      "oldFailuresPreserved": true,
+      "oldReportedGapPP": 0.738928,
+      "status": "completed before new forecasts"
+    },
+    {
+      "distributionChange": null,
+      "kind": "forecast construction",
+      "signature": "74e9a61321315b1c98776135a07ce2fef3c21f63769edeebee3220ad314973e2",
+      "status": "all12cases+9precision cases sealed before evaluation, local commit4c4fef0"
+    },
+    {
+      "conditionalIntegrationSeparatelyPasses": true,
+      "kind": "simulation precision",
+      "status": "representative512/1024 cap gates fail; fixed512 composed retained",
+      "tolerancesChanged": false
+    },
+    {
+      "kind": "independent attribution arithmetic",
+      "oldWarningLog": "/tmp/stage47-attribution.log",
+      "statisticalChange": null,
+      "status": "same-equation explicit contraction avoids previously documented Apple Accelerate false status warnings; attribution --check passed"
+    },
+    {
+      "kind": "future-contract test",
+      "status": "caught duplicated decision field while making future design; split B decision from reviewCriteria before final review; no fitted/statistical output change"
+    },
+    {
+      "kind": "shared-only synthetic reference",
+      "status": "default relative quadrature tolerance gave estimatedreferenceerror2.8e-9; set explicit epsrel1e-12 consistent with frozen reference precision, fixture passes without relaxing test/model gates"
+    },
+    {
+      "kind": "final local tests",
+      "status": "1058full tests pass,9intentionaloptional-environment skips; subsequent extra shared-only fixture and pipeline23focused tests pass"
+    }
+  ],
+  "budgets": "27timed calls frozen before newbanks;40CPUmin newconstruction/precision,30CPUmin attribution; no cap/tolerance escalation. Time observations in timing-pilot.json are not deterministic metrics.",
+  "historicalAcquisition": 0,
+  "localCheckpoints": [
+    "9d4daa6",
+    "7d86a90",
+    "d09fe71",
+    "10c069c",
+    "8a7a37b",
+    "4c4fef0",
+    "f2533ed"
+  ],
+  "logs": "Local/tmp logs are not archived/off-device backups; reproducible contracts/results/check scripts are committed.",
+  "nationalMCMC": 0,
+  "newMeanOrVarianceFits": 0,
+  "operationalChanges": null,
+  "stage": 47
+}

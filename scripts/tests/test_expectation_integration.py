@@ -9,6 +9,18 @@ from scripts.uncertainty_expectation.reference import assess_reference, cholesky
 
 
 class ExpectationIntegrationTests(unittest.TestCase):
+    def test_shared_only_repeated_labels_reduce_to_one_binary_contrast(self):
+        p = np.array([.1,.2,.7])
+        shared = .37
+        offsets, checks = integration.solve_locations(p, ('a','a','b'), shared, 0.)
+        self.assertTrue(checks[0]['passed'])
+        self.assertAlmostEqual(offsets[0], offsets[1], places=11)
+        eta = np.sqrt(2)*shared
+        location = np.log(.3/.7)+offsets[0]-offsets[2]
+        total, error = quad(lambda z: expit(location+eta*z)*norm.pdf(z),-12,12,epsabs=1e-12,epsrel=1e-12)
+        self.assertLess(error,1e-10)
+        np.testing.assert_allclose(np.array([total/3,2*total/3,1-total]),p,rtol=0,atol=.05/100)
+
     def test_repeated_labels_have_shared_covariance_not_individual_noise(self):
         shared, seat = .37, .21
         result = integration.contrast_covariance(('a', 'a', 'b'), shared, seat)
