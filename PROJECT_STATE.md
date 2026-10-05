@@ -1,3 +1,15 @@
+# Stage44 — PR51 final verification handoff, 2026-10-05
+
+[PR #51](https://github.com/jamesfeng24/nz-election-model-2026/pull/51) is open and must remain unmerged. Branch `stage/44-local-candidate-uncertainty`. Pre-fit57ad9a0 → sealed draws8b30fcc → implementation/results7098d57921b7803b4e7c0fcaffb17a8a2131eb65 are pushed. Local tracking matched with a clean tree before this documentation-only handoff.
+
+Implementation, proper scores, frozen precision, independent arithmetic, preservation and required local checks are complete:913Python tests/nine intentional environment skips;31frontend tests/typecheck/build;926sources; eight deterministic module checks; compile/whitespace;1764 prior data files unchanged. Numerical/scoring choices are frozen; do not repeat completed validation or MCMC merely for handoff.
+
+Final-head GitHub checks are pending at this committed handoff. Exact next action: push this documentation commit, verify all PR51/check runs on that resulting final head, confirm local/remote equality and clean tree, record actual CI status in PR51 and return final SHA/results; then stop. No unresolved approval-review block. Any concrete CI serialization/correctness failure must be fixed within the frozen equations/tolerances, not through uncertainty tuning.
+
+D078 retains one development uncertainty scenario with poor major-party sharpness, explicit prior/independence/parameter/precision/reconciliation limitations and nonlinear mean shifts. No calibrated electorate probabilities or operational selection. Next separate work: official nominations and Māori baseline/polling; reconciliation/denominator decisions and finalMMP/live assembly remain bounded dependencies. No new experiment starts automatically.
+
+---
+
 # Stage44 — uncertainty implementation complete locally, 2026-10-05
 
 Branch `stage/44-local-candidate-uncertainty`; PR50 reviewedbdac621/merge95dfcc7 ancestry verified from clean main. Frozen inventory/spec57ad9a0 and sealed scales/draws8b30fcc pushed before evaluation. No new source, mean refit, MCMC, live partial-slate forecast, Māori general-coefficient extension or operational change.
