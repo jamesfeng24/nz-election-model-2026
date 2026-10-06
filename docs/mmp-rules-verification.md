@@ -53,6 +53,22 @@ Documentation-only checkpoint. **No data, code, model, coefficient, test or work
 | [NZ Initiative, Unravelling MMP](https://www.nzinitiative.org.nz/reports-and-media/reports/unravelling-mmp-how-the-2026-election-could-break-the-voting-system-from-two-sides/document/946), [Equal Justice Project](https://www.equaljusticeproject.co.nz/articles/the-electoral-amendment-act2025), [Wikipedia, Electoral system of NZ](https://en.wikipedia.org/wiki/Electoral_system_of_New_Zealand) | Secondary corroboration only (items 2, 8, 9) | Read |
 | legislation.govt.nz Act pages and section pages, NZLII, natlex 2014 reprint, Parliamentary Practice ch. 2 | Statute text | **Not obtained** (403 / truncated / robots.txt) |
 
+## Inventory: can the candidate layer name minor-party winners?
+
+Checked in repo artifacts only (no run, no new data); question raised by the process audit (item A3).
+
+- **Historical frames: yes, structurally.** The Stage39–47 candidate model assigns a share vector to every candidate in a slate, whatever the party, and winners are the per-draw maxima. `data/processed/uncertainty-tails/evaluation.json` stores per-seat vectors for named seats (for example Epsom 2011 carries 13 candidate options with simulated means), and the specifications report "full-slate winner frequencies" with `zeroWinnerProbabilityCount`. "National/Labour/other" in Stage44–47 is the uncertainty-class grouping used to scale variance, not a limit on which candidates can win.
+- **Not calibrated.** Every Stage39–47 document labels winner frequencies as diagnostics. Minor-party seats (Epsom-type personal-vote contests) rely on the "other" variance class and the Gaussian development default; a frequency of zero in a finite draw bank is not a zero probability. Using them for the threshold bypass inherits that.
+- **2026: no named-winner output exists yet.** Stage40 records 70 of 71 targets with partial or unknown slates and no complete slate; Labour's electorate assignments are unpublished there, ACT's Seymour is context only, TPM has two confirmed 2026 candidates, and the 2026 party ballot roster is not final. Nominations close noon 8 Oct. The Māori seats lack a baseline and poll layer (Stage40, roadmap).
+- **Consequence for MMP assembly.** Which minor parties can clear the threshold via an electorate depends on (a) the post-close official slate, (b) the Māori baseline for TPM, and (c) an explicit decision on how uncalibrated winner frequencies feed qualification. These are inputs to a later assembly stage, not to the allocation core, which takes electorate winners as given. A cheap sensitivity (qualification probability bounds from the existing Stage44–47 draws) is possible once slates exist; none is claimed here.
+
+## Module plan notes (for the proposed stage)
+
+- Pure TypeScript, no DOM or React imports, no `Date.now`/`Math.random`; inputs and outputs are plain serializable objects so the same function runs in a module Web Worker.
+- Inputs: integer national valid party votes per ballot party; per-party electorate seat counts (general + Māori) plus an explicit independent count; rules-version identifier citing this document. Output: the `MmpAllocation` shape in `src/types/domain.ts` plus the per-quotient allocation order for auditing.
+- Fail-closed branches (throw a typed error or return an explicit `unverified` flag) for: tied quotients, independent electorate winners, postponed electorate polls, and unknown ballot-party mapping. Tests assert these branches rather than guessing.
+- Edge-case tests: 4.99% versus 5.00%; sub-5% party with one electorate (ACT-style); sub-5% party with zero electorates excluded; several overhang parties at once; overhang party's entitlement computed from the same single 120-seat run; electorate winners fewer than entitlement; party with all votes; very close quotients decided by exact cross-multiplication; invariance under scaling all votes; replay of 2008–2023 official tables.
+
 ## Proposed implementation stage (not started; needs Corinna's go-ahead)
 
 **Question:** given fixed national party-vote counts and fixed electorate winners, does a deterministic, DOM-free, serializable TypeScript allocator in `src/models/mmp` reproduce the official 2008–2023 seat allocations exactly, including every overhang case?

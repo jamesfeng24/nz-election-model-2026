@@ -6,6 +6,8 @@ No-data-change checkpoint: no source acquired, no code, tests, workflows or Stag
 
 Open: Electoral Act ss 3, 191–193 text unreadable here (legislation.govt.nz, NZLII, natlex, Parliamentary Practice blocked or truncated); independent electorate winners, tie-breaking, postponed-electorate rule, party-not-on-ballot winners, list eligibility. Checks: documentation only; no tests run or needed.
 
+Minor-party winner inventory (repo artifacts only): the candidate model yields full-slate named winner frequencies in historical frames (e.g. Epsom 2011, 13 options) but they are uncalibrated diagnostics, and no 2026 named-winner output exists (70/71 slates partial; nominations close 8 Oct; no Māori baseline). Recorded in the verification doc with module-plan notes.
+
 Exact next action: Corinna decides whether to start the proposed `src/models/mmp` allocation-core stage and supplies the Act text (or accepts fail-closed unverified branches). Do not start it unprompted. Re-check Part 6 against current Act text at final readiness.
 
 ---

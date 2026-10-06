@@ -1,6 +1,12 @@
 ## MMP seat-rule verification — 2026-10-06
 
-No data acquired; nothing added under `data/raw/`. [docs/mmp-rules-verification.md](docs/mmp-rules-verification.md) lists the Electoral Commission, Ministry of Justice and Stats NZ pages read through a summarising web-fetch tool (not byte-preserved, no checksums) and the statute hosts that could not be read. Electoral Act 1993 section text (ss 3, 191–193) is **not** yet obtained; rules are supported by Electoral Commission plain-language statements only.
+No data acquired; nothing added under `data/raw/`. Rules supported by Electoral Commission plain-language statements ([How are MPs elected?](https://elections.nz/democracy-in-nz/what-is-new-zealands-system-of-government/how-are-mps-elected), [Sainte-Laguë explained, 2017 edition](https://www.electionresults.govt.nz/electionresults_2017/statistics/sainte-lague-formula.html), [2023 official results](https://elections.nz/media-and-news/2023/official-results-for-the-2023-general-election), [boundaries finalised, 8 Aug 2025](https://elections.nz/media-and-news/2025/electorate-boundaries-finalised)) and the [Ministry of Justice summary of the Electoral Amendment Act 2025](https://www.justice.govt.nz/about/news-and-media/news/electoral-law-changes/):
+
+- 120 nominal seats; qualification by at least 5% of the party vote or at least one electorate seat; Sainte-Laguë divisors 1, 3, 5, …, the 120 highest quotients decide seats and order.
+- Overhang: the party keeps extra electorate seats, receives no list seats, and Parliament grows (2023: 122 with overhang 2, then 123 after the Port Waikato poll).
+- 2026: 64 general + 7 Māori = 71 electorates; 49 nominal list seats is derived (120 − 71), not stated by an official page. The 2025 Act summary lists no allocation-rule change.
+
+Evidence limits: pages were read through a summarising web-fetch tool on 2026-10-06 (no byte preservation, no checksums). Electoral Act 1993 section text (ss 3, 191–193) was **not obtained**: legislation.govt.nz, NZLII, natlex and Parliamentary Practice were blocked, truncated or robots-disallowed. Open: independent electorate winners, tie-breaking, postponed-electorate rule, list eligibility. Full ledger and findings: [docs/mmp-rules-verification.md](docs/mmp-rules-verification.md).
 
 ## Stage34 — preserved-input diagnostic companions
 
