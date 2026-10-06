@@ -427,6 +427,7 @@ def select_pipeline(name, registry, event, root=ROOT, actual_runtime=None, candi
         return {'mode': 'full', 'reason': ' | '.join(reasons)}
     result = select_against(name, registry, root, found)
     if result['mode'] == 'integrity':
+        result['reason'] += ' [pin not used: {}]'.format(reasons[0])
         return result
     reasons.append(result['reason'])
     return {'mode': 'full', 'reason': ' | '.join(reasons)}
