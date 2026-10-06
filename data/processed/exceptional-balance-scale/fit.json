@@ -1,0 +1,938 @@
+{
+  "bound": 1.3862943611198906,
+  "descriptive2026Refit": {
+    "scored": false,
+    "stage60Free2026Refit": 0.7901362246526518,
+    "trainingYears": [
+      2014,
+      2017,
+      2020,
+      2023
+    ],
+    "twogroup": {
+      "a": -0.5054375800073981,
+      "b": 0.8827457702168655,
+      "boundContact": [
+        false,
+        false
+      ],
+      "centralDifferenceGradientMaxDifference": 5.830188415378846e-11,
+      "chosenStart": 0,
+      "exceptionalMultiplier": 1.458353690449582,
+      "gradient": [
+        -5.856274701288022e-10,
+        -2.0706516362656302e-11,
+        0.0
+      ],
+      "objective": -0.9309916955722854,
+      "ordinaryMultiplier": 0.6032415512229498,
+      "powell": {
+        "maximumParameterDifference": 1.1436393165809022e-08,
+        "objective": -0.9309916955722857,
+        "objectiveDifference": 2.220446049250313e-16
+      },
+      "projectedGradientMax": 5.856274701288022e-10,
+      "ratio": 2.4175285795434114,
+      "starts": [
+        {
+          "iterations": 9,
+          "objective": -0.9309916955722854,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.5054375800073981,
+            0.8827457702168655,
+            0.0
+          ]
+        },
+        {
+          "iterations": 8,
+          "objective": -0.9309916955722853,
+          "start": [
+            -0.2,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.5054375786685033,
+            0.8827457722369452,
+            0.0
+          ]
+        },
+        {
+          "iterations": 9,
+          "objective": -0.9309916955722853,
+          "start": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.505437579749613,
+            0.8827457700546669,
+            0.0
+          ]
+        }
+      ]
+    },
+    "twogroup17": {
+      "a": -0.20615130422677108,
+      "b": -1.109665980053599,
+      "boundContact": [
+        false,
+        false
+      ],
+      "centralDifferenceGradientMaxDifference": 6.350413597755453e-11,
+      "chosenStart": 0,
+      "exceptionalMultiplier": 0.26825499303494277,
+      "gradient": [
+        -1.474382387012252e-10,
+        -1.6496469294746685e-10,
+        0.0
+      ],
+      "objective": -0.8350308928074314,
+      "ordinaryMultiplier": 0.8137099492136509,
+      "powell": {
+        "maximumParameterDifference": 5.249966572584697e-10,
+        "objective": -0.8350308928074315,
+        "objectiveDifference": 1.1102230246251565e-16
+      },
+      "projectedGradientMax": 1.6496469294746685e-10,
+      "ratio": 0.3296690587280858,
+      "starts": [
+        {
+          "iterations": 12,
+          "objective": -0.8350308928074314,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.20615130422677108,
+            -1.109665980053599,
+            0.0
+          ]
+        },
+        {
+          "iterations": 9,
+          "objective": -0.835030892807431,
+          "start": [
+            -0.2,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.20615130421891414,
+            -1.109665978702346,
+            0.0
+          ]
+        },
+        {
+          "iterations": 12,
+          "objective": -0.8350308928074313,
+          "start": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.20615130438279713,
+            -1.1096659783449392,
+            0.0
+          ]
+        }
+      ]
+    },
+    "twogroup_exc1": {
+      "boundContact": [
+        false
+      ],
+      "c": -0.504887462232768,
+      "centralDifferenceGradientMaxDifference": 4.945018353130853e-11,
+      "chosenStart": 0,
+      "exceptionalMultiplier": 1.0,
+      "gradient": [
+        -0.16569497621413856,
+        6.472090380987838e-09,
+        0.0
+      ],
+      "objective": -0.9035360971964994,
+      "ordinaryMultiplier": 0.6035734964187778,
+      "powell": {
+        "maximumParameterDifference": 5.241283185242196e-09,
+        "objective": -0.9035360971964996,
+        "objectiveDifference": 2.220446049250313e-16
+      },
+      "projectedGradientMax": 6.472090380987838e-09,
+      "starts": [
+        {
+          "iterations": 5,
+          "objective": -0.9035360971964994,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            0.0,
+            -0.504887462232768,
+            0.0
+          ]
+        },
+        {
+          "iterations": 5,
+          "objective": -0.9035360971964994,
+          "start": [
+            -0.2,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            0.0,
+            -0.504887462232768,
+            0.0
+          ]
+        },
+        {
+          "iterations": 5,
+          "objective": -0.9035360971964994,
+          "start": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            0.0,
+            -0.504887462232768,
+            0.0
+          ]
+        }
+      ]
+    }
+  },
+  "folds": {
+    "2014": {
+      "free": 1.0,
+      "targetYear": 2014,
+      "trainingFlagged": {
+        "twogroup": 0,
+        "twogroup17": 0
+      },
+      "trainingYears": [],
+      "twogroup": {
+        "a": 0.0,
+        "b": 0.0,
+        "exceptionalMultiplier": 1.0,
+        "ordinaryMultiplier": 1.0,
+        "ratio": 1.0,
+        "status": "no earlier candidate residual: control"
+      },
+      "twogroup17": {
+        "a": 0.0,
+        "b": 0.0,
+        "exceptionalMultiplier": 1.0,
+        "ordinaryMultiplier": 1.0,
+        "ratio": 1.0,
+        "status": "no earlier candidate residual: control"
+      },
+      "twogroup_exc1": {
+        "a": 0.0,
+        "b": 0.0,
+        "exceptionalMultiplier": 1.0,
+        "ordinaryMultiplier": 1.0,
+        "ratio": 1.0,
+        "status": "no earlier candidate residual: control"
+      }
+    },
+    "2017": {
+      "free": 0.833555898945583,
+      "targetYear": 2017,
+      "trainingFlagged": {
+        "twogroup": 8,
+        "twogroup17": 1
+      },
+      "trainingYears": [
+        2014
+      ],
+      "twogroup": {
+        "a": -0.5193779592022294,
+        "b": 1.0713368724485086,
+        "boundContact": [
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 5.77650809130431e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 1.736651637877322,
+        "gradient": [
+          1.1881640293170959e-08,
+          1.0853242778021549e-08,
+          0.0
+        ],
+        "objective": -0.8676702067038455,
+        "ordinaryMultiplier": 0.5948904790503285,
+        "powell": {
+          "maximumParameterDifference": 4.3250016679152736e-08,
+          "objective": -0.8676702067038456,
+          "objectiveDifference": 1.1102230246251565e-16
+        },
+        "projectedGradientMax": 1.1881640293170959e-08,
+        "ratio": 2.9192795968926557,
+        "starts": [
+          {
+            "iterations": 10,
+            "objective": -0.8676702067038455,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.5193779592022294,
+              1.0713368724485086,
+              0.0
+            ]
+          },
+          {
+            "iterations": 9,
+            "objective": -0.8676702067038453,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.5193779652720577,
+              1.0713368384594282,
+              0.0
+            ]
+          },
+          {
+            "iterations": 10,
+            "objective": -0.8676702067038456,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.5193779598507744,
+              1.0713368321046886,
+              0.0
+            ]
+          }
+        ]
+      },
+      "twogroup17": {
+        "a": -0.1753281683578403,
+        "b": -0.8103498908062549,
+        "boundContact": [
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 5.194543059583445e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 0.3731860988742034,
+        "gradient": [
+          -1.9353537834831958e-09,
+          1.541173546289933e-10,
+          0.0
+        ],
+        "objective": -0.6743888867797614,
+        "ordinaryMultiplier": 0.8391815827347197,
+        "powell": {
+          "maximumParameterDifference": 8.547755658838696e-08,
+          "objective": -0.6743888867797617,
+          "objectiveDifference": 3.3306690738754696e-16
+        },
+        "projectedGradientMax": 1.9353537834831958e-09,
+        "ratio": 0.4447024417028635,
+        "starts": [
+          {
+            "iterations": 13,
+            "objective": -0.6743888867797614,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.1753281683578403,
+              -0.8103498908062549,
+              0.0
+            ]
+          },
+          {
+            "iterations": 11,
+            "objective": -0.674388886779761,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.17532817031266743,
+              -0.8103497962657641,
+              0.0
+            ]
+          },
+          {
+            "iterations": 13,
+            "objective": -0.6743888867797616,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.17532816496972928,
+              -0.8103498364466195,
+              0.0
+            ]
+          }
+        ]
+      },
+      "twogroup_exc1": {
+        "boundContact": [
+          false
+        ],
+        "c": -0.5196040782626268,
+        "centralDifferenceGradientMaxDifference": 6.77521164171857e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 1.0,
+        "gradient": [
+          -0.2570566943022867,
+          1.1387349396763113e-12,
+          0.0
+        ],
+        "objective": -0.8094139780781354,
+        "ordinaryMultiplier": 0.5947559781813445,
+        "powell": {
+          "maximumParameterDifference": 1.8760815123641805e-09,
+          "objective": -0.8094139780781363,
+          "objectiveDifference": 8.881784197001252e-16
+        },
+        "projectedGradientMax": 1.1387349396763113e-12,
+        "starts": [
+          {
+            "iterations": 6,
+            "objective": -0.8094139780781354,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.5196040782626268,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.8094139780781354,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.5196040782626268,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.8094139780781354,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.5196040782626268,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    "2020": {
+      "free": 0.8539589629398119,
+      "targetYear": 2020,
+      "trainingFlagged": {
+        "twogroup": 14,
+        "twogroup17": 5
+      },
+      "trainingYears": [
+        2014,
+        2017
+      ],
+      "twogroup": {
+        "a": -0.4864511370935321,
+        "b": 1.1223987975832428,
+        "boundContact": [
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 4.890646221333797e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 1.8888112453830646,
+        "gradient": [
+          -2.748855559842056e-09,
+          -4.592014268833822e-12,
+          0.0
+        ],
+        "objective": -0.8755717159227162,
+        "ordinaryMultiplier": 0.6148043836774444,
+        "powell": {
+          "maximumParameterDifference": 1.0924399829193021e-08,
+          "objective": -0.8755717159227163,
+          "objectiveDifference": 1.1102230246251565e-16
+        },
+        "projectedGradientMax": 2.748855559842056e-09,
+        "ratio": 3.0722149931416634,
+        "starts": [
+          {
+            "iterations": 9,
+            "objective": -0.8755717159227162,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.4864511370935321,
+              1.1223987975832428,
+              0.0
+            ]
+          },
+          {
+            "iterations": 11,
+            "objective": -0.8755717159227162,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.48645113522913663,
+              1.122398796270317,
+              0.0
+            ]
+          },
+          {
+            "iterations": 9,
+            "objective": -0.8755717159227159,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.48645112975604454,
+              1.122398793077257,
+              0.0
+            ]
+          }
+        ]
+      },
+      "twogroup17": {
+        "a": -0.14036829068221887,
+        "b": -1.1288857352245263,
+        "boundContact": [
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 7.411440905436037e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 0.28104119305044456,
+        "gradient": [
+          2.860774200863503e-09,
+          -5.230334707007067e-10,
+          0.0
+        ],
+        "objective": -0.6983801576772182,
+        "ordinaryMultiplier": 0.8690381178129786,
+        "powell": {
+          "maximumParameterDifference": 4.6900921590875555e-08,
+          "objective": -0.6983801576772184,
+          "objectiveDifference": 2.220446049250313e-16
+        },
+        "projectedGradientMax": 2.860774200863503e-09,
+        "ratio": 0.323393401612478,
+        "starts": [
+          {
+            "iterations": 13,
+            "objective": -0.6983801576772182,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.14036829068221887,
+              -1.1288857352245263,
+              0.0
+            ]
+          },
+          {
+            "iterations": 12,
+            "objective": -0.6983801576772183,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.14036829224723757,
+              -1.1288857237818768,
+              0.0
+            ]
+          },
+          {
+            "iterations": 14,
+            "objective": -0.6983801576772182,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.14036829207071283,
+              -1.1288857278971853,
+              0.0
+            ]
+          }
+        ]
+      },
+      "twogroup_exc1": {
+        "boundContact": [
+          false
+        ],
+        "c": -0.4856885067891805,
+        "centralDifferenceGradientMaxDifference": 6.328926965837312e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 1.0,
+        "gradient": [
+          -0.28176197743223025,
+          1.3329233550241071e-11,
+          0.0
+        ],
+        "objective": -0.8041187040358175,
+        "ordinaryMultiplier": 0.6152734309637891,
+        "powell": {
+          "maximumParameterDifference": 4.599463976351359e-09,
+          "objective": -0.8041187040358175,
+          "objectiveDifference": 0.0
+        },
+        "projectedGradientMax": 1.3329233550241071e-11,
+        "starts": [
+          {
+            "iterations": 6,
+            "objective": -0.8041187040358175,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.4856885067891805,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.8041187040358175,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.4856885067891805,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.8041187040358175,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.4856885067891805,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    "2023": {
+      "free": 0.7818073233364001,
+      "targetYear": 2023,
+      "trainingFlagged": {
+        "twogroup": 24,
+        "twogroup17": 11
+      },
+      "trainingYears": [
+        2014,
+        2017,
+        2020
+      ],
+      "twogroup": {
+        "a": -0.5000183392433571,
+        "b": 0.9225469358011785,
+        "boundContact": [
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 6.143416331205742e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 1.5258148520322308,
+        "gradient": [
+          -8.570549853148535e-09,
+          -7.651203351444202e-09,
+          0.0
+        ],
+        "objective": -0.9157128484490701,
+        "ordinaryMultiplier": 0.6065195365012573,
+        "powell": {
+          "maximumParameterDifference": 1.4608427467699414e-08,
+          "objective": -0.9157128484490703,
+          "objectiveDifference": 2.220446049250313e-16
+        },
+        "projectedGradientMax": 8.570549853148535e-09,
+        "ratio": 2.515689537115294,
+        "starts": [
+          {
+            "iterations": 9,
+            "objective": -0.9157128484490701,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.5000183392433571,
+              0.9225469358011785,
+              0.0
+            ]
+          },
+          {
+            "iterations": 9,
+            "objective": -0.9157128484490699,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.500018338710987,
+              0.9225469658921887,
+              0.0
+            ]
+          },
+          {
+            "iterations": 9,
+            "objective": -0.9157128484490699,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.5000183383198173,
+              0.9225469655579632,
+              0.0
+            ]
+          }
+        ]
+      },
+      "twogroup17": {
+        "a": -0.2204996182909534,
+        "b": -1.209881426423817,
+        "boundContact": [
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 5.707665821456468e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 0.23921775221476815,
+        "gradient": [
+          5.707665821456468e-11,
+          -8.547280938575597e-12,
+          0.0
+        ],
+        "objective": -0.8194325362443603,
+        "ordinaryMultiplier": 0.8021179450372475,
+        "powell": {
+          "maximumParameterDifference": 1.3387784436602601e-08,
+          "objective": -0.8194325362443605,
+          "objectiveDifference": 2.220446049250313e-16
+        },
+        "projectedGradientMax": 5.707665821456468e-11,
+        "ratio": 0.2982326398440814,
+        "starts": [
+          {
+            "iterations": 12,
+            "objective": -0.8194325362443603,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.2204996182909534,
+              -1.209881426423817,
+              0.0
+            ]
+          },
+          {
+            "iterations": 13,
+            "objective": -0.8194325362443601,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.2204996186618647,
+              -1.2098814268754114,
+              0.0
+            ]
+          },
+          {
+            "iterations": 13,
+            "objective": -0.8194325362443605,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.22049961830633394,
+              -1.2098814262778068,
+              0.0
+            ]
+          }
+        ]
+      },
+      "twogroup_exc1": {
+        "boundContact": [
+          false
+        ],
+        "c": -0.4993592689077909,
+        "centralDifferenceGradientMaxDifference": 4.6273445723314183e-11,
+        "chosenStart": 0,
+        "exceptionalMultiplier": 1.0,
+        "gradient": [
+          -0.16422254218231222,
+          1.8645247383079302e-12,
+          0.0
+        ],
+        "objective": -0.885724497478534,
+        "ordinaryMultiplier": 0.6069194072927206,
+        "powell": {
+          "maximumParameterDifference": 2.3633828227787035e-09,
+          "objective": -0.8857244974785345,
+          "objectiveDifference": 5.551115123125783e-16
+        },
+        "projectedGradientMax": 1.8645247383079302e-12,
+        "starts": [
+          {
+            "iterations": 6,
+            "objective": -0.885724497478534,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.4993592689077909,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.885724497478534,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.4993592689077909,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.885724497478534,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              0.0,
+              -0.4993592689077909,
+              0.0
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "penalty": 0.0,
+  "stage": 67
+}
