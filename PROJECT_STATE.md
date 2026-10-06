@@ -8,7 +8,9 @@ Branch `claude/project-thread-3vvh6n`, base main d0fa5a6 (Stage46 merge). Docume
 
 **Open decisions for James:** probability-release policy and gate; separate sign-off for the balance-scale comparison. The manual-intervention replay is a retained required stage, sequenced after PR54/CI scoping, the scale comparison, the replacement/incumbency dataset and the dated manual-adjustment interface, required before any model-plus-manual output is published, and not started now (James: it should be tested, but not now).
 
-**Exact next action:** James reviews and merges this PR (or asks for changes). Then, independently: PR54 repair and CI-scoping threads, MMP rules/allocation thread, end-to-end skeleton thread; nomination snapshot thread after the 8 October close. Do not start the balance-scale comparison or later items without sign-off. Earlier entries below are historical checkpoints, not current status.
+**Update (same day):** PR #55 was merged before the final planning commits; the manual-adjustment item, replay ordering and James rename follow in a small PR opened with CI on after CI scoping merges (the main run on the #55 merge was cancelled at James's request to avoid a ~60-minute run before scoping). James authorized that, once CI scoping is done, completing Verify runs happen automatically without asking each time.
+
+**Exact next action:** CI scoping merges, then the follow-up planning PR is opened unskipped. Independently: PR54 repair and CI-scoping threads, MMP rules/allocation thread, end-to-end skeleton thread; nomination snapshot thread after the 8 October close. Do not start the balance-scale comparison or later items without sign-off. Earlier entries below are historical checkpoints, not current status.
 
 ---
 
