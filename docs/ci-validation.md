@@ -6,7 +6,7 @@
 
 `check` and `python` retain their names and read-only permissions. Frontend checks, **full standard unittest discovery**, source validation, and every standalone pipeline outside Stage39 still run. No behavioural test is omitted. No national inference, hosted model cache, whole-run cache or schedule is introduced. Main pushes and `workflow_dispatch` ran full when this stage was written; the last section supersedes that for Stage45/46 on pushes (manual dispatch stays full). PR concurrency cancels only superseded runs in the existing PR/event group. The first PR changing this workflow/selection/registry runs full.
 
-The semantic registry identifies one inspected Stage24 pure archival regeneration method, **kept full because its dependency closure is unregistered**. It explicitly identifies Stage39's bounded saved-conditional compatibility test as behavioural, despite `reproduce` in its name. Classification is based on inspected bodies and source fingerprints, not test names or timings. New tests default to behavioural; changing or adding any test forces full standalone validation. Ordinary `python3 -m unittest discover -s scripts/tests -v` is unchanged. This is a small semantic foundation, not a classification of the whole historical suite.
+The semantic registry identifies one inspected Stage24 pure archival regeneration method, **kept full because its dependency closure is unregistered**. It explicitly identifies Stage39's bounded saved-conditional compatibility test as behavioural, despite `reproduce` in its name. Classification is based on inspected bodies and source fingerprints, not test names or timings. New tests default to behavioural. Since 2026-10-07, changing or adding a test forces full standalone Stage39 validation only when it is a Stage39 or CI-policy test (amendment at the end of this document). Ordinary `python3 -m unittest discover -s scripts/tests -v` is unchanged. This is a small semantic foundation, not a classification of the whole historical suite.
 
 ## The only safe subset: Stage39
 
@@ -15,7 +15,7 @@ The five existing Stage39 `--check` commands remain the unchanged full path. A r
 1. The PR base commit and a merge base are available; comparison uses that merge base, with missing/disconnected history forcing full.
 2. The reviewed fingerprint matches all prior code, exact Stage39 consumed/protected/output files and Python environment contracts.
 3. Prior successful Linux evidence remains intact, including the tested head and completion markers.
-4. Every changed path belongs to an explicitly reviewed unaffected scope. Unknown paths, raw/required output changes, shared code, dependency files, CI/registry/checkpoint-policy changes, and changed/new tests force full.
+4. Every changed path belongs to an explicitly reviewed unaffected scope. Unknown paths, raw/required output changes, shared code, dependency files, CI/registry/checkpoint-policy changes, and changed/new Stage39 or CI-policy tests force full; other test files are reviewed as unaffected (2026-10-07).
 
 The dependency list is deliberately a conservative superset: every Python file in the validated historical tree, exact Stage39 input/preservation contracts and outputs, Python version/requirements, and the deterministic Stage39 report. Reuse also requires the attested Linux x86-64/Ubuntu 24.04/Python 3.12.2 runtime, pinned numerical package versions and runner image `20260927.320.1`; an updated/missing image identity or different runtime forces full. That is deliberately conservative and may limit reuse after image updates. New Stage45 code/output paths are explicitly separate consumers; modifications to previously validated shared helpers still force full. Other unknown/new pipelines are not assumed independent. Unrelated source registrations may conservatively force full; no old consumed-source contract is changed.
 
@@ -115,3 +115,22 @@ So: acquisitions made from now on (MMP legislation text, 2026 polls, the nominat
 # Handoff fragments are documentation (2026-10-06)
 
 `handoff.d/*.md` (one per-PR fragment holding that PR's CHANGELOG, PROJECT_STATE, DECISIONS, METHODOLOGY, DATA_SOURCES and roadmap-status entries; folded into those documents by `scripts/fold_doc_fragments.py` after a batch merges; see AGENTS.md) exists so parallel PRs do not conflict on the shared documents, which cost a CI re-run per conflict. A fragment-only change is Markdown outside `data/`, so it never forces a Stage45/46 replay (`ci_frozen`: only watched, referenced, output, environment and existing-data paths do), and `ci_selection` lists `handoff.d/*.md` with `docs/*.md` as reviewed editorial paths, so it does not force Stage39 full either. The fold script is not part of any pipeline's import closure. `scripts/tests/test_fold_doc_fragments.py` runs in the always-on unittest discovery (including a run against copies of the real shared documents); `python3 -m scripts.fold_doc_fragments --check` validates pending fragments locally. Unfolded fragments on main are part of the handoff record until folded.
+
+# Amendment (2026-10-07): only Stage39 and CI-policy tests force the Stage39 replay
+
+James approved narrowing one rule of the Stage39 selector (`scripts/validate/ci_selection.py`). Before this change, adding or changing any file under `scripts/tests/` forced the full Stage39 reconstruction, about 3 minutes, including its 2m 25s to 3m construction. That happened on nearly every PR, although a test file cannot change what Stage39 reconstructs.
+
+Now only these test files force it:
+- `scripts/tests/test_stage39_candidate_integration.py`;
+- any `scripts/tests/test_ci_*.py`, which guard the selectors themselves;
+- any test listed in Stage39's registered dependencies.
+
+Every other test still runs in full standard discovery, so no test is skipped.
+
+**Unchanged:**
+- `.github/`, `scripts/validate/ci*` and `AGENTS.md` changes still force full.
+- Unknown paths, dependency and shared-code changes still force full.
+- Main pushes and manual dispatch still run Stage39 in full.
+- The frozen-pipeline selector (`ci_frozen`) is not affected.
+
+The registry (`.github/validation/stage39.json`) and its attestation are not edited. The other proposed savings (main-push reuse, archival test skipping, a docs-only fast path) were not adopted.
