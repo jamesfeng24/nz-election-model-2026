@@ -1,0 +1,33 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: frame-ancestors 'self'
+cache-control: private, no-store
+etag: W/"f932a6c0bedb40d10e56b641f3fb98ec"
+set-cookie: scribd_ubtc=u%3Da823e211-07ff-46b4-96ec-dd9aeaa4673a%26h%3DeegyQ2rOUcw0nYHOqJ2l98tGJHa43vz37BWWfJ63%2F2M%3D; domain=.scribd.com; path=/; expires=Sun, 06 Oct 2041 01:07:09 GMT; secure
+set-cookie: ssuuid=a823e211-07ff-46b4-96ec-dd9aeaa4673a; domain=.scribd.com; path=/; expires=Sun, 06 Oct 2041 01:07:09 GMT; secure
+set-cookie: _scribd_session=d2luUWJJSFFBRjdHYnhjZ3FYRk5jYTY4MXNGS1dKUVRkZ2dHNEFXeG14UlFQa3NPc2Y3VzYrNEUwcjZlam5tN1AyS21waDBnQjJHa2JnU0pOazg0WkU1c3lkTFFkakZuSFNhVVVTZjduelN6YzdGcllxVG4xWVlBR1E5QnY3NWF0YW5PWmNncitTbUZkOTNmdjVmbTFMRWxvZ21hTEdMbWFBRzdTRkVxdjJELzZyc0tkVWNPRkpCVTZZaFNKb01CUURTMmVhaisrejE5NGxNTTVMU3d1RUdVRnlKcTlxWHdGZTFOSlNVOUd3bnJGb2pQSTloblY3K3BJNHlCazhGVlRrc2ZBbjJoR0g2UFYrSkJZSmpwQXVBdkxjd1NiYktBcStES2E4NDNsZkp6MjZRMDg2N05UdlArYml4YWZ0UjgtLXpEa1NOSHVDSGlHRkVBYVVmQW84QVE9PQ%3D%3D--c6649943b6c816b2a4276518dee79c821d2abbe2; domain=.scribd.com; path=/; expires=Sat, 06 Oct 2029 01:07:10 GMT; secure; HttpOnly
+x-request-id: eba95972f2a833173a745993ceead2a44ed166dfb6fd5113a44a86223c9e62a6
+x-runtime: 0.401304
+x-envoy-upstream-service-time: 404
+server: envoy
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 01:07:10 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-khef600083-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791248830.882265,VS0,VE464
+set-cookie: spv_1054188547=eba95972f2a833173a745993ceead2a44ed166dfb6fd5113a44a86223c9e62a6; Path=/document/1054188547/; Max-Age=180; SameSite=Lax; Secure; HttpOnly
+vary: X-Language-Locale,Accept-Encoding
+strict-transport-security: max-age=63072000; includeSubDomains
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+

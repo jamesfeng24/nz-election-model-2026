@@ -1,0 +1,20 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+last-modified: Mon, 05 Oct 2026 21:58:24 GMT
+etag: W/"article:360993853-ed806580b48afe4c60a4b9030b3e4442"
+content-type: text/html
+cache-control: max-age=300, public, must-revalidate
+via: 1.1 varnish, 1.1 varnish
+accept-ranges: bytes
+age: 0
+date: Tue, 06 Oct 2026 01:07:05 GMT
+x-served-by: cache-akl10321-AKL, cache-akl10321-AKL, cache-akl10335-AKL, cache-iad-kcgs7200142-IAD
+x-cache: HIT, MISS, MISS, MISS
+x-cache-hits: 6934, 0, 0, 0
+x-timer: S1791248825.209984,VS0,VE549
+vary: Accept-Encoding
+strict-transport-security: max-age=31536000
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 70852
+
