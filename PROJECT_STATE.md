@@ -1,6 +1,6 @@
 # MMP rule verification complete — documentation only, 2026-10-06
 
-Branch `claude/project-thread-vojcqq` from main d0fa5a66 (verified equal to origin/main at start). Authorized scope: Corinna approved the MMP rule check only (project thread, 2026-10-06); code and a PR need her separate go-ahead. Pushed to the branch (25175b6, no PR opened; none requested).
+Branch `claude/project-thread-vojcqq` from main d0fa5a66 (verified equal to origin/main at start). Authorized scope: James (using the project owner Corinna's account) approved the MMP rule check only (project thread, 2026-10-06); code and a PR need her separate go-ahead. Pushed to the branch (25175b6, no PR opened; none requested).
 
 No-data-change checkpoint: no source acquired, no code, tests, workflows or Stage47 files touched. New [docs/mmp-rules-verification.md](docs/mmp-rules-verification.md); pointer sections added to docs/statistical-specification.md, DATA_SOURCES.md and CHANGELOG.md. Verified from Electoral Commission pages (tool-extracted, not byte-preserved): 120 seats; 5% party vote or one electorate seat; Sainte-Laguë 1,3,5,…; overhang keeps electorate seats, no list seats, Parliament grows (2023 official: 122, overhang 2, then 123 after Port Waikato); 2026 = 64 general + 7 Māori = 71 electorates, 49 nominal list seats (derived); Electoral Amendment Act 2025 summary (Royal Assent 19 Dec 2025) lists no allocation change.
 
@@ -8,7 +8,7 @@ Open: Electoral Act ss 3, 191–193 text unreadable here (legislation.govt.nz, N
 
 Minor-party winner inventory (repo artifacts only): the candidate model yields full-slate named winner frequencies in historical frames (e.g. Epsom 2011, 13 options) but they are uncalibrated diagnostics, and no 2026 named-winner output exists (70/71 slates partial; nominations close 8 Oct; no Māori baseline). Recorded in the verification doc with module-plan notes.
 
-Exact next action: Corinna decides whether to start the proposed `src/models/mmp` allocation-core stage and supplies the Act text (or accepts fail-closed unverified branches). Do not start it unprompted. Re-check Part 6 against current Act text at final readiness.
+Exact next action: James decides whether to start the proposed `src/models/mmp` allocation-core stage and supplies the Act text (or accepts fail-closed unverified branches). Do not start it unprompted. Re-check Part 6 against current Act text at final readiness.
 
 ---
 

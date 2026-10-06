@@ -1,6 +1,6 @@
 # MMP rules verification — 2026-10-06
 
-Documentation-only checkpoint. **No data, code, model, coefficient, test or workflow changed.** One question: which 2026 MMP seat-allocation rules named in [statistical-specification.md](statistical-specification.md) (items 10–12, "requested design requirements, not independently verified") can now be supported by official sources, and which remain open? Authorized by Corinna on 2026-10-06 as a rule check only; implementation is **not** authorized (see the proposal at the end).
+Documentation-only checkpoint. **No data, code, model, coefficient, test or workflow changed.** One question: which 2026 MMP seat-allocation rules named in [statistical-specification.md](statistical-specification.md) (items 10–12, "requested design requirements, not independently verified") can now be supported by official sources, and which remain open? Authorized by James (working on Corinna's account) on 2026-10-06 as a rule check only; implementation is **not** authorized (see the proposal at the end).
 
 ## Evidence quality — read first
 
@@ -69,7 +69,7 @@ Checked in repo artifacts only (no run, no new data); question raised by the pro
 - Fail-closed branches (throw a typed error or return an explicit `unverified` flag) for: tied quotients, independent electorate winners, postponed electorate polls, and unknown ballot-party mapping. Tests assert these branches rather than guessing.
 - Edge-case tests: 4.99% versus 5.00%; sub-5% party with one electorate (ACT-style); sub-5% party with zero electorates excluded; several overhang parties at once; overhang party's entitlement computed from the same single 120-seat run; electorate winners fewer than entitlement; party with all votes; very close quotients decided by exact cross-multiplication; invariance under scaling all votes; replay of 2008–2023 official tables.
 
-## Proposed implementation stage (not started; needs Corinna's go-ahead)
+## Proposed implementation stage (not started; needs James's go-ahead)
 
 **Question:** given fixed national party-vote counts and fixed electorate winners, does a deterministic, DOM-free, serializable TypeScript allocator in `src/models/mmp` reproduce the official 2008–2023 seat allocations exactly, including every overhang case?
 
@@ -79,4 +79,4 @@ Checked in repo artifacts only (no run, no new data); question raised by the pro
 
 **Do not:** wire into forecasts or Monte Carlo, build electorate probabilities, touch the frontend, `.github/workflows` or Stage47 files, or start any later stage. Checks: `npm run test`, `typecheck`, `build`, plus the dictionary/doc updates. No Python, no new dependencies.
 
-**Needed from Corinna before starting:** (a) go-ahead; (b) either the text of Electoral Act 1993 ss 3, 191–193 (a pasted PDF or an environment allow-list entry for legislation.govt.nz) so open items 1–5 can close, or consent to implement with those branches fail-closed and documented as unverified.
+**Needed from James before starting:** (a) go-ahead; (b) either the text of Electoral Act 1993 ss 3, 191–193 (a pasted PDF or an environment allow-list entry for legislation.govt.nz) so open items 1–5 can close, or consent to implement with those branches fail-closed and documented as unverified.
