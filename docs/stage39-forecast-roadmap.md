@@ -31,17 +31,17 @@ Numbers are identifiers, not an execution order; PR titles use `StageNN:` and th
 | Stage53 | End-to-end skeleton, export contract and synthetic dry run | merged (PR #57) |
 | Stage54 | Composed Monte Carlo precision (item 4): caps not attainable within the cached bank, bound and settledness recorded (D088) | merged (PR #66, 9f4c95b) |
 | Stage55 | Ordinary same-party incumbent replacement: is neutral R right? (item 6, second half; frozen pre-registered candidate-layer test, recommendation only) | merged (PR #67, e31df9c): `mixed_report_to_james` under the frozen rule, reading is keep neutral R; nothing adopted (D090) |
-| Stage56 | Dated manual-adjustment interface (item 7) | in progress (D098 allocated) |
+| Stage56 | Dated manual-adjustment interface (item 7) and Stage57 labelling tooling: adjustment files, additive-uncertainty layer, blind labelling template, label freeze (nothing estimated) | review-ready (PR pending); D098 |
 | Stage57 (provisional) | Manual (labelled) replay (item 8); required before any model + James publication | not yet authorized; confirm the number when it is |
 | Stage58 | Publication-horizon (about 32-day) calibration of the 56-day scales | skipped (D089): candidate intervals have no horizon; no 32-day national archive; inferred gain about 1 to 3% of composed width; Stage62 measures horizon effects on the live series |
 | Stage59 | Derived 2026 national poll panel: 6 Oct RNZ–Reid poll, two Talbot Mills 2024 rows, April 2026 duplicate (data repair, no fit) | merged (PR #68, 3a136c9); Stage35 and all earlier outputs unchanged, `panel-update-2026-10/panel.json` for the live-fit stage |
-| Stage60 | Stronger candidate-seat balance-scale test, extending Stage48 (frozen arms 1.00 to 0.80 plus a fitted arm) | in progress (D092 allocated); adopting any scale needs James's sign-off |
-| Stage61 | Layer calibration audit (diagnostic only) | in progress (D093 allocated) |
-| Stage62 | Live 2026 national poll fit on the Stage59 panel (internal only) | in progress (D094 allocated) |
+| Stage60 | Stronger global candidate-balance scale shrink (plan item 2; frozen pre-registered candidate-layer comparison, recommendation only) | review-ready (PR pending): `recommend_free_for_james_signoff` (earlier-trained penalty-free constant, 2026 refit 0.79; fixed 0.80 blocked by the 2014 coverage floor), nothing adopted (D092) |
+| Stage61 | Layer calibration audit (item 3): local-party, candidate mass/within and shared components scored against frozen scales; diagnostic only | review-ready (PR pending): balance is the only material over-coverer, no second narrowing target, nothing adopted (D093) |
+| Stage62 | Live 2026 national poll fit (item 9, national party vote only) | review-ready; pinned gauss, 119 polls, all gates met, internal only, recent window not adopted (D094) |
 | Stage63 | Layer-replicated composed precision on fixed national draws | in progress (D095 allocated) |
-| Stage64 | 2026 boundaries and notional 2023 results on the 2026 electorates | in progress (D096 allocated) |
-| Stage65 | MMP seat layer integration (Stage49 allocator into the forecast simulation) | in progress (D097 allocated) |
-| Stage66 | Māori seat layer (modelled separately from general electorates) | in progress (D099 allocated) |
+| Stage64 | 2026 electorate set and notional 2023 baselines on the 2025 boundaries: audit, reconciliation, third-party cross-check (D096) | review-ready; set correct and baseline complete and reconciled; no official notional found; about ten changed seats heterogeneity-sensitive |
+| Stage65 | Per-draw MMP seat layer on the unchanged Stage49 allocator: reproduces all six official 2008–2023 seat results, summaries and bloc configuration; internal only (D097) | review-ready |
+| Stage66 | Māori electorate seat layer: electorate polls to per-draw candidate shares and winners (internal; frozen pre-registered design) | review-ready (PR pending): 3 of 7 seats polled; bias term not adopted; four seats `unpolled` with no fallback (D099) |
 
 Next free number: Stage67. Decision numbers: D081 CI scoping, D082 this roadmap, D083 Stage47/PR54, D084 Stage49 MMP (#58), D085 Stage52 (#60), D086 Stage51 (#61), D087 Stage48 (#64), D088 Stage54 (#66), D089 Stage58 (skipped, recorded only), D090 Stage55 (#67), D091 Stage59 (#68); allocated for work in progress: D092 Stage60, D093 Stage61, D094 Stage62, D095 Stage63, D096 Stage64, D097 Stage65, D098 Stage56, D099 Stage66; D100 is the next free decision. Threads get decision numbers from the coordinator, not by taking the next number on main.
 
