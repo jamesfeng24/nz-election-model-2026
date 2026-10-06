@@ -1,3 +1,15 @@
+# MMP rule verification complete — documentation only, 2026-10-06
+
+Branch `claude/project-thread-vojcqq` from main d0fa5a66 (verified equal to origin/main at start). Authorized scope: Corinna approved the MMP rule check only (project thread, 2026-10-06); code and a PR need her separate go-ahead. Local checkpoint; not pushed.
+
+No-data-change checkpoint: no source acquired, no code, tests, workflows or Stage47 files touched. New [docs/mmp-rules-verification.md](docs/mmp-rules-verification.md); pointer sections added to docs/statistical-specification.md, DATA_SOURCES.md and CHANGELOG.md. Verified from Electoral Commission pages (tool-extracted, not byte-preserved): 120 seats; 5% party vote or one electorate seat; Sainte-Laguë 1,3,5,…; overhang keeps electorate seats, no list seats, Parliament grows (2023 official: 122, overhang 2, then 123 after Port Waikato); 2026 = 64 general + 7 Māori = 71 electorates, 49 nominal list seats (derived); Electoral Amendment Act 2025 summary (Royal Assent 19 Dec 2025) lists no allocation change.
+
+Open: Electoral Act ss 3, 191–193 text unreadable here (legislation.govt.nz, NZLII, natlex, Parliamentary Practice blocked or truncated); independent electorate winners, tie-breaking, postponed-electorate rule, party-not-on-ballot winners, list eligibility. Checks: documentation only; no tests run or needed.
+
+Exact next action: Corinna decides whether to start the proposed `src/models/mmp` allocation-core stage and supplies the Act text (or accepts fail-closed unverified branches). Do not start it unprompted. Re-check Part 6 against current Act text at final readiness.
+
+---
+
 # Stage46 complete locally — review-ready bounded tail comparison, 2026-10-06
 
 Branch `stage/46-residual-tail-diagnosis`; prerequisite PR52/reviewed49385c9/merge34bc83bb verified. Pre-fit280b14d/e02dc92; corrected integration29315a7; corrected full-bank seal a036d4a precedes full comparative scoring. Earlier outcome-based numerical precision monitors are explicitly preserved in pre-covariance-convergence.json. All257 candidate residual seats retained;321party/193composed records. No sources, national MCMC, mean refit, new directions, df/scale search or historical overrides.

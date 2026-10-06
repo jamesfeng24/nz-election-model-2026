@@ -1,3 +1,8 @@
+## MMP rule verification — documentation only (2026-10-06)
+
+- Record sourced status of the 5% threshold, one-electorate exemption, Sainte-Laguë, overhang, 120-seat house, 71-electorate/49-list-seat 2026 structure and 2025 law changes in `docs/mmp-rules-verification.md`; list items still open (statute text, independents, ties, postponed polls).
+- Propose, but do not start, the `src/models/mmp` allocation-core stage. No code, data, test or workflow change.
+
 ## Stage34 — bounded post-result diagnostic
 
 Added provenance-pinned whole-party TV/category audit, exact saved-expert common samples, per-election scatters/complete CSV, S/R and joint paired associations, equal-election robustness/baseline-relative controls, strict/chronology/observed-input sensitivities and independent arithmetic tests. No fitting or prior data changes. D066 retains S/S+R actively and recommends separately authorized dated-input readiness before any learned blend.

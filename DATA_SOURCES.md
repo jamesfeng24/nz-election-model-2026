@@ -1,3 +1,7 @@
+## MMP seat-rule verification — 2026-10-06
+
+No data acquired; nothing added under `data/raw/`. [docs/mmp-rules-verification.md](docs/mmp-rules-verification.md) lists the Electoral Commission, Ministry of Justice and Stats NZ pages read through a summarising web-fetch tool (not byte-preserved, no checksums) and the statute hosts that could not be read. Electoral Act 1993 section text (ss 3, 191–193) is **not** yet obtained; rules are supported by Electoral Commission plain-language statements only.
+
 ## Stage34 — preserved-input diagnostic companions
 
 No new resources acquired or sources/adjudications changed. `data/processed/diagnostics/s-r-robustness/` pins consumed Stage33 fits/predictions/scores, Stage32 features, Stage31 whole-group vectors/category relationships, Stage25 exact geography and official national/local valid-party tables through inherited stage-specific integrity contracts. Renames use documented panel aliases; alliances stay indivisible. Structural source/target category absence is distinct from missing evidence. A separate1,447-file Git-blob snapshot verifies historical preservation, not whole-registry scientific coupling. Candidate actuals use valid-candidate totals only in error diagnostics; target local party actuals enter the explanatory movement/error sensitivity only. Historical publication by a cutoff remains unverified.
