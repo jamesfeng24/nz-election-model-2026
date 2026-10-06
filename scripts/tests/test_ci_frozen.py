@@ -50,11 +50,12 @@ def commit(root, message):
 
 
 def registry_for(attested, evidence_sha):
-    return {'version': 2,
-            'attestations': {'a': {'commit': attested, 'runs': [], 'evidencePath': '.github/validation/evidence/e.json',
-                                   'evidenceSha256': evidence_sha, 'requiredSteps': [COMMAND], 'runtime': RUNTIME}},
+    return {'version': 3, 'liveAttestation': {'workflow': 'ci.yml', 'branch': 'main', 'job': 'python', 'maxRuns': 3},
+            'attestation': {'commit': attested, 'runs': [], 'evidencePath': '.github/validation/evidence/e.json',
+                            'evidenceSha256': evidence_sha},
+            'runtime': RUNTIME,
             'pipelines': {'pipe': {
-                'attestation': 'a', 'entryModules': ['scripts.pipe.entry'], 'ownedPaths': ['scripts/pipe'],
+                'entryModules': ['scripts.pipe.entry'], 'ownedPaths': ['scripts/pipe'],
                 'outputPaths': ['data/processed/pipe'], 'extraDependencies': ['docs/spec.txt'],
                 'cacheDirectory': '.cache/pipe', 'cacheReaderModules': ['scripts.pipe.entry'],
                 'cacheReaderNames': ['arrays'], 'reviewedCacheConsumers': [], 'replacedCommands': [COMMAND],
@@ -96,9 +97,19 @@ class Repository:
         write(self.root, '.github/validation/frozen-pipelines.json', json.dumps(self.registry))
         self.base = commit(self.root, 'registry (earlier reviewed pull request)')
 
-    def select(self, event='pull_request', runtime=None, base=None, registry=None):
+    def select(self, event='pull_request', runtime=None, base=None, registry=None, candidates=None):
         return frozen.select_pipeline('pipe', registry or self.registry, event, self.root,
-                                      RUNTIME if runtime is None else runtime, self.base if base is None else base)
+                                      RUNTIME if runtime is None else runtime, self.base if base is None else base,
+                                      candidates)
+
+    def live(self, commit_sha, skipped=False, event='push'):
+        """A live attestation record shaped like the Actions API job record of a main push run."""
+        steps = [{'name': 'Run ' + COMMAND, 'conclusion': 'skipped' if skipped else 'success'},
+                 {'name': 'Run python3 -m scripts.pipe.diagnosis --check', 'conclusion': 'success'},
+                 {'name': 'Run python3 -m unittest discover -s scripts/tests -v', 'conclusion': 'success'}]
+        return {'commit': commit_sha, 'source': 'live', 'record': {
+            'run': {'event': event, 'conclusion': 'success', 'head_sha': commit_sha},
+            'job': {'name': 'python', 'conclusion': 'success', 'steps': steps}}}
 
 
 class SelectionTests(unittest.TestCase):
@@ -147,7 +158,7 @@ class SelectionTests(unittest.TestCase):
         commit(self.repo.root, 'delete')
         self.assertFull(self.repo.select(), 'existing data file changed')
 
-    def test_machinery_changed_by_this_pull_request_is_never_self_attesting(self):
+    def test_machinery_changed_by_this_change_set_is_never_self_attesting(self):
         write(self.repo.root, 'scripts/validate/ci_frozen.py', 'changed\n')
         commit(self.repo.root, 'machinery')
         self.assertFull(self.repo.select(), 'selection machinery')
@@ -162,12 +173,14 @@ class SelectionTests(unittest.TestCase):
         self.assertEqual(self.repo.select()['mode'], 'integrity')
 
     def test_non_pull_request_events_and_missing_history_are_full(self):
-        for event in ('push', 'workflow_dispatch', 'schedule', 'unknown'):
+        for event in ('workflow_dispatch', 'schedule', 'unknown'):
             self.assertFull(self.repo.select(event), 'always uses full')
-        self.assertFull(self.repo.select(base=''), 'base unavailable')
-        self.assertFull(self.repo.select(base='0' * 40), 'base unavailable')
+        for base in ('', '0' * 40, '3' * 40):
+            self.assertFull(self.repo.select('push', base=base), 'base unavailable')
+            self.assertFull(self.repo.select(base=base), 'base unavailable')
+        self.assertEqual(self.repo.select('push')['mode'], 'integrity')
         registry = deepcopy(self.repo.registry)
-        registry['attestations']['a']['commit'] = '1' * 40
+        registry['attestation']['commit'] = '1' * 40
         self.assertFull(self.repo.select(registry=registry), 'attested run')
         self.assertIsNone(frozen.changed_files(self.repo.root, '1' * 40))
 
@@ -191,10 +204,37 @@ class SelectionTests(unittest.TestCase):
             mutate(record)
             path.write_text(json.dumps(record))
             registry = deepcopy(self.repo.registry)
-            registry['attestations']['a']['evidenceSha256'] = hashlib.sha256(path.read_bytes()).hexdigest()
+            registry['attestation']['evidenceSha256'] = hashlib.sha256(path.read_bytes()).hexdigest()
             commit(self.repo.root, 'tamper')
             self.assertFull(self.repo.select(registry=registry))
-        self.assertFull(self.repo.select(), 'changed attestation evidence')
+        self.assertFull(self.repo.select(), 'seed attestation evidence')
+
+    def test_modification_runs_full_once_then_the_new_main_run_becomes_the_attestation(self):
+        write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
+        modified = commit(self.repo.root, 'modify frozen code')
+        self.assertFull(self.repo.select(), 'dependency changed')  # the pull request/main run executes in full once
+        write(self.repo.root, 'docs/a.md', 'later unrelated work\n')
+        later = commit(self.repo.root, 'unrelated')
+        live = self.repo.live(modified)
+        self.assertEqual(self.repo.select(candidates=[live])['mode'], 'integrity')
+        self.assertEqual(self.repo.select('push', candidates=[live])['mode'], 'integrity')
+        write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 3\n')
+        commit(self.repo.root, 'modified again')
+        self.assertFull(self.repo.select(candidates=[live]), 'dependency changed')
+        self.assertNotEqual(later, modified)
+
+    def test_live_attestations_must_have_executed_the_replaced_commands(self):
+        head = git(self.repo.root, 'rev-parse', 'HEAD')
+        for bad in (self.repo.live(head, skipped=True), self.repo.live(head, event='pull_request')):
+            self.assertFull(self.repo.select(candidates=[bad]), 'attested')
+        self.assertEqual(self.repo.select(candidates=[self.repo.live(head)])['mode'], 'integrity')
+
+    def test_newest_provable_candidate_wins_and_failures_fall_back_to_older_ones(self):
+        seed, errors = frozen.seed_candidate(self.repo.registry, self.repo.root)
+        self.assertEqual(errors, [])
+        head = git(self.repo.root, 'rev-parse', 'HEAD')
+        self.assertEqual(self.repo.select(candidates=[self.repo.live(head, skipped=True), seed])['mode'], 'integrity')
+        self.assertFull(self.repo.select(candidates=[]), 'no attested')
 
     def test_dynamic_imports_cannot_be_analysed_and_force_full(self):
         write(self.repo.root, 'scripts/pipe/helper.py', 'import importlib\nimportlib.import_module("scripts.x")\n')
@@ -328,9 +368,6 @@ class RealRegistryTests(unittest.TestCase):
             self.assertIn("steps.frozen.outputs.{} == 'integrity'".format(name), self.workflow)
             self.assertIn('--check --pipeline {} '.format(name), self.workflow)
             self.assertIn('id: frozen\n        continue-on-error: true', self.workflow)
-            attestation = self.registry['attestations'][pipeline['attestation']]
-            for command in pipeline['replacedCommands']:
-                self.assertIn(command, attestation['requiredSteps'])
 
     def test_only_expensive_reconstruction_commands_are_replaced(self):
         replaced = {c for p in self.registry['pipelines'].values() for c in p['replacedCommands']}
@@ -354,13 +391,39 @@ class RealRegistryTests(unittest.TestCase):
         self.assertIn('scripts/uncertainty_revision/construction.py', files)
         self.assertIn('scripts/uncertainty/construction.py', files)
 
-    def test_attestation_evidence_matches_registry_and_pins_a_full_push_run(self):
-        for attestation in self.registry['attestations'].values():
-            errors, steps = frozen.evidence(attestation, ROOT)
-            self.assertEqual(errors, [])
-            self.assertEqual(frozen.workflow_errors(ROOT, [n for n, c in steps.items() if c == 'success'], self.registry), [])
-            self.assertNotIn('Verify previously validated Stage39 sealed integrity',
-                             [n for n, c in steps.items() if c == 'success'])
+    def test_seed_attestation_pins_a_full_push_run_that_executed_every_replaced_command(self):
+        seed, errors = frozen.seed_candidate(self.registry, ROOT)
+        self.assertEqual(errors, [])
+        for name, pipeline in self.registry['pipelines'].items():
+            errors, steps = frozen.candidate_errors(seed, pipeline['replacedCommands'])
+            self.assertEqual(errors, [], name)
+            self.assertEqual(frozen.workflow_errors(ROOT, steps, self.registry), [])
+            self.assertNotIn('Verify previously validated Stage39 sealed integrity', steps)
+
+    def test_live_candidates_are_read_from_the_api_and_fail_closed(self):
+        calls = []
+
+        def fetch(url, token):
+            calls.append(url)
+            if '/jobs' in url:
+                return {'jobs': [{'id': 9, 'name': 'check', 'conclusion': 'success', 'steps': []},
+                                 {'id': 8, 'name': 'python', 'conclusion': 'success', 'steps': [{'name': 'Run x', 'conclusion': 'success'}]}]}
+            return {'workflow_runs': [{'id': 1, 'head_sha': 'a' * 40, 'event': 'push', 'conclusion': 'success'}]}
+        environ = {'GITHUB_REPOSITORY': 'o/r', 'GITHUB_TOKEN': 't'}
+        found = frozen.live_candidates(self.registry, environ, fetch)
+        self.assertEqual([c['commit'] for c in found], ['a' * 40])
+        self.assertEqual(found[0]['record']['job']['id'], 8)
+        self.assertIn('branch=main&event=push&status=success', calls[0])
+        self.assertEqual(frozen.live_candidates(self.registry, {}, fetch), [])
+        self.assertEqual(frozen.live_candidates(self.registry, environ, lambda *a: (_ for _ in ()).throw(OSError())), [])
+        self.assertEqual(frozen.live_candidates(self.registry, environ, lambda *a: {}), [])
+
+    def test_workflow_permissions_timeouts_and_event_wiring(self):
+        self.assertIn('  contents: read\n  actions: read\n', self.workflow)
+        self.assertIn('timeout-minutes: 150', self.workflow)
+        self.assertIn('timeout-minutes: 20', self.workflow)
+        self.assertIn('github.event.pull_request.base.sha || github.event.before', self.workflow)
+        self.assertIn('GITHUB_TOKEN: ${{ github.token }}', self.workflow)
 
     def test_current_cache_consumers_are_none(self):
         for pipeline in self.registry['pipelines'].values():

@@ -358,8 +358,14 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Keep every behavioural/default discovery test and all other historical gates. First revised PR and all main/manual runs are full. Semantic archival classification does not omit tests.
 - Measured original Linux Stage39 construction about143s; new integrity1.697s on different local hardware, not a matched savings benchmark. No hosted measurement run or inference/cache changes.
 
+## Stage46 — residual-tail diagnosis, 2026-10-06
+
+- Diagnosed concentrated candidate National/Labour seat residuals and frozen one earlier-only pooled MAD Student(nu4) seat-balance correction, a matched robust Gaussian and the untouched Stage45 control, retaining every case and all other directions.
+- Corrected Sobol endpoints and shared-ballot-label conditional covariance before scoring; sealed all 12 corrected 32,768-draw banks; retained original failed caches and the attempt ledger. Conditional mean quadrature misses its separate .05pp gate (maximum .73893pp); no tolerance relaxation or target-based adjustment.
+- Student is not adopted (worse CRPS/energy than matched Gaussian in all 7 candidate/composed cases); retain the Stage45 Gaussian as development default (D080). No sources, national MCMC, mean refit or historical override.
+
 ## Frozen Stage45/46 CI reuse and Node 24 actions — 2026-10-06
 
-- Add `.github/validation/frozen-pipelines.json`, a pinned evidence record of the successful full main run `d0fa5a66`, and `scripts/validate/ci_frozen.py`: pull requests may skip only the expensive Stage45/46 construction/evaluation/verification (and Stage45 mean-audit) `--check` commands when Git proves the pipeline's import closure, referenced paths, outputs, environment and existing data are unchanged, no unreviewed reader consumes its cache and the attested runtime matches.
-- Main pushes, manual dispatch, the first PR carrying these changes and any unproved case remain fully validated; behavioural tests, other pipelines and cheap Stage45/46 checks always run. Stage47 currently reads the Stage46 sealed bank, which keeps Stage46 full until reviewed.
-- Bump `actions/checkout` v5, `actions/setup-node` v5, `actions/setup-python` v6 (Node 24). No statistical code, output, threshold or artifact change.
+- Add `.github/validation/frozen-pipelines.json` (seed: the successful full main run `d0fa5a66`; thereafter the newest green main run via the Actions API) and `scripts/validate/ci_frozen.py`: pull requests and main pushes skip only the expensive Stage45/46 construction/evaluation/verification (and Stage45 mean-audit) `--check` commands while Git proves the pipeline's import closure, referenced paths, outputs, environment and existing data unchanged; a modification runs them in full once, then the green main run re-freezes the stage. Manual dispatch is always full.
+- Behavioural tests, other pipelines and cheap Stage45/46 checks always run. A later stage that reads a registered pipeline's cache (Stage47 reads the Stage46 bank) keeps it full until reviewed. The change set introducing the machinery runs full once.
+- Add job `timeout-minutes` (20/150), `actions: read`, and prohibit CPU/wall-time gates inside `--check`. Bump `actions/checkout` v5, `actions/setup-node` v5, `actions/setup-python` v6 (Node 24). No statistical code, output, threshold or artifact change. D081, AGENTS.md handoff section and README refresh.

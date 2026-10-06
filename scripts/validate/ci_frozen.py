@@ -1,12 +1,14 @@
 """Dependency-aware reuse of previously validated frozen pipelines; full validation is the default.
 
-A pull request may skip the expensive ``--check`` reconstruction of a registered frozen pipeline only when
-the exact tree under validation is provably equivalent, for that pipeline, to a commit whose complete
-Linux Verify run already passed. Equivalence is established from Git, not from generated manifests:
-no file in the pipeline's static import closure, referenced data paths, outputs, environment files or
-CI selection machinery differs from the attested commit, no existing data file changed, no unreviewed
-consumer reads the pipeline's runtime cache, and the runner matches the attested runtime.
-Main pushes and manual dispatch never reuse anything. Behavioural unit tests are never skipped.
+A pull request or main push may skip the expensive ``--check`` reconstruction of a registered frozen pipeline
+only when the exact tree under validation is provably equivalent, for that pipeline, to a main commit whose
+complete Linux Verify run already passed *with that reconstruction executed*. Equivalence is established from
+Git, not from generated manifests: no file in the pipeline's static import closure, referenced data paths,
+outputs or environment files differs from the attested commit, no existing data file changed, no unreviewed
+consumer reads the pipeline's runtime cache, no validation was removed from the workflow, and the runner
+matches the attested runtime. Whenever any of that changes, the pipeline runs in full once; the successful
+main run then becomes the newest attestation (read from the Actions API; the pinned seed is the fallback).
+Manual dispatch never reuses anything. Behavioural unit tests are never skipped.
 """
 import argparse
 import ast
@@ -18,6 +20,7 @@ import platform
 import re
 import subprocess
 import sys
+import urllib.request
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 
@@ -31,6 +34,7 @@ ENVIRONMENT = ('.python-version', 'pyproject.toml', 'requirements-boundaries.txt
 # Judged on the pull request's own contribution (base..HEAD); earlier reviewed changes merged to main are not diffs.
 MACHINERY = ('.github/validation/', 'scripts/validate/ci_', 'AGENTS.md')
 KNOWN = ('stage45', 'stage46')
+EVENTS = ('pull_request', 'push')  # workflow_dispatch and anything unknown are always full
 
 
 def git(root, *args):
@@ -114,25 +118,65 @@ def under(path, prefix):
 
 # ---------------------------------------------------------------- evidence, runtime, changes
 
-def evidence(attestation, root):
-    """(errors, recorded step conclusions) of the pinned record of the attested full run."""
+def seed_candidate(registry, root):
+    """The pinned fallback attestation: (candidate, errors)."""
+    attestation = registry['attestation']
     path = Path(root) / attestation['evidencePath']
     if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != attestation['evidenceSha256']:
-        return ['missing or changed attestation evidence'], {}
+        return None, ['missing or changed seed attestation evidence']
     try:
-        record = json.loads(path.read_text())
-        run, steps = record['run'], {s['name']: s['conclusion'] for s in record['job']['steps']}
-    except (ValueError, KeyError, TypeError):
-        return ['unreadable attestation evidence'], {}
+        return {'commit': attestation['commit'], 'source': 'seed', 'record': json.loads(path.read_text())}, []
+    except ValueError:
+        return None, ['unreadable seed attestation evidence']
+
+
+def fetch_json(url, token):
+    request = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + token, 'X-GitHub-Api-Version': '2022-11-28',
+                                                   'Accept': 'application/vnd.github+json'})
+    with urllib.request.urlopen(request, timeout=20) as response:
+        return json.load(response)
+
+
+def live_candidates(registry, environ=None, fetch=fetch_json):
+    """Newest successful full-job records of main push runs, from the Actions API; [] on any failure."""
+    environ = os.environ if environ is None else environ
+    live, repository = registry.get('liveAttestation'), environ.get('GITHUB_REPOSITORY')
+    token = environ.get('GITHUB_TOKEN') or environ.get('GH_TOKEN')
+    if not (live and repository and token):
+        return []
+    api = environ.get('GITHUB_API_URL', 'https://api.github.com') + '/repos/' + repository + '/actions/'
+    found = []
+    try:
+        runs = fetch(api + 'workflows/{}/runs?branch={}&event=push&status=success&per_page={}'.format(
+            live['workflow'], live['branch'], live['maxRuns']), token)['workflow_runs']
+        for run in runs[:live['maxRuns']]:
+            jobs = fetch(api + 'runs/{}/jobs?per_page=100'.format(run['id']), token)['jobs']
+            for job in jobs:
+                if job['name'] == live['job']:
+                    found.append({'commit': run['head_sha'], 'source': 'live', 'record': {
+                        'run': {key: run.get(key) for key in ('id', 'html_url', 'event', 'conclusion', 'head_sha')},
+                        'job': {key: job.get(key) for key in ('id', 'name', 'conclusion', 'steps')}}})
+    except (OSError, ValueError, KeyError, TypeError):
+        pass
+    return found
+
+
+def candidate_errors(candidate, required):
+    """(errors, successful step names) for one attested run record and one pipeline's replaced commands."""
+    try:
+        run, job = candidate['record']['run'], candidate['record']['job']
+        steps = {step['name']: step['conclusion'] for step in job['steps']}
+    except (KeyError, TypeError):
+        return ['unreadable attestation evidence'], []
     errors = []
-    if run.get('event') != 'push' or run.get('conclusion') != 'success' or run.get('head_sha') != attestation['commit']:
+    if run.get('event') != 'push' or run.get('conclusion') != 'success' or run.get('head_sha') != candidate['commit']:
         errors.append('attested run is not a successful full push run of the attested commit')
-    if record['job'].get('conclusion') != 'success' or record['job'].get('name') != 'python':
+    if job.get('conclusion') != 'success' or job.get('name') != 'python':
         errors.append('attested python job did not succeed')
-    for command in attestation['requiredSteps']:
+    for command in required:
         if steps.get('Run ' + command) != 'success':
-            errors.append('attested run lacks successful step: ' + command)
-    return errors, steps
+            errors.append('attested run did not execute successfully: ' + command)
+    return errors, [name for name, conclusion in steps.items() if conclusion == 'success']
 
 
 def runtime_errors(expected, actual=None):
@@ -237,44 +281,64 @@ def ast_has_string(text, needle):
 
 # ---------------------------------------------------------------- selection
 
-def select_pipeline(name, registry, event, root=ROOT, actual_runtime=None, base=''):
+def select_pipeline(name, registry, event, root=ROOT, actual_runtime=None, base='', candidates=None):
+    """First candidate (newest first) that proves reuse wins; otherwise full with the newest candidate's reason."""
+    if event not in EVENTS:
+        return {'mode': 'full', 'reason': 'manual/unknown event always uses full validation'}
+    if registry.get('version') != 3:
+        return {'mode': 'full', 'reason': 'unsupported registry version'}
+    if candidates is None:
+        seed, errors = seed_candidate(registry, root)
+        if seed is None:
+            return {'mode': 'full', 'reason': '; '.join(errors)}
+        candidates = [seed]
+    runtime = runtime_errors(registry['runtime'], actual_runtime)
+    if runtime:
+        return {'mode': 'full', 'reason': '; '.join(runtime[:4])}
+    first = None
+    for candidate in candidates:
+        result = select_against(name, registry, root, base, candidate)
+        if result['mode'] == 'integrity':
+            return result
+        first = first or result
+    return first or {'mode': 'full', 'reason': 'no attested full run available'}
+
+
+def select_against(name, registry, root, base, candidate):
     pipeline = registry['pipelines'][name]
-    attestation = registry['attestations'][pipeline['attestation']]
+    commit = candidate['commit']
 
     def full(reason):
-        return {'mode': 'full', 'reason': reason}
-    if event != 'pull_request':
-        return full('main/manual/unknown event always uses full validation')
-    if registry.get('version') != 2:
-        return full('unsupported registry version')
-    errors, steps = evidence(attestation, root)
-    errors = errors + runtime_errors(attestation['runtime'], actual_runtime)
+        return {'mode': 'full', 'reason': '{} [{} attestation {}]'.format(reason, candidate['source'], commit[:8])}
+    errors, steps = candidate_errors(candidate, pipeline['replacedCommands'])
     if not errors:
-        errors = workflow_errors(root, [n for n, c in steps.items() if c == 'success'], registry)
+        errors = workflow_errors(root, steps, registry)
     if errors:
         return full('; '.join(errors[:4]))
-    changes = changed_files(root, attestation['commit'])
+    changes = changed_files(root, commit)
     if changes is None:
         return full('attested commit unavailable, not an ancestor, or working tree dirty')
-    contribution = changed_files(root, base, ancestor=False) if base else None
+    contribution = changed_files(root, base, ancestor=False) if base and set(base) != {'0'} else None
     if contribution is None:
-        return full('pull request base unavailable')
+        return full('comparison base unavailable')
     for status, path in contribution:
         if any(path.startswith(m) for m in MACHINERY):
-            return full('this pull request changes CI selection machinery: ' + path)
+            return full('this change set alters CI selection machinery: ' + path)
     try:
         files, literals, dynamic = closure(root, pipeline['entryModules'])
     except (SyntaxError, OSError, ValueError) as error:
         return full('cannot analyse dependency closure: ' + str(error))
     if dynamic:
         return full('; '.join(dynamic[:3]))
+    if not files:
+        return full('pipeline entry modules not present')
     watched = set(files) | set(ENVIRONMENT)
     prefixes = set(literals) | set(pipeline['outputPaths']) | set(pipeline['ownedPaths']) | set(pipeline['extraDependencies'])
     for status, path in changes:
         if path == WORKFLOW:
             continue  # judged by workflow_errors above, against the steps that actually passed
         if any(path.startswith(m) for m in MACHINERY):
-            continue  # reviewed on an earlier pull request; this one is judged above
+            continue  # reviewed earlier on main; a change set that alters it is judged above
         if path in watched:
             return full('dependency changed: ' + path)
         if any(under(path, prefix) for prefix in prefixes):
@@ -286,27 +350,37 @@ def select_pipeline(name, registry, event, root=ROOT, actual_runtime=None, base=
     consumers = cache_consumers(root, pipeline)
     if consumers:
         return full('unreviewed reader of this pipeline runtime cache: ' + ', '.join(consumers[:3]))
-    return {'mode': 'integrity', 'reason': 'identical to the dependency scope of attested full run on {} '
-            '({} files in closure, {} changed paths outside it)'.format(attestation['commit'][:8], len(files), len(changes)),
-            'closureFiles': len(files), 'changedPaths': len(changes)}
+    return {'mode': 'integrity', 'reason': 'identical to the dependency scope of the {} full run on {} '
+            '({} files in closure, {} changed paths outside it)'.format(candidate['source'], commit[:8], len(files), len(changes)),
+            'closureFiles': len(files), 'changedPaths': len(changes), 'attestation': candidate}
 
 
-def select(registry, event, root=ROOT, actual_runtime=None, force_full=False, base=''):
+def select(registry, event, root=ROOT, actual_runtime=None, force_full=False, base='', live=None):
     if force_full:
         return {name: {'mode': 'full', 'reason': 'explicit full validation requested'} for name in registry['pipelines']}
+    seed, errors = seed_candidate(registry, root)
+    candidates = (live_candidates(registry) if live is None else live) + ([seed] if seed else [])
     result = {}
     for name in registry['pipelines']:
         try:
-            result[name] = select_pipeline(name, registry, event, root, actual_runtime, base)
+            result[name] = select_pipeline(name, registry, event, root, actual_runtime, base, candidates)
         except (KeyError, ValueError, TypeError, OSError) as error:
             result[name] = {'mode': 'full', 'reason': 'invalid selection inputs: ' + str(error)}
     return result
 
 
-def verify(name, event='pull_request', root=ROOT, base=''):
-    """Lightweight check for a pipeline whose full reconstruction was legitimately skipped."""
+def verify(name, event='pull_request', root=ROOT, base='', result_file=None):
+    """Lightweight check for a pipeline whose full reconstruction was legitimately skipped.
+
+    Re-proves the selection against the very attestation the selector recorded (no network), then runs the
+    pipeline's own consumed-input and prior-artifact verification and parses every committed output.
+    """
     registry = load_registry(root)
-    result = select_pipeline(name, registry, event, root, base=base)
+    candidates = None
+    if result_file:
+        recorded = json.loads(Path(result_file).read_text())[name]
+        candidates = [recorded['attestation']] if recorded['mode'] == 'integrity' else []
+    result = select_pipeline(name, registry, event, root, base=base, candidates=candidates)
     if result['mode'] != 'integrity':
         raise ValueError('{} is not reusable ({}); the full commands must run'.format(name, result['reason']))
     for target in registry['pipelines'][name]['integrityChecks']:
@@ -323,13 +397,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--full', action='store_true', help='Force full validation of every pipeline')
     parser.add_argument('--event', default=os.environ.get('CI_EVENT_NAME', 'unknown'))
-    parser.add_argument('--base', default=os.environ.get('CI_BASE_SHA', ''))
+    parser.add_argument('--base', default=os.environ.get('CI_BASE_SHA', ''),
+                        help='PR base sha, or the previous main tip for a push')
     parser.add_argument('--github-output')
+    parser.add_argument('--result-file', help='Write (selection) or read (--check) the recorded selection')
     parser.add_argument('--check', action='store_true', help='Run the lightweight check for --pipeline')
     parser.add_argument('--pipeline')
     args = parser.parse_args()
     if args.check:
-        print(name_line(args.pipeline, verify(args.pipeline, args.event, base=args.base)))
+        print(name_line(args.pipeline, verify(args.pipeline, args.event, base=args.base, result_file=args.result_file)))
         return
     try:
         registry = load_registry()
@@ -337,7 +413,10 @@ def main():
     except (OSError, ValueError, KeyError) as error:
         # An unreadable registry can only mean full validation of the known pipelines.
         result = {name: {'mode': 'full', 'reason': 'invalid registry: ' + str(error)} for name in KNOWN}
-    print(json.dumps(result, sort_keys=True, indent=1))
+    summary = {name: {key: value for key, value in item.items() if key != 'attestation'} for name, item in result.items()}
+    print(json.dumps(summary, sort_keys=True, indent=1))
+    if args.result_file:
+        Path(args.result_file).write_text(json.dumps(result, sort_keys=True))
     if args.github_output:
         with Path(args.github_output).open('a') as stream:
             for name, value in result.items():
