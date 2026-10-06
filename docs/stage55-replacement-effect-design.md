@@ -4,6 +4,8 @@
 
 **What the author had seen before freezing (disclosed).** While reading the Stage51 table, the design author computed pooled descriptive moments of Stage7 residuals on the full ledger: general-seat retirements have mean R_old about 4.4pp and mean R_new about 0.9pp, an unfitted pooled slope near 0.4 (n about 52), and continuations have a mean R_new about 5.2pp. No fold-trained (earlier-only) fit, no candidate-layer score and no decision quantity had been computed. The design below is built from the transition vocabulary and the layer's structure, not tuned to those moments, but the pooled moments are not blind.
 
+**Māori seats (James, 2026-10-06 11:30).** Māori electorate transitions are excluded from every Stage55 sample, fit, score and reference, because Māori seats are modelled completely separately. The filter is the electorate type (`scope = maori` in the Stage51 ledger), never the party: all 24 Māori ledger rows are Labour. The rule was already in the frozen sample definition below ("excluded by rule ... Māori-scope rows"); this note makes it an explicit requirement and the pipeline now reports the exact removal (24 ledger rows: 21 continuations and 3 candidate changes, from Hauraki-Waikato, Ikaroa-Rāwhiti, Te Tai Hauāuru, Te Tai Tokerau, Te Tai Tonga, Tāmaki Makaurau and Waiariki; the list is in `summary.json`). No arm, threshold or sample membership changed.
+
 ## The one question
 
 > Is the neutral R assumption right for an ordinary same-party National/Labour incumbent replacement?

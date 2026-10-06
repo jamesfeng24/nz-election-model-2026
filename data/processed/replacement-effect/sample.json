@@ -6864,6 +6864,159 @@
     "continuations": 258,
     "extended": 59,
     "ledgerSeats": 333,
+    "maoriExcludedByElectorateType": {
+      "candidateChanges": 3,
+      "continuations": 21,
+      "filter": "ledger scope (electorate type), never party",
+      "rows": 24,
+      "rowsInAnySampleOrReference": [],
+      "seats": [
+        {
+          "key": "2008-2011|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2008-2011|LAB|Ikaroa-Rawhiti",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2011-2014|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2011-2014|LAB|Ikaroa-Rāwhiti",
+          "party": "LAB",
+          "relation": "candidate_change",
+          "transitionType": "by_election_succession"
+        },
+        {
+          "key": "2011-2014|LAB|Te Tai Tonga",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Ikaroa-Rāwhiti",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Te Tai Hauāuru",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Te Tai Tokerau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Te Tai Tonga",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Tāmaki Makaurau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Ikaroa-Rāwhiti",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Te Tai Hauāuru",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Te Tai Tokerau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Te Tai Tonga",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Tāmaki Makaurau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Waiariki",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2020-2023|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2020-2023|LAB|Ikaroa-Rāwhiti",
+          "party": "LAB",
+          "relation": "candidate_change",
+          "transitionType": "party_change"
+        },
+        {
+          "key": "2020-2023|LAB|Te Tai Hauāuru",
+          "party": "LAB",
+          "relation": "candidate_change",
+          "transitionType": "retirement"
+        },
+        {
+          "key": "2020-2023|LAB|Te Tai Tokerau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2020-2023|LAB|Te Tai Tonga",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2020-2023|LAB|Tāmaki Makaurau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        }
+      ]
+    },
     "primary": 47,
     "primaryByPair": {
       "2008-2011": 6,

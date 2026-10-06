@@ -75,8 +75,17 @@ def summarise(table):
         for reason in (r['exclusionReasons'] or ['unreasoned']):
             excluded[reason] += 1
     pair = Counter((r['sourceYear'], r['targetYear']) for r in table if r['primary'])
+    maori = [r for r in table if r['scope'] == 'maori']
+    in_any = [r['key'] for r in maori if r['primary'] or r['extended'] or r['primaryNoListOnly'] or r['continuationReference']]
     return {'ledgerSeats': len(table), 'candidateChanges': len(change),
             'continuations': sum(r['relation'] == 'continuation' for r in table),
+            'maoriExcludedByElectorateType': {
+                'rows': len(maori), 'candidateChanges': sum(r['relation'] == 'candidate_change' for r in maori),
+                'continuations': sum(r['relation'] == 'continuation' for r in maori),
+                'rowsInAnySampleOrReference': in_any,
+                'filter': 'ledger scope (electorate type), never party',
+                'seats': [{'key': r['key'], 'party': r['party'], 'relation': r['relation'], 'transitionType': r['transitionType']}
+                          for r in maori]},
             'changesByScopeAndType': {f'{a}:{b}': n for (a, b), n in sorted(by_type.items())},
             'primary': sum(r['primary'] for r in table), 'extended': sum(r['extended'] for r in table),
             'primaryNoListOnly': sum(r['primaryNoListOnly'] for r in table),

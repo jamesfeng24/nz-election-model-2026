@@ -72,6 +72,15 @@ class SampleRules(unittest.TestCase):
                 self.assertNotIn(r['transitionType'], ('by_election_succession', 'by_election_party_change', 'party_change',
                                                        'boundary_complication'))
 
+    def test_maori_electorate_transitions_are_removed_by_electorate_type_everywhere(self):
+        summary = sample.summarise(self.table)['maoriExcludedByElectorateType']
+        self.assertEqual((summary['rows'], summary['candidateChanges'], summary['continuations']), (24, 3, 21))
+        self.assertEqual(summary['rowsInAnySampleOrReference'], [])
+        maori = [r for r in self.table if r['scope'] == 'maori']
+        self.assertTrue(all(not (r['primary'] or r['extended'] or r['primaryNoListOnly'] or r['continuationReference'])
+                            for r in maori))
+        self.assertTrue(all(r['scope'] == 'general' for name in sample.SAMPLES for r in sample.select(self.table, name)))
+
     def test_join_is_by_occurrence_id_and_matches_stage7(self):
         occ = sample.occurrence_index()
         for r in self.table[:50]:
