@@ -1,0 +1,51 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 308 
+age: 14514
+cache-control: public, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+etag: "f4od7hsz81t2l"
+location: /news/politics/498489/ikaroa-rawhiti-labour-defector-meka-whaitiri-trails-in-latest-poll
+server: Vercel
+x-matched-path: /news/[flagCode]/[sectionSlug]/[...articleSegments]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-vercel-cache: STALE
+x-vercel-id: iad1::syd1::khlzz-1791303118766-0cddd4be75f2
+x-backend-name: 3HC9aipj16jBVeMwVpE1wx--F_Host_1
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 16:11:59 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kcgs7200073-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791303119.752546,VS0,VE314
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-powered-by: One small piece of fairy cake
+strict-transport-security: max-age=31557600
+content-length: 37695
+
+HTTP/2 200 
+age: 5422
+cache-control: public, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+etag: "l9tk5kebh864s2"
+server: Vercel
+x-matched-path: /news/[flagCode]/[sectionSlug]/[...articleSegments]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-vercel-cache: STALE
+x-vercel-id: iad1::syd1::wdtg8-1791303119149-c99230425127
+x-backend-name: 3HC9aipj16jBVeMwVpE1wx--F_Host_1
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 16:11:59 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kcgs7200073-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791303119.134285,VS0,VE393
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-powered-by: One small piece of fairy cake
+strict-transport-security: max-age=31557600
+content-length: 286266
+

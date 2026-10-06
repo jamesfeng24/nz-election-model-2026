@@ -29,9 +29,21 @@ Numbers are identifiers, not an execution order; PR titles use `StageNN:` and th
 | Stage51 | Candidate-change identity classification: the 61 apparent changes and incumbent→successor table (first half of item 6; classification only, no model test) | merged (PR #61): 333 N/L incumbent seats 2008–2020 give 258 continuations and 75 sourced changes (60 election-time exits); 20 of the 59 N/L Stage10 apparent changes are same-person name variants; R_old/R_new and the R_new = a + ρ R_old test not started |
 | Stage52 | 2026 poll acquisition (item 9, raw dated checksummed files only; no fit) | merged (PR #60); 41 raw files incl. James-supplied Taxpayers' Union–Curia prints, 3 of 7 Māori seat polls published (all-seven not confirmed), no panel update or live fit |
 | Stage53 | End-to-end skeleton, export contract and synthetic dry run | merged (PR #57) |
-| Stage54–57 (provisional) | Composed-MC precision (item 4); replacement R_new = a + ρ R_old test; dated manual-adjustment interface (item 7); manual replay (item 8) | not yet authorized; confirm numbers when each is authorized |
+| Stage54 | Composed Monte Carlo precision (item 4): caps not attainable within the cached bank, bound and settledness recorded (D088) | merged (PR #66, 9f4c95b) |
+| Stage55 | Ordinary same-party incumbent replacement: is neutral R right? (item 6, second half; frozen pre-registered candidate-layer test, recommendation only) | merged (PR #67, e31df9c): `mixed_report_to_james` under the frozen rule, reading is keep neutral R; nothing adopted (D090) |
+| Stage56 | Dated manual-adjustment interface (item 7) | in progress (D098 allocated) |
+| Stage57 (provisional) | Manual (labelled) replay (item 8); required before any model + James publication | not yet authorized; confirm the number when it is |
+| Stage58 | Publication-horizon (about 32-day) calibration of the 56-day scales | skipped (D089): candidate intervals have no horizon; no 32-day national archive; inferred gain about 1 to 3% of composed width; Stage62 measures horizon effects on the live series |
+| Stage59 | Derived 2026 national poll panel: 6 Oct RNZ–Reid poll, two Talbot Mills 2024 rows, April 2026 duplicate (data repair, no fit) | merged (PR #68, 3a136c9); Stage35 and all earlier outputs unchanged, `panel-update-2026-10/panel.json` for the live-fit stage |
+| Stage60 | Stronger candidate-seat balance-scale test, extending Stage48 (frozen arms 1.00 to 0.80 plus a fitted arm) | in progress (D092 allocated); adopting any scale needs James's sign-off |
+| Stage61 | Layer calibration audit (diagnostic only) | in progress (D093 allocated) |
+| Stage62 | Live 2026 national poll fit on the Stage59 panel (internal only) | in progress (D094 allocated) |
+| Stage63 | Layer-replicated composed precision on fixed national draws | in progress (D095 allocated) |
+| Stage64 | 2026 boundaries and notional 2023 results on the 2026 electorates | in progress (D096 allocated) |
+| Stage65 | MMP seat layer integration (Stage49 allocator into the forecast simulation) | in progress (D097 allocated) |
+| Stage66 | Māori seat layer (modelled separately from general electorates) | in progress (D099 allocated) |
 
-Next free number: Stage58. Decision numbers: D081 CI scoping, D082 this roadmap, D083 Stage47/PR54, D084 Stage49 MMP (#58), D085 Stage52 (#60), D086 Stage51 (#61), D087 Stage48 (#64); D088 is reserved for Stage54 and D089 is the next free decision. Threads get decision numbers from the coordinator, not by taking the next number on main.
+Next free number: Stage67. Decision numbers: D081 CI scoping, D082 this roadmap, D083 Stage47/PR54, D084 Stage49 MMP (#58), D085 Stage52 (#60), D086 Stage51 (#61), D087 Stage48 (#64), D088 Stage54 (#66), D089 Stage58 (skipped, recorded only), D090 Stage55 (#67), D091 Stage59 (#68); allocated for work in progress: D092 Stage60, D093 Stage61, D094 Stage62, D095 Stage63, D096 Stage64, D097 Stage65, D098 Stage56, D099 Stage66; D100 is the next free decision. Threads get decision numbers from the coordinator, not by taking the next number on main.
 
 ## Three final outputs
 

@@ -1,0 +1,81 @@
+{
+  "stage": 60,
+  "status": "frozen before any Stage60 arm was simulated or scored",
+  "designDocument": "docs/stage60-balance-shrink-design.md",
+  "inheritedFrom": {"design": "docs/stage48-balance-scale-design.md", "contract": "data/processed/balance-scale/design-contract.json"},
+  "arms": {
+    "control": {"role": "control", "multiplier": 1.0},
+    "grid95": {"role": "candidate", "multiplier": 0.95},
+    "grid90": {"role": "candidate", "multiplier": 0.90},
+    "grid85": {"role": "candidate", "multiplier": 0.85},
+    "grid80": {"role": "candidate", "multiplier": 0.80},
+    "free": {"role": "candidate", "multiplier": "earlier-trained penalty-free constant exp(a); 1.0 where no earlier election exists"},
+    "penalised": {"role": "reference", "multiplier": "Stage48 earlier-trained ridge constant K, read from data/processed/balance-scale/fit.json; reference only, never recommendable"}
+  },
+  "armOrder": ["control", "grid95", "grid90", "grid85", "grid80", "free", "penalised"],
+  "candidateArms": ["grid95", "grid90", "grid85", "grid80", "free"],
+  "folds": {"2014": [], "2017": [2014], "2020": [2014, 2017], "2023": [2014, 2017, 2020]},
+  "scoredYears": [2014, 2017, 2020, 2023],
+  "decisionYears": [2017, 2020, 2023],
+  "layer": {"records": "candidateRecords of data/processed/uncertainty/inventory.json", "electorateType": "general", "excludedByElectorateType": "maori", "replacementTreatment": "neutral centred R (Stage55)"},
+  "components": {"draws": 32768, "doubling": [8192, 16384, 32768], "representativeSeats": "first, middle and last seat of each election"},
+  "fit": {
+    "objective": "Stage48 per-seat-normalised Gaussian negative log likelihood with equal environments and equal seats, constant free, b_R = b_T = 0",
+    "penalty": 0.0,
+    "starts": [[0, 0, 0], [-0.2, 0, 0], [0.2, 0, 0]],
+    "bound": "+/- log 4",
+    "independentCheck": "Powell, objective agreement <= 1e-6, projected gradient <= 1e-6, central-difference gradient <= 1e-6",
+    "trainingFrozenScale": "each earlier election enters with the frozen Stage45 fold scales in force for that election, as in Stage48",
+    "agreementWithStage48DescriptiveValue": 1e-6,
+    "descriptive2026Refit": {"trainingYears": [2014, 2017, 2020, 2023], "scored": false, "meaning": "value the free arm would take for the 2026 forecast; reported, never scored"}
+  },
+  "decision": {
+    "primary": "mean over seats of the mean CRPS of that seat's National and Labour candidates (pp), 193 seats of 2017/2020/2023",
+    "improves": {
+      "crpsMaterialityPP": 0.01,
+      "intervalScoreLevels": [50, 80, 90],
+      "coverageGuardAbsolute": 0.02,
+      "energyGuardPP": 0.02,
+      "minimumFoldsNegative": 2,
+      "resolutionPrefixDraws": 16384,
+      "resolutionTolerancePP": 0.002,
+      "doublingGatesPP": {"mean": 0.05, "crps": 0.05, "energy": 0.1, "width50": 0.5, "width80": 0.5, "width90": 0.5}
+    },
+    "coverageFloor": {
+      "levels": [50, 80],
+      "elections": [2014, 2017, 2020, 2023],
+      "nominalMargin": 0.10,
+      "alreadyUndercoveringMargin": 0.05,
+      "rule": "arm coverage >= min(nominal - nominalMargin, control coverage - alreadyUndercoveringMargin) at every election and level; coverage is the pooled N/L candidate coordinate coverage",
+      "justification": "0.10 is about 1.6 binomial standard errors at 50% and 2.0 at 80% for 64 seats, so only a clearly sampling-noise-exceeding miss fails; an election the control already under-covers may lose at most a further 0.05"
+    },
+    "selection": {
+      "best": "qualifying arm with the lowest pooled N/L major CRPS on the decision seats",
+      "withinNoise": "lower end of the 90% paired seat-bootstrap interval of CRPS(arm) - CRPS(best) is <= 0",
+      "bootstrap": {"draws": 2000, "seed": 60, "level": 0.9, "scheme": "seats resampled with replacement within election, pooled equal-seat mean"},
+      "chosen": "least aggressive (highest equal-seat mean multiplier on the decision seats) qualifying arm that is within noise of the best",
+      "descriptiveAlternative": "least aggressive qualifying arm within 0.01pp pooled CRPS of the best, reported only"
+    },
+    "findings": ["recommend_<arm>_for_james_signoff", "floor_blocked_report_to_james", "no_arm_qualifies_keep_corrected_control"],
+    "operationalAdoption": null
+  },
+  "composedWidthImplication": {
+    "newBank": false,
+    "source": "data/processed/uncertainty-expectation/attribution.json (Stage47 nine-seat ablation)",
+    "arithmetic": "per ablation seat, width(m)^2 = width(no_candidate_balance)^2 + (width(full)^2 - width(no_candidate_balance)^2) g(m); g = m^2 if the multiplier is taken to scale all balance variance (upper bound of effect), g = s m^2 + (1 - s) if only the seat part scales, s = seat^2 / (seat^2 + shared^2) from the seat's frozen fold balance scales (Stage48 scales only the seat part)",
+    "reportedLevels": ["national full90", "labour full90"],
+    "sanityCheck": "same arithmetic with the Stage48 penalised multipliers against the Stage48 composed K-versus-control National full-90 width change",
+    "status": "approximate, nine seats, not a composed bank; composed precision gates remain unmet"
+  },
+  "equalityTolerance": {"controlVersusStage48": 1e-12, "referenceVersusStage48": 1e-12, "multiplierRecomputation": 1e-12},
+  "doNot": [
+    "no arm beyond the six listed plus the Stage48 reference; no multiplier search, prior-strength search, feature, family or variance-predictor extension",
+    "no new composed bank, national MCMC, acquisition, source or data/sources.json edit",
+    "no reopening of Student-t, mixtures, regimes, sigma shrinkage, geography fragmentation, candidate-quality scores, S reset, covariance fitting or national MCMC backtest reruns",
+    "no change to frozen Stage45/46/47/48 outputs, scales, means, draw counts, gates or tolerances",
+    "no threshold, floor, margin or arm change after any Stage60 score is read",
+    "no relaxed numerical gates; no calibrated-probability or composed-superiority claim",
+    "no Maori electorate data in any fit, score or calibration; filter by electorate type",
+    "no operational adoption: the corrected control stays the default until James signs off"
+  ]
+}
