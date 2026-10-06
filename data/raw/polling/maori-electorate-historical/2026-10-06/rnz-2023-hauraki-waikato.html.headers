@@ -1,0 +1,51 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 308 
+age: 25868
+cache-control: public, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+etag: "27z8hm4qiktm8"
+location: /news/politics/499329/general-election-2023-nanaia-mahuta-facing-serious-challenge-in-hauraki-waikato-poll-shows
+server: Vercel
+x-matched-path: /news/[flagCode]/[sectionSlug]/[...articleSegments]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-vercel-cache: STALE
+x-vercel-id: iad1::syd1::c7flv-1791303117515-c640fc03049f
+x-backend-name: 3HC9aipj16jBVeMwVpE1wx--F_Host_1
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 16:11:57 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kcgs7200060-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791303118.510898,VS0,VE329
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-powered-by: One small piece of fairy cake
+strict-transport-security: max-age=31557600
+content-length: 38396
+
+HTTP/2 200 
+age: 13793
+cache-control: public, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+etag: "14lhsfj9qbj5pcu"
+server: Vercel
+x-matched-path: /news/[flagCode]/[sectionSlug]/[...articleSegments]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-vercel-cache: STALE
+x-vercel-id: iad1::syd1::x7mr4-1791303117923-f3e690e8837a
+x-backend-name: 3HC9aipj16jBVeMwVpE1wx--F_Host_1
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 16:11:58 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kcgs7200060-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791303118.918367,VS0,VE334
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-powered-by: One small piece of fairy cake
+strict-transport-security: max-age=31557600
+content-length: 266250
+

@@ -1,0 +1,51 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 308 
+age: 120277
+cache-control: public, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+etag: "g0big7f8o7sy0"
+location: /news/politics/499773/rawiri-waititi-on-track-to-hold-waiariki-poll
+server: Vercel
+x-matched-path: /news/[flagCode]/[sectionSlug]/[...articleSegments]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-vercel-cache: STALE
+x-vercel-id: iad1::syd1::chk59-1791303124577-e55409a9857b
+x-backend-name: 3HC9aipj16jBVeMwVpE1wx--F_Host_1
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 16:12:04 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kcgs7200114-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791303125.572119,VS0,VE318
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-powered-by: One small piece of fairy cake
+strict-transport-security: max-age=31557600
+content-length: 37532
+
+HTTP/2 200 
+age: 61403
+cache-control: public, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+etag: "11y1t7kl7fg5rgp"
+server: Vercel
+x-matched-path: /news/[flagCode]/[sectionSlug]/[...articleSegments]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-vercel-cache: STALE
+x-vercel-id: iad1::syd1::hlpg6-1791303124946-1eb78770fbd3
+x-backend-name: 3HC9aipj16jBVeMwVpE1wx--F_Host_1
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 16:12:05 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kcgs7200114-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791303125.943843,VS0,VE333
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-powered-by: One small piece of fairy cake
+strict-transport-security: max-age=31557600
+content-length: 268976
+
