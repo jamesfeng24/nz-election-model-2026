@@ -6,7 +6,7 @@ Branch `claude/project-thread-3vvh6n`, base main d0fa5a6 (Stage46 merge). Docume
 
 **Where the plan lives.** Agreed sequence, three final outputs, do-not-reopen list (historical backtests only; a live 2026 national poll fit stays allowed), 56-day versus ~32-day horizon note, Māori fallback and the open probability-release policy are in the roadmap section "Active roadmap after Stage47 — agreed sequence" and D082. PR54 adds its own Stage47 findings entry, D081 and roadmap/state sections; expect a trivial textual merge (keep both, this planning section above the Stage47 findings).
 
-**Open decisions for Corinna:** probability-release policy and gate; whether the manual replay may be cut if time is short; separate sign-off for the balance-scale comparison.
+**Open decisions for Corinna:** probability-release policy and gate; separate sign-off for the balance-scale comparison. The manual-intervention replay is a retained required stage, sequenced after the replacement/incumbency dataset and not started now (Corinna: it should be tested, but not now).
 
 **Exact next action:** Corinna reviews and merges this PR (or asks for changes). Then, independently: PR54 repair and CI-scoping threads, MMP rules/allocation thread, end-to-end skeleton thread; nomination snapshot thread after the 8 October close. Do not start the balance-scale comparison or later items without sign-off. Earlier entries below are historical checkpoints, not current status.
 
