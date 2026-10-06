@@ -1,0 +1,20 @@
+{
+  "stage": 68,
+  "decisionNumber": "D102",
+  "status": "frozen before the script was written or run; author had seen the four shared shifts (not blind)",
+  "designDocument": "docs/stage68-shared-split-swing-design.md",
+  "years": [2014, 2017, 2020, 2023],
+  "previous": {"2014": 2011, "2017": 2014, "2020": 2017, "2023": 2020},
+  "sharedShift": "equal-seat mean of v - l (Stage48 control location at the frozen fold total sd), general-electorate candidate records",
+  "swing": "log(N/L) of summed general-electorate party votes, election minus previous election",
+  "model": "y = -beta * x through the origin; with-intercept OLS descriptive only",
+  "stopRule": {
+    "signsAgreeRequired": 4,
+    "allLoeoBetaPositive": true,
+    "loeoRmsRatioMaximum": 0.75,
+    "leaveFutureOutYears": [2020, 2023],
+    "leaveFutureOutMustBeatZeroPrediction": true,
+    "findings": ["proceed_to_scored_stage_recommended", "record_and_stop"]
+  },
+  "operationalAdoption": null
+}
