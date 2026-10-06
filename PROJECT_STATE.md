@@ -1,3 +1,19 @@
+# End-to-end export skeleton and dry run (synthetic fixtures) — local checkpoint, 2026-10-06
+
+Branch `claude/project-thread-mk3i23`, base main 109794f (roadmap/D082 merge, PR55). Authorized by D082 item (d). Question: can one versioned export contract carry a labelled synthetic forecast from polls through MMP to the website without synthetic data reaching application results? **Yes, on fixtures.** TypeScript only: no Python, statistical code, saved output, CI file, AGENTS.md, roadmap/DECISIONS text, `src/models/mmp` or Stage47 file touched; nothing fitted; no forecast exists.
+
+Added: export contract (`src/types/export.ts`: snapshot, append-only hashed archive index, GeoJSON keyed by electorate id), pipeline interfaces/seeded per-draw PRNG/aggregation/exporter/worker protocol (`src/models/simulation`), validated loader (`src/data/loader.ts`), Forecast/Electorates/MMP views that render a loaded snapshot under SYNTHETIC and uncalibrated banners, labelled invented fixtures (`data/fixtures/synthetic/`), dev-only dry run (`src/dev`), and `npm run check:dist` (built bundle must contain no fixture markers; verified to fail on a NODE_ENV=development build). Design and field table: `docs/export-contract.md`.
+
+**MMP is a stub.** `MmpStage` is the interface the MMP-rules stage should satisfy; the placeholder allocator (rules version `UNVERIFIED-PLACEHOLDER-synthetic-only`) is not the NZ rules and the schema rejects it outside synthetic snapshots. Integration with the real allocator is an open follow-up once `src/models/mmp` lands. Findings during the build: a first `!DEV` early-return left the synthetic chunk in the production bundle; fixed by wrapping the dynamic import in `if (import.meta.env.DEV)`, and the leak is now caught by `check:dist` and a structural test.
+
+Checks (local): `npm run test` 59 tests pass (was 31), `typecheck`, `build`, `check:dist` pass; `git diff --check` clean. Python suites and source validation not run: no Python, data or source change. `check:dist` is not in `ci.yml` (CI-scoping stage owns it). Local PR not opened; held until CI scoping merges so this PR does not trigger a needless full run, then ask Corinna before opening.
+
+Limitations / open: no D-number assigned to the contract; no Python exporter from Stage41–47 artifacts; Māori seats appear only as explicit `unavailable`; probability-release policy still open (contract carries `calibrationStatus` only); CHANGELOG/README not touched (CI-scoping stage owns them); no hosted CI run.
+
+**Exact next action:** after CI scoping merges, merge main into this branch, rerun `npm run test`, `typecheck`, `build`, `check:dist`, ask Corinna, then open one unskipped PR. Do not start a Python exporter, real stages or publication without separate authorization.
+
+---
+
 # Planning amendment: post-Stage47 roadmap, D082 and authorized scope — 6 October 2026
 
 Branch `claude/project-thread-3vvh6n`, base main d0fa5a6 (Stage46 merge). Documentation only: new roadmap section in `docs/stage39-forecast-roadmap.md`, D082 in `DECISIONS.md`, this entry. No code, data, artifact, threshold, CI or Stage47 file touched; no source acquisition. Checks: Python/frontend suites not run because no code or data changed; whitespace/diff review only. Not pushed to main; one small PR, left unmerged for Corinna.

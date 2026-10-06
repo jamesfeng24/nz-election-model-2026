@@ -28,3 +28,7 @@ Python handles future ingestion, transformations, geographic processing, fitting
 Future Monte Carlo computation belongs in pure TypeScript modules with no window, document or React dependencies. A module Web Worker will receive a request ID, immutable validated inputs/artifact references and seeded run configuration, and return serializable progress, result or error messages. The UI owns cancellation/worker termination and discards messages for stale request IDs. Reproducible run metadata must capture seed, PRNG/version, draw count, input hashes and code revision. No worker or numerical implementation is added now; the contract in src/types/domain.ts defines the message boundary.
 
 Keep the existing src/app and src/models names and colocated tests rather than moving working code purely to match an illustrative tree. src/components and src/data are reserved for future shared UI and validated loaders. The detailed data/script subdirectories now exist.
+
+## Export contract and dry run (draft v1)
+
+Website data now has a versioned, validated boundary: forecast snapshots and an append-only archive index (`src/types/export.ts`), loaded by `src/data/loader.ts`, with a DOM-free pipeline skeleton and Web Worker protocol in `src/models/simulation`. A dry run on labelled synthetic fixtures exercises it; synthetic data is blocked from production. See [export-contract.md](export-contract.md).
