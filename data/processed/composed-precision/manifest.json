@@ -1,0 +1,58 @@
+{
+  "consumedInputs": {
+    "data/processed/balance-scale/design-contract.json": "3678f322c238dac283b0789757db67ecfbdeb1bcaced2d90d5033155df1f0695",
+    "data/processed/balance-scale/evaluation.json": "4d798790e05dc5217477101d2d6a76cde9b574bbae66a540948ce642793006df",
+    "data/processed/balance-scale/fit.json": "02b4b1c9d5ddf593830c875d6ff90e357afa1b64d516f67a18f257ff3c32b4eb",
+    "data/processed/composed-precision/design-contract.json": "9e501d847e13fbf4429c9bce1ec8e08dcf742e4fa592af82d326ad5c4a85544e",
+    "data/processed/polling/candidate-integration/national/2017-recent_report_prior.json.gz": "5989a5a72dc929cbca19043a2854b4d5204d1c8d3a225a51924bcc31ed7640f9",
+    "data/processed/polling/candidate-integration/national/2020-recent_report_prior.json.gz": "e5a22a198ebc32658bf7d5c028663a4947f1d0164c051ab6aac28871ae8485f9",
+    "data/processed/polling/candidate-integration/national/2023-recent_report_prior.json.gz": "384b651ffb2119aa5713854d6ba956b2b00e72c0fd7643c30183e7687572f4fa",
+    "data/processed/uncertainty-revision/scales.json": "4be4940be1c944fa432246f156f5b422bf757c8e3cbc59e840fe5c23e01a1cf5",
+    "data/processed/uncertainty/inventory.json": "ef03dd9dd60130a8adc70901a931b6f481921661773c0f214343c8006de6e44f",
+    "docs/stage54-composed-precision-design.md": "ab1e0fa776e6461874bd2dcb220b9779bc291e9d7e58633f50e98d746cdb08e5",
+    "scripts/balance_scale/common.py": "da046766c51925a51fcd260dfacbf402e2ef46a3b1056c25c5f67b234ecc0534",
+    "scripts/balance_scale/evaluation.py": "05e0e3f5f3306f6ef1adedb95aad6d69dd131ed63389799065452f53508bf07f",
+    "scripts/balance_scale/simulate.py": "c53e228f929e36e10fd4e4cce291ae7d7867174c80eeee83478faf1549f35c28",
+    "scripts/balance_scale/summary.py": "31e27fbec66aa67b03a846b7d1c2917396a3281579488c4e658649193e6722d4",
+    "scripts/uncertainty/construction.py": "aa0d8153030a1f095ace765db0b818b448a7b2a8f630b4210d1d15931b61333f",
+    "scripts/uncertainty/metrics.py": "f7f105dd0d8397a5e4180b4fabd1605b64c00a8c9ba1ce3d5b529c96d3147bf4",
+    "scripts/uncertainty/streams.py": "b23b4e13a08ac3aec7daef7e34888782d795801679232a23ed2fa6ccc77eef0b",
+    "scripts/uncertainty/transforms.py": "30158b52dae16a3ae52f218c5f13428899bcd734ce6c279ce58717d0d2c43a2b",
+    "scripts/uncertainty_expectation/audits.py": "50f06814e7051ae8478a8d7de783049bdb7d9ed4622fd1f8a7053b0a20809126",
+    "scripts/uncertainty_expectation/integration.py": "7b1e7f563fc0f3ffc35d724c46f0962ab68295d834618210c64d27165a59cb76",
+    "scripts/uncertainty_expectation/simulation.py": "4140c2caad9f12615d2a4e57c00c348a3fce4c4df374e6e7b869fcfb51b8d9ad",
+    "scripts/uncertainty_revision/coordinates.py": "4a08290a2f62474df5a80f74ca3262b44b321132a53e86e96326b8b5f0e30f1a",
+    "scripts/uncertainty_revision/estimation.py": "481261b0f67c67e759db88ddb00262cef890f548c820ec288d6c69def20c5856",
+    "scripts/uncertainty_tails/integration.py": "abc7f6d3a72d5d9a70aefbf4dd33287a3cf462034c41d2a634f610cd3f2f5ea4",
+    "scripts/uncertainty_tails/metrics.py": "852d895a02ebd940fc8b89b90c4ead06e0a55b60f9dfddc1ffc2e08be23fcf3d",
+    "scripts/uncertainty_tails/streams.py": "40ee7b2b52216febad3339b1c409fb9c875d97be09f0989c883aad8ad6ecee31"
+  },
+  "dataSourcesJsonTouched": false,
+  "derivedArtifacts": {
+    "data/processed/composed-precision/decision.json": "148fc9d99642146b66231ff771a6480873f3a3ebdbda011ba4873ae27594e719",
+    "data/processed/composed-precision/design-contract.json": "9e501d847e13fbf4429c9bce1ec8e08dcf742e4fa592af82d326ad5c4a85544e",
+    "data/processed/composed-precision/evaluation.json": "366736277e70552e8e6695b0d7a2026ac5a6198cce7a129493b6b5b6880a2052",
+    "data/processed/composed-precision/input-contract.json": "891cd47ac3bf013c601d76701ee19dc7d12a23a96983eb64217f1b0fa906c4bc",
+    "data/processed/composed-precision/verification.json": "52ba056c0c332d8c5b123f256f2a34645423cc75f0f4b79ada115372c936f957"
+  },
+  "frozenDesign": {
+    "data/processed/composed-precision/design-contract.json": "9e501d847e13fbf4429c9bce1ec8e08dcf742e4fa592af82d326ad5c4a85544e",
+    "docs/stage54-composed-precision-design.md": "ab1e0fa776e6461874bd2dcb220b9779bc291e9d7e58633f50e98d746cdb08e5"
+  },
+  "hashesAreNotProofOfLinuxReproduction": true,
+  "newCodeAndTests": {
+    "scripts/composed_precision/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/composed_precision/common.py": "a38b243c162b8cdf8007bb43aa3ae4b07f289f212993374611a7cb1e85a603f4",
+    "scripts/composed_precision/decision.py": "65213fea4b9cf9d2b9453901c7bfc579991f773b6a2260cbcccc91c2e533d7af",
+    "scripts/composed_precision/evaluation.py": "ad41320f96636446c219311412dff92185f6aeff1bddf597961dfa08f7d9281b",
+    "scripts/composed_precision/manifest.py": "3e940d4451ea5ee85c5ace70fb771ddaf19c25b06a9831b8fdd8e1a4a63f4534",
+    "scripts/composed_precision/report.py": "766e72580172a4da1d3af798e6df431c4fde5c7d57ac82266c6f47dcb738837e",
+    "scripts/composed_precision/simulate.py": "8eb13280bedbe77d667016eef0dcd26c5168f8287ed9a9efb027131e15972808",
+    "scripts/composed_precision/stream.py": "df3a0077250cf0802793eafc7fd9c9998f92a1fd6374ab324891422ef393d0bf",
+    "scripts/composed_precision/verification.py": "584680e367435804a22ef281bb6d24c777c4639f9185e85d477257f33b240719",
+    "scripts/tests/test_stage54_composed_precision.py": "258e35ea3be2febcf4765f1d424c38746d8f10c09dd83d9032c910f4f3dbbc9e"
+  },
+  "newNationalInference": false,
+  "newSourcesOrAcquisition": false,
+  "stage": 54
+}

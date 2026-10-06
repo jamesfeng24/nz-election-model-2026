@@ -176,6 +176,30 @@
    "integrityChecks": [
     "scripts.balance_scale.common:verify"
    ]
+  },
+  "stage54": {
+   "entryModules": [
+    "scripts.composed_precision.evaluation",
+    "scripts.composed_precision.verification"
+   ],
+   "ownedPaths": [
+    "scripts/composed_precision"
+   ],
+   "outputPaths": [
+    "data/processed/composed-precision"
+   ],
+   "extraDependencies": [],
+   "cacheDirectory": ".cache/stage54",
+   "cacheReaderModules": [],
+   "cacheReaderNames": [],
+   "reviewedCacheConsumers": [],
+   "replacedCommands": [
+    "python3 -m scripts.composed_precision.evaluation --check",
+    "python3 -m scripts.composed_precision.verification --check"
+   ],
+   "integrityChecks": [
+    "scripts.composed_precision.common:verify"
+   ]
   }
  }
 }
