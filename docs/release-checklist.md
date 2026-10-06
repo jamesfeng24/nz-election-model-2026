@@ -7,9 +7,9 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 | # | Item | Depends on | Status |
 |---|---|---|---|
 | 1 | Decisions recorded: nowcast estimand (D106), 0.60/1.00 policy (D107) | — | done (this reconciliation) |
-| 2 | 2026 candidate and local-party scales computed with the frozen Stage45 rule over 2014–2023 (the folds stop at 2023 today) | — | open |
-| 3 | `config/nowcast-2026.json` as the single live configuration (spec §8) | 2 | open |
-| 4 | 2026 ordinary/exceptional classification for all 64 general seats, dated and sourced; a missing seat fails the build | James | open |
+| 2 | 2026 candidate and local-party scales computed with the frozen Stage45 rule over 2014–2023 | — | done (Stage72) |
+| 3 | `config/nowcast-2026.json` as the single live configuration (spec §8) | 2 | done (Stage72); pending fields listed in the file |
+| 4 | 2026 ordinary/exceptional classification for all 64 general seats, dated and sourced; a missing seat fails the build | James | schema and validator done (Stage72); entries open |
 | 5 | Canonical final roster after nominations close; rebuild S/R destinations, Māori poll-to-candidate matching, export directory and MMP expected electorates from it | Stage50 (after 8 Oct, 12:00 NZDT) | waiting |
 | 6 | Cut over to the Stage69 notional baseline through one pointer; mark the Stage64 and Stage41 2026 artifacts as not live; test that only the configured baseline is read | Stage69 | waiting |
 | 7 | National adapter on `lastDataSupport` from the latest Stage70 refit, as-of week recorded | Stage70 | waiting |
