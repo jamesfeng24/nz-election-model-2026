@@ -169,6 +169,13 @@ class SelectionTests(unittest.TestCase):
         commit(self.repo.root, 'weaken')
         self.assertFull(self.repo.select(), 'removed from workflow')
 
+    def test_handoff_fragments_and_their_fold_script_are_documentation_not_dependencies(self):
+        write(self.repo.root, 'handoff.d/2026-10-06-x.md', '<!-- fold: changelog -->\n## X\n')
+        write(self.repo.root, 'CHANGELOG.md', 'folded\n')
+        write(self.repo.root, 'scripts/fold_doc_fragments.py', 'new\n')
+        commit(self.repo.root, 'fragments')
+        self.assertEqual(self.repo.select()['mode'], 'integrity')
+
     def test_non_pull_request_events_and_missing_history_are_full(self):
         for event in ('workflow_dispatch', 'schedule', 'unknown'):
             self.assertFull(self.repo.select(event), 'always uses full')
