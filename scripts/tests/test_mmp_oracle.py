@@ -2,6 +2,7 @@
 import json
 import unittest
 from scripts.mmp import oracle
+from scripts.validate.source_files import verify_source_files
 
 
 class MmpOracleTests(unittest.TestCase):
@@ -15,6 +16,11 @@ class MmpOracleTests(unittest.TestCase):
         for e in data['elections']:
             self.assertEqual(e['constituencySeatsOutsidePartyBallot'], 0)
             self.assertTrue(all(p['partyVotes'] >= 0 for p in e['listedParties']))
+
+    def test_act_text_registry_matches_preserved_bytes(self):
+        registry = json.loads((oracle.ROOT / 'data/processed/mmp/source-registry.json').read_text(encoding='utf-8'))
+        verify_source_files(oracle.ROOT, registry)
+        self.assertEqual(len(registry['sources']), 1)
 
     def test_parser_distinguishes_unlisted_parties(self):
         raw = ("Summary\nRegistered Parties with List\n"

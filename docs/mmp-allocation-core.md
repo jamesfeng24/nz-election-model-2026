@@ -21,7 +21,7 @@ Not implemented, by design: the by-election seat added after a cancelled elector
 
 - All six elections reproduce exactly: every party's list seats and the Parliament size, including four overhang elections (2008 overhang 2; 2011 and 2014 overhang 1; 2023 overhang 2) and three elections with no overhang. No tie occurred in any official election.
 - 26 allocator tests (hand-worked 620/300/80 example, 4.99% vs 5.00% boundary, one-electorate bypass, independent winner, tie flag, list exhaustion, overhang with unchanged entitlements, scale invariance, input validation, JSON round trip, 300 seeded synthetic accounting trials against the domain schema). Synthetic fixtures are labelled and not used in any application result.
-- The Act text is preserved with checksum and provenance but deliberately **not** registered in `data/sources.json`: that file is pinned by `.github/validation/stage39.json`, so editing it would force full CI validation. Register it after the CI-scoping change merges.
+- The Act text is preserved and registered in the separate dated `data/processed/mmp/source-registry.json` (Stage40 pattern), deliberately **not** in `data/sources.json`, which about 25 historical stages hash.
 
 ## Limits
 

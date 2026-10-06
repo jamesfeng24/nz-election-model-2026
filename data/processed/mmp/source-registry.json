@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "mmp-electoral-act-1993-v238-2026-01-01",
+      "organisation": "New Zealand Parliamentary Counsel Office",
+      "url": "https://www.legislation.govt.nz/act/public/1993/87/en/latest/",
+      "dateOrElection": "Electoral Act 1993, version 238.0 as at 1 January 2026",
+      "resource": "Whole-Act PDF text extraction (user-supplied upload)",
+      "retrievedAt": "2026-10-06T00:34:40Z",
+      "rawPath": "data/raw/legislation/electoral-act-1993/electoral-act-1993-version-238-0-as-at-2026-01-01.pdf.txt",
+      "processingScript": null,
+      "limitations": [
+        "Text extraction of the official PDF uploaded by the project requester; the original PDF and a direct download were not available to the session, so only this extraction is checksummed.",
+        "Statute text is rules evidence, not election data; sections used are ss 3, 35, 45, 127A, 153-153E, 179 and 191-193.",
+        "No processing script: the text is read by hand for rule verification (docs/mmp-rules-verification.md); src/models/mmp/allocate.ts implements ss 191-193 directly."
+      ],
+      "sha256": "8f6f522965a495f4b408892f496f27edd55fcc78f6b16337e8756fd9fb09c01a",
+      "licence": "New Zealand legislation is published by the PCO for reuse under Crown copyright terms with source attribution; exact licence text not captured.",
+      "schemaVersion": 1
+    }
+  ]
+}
