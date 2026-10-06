@@ -1,0 +1,180 @@
+{
+  "automaticAcceptance": "Stage26 name_match flags on same-party successor-seat candidates; see summary.json automaticContinuationFlags.",
+  "continuationNotes": {
+    "2020-2023|NAT|Port Waikato": {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "Voting in Port Waikato was postponed to 25 November 2023 after a candidate died on 9 October 2023; Andrew Bayly (National, incumbent) was the National candidate and won",
+          "date": "2023-11-25",
+          "dateKind": "event",
+          "reading": "direct",
+          "source": "ct-wp-2023-port-waikato-by-election"
+        }
+      ],
+      "reasoning": "The preserved 2023 table marks the contest cancelled (no votes), but the National candidate is the 2020 winner with an identical name; classed as continuation, with the postponed-polling caveat for any later analysis of target outcomes.",
+      "relation": "same_person_continuation_contest_postponed"
+    }
+  },
+  "policy": {
+    "identity": "Name differences (macrons, spelling and transliteration, nicknames, middle or title tokens, name order) are resolved on evidence and judgement with a recorded confidence and reasoning; absence of an exact string match is never treated as a different person. Names that differ and have no evidence of being the same person are treated as different people only where the incumbent is documented as leaving the seat.",
+    "noEffect": "No replacement effect, residual or coefficient is estimated or used in this pass.",
+    "unknownIsNotZero": "An undocumented departure reason is recorded as unknown, never as retirement by default."
+  },
+  "records": [
+    {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "The biography uses \"Peseta Samuelu Masunu Lotu-Iiga\" and also the other spelling interchangeably; MP for Maungakiekie 2008-2017",
+          "date": "2026-10-06",
+          "dateKind": "retrieval",
+          "reading": "direct",
+          "source": "ct-wp-lotu-iiga-name"
+        }
+      ],
+      "key": "2008-2011|NAT|Maungakiekie",
+      "reasoning": "Same electorate, same party, uninterrupted incumbency, identical surname and other given names; one vowel differs in a Samoan given name. Treating it as a different person would be an implausible reading.",
+      "relation": "same_person_name_variant",
+      "sourceName": "LOTU-IIGA, Peseta Samuela Masunu",
+      "targetName": "LOTU-IIGA, Peseta Samuelu Masunu",
+      "variantKind": "spelling"
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "Full formal name \"Aupito Tofae Su'a William Sio\", also \"Su'a William Sio\"; MP for Māngere continuously from the 2008 election to 2023; Viliamu is the Samoan form of William",
+          "date": "2026-10-06",
+          "dateKind": "retrieval",
+          "reading": "direct",
+          "source": "ct-wp-sio-names"
+        }
+      ],
+      "key": "2011-2014|LAB|Māngere",
+      "reasoning": "One continuous Labour incumbent in Māngere whose official nomination label varied by transliteration (Viliamu/William), apostrophe and the matai title (Aupito); no other person is a plausible referent.",
+      "relation": "same_person_name_variant",
+      "sourceName": "SIO, Su'a Viliamu",
+      "targetName": "SIO, Sua William",
+      "variantKind": "samoan_title_and_transliteration"
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "Full name Nicolas Rex Smith (known as Nick); MP for Nelson 1996-2020",
+          "date": "2026-10-06",
+          "dateKind": "retrieval",
+          "reading": "direct",
+          "source": "ct-wp-nick-smith"
+        }
+      ],
+      "key": "2011-2014|NAT|Nelson",
+      "reasoning": "Nick is the standard short form of Nicolas for this long-serving National MP; same seat and party, continuous incumbency. The frozen Stage26 alias list did not contain Nicolas/Nick, which is why the automatic rule left it unresolved.",
+      "relation": "same_person_name_variant",
+      "sourceName": "SMITH, Nicolas Rex",
+      "targetName": "SMITH, Nick",
+      "variantKind": "nickname"
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "Full name Melissa Heni Mekameka Whaitiri; known as Meka; MP for Ikaroa-Rāwhiti from the 29 June 2013 by-election",
+          "date": "2026-10-06",
+          "dateKind": "retrieval",
+          "reading": "direct",
+          "source": "ct-wp-whaitiri"
+        }
+      ],
+      "key": "2014-2017|LAB|Ikaroa-Rāwhiti",
+      "reasoning": "Meka derives from the third given name Mekameka; same Māori electorate, same party, continuous incumbency since the 2013 by-election.",
+      "relation": "same_person_name_variant",
+      "sourceName": "WHAITIRI, Meka",
+      "targetName": "WHAITIRI, Melissa Heni Mekameka",
+      "variantKind": "nickname"
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "Full formal name \"Aupito Tofae Su'a William Sio\", also \"Su'a William Sio\"; MP for Māngere continuously from the 2008 election to 2023; Viliamu is the Samoan form of William",
+          "date": "2026-10-06",
+          "dateKind": "retrieval",
+          "reading": "direct",
+          "source": "ct-wp-sio-names"
+        }
+      ],
+      "key": "2014-2017|LAB|Māngere",
+      "reasoning": "One continuous Labour incumbent in Māngere whose official nomination label varied by transliteration (Viliamu/William), apostrophe and the matai title (Aupito); no other person is a plausible referent.",
+      "relation": "same_person_name_variant",
+      "sourceName": "SIO, Sua William",
+      "targetName": "SIO, Sua Viliamu",
+      "variantKind": "samoan_title_and_transliteration"
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "Full formal name \"Aupito Tofae Su'a William Sio\", also \"Su'a William Sio\"; MP for Māngere continuously from the 2008 election to 2023; Viliamu is the Samoan form of William",
+          "date": "2026-10-06",
+          "dateKind": "retrieval",
+          "reading": "direct",
+          "source": "ct-wp-sio-names"
+        }
+      ],
+      "key": "2017-2020|LAB|Māngere",
+      "reasoning": "One continuous Labour incumbent in Māngere whose official nomination label varied by transliteration (Viliamu/William), apostrophe and the matai title (Aupito); no other person is a plausible referent.",
+      "relation": "same_person_name_variant",
+      "sourceName": "SIO, Sua Viliamu",
+      "targetName": "SIO, Aupito Toesulusulu Tofae Sua William",
+      "variantKind": "samoan_title_and_transliteration"
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "Full name Nicolas Rex Smith (known as Nick); MP for Nelson 1996-2020",
+          "date": "2026-10-06",
+          "dateKind": "retrieval",
+          "reading": "direct",
+          "source": "ct-wp-nick-smith"
+        }
+      ],
+      "key": "2017-2020|NAT|Nelson",
+      "reasoning": "As above, reversed direction.",
+      "relation": "same_person_name_variant",
+      "sourceName": "SMITH, Nick",
+      "targetName": "SMITH, Nicolas Rex",
+      "variantKind": "nickname"
+    },
+    {
+      "confidence": "high",
+      "evidence": [
+        {
+          "citedAs": null,
+          "claim": "Full name Anae Neru Asi Tuiataga Leavasa; Takanini MP 2020-2023; contested Takanini again in 2023",
+          "date": "2026-10-06",
+          "dateKind": "retrieval",
+          "reading": "direct",
+          "source": "ct-wp-leavasa"
+        }
+      ],
+      "key": "2020-2023|LAB|Takanini",
+      "reasoning": "The 2020 label put the matai-title words ahead of the surname; the 2023 label placed Anae in the given-name position. Both resolve to the same person and the same seat; he recontested and lost in 2023.",
+      "relation": "same_person_name_variant",
+      "sourceName": "ASI TUIATAGA LEAVASA, Neru",
+      "targetName": "LEAVASA, Anae Neru",
+      "variantKind": "surname_compound_and_title_order"
+    }
+  ],
+  "schemaVersion": 1
+}
