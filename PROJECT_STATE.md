@@ -10,7 +10,7 @@ Checks run here: `npm run test` 57 pass (31 prior + 26 new), `typecheck`, `build
 
 Limits: validates the rule implementation on historical totals only; component-party mapping, cancelled-poll by-election seat, list ordering/eligibility and the 2026 ballot roster are not implemented. No forecast, Monte Carlo, frontend, workflow or Stage47 change.
 
-Exact next action: when CI scoping has merged, open the PR into main (no skip marker), then report green to the coordinator for review; Next separately authorized MMP-adjacent task: named minor-party winner inputs after the 8 Oct nomination close (not started).
+Exact next action: report the green PR to the coordinator for review and merge (threads do not merge). Next separately authorized MMP-adjacent task: named minor-party winner inputs after the 8 Oct nomination close (not started).
 
 ---
 
