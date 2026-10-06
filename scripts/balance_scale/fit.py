@@ -151,7 +151,7 @@ def build():
         center = centers(env, earlier)
         record = {'targetYear': year, 'trainingYears': earlier, 'centers': center, 'seatIds': env[year]['ids'],
                   'trainingSeats': int(sum(len(env[y]['p']) for y in earlier)),
-                  'missingFeatureSeats': {y: {k: int(sum(f[k] for f in env[y]['missing'])) for k in ('R', 'T')} for y in [year, *earlier]}}
+                  'missingFeatureSeats': {str(y): {k: int(sum(f[k] for f in env[y]['missing'])) for k in ('R', 'T')} for y in [year, *earlier]}}
         features = centered(env, year, center)
         if not earlier:
             zero = {'theta': [0., 0., 0.], 'status': 'no earlier candidate residual: a = b = 0, prior/control'}

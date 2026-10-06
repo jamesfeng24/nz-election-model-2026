@@ -1,4 +1,6 @@
 """Score the three restrictions on identical common-stream records; no adoption."""
+import os
+from concurrent.futures import ProcessPoolExecutor
 import numpy as np
 from scripts.uncertainty.construction import scale_for
 from .common import PREFIX, INVENTORY, SCALES, RESTRICTIONS, read, save, verify, arguments, design
@@ -17,52 +19,68 @@ def multipliers_for(fits, year):
     return lambda cid: {r: fold['multipliers'][r][index[cid]] for r in RESTRICTIONS}
 
 
-def components(inventory, scales, fits, spec):
-    records = {r: [] for r in RESTRICTIONS}
-    representatives, gaps = [], []
-    for year in YEARS:
-        rows = sorted([r for r in inventory['candidateRecords'] if r['targetYear'] == year], key=lambda r: r['targetElectorateId'])
-        fit = scale_for(scales, 'candidate', year)['scales']
-        mult = multipliers_for(fits, year)
-        rep = set(representative_ids(rows))
-        for row in rows:
-            cid = row['targetElectorateId']
-            found, gap = component_seat(row, fit, mult(cid), spec['components']['draws'], spec['decision']['resolutionPrefixDraws'],
-                                        spec['components']['doubling'] if cid in rep else None)
-            for r in RESTRICTIONS:
-                records[r].append(found[r])
-            gaps.append({'id': cid, **{r: v for r, v in gap.items()}})
-        print('Stage48 component', year, len(rows), flush=True)
+def component_year(year):
+    spec = design()
+    inventory, scales, fits = read(INVENTORY), read(SCALES), read(PREFIX + '/fit.json')
+    rows = sorted([r for r in inventory['candidateRecords'] if r['targetYear'] == year], key=lambda r: r['targetElectorateId'])
+    fit = scale_for(scales, 'candidate', year)['scales']
+    mult = multipliers_for(fits, year)
+    rep = set(representative_ids(rows))
+    records, gaps = {r: [] for r in RESTRICTIONS}, []
+    for row in rows:
+        cid = row['targetElectorateId']
+        found, gap = component_seat(row, fit, mult(cid), spec['components']['draws'], spec['decision']['resolutionPrefixDraws'],
+                                    spec['components']['doubling'] if cid in rep else None)
+        for r in RESTRICTIONS:
+            records[r].append(found[r])
+        gaps.append({'id': cid, **gap})
     return records, gaps
 
 
-def composed(inventory, scales, fits, spec):
+def composed_year(year):
+    spec = design()
+    inventory, scales, fits = read(INVENTORY), read(SCALES), read(PREFIX + '/fit.json')
     parties = {r['targetElectorateId']: r for r in inventory['partyRecords']}
-    records = {r: [] for r in RESTRICTIONS}
-    checks, representatives = [], []
     frame, caps = spec['composed']['draws'], spec['composed']['representativeDraws']
-    for year in design()['decisionYears']:
-        rows = sorted([r for r in inventory['candidateRecords'] if r['targetYear'] == year], key=lambda r: r['targetElectorateId'])
-        pfit = scale_for(scales, 'local_party', year)['scales']
-        fit = scale_for(scales, 'candidate', year)['scales']
-        mult = multipliers_for(fits, year)
-        first = parties[rows[0]['targetElectorateId']]
-        national = national_inputs(year, first, frame)
-        rep = representative_ids(rows)
-        edge = {rows[0]['targetElectorateId'], rows[-1]['targetElectorateId']}
-        for row in rows:
-            cid = row['targetElectorateId']
-            found, check = composed_seat(row, parties[cid], national, pfit, fit, mult(cid), frame, None, cid in edge)
-            for r in RESTRICTIONS:
-                records[r].append(found[r])
-            checks.append({'id': cid, **check})
-        big = national_inputs(year, first, max(caps))
-        for cid in rep:
-            row = next(x for x in rows if x['targetElectorateId'] == cid)
-            found, _ = composed_seat(row, parties[cid], big, pfit, fit, mult(cid), len(big), caps)
-            representatives.append({'id': cid, 'year': year, **{r: found[r]['doubling'] for r in RESTRICTIONS}})
-        print('Stage48 composed', year, len(rows), flush=True)
+    rows = sorted([r for r in inventory['candidateRecords'] if r['targetYear'] == year], key=lambda r: r['targetElectorateId'])
+    pfit = scale_for(scales, 'local_party', year)['scales']
+    fit = scale_for(scales, 'candidate', year)['scales']
+    mult = multipliers_for(fits, year)
+    first = parties[rows[0]['targetElectorateId']]
+    national = national_inputs(year, first, frame)
+    edge = {rows[0]['targetElectorateId'], rows[-1]['targetElectorateId']}
+    records, checks, representatives = {r: [] for r in RESTRICTIONS}, [], []
+    for row in rows:
+        cid = row['targetElectorateId']
+        found, check = composed_seat(row, parties[cid], national, pfit, fit, mult(cid), frame, None, cid in edge)
+        for r in RESTRICTIONS:
+            records[r].append(found[r])
+        checks.append({'id': cid, **check})
+    big = national_inputs(year, first, max(caps))
+    for cid in representative_ids(rows):
+        row = next(x for x in rows if x['targetElectorateId'] == cid)
+        found, _ = composed_seat(row, parties[cid], big, pfit, fit, mult(cid), len(big), caps)
+        representatives.append({'id': cid, 'year': year, **{r: found[r]['doubling'] for r in RESTRICTIONS}})
     return records, checks, representatives
+
+
+def task(item):
+    layer, year = item
+    result = (component_year if layer == 'component' else composed_year)(year)
+    print('Stage48', layer, year, flush=True)
+    return result
+
+
+def run_all():
+    """Independent year tasks; results do not depend on the worker count."""
+    items = [('composed', y) for y in design()['decisionYears']] + [('component', y) for y in YEARS]
+    workers = max(1, min(len(items), os.cpu_count() or 1, 4))
+    if workers == 1:
+        results = [task(i) for i in items]
+    else:
+        with ProcessPoolExecutor(max_workers=workers) as pool:
+            results = list(pool.map(task, items))
+    return dict(zip(items, results))
 
 
 def doubling(entries, counts, gates, restrictions=RESTRICTIONS):
@@ -96,13 +114,16 @@ def flatten(value):
 
 def build():
     spec = design()
-    inventory, scales, fits = read(INVENTORY), read(SCALES), read(PREFIX + '/fit.json')
-    comp_records, comp_gaps = components(inventory, scales, fits, spec)
+    results = run_all()
+    comp_records = {r: [x for y in YEARS for x in results[('component', y)][0][r]] for r in RESTRICTIONS}
+    comp_gaps = [g for y in YEARS for g in results[('component', y)][1]]
+    cmp_records = {r: [x for y in spec['decisionYears'] for x in results[('composed', y)][0][r]] for r in RESTRICTIONS}
+    cmp_checks = [c for y in spec['decisionYears'] for c in results[('composed', y)][1]]
+    cmp_rep = [e for y in spec['decisionYears'] for e in results[('composed', y)][2]]
     comp_summary = by_population(comp_records)
-    rep_entries = [{r: x['doubling'] for r, x in zip(RESTRICTIONS, (rec_c, rec_k, rec_f))}
-                   for rec_c, rec_k, rec_f in zip(*[[x for x in comp_records[r] if 'doubling' in x] for r in RESTRICTIONS])]
+    rep_entries = [{r: x['doubling'] for r, x in zip(RESTRICTIONS, trio)}
+                   for trio in zip(*[[x for x in comp_records[r] if 'doubling' in x] for r in RESTRICTIONS])]
     comp_precision = doubling(rep_entries, spec['components']['doubling'], spec['gatesPP'])
-    cmp_records, cmp_checks, cmp_rep = composed(inventory, scales, fits, spec)
     cmp_summary = by_population(cmp_records)
     cmp_precision = doubling(cmp_rep, spec['composed']['representativeDraws'], spec['gatesPP'])
     strip = lambda recs: {r: [{k: v for k, v in x.items() if k != 'doubling'} for x in recs[r]] for r in RESTRICTIONS}
@@ -113,8 +134,7 @@ def build():
                           'maximumFiniteMeanDeviationPP': {r: max(x['finiteMeanDeviationPP'] for x in comp_records[r]) for r in RESTRICTIONS},
                           'representativeDoubling': comp_precision},
             'composed': {'draws': spec['composed']['draws'], 'records': strip(cmp_records), 'summary': cmp_summary,
-                         'equalityChecks': cmp_checks,
-                         'maximumEqualityGap': max(flatten(cmp_checks)),
+                         'equalityChecks': cmp_checks, 'maximumEqualityGap': max(flatten(cmp_checks)),
                          'representativeDoubling': cmp_precision,
                          'precisionNote': 'Stage47 composed precision gates are unmet for the control; no fine superiority claim.'}}
 

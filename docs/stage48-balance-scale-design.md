@@ -64,6 +64,8 @@ Comparisons: K versus C and F versus K decide; F versus C is reported.
 | NEGLIGIBLE or WORSE | NEGLIGIBLE or WORSE | Neither: do not force narrowing; keep the corrected control |
 | any MIXED | any | Mixed: stop, report to James, no adoption |
 
+Any combination not listed (for example F IMPROVES K but F does not IMPROVE C) is **mixed**. This sentence was added after the freeze commit and before any score had been read; it states what the table already implied.
+
 The composed 193-seat check is supporting: its pooled N/L `Delta_CRPS` for K versus C and F versus K is reported with the Stage47 caveat that composed precision gates are unmet. A sign disagreement of at least 0.01pp with the conditional result is flagged for review; it does not change the table above.
 
 **No operational adoption in Stage48 under any outcome.** The question bears on the interval widths that feed the open probability-release decision, so the finding is recorded and the decision stays with James. The retained development default stays the corrected Stage45 Gaussian.

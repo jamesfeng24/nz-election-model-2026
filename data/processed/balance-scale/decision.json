@@ -1,0 +1,308 @@
+{
+  "allSeatsDeltaMajorCRPSPP": {
+    "conditional_vs_constant": -0.0003740551319930674,
+    "conditional_vs_control": -0.01734066742114493,
+    "constant_vs_control": -0.01696661228915186
+  },
+  "component": {
+    "conditional_vs_constant": {
+      "classification": "NEGLIGIBLE",
+      "coverageGuard": {
+        "50": {
+          "coverageX": 0.5932642487046632,
+          "coverageY": 0.5932642487046632,
+          "passed": true
+        },
+        "80": {
+          "coverageX": 0.9041450777202072,
+          "coverageY": 0.9041450777202072,
+          "passed": true
+        },
+        "90": {
+          "coverageX": 0.9481865284974094,
+          "coverageY": 0.9481865284974094,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.0005670182031467519,
+      "deltaMajorCRPSPP": -0.0004980941394938654,
+      "deltaMajorIntervalScorePP": -0.008065746550537156,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.0005567039664926554,
+        "2020": -0.00035537929928519674,
+        "2023": -0.000584429072080006
+      },
+      "foldsNegative": 3,
+      "resolution": {
+        "deltaAtPrefixPP": -0.0004978584469917123,
+        "differencePP": 2.3569250215307435e-07,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "conditional_vs_control": {
+      "classification": "IMPROVES",
+      "coverageGuard": {
+        "50": {
+          "coverageX": 0.5932642487046632,
+          "coverageY": 0.6217616580310881,
+          "passed": true
+        },
+        "80": {
+          "coverageX": 0.9041450777202072,
+          "coverageY": 0.9145077720207254,
+          "passed": true
+        },
+        "90": {
+          "coverageX": 0.9481865284974094,
+          "coverageY": 0.9559585492227979,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.028294405592706795,
+      "deltaMajorCRPSPP": -0.02309094055561811,
+      "deltaMajorIntervalScorePP": -0.30667400554992774,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.027826226488956163,
+        "2020": -0.009881060401375485,
+        "2023": -0.031771939153931505
+      },
+      "foldsNegative": 3,
+      "resolution": {
+        "deltaAtPrefixPP": -0.02311678789902868,
+        "differencePP": 2.5847343410569795e-05,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "constant_vs_control": {
+      "classification": "IMPROVES",
+      "coverageGuard": {
+        "50": {
+          "coverageX": 0.5932642487046632,
+          "coverageY": 0.6217616580310881,
+          "passed": true
+        },
+        "80": {
+          "coverageX": 0.9041450777202072,
+          "coverageY": 0.9145077720207254,
+          "passed": true
+        },
+        "90": {
+          "coverageX": 0.9481865284974094,
+          "coverageY": 0.9559585492227979,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.027727387389560043,
+      "deltaMajorCRPSPP": -0.022592846416124246,
+      "deltaMajorIntervalScorePP": -0.2986082589993906,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.027269522522463507,
+        "2020": -0.009525681102090289,
+        "2023": -0.0311875100818515
+      },
+      "foldsNegative": 3,
+      "resolution": {
+        "deltaAtPrefixPP": -0.022618929452036973,
+        "differencePP": 2.6083035912727315e-05,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    }
+  },
+  "composed": {
+    "conditional_vs_constant": {
+      "classification": null,
+      "coverageGuard": {
+        "50": {
+          "coverageX": 0.6139896373056994,
+          "coverageY": 0.6139896373056994,
+          "passed": true
+        },
+        "80": {
+          "coverageX": 0.8652849740932642,
+          "coverageY": 0.8626943005181347,
+          "passed": true
+        },
+        "90": {
+          "coverageX": 0.9326424870466321,
+          "coverageY": 0.9326424870466321,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.00039886475478745353,
+      "deltaMajorCRPSPP": -0.0003224310349452253,
+      "deltaMajorIntervalScorePP": -0.006066399412021657,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.00017102063246809962,
+        "2020": -0.0005796162765019375,
+        "2023": -0.00021263767646662046
+      },
+      "foldsNegative": 3,
+      "resolution": {
+        "deltaAtPrefixPP": -0.00032243103494571427,
+        "differencePP": 4.889751797909625e-16,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "conditional_vs_control": {
+      "classification": null,
+      "coverageGuard": {
+        "50": {
+          "coverageX": 0.6139896373056994,
+          "coverageY": 0.6295336787564767,
+          "passed": true
+        },
+        "80": {
+          "coverageX": 0.8652849740932642,
+          "coverageY": 0.8626943005181347,
+          "passed": true
+        },
+        "90": {
+          "coverageX": 0.9326424870466321,
+          "coverageY": 0.9378238341968912,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.020150425551639373,
+      "deltaMajorCRPSPP": -0.017375992818396746,
+      "deltaMajorIntervalScorePP": -0.17525432366873397,
+      "foldDeltaMajorCRPSPP": {
+        "2017": 0.0005530762590613136,
+        "2020": -0.02547319487113242,
+        "2023": -0.027081341061048647
+      },
+      "foldsNegative": 2,
+      "resolution": {
+        "deltaAtPrefixPP": -0.017375992818398703,
+        "differencePP": 1.9567680809018384e-15,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "constant_vs_control": {
+      "classification": null,
+      "coverageGuard": {
+        "50": {
+          "coverageX": 0.6139896373056994,
+          "coverageY": 0.6295336787564767,
+          "passed": true
+        },
+        "80": {
+          "coverageX": 0.8626943005181347,
+          "coverageY": 0.8626943005181347,
+          "passed": true
+        },
+        "90": {
+          "coverageX": 0.9326424870466321,
+          "coverageY": 0.9378238341968912,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.01975156079685192,
+      "deltaMajorCRPSPP": -0.01705356178345152,
+      "deltaMajorIntervalScorePP": -0.16918792425671234,
+      "foldDeltaMajorCRPSPP": {
+        "2017": 0.0007240968915294133,
+        "2020": -0.024893578594630483,
+        "2023": -0.026868703384582027
+      },
+      "foldsNegative": 2,
+      "resolution": {
+        "deltaAtPrefixPP": -0.01705356178345299,
+        "differencePP": 1.4675760606763788e-15,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    }
+  },
+  "composedSignFlags": {
+    "conditional_vs_constant": {
+      "component": -0.0004980941394938654,
+      "composed": -0.0003224310349452253,
+      "flag": false,
+      "meaning": "composed sign disagreement of at least the flag size; supporting only, composed gates unmet"
+    },
+    "constant_vs_control": {
+      "component": -0.022592846416124246,
+      "composed": -0.01705356178345152,
+      "flag": false,
+      "meaning": "composed sign disagreement of at least the flag size; supporting only, composed gates unmet"
+    }
+  },
+  "finding": "constant only",
+  "numerical": {
+    "componentDoublingAllPassed": {
+      "conditional": true,
+      "constant": true,
+      "control": true
+    },
+    "componentMaximumDoublingChangePP": {
+      "conditional": {
+        "crps": 0.007550130426942303,
+        "energy": 0.03066639155391382,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.08281690606986203,
+        "width90": 0.1452791089719767
+      },
+      "constant": {
+        "crps": 0.007550130426942303,
+        "energy": 0.030704101192798205,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.08303282439901238,
+        "width90": 0.14673201298797522
+      },
+      "control": {
+        "crps": 0.007550130426942303,
+        "energy": 0.03301422138390109,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.07635698690761039,
+        "width90": 0.1657850763969435
+      }
+    },
+    "composedDoublingAllPassed": {
+      "conditional": false,
+      "constant": false,
+      "control": false
+    },
+    "maximumDrawGapAcrossRestrictions": 2.220446049250313e-16,
+    "maximumFiniteMeanDeviationPP": {
+      "conditional": 0.008847141989076768,
+      "constant": 0.008847141989076768,
+      "control": 0.008847141989076768
+    },
+    "meanDeviationGatePP": 0.05
+  },
+  "operationalAdoption": null,
+  "rule": {
+    "comparisons": [
+      "constant_vs_control",
+      "conditional_vs_constant",
+      "conditional_vs_control"
+    ],
+    "composedSignFlagPP": 0.01,
+    "coverageGuardAbsolute": 0.02,
+    "crpsMaterialityPP": 0.01,
+    "decidingComparisons": [
+      "constant_vs_control",
+      "conditional_vs_constant"
+    ],
+    "energyGuardPP": 0.02,
+    "intervalScoreLevels": [
+      50,
+      80,
+      90
+    ],
+    "minimumFoldsNegative": 2,
+    "operationalAdoption": null,
+    "primary": "mean over seats of the mean CRPS of that seat's National and Labour candidates (pp)",
+    "resolutionPrefixDraws": 16384,
+    "resolutionTolerancePP": 0.002
+  },
+  "stage": 48
+}
