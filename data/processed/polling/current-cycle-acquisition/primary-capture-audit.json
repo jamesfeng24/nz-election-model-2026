@@ -1,0 +1,484 @@
+{
+ "confirmed": [
+  {
+   "evidence": "rnz-reid-2026-10-06",
+   "finding": "RNZ-Reid Research poll published 2026-10-06: fieldwork 24 Sep-1 Oct 2026 (labo49 was right; danylmc 4-11 Sep was wrong), n=1000 online quota sample."
+  },
+  {
+   "evidence": "wikipedia",
+   "finding": "Wikipedia (revision above) lists the same row, so the newer 3 Oct Stage35 Wikipedia snapshot is superseded by this capture for that poll only."
+  },
+  {
+   "evidence": "talbot-2024-11",
+   "finding": "Talbot Mills 1-10 Nov 2024 recovered from a publisher page: NAT 34, LAB 33, GRN 10, ACT 10, NZF 7, TPM 3.3; no n published."
+  },
+  {
+   "evidence": "see verified",
+   "finding": "Fieldwork dates and sample sizes for every Roy Morgan, RNZ-Reid, Verian, Freshwater, Anacta poll since 1 Jun 2026 are confirmed from publisher or pollster bytes and match Wikipedia."
+  },
+  {
+   "evidence": "anacta-2026-09",
+   "finding": "Anacta Consulting is the rebranded Talbot Mills (Herald, 2026-09-10 article)."
+  }
+ ],
+ "liveFitInput": {
+  "consideration": "The frozen national design uses older polls to centre house effects across the pollster roster, to start the trend at the 2023 result and to scale shared polling bias. A recent-window run is plausible as a sensitivity (for example since mid-2025 with the start reset) but departs from the validated design and thins sparse pollsters (Anacta now has one poll under that name; Talbot Mills history carries its earlier name).",
+  "namingNote": "Anacta Consulting is the rebranded Talbot Mills (NZ Herald, 2026-09-10 poll article); the June 2026 article names it \"Talbot Mills poll for Anacta\". A later stage must decide whether these are one house-effect group.",
+  "status": "Recorded as an input to the later live-fit stage; no data dropped or filtered here, and no fit run.",
+  "suggestion": "James suggested using only the most recent 2026 polls (a recent window) for the live fit."
+ },
+ "maoriCoverage": {
+  "allSevenPolledConfirmed": false,
+  "commissioner": "Whakaata Maori, fieldwork by Curia Market Research, n=500 per seat (420 phone, 80 online), margin of error 4.5%, under the Whakatau 2026 series",
+  "pace": "Three seat polls published 28 Sep-6 Oct 2026 (about one every 4 days), with the election on 7 Nov 2026 (Te Ao Maori News); consistent with, but not a statement of, coverage of all seven.",
+  "publishedSeatPolls": [
+   "Te Tai Tonga",
+   "Te Tai Hauauru",
+   "Hauraki-Waikato"
+  ],
+  "seatsWithoutPublishedPoll": [
+   "Waiariki",
+   "Ikaroa-Rawhiti",
+   "Tamaki Makaurau",
+   "Te Tai Tokerau"
+  ],
+  "verdict": "No fetched source states that all seven seats will be polled or announces further seat polls. Not confirmed; the fallback baseline stays deferred until a seat is shown to be unpolled."
+ },
+ "note": "Every fact below was checked as verbatim text in the preserved raw bytes (evidencePhrases). None of this is modelled, averaged or added to the Stage35 panel.",
+ "schemaVersion": 1,
+ "unresolved": [
+  {
+   "item": "Taxpayers' Union-Curia, Jun/Jul/Aug/Sep 2026 (n=1000)",
+   "needed": "A browser-saved copy of each of the four taxpayers.org.nz poll pages or the Curia PDF/results; dates 4-8 Jun, 1-5 Jul, 1-4 Aug, 1-3 Sep 2026.",
+   "reason": "taxpayers.org.nz answers every request with a Cloudflare managed challenge (HTTP 403, cf-mitigated: challenge); not bypassed. Curia posts only link to those pages and hold no figures; Wikipedia lists the results. The Sep 2026 Wikipedia URL carries a stray trailing \"?\" that Curia's own link lacks."
+  },
+  {
+   "item": "Talbot Mills 1-10 May 2024 (Wikipedia NAT 35, LAB 32 only)",
+   "needed": "A saved copy of https://www.thepost.co.nz/politics/350282502/are-tax-cuts-boost-economy-needs or the Talbot Mills release.",
+   "reason": "The Post article is a JS shell (discarded), web.archive.org is denied by the egress policy, and the Herald stories searched were other months or years. The poll is not recovered; Wikipedia remains the only evidence and its blank-sample row stays excluded from the panel."
+  },
+  {
+   "item": "Talbot Mills 2026 sample sizes (Jun 1-10, Jul 10-19, Aug 1-11)",
+   "needed": "Talbot Mills/Anacta release or The Post/Stuff article text.",
+   "reason": "NZ Herald articles give fieldwork and a 3.1% margin of error but no n; the June Stuff page and July Post page are JS shells. Wikipedia lists n=1021 for June and blank for July and August."
+  },
+  {
+   "item": "The Post-Freshwater Strategy articles (Jun, Sep 2026)",
+   "needed": "None for the panel.",
+   "reason": "The Post pages are JS shells. The pollster's own data tables (xlsx) were captured instead and carry fieldwork dates and sample sizes, so no further capture is needed for the panel."
+  },
+  {
+   "item": "1News-Verian June and August reports",
+   "needed": "Optional: Verian PDFs if James has them.",
+   "reason": "Only the publisher-uploaded Scribd copies exist; no verian.com or 1news.co.nz report was found. The June 1news.co.nz article URL tried returned 404."
+  },
+  {
+   "item": "Maori electorate polls for Waiariki, Ikaroa-Rawhiti, Tamaki Makaurau, Te Tai Tokerau",
+   "needed": "Re-check Te Ao Maori News/Curia blog before the 7 Nov 2026 election; capture each seat poll when published.",
+   "reason": "Whakatau 2026 tag, poll tag and landing pages are JS-rendered and list no articles in the fetched bytes; two search passes and the Curia blog index show only Te Tai Tonga, Te Tai Hauauru and Hauraki-Waikato. No source announces commissioning for the other four."
+  }
+ ],
+ "verified": [
+  {
+   "evidencePhrases": [
+    "surveyed 1000 eligible voters online between 24 September and 1 October 2026",
+    "6 October 2026, 6:27am",
+    "National has plunged below 26 percent",
+    "New Zealand First has fallen 1.3 points to 10.6 percent",
+    "Opportunity has edged up 0.2 points to 5.5 percent"
+   ],
+   "facts": {
+    "fieldwork": "2026-09-24 to 2026-10-01",
+    "mode": "online quota sample",
+    "n": 1000,
+    "pollster": "RNZ-Reid Research",
+    "published": "2026-10-06 06:27 NZDT",
+    "shares": {
+     "ACT": 9.0,
+     "GRN": 14.8,
+     "LAB": 30.8,
+     "NAT": 25.9,
+     "NZF": 10.6,
+     "TOP": 5.5,
+     "TPM": 2.0
+    }
+   },
+   "file": "rnz-reid-2026-10-06.html",
+   "id": "rnz-reid-2026-10-06"
+  },
+  {
+   "evidencePhrases": [
+    "online interviews between 2-9 July 2026",
+    "This poll of 1000 people"
+   ],
+   "facts": {
+    "fieldwork": "2026-07-02 to 2026-07-09",
+    "mode": "online",
+    "n": 1000,
+    "pollster": "RNZ-Reid Research"
+   },
+   "file": "rnz-reid-2026-07-09.html",
+   "id": "rnz-reid-2026-07-09"
+  },
+  {
+   "evidencePhrases": [
+    "online interviews between 14-21 August 2026",
+    "This poll of 1000 people"
+   ],
+   "facts": {
+    "fieldwork": "2026-08-14 to 2026-08-21",
+    "mode": "online",
+    "n": 1000,
+    "pollster": "RNZ-Reid Research"
+   },
+   "file": "rnz-reid-2026-08-21.html",
+   "id": "rnz-reid-2026-08-21"
+  },
+  {
+   "evidencePhrases": [
+    "Between September 23 and September 27 2026, 1004 eligible voters were polled by mobile phone (503) and online using online panels (501)"
+   ],
+   "facts": {
+    "fieldwork": "2026-09-23 to 2026-09-27",
+    "mode": "503 mobile phone, 501 online panel",
+    "n": 1004,
+    "pollster": "1News-Verian"
+   },
+   "file": "1news-verian-2026-09-28.html",
+   "id": "verian-2026-09"
+  },
+  {
+   "evidencePhrases": [
+    "Interviewing took place from Saturday 13 to Wednesday 17 June 2026",
+    "n = 1,001 eligible voters, including n=501 polled via mobile phone and n=500 polled online"
+   ],
+   "facts": {
+    "fieldwork": "2026-06-13 to 2026-06-17",
+    "mode": "501 mobile phone, 500 online panel",
+    "n": 1001,
+    "pollster": "1News-Verian",
+    "released": "2026-06-22"
+   },
+   "file": "scribd-verian-2026-06.html",
+   "id": "verian-2026-06"
+  },
+  {
+   "evidencePhrases": [
+    "conducted from August 8-11, 2026, surveyed 847 eligible New Zealand voters"
+   ],
+   "facts": {
+    "fieldwork": "2026-08-08 to 2026-08-11",
+    "n": 847,
+    "pollster": "1News-Verian"
+   },
+   "file": "scribd-verian-2026-08.html",
+   "id": "verian-2026-08"
+  },
+  {
+   "evidencePhrases": [
+    "cross-section of 891 electors from May 25 – June 21, 2026"
+   ],
+   "facts": {
+    "fieldwork": "2026-05-25 to 2026-06-21",
+    "mode": "telephone",
+    "n": 891,
+    "pollster": "Roy Morgan"
+   },
+   "file": "roymorgan-10271-june-2026.html",
+   "id": "roymorgan-2026-06"
+  },
+  {
+   "evidencePhrases": [
+    "cross-section of 881 electors from June 29 – July 26, 2026"
+   ],
+   "facts": {
+    "fieldwork": "2026-06-29 to 2026-07-26",
+    "mode": "telephone",
+    "n": 881,
+    "pollster": "Roy Morgan"
+   },
+   "file": "roymorgan-10281-july-2026.html",
+   "id": "roymorgan-2026-07"
+  },
+  {
+   "evidencePhrases": [
+    "cross-section of 858 electors from July 27 – August 23, 2026"
+   ],
+   "facts": {
+    "fieldwork": "2026-07-27 to 2026-08-23",
+    "mode": "telephone",
+    "n": 858,
+    "pollster": "Roy Morgan"
+   },
+   "file": "roymorgan-10321-august-2026.html",
+   "id": "roymorgan-2026-08"
+  },
+  {
+   "evidencePhrases": [
+    "5-11 June 2026",
+    "n=1038 New Zealand adults aged 18+"
+   ],
+   "facts": {
+    "fieldwork": "2026-06-05 to 2026-06-11",
+    "n": 1038,
+    "pollster": "The Post-Freshwater Strategy"
+   },
+   "file": "freshwater-data-tables-post-2026-06.xlsx",
+   "id": "freshwater-2026-06"
+  },
+  {
+   "evidencePhrases": [
+    "4-11 September 2026",
+    "base n = 1011",
+    "effective sample size = 703 (70%)"
+   ],
+   "facts": {
+    "effectiveSampleSize": 703,
+    "fieldwork": "2026-09-04 to 2026-09-11",
+    "n": 1011,
+    "pollster": "The Post-Freshwater Strategy"
+   },
+   "file": "freshwater-data-tables-post-2026-09.xlsx",
+   "id": "freshwater-2026-09"
+  },
+  {
+   "evidencePhrases": [
+    "June 1-10 and has a margin of error of 3.1%",
+    "Green Party on 13%",
+    "Labour fell 2 points to 34%"
+   ],
+   "facts": {
+    "fieldwork": "2026-06-01 to 2026-06-10",
+    "n": null,
+    "nNote": "not stated in article; margin of error 3.1% reported; Wikipedia lists 1021 (Stuff, not recoverable)",
+    "pollster": "Talbot Mills (for Anacta Consulting)",
+    "shares": {
+     "ACT": 6,
+     "GRN": 13,
+     "LAB": 34,
+     "NAT": 29,
+     "NZF": 12
+    }
+   },
+   "file": "talbot-herald-2026-06.html",
+   "id": "talbot-2026-06"
+  },
+  {
+   "evidencePhrases": [
+    "conducted between July 10 and 19, had a margin of error of 3.1%",
+    "Labour on 33%, down one point"
+   ],
+   "facts": {
+    "fieldwork": "2026-07-10 to 2026-07-19",
+    "n": null,
+    "nNote": "not stated in article; margin of error 3.1% reported",
+    "pollster": "Talbot Mills",
+    "shares": {
+     "ACT": 7,
+     "GRN": 9,
+     "LAB": 33,
+     "NAT": 31,
+     "NZF": 12,
+     "TOP": 4.7,
+     "TPM": 3
+    }
+   },
+   "file": "talbot-herald-2026-07.html",
+   "id": "talbot-2026-07"
+  },
+  {
+   "evidencePhrases": [
+    "The polling period was August 1-11 and has a margin of error of 3.1%"
+   ],
+   "facts": {
+    "fieldwork": "2026-08-01 to 2026-08-11",
+    "n": null,
+    "nNote": "not stated in article; margin of error 3.1% reported",
+    "pollster": "Talbot Mills"
+   },
+   "file": "talbot-herald-2026-08.html",
+   "id": "talbot-2026-08"
+  },
+  {
+   "evidencePhrases": [
+    "The polling period was from 4 to 10 September. The poll’s sample was 1701",
+    "Anacta was known as Talbot Mills until its recent rebranding"
+   ],
+   "facts": {
+    "fieldwork": "2026-09-04 to 2026-09-10",
+    "marginOfError": "2.4%",
+    "n": 1701,
+    "pollster": "Anacta (formerly Talbot Mills)"
+   },
+   "file": "anacta-herald-2026-09.html",
+   "id": "anacta-2026-09"
+  },
+  {
+   "evidencePhrases": [
+    "National on 34% and Labour one point behind on 33%",
+    "unusually long period of November 1-10 (with a margin of error of 3.1%)"
+   ],
+   "facts": {
+    "corporateClient": "yes (also polls for Labour)",
+    "fieldwork": "2024-11-01 to 2024-11-10",
+    "n": null,
+    "nNote": "not stated; margin of error 3.1% reported",
+    "pollster": "Talbot Mills",
+    "shares": {
+     "ACT": 10,
+     "GRN": 10,
+     "LAB": 33,
+     "NAT": 34,
+     "NZF": 7,
+     "TPM": 3.3
+    }
+   },
+   "file": "talbot-herald-2024-11.html",
+   "id": "talbot-2024-11"
+  },
+  {
+   "evidencePhrases": [
+    "surveyed 1,000 Māori voters on both the general and Māori rolls, including 500 by phone and 500 through an online panel"
+   ],
+   "facts": {
+    "n": 1000,
+    "nOnline": 500,
+    "nPhone": 500,
+    "pollster": "Whakaata Maori-Curia",
+    "scope": "Maori voters on both rolls, not a seat poll"
+   },
+   "file": "maori-teaonews-maori-roll-2026-09-17.html",
+   "id": "maori-roll-2026-09"
+  },
+  {
+   "evidencePhrases": [
+    "conducted from September 14 to September 24 by Curia Market Research",
+    "surveyed 500 Māori voters aged 18 and older in Te Tai Tonga, including 420 by phone and 80 through an online panel",
+    "Labour’s Mananui Ramsden with 30%",
+    "Lisa Marie Murch with 17%",
+    "Lisa Te Morenga with 16%",
+    "at 15% support"
+   ],
+   "facts": {
+    "candidateVote": {
+     "Ferris_IND": 15,
+     "Murch_TPM": 17,
+     "Ramsden_LAB": 30,
+     "TeMorenga_GRN": 16
+    },
+    "fieldwork": "2026-09-14 to 2026-09-24",
+    "marginOfError": "4.5%",
+    "n": 500,
+    "nOnline": 80,
+    "nPhone": 420,
+    "pageDate": "2026-09-28 (Te Ao Maori News header); Newsroom says Tuesday 2026-09-29; Curia post 2026-09-29",
+    "partyVote": {
+     "GRN": 14,
+     "LAB": 28,
+     "NAT": 6,
+     "NZF": 6,
+     "TOP": 4,
+     "TPM": 11,
+     "undecided": 10
+    },
+    "pollster": "Whakaata Maori-Curia (Whakatau 2026)",
+    "seat": "Te Tai Tonga"
+   },
+   "file": "maori-teaonews-te-tai-tonga-2026-09-29.html",
+   "id": "maori-te-tai-tonga"
+  },
+  {
+   "evidencePhrases": [
+    "Ngarewa-Packer led the Whakaata Māori-Curia poll at 38%",
+    "Te Pūoho Katene at 27%",
+    "Coral Raukawa at 10%",
+    "Curia Market Research conducted the survey from September 14 to September 24",
+    "surveyed 500 Māori voters aged 18 and older in Te Tai Hauāuru, including 420 by phone and 80 through an online panel"
+   ],
+   "facts": {
+    "candidateVote": {
+     "Katene_LAB": 27,
+     "NgarewaPacker_TPM": 38,
+     "Raukawa_NAT": 10,
+     "other": 6,
+     "undecided": 18
+    },
+    "fieldwork": "2026-09-14 to 2026-09-24",
+    "marginOfError": "4.5%",
+    "n": 500,
+    "nOnline": 80,
+    "nPhone": 420,
+    "pageDate": "Tuesday 2026-09-29 (Te Ao Maori News header)",
+    "pollster": "Whakaata Maori-Curia (Whakatau 2026)",
+    "seat": "Te Tai Hauauru"
+   },
+   "file": "maori-teaonews-te-tai-hauauru-2026-09-30.html",
+   "id": "maori-te-tai-hauauru"
+  },
+  {
+   "evidencePhrases": [
+    "conducted by Curia Market Research from September 21 to October 1",
+    "surveyed 500 Māori voters aged 18 and older enrolled in Hauraki-Waikato, including 420 by phone and 80 through an online panel"
+   ],
+   "facts": {
+    "candidateVote": {
+     "Kiriona_LAB": 26,
+     "MaipiClarke_TPM": 45,
+     "other": 13,
+     "undecided": 17
+    },
+    "fieldwork": "2026-09-21 to 2026-10-01",
+    "marginOfError": "4.5%",
+    "n": 500,
+    "nOnline": 80,
+    "nPhone": 420,
+    "pageDate": "2026-10-06",
+    "partyVote": {
+     "GRN": 16,
+     "LAB": 21,
+     "NAT": 5,
+     "NZF": 7,
+     "TPM": 22,
+     "undecided": 15
+    },
+    "pollster": "Whakaata Maori-Curia (Whakatau 2026)",
+    "seat": "Hauraki-Waikato"
+   },
+   "file": "maori-teaonews-hauraki-waikato-2026-10-06.html",
+   "id": "maori-hauraki-waikato"
+  },
+  {
+   "evidencePhrases": [
+    "Maipi-Clarke was in the lead on 45% to Kiriona’s 26%",
+    "conducted between September 21 and October 1"
+   ],
+   "facts": {
+    "note": "NZ Herald mirror of the same poll",
+    "seat": "Hauraki-Waikato"
+   },
+   "file": "maori-hauraki-waikato-herald.html",
+   "id": "maori-hauraki-waikato-herald"
+  },
+  {
+   "evidencePhrases": [
+    "These seats are almost impossible to poll reliably"
+   ],
+   "facts": {
+    "note": "Newsroom: \"These seats are almost impossible to poll reliably\"; names no commissioning for further seat polls"
+   },
+   "file": "maori-newsroom-seat-poll-2026-09-29.html",
+   "id": "newsroom-seat-context"
+  }
+ ],
+ "wikipedia": {
+  "etagRevision": "1378752122",
+  "file": "wikipedia-opinion-polling-2026.html",
+  "pageRevision": "1378752122",
+  "rowPrefixesFound": {
+   "1–10 May 2024 Talbot Mills 35 32": true,
+   "1–10 Nov 2024 Talbot Mills 34 33 10 10 7 3.3": true,
+   "24 Sep - 1 Oct 2026 RNZ—Reid Research 1,000 25.9 30.8 14.8 9 10.6 2 5.5": true
+  },
+  "tableRowsParsed": 495
+ }
+}

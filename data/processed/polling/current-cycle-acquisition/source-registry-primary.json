@@ -1,0 +1,597 @@
+{
+ "schemaVersion": 1,
+ "sources": [
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-1news-verian-2026-09-28.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: 1News-Verian, 23-27 Sep 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "1News",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/1news-verian-2026-09-28.html",
+   "resource": "1news-verian-2026-09-28.html",
+   "retrievedAt": "2026-10-06T01:06:40Z",
+   "schemaVersion": 1,
+   "sha256": "6e378c98adceba2a471057ffafddc2ebb7824d599101c6a364260b5aa87a1a2b",
+   "url": "https://www.1news.co.nz/2026/09/28/poll-greens-surge-to-best-result-ever-as-national-labour-slide-further/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-anacta-herald-2026-09.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: Anacta (formerly Talbot Mills), 4-10 Sep 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "NZ Herald",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/anacta-herald-2026-09.html",
+   "resource": "anacta-herald-2026-09.html",
+   "retrievedAt": "2026-10-06T01:07:07Z",
+   "schemaVersion": 1,
+   "sha256": "123a58b4e3d65ac4ba423026cf3b711d2ef3ac5afaf577864f8661c6bc6739d7",
+   "url": "https://www.nzherald.co.nz/nz/politics/labour-slumps-in-another-poll-but-still-ahead-of-national/HDUVF4SBJJHK3LYLGXLVLG3F7U/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-curia-political-poll-tag.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "pollster index: Curia political poll archive index. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Curia Market Research",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/curia-political-poll-tag.html",
+   "resource": "curia-political-poll-tag.html",
+   "retrievedAt": "2026-10-06T01:09:09Z",
+   "schemaVersion": 1,
+   "sha256": "e5e2f1ee20da06ec4f879e6bbfd7254109cd10f5d4b1fd59ebc8ab1fe363855b",
+   "url": "https://www.curia.co.nz/tag/political-poll/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-curia-te-tai-tonga-2026-09-29.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori electorate poll pointer: Curia post for the Te Tai Tonga poll (29 Sep). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Curia Market Research",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/curia-te-tai-tonga-2026-09-29.html",
+   "resource": "curia-te-tai-tonga-2026-09-29.html",
+   "retrievedAt": "2026-10-06T01:09:27Z",
+   "schemaVersion": 1,
+   "sha256": "890c6fc94349bc562978df46e729ef59ad994635a953e8619945a5d4a0560749",
+   "url": "https://www.curia.co.nz/2026/09/te-tai-tonga-poll-3/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-curia-tu-2026-06.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "pollster blog post: Taxpayers' Union-Curia June 2026 post (links to blocked taxpayers.org.nz). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Curia Market Research",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/curia-tu-2026-06.html",
+   "resource": "curia-tu-2026-06.html",
+   "retrievedAt": "2026-10-06T01:09:25Z",
+   "schemaVersion": 1,
+   "sha256": "eb27a1c67ff1d5850cc6fdc25b9937a281fddb8e88b42163f54b463710c4587a",
+   "url": "https://www.curia.co.nz/2026/06/taxpayers-union-curia-poll-june-2026/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-curia-tu-2026-08.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "pollster blog post: Taxpayers' Union-Curia August 2026 post (links to blocked taxpayers.org.nz). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Curia Market Research",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/curia-tu-2026-08.html",
+   "resource": "curia-tu-2026-08.html",
+   "retrievedAt": "2026-10-06T01:09:26Z",
+   "schemaVersion": 1,
+   "sha256": "00a11c2c1e8452dac7b70e67dd9eb0db4aa4e426e62eba239fa39ecc8c556795",
+   "url": "https://www.curia.co.nz/2026/08/august-2026-taxpayers-union-curia-poll/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-curia-tu-2026-09.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "pollster blog post: Taxpayers' Union-Curia September 2026 post (links to blocked taxpayers.org.nz). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Curia Market Research",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/curia-tu-2026-09.html",
+   "resource": "curia-tu-2026-09.html",
+   "retrievedAt": "2026-10-06T01:09:27Z",
+   "schemaVersion": 1,
+   "sha256": "9ecff91eaf709f6d8b6ac74ce51c99ecbcbba1b4d21dc4f8c9d925847d1aa41a",
+   "url": "https://www.curia.co.nz/2026/09/taxpayers-union-curia-poll-sep-2026/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-curia-whakaata-maori-poll-2026-09.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori roll poll pointer: Curia post for the Whakaata Maori Maori-roll poll (18 Sep). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Curia Market Research",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/curia-whakaata-maori-poll-2026-09.html",
+   "resource": "curia-whakaata-maori-poll-2026-09.html",
+   "retrievedAt": "2026-10-06T01:09:08Z",
+   "schemaVersion": 1,
+   "sha256": "87a935df3d2fd8ee3c97eb547d393823ff36ab887a0e56dbd09400cb2bf0037d",
+   "url": "https://www.curia.co.nz/2026/09/whakaata-maori-curia-poll/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-freshwater-data-tables-post-2026-06.xlsx",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "pollster data tables: The Post-Freshwater Strategy, 5-11 Jun 2026 data tables. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Freshwater Strategy",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/freshwater-data-tables-post-2026-06.xlsx",
+   "resource": "freshwater-data-tables-post-2026-06.xlsx",
+   "retrievedAt": "2026-10-06T01:10:34Z",
+   "schemaVersion": 1,
+   "sha256": "dae1585441803ac053c0a3f38be6ee8876bf70bd3f18d22dc446df005a8df6c5",
+   "url": "https://freshwaterstrategy.com/wp-content/uploads/Data-Tables-The-Post-Freshwater-Strategy-NZ-Polling-June-2026.xlsx"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-freshwater-data-tables-post-2026-09.xlsx",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "pollster data tables: The Post-Freshwater Strategy, 4-11 Sep 2026 data tables. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Freshwater Strategy",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/freshwater-data-tables-post-2026-09.xlsx",
+   "resource": "freshwater-data-tables-post-2026-09.xlsx",
+   "retrievedAt": "2026-10-06T01:10:42Z",
+   "schemaVersion": 1,
+   "sha256": "9c31deabaada44ab6e6c3473bd275fa617b3df3f46a9a283a86928ba4aae7704",
+   "url": "https://freshwaterstrategy.com/wp-content/uploads/Data-Tables-The-Post-Freshwater-Strategy-NZ-Polling-September-2026-1.xlsx"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-freshwater-post-2026-06.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "pollster landing page: The Post-Freshwater Strategy June 2026 landing page. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Freshwater Strategy",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/freshwater-post-2026-06.html",
+   "resource": "freshwater-post-2026-06.html",
+   "retrievedAt": "2026-10-06T01:07:03Z",
+   "schemaVersion": 1,
+   "sha256": "f5097bbd07fc117198ad6944d15445b3172574fdc0341a53a837351320e4e0e5",
+   "url": "https://freshwaterstrategy.com/2026/06/19/the-post-freshwater-strategy-june-polling-data-2/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-freshwater-post-2026-09-15.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "pollster landing page: The Post-Freshwater Strategy September 2026 landing page. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Freshwater Strategy",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/freshwater-post-2026-09-15.html",
+   "resource": "freshwater-post-2026-09-15.html",
+   "retrievedAt": "2026-10-06T01:10:33Z",
+   "schemaVersion": 1,
+   "sha256": "c5abc11111ccccae8b0dc44bd1dd4baac1a51502f8ed94edbb365c9605da9de5",
+   "url": "https://freshwaterstrategy.com/2026/09/15/the-post-freshwater-strategy-september-polling-data/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-index-teaonews-poll-tag.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "series index (JS-rendered, no listing in bytes): Poll tag page. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Te Ao Maori News",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/index-teaonews-poll-tag.html",
+   "resource": "index-teaonews-poll-tag.html",
+   "retrievedAt": "2026-10-06T01:08:34Z",
+   "schemaVersion": 1,
+   "sha256": "774048a10df3e7eaaf3c688a423a67ea00956a4371aaf1c9a46bf1d37fc1d767",
+   "url": "https://www.teaonews.co.nz/tags/poll"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-index-teaonews-whakatau-2026-tag.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "series index (JS-rendered, no listing in bytes): Whakatau 2026 tag page. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Te Ao Maori News",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/index-teaonews-whakatau-2026-tag.html",
+   "resource": "index-teaonews-whakatau-2026-tag.html",
+   "retrievedAt": "2026-10-06T01:08:30Z",
+   "schemaVersion": 1,
+   "sha256": "51510d0e0d7b6d5bc55a404fc6e4f6871a75e6938bc80f2c142e385c72c63655",
+   "url": "https://www.teaonews.co.nz/tags/whakatau-2026"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-index-teaonews-whakatau.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "series index (JS-rendered, no listing in bytes): Whakatau landing page. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Te Ao Maori News",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/index-teaonews-whakatau.html",
+   "resource": "index-teaonews-whakatau.html",
+   "retrievedAt": "2026-10-06T01:08:39Z",
+   "schemaVersion": 1,
+   "sha256": "4d45b4a679347d66d8d7943dcdce2e74691e09fe66d0528ec1977545d92969dc",
+   "url": "https://www.teaonews.co.nz/whakatau/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-maori-hauraki-waikato-herald.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori electorate poll release (mirror): Whakaata Maori-Curia Hauraki-Waikato (Herald mirror). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "NZ Herald",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/maori-hauraki-waikato-herald.html",
+   "resource": "maori-hauraki-waikato-herald.html",
+   "retrievedAt": "2026-10-06T01:07:58Z",
+   "schemaVersion": 1,
+   "sha256": "815ff253af5cbff690d6bb4996c274bbffa49442bbf9e42400e2fc7a454b3c1a",
+   "url": "https://www.nzherald.co.nz/nz/politics/election-2026-hana-rawhiti-maipi-clarke-well-ahead-in-hauraki-waikato-poll/CETAZEFVJBHM3N2AVG2MLVM6EA/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-maori-newsroom-seat-poll-2026-09-29.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori seat context: Analysis of the seven Maori seats after the Te Tai Tonga poll. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Newsroom",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/maori-newsroom-seat-poll-2026-09-29.html",
+   "resource": "maori-newsroom-seat-poll-2026-09-29.html",
+   "retrievedAt": "2026-10-06T01:08:00Z",
+   "schemaVersion": 1,
+   "sha256": "a197aae6cc89cfaa4539010d0b3150d1ebb5445abef5403788c5fdc3b27e42c1",
+   "url": "https://newsroom.co.nz/2026/09/29/maori-seat-poll-electorates-hang-in-balance-as-willie-jackson-tackles-vote-splitting/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-maori-rnz-te-tai-tonga.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori electorate poll release (mirror): Whakaata Maori-Curia Te Tai Tonga (RNZ mirror). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "RNZ",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/maori-rnz-te-tai-tonga.html",
+   "resource": "maori-rnz-te-tai-tonga.html",
+   "retrievedAt": "2026-10-06T01:09:10Z",
+   "schemaVersion": 1,
+   "sha256": "8f70421bfb0367db4b5951b5005b98859a3ef12ffa8863472306b1ba07c8ba62",
+   "url": "https://www.rnz.co.nz/news/politics_election-2026/1647755/whakaata-maori-curia-poll-reveals-major-shift-in-te-tai-tonga-race"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-maori-teaonews-hauraki-waikato-2026-10-06.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori electorate poll release: Whakaata Maori-Curia Hauraki-Waikato. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Te Ao Maori News (Whakaata Maori)",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/maori-teaonews-hauraki-waikato-2026-10-06.html",
+   "resource": "maori-teaonews-hauraki-waikato-2026-10-06.html",
+   "retrievedAt": "2026-10-06T01:08:27Z",
+   "schemaVersion": 1,
+   "sha256": "6c74098083e7737e64633a14ec74d9646b7e272f2423e0f16c6763c4266493af",
+   "url": "https://www.teaonews.co.nz/2026/10/06/maipi-clarke-leads-hauraki-waikato-as-party-vote-remains-neck-and-neck/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-maori-teaonews-hauraki-waikato-kingitanga-2026-10-06.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori electorate poll release: Hauraki-Waikato Kingitanga question from the same poll. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Te Ao Maori News (Whakaata Maori)",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/maori-teaonews-hauraki-waikato-kingitanga-2026-10-06.html",
+   "resource": "maori-teaonews-hauraki-waikato-kingitanga-2026-10-06.html",
+   "retrievedAt": "2026-10-06T01:08:28Z",
+   "schemaVersion": 1,
+   "sha256": "6c37c6907ec659319b2feb4da59e96fb3f538e27db56ea2c27c83fd040232541",
+   "url": "https://www.teaonews.co.nz/2026/10/06/poll-64-of-hauraki-waikato-voters-back-constitutional-role-for-kingitanga/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-maori-teaonews-maori-roll-2026-09-17.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori roll poll release: Whakaata Maori-Curia Maori-roll poll, n=1,000 (not a seat poll). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Te Ao Maori News (Whakaata Maori)",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/maori-teaonews-maori-roll-2026-09-17.html",
+   "resource": "maori-teaonews-maori-roll-2026-09-17.html",
+   "retrievedAt": "2026-10-06T01:07:57Z",
+   "schemaVersion": 1,
+   "sha256": "15a9e75d42102b9411a28bdb47141e9fa2b2cb71765877f59603ee21393a95a7",
+   "url": "https://www.teaonews.co.nz/2026/09/17/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-maori-teaonews-te-tai-hauauru-2026-09-30.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori electorate poll release: Whakaata Maori-Curia Te Tai Hauauru. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Te Ao Maori News (Whakaata Maori)",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/maori-teaonews-te-tai-hauauru-2026-09-30.html",
+   "resource": "maori-teaonews-te-tai-hauauru-2026-09-30.html",
+   "retrievedAt": "2026-10-06T01:07:54Z",
+   "schemaVersion": 1,
+   "sha256": "39a123e724a4557eb7e2666df4fbcc1838851f56191dc9405d4a2967cad23dc4",
+   "url": "https://www.teaonews.co.nz/2026/09/30/debbie-ngarewa-packer-leads-te-tai-hauauru-poll/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-maori-teaonews-te-tai-tonga-2026-09-29.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "Maori electorate poll release: Whakaata Maori-Curia Te Tai Tonga. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Te Ao Maori News (Whakaata Maori)",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/maori-teaonews-te-tai-tonga-2026-09-29.html",
+   "resource": "maori-teaonews-te-tai-tonga-2026-09-29.html",
+   "retrievedAt": "2026-10-06T01:07:52Z",
+   "schemaVersion": 1,
+   "sha256": "8d9e47ca1daa6ee3bec7f1a94c994100298c0327e85c41044a79415a2c9e2f36",
+   "url": "https://www.teaonews.co.nz/2026/09/29/whakaata-maori-curia-poll-shows-takuta-ferris-trailing-in-te-tai-tonga/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-rnz-reid-2026-07-09.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: RNZ-Reid Research, 2-9 Jul 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "RNZ",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/rnz-reid-2026-07-09.html",
+   "resource": "rnz-reid-2026-07-09.html",
+   "retrievedAt": "2026-10-06T01:06:59Z",
+   "schemaVersion": 1,
+   "sha256": "f1cffa0fad65242a1332999acc23bab5e155f3d80f8417a596dff36775bea5bc",
+   "url": "https://www.rnz.co.nz/news/politics/713431/rnz-poll-national-hits-new-low-under-luxon-opportunity-nears-parliament"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-rnz-reid-2026-08-21.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: RNZ-Reid Research, 14-21 Aug 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "RNZ",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/rnz-reid-2026-08-21.html",
+   "resource": "rnz-reid-2026-08-21.html",
+   "retrievedAt": "2026-10-06T01:06:59Z",
+   "schemaVersion": 1,
+   "sha256": "7d4990ceccbc96f661f05df3fd5da79013d5dd856e050f28df4af1bba2bbaa63",
+   "url": "https://www.rnz.co.nz/news/politics_election-2026/1093636/rnz-reid-research-poll-opportunity-in-kingmaker-position-luxon-and-hipkins-approval-slumps"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-rnz-reid-2026-10-06.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: RNZ-Reid Research, published 2026-10-06. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "RNZ",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/rnz-reid-2026-10-06.html",
+   "resource": "rnz-reid-2026-10-06.html",
+   "retrievedAt": "2026-10-06T01:06:39Z",
+   "schemaVersion": 1,
+   "sha256": "3c4c52a534773c04119089bb9b8f43e6c4703d93fd8777199a4fec2659e321ec",
+   "url": "https://www.rnz.co.nz/news/politics_election-2026/1749693/rnz-reid-research-poll-national-crashes-greens-surge-opportunity-kingmaker"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-roymorgan-10271-june-2026.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: Roy Morgan, 25 May-21 Jun 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Roy Morgan",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/roymorgan-10271-june-2026.html",
+   "resource": "roymorgan-10271-june-2026.html",
+   "retrievedAt": "2026-10-06T01:06:42Z",
+   "schemaVersion": 1,
+   "sha256": "596d339406f26000860fc2af917573e0f7863fd5f389e1c30e34a8b5b3214797",
+   "url": "https://www.roymorgan.com/findings/10271-nz-national-voting-intention-june-2026"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-roymorgan-10281-july-2026.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: Roy Morgan, 29 Jun-26 Jul 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Roy Morgan",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/roymorgan-10281-july-2026.html",
+   "resource": "roymorgan-10281-july-2026.html",
+   "retrievedAt": "2026-10-06T01:06:46Z",
+   "schemaVersion": 1,
+   "sha256": "1dfedb6453b1aba3d14831bf3d8b9bb8e9ea23465f2969d47ffb1e291e92cf41",
+   "url": "https://www.roymorgan.com/findings/10281-nz-national-voting-intention-july-2026"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-roymorgan-10321-august-2026.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: Roy Morgan, 27 Jul-23 Aug 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Roy Morgan",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/roymorgan-10321-august-2026.html",
+   "resource": "roymorgan-10321-august-2026.html",
+   "retrievedAt": "2026-10-06T01:06:47Z",
+   "schemaVersion": 1,
+   "sha256": "78b76048f988b568ef3acfd2d1c80113556a0cf5d48599c742b80e8052b00707",
+   "url": "https://www.roymorgan.com/findings/10321-nz-national-voting-intention-august-2026"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-scribd-verian-2026-06.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll report (publisher upload): 1News-Verian report, 13-17 Jun 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Scribd, uploaded by 1News",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/scribd-verian-2026-06.html",
+   "resource": "scribd-verian-2026-06.html",
+   "retrievedAt": "2026-10-06T01:07:09Z",
+   "schemaVersion": 1,
+   "sha256": "f932a6c0bedb40d10e56b641f3fb98ecd1bf45c2786409c1c99c7967d527d2f7",
+   "url": "https://www.scribd.com/document/1054188547/13-17-June-2026-1-NEWS-Verian-Poll-Report?secret_password=oeKr2nNLrt3WFqTQNXzr"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-scribd-verian-2026-08.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll report (publisher upload): 1News-Verian report, 8-11 Aug 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Scribd, uploaded by 1News",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/scribd-verian-2026-08.html",
+   "resource": "scribd-verian-2026-08.html",
+   "retrievedAt": "2026-10-06T01:07:10Z",
+   "schemaVersion": 1,
+   "sha256": "55701d10b4d3dc3135440ae39a1c0d010e83462fde9950e17372a70ac1c9c8d4",
+   "url": "https://www.scribd.com/document/1073125712/8-11-August-2026-1-NEWS-Verian-Poll-Report"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-talbot-herald-2024-11.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: Talbot Mills, 1-10 Nov 2024 (missing from Stage35 panel). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "NZ Herald",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/talbot-herald-2024-11.html",
+   "resource": "talbot-herald-2024-11.html",
+   "retrievedAt": "2026-10-06T01:07:50Z",
+   "schemaVersion": 1,
+   "sha256": "e605a9f54f1f7431aafcc0dd88518f613810c4d5a4ecd092244ced9fe5f65f21",
+   "url": "https://www.nzherald.co.nz/nz/politics/hikois-influence-will-be-felt-for-years-but-treaty-bill-still-popular-thomas-couglan/ZGRV4ECOE5CJJAUZNHRDFFM4YA/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-talbot-herald-2026-06.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: Talbot Mills-Anacta, 1-10 Jun 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "NZ Herald",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/talbot-herald-2026-06.html",
+   "resource": "talbot-herald-2026-06.html",
+   "retrievedAt": "2026-10-06T01:11:48Z",
+   "schemaVersion": 1,
+   "sha256": "c857470ee7aec4e7b3cdd1953c5fa373e50136c90a2fd37040138a91aaec2bfa",
+   "url": "https://www.nzherald.co.nz/nz/politics/election-2026-green-party-surge-in-new-poll-puts-left-bloc-ahead-of-coalition/JG6D25ESWRBAXBGCYWOGY77BPI/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-talbot-herald-2026-07.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: Talbot Mills, 10-19 Jul 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "NZ Herald",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/talbot-herald-2026-07.html",
+   "resource": "talbot-herald-2026-07.html",
+   "retrievedAt": "2026-10-06T01:11:13Z",
+   "schemaVersion": 1,
+   "sha256": "82fd59dcab9270a2a678adb9e2a42110855f320ca9ee408bcc6443d7cd391a8b",
+   "url": "https://www.nzherald.co.nz/nz/politics/new-poll-predicts-coalition-re-election-while-opportunity-holds-close-to-5/O27VPYYVUVGQXP7OCI7ZJ2ZVKM/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-talbot-herald-2026-08.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release: Talbot Mills, 1-11 Aug 2026. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "NZ Herald",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/talbot-herald-2026-08.html",
+   "resource": "talbot-herald-2026-08.html",
+   "retrievedAt": "2026-10-06T01:07:06Z",
+   "schemaVersion": 1,
+   "sha256": "2f1bc588a6eaf671d256cafbf9fc332c1337c94ff5ae088075b4018de524e618",
+   "url": "https://www.nzherald.co.nz/nz/politics/poll-national-down-and-out-of-government-in-new-talbot-mills-poll/XXSSJVLG35GP7C4NZTSALVAPGE/"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-talbot-stuff-2026-06.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "national poll release (JS shell, metadata only): Talbot Mills-Anacta, June 2026; article text not in bytes. Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Stuff",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/talbot-stuff-2026-06.html",
+   "resource": "talbot-stuff-2026-06.html",
+   "retrievedAt": "2026-10-06T01:07:04Z",
+   "schemaVersion": 1,
+   "sha256": "9d1a1d98bef64dd0d325e9d16e61c4e0243c36ebdd8490806e4a3e4124d3c972",
+   "url": "https://www.stuff.co.nz/politics/360993853/greens-surge-lifts-left-bloc-projected-majority-latest-political-poll"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; captured 2026-10-06",
+   "id": "polling-current2026primary-wikipedia-opinion-polling-2026.html",
+   "licence": "Publisher/pollster page preserved unchanged for research provenance only; copyright remains with the publisher (Wikipedia text CC BY-SA). Not redistributed in application results.",
+   "limitations": [
+    "aggregator table: 2026 NZ opinion-polling table (all polls). Fact extraction is checked in primary-capture-audit.json; the bytes are not a parsed dataset."
+   ],
+   "organisation": "Wikipedia REST HTML, revision 1378752122",
+   "processingScript": "scripts/polling/primary_capture.py",
+   "rawPath": "data/raw/polling/current-2026-primary/wikipedia-opinion-polling-2026.html",
+   "resource": "wikipedia-opinion-polling-2026.html",
+   "retrievedAt": "2026-10-06T01:08:59Z",
+   "schemaVersion": 1,
+   "sha256": "b7d8a710ad2d9568565af347d6a3e1b849c656d097abe6d9a576a2438997c689",
+   "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2026_New_Zealand_general_election"
+  }
+ ]
+}
