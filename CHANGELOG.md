@@ -357,3 +357,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Add one conservative Stage39 integrity path tied to actual prior full Linux evidence and complete reviewed dependency/runtime fingerprints; preserve unchanged full reconstruction commands.
 - Keep every behavioural/default discovery test and all other historical gates. First revised PR and all main/manual runs are full. Semantic archival classification does not omit tests.
 - Measured original Linux Stage39 construction about143s; new integrity1.697s on different local hardware, not a matched savings benchmark. No hosted measurement run or inference/cache changes.
+
+## Frozen Stage45/46 CI reuse and Node 24 actions — 2026-10-06
+
+- Add `.github/validation/frozen-pipelines.json`, a pinned evidence record of the successful full main run `d0fa5a66`, and `scripts/validate/ci_frozen.py`: pull requests may skip only the expensive Stage45/46 construction/evaluation/verification (and Stage45 mean-audit) `--check` commands when Git proves the pipeline's import closure, referenced paths, outputs, environment and existing data are unchanged, no unreviewed reader consumes its cache and the attested runtime matches.
+- Main pushes, manual dispatch, the first PR carrying these changes and any unproved case remain fully validated; behavioural tests, other pipelines and cheap Stage45/46 checks always run. Stage47 currently reads the Stage46 sealed bank, which keeps Stage46 full until reviewed.
+- Bump `actions/checkout` v5, `actions/setup-node` v5, `actions/setup-python` v6 (Node 24). No statistical code, output, threshold or artifact change.
