@@ -32,7 +32,7 @@ jobs:
           fi
   python:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v5
         with:
@@ -197,3 +197,25 @@ jobs:
       - run: python3 -m scripts.diagnostics.uncertainty_tails_reference --check
       - run: python3 -m scripts.diagnostics.uncertainty_tails_report --check
       - run: python3 -m scripts.diagnostics.uncertainty_tails_manifest --check
+      - run: python3 -m scripts.uncertainty_expectation.pilot --check
+      - run: python3 -m scripts.uncertainty_expectation.prior --check
+      - run: python3 -m scripts.uncertainty_expectation.audits --check
+        if: steps.frozen.outputs.stage47 != 'integrity'
+      - run: python3 -m scripts.uncertainty_expectation.structure --check
+      - run: python3 -m scripts.uncertainty_expectation.structural_diagnostics --check
+      - run: python3 -m scripts.uncertainty_expectation.construction --check
+        if: steps.frozen.outputs.stage47 != 'integrity'
+      - run: python3 -m scripts.uncertainty_expectation.evaluation --check
+        if: steps.frozen.outputs.stage47 != 'integrity'
+      - run: python3 -m scripts.uncertainty_expectation.pair_widths --check
+      - run: python3 -m scripts.uncertainty_expectation.attribution --check
+        if: steps.frozen.outputs.stage47 != 'integrity'
+      - run: python3 -m scripts.uncertainty_expectation.verification --check
+        if: steps.frozen.outputs.stage47 != 'integrity'
+      - name: Verify reused Stage47 frozen pipeline
+        if: steps.frozen.outputs.stage47 == 'integrity'
+        env:
+          CI_EVENT_NAME: ${{ github.event_name }}
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage47 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
+      - run: python3 -m scripts.uncertainty_expectation.report --check
+      - run: python3 -m scripts.uncertainty_expectation.manifest --check

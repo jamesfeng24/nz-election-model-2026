@@ -1,0 +1,5566 @@
+{
+  "crossLayer": {
+    "balance": {
+      "byElection": {
+        "2014": {
+          "association": {
+            "pearson": 0.11562646139031127,
+            "records": 64,
+            "significanceTests": null,
+            "spearman": 0.19253663003663005,
+            "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+            "status": "descriptive"
+          },
+          "candidateMean": -0.28184833507109713,
+          "localMean": 0.02385122183547625,
+          "records": 64
+        },
+        "2017": {
+          "association": {
+            "pearson": -0.13101919530545125,
+            "records": 64,
+            "significanceTests": null,
+            "spearman": -0.04752747252747252,
+            "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+            "status": "descriptive"
+          },
+          "candidateMean": 0.03167882410679862,
+          "localMean": -0.040812066499023,
+          "records": 64
+        },
+        "2020": {
+          "association": {
+            "pearson": 0.33301785501574155,
+            "records": 65,
+            "significanceTests": null,
+            "spearman": 0.22285839160839163,
+            "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+            "status": "descriptive"
+          },
+          "candidateMean": 0.2601872391284814,
+          "localMean": -0.05828555281981088,
+          "records": 65
+        },
+        "2023": {
+          "association": {
+            "pearson": -0.1496796798930717,
+            "records": 64,
+            "significanceTests": null,
+            "spearman": -0.11277472527472526,
+            "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+            "status": "descriptive"
+          },
+          "candidateMean": -0.11504905375489491,
+          "localMean": 0.0711305695072804,
+          "records": 64
+        }
+      },
+      "sharedElectionMeans": {
+        "pearson": -0.7643993436885405,
+        "records": 4,
+        "significanceTests": null,
+        "spearman": -0.7999999999999999,
+        "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+        "status": "descriptive"
+      },
+      "withinElectionCenteredEqualElection": {
+        "pearson": -0.011182765509848,
+        "records": 257,
+        "significanceTests": null,
+        "spearman": 0.05606958646276354,
+        "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+        "status": "descriptive"
+      }
+    },
+    "mass": {
+      "byElection": {
+        "2014": {
+          "association": {
+            "pearson": -0.007767213569968358,
+            "records": 64,
+            "significanceTests": null,
+            "spearman": -0.10544871794871792,
+            "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+            "status": "descriptive"
+          },
+          "candidateMean": -0.07280122972259445,
+          "localMean": 0.025102214029686678,
+          "records": 64
+        },
+        "2017": {
+          "association": {
+            "pearson": -0.1622742416245495,
+            "records": 64,
+            "significanceTests": null,
+            "spearman": -0.1454212454212454,
+            "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+            "status": "descriptive"
+          },
+          "candidateMean": -0.2558520065464853,
+          "localMean": 0.011344807036264289,
+          "records": 64
+        },
+        "2020": {
+          "association": {
+            "pearson": -0.07760115822713384,
+            "records": 65,
+            "significanceTests": null,
+            "spearman": -0.04396853146853147,
+            "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+            "status": "descriptive"
+          },
+          "candidateMean": 0.25527881460258484,
+          "localMean": 0.030266578917277423,
+          "records": 65
+        },
+        "2023": {
+          "association": {
+            "pearson": -0.11030795729561765,
+            "records": 64,
+            "significanceTests": null,
+            "spearman": -0.08104395604395603,
+            "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+            "status": "descriptive"
+          },
+          "candidateMean": -0.08375209126776542,
+          "localMean": -0.03143757083615845,
+          "records": 64
+        }
+      },
+      "sharedElectionMeans": {
+        "pearson": 0.3911149861174582,
+        "records": 4,
+        "significanceTests": null,
+        "spearman": 0.7999999999999999,
+        "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+        "status": "descriptive"
+      },
+      "withinElectionCenteredEqualElection": {
+        "pearson": -0.09070100652703901,
+        "records": 257,
+        "significanceTests": null,
+        "spearman": -0.10457834698217355,
+        "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+        "status": "descriptive"
+      }
+    }
+  },
+  "definitionLimitations": "Local errors condition on national truth; candidate errors condition on local truth and depend on it through the nonlinear frozen mean. Associations do not identify a covariance model or imply national error is counted twice. Within-remainder schemas differ and are intentionally not correlated.",
+  "matchedRecords": [
+    {
+      "candidate": {
+        "balance": -0.39881528209259276,
+        "mass": 0.35223920377544626
+      },
+      "id": "nz-general-2014-electorate-01",
+      "local": {
+        "balance": 0.0787131198246529,
+        "mass": 0.0038990912565367575
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.5207984751054808,
+        "mass": -0.15968138536100662
+      },
+      "id": "nz-general-2014-electorate-02",
+      "local": {
+        "balance": -0.02112435629566356,
+        "mass": 0.19794736165773397
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.12661175105324607,
+        "mass": -0.7678216558881599
+      },
+      "id": "nz-general-2014-electorate-03",
+      "local": {
+        "balance": -0.03807877425299244,
+        "mass": -0.009846825726130382
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.2437996877980355,
+        "mass": 0.3512491411833767
+      },
+      "id": "nz-general-2014-electorate-04",
+      "local": {
+        "balance": -0.04009639434915424,
+        "mass": -0.03481063413770591
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.30593800080100964,
+        "mass": -0.24656964207830034
+      },
+      "id": "nz-general-2014-electorate-05",
+      "local": {
+        "balance": -0.25917250468300745,
+        "mass": -0.09499126073383102
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.49259695127882974,
+        "mass": -0.18642836368339166
+      },
+      "id": "nz-general-2014-electorate-06",
+      "local": {
+        "balance": 0.02100436617781698,
+        "mass": 0.09555838493240576
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": 0.087619890993339,
+        "mass": -0.18947512814971357
+      },
+      "id": "nz-general-2014-electorate-07",
+      "local": {
+        "balance": 0.0876187747087136,
+        "mass": 0.17198224369138693
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.40465929092369335,
+        "mass": 0.1734597513743077
+      },
+      "id": "nz-general-2014-electorate-08",
+      "local": {
+        "balance": -0.08125004324591267,
+        "mass": -0.014257126291586264
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.1513424772514883,
+        "mass": 0.1645024037821432
+      },
+      "id": "nz-general-2014-electorate-09",
+      "local": {
+        "balance": -0.041463417726744334,
+        "mass": 0.062064436450403604
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.13393776003422586,
+        "mass": 0.21289248344289535
+      },
+      "id": "nz-general-2014-electorate-10",
+      "local": {
+        "balance": -0.0808075572642446,
+        "mass": 0.055639824107356795
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.139572235186181,
+        "mass": -0.8651983299127062
+      },
+      "id": "nz-general-2014-electorate-11",
+      "local": {
+        "balance": 0.23733514658094967,
+        "mass": -0.06940139868603823
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": 0.8186387837133096,
+        "mass": -0.531410929606784
+      },
+      "id": "nz-general-2014-electorate-12",
+      "local": {
+        "balance": 0.04876360176294092,
+        "mass": -0.10158094903525261
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.2741384947000314,
+        "mass": 0.08015839609437547
+      },
+      "id": "nz-general-2014-electorate-13",
+      "local": {
+        "balance": -0.07314375122664485,
+        "mass": 0.04447161152673562
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.32269591782872853,
+        "mass": 0.05722174411542991
+      },
+      "id": "nz-general-2014-electorate-14",
+      "local": {
+        "balance": 0.025234957700143057,
+        "mass": 0.014499540171834191
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.14622133999048414,
+        "mass": -0.4120248033181746
+      },
+      "id": "nz-general-2014-electorate-15",
+      "local": {
+        "balance": 0.4715140502850683,
+        "mass": -0.2089417678515575
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.39555655116257804,
+        "mass": -0.10384128212436017
+      },
+      "id": "nz-general-2014-electorate-16",
+      "local": {
+        "balance": 0.1808991745597286,
+        "mass": 0.11409225533949496
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.14758472943221568,
+        "mass": 0.4974970364113569
+      },
+      "id": "nz-general-2014-electorate-17",
+      "local": {
+        "balance": 0.1816936358118234,
+        "mass": -0.03423089858401318
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.4747547070957965,
+        "mass": -0.09517674023118206
+      },
+      "id": "nz-general-2014-electorate-18",
+      "local": {
+        "balance": -0.012533246290076017,
+        "mass": 0.007373316960241683
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.2778911998852923,
+        "mass": 0.07239854345551366
+      },
+      "id": "nz-general-2014-electorate-19",
+      "local": {
+        "balance": 0.044506717343851365,
+        "mass": -0.056440567625369864
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.3596459049206582,
+        "mass": 0.17600522298960986
+      },
+      "id": "nz-general-2014-electorate-20",
+      "local": {
+        "balance": 0.08786979763454639,
+        "mass": 0.09774622374882558
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.12440573602305505,
+        "mass": 0.2909581939899861
+      },
+      "id": "nz-general-2014-electorate-21",
+      "local": {
+        "balance": -0.4040317438177682,
+        "mass": 0.04231631307810346
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.6329149842359695,
+        "mass": -0.09282206751467514
+      },
+      "id": "nz-general-2014-electorate-22",
+      "local": {
+        "balance": 0.024142325281643395,
+        "mass": -0.005520850916302722
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": 0.03805766380173359,
+        "mass": -0.47239663210280813
+      },
+      "id": "nz-general-2014-electorate-23",
+      "local": {
+        "balance": 0.06385231727749163,
+        "mass": 0.03356865528292308
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": 0.30362702394400065,
+        "mass": 0.013411495665152984
+      },
+      "id": "nz-general-2014-electorate-24",
+      "local": {
+        "balance": -0.0036573300396409714,
+        "mass": 0.08385873936355792
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.02281830555491915,
+        "mass": -0.024658696683963477
+      },
+      "id": "nz-general-2014-electorate-25",
+      "local": {
+        "balance": 0.05386163247704878,
+        "mass": 0.06693433195431142
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.3591136840761209,
+        "mass": 0.13891140786784062
+      },
+      "id": "nz-general-2014-electorate-26",
+      "local": {
+        "balance": -0.13988195269738601,
+        "mass": -0.06744603512275571
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.10304905400231934,
+        "mass": 0.5167064995476738
+      },
+      "id": "nz-general-2014-electorate-27",
+      "local": {
+        "balance": 0.1155114138947182,
+        "mass": -0.08115766580722439
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.43605758371721315,
+        "mass": 0.1341703333447961
+      },
+      "id": "nz-general-2014-electorate-28",
+      "local": {
+        "balance": 0.13492948216494183,
+        "mass": -0.07674613074235692
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.8140960612837043,
+        "mass": -1.0820445303747757
+      },
+      "id": "nz-general-2014-electorate-29",
+      "local": {
+        "balance": 0.044611843628273085,
+        "mass": 0.04165785456173099
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.38156913373144263,
+        "mass": 0.2560081338871827
+      },
+      "id": "nz-general-2014-electorate-30",
+      "local": {
+        "balance": -0.004660682033517882,
+        "mass": -0.03450408806852301
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -4.9941569722822265e-05,
+        "mass": -0.16545728124681003
+      },
+      "id": "nz-general-2014-electorate-31",
+      "local": {
+        "balance": -0.01711774897654883,
+        "mass": 0.04246548662309113
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.0641961758948495,
+        "mass": 0.030012446147778427
+      },
+      "id": "nz-general-2014-electorate-32",
+      "local": {
+        "balance": 0.17146893410701414,
+        "mass": 0.07216641756904951
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.29383942184344103,
+        "mass": -0.2835642927465041
+      },
+      "id": "nz-general-2014-electorate-33",
+      "local": {
+        "balance": 0.04198277561371033,
+        "mass": -0.0018922627085935506
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.4441426855904388,
+        "mass": -0.14645598143300176
+      },
+      "id": "nz-general-2014-electorate-34",
+      "local": {
+        "balance": 0.01001155476821669,
+        "mass": -0.08487611164155595
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.7734321392872262,
+        "mass": -0.28233110208142387
+      },
+      "id": "nz-general-2014-electorate-35",
+      "local": {
+        "balance": -0.05088752699503596,
+        "mass": 0.06868312415457689
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.9716945237352898,
+        "mass": -0.9799591743850196
+      },
+      "id": "nz-general-2014-electorate-36",
+      "local": {
+        "balance": 0.07005727710357534,
+        "mass": 0.014830149449134522
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.3984561929900523,
+        "mass": 0.026548645739890908
+      },
+      "id": "nz-general-2014-electorate-37",
+      "local": {
+        "balance": 0.13915550008968847,
+        "mass": 0.0800059704600109
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.4715737162847573,
+        "mass": -0.9085694591506601
+      },
+      "id": "nz-general-2014-electorate-38",
+      "local": {
+        "balance": 0.031195200301178172,
+        "mass": -0.0897601866207407
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.04147939608071949,
+        "mass": 0.634101163076997
+      },
+      "id": "nz-general-2014-electorate-39",
+      "local": {
+        "balance": -0.014570093886605573,
+        "mass": -0.02162045058054196
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.9236499814919895,
+        "mass": -0.36294116686887334
+      },
+      "id": "nz-general-2014-electorate-40",
+      "local": {
+        "balance": -0.0702328093690533,
+        "mass": 0.07668243687667409
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.4508372597054262,
+        "mass": 0.4206096427337578
+      },
+      "id": "nz-general-2014-electorate-41",
+      "local": {
+        "balance": -0.03197485461807448,
+        "mass": -0.00020671750321432647
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": 0.0007818211365769878,
+        "mass": -0.16704925423881356
+      },
+      "id": "nz-general-2014-electorate-42",
+      "local": {
+        "balance": 0.14169626549012948,
+        "mass": 0.01920098066563969
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.4562437127200547,
+        "mass": 0.17163834565599
+      },
+      "id": "nz-general-2014-electorate-43",
+      "local": {
+        "balance": 0.06383789197321055,
+        "mass": 0.03358913142968456
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.20474010980940138,
+        "mass": 0.27283503214701255
+      },
+      "id": "nz-general-2014-electorate-44",
+      "local": {
+        "balance": -0.13711823870239503,
+        "mass": -0.00748881158427972
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": 0.4079755190370713,
+        "mass": 0.1122431197962197
+      },
+      "id": "nz-general-2014-electorate-45",
+      "local": {
+        "balance": -0.014066090647615326,
+        "mass": 0.12528422452688925
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.034083711080814205,
+        "mass": 0.2124030938476138
+      },
+      "id": "nz-general-2014-electorate-46",
+      "local": {
+        "balance": 0.021718506991606823,
+        "mass": -0.08068705168855672
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.5855277565027692,
+        "mass": 0.280021635418247
+      },
+      "id": "nz-general-2014-electorate-47",
+      "local": {
+        "balance": -0.1108170995693043,
+        "mass": 0.1960755134128207
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.13797116758718375,
+        "mass": -0.28313823029515195
+      },
+      "id": "nz-general-2014-electorate-48",
+      "local": {
+        "balance": 0.18822670532116148,
+        "mass": 0.02452351020687038
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.06228724810600905,
+        "mass": -0.32844095389807837
+      },
+      "id": "nz-general-2014-electorate-49",
+      "local": {
+        "balance": 0.10746464557704516,
+        "mass": 0.023938199277895533
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.2653994578457315,
+        "mass": -0.11554237634149378
+      },
+      "id": "nz-general-2014-electorate-50",
+      "local": {
+        "balance": 0.16109829710433154,
+        "mass": 0.09059022129025018
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.42458905172855066,
+        "mass": -0.1069254036119196
+      },
+      "id": "nz-general-2014-electorate-51",
+      "local": {
+        "balance": 0.015591386798287754,
+        "mass": 0.15128250870322413
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.6159757694851873,
+        "mass": -0.22620014414158396
+      },
+      "id": "nz-general-2014-electorate-52",
+      "local": {
+        "balance": -0.015874921620274485,
+        "mass": 0.2779227577709268
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.1530319064695025,
+        "mass": 0.10483100003204493
+      },
+      "id": "nz-general-2014-electorate-53",
+      "local": {
+        "balance": 0.009778048289081465,
+        "mass": 0.03863245124401926
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.6507008120123865,
+        "mass": -0.1004401085059643
+      },
+      "id": "nz-general-2014-electorate-54",
+      "local": {
+        "balance": -0.039760731011717176,
+        "mass": 0.07412995366490671
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.14641202431238032,
+        "mass": -0.33753370431115304
+      },
+      "id": "nz-general-2014-electorate-55",
+      "local": {
+        "balance": -0.1315567475936551,
+        "mass": 0.06556483163228188
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.4232443921994977,
+        "mass": -0.18499161316372503
+      },
+      "id": "nz-general-2014-electorate-56",
+      "local": {
+        "balance": 0.020364464003099547,
+        "mass": 0.10583627451802258
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.25426207980094206,
+        "mass": 0.3616085448873474
+      },
+      "id": "nz-general-2014-electorate-57",
+      "local": {
+        "balance": 0.13558187501504537,
+        "mass": -0.006102925900955958
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.4041496608259201,
+        "mass": -0.5246205516321798
+      },
+      "id": "nz-general-2014-electorate-58",
+      "local": {
+        "balance": 0.05730366578769763,
+        "mass": 0.09568045531924119
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.33352157318218034,
+        "mass": -0.43267962118636194
+      },
+      "id": "nz-general-2014-electorate-59",
+      "local": {
+        "balance": 0.119942746005411,
+        "mass": 0.07298278621286447
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.13126500872657743,
+        "mass": 0.2616738113165129
+      },
+      "id": "nz-general-2014-electorate-60",
+      "local": {
+        "balance": 0.0037309725341279076,
+        "mass": -0.10121788705403295
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.36396022693666563,
+        "mass": -0.2289205157393197
+      },
+      "id": "nz-general-2014-electorate-61",
+      "local": {
+        "balance": 0.04065570520934925,
+        "mass": -0.08831375848717504
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.4989717250150112,
+        "mass": 0.24755718959495265
+      },
+      "id": "nz-general-2014-electorate-62",
+      "local": {
+        "balance": -0.0750269799773382,
+        "mass": 0.09276966733667458
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.17468816461322434,
+        "mass": -0.08100190148193365
+      },
+      "id": "nz-general-2014-electorate-63",
+      "local": {
+        "balance": 0.037969350720601924,
+        "mass": 0.040431961347852985
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": -0.35003185457703234,
+        "mass": 0.1931606599224751
+      },
+      "id": "nz-general-2014-electorate-64",
+      "local": {
+        "balance": -0.05551033155707119,
+        "mass": -0.03829513677794272
+      },
+      "year": 2014
+    },
+    {
+      "candidate": {
+        "balance": 0.08397922554389836,
+        "mass": -0.048092327315354844
+      },
+      "id": "nz-general-2017-electorate-01",
+      "local": {
+        "balance": -0.25141827593298416,
+        "mass": -0.017109427633764218
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.15280238176367622,
+        "mass": -0.07613682668747312
+      },
+      "id": "nz-general-2017-electorate-02",
+      "local": {
+        "balance": -0.28206283173754465,
+        "mass": 0.0906177897387368
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.404391767852768,
+        "mass": -0.9023559361570537
+      },
+      "id": "nz-general-2017-electorate-03",
+      "local": {
+        "balance": 0.18983079589625995,
+        "mass": 0.2484629838687331
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.22670049333907794,
+        "mass": 0.18728046630457462
+      },
+      "id": "nz-general-2017-electorate-04",
+      "local": {
+        "balance": -0.1318405108018159,
+        "mass": -0.0537458593627167
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.2400888146001846,
+        "mass": -0.05744967522827027
+      },
+      "id": "nz-general-2017-electorate-05",
+      "local": {
+        "balance": -0.059314026140273146,
+        "mass": 0.08934297463624885
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.1246571133308062,
+        "mass": -0.5244302477892169
+      },
+      "id": "nz-general-2017-electorate-06",
+      "local": {
+        "balance": -0.12555090699616422,
+        "mass": -0.12570921597309592
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.1661329529469583,
+        "mass": -0.5456391594896004
+      },
+      "id": "nz-general-2017-electorate-07",
+      "local": {
+        "balance": -0.18569810435949197,
+        "mass": 0.03386617820750226
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.03077095795808349,
+        "mass": 0.19404015520232565
+      },
+      "id": "nz-general-2017-electorate-08",
+      "local": {
+        "balance": -0.11291199757305814,
+        "mass": -0.07903341436371947
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.027029294242441604,
+        "mass": -0.11288957579978809
+      },
+      "id": "nz-general-2017-electorate-09",
+      "local": {
+        "balance": -0.04393221094227506,
+        "mass": 0.11782988204477274
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.07307958522614133,
+        "mass": -0.39527466033289493
+      },
+      "id": "nz-general-2017-electorate-10",
+      "local": {
+        "balance": -0.13530989153842055,
+        "mass": 0.06632215774290517
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.10933387159542951,
+        "mass": -0.1708611456144924
+      },
+      "id": "nz-general-2017-electorate-11",
+      "local": {
+        "balance": -0.2157399611314701,
+        "mass": 0.1726588478308848
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.8970906169314092,
+        "mass": -0.5675667429586719
+      },
+      "id": "nz-general-2017-electorate-12",
+      "local": {
+        "balance": -0.24428698855091624,
+        "mass": -0.026950210538367436
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.3253346390153379,
+        "mass": -0.0890628536445437
+      },
+      "id": "nz-general-2017-electorate-13",
+      "local": {
+        "balance": -0.010196086380336422,
+        "mass": 0.013719707070498188
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.09694842707298723,
+        "mass": -0.24097620697121047
+      },
+      "id": "nz-general-2017-electorate-14",
+      "local": {
+        "balance": 0.0554507001026221,
+        "mass": 0.0904080865107304
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.0022177115255963553,
+        "mass": -0.7182623576316678
+      },
+      "id": "nz-general-2017-electorate-15",
+      "local": {
+        "balance": -0.31538299226031374,
+        "mass": 0.10271833737359137
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.06264009494862877,
+        "mass": -0.42871873246678294
+      },
+      "id": "nz-general-2017-electorate-16",
+      "local": {
+        "balance": -0.10538703750835121,
+        "mass": 0.13564820206650685
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.24580727521546997,
+        "mass": 0.6830617490224422
+      },
+      "id": "nz-general-2017-electorate-17",
+      "local": {
+        "balance": -0.010043249457950987,
+        "mass": -0.009424904231681408
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.1562883648375294,
+        "mass": -1.5359997856508394
+      },
+      "id": "nz-general-2017-electorate-18",
+      "local": {
+        "balance": -0.2202329643838018,
+        "mass": 0.046445333876539596
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.10979525204062301,
+        "mass": -0.5350104064644756
+      },
+      "id": "nz-general-2017-electorate-19",
+      "local": {
+        "balance": 0.06136876055101537,
+        "mass": 0.14428140138459944
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.13094288194283488,
+        "mass": -0.410391029587003
+      },
+      "id": "nz-general-2017-electorate-20",
+      "local": {
+        "balance": -0.16636023123656185,
+        "mass": 0.04088141155278513
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.1655973577344484,
+        "mass": -0.18171271159233404
+      },
+      "id": "nz-general-2017-electorate-21",
+      "local": {
+        "balance": 0.28108675338237554,
+        "mass": -0.05161029115561355
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.11712329547247224,
+        "mass": -0.42180833634572856
+      },
+      "id": "nz-general-2017-electorate-22",
+      "local": {
+        "balance": 0.0559179953906952,
+        "mass": -0.11257285724375743
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.002032399061276502,
+        "mass": -0.25837500703756566
+      },
+      "id": "nz-general-2017-electorate-23",
+      "local": {
+        "balance": 0.49201430964417314,
+        "mass": -0.20490004240992254
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.10459267411143536,
+        "mass": -0.1122577144964636
+      },
+      "id": "nz-general-2017-electorate-24",
+      "local": {
+        "balance": 0.5328286875253387,
+        "mass": -0.14615023947956507
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.3834648543334991,
+        "mass": -0.28163201978356645
+      },
+      "id": "nz-general-2017-electorate-25",
+      "local": {
+        "balance": 0.37438006439359306,
+        "mass": -0.015535668602935315
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.1432078711370537,
+        "mass": -0.5717654693391883
+      },
+      "id": "nz-general-2017-electorate-26",
+      "local": {
+        "balance": 0.21224700555492637,
+        "mass": -0.048505781223705524
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.11530442230069549,
+        "mass": 0.6257020193969598
+      },
+      "id": "nz-general-2017-electorate-27",
+      "local": {
+        "balance": -0.08662467260948348,
+        "mass": -0.14126871946693198
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.17791325965099336,
+        "mass": 0.436336207416284
+      },
+      "id": "nz-general-2017-electorate-28",
+      "local": {
+        "balance": 0.2814469456811882,
+        "mass": -0.02720663325392003
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.06659518329129321,
+        "mass": 0.14400815218871577
+      },
+      "id": "nz-general-2017-electorate-29",
+      "local": {
+        "balance": -0.0026064881481214774,
+        "mass": -0.03884635977497686
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.073110125897493,
+        "mass": -1.0999499860246433
+      },
+      "id": "nz-general-2017-electorate-30",
+      "local": {
+        "balance": -0.20190993522437228,
+        "mass": 0.04532823918536244
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.053369745501131494,
+        "mass": -0.05290794433347856
+      },
+      "id": "nz-general-2017-electorate-31",
+      "local": {
+        "balance": 0.3361317443834676,
+        "mass": 0.004925910914454157
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.014626620649345168,
+        "mass": -0.3535780247121336
+      },
+      "id": "nz-general-2017-electorate-32",
+      "local": {
+        "balance": -0.17311138237839374,
+        "mass": -0.04538032364602018
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.14579768008655614,
+        "mass": -0.2937219072185706
+      },
+      "id": "nz-general-2017-electorate-33",
+      "local": {
+        "balance": -0.23130235528953602,
+        "mass": 0.04372864765740547
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.25632021255575677,
+        "mass": -0.13060172560070615
+      },
+      "id": "nz-general-2017-electorate-34",
+      "local": {
+        "balance": -0.03595890426869508,
+        "mass": 0.08237989760893849
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.05077919382381557,
+        "mass": -1.13204881641138
+      },
+      "id": "nz-general-2017-electorate-35",
+      "local": {
+        "balance": -0.208825079965831,
+        "mass": -0.008769718903708146
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 1.4267147680766752,
+        "mass": 0.47131372748125244
+      },
+      "id": "nz-general-2017-electorate-36",
+      "local": {
+        "balance": -0.07750202693685915,
+        "mass": -0.12748251255425957
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.15024857454172447,
+        "mass": -0.08423061193331915
+      },
+      "id": "nz-general-2017-electorate-37",
+      "local": {
+        "balance": 0.004803866084705843,
+        "mass": 0.011188844098007023
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.05740888032689462,
+        "mass": -0.2172907076560704
+      },
+      "id": "nz-general-2017-electorate-38",
+      "local": {
+        "balance": 0.024563613356460068,
+        "mass": 0.21848081272200304
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.012344212801934318,
+        "mass": -0.3741492588905473
+      },
+      "id": "nz-general-2017-electorate-39",
+      "local": {
+        "balance": 0.08162607220948626,
+        "mass": -0.1184879864432542
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.25458383306977295,
+        "mass": 0.007146237175503334
+      },
+      "id": "nz-general-2017-electorate-40",
+      "local": {
+        "balance": 0.18319980305423833,
+        "mass": 0.04839878257579544
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.33045295538346475,
+        "mass": -0.3126101938232977
+      },
+      "id": "nz-general-2017-electorate-41",
+      "local": {
+        "balance": -0.20379115866282893,
+        "mass": -0.012086091283006972
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.25434331395265586,
+        "mass": -0.46833111056310983
+      },
+      "id": "nz-general-2017-electorate-42",
+      "local": {
+        "balance": -0.016101345915967014,
+        "mass": 0.1408779877252062
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.17048634656496775,
+        "mass": -0.3472477204556914
+      },
+      "id": "nz-general-2017-electorate-43",
+      "local": {
+        "balance": -0.04168111034177646,
+        "mass": -0.007335084437103845
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.14201899529933437,
+        "mass": -0.175561994048413
+      },
+      "id": "nz-general-2017-electorate-44",
+      "local": {
+        "balance": 0.10145415582160477,
+        "mass": -0.04514341086326845
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.05282789379042807,
+        "mass": -0.25789503020580096
+      },
+      "id": "nz-general-2017-electorate-45",
+      "local": {
+        "balance": -0.22325174399430392,
+        "mass": 0.0721897359414172
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.19839583956966134,
+        "mass": 0.18592930881110914
+      },
+      "id": "nz-general-2017-electorate-46",
+      "local": {
+        "balance": -0.08683220612629627,
+        "mass": -0.17871759386960195
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.004481744517727981,
+        "mass": -0.32120796792496686
+      },
+      "id": "nz-general-2017-electorate-47",
+      "local": {
+        "balance": -0.05639671761908849,
+        "mass": -0.0028344119652137234
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.24039532702425292,
+        "mass": -0.20899219650367784
+      },
+      "id": "nz-general-2017-electorate-48",
+      "local": {
+        "balance": -0.33378617384729636,
+        "mass": 0.16376151746604384
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.3315590854248436,
+        "mass": -0.2890500469549835
+      },
+      "id": "nz-general-2017-electorate-49",
+      "local": {
+        "balance": -0.12475085491875926,
+        "mass": -0.0031478410447665084
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.22677228742129585,
+        "mass": -0.681646840846263
+      },
+      "id": "nz-general-2017-electorate-50",
+      "local": {
+        "balance": -0.19721285487811624,
+        "mass": -0.029945396722870665
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.06794570206389339,
+        "mass": -1.0441490438059446
+      },
+      "id": "nz-general-2017-electorate-51",
+      "local": {
+        "balance": -0.05876542077799851,
+        "mass": 0.004974531275389271
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.120505690527274,
+        "mass": 0.012110099020038678
+      },
+      "id": "nz-general-2017-electorate-52",
+      "local": {
+        "balance": -0.23240684947689505,
+        "mass": 0.07878224960632019
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.11445631739883544,
+        "mass": 0.008086984345976322
+      },
+      "id": "nz-general-2017-electorate-53",
+      "local": {
+        "balance": 0.2209923362223578,
+        "mass": 0.06232002805669534
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.14290906464276054,
+        "mass": 0.06138323866101203
+      },
+      "id": "nz-general-2017-electorate-54",
+      "local": {
+        "balance": -0.017014995503898955,
+        "mass": -0.054172987053668464
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.019731394904149213,
+        "mass": -0.5291735202126691
+      },
+      "id": "nz-general-2017-electorate-55",
+      "local": {
+        "balance": 0.11208116111870947,
+        "mass": 0.0924015954117483
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.027643784885897027,
+        "mass": -0.32746269790479654
+      },
+      "id": "nz-general-2017-electorate-56",
+      "local": {
+        "balance": -0.07721684085085745,
+        "mass": 0.04037899614133078
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.6184172841983672,
+        "mass": 0.13559491970952653
+      },
+      "id": "nz-general-2017-electorate-57",
+      "local": {
+        "balance": -0.16224588783298377,
+        "mass": 0.17925539155392323
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.09981804476546352,
+        "mass": 0.06503133409992934
+      },
+      "id": "nz-general-2017-electorate-58",
+      "local": {
+        "balance": -0.07457813189536833,
+        "mass": 0.006904106381677488
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.21678467155043912,
+        "mass": -0.1785694454144171
+      },
+      "id": "nz-general-2017-electorate-59",
+      "local": {
+        "balance": -0.12963998564476886,
+        "mass": 0.0790166957711862
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.3696392723292117,
+        "mass": -0.6684103455177879
+      },
+      "id": "nz-general-2017-electorate-60",
+      "local": {
+        "balance": -0.24245010529591127,
+        "mass": -0.25790451588576535
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.5469206919808545,
+        "mass": 0.06995892323277642
+      },
+      "id": "nz-general-2017-electorate-61",
+      "local": {
+        "balance": -0.1269678807656498,
+        "mass": -0.11102561177778991
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": -0.09920683124946905,
+        "mass": -0.05660575167192716
+      },
+      "id": "nz-general-2017-electorate-62",
+      "local": {
+        "balance": 0.02927879445020687,
+        "mass": 0.0023924255679868
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.12500552954161215,
+        "mass": -0.956966630753267
+      },
+      "id": "nz-general-2017-electorate-63",
+      "local": {
+        "balance": -0.23694210915085823,
+        "mass": -0.04823131928867408
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.20366779498791554,
+        "mass": 0.08751650672856304
+      },
+      "id": "nz-general-2017-electorate-64",
+      "local": {
+        "balance": 0.03286566449174877,
+        "mass": 0.10441239120863433
+      },
+      "year": 2017
+    },
+    {
+      "candidate": {
+        "balance": 0.4400982104907908,
+        "mass": -0.545771178193497
+      },
+      "id": "nz-general-2020-electorate-01",
+      "local": {
+        "balance": 0.03959922681279282,
+        "mass": 0.1056753496602495
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.1771365198256677,
+        "mass": -0.0650789758989263
+      },
+      "id": "nz-general-2020-electorate-02",
+      "local": {
+        "balance": -0.12143733262593737,
+        "mass": -0.1849334880277257
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.17599151649540457,
+        "mass": 0.2000025540996646
+      },
+      "id": "nz-general-2020-electorate-03",
+      "local": {
+        "balance": -0.17795419057642725,
+        "mass": 0.039392210743898204
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.35017566777129294,
+        "mass": 0.2893900791517052
+      },
+      "id": "nz-general-2020-electorate-04",
+      "local": {
+        "balance": -0.1255733830913487,
+        "mass": 0.29746233622348517
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.2142035766307787,
+        "mass": 0.4036357401364177
+      },
+      "id": "nz-general-2020-electorate-05",
+      "local": {
+        "balance": -0.10894526894415202,
+        "mass": -0.0507349580504326
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.2822770558051444,
+        "mass": -0.06563530116202143
+      },
+      "id": "nz-general-2020-electorate-06",
+      "local": {
+        "balance": -0.15555807989569082,
+        "mass": -0.11452137723307287
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": -0.08941675972111018,
+        "mass": 0.45709131868563735
+      },
+      "id": "nz-general-2020-electorate-07",
+      "local": {
+        "balance": -0.053982598048690766,
+        "mass": 0.04918278140120225
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.6044202142264095,
+        "mass": -0.3241142552142138
+      },
+      "id": "nz-general-2020-electorate-08",
+      "local": {
+        "balance": -0.0034169118496225614,
+        "mass": -0.18615930759223254
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": -0.009121331940837418,
+        "mass": 0.5468959117714784
+      },
+      "id": "nz-general-2020-electorate-09",
+      "local": {
+        "balance": 0.04697758439260036,
+        "mass": -0.14735737054150921
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.3096174836562843,
+        "mass": 0.17523910004328802
+      },
+      "id": "nz-general-2020-electorate-10",
+      "local": {
+        "balance": -0.18640474817438468,
+        "mass": 0.41074440779235444
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.6043503415107494,
+        "mass": -0.12317175591737284
+      },
+      "id": "nz-general-2020-electorate-11",
+      "local": {
+        "balance": 0.024404922634113313,
+        "mass": 0.5877372895006869
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.12172049234446936,
+        "mass": 0.6072571810855807
+      },
+      "id": "nz-general-2020-electorate-12",
+      "local": {
+        "balance": -0.01915596315178092,
+        "mass": 0.07104064443993408
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": -0.21038660848354607,
+        "mass": 0.5866954189674018
+      },
+      "id": "nz-general-2020-electorate-13",
+      "local": {
+        "balance": -0.11012469681802528,
+        "mass": -0.048108452870244234
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.531231089429628,
+        "mass": 0.8728692809847498
+      },
+      "id": "nz-general-2020-electorate-14",
+      "local": {
+        "balance": -0.09349532968952601,
+        "mass": 0.013354978598270728
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.23253833528650025,
+        "mass": 0.4159730904521002
+      },
+      "id": "nz-general-2020-electorate-15",
+      "local": {
+        "balance": -0.04872649217886327,
+        "mass": 0.03927183662536948
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.3126612692752585,
+        "mass": 0.50115098115153
+      },
+      "id": "nz-general-2020-electorate-16",
+      "local": {
+        "balance": 0.056582615413705795,
+        "mass": -0.25288383419995464
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.3745066856775473,
+        "mass": 0.24464663465050895
+      },
+      "id": "nz-general-2020-electorate-17",
+      "local": {
+        "balance": -0.12143501210378271,
+        "mass": -0.10641601590511307
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.1284002751473794,
+        "mass": 0.2826658906103525
+      },
+      "id": "nz-general-2020-electorate-18",
+      "local": {
+        "balance": -0.10477635475000513,
+        "mass": 0.18715517077461108
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.20275428252963934,
+        "mass": 0.1429309140583428
+      },
+      "id": "nz-general-2020-electorate-19",
+      "local": {
+        "balance": -0.0017945160294332574,
+        "mass": -0.026420797542884067
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.2590612855281662,
+        "mass": 0.050196256851016585
+      },
+      "id": "nz-general-2020-electorate-20",
+      "local": {
+        "balance": -0.07598028476991958,
+        "mass": -0.11534513683886694
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.30174870544048416,
+        "mass": -0.3170992453692918
+      },
+      "id": "nz-general-2020-electorate-21",
+      "local": {
+        "balance": 0.12825091562777935,
+        "mass": -0.23199597694320717
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": -0.02270712139850528,
+        "mass": -0.06488501904354926
+      },
+      "id": "nz-general-2020-electorate-22",
+      "local": {
+        "balance": -0.07957399406265742,
+        "mass": 0.022869604503775953
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.29516293971481466,
+        "mass": 0.47804306383685113
+      },
+      "id": "nz-general-2020-electorate-23",
+      "local": {
+        "balance": 0.23419222946651252,
+        "mass": -0.041266195014405316
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.7366749847635445,
+        "mass": 0.5128178555882954
+      },
+      "id": "nz-general-2020-electorate-24",
+      "local": {
+        "balance": 0.1425487159476816,
+        "mass": -0.10384761113378738
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.43806180758524316,
+        "mass": 0.11767762959636063
+      },
+      "id": "nz-general-2020-electorate-25",
+      "local": {
+        "balance": 0.023602150308098313,
+        "mass": 0.1442587687402228
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.7889574328942487,
+        "mass": 0.12157740910761072
+      },
+      "id": "nz-general-2020-electorate-26",
+      "local": {
+        "balance": 0.06204935081875407,
+        "mass": 0.011009455417561487
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.0920006949181702,
+        "mass": 1.078278365476292
+      },
+      "id": "nz-general-2020-electorate-27",
+      "local": {
+        "balance": -0.04554624780868277,
+        "mass": -0.09472728824172783
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.04867004442993006,
+        "mass": 0.2525089457340446
+      },
+      "id": "nz-general-2020-electorate-28",
+      "local": {
+        "balance": -0.22623499823097137,
+        "mass": -0.07144614198035404
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.1349657068344121,
+        "mass": 0.4727508175597783
+      },
+      "id": "nz-general-2020-electorate-29",
+      "local": {
+        "balance": 0.027599270988014957,
+        "mass": 0.10617565777056459
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.2993095304880592,
+        "mass": 0.30233416647402334
+      },
+      "id": "nz-general-2020-electorate-30",
+      "local": {
+        "balance": -0.13367044782630677,
+        "mass": 0.2686353444183127
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.31205556789077826,
+        "mass": 0.6287900255966745
+      },
+      "id": "nz-general-2020-electorate-31",
+      "local": {
+        "balance": -0.07997629221663838,
+        "mass": 0.1953025438652276
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.22894628324757604,
+        "mass": 0.5925930989546865
+      },
+      "id": "nz-general-2020-electorate-32",
+      "local": {
+        "balance": -0.04059495064866714,
+        "mass": -0.04834257832561761
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.41767306006960336,
+        "mass": 0.0336830510916335
+      },
+      "id": "nz-general-2020-electorate-33",
+      "local": {
+        "balance": -0.21641306767704727,
+        "mass": 0.05363129430191271
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.3983810078123772,
+        "mass": 0.5083487687924335
+      },
+      "id": "nz-general-2020-electorate-34",
+      "local": {
+        "balance": -0.06928136772822424,
+        "mass": 0.04021520979633353
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.5013697776943357,
+        "mass": 0.5399872548620088
+      },
+      "id": "nz-general-2020-electorate-35",
+      "local": {
+        "balance": -0.14518965294198527,
+        "mass": 0.32174664600809066
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.16879506972005764,
+        "mass": 0.3332587247287142
+      },
+      "id": "nz-general-2020-electorate-36",
+      "local": {
+        "balance": -0.035182105746941805,
+        "mass": -0.06041626475571937
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.1176341393915703,
+        "mass": -0.03426080240216445
+      },
+      "id": "nz-general-2020-electorate-37",
+      "local": {
+        "balance": -0.19135105079418935,
+        "mass": 0.13685786617284412
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.3001803255076012,
+        "mass": 0.22817535464411343
+      },
+      "id": "nz-general-2020-electorate-38",
+      "local": {
+        "balance": 0.09124517393866338,
+        "mass": 0.15324032363930007
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.08844574769236724,
+        "mass": -0.6066948480888738
+      },
+      "id": "nz-general-2020-electorate-39",
+      "local": {
+        "balance": -0.23396564903412975,
+        "mass": 0.10521819546254285
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.1845861642745642,
+        "mass": 0.4974217762083326
+      },
+      "id": "nz-general-2020-electorate-40",
+      "local": {
+        "balance": -0.055895596231196554,
+        "mass": 0.05928737316820887
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.3183923638406684,
+        "mass": 0.16738914861362142
+      },
+      "id": "nz-general-2020-electorate-41",
+      "local": {
+        "balance": -0.11364364314152431,
+        "mass": -0.04044477331633023
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.29442860231242296,
+        "mass": 0.2516880103049206
+      },
+      "id": "nz-general-2020-electorate-42",
+      "local": {
+        "balance": -0.15539342172695048,
+        "mass": -0.0640018512912719
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.12131937358939071,
+        "mass": -0.11037252154451338
+      },
+      "id": "nz-general-2020-electorate-43",
+      "local": {
+        "balance": -0.06479832707325439,
+        "mass": -0.12406147218684693
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.26913790769706114,
+        "mass": 0.3020616145749939
+      },
+      "id": "nz-general-2020-electorate-44",
+      "local": {
+        "balance": -0.03437754675864868,
+        "mass": -0.13154075113355979
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.24514806933123123,
+        "mass": 0.434146192063666
+      },
+      "id": "nz-general-2020-electorate-45",
+      "local": {
+        "balance": -0.17216425350245712,
+        "mass": -0.059420137899208525
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.24323636792463355,
+        "mass": 0.19332687878210075
+      },
+      "id": "nz-general-2020-electorate-46",
+      "local": {
+        "balance": -0.05151477686022177,
+        "mass": -0.1706120185987623
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.335171586385252,
+        "mass": 0.3050925685492092
+      },
+      "id": "nz-general-2020-electorate-47",
+      "local": {
+        "balance": -0.04340193368917944,
+        "mass": -0.048900625273087917
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.004488265962208415,
+        "mass": -0.04796101029936617
+      },
+      "id": "nz-general-2020-electorate-48",
+      "local": {
+        "balance": 0.010078282029985841,
+        "mass": 0.3543102399845086
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.3115408225668541,
+        "mass": 0.20427940688614754
+      },
+      "id": "nz-general-2020-electorate-49",
+      "local": {
+        "balance": -0.10864484747297454,
+        "mass": 0.41268361071159054
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": -0.16386376436965477,
+        "mass": 0.03502167685812907
+      },
+      "id": "nz-general-2020-electorate-50",
+      "local": {
+        "balance": -0.06465957477848594,
+        "mass": 0.06385549357117626
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.03269176361070747,
+        "mass": 0.2674709121767038
+      },
+      "id": "nz-general-2020-electorate-51",
+      "local": {
+        "balance": -0.08855397350584904,
+        "mass": 0.055112007160983634
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.1203160701127538,
+        "mass": 0.42150051930930177
+      },
+      "id": "nz-general-2020-electorate-52",
+      "local": {
+        "balance": -0.07931266014657712,
+        "mass": 0.09502997365546473
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.3550776221387191,
+        "mass": -0.06227230269755313
+      },
+      "id": "nz-general-2020-electorate-53",
+      "local": {
+        "balance": -0.021389228455750087,
+        "mass": 0.0671806305864655
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.5667005301053731,
+        "mass": 0.5505068115021277
+      },
+      "id": "nz-general-2020-electorate-54",
+      "local": {
+        "balance": 0.008712795057806422,
+        "mass": -0.03412458439238253
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.14223105407483683,
+        "mass": 0.036096255920036624
+      },
+      "id": "nz-general-2020-electorate-55",
+      "local": {
+        "balance": -0.08845988402153071,
+        "mass": 0.18953237143651314
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.12342983868458424,
+        "mass": 0.4046515809305551
+      },
+      "id": "nz-general-2020-electorate-56",
+      "local": {
+        "balance": -9.288876915647393e-05,
+        "mass": 0.1294698245244954
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.27510717402372664,
+        "mass": 0.4661493961198182
+      },
+      "id": "nz-general-2020-electorate-57",
+      "local": {
+        "balance": -0.20578271469641962,
+        "mass": -0.1462184531708317
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.12966252181773275,
+        "mass": 0.313718179239991
+      },
+      "id": "nz-general-2020-electorate-58",
+      "local": {
+        "balance": -0.0610305739788809,
+        "mass": 0.014657284094557799
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.30632844372651136,
+        "mass": 0.29588425372274374
+      },
+      "id": "nz-general-2020-electorate-59",
+      "local": {
+        "balance": -0.027850723684319845,
+        "mass": -0.24385277685762752
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.34709623280936563,
+        "mass": 0.2861935241116548
+      },
+      "id": "nz-general-2020-electorate-60",
+      "local": {
+        "balance": -0.01833766554748273,
+        "mass": -0.09850276702715288
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.7893390107846671,
+        "mass": 0.2244781834072367
+      },
+      "id": "nz-general-2020-electorate-61",
+      "local": {
+        "balance": 0.15594235498033948,
+        "mass": -0.10385944570267713
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.18592923379317783,
+        "mass": 0.137301996650935
+      },
+      "id": "nz-general-2020-electorate-62",
+      "local": {
+        "balance": -0.021155883943456688,
+        "mass": 0.02411726622940158
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.20159172475766118,
+        "mass": 0.4347210250099689
+      },
+      "id": "nz-general-2020-electorate-63",
+      "local": {
+        "balance": -0.14146854932265884,
+        "mass": 0.3141798523441044
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.2658741599421477,
+        "mass": 0.5075812151768386
+      },
+      "id": "nz-general-2020-electorate-64",
+      "local": {
+        "balance": -0.09091288170747691,
+        "mass": 0.005178221003830252
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.24866409727240657,
+        "mass": 0.24629415413703004
+      },
+      "id": "nz-general-2020-electorate-65",
+      "local": {
+        "balance": -0.12576398527607158,
+        "mass": -0.02698198265842544
+      },
+      "year": 2020
+    },
+    {
+      "candidate": {
+        "balance": 0.9393970804802962,
+        "mass": -0.345802603449859
+      },
+      "id": "nz-general-2023-electorate-01",
+      "local": {
+        "balance": 0.14337132623572613,
+        "mass": 0.06393442330826493
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.14323644046962747,
+        "mass": 0.10699846613246855
+      },
+      "id": "nz-general-2023-electorate-02",
+      "local": {
+        "balance": 0.04040899358203354,
+        "mass": -0.019066488436833784
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.028315077873743322,
+        "mass": -0.32215725309664167
+      },
+      "id": "nz-general-2023-electorate-03",
+      "local": {
+        "balance": 0.25423632086793957,
+        "mass": -0.19282098127772296
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.2493266108601231,
+        "mass": -0.19033971791544868
+      },
+      "id": "nz-general-2023-electorate-04",
+      "local": {
+        "balance": 0.29000673932036336,
+        "mass": -0.022877610948586202
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.06151975648685759,
+        "mass": 0.0279074283173526
+      },
+      "id": "nz-general-2023-electorate-05",
+      "local": {
+        "balance": 0.07755318187556659,
+        "mass": -0.01071739011510664
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.02464988635674059,
+        "mass": 0.0015794478837097836
+      },
+      "id": "nz-general-2023-electorate-06",
+      "local": {
+        "balance": 0.09277930327849493,
+        "mass": -0.04285715056924344
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.18993744043716265,
+        "mass": -0.07076303061216649
+      },
+      "id": "nz-general-2023-electorate-07",
+      "local": {
+        "balance": 0.051578443676272956,
+        "mass": -0.30615718076503806
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.3102437159144573,
+        "mass": 0.17805537436300467
+      },
+      "id": "nz-general-2023-electorate-08",
+      "local": {
+        "balance": 0.03809938253545231,
+        "mass": 0.028072880958027402
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.07494593573242414,
+        "mass": 0.21669247783853152
+      },
+      "id": "nz-general-2023-electorate-09",
+      "local": {
+        "balance": -0.1791803850043956,
+        "mass": -0.03757643274438527
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.38487077846404016,
+        "mass": 0.09089419077436967
+      },
+      "id": "nz-general-2023-electorate-10",
+      "local": {
+        "balance": 0.4006914493232743,
+        "mass": -0.06383219321782241
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.017826604019873127,
+        "mass": 0.4004690928028616
+      },
+      "id": "nz-general-2023-electorate-11",
+      "local": {
+        "balance": 0.20363837975573373,
+        "mass": -0.015457738215608474
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.3317865597546332,
+        "mass": 0.1176705981861832
+      },
+      "id": "nz-general-2023-electorate-12",
+      "local": {
+        "balance": 0.10964743651139675,
+        "mass": 0.01064622168558882
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.05630684644059347,
+        "mass": 0.061838763264365326
+      },
+      "id": "nz-general-2023-electorate-13",
+      "local": {
+        "balance": 0.1626663700536567,
+        "mass": -0.032440858470276
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.49661179429140934,
+        "mass": 0.4911568555191672
+      },
+      "id": "nz-general-2023-electorate-14",
+      "local": {
+        "balance": -0.05065218808621874,
+        "mass": 0.0676054566778228
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.04788972322249596,
+        "mass": -0.758617109613126
+      },
+      "id": "nz-general-2023-electorate-15",
+      "local": {
+        "balance": 0.07381672013536955,
+        "mass": -0.021533400976201045
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.1616695769257095,
+        "mass": 0.09836522938509162
+      },
+      "id": "nz-general-2023-electorate-16",
+      "local": {
+        "balance": -0.030769554245942743,
+        "mass": -0.11138541208607311
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.08277523646401674,
+        "mass": 0.11773504395865719
+      },
+      "id": "nz-general-2023-electorate-17",
+      "local": {
+        "balance": 0.054491740449963744,
+        "mass": -0.23038042219742616
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.015512501725857497,
+        "mass": -0.03112345124211413
+      },
+      "id": "nz-general-2023-electorate-18",
+      "local": {
+        "balance": 0.18614331076151036,
+        "mass": -0.14076658197930914
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.08270656537253662,
+        "mass": -0.10988663536543464
+      },
+      "id": "nz-general-2023-electorate-19",
+      "local": {
+        "balance": 0.08883487870615758,
+        "mass": 0.08409354402195457
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.10254107502242094,
+        "mass": 0.21515345280864295
+      },
+      "id": "nz-general-2023-electorate-20",
+      "local": {
+        "balance": -0.14595455980588845,
+        "mass": 0.1571765203101152
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.03717752511458605,
+        "mass": -0.41176271002192677
+      },
+      "id": "nz-general-2023-electorate-21",
+      "local": {
+        "balance": -0.03838155128180021,
+        "mass": 0.42955748643163505
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.06578818186644408,
+        "mass": -0.7703686463063426
+      },
+      "id": "nz-general-2023-electorate-22",
+      "local": {
+        "balance": 0.14469488602050495,
+        "mass": 0.3717234286989337
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.4071879174345133,
+        "mass": 0.37135413115396787
+      },
+      "id": "nz-general-2023-electorate-23",
+      "local": {
+        "balance": 0.07382922875976972,
+        "mass": 0.1141175894012092
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.19505562606430593,
+        "mass": -0.024893571347543553
+      },
+      "id": "nz-general-2023-electorate-24",
+      "local": {
+        "balance": 0.14724157560476514,
+        "mass": 0.21430857263206682
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.00022801307120967618,
+        "mass": -0.16004718758506375
+      },
+      "id": "nz-general-2023-electorate-25",
+      "local": {
+        "balance": 0.18220063076884774,
+        "mass": 0.14848976982572126
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.07235771124321189,
+        "mass": 0.4296010491847069
+      },
+      "id": "nz-general-2023-electorate-26",
+      "local": {
+        "balance": 0.01066494335349133,
+        "mass": -0.14351982847686795
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.3936122021566403,
+        "mass": 0.3314868793042387
+      },
+      "id": "nz-general-2023-electorate-27",
+      "local": {
+        "balance": 0.04202564608945991,
+        "mass": -0.09264983720670661
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.15965411871654256,
+        "mass": -0.11933905542181433
+      },
+      "id": "nz-general-2023-electorate-28",
+      "local": {
+        "balance": 0.20065391404538102,
+        "mass": 0.041941642892148634
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.23882252738921617,
+        "mass": 0.13705307073467
+      },
+      "id": "nz-general-2023-electorate-29",
+      "local": {
+        "balance": 0.01119864234436696,
+        "mass": -0.23426924688791018
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.17769650127475733,
+        "mass": 0.08984124170901597
+      },
+      "id": "nz-general-2023-electorate-30",
+      "local": {
+        "balance": 0.23318780720632581,
+        "mass": 0.020798196288946857
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.26655592509059955,
+        "mass": 0.3457721068443409
+      },
+      "id": "nz-general-2023-electorate-31",
+      "local": {
+        "balance": 0.19851716730619962,
+        "mass": -0.05560046594136159
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.2900293719751068,
+        "mass": -0.22015649182973662
+      },
+      "id": "nz-general-2023-electorate-32",
+      "local": {
+        "balance": -0.07238294157744751,
+        "mass": -0.17385531241490926
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.1947707256456096,
+        "mass": 0.2962504214647341
+      },
+      "id": "nz-general-2023-electorate-33",
+      "local": {
+        "balance": -0.013998748330998678,
+        "mass": 0.1337748858394444
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.204724573624118,
+        "mass": 0.21301814943550013
+      },
+      "id": "nz-general-2023-electorate-34",
+      "local": {
+        "balance": -0.15000776364107482,
+        "mass": -0.06423295426110298
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.7098436366470564,
+        "mass": 0.17358152156564666
+      },
+      "id": "nz-general-2023-electorate-35",
+      "local": {
+        "balance": 0.32361942639585384,
+        "mass": -0.007631644852232444
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.13673930891977426,
+        "mass": -0.22090427604222596
+      },
+      "id": "nz-general-2023-electorate-36",
+      "local": {
+        "balance": -0.02280980290625756,
+        "mass": 0.007593258869396546
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.1417144467614626,
+        "mass": -0.7418405905387848
+      },
+      "id": "nz-general-2023-electorate-37",
+      "local": {
+        "balance": 0.050728027780292395,
+        "mass": 0.2885470277813138
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.31809521140742725,
+        "mass": -0.12165833104631285
+      },
+      "id": "nz-general-2023-electorate-38",
+      "local": {
+        "balance": 0.03137571840462772,
+        "mass": -0.054016415382243554
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.15380378948967388,
+        "mass": 0.20299458898585687
+      },
+      "id": "nz-general-2023-electorate-40",
+      "local": {
+        "balance": -0.04506422825170753,
+        "mass": -0.15899379108532186
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.071535615212862,
+        "mass": -0.3562743535268734
+      },
+      "id": "nz-general-2023-electorate-41",
+      "local": {
+        "balance": 0.007662955130787075,
+        "mass": -0.16527736767760226
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.09947351845416863,
+        "mass": 0.06761257885144367
+      },
+      "id": "nz-general-2023-electorate-42",
+      "local": {
+        "balance": -0.12686839584082987,
+        "mass": 0.1979166667477802
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.07859669269161529,
+        "mass": -0.3923403931487798
+      },
+      "id": "nz-general-2023-electorate-43",
+      "local": {
+        "balance": -0.023820934306452823,
+        "mass": 0.1844429166740269
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.18429868059468513,
+        "mass": -0.3345421374390909
+      },
+      "id": "nz-general-2023-electorate-44",
+      "local": {
+        "balance": 0.011266229501364355,
+        "mass": -0.024605275369044888
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.26647409029056934,
+        "mass": 0.18475677396272783
+      },
+      "id": "nz-general-2023-electorate-45",
+      "local": {
+        "balance": 0.19745948394919388,
+        "mass": -0.11876170521913487
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.036560469918082816,
+        "mass": -0.16528149786193325
+      },
+      "id": "nz-general-2023-electorate-46",
+      "local": {
+        "balance": 0.13392415233620591,
+        "mass": -0.20633303547964887
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.16431386939069315,
+        "mass": -0.02732310981202679
+      },
+      "id": "nz-general-2023-electorate-47",
+      "local": {
+        "balance": -0.011774051100386318,
+        "mass": -0.07537341320546698
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.06441099929254746,
+        "mass": -0.21006386134082344
+      },
+      "id": "nz-general-2023-electorate-48",
+      "local": {
+        "balance": 0.21880915607724538,
+        "mass": 0.13809114531553757
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -1.025516013100438,
+        "mass": -2.0461401834981006
+      },
+      "id": "nz-general-2023-electorate-49",
+      "local": {
+        "balance": 0.16361466603752073,
+        "mass": 0.009538882835749662
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.129168175566735,
+        "mass": -1.7096912635000687
+      },
+      "id": "nz-general-2023-electorate-50",
+      "local": {
+        "balance": 0.02506399299645512,
+        "mass": -0.22875680751009286
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.14326154259366164,
+        "mass": -0.06433132877585379
+      },
+      "id": "nz-general-2023-electorate-51",
+      "local": {
+        "balance": 0.029678436440079725,
+        "mass": -0.16047323446496564
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.396912431023435,
+        "mass": -0.1886654719687174
+      },
+      "id": "nz-general-2023-electorate-52",
+      "local": {
+        "balance": 0.16519681264309272,
+        "mass": -0.15540577120175203
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.14488990940460666,
+        "mass": -0.29109466736871825
+      },
+      "id": "nz-general-2023-electorate-53",
+      "local": {
+        "balance": 0.04021633793050672,
+        "mass": 0.06996744530175802
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.0013068143004738575,
+        "mass": 0.2565431711250896
+      },
+      "id": "nz-general-2023-electorate-54",
+      "local": {
+        "balance": -0.04471098889607128,
+        "mass": -0.17943131870601547
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.19878728292724146,
+        "mass": 0.06918103181582791
+      },
+      "id": "nz-general-2023-electorate-55",
+      "local": {
+        "balance": 0.2117551315592069,
+        "mass": 0.007377308884031875
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.09006765525420923,
+        "mass": -0.22626071270153747
+      },
+      "id": "nz-general-2023-electorate-56",
+      "local": {
+        "balance": 0.07796838739140755,
+        "mass": -0.20523886491554344
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.37402102166116935,
+        "mass": -0.15540070879670242
+      },
+      "id": "nz-general-2023-electorate-57",
+      "local": {
+        "balance": 0.10609799287054122,
+        "mass": -0.22108908024411889
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.05096002345340778,
+        "mass": 0.3412310528963616
+      },
+      "id": "nz-general-2023-electorate-58",
+      "local": {
+        "balance": -0.16598518106884674,
+        "mass": -0.10475223380523724
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.08975330705811346,
+        "mass": 0.003874098596756248
+      },
+      "id": "nz-general-2023-electorate-59",
+      "local": {
+        "balance": 0.02613341678147474,
+        "mass": -0.17846676952513874
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.044964686664746845,
+        "mass": -0.1663882880947105
+      },
+      "id": "nz-general-2023-electorate-60",
+      "local": {
+        "balance": -0.06452580918528827,
+        "mass": 0.18993437755411158
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.2502692317556252,
+        "mass": -0.3334775087421796
+      },
+      "id": "nz-general-2023-electorate-61",
+      "local": {
+        "balance": -0.045425650734649214,
+        "mass": -0.2739367172537055
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.17172403090201294,
+        "mass": 0.32267966662647796
+      },
+      "id": "nz-general-2023-electorate-62",
+      "local": {
+        "balance": -0.06360202131807147,
+        "mass": -0.1666112153592446
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": -0.09546178800782967,
+        "mass": -0.07912908403116914
+      },
+      "id": "nz-general-2023-electorate-63",
+      "local": {
+        "balance": 0.31786532597441053,
+        "mass": -0.16896886281322399
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.03406393469656832,
+        "mass": 0.03739770727874614
+      },
+      "id": "nz-general-2023-electorate-64",
+      "local": {
+        "balance": 0.10096782906744706,
+        "mass": -0.11757573584618664
+      },
+      "year": 2023
+    },
+    {
+      "candidate": {
+        "balance": 0.012948041167023416,
+        "mass": 0.0071857281343252755
+      },
+      "id": "nz-general-2023-electorate-65",
+      "local": {
+        "balance": 0.09668930621253558,
+        "mass": -0.007957435345315012
+      },
+      "year": 2023
+    }
+  ],
+  "remainingSeatErrorPersistence": {
+    "byTransition": {
+      "2014-2017": {
+        "balance": {
+          "pearson": -0.11074863533891119,
+          "records": 64,
+          "significanceTests": null,
+          "spearman": -0.19972527472527474,
+          "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+          "status": "descriptive"
+        },
+        "mass": {
+          "pearson": 0.11352279228814406,
+          "records": 64,
+          "significanceTests": null,
+          "spearman": 0.1478937728937729,
+          "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+          "status": "descriptive"
+        }
+      },
+      "2017-2020": {
+        "balance": {
+          "pearson": 0.274428620731246,
+          "records": 34,
+          "significanceTests": null,
+          "spearman": 0.22597402597402597,
+          "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+          "status": "descriptive"
+        },
+        "mass": {
+          "pearson": 0.2265483744031815,
+          "records": 34,
+          "significanceTests": null,
+          "spearman": 0.17249809014514894,
+          "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+          "status": "descriptive"
+        }
+      },
+      "2020-2023": {
+        "balance": {
+          "pearson": -0.04787201042873067,
+          "records": 64,
+          "significanceTests": null,
+          "spearman": -0.1306318681318681,
+          "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+          "status": "descriptive"
+        },
+        "mass": {
+          "pearson": 0.3069429750882109,
+          "records": 64,
+          "significanceTests": null,
+          "spearman": 0.358470695970696,
+          "spearmanWeighting": "equal paired records; Pearson alone uses supplied weights",
+          "status": "descriptive"
+        }
+      }
+    },
+    "interpretation": "Exact-seat descriptive repeat error after S+R, not personal causality or a fitted latent seat effect; overlapping transitions and reused elections remain dependent",
+    "pairs": [
+      {
+        "earlier": {
+          "balance": -0.39881528209259276,
+          "mass": 0.35223920377544626
+        },
+        "earlierId": "nz-general-2014-electorate-01",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-01",
+        "later": {
+          "balance": 0.08397922554389836,
+          "mass": -0.048092327315354844
+        },
+        "laterId": "nz-general-2017-electorate-01",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.5207984751054808,
+          "mass": -0.15968138536100662
+        },
+        "earlierId": "nz-general-2014-electorate-02",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-02",
+        "later": {
+          "balance": -0.15280238176367622,
+          "mass": -0.07613682668747312
+        },
+        "laterId": "nz-general-2017-electorate-02",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.12661175105324607,
+          "mass": -0.7678216558881599
+        },
+        "earlierId": "nz-general-2014-electorate-03",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-03",
+        "later": {
+          "balance": -0.404391767852768,
+          "mass": -0.9023559361570537
+        },
+        "laterId": "nz-general-2017-electorate-03",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.2437996877980355,
+          "mass": 0.3512491411833767
+        },
+        "earlierId": "nz-general-2014-electorate-04",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-04",
+        "later": {
+          "balance": -0.22670049333907794,
+          "mass": 0.18728046630457462
+        },
+        "laterId": "nz-general-2017-electorate-04",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.30593800080100964,
+          "mass": -0.24656964207830034
+        },
+        "earlierId": "nz-general-2014-electorate-05",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-05",
+        "later": {
+          "balance": 0.2400888146001846,
+          "mass": -0.05744967522827027
+        },
+        "laterId": "nz-general-2017-electorate-05",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.49259695127882974,
+          "mass": -0.18642836368339166
+        },
+        "earlierId": "nz-general-2014-electorate-06",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-06",
+        "later": {
+          "balance": 0.1246571133308062,
+          "mass": -0.5244302477892169
+        },
+        "laterId": "nz-general-2017-electorate-06",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": 0.087619890993339,
+          "mass": -0.18947512814971357
+        },
+        "earlierId": "nz-general-2014-electorate-07",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-07",
+        "later": {
+          "balance": -0.1661329529469583,
+          "mass": -0.5456391594896004
+        },
+        "laterId": "nz-general-2017-electorate-07",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.40465929092369335,
+          "mass": 0.1734597513743077
+        },
+        "earlierId": "nz-general-2014-electorate-08",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-08",
+        "later": {
+          "balance": 0.03077095795808349,
+          "mass": 0.19404015520232565
+        },
+        "laterId": "nz-general-2017-electorate-08",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.1513424772514883,
+          "mass": 0.1645024037821432
+        },
+        "earlierId": "nz-general-2014-electorate-09",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-09",
+        "later": {
+          "balance": 0.027029294242441604,
+          "mass": -0.11288957579978809
+        },
+        "laterId": "nz-general-2017-electorate-09",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.13393776003422586,
+          "mass": 0.21289248344289535
+        },
+        "earlierId": "nz-general-2014-electorate-10",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-10",
+        "later": {
+          "balance": -0.07307958522614133,
+          "mass": -0.39527466033289493
+        },
+        "laterId": "nz-general-2017-electorate-10",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.139572235186181,
+          "mass": -0.8651983299127062
+        },
+        "earlierId": "nz-general-2014-electorate-11",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-11",
+        "later": {
+          "balance": 0.10933387159542951,
+          "mass": -0.1708611456144924
+        },
+        "laterId": "nz-general-2017-electorate-11",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": 0.8186387837133096,
+          "mass": -0.531410929606784
+        },
+        "earlierId": "nz-general-2014-electorate-12",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-12",
+        "later": {
+          "balance": 0.8970906169314092,
+          "mass": -0.5675667429586719
+        },
+        "laterId": "nz-general-2017-electorate-12",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.2741384947000314,
+          "mass": 0.08015839609437547
+        },
+        "earlierId": "nz-general-2014-electorate-13",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-13",
+        "later": {
+          "balance": -0.3253346390153379,
+          "mass": -0.0890628536445437
+        },
+        "laterId": "nz-general-2017-electorate-13",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.32269591782872853,
+          "mass": 0.05722174411542991
+        },
+        "earlierId": "nz-general-2014-electorate-14",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-14",
+        "later": {
+          "balance": 0.09694842707298723,
+          "mass": -0.24097620697121047
+        },
+        "laterId": "nz-general-2017-electorate-14",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.14622133999048414,
+          "mass": -0.4120248033181746
+        },
+        "earlierId": "nz-general-2014-electorate-15",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-15",
+        "later": {
+          "balance": 0.0022177115255963553,
+          "mass": -0.7182623576316678
+        },
+        "laterId": "nz-general-2017-electorate-15",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.39555655116257804,
+          "mass": -0.10384128212436017
+        },
+        "earlierId": "nz-general-2014-electorate-16",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-16",
+        "later": {
+          "balance": 0.06264009494862877,
+          "mass": -0.42871873246678294
+        },
+        "laterId": "nz-general-2017-electorate-16",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.14758472943221568,
+          "mass": 0.4974970364113569
+        },
+        "earlierId": "nz-general-2014-electorate-17",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-17",
+        "later": {
+          "balance": 0.24580727521546997,
+          "mass": 0.6830617490224422
+        },
+        "laterId": "nz-general-2017-electorate-17",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.4747547070957965,
+          "mass": -0.09517674023118206
+        },
+        "earlierId": "nz-general-2014-electorate-18",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-18",
+        "later": {
+          "balance": 0.1562883648375294,
+          "mass": -1.5359997856508394
+        },
+        "laterId": "nz-general-2017-electorate-18",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.2778911998852923,
+          "mass": 0.07239854345551366
+        },
+        "earlierId": "nz-general-2014-electorate-19",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-19",
+        "later": {
+          "balance": -0.10979525204062301,
+          "mass": -0.5350104064644756
+        },
+        "laterId": "nz-general-2017-electorate-19",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.3596459049206582,
+          "mass": 0.17600522298960986
+        },
+        "earlierId": "nz-general-2014-electorate-20",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-20",
+        "later": {
+          "balance": -0.13094288194283488,
+          "mass": -0.410391029587003
+        },
+        "laterId": "nz-general-2017-electorate-20",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.12440573602305505,
+          "mass": 0.2909581939899861
+        },
+        "earlierId": "nz-general-2014-electorate-21",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-21",
+        "later": {
+          "balance": -0.1655973577344484,
+          "mass": -0.18171271159233404
+        },
+        "laterId": "nz-general-2017-electorate-21",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.6329149842359695,
+          "mass": -0.09282206751467514
+        },
+        "earlierId": "nz-general-2014-electorate-22",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-22",
+        "later": {
+          "balance": 0.11712329547247224,
+          "mass": -0.42180833634572856
+        },
+        "laterId": "nz-general-2017-electorate-22",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": 0.03805766380173359,
+          "mass": -0.47239663210280813
+        },
+        "earlierId": "nz-general-2014-electorate-23",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-23",
+        "later": {
+          "balance": -0.002032399061276502,
+          "mass": -0.25837500703756566
+        },
+        "laterId": "nz-general-2017-electorate-23",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": 0.30362702394400065,
+          "mass": 0.013411495665152984
+        },
+        "earlierId": "nz-general-2014-electorate-24",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-24",
+        "later": {
+          "balance": -0.10459267411143536,
+          "mass": -0.1122577144964636
+        },
+        "laterId": "nz-general-2017-electorate-24",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.02281830555491915,
+          "mass": -0.024658696683963477
+        },
+        "earlierId": "nz-general-2014-electorate-25",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-25",
+        "later": {
+          "balance": -0.3834648543334991,
+          "mass": -0.28163201978356645
+        },
+        "laterId": "nz-general-2017-electorate-25",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.3591136840761209,
+          "mass": 0.13891140786784062
+        },
+        "earlierId": "nz-general-2014-electorate-26",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-26",
+        "later": {
+          "balance": 0.1432078711370537,
+          "mass": -0.5717654693391883
+        },
+        "laterId": "nz-general-2017-electorate-26",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.10304905400231934,
+          "mass": 0.5167064995476738
+        },
+        "earlierId": "nz-general-2014-electorate-27",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-27",
+        "later": {
+          "balance": -0.11530442230069549,
+          "mass": 0.6257020193969598
+        },
+        "laterId": "nz-general-2017-electorate-27",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.43605758371721315,
+          "mass": 0.1341703333447961
+        },
+        "earlierId": "nz-general-2014-electorate-28",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-28",
+        "later": {
+          "balance": 0.17791325965099336,
+          "mass": 0.436336207416284
+        },
+        "laterId": "nz-general-2017-electorate-28",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.8140960612837043,
+          "mass": -1.0820445303747757
+        },
+        "earlierId": "nz-general-2014-electorate-29",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-29",
+        "later": {
+          "balance": 0.06659518329129321,
+          "mass": 0.14400815218871577
+        },
+        "laterId": "nz-general-2017-electorate-29",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.38156913373144263,
+          "mass": 0.2560081338871827
+        },
+        "earlierId": "nz-general-2014-electorate-30",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-30",
+        "later": {
+          "balance": -0.073110125897493,
+          "mass": -1.0999499860246433
+        },
+        "laterId": "nz-general-2017-electorate-30",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -4.9941569722822265e-05,
+          "mass": -0.16545728124681003
+        },
+        "earlierId": "nz-general-2014-electorate-31",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-31",
+        "later": {
+          "balance": -0.053369745501131494,
+          "mass": -0.05290794433347856
+        },
+        "laterId": "nz-general-2017-electorate-31",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.0641961758948495,
+          "mass": 0.030012446147778427
+        },
+        "earlierId": "nz-general-2014-electorate-32",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-32",
+        "later": {
+          "balance": 0.014626620649345168,
+          "mass": -0.3535780247121336
+        },
+        "laterId": "nz-general-2017-electorate-32",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.29383942184344103,
+          "mass": -0.2835642927465041
+        },
+        "earlierId": "nz-general-2014-electorate-33",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-33",
+        "later": {
+          "balance": -0.14579768008655614,
+          "mass": -0.2937219072185706
+        },
+        "laterId": "nz-general-2017-electorate-33",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.4441426855904388,
+          "mass": -0.14645598143300176
+        },
+        "earlierId": "nz-general-2014-electorate-34",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-34",
+        "later": {
+          "balance": -0.25632021255575677,
+          "mass": -0.13060172560070615
+        },
+        "laterId": "nz-general-2017-electorate-34",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.7734321392872262,
+          "mass": -0.28233110208142387
+        },
+        "earlierId": "nz-general-2014-electorate-35",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-35",
+        "later": {
+          "balance": 0.05077919382381557,
+          "mass": -1.13204881641138
+        },
+        "laterId": "nz-general-2017-electorate-35",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.9716945237352898,
+          "mass": -0.9799591743850196
+        },
+        "earlierId": "nz-general-2014-electorate-36",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-36",
+        "later": {
+          "balance": 1.4267147680766752,
+          "mass": 0.47131372748125244
+        },
+        "laterId": "nz-general-2017-electorate-36",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.3984561929900523,
+          "mass": 0.026548645739890908
+        },
+        "earlierId": "nz-general-2014-electorate-37",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-37",
+        "later": {
+          "balance": -0.15024857454172447,
+          "mass": -0.08423061193331915
+        },
+        "laterId": "nz-general-2017-electorate-37",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.4715737162847573,
+          "mass": -0.9085694591506601
+        },
+        "earlierId": "nz-general-2014-electorate-38",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-38",
+        "later": {
+          "balance": 0.05740888032689462,
+          "mass": -0.2172907076560704
+        },
+        "laterId": "nz-general-2017-electorate-38",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.04147939608071949,
+          "mass": 0.634101163076997
+        },
+        "earlierId": "nz-general-2014-electorate-39",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-39",
+        "later": {
+          "balance": 0.012344212801934318,
+          "mass": -0.3741492588905473
+        },
+        "laterId": "nz-general-2017-electorate-39",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.9236499814919895,
+          "mass": -0.36294116686887334
+        },
+        "earlierId": "nz-general-2014-electorate-40",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-40",
+        "later": {
+          "balance": 0.25458383306977295,
+          "mass": 0.007146237175503334
+        },
+        "laterId": "nz-general-2017-electorate-40",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.4508372597054262,
+          "mass": 0.4206096427337578
+        },
+        "earlierId": "nz-general-2014-electorate-41",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-41",
+        "later": {
+          "balance": 0.33045295538346475,
+          "mass": -0.3126101938232977
+        },
+        "laterId": "nz-general-2017-electorate-41",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": 0.0007818211365769878,
+          "mass": -0.16704925423881356
+        },
+        "earlierId": "nz-general-2014-electorate-42",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-42",
+        "later": {
+          "balance": -0.25434331395265586,
+          "mass": -0.46833111056310983
+        },
+        "laterId": "nz-general-2017-electorate-42",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.4562437127200547,
+          "mass": 0.17163834565599
+        },
+        "earlierId": "nz-general-2014-electorate-43",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-43",
+        "later": {
+          "balance": -0.17048634656496775,
+          "mass": -0.3472477204556914
+        },
+        "laterId": "nz-general-2017-electorate-43",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.20474010980940138,
+          "mass": 0.27283503214701255
+        },
+        "earlierId": "nz-general-2014-electorate-44",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-44",
+        "later": {
+          "balance": 0.14201899529933437,
+          "mass": -0.175561994048413
+        },
+        "laterId": "nz-general-2017-electorate-44",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": 0.4079755190370713,
+          "mass": 0.1122431197962197
+        },
+        "earlierId": "nz-general-2014-electorate-45",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-45",
+        "later": {
+          "balance": -0.05282789379042807,
+          "mass": -0.25789503020580096
+        },
+        "laterId": "nz-general-2017-electorate-45",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.034083711080814205,
+          "mass": 0.2124030938476138
+        },
+        "earlierId": "nz-general-2014-electorate-46",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-46",
+        "later": {
+          "balance": 0.19839583956966134,
+          "mass": 0.18592930881110914
+        },
+        "laterId": "nz-general-2017-electorate-46",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.5855277565027692,
+          "mass": 0.280021635418247
+        },
+        "earlierId": "nz-general-2014-electorate-47",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-47",
+        "later": {
+          "balance": -0.004481744517727981,
+          "mass": -0.32120796792496686
+        },
+        "laterId": "nz-general-2017-electorate-47",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.13797116758718375,
+          "mass": -0.28313823029515195
+        },
+        "earlierId": "nz-general-2014-electorate-48",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-48",
+        "later": {
+          "balance": -0.24039532702425292,
+          "mass": -0.20899219650367784
+        },
+        "laterId": "nz-general-2017-electorate-48",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.06228724810600905,
+          "mass": -0.32844095389807837
+        },
+        "earlierId": "nz-general-2014-electorate-49",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-49",
+        "later": {
+          "balance": -0.3315590854248436,
+          "mass": -0.2890500469549835
+        },
+        "laterId": "nz-general-2017-electorate-49",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.2653994578457315,
+          "mass": -0.11554237634149378
+        },
+        "earlierId": "nz-general-2014-electorate-50",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-50",
+        "later": {
+          "balance": -0.22677228742129585,
+          "mass": -0.681646840846263
+        },
+        "laterId": "nz-general-2017-electorate-50",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.42458905172855066,
+          "mass": -0.1069254036119196
+        },
+        "earlierId": "nz-general-2014-electorate-51",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-51",
+        "later": {
+          "balance": -0.06794570206389339,
+          "mass": -1.0441490438059446
+        },
+        "laterId": "nz-general-2017-electorate-51",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.6159757694851873,
+          "mass": -0.22620014414158396
+        },
+        "earlierId": "nz-general-2014-electorate-52",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-52",
+        "later": {
+          "balance": -0.120505690527274,
+          "mass": 0.012110099020038678
+        },
+        "laterId": "nz-general-2017-electorate-52",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.1530319064695025,
+          "mass": 0.10483100003204493
+        },
+        "earlierId": "nz-general-2014-electorate-53",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-53",
+        "later": {
+          "balance": 0.11445631739883544,
+          "mass": 0.008086984345976322
+        },
+        "laterId": "nz-general-2017-electorate-53",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.6507008120123865,
+          "mass": -0.1004401085059643
+        },
+        "earlierId": "nz-general-2014-electorate-54",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-54",
+        "later": {
+          "balance": -0.14290906464276054,
+          "mass": 0.06138323866101203
+        },
+        "laterId": "nz-general-2017-electorate-54",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.14641202431238032,
+          "mass": -0.33753370431115304
+        },
+        "earlierId": "nz-general-2014-electorate-55",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-55",
+        "later": {
+          "balance": 0.019731394904149213,
+          "mass": -0.5291735202126691
+        },
+        "laterId": "nz-general-2017-electorate-55",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.4232443921994977,
+          "mass": -0.18499161316372503
+        },
+        "earlierId": "nz-general-2014-electorate-56",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-56",
+        "later": {
+          "balance": 0.027643784885897027,
+          "mass": -0.32746269790479654
+        },
+        "laterId": "nz-general-2017-electorate-56",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.25426207980094206,
+          "mass": 0.3616085448873474
+        },
+        "earlierId": "nz-general-2014-electorate-57",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-57",
+        "later": {
+          "balance": 0.6184172841983672,
+          "mass": 0.13559491970952653
+        },
+        "laterId": "nz-general-2017-electorate-57",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.4041496608259201,
+          "mass": -0.5246205516321798
+        },
+        "earlierId": "nz-general-2014-electorate-58",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-58",
+        "later": {
+          "balance": -0.09981804476546352,
+          "mass": 0.06503133409992934
+        },
+        "laterId": "nz-general-2017-electorate-58",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.33352157318218034,
+          "mass": -0.43267962118636194
+        },
+        "earlierId": "nz-general-2014-electorate-59",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-59",
+        "later": {
+          "balance": -0.21678467155043912,
+          "mass": -0.1785694454144171
+        },
+        "laterId": "nz-general-2017-electorate-59",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.13126500872657743,
+          "mass": 0.2616738113165129
+        },
+        "earlierId": "nz-general-2014-electorate-60",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-60",
+        "later": {
+          "balance": 0.3696392723292117,
+          "mass": -0.6684103455177879
+        },
+        "laterId": "nz-general-2017-electorate-60",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.36396022693666563,
+          "mass": -0.2289205157393197
+        },
+        "earlierId": "nz-general-2014-electorate-61",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-61",
+        "later": {
+          "balance": 0.5469206919808545,
+          "mass": 0.06995892323277642
+        },
+        "laterId": "nz-general-2017-electorate-61",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.4989717250150112,
+          "mass": 0.24755718959495265
+        },
+        "earlierId": "nz-general-2014-electorate-62",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-62",
+        "later": {
+          "balance": -0.09920683124946905,
+          "mass": -0.05660575167192716
+        },
+        "laterId": "nz-general-2017-electorate-62",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.17468816461322434,
+          "mass": -0.08100190148193365
+        },
+        "earlierId": "nz-general-2014-electorate-63",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-63",
+        "later": {
+          "balance": 0.12500552954161215,
+          "mass": -0.956966630753267
+        },
+        "laterId": "nz-general-2017-electorate-63",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": -0.35003185457703234,
+          "mass": 0.1931606599224751
+        },
+        "earlierId": "nz-general-2014-electorate-64",
+        "geographyId": "2014-2017:general:nz-general-2017-electorate-64",
+        "later": {
+          "balance": 0.20366779498791554,
+          "mass": 0.08751650672856304
+        },
+        "laterId": "nz-general-2017-electorate-64",
+        "transition": "2014-2017"
+      },
+      {
+        "earlier": {
+          "balance": 0.08397922554389836,
+          "mass": -0.048092327315354844
+        },
+        "earlierId": "nz-general-2017-electorate-01",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-01",
+        "later": {
+          "balance": 0.4400982104907908,
+          "mass": -0.545771178193497
+        },
+        "laterId": "nz-general-2020-electorate-01",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.404391767852768,
+          "mass": -0.9023559361570537
+        },
+        "earlierId": "nz-general-2017-electorate-03",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-04",
+        "later": {
+          "balance": 0.35017566777129294,
+          "mass": 0.2893900791517052
+        },
+        "laterId": "nz-general-2020-electorate-04",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.22670049333907794,
+          "mass": 0.18728046630457462
+        },
+        "earlierId": "nz-general-2017-electorate-04",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-05",
+        "later": {
+          "balance": 0.2142035766307787,
+          "mass": 0.4036357401364177
+        },
+        "laterId": "nz-general-2020-electorate-05",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.07307958522614133,
+          "mass": -0.39527466033289493
+        },
+        "earlierId": "nz-general-2017-electorate-10",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-09",
+        "later": {
+          "balance": -0.009121331940837418,
+          "mass": 0.5468959117714784
+        },
+        "laterId": "nz-general-2020-electorate-09",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.10933387159542951,
+          "mass": -0.1708611456144924
+        },
+        "earlierId": "nz-general-2017-electorate-11",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-10",
+        "later": {
+          "balance": 0.3096174836562843,
+          "mass": 0.17523910004328802
+        },
+        "laterId": "nz-general-2020-electorate-10",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.8970906169314092,
+          "mass": -0.5675667429586719
+        },
+        "earlierId": "nz-general-2017-electorate-12",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-11",
+        "later": {
+          "balance": 0.6043503415107494,
+          "mass": -0.12317175591737284
+        },
+        "laterId": "nz-general-2020-electorate-11",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.3253346390153379,
+          "mass": -0.0890628536445437
+        },
+        "earlierId": "nz-general-2017-electorate-13",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-12",
+        "later": {
+          "balance": 0.12172049234446936,
+          "mass": 0.6072571810855807
+        },
+        "laterId": "nz-general-2020-electorate-12",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.24580727521546997,
+          "mass": 0.6830617490224422
+        },
+        "earlierId": "nz-general-2017-electorate-17",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-14",
+        "later": {
+          "balance": 0.531231089429628,
+          "mass": 0.8728692809847498
+        },
+        "laterId": "nz-general-2020-electorate-14",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.13094288194283488,
+          "mass": -0.410391029587003
+        },
+        "earlierId": "nz-general-2017-electorate-20",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-17",
+        "later": {
+          "balance": 0.3745066856775473,
+          "mass": 0.24464663465050895
+        },
+        "laterId": "nz-general-2020-electorate-17",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.1655973577344484,
+          "mass": -0.18171271159233404
+        },
+        "earlierId": "nz-general-2017-electorate-21",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-19",
+        "later": {
+          "balance": 0.20275428252963934,
+          "mass": 0.1429309140583428
+        },
+        "laterId": "nz-general-2020-electorate-19",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.11712329547247224,
+          "mass": -0.42180833634572856
+        },
+        "earlierId": "nz-general-2017-electorate-22",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-20",
+        "later": {
+          "balance": 0.2590612855281662,
+          "mass": 0.050196256851016585
+        },
+        "laterId": "nz-general-2020-electorate-20",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.002032399061276502,
+          "mass": -0.25837500703756566
+        },
+        "earlierId": "nz-general-2017-electorate-23",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-21",
+        "later": {
+          "balance": 0.30174870544048416,
+          "mass": -0.3170992453692918
+        },
+        "laterId": "nz-general-2020-electorate-21",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.11530442230069549,
+          "mass": 0.6257020193969598
+        },
+        "earlierId": "nz-general-2017-electorate-27",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-24",
+        "later": {
+          "balance": 0.7366749847635445,
+          "mass": 0.5128178555882954
+        },
+        "laterId": "nz-general-2020-electorate-24",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.06659518329129321,
+          "mass": 0.14400815218871577
+        },
+        "earlierId": "nz-general-2017-electorate-29",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-26",
+        "later": {
+          "balance": 0.7889574328942487,
+          "mass": 0.12157740910761072
+        },
+        "laterId": "nz-general-2020-electorate-26",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.014626620649345168,
+          "mass": -0.3535780247121336
+        },
+        "earlierId": "nz-general-2017-electorate-32",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-29",
+        "later": {
+          "balance": 0.1349657068344121,
+          "mass": 0.4727508175597783
+        },
+        "laterId": "nz-general-2020-electorate-29",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.14579768008655614,
+          "mass": -0.2937219072185706
+        },
+        "earlierId": "nz-general-2017-electorate-33",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-30",
+        "later": {
+          "balance": 0.2993095304880592,
+          "mass": 0.30233416647402334
+        },
+        "laterId": "nz-general-2020-electorate-30",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.25632021255575677,
+          "mass": -0.13060172560070615
+        },
+        "earlierId": "nz-general-2017-electorate-34",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-31",
+        "later": {
+          "balance": 0.31205556789077826,
+          "mass": 0.6287900255966745
+        },
+        "laterId": "nz-general-2020-electorate-31",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 1.4267147680766752,
+          "mass": 0.47131372748125244
+        },
+        "earlierId": "nz-general-2017-electorate-36",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-33",
+        "later": {
+          "balance": 0.41767306006960336,
+          "mass": 0.0336830510916335
+        },
+        "laterId": "nz-general-2020-electorate-33",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.15024857454172447,
+          "mass": -0.08423061193331915
+        },
+        "earlierId": "nz-general-2017-electorate-37",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-34",
+        "later": {
+          "balance": 0.3983810078123772,
+          "mass": 0.5083487687924335
+        },
+        "laterId": "nz-general-2020-electorate-34",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.05740888032689462,
+          "mass": -0.2172907076560704
+        },
+        "earlierId": "nz-general-2017-electorate-38",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-35",
+        "later": {
+          "balance": 0.5013697776943357,
+          "mass": 0.5399872548620088
+        },
+        "laterId": "nz-general-2020-electorate-35",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.012344212801934318,
+          "mass": -0.3741492588905473
+        },
+        "earlierId": "nz-general-2017-electorate-39",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-36",
+        "later": {
+          "balance": 0.16879506972005764,
+          "mass": 0.3332587247287142
+        },
+        "laterId": "nz-general-2020-electorate-36",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.17048634656496775,
+          "mass": -0.3472477204556914
+        },
+        "earlierId": "nz-general-2017-electorate-43",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-41",
+        "later": {
+          "balance": 0.3183923638406684,
+          "mass": 0.16738914861362142
+        },
+        "laterId": "nz-general-2020-electorate-41",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.14201899529933437,
+          "mass": -0.175561994048413
+        },
+        "earlierId": "nz-general-2017-electorate-44",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-42",
+        "later": {
+          "balance": 0.29442860231242296,
+          "mass": 0.2516880103049206
+        },
+        "laterId": "nz-general-2020-electorate-42",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.19839583956966134,
+          "mass": 0.18592930881110914
+        },
+        "earlierId": "nz-general-2017-electorate-46",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-43",
+        "later": {
+          "balance": 0.12131937358939071,
+          "mass": -0.11037252154451338
+        },
+        "laterId": "nz-general-2020-electorate-43",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.004481744517727981,
+          "mass": -0.32120796792496686
+        },
+        "earlierId": "nz-general-2017-electorate-47",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-44",
+        "later": {
+          "balance": 0.26913790769706114,
+          "mass": 0.3020616145749939
+        },
+        "laterId": "nz-general-2020-electorate-44",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.3315590854248436,
+          "mass": -0.2890500469549835
+        },
+        "earlierId": "nz-general-2017-electorate-49",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-49",
+        "later": {
+          "balance": 0.3115408225668541,
+          "mass": 0.20427940688614754
+        },
+        "laterId": "nz-general-2020-electorate-49",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.22677228742129585,
+          "mass": -0.681646840846263
+        },
+        "earlierId": "nz-general-2017-electorate-50",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-50",
+        "later": {
+          "balance": -0.16386376436965477,
+          "mass": 0.03502167685812907
+        },
+        "laterId": "nz-general-2020-electorate-50",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.120505690527274,
+          "mass": 0.012110099020038678
+        },
+        "earlierId": "nz-general-2017-electorate-52",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-52",
+        "later": {
+          "balance": 0.1203160701127538,
+          "mass": 0.42150051930930177
+        },
+        "laterId": "nz-general-2020-electorate-52",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.11445631739883544,
+          "mass": 0.008086984345976322
+        },
+        "earlierId": "nz-general-2017-electorate-53",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-53",
+        "later": {
+          "balance": 0.3550776221387191,
+          "mass": -0.06227230269755313
+        },
+        "laterId": "nz-general-2020-electorate-53",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.14290906464276054,
+          "mass": 0.06138323866101203
+        },
+        "earlierId": "nz-general-2017-electorate-54",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-54",
+        "later": {
+          "balance": 0.5667005301053731,
+          "mass": 0.5505068115021277
+        },
+        "laterId": "nz-general-2020-electorate-54",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.6184172841983672,
+          "mass": 0.13559491970952653
+        },
+        "earlierId": "nz-general-2017-electorate-57",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-57",
+        "later": {
+          "balance": 0.27510717402372664,
+          "mass": 0.4661493961198182
+        },
+        "laterId": "nz-general-2020-electorate-57",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.09981804476546352,
+          "mass": 0.06503133409992934
+        },
+        "earlierId": "nz-general-2017-electorate-58",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-58",
+        "later": {
+          "balance": 0.12966252181773275,
+          "mass": 0.313718179239991
+        },
+        "laterId": "nz-general-2020-electorate-58",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.3696392723292117,
+          "mass": -0.6684103455177879
+        },
+        "earlierId": "nz-general-2017-electorate-60",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-60",
+        "later": {
+          "balance": 0.34709623280936563,
+          "mass": 0.2861935241116548
+        },
+        "laterId": "nz-general-2020-electorate-60",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": -0.09920683124946905,
+          "mass": -0.05660575167192716
+        },
+        "earlierId": "nz-general-2017-electorate-62",
+        "geographyId": "2017-2020:general:nz-general-2020-electorate-62",
+        "later": {
+          "balance": 0.18592923379317783,
+          "mass": 0.137301996650935
+        },
+        "laterId": "nz-general-2020-electorate-62",
+        "transition": "2017-2020"
+      },
+      {
+        "earlier": {
+          "balance": 0.4400982104907908,
+          "mass": -0.545771178193497
+        },
+        "earlierId": "nz-general-2020-electorate-01",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-01",
+        "later": {
+          "balance": 0.9393970804802962,
+          "mass": -0.345802603449859
+        },
+        "laterId": "nz-general-2023-electorate-01",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.1771365198256677,
+          "mass": -0.0650789758989263
+        },
+        "earlierId": "nz-general-2020-electorate-02",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-02",
+        "later": {
+          "balance": -0.14323644046962747,
+          "mass": 0.10699846613246855
+        },
+        "laterId": "nz-general-2023-electorate-02",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.17599151649540457,
+          "mass": 0.2000025540996646
+        },
+        "earlierId": "nz-general-2020-electorate-03",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-03",
+        "later": {
+          "balance": -0.028315077873743322,
+          "mass": -0.32215725309664167
+        },
+        "laterId": "nz-general-2023-electorate-03",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.35017566777129294,
+          "mass": 0.2893900791517052
+        },
+        "earlierId": "nz-general-2020-electorate-04",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-04",
+        "later": {
+          "balance": -0.2493266108601231,
+          "mass": -0.19033971791544868
+        },
+        "laterId": "nz-general-2023-electorate-04",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.2142035766307787,
+          "mass": 0.4036357401364177
+        },
+        "earlierId": "nz-general-2020-electorate-05",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-05",
+        "later": {
+          "balance": 0.06151975648685759,
+          "mass": 0.0279074283173526
+        },
+        "laterId": "nz-general-2023-electorate-05",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.2822770558051444,
+          "mass": -0.06563530116202143
+        },
+        "earlierId": "nz-general-2020-electorate-06",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-06",
+        "later": {
+          "balance": 0.02464988635674059,
+          "mass": 0.0015794478837097836
+        },
+        "laterId": "nz-general-2023-electorate-06",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": -0.08941675972111018,
+          "mass": 0.45709131868563735
+        },
+        "earlierId": "nz-general-2020-electorate-07",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-07",
+        "later": {
+          "balance": 0.18993744043716265,
+          "mass": -0.07076303061216649
+        },
+        "laterId": "nz-general-2023-electorate-07",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.6044202142264095,
+          "mass": -0.3241142552142138
+        },
+        "earlierId": "nz-general-2020-electorate-08",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-08",
+        "later": {
+          "balance": -0.3102437159144573,
+          "mass": 0.17805537436300467
+        },
+        "laterId": "nz-general-2023-electorate-08",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": -0.009121331940837418,
+          "mass": 0.5468959117714784
+        },
+        "earlierId": "nz-general-2020-electorate-09",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-09",
+        "later": {
+          "balance": -0.07494593573242414,
+          "mass": 0.21669247783853152
+        },
+        "laterId": "nz-general-2023-electorate-09",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.3096174836562843,
+          "mass": 0.17523910004328802
+        },
+        "earlierId": "nz-general-2020-electorate-10",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-10",
+        "later": {
+          "balance": -0.38487077846404016,
+          "mass": 0.09089419077436967
+        },
+        "laterId": "nz-general-2023-electorate-10",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.6043503415107494,
+          "mass": -0.12317175591737284
+        },
+        "earlierId": "nz-general-2020-electorate-11",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-11",
+        "later": {
+          "balance": 0.017826604019873127,
+          "mass": 0.4004690928028616
+        },
+        "laterId": "nz-general-2023-electorate-11",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.12172049234446936,
+          "mass": 0.6072571810855807
+        },
+        "earlierId": "nz-general-2020-electorate-12",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-12",
+        "later": {
+          "balance": -0.3317865597546332,
+          "mass": 0.1176705981861832
+        },
+        "laterId": "nz-general-2023-electorate-12",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": -0.21038660848354607,
+          "mass": 0.5866954189674018
+        },
+        "earlierId": "nz-general-2020-electorate-13",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-13",
+        "later": {
+          "balance": -0.05630684644059347,
+          "mass": 0.061838763264365326
+        },
+        "laterId": "nz-general-2023-electorate-13",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.531231089429628,
+          "mass": 0.8728692809847498
+        },
+        "earlierId": "nz-general-2020-electorate-14",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-14",
+        "later": {
+          "balance": -0.49661179429140934,
+          "mass": 0.4911568555191672
+        },
+        "laterId": "nz-general-2023-electorate-14",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.23253833528650025,
+          "mass": 0.4159730904521002
+        },
+        "earlierId": "nz-general-2020-electorate-15",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-15",
+        "later": {
+          "balance": 0.04788972322249596,
+          "mass": -0.758617109613126
+        },
+        "laterId": "nz-general-2023-electorate-15",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.3126612692752585,
+          "mass": 0.50115098115153
+        },
+        "earlierId": "nz-general-2020-electorate-16",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-16",
+        "later": {
+          "balance": -0.1616695769257095,
+          "mass": 0.09836522938509162
+        },
+        "laterId": "nz-general-2023-electorate-16",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.3745066856775473,
+          "mass": 0.24464663465050895
+        },
+        "earlierId": "nz-general-2020-electorate-17",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-17",
+        "later": {
+          "balance": -0.08277523646401674,
+          "mass": 0.11773504395865719
+        },
+        "laterId": "nz-general-2023-electorate-17",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.1284002751473794,
+          "mass": 0.2826658906103525
+        },
+        "earlierId": "nz-general-2020-electorate-18",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-18",
+        "later": {
+          "balance": -0.015512501725857497,
+          "mass": -0.03112345124211413
+        },
+        "laterId": "nz-general-2023-electorate-18",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.20275428252963934,
+          "mass": 0.1429309140583428
+        },
+        "earlierId": "nz-general-2020-electorate-19",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-19",
+        "later": {
+          "balance": -0.08270656537253662,
+          "mass": -0.10988663536543464
+        },
+        "laterId": "nz-general-2023-electorate-19",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.2590612855281662,
+          "mass": 0.050196256851016585
+        },
+        "earlierId": "nz-general-2020-electorate-20",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-20",
+        "later": {
+          "balance": -0.10254107502242094,
+          "mass": 0.21515345280864295
+        },
+        "laterId": "nz-general-2023-electorate-20",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.30174870544048416,
+          "mass": -0.3170992453692918
+        },
+        "earlierId": "nz-general-2020-electorate-21",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-21",
+        "later": {
+          "balance": 0.03717752511458605,
+          "mass": -0.41176271002192677
+        },
+        "laterId": "nz-general-2023-electorate-21",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": -0.02270712139850528,
+          "mass": -0.06488501904354926
+        },
+        "earlierId": "nz-general-2020-electorate-22",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-22",
+        "later": {
+          "balance": 0.06578818186644408,
+          "mass": -0.7703686463063426
+        },
+        "laterId": "nz-general-2023-electorate-22",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.29516293971481466,
+          "mass": 0.47804306383685113
+        },
+        "earlierId": "nz-general-2020-electorate-23",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-23",
+        "later": {
+          "balance": -0.4071879174345133,
+          "mass": 0.37135413115396787
+        },
+        "laterId": "nz-general-2023-electorate-23",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.7366749847635445,
+          "mass": 0.5128178555882954
+        },
+        "earlierId": "nz-general-2020-electorate-24",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-24",
+        "later": {
+          "balance": 0.19505562606430593,
+          "mass": -0.024893571347543553
+        },
+        "laterId": "nz-general-2023-electorate-24",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.43806180758524316,
+          "mass": 0.11767762959636063
+        },
+        "earlierId": "nz-general-2020-electorate-25",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-25",
+        "later": {
+          "balance": -0.00022801307120967618,
+          "mass": -0.16004718758506375
+        },
+        "laterId": "nz-general-2023-electorate-25",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.7889574328942487,
+          "mass": 0.12157740910761072
+        },
+        "earlierId": "nz-general-2020-electorate-26",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-26",
+        "later": {
+          "balance": 0.07235771124321189,
+          "mass": 0.4296010491847069
+        },
+        "laterId": "nz-general-2023-electorate-26",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.0920006949181702,
+          "mass": 1.078278365476292
+        },
+        "earlierId": "nz-general-2020-electorate-27",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-27",
+        "later": {
+          "balance": -0.3936122021566403,
+          "mass": 0.3314868793042387
+        },
+        "laterId": "nz-general-2023-electorate-27",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.04867004442993006,
+          "mass": 0.2525089457340446
+        },
+        "earlierId": "nz-general-2020-electorate-28",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-28",
+        "later": {
+          "balance": -0.15965411871654256,
+          "mass": -0.11933905542181433
+        },
+        "laterId": "nz-general-2023-electorate-28",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.1349657068344121,
+          "mass": 0.4727508175597783
+        },
+        "earlierId": "nz-general-2020-electorate-29",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-29",
+        "later": {
+          "balance": -0.23882252738921617,
+          "mass": 0.13705307073467
+        },
+        "laterId": "nz-general-2023-electorate-29",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.2993095304880592,
+          "mass": 0.30233416647402334
+        },
+        "earlierId": "nz-general-2020-electorate-30",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-30",
+        "later": {
+          "balance": -0.17769650127475733,
+          "mass": 0.08984124170901597
+        },
+        "laterId": "nz-general-2023-electorate-30",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.31205556789077826,
+          "mass": 0.6287900255966745
+        },
+        "earlierId": "nz-general-2020-electorate-31",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-31",
+        "later": {
+          "balance": -0.26655592509059955,
+          "mass": 0.3457721068443409
+        },
+        "laterId": "nz-general-2023-electorate-31",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.22894628324757604,
+          "mass": 0.5925930989546865
+        },
+        "earlierId": "nz-general-2020-electorate-32",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-32",
+        "later": {
+          "balance": -0.2900293719751068,
+          "mass": -0.22015649182973662
+        },
+        "laterId": "nz-general-2023-electorate-32",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.41767306006960336,
+          "mass": 0.0336830510916335
+        },
+        "earlierId": "nz-general-2020-electorate-33",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-33",
+        "later": {
+          "balance": -0.1947707256456096,
+          "mass": 0.2962504214647341
+        },
+        "laterId": "nz-general-2023-electorate-33",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.3983810078123772,
+          "mass": 0.5083487687924335
+        },
+        "earlierId": "nz-general-2020-electorate-34",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-34",
+        "later": {
+          "balance": -0.204724573624118,
+          "mass": 0.21301814943550013
+        },
+        "laterId": "nz-general-2023-electorate-34",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.5013697776943357,
+          "mass": 0.5399872548620088
+        },
+        "earlierId": "nz-general-2020-electorate-35",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-35",
+        "later": {
+          "balance": -0.7098436366470564,
+          "mass": 0.17358152156564666
+        },
+        "laterId": "nz-general-2023-electorate-35",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.16879506972005764,
+          "mass": 0.3332587247287142
+        },
+        "earlierId": "nz-general-2020-electorate-36",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-36",
+        "later": {
+          "balance": -0.13673930891977426,
+          "mass": -0.22090427604222596
+        },
+        "laterId": "nz-general-2023-electorate-36",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.1176341393915703,
+          "mass": -0.03426080240216445
+        },
+        "earlierId": "nz-general-2020-electorate-37",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-37",
+        "later": {
+          "balance": 0.1417144467614626,
+          "mass": -0.7418405905387848
+        },
+        "laterId": "nz-general-2023-electorate-37",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.3001803255076012,
+          "mass": 0.22817535464411343
+        },
+        "earlierId": "nz-general-2020-electorate-38",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-38",
+        "later": {
+          "balance": -0.31809521140742725,
+          "mass": -0.12165833104631285
+        },
+        "laterId": "nz-general-2023-electorate-38",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.1845861642745642,
+          "mass": 0.4974217762083326
+        },
+        "earlierId": "nz-general-2020-electorate-40",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-40",
+        "later": {
+          "balance": 0.15380378948967388,
+          "mass": 0.20299458898585687
+        },
+        "laterId": "nz-general-2023-electorate-40",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.3183923638406684,
+          "mass": 0.16738914861362142
+        },
+        "earlierId": "nz-general-2020-electorate-41",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-41",
+        "later": {
+          "balance": -0.071535615212862,
+          "mass": -0.3562743535268734
+        },
+        "laterId": "nz-general-2023-electorate-41",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.29442860231242296,
+          "mass": 0.2516880103049206
+        },
+        "earlierId": "nz-general-2020-electorate-42",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-42",
+        "later": {
+          "balance": 0.09947351845416863,
+          "mass": 0.06761257885144367
+        },
+        "laterId": "nz-general-2023-electorate-42",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.12131937358939071,
+          "mass": -0.11037252154451338
+        },
+        "earlierId": "nz-general-2020-electorate-43",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-43",
+        "later": {
+          "balance": -0.07859669269161529,
+          "mass": -0.3923403931487798
+        },
+        "laterId": "nz-general-2023-electorate-43",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.26913790769706114,
+          "mass": 0.3020616145749939
+        },
+        "earlierId": "nz-general-2020-electorate-44",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-44",
+        "later": {
+          "balance": -0.18429868059468513,
+          "mass": -0.3345421374390909
+        },
+        "laterId": "nz-general-2023-electorate-44",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.24514806933123123,
+          "mass": 0.434146192063666
+        },
+        "earlierId": "nz-general-2020-electorate-45",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-45",
+        "later": {
+          "balance": -0.26647409029056934,
+          "mass": 0.18475677396272783
+        },
+        "laterId": "nz-general-2023-electorate-45",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.24323636792463355,
+          "mass": 0.19332687878210075
+        },
+        "earlierId": "nz-general-2020-electorate-46",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-46",
+        "later": {
+          "balance": 0.036560469918082816,
+          "mass": -0.16528149786193325
+        },
+        "laterId": "nz-general-2023-electorate-46",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.335171586385252,
+          "mass": 0.3050925685492092
+        },
+        "earlierId": "nz-general-2020-electorate-47",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-47",
+        "later": {
+          "balance": -0.16431386939069315,
+          "mass": -0.02732310981202679
+        },
+        "laterId": "nz-general-2023-electorate-47",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.004488265962208415,
+          "mass": -0.04796101029936617
+        },
+        "earlierId": "nz-general-2020-electorate-48",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-48",
+        "later": {
+          "balance": 0.06441099929254746,
+          "mass": -0.21006386134082344
+        },
+        "laterId": "nz-general-2023-electorate-48",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.3115408225668541,
+          "mass": 0.20427940688614754
+        },
+        "earlierId": "nz-general-2020-electorate-49",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-49",
+        "later": {
+          "balance": -1.025516013100438,
+          "mass": -2.0461401834981006
+        },
+        "laterId": "nz-general-2023-electorate-49",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": -0.16386376436965477,
+          "mass": 0.03502167685812907
+        },
+        "earlierId": "nz-general-2020-electorate-50",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-50",
+        "later": {
+          "balance": -0.129168175566735,
+          "mass": -1.7096912635000687
+        },
+        "laterId": "nz-general-2023-electorate-50",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.03269176361070747,
+          "mass": 0.2674709121767038
+        },
+        "earlierId": "nz-general-2020-electorate-51",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-51",
+        "later": {
+          "balance": -0.14326154259366164,
+          "mass": -0.06433132877585379
+        },
+        "laterId": "nz-general-2023-electorate-51",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.1203160701127538,
+          "mass": 0.42150051930930177
+        },
+        "earlierId": "nz-general-2020-electorate-52",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-52",
+        "later": {
+          "balance": -0.396912431023435,
+          "mass": -0.1886654719687174
+        },
+        "laterId": "nz-general-2023-electorate-52",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.3550776221387191,
+          "mass": -0.06227230269755313
+        },
+        "earlierId": "nz-general-2020-electorate-53",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-53",
+        "later": {
+          "balance": -0.14488990940460666,
+          "mass": -0.29109466736871825
+        },
+        "laterId": "nz-general-2023-electorate-53",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.5667005301053731,
+          "mass": 0.5505068115021277
+        },
+        "earlierId": "nz-general-2020-electorate-54",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-54",
+        "later": {
+          "balance": -0.0013068143004738575,
+          "mass": 0.2565431711250896
+        },
+        "laterId": "nz-general-2023-electorate-54",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.14223105407483683,
+          "mass": 0.036096255920036624
+        },
+        "earlierId": "nz-general-2020-electorate-55",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-55",
+        "later": {
+          "balance": -0.19878728292724146,
+          "mass": 0.06918103181582791
+        },
+        "laterId": "nz-general-2023-electorate-55",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.12342983868458424,
+          "mass": 0.4046515809305551
+        },
+        "earlierId": "nz-general-2020-electorate-56",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-56",
+        "later": {
+          "balance": -0.09006765525420923,
+          "mass": -0.22626071270153747
+        },
+        "laterId": "nz-general-2023-electorate-56",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.27510717402372664,
+          "mass": 0.4661493961198182
+        },
+        "earlierId": "nz-general-2020-electorate-57",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-57",
+        "later": {
+          "balance": -0.37402102166116935,
+          "mass": -0.15540070879670242
+        },
+        "laterId": "nz-general-2023-electorate-57",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.12966252181773275,
+          "mass": 0.313718179239991
+        },
+        "earlierId": "nz-general-2020-electorate-58",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-58",
+        "later": {
+          "balance": -0.05096002345340778,
+          "mass": 0.3412310528963616
+        },
+        "laterId": "nz-general-2023-electorate-58",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.30632844372651136,
+          "mass": 0.29588425372274374
+        },
+        "earlierId": "nz-general-2020-electorate-59",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-59",
+        "later": {
+          "balance": -0.08975330705811346,
+          "mass": 0.003874098596756248
+        },
+        "laterId": "nz-general-2023-electorate-59",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.34709623280936563,
+          "mass": 0.2861935241116548
+        },
+        "earlierId": "nz-general-2020-electorate-60",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-60",
+        "later": {
+          "balance": 0.044964686664746845,
+          "mass": -0.1663882880947105
+        },
+        "laterId": "nz-general-2023-electorate-60",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.7893390107846671,
+          "mass": 0.2244781834072367
+        },
+        "earlierId": "nz-general-2020-electorate-61",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-61",
+        "later": {
+          "balance": -0.2502692317556252,
+          "mass": -0.3334775087421796
+        },
+        "laterId": "nz-general-2023-electorate-61",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.18592923379317783,
+          "mass": 0.137301996650935
+        },
+        "earlierId": "nz-general-2020-electorate-62",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-62",
+        "later": {
+          "balance": 0.17172403090201294,
+          "mass": 0.32267966662647796
+        },
+        "laterId": "nz-general-2023-electorate-62",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.20159172475766118,
+          "mass": 0.4347210250099689
+        },
+        "earlierId": "nz-general-2020-electorate-63",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-63",
+        "later": {
+          "balance": -0.09546178800782967,
+          "mass": -0.07912908403116914
+        },
+        "laterId": "nz-general-2023-electorate-63",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.2658741599421477,
+          "mass": 0.5075812151768386
+        },
+        "earlierId": "nz-general-2020-electorate-64",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-64",
+        "later": {
+          "balance": 0.03406393469656832,
+          "mass": 0.03739770727874614
+        },
+        "laterId": "nz-general-2023-electorate-64",
+        "transition": "2020-2023"
+      },
+      {
+        "earlier": {
+          "balance": 0.24866409727240657,
+          "mass": 0.24629415413703004
+        },
+        "earlierId": "nz-general-2020-electorate-65",
+        "geographyId": "2020-2023:general:nz-general-2023-electorate-65",
+        "later": {
+          "balance": 0.012948041167023416,
+          "mass": 0.0071857281343252755
+        },
+        "laterId": "nz-general-2023-electorate-65",
+        "transition": "2020-2023"
+      }
+    ],
+    "prediction": "complete frozen S+R conditional on observed local party inputs"
+  },
+  "stage": 47
+}

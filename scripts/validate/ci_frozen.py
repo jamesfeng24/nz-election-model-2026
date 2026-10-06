@@ -34,7 +34,7 @@ ENVIRONMENT = ('.python-version', 'pyproject.toml', 'requirements-boundaries.txt
 # nor count as a pipeline change. They are guarded instead by the selector's own always-run unit tests and by
 # ``workflow_errors`` (no attested validation may be removed or newly conditioned).
 MACHINERY = ('.github/validation/', 'scripts/validate/ci_', 'AGENTS.md')
-KNOWN = ('stage45', 'stage46')
+KNOWN = ('stage45', 'stage46', 'stage47')
 EVENTS = ('pull_request', 'push')  # workflow_dispatch and anything unknown are always full
 
 
@@ -385,6 +385,20 @@ def select(registry, event, root=ROOT, actual_runtime=None, force_full=False, li
             result[name] = select_pipeline(name, registry, event, root, actual_runtime, candidates)
         except (KeyError, ValueError, TypeError, OSError) as error:
             result[name] = {'mode': 'full', 'reason': 'invalid selection inputs: ' + str(error)}
+    return couple_cache_dependencies(registry, result)
+
+
+def couple_cache_dependencies(registry, result):
+    """A pipeline that runs in full and reads another pipeline's runtime cache needs that pipeline's full replay too.
+
+    Registry `cacheDependencies` names those pipelines; a dependency reused as `integrity` would leave its
+    uncommitted cache absent for the consumer's full commands.
+    """
+    for name, pipeline in registry['pipelines'].items():
+        if result[name]['mode'] == 'full':
+            for dependency in pipeline.get('cacheDependencies', []):
+                if result[dependency]['mode'] != 'full':
+                    result[dependency] = {'mode': 'full', 'reason': '{} runs in full and reads the {} runtime cache'.format(name, dependency)}
     return result
 
 

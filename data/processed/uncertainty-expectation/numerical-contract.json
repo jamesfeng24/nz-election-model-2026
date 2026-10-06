@@ -1,0 +1,51 @@
+{
+  "conditionalCriterionPP": 0.05,
+  "constructionReferenceAgreementTargetPP": 0.02,
+  "failureAction": "record accuracy/cost failure and unchecked scope; no relaxed tolerance or postscore numerical specification change",
+  "methods": {
+    "QMCReferenceCap": 262144,
+    "activeFaces": "structural/predicted zeros locked; positive options only, loglocation gauge fixed",
+    "binaryGHOrders": [
+      41,
+      81,
+      161
+    ],
+    "binaryReferenceCap": 361,
+    "bulkQMCCounts": [
+      512,
+      2048,
+      8192,
+      32768,
+      131072
+    ],
+    "covariance": "shared ballot-label effect plus independent option/seat effect, repeated labels retained",
+    "digitalCellMidpoints": true,
+    "location": "batched damped analytic-Newton, maximum40iterations/12halvings, no pseudoinverse",
+    "seeds": [
+      470047,
+      470147,
+      470247
+    ],
+    "tensorGHOrders": [
+      15,
+      25,
+      41,
+      61
+    ],
+    "tensorReferenceCap": 81,
+    "tensorScope": "small independent reference fixtures/constant vectors, <=3contrasts"
+  },
+  "pilot": {
+    "composedTimingCases": "first/middle/last canonical seat per election;16/64/256 conditional vectors, no scores",
+    "historicalComponentCases": "every frozen component mean, diagnostics only",
+    "historicalReferenceStress": "largest reported Stage46 conditional-gap input, plus repeated-label/extreme valid fixtures",
+    "timedSyntheticCases": 3,
+    "wallCapMinutes": 20
+  },
+  "referenceConvergenceTargetPP": 0.01,
+  "referenceInterpretation": "finite deterministic Gaussian/RQMC approximations; convergence estimates not exact truth or probability confidence intervals",
+  "scoreCalculationBeforePilotAndCompanionContract": false,
+  "solverTargetPP": 0.002,
+  "stage": 47,
+  "statisticalLaw": "unchanged Stage45 Gaussian, scales and continuous mean model frozen"
+}

@@ -366,7 +366,7 @@ class SelectAndVerifyTests(unittest.TestCase):
                     redirect_stdout(StringIO()):
                 frozen.main()
             lines = sorted(output.read_text().split())
-            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46'])
+            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46', 'stage47'])
             # The mode depends on the runner and its Actions history, so only its form is fixed here.
             self.assertTrue(all(line.split('=')[1] in ('full', 'integrity') for line in lines))
 
@@ -390,7 +390,7 @@ class RealRegistryTests(unittest.TestCase):
     def test_only_expensive_reconstruction_commands_are_replaced(self):
         replaced = {c for p in self.registry['pipelines'].values() for c in p['replacedCommands']}
         for command in replaced:
-            self.assertTrue(any(part in command for part in ('construction', 'evaluation', 'verification', 'mean_audit')))
+            self.assertTrue(any(part in command for part in ('construction', 'evaluation', 'verification', 'mean_audit', 'audits', 'attribution')))
         for kept in ('diagnosis', 'estimation', 'numerics', 'report', 'manifest', 'reference', 'priors'):
             self.assertFalse(any(kept in command for command in replaced))
         self.assertIn('python3 -m unittest discover -s scripts/tests -v', self.workflow)
@@ -413,6 +413,8 @@ class RealRegistryTests(unittest.TestCase):
         seed, errors = frozen.seed_candidate(self.registry, ROOT)
         self.assertEqual(errors, [])
         for name, pipeline in self.registry['pipelines'].items():
+            if name == 'stage47':
+                continue  # its first attestation is the PR54 run itself (live candidates), not the d0fa5a66 seed
             errors, steps = frozen.candidate_errors(seed, pipeline['replacedCommands'])
             self.assertEqual(errors, [], name)
             self.assertEqual(frozen.workflow_errors(ROOT, steps, self.registry), [])
@@ -453,9 +455,27 @@ class RealRegistryTests(unittest.TestCase):
 
     def test_workflow_permissions_timeouts_and_event_wiring(self):
         self.assertIn('  contents: read\n  actions: read\n', self.workflow)
-        self.assertIn('timeout-minutes: 150', self.workflow)
+        self.assertIn('timeout-minutes: 180', self.workflow)
         self.assertIn('timeout-minutes: 20', self.workflow)
         self.assertIn('GITHUB_TOKEN: ${{ github.token }}', self.workflow)
+
+    def test_stage47_declares_the_caches_it_reads_and_couples_the_dependencies(self):
+        stage47 = self.registry['pipelines']['stage47']
+        self.assertEqual(stage47['cacheDependencies'], ['stage45', 'stage46'])
+        for name in stage47['cacheDependencies']:
+            for consumer in self.registry['pipelines'][name]['reviewedCacheConsumers']:
+                self.assertTrue(consumer.startswith('scripts/uncertainty_expectation/'), consumer)
+                self.assertTrue((ROOT / consumer).is_file())
+
+    def test_a_full_pipeline_forces_its_cache_dependencies_full_but_not_the_reverse(self):
+        registry = {'pipelines': {'a': {'cacheDependencies': ['b']}, 'b': {}, 'c': {}}}
+        reused = {'mode': 'integrity', 'reason': 'x'}
+        full = {'mode': 'full', 'reason': 'y'}
+        coupled = frozen.couple_cache_dependencies(registry, {'a': dict(full), 'b': dict(reused), 'c': dict(reused)})
+        self.assertEqual([coupled[n]['mode'] for n in 'abc'], ['full', 'full', 'integrity'])
+        self.assertIn('a runs in full', coupled['b']['reason'])
+        coupled = frozen.couple_cache_dependencies(registry, {'a': dict(reused), 'b': dict(full), 'c': dict(reused)})
+        self.assertEqual([coupled[n]['mode'] for n in 'abc'], ['integrity', 'full', 'integrity'])
 
     def test_current_cache_consumers_are_none(self):
         for pipeline in self.registry['pipelines'].values():
