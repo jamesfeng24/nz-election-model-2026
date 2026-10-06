@@ -16,7 +16,27 @@ Branch `claude/project-thread-sg82yg`, base main 109794f (PR55 merge). Evidence 
 
 **Limitations.** Evidence is tool-rendered; National/Labour only; pre-2008 and minor parties out of scope; a transition fact is not a vote effect.
 
-**Exact next action:** push the branch (CI scoping #56 has merged and is in this branch), open the Stage51 PR, confirm the required hosted checks on the exact SHA, report to the coordinator for review. Later, separately authorized: the replacement/incumbency dataset and R_new = a + rho R_old analysis (not started; do not start from this entry).
+**Exact next action:** coordinator reviews PR #61 (hosted `check` and `python` passed on head 7e406fc; main with Stage53 merged afterwards, awaiting the run on the merge head). Then, only if separately authorized, the replacement/incumbency dataset. Later, separately authorized: the replacement/incumbency dataset and R_new = a + rho R_old analysis (not started; do not start from this entry).
+
+---
+
+# Stage53 end-to-end export skeleton and synthetic dry run — local checkpoint, 2026-10-06
+
+Branch `claude/project-thread-mk3i23`, based on main 109794f (PR55) with CI-scoping merge #56 merged in. Authorized by D082 item (d). Question: can one versioned export contract carry a labelled synthetic forecast from polls through MMP to the website without synthetic data reaching application results? **Yes, on fixtures.** TypeScript only: no Python, statistical code, saved output, CI file, AGENTS.md, roadmap/DECISIONS text, `src/models/mmp` or Stage47 file touched; nothing fitted; no forecast exists.
+
+Added: export contract (`src/types/export.ts`: snapshot, append-only hashed archive index, GeoJSON keyed by electorate id), pipeline interfaces/seeded per-draw PRNG/aggregation/exporter/worker protocol (`src/models/simulation`), validated loader (`src/data/loader.ts`), Forecast/Electorates/MMP views that render a loaded snapshot under SYNTHETIC and uncalibrated banners, labelled invented fixtures (`data/fixtures/synthetic/`), dev-only dry run (`src/dev`), and `npm run check:dist` (built bundle must contain no fixture markers; verified to fail on a NODE_ENV=development build). Design and field table: `docs/export-contract.md`.
+
+**MMP is a stub.** `MmpStage` is the interface the MMP-rules stage should satisfy; the placeholder allocator (rules version `UNVERIFIED-PLACEHOLDER-synthetic-only`) is not the NZ rules and the schema rejects it outside synthetic snapshots. Integration with the real allocator is an open follow-up once `src/models/mmp` lands. Findings during the build: a first `!DEV` early-return left the synthetic chunk in the production bundle; fixed by wrapping the dynamic import in `if (import.meta.env.DEV)`, and the leak is now caught by `check:dist` and a structural test.
+
+Checks (local): `npm run test` 59 tests pass (was 31), `typecheck`, `build`, `check:dist` pass; `git diff --check` clean. Python suites and source validation not run: no Python, data or source change. `check:dist` is wired through #56's guarded frontend step. PR opened after CI scoping merged, unskipped.
+
+Limitations / open: no D-number assigned to the contract; no Python exporter from Stage41–47 artifacts; Māori seats appear only as explicit `unavailable`; probability-release policy still open (contract carries `calibrationStatus` only); README not touched; no hosted CI run.
+
+**Docs updated:** CHANGELOG, METHODOLOGY (no new method), DATA_SOURCES (no new sources), roadmap status line, `docs/export-contract.md` (stage doc). No D-number: D082 allocated this work and the roadmap assigns none for the contract; assign one only if the contract is to be a recorded decision.
+
+**Exact reproduction:** `npm ci && npm run test && npm run typecheck && npm run build && npm run check:dist` (59 tests). Dev dry run: `npm run dev` shows the in-memory synthetic snapshot under a SYNTHETIC banner. Negative check for the leak guard: `NODE_ENV=development npx vite build --mode development --outDir <tmp>` then `node scripts/validate/no_synthetic_in_dist.mjs <tmp>` must fail.
+
+**Exact next action:** CI on the unskipped PR head must pass both required jobs (frontend `check` includes `check:dist`; the Python job reuses frozen Stage45/46 under #56 and must report no change to any Python pipeline). Then the coordinator reviews and merges (merge commit); this thread does not merge. Do not start a Python exporter, real stages or publication without separate authorization.
 
 ---
 

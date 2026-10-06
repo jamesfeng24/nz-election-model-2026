@@ -12,6 +12,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "build": "vite build",
+    "check:dist": "node scripts/validate/no_synthetic_in_dist.mjs dist",
     "preview": "vite preview",
     "check": "npm run test && npm run typecheck && npm run build",
     "test:python": "python3 -m unittest discover -s scripts/tests -v",
