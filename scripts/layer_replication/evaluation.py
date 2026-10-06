@@ -1,5 +1,6 @@
 """Simulate the layer replicates and reduce them to the frozen per-seat records (no thresholds are applied here)."""
 import os
+import pickle
 import platform
 import time
 from concurrent.futures import ProcessPoolExecutor
@@ -35,6 +36,24 @@ def populations():
 
 
 def task(item):
+    """``compute`` with an optional resume directory (``STAGE63_SCRATCH``, outside the repository, local convenience only):
+    a finished task is stored byte-exactly and reloaded, so an interrupted local run continues; the result is identical."""
+    scratch = os.environ.get('STAGE63_SCRATCH')
+    if not scratch:
+        return compute(item)
+    path = os.path.join(scratch, '-'.join(str(v) for v in item) + '.pickle')
+    if os.path.exists(path):
+        with open(path, 'rb') as handle:
+            return pickle.load(handle)
+    result = compute(item)
+    os.makedirs(scratch, exist_ok=True)
+    with open(path + '.part', 'wb') as handle:
+        pickle.dump(result, handle)
+    os.replace(path + '.part', path)
+    return result
+
+
+def compute(item):
     """One chunk of consecutive replicates of one seat on the whole national pool; independent of worker count."""
     kind, year, cid, first, count = item
     ctx, row = seat_row(year, cid)
