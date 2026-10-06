@@ -4,7 +4,7 @@ Branch `claude/project-thread-qp68zt` (continues `claude/project-thread-1g68p4`)
 
 ## Primary capture (second pass, wider network)
 
-The first pass below reached only GitHub. A second pass from an environment with wider network access preserved **37 raw files with response headers and SHA-256** in `data/raw/polling/current-2026-primary/` (`fetch-log.tsv` records every attempt; `acquisition-ledger.json` the checksums). Code: `scripts/polling/primary_capture.py` (`--check` verifies byte-for-byte). Outputs: [`primary-capture-audit.json`](../data/processed/polling/current-cycle-acquisition/primary-capture-audit.json) (every fact checked as verbatim text in the preserved bytes) and the dated registry `source-registry-primary.json`. The older `data/raw/polling/current-2026` snapshots, the Stage35 panel and `data/sources.json` are unchanged.
+The first pass below reached only GitHub. A second pass from an environment with wider network access preserved **41 raw files with SHA-256** (37 fetched, with response headers, and 4 Taxpayers' Union–Curia browser prints supplied by James) in `data/raw/polling/current-2026-primary/` (`fetch-log.tsv` records every attempt; `acquisition-ledger.json` the checksums). Code: `scripts/polling/primary_capture.py` (`--check` verifies byte-for-byte). Outputs: [`primary-capture-audit.json`](../data/processed/polling/current-cycle-acquisition/primary-capture-audit.json) (every fact checked as verbatim text in the preserved bytes) and the dated registry `source-registry-primary.json`. The older `data/raw/polling/current-2026` snapshots, the Stage35 panel and `data/sources.json` are unchanged.
 
 Captured: the Wikipedia REST HTML table (revision 1378752122); RNZ–Reid (2–9 Jul, 14–21 Aug, 24 Sep–1 Oct); 1News–Verian (23–27 Sep article; June and August reports as Scribd uploads by 1News); Roy Morgan (three monthly releases); The Post–Freshwater data tables (5–11 Jun, 4–11 Sep, with sample sizes and fieldwork); Talbot Mills/Anacta (Herald for Jun, Jul, Aug, Sep 2026 and 1–10 Nov 2024); Curia blog pointers; and the Whakaata Māori–Curia pages below.
 
@@ -13,14 +13,14 @@ Findings:
 - **Talbot Mills 1–10 Nov 2024 recovered** from the Herald: NAT 34, LAB 33, GRN 10, ACT 10, NZF 7, TPM 3.3; no n published (3.1% margin).
 - **Talbot Mills 1–10 May 2024 not recovered:** The Post page is a JavaScript shell, web.archive.org is denied, and nothing else was found in one bounded pass. Wikipedia (NAT 35, LAB 32) remains the only evidence.
 - **Talbot Mills 2026 sample sizes** are not published in the articles (dates and a 3.1% margin only). **Anacta Consulting is the rebranded Talbot Mills.**
-- **Taxpayers' Union–Curia (Jun–Sep 2026)** pages sit behind a Cloudflare challenge (HTTP 403) and were not bypassed; their figures stay Wikipedia-only.
+- **Taxpayers' Union–Curia (Jun–Sep 2026)** pages sit behind a Cloudflare challenge (HTTP 403) and were not bypassed. James supplied Chrome print-to-PDF captures of all four (not original server bytes; text extracted with `pdftotext -layout` into `tu-curia-pdf-text/`): fieldwork 4–8 Jun, 1–5 Jul, 1–4 Aug, 1–3 Sep, n=1000 phone and online, ±3.1%, shares and undecided rates match Wikipedia.
 - Fieldwork and sample sizes for all Roy Morgan, RNZ–Reid, Verian, Freshwater and Anacta polls since 1 June match Wikipedia.
 
 **Māori seats, 3 of 7 published.** Whakaata Māori–Curia (Whakatau 2026), n=500 each (420 phone, 80 online), ±4.5%: Te Tai Tonga (14–24 Sep), Te Tai Hauāuru (14–24 Sep) and Hauraki-Waikato (21 Sep–1 Oct; Maipi-Clarke TPM 45, Kiriona LAB 26, undecided 17, published 6 Oct). Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau and Te Tai Tokerau have no published poll and no source announces one; "all seven will be polled" is not confirmed (three polls in nine days is consistent with it; election 7 Nov 2026). Raw only, not modelled.
 
 **Live-fit input (James: use only the most recent polls).** No data are dropped here. The frozen design uses older polls to centre house effects, start the trend at the 2023 result and scale shared polling bias; a recent window is a candidate sensitivity for the live-fit stage, not the default.
 
-Items still wanted from a browser: the four taxpayers.org.nz poll pages (4–8 Jun, 1–5 Jul, 1–4 Aug, 1–3 Sep 2026) and the Post article for Talbot Mills 1–10 May 2024 (`https://www.thepost.co.nz/politics/350282502/are-tax-cuts-boost-economy-needs`).
+Nothing further is wanted from James. The Talbot Mills 1–10 May 2024 row (NAT 35, LAB 32 only) was a Stage35 parser gap, not a 2026 input; it is immaterial to a 2026 fit, so it is not chased further.
 
 Reproduce: `python3 -m scripts.polling.primary_capture --check`; `python3 -m unittest scripts.tests.test_primary_capture`.
 

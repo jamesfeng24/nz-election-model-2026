@@ -14,7 +14,7 @@
   },
   {
    "evidence": "see verified",
-   "finding": "Fieldwork dates and sample sizes for every Roy Morgan, RNZ-Reid, Verian, Freshwater, Anacta poll since 1 Jun 2026 are confirmed from publisher or pollster bytes and match Wikipedia."
+   "finding": "Fieldwork dates and sample sizes for every Roy Morgan, RNZ-Reid, Verian, Freshwater, Anacta and Taxpayers Union-Curia poll since 1 Jun 2026 are confirmed from publisher or pollster bytes (the TU ones from browser prints James supplied) and match Wikipedia; TU party shares, undecided rates and margins also match."
   },
   {
    "evidence": "anacta-2026-09",
@@ -48,14 +48,9 @@
  "schemaVersion": 1,
  "unresolved": [
   {
-   "item": "Taxpayers' Union-Curia, Jun/Jul/Aug/Sep 2026 (n=1000)",
-   "needed": "A browser-saved copy of each of the four taxpayers.org.nz poll pages or the Curia PDF/results; dates 4-8 Jun, 1-5 Jul, 1-4 Aug, 1-3 Sep 2026.",
-   "reason": "taxpayers.org.nz answers every request with a Cloudflare managed challenge (HTTP 403, cf-mitigated: challenge); not bypassed. Curia posts only link to those pages and hold no figures; Wikipedia lists the results. The Sep 2026 Wikipedia URL carries a stray trailing \"?\" that Curia's own link lacks."
-  },
-  {
    "item": "Talbot Mills 1-10 May 2024 (Wikipedia NAT 35, LAB 32 only)",
-   "needed": "A saved copy of https://www.thepost.co.nz/politics/350282502/are-tax-cuts-boost-economy-needs or the Talbot Mills release.",
-   "reason": "The Post article is a JS shell (discarded), web.archive.org is denied by the egress policy, and the Herald stories searched were other months or years. The poll is not recovered; Wikipedia remains the only evidence and its blank-sample row stays excluded from the panel."
+   "needed": "Nothing: a 2024 corporate poll with only two party shares cannot move a 2026 live fit, so by the materiality rule it is not chased further (James, 2026-10-06, questioned why it was wanted).",
+   "reason": "The Post article is a JS shell (discarded), web.archive.org is denied by the egress policy, and the Herald stories searched were other months or years. The poll is not recovered; Wikipedia remains the only evidence (NAT 35, LAB 32 only) and its blank-sample row stays excluded from the panel."
   },
   {
    "item": "Talbot Mills 2026 sample sizes (Jun 1-10, Jul 10-19, Aug 1-11)",
@@ -335,6 +330,138 @@
    },
    "file": "talbot-herald-2024-11.html",
    "id": "talbot-2024-11"
+  },
+  {
+   "evidencePhrases": [
+    "random poll of 1,000 adult New Zealanders",
+    "Thursday 04 June",
+    "Monday 08 June",
+    "maximum margin of error of +/- 3.1%",
+    "4.6% were",
+    "Labour is up 0.3 points to 32.2%, while National is up 0.1 points to 30.1%",
+    "The Greens are up 1.8 points to 11.5%, while New Zealand First is down 0.3 points to 11.4%",
+    "ACT is up 1.3 points to 7.8%, while Te Pāti Māori is down 1.0 point to 3.1%",
+    "TOP is on 3.2%"
+   ],
+   "facts": {
+    "fieldwork": "2026-06-04 to 2026-06-08",
+    "marginOfError": "3.1%",
+    "mode": "phone (landline and mobile) and online",
+    "n": 1000,
+    "pollster": "Taxpayers' Union-Curia",
+    "published": "2026-06-12",
+    "shares": {
+     "ACT": 7.8,
+     "GRN": 11.5,
+     "LAB": 32.2,
+     "NAT": 30.1,
+     "NZF": 11.4,
+     "TOP": 3.2,
+     "TPM": 3.1
+    },
+    "undecidedPct": 4.6
+   },
+   "file": "tu-curia-2026-06.pdf",
+   "id": "tu-curia-2026-06"
+  },
+  {
+   "evidencePhrases": [
+    "random poll of 1,000 adult New Zealanders",
+    "Wednesday 01 July",
+    "Sunday 05 July",
+    "maximum margin of error of +/- 3.1%",
+    "6.6% were",
+    "Labour is down 0.7 points to 31.5%, while National is up 0.4 points to 30.5%",
+    "New Zealand First is down 0.6 points to 10.8%, while the Greens are down 1.1 points to 10.4%",
+    "ACT is down 0.9 points to 6.9%, while Te Pāti Māori is up 0.3 points to 3.4%",
+    "TOP is on 3.3%"
+   ],
+   "facts": {
+    "fieldwork": "2026-07-01 to 2026-07-05",
+    "marginOfError": "3.1%",
+    "mode": "phone (landline and mobile) and online",
+    "n": 1000,
+    "pollster": "Taxpayers' Union-Curia",
+    "published": "2026-07-09",
+    "shares": {
+     "ACT": 6.9,
+     "GRN": 10.4,
+     "LAB": 31.5,
+     "NAT": 30.5,
+     "NZF": 10.8,
+     "TOP": 3.3,
+     "TPM": 3.4
+    },
+    "undecidedPct": 6.6
+   },
+   "file": "tu-curia-2026-07.pdf",
+   "id": "tu-curia-2026-07"
+  },
+  {
+   "evidencePhrases": [
+    "random poll of 1,000 adult New Zealanders",
+    "Saturday 01 August",
+    "Tuesday 04 August",
+    "maximum margin of error of +/- 3.1%",
+    "2.1% were",
+    "National is up 0.5 points to 31.0%, while Labour is down 3.7 points to 27.8%",
+    "The Greens are down 0.3 points to 10.1%, while New Zealand First is down 1.7 points to 9.1%",
+    "ACT is up 0.4 points to 7.3%, while Te Pāti Māori is down 1.9 points to 1.5%",
+    "Opportunity is on 6.1%"
+   ],
+   "facts": {
+    "fieldwork": "2026-08-01 to 2026-08-04",
+    "marginOfError": "3.1%",
+    "mode": "phone (landline and mobile) and online",
+    "n": 1000,
+    "pollster": "Taxpayers' Union-Curia",
+    "published": "2026-08-07",
+    "shares": {
+     "ACT": 7.3,
+     "GRN": 10.1,
+     "LAB": 27.8,
+     "NAT": 31.0,
+     "NZF": 9.1,
+     "OPP": 6.1,
+     "TPM": 1.5
+    },
+    "undecidedPct": 2.1
+   },
+   "file": "tu-curia-2026-08.pdf",
+   "id": "tu-curia-2026-08"
+  },
+  {
+   "evidencePhrases": [
+    "random poll of 1,000 adult New Zealanders",
+    "Tuesday 01 September",
+    "Thursday 03 September",
+    "maximum margin of error of +/- 3.1%",
+    "4.1% were",
+    "National is down 2.0 points to 29.0%, while Labour is down 1.9 points to 25.9%",
+    "The Greens are up 3.8 points to 13.9%, while ACT is up 3.2 points to 10.5%",
+    "New Zealand First is down 0.7 points to 8.4%, and Te Pāti Māori is up 0.5 points to 2.0%",
+    "Opportunity is down 1.6 points to 4.5%"
+   ],
+   "facts": {
+    "fieldwork": "2026-09-01 to 2026-09-03",
+    "marginOfError": "3.1%",
+    "mode": "phone (landline and mobile) and online",
+    "n": 1000,
+    "pollster": "Taxpayers' Union-Curia",
+    "published": "2026-09-07",
+    "shares": {
+     "ACT": 10.5,
+     "GRN": 13.9,
+     "LAB": 25.9,
+     "NAT": 29.0,
+     "NZF": 8.4,
+     "OPP": 4.5,
+     "TPM": 2.0
+    },
+    "undecidedPct": 4.1
+   },
+   "file": "tu-curia-2026-09.pdf",
+   "id": "tu-curia-2026-09"
   },
   {
    "evidencePhrases": [
