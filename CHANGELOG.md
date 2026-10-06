@@ -376,3 +376,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Add the "Active roadmap after Stage47" section (agreed sequence, three final outputs, do-not-reopen list limited to historical backtests, 56-day versus ~32-day horizon limitation, Māori fallback, open probability-release policy) and D082 recording the authorization boundary; no model, data, threshold or artifact change.
 - Allocate Stage48–57 (Stage48 frozen balance-scale comparison, Stage49 MMP, Stage50 nominations, Stage51 candidate-change classification, Stage52 poll acquisition, Stage53 end-to-end contract; Stage54–57 provisional); next free Stage58. Record that D081 on main is the CI-scoping decision, so PR54's Stage47 decision becomes D083 (D084 Stage49, D085 Stage52, D086 Stage51; next free D087).
 - Record James's authorizations (Stage48 after PR54, Stage51, Stage52) and the post-CI-scoping merge policy; add a "Pull requests" section to AGENTS.md (title scheme and body template).
+
+## Stage53 — end-to-end export skeleton and synthetic dry run, 2026-10-06
+
+- Add the versioned website export contract (forecast snapshot, hashed append-only archive index, GeoJSON keyed by electorate id), DOM-free pipeline interfaces with per-draw seeded streams and a Web Worker message protocol, a hash- and schema-verifying loader, and Forecast/Electorates/MMP views for a loaded snapshot. See `docs/export-contract.md`.
+- Run polls → national draws → local party → candidate → MMP → export → site on labelled invented fixtures (`data/fixtures/synthetic/`), kept out of production by a dev-only import and `npm run check:dist`. The MMP stage is an `UNVERIFIED-PLACEHOLDER` stand-in the schema rejects outside synthetic snapshots; `src/models/mmp` is untouched.
+- TypeScript only: no Python, statistical code, saved output, threshold or CI file changes; nothing fitted and no forecast exists.

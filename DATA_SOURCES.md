@@ -313,3 +313,7 @@ No new political sources or inference. `data/processed/uncertainty-revision/` pi
 ## Stage46 preserved-evidence-only uncertainty test
 
 No political/source resources acquired. `data/processed/uncertainty-tails/input-contract.json` pins consumed Stage44/45 residual, mean-model and cached-national dependencies; preservation.json verifies1786 prior data files (raw, processed, controls and source records). Source integrity remains926 registered resources. Completed unscored/superseded numerical attempts are identified in attempt-ledger.json; their local cache hashes and producer commits preserve lineage without treating them as scored evidence. Use the pinned boundary Python environment and exact run signatures; national MCMC is not needed for reproduction.
+
+## Stage53 synthetic export fixtures
+
+No sources acquired and no political or statistical data used. `data/fixtures/synthetic/` holds invented parties, polls, electorates, candidates and unit-square geometry carrying source id `synthetic-fixture`; they are not registered sources, are not copied into `data/processed/`, `public/` or any application result, and are refused by the production loader and the `check:dist` guard. `data/sources.json`, raw data and every prior processed artifact are unchanged.
