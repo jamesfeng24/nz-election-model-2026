@@ -25,8 +25,8 @@ Numbers are identifiers, not an execution order; PR titles use `StageNN:` and th
 | Stage48 | Frozen candidate-seat N/L balance-scale comparison (item 5; no stage number in the Stage47 contract, so allocated here) | authorized, starts after PR54 merges |
 | Stage49 | MMP rules verification and exact allocation (item 2) | authorized |
 | Stage50 | Nomination snapshot, immutable raw acquisition (item 3) | authorized after the 8 October 2026 close |
-| Stage51 | Candidate-change identity classification: the 61 apparent changes and incumbent→successor table (first half of item 6; classification only, no model test) | not yet authorized; a candidate-change table is already being built |
-| Stage52 | 2026 poll acquisition (item 9, raw acquisition only; no fit) | not yet authorized |
+| Stage51 | Candidate-change identity classification: the 61 apparent changes and incumbent→successor table (first half of item 6; classification only, no model test) | authorized by James 2026-10-06 (do not be over-conservative on exact name matching; classify aliases and genuine changes with documented evidence) |
+| Stage52 | 2026 poll acquisition (item 9, raw dated checksummed files only; no fit) | authorized by James 2026-10-06 |
 | Stage53 | End-to-end skeleton, export contract and synthetic dry run | authorized |
 | Stage54–57 (provisional) | Composed-MC precision (item 4); replacement R_new = a + ρ R_old test; dated manual-adjustment interface (item 7); manual replay (item 8) | not yet authorized; confirm numbers when each is authorized |
 
@@ -43,7 +43,7 @@ Student-t, mixtures, latent regimes, arbitrary sigma shrinkage, broad predictor 
 ## Recorded limitations and open decisions
 
 - **Horizon.** Candidate and composed calibration use 56-day cases (Stages 39, 46, 47). At publication the live forecast is about 32 days out and tightens toward election day. The 56-day scales are probably conservative for a late forecast, but this is unmeasured: record it, do not adjust, and do not claim horizon-calibrated intervals.
-- **Māori seats.** All seven have roster/geography records only; no baseline, poll layer or candidate model (Stage40), and MMP overhang depends on them. Required fallback if electorate polls are sparse: an explicitly labelled unpolled baseline with wide, stale-aware uncertainty. National Te Pāti Māori party support remains a distinct quantity. Not implemented or authorized here.
+- **Māori seats.** All seven have roster/geography records only; no baseline, poll layer or candidate model (Stage40), and MMP overhang depends on them. James expects formal electorate polls for all seven seats to be the base of the Māori layer, so no separate baseline is planned now (an expectation, not a verified fact; verify when polls are acquired). Required fallback if polls turn out sparse or stale: an explicitly labelled unpolled baseline with wide, stale-aware uncertainty. National Te Pāti Māori party support remains a distinct quantity. Not implemented or authorized here.
 - **Probability-release policy: OPEN.** Every Stage44–47 record calls probabilities uncalibrated and not operational. No decision yet defines what the site may show (win probabilities, ranges, seat bands, disclaimers) or the gate that permits it. It must address calibration, sharpness, item-4 precision, omitted uncertainty and the three outputs, and be decided before any publication, not after. James decides.
 - **End-to-end skeleton and export contract (authorized).** One dry run polls → national draws → local party → candidate → MMP → static site, on explicitly labelled synthetic fixtures kept out of application results, to fix the versioned JSON/GeoJSON export schema, archive/snapshot format and Web Worker boundary before real components land. It produces no real forecast and fits nothing.
 
