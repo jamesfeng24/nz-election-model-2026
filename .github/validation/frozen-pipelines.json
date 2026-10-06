@@ -1,0 +1,112 @@
+{
+ "version": 2,
+ "description": "Frozen pipelines whose expensive --check reconstruction a pull request may skip when the validated tree is provably equivalent for that pipeline to an attested, fully validated main commit. See docs/ci-validation.md. Full validation is always the default.",
+ "attestations": {
+  "main-d0fa5a66": {
+   "commit": "d0fa5a66ba24c1182513b140bf943ae8172bd8ea",
+   "runs": [
+    "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37354825431",
+    "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37345438085"
+   ],
+   "evidencePath": ".github/validation/evidence/frozen-main-d0fa5a66.json",
+   "evidenceSha256": "3e9b8dbf3539d0d9f5a01ddf64408d82f4ab37f9b36096365d8b88704cde47e5",
+   "requiredSteps": [
+    "python3 -m scripts.uncertainty_revision.construction --check",
+    "python3 -m scripts.uncertainty_revision.evaluation --check",
+    "python3 -m scripts.uncertainty_revision.mean_audit --check",
+    "python3 -m scripts.uncertainty_revision.verification --check",
+    "python3 -m scripts.uncertainty_tails.construction --check",
+    "python3 -m scripts.uncertainty_tails.evaluation --check",
+    "python3 -m scripts.uncertainty_tails.verification --check"
+   ],
+   "runtime": {
+    "python": "3.12.2",
+    "system": "Linux",
+    "machine": "x86_64",
+    "osId": "ubuntu",
+    "osVersionId": "24.04",
+    "packages": {
+     "numpy": "2.2.6",
+     "scipy": "1.16.0",
+     "shapely": "2.1.2",
+     "matplotlib": "3.10.6"
+    }
+   }
+  }
+ },
+ "pipelines": {
+  "stage45": {
+   "attestation": "main-d0fa5a66",
+   "entryModules": [
+    "scripts.uncertainty_revision.construction",
+    "scripts.uncertainty_revision.evaluation",
+    "scripts.uncertainty_revision.mean_audit",
+    "scripts.uncertainty_revision.verification"
+   ],
+   "ownedPaths": [
+    "scripts/uncertainty_revision"
+   ],
+   "outputPaths": [
+    "data/processed/uncertainty-revision"
+   ],
+   "extraDependencies": [],
+   "cacheDirectory": ".cache/stage45",
+   "cacheReaderModules": [
+    "scripts.uncertainty_revision.construction"
+   ],
+   "cacheReaderNames": [
+    "arrays",
+    "restore",
+    "paths",
+    "cache"
+   ],
+   "reviewedCacheConsumers": [],
+   "replacedCommands": [
+    "python3 -m scripts.uncertainty_revision.construction --check",
+    "python3 -m scripts.uncertainty_revision.evaluation --check",
+    "python3 -m scripts.uncertainty_revision.mean_audit --check",
+    "python3 -m scripts.uncertainty_revision.verification --check"
+   ],
+   "integrityChecks": [
+    "scripts.uncertainty_revision.common:verify"
+   ]
+  },
+  "stage46": {
+   "attestation": "main-d0fa5a66",
+   "entryModules": [
+    "scripts.uncertainty_tails.construction",
+    "scripts.uncertainty_tails.evaluation",
+    "scripts.uncertainty_tails.verification"
+   ],
+   "ownedPaths": [
+    "scripts/uncertainty_tails",
+    "scripts/diagnostics/uncertainty_tails_manifest.py",
+    "scripts/diagnostics/uncertainty_tails_reference.py",
+    "scripts/diagnostics/uncertainty_tails_report.py"
+   ],
+   "outputPaths": [
+    "data/processed/uncertainty-tails"
+   ],
+   "extraDependencies": [],
+   "cacheDirectory": ".cache/stage46",
+   "cacheReaderModules": [
+    "scripts.uncertainty_tails.construction"
+   ],
+   "cacheReaderNames": [
+    "arrays",
+    "restore",
+    "paths",
+    "seal"
+   ],
+   "reviewedCacheConsumers": [],
+   "replacedCommands": [
+    "python3 -m scripts.uncertainty_tails.construction --check",
+    "python3 -m scripts.uncertainty_tails.evaluation --check",
+    "python3 -m scripts.uncertainty_tails.verification --check"
+   ],
+   "integrityChecks": [
+    "scripts.uncertainty_tails.common:verify"
+   ]
+  }
+ }
+}
