@@ -1,9 +1,13 @@
 {
  "version": 3,
- "description": "Frozen pipelines whose expensive --check reconstruction a pull request or main push may skip when the validated tree is provably equivalent, for that pipeline, to a main commit whose complete Linux Verify run executed it successfully. A modified pipeline runs in full once; that successful main run becomes the newest attestation (Actions API), the pinned seed below is the fallback. Manual dispatch is always full. See docs/ci-validation.md and D081.",
+ "description": "Frozen pipelines whose expensive --check reconstruction a pull request or main push may skip when the validated tree is provably equivalent, for that pipeline, to a main commit whose complete Linux Verify run executed it successfully. A modified pipeline runs in full once; that successful run (on its PR or on main) becomes the newest attestation (Actions API), the pinned seed below is the fallback. Manual dispatch is always full. See docs/ci-validation.md and D081.",
  "liveAttestation": {
   "workflow": "ci.yml",
   "branch": "main",
+  "events": [
+   "push",
+   "pull_request"
+  ],
   "job": "python",
   "maxRuns": 10
  },
@@ -73,10 +77,7 @@
     "scripts.uncertainty_tails.verification"
    ],
    "ownedPaths": [
-    "scripts/uncertainty_tails",
-    "scripts/diagnostics/uncertainty_tails_manifest.py",
-    "scripts/diagnostics/uncertainty_tails_reference.py",
-    "scripts/diagnostics/uncertainty_tails_report.py"
+    "scripts/uncertainty_tails"
    ],
    "outputPaths": [
     "data/processed/uncertainty-tails"
@@ -100,6 +101,11 @@
    ],
    "integrityChecks": [
     "scripts.uncertainty_tails.common:verify"
+   ],
+   "reportPaths": [
+    "scripts/diagnostics/uncertainty_tails_manifest.py",
+    "scripts/diagnostics/uncertainty_tails_reference.py",
+    "scripts/diagnostics/uncertainty_tails_report.py"
    ]
   }
  }

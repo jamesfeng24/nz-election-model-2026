@@ -7,7 +7,7 @@ Git, not from generated manifests: no file in the pipeline's static import closu
 outputs or environment files differs from the attested commit, no existing data file changed, no unreviewed
 consumer reads the pipeline's runtime cache, no validation was removed from the workflow, and the runner
 matches the attested runtime. Whenever any of that changes, the pipeline runs in full once; the successful
-main run then becomes the newest attestation (read from the Actions API; the pinned seed is the fallback).
+successful run (on its PR, or on main) then becomes the newest attestation (read from the Actions API; the pinned seed is the fallback), so a modified pipeline is replayed exactly once.
 Manual dispatch never reuses anything. Behavioural unit tests are never skipped.
 """
 import argparse
@@ -138,8 +138,22 @@ def fetch_json(url, token):
         return json.load(response)
 
 
-def live_candidates(registry, environ=None, fetch=fetch_json):
-    """Newest successful full-job records of main push runs, from the Actions API; [] on any failure."""
+def is_ancestor(root, commit):
+    try:
+        git(root, 'merge-base', '--is-ancestor', commit, 'HEAD')
+        return True
+    except (subprocess.CalledProcessError, OSError):
+        return False
+
+
+def live_candidates(registry, environ=None, fetch=fetch_json, root=ROOT, ancestor=is_ancestor):
+    """Newest successful full-job records of reachable ci.yml runs, from the Actions API; [] on any failure.
+
+    Both main push runs and pull-request runs count, so a modified pipeline that was fully validated on its PR is
+    already the reference when the PR merges (a main push then reuses it instead of replaying a second time).
+    A pull-request run attests its head commit; it must be an ancestor of the tree under validation, which holds
+    for merge-commit merges and fails closed (no candidate) for squash merges.
+    """
     environ = os.environ if environ is None else environ
     live, repository = registry.get('liveAttestation'), environ.get('GITHUB_REPOSITORY')
     token = environ.get('GITHUB_TOKEN') or environ.get('GH_TOKEN')
@@ -148,13 +162,22 @@ def live_candidates(registry, environ=None, fetch=fetch_json):
     api = environ.get('GITHUB_API_URL', 'https://api.github.com') + '/repos/' + repository + '/actions/'
     found = []
     try:
-        runs = fetch(api + 'workflows/{}/runs?branch={}&event=push&status=success&per_page={}'.format(
-            live['workflow'], live['branch'], live['maxRuns']), token)['workflow_runs']
-        for run in runs[:live['maxRuns']]:
+        runs = []
+        for event in live['events']:
+            query = 'workflows/{}/runs?event={}&status=success&per_page={}'.format(live['workflow'], event, live['maxRuns'])
+            if event == 'push':
+                query += '&branch=' + live['branch']
+            runs.extend(fetch(api + query, token)['workflow_runs'])
+        runs.sort(key=lambda run: run.get('created_at') or '', reverse=True)
+        for run in runs:
+            if len(found) >= live['maxRuns']:
+                break
+            if not ancestor(root, run['head_sha']):
+                continue
             jobs = fetch(api + 'runs/{}/jobs?per_page=100'.format(run['id']), token)['jobs']
             for job in jobs:
                 if job['name'] == live['job']:
-                    found.append({'commit': run['head_sha'], 'source': 'live', 'record': {
+                    found.append({'commit': run['head_sha'], 'source': 'live-' + run['event'], 'record': {
                         'run': {key: run.get(key) for key in ('id', 'html_url', 'event', 'conclusion', 'head_sha')},
                         'job': {key: job.get(key) for key in ('id', 'name', 'conclusion', 'steps')}}})
     except (OSError, ValueError, KeyError, TypeError):
@@ -170,8 +193,9 @@ def candidate_errors(candidate, required):
     except (KeyError, TypeError):
         return ['unreadable attestation evidence'], []
     errors = []
-    if run.get('event') != 'push' or run.get('conclusion') != 'success' or run.get('head_sha') != candidate['commit']:
-        errors.append('attested run is not a successful full push run of the attested commit')
+    if run.get('event') not in ('push', 'pull_request') or run.get('conclusion') != 'success' \
+            or run.get('head_sha') != candidate['commit']:
+        errors.append('attested run is not a successful full run of the attested commit')
     if job.get('conclusion') != 'success' or job.get('name') != 'python':
         errors.append('attested python job did not succeed')
     for command in required:
@@ -253,7 +277,7 @@ def workflow_errors(root, steps, registry):
 def cache_consumers(root, pipeline):
     """Files outside the pipeline that read its runtime cache (a skipped reconstruction would starve them)."""
     root, found = Path(root), []
-    owned = pipeline['ownedPaths']
+    owned = pipeline['ownedPaths'] + pipeline.get('reportPaths', [])
     readers = set(pipeline['cacheReaderModules'])
     reader_names = set(pipeline['cacheReaderNames'])
     for file in sorted((root / 'scripts').rglob('*.py')):
@@ -354,7 +378,7 @@ def select(registry, event, root=ROOT, actual_runtime=None, force_full=False, li
     if force_full:
         return {name: {'mode': 'full', 'reason': 'explicit full validation requested'} for name in registry['pipelines']}
     seed, errors = seed_candidate(registry, root)
-    candidates = (live_candidates(registry) if live is None else live) + ([seed] if seed else [])
+    candidates = (live_candidates(registry, root=root) if live is None else live) + ([seed] if seed else [])
     result = {}
     for name in registry['pipelines']:
         try:

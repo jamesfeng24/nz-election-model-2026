@@ -50,7 +50,7 @@ def commit(root, message):
 
 
 def registry_for(attested, evidence_sha):
-    return {'version': 3, 'liveAttestation': {'workflow': 'ci.yml', 'branch': 'main', 'job': 'python', 'maxRuns': 3},
+    return {'version': 3, 'liveAttestation': {'workflow': 'ci.yml', 'branch': 'main', 'events': ['push', 'pull_request'], 'job': 'python', 'maxRuns': 3},
             'attestation': {'commit': attested, 'runs': [], 'evidencePath': '.github/validation/evidence/e.json',
                             'evidenceSha256': evidence_sha},
             'runtime': RUNTIME,
@@ -106,7 +106,7 @@ class Repository:
         steps = [{'name': 'Run ' + COMMAND, 'conclusion': 'skipped' if skipped else 'success'},
                  {'name': 'Run python3 -m scripts.pipe.diagnosis --check', 'conclusion': 'success'},
                  {'name': 'Run python3 -m unittest discover -s scripts/tests -v', 'conclusion': 'success'}]
-        return {'commit': commit_sha, 'source': 'live', 'record': {
+        return {'commit': commit_sha, 'source': 'live-' + event, 'record': {
             'run': {'event': event, 'conclusion': 'success', 'head_sha': commit_sha},
             'job': {'name': 'python', 'conclusion': 'success', 'steps': steps}}}
 
@@ -190,7 +190,7 @@ class SelectionTests(unittest.TestCase):
     def test_evidence_must_be_unchanged_successful_and_cover_required_steps(self):
         path = self.repo.root / '.github/validation/evidence/e.json'
         original = json.loads(path.read_text())
-        for mutate in (lambda r: r['run'].update(event='pull_request'), lambda r: r['run'].update(conclusion='failure'),
+        for mutate in (lambda r: r['run'].update(event='schedule'), lambda r: r['run'].update(conclusion='failure'),
                        lambda r: r['run'].update(head_sha='2' * 40), lambda r: r['job'].update(conclusion='failure'),
                        lambda r: r['job']['steps'][0].update(conclusion='skipped'),
                        lambda r: r['job']['steps'].pop(0)):
@@ -217,9 +217,23 @@ class SelectionTests(unittest.TestCase):
         self.assertFull(self.repo.select(candidates=[live]), 'dependency changed')
         self.assertNotEqual(later, modified)
 
+    def test_a_successful_pull_request_run_is_the_reference_for_its_own_merge(self):
+        """Modified once on the PR; the merge's main push (a merge commit on top of that head) reuses it."""
+        git(self.repo.root, 'checkout', '-q', '-b', 'pr')
+        write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
+        head = commit(self.repo.root, 'modify frozen code on the pull request')
+        self.assertFull(self.repo.select(), 'dependency changed')  # the PR run replays once
+        git(self.repo.root, 'checkout', '-q', '-')
+        write(self.repo.root, 'docs/a.md', 'main moved on meanwhile\n')
+        commit(self.repo.root, 'unrelated main commit')
+        git(self.repo.root, 'merge', '--no-ff', '-qm', 'Merge pull request', 'pr')
+        pr_run = self.repo.live(head, event='pull_request')
+        self.assertEqual(self.repo.select('push', candidates=[pr_run])['mode'], 'integrity')  # no second replay
+        self.assertFull(self.repo.select('push', candidates=[]), 'no attested')
+
     def test_live_attestations_must_have_executed_the_replaced_commands(self):
         head = git(self.repo.root, 'rev-parse', 'HEAD')
-        for bad in (self.repo.live(head, skipped=True), self.repo.live(head, event='pull_request')):
+        for bad in (self.repo.live(head, skipped=True), self.repo.live(head, event='schedule')):
             self.assertFull(self.repo.select(candidates=[bad]), 'attested')
         self.assertEqual(self.repo.select(candidates=[self.repo.live(head)])['mode'], 'integrity')
 
@@ -394,7 +408,7 @@ class RealRegistryTests(unittest.TestCase):
             self.assertEqual(frozen.workflow_errors(ROOT, steps, self.registry), [])
             self.assertNotIn('Verify previously validated Stage39 sealed integrity', steps)
 
-    def test_live_candidates_are_read_from_the_api_and_fail_closed(self):
+    def test_live_candidates_are_read_from_the_api_for_push_and_pull_request_runs(self):
         calls = []
 
         def fetch(url, token):
@@ -402,15 +416,30 @@ class RealRegistryTests(unittest.TestCase):
             if '/jobs' in url:
                 return {'jobs': [{'id': 9, 'name': 'check', 'conclusion': 'success', 'steps': []},
                                  {'id': 8, 'name': 'python', 'conclusion': 'success', 'steps': [{'name': 'Run x', 'conclusion': 'success'}]}]}
-            return {'workflow_runs': [{'id': 1, 'head_sha': 'a' * 40, 'event': 'push', 'conclusion': 'success'}]}
+            event = 'push' if 'event=push' in url else 'pull_request'
+            return {'workflow_runs': [{'id': 1 if event == 'push' else 2, 'head_sha': ('a' if event == 'push' else 'b') * 40,
+                                       'event': event, 'conclusion': 'success',
+                                       'created_at': '2026-10-06T00:0{}:00Z'.format(1 if event == 'push' else 2)},
+                                      {'id': 3, 'head_sha': 'c' * 40, 'event': event, 'created_at': '2026-10-05T00:00:00Z'}]}
         environ = {'GITHUB_REPOSITORY': 'o/r', 'GITHUB_TOKEN': 't'}
-        found = frozen.live_candidates(self.registry, environ, fetch)
-        self.assertEqual([c['commit'] for c in found], ['a' * 40])
+        reachable = lambda root, sha: sha != 'c' * 40  # unreachable (e.g. squash-merged or unrelated) heads are never attestations
+        found = frozen.live_candidates(self.registry, environ, fetch, ROOT, reachable)
+        self.assertEqual([(c['commit'][0], c['source']) for c in found], [('b', 'live-pull_request'), ('a', 'live-push')])
         self.assertEqual(found[0]['record']['job']['id'], 8)
-        self.assertIn('branch=main&event=push&status=success', calls[0])
+        self.assertTrue(any('event=push' in c and 'branch=main' in c and 'status=success' in c for c in calls))
+        self.assertTrue(any('event=pull_request' in c and 'branch=' not in c for c in calls))
         self.assertEqual(frozen.live_candidates(self.registry, {}, fetch), [])
         self.assertEqual(frozen.live_candidates(self.registry, environ, lambda *a: (_ for _ in ()).throw(OSError())), [])
         self.assertEqual(frozen.live_candidates(self.registry, environ, lambda *a: {}), [])
+
+    def test_report_modules_outside_the_closure_are_not_dependencies(self):
+        stage46 = self.registry['pipelines']['stage46']
+        self.assertTrue(stage46['reportPaths'])
+        for path in stage46['reportPaths']:
+            self.assertNotIn(path, stage46['ownedPaths'])
+            self.assertTrue((ROOT / path).is_file())
+            files, _, _ = frozen.closure(ROOT, stage46['entryModules'])
+            self.assertNotIn(path, files)
 
     def test_workflow_permissions_timeouts_and_event_wiring(self):
         self.assertIn('  contents: read\n  actions: read\n', self.workflow)
