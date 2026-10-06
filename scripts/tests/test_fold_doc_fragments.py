@@ -142,7 +142,7 @@ class FoldFragmentTests(unittest.TestCase):
                 section('changelog', '## Test entry'), section('state', '# Test state'),
                 section('decisions', '## D{:03d} — test decision\n\nbody'.format(new)),
                 section('methodology', '## Test method'), section('sources', '## Test sources'),
-                section('roadmap', first_row.replace('authorized', 'merged-test'))]), encoding='utf-8')
+                section('roadmap', first_row.rsplit('|', 2)[0] + '| merged-test |')]), encoding='utf-8')
             fold.fold(root)
             self.assertTrue((root / 'PROJECT_STATE.md').read_text().startswith('# Test state\n\n---\n\n'))
             self.assertTrue((root / 'CHANGELOG.md').read_text().rstrip().endswith('## Test entry'))
