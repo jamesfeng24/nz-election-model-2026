@@ -1,0 +1,42 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 301 
+content-type: text/html
+content-length: 166
+location: /tags/poll/
+server: openresty
+cache-control: private, max-age=60
+expires: Tue, 06 Oct 2026 01:09:36 GMT
+date: Tue, 06 Oct 2026 01:08:36 GMT
+server-timing: cdn-cache; desc=REVALIDATE
+server-timing: edge; dur=733
+server-timing: origin; dur=670
+content-security-policy: upgrade-insecure-requests
+x-arc-ttl: -1
+x-arc-request-id: 0.ecf6d517.1791248915.bebdc6f5
+x-arc-edgecontroller: 1.8.5
+server-timing: ak_p; desc="1791248915120_399898348_3200108277_140010_46248_9_61_15";dur=1
+
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: openresty
+x-arc-cache-tag: fusion-whakaatamaori-index-engine-1,fusion-did-whakaatamaori-index-engine-90,fusion-pt-whakaatamaori-index-engine-template,fusion-ptid-whakaatamaori-index-engine-tQPbDbBjgrzrYjFs,fusion-template-id-whakaatamaori-index-tQPbDbBjgrzrYjFs,fusion-cid-whakaatamaori-index-276ba5167b5eb83d55f191c75fd7c1e96f87fb82984a931bff45e793e7a6d52a,url-whakaatamaori-index-a4070e12,url-whakaatamaori-teaomaori-index-a4070e12
+etag: W/"1cca6-MwwI2y3/eUWl7/DrttsHHHYT1vg"
+x-arc-pb-mx-id: 00000000
+x-arc-pb-request-id: 6e7d7f88-2085-4c34-b9e6-d679909cd9ae
+x-arc-pb-edge: 0
+last-modified: Tue, 06 Oct 2026 01:08:38 GMT
+x-edgeconnect-cache-status: 1
+x-akamai-transformed: 9 21421 0 pmb=mRUM,2
+cache-control: private, max-age=60
+expires: Tue, 06 Oct 2026 01:09:39 GMT
+date: Tue, 06 Oct 2026 01:08:39 GMT
+server-timing: cdn-cache; desc=REVALIDATE
+server-timing: edge; dur=771
+server-timing: origin; dur=1630
+content-security-policy: upgrade-insecure-requests
+x-arc-ttl: -1
+x-arc-request-id: 0.ecf6d517.1791248916.bebe015f
+x-arc-edgecontroller: 1.8.5
+server-timing: ak_p; desc="1791248916707_399898348_3200123231_239712_33737_9_0_15";dur=1
+

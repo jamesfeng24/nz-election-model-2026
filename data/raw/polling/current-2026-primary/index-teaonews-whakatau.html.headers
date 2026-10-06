@@ -1,0 +1,24 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: openresty
+x-arc-cache-tag: fusion-whakaatamaori-index-engine-3,fusion-did-whakaatamaori-index-engine-90,fusion-pt-whakaatamaori-index-engine-template,fusion-ptid-whakaatamaori-index-engine-tDHbTwBJ3BdUwXjFs,fusion-template-id-whakaatamaori-index-tDHbTwBJ3BdUwXjFs,fusion-cid-whakaatamaori-index-/whakatau,url-whakaatamaori-index-fa3f3df2,url-whakaatamaori-teaomaori-index-fa3f3df2
+x-arc-pb-mx-id: 00000000
+x-arc-pb-request-id: 8a740635-411b-4bf2-ad92-62a6385abd2c
+etag: W/"1e6ae-XZxKgFuITbLt9/EAYNa9AEsJTYs"
+x-arc-pb-edge: 0
+last-modified: Tue, 06 Oct 2026 01:08:41 GMT
+x-akamai-transformed: 9 22373 0 pmb=mRUM,2
+cache-control: private, max-age=60
+expires: Tue, 06 Oct 2026 01:09:41 GMT
+date: Tue, 06 Oct 2026 01:08:41 GMT
+server-timing: cdn-cache; desc=REVALIDATE
+server-timing: edge; dur=956
+server-timing: origin; dur=1064
+content-security-policy: upgrade-insecure-requests
+x-arc-ttl: -1
+x-arc-request-id: 0.c6714017.1791248919.710827a1
+x-arc-edgecontroller: 1.8.5
+server-timing: ak_p; desc="1791248919470_390099398_1896359841_201955_38701_18_47_15";dur=1
+

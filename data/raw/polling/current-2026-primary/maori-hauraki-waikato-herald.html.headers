@@ -1,0 +1,30 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: openresty
+etag: W/"a5a74-2esDTBctIuF6+bHE9sEuev84izc"
+x-arc-pb-mx-id: 00000000
+x-arc-pb-request-id: 3a189803-0c7d-4023-be28-1f8a8f729237
+x-arc-pb-edge: 0
+x-arc-cache-tag: fusion-nzme-index-engine-2,fusion-did-nzme-index-engine-1072,fusion-pt-nzme-index-engine-template,fusion-ptid-nzme-index-engine-t6AfgDmKiydLUxCu,fusion-template-id-nzme-index-t6AfgDmKiydLUxCu,fusion-cid-nzme-index-CETAZEFVJBHM3N2AVG2MLVM6EA,url-nzme-index-c9b9051c,url-nzme-nzh-index-c9b9051c
+last-modified: Tue, 06 Oct 2026 01:07:59 GMT
+x-akamai-transformed: 9 64429 0 pmb=mRUM,2
+cache-control: private, max-age=60
+expires: Tue, 06 Oct 2026 01:08:59 GMT
+date: Tue, 06 Oct 2026 01:07:59 GMT
+server-timing: cdn-cache; desc=HIT
+server-timing: edge; dur=849
+server-timing: origin; dur=0
+set-cookie: akaas_AS_nzme_nzh_prod=2147483647~rv=35~id=bcaa8e8391ebd7b81bbb002f7122aaa7; path=/; Expires=Tue, 19 Jan 2038 03:14:07 GMT; Secure; SameSite=None
+content-security-policy: upgrade-insecure-requests
+strict-transport-security: max-age=31536000
+content-security-policy: frame-ancestors 'self' https://*.nzherald.co.nz https://*.apnnz.co.nz https://nzme.coral.coralproject.net/;
+x-arc-ttl: -1
+x-arc-request-id: 0.d3714017.1791248878.46de7432
+x-datadome: protected
+accept-ch: Sec-CH-UA,Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-Device-Memory,Sec-CH-UA-Platform-Version
+set-cookie: datadome=Lft73ATw47aDeea8kdD9zdINg33zCcnC4TRLxeigHS2wUMG0gMdnEX7fvyERBYvMzd9owpgGSjJfx1FN5CPoh6q2X1HINbayFmTBy2IxkHop0dKhkWw6m90PrUa1lHh_; Max-Age=31536000; Domain=.nzherald.co.nz; Path=/; Secure; SameSite=Lax
+x-arc-edgecontroller: 1.8.5
+server-timing: ak_p; desc="1791248878932_390099411_1188983858_84902_148314_17_52_15";dur=1
+
