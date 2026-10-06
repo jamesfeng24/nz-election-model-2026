@@ -1,0 +1,227 @@
+{
+  "note": "Dated standalone registry for Stage66. data/sources.json is frozen and untouched.",
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-herald-2020-waiariki.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "News report of the 2020 Maori TV-Curia Waiariki poll; used to verify Coffey 38, Waititi 26 and undecided 24.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "NZ Herald",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/herald-2020-waiariki.html",
+      "resource": "herald-2020-waiariki.html",
+      "retrievedAt": "2026-10-06T16:12:10Z",
+      "schemaVersion": 1,
+      "sha256": "7a53c6a22baf5f340c541cb3188dd357a40a8c02d7864124b5e888c83cbbd0e8",
+      "url": "https://www.nzherald.co.nz/rotorua-daily-post/news/election-2020-waiariki-rawiri-waititi-nipping-at-tamati-coffeys-heels/ATYNATHFIZNBHPIC3TGTY4SS2Q/"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-maoritv-2017-first-poll.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Context page for the 2017 Maori TV-Reid Research polls; it does not itself list the seat figures (they come from the Wikipedia compilation).",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "Maori Television",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/maoritv-2017-first-poll.html",
+      "resource": "maoritv-2017-first-poll.html",
+      "retrievedAt": "2026-10-06T16:12:07Z",
+      "schemaVersion": 1,
+      "sha256": "5e4422e982191425463813f15d618b1fc4cc63e81b328b9430c82ff5a9f25098",
+      "url": "https://www.maoritelevision.com/news/politics/first-maori-election-poll-reveals-red-wash"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-rnz-2023-hauraki-waikato.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "News report of a 2023 Whakaata Maori-Curia electorate poll; used to verify listed shares and the undecided share.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "RNZ",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/rnz-2023-hauraki-waikato.html",
+      "resource": "rnz-2023-hauraki-waikato.html",
+      "retrievedAt": "2026-10-06T16:11:58Z",
+      "schemaVersion": 1,
+      "sha256": "32bfe34f7ed62b5741d6b138d0ce260714caecf4e8015c2ddbf48c0dc6172305",
+      "url": "https://www.rnz.co.nz/news/political/499329/general-election-2023-nanaia-mahuta-facing-serious-challenge-in-hauraki-waikato-poll-shows"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-rnz-2023-ikaroa-rawhiti.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "News report of a 2023 Whakaata Maori-Curia electorate poll; used to verify listed shares and the undecided share.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "RNZ",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/rnz-2023-ikaroa-rawhiti.html",
+      "resource": "rnz-2023-ikaroa-rawhiti.html",
+      "retrievedAt": "2026-10-06T16:11:59Z",
+      "schemaVersion": 1,
+      "sha256": "6b2cd4d68fcf4b094fbc07ef3991ce6c34b52a521161dd3fcd5049ef25142715",
+      "url": "https://www.rnz.co.nz/news/political/498489/ikaroa-rawhiti-labour-defector-meka-whaitiri-trails-in-latest-poll"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-rnz-2023-te-tai-hauauru.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "News report of a 2023 Whakaata Maori-Curia electorate poll; used to verify listed shares and the undecided share.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "RNZ",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/rnz-2023-te-tai-hauauru.html",
+      "resource": "rnz-2023-te-tai-hauauru.html",
+      "retrievedAt": "2026-10-06T16:12:01Z",
+      "schemaVersion": 1,
+      "sha256": "5e7ce5664ceac2b41e8de194daad4a3ea3eeedfad25c22efea75ca2135c5e3be",
+      "url": "https://www.rnz.co.nz/news/political/498335/labour-te-pati-maori-in-tight-race-for-te-tai-hauauru"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-rnz-2023-te-tai-tokerau.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "News report of a 2023 Whakaata Maori-Curia electorate poll; used to verify listed shares and the undecided share.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "RNZ",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/rnz-2023-te-tai-tokerau.html",
+      "resource": "rnz-2023-te-tai-tokerau.html",
+      "retrievedAt": "2026-10-06T16:12:03Z",
+      "schemaVersion": 1,
+      "sha256": "0f9d66cd7780c181b1b620de9598e107b315482e7c3e6c05396d02480fccf1f1",
+      "url": "https://www.rnz.co.nz/news/political/499507/te-pati-maori-candidate-trails-labour-s-kelvin-davis-in-te-tai-tokerau-new-poll-shows"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-rnz-2023-waiariki.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "News report of a 2023 Whakaata Maori-Curia electorate poll; used to verify listed shares and the undecided share.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "RNZ",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/rnz-2023-waiariki.html",
+      "resource": "rnz-2023-waiariki.html",
+      "retrievedAt": "2026-10-06T16:12:05Z",
+      "schemaVersion": 1,
+      "sha256": "151a049ace95a6f66a51457d14b144ab6232b2f66b3895442eec14848aad45a1",
+      "url": "https://www.rnz.co.nz/news/election-2023/499773/rawiri-waititi-on-track-to-hold-waiariki-poll"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-scoop-2023-tamaki-makaurau.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Media-release mirror of the 2023 Whakaata Maori-Curia Tamaki Makaurau poll; used to verify shares and undecided share.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "Scoop",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/scoop-2023-tamaki-makaurau.html",
+      "resource": "scoop-2023-tamaki-makaurau.html",
+      "retrievedAt": "2026-10-06T16:12:00Z",
+      "schemaVersion": 1,
+      "sha256": "6d9de5ce3c520af9ed0721b182706d8530d2c42d3e4507926c7e184724f99fad",
+      "url": "https://www.scoop.co.nz/stories/PO2310/S00098/peeni-henare-ahead-in-tamaki-makaurau-poll.htm"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-whakaata-2023-te-tai-tonga.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Whakaata Maori media release for the 2023 Te Tai Tonga poll; used to verify shares and undecided share.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "Whakaata Maori",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/whakaata-2023-te-tai-tonga.html",
+      "resource": "whakaata-2023-te-tai-tonga.html",
+      "retrievedAt": "2026-10-06T16:12:04Z",
+      "schemaVersion": 1,
+      "sha256": "8ef45b1c84f9084fe51cac28fc9c076dec5c67ffe7b841dd00edc287cfaf79dc",
+      "url": "https://www.whakaatamaori.co.nz/media-releases/cracks-appear-in-labour-stronghold-of-te-tai-tonga"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-wikipedia-opinion-polling-2014.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited); transcribed into historical-polls.json and spot-checked against primary reporting where listed.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/wikipedia-opinion-polling-2014.html",
+      "resource": "wikipedia-opinion-polling-2014.html",
+      "retrievedAt": "2026-10-06T16:11:55Z",
+      "schemaVersion": 1,
+      "sha256": "993438888627eb2345eda3cde194aa13d89ca414eaff210a3f08d66553dda874",
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2014_New_Zealand_general_election"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-wikipedia-opinion-polling-2017.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited); transcribed into historical-polls.json and spot-checked against primary reporting where listed.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/wikipedia-opinion-polling-2017.html",
+      "resource": "wikipedia-opinion-polling-2017.html",
+      "retrievedAt": "2026-10-06T16:11:56Z",
+      "schemaVersion": 1,
+      "sha256": "7d42c263d0c4967a9342d93827b4d60780491515eb405fdaf53824101cd23999",
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2017_New_Zealand_general_election"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-wikipedia-opinion-polling-2020.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited); transcribed into historical-polls.json and spot-checked against primary reporting where listed.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/wikipedia-opinion-polling-2020.html",
+      "resource": "wikipedia-opinion-polling-2020.html",
+      "retrievedAt": "2026-10-06T16:11:56Z",
+      "schemaVersion": 1,
+      "sha256": "55464c9694efea4119ddf9a357a36a2947bd18339f1c29c6bfeb1ff892e661b5",
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2020_New_Zealand_general_election"
+    },
+    {
+      "dateOrElection": "Maori electorate polls 2014-2023",
+      "id": "stage66-wikipedia-opinion-polling-2023.html",
+      "licence": "Publisher copyright (Wikipedia text CC BY-SA); preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited); transcribed into historical-polls.json and spot-checked against primary reporting where listed.",
+        "Page bytes preserved as served at retrieval; responses headers in the .headers sidecar. Bytes are not a parsed dataset."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/maori_seat_layer/run.py",
+      "rawPath": "data/raw/polling/maori-electorate-historical/2026-10-06/wikipedia-opinion-polling-2023.html",
+      "resource": "wikipedia-opinion-polling-2023.html",
+      "retrievedAt": "2026-10-06T16:11:57Z",
+      "schemaVersion": 1,
+      "sha256": "92f5e03421c35c50d96be8c55f6cc3ff0346852dfd201a19b2d8eb747ecdcb29",
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2023_New_Zealand_general_election"
+    }
+  ]
+}

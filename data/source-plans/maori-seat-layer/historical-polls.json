@@ -1,0 +1,839 @@
+{
+  "notes": [
+    "Party codes: MP = Maori Party / Te Pati Maori, MANA = Mana, LAB, GRN, NAT, ALC, NZF, IND, OTH.",
+    "pollPercent is the figure as listed (2017 Reid figures sum to 100, the others leave undecided/other out). Only closure over the listed candidates is used.",
+    "Candidates listed only by party (2023) are resolved to the unique official candidate of that party code in that seat; an unresolved or ambiguous match fails the build.",
+    "The Wikipedia compilations list the leading candidates only; unlisted candidates are outside the closure on both the poll and result side.",
+    "Wikipedia lists no 2014 poll for Hauraki-Waikato, Ikaroa-Rawhiti or Te Tai Hauauru; none was searched for beyond the pinned page (bounded pass)."
+  ],
+  "polls": [
+    {
+      "candidates": [
+        {
+          "name": "Rangi McLean",
+          "party": "MP",
+          "pollPercent": 28
+        },
+        {
+          "name": "Peeni Henare",
+          "party": "LAB",
+          "pollPercent": 27
+        },
+        {
+          "name": "Kereama Pene",
+          "party": "MANA",
+          "pollPercent": 14
+        },
+        {
+          "name": "Marama Davidson",
+          "party": "GRN",
+          "pollPercent": 7
+        }
+      ],
+      "dateAsListed": "24 July - 16 August 2014",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2014-08-16",
+      "id": "2014-tamaki-makaurau",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Tāmaki Makaurau",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2014.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2014
+    },
+    {
+      "candidates": [
+        {
+          "name": "Hone Harawira",
+          "party": "MANA",
+          "pollPercent": 38
+        },
+        {
+          "name": "Kelvin Davis",
+          "party": "LAB",
+          "pollPercent": 37
+        },
+        {
+          "name": "Te Hira Paenga",
+          "party": "MP",
+          "pollPercent": 9.4
+        },
+        {
+          "name": "Clifton Dearlove",
+          "party": "IND",
+          "pollPercent": 1.4
+        }
+      ],
+      "dateAsListed": "July - August 2014",
+      "dateQuality": "month end assumed",
+      "fieldworkEnd": "2014-08-31",
+      "id": "2014-te-tai-tokerau",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Te Tai Tokerau",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2014.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2014
+    },
+    {
+      "candidates": [
+        {
+          "name": "Rino Tirikatene",
+          "party": "LAB",
+          "pollPercent": 48
+        },
+        {
+          "name": "Ngaire Button",
+          "party": "MP",
+          "pollPercent": 17
+        },
+        {
+          "name": "Dora Roimata Langsbury",
+          "party": "GRN",
+          "pollPercent": 9
+        },
+        {
+          "name": "Georgina Beyer",
+          "party": "MANA",
+          "pollPercent": 9
+        }
+      ],
+      "dateAsListed": "July 2014",
+      "dateQuality": "month end assumed",
+      "fieldworkEnd": "2014-07-31",
+      "id": "2014-te-tai-tonga",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Te Tai Tonga",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2014.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2014
+    },
+    {
+      "candidates": [
+        {
+          "name": "Te Ururoa Flavell",
+          "party": "MP",
+          "pollPercent": 50
+        },
+        {
+          "name": "Annette Sykes",
+          "party": "MANA",
+          "pollPercent": 21
+        },
+        {
+          "name": "Rawiri Waititi",
+          "party": "LAB",
+          "pollPercent": 17
+        },
+        {
+          "name": "Pat Spellman",
+          "party": "OTH",
+          "pollPercent": 2
+        }
+      ],
+      "dateAsListed": "1 September 2014",
+      "dateQuality": "single listed date",
+      "fieldworkEnd": "2014-09-01",
+      "id": "2014-waiariki",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Waiariki",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2014.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2014
+    },
+    {
+      "candidates": [
+        {
+          "name": "Te Ururoa Flavell",
+          "party": "MP",
+          "pollPercent": 60.1
+        },
+        {
+          "name": "Tamati Coffey",
+          "party": "LAB",
+          "pollPercent": 39.9
+        }
+      ],
+      "dateAsListed": "July - 3 September 2017",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2017-09-03",
+      "id": "2017-waiariki",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Waiariki",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2017.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [
+        "stage66-maoritv-2017-first-poll.html (context only)"
+      ],
+      "year": 2017
+    },
+    {
+      "candidates": [
+        {
+          "name": "Meka Whaitiri",
+          "party": "LAB",
+          "pollPercent": 55
+        },
+        {
+          "name": "Marama Fox",
+          "party": "MP",
+          "pollPercent": 39
+        },
+        {
+          "name": "Elizabeth Kerekere",
+          "party": "GRN",
+          "pollPercent": 6
+        }
+      ],
+      "dateAsListed": "11 Jul - 17 Aug 2017",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2017-08-17",
+      "id": "2017-ikaroa-rawhiti",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Ikaroa-Rāwhiti",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2017.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2017
+    },
+    {
+      "candidates": [
+        {
+          "name": "Adrian Rurawhe",
+          "party": "LAB",
+          "pollPercent": 39
+        },
+        {
+          "name": "Howie Tamati",
+          "party": "MP",
+          "pollPercent": 52
+        },
+        {
+          "name": "Jack McDonald",
+          "party": "GRN",
+          "pollPercent": 9.1
+        }
+      ],
+      "dateAsListed": "11 Jul - 17 Aug 2017",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2017-08-17",
+      "id": "2017-te-tai-hauauru",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Te Tai Hauāuru",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2017.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2017
+    },
+    {
+      "candidates": [
+        {
+          "name": "Rino Tirikatene",
+          "party": "LAB",
+          "pollPercent": 57.1
+        },
+        {
+          "name": "Mei Reedy-Taare",
+          "party": "MP",
+          "pollPercent": 22.1
+        },
+        {
+          "name": "Metiria Turei",
+          "party": "GRN",
+          "pollPercent": 20.7
+        }
+      ],
+      "dateAsListed": "11 Jul - 17 Aug 2017",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2017-08-17",
+      "id": "2017-te-tai-tonga",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Te Tai Tonga",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2017.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2017
+    },
+    {
+      "candidates": [
+        {
+          "name": "Nanaia Mahuta",
+          "party": "LAB",
+          "pollPercent": 78
+        },
+        {
+          "name": "Rahui Papa",
+          "party": "MP",
+          "pollPercent": 22
+        }
+      ],
+      "dateAsListed": "11 Jul - 3 Sept 2017",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2017-09-03",
+      "id": "2017-hauraki-waikato",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Hauraki-Waikato",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2017.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2017
+    },
+    {
+      "candidates": [
+        {
+          "name": "Peeni Henare",
+          "party": "LAB",
+          "pollPercent": 46
+        },
+        {
+          "name": "Shane Taurima",
+          "party": "MP",
+          "pollPercent": 32.6
+        },
+        {
+          "name": "Marama Davidson",
+          "party": "GRN",
+          "pollPercent": 21.4
+        }
+      ],
+      "dateAsListed": "12 Jul - 5 Sept 2017",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2017-09-05",
+      "id": "2017-tamaki-makaurau",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Tāmaki Makaurau",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2017.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2017
+    },
+    {
+      "candidates": [
+        {
+          "name": "Kelvin Davis",
+          "party": "LAB",
+          "pollPercent": 67.4
+        },
+        {
+          "name": "Hone Harawira",
+          "party": "MANA",
+          "pollPercent": 30.3
+        },
+        {
+          "name": "Godfrey Rudolph",
+          "party": "GRN",
+          "pollPercent": 2.3
+        }
+      ],
+      "dateAsListed": "12 Jul - 5 Sept 2017",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2017-09-05",
+      "id": "2017-te-tai-tokerau",
+      "pollster": "Maori TV-Reid Research",
+      "sampleSize": null,
+      "seat": "Te Tai Tokerau",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2017.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2017
+    },
+    {
+      "candidates": [
+        {
+          "name": "Nanaia Mahuta",
+          "party": "LAB",
+          "pollPercent": 61
+        },
+        {
+          "name": "Donna Pokere-Phillips",
+          "party": "MP",
+          "pollPercent": 14
+        }
+      ],
+      "dateAsListed": "29-30 Sep 2020",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2020-09-30",
+      "id": "2020-hauraki-waikato",
+      "pollster": "Maori TV-Curia",
+      "sampleSize": null,
+      "seat": "Hauraki-Waikato",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2020.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2020
+    },
+    {
+      "candidates": [
+        {
+          "name": "Meka Whaitiri",
+          "party": "LAB",
+          "pollPercent": 46
+        },
+        {
+          "name": "Heather Te Au-Skipworth",
+          "party": "MP",
+          "pollPercent": 19
+        },
+        {
+          "name": "Elizabeth Kerekere",
+          "party": "GRN",
+          "pollPercent": 3
+        },
+        {
+          "name": "Waitangi Kupenga",
+          "party": "OTH",
+          "pollPercent": 2
+        },
+        {
+          "name": "Kelly Thurston",
+          "party": "OTH",
+          "pollPercent": 0
+        }
+      ],
+      "dateAsListed": "23-25 Sep 2020",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2020-09-25",
+      "id": "2020-ikaroa-rawhiti",
+      "pollster": "Maori TV-Curia",
+      "sampleSize": null,
+      "seat": "Ikaroa-Rāwhiti",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2020.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2020
+    },
+    {
+      "candidates": [
+        {
+          "name": "Peeni Henare",
+          "party": "LAB",
+          "pollPercent": 35
+        },
+        {
+          "name": "John Tamihere",
+          "party": "MP",
+          "pollPercent": 29
+        },
+        {
+          "name": "Marama Davidson",
+          "party": "GRN",
+          "pollPercent": 14
+        }
+      ],
+      "dateAsListed": "6-7 Oct 2020",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2020-10-07",
+      "id": "2020-tamaki-makaurau",
+      "pollster": "Maori TV-Curia",
+      "sampleSize": null,
+      "seat": "Tāmaki Makaurau",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2020.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2020
+    },
+    {
+      "candidates": [
+        {
+          "name": "Adrian Rurawhe",
+          "party": "LAB",
+          "pollPercent": 38
+        },
+        {
+          "name": "Debbie Ngarewa-Packer",
+          "party": "MP",
+          "pollPercent": 20
+        }
+      ],
+      "dateAsListed": "23-25 Sep 2020",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2020-09-25",
+      "id": "2020-te-tai-hauauru",
+      "pollster": "Maori TV-Curia",
+      "sampleSize": null,
+      "seat": "Te Tai Hauāuru",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2020.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2020
+    },
+    {
+      "candidates": [
+        {
+          "name": "Kelvin Davis",
+          "party": "LAB",
+          "pollPercent": 36
+        },
+        {
+          "name": "Mariameno Kapa-Kingi",
+          "party": "MP",
+          "pollPercent": 18
+        },
+        {
+          "name": "Billy Te Kahika",
+          "party": "OTH",
+          "pollPercent": 1
+        }
+      ],
+      "dateAsListed": "6-7 Oct 2020",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2020-10-07",
+      "id": "2020-te-tai-tokerau",
+      "pollster": "Maori TV-Curia",
+      "sampleSize": null,
+      "seat": "Te Tai Tokerau",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2020.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2020
+    },
+    {
+      "candidates": [
+        {
+          "name": "Rino Tirikatene",
+          "party": "LAB",
+          "pollPercent": 37
+        },
+        {
+          "name": "Takuta Ferris",
+          "party": "MP",
+          "pollPercent": 11
+        },
+        {
+          "name": "Ariana Paretutanganui-Tamati",
+          "party": "GRN",
+          "pollPercent": 2
+        }
+      ],
+      "dateAsListed": "4-5 Oct 2020",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2020-10-05",
+      "id": "2020-te-tai-tonga",
+      "pollster": "Maori TV-Curia",
+      "sampleSize": null,
+      "seat": "Te Tai Tonga",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2020.html"
+      ],
+      "undecidedPercent": null,
+      "verifiedAgainst": [],
+      "year": 2020
+    },
+    {
+      "candidates": [
+        {
+          "name": "Tamati Coffey",
+          "party": "LAB",
+          "pollPercent": 38
+        },
+        {
+          "name": "Rawiri Waititi",
+          "party": "MP",
+          "pollPercent": 26
+        },
+        {
+          "name": "Hannah Tamaki",
+          "party": "OTH",
+          "pollPercent": 2
+        }
+      ],
+      "dateAsListed": "30 Sep - 1 Oct 2020",
+      "dateQuality": "listed range end",
+      "fieldworkEnd": "2020-10-01",
+      "id": "2020-waiariki",
+      "pollster": "Maori TV-Curia",
+      "sampleSize": null,
+      "seat": "Waiariki",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2020.html",
+        "stage66-herald-2020-waiariki.html"
+      ],
+      "undecidedPercent": 24,
+      "verifiedAgainst": [
+        "stage66-herald-2020-waiariki.html: Coffey 38, Waititi 26, undecided 24"
+      ],
+      "year": 2020
+    },
+    {
+      "candidates": [
+        {
+          "name": null,
+          "party": "LAB",
+          "pollPercent": 36
+        },
+        {
+          "name": null,
+          "party": "MP",
+          "pollPercent": 32
+        }
+      ],
+      "dateAsListed": "27 September 2023",
+      "dateQuality": "listed single date",
+      "fieldworkEnd": "2023-09-27",
+      "id": "2023-hauraki-waikato",
+      "pollster": "Whakaata Maori-Curia",
+      "sampleSize": 500,
+      "seat": "Hauraki-Waikato",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2023.html",
+        "stage66-rnz-2023-hauraki-waikato.html"
+      ],
+      "undecidedPercent": 14,
+      "verifiedAgainst": [
+        "stage66-rnz-2023-hauraki-waikato.html: 36, 32, undecided 14"
+      ],
+      "year": 2023
+    },
+    {
+      "candidates": [
+        {
+          "name": null,
+          "party": "LAB",
+          "pollPercent": 33
+        },
+        {
+          "name": null,
+          "party": "MP",
+          "pollPercent": 25
+        }
+      ],
+      "dateAsListed": "21 September 2023",
+      "dateQuality": "listed single date",
+      "fieldworkEnd": "2023-09-21",
+      "id": "2023-ikaroa-rawhiti",
+      "pollster": "Whakaata Maori-Curia",
+      "sampleSize": 500,
+      "seat": "Ikaroa-Rāwhiti",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2023.html",
+        "stage66-rnz-2023-ikaroa-rawhiti.html"
+      ],
+      "undecidedPercent": 29,
+      "verifiedAgainst": [
+        "stage66-rnz-2023-ikaroa-rawhiti.html: 33, 25, undecided 29"
+      ],
+      "year": 2023
+    },
+    {
+      "candidates": [
+        {
+          "name": null,
+          "party": "LAB",
+          "pollPercent": 37
+        },
+        {
+          "name": null,
+          "party": "MP",
+          "pollPercent": 27
+        },
+        {
+          "name": null,
+          "party": "NAT",
+          "pollPercent": 9
+        },
+        {
+          "name": null,
+          "party": "GRN",
+          "pollPercent": 6
+        }
+      ],
+      "dateAsListed": "10 October 2023",
+      "dateQuality": "listed single date",
+      "fieldworkEnd": "2023-10-10",
+      "id": "2023-tamaki-makaurau",
+      "pollster": "Whakaata Maori-Curia",
+      "sampleSize": 500,
+      "seat": "Tāmaki Makaurau",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2023.html",
+        "stage66-scoop-2023-tamaki-makaurau.html"
+      ],
+      "undecidedPercent": 11,
+      "verifiedAgainst": [
+        "stage66-scoop-2023-tamaki-makaurau.html: 37, 27, undecided 11"
+      ],
+      "year": 2023
+    },
+    {
+      "candidates": [
+        {
+          "name": null,
+          "party": "LAB",
+          "pollPercent": 34
+        },
+        {
+          "name": null,
+          "party": "MP",
+          "pollPercent": 29
+        },
+        {
+          "name": null,
+          "party": "NAT",
+          "pollPercent": 12
+        }
+      ],
+      "dateAsListed": "19 September 2023",
+      "dateQuality": "listed single date",
+      "fieldworkEnd": "2023-09-19",
+      "id": "2023-te-tai-hauauru",
+      "pollster": "Whakaata Maori-Curia",
+      "sampleSize": 500,
+      "seat": "Te Tai Hauāuru",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2023.html",
+        "stage66-rnz-2023-te-tai-hauauru.html"
+      ],
+      "undecidedPercent": 16,
+      "verifiedAgainst": [
+        "stage66-rnz-2023-te-tai-hauauru.html: 34, 29, undecided 16"
+      ],
+      "year": 2023
+    },
+    {
+      "candidates": [
+        {
+          "name": null,
+          "party": "LAB",
+          "pollPercent": 32
+        },
+        {
+          "name": null,
+          "party": "MP",
+          "pollPercent": 26
+        },
+        {
+          "name": null,
+          "party": "GRN",
+          "pollPercent": 7
+        },
+        {
+          "name": null,
+          "party": "ALC",
+          "pollPercent": 6
+        }
+      ],
+      "dateAsListed": "5 October 2023",
+      "dateQuality": "listed single date",
+      "fieldworkEnd": "2023-10-05",
+      "id": "2023-te-tai-tokerau",
+      "pollster": "Whakaata Maori-Curia",
+      "sampleSize": 500,
+      "seat": "Te Tai Tokerau",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2023.html",
+        "stage66-rnz-2023-te-tai-tokerau.html"
+      ],
+      "undecidedPercent": 14,
+      "verifiedAgainst": [
+        "stage66-rnz-2023-te-tai-tokerau.html: 32, 26, 7, 6, undecided 14"
+      ],
+      "year": 2023
+    },
+    {
+      "candidates": [
+        {
+          "name": null,
+          "party": "LAB",
+          "pollPercent": 36
+        },
+        {
+          "name": null,
+          "party": "MP",
+          "pollPercent": 25
+        }
+      ],
+      "dateAsListed": "26 September 2023",
+      "dateQuality": "listed single date",
+      "fieldworkEnd": "2023-09-26",
+      "id": "2023-te-tai-tonga",
+      "pollster": "Whakaata Maori-Curia",
+      "sampleSize": 500,
+      "seat": "Te Tai Tonga",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2023.html",
+        "stage66-whakaata-2023-te-tai-tonga.html"
+      ],
+      "undecidedPercent": 18,
+      "verifiedAgainst": [
+        "stage66-whakaata-2023-te-tai-tonga.html: 36, 25, undecided 18"
+      ],
+      "year": 2023
+    },
+    {
+      "candidates": [
+        {
+          "name": null,
+          "party": "MP",
+          "pollPercent": 50
+        },
+        {
+          "name": null,
+          "party": "LAB",
+          "pollPercent": 22
+        }
+      ],
+      "dateAsListed": "9 October 2023",
+      "dateQuality": "listed single date",
+      "fieldworkEnd": "2023-10-09",
+      "id": "2023-waiariki",
+      "pollster": "Whakaata Maori-Curia",
+      "sampleSize": 500,
+      "seat": "Waiariki",
+      "sourceIds": [
+        "stage66-wikipedia-opinion-polling-2023.html",
+        "stage66-rnz-2023-waiariki.html"
+      ],
+      "undecidedPercent": 15,
+      "verifiedAgainst": [
+        "stage66-rnz-2023-waiariki.html: 50, 22, undecided 15"
+      ],
+      "year": 2023
+    }
+  ],
+  "schemaVersion": 1,
+  "status": "curated transcription (hand-entered from the preserved Wikipedia compilation tables, verified in verify step); not a parsed dataset"
+}

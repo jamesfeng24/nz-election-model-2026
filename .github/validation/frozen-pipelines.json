@@ -1,24 +1,18 @@
 {
- "version": 3,
- "description": "Frozen pipelines whose expensive --check reconstruction a pull request or main push may skip when the validated tree is provably equivalent, for that pipeline, to a main commit whose complete Linux Verify run executed it successfully. A modified pipeline runs in full once; that successful run (on its PR or on main) becomes the newest attestation (Actions API), the pinned seed below is the fallback. Manual dispatch is always full. See docs/ci-validation.md and D081.",
+ "version": 4,
+ "description": "Frozen pipelines whose expensive --check reconstruction a pull request or main push may skip when the validated tree is provably equivalent, for that pipeline, to a commit whose complete Linux Verify run executed it successfully. Each pipeline carries a durable pin (commit, run id, evidence hash and scope fingerprint of that full run) that is checked first and never expires because newer unrelated runs exist; only when the pin does not prove reuse is the Actions API walked, per pipeline, for the newest reachable run that actually executed every replaced command (reuse-only runs are skipped). A modified pipeline runs in full once; that successful run becomes the newest attestation and a later maintenance PR may re-pin it (python3 -m scripts.validate.ci_frozen --record-pin RUN_ID), which is never required for correctness. Manual dispatch is always full. See docs/ci-validation.md and D100.",
  "liveAttestation": {
   "workflow": "ci.yml",
   "branch": "main",
   "events": [
    "push",
-   "pull_request"
+   "pull_request",
+   "workflow_dispatch"
   ],
   "job": "python",
-  "maxRuns": 10
- },
- "attestation": {
-  "commit": "d0fa5a66ba24c1182513b140bf943ae8172bd8ea",
-  "runs": [
-   "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37354825431",
-   "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37345438085"
-  ],
-  "evidencePath": ".github/validation/evidence/frozen-main-d0fa5a66.json",
-  "evidenceSha256": "3e9b8dbf3539d0d9f5a01ddf64408d82f4ab37f9b36096365d8b88704cde47e5"
+  "perPage": 100,
+  "maxPages": 10,
+  "maxJobFetches": 120
  },
  "runtime": {
   "python": "3.12.2",
@@ -70,7 +64,16 @@
    ],
    "integrityChecks": [
     "scripts.uncertainty_revision.common:verify"
-   ]
+   ],
+   "pin": {
+    "commit": "22662219a1d0fbdc6090b1d74fd07cbf1fc7a390",
+    "runId": 37412099846,
+    "runUrl": "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37412099846",
+    "createdAt": "2026-10-06T04:06:09Z",
+    "evidencePath": ".github/validation/evidence/frozen-run-37412099846.json",
+    "evidenceSha256": "18a54e3ea8e2d9cc31e19e3d3ef2124d43833c139328b7d49576847247c2e2a7",
+    "scopeFingerprint": "6452dadb698173ea910efd8742af1f93ac09fad365e39298ed09878edd77d30e"
+   }
   },
   "stage46": {
    "entryModules": [
@@ -110,7 +113,16 @@
     "scripts/diagnostics/uncertainty_tails_manifest.py",
     "scripts/diagnostics/uncertainty_tails_reference.py",
     "scripts/diagnostics/uncertainty_tails_report.py"
-   ]
+   ],
+   "pin": {
+    "commit": "22662219a1d0fbdc6090b1d74fd07cbf1fc7a390",
+    "runId": 37412099846,
+    "runUrl": "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37412099846",
+    "createdAt": "2026-10-06T04:06:09Z",
+    "evidencePath": ".github/validation/evidence/frozen-run-37412099846.json",
+    "evidenceSha256": "18a54e3ea8e2d9cc31e19e3d3ef2124d43833c139328b7d49576847247c2e2a7",
+    "scopeFingerprint": "1f7be98713ba478abb8e0bb30f2f72b8f06525a6f91a9c91b3d4880a28d04e53"
+   }
   },
   "stage47": {
    "entryModules": [
@@ -151,7 +163,16 @@
    ],
    "integrityChecks": [
     "scripts.uncertainty_expectation.common:verify"
-   ]
+   ],
+   "pin": {
+    "commit": "22662219a1d0fbdc6090b1d74fd07cbf1fc7a390",
+    "runId": 37412099846,
+    "runUrl": "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37412099846",
+    "createdAt": "2026-10-06T04:06:09Z",
+    "evidencePath": ".github/validation/evidence/frozen-run-37412099846.json",
+    "evidenceSha256": "18a54e3ea8e2d9cc31e19e3d3ef2124d43833c139328b7d49576847247c2e2a7",
+    "scopeFingerprint": "de27c7f287a0519f7cc83c269d9d32d55f0d673289ac9517ed3c428bebc00a5a"
+   }
   },
   "stage48": {
    "entryModules": [
@@ -175,7 +196,16 @@
    ],
    "integrityChecks": [
     "scripts.balance_scale.common:verify"
-   ]
+   ],
+   "pin": {
+    "commit": "2a000a1121577f779c60cc71d9b0befefef0c977",
+    "runId": 37434895393,
+    "runUrl": "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37434895393",
+    "createdAt": "2026-10-06T08:15:26Z",
+    "evidencePath": ".github/validation/evidence/frozen-run-37434895393.json",
+    "evidenceSha256": "391573fc0f4a52e526d0632382b8bad43f2066e1a1910aecb36c47ce4b300488",
+    "scopeFingerprint": "23f791a9d8847f702c0055df344e83cfb9ec341d72feff711d3148e870a0a63a"
+   }
   },
   "stage54": {
    "entryModules": [
@@ -199,7 +229,16 @@
    ],
    "integrityChecks": [
     "scripts.composed_precision.common:verify"
-   ]
+   ],
+   "pin": {
+    "commit": "49f296a1cb2498243f2b0fd3d4390f2a2bb7dd82",
+    "runId": 37452017775,
+    "runUrl": "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37452017775",
+    "createdAt": "2026-10-06T10:46:41Z",
+    "evidencePath": ".github/validation/evidence/frozen-run-37452017775.json",
+    "evidenceSha256": "32d6053a0367b5e4e4b04d3ae0803726fc75c21d2493ec7331ff28e6e7105018",
+    "scopeFingerprint": "78b4f409ac48a45217ff4e8b74e22329dfde1093a4e2fe1f69d3fa747c19f49b"
+   }
   }
  }
 }

@@ -1,0 +1,51 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 308 
+age: 140862
+cache-control: public, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+etag: "ivof2gq20ptjk"
+location: /news/politics/499507/te-pati-maori-candidate-trails-labour-s-kelvin-davis-in-te-tai-tokerau-new-poll-shows
+server: Vercel
+x-matched-path: /news/[flagCode]/[sectionSlug]/[...articleSegments]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-vercel-cache: STALE
+x-vercel-id: iad1::syd1::6crpz-1791303121679-e36bef1dacb3
+x-backend-name: 3HC9aipj16jBVeMwVpE1wx--F_Host_1
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 16:12:02 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kcgs7200148-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791303122.666812,VS0,VE342
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-powered-by: One small piece of fairy cake
+strict-transport-security: max-age=31557600
+content-length: 38312
+
+HTTP/2 200 
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+etag: "cfvxso35qc5syx"
+server: Vercel
+x-matched-path: /news/[flagCode]/[sectionSlug]/[...articleSegments]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-vercel-cache: MISS
+x-vercel-id: iad1::syd1::72gvd-1791303122076-40629bc831da
+x-backend-name: 3HC9aipj16jBVeMwVpE1wx--F_Host_1
+accept-ranges: bytes
+date: Tue, 06 Oct 2026 16:12:03 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kcgs7200148-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791303122.073121,VS0,VE1753
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-powered-by: One small piece of fairy cake
+strict-transport-security: max-age=31557600
+content-length: 270958
+
