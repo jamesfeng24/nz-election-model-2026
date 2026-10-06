@@ -16,6 +16,22 @@ Planning amendment (docs only, [D082](../DECISIONS.md)); no model, data or artif
 8. **Historical manual-intervention replay at the voting-open cutoff (required stage, not now; not yet authorized).** Sequenced after PR54/CI scoping (1), the balance-scale comparison (5), the replacement dataset (6) and the manual-adjustment interface (7). James: it should be tested, but now is not the time given everything else; it is not dropped. It must be complete before any "model + James" output (B) is published. Replays the human judgement layer on past elections. For each historical final forecast, a dossier restricted to information available just before voting first becomes legally available (earliest ballot, including overseas voting if first), result and preferably model residual hidden; James records intervene/no-intervene, direction, approximate size and rationale; decisions frozen; then reveal and score. Adjust the point forecast where possible, not merely drop the seat. This cutoff differs deliberately from the T−56 cutoff of the automated tests (for example Dunne's 2017 retirement postdates T−56 but would be known at voting open). The history is development evidence, not pristine out-of-sample, because some misses were already discussed; freeze the procedure before 2026.
 9. **Later, each separately authorized:** live 2026 national poll ingestion and fit (cycle bias per the Stage35 design); electorate polls and by-elections; final rosters; Māori baseline and electorate polling; national reconciliation with turnout/denominators; MMP/coalition/overhang assembly; static publication/archive.
 
+## Stage-number allocation
+
+Numbers are identifiers, not an execution order; PR titles use `StageNN:` and thread branches stay `claude/project-thread-*` (no `stage/NN-*` branch is required). This roadmap allocates numbers so threads do not collide; the next free number is recorded here and in PROJECT_STATE.md. PR54 repair, CI scoping and this planning record are maintenance, not stages.
+
+| Stage | Question | Status |
+|---|---|---|
+| Stage48 | Frozen candidate-seat N/L balance-scale comparison (item 5; no stage number in the Stage47 contract, so allocated here) | authorized, starts after PR54 merges |
+| Stage49 | MMP rules verification and exact allocation (item 2) | authorized |
+| Stage50 | Nomination snapshot, immutable raw acquisition (item 3) | authorized after the 8 October 2026 close |
+| Stage51 | Candidate-change identity classification: the 61 apparent changes and incumbent→successor table (first half of item 6; classification only, no model test) | not yet authorized; a candidate-change table is already being built |
+| Stage52 | 2026 poll acquisition (item 9, raw acquisition only; no fit) | not yet authorized |
+| Stage53 | End-to-end skeleton, export contract and synthetic dry run | authorized |
+| Stage54–57 (provisional) | Composed-MC precision (item 4); replacement R_new = a + ρ R_old test; dated manual-adjustment interface (item 7); manual replay (item 8) | not yet authorized; confirm numbers when each is authorized |
+
+Next free number: Stage58.
+
 ## Three final outputs
 
 (A) automatic model, untouched; (B) model + James, after dated, sourced, subjective manual adjustments; (C) ordinary-seat automatic calibration set: historical automatic forecasts restricted to seats the replayed manual procedure would have left untouched, the candidate population for ordinary-seat sigma. Always preserve A beside B. A manually flagged seat does not inherit the narrower ordinary-seat sigma unless direct evidence supports it. After 2026 score A, B and A-on-untouched-seats. Persistent structure (S, R, Epsom-type tactics, stable non-major support, ordinary national/local movement, possibly ordinary replacement) belongs in the model; new current-cycle discontinuities (new major challenger, third-party incumbent retirement, new or collapsed electorate deal, scandal, prominence change, targeting, electorate polls) belong to the dated human or measurement layer. Evidence is sourced and dated; the judgement of whether, which way and how much is explicitly James's. No candidate-quality score.

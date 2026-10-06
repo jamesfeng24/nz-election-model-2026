@@ -10,6 +10,8 @@ Branch `claude/project-thread-3vvh6n`, base main d0fa5a6 (Stage46 merge). Docume
 
 **Update (same day):** PR #55 was merged before the final planning commits; the manual-adjustment item, replay ordering and James rename follow in a small PR opened with CI on after CI scoping merges (the main run on the #55 merge was cancelled at James's request to avoid a ~60-minute run before scoping). James authorized that, once CI scoping is done, completing Verify runs happen automatically without asking each time.
 
+**Stage numbers** are allocated in the roadmap's "Stage-number allocation" section (Stage48 balance-scale comparison, Stage49 MMP, Stage50 nominations, Stage51 candidate-change classification, Stage52 poll acquisition, Stage53 end-to-end contract; Stage54–57 provisional); next free Stage58.
+
 **Exact next action:** CI scoping merges, then the follow-up planning PR is opened unskipped. Independently: PR54 repair and CI-scoping threads, MMP rules/allocation thread, end-to-end skeleton thread; nomination snapshot thread after the 8 October close. Do not start the balance-scale comparison or later items without sign-off. Earlier entries below are historical checkpoints, not current status.
 
 ---
