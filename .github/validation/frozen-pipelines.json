@@ -200,6 +200,30 @@
    "integrityChecks": [
     "scripts.composed_precision.common:verify"
    ]
+  },
+  "stage63": {
+   "entryModules": [
+    "scripts.layer_replication.evaluation",
+    "scripts.layer_replication.verification"
+   ],
+   "ownedPaths": [
+    "scripts/layer_replication"
+   ],
+   "outputPaths": [
+    "data/processed/layer-replication"
+   ],
+   "extraDependencies": [],
+   "cacheDirectory": ".cache/stage63",
+   "cacheReaderModules": [],
+   "cacheReaderNames": [],
+   "reviewedCacheConsumers": [],
+   "replacedCommands": [
+    "python3 -m scripts.layer_replication.evaluation --check",
+    "python3 -m scripts.layer_replication.verification --check"
+   ],
+   "integrityChecks": [
+    "scripts.layer_replication.common:verify"
+   ]
   }
  }
 }
