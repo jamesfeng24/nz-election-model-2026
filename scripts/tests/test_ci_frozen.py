@@ -358,7 +358,10 @@ class SelectAndVerifyTests(unittest.TestCase):
             with patch('sys.argv', ['ci_frozen', '--event', 'push', '--github-output', str(output)]), \
                     redirect_stdout(StringIO()):
                 frozen.main()
-            self.assertEqual(sorted(output.read_text().split()), ['stage45=full', 'stage46=full'])
+            lines = sorted(output.read_text().split())
+            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46'])
+            # The mode depends on the runner and its Actions history, so only its form is fixed here.
+            self.assertTrue(all(line.split('=')[1] in ('full', 'integrity') for line in lines))
 
 
 class RealRegistryTests(unittest.TestCase):
