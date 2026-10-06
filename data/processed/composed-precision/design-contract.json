@@ -1,0 +1,41 @@
+{
+  "stage": 54,
+  "status": "frozen before any composed block other than the Stage47/Stage48 frame (block 0) was simulated or scored",
+  "designDocument": "docs/stage54-composed-precision-design.md",
+  "inherited": {
+    "composedFrame": "Stage47/Stage48 composed 56-day cases: 193 seats (2017/2020/2023), local-party layer then candidate layer, external-gauss cached national draws, corrected Gaussian law, Stage48 balance multipliers for K and F",
+    "stage48Contract": "data/processed/balance-scale/design-contract.json"
+  },
+  "years": [2017, 2020, 2023],
+  "restrictions": ["control", "constant", "conditional"],
+  "blockDraws": 512,
+  "nationalPool": 4096,
+  "nationalOrder": "slice [512*b, 512*(b+1)) of permutation(4096, 'national:<year>') applied to the balanced 4,096-draw cached subset",
+  "scrambleSeedFormula": "460046 + year + 1000 * scrambleIndex",
+  "blocks": {"allSeats": 4, "representatives": 8, "blockZeroIsStage48Frame": true},
+  "layerOnly": {"nationalBlock": 0, "scrambleIndices": [8, 9, 10]},
+  "representativeSeats": "first, middle (index n//2) and last seat of each election by sorted electorate id (Stage47/Stage48 set)",
+  "ladder": [512, 1024, 2048, 4096],
+  "gatesPP": {"mean": 0.05, "crps": 0.05, "energy": 0.1, "width50": 0.5, "width80": 0.5, "width90": 0.5},
+  "requirement": {"sigmaMultiple": 3, "powerOfTwo": true, "quantities": ["mean", "rbMean", "crps", "energy", "width50", "width80", "width90"], "rbMeanCapFrom": "mean"},
+  "settled": {"confidence": 0.95, "materialityCRPSPP": 0.01, "comparisons": ["constant_vs_control", "conditional_vs_constant"], "states": ["SETTLED_MATERIAL", "SETTLED_SIGN", "UNRESOLVED"]},
+  "winProbability": {"inclusionRange": [0.05, 0.95], "targetStandardErrors": [0.01, 0.005]},
+  "chainSplit": {"chains": 4, "drawsPerChain": 1024, "reportedOnly": true},
+  "tolerance": {"stage48Block0": 1e-9, "blockZeroStream": 0.0, "independentRecompute": 1e-9},
+  "computeCapCPUMinutes": 120,
+  "verdicts": {
+    "harness": ["MATCHES_STAGE48", "STOP"],
+    "gate": ["CAPS_MET_AT_CACHED_BANK", "CAPS_NOT_ATTAINABLE_WITHIN_CACHED_BANK"]
+  },
+  "operationalAdoption": null,
+  "doNot": [
+    "no change to any model default, scale, mean, law, draw count of an existing stage or frozen gate; Stage48 results, decision and finding are not altered",
+    "no block count, block size, scramble index, seed formula, ladder, representative seat, cap, multiple or rule chosen or changed after any block 1+ result is read",
+    "no new national MCMC, no regeneration of national draws, no use of the 3,904 cached draws outside the balanced 4,096 subset",
+    "no emulator, interpolation or approximation of the conditional-location solves; the Stage47 numerics are used unchanged",
+    "no reopening of Student-t, mixtures, regimes, sigma shrinkage, geography fragmentation, candidate-quality scores, S reset, covariance fitting or national MCMC backtest reruns",
+    "no new source, acquisition or data/sources.json edit",
+    "no probability-release threshold, publication, calibration claim or 2026 forecast",
+    "no bundling of replacement effects, manual adjustment, Maori baseline, nominations, reconciliation, MMP or the Stage48 weaker-penalty size question"
+  ]
+}
