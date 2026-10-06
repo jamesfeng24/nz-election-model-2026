@@ -105,6 +105,9 @@ class FoldFragmentTests(unittest.TestCase):
             'duplicate decision number': ('2026-10-06-b.md', section('decisions', '## D003 — again\n\nx')),
             'already-folded changelog entry': ('2026-10-06-b.md', section('changelog', '## Stage1 — old\n\n- again')),
             'already-folded state entry': ('2026-10-06-b.md', section('state', '# Stage1 — old checkpoint\n\nagain')),
+            'conflict marker between sections': ('2026-10-06-b.md', section('changelog', '## A') + '=======\n' + section('roadmap', '| Stage50 | q | s |')),
+            'conflict start marker': ('2026-10-06-b.md', section('changelog', '## A\n\n<<<<<<< HEAD\n- a')),
+            'conflict end marker': ('2026-10-06-b.md', section('changelog', '## A\n\n>>>>>>> main')),
             'roadmap without table': ('2026-10-06-b.md', section('roadmap', '| Stage50 | only | two | extra | cells |')),
         }
         for label, (name, text) in bad.items():

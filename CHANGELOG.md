@@ -389,3 +389,37 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - `ci_selection` lists `handoff.d/*.md` with `docs/*.md` as reviewed editorial paths; the Stage45/46 selector already ignores Markdown outside `data/` (test added). No pipeline, registry, workflow, statistical code or saved output changed.
 - Export schema (`src/types/export.ts`): a non-synthetic snapshot now rejects `synthetic-` party, electorate, candidate and election ids, and every directory party must have a national vote-share interval (missing is a failure, never blank or zero). Tests added; 61 frontend tests pass (was 59).
 - Correct the stale Stage53 statements in `docs/export-contract.md` and PROJECT_STATE: `check:dist` runs in CI and passed in Verify run 37397768440 on main.
+
+## Stage47 — Gaussian expectation repair, width attribution and CPU-guard amendment, 2026-10-06
+
+- Repair Gaussian conditional-location numerics (shared-label covariance, active faces, converged references); old worst reference gap 0.738928pp is 0.589445pp at a better reference; all 578 component and 197,632 composed inputs pass the retained 0.05pp gate (max independent gap 0.019999957pp). Scales and means unchanged; companions sealed before scoring; width attribution and structural audit; Recommendation B frozen as a future design (D083).
+- PR #54 amendment: remove the machine-speed CPU guards in `construction.py` and `attribution.py` that aborted hosted run 37378985558; regenerate the signed outputs on Linux (max float difference to the committed values 1.9e-10); append two attempt-ledger entries.
+- Register Stage47 as a frozen CI pipeline with a `cacheDependencies` rule (Stage45/46 run full whenever Stage47 does); `python` job timeout 150 to 180 minutes.
+- No new data sources or acquisition, no national MCMC, no new statistical fit, no operational change.
+
+## Stage49 — MMP rules and exact allocation (2026-10-06)
+
+- Add `src/models/mmp/allocate.ts`: exact integer Sainte-Laguë allocation with 5%/electorate qualification, independent-winner deduction, overhang, list exhaustion and explicit tie flag; 26 tests including exact replay of official 2008–2023 seat tables.
+- Add oracle builder `scripts/mmp/oracle.py` and `data/processed/mmp/oracle-seat-tables.json`; update the `MmpAllocation` conventions in the data dictionary. No forecast, workflow or Stage47 change.
+- Preserve the Electoral Act 1993 text (version 238.0, 1 Jan 2026) under `data/raw/legislation/` and verify ss 191–193 rules against it.
+- Record sourced status of the 5% threshold, one-electorate exemption, Sainte-Laguë, overhang, 120-seat house, 71-electorate/49-list-seat 2026 structure and 2025 law changes in `docs/mmp-rules-verification.md`; list items still open (component-party mapping, cancelled-poll by-election seat, list ordering, final 2026 roster).
+
+## Stage51 — candidate-transition evidence pass — 2026-10-06
+
+- Add sourced National/Labour incumbent-to-successor ledger for every adjacent pair 2008–2023: 333 incumbent seats, 258 continuations, 75 typed changes with dated evidence and confidence.
+- Resolve name variants on evidence (Stage26 flags plus 8 curated judgements); separate by-election successions from election-time exits; add dated source registry, curation file, deterministic `--check` and 15 tests.
+- No effect fitted, no model output or historical source registry changed.
+
+## Stage52 — 2026-cycle national poll acquisition — 2026-10-06
+
+- Primary capture (second pass): 41 checksummed raw files (37 fetched with headers, 4 Taxpayers' Union–Curia browser-print PDFs supplied by James) under `data/raw/polling/current-2026-primary/` — Wikipedia REST table, RNZ–Reid, 1News–Verian, Roy Morgan, Freshwater data tables, Talbot Mills/Anacta pages and eight Whakaata Māori–Curia seat-poll pages; deterministic ledger, verbatim-evidence audit and dated registry via `scripts/polling/primary_capture.py`. Confirms RNZ–Reid 6 Oct fieldwork 24 Sep–1 Oct and recovers Talbot Mills 1–10 Nov 2024; May 2024 Talbot Mills remains unrecovered (immaterial, not chased); the Taxpayers' Union pages (Cloudflare challenge) came from James's browser prints and match Wikipedia. Māori seat polls: 3 of 7 published; all-seven not confirmed. No fit, panel or `data/sources.json` change. D085 records the evidence rules; METHODOLOGY, DATA_SOURCES and roadmap status updated.
+
+- Preserve two commit-pinned GitHub snapshots of the Wikipedia 2026 poll table with SHA-256 ledger, blocked-route record and leads (including Māori polls); acquisition only.
+- Add deterministic gap audit against the frozen Stage35 panel: one newer RNZ–Reid Research poll, two Wikipedia-only Talbot Mills rows missing, one fieldwork-date conflict between snapshots.
+- Cross-check Māori seat polling: Whakaata Māori–Curia series has published Te Tai Tonga and Te Tai Hauāuru (leads only); all-seven coverage not confirmed. Add dated Stage40-style source registry.
+- Primary pollster/news/Wikipedia hosts were unreachable. No fit, panel, Stage35 file or `data/sources.json` change.
+
+## Docs: fold stage47-amendment, 49, 51, 52 handoff notes — 2026-10-06
+
+- Fold the four pending handoff fragments into CHANGELOG, PROJECT_STATE, DECISIONS (D083–D086), METHODOLOGY, DATA_SOURCES and the roadmap table; every row for Stage47 (#54), Stage49 (#58), Stage51 (#61) and Stage52 (#60) now reads merged. The Stage47 entry was rewritten as merged state with its run-together spacing restored; the Stage51 entry lost a stray conflict marker and stale base text.
+- `scripts.fold_doc_fragments` rejects git conflict markers in fragments (with tests); `ci_frozen.couple_cache_dependencies` iterates to a fixed point so transitive `cacheDependencies` couple (with a test). No registry content, model, statistical code or data output changed.

@@ -15,7 +15,7 @@ Sections start with a line `<!-- fold: NAME -->`. Every section is optional (omi
 | `sources` | DATA_SOURCES.md | one entry starting `## ` or `### ` | appended at the end |
 | `roadmap` | docs/stage39-forecast-roadmap.md | table rows `\| StageNN \| question \| status \|` | a row with the same first cell replaces the existing row; a new one goes after the table's last row |
 
-Fragments are applied in file-name order (the date prefix), and an entry whose heading is already present is rejected, so a fragment cannot be folded twice.
+Fragments are applied in file-name order (the date prefix), and an entry whose heading is already present is rejected, so a fragment cannot be folded twice. Lines beginning with a git conflict marker (`<<<<<<<`, `=======`, `>>>>>>>`) are rejected, so an unresolved merge cannot be folded into the shared documents.
 
 ## Example
 

@@ -394,11 +394,15 @@ def couple_cache_dependencies(registry, result):
     Registry `cacheDependencies` names those pipelines; a dependency reused as `integrity` would leave its
     uncommitted cache absent for the consumer's full commands.
     """
-    for name, pipeline in registry['pipelines'].items():
-        if result[name]['mode'] == 'full':
-            for dependency in pipeline.get('cacheDependencies', []):
-                if result[dependency]['mode'] != 'full':
-                    result[dependency] = {'mode': 'full', 'reason': '{} runs in full and reads the {} runtime cache'.format(name, dependency)}
+    changed = True
+    while changed:  # iterate to a fixed point so a dependency's own cacheDependencies are coupled too
+        changed = False
+        for name, pipeline in registry['pipelines'].items():
+            if result[name]['mode'] == 'full':
+                for dependency in pipeline.get('cacheDependencies', []):
+                    if result[dependency]['mode'] != 'full':
+                        result[dependency] = {'mode': 'full', 'reason': '{} runs in full and reads the {} runtime cache'.format(name, dependency)}
+                        changed = True
     return result
 
 
