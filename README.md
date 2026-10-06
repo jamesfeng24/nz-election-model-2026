@@ -1,6 +1,6 @@
 # NZ Election Model 2026
 
-An independent, transparent web application for modelling the 2026 New Zealand general election. **Stage 1: foundation only. No election data or statistical model is included, and no forecast is published.**
+An independent, transparent web application for modelling the 2026 New Zealand general election. **Historical election data, offline Python statistical stages (to Stage 46, Stage 47 in review) and a placeholder website exist; MMP seat allocation, the live forecast and any published probability do not.** The Stage 1 description that used to be here is obsolete: current state is in PROJECT_STATE.md.
 
 ## Resume a new session
 

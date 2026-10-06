@@ -1,6 +1,30 @@
 # Stage52 — 2026-cycle national poll acquisition (raw only)
 
-Branch `claude/project-thread-1g68p4`, base main 109794f. One question: what published 2026-cycle national party-vote polls exist since the 14 October 2023 election, preserved as dated, checksummed raw files? No national MCMC, fit, average or panel change. Stage35 files are untouched.
+Branch `claude/project-thread-qp68zt` (continues `claude/project-thread-1g68p4`). One question: what published 2026-cycle national party-vote polls exist since the 14 October 2023 election, preserved as dated, checksummed raw files? No national MCMC, fit, average or panel change. Stage35 files are untouched.
+
+## Primary capture (second pass, wider network)
+
+The first pass below reached only GitHub. A second pass from an environment with wider network access preserved **37 raw files with response headers and SHA-256** in `data/raw/polling/current-2026-primary/` (`fetch-log.tsv` records every attempt; `acquisition-ledger.json` the checksums). Code: `scripts/polling/primary_capture.py` (`--check` verifies byte-for-byte). Outputs: [`primary-capture-audit.json`](../data/processed/polling/current-cycle-acquisition/primary-capture-audit.json) (every fact checked as verbatim text in the preserved bytes) and the dated registry `source-registry-primary.json`. The older `data/raw/polling/current-2026` snapshots, the Stage35 panel and `data/sources.json` are unchanged.
+
+Captured: the Wikipedia REST HTML table (revision 1378752122); RNZ–Reid (2–9 Jul, 14–21 Aug, 24 Sep–1 Oct); 1News–Verian (23–27 Sep article; June and August reports as Scribd uploads by 1News); Roy Morgan (three monthly releases); The Post–Freshwater data tables (5–11 Jun, 4–11 Sep, with sample sizes and fieldwork); Talbot Mills/Anacta (Herald for Jun, Jul, Aug, Sep 2026 and 1–10 Nov 2024); Curia blog pointers; and the Whakaata Māori–Curia pages below.
+
+Findings:
+- **RNZ–Reid 6 Oct confirmed:** fieldwork 24 Sep–1 Oct 2026, n=1000 online quota sample, published 6 Oct 2026 06:27 NZDT. labo49's dates were right and danylmc's 4–11 Sep were wrong.
+- **Talbot Mills 1–10 Nov 2024 recovered** from the Herald: NAT 34, LAB 33, GRN 10, ACT 10, NZF 7, TPM 3.3; no n published (3.1% margin).
+- **Talbot Mills 1–10 May 2024 not recovered:** The Post page is a JavaScript shell, web.archive.org is denied, and nothing else was found in one bounded pass. Wikipedia (NAT 35, LAB 32) remains the only evidence.
+- **Talbot Mills 2026 sample sizes** are not published in the articles (dates and a 3.1% margin only). **Anacta Consulting is the rebranded Talbot Mills.**
+- **Taxpayers' Union–Curia (Jun–Sep 2026)** pages sit behind a Cloudflare challenge (HTTP 403) and were not bypassed; their figures stay Wikipedia-only.
+- Fieldwork and sample sizes for all Roy Morgan, RNZ–Reid, Verian, Freshwater and Anacta polls since 1 June match Wikipedia.
+
+**Māori seats, 3 of 7 published.** Whakaata Māori–Curia (Whakatau 2026), n=500 each (420 phone, 80 online), ±4.5%: Te Tai Tonga (14–24 Sep), Te Tai Hauāuru (14–24 Sep) and Hauraki-Waikato (21 Sep–1 Oct; Maipi-Clarke TPM 45, Kiriona LAB 26, undecided 17, published 6 Oct). Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau and Te Tai Tokerau have no published poll and no source announces one; "all seven will be polled" is not confirmed (three polls in nine days is consistent with it; election 7 Nov 2026). Raw only, not modelled.
+
+**Live-fit input (James: use only the most recent polls).** No data are dropped here. The frozen design uses older polls to centre house effects, start the trend at the 2023 result and scale shared polling bias; a recent window is a candidate sensitivity for the live-fit stage, not the default.
+
+Items still wanted from a browser: the four taxpayers.org.nz poll pages (4–8 Jun, 1–5 Jul, 1–4 Aug, 1–3 Sep 2026) and the Post article for Talbot Mills 1–10 May 2024 (`https://www.thepost.co.nz/politics/350282502/are-tax-cuts-boost-economy-needs`).
+
+Reproduce: `python3 -m scripts.polling.primary_capture --check`; `python3 -m unittest scripts.tests.test_primary_capture`.
+
+## First pass (GitHub snapshots only)
 
 ## Result
 
@@ -40,9 +64,9 @@ What has been published, as leads (summaries from a lossy reading tool; no raw b
 
 A separate Whakaata Māori–Curia poll of the Māori and general rolls overall (17 Sep, n=1,000) measured no individual seat. Nothing found for Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau or Te Tai Tokerau. The pattern, a Whakatau 2026 Curia series released seat by seat, fits the expectation that all seven will be polled, so the fallback baseline stays deferred. Capture each seat's poll as raw bytes when the network allows; the same question, denominator, dates, n and dependence fields the roadmap lists apply later.
 
-## Capture still needed from an unrestricted network
+## Capture still needed
 
-Fresh raw bytes for: the Wikipedia table (`https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2026_New_Zealand_general_election`), the RNZ–Reid, 1News–Verian, Taxpayers' Union–Curia, Roy Morgan, Post–Freshwater and Talbot Mills releases, and every Whakaata Māori–Curia seat poll article (Te Tai Tonga, Te Tai Hauāuru, Hauraki-Waikato and any later seat). Register them by adding entries to `RESOURCES` in `scripts/polling/current_cycle.py` after fetching with curl, then `python -m scripts.polling.current_cycle`.
+Superseded by the primary capture above; the remaining items are listed there.
 
 ## Reproduce
 

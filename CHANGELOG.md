@@ -1,5 +1,7 @@
 ## Stage52 — 2026-cycle national poll acquisition — 2026-10-06
 
+- Primary capture (second pass): 37 checksummed raw files with headers under `data/raw/polling/current-2026-primary/` — Wikipedia REST table, RNZ–Reid, 1News–Verian, Roy Morgan, Freshwater data tables, Talbot Mills/Anacta pages and eight Whakaata Māori–Curia seat-poll pages; deterministic ledger, verbatim-evidence audit and dated registry via `scripts/polling/primary_capture.py`. Confirms RNZ–Reid 6 Oct fieldwork 24 Sep–1 Oct and recovers Talbot Mills 1–10 Nov 2024; May 2024 Talbot Mills and the Taxpayers' Union pages (Cloudflare challenge) remain unrecovered. Māori seat polls: 3 of 7 published; all-seven not confirmed. No fit, panel or `data/sources.json` change.
+
 - Preserve two commit-pinned GitHub snapshots of the Wikipedia 2026 poll table with SHA-256 ledger, blocked-route record and leads (including Māori polls); acquisition only.
 - Add deterministic gap audit against the frozen Stage35 panel: one newer RNZ–Reid Research poll, two Wikipedia-only Talbot Mills rows missing, one fieldwork-date conflict between snapshots.
 - Cross-check Māori seat polling: Whakaata Māori–Curia series has published Te Tai Tonga and Te Tai Hauāuru (leads only); all-seven coverage not confirmed. Add dated Stage40-style source registry.
@@ -364,3 +366,16 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Add one conservative Stage39 integrity path tied to actual prior full Linux evidence and complete reviewed dependency/runtime fingerprints; preserve unchanged full reconstruction commands.
 - Keep every behavioural/default discovery test and all other historical gates. First revised PR and all main/manual runs are full. Semantic archival classification does not omit tests.
 - Measured original Linux Stage39 construction about143s; new integrity1.697s on different local hardware, not a matched savings benchmark. No hosted measurement run or inference/cache changes.
+
+## Stage46 — residual-tail diagnosis, 2026-10-06
+
+- Diagnosed concentrated candidate National/Labour seat residuals and frozen one earlier-only pooled MAD Student(nu4) seat-balance correction, a matched robust Gaussian and the untouched Stage45 control, retaining every case and all other directions.
+- Corrected Sobol endpoints and shared-ballot-label conditional covariance before scoring; sealed all 12 corrected 32,768-draw banks; retained original failed caches and the attempt ledger. Conditional mean quadrature misses its separate .05pp gate (maximum .73893pp); no tolerance relaxation or target-based adjustment.
+- Student is not adopted (worse CRPS/energy than matched Gaussian in all 7 candidate/composed cases); retain the Stage45 Gaussian as development default (D080). No sources, national MCMC, mean refit or historical override.
+
+## Frozen Stage45/46 CI reuse and Node 24 actions — 2026-10-06
+
+- Add `.github/validation/frozen-pipelines.json` (seed: the successful full main run `d0fa5a66`; thereafter the newest green reachable PR or main run via the Actions API) and `scripts/validate/ci_frozen.py`: pull requests and main pushes skip only the expensive Stage45/46 construction/evaluation/verification (and Stage45 mean-audit) `--check` commands while Git proves the pipeline's import closure, referenced paths, outputs, environment and existing data unchanged; a modification runs them in full once, on its PR, and that successful PR run (like a main run) is the reference, so the merge does not replay again. Manual dispatch is always full. New sources must not be appended to `data/sources.json` (about 25 historical contracts hash it whole); use a standalone dated registry.
+- Behavioural tests, other pipelines and cheap Stage45/46 checks always run. A later stage that reads a registered pipeline's cache (Stage47 reads the Stage46 bank) keeps it full until reviewed.
+- Add job `timeout-minutes` (20/150), `actions: read`, and prohibit CPU/wall-time gates inside `--check`. Bump `actions/checkout` v5, `actions/setup-node` v5, `actions/setup-python` v6 (Node 24). No statistical code, output, threshold or artifact change. D081, AGENTS.md handoff section and README refresh.
+- Add a guarded frontend step for `npm run check:dist` (skipped until the script exists on main).
