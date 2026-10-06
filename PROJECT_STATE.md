@@ -10,6 +10,8 @@ Checks run here: `npm run test` 57 pass (31 prior + 26 new), `typecheck`, `build
 
 Limits: validates the rule implementation on historical totals only; component-party mapping, cancelled-poll by-election seat, list ordering/eligibility and the 2026 ballot roster are not implemented. No forecast, Monte Carlo, frontend, workflow or Stage47 change.
 
+Exact reproduction: `npm run test` (allocator tests incl. six-election replay), `npm run typecheck`, `npm run build`; `python3 -m scripts.mmp.oracle --check`; `python3 -m unittest scripts.tests.test_mmp_oracle`; `python3 scripts/validate/source_files.py`. Decision D083, METHODOLOGY, DATA_SOURCES, CHANGELOG and the roadmap status line are updated; PR #58.
+
 Exact next action: report the green PR to the coordinator for review and merge (threads do not merge). Next separately authorized MMP-adjacent task: named minor-party winner inputs after the 8 Oct nomination close (not started).
 
 ---
