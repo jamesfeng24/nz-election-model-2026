@@ -1,0 +1,227 @@
+{
+ "danylmcRowsNotInStage35Panel": [
+  [
+   [
+    "2024-05-10",
+    35.0,
+    32.0,
+    null,
+    null,
+    null
+   ],
+   1
+  ],
+  [
+   [
+    "2024-11-10",
+    34.0,
+    33.0,
+    10.0,
+    10.0,
+    7.0
+   ],
+   1
+  ],
+  [
+   [
+    "2026-09-11",
+    25.9,
+    30.8,
+    14.8,
+    9.0,
+    10.6
+   ],
+   1
+  ]
+ ],
+ "interpretation": [
+  "All 119 distinct Stage35 2026-cycle keys are present in both snapshots with identical shares: no value conflict.",
+  "Rows absent from the Stage35 panel: the RNZ-Reid Research poll published 2026-10-06 (after the 2026-10-03 Stage35 snapshot), and two Talbot Mills rows (1-10 May 2024, 1-10 Nov 2024) that exist only in the Wikipedia table and were dropped by the Stage35 Wikipedia parser for a blank sample-size cell.",
+  "The two snapshots disagree on the fieldwork of the RNZ-Reid Research row (labo49 24 Sep-1 Oct; danylmc 4-11 Sep with identical shares). A 6 Oct 2026 NZCity report quotes the RNZ article as comparing with the August poll, consistent with a late-September/October poll; the primary page is unreachable so the dates stay unverified.",
+  "Stage35 holds both a Nixinova row with a day-00 fieldwork start and a Wikipedia row for the same Talbot Mills 16 Apr 2026 result; same-pollster overlap is screened at cutoff by the frozen design, so no change is made here."
+ ],
+ "labo49RowsNotInStage35Panel": [
+  {
+   "fieldwork": "1–10 May 2024",
+   "firstSeenInLabo49": "2024-05-10",
+   "key": [
+    "2024-05-10",
+    35,
+    32,
+    null,
+    null,
+    null
+   ],
+   "missingCopies": 1,
+   "pollster": "Talbot Mills",
+   "sampleSize": null,
+   "sourceUrl": "https://www.thepost.co.nz/politics/350282502/are-tax-cuts-boost-economy-needs"
+  },
+  {
+   "fieldwork": "1–10 Nov 2024",
+   "firstSeenInLabo49": "2024-11-10",
+   "key": [
+    "2024-11-10",
+    34,
+    33,
+    10,
+    10,
+    7
+   ],
+   "missingCopies": 1,
+   "pollster": "Talbot Mills",
+   "sampleSize": null,
+   "sourceUrl": "https://www.nzherald.co.nz/nz/politics/hikois-influence-will-be-felt-for-years-but-treaty-bill-still-popular-thomas-couglan/ZGRV4ECOE5CJJAUZNHRDFFM4YA/"
+  },
+  {
+   "fieldwork": "24 Sep - 1 Oct 2026",
+   "firstSeenInLabo49": "2026-10-06T00:33:56.083Z",
+   "key": [
+    "2026-10-01",
+    25.9,
+    30.8,
+    14.8,
+    9,
+    10.6
+   ],
+   "missingCopies": 1,
+   "pollster": "RNZ—Reid Research",
+   "sampleSize": 1000,
+   "sourceUrl": "https://www.rnz.co.nz/news/politics_election-2026/1749693/rnz-reid-research-poll-national-crashes-greens-surge-opportunity-kingmaker"
+  }
+ ],
+ "labo49VersusDanylmcDateConflicts": [
+  {
+   "danylmcEnd": "2026-09-11",
+   "danylmcFieldwork": [
+    "2026-09-04",
+    "2026-09-11"
+   ],
+   "labo49End": "2026-10-01",
+   "labo49Label": "24 Sep - 1 Oct 2026",
+   "pollster": "RNZ—Reid Research",
+   "sharesNATLABGRNACTNZF": [
+    25.9,
+    30.8,
+    14.8,
+    9,
+    10.6
+   ]
+  }
+ ],
+ "note": "Comparison only. Keys are (fieldwork end, NAT, LAB, GRN, ACT, NZF) rounded to 0.1pp; None = party not reported. No Stage35 file is changed; panel decisions stay with a later authorised stage.",
+ "panelMissingFromLabo49": [],
+ "schemaVersion": 1,
+ "snapshots": {
+  "danylmc": {
+   "commit": "25c58bc937d52d27f5fd60197347b1c088831ebb",
+   "latestFieldworkEnd": "2026-09-27",
+   "rows": 122,
+   "scrapedAt": "2026-10-05T19:37:51.948152+00:00"
+  },
+  "labo49": {
+   "commit": "da33cf52497f394509caec147f13265667e2679e",
+   "latestFieldworkEnd": "2026-10-01",
+   "pollsters": {
+    "1 News–Verian": 17,
+    "Anacta": 1,
+    "Curia": 2,
+    "Labour–Talbot Mills": 2,
+    "RNZ–Reid Research": 7,
+    "RNZ—Reid Research": 1,
+    "Roy Morgan": 34,
+    "Talbot Mills": 19,
+    "Taxpayers' Union–Curia": 32,
+    "The Post/Freshwater Strategy": 7
+   },
+   "rows": 122,
+   "scrapedAt": "2026-10-06T00:33:56.083Z"
+  }
+ },
+ "stage35Panel": {
+  "cycle2026Waves": 120,
+  "distinctKeys": 119,
+  "latestFieldworkEnd": "2026-09-27"
+ },
+ "stage35PanelWavesWithIdenticalEndAndShares": [
+  {
+   "copies": 2,
+   "key": [
+    "2026-04-16",
+    29.0,
+    36.0,
+    7.0,
+    8.0,
+    15.0
+   ]
+  }
+ ],
+ "stage35WikipediaParserRowsDroppedForBlankOrNonIntegerSample": [
+  {
+   "fieldwork": "1–11 Aug 2026",
+   "pollster": "Talbot Mills",
+   "row": 10,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "10–19 Jul 2026",
+   "pollster": "Talbot Mills",
+   "row": 13,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "1–10 May 2026",
+   "pollster": "Talbot Mills",
+   "row": 24,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "22–28 Nov 2024",
+   "pollster": "Labour–Talbot Mills",
+   "row": 98,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "1–10 Nov 2024",
+   "pollster": "Talbot Mills",
+   "row": 103,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "1–10 Sep 2024",
+   "pollster": "Talbot Mills",
+   "row": 109,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "1–10 May 2024",
+   "pollster": "Talbot Mills",
+   "row": 119,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "30 Apr 2024",
+   "pollster": "Labour–Talbot Mills",
+   "row": 121,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "1–10 Mar 2024",
+   "pollster": "Talbot Mills",
+   "row": 126,
+   "sampleCell": "1,000+"
+  },
+  {
+   "fieldwork": "1–10 Feb 2024",
+   "pollster": "Talbot Mills",
+   "row": 131,
+   "sampleCell": ""
+  },
+  {
+   "fieldwork": "3–5 Dec 2023",
+   "pollster": "Curia",
+   "row": 137,
+   "sampleCell": ""
+  }
+ ]
+}

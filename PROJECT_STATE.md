@@ -1,3 +1,17 @@
+# 2026-cycle national poll acquisition — 6 October 2026
+
+Branch `claude/project-thread-1g68p4`, base main 109794f. Acquisition only (authorized by James/Corinna 2026-10-06); PR held until CI scoping (#56) merges. No national MCMC, fit, panel change, Stage35/Stage47/ci.yml/AGENTS.md/roadmap edit, and `data/sources.json` (926 records) left byte-identical.
+
+**Result.** Only GitHub was reachable from the cloud environment; 10 pollster/news/Wikipedia/elections.nz hosts returned proxy 403 (`data/raw/polling/current-2026/reachability-probe.tsv`). Preserved 9 commit-pinned raw files from labo49/nzpolls @ da33cf52 and danylmc/nz-polls @ 25c58bc9 (derivative Wikipedia scrapes, no licence file, no independent evidence) with SHA-256 in `acquisition-ledger.json`. Stage35 upstream HEADs (Arie, Nixinova, Ellis) unchanged. Search/reading-tool summaries are leads only.
+
+**Findings** (`data/processed/polling/current-cycle-acquisition/gap-audit.json`): all 119 distinct Stage35 2026 keys match both snapshots; one new poll (RNZ–Reid Research, published 2026-10-06, n=1000, NAT 25.9 LAB 30.8 GRN 14.8 ACT 9 NZF 10.6 TPM 2 TOP 5.5; fieldwork 24 Sep–1 Oct per labo49 but 4–11 Sep per danylmc, unverified); two Wikipedia-only Talbot Mills rows (1–10 May 2024, 1–10 Nov 2024) dropped by the Stage35 Wikipedia parser's blank-sample rule; Stage35 holds two waves for the Talbot Mills 16 Apr 2026 result (screened at cutoff by design). Māori: Whakaata Māori roll poll (Curia, n=1000, 17 Sep) and a Te Tai Tonga electorate poll are leads without bytes or figures; not modelled; fallback baseline still deferred.
+
+**Checks.** `python3 -m scripts.polling.current_cycle --check` ok; 7 new focused tests pass; Stage35 foundation suite (22) passes. `test_ci_selection` has 1 failure/1 error locally (`unattested runtime: packages`; missing `candidate_integration.construction` attribute) that is identical with these changes stashed, i.e. local-environment, not caused here. Full suite and frontend checks not run (no frontend/shared TS change); the PR gets full validation since new paths are unknown to the CI selection. No Python formatter configured.
+
+**Limitations.** No fresh Wikipedia/pollster/news bytes; fieldwork/publication/mode for post-3-Oct polls unverified; panel repairs (parser gap, October poll) are not done. **Exact next action:** from an unrestricted network capture the primary pages listed in `docs/current-cycle-poll-acquisition.md`, extend `RESOURCES` in `scripts/polling/current_cycle.py`, rerun it; then open the PR once #56 has merged. A live 2026 fit and panel update remain separate stages.
+
+---
+
 # Planning amendment: post-Stage47 roadmap, D082 and authorized scope — 6 October 2026
 
 Branch `claude/project-thread-3vvh6n`, base main d0fa5a6 (Stage46 merge). Documentation only: new roadmap section in `docs/stage39-forecast-roadmap.md`, D082 in `DECISIONS.md`, this entry. No code, data, artifact, threshold, CI or Stage47 file touched; no source acquisition. Checks: Python/frontend suites not run because no code or data changed; whitespace/diff review only. Not pushed to main; one small PR, left unmerged for Corinna.

@@ -1,3 +1,9 @@
+## 2026-cycle national poll acquisition — 2026-10-06
+
+- Preserve two commit-pinned GitHub snapshots of the Wikipedia 2026 poll table with SHA-256 ledger, blocked-route record and leads (including Māori polls); acquisition only.
+- Add deterministic gap audit against the frozen Stage35 panel: one newer RNZ–Reid Research poll, two Wikipedia-only Talbot Mills rows missing, one fieldwork-date conflict between snapshots.
+- Primary pollster/news/Wikipedia hosts were unreachable. No fit, panel, Stage35 file or `data/sources.json` change.
+
 ## Stage34 — bounded post-result diagnostic
 
 Added provenance-pinned whole-party TV/category audit, exact saved-expert common samples, per-election scatters/complete CSV, S/R and joint paired associations, equal-election robustness/baseline-relative controls, strict/chronology/observed-input sensitivities and independent arithmetic tests. No fitting or prior data changes. D066 retains S/S+R actively and recommends separately authorized dated-input readiness before any learned blend.

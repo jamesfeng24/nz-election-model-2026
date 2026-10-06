@@ -1,0 +1,304 @@
+{
+ "attempts": [
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/danylmc-2026_polling.json",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/data/2026_polling.json"
+  },
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/danylmc-README.md",
+   "retrievedAt": "2026-10-06T00:49:40Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/README.md"
+  },
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/danylmc-scraper.py",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/scraper.py"
+  },
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/labo49-README.md",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/README.md"
+  },
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/labo49-fetch-polls.ts",
+   "retrievedAt": "2026-10-06T00:49:38Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/scripts/fetch-polls.ts"
+  },
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/labo49-meta.json",
+   "retrievedAt": "2026-10-06T00:49:37Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/meta.json"
+  },
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/labo49-newPolls.json",
+   "retrievedAt": "2026-10-06T00:49:38Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/newPolls.json"
+  },
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/labo49-polls.json",
+   "retrievedAt": "2026-10-06T00:49:37Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/polls.json"
+  },
+  {
+   "httpStatus": 200,
+   "rawPath": "data/raw/polling/current-2026/labo49-wikiPollScraper.ts",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "status": "success",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/lib/wikiPollScraper.ts"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:47Z",
+   "status": "blocked",
+   "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:47Z",
+   "status": "blocked",
+   "url": "https://www.roymorgan.com/morgan-poll/new-zealand-party-voting-intention"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:47Z",
+   "status": "blocked",
+   "url": "https://www.1news.co.nz/"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:47Z",
+   "status": "blocked",
+   "url": "https://www.taxpayers.org.nz/"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:47Z",
+   "status": "blocked",
+   "url": "https://www.rnz.co.nz/news/politics_election-2026/1749693/rnz-reid-research-poll-national-crashes-greens-surge-opportunity-kingmaker"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:47Z",
+   "status": "blocked",
+   "url": "https://www.thepost.co.nz/"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:48Z",
+   "status": "blocked",
+   "url": "https://www.nzherald.co.nz/"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:48Z",
+   "status": "blocked",
+   "url": "https://www.teaonews.co.nz/2026/09/17/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll/"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:48Z",
+   "status": "blocked",
+   "url": "https://thespinoff.co.nz/atea/17-09-2026/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll"
+  },
+  {
+   "detail": "curl exit with no HTTP status (proxy CONNECT 403 policy denial)",
+   "httpStatus": null,
+   "rawPath": null,
+   "retrievedAt": "2026-10-06T00:49:48Z",
+   "status": "blocked",
+   "url": "https://elections.nz/"
+  }
+ ],
+ "leads": [
+  {
+   "kind": "national poll",
+   "note": "RNZ-Reid Research national poll published 2026-10-06; labo49 snapshot lists fieldwork 24 Sep-1 Oct 2026, n=1000, NAT 25.9 LAB 30.8 GRN 14.8 ACT 9 NZF 10.6 TPM 2 TOP 5.5. Primary page not retrievable here; method, exact fieldwork dates and publication time remain unverified.",
+   "url": "https://www.rnz.co.nz/news/politics_election-2026/1749693/rnz-reid-research-poll-national-crashes-greens-surge-opportunity-kingmaker"
+  },
+  {
+   "kind": "national poll",
+   "note": "Canonical aggregator table. Direct fetch denied; Stage35 holds the 2026-10-03 snapshot and the two GitHub snapshots here are parsed copies refreshed 2026-10-05/06.",
+   "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election"
+  },
+  {
+   "kind": "Maori electorate-or-roll poll",
+   "note": "Whakaata Maori poll (Curia, fieldwork reported by a lossy summary as 29 Aug-10 Sep 2026, n=1000 Maori voters, 500 phone/500 online) of the Maori and general rolls overall. Reported as not measuring individual Maori seats. Summary not authoritative; unverified; not modelled.",
+   "url": "https://www.teaonews.co.nz/2026/09/17/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll/"
+  },
+  {
+   "kind": "Maori electorate poll",
+   "note": "NZ Herald headline reports a Te Tai Tonga electorate poll; page blocked by robots.txt for the reading tool and by egress policy for download. Commissioner, dates, n and figures unknown.",
+   "url": "https://www.nzherald.co.nz/nz/politics/election-2026-new-poll-reveals-frontrunner-in-the-maori-seat-of-te-tai-tonga/7GVSRBESHZDKRPHO5VHNPJB3SM/"
+  },
+  {
+   "kind": "Maori electorate poll",
+   "note": "Mirror of the Whakaata Maori poll article.",
+   "url": "https://thespinoff.co.nz/atea/17-09-2026/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll"
+  }
+ ],
+ "protocolNotes": [
+  "Outbound HTTPS in this environment allows GitHub raw/git only; every news, Wikipedia, pollster and Electoral Commission host answered the proxy CONNECT with 403 (reachability-probe.tsv).",
+  "Two WebSearch discovery queries (GitHub datasets; Maori electorate polls) and three WebFetch reads were used for discovery only. WebFetch returns model-summarised text, is not raw bytes, was observed stale/inconsistent for the Wikipedia table, and is never a data source here.",
+  "No fresh Wikipedia, pollster or news bytes were captured. Existing Stage35 raw files (Wikipedia 2026-10-03, Nixinova bulk at 781f9eec) remain the preserved primary-aggregator evidence.",
+  "Upstream HEADs checked with git ls-remote on 2026-10-06 are unchanged from Stage35 pins: ariedotcodotnz/nz-poll-of-polls ef76cf65, Nixinova/NZPolls 781f9eec, ellisp/nz-election-forecast 7aa741e7.",
+  "danylmc/nz-polls and labo49/nzpolls are new relative to Stage35; they are derivative scrapes of Wikipedia, not independent measurements, and add no independent poll evidence."
+ ],
+ "resourceCap": 20,
+ "resources": [
+  {
+   "bytes": 46160,
+   "commit": "25c58bc937d52d27f5fd60197347b1c088831ebb",
+   "id": "polling-current2026-danylmc-2026_polling.json",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Independently scraped Wikipedia 2026 poll table with fieldwork start/end",
+   "rawPath": "data/raw/polling/current-2026/danylmc-2026_polling.json",
+   "repository": "danylmc/nz-polls",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "sha256": "a8bc7a1d38c5f25b63e0e2182c151a814d68a633f558d40bfd9fafac64088126",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/data/2026_polling.json"
+  },
+  {
+   "bytes": 3705,
+   "commit": "25c58bc937d52d27f5fd60197347b1c088831ebb",
+   "id": "polling-current2026-danylmc-README.md",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Repository description",
+   "rawPath": "data/raw/polling/current-2026/danylmc-README.md",
+   "repository": "danylmc/nz-polls",
+   "retrievedAt": "2026-10-06T00:49:40Z",
+   "sha256": "93a156d0f5d3bcf94e54b5e749db6947828efb1d53774b7bb68ec163e8e67a1f",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/README.md"
+  },
+  {
+   "bytes": 19021,
+   "commit": "25c58bc937d52d27f5fd60197347b1c088831ebb",
+   "id": "polling-current2026-danylmc-scraper.py",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Scraper provenance (reference only, not run)",
+   "rawPath": "data/raw/polling/current-2026/danylmc-scraper.py",
+   "repository": "danylmc/nz-polls",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "sha256": "5744e2d1818267b78f9e6f83eba9383a7294692f86acc6fdf55112ca680a5cdf",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/scraper.py"
+  },
+  {
+   "bytes": 1646,
+   "commit": "da33cf52497f394509caec147f13265667e2679e",
+   "id": "polling-current2026-labo49-README.md",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Repository description",
+   "rawPath": "data/raw/polling/current-2026/labo49-README.md",
+   "repository": "labo49/nzpolls",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "sha256": "b5cccdfec45f6300bb93e0ca2b0a52cec1311094ee47f5fb47cd18377a7c9f80",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/README.md"
+  },
+  {
+   "bytes": 3138,
+   "commit": "da33cf52497f394509caec147f13265667e2679e",
+   "id": "polling-current2026-labo49-fetch-polls.ts",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Scraper provenance (reference only, not run)",
+   "rawPath": "data/raw/polling/current-2026/labo49-fetch-polls.ts",
+   "repository": "labo49/nzpolls",
+   "retrievedAt": "2026-10-06T00:49:38Z",
+   "sha256": "0a7f583f2ac89f47397fe1115facc63df99c10d27892f75d05499dfeb37a1f41",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/scripts/fetch-polls.ts"
+  },
+  {
+   "bytes": 149,
+   "commit": "da33cf52497f394509caec147f13265667e2679e",
+   "id": "polling-current2026-labo49-meta.json",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Scrape timestamp for labo49-polls.json",
+   "rawPath": "data/raw/polling/current-2026/labo49-meta.json",
+   "repository": "labo49/nzpolls",
+   "retrievedAt": "2026-10-06T00:49:37Z",
+   "sha256": "cd066af8650ab0e7310eabd0a7a52fcc9cac9808144e4c4668442f42f37cd041",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/meta.json"
+  },
+  {
+   "bytes": 507,
+   "commit": "da33cf52497f394509caec147f13265667e2679e",
+   "id": "polling-current2026-labo49-newPolls.json",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Rows first seen on the last labo49 refresh",
+   "rawPath": "data/raw/polling/current-2026/labo49-newPolls.json",
+   "repository": "labo49/nzpolls",
+   "retrievedAt": "2026-10-06T00:49:38Z",
+   "sha256": "a58b02076530d367a2b555ece1e262e02cbfd6d421e0bef4acd93c7bcceec609",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/newPolls.json"
+  },
+  {
+   "bytes": 52970,
+   "commit": "da33cf52497f394509caec147f13265667e2679e",
+   "id": "polling-current2026-labo49-polls.json",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Parsed Wikipedia 2026 poll table incl. per-poll source URL; automated daily refresh",
+   "rawPath": "data/raw/polling/current-2026/labo49-polls.json",
+   "repository": "labo49/nzpolls",
+   "retrievedAt": "2026-10-06T00:49:37Z",
+   "sha256": "1815088c473441096e944641481a87d2d3be9f8131f3e03e0849c900304d2b08",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/polls.json"
+  },
+  {
+   "bytes": 9105,
+   "commit": "da33cf52497f394509caec147f13265667e2679e",
+   "id": "polling-current2026-labo49-wikiPollScraper.ts",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "purpose": "Table parser provenance (reference only, not run)",
+   "rawPath": "data/raw/polling/current-2026/labo49-wikiPollScraper.ts",
+   "repository": "labo49/nzpolls",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "sha256": "4b849944247c86bd67f0f6dd4deaabfdfa5050baf42efa92a1d95c2a233031de",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/lib/wikiPollScraper.ts"
+  }
+ ],
+ "schemaVersion": 1,
+ "scope": "2026-cycle national party-vote poll acquisition (acquisition only; no fit)",
+ "stoppingReason": "Only GitHub-hosted derivative snapshots were reachable; primary pollster/news/Wikipedia routes are denied by egress policy. Further searching cannot produce raw bytes from this environment."
+}
