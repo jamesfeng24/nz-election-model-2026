@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import {
-  CandidateSchema, ElectorateSchema, PartySchema, PollSchema, type MmpAllocation,
+  CandidateSchema, ElectorateSchema, INTERVAL_LEVELS, PartySchema, PollSchema, type IntervalSet, type MmpAllocation,
   type SimulationConfig, type SimulationResult,
 } from '../../types/domain';
 import { drawRng, type Rng } from './prng';
@@ -42,18 +42,19 @@ export type { SimulationWorkerResponse } from '../../types/domain';
 
 export interface PipelineOutput {
   result: SimulationResult;
-  nationalShares: Record<string, { median: number; lower: number; upper: number }>;
+  nationalShares: Record<string, IntervalSet>;
   exampleDrawAllocation: MmpAllocation | null;
 }
 
-const LEVEL = 0.9;
 function quantile(sorted: number[], p: number): number {
   const pos = (sorted.length - 1) * p, lo = Math.floor(pos), hi = Math.ceil(pos);
   return sorted[lo] + (sorted[hi] - sorted[lo]) * (pos - lo);
 }
-function interval(values: number[], method: string) {
+/** Central 50/80/90% intervals (INTERVAL_LEVELS) sharing one median; empirical quantiles of the draws. */
+function intervals(values: number[], method: string): IntervalSet {
   const s = [...values].sort((x, y) => x - y);
-  return { lower: quantile(s, (1 - LEVEL) / 2), median: quantile(s, 0.5), upper: quantile(s, 1 - (1 - LEVEL) / 2), level: LEVEL, method };
+  const median = quantile(s, 0.5);
+  return INTERVAL_LEVELS.map(level => ({ lower: quantile(s, (1 - level) / 2), median, upper: quantile(s, 1 - (1 - level) / 2), level, method }));
 }
 
 export function runPipeline(
@@ -111,11 +112,11 @@ export function runPipeline(
   return {
     result: {
       schemaVersion: 1, runId: options.runId, config, completedDraws: config.draws, electoratePredictions,
-      partySeatSummaries: partyIds.map(partyId => ({ partyId, seats: interval(seats[partyId], method) })),
+      partySeatSummaries: partyIds.map(partyId => ({ partyId, seats: intervals(seats[partyId], method) })),
       governmentOutcomes: config.governmentCombinations.map((g, i) => ({ combinationId: g.id, probability: govt[i] / config.draws })),
       limitations: options.limitations,
     },
-    nationalShares: Object.fromEntries(partyIds.map(p => { const i = interval(national[p], method); return [p, { median: i.median, lower: i.lower, upper: i.upper }]; })),
+    nationalShares: Object.fromEntries(partyIds.map(p => [p, intervals(national[p], method)])),
     exampleDrawAllocation: example,
   };
 }

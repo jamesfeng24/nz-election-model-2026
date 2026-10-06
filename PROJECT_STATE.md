@@ -1,3 +1,45 @@
+# Docs/architecture: nowcast reconciliation and current-state cleanup — review-ready, 6 October 2026
+
+Branch `claude/cool-dirac-mq8787`, restarted from main `ce61569` (its earlier PR #78 is merged). Commits: `49b0b84` mechanical fold of the four pending fragments (exceptional-scale/#78, Stage67, Stage68, Stage71), then the reconciliation commit. The PR number and final head are in the PR body.
+
+**Current state (the canonical summary; details in [docs/nowcast-specification.md](docs/nowcast-specification.md) and [docs/release-checklist.md](docs/release-checklist.md)).**
+- **Product.** The primary product is a nowcast (D106). The national input is Stage62/70 `lastDataSupport`, the latent state for the week of 27 September 2026 with polls to 6 October, never the election-week draws.
+- **General-seat uncertainty (D107).** Candidate N/L balance seat-scale multiplier 0.60 for ordinary and 1.00 for exceptional seats, with no multiplier above 1. The 2026 classification file is not yet written. The evidence is development-informed and flag-selection-sensitive; Stage67 (D101) itself did not establish the narrower ordinary scale.
+- **Assembly.** Every layer exists, but the live 2026 chain is not assembled and nothing is published.
+- **Stage status (reconciled against GitHub).**
+  - Merged: Stage47–49, 51–56, 59–62, 64–68 and 71.
+  - Waiting on a fixed event: Stage50 (nominations close 8 October, 12:00 NZDT).
+  - Running in separate threads, unpushed: Stage63 (D095), Stage69 (D103), Stage70 (D104).
+  - Not authorized: Stage57 (provisional). Skipped: Stage58 (D089).
+  - Next free: **Stage72 / D108**. D106 and D107 were taken as the next free numbers after #83's allocation; the coordinator should confirm them.
+- **PR #78.** The in-sample diagnostic was merged on 6 October although it was meant to stay unmerged as the record. It is kept and labelled superseded by Stage67/D107, and `scripts/tests/test_historical_flag_isolation.py` enforces that no other module reads its (or Stage67's) 2014–2023 flags.
+
+**What changed.**
+- **Fold:** the four fragments were folded with `scripts.fold_doc_fragments`, without wording changes.
+- **Decisions:** D106 (nowcast estimand) and D107 (0.60/1.00 policy).
+- **New canonical docs:** `docs/nowcast-specification.md` (estimand, dating, pipeline map, uncertainty policy, Māori treatment, interval semantics, export, configuration) and `docs/release-checklist.md` (remaining work, publication gate, proposed release policy).
+- **Pointers and banners:** METHODOLOGY gains a current-behaviour pointer and a dated correction of the Stage62 polling-error wording. Stage62's findings get a dated erratum with no number changes. The roadmap header gains a superseded banner, with statuses, numbering and Stage69/70 rows reconciled. The README's stale status, structure and Python setup are corrected. Architecture, statistical-specification, future-work and the #78 diagnostic doc get pointer banners. The export contract records v2.
+- **Export schema v2** (`src/types/export.ts`, `domain.ts`): `targetType`, `modelStateAsOf`, `electionDate`, nested 50/80/90 intervals (80% primary), and `provenance.configVersion`. The pipeline, exporter, dry run and views use it, and UI copy now says nowcast.
+
+**What did not change.** No statistical code, output, scale, frozen artifact, CI workflow or registry; no historical stage conclusion; no Stage63/69/70 work.
+
+**Checks (local; Node from `npm ci`, Python 3.13.16 with the pinned numerical packages).**
+- `npx vitest run`: 126 pass; `tsc --noEmit` clean; `npm run build` and `npm run check:dist` pass (no synthetic content in dist).
+- `python3 -m unittest scripts.tests.test_historical_flag_isolation scripts.tests.test_exceptional_scale scripts.tests.test_ci_frozen scripts.tests.test_fold_doc_fragments`: 67 pass.
+- `python3 -m scripts.fold_doc_fragments --check`: 0 pending.
+- Not run locally: the full Python suite (no Python stage code changed); hosted Verify is the gate.
+
+**Exact next action.** The coordinator reviews and merges. Then follow the release checklist, in order:
+1. Stage72 (2026 scales + `config/nowcast-2026.json` + classification-file schema, fail-closed);
+2. after Stage63, the precision policy;
+3. after Stage50, the canonical roster;
+4. after Stage69, the baseline cutover;
+5. after Stage70, the national adapter;
+6. assembly and the remaining export v2 fields;
+7. James's decisions (release policy, blocs, unpolled Māori seats, 2026 classification).
+
+---
+
 # Stage71 Māori seat calibration complete — review-ready, 6 October 2026
 
 Branch `stage/71-maori-seat-calibration-los82r`, from main `5e22a83`. Commits: `ea1c9fc` frozen design (before any corrected arm was scored), a design clarification (zero-sigma bootstrap replicates are skipped, before any score was displayed), then the final head (code, outputs, findings, tests, this fragment). Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.

@@ -33,7 +33,8 @@ describe('end-to-end dry run on synthetic fixtures', () => {
       const a = snapshot.mmp.exampleDrawAllocation;
       expect(a.parties.reduce((s, p) => s + p.totalSeats, a.independentElectorateSeats)).toBe(a.parliamentSize);
     }
-    for (const s of snapshot.simulation.partySeatSummaries) expect(s.seats.lower).toBeLessThanOrEqual(s.seats.upper);
+    for (const s of snapshot.simulation.partySeatSummaries) expect(s.seats.map(v => v.level)).toEqual([0.5, 0.8, 0.9]);
+    expect(snapshot).toMatchObject({ schemaVersion: 2, targetType: 'nowcast', modelStateAsOf: '2026-09-27', electionDate: '2026-11-07' });
   });
   it('reports the electorate without a candidate model as unavailable rather than zero', () => {
     expect(snapshot.unavailableElectorates.map(e => e.electorateId)).toEqual(['synthetic-electorate-m1']);

@@ -651,3 +651,32 @@ A frozen descriptive check (not blind) found that the national N/L party swing h
 A single penalty-free variance inflation of the Stage66 poll-to-result error, fitted only on earlier elections, was scored against Stage66 unchanged on the 25 historical Māori electorate polls (strictly chronological, 21 held-out polls, and leave-one-election-out, 25), under a design and decision rule frozen before scoring. Frozen finding: `improves_not_restored`. The inflation (fitted variance multiplier 3.03, bootstrap 90% 1.72 to 7.02) improves Brier, log score and interval coverage in every chronological fold and reduces the leader-win overconfidence (predicted 0.826 to 0.765 against 0.619 observed) but misses the pre-registered calibration limit narrowly (z -1.66 against 1.645); nearly all of the gain is the 2023 fold. A pollster-era (Curia) bias arm scores best but is capped at "suggestive, not adopted" because only one same-pollster transition (2020 to 2023) can be tested; it is a judgement for James whether a Curia-era Māori Party shift persists into 2026.
 
 Nothing is adopted: Stage66 stays the Māori-seat default in the repository and no probability is released. Recorded caveats: the single factor is estimated from all named candidates and so over-widens the Māori Party-versus-Labour contest; the Stage66 result was known before the design; four elections and two pollsters identify the correction weakly. Under the inflation the 2026 leader win probabilities fall to about 0.74, 0.66 and 0.62 (Hauraki-Waikato, Te Tai Hauāuru, Te Tai Tonga) from 0.88, 0.78 and 0.85. Māori seats remain modelled separately; the general-seat layers, national model and MMP allocator are untouched. [Design](docs/stage71-maori-seat-calibration-design.md); [findings](docs/stage71-maori-seat-calibration-findings.md).
+
+## D106 — 2026-10-06 — The primary 2026 product is a nowcast
+
+James decided that the primary public product answers: "If a New Zealand general election were held under current political conditions, what would happen?" It is not a forecast of opinion movement by 7 November 2026. The election date is context, not the estimand.
+
+Consequences:
+- **National input.** The national input is the Stage62 (later Stage70) `lastDataSupport` draws, the latent state at the latest poll-midpoint week, labelled "as of the week of …", not "today". In the pinned model these draws already carry the industry polling-error uncertainty (correlation with the election-day industry error −0.45 to −0.68 by party). The election-week draws add only future drift (correlation with that error |r| ≤ 0.03), so they are excluded from the primary product and no second industry draw is ever added. Stage62's and METHODOLOGY's description of this ("no polling error"; election week "adds the common polling-error draw") is corrected by a dated note; no number changes.
+- **Other layers.** Local-party and candidate scales are kept unchanged; they are calibrated against election-day results, so they are slightly conservative for a nowcast.
+- **Māori seats.** Stage71's inflation, also calibrated against election results, is not applied silently.
+- **Horizon.** The roadmap's 56-versus-32-day horizon limitation no longer applies to the national input.
+- **Calibration claims.** A nowcast cannot be validated directly against an election result, so calibration statements are indirect.
+- **Export.** The snapshot schema becomes v2, with `targetType`, `modelStateAsOf`, `electionDate` and nested 50/80/90 intervals (80% primary).
+
+No statistical output or frozen artifact changes. Canonical definition: [docs/nowcast-specification.md](docs/nowcast-specification.md).
+
+## D107 — 2026-10-06 — General-seat candidate-balance uncertainty policy: 0.60 ordinary, 1.00 exceptional
+
+James adopted, as the operational choice for the 2026 nowcast, a candidate National/Labour balance seat-scale multiplier of **0.60** for ordinary general seats and **1.00** (the frozen default) for exceptional general seats. No multiplier above 1 is fitted or applied, and the multiplier changes the seat balance standard deviation only: means, the shared election scale, the local-party layer and the Māori layer are unchanged. This supersedes D092's recommendation of a global free constant (about 0.79) for operational use; D092 stays as the record of what Stage60 found.
+
+The decision goes beyond what Stage67 concluded, and the record keeps that distinction. Stage67 (D101) recommended holding flagged seats at 1.00 and found that a narrower ordinary scale was **not established**. The roughly 0.60 ordinary multiplier was fitted on 2014–2023 with flags assigned knowing the results, and it is flag-selection-sensitive: the 17 flags not taken from the residual-ranked list gave no gain over a single scale. The evidence is development-informed, not validated; the Stage57 blind replay is the clean test and remains optional and post-launch.
+
+Operating rules:
+- Every 2026 general seat is explicitly classified `ordinary` or `exceptional` in one dated, sourced file keyed by 2026 boundary id. The file does not exist yet.
+- A missing classification fails the build; it never defaults to 0.60.
+- A seat flagged exceptional in a Stage56 entry must be `exceptional`.
+- A 1.00 seat may not also carry `extraSdPp` without James's explicit opt-in.
+- Historical development flags (2014–2023, by name) are never read by the live build; a test enforces that no other module imports the two historical-flag diagnostics.
+
+Canonical statement: [docs/nowcast-specification.md §4](docs/nowcast-specification.md).

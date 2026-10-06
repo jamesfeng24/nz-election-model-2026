@@ -557,3 +557,13 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Result (frozen rule): `improves_not_restored`. Chronological pooled: predicted poll-leader win 0.826 (C), 0.765 (P), 0.714 (PB) against 0.619 observed; Brier 0.223, 0.195, 0.149; calibration z -2.65, -1.66 (limit 1.645), -1.08. Fitted `lambda` 3.03 (bootstrap 90% 1.72 to 7.02); almost all of the gain is in the 2023 fold.
 - 2026 readout (three polled seats): leader win probabilities C 0.88 / 0.78 / 0.85, P 0.74 / 0.66 / 0.62 (Hauraki-Waikato, Te Tai Hauāuru, Te Tai Tonga; across the correction's own interval 0.68 to 0.82, 0.60 to 0.72, 0.50 to 0.75), PB 0.92 / 0.87 / 0.53. Nothing adopted; no publication.
 - New code `scripts/maori_seat_calibration/`, outputs `data/processed/maori-seat-calibration/`, tests `scripts/tests/test_maori_seat_calibration.py` (15). Stage66 files, the general-seat layers, the national model, `data/sources.json` and the CI registry are untouched.
+
+## Docs/architecture: nowcast reconciliation, 2026-10-06
+
+- Folded the four pending fragments (exceptional-scale/#78, Stage67, Stage68, Stage71) without wording changes.
+- Recorded D106 (the primary product is a nowcast; national input `lastDataSupport`) and D107 (general-seat candidate-balance multiplier 0.60 ordinary / 1.00 exceptional, James's decision, with Stage67's limits preserved).
+- New canonical `docs/nowcast-specification.md` and `docs/release-checklist.md`; other active docs now point to them.
+- Reconciled Stage47+ statuses and numbering (next free Stage72 / D108); marked the old roadmap sequence and horizon limitation as superseded; corrected the Stage62 polling-error wording by dated notes (no numbers changed); corrected README status, structure and Python setup.
+- Export snapshot schema v2: `targetType`, `modelStateAsOf`, `electionDate`, nested 50/80/90 intervals (80% primary), `provenance.configVersion`; UI copy says nowcast.
+- New test `scripts/tests/test_historical_flag_isolation.py`.
+- No statistical code, output, frozen artifact or CI change.

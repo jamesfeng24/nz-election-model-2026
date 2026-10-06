@@ -1,3 +1,13 @@
+## Current adopted behaviour (2026 nowcast) — 6 October 2026
+
+The current method is defined once, in [docs/nowcast-specification.md](docs/nowcast-specification.md); the sections below are the per-stage record and remain unchanged. In brief:
+- the primary product is a nowcast (D106) whose national input is the Stage62/70 `lastDataSupport` draws, never the election-week draws;
+- general-seat candidate N/L balance seat scale: ×0.60 for ordinary seats and ×1.00 for exceptional seats (D107), with the development-informed, flag-selection-sensitive evidence stated there;
+- local-party and candidate layers use the Stage45 Gaussian law unchanged;
+- the Māori layer is Stage66, with Stage71 not adopted;
+- MMP is the Stage49/65 allocator.
+Remaining work is in [docs/release-checklist.md](docs/release-checklist.md).
+
 ## Stage34 — descriptive movement and robustness after frozen expert comparison
 
 [Stage34 findings](docs/stage34-s-r-error-pattern-results.md) use saved Stage33 predictions only. Full-party total variation preserves aliases/whole alliances and explicit entry/exit structural zeros; it does not identify individual switching. G=MAE_R−MAE_S and J=MAE_S−MAE_joint retain complete slates. Within-election slopes/Spearman and centered associations weight each election equally, without an adaptive weighting model. Observed-input retraining and fixed-fit substitution remain distinct saved branches. Fixed-expert election deletion is influence, not temporal validation.
@@ -433,6 +443,8 @@ The candidate-balance seat scale of the Stage45 Gaussian law has a recommended e
 ## Live 2026 national poll fit (Stage62)
 
 The national input for the 2026 cycle is the pinned external gauss model (Gaussian observations, cycle house effects, shared industry error, campaign multiplier, weekly random walk pinned to completed results) fitted to all current-cycle polls on the preserved Wikipedia tables as of the cutoff, with earlier cycles retained because they identify persistent pollster bias and the industry-error scale. Reported quantities: latent support at the last-data week (no polling error) and at election week (adds the common polling-error draw), house effects as poll-share shifts against the equal-weight pollster mean, and descriptive sensitivity to a recent-poll window, a seed replicate, an evidence-grade filter and one pollster-label repair. Not a calibrated forecast: no spread or horizon calibration, no probability. See `docs/stage62-live-poll-fit-findings.md`.
+
+**Correction (6 October 2026, D106).** The sentence above describing "latent support at the last-data week (no polling error) and at election week (adds the common polling-error draw)" is inaccurate. In the pinned model, the last-data draws already integrate the industry polling-error uncertainty: their correlation with the election-day industry error is −0.45 to −0.68 by party. The election-week draws differ from them only by future drift, which is uncorrelated with that error. No number changes; see [nowcast-specification.md §2](docs/nowcast-specification.md).
 
 ## Stage66 Māori electorate seat layer (D099)
 
