@@ -33,6 +33,23 @@ This stage builds and verifies the layer. It forecasts nothing, publishes nothin
 
 No change to `allocate.ts`, any model scale or any frozen output; no `data/sources.json` edit; no new data acquisition; no live inputs, 2026 bloc choices, probabilities for release, site export or publication; no edit to Stage60–64, 66, 56 or PR #68 files; no CI registry change.
 
+## Results
+
+All pre-registered checks pass, first run, no design amendment.
+
+- **Official reproduction:** all six elections reproduce every listed party's list seats and the Parliament size exactly, through both the integer-vote path and the shares path (shares = votes / total, converted at 10^9): 2008 122, 2011 121, 2014 121, 2017 120, 2020 120, 2023 122, including the four overhang elections. General winners are the 63–65 per election in the preserved candidate results (64 in 2023, Port Waikato excluded as in the oracle); the Māori residual is exactly seven seats in every year. No lot was needed in any election.
+- **Tests:** `src/models/mmp/seatLayer.test.ts`, 37 tests (13 historical: 12 election replays plus the overhang-case check; 7 property tests on 400 seeded synthetic draws; 4 bucket/threshold; 2 tie; 6 validation; 4 summary; 1 adapter), all passing; the 26 Stage49 allocator tests still pass unchanged.
+- **Property checks held on every draw:** accounting reconciles with `MmpAllocationSchema`; Parliament size is 120 plus overhang; entitlements sum to 120 minus independents; only qualified parties hold seats; list = max(0, entitlement - electorate) and overhang = max(0, electorate - entitlement) per party; order and scale invariance; own-vote monotonicity of entitlements. Overhang and non-overhang draws and independents all occurred in the synthetic set, so the properties were not vacuous.
+- **Summaries** carry Monte Carlo standard errors and merge exactly across chunks (a 77/123 split reproduces the single-pass state byte for byte).
+
+## Limits
+
+- Nothing here is a forecast. Synthetic draws are test fixtures only. The historical Māori winners are party-count residuals, not electorate identities; allocation needs only counts, and the Māori seat layer (Stage66) will supply identities.
+- Bloc majority uses a simple strict-majority-of-Parliament rule; confidence-and-supply arrangements, a party declining to sit, vacancies, list exhaustion (list lengths are not an input) and the by-election seat arithmetic are not modelled.
+- Component-party registrations and the 2026 ballot roster stay open (see mmp-rules-verification.md); a winner for a party that is not in `listedPartyIds` is counted as an independent seat (s 191(8)).
+- Share-to-vote conversion treats simulated shares as continuous (10^9 scale); sampling noise in real vote counts is not added.
+- Seat-count and threshold probabilities inherit all upstream uncertainty and calibration limits of the national, local and candidate layers, none of which are assessed here.
+
 ## Amendments
 
-None yet.
+None.
