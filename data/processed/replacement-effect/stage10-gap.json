@@ -1,0 +1,309 @@
+{
+  "ledgerRowsInMissingSeats": [
+    {
+      "RnewPP": -3.601134358250191,
+      "RoldPP": -10.548600372596928,
+      "key": "2008-2011|LAB|Mangere",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": 7.382565158585375,
+      "RoldPP": 10.853261046178925,
+      "key": "2008-2011|LAB|Te Atatu",
+      "primary": false,
+      "relation": "candidate_change",
+      "transitionType": "party_change"
+    },
+    {
+      "RnewPP": 4.470048638951507,
+      "RoldPP": 3.8153135305525,
+      "key": "2008-2011|NAT|Kaikoura",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": 4.412076643834972,
+      "RoldPP": 1.7428382874413617,
+      "key": "2008-2011|NAT|Otaki",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": 4.55939716502397,
+      "RoldPP": 11.241163927211229,
+      "key": "2008-2011|NAT|Rangitikei",
+      "primary": true,
+      "relation": "candidate_change",
+      "transitionType": "retirement"
+    },
+    {
+      "RnewPP": 2.861453731243946,
+      "RoldPP": 3.395046460865425,
+      "key": "2008-2011|NAT|Tamaki",
+      "primary": false,
+      "relation": "candidate_change",
+      "transitionType": "death_or_illness_withdrawal"
+    },
+    {
+      "RnewPP": 7.010161959012706,
+      "RoldPP": 2.190299639934701,
+      "key": "2008-2011|NAT|Taupo",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": 1.0475211107671467,
+      "RoldPP": 4.08909625567262,
+      "key": "2011-2014|NAT|Waitakere",
+      "primary": false,
+      "relation": "candidate_change",
+      "transitionType": "boundary_complication"
+    },
+    {
+      "RnewPP": 0.22444018166081214,
+      "RoldPP": 9.18868392085901,
+      "key": "2017-2020|LAB|Dunedin North",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": -0.29744369323093656,
+      "RoldPP": 5.443347713775049,
+      "key": "2017-2020|LAB|Dunedin South",
+      "primary": false,
+      "relation": "candidate_change",
+      "transitionType": "retirement"
+    },
+    {
+      "RnewPP": 5.324532730163412,
+      "RoldPP": 1.1471818313823046,
+      "key": "2017-2020|LAB|Manukau East",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": 3.4487130371523844,
+      "RoldPP": 13.73131867364657,
+      "key": "2017-2020|LAB|Port Hills",
+      "primary": false,
+      "relation": "candidate_change",
+      "transitionType": "retirement"
+    },
+    {
+      "RnewPP": 12.1467479676433,
+      "RoldPP": 11.715815639342308,
+      "key": "2017-2020|LAB|Rimutaka",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": 6.227356679157903,
+      "RoldPP": 0.6672650621397547,
+      "key": "2017-2020|NAT|Clutha-Southland",
+      "primary": false,
+      "relation": "candidate_change",
+      "transitionType": "retirement"
+    },
+    {
+      "RnewPP": 2.2516508136169735,
+      "RoldPP": 0.6182655076003574,
+      "key": "2017-2020|NAT|Helensville",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": -6.4356952931487745,
+      "RoldPP": 3.750941335595215,
+      "key": "2017-2020|NAT|Hunua",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": 7.352606385807486,
+      "RoldPP": 3.587640457630281,
+      "key": "2017-2020|NAT|Rodney",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    },
+    {
+      "RnewPP": 4.364365860629338,
+      "RoldPP": 1.2631185961359537,
+      "key": "2017-2020|NAT|Whangarei",
+      "primary": false,
+      "relation": "continuation",
+      "transitionType": null
+    }
+  ],
+  "method": "general-seat names of each source election compared with the Stage10 inventory records of the same transition, then with accent-folded target-election names",
+  "pairs": [
+    {
+      "generalSeatsInSourceElection": 63,
+      "missing": [
+        {
+          "accentFoldedMatchInTargetElection": "Kaikōura",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Kaikoura"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Māngere",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Mangere"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Ōhariu",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Ohariu"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Ōtaki",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Otaki"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Rangitīkei",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Rangitikei"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Tāmaki",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Tamaki"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Taupō",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Taupo"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Te Atatū",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Te Atatu"
+        }
+      ],
+      "seatsInStage10Inventory": 55,
+      "sourceYear": 2008,
+      "targetYear": 2011
+    },
+    {
+      "generalSeatsInSourceElection": 63,
+      "missing": [
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Waitakere"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Ōhāriu",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Ōhariu"
+        }
+      ],
+      "seatsInStage10Inventory": 61,
+      "sourceYear": 2011,
+      "targetYear": 2014
+    },
+    {
+      "generalSeatsInSourceElection": 64,
+      "missing": [],
+      "seatsInStage10Inventory": 64,
+      "sourceYear": 2014,
+      "targetYear": 2017
+    },
+    {
+      "generalSeatsInSourceElection": 64,
+      "missing": [
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Clutha-Southland"
+        },
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Dunedin North"
+        },
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Dunedin South"
+        },
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Helensville"
+        },
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Hunua"
+        },
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Manukau East"
+        },
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Port Hills"
+        },
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Rimutaka"
+        },
+        {
+          "accentFoldedMatchInTargetElection": null,
+          "cause": "not_a_same_named_seat_in_target_election",
+          "inTargetElectionByExactName": false,
+          "seat": "Rodney"
+        },
+        {
+          "accentFoldedMatchInTargetElection": "Whangārei",
+          "cause": "target_name_differs_only_by_macron",
+          "inTargetElectionByExactName": false,
+          "seat": "Whangarei"
+        }
+      ],
+      "seatsInStage10Inventory": 54,
+      "sourceYear": 2017,
+      "targetYear": 2020
+    },
+    {
+      "generalSeatsInSourceElection": 65,
+      "missing": [],
+      "seatsInStage10Inventory": 65,
+      "sourceYear": 2020,
+      "targetYear": 2023
+    }
+  ]
+}

@@ -1,0 +1,695 @@
+{
+  "extended": {
+    "affectedSeats": 40,
+    "affectedSeatsByElection": {
+      "2017": 12,
+      "2020": 15,
+      "2023": 13
+    },
+    "comparisons": {
+      "K vs C": {
+        "affectedSeats": 40,
+        "bootstrap90Interval": [
+          -0.0019359420312229682,
+          0.0008141522306810235
+        ],
+        "comparison": "K vs C",
+        "controlMeanCrps": 0.12894755379440165,
+        "deltaCrpsByElection": {
+          "2017": -0.002531795818976086,
+          "2020": 0.0005938536878557101,
+          "2023": -1.3734773028197299e-05
+        },
+        "equalElectionMeanDeltaCrps": -0.0006505589680495244,
+        "label": "MIXED",
+        "meanDeltaCrps": -0.0005413074139810986,
+        "meanDeltaMse": -0.0005819424267374782,
+        "meanDeltaNlpd": -0.0018788559944101987,
+        "relativeDeltaCrps": -0.004197888196034936
+      },
+      "P vs C": {
+        "affectedSeats": 40,
+        "bootstrap90Interval": [
+          0.018313707653161055,
+          0.041427911778736365
+        ],
+        "comparison": "P vs C",
+        "controlMeanCrps": 0.12894755379440165,
+        "deltaCrpsByElection": {
+          "2017": 0.029769813430449113,
+          "2020": 0.03602200438302359,
+          "2023": 0.02170522777755403
+        },
+        "equalElectionMeanDeltaCrps": 0.029165681863675578,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.02949339470047364,
+        "meanDeltaMse": 0.030849668505378902,
+        "meanDeltaNlpd": 0.11101892438994403,
+        "relativeDeltaCrps": 0.22872395662114622
+      },
+      "P vs K": {
+        "affectedSeats": 40,
+        "bootstrap90Interval": [
+          0.01849278841068547,
+          0.042349381549794965
+        ],
+        "comparison": "P vs K",
+        "controlMeanCrps": 0.12894755379440165,
+        "deltaCrpsByElection": {
+          "2017": 0.0323016092494252,
+          "2020": 0.03542815069516789,
+          "2023": 0.02171896255058223
+        },
+        "equalElectionMeanDeltaCrps": 0.029816240831725103,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.030034702114454737,
+        "meanDeltaMse": 0.03143161093211638,
+        "meanDeltaNlpd": 0.11289778038435423,
+        "relativeDeltaCrps": 0.23292184481718115
+      },
+      "T vs C": {
+        "affectedSeats": 40,
+        "bootstrap90Interval": [
+          0.029386774885655578,
+          0.08899183808811371
+        ],
+        "comparison": "T vs C",
+        "controlMeanCrps": 0.12894755379440165,
+        "deltaCrpsByElection": {
+          "2017": 0.07219811159858444,
+          "2020": 0.045526928297136476,
+          "2023": 0.05841914044054446
+        },
+        "equalElectionMeanDeltaCrps": 0.05871472677875513,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.05771825223417846,
+        "meanDeltaMse": 0.06665874118956974,
+        "meanDeltaNlpd": 0.23939758722304436,
+        "relativeDeltaCrps": 0.4476102922138903
+      }
+    },
+    "finding": "mixed_report_to_james",
+    "folds": {
+      "2017": {
+        "K": {
+          "a": -0.00046311867119093827
+        },
+        "P": {
+          "a": -0.03528521062685309,
+          "atBound": false,
+          "rho": 0.8503029184772214,
+          "unconstrainedSlope": 0.8503029184772214
+        },
+        "trainingSeats": 19,
+        "trainingTargetYears": [
+          2011,
+          2014
+        ]
+      },
+      "2020": {
+        "K": {
+          "a": 0.008652069815047547
+        },
+        "P": {
+          "a": -0.021868148925186015,
+          "atBound": false,
+          "rho": 0.6545716488965562,
+          "unconstrainedSlope": 0.6545716488965562
+        },
+        "trainingSeats": 31,
+        "trainingTargetYears": [
+          2011,
+          2014,
+          2017
+        ]
+      },
+      "2023": {
+        "K": {
+          "a": 0.013333923068632632
+        },
+        "P": {
+          "a": -0.010402836038573397,
+          "atBound": false,
+          "rho": 0.52435041148436,
+          "unconstrainedSlope": 0.52435041148436
+        },
+        "trainingSeats": 46,
+        "trainingTargetYears": [
+          2011,
+          2014,
+          2017,
+          2020
+        ]
+      }
+    },
+    "layerExclusions": {
+      "notInLayer": 0,
+      "notNationalOrLabour": 0,
+      "ownRHistory": 0
+    },
+    "rUnitOutOfFold": {
+      "2017": {
+        "meanRnewMinusMuPP": 1.3924056249034584,
+        "meanRnewPP": 2.3084451584925145,
+        "muRPP": 0.9160395335890563,
+        "rmsePP": {
+          "C": 2.4919627755812495,
+          "K": 3.1330441586876883,
+          "P": 3.6775088891512335,
+          "T": 5.155101383743083
+        },
+        "seats": 12
+      },
+      "2020": {
+        "meanRnewMinusMuPP": 1.3253412076328335,
+        "meanRnewPP": 2.300975312604182,
+        "muRPP": 0.9756341049713488,
+        "rmsePP": {
+          "C": 3.9053918438274438,
+          "K": 3.944234632697743,
+          "P": 3.9409407129122895,
+          "T": 5.082935715856387
+        },
+        "seats": 15
+      },
+      "2023": {
+        "meanRnewMinusMuPP": -0.677980668044631,
+        "meanRnewPP": 0.4647429776486356,
+        "muRPP": 1.1427236456932663,
+        "rmsePP": {
+          "C": 3.3489151753613786,
+          "K": 3.392657766805917,
+          "P": 4.818362496724522,
+          "T": 9.037694281652229
+        },
+        "seats": 13
+      }
+    },
+    "sample": "extended",
+    "seatsInSample": 59,
+    "supporting": {
+      "C": {
+        "marginMaePP": 5.942639765681596,
+        "maxAbsLogWeightShift": 0.0,
+        "meanCrps": 0.12894755379440165,
+        "meanNlpd": 0.0810457682798609,
+        "meanSquaredBalanceError": 0.04135837184684225,
+        "meanSquaredStandardisedResidual": 0.3011012129772297,
+        "replacedCandidateShareMaePP": 3.77996649402417,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.2627237136941087
+      },
+      "K": {
+        "marginMaePP": 5.935111169378253,
+        "maxAbsLogWeightShift": 0.03227029756686614,
+        "meanCrps": 0.12840624638042056,
+        "meanNlpd": 0.0791669122854507,
+        "meanSquaredBalanceError": 0.040776429420104766,
+        "meanSquaredStandardisedResidual": 0.2973435009884093,
+        "replacedCandidateShareMaePP": 3.661479247528468,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.48973445198199983
+      },
+      "P": {
+        "marginMaePP": 8.001838797050059,
+        "maxAbsLogWeightShift": 0.25634458424427037,
+        "meanCrps": 0.15844094849487528,
+        "meanNlpd": 0.19206469266980494,
+        "meanSquaredBalanceError": 0.07220804035222114,
+        "meanSquaredStandardisedResidual": 0.5231390617571178,
+        "replacedCandidateShareMaePP": 5.058965156592886,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.10666772999226862
+      },
+      "T": {
+        "marginMaePP": 9.556891987602047,
+        "maxAbsLogWeightShift": 0.5597379255065589,
+        "meanCrps": 0.18666580602858013,
+        "meanNlpd": 0.32044335550290526,
+        "meanSquaredBalanceError": 0.10801711303641197,
+        "meanSquaredStandardisedResidual": 0.7798963874233185,
+        "replacedCandidateShareMaePP": 6.264317146413343,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": 2.5094743057872093
+      }
+    }
+  },
+  "primary": {
+    "affectedSeats": 31,
+    "affectedSeatsByElection": {
+      "2017": 9,
+      "2020": 10,
+      "2023": 12
+    },
+    "comparisons": {
+      "K vs C": {
+        "affectedSeats": 31,
+        "bootstrap90Interval": [
+          -0.0034534485924948306,
+          0.0025656769967687234
+        ],
+        "comparison": "K vs C",
+        "controlMeanCrps": 0.1267354711116014,
+        "deltaCrpsByElection": {
+          "2017": -0.006605222761657239,
+          "2020": 0.003952923175794076,
+          "2023": 0.00033516124904988076
+        },
+        "equalElectionMeanDeltaCrps": -0.0007723794456044275,
+        "label": "MIXED",
+        "meanDeltaCrps": -0.0005127689712379296,
+        "meanDeltaMse": -0.0004272737398405512,
+        "meanDeltaNlpd": -0.0009092644152290164,
+        "relativeDeltaCrps": -0.004045978341662476
+      },
+      "P vs C": {
+        "affectedSeats": 31,
+        "bootstrap90Interval": [
+          0.01467023428594671,
+          0.0369833397213317
+        ],
+        "comparison": "P vs C",
+        "controlMeanCrps": 0.1267354711116014,
+        "deltaCrpsByElection": {
+          "2017": 0.030233182717721345,
+          "2020": 0.03667822691677493,
+          "2023": 0.012272715626377642
+        },
+        "equalElectionMeanDeltaCrps": 0.026394708420291305,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.02535979035947655,
+        "meanDeltaMse": 0.02655359512651654,
+        "meanDeltaNlpd": 0.09498075322286799,
+        "relativeDeltaCrps": 0.20010017824563958
+      },
+      "P vs K": {
+        "affectedSeats": 31,
+        "bootstrap90Interval": [
+          0.01384180444498117,
+          0.03862972384117672
+        ],
+        "comparison": "P vs K",
+        "controlMeanCrps": 0.1267354711116014,
+        "deltaCrpsByElection": {
+          "2017": 0.03683840547937858,
+          "2020": 0.03272530374098084,
+          "2023": 0.011937554377327764
+        },
+        "equalElectionMeanDeltaCrps": 0.027167087865895733,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.02587255933071448,
+        "meanDeltaMse": 0.0269808688663571,
+        "meanDeltaNlpd": 0.09589001763809696,
+        "relativeDeltaCrps": 0.20414615658730206
+      },
+      "T vs C": {
+        "affectedSeats": 31,
+        "bootstrap90Interval": [
+          0.020034936017256696,
+          0.07344139984372554
+        ],
+        "comparison": "T vs C",
+        "controlMeanCrps": 0.1267354711116014,
+        "deltaCrpsByElection": {
+          "2017": 0.08715570003994216,
+          "2020": 0.03340438649026482,
+          "2023": 0.02584634700165145
+        },
+        "equalElectionMeanDeltaCrps": 0.04880214451061948,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.04608391384780467,
+        "meanDeltaMse": 0.05223013873345293,
+        "meanDeltaNlpd": 0.18337724555904872,
+        "relativeDeltaCrps": 0.363622855098111
+      }
+    },
+    "finding": "mixed_report_to_james",
+    "folds": {
+      "2017": {
+        "K": {
+          "a": -0.0078084083151311635
+        },
+        "P": {
+          "a": -0.04155934959109614,
+          "atBound": false,
+          "rho": 0.8357484295201029,
+          "unconstrainedSlope": 0.8357484295201029
+        },
+        "trainingSeats": 16,
+        "trainingTargetYears": [
+          2011,
+          2014
+        ]
+      },
+      "2020": {
+        "K": {
+          "a": 0.004196175536516327
+        },
+        "P": {
+          "a": -0.027192087293031776,
+          "atBound": false,
+          "rho": 0.6737617098982199,
+          "unconstrainedSlope": 0.6737617098982199
+        },
+        "trainingSeats": 25,
+        "trainingTargetYears": [
+          2011,
+          2014,
+          2017
+        ]
+      },
+      "2023": {
+        "K": {
+          "a": 0.008666878496882188
+        },
+        "P": {
+          "a": -0.01829232226117285,
+          "atBound": false,
+          "rho": 0.6008864180332696,
+          "unconstrainedSlope": 0.6008864180332696
+        },
+        "trainingSeats": 35,
+        "trainingTargetYears": [
+          2011,
+          2014,
+          2017,
+          2020
+        ]
+      }
+    },
+    "layerExclusions": {
+      "notInLayer": 0,
+      "notNationalOrLabour": 0,
+      "ownRHistory": 0
+    },
+    "rUnitOutOfFold": {
+      "2017": {
+        "meanRnewMinusMuPP": 1.6377262603554634,
+        "meanRnewPP": 2.5537657939445197,
+        "muRPP": 0.9160395335890563,
+        "rmsePP": {
+          "C": 2.749511737697143,
+          "K": 3.9996585902327255,
+          "P": 4.204107571896403,
+          "T": 5.39426843256996
+        },
+        "seats": 9
+      },
+      "2020": {
+        "meanRnewMinusMuPP": 1.0087294848083355,
+        "meanRnewPP": 1.9843635897796843,
+        "muRPP": 0.9756341049713488,
+        "rmsePP": {
+          "C": 4.018078620500824,
+          "K": 4.1923562330248805,
+          "P": 3.576314735149302,
+          "T": 4.504453998363269
+        },
+        "seats": 10
+      },
+      "2023": {
+        "meanRnewMinusMuPP": -0.9651706286014574,
+        "meanRnewPP": 0.1775530170918092,
+        "muRPP": 1.1427236456932663,
+        "rmsePP": {
+          "C": 3.3928177633325918,
+          "K": 3.3248405751806986,
+          "P": 4.6176319210600445,
+          "T": 7.170261305676304
+        },
+        "seats": 12
+      }
+    },
+    "sample": "primary",
+    "seatsInSample": 47,
+    "supporting": {
+      "C": {
+        "marginMaePP": 5.642812029988811,
+        "maxAbsLogWeightShift": 0.0,
+        "meanCrps": 0.1267354711116014,
+        "meanNlpd": 0.07225899327868592,
+        "meanSquaredBalanceError": 0.039497851215350016,
+        "meanSquaredStandardisedResidual": 0.28671982674101665,
+        "replacedCandidateShareMaePP": 3.4427045673896965,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.31085145478350684
+      },
+      "K": {
+        "marginMaePP": 5.544913998722402,
+        "maxAbsLogWeightShift": 0.05690108028826587,
+        "meanCrps": 0.12622270214036346,
+        "meanNlpd": 0.07134972886345692,
+        "meanSquaredBalanceError": 0.039070577475509474,
+        "meanSquaredStandardisedResidual": 0.2849012979105586,
+        "replacedCandidateShareMaePP": 3.3060460138794974,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.8807972310961689
+      },
+      "P": {
+        "marginMaePP": 7.321584976037056,
+        "maxAbsLogWeightShift": 0.2569609867123198,
+        "meanCrps": 0.15209526147107794,
+        "meanNlpd": 0.1672397465015539,
+        "meanSquaredBalanceError": 0.06605144634186656,
+        "meanSquaredStandardisedResidual": 0.47668133318675265,
+        "replacedCandidateShareMaePP": 4.66212310015153,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.6357120367252469
+      },
+      "T": {
+        "marginMaePP": 8.75694305055793,
+        "maxAbsLogWeightShift": 0.3865345936055605,
+        "meanCrps": 0.17281938495940613,
+        "meanNlpd": 0.2556362388377347,
+        "meanSquaredBalanceError": 0.09172798994880293,
+        "meanSquaredStandardisedResidual": 0.6534743178591143,
+        "replacedCandidateShareMaePP": 5.585542074782167,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": 2.106819547561392
+      }
+    }
+  },
+  "primaryNoListOnly": {
+    "affectedSeats": 25,
+    "affectedSeatsByElection": {
+      "2017": 8,
+      "2020": 6,
+      "2023": 11
+    },
+    "comparisons": {
+      "K vs C": {
+        "affectedSeats": 25,
+        "bootstrap90Interval": [
+          -0.002659980704257573,
+          0.001983501966035009
+        ],
+        "comparison": "K vs C",
+        "controlMeanCrps": 0.1291181619646971,
+        "deltaCrpsByElection": {
+          "2017": -0.0037465892306733604,
+          "2020": 0.003377983745596965,
+          "2023": 5.588346243307315e-05
+        },
+        "equalElectionMeanDeltaCrps": -0.00010424067421444076,
+        "label": "NEGLIGIBLE",
+        "meanDeltaCrps": -0.0003636037314016516,
+        "meanDeltaMse": -0.0003287170022401203,
+        "meanDeltaNlpd": -0.0008010454422444512,
+        "relativeDeltaCrps": -0.002816054115617495
+      },
+      "P vs C": {
+        "affectedSeats": 25,
+        "bootstrap90Interval": [
+          0.008398620281160623,
+          0.03275783768387904
+        ],
+        "comparison": "P vs C",
+        "controlMeanCrps": 0.1291181619646971,
+        "deltaCrpsByElection": {
+          "2017": 0.02974955777845134,
+          "2020": 0.02976228385540852,
+          "2023": 0.008286718666329351
+        },
+        "equalElectionMeanDeltaCrps": 0.02259952010006307,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.020308962827587387,
+        "meanDeltaMse": 0.02133393677876231,
+        "meanDeltaNlpd": 0.07544437661155139,
+        "relativeDeltaCrps": 0.15728974544371357
+      },
+      "P vs K": {
+        "affectedSeats": 25,
+        "bootstrap90Interval": [
+          0.007824069772773593,
+          0.034294800009830796
+        ],
+        "comparison": "P vs K",
+        "controlMeanCrps": 0.1291181619646971,
+        "deltaCrpsByElection": {
+          "2017": 0.033496147009124705,
+          "2020": 0.02638430010981155,
+          "2023": 0.008230835203896279
+        },
+        "equalElectionMeanDeltaCrps": 0.02270376077427751,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.020672566558989035,
+        "meanDeltaMse": 0.021662653781002426,
+        "meanDeltaNlpd": 0.07624542205379584,
+        "relativeDeltaCrps": 0.16010579955933105
+      },
+      "T vs C": {
+        "affectedSeats": 25,
+        "bootstrap90Interval": [
+          0.007561920740881009,
+          0.06395797397882866
+        ],
+        "comparison": "T vs C",
+        "controlMeanCrps": 0.1291181619646971,
+        "deltaCrpsByElection": {
+          "2017": 0.081416344376896,
+          "2020": 0.009442781022317397,
+          "2023": 0.012712424099751414
+        },
+        "equalElectionMeanDeltaCrps": 0.03452384983298827,
+        "label": "WORSE",
+        "meanDeltaCrps": 0.03391296424985352,
+        "meanDeltaMse": 0.03843870396985049,
+        "meanDeltaNlpd": 0.13182545038927096,
+        "relativeDeltaCrps": 0.262650611918762
+      }
+    },
+    "finding": "neutral_adequate",
+    "folds": {
+      "2017": {
+        "K": {
+          "a": -0.003238851066214636
+        },
+        "P": {
+          "a": -0.03645139309263363,
+          "atBound": false,
+          "rho": 0.7773755541081108,
+          "unconstrainedSlope": 0.7773755541081108
+        },
+        "trainingSeats": 14,
+        "trainingTargetYears": [
+          2011,
+          2014
+        ]
+      },
+      "2020": {
+        "K": {
+          "a": 0.007122753238556701
+        },
+        "P": {
+          "a": -0.022003792606021554,
+          "atBound": false,
+          "rho": 0.6118111618558857,
+          "unconstrainedSlope": 0.6118111618558857
+        },
+        "trainingSeats": 22,
+        "trainingTargetYears": [
+          2011,
+          2014,
+          2017
+        ]
+      },
+      "2023": {
+        "K": {
+          "a": 0.011029046153487727
+        },
+        "P": {
+          "a": -0.01564580544342081,
+          "atBound": false,
+          "rho": 0.5794142310839567,
+          "unconstrainedSlope": 0.5794142310839567
+        },
+        "trainingSeats": 28,
+        "trainingTargetYears": [
+          2011,
+          2014,
+          2017,
+          2020
+        ]
+      }
+    },
+    "layerExclusions": {
+      "notInLayer": 0,
+      "notNationalOrLabour": 0,
+      "ownRHistory": 0
+    },
+    "rUnitOutOfFold": {
+      "2017": {
+        "meanRnewMinusMuPP": 1.6095165436015975,
+        "meanRnewPP": 2.5255560771906542,
+        "muRPP": 0.9160395335890563,
+        "rmsePP": {
+          "C": 2.8409078371911796,
+          "K": 3.6877539092639617,
+          "P": 4.172539756072044,
+          "T": 5.530113543531689
+        },
+        "seats": 8
+      },
+      "2020": {
+        "meanRnewMinusMuPP": 1.5595779125188003,
+        "meanRnewPP": 2.535212017490149,
+        "muRPP": 0.9756341049713488,
+        "rmsePP": {
+          "C": 4.678324483146723,
+          "K": 4.7725815753523335,
+          "P": 3.974244601650239,
+          "T": 4.472548943761729
+        },
+        "seats": 6
+      },
+      "2023": {
+        "meanRnewMinusMuPP": -0.7911989814466447,
+        "meanRnewPP": 0.3515246642466219,
+        "muRPP": 1.1427236456932663,
+        "rmsePP": {
+          "C": 3.435730977076732,
+          "K": 3.4267803182463705,
+          "P": 3.769530552139054,
+          "T": 5.122961881537039
+        },
+        "seats": 11
+      }
+    },
+    "sample": "primaryNoListOnly",
+    "seatsInSample": 39,
+    "supporting": {
+      "C": {
+        "marginMaePP": 5.8966287080617255,
+        "maxAbsLogWeightShift": 0.0,
+        "meanCrps": 0.1291181619646971,
+        "meanNlpd": 0.08193094386183303,
+        "meanSquaredBalanceError": 0.041909219203845806,
+        "meanSquaredStandardisedResidual": 0.3053072363257555,
+        "replacedCandidateShareMaePP": 3.679682420615569,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.5052770851608547
+      },
+      "K": {
+        "marginMaePP": 5.866151853685965,
+        "maxAbsLogWeightShift": 0.041578094104335876,
+        "meanCrps": 0.12875455823329543,
+        "meanNlpd": 0.08112989841958856,
+        "meanSquaredBalanceError": 0.04158050220160568,
+        "meanSquaredStandardisedResidual": 0.3037051454412666,
+        "replacedCandidateShareMaePP": 3.542470998327183,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.874705960165687
+      },
+      "P": {
+        "marginMaePP": 7.210456430015956,
+        "maxAbsLogWeightShift": 0.2280735756776311,
+        "meanCrps": 0.14942712479228448,
+        "meanNlpd": 0.15737532047338443,
+        "meanSquaredBalanceError": 0.06324315598260812,
+        "meanSquaredStandardisedResidual": 0.45619598954885815,
+        "replacedCandidateShareMaePP": 4.616457203204535,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": -0.8522607981378304
+      },
+      "T": {
+        "marginMaePP": 8.408852663920127,
+        "maxAbsLogWeightShift": 0.3865345936055605,
+        "meanCrps": 0.1630311262145506,
+        "meanNlpd": 0.213756394251104,
+        "meanSquaredBalanceError": 0.08034792317369628,
+        "meanSquaredStandardisedResidual": 0.5689581371042973,
+        "replacedCandidateShareMaePP": 5.568512401077863,
+        "replacedCandidateShareMeanSignedErrorPP_predictedMinusActual_contextOnly": 1.6522336439361476
+      }
+    }
+  }
+}
