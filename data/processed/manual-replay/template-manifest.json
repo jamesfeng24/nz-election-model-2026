@@ -1,0 +1,79 @@
+{
+ "blindness": "reads only boundary crosswalk, candidate lists and source-election winners, and the Stage51 ledger; no model, score, residual or scale file",
+ "byYear": {
+  "2014": 64,
+  "2017": 64,
+  "2020": 65,
+  "2023": 64
+ },
+ "columns": [
+  "seat_election_id",
+  "election_year",
+  "electorate",
+  "previous_election_winner",
+  "national_candidate",
+  "labour_candidate",
+  "other_candidates",
+  "boundary_evidence",
+  "candidate_change_evidence",
+  "facts_prefilled",
+  "candidate_change",
+  "candidate_change_reason",
+  "boundary_change",
+  "boundary_change_reason",
+  "scandal",
+  "scandal_reason",
+  "tactical_arrangement",
+  "tactical_arrangement_reason",
+  "new_strong_challenger",
+  "new_strong_challenger_reason",
+  "other",
+  "other_reason",
+  "label",
+  "label_reason",
+  "labeller",
+  "labelled_at"
+ ],
+ "inputHashes": {
+  "data/processed/elections/2011.json": "8b3043edb38e072befc2508ed769836fcb6aaaa52c81626b6748f59f37729030",
+  "data/processed/elections/2014.json": "f6f005d0e936230ad260fb7cd32897033d8179482d8cdd6c570712df904a638c",
+  "data/processed/elections/2017.json": "a6f056e5d260b914233f76738b8484bd12746894b79cd65e9beacbac9f4418d8",
+  "data/processed/elections/2020.json": "a8d45193730c486917ae0136593525ccf6f7a8e6c959edef21e4ca3bbebbf1e1",
+  "data/processed/elections/2023.json": "418eba0c8c8403106f44cc93f4d437de347abd6e967d20247927169cc857761e",
+  "data/processed/evidence/candidate-transitions/incumbent-seat-ledger.json": "bbd9891ce1b5db5184f604e424fdf21f0cc7c0f394a277730718c6aba7635823",
+  "data/processed/evidence/candidate-transitions/transition-table.json": "48ae408f70fd9dd0a52722beb53667874c71ba6bde504254e13fae7c09279128",
+  "data/processed/forecast-transport/geography.json": "8ef106a492ea858be765015803be6b81cdc1fd0670a2fbb956b0ae47949c6d19"
+ },
+ "inputsRead": [
+  "data/processed/elections/2011.json",
+  "data/processed/elections/2014.json",
+  "data/processed/elections/2017.json",
+  "data/processed/elections/2020.json",
+  "data/processed/elections/2023.json",
+  "data/processed/evidence/candidate-transitions/incumbent-seat-ledger.json",
+  "data/processed/evidence/candidate-transitions/transition-table.json",
+  "data/processed/forecast-transport/geography.json"
+ ],
+ "kind": "stage57-labelling-template",
+ "labelsFrozen": false,
+ "prefilled": {
+  "boundary_change": 257,
+  "candidate_change": 248,
+  "new_strong_challenger": 0,
+  "other": 0,
+  "scandal": 6,
+  "tactical_arrangement": 0
+ },
+ "prefilledYes": {
+  "boundary_change": 75,
+  "candidate_change": 60,
+  "new_strong_challenger": 0,
+  "other": 0,
+  "scandal": 6,
+  "tactical_arrangement": 0
+ },
+ "scaleEstimated": false,
+ "schemaVersion": 1,
+ "seatElections": 257,
+ "templateSha256": "9e506bf891bd4cc398298041066d1c9e417ec914e38380148aac228fe0c70e8b"
+}
