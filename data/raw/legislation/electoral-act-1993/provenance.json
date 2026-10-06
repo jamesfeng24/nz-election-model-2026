@@ -8,7 +8,7 @@
   "sha256": "8f6f522965a495f4b408892f496f27edd55fcc78f6b16337e8756fd9fb09c01a",
   "notes": [
     "Bytes are the uploaded text file, unchanged. The original PDF was not available to the session; the text extraction (not the PDF) is the preserved object.",
-    "Not registered in data/sources.json on purpose: Stage40 and other tests pin 926 prior source records. Register it in the MMP implementation stage, where the source-validation tests can be run and updated together.",
+    "Not registered in data/sources.json on purpose: that file is a pinned Stage39 CI dependency (.github/validation/stage39.json) and editing it would force full validation. Register after the CI-scoping change merges.",
     "Used by docs/mmp-rules-verification.md for ss 3, 35, 45, 127A, 153-153E, 179, 191-193."
   ]
 }

@@ -1,3 +1,19 @@
+# MMP allocation core complete — review-ready, PR held, 2026-10-06
+
+Branch `claude/project-thread-vojcqq` from main d0fa5a66; authorized by James (MMP work may run concurrently; D082 scope). Pushed; **no PR yet** — hold until the CI-scoping PR merges (a new Python test and new files will make the first run full).
+
+Question: does an exact, DOM-free TypeScript allocator reproduce official 2008–2023 seat tables under ss 191–193 (as at 1 Jan 2026)? Yes: all six elections match on every party's list seats and Parliament size (2008 122, 2011 121, 2014 121, 2017 120, 2020 120, 2023 122), including overhang cases; no cut-off tie occurred. Design frozen in [docs/mmp-allocation-core.md](docs/mmp-allocation-core.md) before the replay; rules and open items in docs/mmp-rules-verification.md.
+
+Material files: `src/models/mmp/allocate.ts` + `allocate.test.ts` (26 tests), `scripts/mmp/oracle.py`, `data/processed/mmp/oracle-seat-tables.json` (built from preserved Commission summary CSVs, hashes inside), `scripts/tests/test_mmp_oracle.py`, preserved Act text `data/raw/legislation/electoral-act-1993/` (SHA-256 8f6f5229…09c01a). Data dictionary MmpAllocation conventions updated. Act text deliberately **not** in data/sources.json: that file is pinned in `.github/validation/stage39.json`, so editing it forces full validation; register after CI scoping merges.
+
+Checks run here: `npm run test` 57 pass (31 prior + 26 new), `typecheck`, `build` pass; `scripts.mmp.oracle --check` and the 3 new Python tests pass; `validate/source_files.py` passes (926). The full Python suite could **not** be run meaningfully in this container (no pinned venv: numpy/shapely/matplotlib missing, 504 tests ran with 45 errors/5 failures, all environment-related); rely on hosted CI. No formatter/linter configured for Python.
+
+Limits: validates the rule implementation on historical totals only; component-party mapping, cancelled-poll by-election seat, list ordering/eligibility and the 2026 ballot roster are not implemented. No forecast, Monte Carlo, frontend, workflow or Stage47 change.
+
+Exact next action: when CI scoping has merged, open the PR into main (no skip marker), then report green to the coordinator for review; afterwards register the Act in data/sources.json. Next separately authorized MMP-adjacent task: named minor-party winner inputs after the 8 Oct nomination close (not started).
+
+---
+
 # MMP rule verification complete — rules statute-verified, 2026-10-06
 
 Branch `claude/project-thread-vojcqq` from main d0fa5a66 (verified equal to origin/main at start); pushed, no PR opened. Authorized scope: James (using the project owner Corinna's account) approved the MMP rule check only (project thread, 2026-10-06); code and a PR need a separate go-ahead.

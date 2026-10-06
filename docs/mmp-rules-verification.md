@@ -4,7 +4,7 @@ Documentation-only checkpoint. **No code, model, coefficient, test or workflow c
 
 ## Evidence
 
-- **Statute (primary).** James uploaded the Electoral Act 1993, version 238.0 as at 1 January 2026, as a PDF text extraction. It is preserved unchanged at `data/raw/legislation/electoral-act-1993/` with SHA-256 `8f6f5229…9c01a` and a provenance note (full hash in `provenance.json`). The session's own access to legislation.govt.nz was blocked, so this is the PDF's text extraction, not a byte-verified download. The version header and the amendment notes (Part 6 sections last amended in 2017 and earlier; the file also carries Electoral Amendment Act 2025 notes elsewhere) show it is the current text for 2026. It is deliberately **not** registered in `data/sources.json`, because tests pin 926 prior source records; register it in the implementation stage together with those tests.
+- **Statute (primary).** James uploaded the Electoral Act 1993, version 238.0 as at 1 January 2026, as a PDF text extraction. It is preserved unchanged at `data/raw/legislation/electoral-act-1993/` with SHA-256 `8f6f5229…9c01a` and a provenance note (full hash in `provenance.json`). The session's own access to legislation.govt.nz was blocked, so this is the PDF's text extraction, not a byte-verified download. The version header and the amendment notes (Part 6 sections last amended in 2017 and earlier; the file also carries Electoral Amendment Act 2025 notes elsewhere) show it is the current text for 2026. It is not yet in `data/sources.json`, which is a pinned Stage39 CI dependency; register it after the CI-scoping change merges.
 - **Electoral Commission pages (secondary to the Act).** Read through a summarising web-fetch tool on 2026-10-06; quoted strings are tool output, not byte-checked, and nothing from them is preserved under `data/raw/`. They corroborate the Act and supply facts the Act does not hold (2023 results, 2026 boundaries).
 - Status vocabulary: **Statute** = text of the Act as at 1 January 2026; **Official** = stated on an Electoral Commission or Ministry page; **Derived** = arithmetic or reasoning from verified inputs; **Open** = not established.
 
@@ -69,7 +69,7 @@ Checked in repo artifacts only (no run, no new data); question raised by the pro
 | [Ministry of Justice, Electoral law changes](https://www.justice.govt.nz/about/news-and-media/news/electoral-law-changes/) | Item 13 | Read via fetch tool; undated, cites Royal Assent 19 Dec 2025 |
 | [NZ Initiative, Unravelling MMP](https://www.nzinitiative.org.nz/reports-and-media/reports/unravelling-mmp-how-the-2026-election-could-break-the-voting-system-from-two-sides/document/946), [Peden brief](https://www.ourcommons.ca/Content/Committee/421/ERRE/Brief/BR8391757/br-external/2PedenR-e.pdf), [Wikipedia](https://en.wikipedia.org/wiki/Electoral_system_of_New_Zealand) | Secondary corroboration only | Read via fetch tool |
 
-## Proposed implementation stage (not started; needs James's go-ahead)
+## Implementation stage (done: see [mmp-allocation-core.md](mmp-allocation-core.md); design below was frozen first)
 
 **Question:** given fixed national valid party-vote counts, electorate winners by party, independent/off-ballot winners and the party-vote ballot roster, does a deterministic, DOM-free, serializable TypeScript allocator in `src/models/mmp` reproduce the official 2008–2023 seat allocations exactly, including every overhang case?
 
@@ -84,4 +84,4 @@ Checked in repo artifacts only (no run, no new data); question raised by the pro
 
 **Do not:** wire into forecasts or Monte Carlo, build electorate probabilities, touch the frontend, `.github/workflows` or Stage47 files, or start any later stage. Checks: `npm run test`, `typecheck`, `build`, plus the dictionary/doc updates and registering the Act text in `data/sources.json` with the source-validation tests re-run. No Python, no new dependencies.
 
-**Needed from James before starting:** a go-ahead. The statute text question is closed.
+
