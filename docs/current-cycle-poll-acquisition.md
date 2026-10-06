@@ -2,6 +2,8 @@
 
 Branch `claude/project-thread-qp68zt` (continues `claude/project-thread-1g68p4`). One question: what published 2026-cycle national party-vote polls exist since the 14 October 2023 election, preserved as dated, checksummed raw files? No national MCMC, fit, average or panel change. Stage35 files are untouched.
 
+> **Update (Stage59):** the Talbot Mills parser gap, the duplicate 16 April 2026 wave and the 6 October RNZ–Reid poll are now handled in a derived panel, [`panel-update-2026-10.md`](panel-update-2026-10.md); the Stage35 panel and this stage's outputs are unchanged.
+
 ## Primary capture (second pass, wider network)
 
 The first pass below reached only GitHub. A second pass from an environment with wider network access preserved **41 raw files with SHA-256** (37 fetched, with response headers, and 4 Taxpayers' Union–Curia browser prints supplied by James) in `data/raw/polling/current-2026-primary/` (`fetch-log.tsv` records every attempt; `acquisition-ledger.json` the checksums). Code: `scripts/polling/primary_capture.py` (`--check` verifies byte-for-byte). Outputs: [`primary-capture-audit.json`](../data/processed/polling/current-cycle-acquisition/primary-capture-audit.json) (every fact checked as verbatim text in the preserved bytes) and the dated registry `source-registry-primary.json`. The older `data/raw/polling/current-2026` snapshots, the Stage35 panel and `data/sources.json` are unchanged.
