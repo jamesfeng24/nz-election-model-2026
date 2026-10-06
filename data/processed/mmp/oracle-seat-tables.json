@@ -1,0 +1,652 @@
+{
+  "schemaVersion": 1,
+  "description": "Official party-vote totals, constituency seats and list seats from the Electoral Commission summary of overall results, used only as allocator test oracles.",
+  "limitations": [
+    "officialListSeats are the Commission's 'Seats Allocated' column; 2023 excludes the postponed Port Waikato electorate poll, so its parliament size is the declaration-day 122.",
+    "Component-party constituency wins are not separated in the source; none is assumed."
+  ],
+  "elections": [
+    {
+      "year": 2008,
+      "rawPath": "data/raw/elections/2008/e9/csv/e9_part1.csv",
+      "rawSha256": "42fb7bd7b284e959f6128e8fb6230b6772783e17f750176683d869f409e4ba6f",
+      "listedParties": [
+        {
+          "partyName": "ACT New Zealand",
+          "partyVotes": 85496,
+          "officialListSeats": 4,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Alliance",
+          "partyVotes": 1909,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Aotearoa Legalise Cannabis Party",
+          "partyVotes": 9515,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Democrats for Social Credit",
+          "partyVotes": 1208,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Family Party",
+          "partyVotes": 8176,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Green Party",
+          "partyVotes": 157613,
+          "officialListSeats": 9,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Jim Anderton's Progressive",
+          "partyVotes": 21241,
+          "officialListSeats": 0,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Kiwi Party",
+          "partyVotes": 12755,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Labour Party",
+          "partyVotes": 796880,
+          "officialListSeats": 22,
+          "constituencySeats": 21
+        },
+        {
+          "partyName": "Libertarianz",
+          "partyVotes": 1176,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Maori Party",
+          "partyVotes": 55980,
+          "officialListSeats": 0,
+          "constituencySeats": 5
+        },
+        {
+          "partyName": "National Party",
+          "partyVotes": 1053398,
+          "officialListSeats": 17,
+          "constituencySeats": 41
+        },
+        {
+          "partyName": "New Zealand First Party",
+          "partyVotes": 95356,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "New Zealand Pacific Party",
+          "partyVotes": 8640,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "RAM - Residents Action Movement",
+          "partyVotes": 465,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "The Bill and Ben Party",
+          "partyVotes": 13016,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "The Republic of New Zealand Party",
+          "partyVotes": 313,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "United Future",
+          "partyVotes": 20497,
+          "officialListSeats": 0,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Workers Party",
+          "partyVotes": 932,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        }
+      ],
+      "constituencySeatsOutsidePartyBallot": 0,
+      "officialParliamentSize": 122
+    },
+    {
+      "year": 2011,
+      "rawPath": "data/raw/elections/2011/e9/csv/e9_part1.csv",
+      "rawSha256": "dc88e6822f1a654962761c8f18145436e1cd978af6bc9b8b3b992680fe7b3d61",
+      "listedParties": [
+        {
+          "partyName": "ACT New Zealand",
+          "partyVotes": 23889,
+          "officialListSeats": 0,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Alliance",
+          "partyVotes": 1209,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Aotearoa Legalise Cannabis Party",
+          "partyVotes": 11738,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Conservative Party",
+          "partyVotes": 59237,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Democrats for Social Credit",
+          "partyVotes": 1714,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Green Party",
+          "partyVotes": 247372,
+          "officialListSeats": 14,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Labour Party",
+          "partyVotes": 614937,
+          "officialListSeats": 12,
+          "constituencySeats": 22
+        },
+        {
+          "partyName": "Libertarianz",
+          "partyVotes": 1595,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Mana",
+          "partyVotes": 24168,
+          "officialListSeats": 0,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Māori Party",
+          "partyVotes": 31982,
+          "officialListSeats": 0,
+          "constituencySeats": 3
+        },
+        {
+          "partyName": "National Party",
+          "partyVotes": 1058636,
+          "officialListSeats": 17,
+          "constituencySeats": 42
+        },
+        {
+          "partyName": "New Zealand First Party",
+          "partyVotes": 147544,
+          "officialListSeats": 8,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "United Future",
+          "partyVotes": 13443,
+          "officialListSeats": 0,
+          "constituencySeats": 1
+        }
+      ],
+      "constituencySeatsOutsidePartyBallot": 0,
+      "officialParliamentSize": 121
+    },
+    {
+      "year": 2014,
+      "rawPath": "data/raw/elections/2014/e9/csv/e9_part1.csv",
+      "rawSha256": "4c121214ae84fc1e8f0571c7fbcc363852fad71155a15156c4c9cf74d4ef89ad",
+      "listedParties": [
+        {
+          "partyName": "ACT New Zealand",
+          "partyVotes": 16689,
+          "officialListSeats": 0,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Aotearoa Legalise Cannabis Party",
+          "partyVotes": 10961,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Ban1080",
+          "partyVotes": 5113,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Conservative",
+          "partyVotes": 95598,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Democrats for Social Credit",
+          "partyVotes": 1730,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Focus New Zealand",
+          "partyVotes": 639,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Green Party",
+          "partyVotes": 257359,
+          "officialListSeats": 14,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Internet MANA",
+          "partyVotes": 34094,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Labour Party",
+          "partyVotes": 604535,
+          "officialListSeats": 5,
+          "constituencySeats": 27
+        },
+        {
+          "partyName": "Māori Party",
+          "partyVotes": 31849,
+          "officialListSeats": 1,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "National Party",
+          "partyVotes": 1131501,
+          "officialListSeats": 19,
+          "constituencySeats": 41
+        },
+        {
+          "partyName": "New Zealand First Party",
+          "partyVotes": 208300,
+          "officialListSeats": 11,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "NZ Independent Coalition",
+          "partyVotes": 872,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "The Civilian Party",
+          "partyVotes": 1096,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "United Future",
+          "partyVotes": 5286,
+          "officialListSeats": 0,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Alliance",
+          "partyVotes": 0,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        }
+      ],
+      "constituencySeatsOutsidePartyBallot": 0,
+      "officialParliamentSize": 121
+    },
+    {
+      "year": 2017,
+      "rawPath": "data/raw/elections/2017/statistics/csv/overall-results-summary.csv",
+      "rawSha256": "925f7cbf9f5a853eca906315e5b9e16b2848ee46323201d9b12020b029d06a34",
+      "listedParties": [
+        {
+          "partyName": "ACT New Zealand",
+          "partyVotes": 13075,
+          "officialListSeats": 0,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Aotearoa Legalise Cannabis Party",
+          "partyVotes": 8075,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Ban1080",
+          "partyVotes": 3005,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Conservative",
+          "partyVotes": 6253,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Democrats for Social Credit",
+          "partyVotes": 806,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Green Party",
+          "partyVotes": 162443,
+          "officialListSeats": 8,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Internet Party",
+          "partyVotes": 499,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Labour Party",
+          "partyVotes": 956184,
+          "officialListSeats": 17,
+          "constituencySeats": 29
+        },
+        {
+          "partyName": "MANA",
+          "partyVotes": 3642,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Māori Party",
+          "partyVotes": 30580,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "National Party",
+          "partyVotes": 1152075,
+          "officialListSeats": 15,
+          "constituencySeats": 41
+        },
+        {
+          "partyName": "New Zealand First Party",
+          "partyVotes": 186706,
+          "officialListSeats": 9,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "New Zealand People's Party",
+          "partyVotes": 1890,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "NZ Outdoors Party",
+          "partyVotes": 1620,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "The Opportunities Party (TOP)",
+          "partyVotes": 63261,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "United Future",
+          "partyVotes": 1782,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        }
+      ],
+      "constituencySeatsOutsidePartyBallot": 0,
+      "officialParliamentSize": 120
+    },
+    {
+      "year": 2020,
+      "rawPath": "data/raw/elections/2020/statistics/csv/overall-results-summary.csv",
+      "rawSha256": "ff538a6c3fa6181fe93b7ae644e7ef20338e8aef9f2bed02e0c412631c10df7e",
+      "listedParties": [
+        {
+          "partyName": "ACT New Zealand",
+          "partyVotes": 219031,
+          "officialListSeats": 9,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "Advance NZ",
+          "partyVotes": 28429,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Aotearoa Legalise Cannabis Party",
+          "partyVotes": 13329,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Green Party",
+          "partyVotes": 226757,
+          "officialListSeats": 9,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "HeartlandNZ",
+          "partyVotes": 914,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Labour Party",
+          "partyVotes": 1443545,
+          "officialListSeats": 19,
+          "constituencySeats": 46
+        },
+        {
+          "partyName": "Māori Party",
+          "partyVotes": 33630,
+          "officialListSeats": 1,
+          "constituencySeats": 1
+        },
+        {
+          "partyName": "National Party",
+          "partyVotes": 738275,
+          "officialListSeats": 10,
+          "constituencySeats": 23
+        },
+        {
+          "partyName": "New Conservative",
+          "partyVotes": 42613,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "New Zealand First Party",
+          "partyVotes": 75020,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "NZ Outdoors Party",
+          "partyVotes": 3256,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "ONE Party",
+          "partyVotes": 8121,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Social Credit",
+          "partyVotes": 1520,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Sustainable New Zealand Party",
+          "partyVotes": 1880,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "TEA Party",
+          "partyVotes": 2414,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "The Opportunities Party (TOP)",
+          "partyVotes": 43449,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Vision New Zealand",
+          "partyVotes": 4237,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        }
+      ],
+      "constituencySeatsOutsidePartyBallot": 0,
+      "officialParliamentSize": 120
+    },
+    {
+      "year": 2023,
+      "rawPath": "data/raw/elections/2023/statistics/csv/overall-results-summary.csv",
+      "rawSha256": "013ae008906b1fb71348ce127a5063ae04881aa58d95a65b4ff3054b9132fb12",
+      "listedParties": [
+        {
+          "partyName": "ACT New Zealand",
+          "partyVotes": 246473,
+          "officialListSeats": 9,
+          "constituencySeats": 2
+        },
+        {
+          "partyName": "Animal Justice Party",
+          "partyVotes": 5018,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Aotearoa Legalise Cannabis Party",
+          "partyVotes": 13025,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "DemocracyNZ",
+          "partyVotes": 6786,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Freedoms NZ",
+          "partyVotes": 9586,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Green Party",
+          "partyVotes": 330907,
+          "officialListSeats": 12,
+          "constituencySeats": 3
+        },
+        {
+          "partyName": "Labour Party",
+          "partyVotes": 767540,
+          "officialListSeats": 17,
+          "constituencySeats": 17
+        },
+        {
+          "partyName": "Leighton Baker Party",
+          "partyVotes": 2105,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "National Party",
+          "partyVotes": 1085851,
+          "officialListSeats": 5,
+          "constituencySeats": 43
+        },
+        {
+          "partyName": "New Conservatives",
+          "partyVotes": 4532,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "New Nation Party",
+          "partyVotes": 1530,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "New Zealand First Party",
+          "partyVotes": 173553,
+          "officialListSeats": 8,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "New Zealand Loyal",
+          "partyVotes": 34478,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "NewZeal",
+          "partyVotes": 16126,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Te Pāti Māori",
+          "partyVotes": 87844,
+          "officialListSeats": 0,
+          "constituencySeats": 6
+        },
+        {
+          "partyName": "The Opportunities Party (TOP)",
+          "partyVotes": 63344,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        },
+        {
+          "partyName": "Women’s Rights Party",
+          "partyVotes": 2513,
+          "officialListSeats": 0,
+          "constituencySeats": 0
+        }
+      ],
+      "constituencySeatsOutsidePartyBallot": 0,
+      "officialParliamentSize": 122
+    }
+  ]
+}
