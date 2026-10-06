@@ -89,6 +89,23 @@ export const ForecastSnapshotSchema = z.object({
     if (p.share.lower < 0 || p.share.upper > 1) bad('Vote-share interval must be within 0–1', ['national', 'partyVoteShares', i]);
   });
   if (!unique(s.national.partyVoteShares.map(p => p.partyId))) bad('Duplicate national party', ['national']);
+  // Missing is never zero: a listed party without a national share must fail, not render as blank or 0%.
+  const shared = new Set(s.national.partyVoteShares.map(p => p.partyId));
+  partyIds.forEach((partyId, i) => {
+    if (!shared.has(partyId)) bad(`Party "${partyId}" has no national vote share`, ['national', 'partyVoteShares', i]);
+  });
+  // Fixture identifiers must never reach a model snapshot, whatever the snapshot id or provenance claims.
+  if (!synthetic) {
+    const fixtureIds: [string, (string | number)[]][] = [];
+    s.directory.parties.forEach((p, i) => fixtureIds.push([p.partyId, ['directory', 'parties', i, 'partyId']]));
+    s.directory.electorates.forEach((e, i) => fixtureIds.push([e.electorateId, ['directory', 'electorates', i, 'electorateId']]));
+    s.directory.candidates.forEach((c, i) => fixtureIds.push([c.candidateId, ['directory', 'candidates', i, 'candidateId']]));
+    fixtureIds.push([s.electionId, ['electionId']]);
+    fixtureIds.forEach(([value, path]) => {
+      if (value.toLowerCase().startsWith(SYNTHETIC_ID_PREFIX))
+        bad(`Synthetic id "${value}" is not allowed in a non-synthetic snapshot`, path);
+    });
+  }
 
   const predicted = s.simulation.electoratePredictions.map(p => p.electorateId);
   const unavailable = s.unavailableElectorates.map(u => u.electorateId);
