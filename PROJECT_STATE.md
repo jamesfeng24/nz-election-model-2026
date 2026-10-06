@@ -1,4 +1,18 @@
-# Stage53 end-to-end export skeleton and synthetic dry run — local checkpoint, 2026-10-06
+# Handoff fragments, export-schema fixes and Stage53 doc corrections — review-ready, 2026-10-06
+
+Branch `claude/project-thread-uumtvd`, based on main 165744d (PR59 merged; Stage53 f09d9ee already in). Process and small-fix PR, titled "CI: handoff fragments and post-merge fixes"; no stage, no D-number requested. No Python statistical code, saved output, frozen-stage input, CI workflow, registry or `data/` file touched; no forecast.
+
+**What changed.** (1) **Handoff fragments** (James and the coordinator, 2026-10-06, after merges kept conflicting on the shared documents and each conflict cost a CI re-run): PRs write one `handoff.d/YYYY-MM-DD-<slug>.md` with optional `<!-- fold: changelog|state|decisions|methodology|sources|roadmap -->` sections instead of editing CHANGELOG.md, PROJECT_STATE.md, DECISIONS.md, METHODOLOGY.md, DATA_SOURCES.md or the roadmap status table; the coordinator folds them in one docs PR after a batch merges, using `scripts/fold_doc_fragments.py` (`--check` validates; rejects unknown/empty/duplicate sections, bad headings, an existing D-number, an entry already folded). Format and examples: `handoff.d/README.md`. Rule, batching rule and "read `handoff.d/` with PROJECT_STATE.md" are in AGENTS.md; `docs/ci-validation.md` notes the paths are documentation; `ci_selection` treats `handoff.d/*.md` like `docs/*.md`. This PR itself edited the shared documents directly because it introduces the rule and main was quiet. (2) **Export schema**: a non-synthetic snapshot rejects `synthetic-` party, electorate, candidate and election ids, and requires a national vote-share interval for every directory party. (3) **Stage53 entry and `docs/export-contract.md`** corrected: `check:dist` is in CI and Verify run 37397768440 passed.
+
+**Checks (local).** `npm run test` 61 tests pass (was 59), `typecheck`, `build`, `check:dist` pass; `git diff --check` clean. Python: this container has Python 3.11 without numpy/scipy/shapely/matplotlib, so the full `unittest discover` could not be run here (541 tests ran; the failures and import errors are the missing packages and, in `test_ci_selection`, the pinned runtime check, and the same two `test_ci_selection` tests fail with the selector unmodified). The new `test_fold_doc_fragments` (8 tests, including a fold against copies of the real shared documents) and the added selector cases pass. CI on the PR is the full Python gate; Stage39 runs full once because this PR changes AGENTS.md, a selector file and tests.
+
+**Limits.** No fragments from open PRs #54, #58, #60, #61 were folded; those PRs still edit the shared documents directly until the coordinator tells them to move to fragments. No D-number was assigned for the fragment rule (recorded in AGENTS.md); assign one if it should be a recorded decision.
+
+**Exact next action.** CI on the unskipped PR head must pass both required jobs; then the coordinator reviews and merges (merge commit). Then the coordinator hands the fragment format (`handoff.d/README.md`) to threads for #54, #58, #60, #61 so each fixes its conflicts with one push, and folds `handoff.d/` after the batch merges. Reproduction: `npm ci && npm run test && npm run typecheck && npm run build && npm run check:dist`; `python3 -m unittest scripts.tests.test_fold_doc_fragments`; `python3 -m scripts.fold_doc_fragments --check`.
+
+---
+
+# Stage53 end-to-end export skeleton and synthetic dry run — merged (PR #57, f09d9ee), 2026-10-06
 
 Branch `claude/project-thread-mk3i23`, based on main 109794f (PR55) with CI-scoping merge #56 merged in. Authorized by D082 item (d). Question: can one versioned export contract carry a labelled synthetic forecast from polls through MMP to the website without synthetic data reaching application results? **Yes, on fixtures.** TypeScript only: no Python, statistical code, saved output, CI file, AGENTS.md, roadmap/DECISIONS text, `src/models/mmp` or Stage47 file touched; nothing fitted; no forecast exists.
 
@@ -6,15 +20,15 @@ Added: export contract (`src/types/export.ts`: snapshot, append-only hashed arch
 
 **MMP is a stub.** `MmpStage` is the interface the MMP-rules stage should satisfy; the placeholder allocator (rules version `UNVERIFIED-PLACEHOLDER-synthetic-only`) is not the NZ rules and the schema rejects it outside synthetic snapshots. Integration with the real allocator is an open follow-up once `src/models/mmp` lands. Findings during the build: a first `!DEV` early-return left the synthetic chunk in the production bundle; fixed by wrapping the dynamic import in `if (import.meta.env.DEV)`, and the leak is now caught by `check:dist` and a structural test.
 
-Checks (local): `npm run test` 59 tests pass (was 31), `typecheck`, `build`, `check:dist` pass; `git diff --check` clean. Python suites and source validation not run: no Python, data or source change. `check:dist` is wired through #56's guarded frontend step. PR opened after CI scoping merged, unskipped.
+Checks (local): `npm run test` 59 tests pass (was 31), `typecheck`, `build`, `check:dist` pass; `git diff --check` clean. Python suites and source validation not run: no Python, data or source change. `check:dist` is wired through #56's guarded frontend step. PR #57 was opened after CI scoping merged, unskipped, and merged at f09d9ee; Verify run 37397768440 on main passed both required jobs including the `check:dist` step.
 
-Limitations / open: no D-number assigned to the contract; no Python exporter from Stage41–47 artifacts; Māori seats appear only as explicit `unavailable`; probability-release policy still open (contract carries `calibrationStatus` only); README not touched; no hosted CI run.
+Limitations / open: no D-number assigned to the contract; no Python exporter from Stage41–47 artifacts; Māori seats appear only as explicit `unavailable`; probability-release policy still open (contract carries `calibrationStatus` only); README not touched. Follow-up fixes to the schema and this entry are recorded in the handoff-fragments entry above.
 
 **Docs updated:** CHANGELOG, METHODOLOGY (no new method), DATA_SOURCES (no new sources), roadmap status line, `docs/export-contract.md` (stage doc). No D-number: D082 allocated this work and the roadmap assigns none for the contract; assign one only if the contract is to be a recorded decision.
 
 **Exact reproduction:** `npm ci && npm run test && npm run typecheck && npm run build && npm run check:dist` (59 tests). Dev dry run: `npm run dev` shows the in-memory synthetic snapshot under a SYNTHETIC banner. Negative check for the leak guard: `NODE_ENV=development npx vite build --mode development --outDir <tmp>` then `node scripts/validate/no_synthetic_in_dist.mjs <tmp>` must fail.
 
-**Exact next action:** CI on the unskipped PR head must pass both required jobs (frontend `check` includes `check:dist`; the Python job reuses frozen Stage45/46 under #56 and must report no change to any Python pipeline). Then the coordinator reviews and merges (merge commit); this thread does not merge. Do not start a Python exporter, real stages or publication without separate authorization.
+**Exact next action:** none for this stage (merged). Do not start a Python exporter, real stages or publication without separate authorization.
 
 ---
 

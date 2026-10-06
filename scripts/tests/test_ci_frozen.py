@@ -170,8 +170,7 @@ class SelectionTests(unittest.TestCase):
         self.assertFull(self.repo.select(), 'removed from workflow')
 
     def test_handoff_fragments_and_their_fold_script_are_documentation_not_dependencies(self):
-        write(self.repo.root, 'changelog.d/2026-10-06-x.md', '## X\n')
-        write(self.repo.root, 'state.d/2026-10-06-x.md', '# X\n')
+        write(self.repo.root, 'handoff.d/2026-10-06-x.md', '<!-- fold: changelog -->\n## X\n')
         write(self.repo.root, 'CHANGELOG.md', 'folded\n')
         write(self.repo.root, 'scripts/fold_doc_fragments.py', 'new\n')
         commit(self.repo.root, 'fragments')
