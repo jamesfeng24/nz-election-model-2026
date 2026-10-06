@@ -14,8 +14,8 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -24,10 +24,10 @@ jobs:
   python:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version-file: .python-version
       - run: python3 -m pip install -r requirements-boundaries.txt
@@ -37,6 +37,13 @@ jobs:
           CI_BASE_SHA: ${{ github.event.pull_request.base.sha }}
           CI_EVENT_NAME: ${{ github.event_name }}
         run: python3 -m scripts.validate.ci_selection --base "$CI_BASE_SHA" --event "$CI_EVENT_NAME" --github-output "$GITHUB_OUTPUT"
+      - name: Select frozen-pipeline reuse
+        id: frozen
+        continue-on-error: true
+        env:
+          CI_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          CI_EVENT_NAME: ${{ github.event_name }}
+        run: python3 -m scripts.validate.ci_frozen --base "$CI_BASE_SHA" --event "$CI_EVENT_NAME" --github-output "$GITHUB_OUTPUT"
       - run: python3 -m scripts.polling.external_comparison.archive --check
       - run: python3 -m scripts.polling.external_comparison.evaluation --check
       - run: python3 -m scripts.polling.category_interface.run --check
@@ -149,17 +156,34 @@ jobs:
       - run: python3 -m scripts.uncertainty_revision.priors --check
       - run: python3 -m scripts.uncertainty_revision.estimation --check
       - run: python3 -m scripts.uncertainty_revision.construction --check
+        if: steps.frozen.outputs.stage45 != 'integrity'
       - run: python3 -m scripts.uncertainty_revision.evaluation --check
+        if: steps.frozen.outputs.stage45 != 'integrity'
       - run: python3 -m scripts.uncertainty_revision.mean_audit --check
+        if: steps.frozen.outputs.stage45 != 'integrity'
       - run: python3 -m scripts.uncertainty_revision.verification --check
+        if: steps.frozen.outputs.stage45 != 'integrity'
+      - name: Verify reused Stage45 frozen pipeline
+        if: steps.frozen.outputs.stage45 == 'integrity'
+        env:
+          CI_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage45 --base "$CI_BASE_SHA" --event pull_request
       - run: python3 -m scripts.uncertainty_revision.report --check
       - run: python3 -m scripts.uncertainty_revision.manifest --check
       - run: python3 -m scripts.uncertainty_tails.diagnosis --check
       - run: python3 -m scripts.uncertainty_tails.estimation --check
       - run: python3 -m scripts.uncertainty_tails.numerics --check
       - run: python3 -m scripts.uncertainty_tails.construction --check
+        if: steps.frozen.outputs.stage46 != 'integrity'
       - run: python3 -m scripts.uncertainty_tails.evaluation --check
+        if: steps.frozen.outputs.stage46 != 'integrity'
       - run: python3 -m scripts.uncertainty_tails.verification --check
+        if: steps.frozen.outputs.stage46 != 'integrity'
+      - name: Verify reused Stage46 frozen pipeline
+        if: steps.frozen.outputs.stage46 == 'integrity'
+        env:
+          CI_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage46 --base "$CI_BASE_SHA" --event pull_request
       - run: python3 -m scripts.diagnostics.uncertainty_tails_reference --check
       - run: python3 -m scripts.diagnostics.uncertainty_tails_report --check
       - run: python3 -m scripts.diagnostics.uncertainty_tails_manifest --check
