@@ -31,14 +31,15 @@ def calibration_rows():
     rows = []
     for poll in polls:
         official = results[str(poll['year'])][poll['seat']]['candidates']
-        resolved = [resolve(e, official) for e in poll['candidates']]
+        entries = [e for e in poll['candidates'] if e['pollPercent'] > 0]  # a listed 0% cannot enter a log-share model
+        resolved = [resolve(e, official) for e in entries]
         names = [c['name'] for c in resolved]
         if len(set(names)) != len(names):
             raise ValueError('Duplicate resolved candidate in ' + poll['id'])
-        q = closure([e['pollPercent'] for e in poll['candidates']])
+        q = closure([e['pollPercent'] for e in entries])
         votes = [c['votes'] for c in resolved]
         v = closure(votes)
-        parties = [e['party'] for e in poll['candidates']]
+        parties = [e['party'] for e in entries]
         if parties.count('MP') > 1 or parties.count('LAB') != 1:
             raise ValueError('Each calibration poll needs one LAB candidate and at most one MP candidate: ' + poll['id'])
         has_contrast = parties.count('MP') == 1

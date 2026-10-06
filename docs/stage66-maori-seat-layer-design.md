@@ -37,7 +37,7 @@ For named candidates `i` in a seat in election `e`, on the log scale:
 
 ## Amendment before any score
 
-While building the calibration table (before any contrast, scale or winner probability was computed) the 2017 Te Tai Tokerau poll was found to have no Māori Party candidate; the contrast sample is therefore 24 polls (4, 6, 7 and 7 in 2014, 2017, 2020 and 2023), `sigma^2` has 20 degrees of freedom, and the text above and `design-contract.json` were corrected in the same commit.
+While building the calibration table (before any contrast, scale or winner probability had been displayed or recorded) the 2017 Te Tai Tokerau poll was found to have no Māori Party candidate; the contrast sample is therefore 24 polls (4, 6, 7 and 7 in 2014, 2017, 2020 and 2023), `sigma^2` has 20 degrees of freedom, and the text above and `design-contract.json` were corrected in the same commit. The same pass found one listed poll share of 0% (2020 Ikaroa-Rāwhiti, Kelly Thurston), which cannot enter a log-share model; candidates with a listed share of 0 are dropped from the named set on both the poll and the result side (they count in the unnamed remainder).
 
 ## Several polls for one seat
 
@@ -49,7 +49,7 @@ Candidate and party questions differ (in Hauraki-Waikato 2026 the Te Pāti Māor
 
 ## Per-draw output for the MMP seat layer
 
-`simulate()` returns, for each draw and each polled seat, candidate vote shares and the winner (party code and name) as arrays plus the draw's `z_e`; unpolled seats are listed as `unpolled` with no values (missing is not zero, and no winner is invented). The committed artifacts are the calibration, the seat summaries (winner probabilities, share quantiles, Monte Carlo error) and a labelled 2,000-draw preview; the full bank (100,000 draws, seed 2026066) is regenerated deterministically. Per-seat random streams are keyed by seat name, so adding a poll for one seat leaves the other seats' draws unchanged. The MMP layer (Stage65) takes winners as a separate input; its shape is `draws x seats` of party codes, which this output matches.
+`simulate()` returns, for each draw and each polled seat, candidate vote shares and the winner (party code and name) as arrays plus the draw's `z_e`; unpolled seats are listed as `unpolled` with no values (missing is not zero, and no winner is invented). The committed artifacts are the calibration, the seat summaries (winner probabilities, share quantiles, Monte Carlo error) and a labelled 500-draw preview; the full bank (100,000 draws, seed 2026066) is regenerated deterministically. Per-seat random streams are keyed by seat name, so adding a poll for one seat leaves the other seats' draws unchanged. The MMP layer (Stage65) takes winners as a separate input; its shape is `draws x seats` of party codes, which this output matches.
 
 ## Adding a poll
 
