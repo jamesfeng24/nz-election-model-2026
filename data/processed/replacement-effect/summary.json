@@ -1,0 +1,436 @@
+{
+  "adopted": false,
+  "affectedSeats": 31,
+  "affectedSeatsByElection": {
+    "2017": 9,
+    "2020": 10,
+    "2023": 12
+  },
+  "descriptive": {
+    "continuationReferenceGeneral": {
+      "a_PP": 2.6159912192749704,
+      "meanRnewPP": 5.244095854579915,
+      "meanRoldPP": 4.543827715912301,
+      "rho": 0.5783900270033191,
+      "rho90Interval": [
+        0.474443522580201,
+        0.6887923052127968
+      ],
+      "seats": 236
+    },
+    "generalChangesByTransitionType": {
+      "boundary_complication": {
+        "meanRnewPP": 1.0475211107671467,
+        "meanRoldPP": 4.08909625567262,
+        "seats": 1
+      },
+      "by_election_party_change": {
+        "meanRnewPP": -4.610760786755491,
+        "meanRoldPP": 3.381856624090887,
+        "seats": 2
+      },
+      "by_election_succession": {
+        "meanRnewPP": 7.375132704964157,
+        "meanRoldPP": 8.873638682010917,
+        "seats": 8
+      },
+      "death_or_illness_withdrawal": {
+        "meanRnewPP": 2.861453731243946,
+        "meanRoldPP": 3.395046460865425,
+        "seats": 1
+      },
+      "deselection": {
+        "meanRnewPP": 1.6847746216647752,
+        "meanRoldPP": 4.470048638951507,
+        "seats": 1
+      },
+      "party_change": {
+        "meanRnewPP": 6.72218853210666,
+        "meanRoldPP": 6.367152539503137,
+        "seats": 2
+      },
+      "resignation_before_election": {
+        "meanRnewPP": 2.807850576549855,
+        "meanRoldPP": 8.902645606589163,
+        "seats": 5
+      },
+      "retirement": {
+        "meanRnewPP": 0.9383119921054691,
+        "meanRoldPP": 4.3777211374146985,
+        "seats": 52
+      }
+    },
+    "primaryPerPair": {
+      "2008-2011": {
+        "meanRnewPP": -0.21462557885272396,
+        "meanRoldPP": 4.869820511253189,
+        "rho": 0.8424152274392908,
+        "seats": 6
+      },
+      "2011-2014": {
+        "meanRnewPP": -1.1205699831093523,
+        "meanRoldPP": 3.5395623767528206,
+        "rho": 0.8363481542736048,
+        "seats": 10
+      },
+      "2014-2017": {
+        "meanRnewPP": 2.5537657939445197,
+        "meanRoldPP": 5.76132629694318,
+        "rho": 0.10755399704935688,
+        "seats": 9
+      },
+      "2017-2020": {
+        "meanRnewPP": 1.984363589779684,
+        "meanRoldPP": 4.056353052078629,
+        "rho": 0.48595930172522384,
+        "seats": 10
+      },
+      "2020-2023": {
+        "meanRnewPP": 0.17755301709180923,
+        "meanRoldPP": 3.8982978925682996,
+        "rho": -0.07923723895395286,
+        "seats": 12
+      }
+    },
+    "primaryPooled": {
+      "a_PP": -1.2324911937869842,
+      "correlation": 0.46324685423592377,
+      "meanRnewPP": 0.6907385307274331,
+      "meanRoldPP": 4.33637422849238,
+      "rho": 0.4435110124669901,
+      "rho90Interval": [
+        0.2656353872186344,
+        0.6251066297944264
+      ],
+      "seats": 47
+    }
+  },
+  "finding": "mixed_report_to_james",
+  "materiality": {
+    "balanceLocationShiftPer1ppR": 0.02829102382254922,
+    "meanThetaR": 2.829102382254922,
+    "medianTotalSd": 0.3692945821792539,
+    "ratio": 0.07660828289329434,
+    "reading": "approximate log-ratio location change from a 1pp change in the incoming candidate R, against the frozen balance total scale"
+  },
+  "neutrality": {
+    "bootstrap90IntervalPP": [
+      -0.5106687301464629,
+      1.386568356447157
+    ],
+    "byTargetYear": {
+      "2017": 1.6377262603554632,
+      "2020": 1.0087294848083352,
+      "2023": -0.9651706286014575
+    },
+    "meanRnewMinusMuPP": 0.4272510854214526,
+    "reading": "mu_f is the fold training mean of supported R that the layer uses as neutral; 0 on this scale means neutral is right on average",
+    "sample": "primary",
+    "sdPP": 3.473536101627472,
+    "seats": 31
+  },
+  "primaryComparisons": {
+    "K vs C": {
+      "affectedSeats": 31,
+      "bootstrap90Interval": [
+        -0.0034534485924948306,
+        0.0025656769967687234
+      ],
+      "comparison": "K vs C",
+      "controlMeanCrps": 0.1267354711116014,
+      "deltaCrpsByElection": {
+        "2017": -0.006605222761657239,
+        "2020": 0.003952923175794076,
+        "2023": 0.00033516124904988076
+      },
+      "equalElectionMeanDeltaCrps": -0.0007723794456044275,
+      "label": "MIXED",
+      "meanDeltaCrps": -0.0005127689712379296,
+      "meanDeltaMse": -0.0004272737398405512,
+      "meanDeltaNlpd": -0.0009092644152290164,
+      "relativeDeltaCrps": -0.004045978341662476
+    },
+    "P vs C": {
+      "affectedSeats": 31,
+      "bootstrap90Interval": [
+        0.01467023428594671,
+        0.0369833397213317
+      ],
+      "comparison": "P vs C",
+      "controlMeanCrps": 0.1267354711116014,
+      "deltaCrpsByElection": {
+        "2017": 0.030233182717721345,
+        "2020": 0.03667822691677493,
+        "2023": 0.012272715626377642
+      },
+      "equalElectionMeanDeltaCrps": 0.026394708420291305,
+      "label": "WORSE",
+      "meanDeltaCrps": 0.02535979035947655,
+      "meanDeltaMse": 0.02655359512651654,
+      "meanDeltaNlpd": 0.09498075322286799,
+      "relativeDeltaCrps": 0.20010017824563958
+    },
+    "P vs K": {
+      "affectedSeats": 31,
+      "bootstrap90Interval": [
+        0.01384180444498117,
+        0.03862972384117672
+      ],
+      "comparison": "P vs K",
+      "controlMeanCrps": 0.1267354711116014,
+      "deltaCrpsByElection": {
+        "2017": 0.03683840547937858,
+        "2020": 0.03272530374098084,
+        "2023": 0.011937554377327764
+      },
+      "equalElectionMeanDeltaCrps": 0.027167087865895733,
+      "label": "WORSE",
+      "meanDeltaCrps": 0.02587255933071448,
+      "meanDeltaMse": 0.0269808688663571,
+      "meanDeltaNlpd": 0.09589001763809696,
+      "relativeDeltaCrps": 0.20414615658730206
+    },
+    "T vs C": {
+      "affectedSeats": 31,
+      "bootstrap90Interval": [
+        0.020034936017256696,
+        0.07344139984372554
+      ],
+      "comparison": "T vs C",
+      "controlMeanCrps": 0.1267354711116014,
+      "deltaCrpsByElection": {
+        "2017": 0.08715570003994216,
+        "2020": 0.03340438649026482,
+        "2023": 0.02584634700165145
+      },
+      "equalElectionMeanDeltaCrps": 0.04880214451061948,
+      "label": "WORSE",
+      "meanDeltaCrps": 0.04608391384780467,
+      "meanDeltaMse": 0.05223013873345293,
+      "meanDeltaNlpd": 0.18337724555904872,
+      "relativeDeltaCrps": 0.363622855098111
+    }
+  },
+  "question": "Is the neutral R assumption right for an ordinary same-party National/Labour incumbent replacement?",
+  "sOverlap": {
+    "correlationRoldZs": 0.5100348612895725,
+    "gammaS": -0.011771496339058777,
+    "reading": "descriptive: a fall in rho once the outgoing seat-party split is controlled indicates the seat-level persistence S already carries",
+    "rhoWithS": 0.4071594273190839,
+    "rhoWithoutS": 0.3996472748475852,
+    "seats": 41,
+    "targetYears": "2014-2023 layer seats with supported S and a replaced N/L candidate"
+  },
+  "sample": {
+    "candidateChanges": 75,
+    "changesByScopeAndType": {
+      "general:boundary_complication": 1,
+      "general:by_election_party_change": 2,
+      "general:by_election_succession": 8,
+      "general:death_or_illness_withdrawal": 1,
+      "general:deselection": 1,
+      "general:party_change": 2,
+      "general:resignation_before_election": 5,
+      "general:retirement": 52,
+      "maori:by_election_succession": 1,
+      "maori:party_change": 1,
+      "maori:retirement": 1
+    },
+    "changesExcludedFromPrimaryByReason": {
+      "maori_scope": 3,
+      "tag_boundary_change_successor_seat": 3,
+      "tag_scandal_context": 4,
+      "type_boundary_complication": 1,
+      "type_by_election_party_change": 2,
+      "type_by_election_succession": 9,
+      "type_death_or_illness_withdrawal": 1,
+      "type_deselection": 1,
+      "type_party_change": 3,
+      "type_resignation_before_election": 5
+    },
+    "continuationReference": 236,
+    "continuations": 258,
+    "extended": 59,
+    "ledgerSeats": 333,
+    "maoriExcludedByElectorateType": {
+      "candidateChanges": 3,
+      "continuations": 21,
+      "filter": "ledger scope (electorate type), never party",
+      "rows": 24,
+      "rowsInAnySampleOrReference": [],
+      "seats": [
+        {
+          "key": "2008-2011|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2008-2011|LAB|Ikaroa-Rawhiti",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2011-2014|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2011-2014|LAB|Ikaroa-Rāwhiti",
+          "party": "LAB",
+          "relation": "candidate_change",
+          "transitionType": "by_election_succession"
+        },
+        {
+          "key": "2011-2014|LAB|Te Tai Tonga",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Ikaroa-Rāwhiti",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Te Tai Hauāuru",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Te Tai Tokerau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Te Tai Tonga",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2014-2017|LAB|Tāmaki Makaurau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Ikaroa-Rāwhiti",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Te Tai Hauāuru",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Te Tai Tokerau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Te Tai Tonga",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Tāmaki Makaurau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2017-2020|LAB|Waiariki",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2020-2023|LAB|Hauraki-Waikato",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2020-2023|LAB|Ikaroa-Rāwhiti",
+          "party": "LAB",
+          "relation": "candidate_change",
+          "transitionType": "party_change"
+        },
+        {
+          "key": "2020-2023|LAB|Te Tai Hauāuru",
+          "party": "LAB",
+          "relation": "candidate_change",
+          "transitionType": "retirement"
+        },
+        {
+          "key": "2020-2023|LAB|Te Tai Tokerau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2020-2023|LAB|Te Tai Tonga",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        },
+        {
+          "key": "2020-2023|LAB|Tāmaki Makaurau",
+          "party": "LAB",
+          "relation": "continuation",
+          "transitionType": null
+        }
+      ]
+    },
+    "primary": 47,
+    "primaryByPair": {
+      "2008-2011": 6,
+      "2011-2014": 10,
+      "2014-2017": 9,
+      "2017-2020": 10,
+      "2020-2023": 12
+    },
+    "primaryNoListOnly": 39
+  },
+  "selectedOperationalReplacementEffectPP": null,
+  "sensitivityFindings": {
+    "extended": "mixed_report_to_james",
+    "primaryNoListOnly": "neutral_adequate"
+  },
+  "stage": 55,
+  "stage10ShiftMinus6p64ppDeployed": false,
+  "standardisedContext": {
+    "affectedBootstrap90Interval": [
+      0.18545354782269755,
+      0.39572830158389344
+    ],
+    "affectedSeats": 31,
+    "allLayerSeats2017To2023": 193,
+    "meanSquaredStandardisedControlResidualAffected": 0.28671982674101665,
+    "meanSquaredStandardisedControlResidualAll": 0.7044941473823251,
+    "reading": "descriptive context only (not a pre-registered decision quantity): compare with the affected-seat value in scores.json to see whether replacement seats are unusually over- or under-dispersed"
+  }
+}
