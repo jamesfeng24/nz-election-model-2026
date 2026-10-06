@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "stage": 55,
+  "freezeStatus": "frozen before any fold-trained fit or candidate-layer score was computed",
+  "question": "Is the neutral R assumption right for an ordinary same-party National/Labour incumbent replacement?",
+  "equation": "R_new = a + rho * R_old + eps",
+  "units": "R is the Stage7 additive_national_centered normalizedPremium (fraction internally, percentage points in reports)",
+  "sample": {
+    "universe": "data/processed/evidence/candidate-transitions/incumbent-seat-ledger.json, relation candidate_change",
+    "primary": {
+      "scope": "general",
+      "transitionTypes": ["retirement"],
+      "excludedTags": ["scandal_context", "boundary_change_successor_seat"],
+      "requires": ["R_old: Stage7 normalizedPremium of the outgoing source winner occurrence is finite",
+                   "R_new: Stage7 normalizedPremium of the Stage51 primary target candidate occurrence is finite"]
+    },
+    "extendedSensitivity": {
+      "scope": "general",
+      "transitionTypes": ["retirement", "resignation_before_election", "deselection", "death_or_illness_withdrawal"],
+      "excludedTags": [],
+      "note": "all election-time incumbent exits (Stage51: 60 across both scopes) with no tag exclusion"
+    },
+    "excludeNoListOnlySensitivity": {"primaryMinusTags": ["list_only", "list_only_then_retirement", "withdrew_from_selection"]},
+    "excludedByRule": ["by_election_succession", "by_election_party_change", "party_change", "boundary_complication",
+                        "scope maori (no Maori candidate layer; counted and listed, never fitted or scored)",
+                        "primary-type rows carrying an excluded tag",
+                        "rows lacking a finite R_old or R_new"],
+    "flaggedNotExcluded": ["list_only", "list_only_then_retirement", "dismissed_as_minister", "dropped_from_cabinet",
+                            "local_government_candidate", "pre_empted_selection_challenge", "late_withdrawal",
+                            "successor_selected_late", "reversal_before_final_announcement", "withdrew_from_selection",
+                            "initially_reselected", "pacific_matai_title_name_variants"],
+    "continuationReference": "relation continuation, scope general, finite R_old and R_new: descriptive persistence slope only, never an arm",
+    "layerScoringRequires": "primary-sample target candidate present in the Stage44 candidate-layer inventory (general exact seats 2017, 2020, 2023), with centered R exactly 0 and supportedMass.R == 0 in the control (a successor with own R history keeps it and is counted and excluded)"
+  },
+  "folds": {"2017": [2011, 2014], "2020": [2011, 2014, 2017], "2023": [2011, 2014, 2017, 2020]},
+  "foldNote": "values are the target years whose replacements may train the fit; R_new of the held-out target year is never used",
+  "arms": {
+    "C": "control: incoming candidate neutral, R-hat_new = mu_f (centered zR = 0), as deployed",
+    "K": "constant: R-hat_new = a-hat, a-hat = equal-seat mean of training R_new (rho = 0)",
+    "P": "partial transfer: R-hat_new = a-hat + rho-hat * R_old; equal-seat least squares on training pairs, rho constrained to [0, 1], a re-solved at a bound",
+    "T": "reference only, never a candidate for adoption: R-hat_new = R_old (full transfer, the continuation treatment)"
+  },
+  "layer": {
+    "source": "data/processed/uncertainty/inventory.json candidateRecords (Stage44 candidate layer, earlier fit fixed to observed local-party shares)",
+    "replacedCandidateShift": "log-weight shift delta_c = theta_R * (R-hat_new,c - mu_f) with theta_R and mu_f = the record's own coefficients.R and trainingOnlyMeans.R; all other candidates unchanged; whole-slate renormalisation q' = q exp(delta) / sum q exp(delta)",
+    "balanceMean": "p' = q'_N / (q'_N + q'_L); location = Stage48 Gaussian logistic location(p', total_sd) with the unchanged Stage45 fold scales, total_sd = sqrt(seat^2 + shared^2)",
+    "observation": "v = log((y_N + eps)/(y_L + eps)), the unchanged Stage45 balance coordinate",
+    "seats": "affected seats only: every other seat is bit-identical across arms, so whole-population averages only dilute the same difference"
+  },
+  "metrics": {
+    "decision": "delta_CRPS: mean over affected seats of the Gaussian CRPS of v under N(location, total_sd^2), X minus Y, divided by the control's mean CRPS on the same seats",
+    "supporting": ["delta mean squared balance error (v - location)^2", "delta negative log predictive density",
+                    "replaced-candidate share MAE and N-L margin MAE in pp", "out-of-fold R-unit squared error of R-hat_new", "mean squared standardised balance residual"],
+    "equalElectionViewReported": true
+  },
+  "decisionRule": {
+    "relativeCrpsThreshold": 0.003,
+    "bootstrap": {"draws": 2000, "seed": 55, "level": 0.9, "scheme": "seats resampled with replacement within election, pooled equal-seat mean"},
+    "minimumAffectedSeats": 20,
+    "IMPROVES": "relative delta_CRPS <= -0.003 AND delta MSE <= 0 AND delta_CRPS < 0 in at least 2 of 3 elections AND bootstrap upper bound < 0",
+    "WORSE": "relative delta_CRPS >= +0.003",
+    "NEGLIGIBLE": "abs(relative delta_CRPS) < 0.003",
+    "MIXED": "anything else (for example a point improvement of 0.3% or more that fails the sign, MSE or bootstrap condition)",
+    "INSUFFICIENT": "fewer than minimumAffectedSeats affected seats: report estimates only, no finding",
+    "comparisons": ["K vs C", "P vs K", "P vs C", "T vs C (reference)"],
+    "findingTable": [
+      {"when": "P vs C IMPROVES and P vs K IMPROVES", "finding": "partial_transfer"},
+      {"when": "K vs C IMPROVES and P vs K is not IMPROVES", "finding": "constant_shift_only"},
+      {"when": "K vs C in {NEGLIGIBLE, WORSE} and P vs C in {NEGLIGIBLE, WORSE}", "finding": "neutral_adequate"},
+      {"when": "any other combination, or any MIXED among K vs C and P vs C", "finding": "mixed_report_to_james"}
+    ]
+  },
+  "descriptiveInference": {
+    "reportedNotDecisive": ["mean R_new minus mu_f on each scored target year and pooled (neutral on average? negative mean shift?)",
+                              "pooled and per-pair OLS slope rho with seat bootstrap interval (partial transfer? rho < 1?)",
+                              "continuation-pairs slope as reference",
+                              "S overlap: slope with and without the outgoing seat-party split (layer zS) as a control"]
+  },
+  "constraints": {
+    "selectedOperationalReplacementEffectPP": null,
+    "stage10ShiftMinus6p64ppUndeployed": true,
+    "adoption": "none under any outcome; recommendation only",
+    "composedScoring": false,
+    "dataSourcesJsonTouched": false,
+    "newAcquisition": false,
+    "nationalMcmcRerun": false
+  }
+}
