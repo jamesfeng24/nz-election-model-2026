@@ -28,7 +28,7 @@ Earlier results anchoring the latent state come only from the pinned reference C
 
 Exploration before freezing (inputs only, no fit) found the key sets identical: 122 panel waves and 122 parsed rows, and the pinned pipeline then excludes the two Labour-commissioned Talbot Mills rows (30 Apr and 22–28 Nov 2024; the pinned `^Labour[–-]` sponsored-release exclusion), leaving 120 table polls. Stage35 and the panel keep those two rows (code TBM); the gauss input does not, which is a pinned-config difference, not an error, and is reported.
 
-**Evidence grade.** Panel waves carry `evidenceGrade` only where Stage59 changed them; the only `aggregator_only` wave is Talbot Mills 1–10 May 2024 (NAT 35, LAB 32). Stage52 verified fieldwork, sample sizes and shares for every poll since 1 June 2026 against preserved primary pages. Arm E (below) removes the one `aggregator_only` row.
+**Evidence grade.** Panel waves carry `evidenceGrade` only where Stage59 changed them; exactly two 2026-cycle waves are `aggregator_only`: Talbot Mills 1–10 May 2024 (NAT 35, LAB 32 only; no primary page recovered) and the Talbot Mills April 2026 wave (16 April; the NZ Herald confirms the shares but no fieldwork dates are published). Stage52 verified fieldwork, sample sizes and shares for every poll since 1 June 2026 against preserved primary pages. Arm E (below) removes those two `aggregator_only` waves.
 
 **Pinned-config consequences, stated rather than repaired.** The pinned config drops pollsters with fewer than two eligible polls: the single Anacta poll (4–10 Sep 2026, n 1701; Anacta is the rebranded Talbot Mills per Stage52) is excluded from the primary fit, so the dataset holds 119 2026-cycle polls and 496 in all (exploration, no fit). Arm T tests the effect of treating Anacta as Talbot Mills. Talbot Mills rows with no reported sample size use the pinned default 1000. Publication lag and the Reid Research method segment are as pinned.
 
@@ -48,7 +48,7 @@ Four CPU chains, x64, 2000 warmup + 2000 samples per chain, `target_accept` 0.95
 | A2 | seed 2035 | Monte Carlo noise floor for every comparison |
 | B1 | drop 2026-cycle polls with fieldwork end before 2026-06-01 (earlier cycles kept) | James's "use only recent polls": about 18 weeks, the span Stage52 verified against primary pages |
 | B2 | drop 2026-cycle polls with fieldwork end before 2026-08-11 (8 weeks, earlier cycles kept) | a harder recent window |
-| E | drop the `aggregator_only` Talbot Mills May 2024 row | evidence-grade filter |
+| E | drop the two `aggregator_only` panel waves (Talbot Mills May 2024 and April 2026) | evidence-grade filter |
 | T | relabel the Anacta poll as Talbot Mills | pinned-config consequence of section 2 |
 
 Windows are applied to the polars table before the pinned `build_dataset`; windowed polls are neither renamed nor reweighted. Earlier cycles are kept in B1/B2 because, in this model, they are where persistent house bias and the industry-error scales are learned, and removing them would be a different model. A "history-truncated" variant (a later `anchor_election`) is not run.
