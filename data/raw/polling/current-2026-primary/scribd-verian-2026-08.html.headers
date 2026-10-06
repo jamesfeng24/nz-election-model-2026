@@ -1,0 +1,35 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+status: 200 OK
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: frame-ancestors 'self'
+cache-control: public, no-cache
+link: <https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical, </options/exposed_to_client.js>; rel=preload; as=script; critical
+etag: W/"75b4fbc36b9274dcd3167649e106f7aa"
+last-modified: Thu, 13 Aug 2026 00:21:06 GMT
+x-request-id: 0db445bfe5269b345e9dd96b04099acfc147b591bae52f1b4cc4a64cf26978ad
+x-runtime: 0.341696
+x-envoy-upstream-service-time: 344
+server: envoy
+accept-ranges: bytes
+age: 1
+date: Tue, 06 Oct 2026 01:07:12 GMT
+via: 1.1 varnish
+x-served-by: cache-iad-kiad7000096-IAD
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1791248831.631260,VS0,VE1381
+set-cookie: spv_1073125712=0db445bfe5269b345e9dd96b04099acfc147b591bae52f1b4cc4a64cf26978ad; Path=/document/1073125712/; Max-Age=180; SameSite=Lax; Secure; HttpOnly
+vary: X-Language-Locale,X-Bot,X-Fastly-Mobile,X-Scribd-Country-Code,Accept-Encoding
+strict-transport-security: max-age=63072000; includeSubDomains
+set-cookie: scribd_ubtc=u%3Def08495e-eafb-44ed-a54b-6bb19735a8a0%26h%3DoeppwxOexkYTErsDMFSHZ8KCVy%2BBHkh87O%2B%2FLQy0ejM%3D; Domain=.scribd.com; Path=/; Expires=Thu, 12 Sep 2126 01:07:12 GMT; SameSite=None; Secure
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 1196970
+

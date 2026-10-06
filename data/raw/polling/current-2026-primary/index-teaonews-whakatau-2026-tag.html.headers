@@ -1,0 +1,41 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 301 
+content-type: text/html
+content-length: 166
+location: /tags/whakatau-2026/
+server: openresty
+cache-control: private, max-age=60
+expires: Tue, 06 Oct 2026 01:09:32 GMT
+date: Tue, 06 Oct 2026 01:08:32 GMT
+server-timing: cdn-cache; desc=REVALIDATE
+server-timing: edge; dur=681
+server-timing: origin; dur=705
+content-security-policy: upgrade-insecure-requests
+x-arc-ttl: -1
+x-arc-request-id: 0.d6714017.1791248910.5f820717
+x-arc-edgecontroller: 1.8.5
+server-timing: ak_p; desc="1791248910927_390099414_1602357015_138657_43775_17_50_15";dur=1
+
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: openresty
+x-arc-cache-tag: fusion-whakaatamaori-index-engine-2,fusion-did-whakaatamaori-index-engine-90,fusion-pt-whakaatamaori-index-engine-template,fusion-ptid-whakaatamaori-index-engine-tQPbDbBjgrzrYjFs,fusion-template-id-whakaatamaori-index-tQPbDbBjgrzrYjFs,fusion-cid-whakaatamaori-index-19782eb253768bc2835db634d7d970a5ebb381361757094ffe4e560b8252ea93,url-whakaatamaori-index-9bdefd74,url-whakaatamaori-teaomaori-index-9bdefd74
+x-arc-pb-mx-id: 00000000
+x-arc-pb-request-id: 8e24f083-7335-44f7-bc4c-a8f993b41963
+etag: W/"2105b-MPr+4tef6iCgAgwNGZlrrrcMQLk"
+x-arc-pb-edge: 0
+last-modified: Tue, 06 Oct 2026 01:08:34 GMT
+x-akamai-transformed: 9 25173 0 pmb=mRUM,2
+cache-control: private, max-age=60
+expires: Tue, 06 Oct 2026 01:09:34 GMT
+date: Tue, 06 Oct 2026 01:08:34 GMT
+server-timing: cdn-cache; desc=REVALIDATE
+server-timing: edge; dur=1079
+server-timing: origin; dur=1104
+content-security-policy: upgrade-insecure-requests
+x-arc-ttl: -1
+x-arc-request-id: 0.d6714017.1791248912.5f821936
+x-arc-edgecontroller: 1.8.5
+server-timing: ak_p; desc="1791248912465_390099414_1602361654_218317_33771_17_0_15";dur=1
+

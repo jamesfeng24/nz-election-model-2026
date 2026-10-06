@@ -1,0 +1,158 @@
+{
+ "schemaVersion": 1,
+ "sources": [
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-danylmc-2026_polling.json",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Independently scraped Wikipedia 2026 poll table with fieldwork start/end"
+   ],
+   "organisation": "danylmc/nz-polls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/danylmc-2026_polling.json",
+   "resource": "danylmc-2026_polling.json",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "schemaVersion": 1,
+   "sha256": "a8bc7a1d38c5f25b63e0e2182c151a814d68a633f558d40bfd9fafac64088126",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/data/2026_polling.json"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-danylmc-README.md",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Repository description"
+   ],
+   "organisation": "danylmc/nz-polls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/danylmc-README.md",
+   "resource": "danylmc-README.md",
+   "retrievedAt": "2026-10-06T00:49:40Z",
+   "schemaVersion": 1,
+   "sha256": "93a156d0f5d3bcf94e54b5e749db6947828efb1d53774b7bb68ec163e8e67a1f",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/README.md"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-danylmc-scraper.py",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Scraper provenance (reference only, not run)"
+   ],
+   "organisation": "danylmc/nz-polls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/danylmc-scraper.py",
+   "resource": "danylmc-scraper.py",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "schemaVersion": 1,
+   "sha256": "5744e2d1818267b78f9e6f83eba9383a7294692f86acc6fdf55112ca680a5cdf",
+   "url": "https://raw.githubusercontent.com/danylmc/nz-polls/25c58bc937d52d27f5fd60197347b1c088831ebb/scraper.py"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-labo49-README.md",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Repository description"
+   ],
+   "organisation": "labo49/nzpolls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/labo49-README.md",
+   "resource": "labo49-README.md",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "schemaVersion": 1,
+   "sha256": "b5cccdfec45f6300bb93e0ca2b0a52cec1311094ee47f5fb47cd18377a7c9f80",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/README.md"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-labo49-fetch-polls.ts",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Scraper provenance (reference only, not run)"
+   ],
+   "organisation": "labo49/nzpolls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/labo49-fetch-polls.ts",
+   "resource": "labo49-fetch-polls.ts",
+   "retrievedAt": "2026-10-06T00:49:38Z",
+   "schemaVersion": 1,
+   "sha256": "0a7f583f2ac89f47397fe1115facc63df99c10d27892f75d05499dfeb37a1f41",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/scripts/fetch-polls.ts"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-labo49-meta.json",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Scrape timestamp for labo49-polls.json"
+   ],
+   "organisation": "labo49/nzpolls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/labo49-meta.json",
+   "resource": "labo49-meta.json",
+   "retrievedAt": "2026-10-06T00:49:37Z",
+   "schemaVersion": 1,
+   "sha256": "cd066af8650ab0e7310eabd0a7a52fcc9cac9808144e4c4668442f42f37cd041",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/meta.json"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-labo49-newPolls.json",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Rows first seen on the last labo49 refresh"
+   ],
+   "organisation": "labo49/nzpolls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/labo49-newPolls.json",
+   "resource": "labo49-newPolls.json",
+   "retrievedAt": "2026-10-06T00:49:38Z",
+   "schemaVersion": 1,
+   "sha256": "a58b02076530d367a2b555ece1e262e02cbfd6d421e0bef4acd93c7bcceec609",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/newPolls.json"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-labo49-polls.json",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Parsed Wikipedia 2026 poll table incl. per-poll source URL; automated daily refresh"
+   ],
+   "organisation": "labo49/nzpolls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/labo49-polls.json",
+   "resource": "labo49-polls.json",
+   "retrievedAt": "2026-10-06T00:49:37Z",
+   "schemaVersion": 1,
+   "sha256": "1815088c473441096e944641481a87d2d3be9f8131f3e03e0849c900304d2b08",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/data/polls.json"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; snapshot 2026-10-06",
+   "id": "polling-current2026-labo49-wikiPollScraper.ts",
+   "licence": "Repository has no LICENSE file; bytes preserved unchanged for research provenance only. Underlying poll figures originate from Wikipedia (CC BY-SA) and the named pollsters.",
+   "limitations": [
+    "Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.",
+    "Table parser provenance (reference only, not run)"
+   ],
+   "organisation": "labo49/nzpolls (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)",
+   "processingScript": "scripts/polling/current_cycle.py",
+   "rawPath": "data/raw/polling/current-2026/labo49-wikiPollScraper.ts",
+   "resource": "labo49-wikiPollScraper.ts",
+   "retrievedAt": "2026-10-06T00:49:39Z",
+   "schemaVersion": 1,
+   "sha256": "4b849944247c86bd67f0f6dd4deaabfdfa5050baf42efa92a1d95c2a233031de",
+   "url": "https://raw.githubusercontent.com/labo49/nzpolls/da33cf52497f394509caec147f13265667e2679e/lib/wikiPollScraper.ts"
+  }
+ ]
+}
