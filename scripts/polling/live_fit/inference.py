@@ -59,10 +59,8 @@ def house_offsets(samples, ds):
         mask = (ds.pollster_idx == j) & (ds.cycle_idx == last)
         if not mask.any():
             continue
-        houses = set(int(h) for h in ds.house_idx[mask])
-        if len(houses) != 1:
-            raise ValueError('Pollster with several method segments in the current cycle: ' + name)
-        h = houses.pop()
+        # a pollster with a method change inside the cycle (Reid Research 2017) takes the segment of its latest poll
+        h = int(ds.house_idx[np.flatnonzero(mask)[np.argmax(ds.t[mask])]])
         rows.append(samples['house_base'][:, :, h, :] + samples['house_cycle'][:, :, j * C + last, :]); names.append(name)
     return names, np.stack(rows, axis=2)
 
