@@ -1,0 +1,1427 @@
+{
+  "note": "Dated registry for the candidate-transition evidence pass. Deliberately separate from data/sources.json, which about 25 historical stages hash as a whole.",
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-1news-dowie-2020",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "1News (news article)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/1news-dowie-2020.md",
+      "resource": "1news-dowie-2020",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "2e2f50cfe5315dd6aecaa074a44a4f79c3c502ff6d9dd50085b00a08024b5166",
+      "url": "https://www.1news.co.nz/2020/02/10/nationals-pre-election-clear-out-continues-as-sarah-dowie-david-carter-and-nicky-wagner-say-they-wont-stand/"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-nzh-rurawhe-list-only",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "NZ Herald (news article)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/nzh-rurawhe-list-only.md",
+      "resource": "nzh-rurawhe-list-only",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "7ffc9be71446e2c462219dcaaf925fdcc0b42a1ab24fece3702bfca63bda46be",
+      "url": "https://www.nzherald.co.nz/nz/politics/speaker-adrian-rurawhe-will-not-contest-seat-going-list-only/3LQR4IMADFBDJPJBDBI7EVW3FQ/"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-odt-wall-selection-2010",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "Otago Daily Times (news article)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/odt-wall-selection-2010.md",
+      "resource": "odt-wall-selection-2010",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "6b50a3f012b77fd390ad4696a5e877259d70af4b4c9702c4bd0a162fac2a45d7",
+      "url": "https://www.odt.co.nz/news/politics/wall-wins-labour-selection-manurewa"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-rnz-grant-robertson",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "Radio New Zealand (news article)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/rnz-grant-robertson.md",
+      "resource": "rnz-grant-robertson",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "3873ffc2d0ee87f8afc5254ec705c99bea09bf04c6ba64fc95bd0c5727f612c5",
+      "url": "https://www.rnz.co.nz/news/political/483193/grant-robertson-goes-list-only-will-not-contest-wellington-central"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-rnz-king-deselected",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "Radio New Zealand (news article)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/rnz-king-deselected.md",
+      "resource": "rnz-king-deselected",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "59b4f8a256498a575fe2563d0ba9a10bccd45d6ad98e1f9d13aaaa9c1faef085",
+      "url": "https://www.rnz.co.nz/news/political/231206/national-dumps-sitting-mp"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-rnz-mallard-2017",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "Radio New Zealand (news article)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/rnz-mallard-2017.md",
+      "resource": "rnz-mallard-2017",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "59bc9dc34bd794d967ad146540218c6dbc94d36bb43dbab75aa1e43f49398d1c",
+      "url": "https://www.rnz.co.nz/news/political/337714/battle-lines-drawn-for-mallard-s-mantle"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-rnz-ross-robertson",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "Radio New Zealand (news article)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/rnz-ross-robertson.md",
+      "resource": "rnz-ross-robertson",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "e811d32af194e2aa7fd908b03f7c23ed347937b7ccf545fb2d74c4a8ab663215",
+      "url": "https://www.rnz.co.nz/news/political/137012/ross-robertson-to-retire-at-next-election"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-rnz-whaitiri-leaves-labour",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "Radio New Zealand (news article)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/rnz-whaitiri-leaves-labour.md",
+      "resource": "rnz-whaitiri-leaves-labour",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "daedea48b48a2b21c3b6d9e1c8cd700a29edadc3a61f7a3d2da2dba24c8a884e",
+      "url": "https://www.rnz.co.nz/news/political/489169/te-pati-maori-confirms-meka-whaitiri-to-leave-labour-and-join-as-ikaroa-rawhiti-candidate"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-scoop-andersen-hutt-south",
+      "licence": "Publisher copyright; excerpt preserved for evidence and attributed research; no licence assumed.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Single news article read once; date as printed in the rendering."
+      ],
+      "organisation": "New Zealand Labour Party (statement mirrored by Scoop)",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/scoop-andersen-hutt-south.md",
+      "resource": "scoop-andersen-hutt-south",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "265c6408f09b0c8c766be0725cdb165e9ba0c0cea2496b636e64ab87c2a96ac3",
+      "url": "https://www.scoop.co.nz/stories/PO1610/S00406/virginia-andersen-selected-as-hutt-south-labour-candidate.htm"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-websearch-result-listings",
+      "licence": "Titles/URLs of third-party pages; no content reproduced.",
+      "limitations": [
+        "Aggregates WebSearch result titles and URLs only; no page text. A date taken from a URL path is flagged where used."
+      ],
+      "organisation": "WebSearch tool result listings",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/websearch-result-listings.md",
+      "resource": "websearch-result-listings",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "f326ef163ecd76e3b33f397593b54a8e1994f01d09945b270b2baee8d8974509",
+      "url": null
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-2011-election",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-2011-election.md",
+      "resource": "wp-2011-election",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "7efa6f7cad3d3bfe485d8a22cf593a24a408b10192e1c05f5542de343044a344",
+      "url": "https://en.wikipedia.org/wiki/2011_New_Zealand_general_election"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-2014-election",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-2014-election.md",
+      "resource": "wp-2014-election",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "64ba06be2ac687be212b2cdc2eada056dd9fe17139e3be580186429cc3167c76",
+      "url": "https://en.wikipedia.org/wiki/2014_New_Zealand_general_election"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-2017-election",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-2017-election.md",
+      "resource": "wp-2017-election",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "9319dbb919acd918094cd0fd75fa3c39babdcd59106aa00f487550c5b25801c0",
+      "url": "https://en.wikipedia.org/wiki/2017_New_Zealand_general_election"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-2020-election",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-2020-election.md",
+      "resource": "wp-2020-election",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "3194845781f65753c2f125c206b631b5eb9e4a9bff68feb0d60b9d5de87a2efb",
+      "url": "https://en.wikipedia.org/wiki/2020_New_Zealand_general_election"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-2022-hamilton-west-by-election",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-2022-hamilton-west-by-election.md",
+      "resource": "wp-2022-hamilton-west-by-election",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "7f4e82e6bf5b5270fb6da8981c9dfde0f4d95731ddae20a87f6a360fb3aa6945",
+      "url": "https://en.wikipedia.org/wiki/2022_Hamilton_West_by-election"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-2023-election",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-2023-election.md",
+      "resource": "wp-2023-election",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "9b05f9f673de428156ae2e58eccca9aa1af21786d48be543e99edbf035f69601",
+      "url": "https://en.wikipedia.org/wiki/2023_New_Zealand_general_election"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-2023-port-waikato-by-election",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-2023-port-waikato-by-election.md",
+      "resource": "wp-2023-port-waikato-by-election",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "c085f544ddaf8f4e55544214dca42bafc7257f7c7faed0cf39f8f726c93b1d12",
+      "url": "https://en.wikipedia.org/wiki/2023_Port_Waikato_by-election"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-49th-parliament",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-49th-parliament.md",
+      "resource": "wp-49th-parliament",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "7ab4505eb523d511a8f3efe04d60903103b8e061f160240bd71827afa2799791",
+      "url": "https://en.wikipedia.org/wiki/49th_New_Zealand_Parliament"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-50th-parliament",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-50th-parliament.md",
+      "resource": "wp-50th-parliament",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "267860741d138822b7b32096616e43be0af1e44dabb7fd4a9e71b3b8d8ef41a8",
+      "url": "https://en.wikipedia.org/wiki/50th_New_Zealand_Parliament"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-51st-parliament",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-51st-parliament.md",
+      "resource": "wp-51st-parliament",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "63ade81bc20336944a8e7932bb416b7bb5744a220de491e2992f61c651dfff58",
+      "url": "https://en.wikipedia.org/wiki/51st_New_Zealand_Parliament"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-52nd-parliament",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-52nd-parliament.md",
+      "resource": "wp-52nd-parliament",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "c6ec6b73c7f5e694e1e2135b9d882abb252aa94b06aa9b7d29c3d628a5d6184e",
+      "url": "https://en.wikipedia.org/wiki/52nd_New_Zealand_Parliament"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-53rd-parliament",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-53rd-parliament.md",
+      "resource": "wp-53rd-parliament",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "72ecfce53331ad26d712ab90330f45d91edcb91bc04a32b2d76661ce676a444f",
+      "url": "https://en.wikipedia.org/wiki/53rd_New_Zealand_Parliament"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-adams",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-adams.md",
+      "resource": "wp-adams",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "8d2b778488eec151da4d2adcb94a4d32c6c763ebc0b844aca2d2c9eafe90e23e",
+      "url": "https://en.wikipedia.org/wiki/Amy_Adams_(politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-annette-king",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-annette-king.md",
+      "resource": "wp-annette-king",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "5f1ee884299836b702ba41c0085a57849a17a0f232a02fd18a9311e0372f7797",
+      "url": "https://en.wikipedia.org/wiki/Annette_King"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-barclay",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-barclay.md",
+      "resource": "wp-barclay",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "df1130fab5b6ade3b25d2106044eacbb3252743941b074df315702615f6b048e",
+      "url": "https://en.wikipedia.org/wiki/Todd_Barclay"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-borrows",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-borrows.md",
+      "resource": "wp-borrows",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "190398236a4be5cbbb496eb26e6f5c99b7fbd709a57a881a12b17e0a105fba11",
+      "url": "https://en.wikipedia.org/wiki/Chester_Borrows"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-chris-carter",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-chris-carter.md",
+      "resource": "wp-chris-carter",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "cab2ed15f9a711e3ab70377e910df32e43d1a4c9238ee3a75b07e79711557fee",
+      "url": "https://en.wikipedia.org/wiki/Chris_Carter_(New_Zealand_politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-coleman",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-coleman.md",
+      "resource": "wp-coleman",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "083fa85e181819f2677d02112b7d3b61bc3a4b4a2e4126151d10c006d0a72bff",
+      "url": "https://en.wikipedia.org/wiki/Jonathan_Coleman_(politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-cunliffe",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-cunliffe.md",
+      "resource": "wp-cunliffe",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "a6f5317a6fef2d843534995311a2c552403b31e766da7b21b33ac4b03280df21",
+      "url": "https://en.wikipedia.org/wiki/David_Cunliffe"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-dalziel",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-dalziel.md",
+      "resource": "wp-dalziel",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "ab50df7783708644992920beef0ae3d1718de2c9bbfc2461e6942b5bb0dcc56d",
+      "url": "https://en.wikipedia.org/wiki/Lianne_Dalziel"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-eagle",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-eagle.md",
+      "resource": "wp-eagle",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "abe14d73a0bc67c285704d8a71e4fe7dd2a7450190970d1bb2efe9ac19a8b3ec",
+      "url": "https://en.wikipedia.org/wiki/Paul_Eagle"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-english",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-english.md",
+      "resource": "wp-english",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "7206c28a9ddeaaba2b14a60246693d5ef9cf1136747f342d612826d03b150fe8",
+      "url": "https://en.wikipedia.org/wiki/Bill_English"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-eric-roy",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-eric-roy.md",
+      "resource": "wp-eric-roy",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "130b500db7019e1d038ca5d4833a4753c0626badde9710c030709f447c9f6ef4",
+      "url": "https://en.wikipedia.org/wiki/Eric_Roy_(politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-falloon",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-falloon.md",
+      "resource": "wp-falloon",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "ea842ed467ac442a6c1d503178272405ca3aa228fa3bf169deaff77e7db871e4",
+      "url": "https://en.wikipedia.org/wiki/Andrew_Falloon"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-foss",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-foss.md",
+      "resource": "wp-foss",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "e15c310e51a978c0541c1232c7e489f30b79fab2b7634486cd6b903ec9a4c7f0",
+      "url": "https://en.wikipedia.org/wiki/Craig_Foss"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-goff",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-goff.md",
+      "resource": "wp-goff",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "4ef45d7f27f79006d7e079864856ba4347155e3903ee62e0a4ec93d82c1ce053",
+      "url": "https://en.wikipedia.org/wiki/Phil_Goff"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-goodhew",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-goodhew.md",
+      "resource": "wp-goodhew",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "f2490d80a65ad936dae6ded2f4f269cd9bdd50a2add382abb94335074a0f718e",
+      "url": "https://en.wikipedia.org/wiki/Jo_Goodhew"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-goudie",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-goudie.md",
+      "resource": "wp-goudie",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "e2b61cd150b3f2389af39f2de259ca0c393320e306dbbb168c499def3f181737",
+      "url": "https://en.wikipedia.org/wiki/Sandra_Goudie"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-hawkins",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-hawkins.md",
+      "resource": "wp-hawkins",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "5085bd06c74ed0a1dd588e98b80e07b98031e9a05601b9657fffc26748397304",
+      "url": "https://en.wikipedia.org/wiki/George_Hawkins_(politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-hayes",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-hayes.md",
+      "resource": "wp-hayes",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "b0bd7c68a4a29c6e2286e148bbf2a507d81642087e9f29d0953dcd5b54e7e535",
+      "url": "https://en.wikipedia.org/wiki/John_Hayes_(New_Zealand_politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-heatley",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-heatley.md",
+      "resource": "wp-heatley",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "df004cb44f1ef4344ac39235d4b94b9fbe1761a65d639bcdebe98458f9e67898",
+      "url": "https://en.wikipedia.org/wiki/Phil_Heatley"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-helen-clark",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-helen-clark.md",
+      "resource": "wp-helen-clark",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "f8418063ec808726bb363c5bf21aae76c641f1be4515ae73fcbb182da0918017",
+      "url": "https://en.wikipedia.org/wiki/Helen_Clark"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-henderson",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-henderson.md",
+      "resource": "wp-henderson",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "868a2e31d756029eeb88117cfc44fbcd9fcf2713d43e35613b45c3a1bd1e81a3",
+      "url": "https://en.wikipedia.org/wiki/Emily_Henderson_(politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-hodgson",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-hodgson.md",
+      "resource": "wp-hodgson",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "67d928b96b5233c557882764467aa297ce1497568c874222af3fd83ccabde876",
+      "url": "https://en.wikipedia.org/wiki/Pete_Hodgson"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-horomia",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-horomia.md",
+      "resource": "wp-horomia",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "acdf58d861cf37c531161c2f138d27195093591e6b16aa68778910196c8eee44",
+      "url": "https://en.wikipedia.org/wiki/Parekura_Horomia"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-hutchison",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-hutchison.md",
+      "resource": "wp-hutchison",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "91da7b2bfb5e0edcafbd704c3af53c8ca18d08482aa5bf55c3cb290f29fd086e",
+      "url": "https://en.wikipedia.org/wiki/Paul_Hutchison_(politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-jami-lee-ross",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-jami-lee-ross.md",
+      "resource": "wp-jami-lee-ross",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "406613642191c02836de454dc4c24808992b2b6afde5e4ae54719cbf47346f76",
+      "url": "https://en.wikipedia.org/wiki/Jami-Lee_Ross"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-john-carter",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-john-carter.md",
+      "resource": "wp-john-carter",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "e5ec3feacf71f88f7fe4c9358f2d319ddcb7ca8b444027b7b766c312b72452bd",
+      "url": "https://en.wikipedia.org/wiki/John_Carter_(New_Zealand_politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-key",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-key.md",
+      "resource": "wp-key",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "79d52b21d578e51ba9a80bb74318d1f6f0339e233d2ed55f50bab3694a2303ff",
+      "url": "https://en.wikipedia.org/wiki/John_Key"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-laban",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-laban.md",
+      "resource": "wp-laban",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "8d9fec17284e6fd56f4311946865076e52cde65fed3f3e820223a193ecea8c82",
+      "url": "https://en.wikipedia.org/wiki/Winnie_Laban"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-leavasa",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-leavasa.md",
+      "resource": "wp-leavasa",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "a641bdc64cc4034c4a5a5d0b5db05b7c9d47ebc6c93b824d87d8ec02b1ab2866",
+      "url": "https://en.wikipedia.org/wiki/Neru_Leavasa"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-lockwood-smith",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-lockwood-smith.md",
+      "resource": "wp-lockwood-smith",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "9c63f2bc40a32bde550daf9073a1aafa3dc732068643718e5143327d4edc429f",
+      "url": "https://en.wikipedia.org/wiki/Lockwood_Smith"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-lotu-iiga",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-lotu-iiga.md",
+      "resource": "wp-lotu-iiga",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "59ebe2c4573ef78ed3962682d3afe8cc559fc072b74bc6fbb624100cc00cfd88",
+      "url": "https://en.wikipedia.org/wiki/Sam_Lotu-Iiga"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-lotu-iiga-name",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-lotu-iiga-name.md",
+      "resource": "wp-lotu-iiga-name",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "3fb0f2c829d0c8775a3899ce1df2c0eb87ffaa7b95d1b6e7205f2409396e910e",
+      "url": "https://en.wikipedia.org/wiki/Sam_Lotu-Iiga"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-mallard",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-mallard.md",
+      "resource": "wp-mallard",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "9349891cd1b19c1fdece5e25e83a75002e3c6acb43d7cbad7c9104d2b12cb8bc",
+      "url": "https://en.wikipedia.org/wiki/Trevor_Mallard"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-mapp",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-mapp.md",
+      "resource": "wp-mapp",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "ad1a645e999f573e610be69f9c7445895fcbdc1d31853e12c07806d68e326517",
+      "url": "https://en.wikipedia.org/wiki/Wayne_Mapp"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-mark-mitchell",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-mark-mitchell.md",
+      "resource": "wp-mark-mitchell",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "08eb1451a0f9af117718100de7443a6e0aa968ada39696f0eea508d002ac91f7",
+      "url": "https://en.wikipedia.org/wiki/Mark_Mitchell_(New_Zealand_politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-mccully",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-mccully.md",
+      "resource": "wp-mccully",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "30fa4bd6dbddfe85baca427fe28d4b5402628e5e1eddeecd3e4502ff36769570",
+      "url": "https://en.wikipedia.org/wiki/Murray_McCully"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-mckelvie",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-mckelvie.md",
+      "resource": "wp-mckelvie",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "644584d633bb9729493105b81d34dcc5ccab4674a26097c34a524bec3cca7ff7",
+      "url": "https://en.wikipedia.org/wiki/Ian_McKelvie"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-nash",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-nash.md",
+      "resource": "wp-nash",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "8d20bce929d42d488ca9a3777fb51ba3fda9392dba48561730cbb706c08553b9",
+      "url": "https://en.wikipedia.org/wiki/Stuart_Nash"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-nick-smith",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-nick-smith.md",
+      "resource": "wp-nick-smith",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "a326fe867c26eeaf71c661c73b79497626dd573da3f89a1d40efcc718d135f3c",
+      "url": "https://en.wikipedia.org/wiki/Nick_Smith_(New_Zealand_politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-nz-by-elections",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-nz-by-elections.md",
+      "resource": "wp-nz-by-elections",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "4768dc62307e462e0b30e96ad8f26d28e24716eb3a0034837dcfc7e5794687d9",
+      "url": "https://en.wikipedia.org/wiki/List_of_New_Zealand_by-elections"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-paula-bennett",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-paula-bennett.md",
+      "resource": "wp-paula-bennett",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "84c7694ea5ac2f8ebda42bfe5237e9cdcc7c8273aaaedb50334df913f81d0ba2",
+      "url": "https://en.wikipedia.org/wiki/Paula_Bennett"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-peachey",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-peachey.md",
+      "resource": "wp-peachey",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "69952e176356cb6423e9acf5793c1f843080c6d277496f939ec3d69260c23295",
+      "url": "https://en.wikipedia.org/wiki/Allan_Peachey"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-poto-williams",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-poto-williams.md",
+      "resource": "wp-poto-williams",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "b753bb54a287a54d4936b283015fd97c27b82fd7f726f23d5d4970554da07b1c",
+      "url": "https://en.wikipedia.org/wiki/Poto_Williams"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-power",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-power.md",
+      "resource": "wp-power",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "e7bde39d69ffbd4b078fcd40998ee6c3bfc383a0f027bc09b0e9dba382d0085c",
+      "url": "https://en.wikipedia.org/wiki/Simon_Power_(politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-ryall",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-ryall.md",
+      "resource": "wp-ryall",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "cf18555dbeac6b16703c0bccaa101184c5e52b697e2d72f2251c13f2039426fb",
+      "url": "https://en.wikipedia.org/wiki/Tony_Ryall"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-sabin",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-sabin.md",
+      "resource": "wp-sabin",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "e51c881fe089b022325378c02d59ca4bea37714926ce6d13787840063aba1b9a",
+      "url": "https://en.wikipedia.org/wiki/Mike_Sabin"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-shane-ardern",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-shane-ardern.md",
+      "resource": "wp-shane-ardern",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "ba45c31e5154ad7d4c9e72e430bf221fd0603e3c526d13b551c793c1409c1da8",
+      "url": "https://en.wikipedia.org/wiki/Shane_Ardern"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-shearer",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-shearer.md",
+      "resource": "wp-shearer",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "b1f648064b7f32165726985b7237956e53623a911783061212add56bbd40c9e9",
+      "url": "https://en.wikipedia.org/wiki/David_Shearer"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-sio-names",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-sio-names.md",
+      "resource": "wp-sio-names",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "c88f0a059bffde1303a3e2f3dc69c65e5245377341673e05dbfdbb7468b8d870",
+      "url": "https://en.wikipedia.org/wiki/William_Sio"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-sio-retire",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-sio-retire.md",
+      "resource": "wp-sio-retire",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "ba74883ad514eaef55f3a2efc5d64f125a177050f46c1d4cb2f01303a3dd5dfc",
+      "url": "https://en.wikipedia.org/wiki/William_Sio"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-strange",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-strange.md",
+      "resource": "wp-strange",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "635c1c2176df37b7b9472bd8778ee7a574fc77e2e52943871f8ec5477fcfb0b5",
+      "url": "https://en.wikipedia.org/wiki/Jamie_Strange"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-tisch",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-tisch.md",
+      "resource": "wp-tisch",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "9400c13b26b56dcdd09d86573122aa8efd10a96de37648560965680540070fd7",
+      "url": "https://en.wikipedia.org/wiki/Lindsay_Tisch"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-tremain",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-tremain.md",
+      "resource": "wp-tremain",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "1e5c6d565c45d2987e30d55cef5246907479c6118f181956a95579f74d455ce7",
+      "url": "https://en.wikipedia.org/wiki/Chris_Tremain"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-whaitiri",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-whaitiri.md",
+      "resource": "wp-whaitiri",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "b0ecc90372f3aeec810ec35188f9a60c5571eaebc4c4eac21cca71f399331f52",
+      "url": "https://en.wikipedia.org/wiki/Meka_Whaitiri"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-wilkinson",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-wilkinson.md",
+      "resource": "wp-wilkinson",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "3332c4b5c73ce386e650dac160560cff0e5fec2b4c7c359a0ec33ab8a8780037",
+      "url": "https://en.wikipedia.org/wiki/Kate_Wilkinson_(politician)"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-williamson",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-williamson.md",
+      "resource": "wp-williamson",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "a33a7cf6f606bc07001bfc974739239613ab058fc981be1406889f1ae88bd888",
+      "url": "https://en.wikipedia.org/wiki/Maurice_Williamson"
+    },
+    {
+      "dateOrElection": "2008-2023 adjacent-election candidate transitions",
+      "id": "ct-wp-wong",
+      "licence": "CC BY-SA 4.0 (Wikipedia); excerpt preserved for attributed research.",
+      "limitations": [
+        "Tool-rendered text, not original page bytes; a small-model rendering can paraphrase or err (several by-election/term tables contain visible summariser errors and are used only for entries cross-checked elsewhere).",
+        "Retrieved 2026-10-06 retrospectively: availability to a forecaster at the historical decision date is unknown; announcement dates are the dates the page/news item states, not verified publication timestamps.",
+        "Wikipedia is a secondary compilation; dates and reasons rest on its cited news sources, named in the extract where given."
+      ],
+      "organisation": "Wikipedia (CC BY-SA), tool-rendered",
+      "processingScript": "scripts/evidence/candidate_transitions/run.py",
+      "rawPath": "data/raw/candidate-transitions/2026-10-06/wp-wong.md",
+      "resource": "wp-wong",
+      "retrievedAt": "2026-10-06",
+      "schemaVersion": 1,
+      "sha256": "871c9c03d5c76e3fcabe61381660805ae467beade846c0fbde1961de6d78110c",
+      "url": "https://en.wikipedia.org/wiki/Pansy_Wong"
+    }
+  ],
+  "stage": "candidate-transition-evidence"
+}
