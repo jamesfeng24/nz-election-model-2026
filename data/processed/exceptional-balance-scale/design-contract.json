@@ -2,76 +2,285 @@
   "stage": 67,
   "status": "frozen before any Stage67 arm was fitted, simulated or scored",
   "designDocument": "docs/stage67-exceptional-balance-scale-design.md",
-  "inheritedFrom": {"stage48": "data/processed/balance-scale/design-contract.json", "stage60": "data/processed/balance-shrink/design-contract.json"},
+  "inheritedFrom": {
+    "stage48": "data/processed/balance-scale/design-contract.json",
+    "stage60": "data/processed/balance-shrink/design-contract.json"
+  },
   "flags": {
     "source": "frozen 2026-10-06 read-only historical audit (exceptional ex-ante uncertainty at the voting-open cutoff); human judgement, not a fitted feature",
     "primary": {
-      "2014": ["Epsom", "Ōhāriu", "Rodney", "Papakura", "Napier", "New Lynn", "East Coast Bays", "Pakuranga"],
-      "2017": ["Ōhāriu", "Epsom", "Northland", "Mt Albert", "Helensville", "Clutha-Southland"],
-      "2020": ["Mt Albert", "Papakura", "Auckland Central", "Epsom", "Northland", "Botany", "Rangitata", "Southland", "Palmerston North", "Dunedin"],
-      "2023": ["Auckland Central", "Wellington Central", "Rongotai", "Tāmaki", "Epsom", "Mt Albert", "Remutaka", "Botany", "Tauranga", "Napier", "Hamilton West", "East Coast", "Mt Roskill", "Ilam"]
+      "2014": [
+        "Epsom",
+        "Ōhāriu",
+        "Rodney",
+        "Papakura",
+        "Napier",
+        "New Lynn",
+        "East Coast Bays",
+        "Pakuranga"
+      ],
+      "2017": [
+        "Ōhāriu",
+        "Epsom",
+        "Northland",
+        "Mt Albert",
+        "Helensville",
+        "Clutha-Southland"
+      ],
+      "2020": [
+        "Mt Albert",
+        "Papakura",
+        "Auckland Central",
+        "Epsom",
+        "Northland",
+        "Botany",
+        "Rangitata",
+        "Southland",
+        "Palmerston North",
+        "Dunedin"
+      ],
+      "2023": [
+        "Auckland Central",
+        "Wellington Central",
+        "Rongotai",
+        "Tāmaki",
+        "Epsom",
+        "Mt Albert",
+        "Remutaka",
+        "Botany",
+        "Tauranga",
+        "Napier",
+        "Hamilton West",
+        "East Coast",
+        "Mt Roskill",
+        "Ilam"
+      ]
     },
     "fromResidualRankedList": {
       "meaning": "primary flags that also appeared in the residual-ranked list (>= 0.5 sigma) shown to the auditor; disclosed bias",
-      "2014": ["Epsom", "Ōhāriu", "Rodney", "Papakura", "Napier", "New Lynn", "Pakuranga"],
-      "2017": ["Ōhāriu", "Epsom"],
-      "2020": ["Mt Albert", "Dunedin", "Epsom", "Auckland Central"],
-      "2023": ["Auckland Central", "Tāmaki", "Mt Albert", "Tauranga", "Remutaka", "Napier", "Ilam", "Wellington Central"]
+      "2014": [
+        "Epsom",
+        "Ōhāriu",
+        "Rodney",
+        "Papakura",
+        "Napier",
+        "New Lynn",
+        "Pakuranga"
+      ],
+      "2017": [
+        "Ōhāriu",
+        "Epsom"
+      ],
+      "2020": [
+        "Mt Albert",
+        "Dunedin",
+        "Epsom",
+        "Auckland Central"
+      ],
+      "2023": [
+        "Auckland Central",
+        "Tāmaki",
+        "Mt Albert",
+        "Tauranga",
+        "Remutaka",
+        "Napier",
+        "Ilam",
+        "Wellington Central"
+      ]
     },
     "sensitivity": "primary minus fromResidualRankedList (17 flags); the 21 list-derived flags count as ordinary in fit and score",
-    "counts": {"primary": 38, "fromResidualRankedList": 21, "sensitivity": 17, "seats": 257}
+    "counts": {
+      "primary": 38,
+      "fromResidualRankedList": 21,
+      "sensitivity": 17,
+      "seats": 257
+    }
   },
   "arms": {
-    "control": {"role": "control", "multiplier": 1.0},
-    "free": {"role": "comparator", "multiplier": "Stage60 free arm, data/processed/balance-shrink/fit.json folds.<year>.multipliers.free, unchanged"},
-    "twogroup": {"role": "candidate", "multiplier": "exp(a) ordinary, exp(a + b) primary-flagged; a, b earlier-trained, penalty-free"},
-    "twogroup17": {"role": "sensitivity", "multiplier": "as twogroup with the 17-flag sensitivity set; never recommendable"}
+    "control": {
+      "role": "control",
+      "multiplier": 1.0
+    },
+    "free": {
+      "role": "comparator",
+      "multiplier": "Stage60 free arm, data/processed/balance-shrink/fit.json folds.<year>.multipliers.free, unchanged"
+    },
+    "twogroup": {
+      "role": "candidate",
+      "multiplier": "exp(a) ordinary, exp(a + b) primary-flagged; a, b earlier-trained, penalty-free"
+    },
+    "twogroup17": {
+      "role": "sensitivity",
+      "multiplier": "as twogroup with the 17-flag sensitivity set; never recommendable"
+    },
+    "twogroup_exc1": {
+      "role": "candidate",
+      "multiplier": "exp(a) ordinary, 1.00 (frozen scale) primary-flagged; a earlier-trained, penalty-free"
+    }
   },
-  "armOrder": ["control", "free", "twogroup", "twogroup17"],
-  "folds": {"2014": [], "2017": [2014], "2020": [2014, 2017], "2023": [2014, 2017, 2020]},
-  "scoredYears": [2014, 2017, 2020, 2023],
-  "decisionYears": [2017, 2020, 2023],
+  "armOrder": [
+    "control",
+    "free",
+    "twogroup",
+    "twogroup_exc1",
+    "twogroup17"
+  ],
+  "folds": {
+    "2014": [],
+    "2017": [
+      2014
+    ],
+    "2020": [
+      2014,
+      2017
+    ],
+    "2023": [
+      2014,
+      2017,
+      2020
+    ]
+  },
+  "scoredYears": [
+    2014,
+    2017,
+    2020,
+    2023
+  ],
+  "decisionYears": [
+    2017,
+    2020,
+    2023
+  ],
   "fit": {
     "objective": "Stage48 per-seat-normalised Gaussian negative log likelihood, equal environments and equal seats; features (flag, 0); b_T = 0",
     "penalty": 0.0,
-    "free": [true, true, false],
-    "starts": [[0, 0, 0], [-0.2, 0, 0], [0.2, 0, 0]],
+    "free": [
+      true,
+      true,
+      false
+    ],
+    "starts": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        -0.2,
+        0,
+        0
+      ],
+      [
+        0.2,
+        0,
+        0
+      ]
+    ],
     "bound": "+/- log 4, never expanded; contact reported",
     "independentCheck": "Powell objective agreement <= 1e-6; central-difference gradient <= 1e-6",
     "noEarlierElection": "a = b = 0 (control) in 2014",
-    "descriptive2026Refit": {"trainingYears": [2014, 2017, 2020, 2023], "scored": false}
+    "descriptive2026Refit": {
+      "trainingYears": [
+        2014,
+        2017,
+        2020,
+        2023
+      ],
+      "scored": false
+    }
   },
-  "components": {"draws": 32768, "doubling": [8192, 16384, 32768], "representativeSeats": "first, middle and last seat of each election", "harness": "scripts.balance_shrink.evaluation.seat"},
+  "components": {
+    "draws": 32768,
+    "doubling": [
+      8192,
+      16384,
+      32768
+    ],
+    "representativeSeats": "first, middle and last seat of each election",
+    "harness": "scripts.balance_shrink.evaluation.seat"
+  },
   "decision": {
-    "comparison": "twogroup versus free on the 193 decision seats",
+    "comparison": "each candidate arm (twogroup, twogroup_exc1) versus free on the 193 decision seats; then twogroup versus twogroup_exc1",
     "improves": {
       "crpsMaterialityPP": 0.01,
-      "intervalScoreLevels": [50, 80, 90],
+      "intervalScoreLevels": [
+        50,
+        80,
+        90
+      ],
       "coverageGuardAbsolute": 0.02,
       "energyGuardPP": 0.02,
       "minimumFoldsNegative": 2,
       "resolutionPrefixDraws": 16384,
       "resolutionTolerancePP": 0.002,
-      "doublingGatesPP": {"mean": 0.05, "crps": 0.05, "energy": 0.1, "width50": 0.5, "width80": 0.5, "width90": 0.5}
+      "doublingGatesPP": {
+        "mean": 0.05,
+        "crps": 0.05,
+        "energy": 0.1,
+        "width50": 0.5,
+        "width80": 0.5,
+        "width90": 0.5
+      }
     },
     "groupCoverageFloors": {
-      "levels": [50, 80],
-      "ordinary": {"scope": "each decision election", "nominalMargin": 0.10, "alreadyUndercoveringMargin": 0.05},
-      "exceptional": {"scope": "pooled over decision-year flagged seats", "nominalMargin": 0.15, "alreadyUndercoveringMargin": 0.05},
+      "levels": [
+        50,
+        80
+      ],
+      "ordinary": {
+        "scope": "each decision election",
+        "nominalMargin": 0.1,
+        "alreadyUndercoveringMargin": 0.05
+      },
+      "exceptional": {
+        "scope": "pooled over decision-year flagged seats",
+        "nominalMargin": 0.15,
+        "alreadyUndercoveringMargin": 0.05
+      },
       "rule": "twogroup coverage >= min(nominal - nominalMargin, free coverage - alreadyUndercoveringMargin) on the group's N/L candidate coordinates"
     },
-    "bootstrap": {"draws": 2000, "seed": 67, "level": 0.9, "scheme": "seats resampled with replacement within election, pooled equal-seat mean, paired"},
-    "findings": ["recommend_twogroup_for_james_signoff", "floor_blocked_report_to_james", "negligible_keep_single_scale", "worse_keep_single_scale", "mixed_report_to_james"],
+    "bootstrap": {
+      "draws": 2000,
+      "seed": 67,
+      "level": 0.9,
+      "scheme": "seats resampled with replacement within election, pooled equal-seat mean, paired"
+    },
+    "findings": [
+      "recommend_twogroup_for_james_signoff",
+      "recommend_twogroup_exc1_for_james_signoff",
+      "floor_blocked_report_to_james",
+      "negligible_keep_single_scale",
+      "worse_keep_single_scale",
+      "mixed_report_to_james"
+    ],
     "sensitivityStatement": "flag_selection_sensitive if twogroup17 pooled dCRPS vs free is >= 0 while twogroup's is < 0; reported, never changes the finding",
-    "operationalAdoption": null
+    "operationalAdoption": null,
+    "candidateArms": [
+      "twogroup",
+      "twogroup_exc1"
+    ],
+    "selection": "both qualify: twogroup only if it Stage48-IMPROVES on twogroup_exc1, else twogroup_exc1; one qualifies: that arm; none: floor_blocked if either IMPROVES vs free, negligible if both NEGLIGIBLE, worse if both WORSE, else mixed"
   },
   "doNot": [
-    "no arm beyond control, free, twogroup and twogroup17; no grid, penalty, prior-strength or feature search",
+    "no arm beyond control, free, twogroup, twogroup_exc1 and twogroup17; no grid, penalty, prior-strength or feature search",
     "no flag added, removed or reclassified after any Stage67 fit or score",
     "no mean, location, S, R, shared-scale, local-party or national change; no composed bank, national MCMC, acquisition, source or data/sources.json edit",
     "no change to frozen Stage45/46/47/48/60 outputs, scales, draw counts, gates or tolerances",
     "no Maori electorate data",
     "no CI, workflow or validation-registry edit",
     "no operational adoption; no calibrated-probability or seat-win claim"
-  ]
+  ],
+  "descriptive": {
+    "twogroup17GroupReport": "ordinary and exceptional (17-flag) coverage, width and CRPS by election, reported beside the rule",
+    "leak": "scored seats were flagged with results known; ordinary narrowing is partly mechanical (coordinator estimate about 0.72 from trimming alone)"
+  },
+  "amendments": [
+    {
+      "number": 1,
+      "date": "2026-10-06",
+      "change": "add twogroup_exc1, revised selection, twogroup17 group report, named leak, decision numbers D101/D102",
+      "timing": "after the original arms were fitted (multipliers seen), before any score was read; one unread evaluation bank deleted and regenerated"
+    }
+  ],
+  "decisionNumber": "D101"
 }

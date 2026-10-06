@@ -93,3 +93,39 @@ Compare twogroup with free on the 193 decision seats.
 - Do not use Māori electorate data.
 - Do not make CI, workflow or validation-registry edits; Stage67 is exercised in CI only through its unit test.
 - Do not adopt anything or make a calibrated-probability or seat-win claim.
+
+## Amendment 1 (2026-10-06): add `twogroup_exc1`, name the main leak, decision numbers
+
+**Reason and timing.** The coordinator asked for this arm to test whether a fitted exceptional multiplier beats simply holding flagged seats at the frozen scale. The in-sample diagnostic's 1.46 fell to 1.02 without its five largest misses.
+
+The amendment came after the original arms had been **fitted** but before any score was **read**. The author had seen the fitted multipliers:
+
+| Arm | Ordinary | Exceptional |
+|---|---|---|
+| twogroup | 0.595 / 0.615 / 0.607 | 1.737 / 1.889 / 1.526 |
+| twogroup17 | 0.839 / 0.869 / 0.802 | 0.373 / 0.281 / 0.239 |
+
+(2017 / 2020 / 2023 folds.)
+
+One evaluation bank had been written by then. It was deleted unread and regenerated after this amendment. No threshold, floor, flag or existing arm changes.
+
+**New arm `twogroup_exc1` (candidate).**
+- Ordinary seats take `exp(a)`; primary-flagged seats are held at the frozen seat scale (multiplier 1.00).
+- `a` is fitted on earlier elections only, penalty-free, with the same Stage48 objective, starts, bounds and independent checks as twogroup.
+- The fit uses the feature `1 - flag` on the second coefficient, with the constant fixed at 0.
+
+**Revised decision.**
+1. Each candidate arm (`twogroup`, `twogroup_exc1`) is judged against `free` with the unchanged rule: Stage48 IMPROVES plus both group coverage floors.
+2. If both qualify, `twogroup` is recommended only if it Stage48-IMPROVES on `twogroup_exc1` (same thresholds). Otherwise `twogroup_exc1` is recommended: it fits one parameter fewer and is the less aggressive arm for flagged seats.
+3. If exactly one qualifies, that arm is recommended.
+4. If none qualifies:
+   - `floor_blocked_report_to_james` if either arm Stage48-IMPROVES against free;
+   - otherwise `negligible_keep_single_scale` if both are NEGLIGIBLE against free;
+   - `worse_keep_single_scale` if both are WORSE;
+   - else `mixed_report_to_james`.
+
+Findings: `recommend_twogroup_for_james_signoff`, `recommend_twogroup_exc1_for_james_signoff`, or the four above. The `flag_selection_sensitive` statement is unchanged.
+
+**The main leak, named.** The 2017–2023 seats being scored were flagged by an author who knew their results. Separating them out therefore narrows the ordinary group partly mechanically: removing large misses shrinks what remains. The coordinator estimates about 0.72× from trimming alone, against the roughly 0.76 seen in the in-sample diagnostic. This bias favours `twogroup` and `twogroup_exc1` over `free`, and it is not removed by earlier-only fitting. The check is the 17-flag arm. Its ordinary-seat and exceptional-seat coverage, width and CRPS are reported by election, as descriptive results beside the rule, not only as the sensitivity statement.
+
+**Decision numbers** (from the coordinator): D101 for Stage67, D102 for Stage68.
