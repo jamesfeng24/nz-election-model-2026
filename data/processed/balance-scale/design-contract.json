@@ -1,0 +1,42 @@
+{
+  "stage": 48,
+  "status": "frozen before any restriction other than the numerically corrected control was fitted or scored",
+  "designDocument": "docs/stage48-balance-scale-design.md",
+  "inheritedContract": {
+    "document": "docs/stage47-next-gaussian-scale-contract.md",
+    "machineContract": "data/processed/uncertainty-expectation/next-test-contract.json"
+  },
+  "restrictions": ["control", "constant", "conditional"],
+  "folds": {"2014": [], "2017": [2014], "2020": [2014, 2017], "2023": [2014, 2017, 2020]},
+  "decisionYears": [2017, 2020, 2023],
+  "components": {"draws": 32768, "doubling": [8192, 16384, 32768], "representativeSeats": "first, middle and last seat of each election"},
+  "composed": {"draws": 512, "representativeDraws": [256, 512, 1024], "cap": 1024},
+  "decision": {
+    "primary": "mean over seats of the mean CRPS of that seat's National and Labour candidates (pp)",
+    "crpsMaterialityPP": 0.01,
+    "intervalScoreLevels": [50, 80, 90],
+    "coverageGuardAbsolute": 0.02,
+    "energyGuardPP": 0.02,
+    "minimumFoldsNegative": 2,
+    "resolutionPrefixDraws": 16384,
+    "resolutionTolerancePP": 0.002,
+    "comparisons": ["constant_vs_control", "conditional_vs_constant", "conditional_vs_control"],
+    "decidingComparisons": ["constant_vs_control", "conditional_vs_constant"],
+    "composedSignFlagPP": 0.01,
+    "operationalAdoption": null
+  },
+  "gatesPP": {"mean": 0.05, "crps": 0.05, "energy": 0.1, "width50": 0.5, "width80": 0.5, "width90": 0.5, "conditionalIntegration": 0.05},
+  "equalityTolerance": {"reusedRemainder": 1e-12, "locationAgreement": 1e-9, "gradient": 1e-6, "objective": 1e-6},
+  "fitCheckParameterTolerance": 1e-6,
+  "descriptiveUnpenalisedMaximumLikelihood": {"reportedOnly": true, "scored": false, "restriction": false},
+  "doNot": [
+    "no restriction beyond control, constant and conditional is fitted or scored",
+    "no prior-strength, feature, family or grid search",
+    "no reopening of Student-t, mixtures, regimes, sigma shrinkage, geography fragmentation, candidate-quality scores, S reset, covariance fitting or national MCMC reruns",
+    "no change to frozen Stage45/46/47 outputs, scales, means, draw counts, gates or tolerances",
+    "no target result used to define features, centres, exclusions or thresholds",
+    "no relaxed gates; no calibrated-probability or fine composed-superiority claim where gates are unmet",
+    "no new source, acquisition or data/sources.json edit",
+    "no operational adoption of any restriction"
+  ]
+}
