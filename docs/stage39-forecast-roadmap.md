@@ -23,7 +23,7 @@ Numbers are identifiers, not an execution order; PR titles use `StageNN:` and th
 | Stage | Question | Status |
 |---|---|---|
 | Stage47 | Gaussian expectation repair and width attribution (PR54; CPU-guard amendment) | merged (PR #54) |
-| Stage48 | Frozen candidate-seat N/L balance-scale comparison (item 5; no stage number in the Stage47 contract, so allocated here) | authorized; PR #54 has merged (c06772a), not yet started |
+| Stage48 | Frozen candidate-seat N/L balance-scale comparison (item 5): finding constant only, nothing adopted (D087) | merged (PR #64, b42cbc4) |
 | Stage49 | MMP rules verification and exact allocation (item 2) | merged (PR #58); allocator reproduces all six official 2008–2023 seat tables |
 | Stage50 | Nomination snapshot, immutable raw acquisition (item 3) | authorized after the 8 October 2026 close |
 | Stage51 | Candidate-change identity classification: the 61 apparent changes and incumbent→successor table (first half of item 6; classification only, no model test) | merged (PR #61): 333 N/L incumbent seats 2008–2020 give 258 continuations and 75 sourced changes (60 election-time exits); 20 of the 59 N/L Stage10 apparent changes are same-person name variants; R_old/R_new and the R_new = a + ρ R_old test not started |
@@ -31,7 +31,7 @@ Numbers are identifiers, not an execution order; PR titles use `StageNN:` and th
 | Stage53 | End-to-end skeleton, export contract and synthetic dry run | merged (PR #57) |
 | Stage54–57 (provisional) | Composed-MC precision (item 4); replacement R_new = a + ρ R_old test; dated manual-adjustment interface (item 7); manual replay (item 8) | not yet authorized; confirm numbers when each is authorized |
 
-Next free number: Stage58. Decision numbers: D081 CI scoping, D082 this roadmap, D083 Stage47/PR54, D084 Stage49 MMP (#58), D085 Stage52 (#60), D086 Stage51 (#61); next free decision D087 (reserved for Stage48). Threads get decision numbers from the coordinator, not by taking the next number on main.
+Next free number: Stage58. Decision numbers: D081 CI scoping, D082 this roadmap, D083 Stage47/PR54, D084 Stage49 MMP (#58), D085 Stage52 (#60), D086 Stage51 (#61), D087 Stage48 (#64); D088 is reserved for Stage54 and D089 is the next free decision. Threads get decision numbers from the coordinator, not by taking the next number on main.
 
 ## Three final outputs
 
