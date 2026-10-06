@@ -1,0 +1,87 @@
+{
+  "consistency": {
+    "blockOneDiffersFromBlockZeroEverySeat": true,
+    "chainDrawCounts": [
+      [
+        [
+          "1",
+          1024
+        ],
+        [
+          "2",
+          1024
+        ],
+        [
+          "3",
+          1024
+        ],
+        [
+          "4",
+          1024
+        ]
+      ]
+    ],
+    "ladder512EqualsBlockZeroMaxAbs": 0.0,
+    "winProbabilitiesSumToOneMaxAbs": 0.0
+  },
+  "passed": true,
+  "plainLoopDecisions": {
+    "conditional_vs_constant": {
+      "difference": 0.0,
+      "plainLoop": [
+        -0.00032243103494558655,
+        -0.00034257465518890796,
+        -0.00026906756339380763,
+        -0.00029765282438206866
+      ]
+    },
+    "constant_vs_control": {
+      "difference": 0.0,
+      "plainLoop": [
+        -0.01705356178345197,
+        -0.016540000286169854,
+        -0.016363550717493347,
+        -0.016999282982234843
+      ]
+    },
+    "designEffect": {
+      "difference": 2.220446049250313e-16,
+      "plainLoop": 0.5937784728387812
+    }
+  },
+  "resimulation": [
+    {
+      "block": 5,
+      "id": "nz-general-2017-electorate-01",
+      "maximumAbsoluteDifference": 0.0,
+      "restriction": "control"
+    },
+    {
+      "block": 2,
+      "id": "nz-general-2017-electorate-64",
+      "maximumAbsoluteDifference": 0.0,
+      "restriction": "control"
+    },
+    {
+      "block": 2,
+      "id": "nz-general-2017-electorate-64",
+      "maximumAbsoluteDifference": 0.0,
+      "restriction": "constant"
+    },
+    {
+      "block": 2,
+      "id": "nz-general-2017-electorate-64",
+      "maximumAbsoluteDifference": 0.0,
+      "restriction": "conditional"
+    }
+  ],
+  "stage": 54,
+  "stage48BlockZero": {
+    "maximumAbsoluteDifference": {
+      "energyPP": 0.0,
+      "intervalScorePP": 0.0,
+      "majorCRPSPP": 0.0
+    },
+    "seatsPerRestriction": 193
+  }
+}

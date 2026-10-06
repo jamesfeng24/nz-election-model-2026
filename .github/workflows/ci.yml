@@ -232,3 +232,15 @@ jobs:
         run: python3 -m scripts.validate.ci_frozen --check --pipeline stage48 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
       - run: python3 -m scripts.balance_scale.report --check
       - run: python3 -m scripts.balance_scale.manifest --check
+      - run: python3 -m scripts.composed_precision.evaluation --check
+        if: steps.frozen.outputs.stage54 != 'integrity'
+      - run: python3 -m scripts.composed_precision.decision --check
+      - run: python3 -m scripts.composed_precision.verification --check
+        if: steps.frozen.outputs.stage54 != 'integrity'
+      - name: Verify reused Stage54 frozen pipeline
+        if: steps.frozen.outputs.stage54 == 'integrity'
+        env:
+          CI_EVENT_NAME: ${{ github.event_name }}
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage54 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
+      - run: python3 -m scripts.composed_precision.report --check
+      - run: python3 -m scripts.composed_precision.manifest --check

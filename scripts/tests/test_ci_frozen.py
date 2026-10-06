@@ -366,7 +366,7 @@ class SelectAndVerifyTests(unittest.TestCase):
                     redirect_stdout(StringIO()):
                 frozen.main()
             lines = sorted(output.read_text().split())
-            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46', 'stage47', 'stage48'])
+            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46', 'stage47', 'stage48', 'stage54'])
             # The mode depends on the runner and its Actions history, so only its form is fixed here.
             self.assertTrue(all(line.split('=')[1] in ('full', 'integrity') for line in lines))
 
@@ -413,7 +413,7 @@ class RealRegistryTests(unittest.TestCase):
         seed, errors = frozen.seed_candidate(self.registry, ROOT)
         self.assertEqual(errors, [])
         for name, pipeline in self.registry['pipelines'].items():
-            if name in ('stage47', 'stage48'):
+            if name in ('stage47', 'stage48', 'stage54'):
                 continue  # their first attestation is their own PR run (live candidates), not the d0fa5a66 seed
             errors, steps = frozen.candidate_errors(seed, pipeline['replacedCommands'])
             self.assertEqual(errors, [], name)
