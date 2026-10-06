@@ -533,3 +533,37 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 ## Docs: fold Stage56, 60, 61, 62, 64, 65, 66, macron-audit and CI-attestation handoff notes — 2026-10-06
 
 - Fold the nine pending fragments into CHANGELOG, PROJECT_STATE, DECISIONS (D092, D093, D094, D096, D097, D098, D099, D100), METHODOLOGY, DATA_SOURCES and the roadmap table. Record in PROJECT_STATE the allocations not yet folded: Stage63 (D095) in progress, Stage67 (D101) and Stage68 (D102) in a separate chat, Stage69 (D103), Stage70 (D104) and Stage71 (D105) in progress, and #78 as a superseded diagnostic left unmerged. Docs only; no wording of the folded entries changed.
+
+## Diagnostics: exceptional-seat balance scale, 2026-10-06
+
+- Added `scripts/exceptional_scale/run.py`, `data/processed/exceptional-scale/summary.json`, `scripts/tests/test_exceptional_scale.py` and `docs/exceptional-scale-diagnostic.md`. These are a development diagnostic of the frozen audit flags against the Stage48 balance likelihood. Nothing is adopted; no CI, model, mean, scale or forecast change.
+
+## Stage67 — ordinary versus exceptional candidate-balance seat scale, 2026-10-06
+
+- Scored earlier-trained ordinary/exceptional seat-balance multipliers against Stage60's free arm on the unchanged Stage60 harness, under a design frozen before any fit (`790cae1`) plus amendment 1 (`e60142b`, the `twogroup_exc1` arm, added before any score was read).
+- Finding: `recommend_twogroup_exc1_for_james_signoff`, with `flag_selection_sensitive`. Nothing is adopted.
+- New code `scripts/exceptional_balance_scale/`, outputs `data/processed/exceptional-balance-scale/`, design and findings docs, test `scripts/tests/test_stage67_exceptional_balance_scale.py` (8).
+- No CI, workflow or registry edit; no source; no change to Stage45/46/47/48/60 outputs.
+
+## Stage68 — national swing and the shared candidate-split shift (descriptive), 2026-10-06
+
+- Descriptive check, frozen first (`8bf4a5f`, disclosed as not blind), of whether the national N/L party swing predicts each election's shared candidate-split shift. Finding: `record_and_stop`. Nothing is adopted or changed.
+- New `scripts/shared_split_swing/run.py`, `data/processed/shared-split-swing/`, design and findings docs, test `scripts/tests/test_stage68_shared_split_swing.py` (3). No CI, registry or source edit.
+
+## Stage71 — Māori seat layer calibration, 2026-10-06
+
+- One bounded question: what correction, fitted only on earlier elections and scored chronologically on the 25 historical Māori electorate polls, restores calibration of the Stage66 layer? Frozen pre-registered design committed before scoring (`docs/stage71-maori-seat-calibration-design.md`, `data/processed/maori-seat-calibration/design-contract.json`); findings in `docs/stage71-maori-seat-calibration-findings.md`.
+- Arms: C (Stage66 unchanged; reproduces its stored backtest to 1e-16 and its 2026 forecast exactly), P (one penalty-free variance multiplier on sigma^2 and tau^2 with its own two-stage bootstrap uncertainty), PB (P plus a leave-self-out pollster-era bias, capped at "suggestive"). Schemes: strictly chronological (21 polls) and leave-one-election-out (25).
+- Result (frozen rule): `improves_not_restored`. Chronological pooled: predicted poll-leader win 0.826 (C), 0.765 (P), 0.714 (PB) against 0.619 observed; Brier 0.223, 0.195, 0.149; calibration z -2.65, -1.66 (limit 1.645), -1.08. Fitted `lambda` 3.03 (bootstrap 90% 1.72 to 7.02); almost all of the gain is in the 2023 fold.
+- 2026 readout (three polled seats): leader win probabilities C 0.88 / 0.78 / 0.85, P 0.74 / 0.66 / 0.62 (Hauraki-Waikato, Te Tai Hauāuru, Te Tai Tonga; across the correction's own interval 0.68 to 0.82, 0.60 to 0.72, 0.50 to 0.75), PB 0.92 / 0.87 / 0.53. Nothing adopted; no publication.
+- New code `scripts/maori_seat_calibration/`, outputs `data/processed/maori-seat-calibration/`, tests `scripts/tests/test_maori_seat_calibration.py` (15). Stage66 files, the general-seat layers, the national model, `data/sources.json` and the CI registry are untouched.
+
+## Docs/architecture: nowcast reconciliation, 2026-10-06
+
+- Folded the four pending fragments (exceptional-scale/#78, Stage67, Stage68, Stage71) without wording changes.
+- Recorded D106 (the primary product is a nowcast; national input `lastDataSupport`) and D107 (general-seat candidate-balance multiplier 0.60 ordinary / 1.00 exceptional, James's decision, with Stage67's limits preserved).
+- New canonical `docs/nowcast-specification.md` and `docs/release-checklist.md`; other active docs now point to them.
+- Reconciled Stage47+ statuses and numbering (next free Stage72 / D108); marked the old roadmap sequence and horizon limitation as superseded; corrected the Stage62 polling-error wording by dated notes (no numbers changed); corrected README status, structure and Python setup.
+- Export snapshot schema v2: `targetType`, `modelStateAsOf`, `electionDate`, nested 50/80/90 intervals (80% primary), `provenance.configVersion`; UI copy says nowcast.
+- New test `scripts/tests/test_historical_flag_isolation.py`.
+- No statistical code, output, frozen artifact or CI change.

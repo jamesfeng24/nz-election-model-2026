@@ -1,5 +1,8 @@
 # Stage62 — live 2026 national poll fit: findings (internal)
 
+> **Erratum (6 October 2026, D106; numbers unchanged).** This document says "last data" is latent support "with no polling error" and that election week "adds the model's common polling-error draw". In the pinned model, the last-data draws already integrate the industry polling-error uncertainty (correlation with the election-day industry error −0.45 to −0.68 by party), and the election-week draws differ only by future drift (|r| ≤ 0.03). The Labour election-week standard deviation is therefore driven by that drift, not by an added industry draw. `lastDataSupport` is the nowcast input; see [nowcast-specification.md](nowcast-specification.md) §2.
+
+
 Design: [stage62-live-poll-fit-design.md](stage62-live-poll-fit-design.md), frozen before any 2026 fit (decision D094). Outputs are internal: no probability, seat or bloc quantity exists in them, nothing is published or fed to another layer. Code `scripts/polling/live_fit/`, outputs `data/processed/polling/live-fit-2026-10/`.
 
 ## Result

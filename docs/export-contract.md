@@ -1,5 +1,25 @@
 # Stage53 — website export contract and end-to-end dry run (v1, draft)
 
+## v2 (6 October 2026, D106): nowcast semantics
+
+The primary product is a nowcast ([nowcast-specification.md](nowcast-specification.md)). Snapshot `schemaVersion` is now **2**. Loaders reject v1, which never reached a published release; only the synthetic dry run produced it. Changes:
+
+- `targetType`: `nowcast` (primary) or `election-day-scenario`, which may only ever be a separately labelled output.
+- `modelStateAsOf` (date): the latent national state the results describe, i.e. the latest poll-midpoint week, not "today". The schema requires `modelStateAsOf` ≤ `dataCutoff` ≤ `createdAt`.
+- `electionDate` (date): context only. A nowcast state may not postdate it.
+- **Intervals:** every national vote share (`partyVoteShares[].share`) and party seat summary (`partySeatSummaries[].seats`) is a set of exactly three central intervals at levels 0.5, 0.8 and 0.9, in that order, sharing one median and nested (`IntervalSetSchema`, `INTERVAL_LEVELS`, `PRIMARY_INTERVAL_LEVEL = 0.8` in `src/types/domain.ts`). The 80% range is the primary display. Every range is shown as full lower–upper bounds, never as a ± half-width, and is described as a central range across simulated elections under current conditions, not a margin of error or an election-day range.
+- `provenance.configVersion` is required for model snapshots.
+
+Unchanged: the archive layout and index (`ForecastIndexSchema`, still v1), the synthetic guards, and the `Forecast*` identifiers and `forecasts/` root, which are kept as stable names. Still to add in the assembly PR ([release-checklist.md](release-checklist.md)), because they depend on Stage63 and the live layers:
+- candidate-share intervals;
+- Monte Carlo SE and effective sample size;
+- threshold, overhang, size and bloc distributions from Stage65;
+- per-seat uncertainty class;
+- per-component calibration status;
+- replacing the fixed-`requiredSeats` government combinations with Stage65 dynamic-majority blocs.
+
+The v1 text below is the original Stage53 record.
+
 Authorized by the roadmap ([D082](../DECISIONS.md), item (d)). One question: can a single versioned export contract carry a forecast from polls through MMP to the website, with synthetic data kept out of real results? This fixes the boundary only. It fits nothing, changes no Python or statistical output, and produces no forecast. Everything run through it so far is invented.
 
 ## Chain and interfaces

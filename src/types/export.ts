@@ -1,10 +1,11 @@
 import { z } from 'zod';
-import { IntervalSchema, MmpAllocationSchema, SimulationResultSchema } from './domain';
+import { IntervalSetSchema, MmpAllocationSchema, SimulationResultSchema } from './domain';
 
 /**
- * Versioned website export contract (v1): the only way forecast results reach the site.
- * Draft contract; it defines a boundary and says nothing about which model fills it.
- * Missing values are explicit `unavailable` records, never zero.
+ * Versioned website export contract (v2): the only way results reach the site.
+ * The primary product is a nowcast (D106, docs/nowcast-specification.md): `targetType` names the estimand and
+ * `modelStateAsOf` the latent-state date; the election date is context only. The `Forecast*` identifiers are
+ * historical names kept for stability. Missing values are explicit `unavailable` records, never zero.
  */
 const id = z.string().trim().min(1);
 const sha256 = z.string().regex(/^[a-f0-9]{64}$/);
@@ -17,7 +18,7 @@ export const FORECAST_ARCHIVE_ROOT = 'forecasts';
 export const ProvenanceSchema = z.discriminatedUnion('kind', [
   // Synthetic fixtures exercise plumbing only. Never application results.
   z.object({ kind: z.literal('synthetic-fixture'), label: id }).strict(),
-  z.object({ kind: z.literal('model'), modelVersion: id, codeRevision: id }).strict(),
+  z.object({ kind: z.literal('model'), modelVersion: id, codeRevision: id, configVersion: id }).strict(),
 ]);
 
 const Unavailable = z.object({ status: z.literal('unavailable'), reason: id }).strict();
@@ -32,18 +33,26 @@ export const BoundaryReferenceSchema = z.object({
   artifactId: id, path: z.string().regex(/^(?!\/)(?!.*\.\.)(?!.*\\).+\.geojson$/), sha256,
 }).strict();
 
+/** `nowcast` is the primary product; an election-day scenario may only ever be a separately labelled output. */
+export const TARGET_TYPES = ['nowcast', 'election-day-scenario'] as const;
+
 export const ForecastSnapshotSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
   snapshotId: id,
+  targetType: z.enum(TARGET_TYPES),
   createdAt: z.iso.datetime({ offset: true }),
   dataCutoff: z.iso.datetime({ offset: true }),
+  // Date of the latent national state the results describe (the latest poll-midpoint week), not "today".
+  modelStateAsOf: z.iso.date(),
   electionId: id,
+  // Context only: the election the nowcast refers to. Not the estimand of a nowcast.
+  electionDate: z.iso.date(),
   provenance: ProvenanceSchema,
   // The site must show uncalibrated outputs as such; the release policy is a separate decision.
   calibrationStatus: z.enum(['uncalibrated', 'validated']),
   directory: ForecastDirectorySchema,
   national: z.object({
-    partyVoteShares: z.array(z.object({ partyId: id, share: IntervalSchema }).strict()).min(1),
+    partyVoteShares: z.array(z.object({ partyId: id, share: IntervalSetSchema }).strict()).min(1),
     basis: id,
   }).strict(),
   simulation: SimulationResultSchema,
@@ -68,6 +77,12 @@ export const ForecastSnapshotSchema = z.object({
     bad('Placeholder MMP rules are only allowed in synthetic snapshots', ['mmp', 'exampleDrawAllocation', 'rulesVersion']);
   if (!synthetic && s.calibrationStatus === 'validated' && s.simulation.limitations.length === 0)
     bad('Validated snapshots must state residual limitations', ['simulation', 'limitations']);
+  if (s.modelStateAsOf > s.dataCutoff.slice(0, 10))
+    bad('The model state cannot postdate the data cutoff', ['modelStateAsOf']);
+  if (Date.parse(s.dataCutoff) > Date.parse(s.createdAt))
+    bad('The data cutoff cannot postdate the snapshot', ['dataCutoff']);
+  if (s.targetType === 'nowcast' && s.electionDate < s.modelStateAsOf)
+    bad('A nowcast model state cannot postdate the election', ['electionDate']);
   if (s.simulation.completedDraws !== s.simulation.config.draws)
     bad('A published snapshot must contain every requested draw', ['simulation', 'completedDraws']);
   if (s.simulation.config.electionId !== s.electionId)
@@ -86,7 +101,7 @@ export const ForecastSnapshotSchema = z.object({
   });
   s.national.partyVoteShares.forEach((p, i) => {
     if (!parties.has(p.partyId)) bad('Unknown party', ['national', 'partyVoteShares', i]);
-    if (p.share.lower < 0 || p.share.upper > 1) bad('Vote-share interval must be within 0–1', ['national', 'partyVoteShares', i]);
+    if (p.share.some(v => v.lower < 0 || v.upper > 1)) bad('Vote-share interval must be within 0–1', ['national', 'partyVoteShares', i]);
   });
   if (!unique(s.national.partyVoteShares.map(p => p.partyId))) bad('Duplicate national party', ['national']);
   // Missing is never zero: a listed party without a national share must fail, not render as blank or 0%.

@@ -28,7 +28,8 @@ export async function runSyntheticDryRun(options: { draws?: number; seed?: strin
   const asOf = '2026-10-06T00:00:00+00:00';
   const output = runPipeline(config, inputs, syntheticStages, { runId: 'synthetic-dry-run', asOf, limitations });
   return buildSnapshot(config, inputs, output, {
-    snapshotId: 'synthetic-dry-run-1', createdAt: asOf, dataCutoff: asOf,
+    snapshotId: 'synthetic-dry-run-1', targetType: 'nowcast', createdAt: asOf, dataCutoff: asOf,
+    modelStateAsOf: '2026-09-27', electionDate: '2026-11-07',
     provenance: { kind: 'synthetic-fixture', label: 'End-to-end dry run on invented fixtures. Not a forecast.' },
     calibrationStatus: 'uncalibrated', nationalBasis: 'Synthetic poll average with invented noise',
     limitations, boundaries: null,

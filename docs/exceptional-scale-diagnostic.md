@@ -1,5 +1,8 @@
 # Exceptional-seat balance scale: development diagnostic
 
+> **Superseded diagnostic (merged as PR #78 on 6 October 2026, though meant to stay unmerged as the record).** In-sample only; superseded by Stage67 ([findings](stage67-exceptional-balance-scale-findings.md), D101) and by James's policy D107. Its 2014–2023 flag list is a development input that the live build must never read; a test enforces that no other module imports it.
+
+
 **Diagnostic only. Nothing is adopted.** No operational scale, mean, forecast, interface or manual adjustment changes. Reproduce: `python3 -m scripts.exceptional_scale.run` (writes `data/processed/exceptional-scale/summary.json`); `--check` recomputes and compares (about 2 minutes); test `python3 -m unittest scripts.tests.test_exceptional_scale`.
 
 ## Question
