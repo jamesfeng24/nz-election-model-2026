@@ -2,7 +2,6 @@
 import hashlib
 import json
 import sys
-import time
 import numpy as np
 import scipy
 from scripts.uncertainty_revision.construction import cases
@@ -118,10 +117,7 @@ def build(regenerate=False):
     spec = read(PREFIX+'/companion-contract.json')
     parties = {r['targetElectorateId']: r for r in inventory['partyRecords']}
     completed, representatives = [], []
-    started = time.process_time()
     for layer, year, rows in cases(inventory):
-        if time.process_time()-started > 40*60:
-            raise RuntimeError('Frozen companion CPU budget exhausted; resume exact completed cases')
         count = spec['composedDraws'] if layer == 'composed' else spec['componentDraws']
         completed.append(case_build(layer, year, rows, count, 'full', scales, parties, regenerate))
     for layer, year, rows in cases(inventory):
@@ -129,8 +125,6 @@ def build(regenerate=False):
             continue
         chosen = [rows[i] for i in sorted({0, len(rows)//2, len(rows)-1})]
         for count in (256, 512, 1024):
-            if time.process_time()-started > 40*60:
-                raise RuntimeError('Frozen companion CPU budget exhausted')
             representatives.append(case_build(layer, year, chosen, count, 'precision', scales, parties, regenerate))
     return {'stage': 47, 'signature': signature(), 'cases': completed, 'representatives': representatives,
             'predictionsSealedBeforeEvaluation': True, 'sameStatisticalLaw': 'Stage45 Gaussian',

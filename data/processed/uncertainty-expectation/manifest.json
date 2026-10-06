@@ -111,15 +111,15 @@
     "scripts/uncertainty_tails/verification.py": "f4b0be55acee9e3c3525d248a3b4042e380657c85f6b7dfdb11bd291f1bbb74c"
   },
   "derivedArtifacts": {
-    "data/processed/uncertainty-expectation/attempt-ledger.json": "8fb60341c231cca19b68b599da460abb87a499ebeacf430abf813bf10465dc69",
-    "data/processed/uncertainty-expectation/attribution.json": "9b1f852ac980841dc65f2d4ee60b3f9057bcace06d006b7a29bb7eb141642846",
+    "data/processed/uncertainty-expectation/attempt-ledger.json": "33e278bf2bfd3ce6a29481c5a2ee70de8f16850a522e63dedbf908da0bea3093",
+    "data/processed/uncertainty-expectation/attribution.json": "b0e739c3f1a1865beb4046afc34124698812d23623ced2bf5fbe0c3fa3feda4f",
     "data/processed/uncertainty-expectation/companion-contract.json": "8b1f9fa8c117bfe500da2ce81d2c4040d40c41899e429c22f7539422ef26a500",
-    "data/processed/uncertainty-expectation/construction.json": "4132648254bf99486dc9cbbcbbad39925bc641a2b5eb98e24ec19574ef7ca8b8",
+    "data/processed/uncertainty-expectation/construction.json": "6140af484186eacac1c985868427d351701818b6325dc4dd2ce8f44ff1e6c6b3",
     "data/processed/uncertainty-expectation/dependence.json": "a48de05b9b930e9a8dac4d25b8f1795f0673aefb35d61af02955099add201b75",
-    "data/processed/uncertainty-expectation/evaluation.json": "4a26e872241b9d2ad94bb81bdcb73af0ac94189f80809870600ad95531d1b5c8",
+    "data/processed/uncertainty-expectation/evaluation.json": "e212cab928a9423ab7963a262e90761fb703692da422565aedde1146144f8d00",
     "data/processed/uncertainty-expectation/heterogeneity.json": "07055f08756e9b7ee524520ba3b72b9dc0ed22aa25bd548f3d1e52a1fa531f31",
     "data/processed/uncertainty-expectation/input-contract.json": "32c7dcc580ec6131d6637d07ca5777c16e282d08b426fb60c48ecd14d9e899b1",
-    "data/processed/uncertainty-expectation/leading-pair-options.json": "e5fa6c4db4f06f560e3f3fd22a4abac20ff9199de2694d402af26a6ee971e451",
+    "data/processed/uncertainty-expectation/leading-pair-options.json": "43c9de12da6866c00011766e3c2a88cf1c6ad4abfdb60aa3e39eccf56606f614",
     "data/processed/uncertainty-expectation/next-test-contract.json": "fb802cef49d1b683d714bb724d810e8e4f5d1d24d7fac167e704d8927fcf6868",
     "data/processed/uncertainty-expectation/numerical-contract.json": "d98f54281dbf7bda7a15587a35e2cd92d7802630f63c0b77e56f69c17c68a532",
     "data/processed/uncertainty-expectation/original-audit.json": "155a6d6dbb0fdd79ebc0fb24ff530bd2091eb35e491bd031e16c5a0e4cd37ac1",
@@ -132,7 +132,7 @@
     "data/processed/uncertainty-expectation/structure-input-contract.json": "9e1273906556c71384bbc548c0eb02409312062997cf8cdc50cd9bbfcdb97498",
     "data/processed/uncertainty-expectation/structure.json": "82f9cb8aa69f74c702d90e0c684beb1ee703d07fb7d1b0c9147dbbd4949e1547",
     "data/processed/uncertainty-expectation/timing-pilot.json": "0b56a8a09f6e26cc1898082f2589e0367bb02895aca34ac4c10caf23957b28cb",
-    "data/processed/uncertainty-expectation/verification.json": "bdacff276dd4ebc057cb8d20a12d9de55d82abcee6cd5bf5261ba1ece6ba0954"
+    "data/processed/uncertainty-expectation/verification.json": "876b674d31f7e6df311f88ee014c79e33d157fe71b076422f2350b43d31741e1"
   },
   "hashesAreNotProofOfLinuxReproduction": true,
   "newCodeAndTests": {
@@ -142,10 +142,10 @@
     "scripts/tests/test_expectation_structure.py": "e7f93d529d08470c1cdd932041e58c4c26fc3894c419e5d076ddae765df90943",
     "scripts/tests/test_prior_expectation.py": "4435829ef7a2f45153489cd353e3f3f310fd71289def8debaca785f13b1ec0ea",
     "scripts/uncertainty_expectation/__init__.py": "1952cc003f5e8c910a70b64bc67c15c34b865e5ae4c8e0bc28d67141bfd195e9",
-    "scripts/uncertainty_expectation/attribution.py": "9ec71c43503a4c1dfbd0285171f9dba384b13cff0675156edeff707888a35ab7",
+    "scripts/uncertainty_expectation/attribution.py": "0540c3ea4b0c233cebb4e94a6818a54799f0e05af29ae6001ff8ba6bbba1a6f0",
     "scripts/uncertainty_expectation/audits.py": "50f06814e7051ae8478a8d7de783049bdb7d9ed4622fd1f8a7053b0a20809126",
     "scripts/uncertainty_expectation/common.py": "92eb26314d1c4d7c037b33f263bdfc88029895cadcd3dc5d4b6b783f28018ce1",
-    "scripts/uncertainty_expectation/construction.py": "bb3bd4228e3df8e8d74bb43e0f0789b9aba5c8816978e8362532c8d1ffff391d",
+    "scripts/uncertainty_expectation/construction.py": "f503b54b68c53e4d4b545d0c52433fa870336413ef2f66e7ab2fd08effc914bd",
     "scripts/uncertainty_expectation/evaluation.py": "d1173c43236b1287a32733dcdd20e16cd5b213b32ea598301c2ba3a0a395413f",
     "scripts/uncertainty_expectation/integration.py": "7b1e7f563fc0f3ffc35d724c46f0962ab68295d834618210c64d27165a59cb76",
     "scripts/uncertainty_expectation/manifest.py": "6605ad44e134da3468659ae18992c7ee3eb92b4a0e6a2103db5249e82a9c2770",
@@ -162,7 +162,7 @@
   "newNationalInferenceOrSources": false,
   "numericalEnvironment": "requirements-boundaries.txt; runtime included in producer signature",
   "preservedPriorDataFiles": 1804,
-  "producerSignature": "74e9a61321315b1c98776135a07ce2fef3c21f63769edeebee3220ad314973e2",
+  "producerSignature": "6b14831697328dcf9d637dba18785b171ac13152a6af5e769544a04a9d4cab8b",
   "stage": 47,
   "structuralConsumedEvidence": {
     "data/processed/checkpoints/joint-candidate-share-design/inventory.json": "a203aa611dafd3953952f14c3fd863ba709aa1fae3166af7911429cdbc1707d2",

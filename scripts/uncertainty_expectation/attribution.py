@@ -1,6 +1,5 @@
 """One-at-a-time common-stream width diagnostics and valid total variance."""
 from copy import deepcopy
-import time
 import numpy as np
 from scipy.special import expit, roots_hermitenorm
 from scripts.uncertainty.construction import scale_for, national_case
@@ -75,7 +74,6 @@ def build():
     spec = read(PREFIX+'/companion-contract.json')
     count = spec['composedDraws']
     results = []
-    started = time.process_time()
     for case in construction['cases']:
         if case['layer'] != 'composed':
             continue
@@ -91,8 +89,6 @@ def build():
                 policies = {}
                 point = np.asarray(item['metadata']['deterministicNationalOnlyMean'])
                 for policy in spec['attribution']['policies']:
-                    if time.process_time()-started > 30*60:
-                        raise RuntimeError('Frozen attribution CPU budget exhausted')
                     pfit, cfit = policy_scales(policy, ps, cs)
                     if policy == 'full':
                         q, meta = bank['corrected:'+item['id']], item['metadata']

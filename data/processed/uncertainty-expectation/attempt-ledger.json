@@ -37,6 +37,14 @@
     {
       "kind": "final local tests",
       "status": "1058full tests pass,9intentionaloptional-environment skips; subsequent extra shared-only fixture and pipeline23focused tests pass"
+    },
+    {
+      "kind": "hosted CI failure (PR54 amendment)",
+      "status": "Verify run 37378985558 on 9d46a01: python job passed every step through structural_diagnostics, then construction --check raised RuntimeError from the frozen 40-CPU-minute process_time guard (construction.py:133) after 12 full banks and 6 of 9 precision banks (2023 precision cases outstanding; 2017/2020/2023 composed took about 5.8/18.2/9.0 minutes on the hosted runner). Downstream Stage47 steps were skipped as a consequence. Machine-speed abort, not a statistical, tolerance or numerical failure; no output was disagreeing."
+    },
+    {
+      "kind": "amendment: guards removed, Linux regeneration",
+      "status": "Removed the 40-minute guard in construction.py and the 30-minute guard in attribution.py with no replacement or --check exemption (job timeout-minutes now bounds runaway cost). companion-contract.json computeCap text is a frozen record and is untouched. construction.py is in the signed producer list, so the producer signature changed from 74e9a61321315b1c98776135a07ce2fef3c21f63769edeebee3220ad314973e2 to 6b14831697328dcf9d637dba18785b171ac13152a6af5e769544a04a9d4cab8b. Full Stage47 reconstruction and all twelve Stage47 --check commands were rerun on Linux x86-64, Python 3.12.3 (signature depends only on major.minor), numpy 2.2.6, scipy 1.16.0, with the Stage46 bank rebuilt. Compared with the committed outputs generated on the original device: largest absolute float difference 7.2e-14 (construction), 3.0e-11 (evaluation), 8.9e-12 (verification), 2.6e-12 (leading-pair-options), 1.9e-10 (attribution); every non-float difference is a signature, draw-cache path/sha256 or manifest hash field. No statistical output, scale, mean, draw count, tolerance or cap changed."
     }
   ],
   "budgets": "27timed calls frozen before newbanks;40CPUmin newconstruction/precision,30CPUmin attribution; no cap/tolerance escalation. Time observations in timing-pilot.json are not deterministic metrics.",

@@ -4,7 +4,7 @@
     {
       "case": "candidate:2014",
       "conditionalComparisonAt005PP": true,
-      "conditionalGapPP": 0.001449300946310128,
+      "conditionalGapPP": 0.0014493009463212303,
       "counts": [
         131072,
         262144
@@ -50,15 +50,15 @@
         470457
       ],
       "notAnExactReferenceOrConfidenceInterval": true,
-      "referenceChangePP": 0.00014597484980088948,
+      "referenceChangePP": 0.00014597484979811393,
       "referenceConvergedAt001PP": true,
-      "referenceDisagreementPP": 5.068740283886708e-05,
+      "referenceDisagreementPP": 5.068740284164264e-05,
       "seat": "nz-general-2014-electorate-64"
     },
     {
       "case": "candidate:2017",
       "conditionalComparisonAt005PP": true,
-      "conditionalGapPP": 0.001839641914262724,
+      "conditionalGapPP": 0.0018396419142738263,
       "counts": [
         131072,
         262144
@@ -68,9 +68,9 @@
         470457
       ],
       "notAnExactReferenceOrConfidenceInterval": true,
-      "referenceChangePP": 0.0001861888183907201,
+      "referenceChangePP": 0.00018618881838516899,
       "referenceConvergedAt001PP": true,
-      "referenceDisagreementPP": 3.540121515099859e-05,
+      "referenceDisagreementPP": 3.5401215153774146e-05,
       "seat": "nz-general-2017-electorate-01"
     },
     {
@@ -86,7 +86,7 @@
         470457
       ],
       "notAnExactReferenceOrConfidenceInterval": true,
-      "referenceChangePP": 8.068861159643559e-05,
+      "referenceChangePP": 8.068861159782337e-05,
       "referenceConvergedAt001PP": true,
       "referenceDisagreementPP": 5.952128229735898e-05,
       "seat": "nz-general-2017-electorate-33"
@@ -106,13 +106,13 @@
       "notAnExactReferenceOrConfidenceInterval": true,
       "referenceChangePP": 0.00016294979059972015,
       "referenceConvergedAt001PP": true,
-      "referenceDisagreementPP": 6.745935570706685e-05,
+      "referenceDisagreementPP": 6.745935571261796e-05,
       "seat": "nz-general-2017-electorate-64"
     },
     {
       "case": "candidate:2020",
       "conditionalComparisonAt005PP": true,
-      "conditionalGapPP": 0.009563307926721554,
+      "conditionalGapPP": 0.009563307926732656,
       "counts": [
         131072,
         262144
@@ -124,13 +124,13 @@
       "notAnExactReferenceOrConfidenceInterval": true,
       "referenceChangePP": 0.0002716843479508291,
       "referenceConvergedAt001PP": true,
-      "referenceDisagreementPP": 0.00012568704298027145,
+      "referenceDisagreementPP": 0.00012568704298235311,
       "seat": "nz-general-2020-electorate-01"
     },
     {
       "case": "candidate:2020",
       "conditionalComparisonAt005PP": true,
-      "conditionalGapPP": 0.001278564658159509,
+      "conditionalGapPP": 0.0012785646581636723,
       "counts": [
         131072,
         262144
@@ -148,7 +148,7 @@
     {
       "case": "candidate:2020",
       "conditionalComparisonAt005PP": true,
-      "conditionalGapPP": 0.002721440828723498,
+      "conditionalGapPP": 0.0027214408287290492,
       "counts": [
         131072,
         262144
@@ -160,7 +160,7 @@
       "notAnExactReferenceOrConfidenceInterval": true,
       "referenceChangePP": 0.00031131066967060583,
       "referenceConvergedAt001PP": true,
-      "referenceDisagreementPP": 0.00014050132013387895,
+      "referenceDisagreementPP": 0.00014050132012277672,
       "seat": "nz-general-2020-electorate-65"
     },
     {
@@ -176,9 +176,9 @@
         470457
       ],
       "notAnExactReferenceOrConfidenceInterval": true,
-      "referenceChangePP": 9.921020690632776e-05,
+      "referenceChangePP": 9.921020690563387e-05,
       "referenceConvergedAt001PP": true,
-      "referenceDisagreementPP": 0.00018956275463777317,
+      "referenceDisagreementPP": 0.00018956275462667094,
       "seat": "nz-general-2023-electorate-01"
     },
     {
@@ -194,9 +194,9 @@
         470457
       ],
       "notAnExactReferenceOrConfidenceInterval": true,
-      "referenceChangePP": 5.282012976726147e-05,
+      "referenceChangePP": 5.282012977003703e-05,
       "referenceConvergedAt001PP": true,
-      "referenceDisagreementPP": 7.241825618342634e-05,
+      "referenceDisagreementPP": 7.241825618065079e-05,
       "seat": "nz-general-2023-electorate-33"
     },
     {
@@ -212,31 +212,31 @@
         470457
       ],
       "notAnExactReferenceOrConfidenceInterval": true,
-      "referenceChangePP": 0.00016407160606801696,
+      "referenceChangePP": 0.00016407160605691473,
       "referenceConvergedAt001PP": true,
-      "referenceDisagreementPP": 0.00013014560615309811,
+      "referenceDisagreementPP": 0.00013014560614199588,
       "seat": "nz-general-2023-electorate-65"
     }
   ],
   "independentScoreChecks": [
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 1.1102230246251565e-16,
       "case": "local_party:2011",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.8543224101567205,
-          "widthPP": 0.8543224101567205
+          "scorePP": 0.8543224101567208,
+          "widthPP": 0.8543224101567208
         },
         {
           "level": 80,
-          "scorePP": 1.7325143229804707,
-          "widthPP": 1.7325143229804707
+          "scorePP": 1.7325143229804694,
+          "widthPP": 1.7325143229804694
         },
         {
           "level": 90,
-          "scorePP": 2.354952597167773,
-          "widthPP": 2.354952597167773
+          "scorePP": 2.354952597167772,
+          "widthPP": 2.354952597167772
         }
       ],
       "option": "actnewzealand",
@@ -249,46 +249,46 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.2314151210930332,
-          "widthPP": 0.2314151210930332
+          "scorePP": 0.2314151210930323,
+          "widthPP": 0.2314151210930323
         },
         {
           "level": 80,
-          "scorePP": 0.47189847155729575,
-          "widthPP": 0.47189847155729575
+          "scorePP": 0.47189847155729464,
+          "widthPP": 0.47189847155729464
         },
         {
           "level": 90,
-          "scorePP": 0.6579803131683806,
-          "widthPP": 0.6579803131683806
+          "scorePP": 0.6579803131683789,
+          "widthPP": 0.6579803131683789
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.04364238362701307,
+      "scalarCRPSPP": 0.04364238362701285,
       "seat": "nz-general-2011-electorate-01"
     },
     {
-      "CRPSGapPP": 1.1102230246251565e-16,
+      "CRPSGapPP": 0.0,
       "case": "local_party:2011",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 1.4982289026414828,
-          "widthPP": 1.4982289026414828
+          "scorePP": 1.498228902641483,
+          "widthPP": 1.498228902641483
         },
         {
           "level": 80,
-          "scorePP": 2.9457541135036895,
-          "widthPP": 2.9457541135036895
+          "scorePP": 2.94575411350369,
+          "widthPP": 2.94575411350369
         },
         {
           "level": 90,
-          "scorePP": 3.9052978968214833,
-          "widthPP": 3.9052978968214833
+          "scorePP": 3.9052978968214838,
+          "widthPP": 3.9052978968214838
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 0.262798496478165,
+      "scalarCRPSPP": 0.2627984964781649,
       "seat": "nz-general-2011-electorate-32"
     },
     {
@@ -297,22 +297,22 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.4528369583620035,
-          "widthPP": 0.4528369583620035
+          "scorePP": 0.45283695836200355,
+          "widthPP": 0.45283695836200355
         },
         {
           "level": 80,
-          "scorePP": 0.9209660558411563,
-          "widthPP": 0.9209660558411563
+          "scorePP": 0.9209660558411565,
+          "widthPP": 0.9209660558411565
         },
         {
           "level": 90,
-          "scorePP": 1.2315460221717882,
-          "widthPP": 1.2315460221717882
+          "scorePP": 1.2315460221717884,
+          "widthPP": 1.2315460221717884
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.0837038806979098,
+      "scalarCRPSPP": 0.08370388069790985,
       "seat": "nz-general-2011-electorate-32"
     },
     {
@@ -321,8 +321,8 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.4112025589651577,
-          "widthPP": 0.4112025589651577
+          "scorePP": 0.41120255896515806,
+          "widthPP": 0.41120255896515806
         },
         {
           "level": 80,
@@ -345,46 +345,46 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.521689511617713,
-          "widthPP": 0.521689511617713
+          "scorePP": 0.5216895116177123,
+          "widthPP": 0.5216895116177123
         },
         {
           "level": 80,
-          "scorePP": 1.0511912835986552,
-          "widthPP": 1.0511912835986552
+          "scorePP": 1.0511912835986545,
+          "widthPP": 1.0511912835986545
         },
         {
           "level": 90,
-          "scorePP": 1.4318094040241724,
-          "widthPP": 1.4318094040241724
+          "scorePP": 1.4318094040241713,
+          "widthPP": 1.4318094040241713
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.11812329191092355,
+      "scalarCRPSPP": 0.11812329191092363,
       "seat": "nz-general-2011-electorate-63"
     },
     {
-      "CRPSGapPP": 1.1102230246251565e-16,
+      "CRPSGapPP": 5.551115123125783e-17,
       "case": "local_party:2014",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 1.1084114364161772,
-          "widthPP": 0.6160887706760603
+          "scorePP": 1.1084114364161781,
+          "widthPP": 0.6160887706760604
         },
         {
           "level": 80,
-          "scorePP": 1.2525121594735291,
-          "widthPP": 1.2525121594735291
+          "scorePP": 1.2525121594735293,
+          "widthPP": 1.2525121594735293
         },
         {
           "level": 90,
-          "scorePP": 1.7279927572642009,
-          "widthPP": 1.7279927572642009
+          "scorePP": 1.7279927572642004,
+          "widthPP": 1.7279927572642004
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 0.2798993126063932,
+      "scalarCRPSPP": 0.27989931260639345,
       "seat": "nz-general-2014-electorate-01"
     },
     {
@@ -393,32 +393,32 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.3954722137823592,
-          "widthPP": 0.06216359632113157
+          "scorePP": 0.3954722137823845,
+          "widthPP": 0.06216359632112717
         },
         {
           "level": 80,
-          "scorePP": 0.4491359843185123,
-          "widthPP": 0.12817514879249958
+          "scorePP": 0.4491359843186137,
+          "widthPP": 0.1281751487924905
         },
         {
           "level": 90,
-          "scorePP": 0.17651089585937121,
-          "widthPP": 0.17651089585937121
+          "scorePP": 0.17651089585935872,
+          "widthPP": 0.17651089585935872
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.08316581208389268,
+      "scalarCRPSPP": 0.08316581208389855,
       "seat": "nz-general-2014-electorate-01"
     },
     {
-      "CRPSGapPP": 2.220446049250313e-16,
+      "CRPSGapPP": 1.6653345369377348e-16,
       "case": "local_party:2014",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.8817231281015708,
-          "widthPP": 0.8817231281015708
+          "scorePP": 0.881723128101571,
+          "widthPP": 0.881723128101571
         },
         {
           "level": 80,
@@ -427,36 +427,36 @@
         },
         {
           "level": 90,
-          "scorePP": 2.38701547805644,
-          "widthPP": 2.38701547805644
+          "scorePP": 2.387015478056442,
+          "widthPP": 2.387015478056442
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 0.23395523854382433,
+      "scalarCRPSPP": 0.23395523854382427,
       "seat": "nz-general-2014-electorate-33"
     },
     {
-      "CRPSGapPP": 2.7755575615628914e-17,
+      "CRPSGapPP": 0.0,
       "case": "local_party:2014",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.2652454948503209,
-          "widthPP": 0.1260988574839256
+          "scorePP": 0.2652454948503181,
+          "widthPP": 0.12609885748392602
         },
         {
           "level": 80,
-          "scorePP": 0.25681417000326767,
-          "widthPP": 0.25681417000326767
+          "scorePP": 0.2568141700032687,
+          "widthPP": 0.2568141700032687
         },
         {
           "level": 90,
-          "scorePP": 0.35332549728497714,
-          "widthPP": 0.35332549728497714
+          "scorePP": 0.35332549728497853,
+          "widthPP": 0.35332549728497853
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.06326590850716515,
+      "scalarCRPSPP": 0.06326590850716479,
       "seat": "nz-general-2014-electorate-33"
     },
     {
@@ -475,8 +475,8 @@
         },
         {
           "level": 90,
-          "scorePP": 2.795419061850625,
-          "widthPP": 0.8221546417598279
+          "scorePP": 2.795419061850634,
+          "widthPP": 0.8221546417598276
         }
       ],
       "option": "actnewzealand",
@@ -489,26 +489,26 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.20769660524152062,
-          "widthPP": 0.20769660524152062
+          "scorePP": 0.2076966052415185,
+          "widthPP": 0.2076966052415185
         },
         {
           "level": 80,
-          "scorePP": 0.4237251331713012,
-          "widthPP": 0.4237251331713012
+          "scorePP": 0.42372513317129684,
+          "widthPP": 0.42372513317129684
         },
         {
           "level": 90,
-          "scorePP": 0.5834687995237715,
-          "widthPP": 0.5834687995237715
+          "scorePP": 0.5834687995237654,
+          "widthPP": 0.5834687995237654
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.0422323632220441,
+      "scalarCRPSPP": 0.042232363222044336,
       "seat": "nz-general-2014-electorate-64"
     },
     {
-      "CRPSGapPP": 1.1102230246251565e-16,
+      "CRPSGapPP": 0.0,
       "case": "local_party:2017",
       "intervals": [
         {
@@ -518,17 +518,17 @@
         },
         {
           "level": 80,
-          "scorePP": 1.4064579767663439,
-          "widthPP": 1.4064579767663439
+          "scorePP": 1.4064579767663432,
+          "widthPP": 1.4064579767663432
         },
         {
           "level": 90,
-          "scorePP": 1.9190668068010956,
-          "widthPP": 1.9190668068010956
+          "scorePP": 1.9190668068010954,
+          "widthPP": 1.9190668068010954
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 0.20341736387521997,
+      "scalarCRPSPP": 0.20341736387521991,
       "seat": "nz-general-2017-electorate-01"
     },
     {
@@ -537,42 +537,42 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.047507200334244014,
-          "widthPP": 0.047507200334244014
+          "scorePP": 0.04750720033424571,
+          "widthPP": 0.04750720033424571
         },
         {
           "level": 80,
-          "scorePP": 0.09886841049776109,
-          "widthPP": 0.09886841049776109
+          "scorePP": 0.09886841049776467,
+          "widthPP": 0.09886841049776467
         },
         {
           "level": 90,
-          "scorePP": 0.13544621655211764,
-          "widthPP": 0.13544621655211764
+          "scorePP": 0.13544621655212252,
+          "widthPP": 0.13544621655212252
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.010939044619651072,
+      "scalarCRPSPP": 0.010939044619650763,
       "seat": "nz-general-2017-electorate-01"
     },
     {
-      "CRPSGapPP": 5.551115123125783e-17,
+      "CRPSGapPP": 0.0,
       "case": "local_party:2017",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.8095189700045227,
-          "widthPP": 0.8095189700045227
+          "scorePP": 0.8095189700045229,
+          "widthPP": 0.8095189700045229
         },
         {
           "level": 80,
-          "scorePP": 1.6424860765041154,
-          "widthPP": 1.6424860765041154
+          "scorePP": 1.642486076504116,
+          "widthPP": 1.642486076504116
         },
         {
           "level": 90,
-          "scorePP": 2.2140020844029156,
-          "widthPP": 2.2140020844029156
+          "scorePP": 2.214002084402917,
+          "widthPP": 2.214002084402917
         }
       ],
       "option": "actnewzealand",
@@ -580,27 +580,27 @@
       "seat": "nz-general-2017-electorate-33"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 3.469446951953614e-18,
       "case": "local_party:2017",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.06233957501262562,
-          "widthPP": 0.06233957501262562
+          "scorePP": 0.06233957501262505,
+          "widthPP": 0.06233957501262505
         },
         {
           "level": 80,
-          "scorePP": 0.13193868800014114,
-          "widthPP": 0.13193868800014114
+          "scorePP": 0.13193868800013991,
+          "widthPP": 0.13193868800013991
         },
         {
           "level": 90,
-          "scorePP": 0.1816457487522994,
-          "widthPP": 0.1816457487522994
+          "scorePP": 0.1816457487522977,
+          "widthPP": 0.1816457487522977
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.012385795389003681,
+      "scalarCRPSPP": 0.012385795389003453,
       "seat": "nz-general-2017-electorate-33"
     },
     {
@@ -609,8 +609,8 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.5590837127023304,
-          "widthPP": 0.5590837127023304
+          "scorePP": 0.5590837127023305,
+          "widthPP": 0.5590837127023305
         },
         {
           "level": 80,
@@ -619,40 +619,40 @@
         },
         {
           "level": 90,
-          "scorePP": 1.558734689836556,
-          "widthPP": 1.558734689836556
+          "scorePP": 1.5587346898365564,
+          "widthPP": 1.5587346898365564
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 0.1289844539019594,
+      "scalarCRPSPP": 0.12898445390195934,
       "seat": "nz-general-2017-electorate-64"
     },
     {
-      "CRPSGapPP": 6.938893903907228e-18,
+      "CRPSGapPP": 0.0,
       "case": "local_party:2017",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.06527293858994557,
-          "widthPP": 0.06527293858994557
+          "scorePP": 0.06527293858994478,
+          "widthPP": 0.06527293858994478
         },
         {
           "level": 80,
-          "scorePP": 0.13531712404363372,
-          "widthPP": 0.13531712404363372
+          "scorePP": 0.135317124043632,
+          "widthPP": 0.135317124043632
         },
         {
           "level": 90,
-          "scorePP": 0.18622700474539228,
-          "widthPP": 0.18622700474539228
+          "scorePP": 0.1862270047453896,
+          "widthPP": 0.1862270047453896
         }
       ],
       "option": "unitedfuture",
-      "scalarCRPSPP": 0.0171329752624172,
+      "scalarCRPSPP": 0.01713297526241747,
       "seat": "nz-general-2017-electorate-64"
     },
     {
-      "CRPSGapPP": 8.881784197001252e-16,
+      "CRPSGapPP": 4.440892098500626e-16,
       "case": "local_party:2020",
       "intervals": [
         {
@@ -662,8 +662,8 @@
         },
         {
           "level": 80,
-          "scorePP": 15.153612239723618,
-          "widthPP": 15.153612239723618
+          "scorePP": 15.153612239723614,
+          "widthPP": 15.153612239723614
         },
         {
           "level": 90,
@@ -672,7 +672,7 @@
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 3.7022841424304955,
+      "scalarCRPSPP": 3.7022841424304964,
       "seat": "nz-general-2020-electorate-01"
     },
     {
@@ -681,13 +681,13 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.23071855229659394,
-          "widthPP": 0.10004616262982319
+          "scorePP": 0.23071855229659397,
+          "widthPP": 0.10004616262982322
         },
         {
           "level": 80,
           "scorePP": 0.31178280202360287,
-          "widthPP": 0.20706181786070435
+          "widthPP": 0.2070618178607045
         },
         {
           "level": 90,
@@ -700,51 +700,51 @@
       "seat": "nz-general-2020-electorate-01"
     },
     {
-      "CRPSGapPP": 8.881784197001252e-16,
+      "CRPSGapPP": 4.440892098500626e-16,
       "case": "local_party:2020",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 5.531239844652189,
-          "widthPP": 5.531239844652189
+          "scorePP": 5.531239844652191,
+          "widthPP": 5.531239844652191
         },
         {
           "level": 80,
-          "scorePP": 10.338778050289498,
-          "widthPP": 10.338778050289498
+          "scorePP": 10.3387780502895,
+          "widthPP": 10.3387780502895
         },
         {
           "level": 90,
-          "scorePP": 13.144293651911532,
-          "widthPP": 13.144293651911532
+          "scorePP": 13.144293651911536,
+          "widthPP": 13.144293651911536
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 1.3683310342511534,
+      "scalarCRPSPP": 1.3683310342511548,
       "seat": "nz-general-2020-electorate-33"
     },
     {
-      "CRPSGapPP": 6.938893903907228e-18,
+      "CRPSGapPP": 0.0,
       "case": "local_party:2020",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.23869287390808053,
-          "widthPP": 0.10943207851603232
+          "scorePP": 0.23869287390808525,
+          "widthPP": 0.10943207851603366
         },
         {
           "level": 80,
-          "scorePP": 0.30390711174233265,
-          "widthPP": 0.22682950351958797
+          "scorePP": 0.3039071117423411,
+          "widthPP": 0.2268295035195908
         },
         {
           "level": 90,
-          "scorePP": 0.31156080768044725,
-          "widthPP": 0.31156080768044725
+          "scorePP": 0.31156080768045097,
+          "widthPP": 0.31156080768045097
         }
       ],
       "option": "visionnewzealand",
-      "scalarCRPSPP": 0.05222830429248521,
+      "scalarCRPSPP": 0.052228304292486226,
       "seat": "nz-general-2020-electorate-33"
     },
     {
@@ -758,13 +758,13 @@
         },
         {
           "level": 80,
-          "scorePP": 7.709103918385936,
-          "widthPP": 7.709103918385936
+          "scorePP": 7.709103918385939,
+          "widthPP": 7.709103918385939
         },
         {
           "level": 90,
-          "scorePP": 9.805952456072223,
-          "widthPP": 9.805952456072223
+          "scorePP": 9.80595245607222,
+          "widthPP": 9.80595245607222
         }
       ],
       "option": "actnewzealand",
@@ -772,75 +772,75 @@
       "seat": "nz-general-2020-electorate-65"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 1.3877787807814457e-17,
       "case": "local_party:2020",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.24464568208063836,
-          "widthPP": 0.10932829154540698
+          "scorePP": 0.2446456820806341,
+          "widthPP": 0.10932829154540588
         },
         {
           "level": 80,
-          "scorePP": 0.31764529657845586,
-          "widthPP": 0.22278128181260276
+          "scorePP": 0.3176452965784488,
+          "widthPP": 0.22278128181260048
         },
         {
           "level": 90,
-          "scorePP": 0.3048661765231438,
-          "widthPP": 0.3048661765231438
+          "scorePP": 0.30486617652314046,
+          "widthPP": 0.30486617652314046
         }
       ],
       "option": "visionnewzealand",
-      "scalarCRPSPP": 0.05340081373721192,
+      "scalarCRPSPP": 0.053400813737211006,
       "seat": "nz-general-2020-electorate-65"
     },
     {
-      "CRPSGapPP": 8.881784197001252e-16,
+      "CRPSGapPP": 1.3322676295501878e-15,
       "case": "local_party:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 6.271411444946994,
-          "widthPP": 6.271411444946994
+          "scorePP": 6.271411444946989,
+          "widthPP": 6.271411444946989
         },
         {
           "level": 80,
-          "scorePP": 12.180043539003986,
-          "widthPP": 12.180043539003986
+          "scorePP": 12.180043539003984,
+          "widthPP": 12.180043539003984
         },
         {
           "level": 90,
-          "scorePP": 15.669098853086041,
-          "widthPP": 15.669098853086041
+          "scorePP": 15.669098853086037,
+          "widthPP": 15.669098853086037
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 1.4679318932620076,
+      "scalarCRPSPP": 1.467931893262008,
       "seat": "nz-general-2023-electorate-01"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 2.0816681711721685e-17,
       "case": "local_party:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.14861175103855906,
-          "widthPP": 0.06697362742582602
+          "scorePP": 0.14861175103855173,
+          "widthPP": 0.06697362742582737
         },
         {
           "level": 80,
-          "scorePP": 0.14061822936849702,
-          "widthPP": 0.14061822936849702
+          "scorePP": 0.14061822936849974,
+          "widthPP": 0.14061822936849974
         },
         {
           "level": 90,
-          "scorePP": 0.1956496981657688,
-          "widthPP": 0.1956496981657688
+          "scorePP": 0.19564969816577277,
+          "widthPP": 0.19564969816577277
         }
       ],
       "option": "womensrightsparty",
-      "scalarCRPSPP": 0.03520311307098027,
+      "scalarCRPSPP": 0.035203113070979335,
       "seat": "nz-general-2023-electorate-01"
     },
     {
@@ -849,8 +849,8 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 5.16646945097373,
-          "widthPP": 5.16646945097373
+          "scorePP": 5.166469450973732,
+          "widthPP": 5.166469450973732
         },
         {
           "level": 80,
@@ -859,36 +859,12 @@
         },
         {
           "level": 90,
-          "scorePP": 12.976471430450545,
-          "widthPP": 12.976471430450545
+          "scorePP": 12.976471430450552,
+          "widthPP": 12.976471430450552
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 0.8951363713902669,
-      "seat": "nz-general-2023-electorate-33"
-    },
-    {
-      "CRPSGapPP": 6.938893903907228e-18,
-      "case": "local_party:2023",
-      "intervals": [
-        {
-          "level": 50,
-          "scorePP": 0.06854190165573275,
-          "widthPP": 0.06854190165573275
-        },
-        {
-          "level": 80,
-          "scorePP": 0.14300139471401876,
-          "widthPP": 0.14300139471401876
-        },
-        {
-          "level": 90,
-          "scorePP": 0.19784714574800155,
-          "widthPP": 0.19784714574800155
-        }
-      ],
-      "option": "womensrightsparty",
-      "scalarCRPSPP": 0.012283121447352163,
+      "scalarCRPSPP": 0.8951363713902674,
       "seat": "nz-general-2023-electorate-33"
     },
     {
@@ -897,8 +873,32 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 4.93534540460553,
-          "widthPP": 4.93534540460553
+          "scorePP": 0.06854190165573126,
+          "widthPP": 0.06854190165573126
+        },
+        {
+          "level": 80,
+          "scorePP": 0.14300139471401568,
+          "widthPP": 0.14300139471401568
+        },
+        {
+          "level": 90,
+          "scorePP": 0.19784714574799744,
+          "widthPP": 0.19784714574799744
+        }
+      ],
+      "option": "womensrightsparty",
+      "scalarCRPSPP": 0.012283121447351983,
+      "seat": "nz-general-2023-electorate-33"
+    },
+    {
+      "CRPSGapPP": 8.881784197001252e-16,
+      "case": "local_party:2023",
+      "intervals": [
+        {
+          "level": 50,
+          "scorePP": 4.935345404605534,
+          "widthPP": 4.935345404605534
         },
         {
           "level": 80,
@@ -907,36 +907,36 @@
         },
         {
           "level": 90,
-          "scorePP": 12.19408681831063,
-          "widthPP": 12.19408681831063
+          "scorePP": 12.194086818310632,
+          "widthPP": 12.194086818310632
         }
       ],
       "option": "actnewzealand",
-      "scalarCRPSPP": 0.8698893502456717,
+      "scalarCRPSPP": 0.8698893502456722,
       "seat": "nz-general-2023-electorate-65"
     },
     {
-      "CRPSGapPP": 6.938893903907228e-18,
+      "CRPSGapPP": 0.0,
       "case": "local_party:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.0713544181473526,
-          "widthPP": 0.0713544181473526
+          "scorePP": 0.0713544181473544,
+          "widthPP": 0.0713544181473544
         },
         {
           "level": 80,
-          "scorePP": 0.14779331042628238,
-          "widthPP": 0.14779331042628238
+          "scorePP": 0.14779331042628602,
+          "widthPP": 0.14779331042628602
         },
         {
           "level": 90,
-          "scorePP": 0.20372607796618242,
-          "widthPP": 0.20372607796618242
+          "scorePP": 0.2037260779661874,
+          "widthPP": 0.2037260779661874
         }
       ],
       "option": "womensrightsparty",
-      "scalarCRPSPP": 0.016778241695552178,
+      "scalarCRPSPP": 0.016778241695551824,
       "seat": "nz-general-2023-electorate-65"
     },
     {
@@ -964,27 +964,27 @@
       "seat": "nz-general-2014-electorate-01"
     },
     {
-      "CRPSGapPP": 1.1102230246251565e-16,
+      "CRPSGapPP": 5.551115123125783e-17,
       "case": "candidate:2014",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 1.0209913803886368,
-          "widthPP": 0.6536194576385211
+          "scorePP": 1.0209913803886317,
+          "widthPP": 0.6536194576385193
         },
         {
           "level": 80,
-          "scorePP": 1.3985246373831337,
-          "widthPP": 1.3985246373831337
+          "scorePP": 1.3985246373831295,
+          "widthPP": 1.3985246373831295
         },
         {
           "level": 90,
-          "scorePP": 2.004368856422307,
-          "widthPP": 2.004368856422307
+          "scorePP": 2.004368856422302,
+          "widthPP": 2.004368856422302
         }
       ],
       "option": "nz-general-2014-electorate-01-candidate-08",
-      "scalarCRPSPP": 0.22874786314066187,
+      "scalarCRPSPP": 0.22874786314066092,
       "seat": "nz-general-2014-electorate-01"
     },
     {
@@ -1022,8 +1022,8 @@
         },
         {
           "level": 80,
-          "scorePP": 12.63836136743564,
-          "widthPP": 12.63836136743564
+          "scorePP": 12.638361367435623,
+          "widthPP": 12.638361367435623
         },
         {
           "level": 90,
@@ -1036,7 +1036,7 @@
       "seat": "nz-general-2014-electorate-33"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 1.1102230246251565e-16,
       "case": "candidate:2014",
       "intervals": [
         {
@@ -1046,8 +1046,8 @@
         },
         {
           "level": 80,
-          "scorePP": 2.8443237762645834,
-          "widthPP": 2.8443237762645834
+          "scorePP": 2.8443237762645843,
+          "widthPP": 2.8443237762645843
         },
         {
           "level": 90,
@@ -1056,7 +1056,7 @@
         }
       ],
       "option": "nz-general-2014-electorate-64-candidate-01",
-      "scalarCRPSPP": 0.24108754206093852,
+      "scalarCRPSPP": 0.24108754206093863,
       "seat": "nz-general-2014-electorate-64"
     },
     {
@@ -1075,8 +1075,8 @@
         },
         {
           "level": 90,
-          "scorePP": 27.065296246373247,
-          "widthPP": 27.065296246373247
+          "scorePP": 27.06529624637324,
+          "widthPP": 27.06529624637324
         }
       ],
       "option": "nz-general-2014-electorate-64-candidate-09",
@@ -1089,8 +1089,8 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 3.0464207510498666,
-          "widthPP": 3.0464207510498666
+          "scorePP": 3.046420751049866,
+          "widthPP": 3.046420751049866
         },
         {
           "level": 80,
@@ -1099,16 +1099,16 @@
         },
         {
           "level": 90,
-          "scorePP": 7.853931432127972,
-          "widthPP": 7.853931432127972
+          "scorePP": 7.85393143212797,
+          "widthPP": 7.85393143212797
         }
       ],
       "option": "nz-general-2017-electorate-01-candidate-01",
-      "scalarCRPSPP": 0.7822355007874915,
+      "scalarCRPSPP": 0.7822355007874908,
       "seat": "nz-general-2017-electorate-01"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 8.881784197001252e-16,
       "case": "candidate:2017",
       "intervals": [
         {
@@ -1128,11 +1128,11 @@
         }
       ],
       "option": "nz-general-2017-electorate-01-candidate-08",
-      "scalarCRPSPP": 2.174492851836151,
+      "scalarCRPSPP": 2.1744928518361517,
       "seat": "nz-general-2017-electorate-01"
     },
     {
-      "CRPSGapPP": 8.881784197001252e-16,
+      "CRPSGapPP": 2.6645352591003757e-15,
       "case": "candidate:2017",
       "intervals": [
         {
@@ -1180,7 +1180,7 @@
       "seat": "nz-general-2017-electorate-33"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 2.220446049250313e-16,
       "case": "candidate:2017",
       "intervals": [
         {
@@ -1195,8 +1195,8 @@
         },
         {
           "level": 90,
-          "scorePP": 8.068504530856773,
-          "widthPP": 8.068504530856773
+          "scorePP": 8.068504530856774,
+          "widthPP": 8.068504530856774
         }
       ],
       "option": "nz-general-2017-electorate-64-candidate-01",
@@ -1233,22 +1233,22 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 2.2292115704108078,
-          "widthPP": 1.9861787534698672
+          "scorePP": 2.2292115704108104,
+          "widthPP": 1.986178753469868
         },
         {
           "level": 80,
-          "scorePP": 4.0844816144263785,
-          "widthPP": 4.0844816144263785
+          "scorePP": 4.084481614426382,
+          "widthPP": 4.084481614426382
         },
         {
           "level": 90,
-          "scorePP": 5.672836099633427,
-          "widthPP": 5.672836099633427
+          "scorePP": 5.672836099633428,
+          "widthPP": 5.672836099633428
         }
       ],
       "option": "nz-general-2020-electorate-01-candidate-01",
-      "scalarCRPSPP": 0.5592484739893038,
+      "scalarCRPSPP": 0.559248473989304,
       "seat": "nz-general-2020-electorate-01"
     },
     {
@@ -1281,22 +1281,22 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.8419242472560893,
-          "widthPP": 0.8419242472560893
+          "scorePP": 0.8419242472560894,
+          "widthPP": 0.8419242472560894
         },
         {
           "level": 80,
-          "scorePP": 1.768452926445851,
-          "widthPP": 1.768452926445851
+          "scorePP": 1.7684529264458513,
+          "widthPP": 1.7684529264458513
         },
         {
           "level": 90,
-          "scorePP": 2.4924169071195346,
-          "widthPP": 2.4924169071195346
+          "scorePP": 2.492416907119534,
+          "widthPP": 2.492416907119534
         }
       ],
       "option": "nz-general-2020-electorate-33-candidate-01",
-      "scalarCRPSPP": 0.19688264059318406,
+      "scalarCRPSPP": 0.19688264059318394,
       "seat": "nz-general-2020-electorate-33"
     },
     {
@@ -1306,31 +1306,31 @@
         {
           "level": 50,
           "scorePP": 1.2955587741286325,
-          "widthPP": 0.6062802901137193
+          "widthPP": 0.6062802901137194
         },
         {
           "level": 80,
-          "scorePP": 1.8514167295546653,
+          "scorePP": 1.8514167295546655,
           "widthPP": 1.2962167893818093
         },
         {
           "level": 90,
-          "scorePP": 2.028151858132522,
+          "scorePP": 2.0281518581325204,
           "widthPP": 1.837763340942196
         }
       ],
       "option": "nz-general-2020-electorate-33-candidate-10",
-      "scalarCRPSPP": 0.2849097298508022,
+      "scalarCRPSPP": 0.28490972985080226,
       "seat": "nz-general-2020-electorate-33"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 5.551115123125783e-17,
       "case": "candidate:2020",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 1.008202196784745,
-          "widthPP": 1.008202196784745
+          "scorePP": 1.0082021967847448,
+          "widthPP": 1.0082021967847448
         },
         {
           "level": 80,
@@ -1339,12 +1339,12 @@
         },
         {
           "level": 90,
-          "scorePP": 2.954830998120483,
-          "widthPP": 2.954830998120483
+          "scorePP": 2.954830998120484,
+          "widthPP": 2.954830998120484
         }
       ],
       "option": "nz-general-2020-electorate-65-candidate-01",
-      "scalarCRPSPP": 0.1822200844063238,
+      "scalarCRPSPP": 0.18222008440632376,
       "seat": "nz-general-2020-electorate-65"
     },
     {
@@ -1372,55 +1372,55 @@
       "seat": "nz-general-2020-electorate-65"
     },
     {
-      "CRPSGapPP": 5.551115123125783e-17,
-      "case": "candidate:2023",
-      "intervals": [
-        {
-          "level": 50,
-          "scorePP": 0.867959121155953,
-          "widthPP": 0.867959121155953
-        },
-        {
-          "level": 80,
-          "scorePP": 1.9160359415413268,
-          "widthPP": 1.9160359415413268
-        },
-        {
-          "level": 90,
-          "scorePP": 2.7905923659985996,
-          "widthPP": 2.7905923659985996
-        }
-      ],
-      "option": "nz-general-2023-electorate-01-candidate-01",
-      "scalarCRPSPP": 0.25966728969475983,
-      "seat": "nz-general-2023-electorate-01"
-    },
-    {
       "CRPSGapPP": 0.0,
       "case": "candidate:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 2.2539367669507477,
-          "widthPP": 2.2539367669507477
+          "scorePP": 0.8679591211559516,
+          "widthPP": 0.8679591211559516
         },
         {
           "level": 80,
-          "scorePP": 4.847082262955447,
-          "widthPP": 4.847082262955447
+          "scorePP": 1.9160359415413264,
+          "widthPP": 1.9160359415413264
         },
         {
           "level": 90,
-          "scorePP": 6.917760329642529,
-          "widthPP": 6.917760329642529
+          "scorePP": 2.7905923659985987,
+          "widthPP": 2.7905923659985987
         }
       ],
-      "option": "nz-general-2023-electorate-01-candidate-10",
-      "scalarCRPSPP": 0.42796304578074684,
+      "option": "nz-general-2023-electorate-01-candidate-01",
+      "scalarCRPSPP": 0.2596672896947599,
       "seat": "nz-general-2023-electorate-01"
     },
     {
-      "CRPSGapPP": 2.220446049250313e-16,
+      "CRPSGapPP": 4.440892098500626e-16,
+      "case": "candidate:2023",
+      "intervals": [
+        {
+          "level": 50,
+          "scorePP": 2.253936766950751,
+          "widthPP": 2.253936766950751
+        },
+        {
+          "level": 80,
+          "scorePP": 4.847082262955452,
+          "widthPP": 4.847082262955452
+        },
+        {
+          "level": 90,
+          "scorePP": 6.917760329642536,
+          "widthPP": 6.917760329642536
+        }
+      ],
+      "option": "nz-general-2023-electorate-01-candidate-10",
+      "scalarCRPSPP": 0.4279630457807475,
+      "seat": "nz-general-2023-electorate-01"
+    },
+    {
+      "CRPSGapPP": 0.0,
       "case": "candidate:2023",
       "intervals": [
         {
@@ -1430,8 +1430,8 @@
         },
         {
           "level": 80,
-          "scorePP": 7.672983910708975,
-          "widthPP": 7.672983910708975
+          "scorePP": 7.672983910708977,
+          "widthPP": 7.672983910708977
         },
         {
           "level": 90,
@@ -1444,7 +1444,7 @@
       "seat": "nz-general-2023-electorate-33"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 8.881784197001252e-16,
       "case": "candidate:2023",
       "intervals": [
         {
@@ -1459,8 +1459,8 @@
         },
         {
           "level": 90,
-          "scorePP": 25.549826173358568,
-          "widthPP": 25.549826173358568
+          "scorePP": 25.54982617335857,
+          "widthPP": 25.54982617335857
         }
       ],
       "option": "nz-general-2023-electorate-33-candidate-07",
@@ -1468,13 +1468,13 @@
       "seat": "nz-general-2023-electorate-33"
     },
     {
-      "CRPSGapPP": 0.0,
+      "CRPSGapPP": 1.1102230246251565e-16,
       "case": "candidate:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 2.778720063169237,
-          "widthPP": 1.0138242890452116
+          "scorePP": 2.7787200631692377,
+          "widthPP": 1.0138242890452114
         },
         {
           "level": 80,
@@ -1483,12 +1483,12 @@
         },
         {
           "level": 90,
-          "scorePP": 3.096934080026555,
-          "widthPP": 3.096934080026555
+          "scorePP": 3.0969340800265543,
+          "widthPP": 3.0969340800265543
         }
       ],
       "option": "nz-general-2023-electorate-65-candidate-01",
-      "scalarCRPSPP": 0.6297341465008399,
+      "scalarCRPSPP": 0.62973414650084,
       "seat": "nz-general-2023-electorate-65"
     },
     {
@@ -1521,13 +1521,13 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 6.147425774264701,
-          "widthPP": 5.398553100055984
+          "scorePP": 6.147425774264702,
+          "widthPP": 5.398553100055981
         },
         {
           "level": 80,
-          "scorePP": 10.931033524309465,
-          "widthPP": 10.931033524309465
+          "scorePP": 10.931033524309466,
+          "widthPP": 10.931033524309466
         },
         {
           "level": 90,
@@ -1536,17 +1536,17 @@
         }
       ],
       "option": "nz-general-2017-electorate-01-candidate-01",
-      "scalarCRPSPP": 1.536191468221158,
+      "scalarCRPSPP": 1.5361914682211584,
       "seat": "nz-general-2017-electorate-01"
     },
     {
-      "CRPSGapPP": 1.0658141036401503e-14,
+      "CRPSGapPP": 7.105427357601002e-15,
       "case": "composed:2017",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 36.93873344096077,
-          "widthPP": 11.902598266417051
+          "scorePP": 36.93873344096076,
+          "widthPP": 11.902598266417044
         },
         {
           "level": 80,
@@ -1555,8 +1555,8 @@
         },
         {
           "level": 90,
-          "scorePP": 25.988538816370458,
-          "widthPP": 25.988538816370458
+          "scorePP": 25.98853881637045,
+          "widthPP": 25.98853881637045
         }
       ],
       "option": "nz-general-2017-electorate-01-candidate-08",
@@ -1564,7 +1564,7 @@
       "seat": "nz-general-2017-electorate-01"
     },
     {
-      "CRPSGapPP": 2.1316282072803006e-14,
+      "CRPSGapPP": 2.4868995751603507e-14,
       "case": "composed:2017",
       "intervals": [
         {
@@ -1574,8 +1574,8 @@
         },
         {
           "level": 80,
-          "scorePP": 59.99841408100469,
-          "widthPP": 18.175968782205018
+          "scorePP": 59.998414081004704,
+          "widthPP": 18.175968782205032
         },
         {
           "level": 90,
@@ -1584,17 +1584,17 @@
         }
       ],
       "option": "nz-general-2017-electorate-33-candidate-01",
-      "scalarCRPSPP": 9.584273931616586,
+      "scalarCRPSPP": 9.584273931616583,
       "seat": "nz-general-2017-electorate-33"
     },
     {
-      "CRPSGapPP": 1.0658141036401503e-14,
+      "CRPSGapPP": 8.881784197001252e-15,
       "case": "composed:2017",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 39.75341576751961,
-          "widthPP": 7.827905534287824
+          "scorePP": 39.75341576751969,
+          "widthPP": 7.827905534287799
         },
         {
           "level": 80,
@@ -1603,12 +1603,12 @@
         },
         {
           "level": 90,
-          "scorePP": 35.51179084950955,
-          "widthPP": 18.91499917901622
+          "scorePP": 35.51179084951846,
+          "widthPP": 18.91499917901575
         }
       ],
       "option": "nz-general-2017-electorate-33-candidate-06",
-      "scalarCRPSPP": 8.551674894263138,
+      "scalarCRPSPP": 8.551674894263153,
       "seat": "nz-general-2017-electorate-33"
     },
     {
@@ -1617,26 +1617,26 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 6.959852318203589,
-          "widthPP": 6.959852318203589
+          "scorePP": 6.959852318203593,
+          "widthPP": 6.959852318203593
         },
         {
           "level": 80,
-          "scorePP": 12.995840737911191,
-          "widthPP": 12.995840737911191
+          "scorePP": 12.995840737911196,
+          "widthPP": 12.995840737911196
         },
         {
           "level": 90,
-          "scorePP": 16.657334268300843,
-          "widthPP": 16.657334268300843
+          "scorePP": 16.657334268300847,
+          "widthPP": 16.657334268300847
         }
       ],
       "option": "nz-general-2017-electorate-64-candidate-01",
-      "scalarCRPSPP": 1.7750403943040292,
+      "scalarCRPSPP": 1.77504039430403,
       "seat": "nz-general-2017-electorate-64"
     },
     {
-      "CRPSGapPP": 1.7763568394002505e-15,
+      "CRPSGapPP": 0.0,
       "case": "composed:2017",
       "intervals": [
         {
@@ -1651,27 +1651,27 @@
         },
         {
           "level": 90,
-          "scorePP": 31.861836334026325,
-          "widthPP": 31.861836334026325
+          "scorePP": 31.861836334026318,
+          "widthPP": 31.861836334026318
         }
       ],
       "option": "nz-general-2017-electorate-64-candidate-08",
-      "scalarCRPSPP": 4.705376558351389,
+      "scalarCRPSPP": 4.705376558351413,
       "seat": "nz-general-2017-electorate-64"
     },
     {
-      "CRPSGapPP": 3.3306690738754696e-16,
+      "CRPSGapPP": 4.440892098500626e-16,
       "case": "composed:2020",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 1.1080739588400115,
-          "widthPP": 1.1080739588400115
+          "scorePP": 1.108073958840012,
+          "widthPP": 1.108073958840012
         },
         {
           "level": 80,
-          "scorePP": 2.611463196573463,
-          "widthPP": 2.611463196573463
+          "scorePP": 2.6114631965734634,
+          "widthPP": 2.6114631965734634
         },
         {
           "level": 90,
@@ -1684,13 +1684,13 @@
       "seat": "nz-general-2020-electorate-01"
     },
     {
-      "CRPSGapPP": 2.1316282072803006e-14,
+      "CRPSGapPP": 1.7763568394002505e-14,
       "case": "composed:2020",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 65.19892673371083,
-          "widthPP": 15.68380427904102
+          "scorePP": 65.19892673371085,
+          "widthPP": 15.683804279041041
         },
         {
           "level": 80,
@@ -1708,7 +1708,7 @@
       "seat": "nz-general-2020-electorate-01"
     },
     {
-      "CRPSGapPP": 3.3306690738754696e-16,
+      "CRPSGapPP": 2.220446049250313e-16,
       "case": "composed:2020",
       "intervals": [
         {
@@ -1723,36 +1723,36 @@
         },
         {
           "level": 90,
-          "scorePP": 2.1163518282746425,
-          "widthPP": 2.1163518282746425
+          "scorePP": 2.116351828274641,
+          "widthPP": 2.116351828274641
         }
       ],
       "option": "nz-general-2020-electorate-33-candidate-01",
-      "scalarCRPSPP": 0.14456805339796064,
+      "scalarCRPSPP": 0.14456805339796075,
       "seat": "nz-general-2020-electorate-33"
     },
     {
-      "CRPSGapPP": 5.551115123125783e-16,
+      "CRPSGapPP": 7.771561172376096e-16,
       "case": "composed:2020",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 1.306129515664555,
-          "widthPP": 0.5811429918287663
+          "scorePP": 1.3061295156645483,
+          "widthPP": 0.5811429918287654
         },
         {
           "level": 80,
-          "scorePP": 1.8569102067323033,
-          "widthPP": 1.2211477348944169
+          "scorePP": 1.8569102067322976,
+          "widthPP": 1.2211477348944197
         },
         {
           "level": 90,
-          "scorePP": 1.885126868832109,
-          "widthPP": 1.7584097352705843
+          "scorePP": 1.885126868832118,
+          "widthPP": 1.7584097352705839
         }
       ],
       "option": "nz-general-2020-electorate-33-candidate-10",
-      "scalarCRPSPP": 0.28205501317213433,
+      "scalarCRPSPP": 0.282055013172134,
       "seat": "nz-general-2020-electorate-33"
     },
     {
@@ -1761,18 +1761,18 @@
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.6167973459545422,
-          "widthPP": 0.6167973459545422
+          "scorePP": 0.6167973459545425,
+          "widthPP": 0.6167973459545425
         },
         {
           "level": 80,
-          "scorePP": 1.2764214802197626,
-          "widthPP": 1.2764214802197626
+          "scorePP": 1.2764214802197622,
+          "widthPP": 1.2764214802197622
         },
         {
           "level": 90,
-          "scorePP": 1.7537249800091135,
-          "widthPP": 1.7537249800091135
+          "scorePP": 1.753724980009112,
+          "widthPP": 1.753724980009112
         }
       ],
       "option": "nz-general-2020-electorate-65-candidate-01",
@@ -1780,7 +1780,7 @@
       "seat": "nz-general-2020-electorate-65"
     },
     {
-      "CRPSGapPP": 1.1546319456101628e-14,
+      "CRPSGapPP": 1.0658141036401503e-14,
       "case": "composed:2020",
       "intervals": [
         {
@@ -1804,23 +1804,23 @@
       "seat": "nz-general-2020-electorate-65"
     },
     {
-      "CRPSGapPP": 5.551115123125783e-16,
+      "CRPSGapPP": 1.6653345369377348e-16,
       "case": "composed:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 0.9537660353357273,
-          "widthPP": 0.9537660353357273
+          "scorePP": 0.9537660353357276,
+          "widthPP": 0.9537660353357276
         },
         {
           "level": 80,
-          "scorePP": 1.8981215784204346,
-          "widthPP": 1.8981215784204346
+          "scorePP": 1.8981215784204337,
+          "widthPP": 1.8981215784204337
         },
         {
           "level": 90,
-          "scorePP": 2.650672874064736,
-          "widthPP": 2.650672874064736
+          "scorePP": 2.650672874064735,
+          "widthPP": 2.650672874064735
         }
       ],
       "option": "nz-general-2023-electorate-01-candidate-01",
@@ -1828,37 +1828,37 @@
       "seat": "nz-general-2023-electorate-01"
     },
     {
-      "CRPSGapPP": 2.220446049250313e-16,
+      "CRPSGapPP": 0.0,
       "case": "composed:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 1.8800414291807477,
-          "widthPP": 1.8800414291807477
+          "scorePP": 1.8800414291807388,
+          "widthPP": 1.8800414291807388
         },
         {
           "level": 80,
-          "scorePP": 4.942055389396655,
-          "widthPP": 4.942055389396655
+          "scorePP": 4.94205538939666,
+          "widthPP": 4.94205538939666
         },
         {
           "level": 90,
-          "scorePP": 6.860200359337219,
-          "widthPP": 6.860200359337219
+          "scorePP": 6.86020035933725,
+          "widthPP": 6.86020035933725
         }
       ],
       "option": "nz-general-2023-electorate-01-candidate-10",
-      "scalarCRPSPP": 0.3807200827448518,
+      "scalarCRPSPP": 0.38072008274485203,
       "seat": "nz-general-2023-electorate-01"
     },
     {
-      "CRPSGapPP": 3.9968028886505635e-15,
+      "CRPSGapPP": 5.773159728050814e-15,
       "case": "composed:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 10.62746582566243,
-          "widthPP": 7.260357831314437
+          "scorePP": 10.627465825662426,
+          "widthPP": 7.260357831314435
         },
         {
           "level": 80,
@@ -1867,22 +1867,22 @@
         },
         {
           "level": 90,
-          "scorePP": 17.349276361671738,
-          "widthPP": 17.349276361671738
+          "scorePP": 17.349276361671734,
+          "widthPP": 17.349276361671734
         }
       ],
       "option": "nz-general-2023-electorate-33-candidate-01",
-      "scalarCRPSPP": 2.4515331730834156,
+      "scalarCRPSPP": 2.4515331730834125,
       "seat": "nz-general-2023-electorate-33"
     },
     {
-      "CRPSGapPP": 6.217248937900877e-15,
+      "CRPSGapPP": 1.0658141036401503e-14,
       "case": "composed:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 12.690331748085654,
-          "widthPP": 12.690331748085654
+          "scorePP": 12.69033174808565,
+          "widthPP": 12.69033174808565
         },
         {
           "level": 80,
@@ -1896,35 +1896,35 @@
         }
       ],
       "option": "nz-general-2023-electorate-33-candidate-07",
-      "scalarCRPSPP": 2.771958698905694,
+      "scalarCRPSPP": 2.7719586989056815,
       "seat": "nz-general-2023-electorate-33"
     },
     {
-      "CRPSGapPP": 2.220446049250313e-16,
+      "CRPSGapPP": 7.771561172376096e-16,
       "case": "composed:2023",
       "intervals": [
         {
           "level": 50,
-          "scorePP": 2.403580409093168,
-          "widthPP": 1.218036996717041
+          "scorePP": 2.4035804090931694,
+          "widthPP": 1.2180369967170406
         },
         {
           "level": 80,
-          "scorePP": 2.22150405966014,
-          "widthPP": 2.22150405966014
+          "scorePP": 2.2215040596601403,
+          "widthPP": 2.2215040596601403
         },
         {
           "level": 90,
-          "scorePP": 3.3746638963564863,
-          "widthPP": 3.3746638963564863
+          "scorePP": 3.3746638963564832,
+          "widthPP": 3.3746638963564832
         }
       ],
       "option": "nz-general-2023-electorate-65-candidate-01",
-      "scalarCRPSPP": 0.6003883753320379,
+      "scalarCRPSPP": 0.6003883753320385,
       "seat": "nz-general-2023-electorate-65"
     },
     {
-      "CRPSGapPP": 3.552713678800501e-15,
+      "CRPSGapPP": 0.0,
       "case": "composed:2023",
       "intervals": [
         {
@@ -1934,24 +1934,24 @@
         },
         {
           "level": 80,
-          "scorePP": 26.789416016062823,
-          "widthPP": 26.789416016062823
+          "scorePP": 26.78941601606281,
+          "widthPP": 26.78941601606281
         },
         {
           "level": 90,
-          "scorePP": 36.172909246976914,
-          "widthPP": 36.172909246976914
+          "scorePP": 36.17290924697691,
+          "widthPP": 36.17290924697691
         }
       ],
       "option": "nz-general-2023-electorate-65-candidate-10",
-      "scalarCRPSPP": 3.9443011803830785,
+      "scalarCRPSPP": 3.944301180383059,
       "seat": "nz-general-2023-electorate-65"
     }
   ],
   "majorComponentVectorsExactlyUnchangedSeats": 578,
   "noHeldOutOutcomeUsedByNumericalRepair": true,
   "scope": "Every bank conservation/aggregate equivalence; first/middle/last each case scalar scores;12candidate independent references. No claim of independent262144reference for every composed input.",
-  "signature": "74e9a61321315b1c98776135a07ce2fef3c21f63769edeebee3220ad314973e2",
+  "signature": "6b14831697328dcf9d637dba18785b171ac13152a6af5e769544a04a9d4cab8b",
   "simplexVectorsChecked": 19038720,
   "stage": 47
 }
