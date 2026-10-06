@@ -1,0 +1,53 @@
+{
+  "backtestMeanPredictedLeaderWin": 0.815126,
+  "backtestObservedLeaderWinRate": 0.6,
+  "biasAdopted": false,
+  "biasHat": 0.15087592101705427,
+  "contrastPolls": 24,
+  "defaultWinProbabilities": {
+    "Hauraki-Waikato": {
+      "Hana-Rāwhiti Maipi-Clarke": 0.88105,
+      "Kingi Kiriona": 0.11895
+    },
+    "Te Tai Hauāuru": {
+      "Coral Raukawa": 0.00022,
+      "Debbie Ngarewa-Packer": 0.77526,
+      "Te Pūoho Katene": 0.22452
+    },
+    "Te Tai Tonga": {
+      "Lisa Marie Murch": 0.10606,
+      "Lisa Te Morenga": 0.02498,
+      "Mananui Ramsden": 0.85337,
+      "Tākuta Ferris": 0.01559
+    }
+  },
+  "flaggedSensitivityShifts": {
+    "curiaEraBias": [
+      "Te Tai Hauāuru",
+      "Te Tai Tonga"
+    ],
+    "default": [],
+    "horizon": [],
+    "independentSeats": [],
+    "widerOtherNoise": [
+      "Te Tai Tonga"
+    ]
+  },
+  "historicalPolls": 25,
+  "loeoImprovementNats": -0.3289601984812087,
+  "otherContrastRatioTo2Sigma2": 4.028678163422176,
+  "polledSeats": [
+    "Hauraki-Waikato",
+    "Te Tai Hauāuru",
+    "Te Tai Tonga"
+  ],
+  "schemaVersion": 1,
+  "sigma": 0.23144610381823846,
+  "tau": 0.25334946810399517,
+  "unpolledSeats": [
+    "Ikaroa-Rāwhiti",
+    "Tāmaki Makaurau",
+    "Te Tai Tokerau",
+    "Waiariki"
+  ]
+}

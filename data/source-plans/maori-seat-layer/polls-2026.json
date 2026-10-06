@@ -1,0 +1,139 @@
+{
+  "electionDate": "2026-11-07",
+  "polls": [
+    {
+      "candidates": [
+        {
+          "name": "Mananui Ramsden",
+          "party": "LAB",
+          "pollPercent": 30
+        },
+        {
+          "name": "Lisa Marie Murch",
+          "party": "MP",
+          "pollPercent": 17
+        },
+        {
+          "name": "Lisa Te Morenga",
+          "party": "GRN",
+          "pollPercent": 16
+        },
+        {
+          "name": "Tākuta Ferris",
+          "party": "IND",
+          "pollPercent": 15
+        }
+      ],
+      "fieldworkEnd": "2026-09-24",
+      "fieldworkStart": "2026-09-14",
+      "id": "2026-te-tai-tonga",
+      "marginOfErrorPercent": 4.5,
+      "mode": "420 phone, 80 online panel",
+      "notes": "Candidate-vote shares as published (22% of respondents are not accounted for by the four named candidates; the release states no candidate-vote undecided figure). Ferris stands as an independent after leaving Te Pāti Māori. Party-vote figures are recorded for the national-layer reconciliation and are not used in the seat forecast.",
+      "otherPercent": null,
+      "partyVotePercent": {
+        "FreePalestine": 4,
+        "GRN": 14,
+        "LAB": 28,
+        "MP": 11,
+        "NAT": 6,
+        "NZF": 6,
+        "TOP": 4,
+        "undecided": 10
+      },
+      "pollster": "Whakaata Māori–Curia (Whakatau 2026)",
+      "published": "2026-09-28",
+      "sampleSize": 500,
+      "seat": "Te Tai Tonga",
+      "sourceFiles": [
+        "data/raw/polling/current-2026-primary/maori-teaonews-te-tai-tonga-2026-09-29.html",
+        "data/raw/polling/current-2026-primary/maori-rnz-te-tai-tonga.html"
+      ],
+      "undecidedPercent": null
+    },
+    {
+      "candidates": [
+        {
+          "name": "Debbie Ngarewa-Packer",
+          "party": "MP",
+          "pollPercent": 38
+        },
+        {
+          "name": "Te Pūoho Katene",
+          "party": "LAB",
+          "pollPercent": 27
+        },
+        {
+          "name": "Coral Raukawa",
+          "party": "NAT",
+          "pollPercent": 10
+        }
+      ],
+      "fieldworkEnd": "2026-09-24",
+      "fieldworkStart": "2026-09-14",
+      "id": "2026-te-tai-hauauru",
+      "marginOfErrorPercent": 4.5,
+      "mode": "420 phone, 80 online panel",
+      "notes": "The release states party vote excluding undecided (TPM 18, LAB 30, GRN 22) but gives no undecided-inclusive figures; not recorded here. Te Tai Hauāuru has no Green candidate (stated in the release).",
+      "otherPercent": 6,
+      "partyVotePercent": null,
+      "pollster": "Whakaata Māori–Curia (Whakatau 2026)",
+      "published": "2026-09-29",
+      "sampleSize": 500,
+      "seat": "Te Tai Hauāuru",
+      "sourceFiles": [
+        "data/raw/polling/current-2026-primary/maori-teaonews-te-tai-hauauru-2026-09-30.html"
+      ],
+      "undecidedPercent": 18
+    },
+    {
+      "candidates": [
+        {
+          "name": "Hana-Rāwhiti Maipi-Clarke",
+          "party": "MP",
+          "pollPercent": 45
+        },
+        {
+          "name": "Kingi Kiriona",
+          "party": "LAB",
+          "pollPercent": 26
+        }
+      ],
+      "fieldworkEnd": "2026-10-01",
+      "fieldworkStart": "2026-09-21",
+      "id": "2026-hauraki-waikato",
+      "marginOfErrorPercent": 4.5,
+      "mode": "420 phone, 80 online panel",
+      "notes": "\"Other\" 13% preferred someone else although no other candidate had been named at the time of the release; nominations close 8 October 2026. Party-vote figures are recorded for the national-layer reconciliation and are not used in the seat forecast.",
+      "otherPercent": 13,
+      "partyVotePercent": {
+        "ACT": 3,
+        "GRN": 16,
+        "LAB": 21,
+        "MP": 22,
+        "NAT": 5,
+        "NZF": 7,
+        "TOP": 2,
+        "TeTaiTokerauParty": 3,
+        "undecided": 15
+      },
+      "pollster": "Whakaata Māori–Curia (Whakatau 2026)",
+      "published": "2026-10-06",
+      "sampleSize": 500,
+      "seat": "Hauraki-Waikato",
+      "sourceFiles": [
+        "data/raw/polling/current-2026-primary/maori-teaonews-hauraki-waikato-2026-10-06.html",
+        "data/raw/polling/current-2026-primary/maori-hauraki-waikato-herald.html"
+      ],
+      "undecidedPercent": 17
+    }
+  ],
+  "schemaVersion": 1,
+  "status": "Current-cycle Maori electorate polls. Append a poll for each seat as it is published (see docs/stage66-maori-seat-layer-design.md, \"Adding a poll\"), then rerun scripts.maori_seat_layer.run. Facts below are verified verbatim against the preserved Stage52 bytes by verify.py.",
+  "unpolledSeats": [
+    "Waiariki",
+    "Ikaroa-Rāwhiti",
+    "Tāmaki Makaurau",
+    "Te Tai Tokerau"
+  ]
+}
