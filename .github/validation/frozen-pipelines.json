@@ -152,6 +152,30 @@
    "integrityChecks": [
     "scripts.uncertainty_expectation.common:verify"
    ]
+  },
+  "stage48": {
+   "entryModules": [
+    "scripts.balance_scale.evaluation",
+    "scripts.balance_scale.verification"
+   ],
+   "ownedPaths": [
+    "scripts/balance_scale"
+   ],
+   "outputPaths": [
+    "data/processed/balance-scale"
+   ],
+   "extraDependencies": [],
+   "cacheDirectory": ".cache/stage48",
+   "cacheReaderModules": [],
+   "cacheReaderNames": [],
+   "reviewedCacheConsumers": [],
+   "replacedCommands": [
+    "python3 -m scripts.balance_scale.evaluation --check",
+    "python3 -m scripts.balance_scale.verification --check"
+   ],
+   "integrityChecks": [
+    "scripts.balance_scale.common:verify"
+   ]
   }
  }
 }

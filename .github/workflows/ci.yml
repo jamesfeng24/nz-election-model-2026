@@ -219,3 +219,16 @@ jobs:
         run: python3 -m scripts.validate.ci_frozen --check --pipeline stage47 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
       - run: python3 -m scripts.uncertainty_expectation.report --check
       - run: python3 -m scripts.uncertainty_expectation.manifest --check
+      - run: python3 -m scripts.balance_scale.fit --check
+      - run: python3 -m scripts.balance_scale.evaluation --check
+        if: steps.frozen.outputs.stage48 != 'integrity'
+      - run: python3 -m scripts.balance_scale.decision --check
+      - run: python3 -m scripts.balance_scale.verification --check
+        if: steps.frozen.outputs.stage48 != 'integrity'
+      - name: Verify reused Stage48 frozen pipeline
+        if: steps.frozen.outputs.stage48 == 'integrity'
+        env:
+          CI_EVENT_NAME: ${{ github.event_name }}
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage48 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
+      - run: python3 -m scripts.balance_scale.report --check
+      - run: python3 -m scripts.balance_scale.manifest --check
