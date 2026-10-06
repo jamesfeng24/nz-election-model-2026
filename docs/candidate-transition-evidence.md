@@ -1,4 +1,4 @@
-# Candidate-transition evidence pass (National and Labour electorates, 2008–2023)
+# Stage51 candidate-transition evidence pass (National and Labour electorates, 2008–2023)
 
 Evidence acquisition only. This pass answers one question: across every adjacent election pair 2008→11, 2011→14, 2014→17, 2017→20 and 2020→23, which National and Labour electorate candidate changes are genuine incumbent-to-successor transitions, and of what type. It fits no replacement effect, changes no R/S code and touches no model output. `selectedOperationalReplacementEffectPP` stays `null`. The later `R_new = a + rho R_old` analysis is a separate, unauthorized-here stage.
 

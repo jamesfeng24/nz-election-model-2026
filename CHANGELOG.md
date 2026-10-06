@@ -1,4 +1,4 @@
-## Candidate-transition evidence pass — 2026-10-06
+## Stage51 — candidate-transition evidence pass — 2026-10-06
 
 - Add sourced National/Labour incumbent-to-successor ledger for every adjacent pair 2008–2023: 333 incumbent seats, 258 continuations, 75 typed changes with dated evidence and confidence.
 - Resolve name variants on evidence (Stage26 flags plus 8 curated judgements); separate by-election successions from election-time exits; add dated source registry, curation file, deterministic `--check` and 15 tests.
