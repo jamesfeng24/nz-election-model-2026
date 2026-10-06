@@ -1,6 +1,6 @@
 # MMP rule verification complete — documentation only, 2026-10-06
 
-Branch `claude/project-thread-vojcqq` from main d0fa5a66 (verified equal to origin/main at start). Authorized scope: Corinna approved the MMP rule check only (project thread, 2026-10-06); code and a PR need her separate go-ahead. Local checkpoint; not pushed.
+Branch `claude/project-thread-vojcqq` from main d0fa5a66 (verified equal to origin/main at start). Authorized scope: Corinna approved the MMP rule check only (project thread, 2026-10-06); code and a PR need her separate go-ahead. Pushed to the branch (25175b6, no PR opened; none requested).
 
 No-data-change checkpoint: no source acquired, no code, tests, workflows or Stage47 files touched. New [docs/mmp-rules-verification.md](docs/mmp-rules-verification.md); pointer sections added to docs/statistical-specification.md, DATA_SOURCES.md and CHANGELOG.md. Verified from Electoral Commission pages (tool-extracted, not byte-preserved): 120 seats; 5% party vote or one electorate seat; Sainte-Laguë 1,3,5,…; overhang keeps electorate seats, no list seats, Parliament grows (2023 official: 122, overhang 2, then 123 after Port Waikato); 2026 = 64 general + 7 Māori = 71 electorates, 49 nominal list seats (derived); Electoral Amendment Act 2025 summary (Royal Assent 19 Dec 2025) lists no allocation change.
 
