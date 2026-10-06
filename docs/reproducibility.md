@@ -28,6 +28,10 @@ For future random runs record seed, PRNG implementation/version, draw count, mod
 
 GitHub Actions runs locked installation, Vitest, strict TypeScript and Vite build on pushes and pull requests. Local gates use the same npm scripts. Build artifacts and node_modules are ignored; package-lock.json is tracked. Dependency upgrades must be intentional, checked and documented.
 
+## Frozen pipelines, CI replay and time gates
+
+A frozen pipeline's expensive `--check` replay is skipped in CI while its code, consumed inputs and hashes are unchanged and is run in full once whenever it is modified (docs/ci-validation.md, D081). Reconstruction `--check` modules must be deterministic functions of committed code and inputs: do not add `time.process_time()`/wall-clock budgets or other machine-speed gates that can fail on a slower runner without any statistical meaning; bound cost with workflow `timeout-minutes`. Cache directories under `.cache/` are local conveniences, not backups, and a registered pipeline's cache must not be read by a later stage's CI check unless that reader is reviewed in `.github/validation/frozen-pipelines.json`.
+
 ## Offline research and large inputs
 
 Python 3.12.2 is pinned in .python-version, and pyproject.toml declares no dependencies. Standard-library tests and source-integrity checking run in a separate CI job. Once third-party packages are needed, commit exact direct/transitive versions and installation instructions before using them. Keep per-run environment metadata and export JSON/GeoJSON for the client. No pip installation is required in this stage.
