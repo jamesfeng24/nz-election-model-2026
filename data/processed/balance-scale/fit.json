@@ -1,0 +1,1825 @@
+{
+  "bound": 1.3862943611198906,
+  "folds": {
+    "2014": {
+      "centers": {
+        "R": 0.0,
+        "T": 0.0
+      },
+      "conditional": {
+        "status": "no earlier candidate residual: a = b = 0, prior/control",
+        "theta": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "constant": {
+        "status": "no earlier candidate residual: a = b = 0, prior/control",
+        "theta": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "control": {
+        "status": "no earlier candidate residual: a = b = 0, prior/control",
+        "theta": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "missingFeatureSeats": {
+        "2014": {
+          "R": 0,
+          "T": 0
+        }
+      },
+      "multiplierSummary": {
+        "conditional": {
+          "max": 1.0,
+          "median": 1.0,
+          "min": 1.0
+        },
+        "constant": {
+          "max": 1.0,
+          "median": 1.0,
+          "min": 1.0
+        },
+        "control": {
+          "max": 1.0,
+          "median": 1.0,
+          "min": 1.0
+        }
+      },
+      "multipliers": {
+        "conditional": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "constant": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "control": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "seatIds": [
+        "nz-general-2014-electorate-01",
+        "nz-general-2014-electorate-02",
+        "nz-general-2014-electorate-03",
+        "nz-general-2014-electorate-04",
+        "nz-general-2014-electorate-05",
+        "nz-general-2014-electorate-06",
+        "nz-general-2014-electorate-07",
+        "nz-general-2014-electorate-08",
+        "nz-general-2014-electorate-09",
+        "nz-general-2014-electorate-10",
+        "nz-general-2014-electorate-11",
+        "nz-general-2014-electorate-12",
+        "nz-general-2014-electorate-13",
+        "nz-general-2014-electorate-14",
+        "nz-general-2014-electorate-15",
+        "nz-general-2014-electorate-16",
+        "nz-general-2014-electorate-17",
+        "nz-general-2014-electorate-18",
+        "nz-general-2014-electorate-19",
+        "nz-general-2014-electorate-20",
+        "nz-general-2014-electorate-21",
+        "nz-general-2014-electorate-22",
+        "nz-general-2014-electorate-23",
+        "nz-general-2014-electorate-24",
+        "nz-general-2014-electorate-25",
+        "nz-general-2014-electorate-26",
+        "nz-general-2014-electorate-27",
+        "nz-general-2014-electorate-28",
+        "nz-general-2014-electorate-29",
+        "nz-general-2014-electorate-30",
+        "nz-general-2014-electorate-31",
+        "nz-general-2014-electorate-32",
+        "nz-general-2014-electorate-33",
+        "nz-general-2014-electorate-34",
+        "nz-general-2014-electorate-35",
+        "nz-general-2014-electorate-36",
+        "nz-general-2014-electorate-37",
+        "nz-general-2014-electorate-38",
+        "nz-general-2014-electorate-39",
+        "nz-general-2014-electorate-40",
+        "nz-general-2014-electorate-41",
+        "nz-general-2014-electorate-42",
+        "nz-general-2014-electorate-43",
+        "nz-general-2014-electorate-44",
+        "nz-general-2014-electorate-45",
+        "nz-general-2014-electorate-46",
+        "nz-general-2014-electorate-47",
+        "nz-general-2014-electorate-48",
+        "nz-general-2014-electorate-49",
+        "nz-general-2014-electorate-50",
+        "nz-general-2014-electorate-51",
+        "nz-general-2014-electorate-52",
+        "nz-general-2014-electorate-53",
+        "nz-general-2014-electorate-54",
+        "nz-general-2014-electorate-55",
+        "nz-general-2014-electorate-56",
+        "nz-general-2014-electorate-57",
+        "nz-general-2014-electorate-58",
+        "nz-general-2014-electorate-59",
+        "nz-general-2014-electorate-60",
+        "nz-general-2014-electorate-61",
+        "nz-general-2014-electorate-62",
+        "nz-general-2014-electorate-63",
+        "nz-general-2014-electorate-64"
+      ],
+      "targetYear": 2014,
+      "trainingSeats": 0,
+      "trainingYears": []
+    },
+    "2017": {
+      "centers": {
+        "R": 0.5257832407010152,
+        "T": 0.14858577568294162
+      },
+      "conditional": {
+        "boundContact": [
+          false,
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 4.5380477153855736e-11,
+        "chosenStart": 0,
+        "gradient": [
+          -8.784628580116305e-11,
+          -3.7226231090758954e-09,
+          -7.880067431909055e-10
+        ],
+        "likelihoodInformation": {
+          "conditionNumber": 41.26381218307582,
+          "hessianEigenvalues": [
+            0.037856107020723465,
+            0.11788801670100793,
+            1.5620872900855511
+          ],
+          "meaning": "unpenalised likelihood curvature of the free parameters; penalty reported separately",
+          "rank": 3
+        },
+        "objective": -0.6485481536717217,
+        "powell": {
+          "maximumParameterDifference": 3.6623351573616958e-09,
+          "objective": -0.6485481536717219,
+          "objectiveDifference": 2.220446049250313e-16,
+          "theta": [
+            -0.05629617499863572,
+            -0.004461501043796492,
+            0.021985858090681543
+          ]
+        },
+        "projectedGradientMax": 3.7226231090758954e-09,
+        "starts": [
+          {
+            "iterations": 5,
+            "objective": -0.6485481536717217,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.05629617866097088,
+              -0.004461503799526191,
+              0.021985856755949593
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.6485481536717217,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.05629617872701891,
+              -0.004461502843077431,
+              0.021985857089428303
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.6485481536717216,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.056296178668241305,
+              -0.004461501724643224,
+              0.021985857163192724
+            ]
+          }
+        ],
+        "theta": [
+          -0.05629617866097088,
+          -0.004461503799526191,
+          0.021985856755949593
+        ]
+      },
+      "constant": {
+        "boundContact": [
+          false,
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 5.006797754170122e-11,
+        "chosenStart": 0,
+        "gradient": [
+          1.0794143356918084e-13,
+          0.017943482544805798,
+          -0.08916930355560422
+        ],
+        "likelihoodInformation": {
+          "conditionNumber": 1.0,
+          "hessianEigenvalues": [
+            1.546346161773737
+          ],
+          "meaning": "unpenalised likelihood curvature of the free parameters; penalty reported separately",
+          "rank": 1
+        },
+        "objective": -0.6475279176275722,
+        "powell": {
+          "maximumParameterDifference": 1.6802612322341925e-08,
+          "objective": -0.6475279176275719,
+          "objectiveDifference": 3.3306690738754696e-16,
+          "theta": [
+            -0.055561462280851334,
+            0.0,
+            0.0
+          ]
+        },
+        "projectedGradientMax": 1.0794143356918084e-13,
+        "starts": [
+          {
+            "iterations": 4,
+            "objective": -0.6475279176275722,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.05556147908346366,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 4,
+            "objective": -0.6475279176275727,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.05556147907858361,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 4,
+            "objective": -0.6475279176275723,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.05556147905203857,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "theta": [
+          -0.05556147908346366,
+          0.0,
+          0.0
+        ]
+      },
+      "control": {
+        "status": "numerically corrected Stage45 control",
+        "theta": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "missingFeatureSeats": {
+        "2014": {
+          "R": 0,
+          "T": 0
+        },
+        "2017": {
+          "R": 0,
+          "T": 0
+        }
+      },
+      "multiplierSummary": {
+        "conditional": {
+          "max": 0.9545249588499986,
+          "median": 0.945639865970415,
+          "min": 0.94134132787419
+        },
+        "constant": {
+          "max": 0.9459538655060474,
+          "median": 0.9459538655060474,
+          "min": 0.9459538655060474
+        },
+        "control": {
+          "max": 1.0,
+          "median": 1.0,
+          "min": 1.0
+        }
+      },
+      "multipliers": {
+        "conditional": [
+          0.9444684115951688,
+          0.9465981739693867,
+          0.9467828835456157,
+          0.9453663092613219,
+          0.9478608734155958,
+          0.9435191617641564,
+          0.9485066497203265,
+          0.949049505509165,
+          0.9448303292151097,
+          0.9460703016821251,
+          0.9455606638511842,
+          0.9545249588499986,
+          0.9454862473269275,
+          0.9446645751703762,
+          0.9446737265694248,
+          0.9453101182617727,
+          0.9452396181146112,
+          0.9461095813676782,
+          0.9460327155493364,
+          0.9484080159135113,
+          0.9456671900042607,
+          0.9448902314088422,
+          0.9427236599841536,
+          0.9471055625591246,
+          0.9456602101850702,
+          0.9423107677003438,
+          0.9448588702523123,
+          0.9446705354825379,
+          0.9475349359611591,
+          0.9450971102540472,
+          0.9427181836078997,
+          0.9442866960042477,
+          0.9459215423485897,
+          0.9451773063768355,
+          0.9467204615982464,
+          0.9523753993922164,
+          0.9464173325085816,
+          0.945698726923957,
+          0.9436103683870601,
+          0.9468200416777792,
+          0.9470542660148303,
+          0.9413949305254014,
+          0.9447506601265456,
+          0.9448411701568723,
+          0.9475816650935176,
+          0.9476407636590769,
+          0.9442873200437365,
+          0.9462578668419741,
+          0.9452425819387584,
+          0.9453710892016659,
+          0.94561952175576,
+          0.9478948195010546,
+          0.9467330826850656,
+          0.9450436409581664,
+          0.9457808726898429,
+          0.943291233403979,
+          0.9443281723566579,
+          0.9507491147614034,
+          0.9457716719052023,
+          0.9459547259642138,
+          0.9479205612648302,
+          0.94134132787419,
+          0.9475270241053726,
+          0.9450502517511261
+        ],
+        "constant": [
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474,
+          0.9459538655060474
+        ],
+        "control": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "seatIds": [
+        "nz-general-2017-electorate-01",
+        "nz-general-2017-electorate-02",
+        "nz-general-2017-electorate-03",
+        "nz-general-2017-electorate-04",
+        "nz-general-2017-electorate-05",
+        "nz-general-2017-electorate-06",
+        "nz-general-2017-electorate-07",
+        "nz-general-2017-electorate-08",
+        "nz-general-2017-electorate-09",
+        "nz-general-2017-electorate-10",
+        "nz-general-2017-electorate-11",
+        "nz-general-2017-electorate-12",
+        "nz-general-2017-electorate-13",
+        "nz-general-2017-electorate-14",
+        "nz-general-2017-electorate-15",
+        "nz-general-2017-electorate-16",
+        "nz-general-2017-electorate-17",
+        "nz-general-2017-electorate-18",
+        "nz-general-2017-electorate-19",
+        "nz-general-2017-electorate-20",
+        "nz-general-2017-electorate-21",
+        "nz-general-2017-electorate-22",
+        "nz-general-2017-electorate-23",
+        "nz-general-2017-electorate-24",
+        "nz-general-2017-electorate-25",
+        "nz-general-2017-electorate-26",
+        "nz-general-2017-electorate-27",
+        "nz-general-2017-electorate-28",
+        "nz-general-2017-electorate-29",
+        "nz-general-2017-electorate-30",
+        "nz-general-2017-electorate-31",
+        "nz-general-2017-electorate-32",
+        "nz-general-2017-electorate-33",
+        "nz-general-2017-electorate-34",
+        "nz-general-2017-electorate-35",
+        "nz-general-2017-electorate-36",
+        "nz-general-2017-electorate-37",
+        "nz-general-2017-electorate-38",
+        "nz-general-2017-electorate-39",
+        "nz-general-2017-electorate-40",
+        "nz-general-2017-electorate-41",
+        "nz-general-2017-electorate-42",
+        "nz-general-2017-electorate-43",
+        "nz-general-2017-electorate-44",
+        "nz-general-2017-electorate-45",
+        "nz-general-2017-electorate-46",
+        "nz-general-2017-electorate-47",
+        "nz-general-2017-electorate-48",
+        "nz-general-2017-electorate-49",
+        "nz-general-2017-electorate-50",
+        "nz-general-2017-electorate-51",
+        "nz-general-2017-electorate-52",
+        "nz-general-2017-electorate-53",
+        "nz-general-2017-electorate-54",
+        "nz-general-2017-electorate-55",
+        "nz-general-2017-electorate-56",
+        "nz-general-2017-electorate-57",
+        "nz-general-2017-electorate-58",
+        "nz-general-2017-electorate-59",
+        "nz-general-2017-electorate-60",
+        "nz-general-2017-electorate-61",
+        "nz-general-2017-electorate-62",
+        "nz-general-2017-electorate-63",
+        "nz-general-2017-electorate-64"
+      ],
+      "targetYear": 2017,
+      "trainingSeats": 64,
+      "trainingYears": [
+        2014
+      ],
+      "unpenalisedConstant": {
+        "a": -0.1820545137184312,
+        "objective": -0.668344353872643,
+        "scoredOrAdopted": false,
+        "status": "descriptive likelihood-only maximiser of the constant; not a restriction"
+      }
+    },
+    "2020": {
+      "centers": {
+        "R": 0.5089853703505076,
+        "T": 0.16021217777709149
+      },
+      "conditional": {
+        "boundContact": [
+          false,
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 7.224865150590176e-11,
+        "chosenStart": 0,
+        "gradient": [
+          -4.8515904627066675e-09,
+          1.616785570701662e-08,
+          6.054350035200606e-09
+        ],
+        "likelihoodInformation": {
+          "conditionNumber": 37.78813265272128,
+          "hessianEigenvalues": [
+            0.04285781324777775,
+            0.09424966231727464,
+            1.6195167322125812
+          ],
+          "meaning": "unpenalised likelihood curvature of the free parameters; penalty reported separately",
+          "rank": 3
+        },
+        "objective": -0.6589034685761558,
+        "powell": {
+          "maximumParameterDifference": 9.694059457943105e-09,
+          "objective": -0.6589034685761557,
+          "objectiveDifference": 1.1102230246251565e-16,
+          "theta": [
+            -0.04980969388378202,
+            -0.007104874626045323,
+            0.027502376414176175
+          ]
+        },
+        "projectedGradientMax": 1.616785570701662e-08,
+        "starts": [
+          {
+            "iterations": 5,
+            "objective": -0.6589034685761558,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.04980970357784148,
+              -0.007104870149049307,
+              0.027502369503563943
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.6589034685761557,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.04980970282677896,
+              -0.007104873802887671,
+              0.027502368281080318
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.6589034685761559,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.04980970270863683,
+              -0.00710487174529047,
+              0.027502368562544097
+            ]
+          }
+        ],
+        "theta": [
+          -0.04980970357784148,
+          -0.007104870149049307,
+          0.027502369503563943
+        ]
+      },
+      "constant": {
+        "boundContact": [
+          false,
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 5.555997328876571e-11,
+        "chosenStart": 0,
+        "gradient": [
+          4.882205750789126e-14,
+          0.028734618678372424,
+          -0.11191946276016786
+        ],
+        "likelihoodInformation": {
+          "conditionNumber": 1.0,
+          "hessianEigenvalues": [
+            1.5956981224002351
+          ],
+          "meaning": "unpenalised likelihood curvature of the free parameters; penalty reported separately",
+          "rank": 1
+        },
+        "objective": -0.6572624181187547,
+        "powell": {
+          "maximumParameterDifference": 1.4254468855279256e-08,
+          "objective": -0.6572624181187547,
+          "objectiveDifference": 0.0,
+          "theta": [
+            -0.048651536178777814,
+            0.0,
+            0.0
+          ]
+        },
+        "projectedGradientMax": 4.882205750789126e-14,
+        "starts": [
+          {
+            "iterations": 4,
+            "objective": -0.6572624181187547,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.04865155043324667,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 4,
+            "objective": -0.6572624181187549,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.048651550423215874,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 4,
+            "objective": -0.6572624181187549,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.048651550391250804,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "theta": [
+          -0.04865155043324667,
+          0.0,
+          0.0
+        ]
+      },
+      "control": {
+        "status": "numerically corrected Stage45 control",
+        "theta": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "missingFeatureSeats": {
+        "2014": {
+          "R": 0,
+          "T": 0
+        },
+        "2017": {
+          "R": 0,
+          "T": 0
+        },
+        "2020": {
+          "R": 0,
+          "T": 0
+        }
+      },
+      "multiplierSummary": {
+        "conditional": {
+          "max": 0.9611383663197145,
+          "median": 0.9511856206306256,
+          "min": 0.9465244792544167
+        },
+        "constant": {
+          "max": 0.9525129746128697,
+          "median": 0.9525129746128697,
+          "min": 0.9525129746128697
+        },
+        "control": {
+          "max": 1.0,
+          "median": 1.0,
+          "min": 1.0
+        }
+      },
+      "multipliers": {
+        "conditional": [
+          0.9511856206306256,
+          0.9468584121511203,
+          0.953697525943124,
+          0.9470616092338899,
+          0.9505300694183145,
+          0.9506373535960069,
+          0.9559624691381705,
+          0.9538557017933054,
+          0.952359989612352,
+          0.9512621666127088,
+          0.9611383663197145,
+          0.9531410363261402,
+          0.9548601269411049,
+          0.9527448272608657,
+          0.954869016026267,
+          0.9508188662629854,
+          0.9524540764727222,
+          0.9528084867768617,
+          0.9543407195190652,
+          0.9465244792544167,
+          0.9475694908667212,
+          0.947540327219713,
+          0.9534805221166226,
+          0.953630865095934,
+          0.9519430570968218,
+          0.9486528008174736,
+          0.9548837383034202,
+          0.9510991166446231,
+          0.9510616624900041,
+          0.9503258832198496,
+          0.9503255587889633,
+          0.9608179662925317,
+          0.9550160727944074,
+          0.9474392516339988,
+          0.9506337072217099,
+          0.9471337236013085,
+          0.9521264931641085,
+          0.9488636978286737,
+          0.9522646414250784,
+          0.9497653169898085,
+          0.9511523206312799,
+          0.9499537063260513,
+          0.9531168680969475,
+          0.9513898641877582,
+          0.9472818308084697,
+          0.9488240702466775,
+          0.9476331454826964,
+          0.9470074991114318,
+          0.9506404207922378,
+          0.9498069165051907,
+          0.9534944626586364,
+          0.955670958834902,
+          0.9500252719597874,
+          0.9536467875818958,
+          0.9477783282792279,
+          0.9507919375149806,
+          0.9538457888956745,
+          0.9536648247922165,
+          0.9510714882033856,
+          0.9572165114604025,
+          0.9547021478711789,
+          0.9507985160803255,
+          0.9516651472704373,
+          0.956323431538622,
+          0.949522238474946
+        ],
+        "constant": [
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697,
+          0.9525129746128697
+        ],
+        "control": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "seatIds": [
+        "nz-general-2020-electorate-01",
+        "nz-general-2020-electorate-02",
+        "nz-general-2020-electorate-03",
+        "nz-general-2020-electorate-04",
+        "nz-general-2020-electorate-05",
+        "nz-general-2020-electorate-06",
+        "nz-general-2020-electorate-07",
+        "nz-general-2020-electorate-08",
+        "nz-general-2020-electorate-09",
+        "nz-general-2020-electorate-10",
+        "nz-general-2020-electorate-11",
+        "nz-general-2020-electorate-12",
+        "nz-general-2020-electorate-13",
+        "nz-general-2020-electorate-14",
+        "nz-general-2020-electorate-15",
+        "nz-general-2020-electorate-16",
+        "nz-general-2020-electorate-17",
+        "nz-general-2020-electorate-18",
+        "nz-general-2020-electorate-19",
+        "nz-general-2020-electorate-20",
+        "nz-general-2020-electorate-21",
+        "nz-general-2020-electorate-22",
+        "nz-general-2020-electorate-23",
+        "nz-general-2020-electorate-24",
+        "nz-general-2020-electorate-25",
+        "nz-general-2020-electorate-26",
+        "nz-general-2020-electorate-27",
+        "nz-general-2020-electorate-28",
+        "nz-general-2020-electorate-29",
+        "nz-general-2020-electorate-30",
+        "nz-general-2020-electorate-31",
+        "nz-general-2020-electorate-32",
+        "nz-general-2020-electorate-33",
+        "nz-general-2020-electorate-34",
+        "nz-general-2020-electorate-35",
+        "nz-general-2020-electorate-36",
+        "nz-general-2020-electorate-37",
+        "nz-general-2020-electorate-38",
+        "nz-general-2020-electorate-39",
+        "nz-general-2020-electorate-40",
+        "nz-general-2020-electorate-41",
+        "nz-general-2020-electorate-42",
+        "nz-general-2020-electorate-43",
+        "nz-general-2020-electorate-44",
+        "nz-general-2020-electorate-45",
+        "nz-general-2020-electorate-46",
+        "nz-general-2020-electorate-47",
+        "nz-general-2020-electorate-48",
+        "nz-general-2020-electorate-49",
+        "nz-general-2020-electorate-50",
+        "nz-general-2020-electorate-51",
+        "nz-general-2020-electorate-52",
+        "nz-general-2020-electorate-53",
+        "nz-general-2020-electorate-54",
+        "nz-general-2020-electorate-55",
+        "nz-general-2020-electorate-56",
+        "nz-general-2020-electorate-57",
+        "nz-general-2020-electorate-58",
+        "nz-general-2020-electorate-59",
+        "nz-general-2020-electorate-60",
+        "nz-general-2020-electorate-61",
+        "nz-general-2020-electorate-62",
+        "nz-general-2020-electorate-63",
+        "nz-general-2020-electorate-64",
+        "nz-general-2020-electorate-65"
+      ],
+      "targetYear": 2020,
+      "trainingSeats": 128,
+      "trainingYears": [
+        2014,
+        2017
+      ],
+      "unpenalisedConstant": {
+        "a": -0.15787213911182454,
+        "objective": -0.6730075682103345,
+        "scoredOrAdopted": false,
+        "status": "descriptive likelihood-only maximiser of the constant; not a restriction"
+      }
+    },
+    "2023": {
+      "centers": {
+        "R": 0.4965184932420013,
+        "T": 0.16026396711278873
+      },
+      "conditional": {
+        "boundContact": [
+          false,
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 3.619410327004857e-11,
+        "chosenStart": 0,
+        "gradient": [
+          3.064298814692279e-11,
+          3.551510363575261e-09,
+          1.843609348517461e-09
+        ],
+        "likelihoodInformation": {
+          "conditionNumber": 38.722935111699044,
+          "hessianEigenvalues": [
+            0.036639252426778894,
+            0.10033997490769166,
+            1.418779394263321
+          ],
+          "meaning": "unpenalised likelihood curvature of the free parameters; penalty reported separately",
+          "rank": 3
+        },
+        "objective": -0.7425283136741458,
+        "powell": {
+          "maximumParameterDifference": 3.5879391541149275e-09,
+          "objective": -0.742528313674146,
+          "objectiveDifference": 1.1102230246251565e-16,
+          "theta": [
+            -0.07332519029659297,
+            -0.010156643551859384,
+            0.01913161566503073
+          ]
+        },
+        "projectedGradientMax": 3.551510363575261e-09,
+        "starts": [
+          {
+            "iterations": 5,
+            "objective": -0.7425283136741458,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.07332519388453212,
+              -0.010156642927854212,
+              0.019131616299670348
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.7425283136741456,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.07332519387836936,
+              -0.010156644321310141,
+              0.019131615701862798
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.7425283136741458,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.07332519432492487,
+              -0.010156649851015869,
+              0.01913161298102446
+            ]
+          }
+        ],
+        "theta": [
+          -0.07332519388453212,
+          -0.010156642927854212,
+          0.019131616299670348
+        ]
+      },
+      "constant": {
+        "boundContact": [
+          false,
+          false,
+          false
+        ],
+        "centralDifferenceGradientMaxDifference": 4.486244709056563e-11,
+        "chosenStart": 0,
+        "gradient": [
+          4.5352610555937645e-13,
+          0.04140951749470123,
+          -0.07746781290072986
+        ],
+        "likelihoodInformation": {
+          "conditionNumber": 1.0,
+          "hessianEigenvalues": [
+            1.4025384949545303
+          ],
+          "meaning": "unpenalised likelihood curvature of the free parameters; penalty reported separately",
+          "rank": 1
+        },
+        "objective": -0.7415769939841894,
+        "powell": {
+          "maximumParameterDifference": 1.1150375178736738e-08,
+          "objective": -0.7415769939841894,
+          "objectiveDifference": 0.0,
+          "theta": [
+            -0.07262966333689568,
+            0.0,
+            0.0
+          ]
+        },
+        "projectedGradientMax": 4.5352610555937645e-13,
+        "starts": [
+          {
+            "iterations": 4,
+            "objective": -0.7415769939841894,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.07262967448727085,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 4,
+            "objective": -0.7415769939841893,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.07262967448667301,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 4,
+            "objective": -0.7415769939841893,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.07262967446922648,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "theta": [
+          -0.07262967448727085,
+          0.0,
+          0.0
+        ]
+      },
+      "control": {
+        "status": "numerically corrected Stage45 control",
+        "theta": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "missingFeatureSeats": {
+        "2014": {
+          "R": 0,
+          "T": 0
+        },
+        "2017": {
+          "R": 0,
+          "T": 0
+        },
+        "2020": {
+          "R": 0,
+          "T": 0
+        },
+        "2023": {
+          "R": 0,
+          "T": 0
+        }
+      },
+      "multiplierSummary": {
+        "conditional": {
+          "max": 0.9417718710399374,
+          "median": 0.9288827831565178,
+          "min": 0.9234894162069955
+        },
+        "constant": {
+          "max": 0.9299451486808616,
+          "median": 0.9299451486808616,
+          "min": 0.9299451486808616
+        },
+        "control": {
+          "max": 1.0,
+          "median": 1.0,
+          "min": 1.0
+        }
+      },
+      "multipliers": {
+        "conditional": [
+          0.9288207122698837,
+          0.9305172323348352,
+          0.9248670549646453,
+          0.9275058577692669,
+          0.9337934039841267,
+          0.9247160455964625,
+          0.9293205842284304,
+          0.9312492439182587,
+          0.9238254336857489,
+          0.928866346450547,
+          0.9417718710399374,
+          0.9238948471148802,
+          0.9234894162069955,
+          0.9326377478040566,
+          0.9290811515773851,
+          0.9328466989069032,
+          0.9299819274456264,
+          0.9297694531603804,
+          0.9293671518013508,
+          0.9290054753456566,
+          0.9235944628516234,
+          0.9289417844467868,
+          0.9285776436273782,
+          0.9279868806203059,
+          0.9288147091385172,
+          0.928254446984849,
+          0.9287119551197525,
+          0.9296123746020012,
+          0.9280507741328008,
+          0.9293677932160659,
+          0.9327658886681017,
+          0.9307109511994641,
+          0.9301902549261878,
+          0.9327838022005226,
+          0.9327552409007144,
+          0.9288992198624886,
+          0.9279943122055111,
+          0.928978326113545,
+          0.9281635377773227,
+          0.9246030947000795,
+          0.9283670315025686,
+          0.9265806609997196,
+          0.929194092856808,
+          0.9286612813199577,
+          0.9284574086813666,
+          0.9288505617069164,
+          0.9283160795821005,
+          0.9289655356652695,
+          0.9335643929646951,
+          0.9336447426537092,
+          0.9295057518457387,
+          0.9287850702655994,
+          0.9284082329675081,
+          0.9293482760138935,
+          0.9280259674687017,
+          0.9328902271564679,
+          0.9338912621491886,
+          0.9247705771043321,
+          0.9260338630983916,
+          0.9342744899853215,
+          0.928018312210476,
+          0.92836734373633,
+          0.9298597519399818,
+          0.9285230626639794
+        ],
+        "constant": [
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616,
+          0.9299451486808616
+        ],
+        "control": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "seatIds": [
+        "nz-general-2023-electorate-01",
+        "nz-general-2023-electorate-02",
+        "nz-general-2023-electorate-03",
+        "nz-general-2023-electorate-04",
+        "nz-general-2023-electorate-05",
+        "nz-general-2023-electorate-06",
+        "nz-general-2023-electorate-07",
+        "nz-general-2023-electorate-08",
+        "nz-general-2023-electorate-09",
+        "nz-general-2023-electorate-10",
+        "nz-general-2023-electorate-11",
+        "nz-general-2023-electorate-12",
+        "nz-general-2023-electorate-13",
+        "nz-general-2023-electorate-14",
+        "nz-general-2023-electorate-15",
+        "nz-general-2023-electorate-16",
+        "nz-general-2023-electorate-17",
+        "nz-general-2023-electorate-18",
+        "nz-general-2023-electorate-19",
+        "nz-general-2023-electorate-20",
+        "nz-general-2023-electorate-21",
+        "nz-general-2023-electorate-22",
+        "nz-general-2023-electorate-23",
+        "nz-general-2023-electorate-24",
+        "nz-general-2023-electorate-25",
+        "nz-general-2023-electorate-26",
+        "nz-general-2023-electorate-27",
+        "nz-general-2023-electorate-28",
+        "nz-general-2023-electorate-29",
+        "nz-general-2023-electorate-30",
+        "nz-general-2023-electorate-31",
+        "nz-general-2023-electorate-32",
+        "nz-general-2023-electorate-33",
+        "nz-general-2023-electorate-34",
+        "nz-general-2023-electorate-35",
+        "nz-general-2023-electorate-36",
+        "nz-general-2023-electorate-37",
+        "nz-general-2023-electorate-38",
+        "nz-general-2023-electorate-40",
+        "nz-general-2023-electorate-41",
+        "nz-general-2023-electorate-42",
+        "nz-general-2023-electorate-43",
+        "nz-general-2023-electorate-44",
+        "nz-general-2023-electorate-45",
+        "nz-general-2023-electorate-46",
+        "nz-general-2023-electorate-47",
+        "nz-general-2023-electorate-48",
+        "nz-general-2023-electorate-49",
+        "nz-general-2023-electorate-50",
+        "nz-general-2023-electorate-51",
+        "nz-general-2023-electorate-52",
+        "nz-general-2023-electorate-53",
+        "nz-general-2023-electorate-54",
+        "nz-general-2023-electorate-55",
+        "nz-general-2023-electorate-56",
+        "nz-general-2023-electorate-57",
+        "nz-general-2023-electorate-58",
+        "nz-general-2023-electorate-59",
+        "nz-general-2023-electorate-60",
+        "nz-general-2023-electorate-61",
+        "nz-general-2023-electorate-62",
+        "nz-general-2023-electorate-63",
+        "nz-general-2023-electorate-64",
+        "nz-general-2023-electorate-65"
+      ],
+      "targetYear": 2023,
+      "trainingSeats": 193,
+      "trainingYears": [
+        2014,
+        2017,
+        2020
+      ],
+      "unpenalisedConstant": {
+        "a": -0.24614695839112544,
+        "objective": -0.7787769732611839,
+        "scoredOrAdopted": false,
+        "status": "descriptive likelihood-only maximiser of the constant; not a restriction"
+      }
+    }
+  },
+  "objective": "0.5 * mean_e[(logdet(Sigma_e)+(v_e-ell_e)^T Sigma_e^-1(v_e-ell_e))/n_e] + 0.5*((a/0.5)^2+(b_R/0.5)^2+(b_T/0.5)^2)",
+  "ridgeSD": 0.5,
+  "stage": 48
+}
