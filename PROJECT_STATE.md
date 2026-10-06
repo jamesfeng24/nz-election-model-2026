@@ -1,3 +1,25 @@
+# Candidate-transition evidence pass — 6 October 2026
+
+Branch `claude/project-thread-sg82yg`, base main 109794f (PR55 merge). Evidence acquisition only: no replacement effect, regression, R/S change, model output, ci.yml/AGENTS.md, Stage47 or roadmap file touched. `selectedOperationalReplacementEffectPP` remains `null`.
+
+**Completed unit.** Every National/Labour electorate winner (general and Māori) at 2008–2020 (333 incumbent seats) is joined to the same party's candidate in the dominant Stage25 successor seat at the next election. 258 continuations (250 automatic Stage26 name matches, 8 curated same-person judgements) and **75 candidate changes**: retirement 53, resignation_before_election 5, by_election_succession 9, by_election_party_change 2, party_change 3, boundary_complication 1, deselection 1, death_or_illness_withdrawal 1; changes per pair 12/14/15/17/17; confidence 52 high, 23 medium; 60 election-time incumbent exits. Of the 59 N/L Stage10 "apparent changes", 20 are same-person name variants (17 automatic, 3 curated). Three ledger changes (Te Atatu, Rangitikei, Tāmaki, 2008 pair) lie in seats absent from the Stage10 inventory; cause not investigated, Stage10 outputs unchanged.
+
+**Identity rule applied (James).** Macrons, transliteration, nicknames, middle/title tokens and name order are resolved on evidence and judgement with recorded confidence and reasoning; an unclassified difference fails the build.
+
+**Provenance.** 78 tool-rendered extracts plus a search listing under `data/raw/candidate-transitions/2026-10-06/` (committed first, 61bb6d1), 79-source dated registry `data/processed/evidence/candidate-transitions/source-registry.json` (not `data/sources.json`, which about 25 stages hash). Extracts are tool-rendered, not original bytes (Stage40 precedent); known summariser errors are listed in registry limitations. See [docs/candidate-transition-evidence.md](docs/candidate-transition-evidence.md).
+
+**Material files.** `scripts/evidence/candidate_transitions/{universe,run}.py`, `scripts/tests/test_candidate_transitions.py` (15 tests), `data/source-plans/candidate-transition-curation.json`, `data/processed/evidence/candidate-transitions/*`, `docs/candidate-transition-evidence.md`, D083.
+
+**Checks.** `candidate_transitions.run --check` OK (333/75/258); `scripts.tests.test_candidate_transitions` 15 tests OK; `scripts/validate/source_files.py` passed (926 registered resources, unchanged). Full `unittest discover -s scripts/tests` in this cloud container (Python 3.11.15, pinned requirements-boundaries.txt installed, no Python 3.12 or hosted Ubuntu runner): 1025 tests, 9 skipped, **16 failures, all in earlier stages** (e.g. candidate_persistence, complete_party_vector, conditional_candidate_ledger, freshman_analysis, replacement_candidate, stage24/27/29/31/44/45), each a last-digit floating-point difference in byte comparisons of historical outputs I did not touch; consistent with the Python 3.11 vs pinned 3.12 mismatch, not with this additive change (no new test fails and no existing file was edited besides docs). Not confirmed on the baseline; the hosted Ubuntu/Python 3.12 gate on the exact PR SHA is the authority. A first run before installing numpy/shapely/matplotlib failed on imports (environment only). Frontend checks not run (Python/docs-only change).
+
+**Publication.** LOCAL ONLY at this checkpoint; no remote branch or PR. The PR is held until CI scoping (#56) merges, then opened into main for coordinator review (not merged by the thread).
+
+**Limitations.** Evidence is tool-rendered; National/Labour only; pre-2008 and minor parties out of scope; a transition fact is not a vote effect.
+
+**Exact next action:** after #56 merges, push the branch, open the PR, confirm full required checks green on the exact SHA, report to the coordinator. Later, separately authorized: the replacement/incumbency dataset and R_new = a + rho R_old analysis (not started; do not start from this entry).
+
+---
+
 # Planning amendment: post-Stage47 roadmap, D082 and authorized scope — 6 October 2026
 
 Branch `claude/project-thread-3vvh6n`, base main d0fa5a6 (Stage46 merge). Documentation only: new roadmap section in `docs/stage39-forecast-roadmap.md`, D082 in `DECISIONS.md`, this entry. No code, data, artifact, threshold, CI or Stage47 file touched; no source acquisition. Checks: Python/frontend suites not run because no code or data changed; whitespace/diff review only. Not pushed to main; one small PR, left unmerged for Corinna.

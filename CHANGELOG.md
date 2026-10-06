@@ -1,3 +1,9 @@
+## Candidate-transition evidence pass — 2026-10-06
+
+- Add sourced National/Labour incumbent-to-successor ledger for every adjacent pair 2008–2023: 333 incumbent seats, 258 continuations, 75 typed changes with dated evidence and confidence.
+- Resolve name variants on evidence (Stage26 flags plus 8 curated judgements); separate by-election successions from election-time exits; add dated source registry, curation file, deterministic `--check` and 15 tests.
+- No effect fitted, no model output or historical source registry changed.
+
 ## Stage34 — bounded post-result diagnostic
 
 Added provenance-pinned whole-party TV/category audit, exact saved-expert common samples, per-election scatters/complete CSV, S/R and joint paired associations, equal-election robustness/baseline-relative controls, strict/chronology/observed-input sensitivities and independent arithmetic tests. No fitting or prior data changes. D066 retains S/S+R actively and recommends separately authorized dated-input readiness before any learned blend.

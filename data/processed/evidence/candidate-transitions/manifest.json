@@ -1,0 +1,25 @@
+{
+  "generatorSha256": {
+    "scripts/evidence/candidate_transitions/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/evidence/candidate_transitions/run.py": "9ae0b1bbfec72325d8ba4cc9d2e40e34018fc3148b0bcd35ed1bfac7cddfa39b",
+    "scripts/evidence/candidate_transitions/universe.py": "b1b0b7b23b62f75dfeeaeacaec4b2ccd60541cf204a3a197cfd36d9b329a41fc"
+  },
+  "inputSha256": {
+    "data/processed/checkpoints/stage25-historical-geography/geography.json": "998a4e1e85276bd8551f4bb6f2a8188db64af5e0346691f7485ba33b13340a1e",
+    "data/processed/evidence/candidate-transitions/source-registry.json": "809694072026e69bfb9052cde742d94f4b56009f155317d65d3b58b50f23e1c7",
+    "data/processed/evidence/practical-candidate-linkage/aliases.json": "2bd6e0d0cc3e8f081ad6fd77c371852499c07de6582c5da6ddad33c114d01449",
+    "data/processed/historical/2008-2023/candidate-votes.json": "2744f32dd0d8afa4b0e18ba83037527b313cd6b94053b265c334c9f95538126d",
+    "data/processed/models/candidate-overperformance/occurrences.json": "5df30b9ee8047e1afb15a5120cc08dc4f7472fa06f98006083bb3d7e55a299a5",
+    "data/processed/models/replacement-candidate/inventory.json": "ba7d3244783942b406e8cba032947583c6463a2e11b13c2278449a9765ee2b52",
+    "data/processed/models/replacement-candidate/maori-winner-overlay.json": "ef9b2fa6f4e3e7f3ab1cf957a3df331360c7bd6f055f6fa3398dda87d30d2daa",
+    "data/source-plans/candidate-transition-curation.json": "f14097d9938646b00284edbf0585e1c57bceb0a3765fc8f7c49d55371f99e725"
+  },
+  "outputSha256": {
+    "identity-judgements.json": "9d565fdd6daea6fdb187ee9af5e2fdfcf713446f026f221570aaac9b7464bc97",
+    "incumbent-seat-ledger.json": "bbd9891ce1b5db5184f604e424fdf21f0cc7c0f394a277730718c6aba7635823",
+    "summary.json": "56c2a13667d5c65156a0468a86157a3a3e327a097cee872994b03ff3196c644b",
+    "transition-table.json": "48ae408f70fd9dd0a52722beb53667874c71ba6bde504254e13fae7c09279128",
+    "transition-table.md": "7e2a99e432e4fe2ef711d0cf0df2d5d651a7851731977cd2b4d4788ca38b7ac4"
+  },
+  "schemaVersion": 1
+}

@@ -1,0 +1,255 @@
+{
+  "automaticContinuationFlags": {
+    "exact_name": 218,
+    "frozen_nickname": 1,
+    "middle_omission": 32
+  },
+  "byPair": {
+    "2008-2011": {
+      "byParty": {
+        "LAB": 21,
+        "NAT": 41
+      },
+      "candidateChanges": 12,
+      "changesByParty": {
+        "LAB": 5,
+        "NAT": 7
+      },
+      "changesByType": {
+        "by_election_succession": 3,
+        "death_or_illness_withdrawal": 1,
+        "party_change": 1,
+        "resignation_before_election": 1,
+        "retirement": 6
+      },
+      "continuations": 50,
+      "electionTimeIncumbentExits": 8,
+      "generalAndMaori": {
+        "general": 12
+      },
+      "incumbentSeats": 62
+    },
+    "2011-2014": {
+      "byParty": {
+        "LAB": 22,
+        "NAT": 42
+      },
+      "candidateChanges": 14,
+      "changesByParty": {
+        "LAB": 3,
+        "NAT": 11
+      },
+      "changesByType": {
+        "boundary_complication": 1,
+        "by_election_succession": 2,
+        "deselection": 1,
+        "retirement": 10
+      },
+      "continuations": 50,
+      "electionTimeIncumbentExits": 11,
+      "generalAndMaori": {
+        "general": 13,
+        "maori": 1
+      },
+      "incumbentSeats": 64
+    },
+    "2014-2017": {
+      "byParty": {
+        "LAB": 27,
+        "NAT": 41
+      },
+      "candidateChanges": 15,
+      "changesByParty": {
+        "LAB": 5,
+        "NAT": 10
+      },
+      "changesByType": {
+        "by_election_party_change": 1,
+        "by_election_succession": 2,
+        "resignation_before_election": 2,
+        "retirement": 10
+      },
+      "continuations": 53,
+      "electionTimeIncumbentExits": 12,
+      "generalAndMaori": {
+        "general": 15
+      },
+      "incumbentSeats": 68
+    },
+    "2017-2020": {
+      "byParty": {
+        "LAB": 29,
+        "NAT": 41
+      },
+      "candidateChanges": 17,
+      "changesByParty": {
+        "LAB": 5,
+        "NAT": 12
+      },
+      "changesByType": {
+        "by_election_succession": 1,
+        "party_change": 1,
+        "resignation_before_election": 1,
+        "retirement": 14
+      },
+      "continuations": 53,
+      "electionTimeIncumbentExits": 15,
+      "generalAndMaori": {
+        "general": 17
+      },
+      "incumbentSeats": 70
+    },
+    "2020-2023": {
+      "byParty": {
+        "LAB": 46,
+        "NAT": 23
+      },
+      "candidateChanges": 17,
+      "changesByParty": {
+        "LAB": 13,
+        "NAT": 4
+      },
+      "changesByType": {
+        "by_election_party_change": 1,
+        "by_election_succession": 1,
+        "party_change": 1,
+        "resignation_before_election": 1,
+        "retirement": 13
+      },
+      "continuations": 52,
+      "electionTimeIncumbentExits": 14,
+      "generalAndMaori": {
+        "general": 15,
+        "maori": 2
+      },
+      "incumbentSeats": 69
+    }
+  },
+  "candidateChanges": 75,
+  "changesByConfidence": {
+    "high": 52,
+    "medium": 23
+  },
+  "changesByType": {
+    "boundary_complication": 1,
+    "by_election_party_change": 2,
+    "by_election_succession": 9,
+    "death_or_illness_withdrawal": 1,
+    "deselection": 1,
+    "party_change": 3,
+    "resignation_before_election": 5,
+    "retirement": 53
+  },
+  "continuationBasis": {
+    "automatic_name_match_same_party_successor_seat": 250,
+    "curated_identity_judgement": 8
+  },
+  "continuations": 258,
+  "definitions": {
+    "by_election_succession": "Not newcomers at the election: the by-election winner is the effective incumbent.",
+    "electionTimeIncumbentExits": "Changes in which the party seat holder at the target election did not recontest and the departure is neither a party switch nor a boundary move: the cleanest incumbent-to-newcomer set."
+  },
+  "exactNameDifferencesByPair": {
+    "2008-2011": {
+      "candidateChanges": 12,
+      "exactStringDifferences": 15,
+      "incumbentSeats": 62,
+      "resolvedSamePersonAutomatic": 2,
+      "resolvedSamePersonCurated": 1
+    },
+    "2011-2014": {
+      "candidateChanges": 14,
+      "exactStringDifferences": 19,
+      "incumbentSeats": 64,
+      "resolvedSamePersonAutomatic": 3,
+      "resolvedSamePersonCurated": 2
+    },
+    "2014-2017": {
+      "candidateChanges": 15,
+      "exactStringDifferences": 22,
+      "incumbentSeats": 68,
+      "resolvedSamePersonAutomatic": 5,
+      "resolvedSamePersonCurated": 2
+    },
+    "2017-2020": {
+      "candidateChanges": 17,
+      "exactStringDifferences": 30,
+      "incumbentSeats": 70,
+      "resolvedSamePersonAutomatic": 11,
+      "resolvedSamePersonCurated": 2
+    },
+    "2020-2023": {
+      "candidateChanges": 17,
+      "exactStringDifferences": 30,
+      "incumbentSeats": 69,
+      "resolvedSamePersonAutomatic": 12,
+      "resolvedSamePersonCurated": 1
+    }
+  },
+  "incumbentSeats": 333,
+  "schemaVersion": 1,
+  "stage10Reconciliation": {
+    "ledgerChangesAbsentFromStage10List": [
+      "2008-2011|LAB|Te Atatu",
+      "2008-2011|NAT|Rangitikei",
+      "2008-2011|NAT|Tamaki"
+    ],
+    "note": "Stage10 listed exact-name contrasts (13/21/27 incl. ACT and United Future, 61 total). Same-person variants and by-election successions are not election-time replacements; three further National/Labour changes are in seats absent from the Stage10 inventory (cause not investigated; Stage10 outputs unchanged).",
+    "stage10NameContrastSourceWinners": {
+      "2008-2011": {
+        "automatic_name_match_same_party_successor_seat_same_person": 2,
+        "candidate_change": 9,
+        "curated_identity_judgement_same_person": 1,
+        "other_party_winner_outside_ledger": 1
+      },
+      "2014-2017": {
+        "automatic_name_match_same_party_successor_seat_same_person": 4,
+        "candidate_change": 15,
+        "curated_identity_judgement_same_person": 1,
+        "other_party_winner_outside_ledger": 1
+      },
+      "2020-2023": {
+        "automatic_name_match_same_party_successor_seat_same_person": 11,
+        "candidate_change": 15,
+        "curated_identity_judgement_same_person": 1
+      }
+    },
+    "stage10Total": 61
+  },
+  "tags": {
+    "announced_retirement": 2,
+    "boundary_change_successor_seat": 3,
+    "candidate_replaced_after_withdrawal": 1,
+    "death_of_incumbent": 1,
+    "diplomatic_appointment": 1,
+    "dismissed_as_minister": 2,
+    "dropped_from_cabinet": 1,
+    "expelled_from_party": 3,
+    "incumbent_moved_seat": 1,
+    "incumbent_recontested_for_other_party": 1,
+    "independent_mid_term": 2,
+    "initially_reselected": 1,
+    "international_appointment": 3,
+    "late_withdrawal": 1,
+    "list_only": 7,
+    "list_only_then_retirement": 2,
+    "local_government_candidate": 1,
+    "local_government_office": 2,
+    "maori_seat": 3,
+    "pacific_matai_title_name_variants": 1,
+    "pre_empted_selection_challenge": 1,
+    "prime_minister": 2,
+    "resignation_mid_term": 10,
+    "resigned_before_election": 1,
+    "reversal_before_final_announcement": 1,
+    "scandal_context": 4,
+    "seat_abolished": 1,
+    "seat_changed_party_mid_term": 2,
+    "sitting_mp_lost_selection": 1,
+    "successor_selected_late": 1,
+    "travel_entitlement_scandal": 1,
+    "unusual_third_party_environment": 2,
+    "withdrew_from_electorate_contest": 1,
+    "withdrew_from_selection": 1
+  }
+}

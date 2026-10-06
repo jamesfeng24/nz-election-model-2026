@@ -1,0 +1,2393 @@
+{
+ "authoredOn": "2026-10-06",
+ "confidenceScale": {
+  "high": "Type and a dated fact are supported by two or more independent items or one dated primary report with no conflict.",
+  "low": "Type is inferred; none are used in this pass.",
+  "medium": "Type supported but a date or reason rests on one rendering, or two readings of type are possible and the alternative is tagged."
+ },
+ "continuationNotes": {
+  "2020-2023|NAT|Port Waikato": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Voting in Port Waikato was postponed to 25 November 2023 after a candidate died on 9 October 2023; Andrew Bayly (National, incumbent) was the National candidate and won",
+     "date": "2023-11-25",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-2023-port-waikato-by-election"
+    }
+   ],
+   "reasoning": "The preserved 2023 table marks the contest cancelled (no votes), but the National candidate is the 2020 winner with an identical name; classed as continuation, with the postponed-polling caveat for any later analysis of target outcomes.",
+   "relation": "same_person_continuation_contest_postponed"
+  }
+ },
+ "identityJudgements": {
+  "2008-2011|NAT|Maungakiekie": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "The biography uses \"Peseta Samuelu Masunu Lotu-Iiga\" and also the other spelling interchangeably; MP for Maungakiekie 2008-2017",
+     "date": "2026-10-06",
+     "dateKind": "retrieval",
+     "reading": "direct",
+     "source": "ct-wp-lotu-iiga-name"
+    }
+   ],
+   "reasoning": "Same electorate, same party, uninterrupted incumbency, identical surname and other given names; one vowel differs in a Samoan given name. Treating it as a different person would be an implausible reading.",
+   "relation": "same_person_name_variant",
+   "sourceName": "LOTU-IIGA, Peseta Samuela Masunu",
+   "targetName": "LOTU-IIGA, Peseta Samuelu Masunu",
+   "variantKind": "spelling"
+  },
+  "2011-2014|LAB|Māngere": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Full formal name \"Aupito Tofae Su'a William Sio\", also \"Su'a William Sio\"; MP for Māngere continuously from the 2008 election to 2023; Viliamu is the Samoan form of William",
+     "date": "2026-10-06",
+     "dateKind": "retrieval",
+     "reading": "direct",
+     "source": "ct-wp-sio-names"
+    }
+   ],
+   "reasoning": "One continuous Labour incumbent in Māngere whose official nomination label varied by transliteration (Viliamu/William), apostrophe and the matai title (Aupito); no other person is a plausible referent.",
+   "relation": "same_person_name_variant",
+   "sourceName": "SIO, Su'a Viliamu",
+   "targetName": "SIO, Sua William",
+   "variantKind": "samoan_title_and_transliteration"
+  },
+  "2011-2014|NAT|Nelson": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Full name Nicolas Rex Smith (known as Nick); MP for Nelson 1996-2020",
+     "date": "2026-10-06",
+     "dateKind": "retrieval",
+     "reading": "direct",
+     "source": "ct-wp-nick-smith"
+    }
+   ],
+   "reasoning": "Nick is the standard short form of Nicolas for this long-serving National MP; same seat and party, continuous incumbency. The frozen Stage26 alias list did not contain Nicolas/Nick, which is why the automatic rule left it unresolved.",
+   "relation": "same_person_name_variant",
+   "sourceName": "SMITH, Nicolas Rex",
+   "targetName": "SMITH, Nick",
+   "variantKind": "nickname"
+  },
+  "2014-2017|LAB|Ikaroa-Rāwhiti": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Full name Melissa Heni Mekameka Whaitiri; known as Meka; MP for Ikaroa-Rāwhiti from the 29 June 2013 by-election",
+     "date": "2026-10-06",
+     "dateKind": "retrieval",
+     "reading": "direct",
+     "source": "ct-wp-whaitiri"
+    }
+   ],
+   "reasoning": "Meka derives from the third given name Mekameka; same Māori electorate, same party, continuous incumbency since the 2013 by-election.",
+   "relation": "same_person_name_variant",
+   "sourceName": "WHAITIRI, Meka",
+   "targetName": "WHAITIRI, Melissa Heni Mekameka",
+   "variantKind": "nickname"
+  },
+  "2014-2017|LAB|Māngere": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Full formal name \"Aupito Tofae Su'a William Sio\", also \"Su'a William Sio\"; MP for Māngere continuously from the 2008 election to 2023; Viliamu is the Samoan form of William",
+     "date": "2026-10-06",
+     "dateKind": "retrieval",
+     "reading": "direct",
+     "source": "ct-wp-sio-names"
+    }
+   ],
+   "reasoning": "One continuous Labour incumbent in Māngere whose official nomination label varied by transliteration (Viliamu/William), apostrophe and the matai title (Aupito); no other person is a plausible referent.",
+   "relation": "same_person_name_variant",
+   "sourceName": "SIO, Sua William",
+   "targetName": "SIO, Sua Viliamu",
+   "variantKind": "samoan_title_and_transliteration"
+  },
+  "2017-2020|LAB|Māngere": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Full formal name \"Aupito Tofae Su'a William Sio\", also \"Su'a William Sio\"; MP for Māngere continuously from the 2008 election to 2023; Viliamu is the Samoan form of William",
+     "date": "2026-10-06",
+     "dateKind": "retrieval",
+     "reading": "direct",
+     "source": "ct-wp-sio-names"
+    }
+   ],
+   "reasoning": "One continuous Labour incumbent in Māngere whose official nomination label varied by transliteration (Viliamu/William), apostrophe and the matai title (Aupito); no other person is a plausible referent.",
+   "relation": "same_person_name_variant",
+   "sourceName": "SIO, Sua Viliamu",
+   "targetName": "SIO, Aupito Toesulusulu Tofae Sua William",
+   "variantKind": "samoan_title_and_transliteration"
+  },
+  "2017-2020|NAT|Nelson": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Full name Nicolas Rex Smith (known as Nick); MP for Nelson 1996-2020",
+     "date": "2026-10-06",
+     "dateKind": "retrieval",
+     "reading": "direct",
+     "source": "ct-wp-nick-smith"
+    }
+   ],
+   "reasoning": "As above, reversed direction.",
+   "relation": "same_person_name_variant",
+   "sourceName": "SMITH, Nick",
+   "targetName": "SMITH, Nicolas Rex",
+   "variantKind": "nickname"
+  },
+  "2020-2023|LAB|Takanini": {
+   "confidence": "high",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Full name Anae Neru Asi Tuiataga Leavasa; Takanini MP 2020-2023; contested Takanini again in 2023",
+     "date": "2026-10-06",
+     "dateKind": "retrieval",
+     "reading": "direct",
+     "source": "ct-wp-leavasa"
+    }
+   ],
+   "reasoning": "The 2020 label put the matai-title words ahead of the surname; the 2023 label placed Anae in the given-name position. Both resolve to the same person and the same seat; he recontested and lost in 2023.",
+   "relation": "same_person_name_variant",
+   "sourceName": "ASI TUIATAGA LEAVASA, Neru",
+   "targetName": "LEAVASA, Anae Neru",
+   "variantKind": "surname_compound_and_title_order"
+  }
+ },
+ "policy": {
+  "identity": "Name differences (macrons, spelling and transliteration, nicknames, middle or title tokens, name order) are resolved on evidence and judgement with a recorded confidence and reasoning; absence of an exact string match is never treated as a different person. Names that differ and have no evidence of being the same person are treated as different people only where the incumbent is documented as leaving the seat.",
+  "noEffect": "No replacement effect, residual or coefficient is estimated or used in this pass.",
+  "unknownIsNotZero": "An undocumented departure reason is recorded as unknown, never as retirement by default."
+ },
+ "role": "Hand-authored judgements and evidence references for the candidate-transition evidence pass. Not a statistical input.",
+ "schemaVersion": 1,
+ "supplementarySeatGains": [
+  {
+   "basis": "Won the 10 December 2022 by-election from Labour (see 2020-2023|LAB|Hamilton West); recontested 2023 as National candidate",
+   "confidence": "high",
+   "effectiveIncumbent": "POTAKA, Tama William",
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Tama Potaka (National) won the by-election 10 December 2022; Labour had held the seat",
+     "date": "2022-12-10",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-2022-hamilton-west-by-election"
+    },
+    {
+     "citedAs": null,
+     "claim": "Hamilton West: Gaurav Sharma resigned 18 October 2022; replacement Tama Potaka (National) elected 10 December 2022",
+     "date": "2022-12-10",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-53rd-parliament"
+    }
+   ],
+   "key": "2020-2023|NAT|Hamilton West",
+   "party": "NAT",
+   "role": "National effective incumbent acquired by a by-election seat gain; not a source-election National winner, so excluded from the incumbent ledger and recorded here only so the 2023 Hamilton West National candidate is not mistaken for an ordinary newcomer.",
+   "seat": "Hamilton West",
+   "targetYear": 2023
+  }
+ ],
+ "transitionTypes": {
+  "boundary_complication": "Seat abolished or reshaped so the incumbent recontested elsewhere while the dominant successor seat received a different candidate.",
+  "by_election_party_change": "Mid-term vacancy lost to another party at a by-election; the N/L candidate faces a different-party incumbent. Not an incumbent-to-successor transition.",
+  "by_election_succession": "Mid-term vacancy filled by a same-party by-election; the by-election winner is the effective incumbent who recontested, so the target candidate is not a newcomer at the election.",
+  "death_or_illness_withdrawal": "Candidate withdrew for illness or died before the election and was replaced.",
+  "deselection": "Sitting MP lost a party selection contest for the seat.",
+  "party_change": "Outgoing incumbent left or was expelled from the party; may or may not have recontested under another label.",
+  "resignation_before_election": "Seat vacated before the target election with no by-election; successor is a new candidate for an open seat.",
+  "retirement": "Sitting electorate MP did not contest the seat at the target election by choice, including list-only moves and withdrawals without a documented selection loss; tags carry scandal, list-only and dismissal context."
+ },
+ "transitions": {
+  "2008-2011|LAB|Dunedin North": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2011-election"
+    },
+    {
+     "citedAs": "Otago Daily Times, 5 June 2010 (as cited on page)",
+     "claim": "Hodgson retired from politics at the end of the 49th Parliament after 21 years as MP; Otago Daily Times piece \"Hodgson exits politics on own terms\"",
+     "date": "2010-06-05",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-hodgson"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement announced about 17 months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2008-2011|LAB|Mana": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2010-11-20",
+    "name": "FAAFOI, Kristopher John",
+    "party": "LAB"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": "Three News, 10 August 2010 (as cited on page)",
+     "claim": "Laban announced she would resign to become an assistant vice-chancellor at Victoria University; membership ended 15 October 2010",
+     "date": "2010-08-10",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-laban"
+    },
+    {
+     "citedAs": null,
+     "claim": "Mana by-election 20 November 2010 won by Kris Faafoi (Labour)",
+     "date": "2010-11-20",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    },
+    {
+     "citedAs": null,
+     "claim": "Winnie Laban resigned October 2010; replacement Kris Faafoi",
+     "date": "2010-10",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-49th-parliament"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "Mid-term resignation filled by a same-party by-election; Faafoi is the effective incumbent who recontested in 2011.",
+   "tags": [
+    "resignation_mid_term"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2008-2011|LAB|Manurewa": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2011-election"
+    },
+    {
+     "citedAs": "Otago Daily Times, \"Wall wins Labour selection for Manurewa\"",
+     "claim": "Wall won Labour selection for Manurewa; the article states the seat is held by George Hawkins, \"who is retiring at the next election\"",
+     "date": "2010-12-12",
+     "dateKind": "publication",
+     "reading": "direct",
+     "source": "ct-odt-wall-selection-2010"
+    },
+    {
+     "citedAs": null,
+     "claim": "Page text on Hawkins announcement is internally inconsistent (cites a valedictory date as announcement); not relied on for the date",
+     "date": "2011-09-29",
+     "dateKind": "event",
+     "reading": "low_reliability",
+     "source": "ct-wp-hawkins"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Retirement is consistent across three items; the successor (Louisa Wall) was selected 12 December 2010.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2008-2011|LAB|Mt Albert": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2009-06-13",
+    "name": "SHEARER, David James",
+    "party": "LAB"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Clark resigned from Parliament in April 2009 to head the UN Development Programme (resignation 17 April 2009)",
+     "date": "2009-04-17",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-helen-clark"
+    },
+    {
+     "citedAs": null,
+     "claim": "Mount Albert by-election 13 June 2009 won by David Shearer (Labour)",
+     "date": "2009-06-13",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    },
+    {
+     "citedAs": null,
+     "claim": "Helen Clark resigned (UNDP); replacement David Shearer",
+     "date": "2009-06",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-49th-parliament"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "Mid-term resignation, same-party by-election; Shearer recontested in 2011 as incumbent.",
+   "tags": [
+    "international_appointment",
+    "resignation_mid_term"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2008-2011|LAB|Te Atatu": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "New Zealand Herald articles cited on page",
+     "claim": "Suspended from the Labour caucus 29 July 2010, declared independent 17 August 2010, expelled from the party 11 October 2010; resigned from Parliament 30 September 2011 on appointment to a UN post",
+     "date": "2010-07-29",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-chris-carter"
+    },
+    {
+     "citedAs": null,
+     "claim": "Chris Carter, Te Atatū: expelled from Labour caucus; became independent",
+     "date": "2010",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-49th-parliament"
+    }
+   ],
+   "outgoingDisposition": "expelled_then_resigned",
+   "reasoning": "The Labour incumbent was an independent from August 2010 and left Parliament before the election; Twyford was a new Labour candidate. The footnote chain on the page is internally dated.",
+   "tags": [
+    "expelled_from_party",
+    "independent_mid_term",
+    "international_appointment",
+    "resigned_before_election"
+   ],
+   "transitionType": "party_change"
+  },
+  "2008-2011|NAT|Botany": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2011-03-05",
+    "name": "ROSS, Jami-Lee Matenga",
+    "party": "NAT"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": "New Zealand Herald, 14 December 2010 (as cited on page)",
+     "claim": "Wong announced her resignation from Parliament, effective mid-January 2011, after the travel-entitlement investigation",
+     "date": "2010-12-14",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-wong"
+    },
+    {
+     "citedAs": null,
+     "claim": "Listed: Pansy Wong, National, Botany, resigned January 2011 following Speaker investigation; replacement Jami-Lee Ross",
+     "date": "2011-01",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-49th-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "Botany by-election 5 March 2011 won by Jami-Lee Ross (National); seat not changed",
+     "date": "2011-03-05",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "Wong left Parliament mid-term; the National by-election winner Ross is the effective incumbent at the 2011 election and is the 2011 National candidate. This is a mid-term succession, not an election-time replacement of a sitting MP.",
+   "tags": [
+    "resignation_mid_term",
+    "travel_entitlement_scandal"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2008-2011|NAT|Coromandel": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2011-election"
+    },
+    {
+     "citedAs": "New Zealand Herald (as cited on page)",
+     "claim": "Goudie announced her retirement from Parliament, citing family priorities; succeeded by Scott Simpson",
+     "date": "2011-01-14",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-goudie"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Documented voluntary retirement at the end of the term; no scandal or contest evidence.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2008-2011|NAT|North Shore": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2011-election"
+    },
+    {
+     "citedAs": "Stuff, 15 December 2010 (as cited on page)",
+     "claim": "Mapp announced he would retire at the 2011 general election",
+     "date": "2010-12-15",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-mapp"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement announced about 11 months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2008-2011|NAT|Northland": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2011-election"
+    },
+    {
+     "citedAs": "Scoop (government release), 11 February 2011, as cited on page",
+     "claim": "Government announced Carter would be High Commissioner to the Cook Islands; Carter left Parliament in July 2011",
+     "date": "2011-02-11",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-john-carter"
+    },
+    {
+     "citedAs": null,
+     "claim": "John Carter resigned June 2011 for the Cook Islands post; no by-election required",
+     "date": "2011-06",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-49th-parliament"
+    }
+   ],
+   "outgoingDisposition": "resigned_before_election",
+   "reasoning": "Left Parliament mid-year for a diplomatic post; no by-election, so Sabin was a new National candidate for an open seat. The page dates the departure June (term table) or July (biography); both before the 26 November election.",
+   "tags": [
+    "diplomatic_appointment"
+   ],
+   "transitionType": "resignation_before_election"
+  },
+  "2008-2011|NAT|Rangitikei": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2011-election"
+    },
+    {
+     "citedAs": "New Zealand Herald, \"Justice Minister Simon Power to retire\", 2 March 2011",
+     "claim": "Power announced on 2 March 2011 he would step down at the end of the term",
+     "date": "2011-03-02",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-power"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement of a sitting Minister, announced about nine months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2008-2011|NAT|Rodney": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "In 2011 Smith stood only on the National list (rank 3) rather than contesting Rodney; he left Parliament 14 February 2013",
+     "date": "2011",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-lockwood-smith"
+    },
+    {
+     "citedAs": null,
+     "claim": "Smith decided to contest 2011 as a list-only candidate; Mark Mitchell won National pre-selection for Rodney on 26 April 2011",
+     "date": "2011-04-26",
+     "dateKind": "selection",
+     "reading": "direct",
+     "source": "ct-wp-mark-mitchell"
+    }
+   ],
+   "outgoingDisposition": "list_only",
+   "reasoning": "The outgoing Speaker stayed in Parliament via the list and handed the electorate to a successor; announcement date is not documented, only that it precedes the 26 April 2011 selection.",
+   "tags": [
+    "list_only"
+   ],
+   "transitionType": "retirement"
+  },
+  "2008-2011|NAT|Tamaki": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed: died three weeks before the election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2011-election"
+    },
+    {
+     "citedAs": null,
+     "claim": "Peachey withdrew on 5 October 2011 and died on 6 November 2011, 20 days before the election; Simon O'Connor became the National candidate",
+     "date": "2011-10-05",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-peachey"
+    }
+   ],
+   "outgoingDisposition": "withdrew_then_died",
+   "reasoning": "Late withdrawal for illness then death; the successor selection date is not documented in the extract. The withdrawal date rests on a single rendering.",
+   "tags": [
+    "candidate_replaced_after_withdrawal"
+   ],
+   "transitionType": "death_or_illness_withdrawal"
+  },
+  "2011-2014|LAB|Christchurch East": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2013-11-30",
+    "name": "WILLIAMS, Munokoa Poto",
+    "party": "LAB"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": "The Press, as cited on page (page also prints 19 July in the citation title line)",
+     "claim": "Dalziel confirmed her mayoral run and announced she would resign from Parliament (19 June 2013); resignation took effect in October 2013",
+     "date": "2013-06-19",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-dalziel"
+    },
+    {
+     "citedAs": null,
+     "claim": "Christchurch East by-election 30 November 2013; winner Poto Williams",
+     "date": "2013-11-30",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-50th-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "Christchurch East by-election 30 November 2013 won by Poto Williams (Labour)",
+     "date": "2013-11-30",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "Same-party by-election; Williams is the effective incumbent at the 2014 election. Announcement date has an internal one-month inconsistency in the rendering; the by-election facts agree across three items.",
+   "tags": [
+    "local_government_office",
+    "resignation_mid_term"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2011-2014|LAB|Ikaroa-Rāwhiti": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2013-06-29",
+    "name": "WHAITIRI, Meka",
+    "party": "LAB"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Horomia died 29 April 2013; a by-election was held 29 June 2013",
+     "date": "2013-04-29",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-horomia"
+    },
+    {
+     "citedAs": null,
+     "claim": "Ikaroa-Rāwhiti by-election 29 June 2013 won by Meka Whaitiri (Labour)",
+     "date": "2013-06-29",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    },
+    {
+     "citedAs": null,
+     "claim": "Ikaroa-Rāwhiti by-election, incumbent Parekura Horomia (death); winner Meka Whaitiri",
+     "date": "2013-06-29",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-50th-parliament"
+    }
+   ],
+   "outgoingDisposition": "died_mid_term",
+   "reasoning": "Incumbent death; same-party by-election; Whaitiri is the effective incumbent who recontested in 2014 (Māori seat).",
+   "tags": [
+    "death_of_incumbent",
+    "maori_seat"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2011-2014|LAB|Manukau East": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "Radio New Zealand, \"Ross Robertson to retire at next election\", 6 June 2013",
+     "claim": "Robertson to retire from Parliament at the 2014 election and stand for the local board in 2013",
+     "date": "2013-06-06",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-rnz-ross-robertson"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement announced about 15 months before the election.",
+   "tags": [
+    "local_government_candidate"
+   ],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Bay of Plenty": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "New Zealand Herald, \"Health Minister Tony Ryall announces retirement\", 27 February 2014",
+     "claim": "Ryall announced he would retire at the 2014 general election",
+     "date": "2014-02-27",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-ryall"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement of a long-serving Minister, about seven months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Clutha-Southland": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "Otago Daily Times, 1 November 2013, as cited on page",
+     "claim": "English stood as a list-only candidate in 2014 rather than contesting Clutha-Southland; announced early November 2013 (Otago Daily Times 1 November 2013)",
+     "date": "2013-11-01",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-english"
+    }
+   ],
+   "outgoingDisposition": "list_only",
+   "reasoning": "Single rendering; the electorate was handed to Todd Barclay while English remained in Parliament via the list. The page claim is consistent with the dated news citation.",
+   "tags": [
+    "list_only"
+   ],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Hunua": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "stuff.co.nz, \"National MPs to retire\", 25 October 2013",
+     "claim": "Hutchison announced in October 2013 that he would retire at the 2014 election",
+     "date": "2013-10-25",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-hutchison"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement about 11 months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Invercargill": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "Stuff, \"Eric Roy to quit politics after two decades\", 15 January 2014",
+     "claim": "Roy announced in January 2014 he would retire at the 2014 election",
+     "date": "2014-01-15",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-eric-roy"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement about eight months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Kaikōura": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "Radio New Zealand, \"National dumps sitting MP\", 18 December 2013",
+     "claim": "King lost his bid to contest Kaikōura in 2014 to Stuart Smith after being voted out by party delegates; RNZ describes it as the first successful challenge to a sitting National MP in over a decade",
+     "date": "2013-12-18",
+     "dateKind": "publication",
+     "reading": "direct",
+     "source": "ct-rnz-king-deselected"
+    }
+   ],
+   "outgoingDisposition": "not_reselected",
+   "reasoning": "A true deselection hidden in a \"did not stand\" list. It is the one clear electorate deselection in the 2008-2023 National/Labour set.",
+   "tags": [
+    "sitting_mp_lost_selection"
+   ],
+   "transitionType": "deselection"
+  },
+  "2011-2014|NAT|Napier": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "Scoop, \"Chris Tremain Not Contesting 2014 Election\", 30 September 2013",
+     "claim": "Tremain announced on 30 September 2013 that he would not contest the 2014 election",
+     "date": "2013-09-30",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-tremain"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement about a year before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Taranaki-King Country": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "Radio New Zealand, 3 December 2013, as cited on page",
+     "claim": "Ardern announced in December 2013 he was stepping down at the 2014 election and would remain an MP to the end of the term",
+     "date": "2013-12-03",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-shane-ardern"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement of a long-serving MP.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Waimakariri": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "The Press, \"Wilkinson to fall on her sword\", 8 November 2013 (title suggests a forced element; not established by the extract)",
+     "claim": "Wilkinson announced in November 2013 she would retire at the end of the term",
+     "date": "2013-11-08",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-wilkinson"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Recorded as retirement; the citation title hints at pressure after a ministerial resignation, which is not documented in the extract. Type sensitivity is limited because both readings are a non-contesting incumbent.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Wairarapa": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "The Dominion Post, \"Wairarapa MP Hayes calls time\", 18 January 2014, as cited on page",
+     "claim": "Hayes announced he would retire after being challenged for the Wairarapa candidacy by Alastair Scott (Dominion Post, 18 January 2014)",
+     "date": "2014-01-18",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-hayes"
+    }
+   ],
+   "outgoingDisposition": "retired_after_challenge",
+   "reasoning": "Retirement that followed a selection challenge by the eventual successor; classed as retirement because he withdrew before a contested vote, but the boundary with deselection is unresolved. A sensitivity treating it as deselection is available from the tag.",
+   "tags": [
+    "pre_empted_selection_challenge"
+   ],
+   "transitionType": "retirement"
+  },
+  "2011-2014|NAT|Waitakere": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "contested Upper Harbour 2014",
+    "name": "BENNETT, Paula Lee",
+    "party": "NAT"
+   },
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Waitakere was abolished in the 2013/14 boundary review in favour of Kelston and Upper Harbour; Bennett stood in the new Upper Harbour seat in 2014 and won",
+     "date": "2014",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-paula-bennett"
+    }
+   ],
+   "outgoingDisposition": "recontested_other_seat",
+   "reasoning": "The Waitakere incumbent recontested nearby. The dominant geographic successor (Kelston) received a new National candidate, so this is a boundary complication rather than a normal incumbent exit. The incumbent appears as National candidate for Upper Harbour in the preserved 2014 candidate list.",
+   "tags": [
+    "incumbent_moved_seat",
+    "seat_abolished"
+   ],
+   "transitionType": "boundary_complication"
+  },
+  "2011-2014|NAT|Whangarei": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2014-election"
+    },
+    {
+     "citedAs": "National Party release, \"Phil Heatley to retire from politics at next election\", 1 November 2013 (archived), as cited on page",
+     "claim": "Heatley announced in early November 2013 he would retire at the 2014 election to move to the private sector",
+     "date": "2013-11-01",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-heatley"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement about 10 months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2014-2017|LAB|Hutt South": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "Labour release via Scoop, 31 October 2016",
+     "claim": "Virginia Andersen selected as Labour candidate for Hutt South; Mallard is quoted as the sitting MP",
+     "date": "2016-10-31",
+     "dateKind": "selection",
+     "reading": "direct",
+     "source": "ct-scoop-andersen-hutt-south"
+    },
+    {
+     "citedAs": "Radio New Zealand, \"Battle lines drawn for Mallard's mantle\", 24 August 2017",
+     "claim": "Mallard \"retires from the Hutt South seat next month to go on the party list\" and has been replaced as a candidate by Ginny Andersen",
+     "date": "2017-08-24",
+     "dateKind": "publication",
+     "reading": "direct",
+     "source": "ct-rnz-mallard-2017"
+    },
+    {
+     "citedAs": null,
+     "claim": "Mallard \"retained the seat until 2017 when he opted to become a list MP\"",
+     "date": "2017",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-mallard"
+    }
+   ],
+   "outgoingDisposition": "list_only",
+   "reasoning": "Electorate handed over while Mallard stayed on the list. The announcement date is not documented; the successor was selected by 31 October 2016, so the decision precedes that.",
+   "tags": [
+    "list_only"
+   ],
+   "transitionType": "retirement"
+  },
+  "2014-2017|LAB|Mt Albert": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2017-02-25",
+    "name": "ARDERN, Jacinda Kate Laurell",
+    "party": "LAB"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": "as cited on page",
+     "claim": "Shearer announced on 8 December 2016 he would resign to head the UN mission in South Sudan",
+     "date": "2016-12-08",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-shearer"
+    },
+    {
+     "citedAs": null,
+     "claim": "David Shearer, Labour, Mount Albert, resigned 31 December 2016; replacement Jacinda Ardern",
+     "date": "2016-12-31",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-51st-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "Mount Albert by-election 25 February 2017 won by Jacinda Ardern (Labour)",
+     "date": "2017-02-25",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "Same-party by-election about seven months before the election; Ardern is the effective incumbent at the 2017 election.",
+   "tags": [
+    "international_appointment",
+    "resignation_mid_term"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2014-2017|LAB|Mt Roskill": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2016-12-03",
+    "name": "WOOD, Michael Philip",
+    "party": "LAB"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Goff resigned from Parliament on 12 October 2016 after winning the Auckland mayoralty; Michael Wood succeeded him",
+     "date": "2016-10-12",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-goff"
+    },
+    {
+     "citedAs": null,
+     "claim": "Phil Goff, Labour, Mount Roskill, resigned 12 October 2016; replacement Michael Wood",
+     "date": "2016-10-12",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-51st-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "Mount Roskill by-election 3 December 2016 won by Michael Wood (Labour)",
+     "date": "2016-12-03",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "Same-party by-election; Wood is the effective incumbent at the 2017 election.",
+   "tags": [
+    "local_government_office",
+    "resignation_mid_term"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2014-2017|LAB|New Lynn": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "The Spinoff / New Zealand Herald, 1 November 2016, as cited on page",
+     "claim": "Cunliffe's intention to retire was announced 1 November 2016; he resigned in April 2017, deliberately close enough to the election to avoid a by-election",
+     "date": "2016-11-01",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-cunliffe"
+    },
+    {
+     "citedAs": null,
+     "claim": "David Cunliffe, Labour, New Lynn, resigned 23 April 2017; no by-election",
+     "date": "2017-04-23",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-51st-parliament"
+    }
+   ],
+   "outgoingDisposition": "resigned_before_election",
+   "reasoning": "Retirement announced in advance; the seat was vacant at dissolution with no by-election, and Russell was a new Labour candidate.",
+   "tags": [
+    "announced_retirement"
+   ],
+   "transitionType": "resignation_before_election"
+  },
+  "2014-2017|LAB|Rongotai": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "New Zealand Herald, \"Labour has lost one of its giants\", 1 March 2017",
+     "claim": "King announced on 1 March 2017 she would retire at the 2017 election, having initially said she would contest on the list only",
+     "date": "2017-03-01",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-annette-king"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Full retirement after an earlier list-only indication.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2014-2017|NAT|Clutha-Southland": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "Stuff, 20 June 2017, as cited on page",
+     "claim": "Barclay announced he would not contest the 2017 election after revelations about a recording of a former staffer (Stuff 20 June 2017)",
+     "date": "2017-06-21",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-barclay"
+    }
+   ],
+   "outgoingDisposition": "announced_not_standing",
+   "reasoning": "Withdrawal under a staff-recording controversy rather than a planned retirement; no deselection vote is documented, so it is recorded as retirement with a scandal tag. The page prints 21 June for the announcement.",
+   "tags": [
+    "scandal_context"
+   ],
+   "transitionType": "retirement"
+  },
+  "2014-2017|NAT|East Coast Bays": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "New Zealand Herald, 15 December 2016, as cited on page",
+     "claim": "McCully announced on 15 December 2016 that he would not stand in 2017, following the prime-ministerial change",
+     "date": "2016-12-15",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-mccully"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement after the Key resignation.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2014-2017|NAT|Helensville": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "Stuff and Parliament records, as cited on page",
+     "claim": "Key announced his resignation as Prime Minister on 5 December 2016 and resigned from his Helensville seat on 14 April 2017 to avoid a by-election",
+     "date": "2016-12-05",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-key"
+    },
+    {
+     "citedAs": null,
+     "claim": "John Key, National, Helensville, resigned 14 April 2017; no by-election",
+     "date": "2017-04-14",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-51st-parliament"
+    }
+   ],
+   "outgoingDisposition": "resigned_before_election",
+   "reasoning": "The seat was vacant at dissolution with no by-election; Penk was a new National candidate for an open seat.",
+   "tags": [
+    "prime_minister"
+   ],
+   "transitionType": "resignation_before_election"
+  },
+  "2014-2017|NAT|Maungakiekie": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "Radio New Zealand, \"Sam Lotu-Iiga to leave Parliament\", 13 December 2016",
+     "claim": "Lotu-Iiga announced on 13 December 2016 he was quitting politics at the 2017 election",
+     "date": "2016-12-13",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-lotu-iiga"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary departure after the Key resignation and loss of ministerial rank.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2014-2017|NAT|Northland": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2015-03-28",
+    "name": "PETERS, Winston Raymond",
+    "party": "NZF"
+   },
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "Scoop, \"Mike Sabin announces resignation as Northland MP\", 30 January 2015, as cited on page",
+     "claim": "Sabin resigned the Northland seat on 30 January 2015, citing personal issues, after reports of a police investigation; Winston Peters won the resulting by-election",
+     "date": "2015-01-30",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-sabin"
+    },
+    {
+     "citedAs": null,
+     "claim": "Mike Sabin, National, Northland, resigned 30 January 2015; replacement Winston Peters (NZ First)",
+     "date": "2015-01-30",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-51st-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "Northland by-election 28 March 2015 won by Winston Peters (NZ First); seat changed party",
+     "date": "2015-03-28",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "The National seat was lost to NZ First at a mid-term by-election; the 2017 National candidate challenged the NZ First leader as incumbent. This is not a National incumbent-to-successor transition for R_old purposes.",
+   "tags": [
+    "resignation_mid_term",
+    "seat_changed_party_mid_term",
+    "unusual_third_party_environment"
+   ],
+   "transitionType": "by_election_party_change"
+  },
+  "2014-2017|NAT|Pakuranga": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "New Zealand Herald, 26 July 2016, as cited on page",
+     "claim": "Williamson announced he would not contest the 2017 election",
+     "date": "2016-07-26",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-williamson"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement about 14 months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2014-2017|NAT|Rangitata": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "New Zealand Herald and Stuff, 25 January 2017, as cited on page",
+     "claim": "Goodhew announced on 25 January 2017 she would not contest the 2017 election after losing her ministerial portfolios in a post-Key reshuffle",
+     "date": "2017-01-25",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-goodhew"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Departure after demotion; no selection contest documented.",
+   "tags": [
+    "dropped_from_cabinet"
+   ],
+   "transitionType": "retirement"
+  },
+  "2014-2017|NAT|Tukituki": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "New Zealand Herald, as cited on page",
+     "claim": "Foss announced on 14 December 2016 he would retire at the 2017 election",
+     "date": "2016-12-14",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-foss"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement following the leadership change.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2014-2017|NAT|Waikato": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "stuff.co.nz, 20 June 2016, as cited on page",
+     "claim": "\"MP Lindsay Tisch not to seek re-election\"",
+     "date": "2016-06-20",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-tisch"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement about 15 months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2014-2017|NAT|Whanganui": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2017-election"
+    },
+    {
+     "citedAs": "Stuff, 28 November 2016, as cited on page",
+     "claim": "Borrows did not stand in 2017, saying he always intended to serve four terms",
+     "date": "2016-11-28",
+     "dateKind": "publication",
+     "reading": "direct",
+     "source": "ct-wp-borrows"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2017-2020|LAB|Dunedin South": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Curran announced on 27 August 2019 she would not contest the 2020 election",
+     "date": "2019-08-27",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Single table source; the dominant successor seat is Taieri (boundary change), where Leary was the new Labour candidate.",
+   "tags": [
+    "boundary_change_successor_seat"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|LAB|Mana": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Faafoi announced on 8 February 2020 he would stand as list-only",
+     "date": "2020-02-08",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "list_only",
+   "reasoning": "Single table source; Edmonds was selected for the electorate.",
+   "tags": [
+    "list_only"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|LAB|Manurewa": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Wall announced 29 May 2020 she was withdrawing to pursue a list position",
+     "date": "2020-05-29",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    },
+    {
+     "citedAs": null,
+     "claim": "Listing title: \"Labour's Louisa Wall pulls out of Manurewa selection\" (NZ Herald)",
+     "date": null,
+     "dateKind": "listing",
+     "reading": "listing",
+     "source": "ct-websearch-result-listings"
+    }
+   ],
+   "outgoingDisposition": "list_only",
+   "reasoning": "Withdrew from the electorate selection to take a list route; Arena Williams became the Labour candidate. The extract does not date the selection itself.",
+   "tags": [
+    "list_only",
+    "withdrew_from_selection"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|LAB|Palmerston North": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Lees-Galloway announced 22 July 2020 he would not stand; note: removed as Minister over an inappropriate relationship",
+     "date": "2020-07-22",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Departure following ministerial dismissal; recorded as retirement, with the dismissal tag.",
+   "tags": [
+    "dismissed_as_minister"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|LAB|Port Hills": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Dyson announced on 3 March 2019 she would not contest the 2020 election",
+     "date": "2019-03-03",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Single table source; the dominant successor seat is Banks Peninsula (boundary change), where McLellan was the new Labour candidate.",
+   "tags": [
+    "boundary_change_successor_seat"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|Auckland Central": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Kaye announced on 16 July 2020 she would not contest the 2020 election (table note: \"Resigned following Todd Muller's departure\")",
+     "date": "2020-07-16",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Announcement date from a single table; the note on timing relative to the leadership change is ambiguous, so the reason is not asserted.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|Botany": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Ross was expelled from National on 16 October 2018; he initially planned to contest Botany for Advance NZ but pulled out and campaigned as list-only; Christopher Luxon succeeded him",
+     "date": "2018-10-16",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-jami-lee-ross"
+    },
+    {
+     "citedAs": null,
+     "claim": "Jami-Lee Ross, National, Botany, left the National Party 19 October 2018 and became independent",
+     "date": "2018-10-19",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-52nd-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "Table 2 (list-only/previous electorate): Jami-Lee Ross, Botany, announced 15 September 2020",
+     "date": "2020-09-15",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "expelled_not_contesting",
+   "reasoning": "The incumbent left the party two years before the election and did not appear on the preserved 2020 Botany candidate list; Luxon was a new National candidate for an open seat. The page dates the expulsion 16 October while the term table shows 19 October; either is long before the election.",
+   "tags": [
+    "expelled_from_party",
+    "independent_mid_term",
+    "withdrew_from_electorate_contest"
+   ],
+   "transitionType": "party_change"
+  },
+  "2017-2020|NAT|Clutha-Southland": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Walker announced on 8 July 2020 he would not stand; note: resigned after leaking COVID-19 patient data",
+     "date": "2020-07-08",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "announced_not_standing",
+   "reasoning": "Withdrawal under scandal; the dominant successor seat is Southland (boundary change), where Mooney was the new National candidate. The table wording \"Resigned\" is ambiguous (he did not leave Parliament before the election).",
+   "tags": [
+    "boundary_change_successor_seat",
+    "scandal_context"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|East Coast": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Tolley announced 27 June 2020 she would not stand; note: initially announced 20 December 2019 as list-only",
+     "date": "2020-06-27",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Initial list-only intention (20 December 2019) then full retirement (27 June 2020); the electorate was handed over either way.",
+   "tags": [
+    "list_only_then_retirement"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|Invercargill": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Dowie announced 11 February 2020 she would not stand; note: initially re-selected as candidate",
+     "date": "2020-02-11",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    },
+    {
+     "citedAs": "1News, 10-11 February 2020 (page prints 11 February)",
+     "claim": "Dowie cited family priorities in announcing she would not stand",
+     "date": "2020-02-11",
+     "dateKind": "publication",
+     "reading": "direct",
+     "source": "ct-1news-dowie-2020"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Stated reason is family; she had been re-selected and the preceding term was scandal-affected (ODT headline in listing). Recorded as retirement.",
+   "tags": [
+    "initially_reselected",
+    "scandal_context"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|North Shore": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Barry announced on 5 November 2019 she would not contest the 2020 election",
+     "date": "2019-11-05",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Single table source.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|Northcote": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2018-06-09",
+    "name": "BIDOIS, Daniel Michael",
+    "party": "NAT"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": "Otago Daily Times, \"Coleman to quit politics\", 22 March 2018, as cited on page",
+     "claim": "Coleman announced on 22 March 2018 he would resign, triggering the 2018 Northcote by-election; Dan Bidois succeeded him",
+     "date": "2018-03-22",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-coleman"
+    },
+    {
+     "citedAs": null,
+     "claim": "Jonathan Coleman, National, Northcote, resigned 15 April 2018; replaced by Dan Bidois (9 June 2018) in by-election",
+     "date": "2018-06-09",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-52nd-parliament"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "Same-party by-election; Bidois is the effective incumbent who recontested in 2020. The by-election is missing from the by-election list rendering but is stated in the 52nd Parliament table.",
+   "tags": [
+    "resignation_mid_term"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2017-2020|NAT|Rangitata": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "New Zealand Herald, 21 July 2020, as cited on page",
+     "claim": "Falloon announced on 20 July 2020 he would not seek re-election and resigned on 21 July 2020 after media reports of inappropriate messages",
+     "date": "2020-07-21",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-falloon"
+    },
+    {
+     "citedAs": null,
+     "claim": "Andrew Falloon, National, Rangitata, resigned 21 July 2020; seat vacant, no by-election",
+     "date": "2020-07-21",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-52nd-parliament"
+    }
+   ],
+   "outgoingDisposition": "resigned_before_election",
+   "reasoning": "Resignation under scandal less than three months before polling; Hands was a late new National candidate. The rendering names a different Rangitata winner (Jo Luxton) in its successor line; that is a different fact (the 2020 winner) and does not affect this row.",
+   "tags": [
+    "scandal_context"
+   ],
+   "transitionType": "resignation_before_election"
+  },
+  "2017-2020|NAT|Selwyn": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "New Zealand Herald, 25 June 2019; Radio New Zealand, 25 May 2020, as cited on page",
+     "claim": "Adams announced retirement in June 2019, rescinded it in May 2020, then reconfirmed leaving in July 2020",
+     "date": "2020-07-16",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-adams"
+    },
+    {
+     "citedAs": null,
+     "claim": "Amy Adams, Selwyn: reversed retirement decision, then retired again after leadership change",
+     "date": "2020-07",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Final decision not to stand was settled by 16 July 2020; the earlier reversal is a timing sensitivity, not a change of type.",
+   "tags": [
+    "reversal_before_final_announcement"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|Upper Harbour": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Bennett announced 29 June 2020 she would not stand; note: initially announced 14 August 2019 as list-only",
+     "date": "2020-06-29",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "List-only intention then full retirement; Bezzant was the new National candidate.",
+   "tags": [
+    "list_only_then_retirement"
+   ],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|Wairarapa": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Scott announced on 25 June 2019 he would not contest the 2020 election",
+     "date": "2019-06-25",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Single table source.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2017-2020|NAT|Ōtaki": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Guy announced on 30 July 2019 he would not contest the 2020 election",
+     "date": "2019-07-30",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2020-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Single table source.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Christchurch East": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    },
+    {
+     "citedAs": "1News, \"Six Labour MPs including David Clark to retire at election\", 13 December 2022",
+     "claim": "Williams announced 13 December 2022 she would not contest 2023, saying the electorate needed \"fresh eyes and fresh energy\"",
+     "date": "2022-12-13",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-poto-williams"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement announced about 10 months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Dunedin": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Clark announced on 13 December 2022 he would not contest the 2023 election",
+     "date": "2022-12-13",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Single table source consistent with the 13 December 2022 1News group announcement named in other extracts.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|East Coast": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Allan announced on 25 July 2023 she would not contest the 2023 election; note: Tāmati Coffey announced retirement in March 2023 but reversed in July",
+     "date": "2023-07-25",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    }
+   ],
+   "outgoingDisposition": "withdrew_from_contest",
+   "reasoning": "Late withdrawal about eleven weeks before polling; the successor selection date is not documented. The cause is not stated in the retrieved extract, so no reason is asserted.",
+   "tags": [
+    "late_withdrawal",
+    "successor_selected_late"
+   ],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Hamilton East": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    },
+    {
+     "citedAs": "1News, 13 December 2022, as cited on page",
+     "claim": "Strange announced in mid-December 2022 he would not contest 2023, citing travel strain on family life",
+     "date": "2022-12-13",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-strange"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Hamilton West": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2022-12-10",
+    "name": "POTAKA, Tama William",
+    "party": "NAT"
+   },
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Gaurav Sharma was expelled from the Labour Party on 23 August 2022 and resigned on 18 October 2022; Tama Potaka (National) was elected on 10 December 2022",
+     "date": "2022-10-18",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-53rd-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "By-election held 10 December 2022; Tama Potaka (National) won; Labour had held the seat",
+     "date": "2022-12-10",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-2022-hamilton-west-by-election"
+    },
+    {
+     "citedAs": null,
+     "claim": "Hamilton West by-election 10 December 2022 won by Tama Potaka (National); seat changed party",
+     "date": "2022-12-10",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    }
+   ],
+   "outgoingDisposition": "expelled_then_resigned",
+   "reasoning": "Labour lost the seat to National at a mid-term by-election; the 2023 Labour candidate challenged a National incumbent. Not a Labour incumbent-to-successor transition for R_old purposes; National gains an effective incumbent (see supplementary seat gains).",
+   "tags": [
+    "expelled_from_party",
+    "resignation_mid_term",
+    "seat_changed_party_mid_term"
+   ],
+   "transitionType": "by_election_party_change"
+  },
+  "2020-2023|LAB|Ikaroa-Rāwhiti": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "recontested for Te Pāti Māori 2023",
+    "name": "WHAITIRI, Meka",
+    "party": "TPM"
+   },
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "Radio New Zealand, 3 May 2023",
+     "claim": "Whaitiri announced on 3 May 2023 she had quit Labour and would stand for Te Pāti Māori",
+     "date": "2023-05-03",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-rnz-whaitiri-leaves-labour"
+    },
+    {
+     "citedAs": null,
+     "claim": "Meka Whaitiri, Labour, Ikaroa-Rāwhiti, resigned from the Labour Party 3 May 2023 and sat as independent",
+     "date": "2023-05-03",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-53rd-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "Listing title: \"Labour reveals candidate to battle Whaitiri in Ikaroa-Rāwhiti\" (1News; date 2023-06-27 taken from URL path only)",
+     "date": "2023-06-27",
+     "dateKind": "selection",
+     "reading": "listing",
+     "source": "ct-websearch-result-listings"
+    }
+   ],
+   "outgoingDisposition": "party_switch_recontested",
+   "reasoning": "The Labour incumbent switched to Te Pāti Māori and recontested the seat; the Labour candidate (Tangaere-Manuel) challenged her. The Labour nominee faces an incumbent with a personal vote under another label, which is not an ordinary retirement.",
+   "tags": [
+    "incumbent_recontested_for_other_party",
+    "maori_seat",
+    "unusual_third_party_environment"
+   ],
+   "transitionType": "party_change"
+  },
+  "2020-2023|LAB|Mt Albert": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    },
+    {
+     "citedAs": null,
+     "claim": "Ardern announced on 19 January 2023 she would not contest the 2023 election",
+     "date": "2023-01-19",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    },
+    {
+     "citedAs": null,
+     "claim": "Jacinda Ardern, Labour, Mount Albert, resigned 15 April 2023; no replacement",
+     "date": "2023-04-15",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-53rd-parliament"
+    }
+   ],
+   "outgoingDisposition": "resigned_before_election",
+   "reasoning": "Prime Minister resigned the leadership then the seat, with no by-election; White was a new Labour candidate.",
+   "tags": [
+    "announced_retirement",
+    "prime_minister"
+   ],
+   "transitionType": "resignation_before_election"
+  },
+  "2020-2023|LAB|Māngere": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    },
+    {
+     "citedAs": "1News, 13 December 2022, as cited on page",
+     "claim": "Sio announced his retirement in mid-December 2022, citing the all-consuming nature of the MP role and family/matai obligations",
+     "date": "2022-12-13",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-sio-retire"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement.",
+   "tags": [
+    "pacific_matai_title_name_variants"
+   ],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Napier": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    },
+    {
+     "citedAs": "Radio New Zealand, 3 April 2023, as cited on page",
+     "claim": "Nash announced on 3 April 2023 he would not contest 2023, six days after being stripped of ministerial portfolios on 28 March 2023",
+     "date": "2023-04-03",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-nash"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Departure following ministerial dismissal; recorded as retirement with a tag.",
+   "tags": [
+    "dismissed_as_minister"
+   ],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Rongotai": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    },
+    {
+     "citedAs": "1News, 13 December 2022, as cited on page",
+     "claim": "Eagle announced on 13 December 2022 he would not contest the 2023 election",
+     "date": "2022-12-13",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-eagle"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Te Tai Hauāuru": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "NZ Herald; publication date not exposed by the rendering",
+     "claim": "Speaker Adrian Rurawhe will not contest Te Tai Hauāuru and has opted to go on the party list, following the tradition of recent Speakers",
+     "date": null,
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-nzh-rurawhe-list-only"
+    }
+   ],
+   "outgoingDisposition": "list_only",
+   "reasoning": "List-only move by the Speaker; announcement date is not documented (the same-outlet announcement for Wellington Central is 27 January 2023 but that is not evidence for this date).",
+   "tags": [
+    "list_only",
+    "maori_seat"
+   ],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Wellington Central": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "Radio New Zealand, 27 January 2023",
+     "claim": "Robertson will not run in Wellington Central, campaigning as list-only",
+     "date": "2023-01-27",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-rnz-grant-robertson"
+    },
+    {
+     "citedAs": null,
+     "claim": "Listing title: \"Omer to replace Robertson as Labour's Wellington Central candidate\" (1News; date 2023-03-19 taken from URL path only)",
+     "date": "2023-03-19",
+     "dateKind": "selection",
+     "reading": "listing",
+     "source": "ct-websearch-result-listings"
+    }
+   ],
+   "outgoingDisposition": "list_only",
+   "reasoning": "Deputy Prime Minister handed the electorate to a list MP while staying on the list.",
+   "tags": [
+    "list_only"
+   ],
+   "transitionType": "retirement"
+  },
+  "2020-2023|LAB|Whangārei": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": "Northern Advocate / NZ Herald, 22 March 2023, as cited on page",
+     "claim": "Henderson announced on 17 March 2023 she would retire to return to her legal career",
+     "date": "2023-03-17",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-henderson"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Voluntary retirement.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2020-2023|NAT|Bay of Plenty": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Muller announced on 17 March 2023 he would not contest the 2023 election",
+     "date": "2023-03-17",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Single table source; announced about seven months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2020-2023|NAT|Rangitīkei": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Listed among sitting MPs not standing for re-election at the target election",
+     "date": null,
+     "dateKind": "list_membership",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    },
+    {
+     "citedAs": "NZ Herald / Whanganui Chronicle, 20 June 2022, as cited on page (text says late July 2022 while the cited item is dated 20 June)",
+     "claim": "McKelvie announced he would retire at the 2023 election (\"12-not-out\")",
+     "date": "2022-06-20",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-mckelvie"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Retirement is clear; the page text and its dated citation disagree by a month, so the date is recorded as the citation date with medium confidence.",
+   "tags": [],
+   "transitionType": "retirement"
+  },
+  "2020-2023|NAT|Tauranga": {
+   "confidence": "high",
+   "effectiveIncumbentAtTarget": {
+    "basis": "by-election winner 2022-06-18",
+    "name": "UFFINDELL, Samuel Julian",
+    "party": "NAT"
+   },
+   "effectiveIncumbentRecontests": true,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Simon Bridges, National, Tauranga, resigned 6 May 2022; Sam Uffindell (National) elected 18 June 2022",
+     "date": "2022-06-18",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-53rd-parliament"
+    },
+    {
+     "citedAs": null,
+     "claim": "Tauranga by-election 18 June 2022 won by Sam Uffindell (National)",
+     "date": "2022-06-18",
+     "dateKind": "event",
+     "reading": "direct",
+     "source": "ct-wp-nz-by-elections"
+    }
+   ],
+   "outgoingDisposition": "resigned_mid_term",
+   "reasoning": "Same-party by-election; Uffindell is the effective incumbent who recontested in 2023.",
+   "tags": [
+    "resignation_mid_term"
+   ],
+   "transitionType": "by_election_succession"
+  },
+  "2020-2023|NAT|Waitaki": {
+   "confidence": "medium",
+   "effectiveIncumbentAtTarget": null,
+   "effectiveIncumbentRecontests": false,
+   "evidence": [
+    {
+     "citedAs": null,
+     "claim": "Dean announced on 20 May 2022 she would not contest the 2023 election",
+     "date": "2022-05-20",
+     "dateKind": "announcement",
+     "reading": "direct",
+     "source": "ct-wp-2023-election"
+    }
+   ],
+   "outgoingDisposition": "retired",
+   "reasoning": "Single table source; announced about 17 months before the election.",
+   "tags": [],
+   "transitionType": "retirement"
+  }
+ }
+}
