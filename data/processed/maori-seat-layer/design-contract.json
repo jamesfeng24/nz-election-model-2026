@@ -1,0 +1,48 @@
+{
+  "biasAdoption": {
+    "default": 0.0,
+    "estimator": "equal-weight mean of the four election means of D",
+    "ifNotAdopted": "tau computed about zero",
+    "loeoLogScoreImprovementNats": 1.0,
+    "minimumSameSignElections": 3
+  },
+  "closure": "named candidates only; unnamed remainder drawn from the empirical historical distribution",
+  "decisionNumber": "D099",
+  "diagnostics": {
+    "horizonCutDays": 21,
+    "horizonFlagWinnerProbabilityShift": 0.1,
+    "otherContrastFlagRatio": 1.5
+  },
+  "draws": 100000,
+  "frozenBeforeCalibration": true,
+  "generalElectorateCalibrationTouched": false,
+  "groups": {
+    "LAB": [
+      "Labour"
+    ],
+    "MP": [
+      "Maori Party",
+      "Te Pati Maori"
+    ],
+    "OTH": "all other parties and independents"
+  },
+  "nationalCoupling": "none by default; standardised shared factor exported",
+  "parameterUncertainty": "scaled inverse chi-square draws for sigma^2 (21 df) and tau^2 (4 df) per Monte Carlo draw",
+  "partyVoteUsed": false,
+  "pollPerSeat": "latest by fieldwork end",
+  "previewDraws": 2000,
+  "publication": false,
+  "schemaVersion": 1,
+  "seed": 2026066,
+  "sigma": {
+    "contrast": "D = log(v_MP/v_LAB) - log(q_MP/q_LAB)",
+    "degreesOfFreedom": 21,
+    "estimator": "within-election pooled variance of D / 2"
+  },
+  "tau": {
+    "degreesOfFreedomForDraw": 4,
+    "electionsUsed": 4,
+    "estimator": "max(0, mean_e((mean_e(D)-b)^2) - mean_e(2 sigma^2 / n_e))"
+  },
+  "unpolledSeats": "listed as unpolled; no baseline or fallback"
+}
