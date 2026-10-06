@@ -1,0 +1,6105 @@
+{
+  "chronological": {
+    "byFold": {
+      "C": {
+        "2017": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.7412624999999999,
+              "observed": 0.5,
+              "polls": 4
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.9280933333333333,
+              "observed": 1.0,
+              "polls": 3
+            }
+          },
+          "brierLeader": 0.1838964317285714,
+          "brierMulti": 0.3645319634,
+          "calibrationZ": -0.7641472016079299,
+          "contrastCoverage": {
+            "0.5": 0.5,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 6,
+          "coverageDeviation": 0.07368421052631574,
+          "leaderWins": 5,
+          "meanLogScoreWinner": -0.5229683343812888,
+          "meanPredictedLeaderWin": 0.8213328571428571,
+          "observedLeaderWinRate": 0.7142857142857143,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.47368421052631576,
+            "0.8": 0.9473684210526315,
+            "0.9": 0.9473684210526315
+          },
+          "shareObservations": 19
+        },
+        "2020": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.67436,
+              "observed": 1.0,
+              "polls": 1
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.82149,
+              "observed": 0.0,
+              "polls": 1
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.968026,
+              "observed": 1.0,
+              "polls": 5
+            }
+          },
+          "brierLeader": 0.11276612354285716,
+          "brierMulti": 0.22478982402857145,
+          "calibrationZ": -0.4669826155057094,
+          "contrastCoverage": {
+            "0.5": 0.2857142857142857,
+            "0.8": 0.7142857142857143,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.13333333333333333,
+          "leaderWins": 6,
+          "meanLogScoreWinner": -0.32592042308894975,
+          "meanPredictedLeaderWin": 0.9051400000000001,
+          "observedLeaderWinRate": 0.8571428571428571,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.35,
+            "0.8": 0.65,
+            "0.9": 0.8
+          },
+          "shareObservations": 20
+        },
+        "2023": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.6527933333333333,
+              "observed": 0.0,
+              "polls": 3
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.7808066666666668,
+              "observed": 0.3333333333333333,
+              "polls": 3
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.9679,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.3730997856,
+          "brierMulti": 0.7464427535142858,
+          "calibrationZ": -2.9600195365417665,
+          "contrastCoverage": {
+            "0.5": 0.2857142857142857,
+            "0.8": 0.7142857142857143,
+            "0.9": 0.8571428571428571
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.22456140350877196,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.956224437780287,
+          "meanPredictedLeaderWin": 0.7526714285714285,
+          "observedLeaderWinRate": 0.2857142857142857,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.2631578947368421,
+            "0.8": 0.5789473684210527,
+            "0.9": 0.6842105263157895
+          },
+          "shareObservations": 19
+        }
+      },
+      "P": {
+        "2017": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.675465,
+              "observed": 0.5,
+              "polls": 2
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.7981225,
+              "observed": 0.75,
+              "polls": 4
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.93757,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.18005635010000007,
+          "brierMulti": 0.3551352480857144,
+          "calibrationZ": -0.45373678273030066,
+          "contrastCoverage": {
+            "0.5": 0.8333333333333334,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 6,
+          "coverageDeviation": 0.09122807017543855,
+          "leaderWins": 5,
+          "meanLogScoreWinner": -0.5260333862762356,
+          "meanPredictedLeaderWin": 0.7829985714285714,
+          "observedLeaderWinRate": 0.7142857142857143,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.5789473684210527,
+            "0.8": 0.9473684210526315,
+            "0.9": 0.9473684210526315
+          },
+          "shareObservations": 19
+        },
+        "2020": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.61811,
+              "observed": 1.0,
+              "polls": 1
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.8295766666666667,
+              "observed": 0.6666666666666666,
+              "polls": 3
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.9554066666666667,
+              "observed": 1.0,
+              "polls": 3
+            }
+          },
+          "brierLeader": 0.10734868957142855,
+          "brierMulti": 0.21150157088571425,
+          "calibrationZ": 0.030569078936624663,
+          "contrastCoverage": {
+            "0.5": 0.42857142857142855,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.05000000000000001,
+          "leaderWins": 6,
+          "meanLogScoreWinner": -0.3271038756849474,
+          "meanPredictedLeaderWin": 0.8532942857142858,
+          "observedLeaderWinRate": 0.8571428571428571,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.35,
+            "0.8": 0.8,
+            "0.9": 0.9
+          },
+          "shareObservations": 20
+        },
+        "2023": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.6254633333333334,
+              "observed": 0.16666666666666666,
+              "polls": 6
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.85936,
+              "observed": 1.0,
+              "polls": 1
+            },
+            "0.9-1.0": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            }
+          },
+          "brierLeader": 0.29687341720000004,
+          "brierMulti": 0.6032703332571429,
+          "calibrationZ": -2.123925461424428,
+          "contrastCoverage": {
+            "0.5": 0.5714285714285714,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.07368421052631578,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.8012751486750236,
+          "meanPredictedLeaderWin": 0.6588771428571428,
+          "observedLeaderWinRate": 0.2857142857142857,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.47368421052631576,
+            "0.8": 0.8947368421052632,
+            "0.9": 1.0
+          },
+          "shareObservations": 19
+        }
+      },
+      "PB": {
+        "2017": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.6686300000000001,
+              "observed": 0.5,
+              "polls": 2
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.7984325,
+              "observed": 0.75,
+              "polls": 4
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.94087,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.15910491165714288,
+          "brierMulti": 0.31391466151428576,
+          "calibrationZ": -0.44535598705481066,
+          "contrastCoverage": {
+            "0.5": 0.6666666666666666,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 6,
+          "coverageDeviation": 0.07368421052631573,
+          "leaderWins": 5,
+          "meanLogScoreWinner": -0.47490731832910404,
+          "meanPredictedLeaderWin": 0.7816942857142857,
+          "observedLeaderWinRate": 0.7142857142857143,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.5263157894736842,
+            "0.8": 0.9473684210526315,
+            "0.9": 0.9473684210526315
+          },
+          "shareObservations": 19
+        },
+        "2020": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.61612,
+              "observed": 1.0,
+              "polls": 1
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.8271099999999999,
+              "observed": 0.6666666666666666,
+              "polls": 3
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.9525866666666666,
+              "observed": 1.0,
+              "polls": 3
+            }
+          },
+          "brierLeader": 0.10744326227142856,
+          "brierMulti": 0.21146798277142856,
+          "calibrationZ": 0.05040011481721012,
+          "contrastCoverage": {
+            "0.5": 0.42857142857142855,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.06666666666666665,
+          "leaderWins": 6,
+          "meanLogScoreWinner": -0.3286116470050624,
+          "meanPredictedLeaderWin": 0.8507442857142858,
+          "observedLeaderWinRate": 0.8571428571428571,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.35,
+            "0.8": 0.85,
+            "0.9": 0.9
+          },
+          "shareObservations": 20
+        },
+        "2023": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.4410133333333333,
+              "observed": 0.16666666666666666,
+              "polls": 6
+            },
+            "0.7-0.9": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.92611,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.17967774658571428,
+          "brierMulti": 0.36403282791428565,
+          "calibrationZ": -1.2700007278943632,
+          "contrastCoverage": {
+            "0.5": 0.8571428571428571,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.143859649122807,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.5425626943707796,
+          "meanPredictedLeaderWin": 0.5103128571428571,
+          "observedLeaderWinRate": 0.2857142857142857,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.7368421052631579,
+            "0.8": 0.8947368421052632,
+            "0.9": 1.0
+          },
+          "shareObservations": 19
+        }
+      }
+    },
+    "comparisons": {
+      "C->P": {
+        "brierDifference": -0.02849462800000001,
+        "brierInterval90": [
+          -0.05399228403642857,
+          -0.0052825916826190564
+        ],
+        "logScoreDifference": 0.05023359487143958,
+        "logScoreInterval90": [
+          -0.008715580557471778,
+          0.11722560990486769
+        ]
+      },
+      "C->PB": {
+        "brierDifference": -0.07451214011904762,
+        "brierInterval90": [
+          -0.13293425306714285,
+          -0.020255542391190474
+        ],
+        "logScoreDifference": 0.15301051184852643,
+        "logScoreInterval90": [
+          0.031384897930577506,
+          0.286611688810079
+        ]
+      },
+      "P->PB": {
+        "brierDifference": -0.04601751211904762,
+        "brierInterval90": [
+          -0.08129645815261904,
+          -0.013651898505476183
+        ],
+        "logScoreDifference": 0.10277691697708685,
+        "logScoreInterval90": [
+          0.033523804196567177,
+          0.1772452558753874
+        ]
+      }
+    },
+    "fits": {
+      "2017": {
+        "C": {
+          "bias": [
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 14,
+          "elections": 1,
+          "heldOutBias": 0.0,
+          "lambdaHat": 0.9423555460504288,
+          "lambdaInterval": {
+            "p05": 0.6530588285687663,
+            "p50": 1.2900131598090936,
+            "p95": 7.392114333923317,
+            "replicates": 986
+          },
+          "sigma2": 0.10167991243711165,
+          "sigma2Dof": 3,
+          "tau2": 0.0,
+          "trainElections": [
+            2014
+          ]
+        },
+        "P": {
+          "bias": [
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 16,
+          "elections": 1,
+          "heldOutBias": 0.0,
+          "lambdaHat": 0.9423555460504288,
+          "lambdaInterval": {
+            "p05": 0.6530588285687664,
+            "p50": 1.3058634361812838,
+            "p95": 9.210583330214567,
+            "replicates": 984
+          },
+          "sigma2": 0.10167991243711165,
+          "sigma2Dof": 3,
+          "tau2": 0.0,
+          "trainElections": [
+            2014
+          ]
+        },
+        "PB": {
+          "bias": [
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 16,
+          "elections": 1,
+          "heldOutBias": -0.07107599459466557,
+          "lambdaHat": 0.9423555460504288,
+          "lambdaInterval": {
+            "p05": 0.6530588285687664,
+            "p50": 1.3058634361812838,
+            "p95": 9.642628511760726,
+            "replicates": 984
+          },
+          "sigma2": 0.10167991243711165,
+          "sigma2Dof": 3,
+          "tau2": 0.0,
+          "trainElections": [
+            2014
+          ]
+        }
+      },
+      "2020": {
+        "C": {
+          "bias": [
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 2,
+          "heldOutBias": 0.0,
+          "lambdaHat": 1.6833715876445485,
+          "lambdaInterval": {
+            "p05": 0.8840339350473326,
+            "p50": 2.021887279227328,
+            "p95": 5.353572545838023,
+            "replicates": 1000
+          },
+          "sigma2": 0.07509638574286039,
+          "sigma2Dof": 8,
+          "tau2": 0.0,
+          "trainElections": [
+            2014,
+            2017
+          ]
+        },
+        "P": {
+          "bias": [
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 2,
+          "heldOutBias": 0.0,
+          "lambdaHat": 1.6833715876445485,
+          "lambdaInterval": {
+            "p05": 0.8866297315539389,
+            "p50": 1.937224500012416,
+            "p95": 5.371325815778503,
+            "replicates": 1000
+          },
+          "sigma2": 0.07509638574286039,
+          "sigma2Dof": 8,
+          "tau2": 0.0,
+          "trainElections": [
+            2014,
+            2017
+          ]
+        },
+        "PB": {
+          "bias": [
+            -0.11165693302543496,
+            -0.07107599459466557
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 2,
+          "heldOutBias": 0.0,
+          "lambdaHat": 1.6300880240025242,
+          "lambdaInterval": {
+            "p05": 0.8784100165549389,
+            "p50": 1.9291683079535806,
+            "p95": 5.724527009627249,
+            "replicates": 1000
+          },
+          "sigma2": 0.07509638574286039,
+          "sigma2Dof": 8,
+          "tau2": 0.0,
+          "trainElections": [
+            2014,
+            2017
+          ]
+        }
+      },
+      "2023": {
+        "C": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 2.817738566083246,
+          "lambdaInterval": {
+            "p05": 1.2665148825729802,
+            "p50": 3.5103695706704077,
+            "p95": 8.307078220399921,
+            "replicates": 1000
+          },
+          "sigma2": 0.05709179580610473,
+          "sigma2Dof": 14,
+          "tau2": 0.023350430576435537,
+          "trainElections": [
+            2014,
+            2017,
+            2020
+          ]
+        },
+        "P": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 2.817738566083246,
+          "lambdaInterval": {
+            "p05": 1.2586243248588067,
+            "p50": 3.332668633457044,
+            "p95": 7.89486239385191,
+            "replicates": 1000
+          },
+          "sigma2": 0.05709179580610473,
+          "sigma2Dof": 14,
+          "tau2": 0.023350430576435537,
+          "trainElections": [
+            2014,
+            2017,
+            2020
+          ]
+        },
+        "PB": {
+          "bias": [
+            -0.11165693302543496,
+            -0.07107599459466557,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.341204721821099,
+          "lambdaHat": 2.8010145141151197,
+          "lambdaInterval": {
+            "p05": 1.1999981836257234,
+            "p50": 3.5371895989295195,
+            "p95": 8.189241524714713,
+            "replicates": 1000
+          },
+          "sigma2": 0.05709179580610473,
+          "sigma2Dof": 14,
+          "tau2": 0.01860861638562767,
+          "trainElections": [
+            2014,
+            2017,
+            2020
+          ]
+        }
+      }
+    },
+    "foldsScored": [
+      2017,
+      2020,
+      2023
+    ],
+    "pollRecords": {
+      "C": [
+        {
+          "actualWinnerProbability": 0.2134,
+          "brierLeader": 0.61873956,
+          "brierMulti": 1.23747912,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-waiariki",
+          "leaderWinProbability": 0.7866,
+          "leaderWon": false,
+          "logScoreWinner": -1.544586940114484,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.7494,
+          "brierLeader": 0.06280036000000003,
+          "brierMulti": 0.12393926720000002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-ikaroa-rawhiti",
+          "leaderWinProbability": 0.7494,
+          "leaderWon": true,
+          "logScoreWinner": -0.2884823926225501,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.28104,
+          "brierLeader": 0.50765625,
+          "brierMulti": 1.0246014632000002,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-hauauru",
+          "leaderWinProbability": 0.7125,
+          "leaderWon": false,
+          "logScoreWinner": -1.2692582710245655,
+          "shareCover": {
+            "0.5": [
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.90516,
+          "brierLeader": 0.008994625600000007,
+          "brierMulti": 0.013529957600000007,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-tonga",
+          "leaderWinProbability": 0.90516,
+          "leaderWon": true,
+          "logScoreWinner": -0.09964355532859727,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.96634,
+          "brierLeader": 0.0011329956000000016,
+          "brierMulti": 0.002265991200000002,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-hauraki-waikato",
+          "leaderWinProbability": 0.96634,
+          "leaderWon": true,
+          "logScoreWinner": -0.034239539821723036,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.71655,
+          "brierLeader": 0.0803439025,
+          "brierMulti": 0.1348657278,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-tamaki-makaurau",
+          "leaderWinProbability": 0.71655,
+          "leaderWon": true,
+          "logScoreWinner": -0.3333072504780565,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.91278,
+          "brierLeader": 0.007607328399999994,
+          "brierMulti": 0.015042216799999994,
+          "id": "2017-te-tai-tokerau",
+          "leaderWinProbability": 0.91278,
+          "leaderWon": true,
+          "logScoreWinner": -0.09126039127904463,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.99719,
+          "brierLeader": 7.896099999999884e-06,
+          "brierMulti": 1.5792199999999886e-05,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-hauraki-waikato",
+          "leaderWinProbability": 0.99719,
+          "leaderWon": true,
+          "logScoreWinner": -0.0028139554616358666,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.97382,
+          "brierLeader": 0.000685392399999999,
+          "brierMulti": 0.0013697383999999987,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-ikaroa-rawhiti",
+          "leaderWinProbability": 0.97382,
+          "leaderWon": true,
+          "logScoreWinner": -0.026528797346268243,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.67436,
+          "brierLeader": 0.10604140960000003,
+          "brierMulti": 0.2068706186,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-tamaki-makaurau",
+          "leaderWinProbability": 0.67436,
+          "leaderWon": true,
+          "logScoreWinner": -0.3939911860345367,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.93164,
+          "brierLeader": 0.004673089599999997,
+          "brierMulti": 0.009346179199999997,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": false,
+            "0.9": true
+          },
+          "id": "2020-te-tai-hauauru",
+          "leaderWinProbability": 0.93164,
+          "leaderWon": true,
+          "logScoreWinner": -0.07080880501093036,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              false,
+              false
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.94471,
+          "brierLeader": 0.0030569840999999944,
+          "brierMulti": 0.006113968199999995,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tokerau",
+          "leaderWinProbability": 0.94471,
+          "leaderWon": true,
+          "logScoreWinner": -0.05687727689205574,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.99277,
+          "brierLeader": 5.22728999999994e-05,
+          "brierMulti": 0.0001044013999999994,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": false,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tonga",
+          "leaderWinProbability": 0.99277,
+          "leaderWon": true,
+          "logScoreWinner": -0.007256263114778063,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              false,
+              true,
+              false
+            ],
+            "0.9": [
+              false,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.1785,
+          "brierLeader": 0.6748458201,
+          "brierMulti": 1.3497080702000002,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-waiariki",
+          "leaderWinProbability": 0.82149,
+          "leaderWon": false,
+          "logScoreWinner": -1.7231666777624433,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.38491,
+          "brierLeader": 0.37833570810000006,
+          "brierMulti": 0.7566714162000001,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-hauraki-waikato",
+          "leaderWinProbability": 0.61509,
+          "leaderWon": false,
+          "logScoreWinner": -0.9547457382557041,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.75088,
+          "brierLeader": 0.062060774400000004,
+          "brierMulti": 0.12412154880000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-ikaroa-rawhiti",
+          "leaderWinProbability": 0.75088,
+          "leaderWon": true,
+          "logScoreWinner": -0.28650942693602954,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.22103,
+          "brierLeader": 0.6066073225,
+          "brierMulti": 1.2134015978000001,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-tamaki-makaurau",
+          "leaderWinProbability": 0.77885,
+          "leaderWon": false,
+          "logScoreWinner": -1.5094568400707862,
+          "shareCover": {
+            "0.5": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false,
+              false
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.34946,
+          "brierLeader": 0.42178530249999996,
+          "brierMulti": 0.8449887822000001,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": false,
+            "0.9": false
+          },
+          "id": "2023-te-tai-hauauru",
+          "leaderWinProbability": 0.64945,
+          "leaderWon": false,
+          "logScoreWinner": -1.0513661730712447,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              false,
+              false,
+              false
+            ],
+            "0.9": [
+              false,
+              false,
+              false
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.30609,
+          "brierLeader": 0.4814139456,
+          "brierMulti": 0.9629250374,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tokerau",
+          "leaderWinProbability": 0.69384,
+          "leaderWon": false,
+          "logScoreWinner": -1.1838761026268136,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.18731,
+          "brierLeader": 0.6604650361000001,
+          "brierMulti": 1.3209300722000001,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": false,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tonga",
+          "leaderWinProbability": 0.81269,
+          "leaderWon": false,
+          "logScoreWinner": -1.6749902806743362,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              false,
+              false
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.9679,
+          "brierLeader": 0.0010304100000000011,
+          "brierMulti": 0.002060820000000001,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-waiariki",
+          "leaderWinProbability": 0.9679,
+          "leaderWon": true,
+          "logScoreWinner": -0.032626502827094166,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        }
+      ],
+      "P": [
+        {
+          "actualWinnerProbability": 0.24718,
+          "brierLeader": 0.5667379524,
+          "brierMulti": 1.1334759048,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-waiariki",
+          "leaderWinProbability": 0.75282,
+          "leaderWon": false,
+          "logScoreWinner": -1.3976384628205476,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.71407,
+          "brierLeader": 0.0817559649,
+          "brierMulti": 0.15854862740000003,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-ikaroa-rawhiti",
+          "leaderWinProbability": 0.71407,
+          "leaderWon": true,
+          "logScoreWinner": -0.33677428223239625,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.30441,
+          "brierLeader": 0.4620464676,
+          "brierMulti": 0.9461431381999998,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-hauauru",
+          "leaderWinProbability": 0.67974,
+          "leaderWon": false,
+          "logScoreWinner": -1.1893798020230357,
+          "shareCover": {
+            "0.5": [
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.85298,
+          "brierLeader": 0.021614880400000012,
+          "brierMulti": 0.03249217680000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-tonga",
+          "leaderWinProbability": 0.85298,
+          "leaderWon": true,
+          "logScoreWinner": -0.1590191784241863,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.93757,
+          "brierLeader": 0.003897504899999998,
+          "brierMulti": 0.007795009799999998,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-hauraki-waikato",
+          "leaderWinProbability": 0.93757,
+          "leaderWon": true,
+          "logScoreWinner": -0.0644638572583213,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.67119,
+          "brierLeader": 0.10811601610000003,
+          "brierMulti": 0.17583772220000005,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-tamaki-makaurau",
+          "leaderWinProbability": 0.67119,
+          "leaderWon": true,
+          "logScoreWinner": -0.39870302262904267,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.87262,
+          "brierLeader": 0.016225664400000013,
+          "brierMulti": 0.03165415740000001,
+          "id": "2017-te-tai-tokerau",
+          "leaderWinProbability": 0.87262,
+          "leaderWon": true,
+          "logScoreWinner": -0.13625509854611928,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.98026,
+          "brierLeader": 0.0003896675999999992,
+          "brierMulti": 0.0007793351999999992,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-hauraki-waikato",
+          "leaderWinProbability": 0.98026,
+          "leaderWon": true,
+          "logScoreWinner": -0.01993743638251626,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.92156,
+          "brierLeader": 0.006152833599999993,
+          "brierMulti": 0.012130392199999996,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-ikaroa-rawhiti",
+          "leaderWinProbability": 0.92156,
+          "leaderWon": true,
+          "logScoreWinner": -0.0816873927602158,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.61811,
+          "brierLeader": 0.14583997209999996,
+          "brierMulti": 0.26904567659999995,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-tamaki-makaurau",
+          "leaderWinProbability": 0.61811,
+          "leaderWon": true,
+          "logScoreWinner": -0.48108884383590655,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.86077,
+          "brierLeader": 0.01938499289999999,
+          "brierMulti": 0.03876998579999999,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-hauauru",
+          "leaderWinProbability": 0.86077,
+          "leaderWon": true,
+          "logScoreWinner": -0.149927941483053,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.87738,
+          "brierLeader": 0.015035664399999989,
+          "brierMulti": 0.030027250399999986,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tokerau",
+          "leaderWinProbability": 0.87738,
+          "leaderWon": true,
+          "logScoreWinner": -0.13081508513029427,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.9644,
+          "brierLeader": 0.0012673599999999975,
+          "brierMulti": 0.0024920321999999974,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tonga",
+          "leaderWinProbability": 0.9644,
+          "leaderWon": true,
+          "logScoreWinner": -0.03624913267512103,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              false,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.24907,
+          "brierLeader": 0.5633703364,
+          "brierMulti": 1.1272663237999998,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-waiariki",
+          "leaderWinProbability": 0.75058,
+          "leaderWon": false,
+          "logScoreWinner": -1.3900212975275248,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.43277,
+          "brierLeader": 0.3217498729,
+          "brierMulti": 0.6434997458,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-hauraki-waikato",
+          "leaderWinProbability": 0.56723,
+          "leaderWon": false,
+          "logScoreWinner": -0.8375488699336667,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.65137,
+          "brierLeader": 0.1215428769,
+          "brierMulti": 0.2430857538,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-ikaroa-rawhiti",
+          "leaderWinProbability": 0.65137,
+          "leaderWon": true,
+          "logScoreWinner": -0.42867744185207174,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.32233,
+          "brierLeader": 0.44044459560000004,
+          "brierMulti": 0.8998078658000002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-tamaki-makaurau",
+          "leaderWinProbability": 0.66366,
+          "leaderWon": false,
+          "logScoreWinner": -1.1321794135120575,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.40297,
+          "brierLeader": 0.32470622889999995,
+          "brierMulti": 0.6818908898,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-hauauru",
+          "leaderWinProbability": 0.56983,
+          "leaderWon": false,
+          "logScoreWinner": -0.9088931614937189,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              false,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.38193,
+          "brierLeader": 0.3668240356,
+          "brierMulti": 0.7489154566,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tokerau",
+          "leaderWinProbability": 0.60566,
+          "leaderWon": false,
+          "logScoreWinner": -0.9625179332404734,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.30497,
+          "brierLeader": 0.48306670090000003,
+          "brierMulti": 0.9661334018000001,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tonga",
+          "leaderWinProbability": 0.69503,
+          "leaderWon": false,
+          "logScoreWinner": -1.1875418678681895,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.85936,
+          "brierLeader": 0.019779609599999998,
+          "brierMulti": 0.039559219199999995,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-waiariki",
+          "leaderWinProbability": 0.85936,
+          "leaderWon": true,
+          "logScoreWinner": -0.15156735282498782,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        }
+      ],
+      "PB": [
+        {
+          "actualWinnerProbability": 0.28357,
+          "brierLeader": 0.5132719449,
+          "brierMulti": 1.0265438898,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-waiariki",
+          "leaderWinProbability": 0.71643,
+          "leaderWon": false,
+          "logScoreWinner": -1.2602962727122247,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.7484,
+          "brierLeader": 0.06330256000000002,
+          "brierMulti": 0.12201452480000002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-ikaroa-rawhiti",
+          "leaderWinProbability": 0.7484,
+          "leaderWon": true,
+          "logScoreWinner": -0.2898176845822026,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.34484,
+          "brierLeader": 0.4065975225000001,
+          "brierMulti": 0.8361387482000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-hauauru",
+          "leaderWinProbability": 0.63765,
+          "leaderWon": false,
+          "logScoreWinner": -1.0646747376404129,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.85796,
+          "brierLeader": 0.020175361600000014,
+          "brierMulti": 0.030263058600000014,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-tonga",
+          "leaderWinProbability": 0.85796,
+          "leaderWon": true,
+          "logScoreWinner": -0.15319780062754304,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.94087,
+          "brierLeader": 0.003496356900000002,
+          "brierMulti": 0.006992713800000002,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-hauraki-waikato",
+          "leaderWinProbability": 0.94087,
+          "leaderWon": true,
+          "logScoreWinner": -0.060950299843766834,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.69961,
+          "brierLeader": 0.09023415210000003,
+          "brierMulti": 0.14312752020000005,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-tamaki-makaurau",
+          "leaderWinProbability": 0.69961,
+          "leaderWon": true,
+          "logScoreWinner": -0.35723224205762827,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.87094,
+          "brierLeader": 0.016656483599999987,
+          "brierMulti": 0.03232217519999998,
+          "id": "2017-te-tai-tokerau",
+          "leaderWinProbability": 0.87094,
+          "leaderWon": true,
+          "logScoreWinner": -0.13818219083994998,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.97787,
+          "brierLeader": 0.0004897368999999993,
+          "brierMulti": 0.0009794737999999992,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-hauraki-waikato",
+          "leaderWinProbability": 0.97787,
+          "leaderWon": true,
+          "logScoreWinner": -0.022378542117920442,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.91861,
+          "brierLeader": 0.006624332099999994,
+          "brierMulti": 0.013046039599999995,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-ikaroa-rawhiti",
+          "leaderWinProbability": 0.91861,
+          "leaderWon": true,
+          "logScoreWinner": -0.08489362101862842,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.61612,
+          "brierLeader": 0.1473638544,
+          "brierMulti": 0.2704254554,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-tamaki-makaurau",
+          "leaderWinProbability": 0.61612,
+          "leaderWon": true,
+          "logScoreWinner": -0.48431352922588017,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.85888,
+          "brierLeader": 0.019914854400000008,
+          "brierMulti": 0.0398297088,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-hauauru",
+          "leaderWinProbability": 0.85888,
+          "leaderWon": true,
+          "logScoreWinner": -0.15212606407892948,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.87391,
+          "brierLeader": 0.01589868810000001,
+          "brierMulti": 0.03174702020000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tokerau",
+          "leaderWinProbability": 0.87391,
+          "leaderWon": true,
+          "logScoreWinner": -0.13477788345724856,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.96128,
+          "brierLeader": 0.0014992383999999981,
+          "brierMulti": 0.002934838399999998,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tonga",
+          "leaderWinProbability": 0.96128,
+          "leaderWon": true,
+          "logScoreWinner": -0.03948954928647649,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.251,
+          "brierLeader": 0.5603121315999999,
+          "brierMulti": 1.1213133432,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-waiariki",
+          "leaderWinProbability": 0.74854,
+          "leaderWon": false,
+          "logScoreWinner": -1.3823023398503531,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.62231,
+          "brierLeader": 0.1426497361,
+          "brierMulti": 0.28529947219999996,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-hauraki-waikato",
+          "leaderWinProbability": 0.37769,
+          "leaderWon": false,
+          "logScoreWinner": -0.4743169181161826,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.46486,
+          "brierLeader": 0.28637481959999994,
+          "brierMulti": 0.5727496391999999,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-ikaroa-rawhiti",
+          "leaderWinProbability": 0.46486,
+          "leaderWon": true,
+          "logScoreWinner": -0.7660189939958558,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.50838,
+          "brierLeader": 0.23181336090000002,
+          "brierMulti": 0.47356724899999997,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-tamaki-makaurau",
+          "leaderWinProbability": 0.48147,
+          "leaderWon": false,
+          "logScoreWinner": -0.6765260795437092,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.5937,
+          "brierLeader": 0.1496993481,
+          "brierMulti": 0.3151550102,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-hauauru",
+          "leaderWinProbability": 0.38691,
+          "leaderWon": false,
+          "logScoreWinner": -0.5213811377055073,
+          "shareCover": {
+            "0.5": [
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.57157,
+          "brierLeader": 0.17654282889999998,
+          "brierMulti": 0.36013015979999996,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tokerau",
+          "leaderWinProbability": 0.42017,
+          "leaderWon": false,
+          "logScoreWinner": -0.5593683185584949,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.48502,
+          "brierLeader": 0.2652044004,
+          "brierMulti": 0.5304088008,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tonga",
+          "leaderWinProbability": 0.51498,
+          "leaderWon": false,
+          "logScoreWinner": -0.7235651517814782,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.92611,
+          "brierLeader": 0.0054597321000000015,
+          "brierMulti": 0.010919464200000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-waiariki",
+          "leaderWinProbability": 0.92611,
+          "leaderWon": true,
+          "logScoreWinner": -0.07676226089422977,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        }
+      ]
+    },
+    "pooled": {
+      "C": {
+        "bands": {
+          "0.0-0.7": {
+            "meanPredicted": 0.658185,
+            "observed": 0.25,
+            "polls": 4
+          },
+          "0.7-0.9": {
+            "meanPredicted": 0.7661200000000001,
+            "observed": 0.375,
+            "polls": 8
+          },
+          "0.9-1.0": {
+            "meanPredicted": 0.954701111111111,
+            "observed": 1.0,
+            "polls": 9
+          }
+        },
+        "brierLeader": 0.22325411362380954,
+        "brierMulti": 0.4452548469809524,
+        "calibrationZ": -2.6504171970373918,
+        "contrastCoverage": {
+          "0.5": 0.35,
+          "0.8": 0.8,
+          "0.9": 0.95
+        },
+        "contrastPolls": 20,
+        "coverageDeviation": 0.10114942528735636,
+        "leaderWins": 13,
+        "meanLogScoreWinner": -0.6017043984168418,
+        "meanPredictedLeaderWin": 0.8263814285714287,
+        "observedLeaderWinRate": 0.6190476190476191,
+        "polls": 21,
+        "shareCoverage": {
+          "0.5": 0.3620689655172414,
+          "0.8": 0.7241379310344828,
+          "0.9": 0.8103448275862069
+        },
+        "shareObservations": 58
+      },
+      "P": {
+        "bands": {
+          "0.0-0.7": {
+            "meanPredicted": 0.6357577777777778,
+            "observed": 0.3333333333333333,
+            "polls": 9
+          },
+          "0.7-0.9": {
+            "meanPredicted": 0.8175725,
+            "observed": 0.75,
+            "polls": 8
+          },
+          "0.9-1.0": {
+            "meanPredicted": 0.9509475,
+            "observed": 1.0,
+            "polls": 4
+          }
+        },
+        "brierLeader": 0.1947594856238095,
+        "brierMulti": 0.3899690507428571,
+        "calibrationZ": -1.659714593672093,
+        "contrastCoverage": {
+          "0.5": 0.6,
+          "0.8": 1.0,
+          "0.9": 1.0
+        },
+        "contrastPolls": 20,
+        "coverageDeviation": 0.054022988505747105,
+        "leaderWins": 13,
+        "meanLogScoreWinner": -0.5514708035454022,
+        "meanPredictedLeaderWin": 0.7650566666666666,
+        "observedLeaderWinRate": 0.6190476190476191,
+        "polls": 21,
+        "shareCoverage": {
+          "0.5": 0.46551724137931033,
+          "0.8": 0.8793103448275862,
+          "0.9": 0.9482758620689655
+        },
+        "shareObservations": 58
+      },
+      "PB": {
+        "bands": {
+          "0.0-0.7": {
+            "meanPredicted": 0.5110511111111111,
+            "observed": 0.3333333333333333,
+            "polls": 9
+          },
+          "0.7-0.9": {
+            "meanPredicted": 0.8107228571428572,
+            "observed": 0.7142857142857143,
+            "polls": 7
+          },
+          "0.9-1.0": {
+            "meanPredicted": 0.9449480000000001,
+            "observed": 1.0,
+            "polls": 5
+          }
+        },
+        "brierLeader": 0.1487419735047619,
+        "brierMulti": 0.2964718240666666,
+        "calibrationZ": -1.0771714653887188,
+        "contrastCoverage": {
+          "0.5": 0.65,
+          "0.8": 1.0,
+          "0.9": 1.0
+        },
+        "contrastPolls": 20,
+        "coverageDeviation": 0.05977011494252871,
+        "leaderWins": 13,
+        "meanLogScoreWinner": -0.4486938865683153,
+        "meanPredictedLeaderWin": 0.7142504761904762,
+        "observedLeaderWinRate": 0.6190476190476191,
+        "polls": 21,
+        "shareCoverage": {
+          "0.5": 0.5344827586206896,
+          "0.8": 0.896551724137931,
+          "0.9": 0.9482758620689655
+        },
+        "shareObservations": 58
+      }
+    }
+  },
+  "leaveOneElectionOut": {
+    "byFold": {
+      "C": {
+        "2014": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.5299499999999999,
+              "observed": 0.0,
+              "polls": 2
+            },
+            "0.7-0.9": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.95232,
+              "observed": 1.0,
+              "polls": 2
+            }
+          },
+          "brierLeader": 0.14166847814999997,
+          "brierMulti": 0.2872569515,
+          "calibrationZ": -1.2572314793513626,
+          "contrastCoverage": {
+            "0.5": 0.5,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 4,
+          "coverageDeviation": 0.04583333333333336,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.4104276960635056,
+          "meanPredictedLeaderWin": 0.741135,
+          "observedLeaderWinRate": 0.5,
+          "polls": 4,
+          "shareCoverage": {
+            "0.5": 0.4375,
+            "0.8": 0.75,
+            "0.9": 0.875
+          },
+          "shareObservations": 16
+        },
+        "2017": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.75146,
+              "observed": 0.5,
+              "polls": 4
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.97406,
+              "observed": 1.0,
+              "polls": 3
+            }
+          },
+          "brierLeader": 0.18081235828571435,
+          "brierMulti": 0.3610414574285715,
+          "calibrationZ": -1.025080767297878,
+          "contrastCoverage": {
+            "0.5": 0.5,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 6,
+          "coverageDeviation": 0.07368421052631575,
+          "leaderWins": 5,
+          "meanLogScoreWinner": -0.49666861398664836,
+          "meanPredictedLeaderWin": 0.8468600000000001,
+          "observedLeaderWinRate": 0.7142857142857143,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.42105263157894735,
+            "0.8": 0.8947368421052632,
+            "0.9": 0.9473684210526315
+          },
+          "shareObservations": 19
+        },
+        "2020": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.65482,
+              "observed": 1.0,
+              "polls": 1
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.78933,
+              "observed": 0.0,
+              "polls": 1
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.953504,
+              "observed": 1.0,
+              "polls": 5
+            }
+          },
+          "brierLeader": 0.10841722244285713,
+          "brierMulti": 0.21645898188571427,
+          "calibrationZ": -0.2714455460582332,
+          "contrastCoverage": {
+            "0.5": 0.42857142857142855,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.08333333333333337,
+          "leaderWins": 6,
+          "meanLogScoreWinner": -0.31745516934372636,
+          "meanPredictedLeaderWin": 0.8873814285714285,
+          "observedLeaderWinRate": 0.8571428571428571,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.35,
+            "0.8": 0.75,
+            "0.9": 0.85
+          },
+          "shareObservations": 20
+        },
+        "2023": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.65406,
+              "observed": 0.0,
+              "polls": 3
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.7797300000000001,
+              "observed": 0.3333333333333333,
+              "polls": 3
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.96951,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.37325526594285713,
+          "brierMulti": 0.7467510506857141,
+          "calibrationZ": -2.963292034024426,
+          "contrastCoverage": {
+            "0.5": 0.2857142857142857,
+            "0.8": 0.7142857142857143,
+            "0.9": 0.8571428571428571
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.22456140350877196,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.9559421072306026,
+          "meanPredictedLeaderWin": 0.7529828571428572,
+          "observedLeaderWinRate": 0.2857142857142857,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.2631578947368421,
+            "0.8": 0.5789473684210527,
+            "0.9": 0.6842105263157895
+          },
+          "shareObservations": 19
+        }
+      },
+      "P": {
+        "2014": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.48641999999999996,
+              "observed": 0.0,
+              "polls": 2
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.78665,
+              "observed": 1.0,
+              "polls": 2
+            },
+            "0.9-1.0": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            }
+          },
+          "brierLeader": 0.14169937670000002,
+          "brierMulti": 0.31536364325000005,
+          "calibrationZ": -0.5984785958354395,
+          "contrastCoverage": {
+            "0.5": 1.0,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 4,
+          "coverageDeviation": 0.20416666666666664,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.5298886486656675,
+          "meanPredictedLeaderWin": 0.636535,
+          "observedLeaderWinRate": 0.5,
+          "polls": 4,
+          "shareCoverage": {
+            "0.5": 0.8125,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "shareObservations": 16
+        },
+        "2017": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.6333125000000001,
+              "observed": 0.5,
+              "polls": 4
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.85684,
+              "observed": 1.0,
+              "polls": 3
+            },
+            "0.9-1.0": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            }
+          },
+          "brierLeader": 0.17073974167142855,
+          "brierMulti": 0.33371986157142847,
+          "calibrationZ": -0.09145263144538907,
+          "contrastCoverage": {
+            "0.5": 1.0,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 6,
+          "coverageDeviation": 0.14385964912280694,
+          "leaderWins": 5,
+          "meanLogScoreWinner": -0.5037736513901774,
+          "meanPredictedLeaderWin": 0.72911,
+          "observedLeaderWinRate": 0.7142857142857143,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.7368421052631579,
+            "0.8": 0.9473684210526315,
+            "0.9": 0.9473684210526315
+          },
+          "shareObservations": 19
+        },
+        "2020": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.6381049999999999,
+              "observed": 0.5,
+              "polls": 2
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.82884,
+              "observed": 1.0,
+              "polls": 3
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.942045,
+              "observed": 1.0,
+              "polls": 2
+            }
+          },
+          "brierLeader": 0.10778714737142857,
+          "brierMulti": 0.21200744297142857,
+          "calibrationZ": 0.35544608905412084,
+          "contrastCoverage": {
+            "0.5": 0.5714285714285714,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.033333333333333326,
+          "leaderWins": 6,
+          "meanLogScoreWinner": -0.34451914454317006,
+          "meanPredictedLeaderWin": 0.8066885714285714,
+          "observedLeaderWinRate": 0.8571428571428571,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.55,
+            "0.8": 0.85,
+            "0.9": 0.9
+          },
+          "shareObservations": 20
+        },
+        "2023": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.6248616666666666,
+              "observed": 0.16666666666666666,
+              "polls": 6
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.85828,
+              "observed": 1.0,
+              "polls": 1
+            },
+            "0.9-1.0": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            }
+          },
+          "brierLeader": 0.29657025895714284,
+          "brierMulti": 0.6029282594857142,
+          "calibrationZ": -2.1184934867154563,
+          "contrastCoverage": {
+            "0.5": 0.5714285714285714,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.07368421052631578,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.8010830633578802,
+          "meanPredictedLeaderWin": 0.6582071428571429,
+          "observedLeaderWinRate": 0.2857142857142857,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.47368421052631576,
+            "0.8": 0.8947368421052632,
+            "0.9": 1.0
+          },
+          "shareObservations": 19
+        }
+      },
+      "PB": {
+        "2014": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.465835,
+              "observed": 0.0,
+              "polls": 2
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.81844,
+              "observed": 1.0,
+              "polls": 1
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.93065,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.11925648794999998,
+          "brierMulti": 0.25607831965,
+          "calibrationZ": -0.8104549620682286,
+          "contrastCoverage": {
+            "0.5": 0.5,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 4,
+          "coverageDeviation": 0.14166666666666664,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.42512198636429144,
+          "meanPredictedLeaderWin": 0.67019,
+          "observedLeaderWinRate": 0.5,
+          "polls": 4,
+          "shareCoverage": {
+            "0.5": 0.625,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "shareObservations": 16
+        },
+        "2017": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.662955,
+              "observed": 0.5,
+              "polls": 2
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.8011575,
+              "observed": 0.75,
+              "polls": 4
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.96498,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.15565906188571432,
+          "brierMulti": 0.3057246359142857,
+          "calibrationZ": -0.4744944270711311,
+          "contrastCoverage": {
+            "0.5": 0.8333333333333334,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 6,
+          "coverageDeviation": 0.12631578947368416,
+          "leaderWins": 5,
+          "meanLogScoreWinner": -0.45634158144941595,
+          "meanPredictedLeaderWin": 0.7850742857142857,
+          "observedLeaderWinRate": 0.7142857142857143,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.6842105263157895,
+            "0.8": 0.9473684210526315,
+            "0.9": 0.9473684210526315
+          },
+          "shareObservations": 19
+        },
+        "2020": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.513545,
+              "observed": 0.75,
+              "polls": 4
+            },
+            "0.7-0.9": {
+              "meanPredicted": 0.7851699999999999,
+              "observed": 1.0,
+              "polls": 2
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.90647,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.1475768724714286,
+          "brierMulti": 0.29194164671428574,
+          "calibrationZ": 1.259095565318183,
+          "contrastCoverage": {
+            "0.5": 0.8571428571428571,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.09999999999999998,
+          "leaderWins": 6,
+          "meanLogScoreWinner": -0.4591015778494843,
+          "meanPredictedLeaderWin": 0.6472842857142858,
+          "observedLeaderWinRate": 0.8571428571428571,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.7,
+            "0.8": 0.85,
+            "0.9": 0.85
+          },
+          "shareObservations": 20
+        },
+        "2023": {
+          "bands": {
+            "0.0-0.7": {
+              "meanPredicted": 0.43948833333333326,
+              "observed": 0.16666666666666666,
+              "polls": 6
+            },
+            "0.7-0.9": {
+              "meanPredicted": null,
+              "observed": null,
+              "polls": 0
+            },
+            "0.9-1.0": {
+              "meanPredicted": 0.9298,
+              "observed": 1.0,
+              "polls": 1
+            }
+          },
+          "brierLeader": 0.17923617435714287,
+          "brierMulti": 0.3629331898571429,
+          "calibrationZ": -1.2674229628757336,
+          "contrastCoverage": {
+            "0.5": 0.8571428571428571,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "contrastPolls": 7,
+          "coverageDeviation": 0.1263157894736842,
+          "leaderWins": 2,
+          "meanLogScoreWinner": -0.5407812974738478,
+          "meanPredictedLeaderWin": 0.5095328571428571,
+          "observedLeaderWinRate": 0.2857142857142857,
+          "polls": 7,
+          "shareCoverage": {
+            "0.5": 0.6842105263157895,
+            "0.8": 0.8947368421052632,
+            "0.9": 1.0
+          },
+          "shareObservations": 19
+        }
+      }
+    },
+    "comparisons": {
+      "C->P": {
+        "brierDifference": -0.02446361186000001,
+        "brierInterval90": [
+          -0.0514411203534,
+          0.0019644185872000042
+        ],
+        "logScoreDifference": 0.014679456339184018,
+        "logScoreInterval90": [
+          -0.05323292657822407,
+          0.08796063988051216
+        ]
+      },
+      "C->PB": {
+        "brierDifference": -0.05398948506,
+        "brierInterval90": [
+          -0.1158316115108,
+          0.006657226462200003
+        ],
+        "logScoreDifference": 0.08552451501257846,
+        "logScoreInterval90": [
+          -0.05204369948432911,
+          0.22958307029370048
+        ]
+      },
+      "P->PB": {
+        "brierDifference": -0.029525873199999993,
+        "brierInterval90": [
+          -0.06985497894699998,
+          0.01106173038180003
+        ],
+        "logScoreDifference": 0.07084505867339445,
+        "logScoreInterval90": [
+          -0.01814342377172628,
+          0.1582736540066573
+        ]
+      }
+    },
+    "fits": {
+      "2014": {
+        "C": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 4.051532280477531,
+          "lambdaInterval": {
+            "p05": 2.301782433247288,
+            "p50": 4.556414493195739,
+            "p95": 8.602340037665043,
+            "replicates": 1000
+          },
+          "sigma2": 0.045076837773030676,
+          "sigma2Dof": 17,
+          "tau2": 0.09538583676009255,
+          "trainElections": [
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "P": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 4.051532280477531,
+          "lambdaInterval": {
+            "p05": 2.3740558165390455,
+            "p50": 4.557367060859226,
+            "p95": 9.053848585065557,
+            "replicates": 1000
+          },
+          "sigma2": 0.045076837773030676,
+          "sigma2Dof": 17,
+          "tau2": 0.09538583676009255,
+          "trainElections": [
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "PB": {
+          "bias": [
+            0.0,
+            0.44503188986721864,
+            0.341204721821099
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": -0.11165693302543496,
+          "lambdaHat": 4.640201167555012,
+          "lambdaInterval": {
+            "p05": 2.346699671987626,
+            "p50": 4.763960308271099,
+            "p95": 9.534576845623706,
+            "replicates": 1000
+          },
+          "sigma2": 0.045076837773030676,
+          "sigma2Dof": 17,
+          "tau2": 0.0,
+          "trainElections": [
+            2017,
+            2020,
+            2023
+          ]
+        }
+      },
+      "2017": {
+        "C": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 3.218618375084263,
+          "lambdaInterval": {
+            "p05": 1.4741163607757923,
+            "p50": 3.871374308385649,
+            "p95": 8.27674259976207,
+            "replicates": 1000
+          },
+          "sigma2": 0.05170764205475388,
+          "sigma2Dof": 15,
+          "tau2": 0.08804159904691927,
+          "trainElections": [
+            2014,
+            2020,
+            2023
+          ]
+        },
+        "P": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 3.218618375084263,
+          "lambdaInterval": {
+            "p05": 1.5003585272710598,
+            "p50": 3.7697220567650636,
+            "p95": 8.222574960906881,
+            "replicates": 1000
+          },
+          "sigma2": 0.05170764205475388,
+          "sigma2Dof": 15,
+          "tau2": 0.08804159904691927,
+          "trainElections": [
+            2014,
+            2020,
+            2023
+          ]
+        },
+        "PB": {
+          "bias": [
+            0.0,
+            0.44503188986721864,
+            0.341204721821099
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": -0.07107599459466557,
+          "lambdaHat": 3.661339293496151,
+          "lambdaInterval": {
+            "p05": 1.6338111281898744,
+            "p50": 3.937070028227359,
+            "p95": 9.082084541198297,
+            "replicates": 1000
+          },
+          "sigma2": 0.05170764205475388,
+          "sigma2Dof": 15,
+          "tau2": 0.0,
+          "trainElections": [
+            2014,
+            2020,
+            2023
+          ]
+        }
+      },
+      "2020": {
+        "C": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 2.236229693112788,
+          "lambdaInterval": {
+            "p05": 1.1873960717088141,
+            "p50": 2.502702005417966,
+            "p95": 5.468887669122698,
+            "replicates": 1000
+          },
+          "sigma2": 0.062345137436448095,
+          "sigma2Dof": 14,
+          "tau2": 0.0486017576972006,
+          "trainElections": [
+            2014,
+            2017,
+            2023
+          ]
+        },
+        "P": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 2.236229693112788,
+          "lambdaInterval": {
+            "p05": 1.2545444712961635,
+            "p50": 2.618802579263384,
+            "p95": 5.820293855775147,
+            "replicates": 1000
+          },
+          "sigma2": 0.062345137436448095,
+          "sigma2Dof": 14,
+          "tau2": 0.0486017576972006,
+          "trainElections": [
+            2014,
+            2017,
+            2023
+          ]
+        },
+        "PB": {
+          "bias": [
+            -0.11165693302543496,
+            -0.07107599459466557,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.44503188986721864,
+          "lambdaHat": 2.2328618604590353,
+          "lambdaInterval": {
+            "p05": 1.2784102065451266,
+            "p50": 2.5490953368899634,
+            "p95": 5.218402028723341,
+            "replicates": 1000
+          },
+          "sigma2": 0.062345137436448095,
+          "sigma2Dof": 14,
+          "tau2": 0.04385994350639273,
+          "trainElections": [
+            2014,
+            2017,
+            2023
+          ]
+        }
+      },
+      "2023": {
+        "C": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 2.817738566083246,
+          "lambdaInterval": {
+            "p05": 1.2555276037835388,
+            "p50": 3.3262017962326347,
+            "p95": 7.71244904746905,
+            "replicates": 1000
+          },
+          "sigma2": 0.05709179580610473,
+          "sigma2Dof": 14,
+          "tau2": 0.023350430576435537,
+          "trainElections": [
+            2014,
+            2017,
+            2020
+          ]
+        },
+        "P": {
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.0,
+          "lambdaHat": 2.817738566083246,
+          "lambdaInterval": {
+            "p05": 1.1941337696010232,
+            "p50": 3.336834759726507,
+            "p95": 8.396359902391033,
+            "replicates": 1000
+          },
+          "sigma2": 0.05709179580610473,
+          "sigma2Dof": 14,
+          "tau2": 0.023350430576435537,
+          "trainElections": [
+            2014,
+            2017,
+            2020
+          ]
+        },
+        "PB": {
+          "bias": [
+            -0.11165693302543496,
+            -0.07107599459466557,
+            0.0
+          ],
+          "bootstrapReplicates": 1000,
+          "bootstrapSkipped": 0,
+          "elections": 3,
+          "heldOutBias": 0.341204721821099,
+          "lambdaHat": 2.8010145141151197,
+          "lambdaInterval": {
+            "p05": 1.1688593319688236,
+            "p50": 3.334420331481301,
+            "p95": 8.093771593614253,
+            "replicates": 1000
+          },
+          "sigma2": 0.05709179580610473,
+          "sigma2Dof": 14,
+          "tau2": 0.01860861638562767,
+          "trainElections": [
+            2014,
+            2017,
+            2020
+          ]
+        }
+      }
+    },
+    "foldsScored": [
+      2014,
+      2017,
+      2020,
+      2023
+    ],
+    "pollRecords": {
+      "C": [
+        {
+          "actualWinnerProbability": 0.46746,
+          "brierLeader": 0.27730755999999995,
+          "brierMulti": 0.5609414584,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-tamaki-makaurau",
+          "leaderWinProbability": 0.5266,
+          "leaderWon": false,
+          "logScoreWinner": -0.7604414954113153,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.45688,
+          "brierLeader": 0.28440888999999997,
+          "brierMulti": 0.5794846568,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-te-tai-tokerau",
+          "leaderWinProbability": 0.5333,
+          "leaderWon": false,
+          "logScoreWinner": -0.7833345046255296,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.96665,
+          "brierLeader": 0.0011122224999999995,
+          "brierMulti": 0.0022237781999999997,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-te-tai-tonga",
+          "leaderWinProbability": 0.96665,
+          "leaderWon": true,
+          "logScoreWinner": -0.03391879320362597,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "0.8": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.93799,
+          "brierLeader": 0.003845240100000001,
+          "brierMulti": 0.006377912600000001,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-waiariki",
+          "leaderWinProbability": 0.93799,
+          "leaderWon": true,
+          "logScoreWinner": -0.06401599101355128,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.21056,
+          "brierLeader": 0.6232155136,
+          "brierMulti": 1.2464310272,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-waiariki",
+          "leaderWinProbability": 0.78944,
+          "leaderWon": false,
+          "logScoreWinner": -1.5579846308451848,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.75224,
+          "brierLeader": 0.06138501759999999,
+          "brierMulti": 0.12277003519999999,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-ikaroa-rawhiti",
+          "leaderWinProbability": 0.75224,
+          "leaderWon": true,
+          "logScoreWinner": -0.28469985701331557,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.28279,
+          "brierLeader": 0.5143901841,
+          "brierMulti": 1.0287803682,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-hauauru",
+          "leaderWinProbability": 0.71721,
+          "leaderWon": false,
+          "logScoreWinner": -1.263050706263848,
+          "shareCover": {
+            "0.5": [
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.95363,
+          "brierLeader": 0.002150176900000002,
+          "brierMulti": 0.004071926600000002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-tonga",
+          "leaderWinProbability": 0.95363,
+          "leaderWon": true,
+          "logScoreWinner": -0.04747952343435512,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.98138,
+          "brierLeader": 0.00034670439999999887,
+          "brierMulti": 0.0006934087999999989,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-hauraki-waikato",
+          "leaderWinProbability": 0.98138,
+          "leaderWon": true,
+          "logScoreWinner": -0.018795534584325924,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.74695,
+          "brierLeader": 0.0640343025,
+          "brierMulti": 0.1242142182,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-tamaki-makaurau",
+          "leaderWinProbability": 0.74695,
+          "leaderWon": true,
+          "logScoreWinner": -0.29175703049381074,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.98717,
+          "brierLeader": 0.0001646089000000002,
+          "brierMulti": 0.0003292178000000002,
+          "id": "2017-te-tai-tokerau",
+          "leaderWinProbability": 0.98717,
+          "leaderWon": true,
+          "logScoreWinner": -0.012913015271698376,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false
+            ],
+            "0.8": [
+              false,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.99378,
+          "brierLeader": 3.868840000000004e-05,
+          "brierMulti": 7.737680000000004e-05,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-hauraki-waikato",
+          "leaderWinProbability": 0.99378,
+          "leaderWon": true,
+          "logScoreWinner": -0.006239424790019123,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.95895,
+          "brierLeader": 0.0016851025000000025,
+          "brierMulti": 0.003370205000000003,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-ikaroa-rawhiti",
+          "leaderWinProbability": 0.95895,
+          "leaderWon": true,
+          "logScoreWinner": -0.04191634310129155,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.65482,
+          "brierLeader": 0.11914923240000003,
+          "brierMulti": 0.23567022380000005,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-tamaki-makaurau",
+          "leaderWinProbability": 0.65482,
+          "leaderWon": true,
+          "logScoreWinner": -0.4233948902741471,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.90742,
+          "brierLeader": 0.008571056399999999,
+          "brierMulti": 0.017142112799999998,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-hauauru",
+          "leaderWinProbability": 0.90742,
+          "leaderWon": true,
+          "logScoreWinner": -0.09714987099891968,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.92094,
+          "brierLeader": 0.006250483600000003,
+          "brierMulti": 0.012500967200000004,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tokerau",
+          "leaderWinProbability": 0.92094,
+          "leaderWon": true,
+          "logScoreWinner": -0.08236039142876539,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.98643,
+          "brierLeader": 0.0001841448999999992,
+          "brierMulti": 0.00036828979999999924,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tonga",
+          "leaderWinProbability": 0.98643,
+          "leaderWon": true,
+          "logScoreWinner": -0.013662913969183269,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              false,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.21067,
+          "brierLeader": 0.6230418488999999,
+          "brierMulti": 1.2460836977999998,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-waiariki",
+          "leaderWinProbability": 0.78933,
+          "leaderWon": false,
+          "logScoreWinner": -1.5574623508437582,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.38486,
+          "brierLeader": 0.3783972196,
+          "brierMulti": 0.7567944392,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-hauraki-waikato",
+          "leaderWinProbability": 0.61514,
+          "leaderWon": false,
+          "logScoreWinner": -0.9548756471897242,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.75035,
+          "brierLeader": 0.06232512250000002,
+          "brierMulti": 0.12465024500000002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-ikaroa-rawhiti",
+          "leaderWinProbability": 0.75035,
+          "leaderWon": true,
+          "logScoreWinner": -0.2872155146401385,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.22272,
+          "brierLeader": 0.6040242961000001,
+          "brierMulti": 1.208188501,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-tamaki-makaurau",
+          "leaderWinProbability": 0.77719,
+          "leaderWon": false,
+          "logScoreWinner": -1.5018399018360822,
+          "shareCover": {
+            "0.5": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false,
+              false
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.34857,
+          "brierLeader": 0.4229161024,
+          "brierMulti": 0.8472783794,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": false,
+            "0.9": false
+          },
+          "id": "2023-te-tai-hauauru",
+          "leaderWinProbability": 0.65032,
+          "leaderWon": false,
+          "logScoreWinner": -1.0539162081192568,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              false,
+              false,
+              false
+            ],
+            "0.9": [
+              false,
+              false,
+              false
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.30321,
+          "brierLeader": 0.4854187584,
+          "brierMulti": 0.9709350649999999,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tokerau",
+          "leaderWinProbability": 0.69672,
+          "leaderWon": false,
+          "logScoreWinner": -1.1933296442274561,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.18835,
+          "brierLeader": 0.6587757224999999,
+          "brierMulti": 1.3175514449999999,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": false,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tonga",
+          "leaderWinProbability": 0.81165,
+          "leaderWon": false,
+          "logScoreWinner": -1.6694533448440871,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              false,
+              false
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.96951,
+          "brierLeader": 0.000929640100000001,
+          "brierMulti": 0.001859280200000001,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-waiariki",
+          "leaderWinProbability": 0.96951,
+          "leaderWon": true,
+          "logScoreWinner": -0.030964489757473505,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        }
+      ],
+      "P": [
+        {
+          "actualWinnerProbability": 0.43587,
+          "brierLeader": 0.2389743225,
+          "brierMulti": 0.5619318164000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-tamaki-makaurau",
+          "leaderWinProbability": 0.48885,
+          "leaderWon": false,
+          "logScoreWinner": -0.8304112452307799,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.44613,
+          "brierLeader": 0.2342463201,
+          "brierMulti": 0.5459001139999999,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-te-tai-tokerau",
+          "leaderWinProbability": 0.48399,
+          "leaderWon": false,
+          "logScoreWinner": -0.8071448896134351,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.82229,
+          "brierLeader": 0.03158084410000001,
+          "brierMulti": 0.05806254300000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-te-tai-tonga",
+          "leaderWinProbability": 0.82229,
+          "leaderWon": true,
+          "logScoreWinner": -0.1956621480910292,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.75101,
+          "brierLeader": 0.06199602010000002,
+          "brierMulti": 0.09556009960000003,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-waiariki",
+          "leaderWinProbability": 0.75101,
+          "leaderWon": true,
+          "logScoreWinner": -0.2863363117274262,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.32864,
+          "brierLeader": 0.45072424959999996,
+          "brierMulti": 0.9014484991999999,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-waiariki",
+          "leaderWinProbability": 0.67136,
+          "leaderWon": false,
+          "logScoreWinner": -1.1127923522419436,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.64293,
+          "brierLeader": 0.1274989849,
+          "brierMulti": 0.2541226034,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-ikaroa-rawhiti",
+          "leaderWinProbability": 0.64293,
+          "leaderWon": true,
+          "logScoreWinner": -0.4417194253674429,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.37224,
+          "brierLeader": 0.38672229690000004,
+          "brierMulti": 0.7808396066,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-hauauru",
+          "leaderWinProbability": 0.62187,
+          "leaderWon": false,
+          "logScoreWinner": -0.988216471445744,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.79147,
+          "brierLeader": 0.043484760899999995,
+          "brierMulti": 0.07140207979999999,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-tonga",
+          "leaderWinProbability": 0.79147,
+          "leaderWon": true,
+          "logScoreWinner": -0.23386330309575765,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.89052,
+          "brierLeader": 0.011985870400000005,
+          "brierMulti": 0.023971740800000002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-hauraki-waikato",
+          "leaderWinProbability": 0.89052,
+          "leaderWon": true,
+          "logScoreWinner": -0.11594971721209459,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.59709,
+          "brierLeader": 0.1623364681,
+          "brierMulti": 0.27943010339999996,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-tamaki-makaurau",
+          "leaderWinProbability": 0.59709,
+          "leaderWon": true,
+          "logScoreWinner": -0.5156874231828982,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.88853,
+          "brierLeader": 0.01242556089999999,
+          "brierMulti": 0.02482439779999999,
+          "id": "2017-te-tai-tokerau",
+          "leaderWinProbability": 0.88853,
+          "leaderWon": true,
+          "logScoreWinner": -0.11818686718536028,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.95689,
+          "brierLeader": 0.0018584720999999984,
+          "brierMulti": 0.0037169441999999986,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-hauraki-waikato",
+          "leaderWinProbability": 0.95689,
+          "leaderWon": true,
+          "logScoreWinner": -0.0440668366643171,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.86946,
+          "brierLeader": 0.017040691599999998,
+          "brierMulti": 0.0339902002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-ikaroa-rawhiti",
+          "leaderWinProbability": 0.86946,
+          "leaderWon": true,
+          "logScoreWinner": -0.13988294969624926,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.5819,
+          "brierLeader": 0.17480761000000003,
+          "brierMulti": 0.324657195,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-tamaki-makaurau",
+          "leaderWinProbability": 0.5819,
+          "leaderWon": true,
+          "logScoreWinner": -0.5414566673195128,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.80093,
+          "brierLeader": 0.03962886489999999,
+          "brierMulti": 0.07925772979999998,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-hauauru",
+          "leaderWinProbability": 0.80093,
+          "leaderWon": true,
+          "logScoreWinner": -0.22198172649412096,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.81613,
+          "brierLeader": 0.033808176899999993,
+          "brierMulti": 0.06760164739999999,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tokerau",
+          "leaderWinProbability": 0.81613,
+          "leaderWon": true,
+          "logScoreWinner": -0.2031816229816237,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.9272,
+          "brierLeader": 0.005299839999999997,
+          "brierMulti": 0.010570639999999996,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tonga",
+          "leaderWinProbability": 0.9272,
+          "leaderWon": true,
+          "logScoreWinner": -0.07558598695659507,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.3056,
+          "brierLeader": 0.48206637609999997,
+          "brierMulti": 0.9642577442,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-waiariki",
+          "leaderWinProbability": 0.69431,
+          "leaderWon": false,
+          "logScoreWinner": -1.1854782216897717,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.43288,
+          "brierLeader": 0.3216250944,
+          "brierMulti": 0.6432501888000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-hauraki-waikato",
+          "leaderWinProbability": 0.56712,
+          "leaderWon": false,
+          "logScoreWinner": -0.8372947256476573,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.65001,
+          "brierLeader": 0.12249300010000001,
+          "brierMulti": 0.24498600020000003,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-ikaroa-rawhiti",
+          "leaderWinProbability": 0.65001,
+          "leaderWon": true,
+          "logScoreWinner": -0.43076753159541165,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.32652,
+          "brierLeader": 0.43437326490000006,
+          "brierMulti": 0.8880819674000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-tamaki-makaurau",
+          "leaderWinProbability": 0.65907,
+          "leaderWon": false,
+          "logScoreWinner": -1.1192640763989818,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.40168,
+          "brierLeader": 0.32455808999999997,
+          "brierMulti": 0.6833640167999999,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-hauauru",
+          "leaderWinProbability": 0.5697,
+          "leaderWon": false,
+          "logScoreWinner": -0.912099527255687,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              false,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.37873,
+          "brierLeader": 0.37112463999999995,
+          "brierMulti": 0.7571801965999999,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tokerau",
+          "leaderWinProbability": 0.6092,
+          "leaderWon": false,
+          "logScoreWinner": -0.9709317288333341,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.30593,
+          "brierLeader": 0.48173316489999995,
+          "brierMulti": 0.9634663297999999,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tonga",
+          "leaderWinProbability": 0.69407,
+          "leaderWon": false,
+          "logScoreWinner": -1.1843989613688322,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.85828,
+          "brierLeader": 0.020084558399999987,
+          "brierMulti": 0.04016911679999999,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-waiariki",
+          "leaderWinProbability": 0.85828,
+          "leaderWon": true,
+          "logScoreWinner": -0.15282489240525665,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        }
+      ],
+      "PB": [
+        {
+          "actualWinnerProbability": 0.50278,
+          "brierLeader": 0.1719014521,
+          "brierMulti": 0.42482829499999997,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-tamaki-makaurau",
+          "leaderWinProbability": 0.41461,
+          "leaderWon": false,
+          "logScoreWinner": -0.6876025803045949,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.4768,
+          "brierLeader": 0.26735104359999995,
+          "brierMulti": 0.5411264952,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-te-tai-tokerau",
+          "leaderWinProbability": 0.51706,
+          "leaderWon": false,
+          "logScoreWinner": -0.7406581632309971,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.93065,
+          "brierLeader": 0.004809422500000003,
+          "brierMulti": 0.007454317800000004,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-te-tai-tonga",
+          "leaderWinProbability": 0.93065,
+          "leaderWon": true,
+          "logScoreWinner": -0.07187201223779495,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.81844,
+          "brierLeader": 0.03296403360000002,
+          "brierMulti": 0.050904170600000014,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2014-waiariki",
+          "leaderWinProbability": 0.81844,
+          "leaderWon": true,
+          "logScoreWinner": -0.20035518968377863,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2014
+        },
+        {
+          "actualWinnerProbability": 0.29613,
+          "brierLeader": 0.4954329769,
+          "brierMulti": 0.9908659538,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-waiariki",
+          "leaderWinProbability": 0.70387,
+          "leaderWon": false,
+          "logScoreWinner": -1.2169567318842307,
+          "shareCover": {
+            "0.5": [
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.74047,
+          "brierLeader": 0.06735582090000002,
+          "brierMulti": 0.1338965198,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-ikaroa-rawhiti",
+          "leaderWinProbability": 0.74047,
+          "leaderWon": true,
+          "logScoreWinner": -0.30047015926174336,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.36143,
+          "brierLeader": 0.40194332010000006,
+          "brierMulti": 0.8097359414000002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-hauauru",
+          "leaderWinProbability": 0.63399,
+          "leaderWon": false,
+          "logScoreWinner": -1.017686893754526,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.87778,
+          "brierLeader": 0.0149377284,
+          "brierMulti": 0.0224094726,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-te-tai-tonga",
+          "leaderWinProbability": 0.87778,
+          "leaderWon": true,
+          "logScoreWinner": -0.13035928622087856,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.96498,
+          "brierLeader": 0.0012264004000000035,
+          "brierMulti": 0.0024528008000000035,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-hauraki-waikato",
+          "leaderWinProbability": 0.96498,
+          "leaderWon": true,
+          "logScoreWinner": -0.03564790324652605,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.69192,
+          "brierLeader": 0.09491328640000002,
+          "brierMulti": 0.15312744080000004,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2017-tamaki-makaurau",
+          "leaderWinProbability": 0.69192,
+          "leaderWon": true,
+          "logScoreWinner": -0.36828493698388065,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.88251,
+          "brierLeader": 0.013803900099999995,
+          "brierMulti": 0.027584322199999997,
+          "id": "2017-te-tai-tokerau",
+          "leaderWinProbability": 0.88251,
+          "leaderWon": true,
+          "logScoreWinner": -0.12498515879412633,
+          "shareCover": {
+            "0.5": [
+              false,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2017
+        },
+        {
+          "actualWinnerProbability": 0.90647,
+          "brierLeader": 0.0087478609,
+          "brierMulti": 0.0174957218,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-hauraki-waikato",
+          "leaderWinProbability": 0.90647,
+          "leaderWon": true,
+          "logScoreWinner": -0.09819734365366896,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.72597,
+          "brierLeader": 0.0750924409,
+          "brierMulti": 0.1500862828,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-ikaroa-rawhiti",
+          "leaderWinProbability": 0.72597,
+          "leaderWon": true,
+          "logScoreWinner": -0.3202465873251809,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.3491,
+          "brierLeader": 0.42367081000000006,
+          "brierMulti": 0.8249755832000001,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-tamaki-makaurau",
+          "leaderWinProbability": 0.3491,
+          "leaderWon": true,
+          "logScoreWinner": -1.0523968648711466,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.60821,
+          "brierLeader": 0.1534994041,
+          "brierMulti": 0.30699880820000003,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-hauauru",
+          "leaderWinProbability": 0.60821,
+          "leaderWon": true,
+          "logScoreWinner": -0.49723506191415867,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.63424,
+          "brierLeader": 0.13378037759999997,
+          "brierMulti": 0.2675534402,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tokerau",
+          "leaderWinProbability": 0.63424,
+          "leaderWon": true,
+          "logScoreWinner": -0.4553278472805685,
+          "shareCover": {
+            "0.5": [
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.84437,
+          "brierLeader": 0.024220696900000015,
+          "brierMulti": 0.04839164340000002,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-te-tai-tonga",
+          "leaderWinProbability": 0.84437,
+          "leaderWon": true,
+          "logScoreWinner": -0.16916449182480647,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              false
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.53733,
+          "brierLeader": 0.2140265169,
+          "brierMulti": 0.4280900474,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2020-waiariki",
+          "leaderWinProbability": 0.46263,
+          "leaderWon": false,
+          "logScoreWinner": -0.6211428480768603,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2020
+        },
+        {
+          "actualWinnerProbability": 0.6258,
+          "brierLeader": 0.14002563999999998,
+          "brierMulti": 0.28005127999999996,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-hauraki-waikato",
+          "leaderWinProbability": 0.3742,
+          "leaderWon": false,
+          "logScoreWinner": -0.4687244477473553,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.4622,
+          "brierLeader": 0.28922884000000004,
+          "brierMulti": 0.57845768,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-ikaroa-rawhiti",
+          "leaderWinProbability": 0.4622,
+          "leaderWon": true,
+          "logScoreWinner": -0.7717575811418567,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.51085,
+          "brierLeader": 0.22996820249999997,
+          "brierMulti": 0.46929521479999997,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-tamaki-makaurau",
+          "leaderWinProbability": 0.47955,
+          "leaderWon": false,
+          "logScoreWinner": -0.6716792739447043,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.59638,
+          "brierLeader": 0.14850232959999998,
+          "brierMulti": 0.3117448615999999,
+          "contrastCover": {
+            "0.5": false,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-hauauru",
+          "leaderWinProbability": 0.38536,
+          "leaderWon": false,
+          "logScoreWinner": -0.5168772311944257,
+          "shareCover": {
+            "0.5": [
+              false,
+              false,
+              false
+            ],
+            "0.8": [
+              true,
+              true,
+              false
+            ],
+            "0.9": [
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.57027,
+          "brierLeader": 0.17757796,
+          "brierMulti": 0.36228279579999995,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tokerau",
+          "leaderWinProbability": 0.4214,
+          "leaderWon": false,
+          "logScoreWinner": -0.5616453460959652,
+          "shareCover": {
+            "0.5": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.8": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "0.9": [
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.48578,
+          "brierLeader": 0.2644222084,
+          "brierMulti": 0.5288444168,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-te-tai-tonga",
+          "leaderWinProbability": 0.51422,
+          "leaderWon": false,
+          "logScoreWinner": -0.7219994324669743,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        },
+        {
+          "actualWinnerProbability": 0.9298,
+          "brierLeader": 0.004928040000000006,
+          "brierMulti": 0.009856080000000007,
+          "contrastCover": {
+            "0.5": true,
+            "0.8": true,
+            "0.9": true
+          },
+          "id": "2023-waiariki",
+          "leaderWinProbability": 0.9298,
+          "leaderWon": true,
+          "logScoreWinner": -0.07278576972565273,
+          "shareCover": {
+            "0.5": [
+              true,
+              true
+            ],
+            "0.8": [
+              true,
+              true
+            ],
+            "0.9": [
+              true,
+              true
+            ]
+          },
+          "year": 2023
+        }
+      ]
+    },
+    "pooled": {
+      "C": {
+        "bands": {
+          "0.0-0.7": {
+            "meanPredicted": 0.6128166666666667,
+            "observed": 0.16666666666666666,
+            "polls": 6
+          },
+          "0.7-0.9": {
+            "meanPredicted": 0.766795,
+            "observed": 0.375,
+            "polls": 8
+          },
+          "0.9-1.0": {
+            "meanPredicted": 0.96035,
+            "observed": 1.0,
+            "polls": 11
+          }
+        },
+        "brierLeader": 0.20816271357199997,
+        "brierMulti": 0.41675152944,
+        "calibrationZ": -2.988653576171044,
+        "contrastCoverage": {
+          "0.5": 0.4166666666666667,
+          "0.8": 0.9166666666666666,
+          "0.9": 0.9583333333333334
+        },
+        "contrastPolls": 24,
+        "coverageDeviation": 0.08468468468468472,
+        "leaderWins": 15,
+        "meanLogScoreWinner": -0.5612868807272345,
+        "meanPredictedLeaderWin": 0.8150044,
+        "observedLeaderWinRate": 0.6,
+        "polls": 25,
+        "shareCoverage": {
+          "0.5": 0.36486486486486486,
+          "0.8": 0.7432432432432432,
+          "0.9": 0.8378378378378378
+        },
+        "shareObservations": 74
+      },
+      "P": {
+        "bands": {
+          "0.0-0.7": {
+            "meanPredicted": 0.6093907142857142,
+            "observed": 0.2857142857142857,
+            "polls": 14
+          },
+          "0.7-0.9": {
+            "meanPredicted": 0.8320688888888887,
+            "observed": 1.0,
+            "polls": 9
+          },
+          "0.9-1.0": {
+            "meanPredicted": 0.942045,
+            "observed": 1.0,
+            "polls": 2
+          }
+        },
+        "brierLeader": 0.18369910171200002,
+        "brierMulti": 0.372081740848,
+        "calibrationZ": -1.3507927252233005,
+        "contrastCoverage": {
+          "0.5": 0.75,
+          "0.8": 1.0,
+          "0.9": 1.0
+        },
+        "contrastPolls": 24,
+        "coverageDeviation": 0.10450450450450448,
+        "leaderWins": 15,
+        "meanLogScoreWinner": -0.5466074243880504,
+        "meanPredictedLeaderWin": 0.7161672,
+        "observedLeaderWinRate": 0.6,
+        "polls": 25,
+        "shareCoverage": {
+          "0.5": 0.6351351351351351,
+          "0.8": 0.918918918918919,
+          "0.9": 0.9594594594594594
+        },
+        "shareObservations": 74
+      },
+      "PB": {
+        "bands": {
+          "0.0-0.7": {
+            "meanPredicted": 0.496335,
+            "observed": 0.35714285714285715,
+            "polls": 14
+          },
+          "0.7-0.9": {
+            "meanPredicted": 0.7990585714285715,
+            "observed": 0.8571428571428571,
+            "polls": 7
+          },
+          "0.9-1.0": {
+            "meanPredicted": 0.9329749999999999,
+            "observed": 1.0,
+            "polls": 4
+          }
+        },
+        "brierLeader": 0.154173228512,
+        "brierMulti": 0.30994038343999997,
+        "calibrationZ": -0.5885641525531323,
+        "contrastCoverage": {
+          "0.5": 0.7916666666666666,
+          "0.8": 1.0,
+          "0.9": 1.0
+        },
+        "contrastPolls": 24,
+        "coverageDeviation": 0.1135135135135135,
+        "leaderWins": 15,
+        "meanLogScoreWinner": -0.47576236571465613,
+        "meanPredictedLeaderWin": 0.65096,
+        "observedLeaderWinRate": 0.6,
+        "polls": 25,
+        "shareCoverage": {
+          "0.5": 0.6756756756756757,
+          "0.8": 0.918918918918919,
+          "0.9": 0.9459459459459459
+        },
+        "shareObservations": 74
+      }
+    }
+  },
+  "schemaVersion": 1,
+  "stage66Reproduction": {
+    "control": {
+      "brierLeaderWins": 0.20835035650000003,
+      "meanLogScoreActualWinner": -0.5622522779515555,
+      "meanPredictedLeaderWin": 0.8151259999999999,
+      "observedLeaderWinRate": 0.6
+    },
+    "draws": 20000,
+    "maxAbsoluteGap": 1.1102230246251565e-16,
+    "seed": 2026066,
+    "stored": {
+      "brierLeaderWins": 0.20835035650000003,
+      "meanLogScoreActualWinner": -0.5622522779515554,
+      "meanPredictedLeaderWin": 0.815126,
+      "observedLeaderWinRate": 0.6
+    }
+  }
+}
