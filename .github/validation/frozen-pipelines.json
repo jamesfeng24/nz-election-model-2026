@@ -59,7 +59,9 @@
     "paths",
     "cache"
    ],
-   "reviewedCacheConsumers": [],
+   "reviewedCacheConsumers": [
+    "scripts/uncertainty_expectation/audits.py"
+   ],
    "replacedCommands": [
     "python3 -m scripts.uncertainty_revision.construction --check",
     "python3 -m scripts.uncertainty_revision.evaluation --check",
@@ -93,7 +95,9 @@
     "paths",
     "seal"
    ],
-   "reviewedCacheConsumers": [],
+   "reviewedCacheConsumers": [
+    "scripts/uncertainty_expectation/construction.py"
+   ],
    "replacedCommands": [
     "python3 -m scripts.uncertainty_tails.construction --check",
     "python3 -m scripts.uncertainty_tails.evaluation --check",
@@ -106,6 +110,47 @@
     "scripts/diagnostics/uncertainty_tails_manifest.py",
     "scripts/diagnostics/uncertainty_tails_reference.py",
     "scripts/diagnostics/uncertainty_tails_report.py"
+   ]
+  },
+  "stage47": {
+   "entryModules": [
+    "scripts.uncertainty_expectation.audits",
+    "scripts.uncertainty_expectation.construction",
+    "scripts.uncertainty_expectation.evaluation",
+    "scripts.uncertainty_expectation.attribution",
+    "scripts.uncertainty_expectation.verification"
+   ],
+   "ownedPaths": [
+    "scripts/uncertainty_expectation"
+   ],
+   "outputPaths": [
+    "data/processed/uncertainty-expectation"
+   ],
+   "extraDependencies": [],
+   "cacheDirectory": ".cache/stage47",
+   "cacheReaderModules": [
+    "scripts.uncertainty_expectation.construction"
+   ],
+   "cacheReaderNames": [
+    "arrays",
+    "restore",
+    "paths",
+    "seal"
+   ],
+   "reviewedCacheConsumers": [],
+   "cacheDependencies": [
+    "stage45",
+    "stage46"
+   ],
+   "replacedCommands": [
+    "python3 -m scripts.uncertainty_expectation.audits --check",
+    "python3 -m scripts.uncertainty_expectation.construction --check",
+    "python3 -m scripts.uncertainty_expectation.evaluation --check",
+    "python3 -m scripts.uncertainty_expectation.attribution --check",
+    "python3 -m scripts.uncertainty_expectation.verification --check"
+   ],
+   "integrityChecks": [
+    "scripts.uncertainty_expectation.common:verify"
    ]
   }
  }

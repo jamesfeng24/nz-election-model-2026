@@ -3,7 +3,8 @@
 
 - Repair Gaussian conditional-location numerics (shared-label covariance, active faces, converged references); old worst reference gap 0.738928pp is 0.589445pp at a better reference; all 578 component and 197,632 composed inputs pass the retained 0.05pp gate (max independent gap 0.019999957pp). Scales and means unchanged; companions sealed before scoring; width attribution and structural audit; Recommendation B frozen as a future design (D083).
 - PR54 amendment: remove the machine-speed CPU guards in `construction.py` and `attribution.py` that aborted hosted run 37378985558; regenerate the signed outputs on Linux (max float difference to the committed values 1.9e-10); append two attempt-ledger entries.
-- No new data sources or acquisition, no national MCMC, no new statistical fit, no operational change. Stage47 is not yet registered as a frozen CI pipeline (follow-up in the PR notes).
+- Register Stage47 as a frozen CI pipeline with a `cacheDependencies` rule (Stage45/46 run full whenever Stage47 does); `python` job timeout 150 to 180 minutes.
+- No new data sources or acquisition, no national MCMC, no new statistical fit, no operational change.
 
 <!-- fold: state -->
 # Stage47 complete; CPU-guard amendment (PR54) — 6 October 2026
@@ -30,7 +31,9 @@ Exact next action after independent review: separately authorize the frozen smal
 
 Earlier entries below are historical checkpoints, not current status.
 
-**Exact next action (amended):** Hosted Verify on this PR must pass; Stage47 is not yet registered in `.github/validation/frozen-pipelines.json`, so every run executes its twelve `--check` commands in full (about 60 min additional). Registration needs a `cacheDependencies` rule (Stage47 audits/evaluation/verification read the Stage45/46 runtime caches; if Stage47 runs in full, Stage45 and Stage46 must too) and `reviewedCacheConsumers` entries (audits.py for stage45, construction.py for stage46); see docs/ci-validation.md. After merge, the separately authorized frozen candidate-balance scale comparison (D083, docs/stage47-next-gaussian-scale-contract.md) is Stage48.
+**CI registration (this PR):** Stage47 is registered as a frozen pipeline in `.github/validation/frozen-pipelines.json` (replaced commands audits, construction, evaluation, attribution, verification; ci.yml gates and a `Verify reused Stage47` step). Because Stage47 reads the Stage45/46 runtime caches, a new `cacheDependencies` rule in `scripts/validate/ci_frozen.py` forces Stage45 and Stage46 full whenever Stage47 runs full; the Stage47 readers are `reviewedCacheConsumers` of those two. `python` job `timeout-minutes` raised 150 to 180 because this PR's first run executes all three pipelines in full (about 2 hours; Stage47 itself is not attested until this run passes). Selector tests (58) and `fold --check` pass locally. Details in docs/ci-validation.md.
+
+**Exact next action:** Hosted Verify on this PR must pass on the exact head; then it is reviewed and merged with a merge commit (so later runs reuse this PR run as the Stage47 attestation). After merge, the separately authorized frozen candidate-balance scale comparison (D083, docs/stage47-next-gaussian-scale-contract.md) is Stage48.
 
 <!-- fold: decisions -->
 ## D083 — 2026-10-06 — Repair Gaussian expectations; bounded conditional-scale design
