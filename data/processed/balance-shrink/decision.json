@@ -1,0 +1,2159 @@
+{
+  "allSeatsDeltaMajorCRPSPP": {
+    "free": -0.04622690004235919,
+    "grid80": -0.04577996169135412,
+    "grid85": -0.03774011573032121,
+    "grid90": -0.027405368815160536,
+    "grid95": -0.014802770147582578,
+    "penalised": -0.01696661228915186
+  },
+  "classification": {
+    "free": "IMPROVES",
+    "grid80": "IMPROVES",
+    "grid85": "IMPROVES",
+    "grid90": "IMPROVES",
+    "grid95": "IMPROVES",
+    "penalised": "IMPROVES"
+  },
+  "comparisons": {
+    "free": {
+      "classification": "IMPROVES",
+      "coverageGuard": {
+        "50": {
+          "coverageArm": 0.5569948186528497,
+          "coverageControl": 0.6217616580310881,
+          "passed": true
+        },
+        "80": {
+          "coverageArm": 0.8782383419689119,
+          "coverageControl": 0.9145077720207254,
+          "passed": true
+        },
+        "90": {
+          "coverageArm": 0.9378238341968912,
+          "coverageControl": 0.9559585492227979,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.0760718295885976,
+      "deltaMajorCRPSPP": -0.06155602751754552,
+      "deltaMajorIntervalScorePP": -0.8108981786956075,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.07566775380410462,
+        "2020": -0.022745113541015716,
+        "2023": -0.08686163573840044
+      },
+      "foldsNegative": 3,
+      "relativeDeltaMajorCRPS": -0.017985837406212367,
+      "resolution": {
+        "deltaAtPrefixPP": -0.06161434257781142,
+        "differencePP": 5.8315060265899665e-05,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "grid80": {
+      "classification": "IMPROVES",
+      "coverageGuard": {
+        "50": {
+          "coverageArm": 0.5440414507772021,
+          "coverageControl": 0.6217616580310881,
+          "passed": true
+        },
+        "80": {
+          "coverageArm": 0.8704663212435233,
+          "coverageControl": 0.9145077720207254,
+          "passed": true
+        },
+        "90": {
+          "coverageArm": 0.9378238341968912,
+          "coverageControl": 0.9559585492227979,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.0816134892622502,
+      "deltaMajorCRPSPP": -0.06475616816256169,
+      "deltaMajorIntervalScorePP": -0.8532018704002867,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.08783363339257333,
+        "2020": -0.026235685720035207,
+        "2023": -0.08080106791324226
+      },
+      "foldsNegative": 3,
+      "relativeDeltaMajorCRPS": -0.018920875153764654,
+      "resolution": {
+        "deltaAtPrefixPP": -0.06480894627687858,
+        "differencePP": 5.277811431689261e-05,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "grid85": {
+      "classification": "IMPROVES",
+      "coverageGuard": {
+        "50": {
+          "coverageArm": 0.5569948186528497,
+          "coverageControl": 0.6217616580310881,
+          "passed": true
+        },
+        "80": {
+          "coverageArm": 0.8782383419689119,
+          "coverageControl": 0.9145077720207254,
+          "passed": true
+        },
+        "90": {
+          "coverageArm": 0.9430051813471503,
+          "coverageControl": 0.9559585492227979,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.06480184894360264,
+      "deltaMajorCRPSPP": -0.05165680322968713,
+      "deltaMajorIntervalScorePP": -0.6846371817226485,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.0693170093616291,
+        "2020": -0.023090235598458797,
+        "2023": -0.06300951734821325
+      },
+      "foldsNegative": 3,
+      "relativeDeltaMajorCRPS": -0.015093418163623973,
+      "resolution": {
+        "deltaAtPrefixPP": -0.05171004261980478,
+        "differencePP": 5.3239390117650054e-05,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "grid90": {
+      "classification": "IMPROVES",
+      "coverageGuard": {
+        "50": {
+          "coverageArm": 0.572538860103627,
+          "coverageControl": 0.6217616580310881,
+          "passed": true
+        },
+        "80": {
+          "coverageArm": 0.8911917098445595,
+          "coverageControl": 0.9145077720207254,
+          "passed": true
+        },
+        "90": {
+          "coverageArm": 0.9455958549222798,
+          "coverageControl": 0.9559585492227979,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.04556383021618515,
+      "deltaMajorCRPSPP": -0.03647578971740906,
+      "deltaMajorIntervalScorePP": -0.48097764738165044,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.04845457967675104,
+        "2020": -0.017677910518416162,
+        "2023": -0.043588595819544995
+      },
+      "foldsNegative": 3,
+      "relativeDeltaMajorCRPS": -0.01065773165647372,
+      "resolution": {
+        "deltaAtPrefixPP": -0.03652049607011572,
+        "differencePP": 4.470635270666101e-05,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "grid95": {
+      "classification": "IMPROVES",
+      "coverageGuard": {
+        "50": {
+          "coverageArm": 0.5958549222797928,
+          "coverageControl": 0.6217616580310881,
+          "passed": true
+        },
+        "80": {
+          "coverageArm": 0.9041450777202072,
+          "coverageControl": 0.9145077720207254,
+          "passed": true
+        },
+        "90": {
+          "coverageArm": 0.9507772020725389,
+          "coverageControl": 0.9559585492227979,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.023944133038552806,
+      "deltaMajorCRPSPP": -0.01923697387758727,
+      "deltaMajorIntervalScorePP": -0.25720216524878187,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.025314972660690938,
+        "2020": -0.009973001255046743,
+        "2023": -0.022567697289253452
+      },
+      "foldsNegative": 3,
+      "relativeDeltaMajorCRPS": -0.00562078318408737,
+      "resolution": {
+        "deltaAtPrefixPP": -0.019256882415390867,
+        "differencePP": 1.9908537803595833e-05,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    },
+    "penalised": {
+      "classification": "IMPROVES",
+      "coverageGuard": {
+        "50": {
+          "coverageArm": 0.5932642487046632,
+          "coverageControl": 0.6217616580310881,
+          "passed": true
+        },
+        "80": {
+          "coverageArm": 0.9041450777202072,
+          "coverageControl": 0.9145077720207254,
+          "passed": true
+        },
+        "90": {
+          "coverageArm": 0.9481865284974094,
+          "coverageControl": 0.9559585492227979,
+          "passed": true
+        }
+      },
+      "deltaEnergyPP": -0.027727387389560043,
+      "deltaMajorCRPSPP": -0.022592846416124246,
+      "deltaMajorIntervalScorePP": -0.2986082589993906,
+      "foldDeltaMajorCRPSPP": {
+        "2017": -0.027269522522463507,
+        "2020": -0.009525681102090289,
+        "2023": -0.0311875100818515
+      },
+      "foldsNegative": 3,
+      "relativeDeltaMajorCRPS": -0.006601323681391149,
+      "resolution": {
+        "deltaAtPrefixPP": -0.022618929452036973,
+        "differencePP": 2.6083035912727315e-05,
+        "passed": true,
+        "prefixDraws": 16384
+      }
+    }
+  },
+  "composedWidthImplication": {
+    "control": {
+      "allBalance:labour": {
+        "changeRelativeToControl": 0.0,
+        "widthPP": 31.013429333101197
+      },
+      "allBalance:national": {
+        "changeRelativeToControl": 0.0,
+        "widthPP": 29.889697501938095
+      },
+      "seatOnly:labour": {
+        "changeRelativeToControl": 0.0,
+        "widthPP": 31.013429333101197
+      },
+      "seatOnly:national": {
+        "changeRelativeToControl": 0.0,
+        "widthPP": 29.889697501938095
+      }
+    },
+    "free": {
+      "allBalance:labour": {
+        "changeRelativeToControl": -0.07505679372549767,
+        "widthPP": 28.68566076492632
+      },
+      "allBalance:national": {
+        "changeRelativeToControl": -0.08427116931006962,
+        "widthPP": 27.370857743125505
+      },
+      "seatOnly:labour": {
+        "changeRelativeToControl": -0.05575761625093656,
+        "widthPP": 29.2841944417206
+      },
+      "seatOnly:national": {
+        "changeRelativeToControl": -0.06268558168988148,
+        "widthPP": 28.016044427494506
+      }
+    },
+    "free2026Refit": {
+      "allBalance:labour": {
+        "changeRelativeToControl": -0.0886745940141479,
+        "widthPP": 28.26332607800198
+      },
+      "allBalance:national": {
+        "changeRelativeToControl": -0.10068520076144194,
+        "widthPP": 26.88024730825669
+      },
+      "seatOnly:labour": {
+        "changeRelativeToControl": -0.0660389823201536,
+        "widthPP": 28.965334021685194
+      },
+      "seatOnly:national": {
+        "changeRelativeToControl": -0.07506166077737142,
+        "widthPP": 27.64612716730937
+      }
+    },
+    "grid80": {
+      "allBalance:labour": {
+        "changeRelativeToControl": -0.08478126201687441,
+        "widthPP": 28.384071654769727
+      },
+      "allBalance:national": {
+        "changeRelativeToControl": -0.09624158410867245,
+        "widthPP": 27.01306566582254
+      },
+      "seatOnly:labour": {
+        "changeRelativeToControl": -0.06317927903067588,
+        "widthPP": 29.054023227567047
+      },
+      "seatOnly:national": {
+        "changeRelativeToControl": -0.07179799039954149,
+        "widthPP": 27.743677287648744
+      }
+    },
+    "grid85": {
+      "allBalance:labour": {
+        "changeRelativeToControl": -0.0646009234453836,
+        "widthPP": 29.00993315897471
+      },
+      "allBalance:national": {
+        "changeRelativeToControl": -0.07324428768595881,
+        "widthPP": 27.700447899259856
+      },
+      "seatOnly:labour": {
+        "changeRelativeToControl": -0.04829391534728533,
+        "widthPP": 29.51566940225939
+      },
+      "seatOnly:national": {
+        "changeRelativeToControl": -0.05483003965335276,
+        "widthPP": 28.25084420268011
+      }
+    },
+    "grid90": {
+      "allBalance:labour": {
+        "changeRelativeToControl": -0.04371343883802059,
+        "widthPP": 29.657725686791405
+      },
+      "allBalance:national": {
+        "changeRelativeToControl": -0.04950160582084373,
+        "widthPP": 28.4101094780929
+      },
+      "seatOnly:labour": {
+        "changeRelativeToControl": -0.032781622176440095,
+        "widthPP": 29.99675881030775
+      },
+      "seatOnly:national": {
+        "changeRelativeToControl": -0.037182455955676263,
+        "widthPP": 28.778325141043794
+      }
+    },
+    "grid95": {
+      "allBalance:labour": {
+        "changeRelativeToControl": -0.022165321622725664,
+        "widthPP": 30.326006697309335
+      },
+      "allBalance:national": {
+        "changeRelativeToControl": -0.025069598341593613,
+        "widthPP": 29.14037479101277
+      },
+      "seatOnly:labour": {
+        "changeRelativeToControl": -0.016673627169484395,
+        "widthPP": 30.496322975153916
+      },
+      "seatOnly:national": {
+        "changeRelativeToControl": -0.01889357043143458,
+        "widthPP": 29.32497439701095
+      }
+    },
+    "penalised": {
+      "allBalance:labour": {
+        "changeRelativeToControl": -0.0251882614084602,
+        "widthPP": 30.232254967886238
+      },
+      "allBalance:national": {
+        "changeRelativeToControl": -0.028203745587992657,
+        "widthPP": 29.046696077891372
+      },
+      "seatOnly:labour": {
+        "changeRelativeToControl": -0.018853318353826753,
+        "widthPP": 30.42872327664033
+      },
+      "seatOnly:national": {
+        "changeRelativeToControl": -0.021149342080002742,
+        "widthPP": 29.2575500648018
+      }
+    }
+  },
+  "composedWidthSanityCheck": {
+    "arithmeticAllBalanceChange": -0.028203745587992657,
+    "arithmeticSeatOnlyChange": -0.021149342080002742,
+    "stage48ComposedNationalFull90": {
+      "change": -0.018979667419012136,
+      "constant": 29.48484481247167,
+      "control": 30.05528410904527
+    },
+    "status": "sanity check only: composed bank has 512 draws and unmet precision gates; arithmetic uses nine ablation seats"
+  },
+  "coverageFloor": {
+    "free": {
+      "passed": true,
+      "rows": {
+        "2014:50": {
+          "controlCoverage": 0.3671875,
+          "coverage": 0.3671875,
+          "passed": true,
+          "threshold": 0.3171875
+        },
+        "2014:80": {
+          "controlCoverage": 0.8125,
+          "coverage": 0.8125,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2017:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.6015625,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2017:80": {
+          "controlCoverage": 0.90625,
+          "coverage": 0.875,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2020:50": {
+          "controlCoverage": 0.5076923076923077,
+          "coverage": 0.43846153846153846,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2020:80": {
+          "controlCoverage": 0.8923076923076924,
+          "coverage": 0.8461538461538461,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2023:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.6328125,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2023:80": {
+          "controlCoverage": 0.9453125,
+          "coverage": 0.9140625,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        }
+      }
+    },
+    "grid80": {
+      "passed": false,
+      "rows": {
+        "2014:50": {
+          "controlCoverage": 0.3671875,
+          "coverage": 0.34375,
+          "passed": true,
+          "threshold": 0.3171875
+        },
+        "2014:80": {
+          "controlCoverage": 0.8125,
+          "coverage": 0.6875,
+          "passed": false,
+          "threshold": 0.7000000000000001
+        },
+        "2017:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.5859375,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2017:80": {
+          "controlCoverage": 0.90625,
+          "coverage": 0.875,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2020:50": {
+          "controlCoverage": 0.5076923076923077,
+          "coverage": 0.4153846153846154,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2020:80": {
+          "controlCoverage": 0.8923076923076924,
+          "coverage": 0.823076923076923,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2023:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.6328125,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2023:80": {
+          "controlCoverage": 0.9453125,
+          "coverage": 0.9140625,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        }
+      }
+    },
+    "grid85": {
+      "passed": true,
+      "rows": {
+        "2014:50": {
+          "controlCoverage": 0.3671875,
+          "coverage": 0.3515625,
+          "passed": true,
+          "threshold": 0.3171875
+        },
+        "2014:80": {
+          "controlCoverage": 0.8125,
+          "coverage": 0.734375,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2017:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.6015625,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2017:80": {
+          "controlCoverage": 0.90625,
+          "coverage": 0.875,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2020:50": {
+          "controlCoverage": 0.5076923076923077,
+          "coverage": 0.4307692307692308,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2020:80": {
+          "controlCoverage": 0.8923076923076924,
+          "coverage": 0.8384615384615385,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2023:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.640625,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2023:80": {
+          "controlCoverage": 0.9453125,
+          "coverage": 0.921875,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        }
+      }
+    },
+    "grid90": {
+      "passed": true,
+      "rows": {
+        "2014:50": {
+          "controlCoverage": 0.3671875,
+          "coverage": 0.3515625,
+          "passed": true,
+          "threshold": 0.3171875
+        },
+        "2014:80": {
+          "controlCoverage": 0.8125,
+          "coverage": 0.7578125,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2017:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.609375,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2017:80": {
+          "controlCoverage": 0.90625,
+          "coverage": 0.8828125,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2020:50": {
+          "controlCoverage": 0.5076923076923077,
+          "coverage": 0.45384615384615384,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2020:80": {
+          "controlCoverage": 0.8923076923076924,
+          "coverage": 0.8615384615384616,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2023:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.65625,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2023:80": {
+          "controlCoverage": 0.9453125,
+          "coverage": 0.9296875,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        }
+      }
+    },
+    "grid95": {
+      "passed": true,
+      "rows": {
+        "2014:50": {
+          "controlCoverage": 0.3671875,
+          "coverage": 0.3515625,
+          "passed": true,
+          "threshold": 0.3171875
+        },
+        "2014:80": {
+          "controlCoverage": 0.8125,
+          "coverage": 0.78125,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2017:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.640625,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2017:80": {
+          "controlCoverage": 0.90625,
+          "coverage": 0.8984375,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2020:50": {
+          "controlCoverage": 0.5076923076923077,
+          "coverage": 0.47692307692307695,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2020:80": {
+          "controlCoverage": 0.8923076923076924,
+          "coverage": 0.8769230769230769,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2023:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.671875,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2023:80": {
+          "controlCoverage": 0.9453125,
+          "coverage": 0.9375,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        }
+      }
+    },
+    "penalised": {
+      "passed": true,
+      "rows": {
+        "2014:50": {
+          "controlCoverage": 0.3671875,
+          "coverage": 0.3671875,
+          "passed": true,
+          "threshold": 0.3171875
+        },
+        "2014:80": {
+          "controlCoverage": 0.8125,
+          "coverage": 0.8125,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2017:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.640625,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2017:80": {
+          "controlCoverage": 0.90625,
+          "coverage": 0.8984375,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2020:50": {
+          "controlCoverage": 0.5076923076923077,
+          "coverage": 0.47692307692307695,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2020:80": {
+          "controlCoverage": 0.8923076923076924,
+          "coverage": 0.8846153846153846,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        },
+        "2023:50": {
+          "controlCoverage": 0.6796875,
+          "coverage": 0.6640625,
+          "passed": true,
+          "threshold": 0.4
+        },
+        "2023:80": {
+          "controlCoverage": 0.9453125,
+          "coverage": 0.9296875,
+          "passed": true,
+          "threshold": 0.7000000000000001
+        }
+      }
+    }
+  },
+  "doublingGatesPassed": {
+    "control": true,
+    "free": true,
+    "grid80": true,
+    "grid85": true,
+    "grid90": true,
+    "grid95": true,
+    "penalised": true
+  },
+  "finding": "recommend_free_for_james_signoff",
+  "free2026RefitMultiplier": 0.7901362246526518,
+  "numerical": {
+    "doublingAllPassed": {
+      "control": true,
+      "free": true,
+      "grid80": true,
+      "grid85": true,
+      "grid90": true,
+      "grid95": true,
+      "penalised": true
+    },
+    "doublingLastChangesPP": {
+      "control": {
+        "crps": 0.007550130426942303,
+        "energy": 0.03301422138390109,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.07635698690761039,
+        "width90": 0.1657850763969435
+      },
+      "free": {
+        "crps": 0.007550130426942303,
+        "energy": 0.026195524300085538,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.07635698690761039,
+        "width90": 0.11371004049941646
+      },
+      "grid80": {
+        "crps": 0.007550130426942303,
+        "energy": 0.024941625026717595,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.08300318222453029,
+        "width90": 0.11371004049941646
+      },
+      "grid85": {
+        "crps": 0.007550130426942303,
+        "energy": 0.026828412517951428,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.07635698690761039,
+        "width90": 0.1466320101002303
+      },
+      "grid90": {
+        "crps": 0.007550130426942303,
+        "energy": 0.028813789485742092,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.07635698690761039,
+        "width90": 0.15233085850534422
+      },
+      "grid95": {
+        "crps": 0.007550130426942303,
+        "energy": 0.030873255619132678,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.07635698690761039,
+        "width90": 0.14899538518720945
+      },
+      "penalised": {
+        "crps": 0.007550130426942303,
+        "energy": 0.030704101192798205,
+        "mean": 0.013987768769749831,
+        "width50": 0.07772672497085065,
+        "width80": 0.08303282439901238,
+        "width90": 0.14673201298797522
+      }
+    },
+    "maximumDrawGapAcrossArms": 2.220446049250313e-16,
+    "maximumFiniteMeanDeviationPP": {
+      "control": 0.008847141989076768,
+      "free": 0.008847141989076768,
+      "grid80": 0.008847141989076768,
+      "grid85": 0.008847141989076768,
+      "grid90": 0.008847141989076768,
+      "grid95": 0.008847141989076768,
+      "penalised": 0.008847141989076768
+    }
+  },
+  "operationalAdoption": null,
+  "recommendedArmIsLeaveFutureOut": true,
+  "rule": {
+    "coverageFloor": {
+      "alreadyUndercoveringMargin": 0.05,
+      "elections": [
+        2014,
+        2017,
+        2020,
+        2023
+      ],
+      "justification": "0.10 is about 1.6 binomial standard errors at 50% and 2.0 at 80% for 64 seats, so only a clearly sampling-noise-exceeding miss fails; an election the control already under-covers may lose at most a further 0.05",
+      "levels": [
+        50,
+        80
+      ],
+      "nominalMargin": 0.1,
+      "rule": "arm coverage >= min(nominal - nominalMargin, control coverage - alreadyUndercoveringMargin) at every election and level; coverage is the pooled N/L candidate coordinate coverage"
+    },
+    "findings": [
+      "recommend_<arm>_for_james_signoff",
+      "floor_blocked_report_to_james",
+      "no_arm_qualifies_keep_corrected_control"
+    ],
+    "improves": {
+      "coverageGuardAbsolute": 0.02,
+      "crpsMaterialityPP": 0.01,
+      "doublingGatesPP": {
+        "crps": 0.05,
+        "energy": 0.1,
+        "mean": 0.05,
+        "width50": 0.5,
+        "width80": 0.5,
+        "width90": 0.5
+      },
+      "energyGuardPP": 0.02,
+      "intervalScoreLevels": [
+        50,
+        80,
+        90
+      ],
+      "minimumFoldsNegative": 2,
+      "resolutionPrefixDraws": 16384,
+      "resolutionTolerancePP": 0.002
+    },
+    "operationalAdoption": null,
+    "primary": "mean over seats of the mean CRPS of that seat's National and Labour candidates (pp), 193 seats of 2017/2020/2023",
+    "selection": {
+      "best": "qualifying arm with the lowest pooled N/L major CRPS on the decision seats",
+      "bootstrap": {
+        "draws": 2000,
+        "level": 0.9,
+        "scheme": "seats resampled with replacement within election, pooled equal-seat mean",
+        "seed": 60
+      },
+      "chosen": "least aggressive (highest equal-seat mean multiplier on the decision seats) qualifying arm that is within noise of the best",
+      "descriptiveAlternative": "least aggressive qualifying arm within 0.01pp pooled CRPS of the best, reported only",
+      "withinNoise": "lower end of the 90% paired seat-bootstrap interval of CRPS(arm) - CRPS(best) is <= 0"
+    }
+  },
+  "selection": {
+    "best": "free",
+    "descriptiveAlternative": "grid85",
+    "qualifying": [
+      "grid95",
+      "grid90",
+      "grid85",
+      "free"
+    ],
+    "recommended": "free",
+    "withinNoise": {
+      "free": {
+        "intervalOfArmMinusBest": [
+          0.0,
+          0.0
+        ],
+        "withinNoise": true
+      },
+      "grid85": {
+        "intervalOfArmMinusBest": [
+          0.00754585638642472,
+          0.012102851547730881
+        ],
+        "withinNoise": false
+      },
+      "grid90": {
+        "intervalOfArmMinusBest": [
+          0.019552349566136,
+          0.03021519219769246
+        ],
+        "withinNoise": false
+      },
+      "grid95": {
+        "intervalOfArmMinusBest": [
+          0.033147433521352035,
+          0.050925457492118735
+        ],
+        "withinNoise": false
+      }
+    }
+  },
+  "stage": 60,
+  "summary": {
+    "2014": {
+      "control": {
+        "energyPP": 7.814595857222662,
+        "majorCRPSPP": 4.390548001102982,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.3671875,
+            "covered": 47,
+            "intervalScorePP": 19.6832205086285,
+            "total": 128,
+            "widthPP": 9.415299258058774
+          },
+          "80": {
+            "coverage": 0.8125,
+            "covered": 104,
+            "intervalScorePP": 25.265310368479213,
+            "total": 128,
+            "widthPP": 17.756343937304912
+          },
+          "90": {
+            "coverage": 0.8984375,
+            "covered": 115,
+            "intervalScorePP": 30.288019762010173,
+            "total": 128,
+            "widthPP": 22.637211560832874
+          }
+        },
+        "meanMultiplier": 1.0,
+        "seats": 64
+      },
+      "free": {
+        "energyPP": 7.814595857222662,
+        "majorCRPSPP": 4.390548001102982,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.3671875,
+            "covered": 47,
+            "intervalScorePP": 19.6832205086285,
+            "total": 128,
+            "widthPP": 9.415299258058774
+          },
+          "80": {
+            "coverage": 0.8125,
+            "covered": 104,
+            "intervalScorePP": 25.265310368479213,
+            "total": 128,
+            "widthPP": 17.756343937304912
+          },
+          "90": {
+            "coverage": 0.8984375,
+            "covered": 115,
+            "intervalScorePP": 30.288019762010173,
+            "total": 128,
+            "widthPP": 22.637211560832874
+          }
+        },
+        "meanMultiplier": 1.0,
+        "seats": 64
+      },
+      "grid80": {
+        "energyPP": 7.821108788695988,
+        "majorCRPSPP": 4.401993162051365,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.34375,
+            "covered": 44,
+            "intervalScorePP": 19.87820751804506,
+            "total": 128,
+            "widthPP": 8.19763140954602
+          },
+          "80": {
+            "coverage": 0.6875,
+            "covered": 88,
+            "intervalScorePP": 25.724073467559464,
+            "total": 128,
+            "widthPP": 15.485142144931501
+          },
+          "90": {
+            "coverage": 0.859375,
+            "covered": 110,
+            "intervalScorePP": 30.935764542425854,
+            "total": 128,
+            "widthPP": 19.786607362545904
+          }
+        },
+        "meanMultiplier": 0.7999999999999999,
+        "seats": 64
+      },
+      "grid85": {
+        "energyPP": 7.814399063303882,
+        "majorCRPSPP": 4.394775396112938,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.3515625,
+            "covered": 45,
+            "intervalScorePP": 19.8258145702303,
+            "total": 128,
+            "widthPP": 8.4960035127001
+          },
+          "80": {
+            "coverage": 0.734375,
+            "covered": 94,
+            "intervalScorePP": 25.464148667800686,
+            "total": 128,
+            "widthPP": 16.042181877178002
+          },
+          "90": {
+            "coverage": 0.8671875,
+            "covered": 111,
+            "intervalScorePP": 30.63979286435334,
+            "total": 128,
+            "widthPP": 20.486217833316502
+          }
+        },
+        "meanMultiplier": 0.8499999999999999,
+        "seats": 64
+      },
+      "grid90": {
+        "energyPP": 7.811088978559878,
+        "majorCRPSPP": 4.3904956203211665,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.3515625,
+            "covered": 45,
+            "intervalScorePP": 19.77528117705198,
+            "total": 128,
+            "widthPP": 8.798621535855297
+          },
+          "80": {
+            "coverage": 0.7578125,
+            "covered": 97,
+            "intervalScorePP": 25.325997570051058,
+            "total": 128,
+            "widthPP": 16.608093531835806
+          },
+          "90": {
+            "coverage": 0.8828125,
+            "covered": 113,
+            "intervalScorePP": 30.46298475156795,
+            "total": 128,
+            "widthPP": 21.19404946369587
+          }
+        },
+        "meanMultiplier": 0.9000000000000001,
+        "seats": 64
+      },
+      "grid95": {
+        "energyPP": 7.811168154566302,
+        "majorCRPSPP": 4.3891171265786975,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.3515625,
+            "covered": 45,
+            "intervalScorePP": 19.72833209804765,
+            "total": 128,
+            "widthPP": 9.105951551581935
+          },
+          "80": {
+            "coverage": 0.78125,
+            "covered": 100,
+            "intervalScorePP": 25.25917145710376,
+            "total": 128,
+            "widthPP": 17.178509541570527
+          },
+          "90": {
+            "coverage": 0.890625,
+            "covered": 114,
+            "intervalScorePP": 30.364082959785947,
+            "total": 128,
+            "widthPP": 21.908679052724167
+          }
+        },
+        "meanMultiplier": 0.9500000000000001,
+        "seats": 64
+      },
+      "penalised": {
+        "energyPP": 7.814595857222662,
+        "majorCRPSPP": 4.390548001102982,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.3671875,
+            "covered": 47,
+            "intervalScorePP": 19.6832205086285,
+            "total": 128,
+            "widthPP": 9.415299258058774
+          },
+          "80": {
+            "coverage": 0.8125,
+            "covered": 104,
+            "intervalScorePP": 25.265310368479213,
+            "total": 128,
+            "widthPP": 17.756343937304912
+          },
+          "90": {
+            "coverage": 0.8984375,
+            "covered": 115,
+            "intervalScorePP": 30.288019762010173,
+            "total": 128,
+            "widthPP": 22.637211560832874
+          }
+        },
+        "meanMultiplier": 1.0,
+        "seats": 64
+      }
+    },
+    "2017": {
+      "control": {
+        "energyPP": 6.744557027482845,
+        "majorCRPSPP": 3.5049135126826676,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.6796875,
+            "covered": 87,
+            "intervalScorePP": 15.74481513936264,
+            "total": 128,
+            "widthPP": 10.306483278021098
+          },
+          "80": {
+            "coverage": 0.90625,
+            "covered": 116,
+            "intervalScorePP": 23.861475627767277,
+            "total": 128,
+            "widthPP": 19.425227420268776
+          },
+          "90": {
+            "coverage": 0.9609375,
+            "covered": 123,
+            "intervalScorePP": 29.67206611550166,
+            "total": 128,
+            "widthPP": 24.751233741415888
+          }
+        },
+        "meanMultiplier": 1.0,
+        "seats": 64
+      },
+      "free": {
+        "energyPP": 6.65217903533706,
+        "majorCRPSPP": 3.429245758878563,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.6015625,
+            "covered": 77,
+            "intervalScorePP": 15.386401948653303,
+            "total": 128,
+            "widthPP": 9.213908540748116
+          },
+          "80": {
+            "coverage": 0.875,
+            "covered": 112,
+            "intervalScorePP": 22.86664299306453,
+            "total": 128,
+            "widthPP": 17.389994969794436
+          },
+          "90": {
+            "coverage": 0.921875,
+            "covered": 118,
+            "intervalScorePP": 28.239237986228815,
+            "total": 128,
+            "widthPP": 22.18811220157727
+          }
+        },
+        "meanMultiplier": 0.8335558989455831,
+        "seats": 64
+      },
+      "grid80": {
+        "energyPP": 6.6371596093081315,
+        "majorCRPSPP": 3.4170798792900943,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5859375,
+            "covered": 75,
+            "intervalScorePP": 15.338494649292002,
+            "total": 128,
+            "widthPP": 8.999919564791346
+          },
+          "80": {
+            "coverage": 0.875,
+            "covered": 112,
+            "intervalScorePP": 22.690507716198564,
+            "total": 128,
+            "widthPP": 16.9942811980565
+          },
+          "90": {
+            "coverage": 0.921875,
+            "covered": 118,
+            "intervalScorePP": 28.104772145534955,
+            "total": 128,
+            "widthPP": 21.68566297431392
+          }
+        },
+        "meanMultiplier": 0.7999999999999999,
+        "seats": 64
+      },
+      "grid85": {
+        "energyPP": 6.6599930006363905,
+        "majorCRPSPP": 3.4355965033210385,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.6015625,
+            "covered": 77,
+            "intervalScorePP": 15.41477886806444,
+            "total": 128,
+            "widthPP": 9.319262650019716
+          },
+          "80": {
+            "coverage": 0.875,
+            "covered": 112,
+            "intervalScorePP": 22.95279990486999,
+            "total": 128,
+            "widthPP": 17.585543501662684
+          },
+          "90": {
+            "coverage": 0.9375,
+            "covered": 120,
+            "intervalScorePP": 28.336700887513217,
+            "total": 128,
+            "widthPP": 22.434723818227113
+          }
+        },
+        "meanMultiplier": 0.8499999999999999,
+        "seats": 64
+      },
+      "grid90": {
+        "energyPP": 6.685556791257736,
+        "majorCRPSPP": 3.4564589330059166,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.609375,
+            "covered": 78,
+            "intervalScorePP": 15.508322963717529,
+            "total": 128,
+            "widthPP": 9.64296403299431
+          },
+          "80": {
+            "coverage": 0.8828125,
+            "covered": 113,
+            "intervalScorePP": 23.2307549198992,
+            "total": 128,
+            "widthPP": 18.191398813464282
+          },
+          "90": {
+            "coverage": 0.9453125,
+            "covered": 121,
+            "intervalScorePP": 28.744461465042107,
+            "total": 128,
+            "widthPP": 23.199411702695887
+          }
+        },
+        "meanMultiplier": 0.9000000000000001,
+        "seats": 64
+      },
+      "grid95": {
+        "energyPP": 6.713773252455333,
+        "majorCRPSPP": 3.4795985400219767,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.640625,
+            "covered": 82,
+            "intervalScorePP": 15.611115480865589,
+            "total": 128,
+            "widthPP": 9.972118793130871
+          },
+          "80": {
+            "coverage": 0.8984375,
+            "covered": 115,
+            "intervalScorePP": 23.53124325974376,
+            "total": 128,
+            "widthPP": 18.804849836684035
+          },
+          "90": {
+            "coverage": 0.953125,
+            "covered": 122,
+            "intervalScorePP": 29.165959069089716,
+            "total": 128,
+            "widthPP": 23.97205424356931
+          }
+        },
+        "meanMultiplier": 0.9500000000000001,
+        "seats": 64
+      },
+      "penalised": {
+        "energyPP": 6.711393235315679,
+        "majorCRPSPP": 3.477643990160204,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.640625,
+            "covered": 82,
+            "intervalScorePP": 15.601598888396241,
+            "total": 128,
+            "widthPP": 9.945361224034265
+          },
+          "80": {
+            "coverage": 0.8984375,
+            "covered": 115,
+            "intervalScorePP": 23.505089920200938,
+            "total": 128,
+            "widthPP": 18.75496123386089
+          },
+          "90": {
+            "coverage": 0.9453125,
+            "covered": 121,
+            "intervalScorePP": 29.127582149956254,
+            "total": 128,
+            "widthPP": 23.909811508671247
+          }
+        },
+        "meanMultiplier": 0.9459538655060474,
+        "seats": 64
+      }
+    },
+    "2020": {
+      "control": {
+        "energyPP": 6.64910288236284,
+        "majorCRPSPP": 3.7291640474334855,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5076923076923077,
+            "covered": 66,
+            "intervalScorePP": 16.54296150895345,
+            "total": 130,
+            "widthPP": 9.799394603237838
+          },
+          "80": {
+            "coverage": 0.8923076923076924,
+            "covered": 116,
+            "intervalScorePP": 22.29688292645926,
+            "total": 130,
+            "widthPP": 18.493382958559092
+          },
+          "90": {
+            "coverage": 0.9384615384615385,
+            "covered": 122,
+            "intervalScorePP": 26.88454633759372,
+            "total": 130,
+            "widthPP": 23.559020169970097
+          }
+        },
+        "meanMultiplier": 1.0,
+        "seats": 65
+      },
+      "free": {
+        "energyPP": 6.610913050455906,
+        "majorCRPSPP": 3.70641893389247,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.43846153846153846,
+            "covered": 57,
+            "intervalScorePP": 16.522247365493886,
+            "total": 130,
+            "widthPP": 8.956215853349859
+          },
+          "80": {
+            "coverage": 0.8461538461538461,
+            "covered": 110,
+            "intervalScorePP": 21.725757671793495,
+            "total": 130,
+            "widthPP": 16.9252127915183
+          },
+          "90": {
+            "coverage": 0.9307692307692308,
+            "covered": 121,
+            "intervalScorePP": 26.283829625059898,
+            "total": 130,
+            "widthPP": 21.593023674407974
+          }
+        },
+        "meanMultiplier": 0.8539589629398119,
+        "seats": 65
+      },
+      "grid80": {
+        "energyPP": 6.602519221536778,
+        "majorCRPSPP": 3.7029283617134503,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.4153846153846154,
+            "covered": 54,
+            "intervalScorePP": 16.54440223702156,
+            "total": 130,
+            "widthPP": 8.656115652617022
+          },
+          "80": {
+            "coverage": 0.823076923076923,
+            "covered": 107,
+            "intervalScorePP": 21.64014326134453,
+            "total": 130,
+            "widthPP": 16.367700621018134
+          },
+          "90": {
+            "coverage": 0.9307692307692308,
+            "covered": 121,
+            "intervalScorePP": 26.077753672814083,
+            "total": 130,
+            "widthPP": 20.89339929427625
+          }
+        },
+        "meanMultiplier": 0.7999999999999999,
+        "seats": 65
+      },
+      "grid85": {
+        "energyPP": 6.6101915472193955,
+        "majorCRPSPP": 3.7060738118350267,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.4307692307692308,
+            "covered": 56,
+            "intervalScorePP": 16.523470463729268,
+            "total": 130,
+            "widthPP": 8.934050128921001
+          },
+          "80": {
+            "coverage": 0.8384615384615385,
+            "covered": 109,
+            "intervalScorePP": 21.715169133642842,
+            "total": 130,
+            "widthPP": 16.883698644310144
+          },
+          "90": {
+            "coverage": 0.9307692307692308,
+            "covered": 121,
+            "intervalScorePP": 26.267083010052666,
+            "total": 130,
+            "widthPP": 21.542585137371436
+          }
+        },
+        "meanMultiplier": 0.8499999999999999,
+        "seats": 65
+      },
+      "grid90": {
+        "energyPP": 6.62053020368243,
+        "majorCRPSPP": 3.7114861369150693,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.45384615384615384,
+            "covered": 59,
+            "intervalScorePP": 16.511868119015876,
+            "total": 130,
+            "widthPP": 9.217843876463766
+          },
+          "80": {
+            "coverage": 0.8615384615384616,
+            "covered": 112,
+            "intervalScorePP": 21.853714733216457,
+            "total": 130,
+            "widthPP": 17.409415997675243
+          },
+          "90": {
+            "coverage": 0.9307692307692308,
+            "covered": 121,
+            "intervalScorePP": 26.456896785347777,
+            "total": 130,
+            "widthPP": 22.204055534463247
+          }
+        },
+        "meanMultiplier": 0.9000000000000001,
+        "seats": 65
+      },
+      "grid95": {
+        "energyPP": 6.633514582248312,
+        "majorCRPSPP": 3.7191910461784388,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.47692307692307695,
+            "covered": 62,
+            "intervalScorePP": 16.51196332388792,
+            "total": 130,
+            "widthPP": 9.506614036863413
+          },
+          "80": {
+            "coverage": 0.8769230769230769,
+            "covered": 114,
+            "intervalScorePP": 22.04185241550958,
+            "total": 130,
+            "widthPP": 17.948063324891365
+          },
+          "90": {
+            "coverage": 0.9384615384615385,
+            "covered": 122,
+            "intervalScorePP": 26.668213213976,
+            "total": 130,
+            "widthPP": 22.87849655645291
+          }
+        },
+        "meanMultiplier": 0.9500000000000001,
+        "seats": 65
+      },
+      "penalised": {
+        "energyPP": 6.634236307582012,
+        "majorCRPSPP": 3.719638366331395,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.47692307692307695,
+            "covered": 62,
+            "intervalScorePP": 16.512354339249647,
+            "total": 130,
+            "widthPP": 9.521226350184529
+          },
+          "80": {
+            "coverage": 0.8846153846153846,
+            "covered": 115,
+            "intervalScorePP": 22.054756262991845,
+            "total": 130,
+            "widthPP": 17.97529194567615
+          },
+          "90": {
+            "coverage": 0.9384615384615385,
+            "covered": 122,
+            "intervalScorePP": 26.678129850249473,
+            "total": 130,
+            "widthPP": 22.913240464432377
+          }
+        },
+        "meanMultiplier": 0.9525129746128698,
+        "seats": 65
+      }
+    },
+    "2023": {
+      "control": {
+        "energyPP": 6.358471890705597,
+        "majorCRPSPP": 3.0285468122793837,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.6796875,
+            "covered": 87,
+            "intervalScorePP": 13.670552631392166,
+            "total": 128,
+            "widthPP": 9.501790913456837
+          },
+          "80": {
+            "coverage": 0.9453125,
+            "covered": 121,
+            "intervalScorePP": 21.66264428812172,
+            "total": 128,
+            "widthPP": 17.923765089559325
+          },
+          "90": {
+            "coverage": 0.96875,
+            "covered": 124,
+            "intervalScorePP": 28.416790803824277,
+            "total": 128,
+            "widthPP": 22.875527206656297
+          }
+        },
+        "meanMultiplier": 1.0,
+        "seats": 64
+      },
+      "free": {
+        "energyPP": 6.260232319778751,
+        "majorCRPSPP": 2.9416851765409833,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.6328125,
+            "covered": 81,
+            "intervalScorePP": 13.253459696629942,
+            "total": 128,
+            "widthPP": 8.446872899245989
+          },
+          "80": {
+            "coverage": 0.9140625,
+            "covered": 117,
+            "intervalScorePP": 20.41275209489475,
+            "total": 128,
+            "widthPP": 15.966839770161446
+          },
+          "90": {
+            "coverage": 0.9609375,
+            "covered": 123,
+            "intervalScorePP": 26.744945225999764,
+            "total": 128,
+            "widthPP": 20.40214952019342
+          }
+        },
+        "meanMultiplier": 0.7818073233364001,
+        "seats": 64
+      },
+      "grid80": {
+        "energyPP": 6.267065160850308,
+        "majorCRPSPP": 2.9477457443661415,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.6328125,
+            "covered": 81,
+            "intervalScorePP": 13.282019029952696,
+            "total": 128,
+            "widthPP": 8.530232386793621
+          },
+          "80": {
+            "coverage": 0.9140625,
+            "covered": 117,
+            "intervalScorePP": 20.499967845590806,
+            "total": 128,
+            "widthPP": 16.122135875895673
+          },
+          "90": {
+            "coverage": 0.9609375,
+            "covered": 123,
+            "intervalScorePP": 26.878709331227924,
+            "total": 128,
+            "widthPP": 20.597370080936415
+          }
+        },
+        "meanMultiplier": 0.7999999999999999,
+        "seats": 64
+      },
+      "grid85": {
+        "energyPP": 6.2871371665865645,
+        "majorCRPSPP": 2.9655372949311705,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.640625,
+            "covered": 82,
+            "intervalScorePP": 13.365542997403299,
+            "total": 128,
+            "widthPP": 8.76376623185921
+          },
+          "80": {
+            "coverage": 0.921875,
+            "covered": 118,
+            "intervalScorePP": 20.759348511146747,
+            "total": 128,
+            "widthPP": 16.556753406581546
+          },
+          "90": {
+            "coverage": 0.9609375,
+            "covered": 123,
+            "intervalScorePP": 27.243056289243835,
+            "total": 128,
+            "widthPP": 21.14765319826123
+          }
+        },
+        "meanMultiplier": 0.8499999999999999,
+        "seats": 64
+      },
+      "grid90": {
+        "energyPP": 6.309087828219816,
+        "majorCRPSPP": 2.9849582164598387,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.65625,
+            "covered": 84,
+            "intervalScorePP": 13.45788172332044,
+            "total": 128,
+            "widthPP": 9.00483206537579
+          },
+          "80": {
+            "coverage": 0.9296875,
+            "covered": 119,
+            "intervalScorePP": 21.030503782787417,
+            "total": 128,
+            "widthPP": 17.002749545299192
+          },
+          "90": {
+            "coverage": 0.9609375,
+            "covered": 123,
+            "intervalScorePP": 27.621078594464514,
+            "total": 128,
+            "widthPP": 21.710753501094985
+          }
+        },
+        "meanMultiplier": 0.9000000000000001,
+        "seats": 64
+      },
+      "grid95": {
+        "energyPP": 6.332881006842541,
+        "majorCRPSPP": 3.0059791149901303,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.671875,
+            "covered": 86,
+            "intervalScorePP": 13.558018796949314,
+            "total": 128,
+            "widthPP": 9.251007855557305
+          },
+          "80": {
+            "coverage": 0.9375,
+            "covered": 120,
+            "intervalScorePP": 21.32778378759465,
+            "total": 128,
+            "widthPP": 17.457657848711882
+          },
+          "90": {
+            "coverage": 0.9609375,
+            "covered": 123,
+            "intervalScorePP": 28.017559596056337,
+            "total": 128,
+            "widthPP": 22.28812240877115
+          }
+        },
+        "meanMultiplier": 0.9500000000000001,
+        "seats": 64
+      },
+      "penalised": {
+        "energyPP": 6.323119145287905,
+        "majorCRPSPP": 2.997359302197532,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.6640625,
+            "covered": 85,
+            "intervalScorePP": 13.518560451337066,
+            "total": 128,
+            "widthPP": 9.150926907892332
+          },
+          "80": {
+            "coverage": 0.9296875,
+            "covered": 119,
+            "intervalScorePP": 21.20611518378373,
+            "total": 128,
+            "widthPP": 17.2749353139002
+          },
+          "90": {
+            "coverage": 0.9609375,
+            "covered": 123,
+            "intervalScorePP": 27.854563463433923,
+            "total": 128,
+            "widthPP": 22.055236954833873
+          }
+        },
+        "meanMultiplier": 0.9299451486808615,
+        "seats": 64
+      }
+    },
+    "allSeats": {
+      "control": {
+        "energyPP": 6.8907380271591245,
+        "majorCRPSPP": 3.6635494005888667,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5583657587548638,
+            "covered": 287,
+            "intervalScorePP": 16.410903299465,
+            "total": 514,
+            "widthPP": 9.755911867629607
+          },
+          "80": {
+            "coverage": 0.8891050583657587,
+            "covered": 457,
+            "intervalScorePP": 23.267785713694227,
+            "total": 514,
+            "widthPP": 18.400044454952734
+          },
+          "90": {
+            "coverage": 0.9416342412451362,
+            "covered": 484,
+            "intervalScorePP": 28.807842877622967,
+            "total": 514,
+            "widthPP": 23.45615000629564
+          }
+        },
+        "meanMultiplier": 1.0,
+        "seats": 257
+      },
+      "free": {
+        "energyPP": 6.833610155133448,
+        "majorCRPSPP": 3.6173225005465075,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5097276264591439,
+            "covered": 262,
+            "intervalScorePP": 16.21254216578776,
+            "total": 514,
+            "widthPP": 9.00787235464251
+          },
+          "80": {
+            "coverage": 0.8618677042801557,
+            "covered": 443,
+            "intervalScorePP": 22.564340069566697,
+            "total": 514,
+            "widthPP": 17.00926952059681
+          },
+          "90": {
+            "coverage": 0.9280155642023347,
+            "covered": 477,
+            "intervalScorePP": 27.882762318989002,
+            "total": 514,
+            "widthPP": 21.704688050284613
+          }
+        },
+        "meanMultiplier": 0.8672785167981896,
+        "seats": 257
+      },
+      "grid80": {
+        "energyPP": 6.831070416990561,
+        "majorCRPSPP": 3.6177694388975126,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.49416342412451364,
+            "covered": 254,
+            "intervalScorePP": 16.26188444370796,
+            "total": 514,
+            "widthPP": 8.596208764717858
+          },
+          "80": {
+            "coverage": 0.8249027237354085,
+            "covered": 424,
+            "intervalScorePP": 22.634787742668173,
+            "total": 514,
+            "widthPP": 16.242802841925034
+          },
+          "90": {
+            "coverage": 0.9182879377431906,
+            "covered": 472,
+            "intervalScorePP": 27.99177328389492,
+            "total": 514,
+            "widthPP": 20.74135385551329
+          }
+        },
+        "meanMultiplier": 0.8,
+        "seats": 257
+      },
+      "grid85": {
+        "energyPP": 6.842024596587464,
+        "majorCRPSPP": 3.6258092848585455,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5058365758754864,
+            "covered": 260,
+            "intervalScorePP": 16.283339735513916,
+            "total": 514,
+            "widthPP": 8.878487671723434
+          },
+          "80": {
+            "coverage": 0.8424124513618677,
+            "covered": 433,
+            "intervalScorePP": 22.718945552728016,
+            "total": 514,
+            "widthPP": 16.767498265164132
+          },
+          "90": {
+            "coverage": 0.9241245136186771,
+            "covered": 475,
+            "intervalScorePP": 28.114442016671163,
+            "total": 514,
+            "widthPP": 21.403338927302155
+          }
+        },
+        "meanMultiplier": 0.8499999999999998,
+        "seats": 257
+      },
+      "grid90": {
+        "energyPP": 6.85564752339982,
+        "majorCRPSPP": 3.636144031773706,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5175097276264592,
+            "covered": 266,
+            "intervalScorePP": 16.314110984582836,
+            "total": 514,
+            "widthPP": 9.166266850430235
+          },
+          "80": {
+            "coverage": 0.857976653696498,
+            "covered": 441,
+            "intervalScorePP": 22.856326300055567,
+            "total": 514,
+            "widthPP": 17.303328874892003
+          },
+          "90": {
+            "coverage": 0.9299610894941635,
+            "covered": 478,
+            "intervalScorePP": 28.314100696328317,
+            "total": 514,
+            "widthPP": 22.077561667156665
+          }
+        },
+        "meanMultiplier": 0.9000000000000002,
+        "seats": 257
+      },
+      "grid95": {
+        "energyPP": 6.871903044099017,
+        "majorCRPSPP": 3.648746630441284,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5350194552529183,
+            "covered": 275,
+            "intervalScorePP": 16.352978459563882,
+            "total": 514,
+            "widthPP": 9.45910862728953
+          },
+          "80": {
+            "coverage": 0.8735408560311284,
+            "covered": 449,
+            "intervalScorePP": 23.036128837713704,
+            "total": 514,
+            "widthPP": 17.84766232935327
+          },
+          "90": {
+            "coverage": 0.9357976653696498,
+            "covered": 481,
+            "intervalScorePP": 28.54661619807038,
+            "total": 514,
+            "widthPP": 22.762291989469162
+          }
+        },
+        "meanMultiplier": 0.95,
+        "seats": 257
+      },
+      "penalised": {
+        "energyPP": 6.869915514450236,
+        "majorCRPSPP": 3.646582788299715,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5369649805447471,
+            "covered": 276,
+            "intervalScorePP": 16.329647246483983,
+            "total": 514,
+            "widthPP": 9.508254107864039
+          },
+          "80": {
+            "coverage": 0.8813229571984436,
+            "covered": 453,
+            "intervalScorePP": 23.00410952269322,
+            "total": 514,
+            "widthPP": 17.940518939739977
+          },
+          "90": {
+            "coverage": 0.9357976653696498,
+            "covered": 481,
+            "intervalScorePP": 28.480035113976026,
+            "total": 514,
+            "widthPP": 22.879008839477574
+          }
+        },
+        "meanMultiplier": 0.9570851371898781,
+        "seats": 257
+      }
+    },
+    "decisionSeats": {
+      "control": {
+        "energyPP": 6.584381026516295,
+        "majorCRPSPP": 3.422472144459833,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.6217616580310881,
+            "covered": 240,
+            "intervalScorePP": 15.32578256689265,
+            "total": 386,
+            "widthPP": 9.868861126761903
+          },
+          "80": {
+            "coverage": 0.9145077720207254,
+            "covered": 353,
+            "intervalScorePP": 22.60539411832512,
+            "total": 386,
+            "widthPP": 18.613499548887766
+          },
+          "90": {
+            "coverage": 0.9559585492227979,
+            "covered": 369,
+            "intervalScorePP": 28.31700701958783,
+            "total": 386,
+            "widthPP": 23.727715086656346
+          }
+        },
+        "meanMultiplier": 1.0,
+        "seats": 193
+      },
+      "free": {
+        "energyPP": 6.508309196927698,
+        "majorCRPSPP": 3.3609161169422874,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5569948186528497,
+            "covered": 215,
+            "intervalScorePP": 15.061643647954561,
+            "total": 386,
+            "widthPP": 8.872767060245407
+          },
+          "80": {
+            "coverage": 0.8782383419689119,
+            "covered": 339,
+            "intervalScorePP": 21.66868152484959,
+            "total": 386,
+            "widthPP": 16.761534998994126
+          },
+          "90": {
+            "coverage": 0.9378238341968912,
+            "covered": 362,
+            "intervalScorePP": 27.085163995914627,
+            "total": 386,
+            "widthPP": 21.395457456113167
+          }
+        },
+        "meanMultiplier": 0.8232672477571746,
+        "seats": 193
+      },
+      "grid80": {
+        "energyPP": 6.502767537254045,
+        "majorCRPSPP": 3.3577159762972713,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5440414507772021,
+            "covered": 210,
+            "intervalScorePP": 15.062689227347473,
+            "total": 386,
+            "widthPP": 8.728379493894012
+          },
+          "80": {
+            "coverage": 0.8704663212435233,
+            "covered": 336,
+            "intervalScorePP": 21.61036138830007,
+            "total": 386,
+            "widthPP": 16.494047839891802
+          },
+          "90": {
+            "coverage": 0.9378238341968912,
+            "covered": 362,
+            "intervalScorePP": 27.015527477957196,
+            "total": 386,
+            "widthPP": 21.0579537288289
+          }
+        },
+        "meanMultiplier": 0.7999999999999999,
+        "seats": 193
+      },
+      "grid85": {
+        "energyPP": 6.519579177572693,
+        "majorCRPSPP": 3.370815341230146,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5569948186528497,
+            "covered": 215,
+            "intervalScorePP": 15.108633054571696,
+            "total": 386,
+            "widthPP": 9.005321796995421
+          },
+          "80": {
+            "coverage": 0.8782383419689119,
+            "covered": 339,
+            "intervalScorePP": 21.808619131149513,
+            "total": 386,
+            "widthPP": 17.008017689159534
+          },
+          "90": {
+            "coverage": 0.9430051813471503,
+            "covered": 364,
+            "intervalScorePP": 27.277019973916445,
+            "total": 386,
+            "widthPP": 21.707461984375115
+          }
+        },
+        "meanMultiplier": 0.8499999999999998,
+        "seats": 193
+      },
+      "grid90": {
+        "energyPP": 6.53881719630011,
+        "majorCRPSPP": 3.385996354742424,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.572538860103627,
+            "covered": 221,
+            "intervalScorePP": 15.166365428530892,
+            "total": 386,
+            "widthPP": 9.288180322620887
+          },
+          "80": {
+            "coverage": 0.8911917098445595,
+            "covered": 344,
+            "intervalScorePP": 22.03736795145603,
+            "total": 386,
+            "widthPP": 17.533873237356236
+          },
+          "90": {
+            "coverage": 0.9455958549222798,
+            "covered": 365,
+            "intervalScorePP": 27.601517382673727,
+            "total": 386,
+            "widthPP": 22.370539807164388
+          }
+        },
+        "meanMultiplier": 0.9000000000000002,
+        "seats": 193
+      },
+      "grid95": {
+        "energyPP": 6.560436893477743,
+        "majorCRPSPP": 3.4032351705822457,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5958549222797928,
+            "covered": 230,
+            "intervalScorePP": 15.23369020638792,
+            "total": 386,
+            "widthPP": 9.576217709389457
+          },
+          "80": {
+            "coverage": 0.9041450777202072,
+            "covered": 349,
+            "intervalScorePP": 22.298954083097307,
+            "total": 386,
+            "widthPP": 18.069557554317498
+          },
+          "90": {
+            "coverage": 0.9507772020725389,
+            "covered": 367,
+            "intervalScorePP": 27.943932919574028,
+            "total": 386,
+            "widthPP": 23.045355346731757
+          }
+        },
+        "meanMultiplier": 0.9499999999999998,
+        "seats": 193
+      },
+      "penalised": {
+        "energyPP": 6.556653639126735,
+        "majorCRPSPP": 3.3998792980437087,
+        "majorIntervals": {
+          "50": {
+            "coverage": 0.5932642487046632,
+            "covered": 229,
+            "intervalScorePP": 15.217581501524139,
+            "total": 386,
+            "widthPP": 9.53907851401708
+          },
+          "80": {
+            "coverage": 0.9041450777202072,
+            "covered": 349,
+            "intervalScorePP": 22.254281262950716,
+            "total": 386,
+            "widthPP": 18.001592515676993
+          },
+          "90": {
+            "coverage": 0.9481865284974094,
+            "covered": 366,
+            "intervalScorePP": 27.880496163332573,
+            "total": 386,
+            "widthPP": 22.95919032047892
+          }
+        },
+        "meanMultiplier": 0.9428543018538792,
+        "seats": 193
+      }
+    },
+    "equalElectionDecision": {
+      "control": {
+        "majorCRPSPP": 3.4208747907985124
+      },
+      "free": {
+        "majorCRPSPP": 3.3591166231040055
+      },
+      "grid80": {
+        "majorCRPSPP": 3.3559179951232285
+      },
+      "grid85": {
+        "majorCRPSPP": 3.3690692033624123
+      },
+      "grid90": {
+        "majorCRPSPP": 3.384301095460275
+      },
+      "grid95": {
+        "majorCRPSPP": 3.4015895670635152
+      },
+      "penalised": {
+        "majorCRPSPP": 3.3982138862297107
+      }
+    }
+  }
+}

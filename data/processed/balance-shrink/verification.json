@@ -1,0 +1,180 @@
+{
+  "decisionArithmetic": {
+    "free": {
+      "difference": 3.122502256758253e-16,
+      "plainLoop": -0.06155602751754583,
+      "saved": -0.06155602751754552
+    },
+    "grid80": {
+      "difference": 4.718447854656915e-16,
+      "plainLoop": -0.06475616816256216,
+      "saved": -0.06475616816256169
+    },
+    "grid85": {
+      "difference": 4.926614671774132e-16,
+      "plainLoop": -0.051656803229687624,
+      "saved": -0.05165680322968713
+    },
+    "grid90": {
+      "difference": 2.220446049250313e-16,
+      "plainLoop": -0.03647578971740928,
+      "saved": -0.03647578971740906
+    },
+    "grid95": {
+      "difference": 5.516420653606247e-16,
+      "plainLoop": -0.019236973877587823,
+      "saved": -0.01923697387758727
+    },
+    "penalised": {
+      "difference": 1.8388068845354155e-16,
+      "plainLoop": -0.02259284641612443,
+      "saved": -0.022592846416124246
+    }
+  },
+  "drawGapAcrossArms": 2.220446049250313e-16,
+  "equalsStage48": {
+    "control": {
+      "comparedWith": "Stage48 control",
+      "maximumAbsoluteDifference": {
+        "coverage": 0,
+        "crps": 0.0,
+        "energy": 0.0,
+        "score": 0.0,
+        "width": 0.0
+      },
+      "seats": 257
+    },
+    "penalised": {
+      "comparedWith": "Stage48 constant",
+      "maximumAbsoluteDifference": {
+        "coverage": 0,
+        "crps": 0.0,
+        "energy": 0.0,
+        "score": 0.0,
+        "width": 0.0
+      },
+      "seats": 257
+    }
+  },
+  "exclusion": {
+    "inventoryScopes": [
+      "general"
+    ],
+    "nonGeneralRecordsInInventory": 0,
+    "passed": true,
+    "seatsByElection": {
+      "2014": 64,
+      "2017": 64,
+      "2020": 65,
+      "2023": 64
+    },
+    "seatsScored": 257
+  },
+  "fitChecks": [
+    {
+      "agreementWithStage48DescriptiveA": 0.0,
+      "boundContact": false,
+      "centralDifferenceGradient": 8.893265984744048e-11,
+      "objectiveDifference": 3.3306690738754696e-16,
+      "passed": true,
+      "penalisedMultiplierAgreement": 0.0,
+      "projectedGradientMax": 1.67681632468053e-11,
+      "year": 2017
+    },
+    {
+      "agreementWithStage48DescriptiveA": 0.0,
+      "boundContact": false,
+      "centralDifferenceGradient": 7.404641483299555e-11,
+      "objectiveDifference": 4.440892098500626e-16,
+      "passed": true,
+      "penalisedMultiplierAgreement": 0.0,
+      "projectedGradientMax": 1.4771427137016957e-11,
+      "year": 2020
+    },
+    {
+      "agreementWithStage48DescriptiveA": 0.0,
+      "boundContact": false,
+      "centralDifferenceGradient": 5.696400758499939e-11,
+      "objectiveDifference": 3.3306690738754696e-16,
+      "passed": true,
+      "penalisedMultiplierAgreement": 0.0,
+      "projectedGradientMax": 2.45701921771276e-10,
+      "year": 2023
+    },
+    {
+      "boundContact": false,
+      "centralDifferenceGradient": 7.984602215516114e-11,
+      "objectiveDifference": 0.0,
+      "passed": true,
+      "projectedGradientMax": 1.6866386412517365e-10,
+      "year": 2026
+    }
+  ],
+  "identity2014": {
+    "freeIdenticalToControl": true,
+    "gridArmsDifferFromControl": true,
+    "penalisedIdenticalToControl": true,
+    "seats": 64
+  },
+  "locationChecks": {
+    "gatePP": 0.05,
+    "maximumConditionalMeanGapPP": 6.927791673660977e-12,
+    "maximumSimulationVersusFitLocationDifference": 2.877698079828406e-13
+  },
+  "multiplierMaxDifference": 0.0,
+  "passed": true,
+  "scoreChecks": {
+    "maximumDifferencePP": 3.552713678800501e-15,
+    "seats": [
+      {
+        "arm": "grid85",
+        "id": "nz-general-2017-electorate-01",
+        "pairwiseVersusVectorisedPP": 4.440892098500626e-16,
+        "savedVersusRegeneratedPP": 0.0
+      },
+      {
+        "arm": "free",
+        "id": "nz-general-2017-electorate-01",
+        "pairwiseVersusVectorisedPP": 3.552713678800501e-15,
+        "savedVersusRegeneratedPP": 0.0
+      },
+      {
+        "arm": "grid85",
+        "id": "nz-general-2017-electorate-64",
+        "pairwiseVersusVectorisedPP": 1.3322676295501878e-15,
+        "savedVersusRegeneratedPP": 0.0
+      },
+      {
+        "arm": "free",
+        "id": "nz-general-2017-electorate-64",
+        "pairwiseVersusVectorisedPP": 8.881784197001252e-16,
+        "savedVersusRegeneratedPP": 0.0
+      },
+      {
+        "arm": "grid85",
+        "id": "nz-general-2023-electorate-01",
+        "pairwiseVersusVectorisedPP": 1.7763568394002505e-15,
+        "savedVersusRegeneratedPP": 0.0
+      },
+      {
+        "arm": "free",
+        "id": "nz-general-2023-electorate-01",
+        "pairwiseVersusVectorisedPP": 3.552713678800501e-15,
+        "savedVersusRegeneratedPP": 0.0
+      },
+      {
+        "arm": "grid85",
+        "id": "nz-general-2023-electorate-65",
+        "pairwiseVersusVectorisedPP": 8.881784197001252e-16,
+        "savedVersusRegeneratedPP": 0.0
+      },
+      {
+        "arm": "free",
+        "id": "nz-general-2023-electorate-65",
+        "pairwiseVersusVectorisedPP": 0.0,
+        "savedVersusRegeneratedPP": 0.0
+      }
+    ]
+  },
+  "stage": 60
+}
