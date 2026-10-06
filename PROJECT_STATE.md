@@ -1,4 +1,4 @@
-# End-to-end export skeleton and dry run (synthetic fixtures) — local checkpoint, 2026-10-06
+# Stage53 end-to-end export skeleton and synthetic dry run — local checkpoint, 2026-10-06
 
 Branch `claude/project-thread-mk3i23`, base main 109794f (roadmap/D082 merge, PR55). Authorized by D082 item (d). Question: can one versioned export contract carry a labelled synthetic forecast from polls through MMP to the website without synthetic data reaching application results? **Yes, on fixtures.** TypeScript only: no Python, statistical code, saved output, CI file, AGENTS.md, roadmap/DECISIONS text, `src/models/mmp` or Stage47 file touched; nothing fitted; no forecast exists.
 
