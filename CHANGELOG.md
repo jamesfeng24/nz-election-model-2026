@@ -1,5 +1,6 @@
 ## MMP rule verification — documentation only (2026-10-06)
 
+- Preserve the Electoral Act 1993 text (version 238.0, 1 Jan 2026) under `data/raw/legislation/` and verify ss 191–193 rules against it.
 - Record sourced status of the 5% threshold, one-electorate exemption, Sainte-Laguë, overhang, 120-seat house, 71-electorate/49-list-seat 2026 structure and 2025 law changes in `docs/mmp-rules-verification.md`; list items still open (statute text, independents, ties, postponed polls).
 - Propose, but do not start, the `src/models/mmp` allocation-core stage. No code, data, test or workflow change.
 
