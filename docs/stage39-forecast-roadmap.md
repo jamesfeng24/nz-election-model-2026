@@ -30,7 +30,7 @@ Numbers are identifiers, not an execution order; PR titles use `StageNN:` and th
 | Stage53 | End-to-end skeleton, export contract and synthetic dry run | authorized |
 | Stage54–57 (provisional) | Composed-MC precision (item 4); replacement R_new = a + ρ R_old test; dated manual-adjustment interface (item 7); manual replay (item 8) | not yet authorized; confirm numbers when each is authorized |
 
-Next free number: Stage58. Decision numbers: D081 is the CI-scoping decision on main, so PR54's Stage47 decision (written as D081 on its branch) must be renumbered D083 when PR54 takes main; D084 is reserved for the Stage49 MMP decision (#58); next free decision D085.
+Next free number: Stage58. Decision numbers: D081 is the CI-scoping decision on main, so PR54's Stage47 decision (written as D081 on its branch) must be renumbered D083 when PR54 takes main; D084 is the Stage49 MMP decision (#58), D085 is reserved for Stage52 and D086 for Stage51; next free decision D087. Threads get decision numbers from the coordinator, not by taking the next number on main.
 
 ## Three final outputs
 
