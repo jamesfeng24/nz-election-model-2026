@@ -1,4 +1,5 @@
 {
+  "amendmentBeforeScoring": "2017 Te Tai Tokerau has no Maori Party candidate; contrast sample 24 polls",
   "biasAdoption": {
     "default": 0.0,
     "estimator": "equal-weight mean of the four election means of D",
@@ -27,7 +28,7 @@
     "OTH": "all other parties and independents"
   },
   "nationalCoupling": "none by default; standardised shared factor exported",
-  "parameterUncertainty": "scaled inverse chi-square draws for sigma^2 (21 df) and tau^2 (4 df) per Monte Carlo draw",
+  "parameterUncertainty": "scaled inverse chi-square draws for sigma^2 (20 df) and tau^2 (4 df) per Monte Carlo draw",
   "partyVoteUsed": false,
   "pollPerSeat": "latest by fieldwork end",
   "previewDraws": 2000,
@@ -36,7 +37,8 @@
   "seed": 2026066,
   "sigma": {
     "contrast": "D = log(v_MP/v_LAB) - log(q_MP/q_LAB)",
-    "degreesOfFreedom": 21,
+    "contrastPolls": 24,
+    "degreesOfFreedom": 20,
     "estimator": "within-election pooled variance of D / 2"
   },
   "tau": {
