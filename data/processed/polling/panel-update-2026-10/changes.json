@@ -1,0 +1,182 @@
+{
+ "added": [
+  {
+   "evidenceGrade": "primary_verified",
+   "fieldworkRaw": [
+    "2026-09-24",
+    "2026-10-01"
+   ],
+   "id": "nz-poll-74bbbd7e57ad58aed228",
+   "pollsterCode": "REI",
+   "provenance": [
+    "polling-current2026primary-rnz-reid-2026-10-06.html",
+    "polling-current2026primary-wikipedia-opinion-polling-2026.html"
+   ],
+   "sampleSize": 1000,
+   "shares": {
+    "ACT": "9",
+    "GRN": "14.8",
+    "LAB": "30.8",
+    "MRI": "2",
+    "NAT": "25.9",
+    "NZF": "10.6",
+    "TOP": "5.5"
+   }
+  },
+  {
+   "evidenceGrade": "primary_verified",
+   "fieldworkRaw": [
+    "2024-11-01",
+    "2024-11-10"
+   ],
+   "id": "nz-poll-51599d9ddce75d678337",
+   "pollsterCode": "TBM",
+   "provenance": [
+    "polling35-wiki2026.html",
+    "polling-current2026primary-talbot-herald-2024-11.html"
+   ],
+   "sampleSize": null,
+   "shares": {
+    "ACT": "10",
+    "GRN": "10",
+    "LAB": "33",
+    "MRI": "3.3",
+    "NAT": "34",
+    "NZF": "7"
+   }
+  },
+  {
+   "evidenceGrade": "aggregator_only",
+   "fieldworkRaw": [
+    "2024-05-01",
+    "2024-05-10"
+   ],
+   "id": "nz-poll-1b2a21643e2c0e1d2ae7",
+   "pollsterCode": "TBM",
+   "provenance": [
+    "polling35-wiki2026.html",
+    "labo49/nzpolls@da33cf52 data/polls.json"
+   ],
+   "sampleSize": null,
+   "shares": {
+    "LAB": "32",
+    "NAT": "35"
+   }
+  }
+ ],
+ "baseWaves": 496,
+ "notes": [
+  "Stage35 polls.json is unchanged; Stage36-Stage48 consumers still pin its bytes.",
+  "evidenceGrade is present only on the waves this update added or changed.",
+  "Labour-commissioned Talbot Mills rows (30 Apr and 22-28 Nov 2024) share pollster code TBM with the corporate rows in the Stage35 panel; unchanged here."
+ ],
+ "removed": [
+  {
+   "collapsedInto": "nz-poll-342c0ad79dbdb93739cf",
+   "id": "nz-poll-76482a3c446b7d615157",
+   "identicalFields": [
+    "party estimates (status, share, bounds)",
+    "sampleSize",
+    "pollsterCode",
+    "cycle"
+   ],
+   "whyThisOneWasDropped": "The kept Nixinova row preserves that the fieldwork start day is unknown (start day 00, interval); the Wikipedia copy states the single day 16 Apr, which is the date the poll was first reported, not a published fieldwork date, and would silently turn an end bound into a fieldwork day."
+  }
+ ],
+ "rnzReidAcrossStage52Snapshots": {
+  "note": "labo49 (24 Sep-1 Oct) agrees with the RNZ article; danylmc dates the same shares 4-11 Sep, which the RNZ article contradicts. Both are derivative Wikipedia scrapes.",
+  "panelFieldwork": [
+   "2026-09-24",
+   "2026-10-01"
+  ],
+  "snapshotLabels": {
+   "danylmc": [
+    "2026-09-04..2026-09-11"
+   ],
+   "labo49": [
+    "24 Sep - 1 Oct 2026"
+   ]
+  }
+ },
+ "schemaVersion": 1,
+ "stage52TalbotMillsCheck": {
+  "danylmc": {
+   "panelWavesMatchedByMoreThanOneSnapshotRow": {},
+   "talbotMillsRows": 22,
+   "unmatched": []
+  },
+  "labo49": {
+   "panelWavesMatchedByMoreThanOneSnapshotRow": {},
+   "talbotMillsRows": 22,
+   "unmatched": []
+  }
+ },
+ "stage52TalbotMillsCheckAgainstStage35Panel": {
+  "danylmc": {
+   "panelWavesMatchedByMoreThanOneSnapshotRow": {},
+   "talbotMillsRows": 22,
+   "unmatched": [
+    {
+     "label": "2024-11-01..2024-11-10",
+     "pollster": "Talbot Mills",
+     "shares": {
+      "ACT": 10.0,
+      "GRN": 10.0,
+      "LAB": 33.0,
+      "NAT": 34.0,
+      "NZF": 7.0
+     }
+    },
+    {
+     "label": "2024-05-01..2024-05-10",
+     "pollster": "Talbot Mills",
+     "shares": {
+      "LAB": 32.0,
+      "NAT": 35.0
+     }
+    }
+   ]
+  },
+  "labo49": {
+   "panelWavesMatchedByMoreThanOneSnapshotRow": {},
+   "talbotMillsRows": 22,
+   "unmatched": [
+    {
+     "label": "1–10 May 2024",
+     "pollster": "Talbot Mills",
+     "shares": {
+      "LAB": 32,
+      "NAT": 35
+     }
+    },
+    {
+     "label": "1–10 Nov 2024",
+     "pollster": "Talbot Mills",
+     "shares": {
+      "ACT": 10,
+      "GRN": 10,
+      "LAB": 33,
+      "NAT": 34,
+      "NZF": 7
+     }
+    }
+   ]
+  }
+ },
+ "unchangedBaseWaves": 494,
+ "updatedWaves": 498,
+ "wavesByCycleBase": {
+  "2014": 136,
+  "2017": 78,
+  "2020": 46,
+  "2023": 116,
+  "2026": 120
+ },
+ "wavesByCycleUpdated": {
+  "2014": 136,
+  "2017": 78,
+  "2020": 46,
+  "2023": 116,
+  "2026": 122
+ }
+}
