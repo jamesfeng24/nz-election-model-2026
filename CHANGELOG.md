@@ -370,3 +370,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Behavioural tests, other pipelines and cheap Stage45/46 checks always run. A later stage that reads a registered pipeline's cache (Stage47 reads the Stage46 bank) keeps it full until reviewed.
 - Add job `timeout-minutes` (20/150), `actions: read`, and prohibit CPU/wall-time gates inside `--check`. Bump `actions/checkout` v5, `actions/setup-node` v5, `actions/setup-python` v6 (Node 24). No statistical code, output, threshold or artifact change. D081, AGENTS.md handoff section and README refresh.
 - Add a guarded frontend step for `npm run check:dist` (skipped until the script exists on main).
+
+## Post-Stage47 roadmap, D082 and PR conventions — 2026-10-06
+
+- Add the "Active roadmap after Stage47" section (agreed sequence, three final outputs, do-not-reopen list limited to historical backtests, 56-day versus ~32-day horizon limitation, Māori fallback, open probability-release policy) and D082 recording the authorization boundary; no model, data, threshold or artifact change.
+- Allocate Stage48–57 (Stage48 frozen balance-scale comparison, Stage49 MMP, Stage50 nominations, Stage51 candidate-change classification, Stage52 poll acquisition, Stage53 end-to-end contract; Stage54–57 provisional); next free Stage58. Record that D081 on main is the CI-scoping decision, so PR54's Stage47 decision becomes D083.
+- Record James's authorizations (Stage48 after PR54, Stage51, Stage52) and the post-CI-scoping merge policy; add a "Pull requests" section to AGENTS.md (title scheme and body template).
