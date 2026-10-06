@@ -28,6 +28,10 @@ Three views per component: (1) seat-scale ratio R with a seat bootstrap (2,000 d
 - **Share coverage:** over-covers if the interval for 80% coverage lies entirely above 0.80.
 - **Next-best target:** among components that are conservative and map to a Stage47 ablation policy, the largest approximate cut to the composed National 90% width at the point R and at the interval's upper end. The arithmetic is the plan's own, `W(m) = sqrt(W_full^2 - (1-m^2)(W_full^2 - W_without^2))`, from the nine-seat ablation, so it is indicative and non-additive.
 
+## Amendment A1 (2026-10-06): within-remainder seat moment definition
+
+The first implementation took the within-remainder seat moment from the Stage46 residual records (`seatResidual = raw - shared`). Those records do not centre the class effect within each seat, so the resulting moments did not reproduce the saved Stage45 descriptive moments in the cross-check (2011 local: 0.846 against 0.770). The first-attempt pooled R values (0.852 candidate, 1.123 local) were seen before this amendment, so the correction was not blind. The amended definition follows the Stage45 estimator exactly: `e` is the raw within-remainder residual, `b` the saved class effects of that election, `left = e - (b - mean b)` and the seat moment `sum(left^2)/(K-1)` per seat, which reproduces every saved descriptive within seat moment to machine precision (a unit test). No rule, threshold, seed or verdict definition changed; the Stage46 diagnosis file is no longer consumed.
+
 ## Limits recorded in advance
 
 - Seats within an election share a common effect, so seat-bootstrap intervals understate uncertainty about the shared part, and three or four elections cannot calibrate a shared scale. The cheapest way to isolate a shared effect better is more elections, which no existing frame supplies; nothing new is acquired here.

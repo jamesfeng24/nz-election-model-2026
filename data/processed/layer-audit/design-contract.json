@@ -4,12 +4,55 @@
   "question": "Besides the candidate National/Labour balance term, are the other uncertainty layers and components too conservative, too tight or about right, and which is the next-best narrowing target?",
   "scope": {
     "electorateType": "general only; Maori electorates are excluded by scope, never by party",
-    "layers": ["local_party", "candidate"],
-    "components": ["balance", "mass", "within"],
-    "parts": ["seat", "shared"],
-    "years": {"local_party": [2011, 2014, 2017, 2020, 2023], "candidate": [2014, 2017, 2020, 2023]},
-    "estimatedFoldYears": {"local_party": [2014, 2017, 2020, 2023], "candidate": [2017, 2020, 2023]},
-    "priorOnlyFoldYears": {"local_party": [2011], "candidate": [2014]},
+    "layers": [
+      "local_party",
+      "candidate"
+    ],
+    "components": [
+      "balance",
+      "mass",
+      "within"
+    ],
+    "parts": [
+      "seat",
+      "shared"
+    ],
+    "years": {
+      "local_party": [
+        2011,
+        2014,
+        2017,
+        2020,
+        2023
+      ],
+      "candidate": [
+        2014,
+        2017,
+        2020,
+        2023
+      ]
+    },
+    "estimatedFoldYears": {
+      "local_party": [
+        2014,
+        2017,
+        2020,
+        2023
+      ],
+      "candidate": [
+        2017,
+        2020,
+        2023
+      ]
+    },
+    "priorOnlyFoldYears": {
+      "local_party": [
+        2011
+      ],
+      "candidate": [
+        2014
+      ]
+    },
     "nationalLayer": "not scored: Stage36/38 national inference is out of scope and no national MCMC is run"
   },
   "scales": "frozen Stage45 fold scales (earlier elections only), unchanged by Stage47 and Stage48 (data/processed/uncertainty-revision/scales.json); nothing is refit, retuned or rescaled",
@@ -22,7 +65,13 @@
     "rawBasisSensitivity": "the same ratios on the Stage45 raw residual basis (observed minus logit of the mean, no location adjustment); reported beside, never decisive",
     "totalPit": "PIT_i = Phi(e_i / total_sd) for balance and mass; central 50/80/90 coverage by election and pooled; ten-bin histogram; chi-square statistic descriptive only (seats share an election effect)",
     "shareCoverage": "stored Stage47 interval50/80/90 coverage flags for local_party (13-17 options), candidate (8-11) and composed (3 elections, 512 cached national scenarios) by option group national, labour and other; seven-bin PIT from the stored interval bounds with expected frequencies .05/.05/.15/.50/.15/.05/.05",
-    "bootstrap": {"draws": 2000, "seed": 61, "level": 0.9, "scheme": "seats resampled with replacement within election; elections equally weighted; shared effects are not resampled", "note": "seats share an election effect, so intervals describe seat-level noise only; shared parts are never given a bootstrap"}
+    "bootstrap": {
+      "draws": 2000,
+      "seed": 61,
+      "level": 0.9,
+      "scheme": "seats resampled with replacement within election; elections equally weighted; shared effects are not resampled",
+      "note": "seats share an election effect, so intervals describe seat-level noise only; shared parts are never given a bootstrap"
+    }
   },
   "verdictRules": {
     "seatScale": {
@@ -38,8 +87,12 @@
     "rule": "among seat-scale components whose verdict is conservative and that map to a Stage47 ablation policy, rank by the approximate drop in the composed National 90% width at scale multiplier m = R (point) and m = upper bootstrap end; report none if no component qualifies",
     "arithmetic": "W(m) = sqrt(W_full^2 - (1 - m^2)(W_full^2 - W_without^2)); W_full and W_without are the Stage47 nine-seat ablation means; width changes are not additive variance shares and the sample is nine seats",
     "ablationMap": {
-      "candidate.balance": "no_candidate_balance", "candidate.mass": "no_candidate_mass", "candidate.within": "no_candidate_within",
-      "candidate.shared": "no_candidate_shared", "local_party.seat": "no_local_seat", "local_party.shared": "no_local_shared"
+      "candidate.balance": "no_candidate_balance",
+      "candidate.mass": "no_candidate_mass",
+      "candidate.within": "no_candidate_within",
+      "candidate.shared": "no_candidate_shared",
+      "local_party.seat": "no_local_seat",
+      "local_party.shared": "no_local_shared"
     },
     "localSeatBracket": "the three local coordinates map to one ablation policy, so the lowest and highest local R bracket it"
   },
@@ -51,5 +104,14 @@
     "frozenStage45To48OutputsTouched": false,
     "dataSourcesJsonTouched": false,
     "pipelinesBuilt": "none; analytic arithmetic on stored frozen inputs only"
-  }
+  },
+  "amendments": [
+    {
+      "id": "A1",
+      "date": "2026-10-06",
+      "status": "recorded before the amended within scores were read",
+      "reason": "The first within-remainder implementation used the Stage46 residual records (seatResidual = raw - shared). Those records do not centre the class effect within each seat, so their seat moment differs from the Stage45 estimator: the within seat moments did not reproduce the saved Stage45 descriptive moments in the cross-check test (for example 2011 local 0.846 against 0.770). The first-attempt pooled R values were 0.852 (candidate) and 1.123 (local) and were seen before this amendment.",
+      "change": "withinSeatPart now uses the Stage45 estimator definition exactly: e = raw within residual, b = the saved class effects of that election, left = e - (b - mean b), s = sum(left^2)/(K - 1) per seat, reproducing the saved descriptive seat moments to machine precision. All rules, thresholds, seeds and verdict definitions are unchanged."
+    }
+  ]
 }
