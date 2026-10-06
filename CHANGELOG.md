@@ -423,3 +423,14 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 
 - Fold the four pending handoff fragments into CHANGELOG, PROJECT_STATE, DECISIONS (D083–D086), METHODOLOGY, DATA_SOURCES and the roadmap table; every row for Stage47 (#54), Stage49 (#58), Stage51 (#61) and Stage52 (#60) now reads merged. The Stage47 entry was rewritten as merged state with its run-together spacing restored; the Stage51 entry lost a stray conflict marker and stale base text.
 - `scripts.fold_doc_fragments` rejects git conflict markers in fragments (with tests); `ci_frozen.couple_cache_dependencies` iterates to a fixed point so transitive `cacheDependencies` couple (with a test). No registry content, model, statistical code or data output changed.
+
+## Stage48 — frozen candidate-balance scale comparison, 2026-10-06
+
+- Run exactly the frozen Stage47 Recommendation B contract (D083): numerically corrected control C, earlier-trained constant seat-balance multiplier K, strongly pooled conditional multiplier F (supported R deficit, continuous historical non-major support). The design, interpretations and decision rule were committed before any challenger was fitted or scored (`docs/stage48-balance-scale-design.md`, `data/processed/balance-scale/design-contract.json`).
+- Finding under the frozen rule: **constant only**. K beats C on the 193 fitted-fold seats (N/L CRPS -0.0226pp, -0.66%; mean N/L interval score -0.299; energy -0.028; all three elections improve; coverage moves toward nominal at 50/80/90). F adds -0.0005pp over K (negligible). The 193-seat composed check agrees in sign (K vs C -0.0171pp) with its precision gates still unmet. The frozen ridge limits K to multipliers 0.930-0.953; the likelihood alone prefers about 0.78-0.85 (descriptive, never scored). Nothing is adopted (D087).
+- New code `scripts/balance_scale/` (fit, simulate, evaluation, decision, verification, report, manifest), outputs `data/processed/balance-scale/`, findings `docs/stage48-balance-scale-findings.md`, tests `scripts/tests/test_stage48_balance_scale.py`. Stage48 registered as frozen pipeline `stage48` (registry, workflow gates, `ci_frozen.KNOWN`, selector tests, `docs/ci-validation.md`).
+- No new source or acquisition, no `data/sources.json` edit, no national MCMC, no frozen Stage45/46/47 output changed.
+
+## Docs: fold Stage48 handoff notes — 2026-10-06
+
+- Fold the Stage48 fragment into CHANGELOG, PROJECT_STATE, DECISIONS (D087), METHODOLOGY and the roadmap table; the Stage48 row now reads merged (PR #64, `b42cbc4`). Wording fixed in the folded text: Stage48's final head was `2a000a1`, merged via PR #64 at `b42cbc4` with main at `c251add` before the merge. The roadmap decision-number paragraph now records D087 as used by Stage48, D088 reserved for Stage54 and D089 as next free. `handoff.d/` holds only its README. No model, statistical code, data, registry or CI change.
