@@ -1,3 +1,71 @@
+# Stage71 Māori seat calibration complete — review-ready, 6 October 2026
+
+Branch `stage/71-maori-seat-calibration-los82r`, from main `5e22a83`. Commits: `ea1c9fc` frozen design (before any corrected arm was scored), a design clarification (zero-sigma bootstrap replicates are skipped, before any score was displayed), then the final head (code, outputs, findings, tests, this fragment). Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
+
+**What was done.** The one question: what correction fitted only on earlier elections and scored chronologically restores calibration of the Stage66 Māori seat layer, and how much does it widen or shift the 2026 seat probabilities? Control C = Stage66 unchanged; P = single variance inflation on the poll-to-result error (maximum likelihood over every named candidate of the training polls, unconstrained, with a two-stage bootstrap of the correction carried into every draw); PB = P plus a leave-self-out pollster-era (Reid / Curia) bias for Māori Party candidates, capped by design at "suggestive". Scored chronologically (training on strictly earlier elections: 2017, 2020, 2023 held out, 21 polls) and leave-one-election-out (25 polls), 100,000 draws per fold with common random numbers, on calibration of the poll-leader win probability (z, bands), Brier, log score and 50/80/90% interval coverage; decision rule and finding classes frozen first.
+
+**Result.** `improves_not_restored` in the chronological scheme and both robustness repeats. Chronological pooled (C / P / PB): predicted leader win 0.826 / 0.765 / 0.714 against 13 of 21 (0.619); calibration z -2.65 / -1.66 / -1.08 (limit 1.645, so P misses narrowly); Brier 0.223 / 0.195 / 0.149; log score of the winner -0.602 / -0.551 / -0.449; closed-share 50/80/90% coverage C 0.36 / 0.72 / 0.81, P 0.47 / 0.88 / 0.95. P against C: Brier -0.028 (poll-bootstrap 90% -0.054 to -0.005), better in all three folds. Gain is almost all 2023 (Brier 0.373 to 0.297). Fitted `lambda` 0.94 (2014 alone), 1.68, 2.82, 3.03 (all four; bootstrap 90% 1.72 to 7.02; leave-one-election-out 2.24 to 4.05). The single factor over-widens the Māori Party-versus-Labour contrast (80 and 90% contrast intervals cover 20 of 20 polls) because it is driven by minor candidates. PB scores best but rests on one Curia transition (2020 to 2023). 2026 readout (leader win probability, Hauraki-Waikato / Te Tai Hauāuru / Te Tai Tonga): C 0.88 / 0.78 / 0.85; P 0.74 / 0.66 / 0.62 (spans 0.68 to 0.82, 0.60 to 0.72, 0.50 to 0.75 across the correction's own interval); PB 0.92 / 0.87 / 0.53. Māori Party wins among the three: mean 1.76 (C), 1.61 (P), 2.11 (PB).
+
+**Limits.** 25 polls, four elections, two pollsters; the Stage66 backtest result was known before the design, so only earlier-elections-only fitting and the frozen rule guard against leakage; the 2017 fold trains on one election; the correction is identified mostly by the 2020 and 2023 Curia misses; the poll bootstrap ignores within-election dependence; leader-win calibration on 21 to 25 polls has about ±0.1 of sampling noise; 2026 polls are 37 to 44 days out. No calibrated-probability claim.
+
+**Not done / not authorised.** No adoption, release or publication; no per-candidate-type noise (the likely cause of the inflation, left as a follow-up); no covariates, party-vote or national input; no general-seat, national or MMP change; no new source or `data/sources.json` edit; no CI registry edit; no later stage; new Whakatau polls are not this stage's job.
+
+**Checks (local, Linux x86-64, Python 3.13, numpy 2.5.3; CI pins Python 3.12.2 and numpy 2.2.6).** `python3 -m scripts.maori_seat_calibration.run --check` ok (about 12 seconds); `scripts.tests.test_maori_seat_calibration` 15 pass; Stage66's `run --check` and tests re-run; the full unittest, fold-check and source-validation results are in the PR body. Frontend not run: no TypeScript changed. Not run locally: hosted Verify on the exact head.
+
+**Exact next action.** Coordinator reviews and merges; James decides whether to adopt P (or keep Stage66) as the Māori-seat default before any probability release, and whether the Curia-era hypothesis (PB) is believable. Optional separately authorised follow-ups: a structure-specific minor-candidate noise test; re-running this frozen design after more Whakatau polls arrive (adding a poll is a Stage66 data-file change plus a rerun of this runner). Reproduction: `python3 -m scripts.maori_seat_calibration.run` (add `--check` to verify); no network, no cache.
+
+---
+
+# Stage68 shared split-shift swing check complete — review-ready, 6 October 2026
+
+Branch `stage/68-shared-split-swing` from main `5e22a83`. Frozen design `8bf4a5f`. Decision D102.
+
+**Result.** Shared shifts are −0.303, +0.025, +0.277 and −0.130 (2014 to 2023); swings are +0.101, −0.440, −0.879 and +1.051. All 4 signs agree with "candidate split lags party swing", and every LOEO β is positive (0.14 to 0.29). But the LOEO RMS is 0.188 against 0.216 for predicting zero (ratio 0.87, threshold 0.75), and the 2023 leave-future-out prediction is worse than zero. Finding: `record_and_stop`.
+
+**Checks.** `python3 -m scripts.shared_split_swing.run --check` PASS; `scripts.tests.test_stage68_shared_split_swing` 3 PASS (local, Python 3.13.16). No CI, workflow or registry edit.
+
+**Exact next action.** The coordinator reviews and merges. No further swing work unless a fifth election is added; the shared election balance scale stays as is.
+
+---
+
+# Stage67 ordinary versus exceptional balance scale complete — review-ready, 6 October 2026
+
+Branch `stage/67-exceptional-balance-scale` from main `5e22a83`. Design freeze `790cae1` (before any fit); amendment 1 `e60142b`, which added `twogroup_exc1` at the coordinator's request after the original arms were fitted and before any score was read (one unread bank deleted). Decision D101. The PR number and final head are in the PR body. The coordinator reviews and merges.
+
+**Question.** Do separate earlier-trained ordinary/exceptional multipliers on the candidate N/L seat balance scale beat Stage60's single earlier-trained multiplier? Flags: the frozen 38-seat 2026-10-06 audit set. Sensitivity: the 17 flags not taken from the residual-ranked list.
+
+**Result (frozen rule).**
+- `twogroup_exc1` (ordinary 0.595/0.615/0.607, flagged seats at 1.00) IMPROVES on free: −0.0368pp N/L CRPS (−1.09%), all three elections better, bootstrap [−0.054, −0.019], floors pass. Ordinary-seat coverage 0.543/0.828/0.933; 2020 is near the floor.
+- `twogroup` (fitted exceptional 1.74/1.89/1.53) is NEGLIGIBLE against free and WORSE than `twogroup_exc1` (+0.0285pp).
+- `twogroup17` is NEGLIGIBLE (+0.0052pp), fails the exceptional 50% floor, and has fitted exceptional multipliers below ordinary (0.24–0.37). Hence `flag_selection_sensitive`.
+
+**Reading.** Flagged seats should stay at the frozen scale. The narrower ordinary scale is not established, because the gain depends on flags made with outcome knowledge. A blind-flag test (Stage57) is the clean version.
+
+**Checks (local, Python 3.13.16, numpy 2.2.6, scipy 1.16.0).**
+- `python3 -m scripts.exceptional_balance_scale.{inputs,fit,evaluation,decision} --check`: PASS (evaluation about 53s on 4 cores).
+- `scripts.tests.test_stage67_exceptional_balance_scale`: 8 PASS (about 18s).
+- Control and free equal Stage60 seat by seat.
+
+**CI.** No CI, workflow or registry edit. Hosted CI exercises the stage only through the unit test.
+
+**Exact next action.** The coordinator reviews and merges. James decides on (a) flagged seats held at the frozen scale and (b) whether to authorize a blind-flag test via the Stage57 manual replay. Stage68 (D102, a descriptive check of national swing against the shared split shift) follows on its own branch.
+
+---
+
+# Diagnostics: exceptional-seat balance scale — review-ready, 2026-10-06
+
+Branch `claude/cool-dirac-mq8787` from main `3a136c9`. One question: do the frozen 38/257 exceptional-uncertainty flags (2026-10-06 read-only audit) support separate ordinary and exceptional candidate N/L balance seat scales? This reuses the Stage48 loader and Gaussian likelihood unchanged, with an unpenalised two-group seat multiplier.
+
+**Results.** The one-scale fit is 0.79 of the frozen seat scale (90% bootstrap 0.68–0.90). Ordinary seats are 0.60 (0.54–0.65), stable at 0.59–0.63 per election and in leave-one-election-out fits. Exceptional seats are 1.46 (1.09–1.80); the ratio is 2.41 (1.80–3.08), 1.23 in 2020, and 1.69 without the five largest cases. LR 70.2 on 1 df; permutation 0/400. Held-out likelihood improves in all four elections (2020 only slightly). Even-seat 90% N/(N+L) width: frozen about 30–32pp, ordinary about 21–23pp, exceptional about 40–44pp.
+
+**Limits.** The flags are not fully blind (21 of the 38 came from a residual-ranked list); this is in-sample development evidence with the shared scale untouched. Nothing is adopted.
+
+**Checks.** `python3 -m unittest scripts.tests.test_exceptional_scale` 4 PASS; `python3 -m scripts.exceptional_scale.run --check` PASS (about 1m40, local Python 3.13 with pinned numpy 2.2.6/scipy 1.16.0). Not run: the full suite and frontend (no shared code changed). CI was not modified; the separate pending CI fix remains separate. New test files force full hosted validation under the existing selector.
+
+**Exact next action.** James decides whether to authorize a pre-registered ordinary/exceptional uncertainty design (ideally chronological with blind flags). Leave this PR for coordinator review; do not adopt.
+
+---
+
 # Docs: fold of the Stage56, 60, 61, 62, 64, 65, 66, macron-audit and CI-attestation handoff fragments — review-ready, 6 October 2026
 
 Branch `claude/docs-fold-stage60-66-t721cs`, started from main `823f065` (PRs #69 to #77 and #79 merged). Folded the nine pending fragments in `handoff.d/` with `python3 -m scripts.fold_doc_fragments` into CHANGELOG, PROJECT_STATE, DECISIONS (D092, D093, D094, D096, D097, D098, D099, D100), METHODOLOGY, DATA_SOURCES and the roadmap table: Stage56, Stage60, Stage61, Stage62, Stage64, Stage65, Stage66, the seat-name key audit (#74, no decision number) and the durable frozen-pipeline attestation fix (#77, D100). Docs only: no model or statistical code, data, registry, test or CI change, and no wording of the folded entries changed. `handoff.d/` now holds only README.md.
