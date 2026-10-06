@@ -116,7 +116,7 @@ Still to add in the assembly PR, because they depend on Stage63 and the live lay
 
 Stage53's fixed `requiredSeats` government combinations are to be replaced by Stage65's dynamic-majority blocs.
 
-## 8. Configuration (one canonical source, to create)
+## 8. Configuration (one canonical source: `config/nowcast-2026.json`, Stage72)
 
 `config/nowcast-2026.json` will hold:
 - the election date;
@@ -131,7 +131,7 @@ Stage53's fixed `requiredSeats` government combinations are to be replaced by St
 - the MMP rules version;
 - the model and config version.
 
-Frozen historical scripts keep their own constants. Live code reads only this file.
+Frozen historical scripts keep their own constants. Live code reads only this file, through `scripts/nowcast_config/validate.py`. Fields owned by other work are explicitly pending, and the assembly runs with `--require-complete`. The 2026 scales (`data/processed/nowcast-config/scales-2026.json`) are the frozen Stage45 rule with target 2026. See [stage72-nowcast-config.md](stage72-nowcast-config.md).
 
 ## 9. Decisions still James's
 
