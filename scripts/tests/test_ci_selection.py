@@ -30,7 +30,7 @@ def synthetic_registry():
 class ConservativeSelectionTests(unittest.TestCase):
     def test_only_reviewed_unaffected_scopes_can_reuse_stage39(self):
         registry = synthetic_registry()
-        for changed in (['docs/a.md'], ['PROJECT_STATE.md'], ['src/App.tsx'],
+        for changed in (['docs/a.md'], ['PROJECT_STATE.md'], ['handoff.d/2026-10-06-x.md'], ['src/App.tsx'],
                         ['scripts/uncertainty_revision/evaluation.py'],
                         ['data/processed/uncertainty-revision/evaluation.json'], []):
             with self.subTest(changed=changed):
@@ -44,7 +44,7 @@ class ConservativeSelectionTests(unittest.TestCase):
                         'data/processed/polling/candidate-integration/construction.json',
                         'data/raw/unreviewed.csv', 'scripts/new_pipeline/run.py',
                         'data/processed/new-stage/result.json', 'package-lock.json',
-                        'unknown.txt', 'docs/new-data.json'):
+                        'unknown.txt', 'docs/new-data.json', 'handoff.d/data.json'):
             with self.subTest(changed=changed):
                 self.assertEqual(selection.select([changed], 'pull_request', synthetic_registry())['mode'], 'full')
 
