@@ -1,3 +1,3 @@
 # Validated website data boundary
 
-Future loaders must validate versioned JSON/GeoJSON exports and source references before handing data to models or pages. No data loading exists in stage 1. Never import raw data or synthetic fixtures into the website.
+`loader.ts` loads the latest published forecast snapshot from the versioned archive (`<base>/forecasts/index.json`), verifying the index schema, the snapshot's SHA-256 and the snapshot schema (`src/types/export.ts`). Any failure returns `unavailable`; pages never render unverified or partial data. Synthetic fixtures are accepted only when the caller passes `allowSynthetic` (development). Never import raw data or synthetic fixtures into the website. See `docs/export-contract.md`.
