@@ -28,7 +28,7 @@ One immutable JSON file per run. It composes the existing draft types (`Simulati
 | `boundaries` | Optional reference (path, sha256) to an `ElectorateGeometrySchema` GeoJSON FeatureCollection keyed by `properties.electorateId`. |
 | `limitations` | At least one. |
 
-Cross-checks reject unknown parties/candidates, duplicate ids, election mismatches, out-of-range shares and placeholder MMP rules in model snapshots.
+Cross-checks reject unknown parties/candidates, duplicate ids, election mismatches, out-of-range shares and placeholder MMP rules in model snapshots. They also require a national vote-share interval for every party in the directory (a missing share is a failure, never a blank or zero), and reject any `synthetic-…` party, electorate, candidate or election id in a non-synthetic snapshot, whatever its snapshot id or provenance claims.
 
 ## Archive and loading
 
@@ -44,7 +44,7 @@ Layout under `<base>/forecasts/`: `index.json` and `<snapshotId>/snapshot.json` 
 2. `npm run build && npm run check:dist` (`scripts/validate/no_synthetic_in_dist.mjs`) scans the built bundle for fixture markers. It was verified to fail on a `NODE_ENV=development` build and pass on the production build.
 3. Loader tests check synthetic snapshots are refused when `allowSynthetic` is false.
 
-`check:dist` is not yet in `ci.yml` (owned by the CI-scoping stage); until it is, run it after `npm run build`.
+`check:dist` runs in the `check` job of `ci.yml` (the step is guarded so it is skipped only if the script is undefined). It passed in the hosted Verify run 37397768440 on main after #57 merged.
 
 ## Not done here
 

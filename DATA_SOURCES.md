@@ -314,12 +314,6 @@ No new political sources or inference. `data/processed/uncertainty-revision/` pi
 
 No political/source resources acquired. `data/processed/uncertainty-tails/input-contract.json` pins consumed Stage44/45 residual, mean-model and cached-national dependencies; preservation.json verifies1786 prior data files (raw, processed, controls and source records). Source integrity remains926 registered resources. Completed unscored/superseded numerical attempts are identified in attempt-ledger.json; their local cache hashes and producer commits preserve lineage without treating them as scored evidence. Use the pinned boundary Python environment and exact run signatures; national MCMC is not needed for reproduction.
 
-<<<<<<< HEAD
-## Stage51 candidate-transition evidence (2026-10-06)
-
-79 sources (Wikipedia electorate and by-election pages, NZ news reports, Parliament and party notices) are recorded in `data/processed/evidence/candidate-transitions/source-registry.json` with id, URL, raw path, SHA-256, limitations and licence; `data/sources.json` is deliberately unchanged because about 25 earlier stages hash it. Extracts under `data/raw/candidate-transitions/2026-10-06/` are tool-rendered (WebFetch/WebSearch), not original bytes, following the Stage40 precedent; summariser errors are listed per source and claims were used only where cross-checked. Used for transition facts only, no vote data.
-=======
 ## Stage53 synthetic export fixtures
 
 No sources acquired and no political or statistical data used. `data/fixtures/synthetic/` holds invented parties, polls, electorates, candidates and unit-square geometry carrying source id `synthetic-fixture`; they are not registered sources, are not copied into `data/processed/`, `public/` or any application result, and are refused by the production loader and the `check:dist` guard. `data/sources.json`, raw data and every prior processed artifact are unchanged.
->>>>>>> origin/main

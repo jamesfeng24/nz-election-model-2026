@@ -1,9 +1,3 @@
-## Stage51 — candidate-transition evidence pass — 2026-10-06
-
-- Add sourced National/Labour incumbent-to-successor ledger for every adjacent pair 2008–2023: 333 incumbent seats, 258 continuations, 75 typed changes with dated evidence and confidence.
-- Resolve name variants on evidence (Stage26 flags plus 8 curated judgements); separate by-election successions from election-time exits; add dated source registry, curation file, deterministic `--check` and 15 tests.
-- No effect fitted, no model output or historical source registry changed.
-
 ## Stage34 — bounded post-result diagnostic
 
 Added provenance-pinned whole-party TV/category audit, exact saved-expert common samples, per-election scatters/complete CSV, S/R and joint paired associations, equal-election robustness/baseline-relative controls, strict/chronology/observed-input sensitivities and independent arithmetic tests. No fitting or prior data changes. D066 retains S/S+R actively and recommends separately authorized dated-input readiness before any learned blend.
@@ -377,8 +371,21 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Add job `timeout-minutes` (20/150), `actions: read`, and prohibit CPU/wall-time gates inside `--check`. Bump `actions/checkout` v5, `actions/setup-node` v5, `actions/setup-python` v6 (Node 24). No statistical code, output, threshold or artifact change. D081, AGENTS.md handoff section and README refresh.
 - Add a guarded frontend step for `npm run check:dist` (skipped until the script exists on main).
 
+## Post-Stage47 roadmap, D082 and PR conventions — 2026-10-06
+
+- Add the "Active roadmap after Stage47" section (agreed sequence, three final outputs, do-not-reopen list limited to historical backtests, 56-day versus ~32-day horizon limitation, Māori fallback, open probability-release policy) and D082 recording the authorization boundary; no model, data, threshold or artifact change.
+- Allocate Stage48–57 (Stage48 frozen balance-scale comparison, Stage49 MMP, Stage50 nominations, Stage51 candidate-change classification, Stage52 poll acquisition, Stage53 end-to-end contract; Stage54–57 provisional); next free Stage58. Record that D081 on main is the CI-scoping decision, so PR54's Stage47 decision becomes D083 (D084 Stage49, D085 Stage52, D086 Stage51; next free D087).
+- Record James's authorizations (Stage48 after PR54, Stage51, Stage52) and the post-CI-scoping merge policy; add a "Pull requests" section to AGENTS.md (title scheme and body template).
+
 ## Stage53 — end-to-end export skeleton and synthetic dry run, 2026-10-06
 
 - Add the versioned website export contract (forecast snapshot, hashed append-only archive index, GeoJSON keyed by electorate id), DOM-free pipeline interfaces with per-draw seeded streams and a Web Worker message protocol, a hash- and schema-verifying loader, and Forecast/Electorates/MMP views for a loaded snapshot. See `docs/export-contract.md`.
 - Run polls → national draws → local party → candidate → MMP → export → site on labelled invented fixtures (`data/fixtures/synthetic/`), kept out of production by a dev-only import and `npm run check:dist`. The MMP stage is an `UNVERIFIED-PLACEHOLDER` stand-in the schema rejects outside synthetic snapshots; `src/models/mmp` is untouched.
 - TypeScript only: no Python, statistical code, saved output, threshold or CI file changes; nothing fitted and no forecast exists.
+
+## Handoff fragments and post-merge fixes, 2026-10-06
+
+- Add per-PR handoff fragments: a PR no longer edits CHANGELOG, PROJECT_STATE, DECISIONS, METHODOLOGY, DATA_SOURCES or the roadmap status table; it writes one `handoff.d/YYYY-MM-DD-<slug>.md`, and `python3 -m scripts.fold_doc_fragments` (`--check` to validate) folds pending fragments into those documents (CHANGELOG/METHODOLOGY/DATA_SOURCES appended, PROJECT_STATE newest first, DECISIONS in D-number order, roadmap table rows replaced or added) and deletes them. AGENTS.md records the rule, the batching rule (new threads start from main after a batch merges unless independent) and that unfolded fragments are part of the handoff record; `docs/ci-validation.md` records that fragment paths are documentation.
+- `ci_selection` lists `handoff.d/*.md` with `docs/*.md` as reviewed editorial paths; the Stage45/46 selector already ignores Markdown outside `data/` (test added). No pipeline, registry, workflow, statistical code or saved output changed.
+- Export schema (`src/types/export.ts`): a non-synthetic snapshot now rejects `synthetic-` party, electorate, candidate and election ids, and every directory party must have a national vote-share interval (missing is a failure, never blank or zero). Tests added; 61 frontend tests pass (was 59).
+- Correct the stale Stage53 statements in `docs/export-contract.md` and PROJECT_STATE: `check:dist` runs in CI and passed in Verify run 37397768440 on main.
