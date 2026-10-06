@@ -10,6 +10,10 @@ Checks (local): `npm run test` 59 tests pass (was 31), `typecheck`, `build`, `ch
 
 Limitations / open: no D-number assigned to the contract; no Python exporter from Stage41–47 artifacts; Māori seats appear only as explicit `unavailable`; probability-release policy still open (contract carries `calibrationStatus` only); README not touched; no hosted CI run.
 
+**Docs updated:** CHANGELOG, METHODOLOGY (no new method), DATA_SOURCES (no new sources), roadmap status line, `docs/export-contract.md` (stage doc). No D-number: D082 allocated this work and the roadmap assigns none for the contract; assign one only if the contract is to be a recorded decision.
+
+**Exact reproduction:** `npm ci && npm run test && npm run typecheck && npm run build && npm run check:dist` (59 tests). Dev dry run: `npm run dev` shows the in-memory synthetic snapshot under a SYNTHETIC banner. Negative check for the leak guard: `NODE_ENV=development npx vite build --mode development --outDir <tmp>` then `node scripts/validate/no_synthetic_in_dist.mjs <tmp>` must fail.
+
 **Exact next action:** CI on the unskipped PR head must pass both required jobs (frontend `check` includes `check:dist`; the Python job reuses frozen Stage45/46 under #56 and must report no change to any Python pipeline). Then the coordinator reviews and merges (merge commit); this thread does not merge. Do not start a Python exporter, real stages or publication without separate authorization.
 
 ---
