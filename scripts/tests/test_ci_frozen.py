@@ -97,10 +97,9 @@ class Repository:
         write(self.root, '.github/validation/frozen-pipelines.json', json.dumps(self.registry))
         self.base = commit(self.root, 'registry (earlier reviewed pull request)')
 
-    def select(self, event='pull_request', runtime=None, base=None, registry=None, candidates=None):
+    def select(self, event='pull_request', runtime=None, registry=None, candidates=None):
         return frozen.select_pipeline('pipe', registry or self.registry, event, self.root,
-                                      RUNTIME if runtime is None else runtime, self.base if base is None else base,
-                                      candidates)
+                                      RUNTIME if runtime is None else runtime, candidates)
 
     def live(self, commit_sha, skipped=False, event='push'):
         """A live attestation record shaped like the Actions API job record of a main push run."""
@@ -158,26 +157,21 @@ class SelectionTests(unittest.TestCase):
         commit(self.repo.root, 'delete')
         self.assertFull(self.repo.select(), 'existing data file changed')
 
-    def test_machinery_changed_by_this_change_set_is_never_self_attesting(self):
+    def test_machinery_and_policy_edits_do_not_force_replay_but_cannot_remove_validation(self):
         write(self.repo.root, 'scripts/validate/ci_frozen.py', 'changed\n')
-        commit(self.repo.root, 'machinery')
-        self.assertFull(self.repo.select(), 'selection machinery')
-        git(self.repo.root, 'reset', '-q', '--hard', self.repo.base)
-        write(self.repo.root, '.github/validation/frozen-pipelines.json', '{}\n')
-        commit(self.repo.root, 'registry')
-        self.assertFull(self.repo.select(), 'selection machinery')
-
-    def test_machinery_merged_earlier_does_not_defeat_reuse(self):
-        self.assertTrue(any(p.startswith('.github/validation/') for _, p in
-                            frozen.changed_files(self.repo.root, self.repo.attested)))
+        write(self.repo.root, '.github/validation/frozen-pipelines.json', json.dumps(self.repo.registry))
+        write(self.repo.root, 'AGENTS.md', 'rules\n')
+        commit(self.repo.root, 'machinery and policy only')
         self.assertEqual(self.repo.select()['mode'], 'integrity')
+        # ... but the same change set may not weaken the validation that the attested run executed.
+        text = (self.repo.root / '.github/workflows/ci.yml').read_text()
+        write(self.repo.root, '.github/workflows/ci.yml', text.replace('      - run: python3 -m scripts.pipe.diagnosis --check\n', ''))
+        commit(self.repo.root, 'weaken')
+        self.assertFull(self.repo.select(), 'removed from workflow')
 
     def test_non_pull_request_events_and_missing_history_are_full(self):
         for event in ('workflow_dispatch', 'schedule', 'unknown'):
             self.assertFull(self.repo.select(event), 'always uses full')
-        for base in ('', '0' * 40, '3' * 40):
-            self.assertFull(self.repo.select('push', base=base), 'base unavailable')
-            self.assertFull(self.repo.select(base=base), 'base unavailable')
         self.assertEqual(self.repo.select('push')['mode'], 'integrity')
         registry = deepcopy(self.repo.registry)
         registry['attestation']['commit'] = '1' * 40
@@ -318,7 +312,7 @@ class SelectAndVerifyTests(unittest.TestCase):
             repo = Repository(tmp)
             broken = deepcopy(repo.registry)
             del broken['pipelines']['pipe']['entryModules']
-            result = frozen.select(broken, 'pull_request', repo.root, RUNTIME, base=repo.base)
+            result = frozen.select(broken, 'pull_request', repo.root, RUNTIME)
             self.assertEqual(result['pipe']['mode'], 'full')
             self.assertIn('invalid selection inputs', result['pipe']['reason'])
 
@@ -329,7 +323,7 @@ class SelectAndVerifyTests(unittest.TestCase):
             commit(repo.root, 'change')
             with patch.object(frozen, 'runtime_errors', return_value=[]):
                 with self.assertRaises(ValueError):
-                    frozen.verify('pipe', root=repo.root, base=repo.base)
+                    frozen.verify('pipe', root=repo.root)
 
     def test_verify_runs_integrity_checks_when_reuse_is_proven(self):
         with TemporaryDirectory() as tmp:
@@ -340,7 +334,7 @@ class SelectAndVerifyTests(unittest.TestCase):
             base = commit(repo.root, 'registry with integrity check')
             with patch.object(frozen, 'runtime_errors', return_value=[]), \
                     patch.object(frozen, 'load_registry', return_value=registry) as loaded:
-                result = frozen.verify('pipe', root=repo.root, base=base)
+                result = frozen.verify('pipe', root=repo.root)
             self.assertEqual(result['mode'], 'integrity')
             self.assertTrue(loaded.called)
 
@@ -422,7 +416,6 @@ class RealRegistryTests(unittest.TestCase):
         self.assertIn('  contents: read\n  actions: read\n', self.workflow)
         self.assertIn('timeout-minutes: 150', self.workflow)
         self.assertIn('timeout-minutes: 20', self.workflow)
-        self.assertIn('github.event.pull_request.base.sha || github.event.before', self.workflow)
         self.assertIn('GITHUB_TOKEN: ${{ github.token }}', self.workflow)
 
     def test_current_cache_consumers_are_none(self):

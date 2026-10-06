@@ -46,15 +46,14 @@ jobs:
         env:
           CI_BASE_SHA: ${{ github.event.pull_request.base.sha }}
           CI_EVENT_NAME: ${{ github.event_name }}
-        run: python3 -m scripts.validate.ci_selection --base "$CI_BASE_SHA" --event "$CI_EVENT_NAME" --github-output "$GITHUB_OUTPUT"
+        run: python3 -m scripts.validate.ci_selection --event "$CI_EVENT_NAME" --github-output "$GITHUB_OUTPUT"
       - name: Select frozen-pipeline reuse
         id: frozen
         continue-on-error: true
         env:
-          CI_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           CI_EVENT_NAME: ${{ github.event_name }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: python3 -m scripts.validate.ci_frozen --base "$CI_BASE_SHA" --event "$CI_EVENT_NAME" --github-output "$GITHUB_OUTPUT" --result-file "$RUNNER_TEMP/frozen-selection.json"
+        run: python3 -m scripts.validate.ci_frozen --event "$CI_EVENT_NAME" --github-output "$GITHUB_OUTPUT" --result-file "$RUNNER_TEMP/frozen-selection.json"
       - run: python3 -m scripts.polling.external_comparison.archive --check
       - run: python3 -m scripts.polling.external_comparison.evaluation --check
       - run: python3 -m scripts.polling.category_interface.run --check
@@ -177,9 +176,8 @@ jobs:
       - name: Verify reused Stage45 frozen pipeline
         if: steps.frozen.outputs.stage45 == 'integrity'
         env:
-          CI_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           CI_EVENT_NAME: ${{ github.event_name }}
-        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage45 --base "$CI_BASE_SHA" --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage45 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
       - run: python3 -m scripts.uncertainty_revision.report --check
       - run: python3 -m scripts.uncertainty_revision.manifest --check
       - run: python3 -m scripts.uncertainty_tails.diagnosis --check
@@ -194,9 +192,8 @@ jobs:
       - name: Verify reused Stage46 frozen pipeline
         if: steps.frozen.outputs.stage46 == 'integrity'
         env:
-          CI_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           CI_EVENT_NAME: ${{ github.event_name }}
-        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage46 --base "$CI_BASE_SHA" --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage46 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
       - run: python3 -m scripts.diagnostics.uncertainty_tails_reference --check
       - run: python3 -m scripts.diagnostics.uncertainty_tails_report --check
       - run: python3 -m scripts.diagnostics.uncertainty_tails_manifest --check
