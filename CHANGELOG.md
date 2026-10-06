@@ -2,6 +2,7 @@
 
 - Preserve two commit-pinned GitHub snapshots of the Wikipedia 2026 poll table with SHA-256 ledger, blocked-route record and leads (including Māori polls); acquisition only.
 - Add deterministic gap audit against the frozen Stage35 panel: one newer RNZ–Reid Research poll, two Wikipedia-only Talbot Mills rows missing, one fieldwork-date conflict between snapshots.
+- Cross-check Māori seat polling: Whakaata Māori–Curia series has published Te Tai Tonga and Te Tai Hauāuru (leads only); all-seven coverage not confirmed. Add dated Stage40-style source registry.
 - Primary pollster/news/Wikipedia hosts were unreachable. No fit, panel, Stage35 file or `data/sources.json` change.
 
 ## Stage34 — bounded post-result diagnostic

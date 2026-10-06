@@ -4,6 +4,7 @@ from pathlib import Path
 import unittest
 
 from scripts.polling import current_cycle as cc
+from scripts.validate.source_files import verify_source_files
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -36,6 +37,21 @@ class CurrentCycleAcquisitionTests(unittest.TestCase):
                          ['RNZ—Reid Research', 'Talbot Mills', 'Talbot Mills'])
         self.assertEqual(len(a['labo49VersusDanylmcDateConflicts']), 1)
         self.assertEqual(a['stage35Panel']['latestFieldworkEnd'], '2026-09-27')
+
+    def test_dated_registry_is_valid_and_central_registry_untouched(self):
+        registry = json.loads((cc.OUT / 'source-registry.json').read_text())
+        verify_source_files(ROOT, registry)
+        self.assertEqual((cc.OUT / 'source-registry.json').read_bytes(), cc.encode(cc.build_registry()))
+        central = json.loads((ROOT / 'data/sources.json').read_text())['sources']
+        self.assertEqual(len(central), 926)
+        self.assertFalse({s['id'] for s in registry['sources']} & {s['id'] for s in central})
+
+    def test_maori_leads_are_unmodelled_and_coverage_not_overclaimed(self):
+        ledger = json.loads((cc.RAW / 'acquisition-ledger.json').read_text())
+        seats = {x.get('seat') for x in ledger['leads'] if x['kind'] == 'Maori electorate poll'}
+        self.assertEqual(seats, {'Te Tai Tonga', 'Te Tai Hauāuru', 'Hauraki-Waikato'})
+        self.assertFalse(ledger['maoriCoverage']['allSevenPolledConfirmed'])
+        self.assertFalse([r for r in ledger['resources'] if 'maori' in r['rawPath'].lower()])
 
     def test_missing_party_is_none_not_zero(self):
         key = cc.keys_labo49([{'date': '2024-05-10', 'results': {'NAT': 35, 'LAB': 32}}])[0]

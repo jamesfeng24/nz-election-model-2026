@@ -45,14 +45,26 @@ LEADS = [
              'Primary page not retrievable here; method, exact fieldwork dates and publication time remain unverified.'},
     {'kind': 'national poll', 'url': 'https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election',
      'note': 'Canonical aggregator table. Direct fetch denied; Stage35 holds the 2026-10-03 snapshot and the two GitHub snapshots here are parsed copies refreshed 2026-10-05/06.'},
-    {'kind': 'Maori electorate-or-roll poll', 'url': 'https://www.teaonews.co.nz/2026/09/17/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll/',
-     'note': 'Whakaata Maori poll (Curia, fieldwork reported by a lossy summary as 29 Aug-10 Sep 2026, n=1000 Maori voters, 500 phone/500 online) of the Maori and general rolls overall. '
-             'Reported as not measuring individual Maori seats. Summary not authoritative; unverified; not modelled.'},
-    {'kind': 'Maori electorate poll', 'url': 'https://www.nzherald.co.nz/nz/politics/election-2026-new-poll-reveals-frontrunner-in-the-maori-seat-of-te-tai-tonga/7GVSRBESHZDKRPHO5VHNPJB3SM/',
-     'note': 'NZ Herald headline reports a Te Tai Tonga electorate poll; page blocked by robots.txt for the reading tool and by egress policy for download. Commissioner, dates, n and figures unknown.'},
-    {'kind': 'Maori electorate poll', 'url': 'https://thespinoff.co.nz/atea/17-09-2026/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll',
-     'note': 'Mirror of the Whakaata Maori poll article.'},
+    {'kind': 'Maori roll poll', 'url': 'https://www.teaonews.co.nz/2026/09/17/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll/',
+     'note': 'Whakaata Maori poll by Curia, published 2026-09-17; summary-reported fieldwork 29 Aug-10 Sep, n=1000 Maori voters (500 phone/500 online), Maori and general rolls overall, not individual seats. Mirror: https://thespinoff.co.nz/atea/17-09-2026/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll. Unverified summary.'},
+    {'kind': 'Maori electorate poll', 'seat': 'Te Tai Tonga', 'url': 'https://www.teaonews.co.nz/2026/09/29/whakaata-maori-curia-poll-shows-takuta-ferris-trailing-in-te-tai-tonga/',
+     'note': 'Whakaata Maori-Curia, published 2026-09-29; summary-reported fieldwork 14-24 Sep, n=500 Maori voters 18+ (420 phone/80 online), +/-4.5%. Candidate vote: Ramsden (LAB) 30, Murch (TPM) 17, Te Morenga (GRN) 16, Ferris (IND) 15. Also party vote. Mirrors: RNZ 1647755, NZ Herald 7GVSRBESHZDKRPHO5VHNPJB3SM. Unverified summary.'},
+    {'kind': 'Maori electorate poll', 'seat': 'Te Tai Hauāuru', 'url': 'https://www.teaonews.co.nz/2026/09/30/debbie-ngarewa-packer-leads-te-tai-hauauru-poll/',
+     'note': 'Whakaata Maori-Curia as part of its "Whakatau 2026" election series, published 2026-09-30; summary-reported fieldwork 14-24 Sep, n=500 (420 phone/80 online), +/-4.5%. Candidate vote: Ngarewa-Packer (TPM) 38, Katene (LAB) 27, Raukawa 10, undecided 18. Party vote shown Labour 30, Greens 22, TPM 18. Mirrors: RNZ 1656179, NZ Herald XCKALCEWXBBSDB43Z55QMSM4JE. Unverified summary.'},
+    {'kind': 'Maori electorate poll', 'seat': 'Hauraki-Waikato', 'url': 'https://www.nzherald.co.nz/nz/politics/election-2026-hana-rawhiti-maipi-clarke-well-ahead-in-hauraki-waikato-poll/CETAZEFVJBHM3N2AVG2MLVM6EA/',
+     'note': 'NZ Herald headline only (Maipi-Clarke well ahead); page blocked to the reading tool by robots.txt and by egress policy; commissioner, dates, n and figures unknown.'},
+    {'kind': 'Maori electorate polls (context)', 'url': 'https://newsroom.co.nz/2026/09/29/maori-seat-poll-electorates-hang-in-balance-as-willie-jackson-tackles-vote-splitting/',
+     'note': 'Newsroom headline "Maori seat poll: electorates hang in balance" (blocked by robots.txt for the reading tool).'},
+    {'kind': 'strategy context', 'url': 'https://waateanews.com/2026/10/05/all-in-the-maori-seats-te-pati-maori-unveils-one-person-party-list/',
+     'note': 'Waatea News 2026-10-05: Te Pati Maori one-person party list (Lance Norman), electorate vote to TPM and party vote to Labour or the Greens. Also Newsroom 2026-08-28 "one-tick trick" and NZ Herald (Willie Jackson) coverage of the strategy; not retrieved.'},
 ]
+
+MAORI_COVERAGE = dict(
+    teTapatiMaoriOneTickStrategy='Confirmed by multiple 2026 reports (Waatea 2026-10-05, Newsroom, NZ Herald): electorate vote to TPM, party vote to Labour or the Greens, one-person party list.',
+    publishedElectoratePolls='At least 3 of 7 seats have a published poll as of 2026-10-06: Te Tai Tonga, Te Tai Hauāuru (Whakaata Maori-Curia, fieldwork reported 14-24 Sep, n=500 each) and Hauraki-Waikato (headline only).',
+    allSevenPolledConfirmed=False,
+    verdict='Not confirmed: no readable source states that all seven seats will be polled or announces commissioning for the other four (Waiariki, Ikaroa-Rawhiti, Tamaki Makaurau, Te Tai Tokerau). The pattern, a Whakaata Maori "Whakatau 2026" Curia series released seat by seat, is consistent with James\'s expectation.',
+)
 
 PROTOCOL_NOTES = [
     'Outbound HTTPS in this environment allows GitHub raw/git only; every news, Wikipedia, pollster and Electoral Commission host answered the proxy CONNECT with 403 (reachability-probe.tsv).',
@@ -97,9 +109,22 @@ def build_ledger():
         raise ValueError('Budget/duplicate resource')
     return dict(schemaVersion=1, scope='2026-cycle national party-vote poll acquisition (acquisition only; no fit)',
                 resourceCap=RESOURCE_CAP, resources=resources, attempts=attempts, leads=LEADS,
+                maoriCoverage=MAORI_COVERAGE,
                 protocolNotes=PROTOCOL_NOTES,
                 stoppingReason='Only GitHub-hosted derivative snapshots were reachable; primary pollster/news/Wikipedia routes are denied by egress policy. '
                                'Further searching cannot produce raw bytes from this environment.')
+
+
+def build_registry(ledger=None):
+    """Stage40-style dated registry (data/sources.json schema); data/sources.json itself is never touched."""
+    ledger = ledger or build_ledger()
+    sources = [dict(id=r['id'], organisation=r['repository'] + ' (GitHub; derivative scrape of Wikipedia 2026 opinion-polling table)',
+                    url=r['url'], dateOrElection='2026 general election cycle; snapshot ' + r['retrievedAt'][:10],
+                    resource=Path(r['rawPath']).name, retrievedAt=r['retrievedAt'], rawPath=r['rawPath'],
+                    processingScript=r['processingScript'],
+                    limitations=['Derivative aggregator copy, not an original pollster release; fieldwork/publication metadata unverified.', r['purpose']],
+                    sha256=r['sha256'], licence=r['licence'], schemaVersion=1) for r in ledger['resources']]
+    return dict(schemaVersion=1, sources=sources)
 
 
 def verify_ledger():
@@ -193,13 +218,17 @@ def main():
     else:
         (RAW / 'acquisition-ledger.json').write_bytes(encode(ledger))
     gap = encode(audit())
+    registry = encode(build_registry(ledger))
     if a.check:
+        if (OUT / 'source-registry.json').read_bytes() != registry:
+            raise ValueError('Changed deterministic source-registry.json')
         if (OUT / 'gap-audit.json').read_bytes() != gap:
             raise ValueError('Changed deterministic gap-audit.json')
         if (RAW / 'acquisition-ledger.json').read_bytes() != encode(ledger):
             raise ValueError('Changed deterministic acquisition-ledger.json')
     else:
         (OUT / 'gap-audit.json').write_bytes(gap)
+        (OUT / 'source-registry.json').write_bytes(registry)
     print('ok' if a.check else 'written')
 
 

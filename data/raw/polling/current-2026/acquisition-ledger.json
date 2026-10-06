@@ -156,21 +156,45 @@
    "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election"
   },
   {
-   "kind": "Maori electorate-or-roll poll",
-   "note": "Whakaata Maori poll (Curia, fieldwork reported by a lossy summary as 29 Aug-10 Sep 2026, n=1000 Maori voters, 500 phone/500 online) of the Maori and general rolls overall. Reported as not measuring individual Maori seats. Summary not authoritative; unverified; not modelled.",
+   "kind": "Maori roll poll",
+   "note": "Whakaata Maori poll by Curia, published 2026-09-17; summary-reported fieldwork 29 Aug-10 Sep, n=1000 Maori voters (500 phone/500 online), Maori and general rolls overall, not individual seats. Mirror: https://thespinoff.co.nz/atea/17-09-2026/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll. Unverified summary.",
    "url": "https://www.teaonews.co.nz/2026/09/17/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll/"
   },
   {
    "kind": "Maori electorate poll",
-   "note": "NZ Herald headline reports a Te Tai Tonga electorate poll; page blocked by robots.txt for the reading tool and by egress policy for download. Commissioner, dates, n and figures unknown.",
-   "url": "https://www.nzherald.co.nz/nz/politics/election-2026-new-poll-reveals-frontrunner-in-the-maori-seat-of-te-tai-tonga/7GVSRBESHZDKRPHO5VHNPJB3SM/"
+   "note": "Whakaata Maori-Curia, published 2026-09-29; summary-reported fieldwork 14-24 Sep, n=500 Maori voters 18+ (420 phone/80 online), +/-4.5%. Candidate vote: Ramsden (LAB) 30, Murch (TPM) 17, Te Morenga (GRN) 16, Ferris (IND) 15. Also party vote. Mirrors: RNZ 1647755, NZ Herald 7GVSRBESHZDKRPHO5VHNPJB3SM. Unverified summary.",
+   "seat": "Te Tai Tonga",
+   "url": "https://www.teaonews.co.nz/2026/09/29/whakaata-maori-curia-poll-shows-takuta-ferris-trailing-in-te-tai-tonga/"
   },
   {
    "kind": "Maori electorate poll",
-   "note": "Mirror of the Whakaata Maori poll article.",
-   "url": "https://thespinoff.co.nz/atea/17-09-2026/whakaata-maori-poll-labour-leads-party-vote-as-te-pati-maori-dominates-maori-roll"
+   "note": "Whakaata Maori-Curia as part of its \"Whakatau 2026\" election series, published 2026-09-30; summary-reported fieldwork 14-24 Sep, n=500 (420 phone/80 online), +/-4.5%. Candidate vote: Ngarewa-Packer (TPM) 38, Katene (LAB) 27, Raukawa 10, undecided 18. Party vote shown Labour 30, Greens 22, TPM 18. Mirrors: RNZ 1656179, NZ Herald XCKALCEWXBBSDB43Z55QMSM4JE. Unverified summary.",
+   "seat": "Te Tai Hauāuru",
+   "url": "https://www.teaonews.co.nz/2026/09/30/debbie-ngarewa-packer-leads-te-tai-hauauru-poll/"
+  },
+  {
+   "kind": "Maori electorate poll",
+   "note": "NZ Herald headline only (Maipi-Clarke well ahead); page blocked to the reading tool by robots.txt and by egress policy; commissioner, dates, n and figures unknown.",
+   "seat": "Hauraki-Waikato",
+   "url": "https://www.nzherald.co.nz/nz/politics/election-2026-hana-rawhiti-maipi-clarke-well-ahead-in-hauraki-waikato-poll/CETAZEFVJBHM3N2AVG2MLVM6EA/"
+  },
+  {
+   "kind": "Maori electorate polls (context)",
+   "note": "Newsroom headline \"Maori seat poll: electorates hang in balance\" (blocked by robots.txt for the reading tool).",
+   "url": "https://newsroom.co.nz/2026/09/29/maori-seat-poll-electorates-hang-in-balance-as-willie-jackson-tackles-vote-splitting/"
+  },
+  {
+   "kind": "strategy context",
+   "note": "Waatea News 2026-10-05: Te Pati Maori one-person party list (Lance Norman), electorate vote to TPM and party vote to Labour or the Greens. Also Newsroom 2026-08-28 \"one-tick trick\" and NZ Herald (Willie Jackson) coverage of the strategy; not retrieved.",
+   "url": "https://waateanews.com/2026/10/05/all-in-the-maori-seats-te-pati-maori-unveils-one-person-party-list/"
   }
  ],
+ "maoriCoverage": {
+  "allSevenPolledConfirmed": false,
+  "publishedElectoratePolls": "At least 3 of 7 seats have a published poll as of 2026-10-06: Te Tai Tonga, Te Tai Hauāuru (Whakaata Maori-Curia, fieldwork reported 14-24 Sep, n=500 each) and Hauraki-Waikato (headline only).",
+  "teTapatiMaoriOneTickStrategy": "Confirmed by multiple 2026 reports (Waatea 2026-10-05, Newsroom, NZ Herald): electorate vote to TPM, party vote to Labour or the Greens, one-person party list.",
+  "verdict": "Not confirmed: no readable source states that all seven seats will be polled or announces commissioning for the other four (Waiariki, Ikaroa-Rawhiti, Tamaki Makaurau, Te Tai Tokerau). The pattern, a Whakaata Maori \"Whakatau 2026\" Curia series released seat by seat, is consistent with James's expectation."
+ },
  "protocolNotes": [
   "Outbound HTTPS in this environment allows GitHub raw/git only; every news, Wikipedia, pollster and Electoral Commission host answered the proxy CONNECT with 403 (reachability-probe.tsv).",
   "Two WebSearch discovery queries (GitHub datasets; Maori electorate polls) and three WebFetch reads were used for discovery only. WebFetch returns model-summarised text, is not raw bytes, was observed stale/inconsistent for the Wikipedia table, and is never a data source here.",
