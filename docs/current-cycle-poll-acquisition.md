@@ -16,7 +16,7 @@ Findings:
 - **Taxpayers' Union–Curia (Jun–Sep 2026)** pages sit behind a Cloudflare challenge (HTTP 403) and were not bypassed. James supplied Chrome print-to-PDF captures of all four (not original server bytes; text extracted with `pdftotext -layout` into `tu-curia-pdf-text/`): fieldwork 4–8 Jun, 1–5 Jul, 1–4 Aug, 1–3 Sep, n=1000 phone and online, ±3.1%, shares and undecided rates match Wikipedia.
 - Fieldwork and sample sizes for all Roy Morgan, RNZ–Reid, Verian, Freshwater and Anacta polls since 1 June match Wikipedia.
 
-**Māori seats, 3 of 7 published.** Whakaata Māori–Curia (Whakatau 2026), n=500 each (420 phone, 80 online), ±4.5%: Te Tai Tonga (14–24 Sep), Te Tai Hauāuru (14–24 Sep) and Hauraki-Waikato (21 Sep–1 Oct; Maipi-Clarke TPM 45, Kiriona LAB 26, undecided 17, published 6 Oct). Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau and Te Tai Tokerau have no published poll and no source announces one; "all seven will be polled" is not confirmed (three polls in nine days is consistent with it; election 7 Nov 2026). Raw only, not modelled.
+**Māori seats, 3 of 7 published.** Whakaata Māori–Curia (Whakatau 2026), n=500 each (420 phone, 80 online), ±4.5%: Te Tai Tonga (14–24 Sep), Te Tai Hauāuru (14–24 Sep) and Hauraki-Waikato (21 Sep–1 Oct; Maipi-Clarke TPM 45, Kiriona LAB 26, undecided 17, published 6 Oct). Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau and Te Tai Tokerau have no published poll and no source announces one; "all seven will be polled" is not confirmed (three polls in nine days say nothing about the other four; election 7 Nov 2026). Raw only, not modelled.
 
 **Live-fit input (James: use only the most recent polls).** No data are dropped here. The frozen design uses older polls to centre house effects, start the trend at the 2023 result and scale shared polling bias; a recent window is a candidate sensitivity for the live-fit stage, not the default.
 
@@ -62,7 +62,7 @@ What has been published, as leads (summaries from a lossy reading tool; no raw b
 | Te Tai Hauāuru | Whakaata Māori–Curia, 30 Sep, "Whakatau 2026" series | same fieldwork and sample; Ngarewa-Packer (TPM) 38, Kātene (LAB) 27, Raukawa 10, undecided 18 |
 | Hauraki-Waikato | NZ Herald headline only | Maipi-Clarke "well ahead"; nothing else retrievable |
 
-A separate Whakaata Māori–Curia poll of the Māori and general rolls overall (17 Sep, n=1,000) measured no individual seat. Nothing found for Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau or Te Tai Tokerau. The pattern, a Whakatau 2026 Curia series released seat by seat, fits the expectation that all seven will be polled, so the fallback baseline stays deferred. Capture each seat's poll as raw bytes when the network allows; the same question, denominator, dates, n and dependence fields the roadmap lists apply later.
+A separate Whakaata Māori–Curia poll of the Māori and general rolls overall (17 Sep, n=1,000) measured no individual seat. Nothing found for Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau or Te Tai Tokerau. The Whakatau 2026 Curia series is being released seat by seat, but that is no evidence about the four seats without a poll; the fallback baseline stays deferred until a seat is shown to be unpolled. Capture each seat's poll as raw bytes when the network allows; the same question, denominator, dates, n and dependence fields the roadmap lists apply later.
 
 ## Capture still needed
 
