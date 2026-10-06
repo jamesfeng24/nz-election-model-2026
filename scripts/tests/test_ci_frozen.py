@@ -452,5 +452,14 @@ class RealRegistryTests(unittest.TestCase):
             self.assertEqual(frozen.cache_consumers(ROOT, pipeline), [])
 
 
+class SourceRegistryFrozenTests(unittest.TestCase):
+    def test_historical_contracts_pin_the_current_source_registry(self):
+        pinned = json.loads((ROOT / 'data/processed/uncertainty-revision/preservation.json').read_text())
+        actual = hashlib.sha256((ROOT / 'data/sources.json').read_bytes()).hexdigest()
+        self.assertEqual(pinned['priorDataHashes']['data/sources.json'], actual,
+                         'data/sources.json is pinned by historical preservation contracts; record new sources '
+                         'in a standalone dated registry instead (docs/ci-validation.md)')
+
+
 if __name__ == '__main__':
     unittest.main()
