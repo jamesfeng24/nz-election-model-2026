@@ -86,3 +86,7 @@ So: acquisitions made from now on (MMP legislation text, 2026 polls, the nominat
 - Node 24: `actions/checkout` v5, `actions/setup-node` v5 and `actions/setup-python` v6 (all `using: node24`; newer majors exist but were not needed). Behaviour-relevant inputs (`fetch-depth: 0`, `node-version-file`, `python-version-file`, `cache: npm`) are unchanged.
 - No inference cache, schedule, benchmark run or statistical change. PR concurrency and event triggers are unchanged.
 - The frontend `check` job has a guarded step that runs `npm run check:dist` (production build must not contain synthetic fixture content) once that script exists in `package.json`, and is skipped with a message until then. It runs after `npm run check`, which builds `dist`.
+
+# Handoff fragments are documentation (2026-10-06)
+
+`changelog.d/*.md` and `state.d/*.md` (per-PR CHANGELOG and PROJECT_STATE entries, folded by `scripts/fold_doc_fragments.py`; see AGENTS.md) exist so parallel PRs do not conflict on the top of those files, which cost a CI re-run per conflict. They are Markdown outside `data/`, so they never force a Stage45/46 replay (`ci_frozen`: only watched, referenced, output, environment and existing-data paths do), and `ci_selection` now lists them with `docs/` as reviewed editorial paths so they do not force Stage39 full either. The fold script is not part of any pipeline's import closure. `scripts/tests/test_fold_doc_fragments.py` runs in the always-on unittest discovery; `python3 -m scripts.fold_doc_fragments --check` validates pending fragments locally.

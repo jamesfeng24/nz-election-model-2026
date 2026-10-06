@@ -66,7 +66,9 @@ def select(changed, event, registry, errors=(), history_available=True):
             return {'mode': 'full', 'reason': 'Stage39 dependency changed: ' + path}
         if path.startswith(('.github/', 'scripts/tests/', 'scripts/validate/ci')) or path == 'AGENTS.md':
             return {'mode': 'full', 'reason': 'CI, test or checkpoint policy changed: ' + path}
-        editorial = path in registry['reviewedEditorialFiles'] or (path.startswith('docs/') and path.endswith('.md'))
+        # Per-PR handoff fragments (see scripts/fold_doc_fragments.py) are documentation like the files they fold into.
+        editorial = (path in registry['reviewedEditorialFiles'] or
+                     (path.startswith(('docs/', 'changelog.d/', 'state.d/')) and path.endswith('.md')))
         unrelated = any(path.startswith(prefix) for prefix in registry['reviewedUnaffectedPrefixes'])
         if not editorial and not unrelated:
             return {'mode': 'full', 'reason': 'unreviewed dependency scope: ' + path}
