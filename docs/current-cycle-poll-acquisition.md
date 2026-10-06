@@ -1,4 +1,4 @@
-# 2026-cycle national poll acquisition (acquisition only)
+# Stage52 — 2026-cycle national poll acquisition (raw only)
 
 Branch `claude/project-thread-1g68p4`, base main 109794f. One question: what published 2026-cycle national party-vote polls exist since the 14 October 2023 election, preserved as dated, checksummed raw files? No national MCMC, fit, average or panel change. Stage35 files are untouched.
 

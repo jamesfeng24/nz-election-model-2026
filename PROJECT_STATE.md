@@ -1,4 +1,4 @@
-# 2026-cycle national poll acquisition — 6 October 2026
+# Stage52 — 2026-cycle national poll acquisition (raw only) — 6 October 2026
 
 Branch `claude/project-thread-1g68p4`, base main 109794f. Acquisition only (authorized by James/Corinna 2026-10-06); PR held until CI scoping (#56) merges. No national MCMC, fit, panel change, Stage35/Stage47/ci.yml/AGENTS.md/roadmap edit, and `data/sources.json` (926 records) left byte-identical.
 

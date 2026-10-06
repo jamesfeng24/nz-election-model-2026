@@ -1,4 +1,4 @@
-## 2026-cycle national poll acquisition — 2026-10-06
+## Stage52 — 2026-cycle national poll acquisition — 2026-10-06
 
 - Preserve two commit-pinned GitHub snapshots of the Wikipedia 2026 poll table with SHA-256 ledger, blocked-route record and leads (including Māori polls); acquisition only.
 - Add deterministic gap audit against the frozen Stage35 panel: one newer RNZ–Reid Research poll, two Wikipedia-only Talbot Mills rows missing, one fieldwork-date conflict between snapshots.
