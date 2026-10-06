@@ -1,14 +1,19 @@
 """Dependency-aware reuse of previously validated frozen pipelines; full validation is the default.
 
 A pull request or main push may skip the expensive ``--check`` reconstruction of a registered frozen pipeline
-only when the exact tree under validation is provably equivalent, for that pipeline, to a main commit whose
-complete Linux Verify run already passed *with that reconstruction executed*. Equivalence is established from
-Git, not from generated manifests: no file in the pipeline's static import closure, referenced data paths,
-outputs or environment files differs from the attested commit, no existing data file changed, no unreviewed
-consumer reads the pipeline's runtime cache, no validation was removed from the workflow, and the runner
-matches the attested runtime. Whenever any of that changes, the pipeline runs in full once; the successful
-successful run (on its PR, or on main) then becomes the newest attestation (read from the Actions API; the pinned seed is the fallback), so a modified pipeline is replayed exactly once.
-Manual dispatch never reuses anything. Behavioural unit tests are never skipped.
+only when the exact tree under validation is provably equivalent, for that pipeline, to a commit whose complete
+Linux Verify run already passed *with that reconstruction executed*. Equivalence is established from Git, not
+from generated manifests: no file in the pipeline's static import closure, referenced data paths, outputs or
+environment files differs from the attested commit, no existing data file changed, no unreviewed consumer reads
+the pipeline's runtime cache, no validation was removed from the workflow, and the runner matches the attested
+runtime. Whenever any of that changes, the pipeline runs in full once.
+
+Attestations never expire because newer unrelated runs exist. Each pipeline carries a durable **pin** in the
+registry (commit, run id, evidence hash, scope fingerprint of the proved scope), checked first and Git-only; the
+Actions API is consulted only when the pin is stale, and then the walk over successful reachable Verify runs is
+per pipeline: it skips reuse-only runs and stops at the pinned run. Without a valid pin or API the answer is
+full. A reuse-only run is never an attestation. Manual dispatch never reuses anything. Behavioural unit tests
+are never skipped.
 """
 import argparse
 import ast
@@ -20,7 +25,9 @@ import platform
 import re
 import subprocess
 import sys
+import tempfile
 import urllib.request
+from copy import deepcopy
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 
@@ -36,6 +43,8 @@ ENVIRONMENT = ('.python-version', 'pyproject.toml', 'requirements-boundaries.txt
 MACHINERY = ('.github/validation/', 'scripts/validate/ci_', 'AGENTS.md')
 KNOWN = ('stage45', 'stage46', 'stage47', 'stage48', 'stage54')
 EVENTS = ('pull_request', 'push')  # workflow_dispatch and anything unknown are always full
+ATTESTING_EVENTS = ('pull_request', 'push', 'workflow_dispatch')  # a manual full dispatch of main is a valid reference
+REGISTRY_VERSION = 4
 
 
 def git(root, *args):
@@ -119,16 +128,32 @@ def under(path, prefix):
 
 # ---------------------------------------------------------------- evidence, runtime, changes
 
-def seed_candidate(registry, root):
-    """The pinned fallback attestation: (candidate, errors)."""
-    attestation = registry['attestation']
-    path = Path(root) / attestation['evidencePath']
-    if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != attestation['evidenceSha256']:
-        return None, ['missing or changed seed attestation evidence']
+def pin_candidate(pipeline, root):
+    """The pipeline's durable pinned full attestation: (candidate, error). Git-only, no API."""
+    pin = pipeline.get('pin')
+    if not pin:
+        return None, 'no pinned attestation'
+    path = Path(root) / pin['evidencePath']
+    if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != pin['evidenceSha256']:
+        return None, 'pinned attestation evidence missing or changed'
     try:
-        return {'commit': attestation['commit'], 'source': 'seed', 'record': json.loads(path.read_text())}, []
+        record = json.loads(path.read_text())
     except ValueError:
-        return None, ['unreadable seed attestation evidence']
+        return None, 'pinned attestation evidence unreadable'
+    return {'commit': pin['commit'], 'source': 'pin', 'runId': pin['runId'], 'runUrl': pin.get('runUrl'),
+            'createdAt': pin.get('createdAt'), 'fingerprint': pin.get('scopeFingerprint'), 'record': record}, None
+
+
+def scope_fingerprint(root, pipeline, files, literals, rev='HEAD'):
+    """SHA-256 over the git blob ids of everything a replay of this pipeline can read, at ``rev``.
+
+    The scope is the static import closure, referenced literal paths, owned and output paths, extra
+    dependencies and the Python environment files. It records what a pin proved; a pin is only used while the
+    tree under validation has the same fingerprint.
+    """
+    paths = sorted(set(files) | set(ENVIRONMENT) | set(literals) | set(pipeline['outputPaths'])
+                   | set(pipeline['ownedPaths']) | set(pipeline['extraDependencies']))
+    return hashlib.sha256(git(root, 'ls-tree', '-r', '-z', rev, '--', *paths)).hexdigest()
 
 
 def fetch_json(url, token):
@@ -146,43 +171,90 @@ def is_ancestor(root, commit):
         return False
 
 
-def live_candidates(registry, environ=None, fetch=fetch_json, root=ROOT, ancestor=is_ancestor):
-    """Newest successful full-job records of reachable ci.yml runs, from the Actions API; [] on any failure.
+def run_candidate(run, job):
+    """A discovered attestation record shaped like a pin's evidence."""
+    return {'commit': run['head_sha'], 'source': 'discovered-' + run['event'], 'runId': run.get('id'),
+            'runUrl': run.get('html_url'), 'createdAt': run.get('created_at'), 'record': {
+                'run': {key: run.get(key) for key in ('id', 'html_url', 'event', 'conclusion', 'head_sha', 'created_at')},
+                'job': {key: job.get(key) for key in ('id', 'name', 'conclusion', 'steps')}}}
 
-    Both main push runs and pull-request runs count, so a modified pipeline that was fully validated on its PR is
-    already the reference when the PR merges (a main push then reuses it instead of replaying a second time).
-    A pull-request run attests its head commit; it must be an ancestor of the tree under validation, which holds
-    for merge-commit merges and fails closed (no candidate) for squash merges.
+
+class Discovery:
+    """Lazy, memoised, newest-first walk over successful reachable Verify runs (the Actions API).
+
+    Used only when a pipeline's pin does not prove reuse. Runs whose head commit is not an ancestor of the tree
+    under validation are skipped without a job request; every other run costs one job request, bounded by
+    ``maxJobFetches`` and ``maxPages``. Any API, parse or network problem ends the walk and is remembered, so
+    callers see "no candidate" with the reason and the answer stays full. Main push runs, pull-request runs and
+    manual dispatches of main all count; a reuse-only run is skipped by ``newest_full`` because its python job did
+    not execute every replaced command.
     """
-    environ = os.environ if environ is None else environ
-    live, repository = registry.get('liveAttestation'), environ.get('GITHUB_REPOSITORY')
-    token = environ.get('GITHUB_TOKEN') or environ.get('GH_TOKEN')
-    if not (live and repository and token):
-        return []
-    api = environ.get('GITHUB_API_URL', 'https://api.github.com') + '/repos/' + repository + '/actions/'
-    found = []
-    try:
-        runs = []
-        for event in live['events']:
-            query = 'workflows/{}/runs?event={}&status=success&per_page={}'.format(live['workflow'], event, live['maxRuns'])
-            if event == 'push':
-                query += '&branch=' + live['branch']
-            runs.extend(fetch(api + query, token)['workflow_runs'])
-        runs.sort(key=lambda run: run.get('created_at') or '', reverse=True)
-        for run in runs:
-            if len(found) >= live['maxRuns']:
-                break
-            if not ancestor(root, run['head_sha']):
+
+    def __init__(self, registry, environ=None, fetch=fetch_json, root=ROOT, ancestor=is_ancestor):
+        environ = os.environ if environ is None else environ
+        self.config = registry.get('liveAttestation') or {}
+        self.repository = environ.get('GITHUB_REPOSITORY')
+        self.token = environ.get('GITHUB_TOKEN') or environ.get('GH_TOKEN')
+        self.api = environ.get('GITHUB_API_URL', 'https://api.github.com') + '/repos/{}/actions/'.format(self.repository)
+        self.fetch, self.root, self.ancestor = fetch, root, ancestor
+        self.enabled = bool(self.config and self.repository and self.token)
+        self.seen, self.done, self.error, self.bound, self.walker = [], not self.enabled, None, None, None
+
+    def eligible(self, run):
+        branch_ok = run.get('event') == 'pull_request' or run.get('head_branch') == self.config['branch']
+        return run.get('event') in ATTESTING_EVENTS and run.get('conclusion', 'success') == 'success' and branch_ok
+
+    def walk(self):
+        per_page, jobs_fetched = self.config.get('perPage', 100), 0
+        for page in range(1, self.config.get('maxPages', 10) + 1):
+            runs = self.fetch(self.api + 'workflows/{}/runs?status=success&per_page={}&page={}'.format(
+                self.config['workflow'], per_page, page), self.token)['workflow_runs']
+            for run in runs:
+                if not self.eligible(run) or not self.ancestor(self.root, run['head_sha']):
+                    continue
+                if jobs_fetched >= self.config.get('maxJobFetches', 120):
+                    self.bound = 'job request bound ({}) reached'.format(self.config.get('maxJobFetches', 120))
+                    return
+                jobs_fetched += 1
+                for job in self.fetch(self.api + 'runs/{}/jobs?per_page=100'.format(run['id']), self.token)['jobs']:
+                    if job['name'] == self.config['job']:
+                        yield run_candidate(run, job)
+            if len(runs) < per_page:
+                return
+        self.bound = 'page bound ({}) reached'.format(self.config.get('maxPages', 10))
+
+    def candidates(self):
+        index = 0
+        while True:
+            if index < len(self.seen):
+                index += 1
+                yield self.seen[index - 1]
                 continue
-            jobs = fetch(api + 'runs/{}/jobs?per_page=100'.format(run['id']), token)['jobs']
-            for job in jobs:
-                if job['name'] == live['job']:
-                    found.append({'commit': run['head_sha'], 'source': 'live-' + run['event'], 'record': {
-                        'run': {key: run.get(key) for key in ('id', 'html_url', 'event', 'conclusion', 'head_sha')},
-                        'job': {key: job.get(key) for key in ('id', 'name', 'conclusion', 'steps')}}})
-    except (OSError, ValueError, KeyError, TypeError):
-        pass
-    return found
+            if self.done:
+                return
+            self.walker = self.walker or self.walk()
+            try:
+                self.seen.append(next(self.walker))
+            except StopIteration:
+                self.done = True
+            except (OSError, ValueError, KeyError, TypeError) as error:
+                self.done, self.error = True, '{}: {}'.format(type(error).__name__, error)
+
+    def newest_full(self, pipeline, stop=None):
+        """(newest reachable run whose python job executed every replaced command, None) or (None, why not)."""
+        if not self.enabled:
+            return None, 'Actions API discovery unavailable (no token or repository)'
+        for candidate in self.candidates():
+            if stop and (candidate['runId'] == stop.get('runId')
+                         or (stop.get('createdAt') and (candidate.get('createdAt') or '') <= stop['createdAt'])):
+                return None, 'no full run newer than the pinned run among {} reachable runs examined'.format(len(self.seen))
+            if not candidate_errors(candidate, pipeline['replacedCommands'])[0]:
+                return candidate, None
+        if self.error:
+            return None, 'Actions API failed after {} reachable runs examined ({})'.format(len(self.seen), self.error)
+        if self.bound:
+            return None, 'no full run among {} reachable runs examined; {}'.format(len(self.seen), self.bound)
+        return None, 'no reachable run executed every replaced command ({} examined)'.format(len(self.seen))
 
 
 def candidate_errors(candidate, required):
@@ -193,7 +265,7 @@ def candidate_errors(candidate, required):
     except (KeyError, TypeError):
         return ['unreadable attestation evidence'], []
     errors = []
-    if run.get('event') not in ('push', 'pull_request') or run.get('conclusion') != 'success' \
+    if run.get('event') not in ATTESTING_EVENTS or run.get('conclusion') != 'success' \
             or run.get('head_sha') != candidate['commit']:
         errors.append('attested run is not a successful full run of the attested commit')
     if job.get('conclusion') != 'success' or job.get('name') != 'python':
@@ -306,27 +378,59 @@ def ast_has_string(text, needle):
 
 # ---------------------------------------------------------------- selection
 
-def select_pipeline(name, registry, event, root=ROOT, actual_runtime=None, candidates=None):
-    """First candidate (newest first) that proves reuse wins; otherwise full with the newest candidate's reason."""
+def describe(candidate):
+    run = ' run {}'.format(candidate['runId']) if candidate.get('runId') else ''
+    return '{} attestation {}{}'.format(candidate['source'], candidate['commit'][:8], run)
+
+
+def chosen(candidate):
+    return {key: candidate.get(key) for key in ('source', 'commit', 'runId', 'runUrl')}
+
+
+def select_pipeline(name, registry, event, root=ROOT, actual_runtime=None, candidates=None, discovery=None):
+    """Pick the attestation that proves reuse of one pipeline, or full with every reason it was rejected.
+
+    1. The pipeline's durable pin, Git-only: no API call, no dependence on how recent the attested run is.
+    2. Only if the pin does not prove reuse: the newest reachable Verify run (API, paginated, reuse-only runs
+       skipped, stopping at the pinned run) whose python job executed every replaced command.
+    ``candidates`` (an explicit newest-first list) bypasses both and is used to re-prove a recorded selection.
+    """
     if event not in EVENTS:
         return {'mode': 'full', 'reason': 'manual/unknown event always uses full validation'}
-    if registry.get('version') != 3:
+    if registry.get('version') != REGISTRY_VERSION:
         return {'mode': 'full', 'reason': 'unsupported registry version'}
-    if candidates is None:
-        seed, errors = seed_candidate(registry, root)
-        if seed is None:
-            return {'mode': 'full', 'reason': '; '.join(errors)}
-        candidates = [seed]
     runtime = runtime_errors(registry['runtime'], actual_runtime)
     if runtime:
         return {'mode': 'full', 'reason': '; '.join(runtime[:4])}
-    first = None
-    for candidate in candidates:
-        result = select_against(name, registry, root, candidate)
+    pipeline = registry['pipelines'][name]
+    if candidates is not None:
+        reasons = []
+        for candidate in candidates:
+            result = select_against(name, registry, root, candidate)
+            if result['mode'] == 'integrity':
+                return result
+            reasons.append(result['reason'])
+        return {'mode': 'full', 'reason': ' | '.join(reasons[:2]) or 'no attested full run available'}
+    reasons = []
+    pin, why = pin_candidate(pipeline, root)
+    if pin:
+        result = select_against(name, registry, root, pin)
         if result['mode'] == 'integrity':
             return result
-        first = first or result
-    return first or {'mode': 'full', 'reason': 'no attested full run available'}
+        reasons.append(result['reason'])
+    else:
+        reasons.append(why)
+    discovery = discovery or Discovery(registry, root=root)
+    found, note = discovery.newest_full(pipeline, pin)
+    if found is None:
+        reasons.append(note)
+        return {'mode': 'full', 'reason': ' | '.join(reasons)}
+    result = select_against(name, registry, root, found)
+    if result['mode'] == 'integrity':
+        result['reason'] += ' [pin not used: {}]'.format(reasons[0])
+        return result
+    reasons.append(result['reason'])
+    return {'mode': 'full', 'reason': ' | '.join(reasons)}
 
 
 def select_against(name, registry, root, candidate):
@@ -334,7 +438,7 @@ def select_against(name, registry, root, candidate):
     commit = candidate['commit']
 
     def full(reason):
-        return {'mode': 'full', 'reason': '{} [{} attestation {}]'.format(reason, candidate['source'], commit[:8])}
+        return {'mode': 'full', 'reason': '{}: {}'.format(describe(candidate), reason)}
     errors, steps = candidate_errors(candidate, pipeline['replacedCommands'])
     if not errors:
         errors = workflow_errors(root, steps, registry)
@@ -369,20 +473,21 @@ def select_against(name, registry, root, candidate):
     consumers = cache_consumers(root, pipeline)
     if consumers:
         return full('unreviewed reader of this pipeline runtime cache: ' + ', '.join(consumers[:3]))
-    return {'mode': 'integrity', 'reason': 'identical to the dependency scope of the {} full run on {} '
-            '({} files in closure, {} changed paths outside it)'.format(candidate['source'], commit[:8], len(files), len(changes)),
-            'closureFiles': len(files), 'changedPaths': len(changes), 'attestation': candidate}
+    if candidate.get('fingerprint') and scope_fingerprint(root, pipeline, files, literals) != candidate['fingerprint']:
+        return full('scope fingerprint differs from the one the pin recorded')
+    return {'mode': 'integrity', 'reason': 'reusing the {}: dependency scope unchanged since that full run '
+            '({} files in closure, {} changed paths outside it)'.format(describe(candidate), len(files), len(changes)),
+            'closureFiles': len(files), 'changedPaths': len(changes), 'attestation': candidate, 'chosen': chosen(candidate)}
 
 
-def select(registry, event, root=ROOT, actual_runtime=None, force_full=False, live=None):
+def select(registry, event, root=ROOT, actual_runtime=None, force_full=False, discovery=None):
     if force_full:
         return {name: {'mode': 'full', 'reason': 'explicit full validation requested'} for name in registry['pipelines']}
-    seed, errors = seed_candidate(registry, root)
-    candidates = (live_candidates(registry, root=root) if live is None else live) + ([seed] if seed else [])
+    discovery = discovery or Discovery(registry, root=root)  # lazy: no request unless a pin fails to prove reuse
     result = {}
     for name in registry['pipelines']:
         try:
-            result[name] = select_pipeline(name, registry, event, root, actual_runtime, candidates)
+            result[name] = select_pipeline(name, registry, event, root, actual_runtime, discovery=discovery)
         except (KeyError, ValueError, TypeError, OSError) as error:
             result[name] = {'mode': 'full', 'reason': 'invalid selection inputs: ' + str(error)}
     return couple_cache_dependencies(registry, result)
@@ -430,6 +535,74 @@ def verify(name, event='pull_request', root=ROOT, result_file=None):
     return result
 
 
+REPOSITORY = 'jamesfeng24/nz-election-model-2026'
+EVIDENCE_DIRECTORY = '.github/validation/evidence'
+
+
+def record_pin(run_id, registry, root=ROOT, names=None, environ=None, fetch=fetch_json):
+    """Pin one successful Verify run as the durable attestation of every pipeline it fully validated.
+
+    Reads the run and its python job from the Actions API, writes the evidence file (the run, the job and every
+    step with its conclusion and timestamps), fingerprints each pipeline's scope **at the run's own commit** in a
+    temporary worktree and returns ``(updated registry, report lines)``. A pipeline is pinned only if the run is a
+    successful push, pull-request or manual run whose head is an ancestor of HEAD and whose python job executed
+    every one of its replaced commands successfully; any other pipeline is left unchanged and reported. Nothing
+    here is needed for correctness (discovery finds the newest full run on its own); a pin only makes reuse
+    independent of the API and of how many runs have happened since.
+    """
+    environ = os.environ if environ is None else environ
+    token = environ.get('GITHUB_TOKEN') or environ.get('GH_TOKEN') or ''
+    api = '{}/repos/{}/actions/'.format(environ.get('GITHUB_API_URL', 'https://api.github.com'),
+                                         environ.get('GITHUB_REPOSITORY', REPOSITORY))
+    run = fetch(api + 'runs/{}'.format(run_id), token)
+    jobs = [job for job in fetch(api + 'runs/{}/jobs?per_page=100&filter=latest'.format(run_id), token)['jobs']
+            if job['name'] == registry['liveAttestation']['job']]
+    if len(jobs) != 1:
+        raise ValueError('run {} has no unique {} job'.format(run_id, registry['liveAttestation']['job']))
+    candidate = run_candidate(run, jobs[0])
+    if not is_ancestor(root, candidate['commit']):
+        raise ValueError('run {} head {} is not an ancestor of HEAD'.format(run_id, candidate['commit']))
+    evidence = {'description': 'Subset of the GitHub Actions API records of the successful Verify run {} (head {}): the run, '
+                'its python job and every step with its conclusion and timestamps. The live API records are the source of '
+                'truth; this copy pins the step conclusions the reuse registry relies on.'.format(run_id, candidate['commit']),
+                'run': candidate['record']['run'],
+                'job': {**candidate['record']['job'], 'completed_at': jobs[0].get('completed_at'), 'started_at': jobs[0].get('started_at'),
+                        'steps': [{key: step.get(key) for key in ('name', 'conclusion', 'started_at', 'completed_at')}
+                                  for step in jobs[0]['steps']]},
+                'source': 'recorded by scripts.validate.ci_frozen --record-pin'}
+    candidate['record'] = {'run': evidence['run'], 'job': evidence['job']}
+    text = json.dumps(evidence, indent=1, sort_keys=True) + '\n'
+    relative = '{}/frozen-run-{}.json'.format(EVIDENCE_DIRECTORY, run_id)
+    registry, report, wrote = deepcopy(registry), [], False
+    with tempfile.TemporaryDirectory() as tmp:
+        tree = Path(tmp) / 'tree'
+        git(root, 'worktree', 'add', '--detach', str(tree), candidate['commit'])
+        try:
+            for name, pipeline in registry['pipelines'].items():
+                if names and name not in names:
+                    continue
+                errors, _ = candidate_errors(candidate, pipeline['replacedCommands'])
+                if errors:
+                    report.append('{}: not pinned ({})'.format(name, '; '.join(errors[:2])))
+                    continue
+                files, literals, dynamic = closure(tree, pipeline['entryModules'])
+                if dynamic or not files:
+                    report.append('{}: not pinned (scope not analysable at the run commit)'.format(name))
+                    continue
+                if not wrote:
+                    (Path(root) / relative).parent.mkdir(parents=True, exist_ok=True)
+                    (Path(root) / relative).write_text(text)
+                    wrote = True
+                pipeline['pin'] = {'commit': candidate['commit'], 'runId': run['id'], 'runUrl': run.get('html_url'),
+                                   'createdAt': run.get('created_at'), 'evidencePath': relative,
+                                   'evidenceSha256': hashlib.sha256(text.encode()).hexdigest(),
+                                   'scopeFingerprint': scope_fingerprint(tree, pipeline, files, literals)}
+                report.append('{}: pinned to {}'.format(name, describe(candidate)))
+        finally:
+            git(root, 'worktree', 'remove', '--force', str(tree))
+    return registry, report
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--full', action='store_true', help='Force full validation of every pipeline')
@@ -438,9 +611,21 @@ def main():
     parser.add_argument('--result-file', help='Write (selection) or read (--check) the recorded selection')
     parser.add_argument('--check', action='store_true', help='Run the lightweight check for --pipeline')
     parser.add_argument('--pipeline')
+    parser.add_argument('--fingerprint', action='store_true', help='Print the current scope fingerprint of --pipeline')
+    parser.add_argument('--record-pin', metavar='RUN_ID', help='Pin a successful Verify run as the attestation (maintenance; needs a token)')
     args = parser.parse_args()
     if args.check:
         print(name_line(args.pipeline, verify(args.pipeline, args.event, result_file=args.result_file)))
+        return
+    if args.fingerprint:
+        pipeline = load_registry()['pipelines'][args.pipeline]
+        files, literals, _ = closure(ROOT, pipeline['entryModules'])
+        print(scope_fingerprint(ROOT, pipeline, files, literals))
+        return
+    if args.record_pin:
+        registry, report = record_pin(args.record_pin, load_registry(), names=[args.pipeline] if args.pipeline else None)
+        (ROOT / REGISTRY).write_text(json.dumps(registry, indent=1) + '\n')
+        print('\n'.join(report))
         return
     try:
         registry = load_registry()
@@ -448,6 +633,8 @@ def main():
     except (OSError, ValueError, KeyError) as error:
         # An unreadable registry can only mean full validation of the known pipelines.
         result = {name: {'mode': 'full', 'reason': 'invalid registry: ' + str(error)} for name in KNOWN}
+    for name, item in result.items():
+        print('{}: {} - {}'.format(name, item['mode'], item['reason']))
     summary = {name: {key: value for key, value in item.items() if key != 'attestation'} for name, item in result.items()}
     print(json.dumps(summary, sort_keys=True, indent=1))
     if args.result_file:
