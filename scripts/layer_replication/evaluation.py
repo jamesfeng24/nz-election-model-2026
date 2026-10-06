@@ -6,7 +6,7 @@ from concurrent.futures import ProcessPoolExecutor
 import numpy as np
 import scipy
 from scripts.composed_precision.evaluation import year_inputs
-from scripts.composed_precision.stream import national_block, POOL
+from scripts.composed_precision.stream import block_uniforms, national_block, POOL
 from .common import PREFIX, QUANTITIES, VECTOR, STAGE54_EVALUATION, YEARS, equivalent, read, save, verify, arguments, design
 from .simulate import bank_metrics, replicate_bank, reused_solves
 
@@ -47,6 +47,7 @@ def task(item):
             q, control = replicate_bank(row, ctx['parties'][cid], national, ctx['pfit'], ctx['fit'], r)
             cpu.append(time.process_time() - start)
             banks[r] = q
+            block_uniforms.cache_clear()  # each 4,096-point replicate stream is 48 MB and is never reused; memory only
     print('Stage63', kind, cid, first, flush=True)
     return item, banks, control, {'replicateCPUSeconds': cpu, 'solveCacheHits': solves['hits'], 'solveCacheMisses': solves['misses']}
 
