@@ -1,4 +1,4 @@
-# MMP rules verification — 2026-10-06
+# Stage49 MMP rules verification — 2026-10-06
 
 Documentation-only checkpoint. **No code, model, coefficient, test or workflow changed.** One question: which 2026 MMP seat-allocation rules named in [statistical-specification.md](statistical-specification.md) (items 10–12, "requested design requirements, not independently verified") are supported by the Electoral Act and Electoral Commission sources, and which remain open? Authorized by James (working on Corinna's account) on 2026-10-06 as a rule check only; implementation is **not** authorized (see the proposal at the end).
 

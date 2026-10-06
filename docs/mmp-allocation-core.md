@@ -1,4 +1,4 @@
-# MMP allocation core — frozen design and results, 2026-10-06
+# Stage49 MMP allocation core — frozen design and results, 2026-10-06
 
 One question: does a deterministic, DOM-free, serializable TypeScript allocator reproduce the official 2008–2023 New Zealand seat allocations exactly, under the Electoral Act 1993 as at 1 January 2026? Rule sources and open items are in [mmp-rules-verification.md](mmp-rules-verification.md). Authorized by James on 2026-10-06 (concurrent MMP work, D082 scope). This stage allocates seats from given inputs only; it forecasts nothing.
 

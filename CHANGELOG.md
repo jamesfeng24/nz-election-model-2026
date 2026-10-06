@@ -1,9 +1,9 @@
-## MMP allocation core (2026-10-06)
+## Stage49 — MMP rules and exact allocation (2026-10-06)
 
 - Add `src/models/mmp/allocate.ts`: exact integer Sainte-Laguë allocation with 5%/electorate qualification, independent-winner deduction, overhang, list exhaustion and explicit tie flag; 26 tests including exact replay of official 2008–2023 seat tables.
 - Add oracle builder `scripts/mmp/oracle.py` and `data/processed/mmp/oracle-seat-tables.json`; update the `MmpAllocation` conventions in the data dictionary. No forecast, workflow or Stage47 change.
 
-## MMP rule verification — documentation only (2026-10-06)
+## Stage49 — MMP rule verification checkpoint (2026-10-06)
 
 - Preserve the Electoral Act 1993 text (version 238.0, 1 Jan 2026) under `data/raw/legislation/` and verify ss 191–193 rules against it.
 - Record sourced status of the 5% threshold, one-electorate exemption, Sainte-Laguë, overhang, 120-seat house, 71-electorate/49-list-seat 2026 structure and 2025 law changes in `docs/mmp-rules-verification.md`; list items still open (statute text, independents, ties, postponed polls).

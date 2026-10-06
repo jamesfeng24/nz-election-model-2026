@@ -1,4 +1,4 @@
-## MMP seat-rule verification — 2026-10-06
+## Stage49 — MMP seat-rule verification — 2026-10-06
 
 One new raw source: Electoral Act 1993, version 238.0 as at 1 January 2026, text extraction of the official PDF supplied by James (the session could not reach legislation.govt.nz). Preserved unchanged at `data/raw/legislation/electoral-act-1993/electoral-act-1993-version-238-0-as-at-2026-01-01.pdf.txt` (958,084 bytes, SHA-256 `8f6f522965a495f4b408892f496f27edd55fcc78f6b16337e8756fd9fb09c01a`; provenance in `provenance.json`). Registered in the separate dated registry `data/processed/mmp/source-registry.json` (Stage40 pattern), **not** `data/sources.json`, which ~25 historical stages hash. Derived oracle: `data/processed/mmp/oracle-seat-tables.json`, built by `scripts/mmp/oracle.py` from the already-preserved 2008–2023 Electoral Commission summary-of-results CSVs (no new acquisition).
 

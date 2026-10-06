@@ -1,4 +1,4 @@
-# MMP allocation core complete — review-ready, PR held, 2026-10-06
+# Stage49 MMP rules and exact allocation complete — review-ready, PR held, 2026-10-06
 
 Branch `claude/project-thread-vojcqq` from main d0fa5a66; authorized by James (MMP work may run concurrently; D082 scope). Pushed; **no PR yet** — hold until the CI-scoping PR merges (a new Python test and new files will make the first run full).
 
@@ -14,7 +14,7 @@ Exact next action: when CI scoping has merged, open the PR into main (no skip ma
 
 ---
 
-# MMP rule verification complete — rules statute-verified, 2026-10-06
+# Stage49 MMP rule verification checkpoint — rules statute-verified, 2026-10-06
 
 Branch `claude/project-thread-vojcqq` from main d0fa5a66 (verified equal to origin/main at start); pushed, no PR opened. Authorized scope: James (using the project owner Corinna's account) approved the MMP rule check only (project thread, 2026-10-06); code and a PR need a separate go-ahead.
 
