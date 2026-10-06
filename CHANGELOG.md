@@ -381,3 +381,9 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Behavioural tests, other pipelines and cheap Stage45/46 checks always run. A later stage that reads a registered pipeline's cache (Stage47 reads the Stage46 bank) keeps it full until reviewed.
 - Add job `timeout-minutes` (20/150), `actions: read`, and prohibit CPU/wall-time gates inside `--check`. Bump `actions/checkout` v5, `actions/setup-node` v5, `actions/setup-python` v6 (Node 24). No statistical code, output, threshold or artifact change. D081, AGENTS.md handoff section and README refresh.
 - Add a guarded frontend step for `npm run check:dist` (skipped until the script exists on main).
+
+## Stage53 — end-to-end export skeleton and synthetic dry run, 2026-10-06
+
+- Add the versioned website export contract (forecast snapshot, hashed append-only archive index, GeoJSON keyed by electorate id), DOM-free pipeline interfaces with per-draw seeded streams and a Web Worker message protocol, a hash- and schema-verifying loader, and Forecast/Electorates/MMP views for a loaded snapshot. See `docs/export-contract.md`.
+- Run polls → national draws → local party → candidate → MMP → export → site on labelled invented fixtures (`data/fixtures/synthetic/`), kept out of production by a dev-only import and `npm run check:dist`. The MMP stage is an `UNVERIFIED-PLACEHOLDER` stand-in the schema rejects outside synthetic snapshots; `src/models/mmp` is untouched.
+- TypeScript only: no Python, statistical code, saved output, threshold or CI file changes; nothing fitted and no forecast exists.

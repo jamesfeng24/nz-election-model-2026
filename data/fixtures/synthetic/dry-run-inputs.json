@@ -1,0 +1,441 @@
+{
+ "schemaVersion": 1,
+ "electionId": "synthetic-election",
+ "boundaryVersionId": "synthetic-boundary-v1",
+ "parties": [
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-party-a",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Alpha",
+   "abbreviation": "ALP",
+   "relatedPartyIds": [],
+   "validFrom": null,
+   "validTo": null
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-party-b",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Beta",
+   "abbreviation": "BET",
+   "relatedPartyIds": [],
+   "validFrom": null,
+   "validTo": null
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-party-c",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Gamma",
+   "abbreviation": "GAM",
+   "relatedPartyIds": [],
+   "validFrom": null,
+   "validTo": null
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-party-d",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Delta",
+   "abbreviation": "DEL",
+   "relatedPartyIds": [],
+   "validFrom": null,
+   "validTo": null
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-party-e",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Epsilon",
+   "abbreviation": "EPS",
+   "relatedPartyIds": [],
+   "validFrom": null,
+   "validTo": null
+  }
+ ],
+ "polls": [
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-poll-1",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "pollsterId": "synthetic-pollster",
+   "fieldworkStart": "2026-09-01",
+   "fieldworkEnd": "2026-09-05",
+   "publishedOn": "2026-09-05",
+   "sampleSize": 1000,
+   "population": "synthetic",
+   "mode": "synthetic",
+   "voteType": "party",
+   "electorateId": null,
+   "boundaryVersionId": null,
+   "denominator": "synthetic-decided",
+   "undecidedShare": null,
+   "results": [
+    {
+     "choiceId": "synthetic-party-a",
+     "share": 0.38
+    },
+    {
+     "choiceId": "synthetic-party-b",
+     "share": 0.34
+    },
+    {
+     "choiceId": "synthetic-party-c",
+     "share": 0.12
+    },
+    {
+     "choiceId": "synthetic-party-d",
+     "share": 0.08
+    },
+    {
+     "choiceId": "synthetic-party-e",
+     "share": 0.05
+    }
+   ],
+   "limitations": [
+    "synthetic fixture, not a real poll"
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-poll-2",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "pollsterId": "synthetic-pollster",
+   "fieldworkStart": "2026-09-10",
+   "fieldworkEnd": "2026-09-14",
+   "publishedOn": "2026-09-14",
+   "sampleSize": 1000,
+   "population": "synthetic",
+   "mode": "synthetic",
+   "voteType": "party",
+   "electorateId": null,
+   "boundaryVersionId": null,
+   "denominator": "synthetic-decided",
+   "undecidedShare": null,
+   "results": [
+    {
+     "choiceId": "synthetic-party-a",
+     "share": 0.4
+    },
+    {
+     "choiceId": "synthetic-party-b",
+     "share": 0.32
+    },
+    {
+     "choiceId": "synthetic-party-c",
+     "share": 0.11
+    },
+    {
+     "choiceId": "synthetic-party-d",
+     "share": 0.09
+    },
+    {
+     "choiceId": "synthetic-party-e",
+     "share": 0.04
+    }
+   ],
+   "limitations": [
+    "synthetic fixture, not a real poll"
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-poll-3",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "pollsterId": "synthetic-pollster",
+   "fieldworkStart": "2026-09-20",
+   "fieldworkEnd": "2026-09-24",
+   "publishedOn": "2026-09-24",
+   "sampleSize": 1000,
+   "population": "synthetic",
+   "mode": "synthetic",
+   "voteType": "party",
+   "electorateId": null,
+   "boundaryVersionId": null,
+   "denominator": "synthetic-decided",
+   "undecidedShare": null,
+   "results": [
+    {
+     "choiceId": "synthetic-party-a",
+     "share": 0.37
+    },
+    {
+     "choiceId": "synthetic-party-b",
+     "share": 0.35
+    },
+    {
+     "choiceId": "synthetic-party-c",
+     "share": 0.13
+    },
+    {
+     "choiceId": "synthetic-party-d",
+     "share": 0.07
+    },
+    {
+     "choiceId": "synthetic-party-e",
+     "share": 0.05
+    }
+   ],
+   "limitations": [
+    "synthetic fixture, not a real poll"
+   ]
+  }
+ ],
+ "electorates": [
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-electorate-1",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Electorate 1",
+   "boundaryVersionId": "synthetic-boundary-v1",
+   "kind": "general",
+   "predecessorIds": []
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-electorate-2",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Electorate 2",
+   "boundaryVersionId": "synthetic-boundary-v1",
+   "kind": "general",
+   "predecessorIds": []
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-electorate-3",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Electorate 3",
+   "boundaryVersionId": "synthetic-boundary-v1",
+   "kind": "general",
+   "predecessorIds": []
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-electorate-4",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Electorate 4",
+   "boundaryVersionId": "synthetic-boundary-v1",
+   "kind": "general",
+   "predecessorIds": []
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-electorate-5",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Electorate 5",
+   "boundaryVersionId": "synthetic-boundary-v1",
+   "kind": "general",
+   "predecessorIds": []
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-electorate-6",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Electorate 6",
+   "boundaryVersionId": "synthetic-boundary-v1",
+   "kind": "general",
+   "predecessorIds": []
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-electorate-m1",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Māori Electorate 1",
+   "boundaryVersionId": "synthetic-boundary-v1",
+   "kind": "maori",
+   "predecessorIds": []
+  }
+ ],
+ "candidates": [
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-1",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 1",
+   "electorateId": "synthetic-electorate-1",
+   "partyId": "synthetic-party-a"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-2",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 2",
+   "electorateId": "synthetic-electorate-1",
+   "partyId": "synthetic-party-b"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-3",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 3",
+   "electorateId": "synthetic-electorate-2",
+   "partyId": "synthetic-party-b"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-4",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 4",
+   "electorateId": "synthetic-electorate-2",
+   "partyId": "synthetic-party-a"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-5",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 5",
+   "electorateId": "synthetic-electorate-3",
+   "partyId": "synthetic-party-a"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-6",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 6",
+   "electorateId": "synthetic-electorate-3",
+   "partyId": "synthetic-party-c"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-7",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 7",
+   "electorateId": "synthetic-electorate-4",
+   "partyId": "synthetic-party-b"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-8",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 8",
+   "electorateId": "synthetic-electorate-4",
+   "partyId": "synthetic-party-d"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-9",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 9 (independent)",
+   "electorateId": "synthetic-electorate-4",
+   "partyId": null
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-10",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 10",
+   "electorateId": "synthetic-electorate-5",
+   "partyId": "synthetic-party-a"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-11",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 11",
+   "electorateId": "synthetic-electorate-5",
+   "partyId": "synthetic-party-b"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-12",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 12",
+   "electorateId": "synthetic-electorate-6",
+   "partyId": "synthetic-party-b"
+  },
+  {
+   "schemaVersion": 1,
+   "id": "synthetic-candidate-13",
+   "sourceIds": [
+    "synthetic-fixture"
+   ],
+   "name": "Synthetic Candidate 13",
+   "electorateId": "synthetic-electorate-6",
+   "partyId": "synthetic-party-c"
+  }
+ ],
+ "stageParameters": {
+  "synthetic": {
+   "nationalLogSd": 0.05,
+   "localLogSd": 0.1,
+   "candidateLogSd": 0.15,
+   "electorateLean": {
+    "synthetic-electorate-1": {
+     "synthetic-party-a": 0.15
+    },
+    "synthetic-electorate-2": {
+     "synthetic-party-b": 0.2
+    },
+    "synthetic-electorate-3": {
+     "synthetic-party-a": 0.05,
+     "synthetic-party-c": 0.5
+    },
+    "synthetic-electorate-4": {
+     "synthetic-party-d": 0.6
+    },
+    "synthetic-electorate-5": {},
+    "synthetic-electorate-6": {
+     "synthetic-party-b": 0.1
+    }
+   },
+   "independentLogShare": -2.5,
+   "nominalSeats": 20,
+   "threshold": 0.05
+  }
+ }
+}
