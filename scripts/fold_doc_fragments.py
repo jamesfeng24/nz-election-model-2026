@@ -8,7 +8,7 @@ coordinator folds the pending fragments in one docs PR. Documentation only; it t
   python3 -m scripts.fold_doc_fragments --check   # validate fragments, change nothing
   python3 -m scripts.fold_doc_fragments           # fold into the shared documents, delete the fragments
 
-Fragment format: sections introduced by a line `<!-- fold: NAME -->`, all optional, at least one:
+Fragment format (git conflict markers are rejected): sections introduced by a line `<!-- fold: NAME -->`, all optional, at least one:
 
   changelog    -> CHANGELOG.md             appended at the end; starts with a `## ` heading
   state        -> PROJECT_STATE.md         inserted at the top (newest first, `---` separated); starts with `# `
@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DIRECTORY = 'handoff.d'
 NAME = re.compile(r'^\d{4}-\d{2}-\d{2}-[a-z0-9][a-z0-9-]*\.md$')
 MARKER = re.compile(r'^<!-- fold: ([a-z]+) -->$')
+CONFLICT = re.compile(r'^(<{7}|={7}|>{7})(\s|$)')
 DECISION = re.compile(r'^## D(\d{3,}) — ', re.M)
 ROADMAP = 'docs/stage39-forecast-roadmap.md'
 # section -> (target file, heading regex the first line must match)
@@ -51,7 +52,9 @@ def parse(name, text):
     """Return {section: body} for one fragment; raise FragmentError on any malformed content."""
     label = '{}/{}'.format(DIRECTORY, name)
     sections, current = {}, None
-    for line in text.splitlines():
+    for number, line in enumerate(text.splitlines(), 1):
+        if CONFLICT.match(line):
+            raise FragmentError('{}:{}: git conflict marker "{}"'.format(label, number, line[:7]))
         marker = MARKER.match(line)
         if marker:
             current = marker.group(1)

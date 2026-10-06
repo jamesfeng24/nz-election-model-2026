@@ -477,6 +477,14 @@ class RealRegistryTests(unittest.TestCase):
         coupled = frozen.couple_cache_dependencies(registry, {'a': dict(reused), 'b': dict(full), 'c': dict(reused)})
         self.assertEqual([coupled[n]['mode'] for n in 'abc'], ['integrity', 'full', 'integrity'])
 
+    def test_cache_dependencies_couple_transitively_whatever_the_registry_order(self):
+        registry = {'pipelines': {'c': {}, 'b': {'cacheDependencies': ['c']}, 'a': {'cacheDependencies': ['b']}, 'd': {}}}
+        reused = {'mode': 'integrity', 'reason': 'x'}
+        coupled = frozen.couple_cache_dependencies(registry, {
+            'a': {'mode': 'full', 'reason': 'y'}, 'b': dict(reused), 'c': dict(reused), 'd': dict(reused)})
+        self.assertEqual([coupled[n]['mode'] for n in 'abcd'], ['full', 'full', 'full', 'integrity'])
+        self.assertIn('b runs in full', coupled['c']['reason'])
+
     def test_current_cache_consumers_are_none(self):
         for pipeline in self.registry['pipelines'].values():
             self.assertEqual(frozen.cache_consumers(ROOT, pipeline), [])

@@ -22,15 +22,16 @@ Numbers are identifiers, not an execution order; PR titles use `StageNN:` and th
 
 | Stage | Question | Status |
 |---|---|---|
-| Stage48 | Frozen candidate-seat N/L balance-scale comparison (item 5; no stage number in the Stage47 contract, so allocated here) | authorized, starts after PR54 merges |
-| Stage49 | MMP rules verification and exact allocation (item 2) | authorized |
+| Stage47 | Gaussian expectation repair and width attribution (PR54; CPU-guard amendment) | merged (PR #54) |
+| Stage48 | Frozen candidate-seat N/L balance-scale comparison (item 5; no stage number in the Stage47 contract, so allocated here) | authorized; PR #54 has merged (c06772a), not yet started |
+| Stage49 | MMP rules verification and exact allocation (item 2) | merged (PR #58); allocator reproduces all six official 2008–2023 seat tables |
 | Stage50 | Nomination snapshot, immutable raw acquisition (item 3) | authorized after the 8 October 2026 close |
-| Stage51 | Candidate-change identity classification: the 61 apparent changes and incumbent→successor table (first half of item 6; classification only, no model test) | authorized by James 2026-10-06 (do not be over-conservative on exact name matching; classify aliases and genuine changes with documented evidence) |
-| Stage52 | 2026 poll acquisition (item 9, raw dated checksummed files only; no fit) | authorized by James 2026-10-06 |
+| Stage51 | Candidate-change identity classification: the 61 apparent changes and incumbent→successor table (first half of item 6; classification only, no model test) | merged (PR #61): 333 N/L incumbent seats 2008–2020 give 258 continuations and 75 sourced changes (60 election-time exits); 20 of the 59 N/L Stage10 apparent changes are same-person name variants; R_old/R_new and the R_new = a + ρ R_old test not started |
+| Stage52 | 2026 poll acquisition (item 9, raw dated checksummed files only; no fit) | merged (PR #60); 41 raw files incl. James-supplied Taxpayers' Union–Curia prints, 3 of 7 Māori seat polls published (all-seven not confirmed), no panel update or live fit |
 | Stage53 | End-to-end skeleton, export contract and synthetic dry run | merged (PR #57) |
 | Stage54–57 (provisional) | Composed-MC precision (item 4); replacement R_new = a + ρ R_old test; dated manual-adjustment interface (item 7); manual replay (item 8) | not yet authorized; confirm numbers when each is authorized |
 
-Next free number: Stage58. Decision numbers: D081 is the CI-scoping decision on main, so PR54's Stage47 decision (written as D081 on its branch) must be renumbered D083 when PR54 takes main; D084 is the Stage49 MMP decision (#58), D085 is reserved for Stage52 and D086 for Stage51; next free decision D087. Threads get decision numbers from the coordinator, not by taking the next number on main.
+Next free number: Stage58. Decision numbers: D081 CI scoping, D082 this roadmap, D083 Stage47/PR54, D084 Stage49 MMP (#58), D085 Stage52 (#60), D086 Stage51 (#61); next free decision D087 (reserved for Stage48). Threads get decision numbers from the coordinator, not by taking the next number on main.
 
 ## Three final outputs
 
