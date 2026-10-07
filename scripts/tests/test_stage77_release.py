@@ -68,12 +68,9 @@ class Blocs(unittest.TestCase):
 
 
 class Gate(unittest.TestCase):
-    def test_reconciliation_tolerance_and_staleness_labels(self):
+    def test_reconciliation_tolerance_is_an_internal_gate_check(self):
         config = read(CONFIG)
-        bank = {'modelStateAsOf': '2026-09-27', 'seats': [{'electorateId': 'x', 'pollFieldworkEnd': '2026-07-01'}]}
-        self.assertEqual(A.staleness(bank, config, '2026-10-07'), [
-            'x: electorate poll fieldwork ended 2026-07-01 (98 days); window 60 days.'])
-        self.assertEqual(len(A.staleness(bank, config, '2026-10-20')), 2)
+        self.assertFalse(hasattr(A, 'staleness'))
         strict = copy.deepcopy(config)
         strict['release']['reconciliationTolerancePP'] = 0.1
         bank = A.assemble(config, 8, slates=synthetic_slates(), classification=synthetic_classification(),

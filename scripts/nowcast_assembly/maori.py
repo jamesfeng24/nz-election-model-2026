@@ -2,7 +2,8 @@
 
 Stage66 stores only a 500-draw preview, so the registered model is re-simulated here with the assembly's draw
 count. Maori draws are independent of the national draw (Stage66 default; any coupling needs a stated correlation).
-Unpolled seats have no estimate: while `maori.unpolledSeats` is pending they are `unavailable`, never a fallback.
+Unpolled seats have no estimate in the Maori layer. James chose a labelled fallback (D114), but no no-poll model is
+registered yet (`maori.unpolledFallbackModel`), so they stay `unavailable` with that reason, never a default or a guess.
 """
 from scripts.maori_seat_layer.common import SEATS, fold
 from scripts.maori_seat_layer.fit import fit
@@ -45,7 +46,9 @@ def simulate(config, count):
                               'candidateShares': share_summaries(candidates, s['share']),
                               'winners': [int(i) for i in s['winner']]}
         else:
-            reason = 'unpolled; maori.unpolledSeats is pending James' if config['maori']['unpolledSeats'] is None \
-                else 'unpolled; no registered fallback implementation'
+            decision = config['maori']['unpolledSeats']
+            reason = ('unpolled; maori.unpolledSeats is pending James' if decision is None
+                      else 'unpolled; withheld by decision (D114)' if decision == 'withhold'
+                      else 'unpolled; labelled fallback chosen (D114) but no fallback model is registered yet (maori.unpolledFallbackModel)')
             out[ids[seat]] = {'status': 'unavailable', 'reason': reason}
     return out

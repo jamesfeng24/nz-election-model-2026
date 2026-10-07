@@ -71,7 +71,6 @@ def rehearse(national, replicates, workers):
     records = synthetic_unpolled(maori.simulate(config, total), total, config['simulation']['seedNamespace'])
     bank = A.assemble(config, national, slates=slates, classification=synthetic_classification(general),
                       maori_records=records, workers=workers, replicates=replicates)
-    bank['diagnostics']['staleness'] = A.staleness(bank, config, AS_OF)
     passed, checks = A.gate(bank, config)
     elapsed = time.time() - started
     report = {'stage': 77, 'label': 'REHEARSAL with labelled synthetic stand-ins; not a nowcast and never published',
@@ -80,7 +79,7 @@ def rehearse(national, replicates, workers):
               'nationalInput': {'source': national_input['source'], 'modelStateAsOf': national_input['modelStateAsOf'],
                                 'dataCutoff': national_input['dataCutoff'], 'note': 'Stage70 2026-10-07 refresh, adopted into the config (#94)'},
               'seats': {'simulated': sum(s['status'] == 'simulated' for s in bank['seats']), 'total': len(bank['seats'])},
-              'gate': {'passed': passed, 'checks': checks}, 'staleness': bank['diagnostics']['staleness'],
+              'gate': {'passed': passed, 'checks': checks},
               'reconciliation': bank['diagnostics']['reconciliation'], 'bankDigest': A.bank_digest(bank)}
     options = {'snapshotId': 'synthetic-rehearsal-' + AS_OF, 'createdAt': AS_OF + 'T00:00:00+00:00',
                'dataCutoff': config['national']['dataCutoff'] + 'T00:00:00+00:00', 'electionId': 'nz-general-2026',

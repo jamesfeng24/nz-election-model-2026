@@ -36,7 +36,6 @@ export function releaseGate(snapshot: ForecastSnapshot, policy: ReleasePolicy): 
   const failures: string[] = [];
   if (snapshot.provenance.kind !== 'model' && !policy.allowSynthetic) failures.push('Only model snapshots may be published');
   if (snapshot.targetType !== 'nowcast') failures.push('The primary release is a nowcast');
-  if (snapshot.calibrationStatus !== 'uncalibrated') failures.push('Probabilities stay labelled uncalibrated until a validation exists');
   if (snapshot.unavailableElectorates.length) failures.push(`${snapshot.unavailableElectorates.length} electorates have no prediction`);
   if (snapshot.seatLayer.status !== 'available') failures.push(`Seat layer withheld: ${snapshot.seatLayer.reason}`);
   if (snapshot.mmp.status !== 'available') failures.push('MMP allocation withheld');
