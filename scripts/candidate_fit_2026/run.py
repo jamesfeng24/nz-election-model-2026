@@ -11,10 +11,10 @@ re-centred on the new training-only means from their stored components (exact; t
 import argparse
 from math import fsum
 from scripts.balance_scale.common import equivalent
-from scripts.models.joint_candidate_share.numerics import calculate
+import numpy as np
+from scripts.models.joint_candidate_share.numerics import calculate, predict
 from scripts.uncertainty_revision.common import ROOT, encode
-from .common import (CONSTRUCTION, FEATURES, FIT, LIVE_BRANCH, LIVE_YEAR, METHOD, PREFIX, READINESS, design, job,
-                     live_fold, read, rows_for)
+from .common import CONSTRUCTION, FEATURES, FIT, IMPACT, METHOD, PREFIX, READINESS, design, job, live_fold, read, rows_for
 
 TOLERANCE = 1e-12
 
@@ -83,13 +83,54 @@ def recentre(fit_value):
             'candidates': candidates}
 
 
+def impact(fit_value, features):
+    """How far the refit moves predictions. Not a score: the live fit has seen 2023, so 2023 is in-sample for it.
+    (a) 2023 contests under each fit with its own centring; (b) 2026 candidates' exponent change exp(theta.z)."""
+    latest, records = design()
+    rows = rows_for(latest['evaluationIds'], records)
+    old_fold = saved_latest()
+    new_fold = fit_value['folds'][0]
+    old = {p['targetElectorateId']: p['candidateShares'] for p in predict(rows, old_fold, METHOD, old_fold['fits'][METHOD]['parameters'])}
+    new = {p['targetElectorateId']: p['candidateShares'] for p in predict(rows, new_fold, METHOD, new_fold['fits'][METHOD]['parameters'])}
+    changes, major, flips = [], [], 0
+    for row in rows:
+        seat = row['targetElectorateId']
+        ids = [c['targetOccurrenceId'] for c in row['candidates']]
+        a, b = np.array([old[seat][i] for i in ids]), np.array([new[seat][i] for i in ids])
+        changes.extend(100 * np.abs(b - a))
+        groups = [c['partyBallotGroupKey'] for c in row['candidates']]
+        if 'nationalparty' in groups and 'labourparty' in groups:
+            n, l = groups.index('nationalparty'), groups.index('labourparty')
+            major.append(100 * abs((b[n] - b[l]) - (a[n] - a[l])))
+        flips += int(a.argmax() != b.argmax())
+    readiness = read(READINESS)
+    previous = old_fold['fits'][METHOD]['parameters']['coefficients']
+    live = new_fold['fits'][METHOD]['parameters']['coefficients']
+    factor = []
+    for c in readiness['candidateRecords']:
+        z_old = {n: c['continuous'][n]['contribution'] for n in ('S', 'R')}
+        z_new = features['candidates'][c['targetOccurrenceId']]
+        factor.append(float(np.exp(sum(live[n] * z_new[n] - previous[n] * z_old[n] for n in ('S', 'R')))))
+    q = lambda x, p: float(np.quantile(x, p))
+    return {'stage': 75, 'note': 'movement only, not a score: 2023 is in-sample for the live fit',
+            'contests2023': {'contests': len(rows), 'candidates': len(changes),
+                             'meanAbsShareChangePP': float(np.mean(changes)), 'p95AbsShareChangePP': q(changes, .95),
+                             'maxAbsShareChangePP': float(np.max(changes)),
+                             'nationalLabourMarginChangePP': {'mean': float(np.mean(major)), 'p95': q(major, .95), 'max': float(np.max(major)),
+                                                              'contests': len(major)},
+                             'predictedWinnerChanges': flips},
+            'candidates2026': {'candidates': len(factor), 'relativeWeightFactor': {
+                'min': float(np.min(factor)), 'p05': q(factor, .05), 'median': q(factor, .5), 'p95': q(factor, .95), 'max': float(np.max(factor))},
+                'meaning': 'exp(theta_live.z_live - theta_previous.z_previous): change in each candidate\'s feature weight before the kappa floor and renormalisation'}}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
     check = parser.parse_args().check
     value = fit()
     features = recentre(value)
-    for path, data in ((FIT, value), (FEATURES, features)):
+    for path, data in ((FIT, value), (FEATURES, features), (IMPACT, impact(value, features))):
         if check:
             if not equivalent(read(path), data, 1e-9):
                 raise SystemExit('Stale ' + path)

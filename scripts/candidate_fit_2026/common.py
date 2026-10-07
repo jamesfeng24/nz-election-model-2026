@@ -9,6 +9,7 @@ from scripts.models.joint_candidate_share.common import read, encode, keyed, DES
 PREFIX = 'data/processed/candidate-fit-2026/'
 FIT = PREFIX + 'fit.json'
 FEATURES = PREFIX + 'features-2026.json'
+IMPACT = PREFIX + 'impact.json'
 CONSTRUCTION = 'data/processed/models/joint-candidate-share/construction.json'
 READINESS = 'data/processed/continuous-transport/readiness-2026.json'
 METHOD = 'baseline_plus_S_plus_R'
