@@ -15,6 +15,7 @@ from unittest.mock import patch
 from scripts.validate import ci_frozen as frozen
 
 ROOT = Path(__file__).resolve().parents[2]
+UNPINNED_UNTIL_FIRST_FULL_RUN = ('stage63',)  # registered in its own PR (no pin needed); pin after its first full run
 COMMAND = 'python3 -m scripts.pipe.entry --check'
 COMMAND2 = 'python3 -m scripts.pipe2.entry --check'
 ENV = {'GITHUB_REPOSITORY': 'o/r', 'GITHUB_TOKEN': 't'}
@@ -691,10 +692,10 @@ class SelectAndVerifyTests(unittest.TestCase):
                     patch.dict(os.environ, NO_TOKEN), redirect_stdout(printed):
                 frozen.main()
             # one human-readable line per pipeline: its mode and the attestation chosen or every reason for full
-            for name in ('stage45', 'stage46', 'stage47', 'stage48', 'stage54'):
+            for name in ('stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63'):
                 self.assertRegex(printed.getvalue(), r'(?m)^{}: (full|integrity) - .+'.format(name))
             lines = sorted(output.read_text().split())
-            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46', 'stage47', 'stage48', 'stage54'])
+            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63'])
             # The mode depends on the runner and its Actions history, so only its form is fixed here.
             self.assertTrue(all(line.split('=')[1] in ('full', 'integrity') for line in lines))
 
@@ -740,6 +741,8 @@ class RealRegistryTests(unittest.TestCase):
     def test_every_registered_pipeline_has_a_pin_that_proves_its_own_full_run(self):
         """Each pin's evidence shows its pipeline's replaced commands executed successfully in one full run."""
         for name, pipeline in self.registry['pipelines'].items():
+            if name in UNPINNED_UNTIL_FIRST_FULL_RUN:
+                continue  # registered in its own PR; the first attestation is that PR's run (discovery), pinned afterwards
             pin, why = frozen.pin_candidate(pipeline, ROOT)
             self.assertIsNone(why, name)
             self.assertEqual(pin['record']['run']['id'], pin['runId'], name)
@@ -759,7 +762,8 @@ class RealRegistryTests(unittest.TestCase):
 
     def test_pins_cover_every_registered_pipeline_and_cache_dependencies_are_pinned_consistently(self):
         for name, pipeline in self.registry['pipelines'].items():
-            self.assertIn('pin', pipeline, name)
+            if name not in UNPINNED_UNTIL_FIRST_FULL_RUN:
+                self.assertIn('pin', pipeline, name)
             for dependency in pipeline.get('cacheDependencies', []):
                 self.assertIn(dependency, self.registry['pipelines'])
         self.assertEqual(self.registry['version'], frozen.REGISTRY_VERSION)

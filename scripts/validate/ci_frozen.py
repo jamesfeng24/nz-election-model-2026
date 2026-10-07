@@ -41,7 +41,7 @@ ENVIRONMENT = ('.python-version', 'pyproject.toml', 'requirements-boundaries.txt
 # nor count as a pipeline change. They are guarded instead by the selector's own always-run unit tests and by
 # ``workflow_errors`` (no attested validation may be removed or newly conditioned).
 MACHINERY = ('.github/validation/', 'scripts/validate/ci_', 'AGENTS.md')
-KNOWN = ('stage45', 'stage46', 'stage47', 'stage48', 'stage54')
+KNOWN = ('stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63')
 EVENTS = ('pull_request', 'push')  # workflow_dispatch and anything unknown are always full
 ATTESTING_EVENTS = ('pull_request', 'push', 'workflow_dispatch')  # a manual full dispatch of main is a valid reference
 REGISTRY_VERSION = 4

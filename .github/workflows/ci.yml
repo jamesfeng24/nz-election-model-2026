@@ -244,3 +244,15 @@ jobs:
         run: python3 -m scripts.validate.ci_frozen --check --pipeline stage54 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
       - run: python3 -m scripts.composed_precision.report --check
       - run: python3 -m scripts.composed_precision.manifest --check
+      - run: python3 -m scripts.layer_replication.evaluation --check
+        if: steps.frozen.outputs.stage63 != 'integrity'
+      - run: python3 -m scripts.layer_replication.decision --check
+      - run: python3 -m scripts.layer_replication.verification --check
+        if: steps.frozen.outputs.stage63 != 'integrity'
+      - name: Verify reused Stage63 frozen pipeline
+        if: steps.frozen.outputs.stage63 == 'integrity'
+        env:
+          CI_EVENT_NAME: ${{ github.event_name }}
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline stage63 --event "$CI_EVENT_NAME" --result-file "$RUNNER_TEMP/frozen-selection.json"
+      - run: python3 -m scripts.layer_replication.report --check
+      - run: python3 -m scripts.layer_replication.manifest --check
