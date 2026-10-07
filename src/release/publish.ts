@@ -35,12 +35,10 @@ export async function publish(request: PublishRequest, io: ArchiveIO): Promise<P
   if (policy.allowSynthetic && /(^|\/)public(\/|$)/.test(archiveDir))
     return { status: 'refused', failures: ['Rehearsal (synthetic) output is never written under public/'] };
   const bank = JSON.parse(request.bankText);
-  const staleness: string[] = Array.isArray(bank?.diagnostics?.staleness) ? bank.diagnostics.staleness : [];
   let snapshot: ForecastSnapshot;
   try {
     snapshot = await buildNowcastSnapshot(bank, {
       ...request.options, bankSha256: await sha256Hex(request.bankText),
-      limitations: [...request.options.limitations, ...staleness.map(s => `Stale input: ${s}`)],
     });
   } catch (error) {
     return { status: 'refused', failures: [`Snapshot invalid: ${error instanceof Error ? error.message : String(error)}`] };

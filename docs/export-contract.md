@@ -39,7 +39,7 @@ Added before any v2 snapshot was published, so `schemaVersion` stays 2 ([stage74
 
   These are scenarios of seat arithmetic, not predictions of coalition agreements.
 
-Still open: per-component calibration status (every probability is `uncalibrated`) and precision thresholds (Stage63).
+Calibration labels were dropped by James's release-policy decision (D114, 2026-10-07): `calibrationStatus` is no longer in the v2 contract. Precision thresholds are set (MCSE ≤ 0.01).
 
 The v1 text below is the original Stage53 record.
 
@@ -62,7 +62,6 @@ One immutable JSON file per run. It composes the existing draft types (`Simulati
 | `schemaVersion` | `1`. A breaking change bumps it; loaders reject unknown versions. |
 | `snapshotId`, `createdAt`, `dataCutoff` | Identity and dates. Ids are `synthetic-…` exactly when synthetic. |
 | `provenance` | `synthetic-fixture` (with label) or `model` (model version, code revision). |
-| `calibrationStatus` | `uncalibrated` or `validated`. The site states uncalibrated output as such. What the site may show, and the gate for it, is the still-open probability-release policy (roadmap); the contract only carries the status. |
 | `directory` | Names for parties, electorates, candidates, so pages need no other lookup. |
 | `national` | Party vote-share intervals plus a basis note. |
 | `simulation` | `SimulationResult`: seed, PRNG, draws, input hashes, code revision, electorate winner frequencies, party seat intervals, government-combination probabilities, limitations. Must contain every requested draw. |

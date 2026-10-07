@@ -42,7 +42,7 @@ describe('release publication', () => {
     if (strict.status === 'refused') expect(strict.failures.join(' ')).toMatch(/Monte Carlo SE threshold/);
   });
 
-  it('gates provenance, completeness and calibration labels', async () => {
+  it('gates provenance and completeness', async () => {
     const io = memory();
     const result = await publish({ bankText, options: options('synthetic-z'), archiveDir: '.release-build/archive',
       policy: { probabilityMcseMax: 0.49, allowSynthetic: true } }, io);

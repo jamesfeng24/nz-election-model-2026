@@ -1,12 +1,12 @@
 {
   "asOf": "2026-10-07",
-  "bankDigest": "1cdb450f251437e56b9772f76a5faab6a517cd188028f1c5241a0d9890933dcf",
-  "configVersion": "2026-10-07.7",
+  "bankDigest": "77bcfcb5eea14e7ca657c0885d699698866fad5eb948fb27d25927d0321eb3ff",
+  "configVersion": "2026-10-07.8",
   "gate": {
     "checks": [
       {
         "check": "configComplete",
-        "detail": "pending fields must be filled before assembly: maori.unpolledSeats, mmp.rulesVersion, release.policyApprovedBy",
+        "detail": "pending fields must be filled before assembly: maori.unpolledFallbackModel",
         "passed": false
       },
       {
@@ -51,7 +51,7 @@
       },
       {
         "check": "nationalReconciliation",
-        "detail": "max gap 0.373pp, tolerance 1.0pp",
+        "detail": "max gap 0.390pp, tolerance 1.0pp",
         "passed": true
       }
     ],
@@ -73,42 +73,42 @@
   "reconciliation": {
     "byGroup": {
       "actnewzealand": {
-        "gapPP": 0.12568927586352197,
-        "generalSeatWeightedLocalMeanPP": 9.746405805476122,
+        "gapPP": 0.12896910242891774,
+        "generalSeatWeightedLocalMeanPP": 9.749685632041517,
         "nationalMeanPP": 9.620716529612599
       },
       "greenparty": {
-        "gapPP": -0.21756810208837518,
-        "generalSeatWeightedLocalMeanPP": 13.353191215072238,
+        "gapPP": -0.22339265105670858,
+        "generalSeatWeightedLocalMeanPP": 13.347366666103905,
         "nationalMeanPP": 13.570759317160613
       },
       "labourparty": {
-        "gapPP": -0.1643219565533205,
-        "generalSeatWeightedLocalMeanPP": 28.43687322598744,
+        "gapPP": -0.17795155081636316,
+        "generalSeatWeightedLocalMeanPP": 28.4232436317244,
         "nationalMeanPP": 28.601195182540764
       },
       "nationalparty": {
-        "gapPP": 0.3734630494005686,
-        "generalSeatWeightedLocalMeanPP": 28.266257627101034,
+        "gapPP": 0.3897680336908904,
+        "generalSeatWeightedLocalMeanPP": 28.282562611391356,
         "nationalMeanPP": 27.892794577700464
       },
       "newzealandfirstparty": {
-        "gapPP": 0.04452334596773827,
-        "generalSeatWeightedLocalMeanPP": 10.802412420417431,
+        "gapPP": 0.04579591450496606,
+        "generalSeatWeightedLocalMeanPP": 10.80368498895466,
         "nationalMeanPP": 10.757889074449693
       },
       "opportunity": {
-        "gapPP": -0.15862635850541762,
-        "generalSeatWeightedLocalMeanPP": 6.303837106673105,
+        "gapPP": -0.15970469139232057,
+        "generalSeatWeightedLocalMeanPP": 6.302758773786202,
         "nationalMeanPP": 6.462463465178522
       },
       "tepatimaori": {
-        "gapPP": -0.012778975191286152,
-        "generalSeatWeightedLocalMeanPP": 1.6655090202558849,
+        "gapPP": -0.013154981551433825,
+        "generalSeatWeightedLocalMeanPP": 1.6651330138957372,
         "nationalMeanPP": 1.678287995447171
       }
     },
-    "maxAbsGapPP": 0.3734630494005686,
+    "maxAbsGapPP": 0.3897680336908904,
     "note": "diagnostic only; the tolerance is set with the publication gate (Stage74)",
     "tolerance": null
   },
@@ -118,7 +118,6 @@
     "total": 71
   },
   "stage": 77,
-  "staleness": [],
   "syntheticStandIns": [
     "official candidate list (Stage50 not yet run; announcements + invented Labour/independent rows)",
     "ordinary/exceptional classification (James has not entered it)",

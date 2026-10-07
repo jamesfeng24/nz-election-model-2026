@@ -226,23 +226,5 @@ def gate(bank, config):
     return all(c['passed'] for c in checks), checks
 
 
-def staleness(bank, config, as_of):
-    """Label components older than the configured windows at the publication date. Stale is labelled, never hidden
-    and never a reason to fill or drop a value; the labels go into the snapshot's limitations."""
-    import datetime
-    day = datetime.date.fromisoformat(as_of)
-    windows = config['release']['staleDays']
-    age = lambda value: (day - datetime.date.fromisoformat(value)).days
-    labels = []
-    national = age(bank['modelStateAsOf'])
-    if national > windows['nationalState']:
-        labels.append(f"National latent state is {national} days old (week of {bank['modelStateAsOf']}); window {windows['nationalState']} days.")
-    for seat in bank['seats']:
-        end = seat.get('pollFieldworkEnd')
-        if end and age(end) > windows['maoriPoll']:
-            labels.append(f"{seat['electorateId']}: electorate poll fieldwork ended {end} ({age(end)} days); window {windows['maoriPoll']} days.")
-    return labels
-
-
 def bank_digest(bank):
     return digest({k: v for k, v in bank.items() if k != 'diagnostics'})

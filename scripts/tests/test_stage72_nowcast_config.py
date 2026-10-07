@@ -38,10 +38,23 @@ class Config(unittest.TestCase):
 
     def test_live_config_is_valid_with_explicit_pending_fields(self):
         pending = V.check_config(self.config)
-        self.assertIn('release.policyApprovedBy', pending)
-        self.assertIn('roster.snapshotId', pending)
+        self.assertEqual(pending, ['maori.unpolledFallbackModel', 'roster.snapshotId'])
         with self.assertRaises(V.ConfigError):
             V.check_config(self.config, require_complete=True)
+
+    def test_release_policy_is_recorded_as_james_decided(self):
+        """D114 (James, 2026-10-07): no calibration label or staleness windows, internal reconciliation gate, MCSE 0.01."""
+        config = self.config
+        release = config['release']
+        self.assertEqual(release['policyApprovedBy'], 'James, 2026-10-07 (D114)')
+        self.assertEqual(release['probabilityMcseMax'], 0.01)
+        self.assertNotIn('staleDays', release)
+        self.assertEqual(config['mmp']['rulesVersion'], 'electoral-act-1993-2026-01-01')
+        self.assertEqual(config['maori']['unpolledSeats'], 'labelled-fallback')
+        self.assertEqual(config['maori']['presentation'], 'labelled-range')
+        broken = copy.deepcopy(config); broken['maori']['unpolledSeats'] = 'guess'
+        with self.assertRaises(V.ConfigError):
+            V.check_config(broken)
 
     def test_config_rejects_forecast_semantics_and_other_multipliers(self):
         for edit in (lambda c: c.update(estimand='forecast'),

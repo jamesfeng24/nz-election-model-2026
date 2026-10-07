@@ -215,7 +215,6 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     provenance: synthetic
       ? { kind: 'synthetic-fixture', label: options.syntheticLabel ?? 'Synthetic draw bank; not a nowcast' }
       : { kind: 'model', modelVersion: options.modelVersion, codeRevision: options.codeRevision, configVersion: bank.configVersion },
-    calibrationStatus: 'uncalibrated',
     directory: bank.directory,
     national: {
       partyVoteShares: bank.partyVote.groups.map((g, i) => ({ partyId: g, share: linearIntervals(bank.partyVote.shares.map(row => row[i])) })),

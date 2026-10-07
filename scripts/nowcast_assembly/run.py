@@ -3,13 +3,13 @@
 python -m scripts.nowcast_assembly.run [--check] [--workers N]
     Development gate on the live inputs: builds the bank at the development draw count and writes only the gate
     report (statuses, blockers, checks, reconciliation diagnostic, bank digest), never the bank or a forecast.
-python -m scripts.nowcast_assembly.run --require-complete --bank PATH --as-of YYYY-MM-DD [--workers N]
+python -m scripts.nowcast_assembly.run --require-complete --bank PATH [--workers N]
     Production: refuses unless the config is complete and every gate check passes, then writes the bank to PATH.
 """
 import argparse
 import os
 from scripts.nowcast_config.validate import check_config, ConfigError
-from .assemble import assemble, gate, bank_digest, staleness
+from .assemble import assemble, gate, bank_digest
 from .common import CONFIG, OUTPUT, ROOT, read, encode, require, AssemblyError
 from scripts.balance_scale.common import equivalent
 
@@ -37,7 +37,6 @@ def main():
     parser.add_argument('--require-complete', action='store_true')
     parser.add_argument('--bank')
     parser.add_argument('--workers', type=int, default=min(4, os.cpu_count() or 1))
-    parser.add_argument('--as-of', help='publication date (YYYY-MM-DD) for the staleness labels; required with --require-complete')
     args = parser.parse_args()
     config = read(CONFIG)
     if args.require_complete:
@@ -47,9 +46,8 @@ def main():
             raise SystemExit(f'REFUSED: {error}')
         sim = config['simulation']
         require(sim['nationalDraws'] * sim['layerReplicates'] == sim['draws'], 'simulation.draws must be nationalDraws x layerReplicates')
-        require(args.bank and args.as_of, '--bank and --as-of are required')
+        require(args.bank, '--bank is required')
         bank = assemble(config, sim['nationalDraws'], workers=args.workers, replicates=sim['layerReplicates'])
-        bank['diagnostics']['staleness'] = staleness(bank, config, args.as_of)
         passed, checks = gate(bank, config)
         if not passed:
             raise SystemExit('REFUSED: ' + '; '.join(f"{c['check']}: {c['detail']}" for c in checks if not c['passed']))
