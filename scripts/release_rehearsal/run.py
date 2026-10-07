@@ -2,11 +2,11 @@
 
 python -m scripts.release_rehearsal.run [--national 4096] [--replicates 16] [--workers 4] [--check]
 
-Real inputs: the Stage62 national fit (lastDataSupport), the Stage64 population-flat baseline, the Stage72 scales,
+Real inputs: the Stage70 2026-10-07 national refresh (lastDataSupport; applied in memory, adoption separate), the Stage64 population-flat baseline, the Stage72 scales,
 the Stage75 candidate fit, the Stage66 Maori layer for the three polled seats, the 2026 frame. SYNTHETIC stand-ins
 (because the real inputs do not exist yet): the official candidate list (Stage50 stand-in: announcements plus
 invented Labour and independent candidates), the D107 classification, and winners for the four unpolled Maori seats.
-The Stage69 baseline and Stage70 refresh are not on main and are not used.
+The Stage69 baseline is not on main and is not used.
 
 Writes the bank and the rehearsal publication inputs under the gitignored `.release-build/rehearsal/` only (never
 `public/`), and a deterministic report `data/processed/release-rehearsal/report.json` (no timings).
@@ -29,8 +29,8 @@ STAND_INS = ['official candidate list (Stage50 not yet run; announcements + inve
              'ordinary/exceptional classification (James has not entered it)',
              'winners for the four unpolled Maori seats (James has not chosen a fallback)',
              'MMP rules-version label (placeholder) and blocs (none)']
-NOT_USED = ['Stage69 voting-place notional baseline (not on main; the Stage64 population-flat baseline is used)',
-            'Stage70 weekly national refresh (not on main; the Stage62 fit cut off 2026-10-06 is used)']
+NOT_USED = ['Stage69 voting-place notional baseline (not on main; the Stage64 population-flat baseline is used)']
+STAGE70 = 'data/processed/polling/weekly-refresh/2026-10-07/estimate.json'
 
 
 def synthetic_classification(general):
@@ -60,6 +60,9 @@ def rehearse(national, replicates, workers):
     features = outputs[refresh.output_dir(synthetic.ACQUISITION) + 'features-raw.json']
     centred = outputs[refresh.output_dir(synthetic.ACQUISITION) + 'features-centred.json']
     config = copy.deepcopy(read(CONFIG))
+    national_input = read(STAGE70)['nowcastInput']  # Stage70 refresh, applied in memory; adoption into the config is separate
+    config['national'].update(source=national_input['source'], modelStateAsOf=national_input['modelStateAsOf'],
+                              dataCutoff=national_input['dataCutoff'])
     config['roster']['snapshotId'] = 'synthetic-rehearsal-roster'
     config['pending'].pop('roster.snapshotId')
     slates, _ = A.live_slates(config, features, centred)
@@ -74,6 +77,8 @@ def rehearse(national, replicates, workers):
     report = {'stage': 77, 'label': 'REHEARSAL with labelled synthetic stand-ins; not a nowcast and never published',
               'configVersion': config['configVersion'], 'asOf': AS_OF, 'nationalDraws': national, 'layerReplicates': replicates,
               'rows': bank['draws'], 'provenance': bank['provenance'], 'syntheticStandIns': STAND_INS, 'realInputsNotYetAvailable': NOT_USED,
+              'nationalInput': {'source': national_input['source'], 'modelStateAsOf': national_input['modelStateAsOf'],
+                                'dataCutoff': national_input['dataCutoff'], 'note': 'Stage70 2026-10-07 refresh, applied in memory (not yet adopted)'},
               'seats': {'simulated': sum(s['status'] == 'simulated' for s in bank['seats']), 'total': len(bank['seats'])},
               'gate': {'passed': passed, 'checks': checks}, 'staleness': bank['diagnostics']['staleness'],
               'reconciliation': bank['diagnostics']['reconciliation'], 'bankDigest': A.bank_digest(bank)}
@@ -82,7 +87,7 @@ def rehearse(national, replicates, workers):
                'electionDate': config['electionDate'], 'boundaryVersionId': 'stats-nz-electorates-final-2025',
                'modelVersion': 'rehearsal-' + config['configVersion'], 'codeRevision': 'rehearsal',
                'mmp': {'rulesVersion': 'UNVERIFIED-PLACEHOLDER-synthetic-only', 'rulesSourceIds': ['synthetic-rules'], 'blocs': []},
-               'nationalBasis': 'Stage62 live fit, lastDataSupport (latent state, week of ' + config['national']['modelStateAsOf'] + ')',
+               'nationalBasis': 'Stage70 2026-10-07 refresh, lastDataSupport (latent state, week of ' + config['national']['modelStateAsOf'] + ')',
                'limitations': ['SYNTHETIC REHEARSAL: stand-in candidate list, classification and unpolled Maori seats; not a nowcast.'],
                'probabilityMcseMax': config['release']['probabilityMcseMax']}
     return report, bank, options, elapsed

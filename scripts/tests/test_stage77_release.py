@@ -71,7 +71,7 @@ class Gate(unittest.TestCase):
 
     def test_rehearsal_labels_every_stand_in(self):
         self.assertEqual(len(rehearsal.STAND_INS), 4)
-        self.assertTrue(all('Stage69' in n or 'Stage70' in n for n in rehearsal.NOT_USED))
+        self.assertTrue(all('Stage69' in n for n in rehearsal.NOT_USED))
         classes = rehearsal.synthetic_classification(GENERAL)
         self.assertEqual(set(classes), set(GENERAL))
 

@@ -35,7 +35,7 @@ The local-party and candidate scales were calibrated against election-day result
   - Polls whose fieldwork ends later are placed at their midpoint week and are incorporated coherently.
   - Outputs are labelled **"latent state as of the week of …, polls to …"**, never "today". `modelStateAsOf` in the export carries this date.
   - Stage70 should refit when polls arrive and save joint draws at the as-of week.
-- **Precision.** The 8,000 national draws are MCMC output with bulk ESS of about 1,000 to 1,800 per coordinate. Monte Carlo errors for national-driven quantities (party seats, thresholds, blocs) must use an effective sample size, for example batch means by chain, not `sqrt(p(1-p)/n)` with n = 8,000.
+- **Precision.** The 8,000 national draws are MCMC output with bulk ESS of about 1,000 to 1,800 per coordinate. Monte Carlo errors for national-driven quantities (party seats, thresholds, blocs) must use an effective sample size, for example batch means by chain, not `sqrt(p(1-p)/n)` with n = 8,000. Production uses 4,096 national draws × 16 layer replicates (Stage63; `simulation` in the config): replicates lower the layer error, not the national floor, and batch means keep each draw's replicates together (Stage77).
 
 ## 3. Pipeline (producer → interface → consumer)
 
