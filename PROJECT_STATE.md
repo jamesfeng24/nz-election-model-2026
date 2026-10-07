@@ -1,3 +1,282 @@
+# Stage77 release steps — review-ready, 2026-10-07
+
+Branch `stage/77-release-steps`, with main merged (Stage50 part 1, Stage70, Stage76). Authorized by James on 2026-10-07. The coordinator's notes are applied (precision from #91, M = 16; config shared with Stage70; stand-ins labelled; next free decision number D113).
+
+**Rehearsal.**
+- 65,536 rows; 71/71 seats.
+- Python gate: all structural checks pass, including reconciliation (0.373pp against 1.0pp). It fails only on config completeness and synthetic provenance.
+- The TypeScript release gate passes at MCSE ≤ 0.01 (maximum 0.0051).
+- 31 minutes on 4 cores; bank 10.4 MB; snapshot 0.63 MB.
+- National input: the Stage70 2026-10-07 refresh, adopted into the config by #94.
+
+**Checks.**
+- Python Stage50, 72–77 tests: pass.
+- `npm run test`, `typecheck`, `build` and `check:dist`: pass.
+- Development gate and fixture `--check`: reproduced.
+- Frozen selector: all five `integrity`.
+
+**Exact next action.** Live inputs, then the first real run:
+- Stage50 part 2 after the 8 October publication;
+- James: classification, unpolled Māori seats, rules version and release-policy approval (blocs are now set);
+- Stage69 baseline.
+
+Then run `scripts.nowcast_assembly.run --require-complete` and `npm run release:publish` to `public/forecasts` under a separately authorized release.
+
+---
+
+# Stage76 faster assembly — review-ready, 2026-10-07
+
+Branch `stage/76-assembly-speed` from main `e429222`. Requested by James on 2026-10-07.
+
+**Results.**
+- One seat with 128 draws: 4.46 s → 1.17 s.
+- Development gate: 34 s → 17 s.
+- Production estimate: about 5 → 1.3 core-hours.
+- Equivalence to the frozen kernel: below 1e-13, and below 1e-12 on seat draws.
+
+**Checks.**
+- `python3 -m unittest scripts.tests.test_stage76_assembly_speed scripts.tests.test_stage73_nowcast_assembly scripts.tests.test_stage74_nowcast_snapshot scripts.tests.test_stage75_candidate_fit`: 16 pass.
+- `python3 -m scripts.nowcast_assembly.run --check` and `python3 -m scripts.nowcast_assembly.fixture --check`: reproduced.
+- Frozen selector: all five `integrity`.
+
+**Exact next action.** Unchanged: Stage50 part 2 after the official publication, then the remaining live inputs.
+
+---
+
+# Stage75 live candidate-mean refit — review-ready, 2026-10-07
+
+Branch `stage/75-candidate-fit-2023` from main `b76c270` (after #88). Raised and authorized by James on 2026-10-07.
+
+**Results.**
+- **Coefficients:** S 0.9194 → 0.8987, R 2.3459 → 2.2247, κ 0.00818 → 0.00930. Training means S 0.58531 → 0.58573 and R 0.01143 → 0.01346.
+- **Builder check:** the builder reproduces the saved 2023-target fit payload signature exactly, and its re-fit agrees to 1e-7.
+- **Movement on the 2023 contests (in-sample for the live fit, not a score):**
+  - mean candidate share change 0.17pp (maximum 1.94pp);
+  - National−Labour margin change 0.46pp on average (maximum 1.16pp);
+  - 0 winner changes.
+- **2026 feature-weight factors:** 0.967–1.013.
+
+**Checks.**
+- `python3 -m scripts.candidate_fit_2026.run --check`: reproduced.
+- `python3 -m scripts.nowcast_assembly.run --check` and `python3 -m scripts.nowcast_assembly.fixture --check`: reproduced.
+- Stage72–75 Python tests: 21 pass.
+- `npm run test`: 135 pass.
+- `npm run typecheck`: passes.
+
+**Limits.**
+- The downward drift of R across folds is recorded but not modelled.
+- Recency weighting is a separate question.
+
+**Exact next action.** Unchanged from Stage74: the live inputs from their owners (the Stage50 roster, James's classification and decisions, Stage63 precision, the Stage69/70 cutovers), then a separately authorized first live run.
+
+---
+
+# Stage74 nowcast snapshot from the draw bank — review-ready, 2026-10-07
+
+Branch `stage/74-nowcast-snapshot` from Stage73 (merged with main after #87). Pre-approved by James on 2026-10-07 to follow Stage73 as a separate PR.
+
+**What changed.**
+- The bank schema is now 2 (share intervals, Māori winner candidates, directory). The config is at 2026-10-07.3 (`national.display`, `national.otherName`).
+- New TypeScript in `src/models/nowcast/` (`drawBank.ts`, `batchMeans.ts`, `fromBank.ts` and its test).
+- Export v2 gains `seatLayer`, `electorateDetail` and `partyLabel`; Stage65 `SeatQuantiles` gains q10/q90.
+- New synthetic bank fixture and `scripts/tests/test_stage74_nowcast_snapshot.py`.
+- Docs: `docs/stage74-nowcast-snapshot.md`, the export-contract v2 completion, spec §3/§7 and checklist items 9 and 13.
+
+**What did not change.** The Stage49 allocator, the frozen stages, the national fit and the baseline.
+
+**Counts.** The live development gate is still blocked (64 general seats roster-pending, 4 Māori unpolled). A complete synthetic 71-seat bank yields a valid synthetic snapshot.
+
+**Checks.**
+- `npm run test`: 135 pass (vitest).
+- `npm run typecheck`, `npm run build` and `npm run check:dist`: pass.
+- `python3 -m scripts.nowcast_assembly.run --check` and `python3 -m scripts.nowcast_assembly.fixture --check`: reproduced.
+- Stage73 and Stage74 Python tests: 10 pass.
+
+**Limits.**
+- MCSE uses about sqrt(n) batches within chains, which is rough at fixture sizes.
+- Māori candidates use poll-derived keys until Stage50 ids exist.
+- Minor-party candidates inside Other carry `partyId` null with `partyLabel`.
+- No production Node runner and no UI for the new fields.
+
+**Exact next action.** The live inputs, from their owners:
+- the Stage50 roster (after 8 Oct 12:00 NZDT);
+- James's classification (from the draft), the unpolled Māori decision, blocs and the rules-version identifier;
+- Stage63 draws and precision thresholds;
+- the Stage69 baseline cutover and the Stage70 refits.
+
+Then a separately authorized first live run and a release decision.
+
+---
+
+# Stage73 live nowcast draw bank — review-ready, 2026-10-07
+
+Branch `stage/73-draw-bank` from main `143d58d` (after #85 and #86). Approved by James on 2026-10-07, including the local 2023 Other split and a separate Stage74 PR (pre-approved to start after Stage73).
+
+**What changed.** `scripts/nowcast_assembly/` (national, streams, general, maori, assemble, run). The config is extended to configVersion 2026-10-07.2. New files: `data/processed/nowcast-assembly/development-gate.json`, `docs/stage73-nowcast-assembly.md`, the classification draft and `scripts/tests/test_stage73_nowcast_assembly.py` (7 tests). The spec §3 and checklist items 4 and 9 are updated.
+
+**What did not change.** Stage45–72 outputs, the historical Sobol registry, the national fit, the baseline and `data/sources.json`.
+
+**Results (live inputs, 64 development draws).** Not publishable.
+- **Failed checks:** `configComplete` (6 pending) and `allWinnersPresent` (68 unavailable).
+- **Structural checks:** all pass.
+- **Reconciliation:** the largest gap between the weighted local and national party means is 0.37pp (National).
+- **Bank digest:** `008ab050e388a4891ffd1b550c8267fe95a6fae9ff8b188125d844f605ddb569`, identical for 1 and 4 workers.
+
+**Checks.**
+- `python3 -m scripts.nowcast_assembly.run --check`: reproduced.
+- `python3 -m unittest scripts.tests.test_stage73_nowcast_assembly scripts.tests.test_stage72_nowcast_config scripts.tests.test_historical_flag_isolation`: 15 pass.
+- `python3 scripts/validate/source_files.py`: passed.
+- `python3 -m scripts.fold_doc_fragments --check`: valid.
+
+**Limits.**
+- The candidate means use the latest saved S+R fold (target 2023, trained 2014–2020); no fit includes 2023.
+- The within-remainder solve costs about 35ms per draw per seat, so production needs workers.
+- Māori draws are independent of the national draw.
+
+**Exact next action.** Stage74 (TypeScript: bank reader → Stage65 seat layer → 80% intervals, effective-sample MCSE, export v2 completion), as a separate PR. Then, as their owners deliver: the Stage50 roster (after 8 Oct 12:00 NZDT), James's classification (from the draft), the unpolled Māori decision, blocs and Stage63 draws.
+
+---
+
+# Stage72 nowcast configuration — review-ready, 7 October 2026
+
+Branch `stage/72-nowcast-config` from main `4f6ca8a` (#84 merged). Approved by James on 2026-10-07; independent of the running Stage63/69/70 threads.
+
+**Done.**
+- **2026 scales.** Candidate balance seat 0.3010 / shared 0.1808; local-party balance seat 0.1473 / shared 0.0613. Under D107 the ordinary-seat balance total sd is 0.2556 and the exceptional 0.3512.
+- **Live config** at `config/nowcast-2026.json`.
+- **Classification schema and validator.** Every general seat must appear once; no default to 0.60; Stage56 consistency enforced; extra-sd opt-in only on exceptional seats.
+
+**Pending.** Explicit in the config:
+- roster snapshot (Stage50);
+- draws and precision (Stage63);
+- MMP rules-version identifier;
+- blocs (James);
+- the unpolled Māori seats (James).
+
+Also still open:
+- the 2026 classification entries (James);
+- the Stage69 baseline cutover;
+- the Stage70 national refresh.
+
+**Checks.**
+- `python3 -m scripts.nowcast_config.scales --check`: pass.
+- `python3 -m scripts.nowcast_config.validate`: valid, six pending fields.
+- `scripts.tests.test_stage72_nowcast_config` + `test_historical_flag_isolation`: 8 pass.
+- Frozen pipelines unaffected.
+
+**Exact next action.** The coordinator reviews and merges. Next, by dependency: Stage50 roster after the 8 October close, Stage63 precision values, the Stage69 cutover, the Stage70 adapter, then assembly.
+
+---
+
+# Stage70 weekly poll refresh, nowcast input and routine — review-ready, 7 October 2026
+
+Branch `stage/70-weekly-poll-routine-g9w7ri`, from main `823f065`, with main `e429222` (D106 nowcast, Stage72–75) merged before the single push. Decision D104. The coordinator reviews and merges.
+
+**What was done.** Part A: the refresh pipeline (`scripts/polling/weekly_refresh/`: `capture`, `delta` rules, `dataset`, `fit`, `summarize`, `run`, `adopt`, `electorate_polls`), run once for the polls published since Stage62's 27 Sep cutoff. Part B: the weekly routine. Part C: the electorate-poll search. Full description, rules and runbook: `docs/stage70-weekly-poll-refresh.md`.
+
+**First run (`data/processed/polling/weekly-refresh/2026-10-07/`).** Capture: Wikipedia revision 1378865337 (SHA-256 recorded in the registry). New rows: 1 News–Verian 1–5 Oct 2026 (n 1,001; NAT 29, LAB 28, GRN 16, ACT 9, NZF 10, TPM 0.6, TOP 7) and Roy Morgan 31 Aug–27 Sep 2026 (n 859; NAT 31, LAB 23.5, GRN 16, ACT 11, NZF 10, TPM 2, TOP 6.5). Both enter as `aggregator_only`, primary-release verification pending; no blocker or review flag. Panel 122 to 124 waves (the Stage59 April pair stays collapsed); the pinned dataset has 498 polls, 121 in the current cycle. Fit: Stage62 pinned gauss, seed 2034, attempt 1 accepted (max rank R-hat 1.0068, min bulk/tail ESS 778/1,466, 0 divergences, 0 tree-depth contacts, min BFMI 0.84), 701 s. Last-data state (week of 27 Sep, polls to 7 Oct), means in pp: NAT 27.9, LAB 28.6, GRN 13.6, ACT 9.6, NZF 10.8, TOP 6.5, TPM 1.7, Other 1.4; change against Stage62 arm A: NAT +0.4, LAB −0.3, GRN +0.4, TOP +0.4 (noise floor about 0.1 pp; below the 1 pp review threshold); NAT−LAB −0.7 pp (90% −5.7 to +4.8; Stage62 −1.4). The model-state week is unchanged because both new polls fall in the week of 27 Sep.
+
+**Electorate polls.** Wellington Bays (Curia for the Taxpayers' Union, n 400, LAB 29 GRN 29 NAT 15) and Mt Albert (Curia for The Spinoff, n 400, 21–28 Sep, LAB 33 NAT 32 GRN 14 TOP 10) preserved with hashes and listed in `data/processed/polling/electorate-polls-2026/`; press reports only, not modelled.
+
+**Limits.** Wikipedia aggregator input with no primary verification of new rows; a Wikipedia edit to an old row blocks the run for a human; Talbot Mills n is the pinned default and Anacta stays excluded by the pinned rule; no horizon or spread calibration, no probability. The Python 3.12.3 x86 environment is the Stage62 one. The routine is bound to this thread's session because a private project cannot create fresh-session routines; until the Stage70 PR merges it replies that it is waiting.
+
+**Not done.** No change to the Stage62 model, priors or files, no config edit (adoption is the explicit `adopt.py` step; adopting a run with dataCutoff on or after 2026-10-07 requires changing the date literal in `scripts/tests/test_stage72_nowcast_config.py` line 52, which would otherwise pass its negative case wrongly), no probability, seat or bloc output, no use of electorate polls in any layer.
+
+**Checks.** See the PR body for the exact commands and results.
+
+**Exact next action.** The coordinator reviews and merges the PR, then adopts the 2026-10-07 run into `config/nowcast-2026.json` (`adopt.py --date 2026-10-07`, with the Stage72 test date fixed in the same change). The Thursday routine then produces each later refresh as its own pull request; it is disabled after 5 November.
+
+---
+
+# Stage69 voting-place notional baselines — review-ready, 7 October 2026
+
+Branch `stage/69-voting-place-notionals-72u6wn`; frozen design commit `9aaf67a` (before any result), raw party files `b5c23e6`. Main merged in, not rebased. Design, amendments and results: `docs/stage69-voting-place-notionals.md`.
+
+**Result.** Party vote, V against the Stage64 population-weighted baseline W: 8 of 64 seats are material (Botany, Henderson, Kapiti, Kenepuru, Mt Roskill, Ōtāhuhu, Papakura, Upper Harbour) and one changes leader (Kapiti: Labour −0.5 to National +3.9 pp on National−Labour; P(National ahead) 1.00 across draws). Mean absolute margin difference at the 50 changed seats is 1.03 pp (median 0.35, maximum 7.9). Against the Tally Room sheet at those 50 seats, RMSE of the top-two log ratio is V 0.054 and W 0.111; leader agreement V 50, W 49. Under the pre-registered rule V is better founded; the Tally agreement is evidence of method fit, not truth.
+
+**Checks.** Tables reconcile 137/137; national conservation 0.0 and per-old-seat at most 7e-12; 14 unchanged seats reproduce 2023 exactly (candidate 13: Port Waikato's poll was cancelled and has no candidate notional); 98.79% of ordinary votes at located venues (lowest seat 95.4%). Check 5, the hypothesis that the Tally sheet is ordinary-votes-only, **failed** (largest difference 6.1 pp), recorded and not tuned; the sheet is used by log ratios only.
+
+**Not covered / limits.** Māori seats are excluded (Stage64 baselines retained; Stage71 owns calibration). Draws cover geocode, non-place-vote rule and disclosure uncertainty only; catchment misspecification (V against P, mean 0.71 pp, maximum 5.0) and the unknown party mix of non-place votes (19.8% of candidate votes) are reported separately. The draw median differs slightly from V (mean 0.19 pp). Candidate names are not carried to 2026. 5 non-roving venues are unlocated; 1,162 sites have empty catchments and join the non-place pool.
+
+**Local checks run.** `python3 -m unittest scripts.tests.test_stage69_voting_place_notionals`: 22 tests pass. `python3 -m scripts.voting_place_notionals.run --check`: artifacts ok (full regeneration with draws, about 55 s; byte-identical to the saved files on a second run). Full discovery (`python3 -m unittest discover -s scripts/tests`, 1,440 tests, 9 skipped): 3 failures and 1 error, none in Stage69 and all identical on an unmodified checkout of main in this container (no matplotlib; the Linux-runtime fingerprint test; a 6.7e-12 tolerance in `test_uncertainty_tails`); the Stage64 guard that model code never reads the third-party sheet passes (Stage69 takes those paths from Stage64's own constants). Hosted CI is the authority for those four. No frontend change, so the TypeScript checks were not run.
+
+**Exact next action.** CI green, then the coordinator reviews. Adoption as the nowcast baseline is James's decision: set `baseline.source` in `config/nowcast-2026.json` to `data/processed/voting-place-notionals/baseline-party-vectors.json`. No later stage started.
+
+Reproduce: `python3 -m scripts.voting_place_notionals.registry && python3 -m scripts.voting_place_notionals.run && python3 -m scripts.voting_place_notionals.run --check`. Geocoding is not re-run: it is cached in `data/raw/voting-place-notionals/2026-10-06/nominatim-responses.jsonl`.
+
+---
+
+# Config: Stage69 baseline adopted in the nowcast config — review-ready, 7 October 2026
+
+Branch `stage/69-voting-place-notionals-72u6wn`, restarted from main `0160180` (merge of Stage69 PR #96, whose branch history was fully merged). One-line pointer change after James's "Stage 69 looks good" (relayed by the coordinator as approval of the result and of adopting the baseline). The Stage69 file has the same `transitions.2023-2026.scopes.general` structure the assembly reads: the 17 party categories and 64 general seats load through `scripts/nowcast_assembly/general.py` `baseline`, and `check_config` accepts the config (pending fields unchanged: `maori.unpolledSeats`, `mmp.blocs`, `mmp.rulesVersion`, `roster.snapshotId`, `simulation.draws`, `simulation.precisionPolicy`).
+
+**Checks run.** `python3 -m unittest` on the Stage50, 69, 72, 73, 74, 75 and 76 test modules: 51 tests pass. Not run locally: full discovery (hosted CI runs it).
+
+**Effect and limits.** Any nowcast assembled from now on uses the voting-place baseline for the 64 general seats (Māori seats are unaffected: they have no baseline here). Seat-level party means move at 8 seats by 2 to 8 points of National−Labour margin and Kapiti changes leader on the 2023 baseline (PR #96). Reverting is the same one-line change.
+
+**Test fix.** The post-merge main run of #96 (Verify 37569089462, head `0160180`) failed one Stage69 test, `test_deterministic_regeneration_matches_saved_artifacts_apart_from_draws`, on `baseline-party-vectors.json` only; the PR run on the same content had passed. Cause: `shareExact` is `Fraction(share).limit_denominator(10**15)`, so a last-bit float difference between runner CPUs changes both integers, and `equivalent()` compared integers exactly. `scripts/voting_place_notionals/common.py` `equivalent` now compares `{numerator, denominator}` pairs by value to the same 1e-9 tolerance as floats (a unit test shows one-ulp noise changes the integers but not the value). Artifacts are byte-identical; only the manifest code hash changed.
+
+**Exact next action.** The coordinator reviews and merges; the docs fold then folds this and the Stage69 fragment.
+
+---
+
+# Stage63 layer-replicated composed simulation complete — review-ready, 7 October 2026
+
+Branch `claude/project-thread-stage63-layer-replication-3jygiu`, base main `e429222` (merged in; Stage54 PR #66 merged earlier). Commits: `25c8534` design freeze (before any replicate bank was scored; only a one-seat timing, the Sobol prefix identity and the panel rule from committed Stage54 data preceded it), results and decision `b3c234a`, final review commit follows. Pushed once at review readiness; PR left unmerged for the coordinator. Decision D095.
+
+**What was done.** One question: does layer replication on fixed national draws meet the Stage54 caps, and at what CPU cost? Replicate `r` is a 4,096-point scrambled Sobol layer stream (Stage54 scramble `r`; its first 512 points are Stage54's stream) paired with the 4,096 cached national draws in the Stage47 order; arm M is the first M replicates. Nine representative seats x 64 replicates, nine panel seats (three per election closest to a 0.5 National win probability in Stage54, not representatives) x 8 replicates. Gate B (layer doubling M/2 to M at the full pool, caps unchanged), gate A (literal Stage54 national doubling at arms 1, 4, 16, 64), 3-sigma requirement, national variance floor from eight 512-draw national blocks pooled over 64 replicates, equivalence diagnostic, seat-win probability standard errors, CPU.
+
+**Result.** Verdict `CAPS_MET_BY_REPLICATION`, cheapest arm M = 16 (see the changelog entry for the numbers); gate A not met at any arm; national floor reported; win probabilities floor-limited at SE(0.5) 0.0028. Nothing is adopted. The first attempt of the run was killed by out-of-memory (an unbounded cache of 48 MB streams); the fix frees each stream and changes no numerics. The run is resumable per task through an optional local directory (`STAGE63_SCRATCH`), which does not enter any output.
+
+**Limits.** Control restriction, pinned Stage45 scales, 56-day horizon; K, F, a changed balance scale (Stage60), horizon, parameter uncertainty and calibration untouched. Representatives are not the worst-precision seats; maxima over 80 seat-candidates and the 7-degree-of-freedom floor are biased high. The scrambled 4,096-point stream beats an i.i.d. bank for smooth statistics, so layer sds are specific to this construction. Precision is relative to the cached national draws; the four cached chains disagree more than subsampling implies (Stage54).
+
+**Local checks (Linux x86-64, Python 3.13.16, numpy 2.2.6, scipy 1.16.0).** Complete run of `evaluation` (45 tasks, 4 workers; about 7.6 CPU hours in total), `decision`, `verification`, `report`, `manifest` generated and re-checked with `--check`; sampled `evaluation --check` reproduced 36 replicate banks; Stage63 tests (15), CI-selector tests (53) and Stage54 tests pass; `fold_doc_fragments --check` accepts the fragment. Not run locally: hosted Verify on the exact head, Python 3.12.2 as pinned in CI, and the complete `evaluation --check --full` replay (started after the PR opened; see the PR body).
+
+**CI.** A complete replay is about 6 CPU hours (about 1.6 hours on 4 cores, more than the 180-minute hosted limit on 2 cores), so the registered `evaluation --check` is a bounded replay of 36 replicate banks (two per seat) compared with their stored records; **the hosted CI does not run the full replay**. `evaluation --check --full` replays everything. `verification --check` re-simulates two banks without the solve reuse; `decision`, `report`, `manifest` re-derive everything from the stored records. Stage63 is registered unpinned; its first attestation is the PR run; pin it afterwards with `--record-pin`.
+
+**What Stage63 supplies for the pending fields of `config/nowcast-2026.json` (not edited here).** `simulation.draws`: composed draws are `national draws x M` layer replicates, and the lever is M, not more national draws. Evidence-based values: M = 16 per national draw (frozen caps met for score, mean and interval precision relative to the cached national draws; about 0.19 CPU hours per seat, about 14 for a 71-seat slate), or M = 4 where only seat-win probabilities are needed (SE of a probability of 0.5 about 0.0037, floor 0.0028; about 4.5 CPU hours per slate). `simulation.precisionPolicy`: layer Monte Carlo error is controlled by M as above; national-driven quantities carry the national-bank floor and must be reported with effective-sample-size MCSE (batch means by chain, as `docs/nowcast-specification.md` already requires), never `sqrt(p(1-p)/n)`; absolute composed CRPS and mean levels are not settled below the floor (about 0.1pp at the worst seat-candidate on the backtest elections). Caveats: measured on the 2017/2020/2023 backtest cases, control restriction, the Stage45 scales and the cached 4,096 balanced draws; the live fit's draw bank and the 0.60/1.00 balance multipliers (D107) were not run, and the study reruns unchanged with those inputs when James or the coordinator wants the live numbers. James chooses the values; this stage only reports.
+
+**Exact next action.** Coordinator reviews and merges the PR (merge commit) when CI is green, then pins `stage63`. If composed precision of scores or widths matters for the live stage, adopting M = 16 layer replication is a separate authorisation; Stage60's scale change reruns this study unchanged with the new scales file. Reproduction: `python3 -m scripts.layer_replication.evaluation` (about 2 hours on 4 cores; `STAGE63_SCRATCH=<dir>` to resume), then `decision`, `verification`, `report`, `manifest` (add `--check` to verify; `--pin` rewrites the input contract).
+
+---
+
+# Stage50 part 1 official nomination pipeline — review-ready, 2026-10-07
+
+Branch `stage/50-nominations` from main `e429222`. Authorized by James on 2026-10-07: James supplies the official files (tool-rendered text as a fallback), and the official list replaces party announcements in the live roster.
+
+**What changed.**
+- New `scripts/nominations_2026/` (`official.py`, `refresh.py`) and `docs/stage50-nominations.md`, which includes the post-publication procedure.
+- `scripts/tests/test_stage50_nominations.py`: 7 tests.
+- Stage75 `recentre` accepts an explicit feature file.
+- Assembly `live_slates` takes general seats only and accepts in-memory features.
+
+**Checks.**
+- `python3 -m unittest scripts.tests.test_stage50_nominations`: 7 pass.
+- Stage72–75 tests: 21 pass.
+- `python3 -m scripts.nowcast_assembly.run --check` and `python3 -m scripts.nowcast_assembly.fixture --check`: reproduced.
+
+**Exact next action (part 2).** This happens after the official publication (nominations close 12:00 NZDT, 8 October):
+1. preserve James's files and register them in the new standalone registry;
+2. commit;
+3. transcribe the files to the official table;
+4. run `python3 -m scripts.nominations_2026.refresh --acquisition … --apply-config` and `--check`;
+5. regenerate the development gate, review the reconciliation, and recheck the classification draft against Labour and the new candidates;
+6. open the part-2 PR.
+
+---
+
+# CI: Stage39 owned-test rule — review-ready, 7 October 2026
+
+Branch `claude/ci-stage39-owned-tests` from main `ce61569`, independent of the open docs PR #84 (no shared files). James chose one of four proposed CI savings: other test files no longer force the Stage39 replay. He did not adopt main-push reuse, archival test skipping or a docs-only fast path.
+
+**Effect.** PRs that add or change ordinary tests can now reach Stage39 integrity mode. Before, the selector forced full on nearly every such PR (about 3 minutes of the roughly 15-minute Python job). Stage PRs that add new `scripts/<stage>/` or `data/processed/<stage>/` paths still go full, because those paths are outside Stage39's reviewed scopes; that is unchanged. The frozen Stage45/46/47/48/54 replays are unaffected; they were already reused.
+
+**Checks.** `python3 -m unittest scripts.tests.test_ci_selection`: 17 run; the new and changed selector tests pass. The one local failure, `test_runtime_must_match_previously_validated_linux_environment`, is environmental: this container has an unattested package set. It passes on the attested CI runner and fails identically on main locally. This PR changes `scripts/validate/ci*` and AGENTS.md, so its own hosted run is full by design, once.
+
+**Exact next action.** The coordinator reviews and merges.
+
+---
+
 # Docs/architecture: nowcast reconciliation and current-state cleanup — review-ready, 6 October 2026
 
 Branch `claude/cool-dirac-mq8787`, restarted from main `ce61569` (its earlier PR #78 is merged). Commits: `49b0b84` mechanical fold of the four pending fragments (exceptional-scale/#78, Stage67, Stage68, Stage71), then the reconciliation commit. The PR number and final head are in the PR body.

@@ -610,6 +610,10 @@ Stage61 scored each uncertainty layer component against the frozen Stage45 earli
 
 Stage62 fitted the pinned external gauss model, unchanged, to the 2026-cycle polls (119 current-cycle polls as of 6 October 2026) with a design frozen before any 2026 fit. All fits met the Stage38 gates; the primary full-cycle estimate (arm A) is the internal national result: NAT 27.5, LAB 28.9, GRN 13.1, ACT 9.9, NZF 10.7, TOP 6.1, TPM 1.9 at the last-data week. Recorded: James's recent-polls window (from 1 Jun, 18 polls; from 11 Aug, 8 polls) moves party means by under 1 pp and the National-minus-Labour margin by +0.8 to +1.3 pp with 4–9% wider intervals, because current-cycle house effects (notably Roy Morgan Labour about -4 pp) are estimated from fewer polls; no frozen flag tripped and no backtest can validate a window without reopening historical national reruns, so the window is not adopted and the full-cycle fit is retained. The pinned Anacta min-polls exclusion and the two `aggregator_only` panel waves are immaterial. Outputs are internal: probability release, 32-day calibration and use in the candidate layer remain separate decisions.
 
+## D095 — 2026-10-07 — Stage63 layer replication: caps met by M = 16 relative to the cached national draws; nothing adopted
+
+Stage63 tested the Stage54 recommendation with a frozen design: M independent layer replicates per fixed national draw on all 4,096 cached national draws, nine representative seats x 64 replicates plus a nine-seat win panel. Under the unchanged Stage47/Stage54 caps (mean and CRPS 0.05pp, energy 0.1pp, widths 0.5pp) the layer doubling M/2 to M passes from M = 8, the 3-sigma rule requires M = 16, and M = 16 passes (CAPS_MET_BY_REPLICATION); M = 16 is 65,536 composed draws and about 0.19 CPU hours per seat (about 14 for a 71-seat slate) with the exact local-solve reuse. The literal Stage54 national-doubling gate is not met at any arm because of the finite national bank (CRPS and mean floor up to 0.13 and 0.12pp at the worst seat-candidate), so absolute composed CRPS and mean levels carry that floor and are not called settled at 0.05pp; widths and energy are within caps at M >= 16. Seat-win probabilities are floor-limited (SE(0.5) 0.0056 at M = 1, 0.0037 at M = 4, floor 0.0028). The caps stay frozen; no default, scale, law or earlier-stage result changes; adopting replication in any release path needs separate authorisation. [Findings](docs/stage63-layer-replication-findings.md); [frozen design](docs/stage63-layer-replication-design.md).
+
 ## D096 — 2026-10-06 — Stage64: 2026 electorate set and notional baseline audited; baseline retained
 
 The 2026 electorate set (64 general, 7 Māori, 71 in all, 49 list seats implied) equals the preserved Representation Commission Schedule C by scope, code, name and population, and every target has a complete 17-party notional 2023 party-vote baseline (Stage41 coherent scenario with Stage4 bounds) that reconciles exactly with official 2023 national totals. No official notional results were found (bounded search; not proved absent), so the repo's own population-weighted reconstruction remains the baseline and is unchanged. An independent third-party notional (Tally Room) is preserved for comparison only and never read by a model; it agrees at certified-exact seats to rounding and differs materially at about ten changed seats, and flips the party-vote lead only at Kapiti. Recorded: boundary codes are vintage-specific and must not be joined across vintages; 2023 source seats and 2026 targets are joined by election-local and `nz-<scope>-2026-boundary-<code>` ids. Not decided: whether to remove the within-source heterogeneity by re-weighting with 2023 voting-place party votes (a separate acquisition and stage, James's call). [Audit](docs/stage64-electorate-baseline-audit.md).
@@ -646,6 +650,14 @@ The flag-selection sensitivity fails: using only the 17 flags not taken from the
 
 A frozen descriptive check (not blind) found that the national N/L party swing has the expected sign in all four elections (candidate split lags party swing). It does not predict the size well enough: leave-one-election-out RMS is 0.188 against 0.216 for predicting no shift (ratio 0.87, frozen threshold 0.75), and the 2023 leave-future-out prediction is worse than zero. Finding `record_and_stop`: no swing term is added to the candidate mean, and the shared balance scale stays the honest uncertainty for the shared part of the split. [Findings](docs/stage68-shared-split-swing-findings.md).
 
+## D103 — 2026-10-07 — Stage69: voting-place notional baselines built; V is better founded, adoption is James's decision
+
+2023 voting places, located and allocated to the 2026 general electorates, give a party-vote baseline that differs materially from Stage64 at 8 of 64 seats and changes one leader (Kapiti). It meets the pre-registered "better founded" rule (checks 1 to 4 pass; RMSE against the Tally Room sheet 0.054 against 0.111; leader agreement 50 against 49) with stated limits: check 5 failed, the external sheet is a method-fit comparison and not truth, and non-place votes (19.8% of candidate votes) rest on a stated rule. Māori seats are excluded. Nothing is adopted and no scale or downstream layer changed; adopting V is a separate decision for James (one pointer change). The Stage64 baseline stays the default until then.
+
+## D104 — 2026-10-07 — Stage70: weekly poll refresh produces the latest-state nowcast input; flags go to a human, rule breaks refuse
+
+The national input is refreshed by one deterministic command that appends new Wikipedia-listed polls to a new dated panel (earlier versions never edited), reruns the unchanged Stage62 fit under its gates and saves only the `lastDataSupport` draws dated by model-state week (D106; election-week draws are not saved). A new row that breaks an inclusion rule, a revised or removed old row, a panel/upstream mismatch or a failed gate refuses publication; a new pollster, odd fieldwork dates, a missing party share or a 1 pp move are flagged for human review but published. New rows are `aggregator_only` until a human verifies a primary release. The weekly routine opens a pull request and never merges; adoption into `config/nowcast-2026.json` is a separate reviewed step. The first refresh (2 new polls) moved the last-data means by at most 0.5 pp. General-seat electorate polls found (Wellington Bays, Mt Albert) are preserved and listed only; they enter no layer until a measurement interface exists (specification section 4).
+
 ## D105 — 2026-10-06 — Stage71: Māori seat layer calibration; nothing adopted
 
 A single penalty-free variance inflation of the Stage66 poll-to-result error, fitted only on earlier elections, was scored against Stage66 unchanged on the 25 historical Māori electorate polls (strictly chronological, 21 held-out polls, and leave-one-election-out, 25), under a design and decision rule frozen before scoring. Frozen finding: `improves_not_restored`. The inflation (fitted variance multiplier 3.03, bootstrap 90% 1.72 to 7.02) improves Brier, log score and interval coverage in every chronological fold and reduces the leader-win overconfidence (predicted 0.826 to 0.765 against 0.619 observed) but misses the pre-registered calibration limit narrowly (z -1.66 against 1.645); nearly all of the gain is the 2023 fold. A pollster-era (Curia) bias arm scores best but is capped at "suggestive, not adopted" because only one same-pollster transition (2020 to 2023) can be tested; it is a judgement for James whether a Curia-era Māori Party shift persists into 2026.
@@ -680,3 +692,40 @@ Operating rules:
 - Historical development flags (2014–2023, by name) are never read by the live build; a test enforces that no other module imports the two historical-flag diagnostics.
 
 Canonical statement: [docs/nowcast-specification.md §4](docs/nowcast-specification.md).
+
+## D108 — 2026-10-07 — CI: only Stage39 and CI-policy tests force the Stage39 replay
+
+James narrowed one Stage39 selector rule: a new or changed test file forces the full Stage39 reconstruction only if it is Stage39's own test, a CI-policy (`test_ci_*`) test or a registered Stage39 dependency. A test file cannot change Stage39's outputs, and every test still runs in full standard discovery. All other fail-closed rules (CI, selector, AGENTS.md, unknown paths, dependencies, main/manual events) are unchanged, as are the frozen-pipeline selector and every attestation. Main-push reuse, archival test skipping and a docs-only fast path were considered and not adopted. Decision number taken as the next free after D107; the coordinator may renumber, in which case Stage72 shifts accordingly.
+
+## D109 — 2026-10-07 — Stage72: 2026 scales, one live configuration and a fail-closed D107 classification
+
+The 2026 uncertainty scales are the frozen Stage45 rule with target 2026, which reproduces Stage45's all-election fit exactly; no new estimator. `config/nowcast-2026.json` is the only live configuration. Values owned by other work stay explicitly pending, and the assembly must run the validator with `--require-complete`. The D107 classification must name every 2026 general seat once, with a dated, sourced reason; a missing file or seat fails and never defaults to the ordinary scale. Number provisional pending the coordinator (D108 is proposed for the CI rule in #85).
+
+## D110 — 2026-10-07 — live nowcast draw bank and its fail-closed gate (Stage73; provisional number)
+
+- **Bank structure.** The live 2026 chain is assembled in Python as one draw bank. Row *i* is national `lastDataSupport` draw *i* for the MMP party vote and every general seat, and the layer noise has shared election keys.
+- **Other split.** Other stays one national MMP bucket. Inside each seat it is split by that seat's own 2023 notional mix (James, 2026-10-07). Nothing is invented for new 2026 parties.
+- **Candidate means.** They use the latest saved S+R joint fold (target 2023), which matches the Stage42 2026 feature centring. A refit including 2023 is a separate question.
+- **Missing inputs.** Every missing input makes the seat `unavailable` with a reason, never a default. A bank is publishable only when the config is complete and every gate check passes. MMP, precision and schema checks follow in Stage74.
+
+## D111 — 2026-10-07 — nowcast snapshot from the draw bank (Stage74; provisional number)
+
+- **Seat layer.** A nowcast snapshot is built from the Stage73 draw bank by running the Stage65 seat layer on every row, with Other as an unlisted bucket.
+- **Monte Carlo errors.** Every exported probability carries an effective-sample Monte Carlo error and ESS, from batch means within national MCMC chains.
+- **Completion before publication.** Snapshot v2 is completed in place, still before any publication, with `seatLayer` and `electorateDetail`. A model snapshot must carry per-seat detail. Any unavailable seat, or missing MMP rules or blocs, withholds the seat layer and MMP with a reason, never zeros.
+- **Coalition outputs.** Fixed-seat government combinations are not used for nowcasts; blocs are James's.
+
+## D112 — 2026-10-07 — live candidate means use every completed election (Stage75; provisional number)
+
+- **What changes.** The live 2026 candidate-mean model is the Stage33 S+R design and fitter, unchanged, trained on every completed election (2011–2023 target contests). The 2026 features are recentred on its training-only means.
+- **Why.** Out-of-time folds that leave out their target election are for evaluation only; a live prediction uses all completed elections.
+- **Unchanged.** The uncertainty scales stay the out-of-time Stage45/72 scales.
+- **Impact.** Coefficients moved by 2–14%, and 2023 predictions moved by 0.17pp on average with no winner changes: a correctness fix, not a change of conclusions.
+
+## D113 — 2026-10-07 — production precision, layer replication and the release path (Stage77)
+
+- **Precision.** Production runs 4,096 national draws × 16 layer replicates (Stage63, James M = 16). Replicates use independent layer noise from grouped per-seat Sobol banks (a shared bank for election-wide keys).
+- **Monte Carlo errors.** National-driven quantities keep the national-bank floor and carry batch-means MCSE with each draw's replicates kept together.
+- **Blocs (James).** NAT+ACT, NAT+ACT+NZF, LAB+GRN and LAB+GRN+TPM, with majority probabilities. A hung parliament is neither NAT+ACT+NZF nor LAB+GRN+TPM holding a majority, split into TOP kingmaker (TOP's seats give either side a majority), only NAT+ACT+NZF with TOP, and only LAB+GRN+TPM with TOP; the remainder (neither side even with TOP) is not reported separately. These are seat-arithmetic scenarios, not coalition predictions.
+- **Publication.** It goes through one append-only TypeScript runner and release gate: model provenance, a complete 71-seat seat layer, `uncalibrated` labels, and every probability's MCSE ≤ the configured limit. Stale inputs are labelled, not dropped.
+- **Release settings.** The settings (MCSE ≤ 0.01, reconciliation ≤ 1.0pp, staleness 14/60 days) are proposals that take effect only with James's release-policy approval.

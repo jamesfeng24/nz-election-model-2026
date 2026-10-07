@@ -346,3 +346,13 @@ Registered in the standalone `data/processed/electorate-baseline/source-registry
 ## Stage66 Māori electorate poll sources (D099)
 
 New dated registry `data/processed/maori-seat-layer/source-registry.json` (13 sources, 2026-10-06; `data/sources.json` untouched): Wikipedia opinion-polling compilations for the 2014, 2017, 2020 and 2023 general elections (Māori electorate polling sections; secondary, volunteer-edited, transcribed and verified against the preserved bytes); RNZ, Scoop and Whakaata Māori pages for the seven 2023 Whakaata Māori–Curia seat polls and an NZ Herald page for the 2020 Waiariki poll (used to verify shares and undecided shares); a Māori Television 2017 page that gives context only. Official results are the Electoral Commission candidate files already registered. 2014 polls for Hauraki-Waikato, Ikaroa-Rāwhiti and Te Tai Hauāuru, and any pre-2014 Māori electorate poll, were not searched for beyond this one bounded pass.
+
+## Stage69 sources (registered in `data/processed/voting-place-notionals/source-registry.json`, not `data/sources.json`)
+
+- Electoral Commission 2023 `party-votes-by-voting-place-N.csv`, N = 1 to 72, downloaded unchanged by James on his device (the site blocks the cloud environment), preserved with SHA-256 under `data/raw/elections/2023/statistics/csv/`.
+- OpenStreetMap Nominatim geocodes of the venue addresses (ODbL, attribution recorded in the registry); every raw response kept at `data/raw/voting-place-notionals/2026-10-06/nominatim-responses.jsonl`.
+- The preserved Tally Room notional sheet is used only as an external cross-check in the comparison, never as an input.
+
+## Weekly poll refresh captures and electorate poll pages (Stage70)
+
+Dated Wikipedia REST captures of the 2026 opinion-polling table are preserved under `data/raw/polling/weekly-refresh/<date>/` with response headers and fetch log, each registered with its SHA-256 in `data/processed/polling/weekly-refresh/<date>/source-registry.json` (Wikipedia text is CC BY-SA; aggregator evidence only). Four press pages for two 2026 general-seat Curia electorate polls (Wellington Bays; Mt Albert) are preserved under `data/raw/polling/electorate-polls-2026/` and registered in `data/processed/polling/electorate-polls-2026/source-registry.json` with transcribed facts in `polls.json` (publisher copyright; hashes only, no republication). `data/sources.json` is not edited.
