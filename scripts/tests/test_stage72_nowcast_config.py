@@ -1,5 +1,6 @@
 """Stage72: 2026 scales by the frozen Stage45 rule, the live nowcast config and the fail-closed D107 classification."""
 import copy
+import datetime
 import unittest
 from scripts.balance_scale.common import equivalent
 from scripts.manual_adjustment.schema import seat_frame
@@ -49,7 +50,7 @@ class Config(unittest.TestCase):
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.79, 'exceptional': 1.0}),
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.60, 'exceptional': 1.5}),
                      lambda c: c.update(intervalLevels=[0.9]),
-                     lambda c: c['national'].update(modelStateAsOf='2026-10-07'),
+                     lambda c: c['national'].update(modelStateAsOf=(datetime.date.fromisoformat(c['national']['dataCutoff']) + datetime.timedelta(days=1)).isoformat()),   # state dated after the cutoff
                      lambda c: c['simulation'].update(draws=1000)):
             config = copy.deepcopy(self.config); edit(config)
             with self.assertRaises(V.ConfigError):
