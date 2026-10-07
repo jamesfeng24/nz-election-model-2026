@@ -138,6 +138,22 @@ export const IntervalSchema = z.object({
   lower: z.number().finite(), median: z.number().finite(), upper: z.number().finite(),
   level: z.number().gt(0).lt(1), method: id,
 }).strict().refine(v => v.lower <= v.median && v.median <= v.upper, 'Interval must be ordered');
+export type Interval = z.infer<typeof IntervalSchema>;
+
+/**
+ * Nowcast interval levels (D106): central 50%, 80% (the primary displayed range) and 90% intervals across simulated
+ * elections held under the current latent state. Not margins of error and not ranges for movement by election day.
+ */
+export const INTERVAL_LEVELS = [0.5, 0.8, 0.9] as const;
+export const PRIMARY_INTERVAL_LEVEL = 0.8;
+export const IntervalSetSchema = z.array(IntervalSchema).length(INTERVAL_LEVELS.length).superRefine((set, ctx) => {
+  if (set.some((v, i) => v.level !== INTERVAL_LEVELS[i]))
+    ctx.addIssue({ code: 'custom', message: 'Intervals must be the 50%, 80% and 90% central intervals, in that order' });
+  if (set.some(v => v.median !== set[0].median)) ctx.addIssue({ code: 'custom', message: 'Intervals must share one median' });
+  if (set.some((v, i) => i > 0 && (v.lower > set[i - 1].lower || v.upper < set[i - 1].upper)))
+    ctx.addIssue({ code: 'custom', message: 'Wider intervals must contain narrower ones' });
+});
+export type IntervalSet = z.infer<typeof IntervalSetSchema>;
 
 const prediction = {
   schemaVersion: z.literal(1), id, electionId: id, modelVersion: id,
@@ -195,7 +211,7 @@ export type SimulationConfig = z.infer<typeof SimulationConfigSchema>;
 export const SimulationResultSchema = z.object({
   schemaVersion: z.literal(1), runId: id, config: SimulationConfigSchema,
   completedDraws: count.positive(), electoratePredictions: z.array(SeatPredictionSchema),
-  partySeatSummaries: z.array(z.object({ partyId: id, seats: IntervalSchema }).strict()),
+  partySeatSummaries: z.array(z.object({ partyId: id, seats: IntervalSetSchema }).strict()),
   governmentOutcomes: z.array(z.object({ combinationId: id, probability: share }).strict()),
   limitations: z.array(id),
 }).strict().refine(r => r.completedDraws <= r.config.draws, 'Completed draws exceed requested draws');

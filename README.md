@@ -1,10 +1,18 @@
 # NZ Election Model 2026
 
-An independent, transparent web application for modelling the 2026 New Zealand general election. **Historical election data, offline Python statistical stages (to Stage 46, Stage 47 in review) and a placeholder website exist; MMP seat allocation, the live forecast and any published probability do not.** The Stage 1 description that used to be here is obsolete: current state is in PROJECT_STATE.md.
+An independent, transparent web application for a **nowcast** of the 2026 New Zealand general election: what would happen if an election were held under current political conditions ([D106](DECISIONS.md)).
+
+**Current state:**
+- historical data and the offline Python stages are in place, through Stage71;
+- a live 2026 national poll fit exists (Stage62);
+- the Māori seat layer, a verified MMP allocator and per-draw seat layer (Stages 49 and 65), and a versioned export contract with a synthetic dry run all exist;
+- the live 2026 chain is **not assembled**, and no nowcast or probability is published.
+
+What the product is and how its parts connect: [docs/nowcast-specification.md](docs/nowcast-specification.md). What remains before publication: [docs/release-checklist.md](docs/release-checklist.md). Stage-by-stage history: [PROJECT_STATE.md](PROJECT_STATE.md).
 
 ## Resume a new session
 
-GitHub is canonical. Clone this repository, inspect `git status`, and read [AGENTS.md](AGENTS.md), [PROJECT_STATE.md](PROJECT_STATE.md), [DECISIONS.md](DECISIONS.md), [METHODOLOGY.md](METHODOLOGY.md) [DATA_SOURCES.md](DATA_SOURCES.md) and [statistical specification](docs/statistical-specification.md). Follow the exact next task only after the user authorizes it. No prior conversation is needed.
+GitHub is canonical. Clone this repository, inspect `git status`, and read [AGENTS.md](AGENTS.md), [PROJECT_STATE.md](PROJECT_STATE.md) with any pending `handoff.d/` fragments, [docs/nowcast-specification.md](docs/nowcast-specification.md), [docs/release-checklist.md](docs/release-checklist.md), [DECISIONS.md](DECISIONS.md), [METHODOLOGY.md](METHODOLOGY.md) and [DATA_SOURCES.md](DATA_SOURCES.md). The original [statistical specification](docs/statistical-specification.md) is the Stage 1 design intent, kept as history. Follow the exact next task only after the user authorizes it. No prior conversation is needed.
 
 ## Local setup
 
@@ -31,13 +39,13 @@ npm run check:all # frontend + Python tests + source file integrity
 
 ## Structure
 
-- `src/app/`: accessible navigation and seven pages, plus unknown-route handling.
-- `src/models/`: reserved polling, electorates, regressions, split-voting, candidate-effects, simulation and mmp modules; no implementations.
+- `src/app/`: accessible navigation, pages and snapshot views (shown only when a validated snapshot is published).
+- `src/models/mmp/`: verified MMP allocator and per-draw seat layer (Stages 49 and 65). `src/models/simulation/`: DOM-free pipeline interfaces, PRNG, worker protocol and the snapshot exporter (synthetic dry run only so far). The other `src/models/` directories are reserved.
 - `src/types/`: runtime provenance and draft domain schemas, inferred TypeScript types and serializable worker message contracts.
 - `src/utils/`: shared utility boundary.
-- `data/raw/`, `data/processed/`, `data/sources.json`: immutable inputs, reproducible outputs and currently empty provenance register.
-- `scripts/`: ingest/transform/analysis boundaries, read-only source-file integrity validation and Python tests.
-- `docs/`: architecture, data dictionary, reproducibility and staged backlog.
+- `data/raw/`, `data/processed/`: immutable inputs and reproducible stage outputs. `data/sources.json` is the frozen historical source register: new acquisitions go to standalone dated registries (AGENTS.md).
+- `scripts/`: offline Python stages (one package per stage), source-file integrity validation and Python tests.
+- `docs/`: the canonical nowcast specification and release checklist, plus per-stage design and findings records (historical).
 - `.github/workflows/ci.yml`: tests, typecheck and production build on pushes and pull requests.
 
 ## Cloudflare Pages (future deployment)
@@ -48,7 +56,7 @@ References: [Vite setup](https://vite.dev/guide/), [Cloudflare Pages Vite guide]
 
 ## Contributing
 
-Fetch latest main, confirm the remote, then create the authorized stage branch before editing. The current correction branch is `stage/01-foundation`; its changes must reach main only through a PR that the user merges. Push meaningful checkpoints periodically. Keep changes scoped to the authorized stage, document assumptions, add meaningful tests, run all checks and update the handoff documents before committing and pushing. Read [reproducibility](docs/reproducibility.md) and [future work](docs/future-work.md).
+Follow [AGENTS.md](AGENTS.md): fetch latest main, work on the authorized branch, keep each change to one bounded question, record shared-document updates as a `handoff.d/` fragment, and reach main only through a reviewed PR. Read [reproducibility](docs/reproducibility.md) and [future work](docs/future-work.md).
 
 ## Licensing
 
@@ -56,11 +64,12 @@ No open-source licence has been selected yet. Public availability does not grant
 
 ## Offline Python setup
 
-Use Python 3.12.2, pinned in .python-version and pyproject.toml. Foundation scripts use only the standard library, so no pip install is required and the complete third-party dependency set is empty. Optionally create an isolated environment:
+Use Python 3.12.2, pinned in .python-version and pyproject.toml. The stages need the pinned numerical packages in `requirements-boundaries.txt` (numpy, scipy, shapely, matplotlib), which is what CI installs; the external national model has its own lock (`requirements-external.lock`, never run in CI). Create an isolated environment:
 
 ```sh
 python3 -m venv .venv
 . .venv/bin/activate
+python3 -m pip install -r requirements-boundaries.txt
 python3 -m unittest discover -s scripts/tests -v
 python3 scripts/validate/source_files.py
 ```

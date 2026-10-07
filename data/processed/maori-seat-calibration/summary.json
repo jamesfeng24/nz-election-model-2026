@@ -1,0 +1,387 @@
+{
+  "chronologicalPooled": {
+    "C": {
+      "bands": {
+        "0.0-0.7": {
+          "meanPredicted": 0.658185,
+          "observed": 0.25,
+          "polls": 4
+        },
+        "0.7-0.9": {
+          "meanPredicted": 0.7661200000000001,
+          "observed": 0.375,
+          "polls": 8
+        },
+        "0.9-1.0": {
+          "meanPredicted": 0.954701111111111,
+          "observed": 1.0,
+          "polls": 9
+        }
+      },
+      "brierLeader": 0.22325411362380954,
+      "brierMulti": 0.4452548469809524,
+      "calibrationZ": -2.6504171970373918,
+      "contrastCoverage": {
+        "0.5": 0.35,
+        "0.8": 0.8,
+        "0.9": 0.95
+      },
+      "contrastPolls": 20,
+      "coverageDeviation": 0.10114942528735636,
+      "leaderWins": 13,
+      "meanLogScoreWinner": -0.6017043984168418,
+      "meanPredictedLeaderWin": 0.8263814285714287,
+      "observedLeaderWinRate": 0.6190476190476191,
+      "polls": 21,
+      "shareCoverage": {
+        "0.5": 0.3620689655172414,
+        "0.8": 0.7241379310344828,
+        "0.9": 0.8103448275862069
+      },
+      "shareObservations": 58
+    },
+    "P": {
+      "bands": {
+        "0.0-0.7": {
+          "meanPredicted": 0.6357577777777778,
+          "observed": 0.3333333333333333,
+          "polls": 9
+        },
+        "0.7-0.9": {
+          "meanPredicted": 0.8175725,
+          "observed": 0.75,
+          "polls": 8
+        },
+        "0.9-1.0": {
+          "meanPredicted": 0.9509475,
+          "observed": 1.0,
+          "polls": 4
+        }
+      },
+      "brierLeader": 0.1947594856238095,
+      "brierMulti": 0.3899690507428571,
+      "calibrationZ": -1.659714593672093,
+      "contrastCoverage": {
+        "0.5": 0.6,
+        "0.8": 1.0,
+        "0.9": 1.0
+      },
+      "contrastPolls": 20,
+      "coverageDeviation": 0.054022988505747105,
+      "leaderWins": 13,
+      "meanLogScoreWinner": -0.5514708035454022,
+      "meanPredictedLeaderWin": 0.7650566666666666,
+      "observedLeaderWinRate": 0.6190476190476191,
+      "polls": 21,
+      "shareCoverage": {
+        "0.5": 0.46551724137931033,
+        "0.8": 0.8793103448275862,
+        "0.9": 0.9482758620689655
+      },
+      "shareObservations": 58
+    },
+    "PB": {
+      "bands": {
+        "0.0-0.7": {
+          "meanPredicted": 0.5110511111111111,
+          "observed": 0.3333333333333333,
+          "polls": 9
+        },
+        "0.7-0.9": {
+          "meanPredicted": 0.8107228571428572,
+          "observed": 0.7142857142857143,
+          "polls": 7
+        },
+        "0.9-1.0": {
+          "meanPredicted": 0.9449480000000001,
+          "observed": 1.0,
+          "polls": 5
+        }
+      },
+      "brierLeader": 0.1487419735047619,
+      "brierMulti": 0.2964718240666666,
+      "calibrationZ": -1.0771714653887188,
+      "contrastCoverage": {
+        "0.5": 0.65,
+        "0.8": 1.0,
+        "0.9": 1.0
+      },
+      "contrastPolls": 20,
+      "coverageDeviation": 0.05977011494252871,
+      "leaderWins": 13,
+      "meanLogScoreWinner": -0.4486938865683153,
+      "meanPredictedLeaderWin": 0.7142504761904762,
+      "observedLeaderWinRate": 0.6190476190476191,
+      "polls": 21,
+      "shareCoverage": {
+        "0.5": 0.5344827586206896,
+        "0.8": 0.896551724137931,
+        "0.9": 0.9482758620689655
+      },
+      "shareObservations": 58
+    }
+  },
+  "flaggedShifts2026": {
+    "C": [],
+    "P": [
+      "Hauraki-Waikato",
+      "Te Tai Hauāuru",
+      "Te Tai Tonga"
+    ],
+    "PB": [
+      "Te Tai Tonga"
+    ],
+    "P_lambda_hat": [
+      "Hauraki-Waikato",
+      "Te Tai Hauāuru",
+      "Te Tai Tonga"
+    ],
+    "P_lambda_p05": [
+      "Te Tai Tonga"
+    ],
+    "P_lambda_p95": [
+      "Hauraki-Waikato",
+      "Te Tai Hauāuru",
+      "Te Tai Tonga"
+    ]
+  },
+  "headlineFinding": "improves_not_restored",
+  "headlineQualifier": null,
+  "lambdaHatAllFourElections": 3.0332779945521278,
+  "lambdaInterval90": {
+    "p05": 1.7216809782672111,
+    "p50": 3.563438722557667,
+    "p95": 7.0155637309043275
+  },
+  "leaveOneElectionOutPooled": {
+    "C": {
+      "bands": {
+        "0.0-0.7": {
+          "meanPredicted": 0.6128166666666667,
+          "observed": 0.16666666666666666,
+          "polls": 6
+        },
+        "0.7-0.9": {
+          "meanPredicted": 0.766795,
+          "observed": 0.375,
+          "polls": 8
+        },
+        "0.9-1.0": {
+          "meanPredicted": 0.96035,
+          "observed": 1.0,
+          "polls": 11
+        }
+      },
+      "brierLeader": 0.20816271357199997,
+      "brierMulti": 0.41675152944,
+      "calibrationZ": -2.988653576171044,
+      "contrastCoverage": {
+        "0.5": 0.4166666666666667,
+        "0.8": 0.9166666666666666,
+        "0.9": 0.9583333333333334
+      },
+      "contrastPolls": 24,
+      "coverageDeviation": 0.08468468468468472,
+      "leaderWins": 15,
+      "meanLogScoreWinner": -0.5612868807272345,
+      "meanPredictedLeaderWin": 0.8150044,
+      "observedLeaderWinRate": 0.6,
+      "polls": 25,
+      "shareCoverage": {
+        "0.5": 0.36486486486486486,
+        "0.8": 0.7432432432432432,
+        "0.9": 0.8378378378378378
+      },
+      "shareObservations": 74
+    },
+    "P": {
+      "bands": {
+        "0.0-0.7": {
+          "meanPredicted": 0.6093907142857142,
+          "observed": 0.2857142857142857,
+          "polls": 14
+        },
+        "0.7-0.9": {
+          "meanPredicted": 0.8320688888888887,
+          "observed": 1.0,
+          "polls": 9
+        },
+        "0.9-1.0": {
+          "meanPredicted": 0.942045,
+          "observed": 1.0,
+          "polls": 2
+        }
+      },
+      "brierLeader": 0.18369910171200002,
+      "brierMulti": 0.372081740848,
+      "calibrationZ": -1.3507927252233005,
+      "contrastCoverage": {
+        "0.5": 0.75,
+        "0.8": 1.0,
+        "0.9": 1.0
+      },
+      "contrastPolls": 24,
+      "coverageDeviation": 0.10450450450450448,
+      "leaderWins": 15,
+      "meanLogScoreWinner": -0.5466074243880504,
+      "meanPredictedLeaderWin": 0.7161672,
+      "observedLeaderWinRate": 0.6,
+      "polls": 25,
+      "shareCoverage": {
+        "0.5": 0.6351351351351351,
+        "0.8": 0.918918918918919,
+        "0.9": 0.9594594594594594
+      },
+      "shareObservations": 74
+    },
+    "PB": {
+      "bands": {
+        "0.0-0.7": {
+          "meanPredicted": 0.496335,
+          "observed": 0.35714285714285715,
+          "polls": 14
+        },
+        "0.7-0.9": {
+          "meanPredicted": 0.7990585714285715,
+          "observed": 0.8571428571428571,
+          "polls": 7
+        },
+        "0.9-1.0": {
+          "meanPredicted": 0.9329749999999999,
+          "observed": 1.0,
+          "polls": 4
+        }
+      },
+      "brierLeader": 0.154173228512,
+      "brierMulti": 0.30994038343999997,
+      "calibrationZ": -0.5885641525531323,
+      "contrastCoverage": {
+        "0.5": 0.7916666666666666,
+        "0.8": 1.0,
+        "0.9": 1.0
+      },
+      "contrastPolls": 24,
+      "coverageDeviation": 0.1135135135135135,
+      "leaderWins": 15,
+      "meanLogScoreWinner": -0.47576236571465613,
+      "meanPredictedLeaderWin": 0.65096,
+      "observedLeaderWinRate": 0.6,
+      "polls": 25,
+      "shareCoverage": {
+        "0.5": 0.6756756756756757,
+        "0.8": 0.918918918918919,
+        "0.9": 0.9459459459459459
+      },
+      "shareObservations": 74
+    }
+  },
+  "robustnessFindings": {
+    "chronological2020And2023": "improves_not_restored",
+    "leaveOneElectionOut": "improves_not_restored"
+  },
+  "schemaVersion": 1,
+  "winProbabilities2026": {
+    "C": {
+      "Hauraki-Waikato": {
+        "Hana-Rāwhiti Maipi-Clarke": 0.88105,
+        "Kingi Kiriona": 0.11895
+      },
+      "Te Tai Hauāuru": {
+        "Coral Raukawa": 0.00022,
+        "Debbie Ngarewa-Packer": 0.77526,
+        "Te Pūoho Katene": 0.22452
+      },
+      "Te Tai Tonga": {
+        "Lisa Marie Murch": 0.10606,
+        "Lisa Te Morenga": 0.02498,
+        "Mananui Ramsden": 0.85337,
+        "Tākuta Ferris": 0.01559
+      }
+    },
+    "P": {
+      "Hauraki-Waikato": {
+        "Hana-Rāwhiti Maipi-Clarke": 0.74133,
+        "Kingi Kiriona": 0.25867
+      },
+      "Te Tai Hauāuru": {
+        "Coral Raukawa": 0.0152,
+        "Debbie Ngarewa-Packer": 0.65454,
+        "Te Pūoho Katene": 0.33026
+      },
+      "Te Tai Tonga": {
+        "Lisa Marie Murch": 0.21179,
+        "Lisa Te Morenga": 0.09516,
+        "Mananui Ramsden": 0.61648,
+        "Tākuta Ferris": 0.07657
+      }
+    },
+    "PB": {
+      "Hauraki-Waikato": {
+        "Hana-Rāwhiti Maipi-Clarke": 0.91876,
+        "Kingi Kiriona": 0.08124
+      },
+      "Te Tai Hauāuru": {
+        "Coral Raukawa": 0.00569,
+        "Debbie Ngarewa-Packer": 0.86699,
+        "Te Pūoho Katene": 0.12732
+      },
+      "Te Tai Tonga": {
+        "Lisa Marie Murch": 0.32786,
+        "Lisa Te Morenga": 0.07923,
+        "Mananui Ramsden": 0.53082,
+        "Tākuta Ferris": 0.06209
+      }
+    },
+    "P_lambda_hat": {
+      "Hauraki-Waikato": {
+        "Hana-Rāwhiti Maipi-Clarke": 0.75421,
+        "Kingi Kiriona": 0.24579
+      },
+      "Te Tai Hauāuru": {
+        "Coral Raukawa": 0.0085,
+        "Debbie Ngarewa-Packer": 0.66592,
+        "Te Pūoho Katene": 0.32558
+      },
+      "Te Tai Tonga": {
+        "Lisa Marie Murch": 0.20465,
+        "Lisa Te Morenga": 0.08728,
+        "Mananui Ramsden": 0.64052,
+        "Tākuta Ferris": 0.06755
+      }
+    },
+    "P_lambda_p05": {
+      "Hauraki-Waikato": {
+        "Hana-Rāwhiti Maipi-Clarke": 0.81795,
+        "Kingi Kiriona": 0.18205
+      },
+      "Te Tai Hauāuru": {
+        "Coral Raukawa": 0.00176,
+        "Debbie Ngarewa-Packer": 0.7184,
+        "Te Pūoho Katene": 0.27984
+      },
+      "Te Tai Tonga": {
+        "Lisa Marie Murch": 0.15892,
+        "Lisa Te Morenga": 0.05272,
+        "Mananui Ramsden": 0.75094,
+        "Tākuta Ferris": 0.03742
+      }
+    },
+    "P_lambda_p95": {
+      "Hauraki-Waikato": {
+        "Hana-Rāwhiti Maipi-Clarke": 0.67498,
+        "Kingi Kiriona": 0.32502
+      },
+      "Te Tai Hauāuru": {
+        "Coral Raukawa": 0.03925,
+        "Debbie Ngarewa-Packer": 0.59847,
+        "Te Pūoho Katene": 0.36228
+      },
+      "Te Tai Tonga": {
+        "Lisa Marie Murch": 0.25162,
+        "Lisa Te Morenga": 0.13465,
+        "Mananui Ramsden": 0.4995,
+        "Tākuta Ferris": 0.11423
+      }
+    }
+  }
+}

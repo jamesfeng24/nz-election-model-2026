@@ -48,12 +48,22 @@ class ConservativeSelectionTests(unittest.TestCase):
             with self.subTest(changed=changed):
                 self.assertEqual(selection.select([changed], 'pull_request', synthetic_registry())['mode'], 'full')
 
-    def test_ci_registry_checkpoint_policy_and_every_new_or_changed_test_fail_full(self):
+    def test_ci_registry_checkpoint_policy_and_stage39_or_ci_tests_fail_full(self):
         for changed in ('.github/workflows/ci.yml', '.github/validation/stage39.json',
                         'scripts/validate/ci_selection.py', 'AGENTS.md',
-                        'scripts/tests/test_new_feature.py', 'scripts/tests/test_stage39_candidate_integration.py'):
+                        'scripts/tests/test_stage39_candidate_integration.py', 'scripts/tests/test_ci_selection.py',
+                        'scripts/tests/test_ci_frozen.py', 'scripts/tests/test_ci_new_policy.py'):
             with self.subTest(changed=changed):
                 self.assertEqual(selection.select([changed], 'pull_request', synthetic_registry())['mode'], 'full')
+
+    def test_other_new_or_changed_tests_do_not_force_the_stage39_replay(self):
+        for changed in ('scripts/tests/test_new_feature.py', 'scripts/tests/test_stage67_exceptional_balance_scale.py',
+                        'scripts/tests/fixtures/synthetic.json'):
+            with self.subTest(changed=changed):
+                self.assertEqual(selection.select([changed], 'pull_request', synthetic_registry())['mode'], 'integrity')
+        # A test file never hides a real dependency change elsewhere in the same PR.
+        result = selection.select(['scripts/tests/test_new_feature.py', 'scripts/shared.py'], 'pull_request', synthetic_registry())
+        self.assertEqual(result['mode'], 'full')
 
     def test_missing_history_invalid_fingerprint_and_non_pr_events_fail_full(self):
         for event in ('push', 'workflow_dispatch', 'schedule', 'unknown'):

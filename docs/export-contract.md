@@ -1,5 +1,40 @@
 # Stage53 — website export contract and end-to-end dry run (v1, draft)
 
+## v2 (6 October 2026, D106): nowcast semantics
+
+The primary product is a nowcast ([nowcast-specification.md](nowcast-specification.md)). Snapshot `schemaVersion` is now **2**. Loaders reject v1, which never reached a published release; only the synthetic dry run produced it. Changes:
+
+- `targetType`: `nowcast` (primary) or `election-day-scenario`, which may only ever be a separately labelled output.
+- `modelStateAsOf` (date): the latent national state the results describe, i.e. the latest poll-midpoint week, not "today". The schema requires `modelStateAsOf` ≤ `dataCutoff` ≤ `createdAt`.
+- `electionDate` (date): context only. A nowcast state may not postdate it.
+- **Intervals:** every national vote share (`partyVoteShares[].share`) and party seat summary (`partySeatSummaries[].seats`) is a set of exactly three central intervals at levels 0.5, 0.8 and 0.9, in that order, sharing one median and nested (`IntervalSetSchema`, `INTERVAL_LEVELS`, `PRIMARY_INTERVAL_LEVEL = 0.8` in `src/types/domain.ts`). The 80% range is the primary display. Every range is shown as full lower–upper bounds, never as a ± half-width, and is described as a central range across simulated elections under current conditions, not a margin of error or an election-day range.
+- `provenance.configVersion` is required for model snapshots.
+
+Unchanged: the archive layout and index (`ForecastIndexSchema`, still v1), the synthetic guards, and the `Forecast*` identifiers and `forecasts/` root, which are kept as stable names. Still to add in the assembly PR ([release-checklist.md](release-checklist.md)), because they depend on Stage63 and the live layers:
+- candidate-share intervals;
+- Monte Carlo SE and effective sample size;
+- threshold, overhang, size and bloc distributions from Stage65;
+- per-seat uncertainty class;
+- per-component calibration status;
+- replacing the fixed-`requiredSeats` government combinations with Stage65 dynamic-majority blocs.
+
+### v2 completion (7 October 2026, Stage74)
+
+Added before any v2 snapshot was published, so `schemaVersion` stays 2 ([stage74-nowcast-snapshot.md](stage74-nowcast-snapshot.md)):
+- `seatLayer`: `available` with the Stage65 summary over every simulated election, or `unavailable` with a reason. The summary holds:
+  - party, bloc and Parliament-size 50/80/90 seat intervals;
+  - seat and size distributions;
+  - qualification, lifeboat, overhang, majority and exact-half probabilities, each `{p, mcse, ess}` by batch means within national MCMC chains.
+
+  An available seat layer requires an MMP example allocation and no unavailable electorate.
+- `electorateDetail`: per predicted seat, the uncertainty class (`ordinary`, `exceptional` or `maori-layer`, D107) and per-candidate `meanShare`, 50/80/90 share intervals and `winProbability {p, mcse, ess}`. A model snapshot must give it for every predicted seat.
+- `directory.candidates[].partyLabel` (optional): the ballot-group key of a candidate whose party has no national group (`partyId` null).
+- `governmentOutcomes` stays empty for nowcasts. Blocs live in `seatLayer.summary.blocs`, defined by James.
+
+Still open: per-component calibration status (every probability is `uncalibrated`) and precision thresholds (Stage63).
+
+The v1 text below is the original Stage53 record.
+
 Authorized by the roadmap ([D082](../DECISIONS.md), item (d)). One question: can a single versioned export contract carry a forecast from polls through MMP to the website, with synthetic data kept out of real results? This fixes the boundary only. It fits nothing, changes no Python or statistical output, and produces no forecast. Everything run through it so far is invented.
 
 ## Chain and interfaces

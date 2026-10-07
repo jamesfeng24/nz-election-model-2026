@@ -1,3 +1,296 @@
+# Docs/architecture: nowcast reconciliation and current-state cleanup — review-ready, 6 October 2026
+
+Branch `claude/cool-dirac-mq8787`, restarted from main `ce61569` (its earlier PR #78 is merged). Commits: `49b0b84` mechanical fold of the four pending fragments (exceptional-scale/#78, Stage67, Stage68, Stage71), then the reconciliation commit. The PR number and final head are in the PR body.
+
+**Current state (the canonical summary; details in [docs/nowcast-specification.md](docs/nowcast-specification.md) and [docs/release-checklist.md](docs/release-checklist.md)).**
+- **Product.** The primary product is a nowcast (D106). The national input is Stage62/70 `lastDataSupport`, the latent state for the week of 27 September 2026 with polls to 6 October, never the election-week draws.
+- **General-seat uncertainty (D107).** Candidate N/L balance seat-scale multiplier 0.60 for ordinary and 1.00 for exceptional seats, with no multiplier above 1. The 2026 classification file is not yet written. The evidence is development-informed and flag-selection-sensitive; Stage67 (D101) itself did not establish the narrower ordinary scale.
+- **Assembly.** Every layer exists, but the live 2026 chain is not assembled and nothing is published.
+- **Stage status (reconciled against GitHub).**
+  - Merged: Stage47–49, 51–56, 59–62, 64–68 and 71.
+  - Waiting on a fixed event: Stage50 (nominations close 8 October, 12:00 NZDT).
+  - Running in separate threads, unpushed: Stage63 (D095), Stage69 (D103), Stage70 (D104).
+  - Not authorized: Stage57 (provisional). Skipped: Stage58 (D089).
+  - Next free: **Stage72 / D108**. D106 and D107 were taken as the next free numbers after #83's allocation; the coordinator should confirm them.
+- **PR #78.** The in-sample diagnostic was merged on 6 October although it was meant to stay unmerged as the record. It is kept and labelled superseded by Stage67/D107, and `scripts/tests/test_historical_flag_isolation.py` enforces that no other module reads its (or Stage67's) 2014–2023 flags.
+
+**What changed.**
+- **Fold:** the four fragments were folded with `scripts.fold_doc_fragments`, without wording changes.
+- **Decisions:** D106 (nowcast estimand) and D107 (0.60/1.00 policy).
+- **New canonical docs:** `docs/nowcast-specification.md` (estimand, dating, pipeline map, uncertainty policy, Māori treatment, interval semantics, export, configuration) and `docs/release-checklist.md` (remaining work, publication gate, proposed release policy).
+- **Pointers and banners:** METHODOLOGY gains a current-behaviour pointer and a dated correction of the Stage62 polling-error wording. Stage62's findings get a dated erratum with no number changes. The roadmap header gains a superseded banner, with statuses, numbering and Stage69/70 rows reconciled. The README's stale status, structure and Python setup are corrected. Architecture, future-work and the #78 diagnostic doc get pointer banners. `docs/statistical-specification.md` is deliberately untouched because Stage28's frozen contract hash-pins it; the README labels it historical. The export contract records v2.
+- **Export schema v2** (`src/types/export.ts`, `domain.ts`): `targetType`, `modelStateAsOf`, `electionDate`, nested 50/80/90 intervals (80% primary), and `provenance.configVersion`. The pipeline, exporter, dry run and views use it, and UI copy now says nowcast.
+
+**What did not change.** No statistical code, output, scale, frozen artifact, CI workflow or registry; no historical stage conclusion; no Stage63/69/70 work.
+
+**Checks (local; Node from `npm ci`, Python 3.13.16 with the pinned numerical packages).**
+- `npx vitest run`: 126 pass; `tsc --noEmit` clean; `npm run build` and `npm run check:dist` pass (no synthetic content in dist).
+- `python3 -m unittest scripts.tests.test_historical_flag_isolation scripts.tests.test_exceptional_scale scripts.tests.test_ci_frozen scripts.tests.test_fold_doc_fragments`: 67 pass.
+- `python3 -m scripts.fold_doc_fragments --check`: 0 pending.
+- Not run locally: the full Python suite (no Python stage code changed); hosted Verify is the gate.
+
+**Exact next action.** The coordinator reviews and merges. Then follow the release checklist, in order:
+1. Stage72 (2026 scales + `config/nowcast-2026.json` + classification-file schema, fail-closed);
+2. after Stage63, the precision policy;
+3. after Stage50, the canonical roster;
+4. after Stage69, the baseline cutover;
+5. after Stage70, the national adapter;
+6. assembly and the remaining export v2 fields;
+7. James's decisions (release policy, blocs, unpolled Māori seats, 2026 classification).
+
+---
+
+# Stage71 Māori seat calibration complete — review-ready, 6 October 2026
+
+Branch `stage/71-maori-seat-calibration-los82r`, from main `5e22a83`. Commits: `ea1c9fc` frozen design (before any corrected arm was scored), a design clarification (zero-sigma bootstrap replicates are skipped, before any score was displayed), then the final head (code, outputs, findings, tests, this fragment). Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
+
+**What was done.** The one question: what correction fitted only on earlier elections and scored chronologically restores calibration of the Stage66 Māori seat layer, and how much does it widen or shift the 2026 seat probabilities? Control C = Stage66 unchanged; P = single variance inflation on the poll-to-result error (maximum likelihood over every named candidate of the training polls, unconstrained, with a two-stage bootstrap of the correction carried into every draw); PB = P plus a leave-self-out pollster-era (Reid / Curia) bias for Māori Party candidates, capped by design at "suggestive". Scored chronologically (training on strictly earlier elections: 2017, 2020, 2023 held out, 21 polls) and leave-one-election-out (25 polls), 100,000 draws per fold with common random numbers, on calibration of the poll-leader win probability (z, bands), Brier, log score and 50/80/90% interval coverage; decision rule and finding classes frozen first.
+
+**Result.** `improves_not_restored` in the chronological scheme and both robustness repeats. Chronological pooled (C / P / PB): predicted leader win 0.826 / 0.765 / 0.714 against 13 of 21 (0.619); calibration z -2.65 / -1.66 / -1.08 (limit 1.645, so P misses narrowly); Brier 0.223 / 0.195 / 0.149; log score of the winner -0.602 / -0.551 / -0.449; closed-share 50/80/90% coverage C 0.36 / 0.72 / 0.81, P 0.47 / 0.88 / 0.95. P against C: Brier -0.028 (poll-bootstrap 90% -0.054 to -0.005), better in all three folds. Gain is almost all 2023 (Brier 0.373 to 0.297). Fitted `lambda` 0.94 (2014 alone), 1.68, 2.82, 3.03 (all four; bootstrap 90% 1.72 to 7.02; leave-one-election-out 2.24 to 4.05). The single factor over-widens the Māori Party-versus-Labour contrast (80 and 90% contrast intervals cover 20 of 20 polls) because it is driven by minor candidates. PB scores best but rests on one Curia transition (2020 to 2023). 2026 readout (leader win probability, Hauraki-Waikato / Te Tai Hauāuru / Te Tai Tonga): C 0.88 / 0.78 / 0.85; P 0.74 / 0.66 / 0.62 (spans 0.68 to 0.82, 0.60 to 0.72, 0.50 to 0.75 across the correction's own interval); PB 0.92 / 0.87 / 0.53. Māori Party wins among the three: mean 1.76 (C), 1.61 (P), 2.11 (PB).
+
+**Limits.** 25 polls, four elections, two pollsters; the Stage66 backtest result was known before the design, so only earlier-elections-only fitting and the frozen rule guard against leakage; the 2017 fold trains on one election; the correction is identified mostly by the 2020 and 2023 Curia misses; the poll bootstrap ignores within-election dependence; leader-win calibration on 21 to 25 polls has about ±0.1 of sampling noise; 2026 polls are 37 to 44 days out. No calibrated-probability claim.
+
+**Not done / not authorised.** No adoption, release or publication; no per-candidate-type noise (the likely cause of the inflation, left as a follow-up); no covariates, party-vote or national input; no general-seat, national or MMP change; no new source or `data/sources.json` edit; no CI registry edit; no later stage; new Whakatau polls are not this stage's job.
+
+**Checks (local, Linux x86-64, Python 3.13, numpy 2.5.3; CI pins Python 3.12.2 and numpy 2.2.6).** `python3 -m scripts.maori_seat_calibration.run --check` ok (about 12 seconds); `scripts.tests.test_maori_seat_calibration` 15 pass; Stage66's `run --check` and tests re-run; the full unittest, fold-check and source-validation results are in the PR body. Frontend not run: no TypeScript changed. Not run locally: hosted Verify on the exact head.
+
+**Exact next action.** Coordinator reviews and merges; James decides whether to adopt P (or keep Stage66) as the Māori-seat default before any probability release, and whether the Curia-era hypothesis (PB) is believable. Optional separately authorised follow-ups: a structure-specific minor-candidate noise test; re-running this frozen design after more Whakatau polls arrive (adding a poll is a Stage66 data-file change plus a rerun of this runner). Reproduction: `python3 -m scripts.maori_seat_calibration.run` (add `--check` to verify); no network, no cache.
+
+---
+
+# Stage68 shared split-shift swing check complete — review-ready, 6 October 2026
+
+Branch `stage/68-shared-split-swing` from main `5e22a83`. Frozen design `8bf4a5f`. Decision D102.
+
+**Result.** Shared shifts are −0.303, +0.025, +0.277 and −0.130 (2014 to 2023); swings are +0.101, −0.440, −0.879 and +1.051. All 4 signs agree with "candidate split lags party swing", and every LOEO β is positive (0.14 to 0.29). But the LOEO RMS is 0.188 against 0.216 for predicting zero (ratio 0.87, threshold 0.75), and the 2023 leave-future-out prediction is worse than zero. Finding: `record_and_stop`.
+
+**Checks.** `python3 -m scripts.shared_split_swing.run --check` PASS; `scripts.tests.test_stage68_shared_split_swing` 3 PASS (local, Python 3.13.16). No CI, workflow or registry edit.
+
+**Exact next action.** The coordinator reviews and merges. No further swing work unless a fifth election is added; the shared election balance scale stays as is.
+
+---
+
+# Stage67 ordinary versus exceptional balance scale complete — review-ready, 6 October 2026
+
+Branch `stage/67-exceptional-balance-scale` from main `5e22a83`. Design freeze `790cae1` (before any fit); amendment 1 `e60142b`, which added `twogroup_exc1` at the coordinator's request after the original arms were fitted and before any score was read (one unread bank deleted). Decision D101. The PR number and final head are in the PR body. The coordinator reviews and merges.
+
+**Question.** Do separate earlier-trained ordinary/exceptional multipliers on the candidate N/L seat balance scale beat Stage60's single earlier-trained multiplier? Flags: the frozen 38-seat 2026-10-06 audit set. Sensitivity: the 17 flags not taken from the residual-ranked list.
+
+**Result (frozen rule).**
+- `twogroup_exc1` (ordinary 0.595/0.615/0.607, flagged seats at 1.00) IMPROVES on free: −0.0368pp N/L CRPS (−1.09%), all three elections better, bootstrap [−0.054, −0.019], floors pass. Ordinary-seat coverage 0.543/0.828/0.933; 2020 is near the floor.
+- `twogroup` (fitted exceptional 1.74/1.89/1.53) is NEGLIGIBLE against free and WORSE than `twogroup_exc1` (+0.0285pp).
+- `twogroup17` is NEGLIGIBLE (+0.0052pp), fails the exceptional 50% floor, and has fitted exceptional multipliers below ordinary (0.24–0.37). Hence `flag_selection_sensitive`.
+
+**Reading.** Flagged seats should stay at the frozen scale. The narrower ordinary scale is not established, because the gain depends on flags made with outcome knowledge. A blind-flag test (Stage57) is the clean version.
+
+**Checks (local, Python 3.13.16, numpy 2.2.6, scipy 1.16.0).**
+- `python3 -m scripts.exceptional_balance_scale.{inputs,fit,evaluation,decision} --check`: PASS (evaluation about 53s on 4 cores).
+- `scripts.tests.test_stage67_exceptional_balance_scale`: 8 PASS (about 18s).
+- Control and free equal Stage60 seat by seat.
+
+**CI.** No CI, workflow or registry edit. Hosted CI exercises the stage only through the unit test.
+
+**Exact next action.** The coordinator reviews and merges. James decides on (a) flagged seats held at the frozen scale and (b) whether to authorize a blind-flag test via the Stage57 manual replay. Stage68 (D102, a descriptive check of national swing against the shared split shift) follows on its own branch.
+
+---
+
+# Diagnostics: exceptional-seat balance scale — review-ready, 2026-10-06
+
+Branch `claude/cool-dirac-mq8787` from main `3a136c9`. One question: do the frozen 38/257 exceptional-uncertainty flags (2026-10-06 read-only audit) support separate ordinary and exceptional candidate N/L balance seat scales? This reuses the Stage48 loader and Gaussian likelihood unchanged, with an unpenalised two-group seat multiplier.
+
+**Results.** The one-scale fit is 0.79 of the frozen seat scale (90% bootstrap 0.68–0.90). Ordinary seats are 0.60 (0.54–0.65), stable at 0.59–0.63 per election and in leave-one-election-out fits. Exceptional seats are 1.46 (1.09–1.80); the ratio is 2.41 (1.80–3.08), 1.23 in 2020, and 1.69 without the five largest cases. LR 70.2 on 1 df; permutation 0/400. Held-out likelihood improves in all four elections (2020 only slightly). Even-seat 90% N/(N+L) width: frozen about 30–32pp, ordinary about 21–23pp, exceptional about 40–44pp.
+
+**Limits.** The flags are not fully blind (21 of the 38 came from a residual-ranked list); this is in-sample development evidence with the shared scale untouched. Nothing is adopted.
+
+**Checks.** `python3 -m unittest scripts.tests.test_exceptional_scale` 4 PASS; `python3 -m scripts.exceptional_scale.run --check` PASS (about 1m40, local Python 3.13 with pinned numpy 2.2.6/scipy 1.16.0). Not run: the full suite and frontend (no shared code changed). CI was not modified; the separate pending CI fix remains separate. New test files force full hosted validation under the existing selector.
+
+**Exact next action.** James decides whether to authorize a pre-registered ordinary/exceptional uncertainty design (ideally chronological with blind flags). Leave this PR for coordinator review; do not adopt.
+
+---
+
+# Docs: fold of the Stage56, 60, 61, 62, 64, 65, 66, macron-audit and CI-attestation handoff fragments — review-ready, 6 October 2026
+
+Branch `claude/docs-fold-stage60-66-t721cs`, started from main `823f065` (PRs #69 to #77 and #79 merged). Folded the nine pending fragments in `handoff.d/` with `python3 -m scripts.fold_doc_fragments` into CHANGELOG, PROJECT_STATE, DECISIONS (D092, D093, D094, D096, D097, D098, D099, D100), METHODOLOGY, DATA_SOURCES and the roadmap table: Stage56, Stage60, Stage61, Stage62, Stage64, Stage65, Stage66, the seat-name key audit (#74, no decision number) and the durable frozen-pipeline attestation fix (#77, D100). Docs only: no model or statistical code, data, registry, test or CI change, and no wording of the folded entries changed. `handoff.d/` now holds only README.md.
+
+**Folded wording not corrected.** The folded Stage56 to Stage66 entries and roadmap rows still read "review-ready" as written in their fragments; those PRs are merged. The roadmap's "Next free number" paragraph still says Stage67 and D100 and is stale (see the allocations below). Both are left for a later docs pass.
+
+**Allocated and not yet folded (no fragment on main at this base).**
+- Stage63 (layer-replicated composed precision, D095): in progress.
+- Stage67 (D101) and Stage68 (D102) run in a separate chat.
+- Stage69 (D103), Stage70 (D104) and Stage71 (D105): in progress.
+- #78 ("Diagnostics: test frozen exceptional flags against the candidate balance scale", branch `claude/cool-dirac-mq8787`) is a superseded diagnostic left unmerged; its fragment `handoff.d/2026-10-06-exceptional-scale.md` is not on main and is not folded.
+- Next free after these: Stage72 and D106.
+
+**Checks.** `python3 -m scripts.fold_doc_fragments --check` accepted the nine fragments before the fold and reports 0 pending after it. Not run locally: Python and frontend suites (docs only, no code or test changed); hosted Verify is the gate. **Exact next action:** coordinator reviews and merges this docs PR; fragments from Stage63, 67, 68, 69, 70 and 71 are folded after they merge.
+
+---
+
+# Stage66 Māori electorate seat layer complete — review-ready, 6 October 2026
+
+Branch `claude/project-thread-stage66-maori-layer-dua3bt`, based on main `9f4c95b`. Commits: `7a25ea2` raw acquisition (before any transformation), `615ecff` frozen design, curated polls, official results and registry, a second design amendment commit (2017 Te Tai Tokerau has no Māori Party candidate: contrast sample 24 polls, 20 degrees of freedom), then the final head (calibration, simulation, runner, findings, tests, this fragment). Single push at review readiness; the PR number and the final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
+
+**What was done.** The one question: can Māori electorate polls (three published for 2026) be turned into per-draw candidate shares and winners, with the poll error calibrated on historical Māori electorate polls? Each poll is closed over its named candidates (undecided and "other" allocated proportionally); shares get a log-share Gaussian error with per-candidate `sigma`, one election-wide shift shared by every Māori Party candidate (`tau`), an unadopted-by-rule constant bias, parameter uncertainty by scaled inverse chi-square per draw, and an unnamed remainder drawn from history. Calibration contrast: Māori Party versus Labour log-odds error in 24 of 25 polls. Party-vote figures, the Māori-roll poll and national Te Pāti Māori support are deliberately unused (no double counting); each draw exposes the standardised shared factor for later optional coupling with the national draw.
+
+**Result.** Election means of the contrast: 2014 -0.07, 2017 -0.11, 2020 +0.34, 2023 +0.45. `sigma` 0.231, `tau` 0.253. Bias not adopted (equal-weight +0.15; leave-one-election-out -0.33 nats; same sign in 2 of 4 elections). Diagnostics flagged and not adopted: non-Māori-Party, non-Labour candidates err 4.0 times what `2 sigma^2` allows (mean +0.30 against Labour); polls 21 or more days out have `sigma` 0.305 (9 polls, 5 df). Backtest (leave one election out, 25 polls): mean predicted poll-leader win probability 0.82 against 0.60 observed (15 of 25; 2 of 7 in 2023), Brier 0.208 against 0.240 for a constant 0.6, so the default is overconfident about poll leaders. 2026 default (100,000 draws, seed 2026066): Hauraki-Waikato Maipi-Clarke 0.88; Te Tai Hauāuru Ngarewa-Packer 0.78, Katene 0.22; Te Tai Tonga Ramsden 0.85, Murch 0.11, Te Morenga 0.03, Ferris 0.02. Sensitivity arms (the Curia-era bias and wider minor-candidate noise are post hoc and labelled; none adopted): Te Tai Tonga Labour win 0.63 to 0.91, the other two seats keep the same leader in every arm. Māori Party wins among the three polled seats: mean 1.76 (0 to 3 wins: 0.06, 0.21, 0.63, 0.10), with all-or-nothing outcomes likelier than independence implies.
+
+**Descriptive observation, not adopted.** The Māori Party candidate beat the Labour-relative poll in 17 of 24 polls, mainly in the two Curia elections (+0.34, +0.45; odds 1.4 and 1.6 times the poll's) against about -0.1 for Reid Research in 2014 and 2017. Pollster era and election are confounded with two Curia elections, so it is a hypothesis for James, not an estimate; the 2026 polls share Curia's method.
+
+**Limits.** 25 polls, four elections, two pollsters; `tau` from four elections; historical polls transcribed from a volunteer-edited compilation (all seven 2023 polls and the 2020 Waiariki and 2017 Waiariki and Te Tai Hauāuru polls cross-checked against news reports; 2014 lists four seats only; some 2014 fieldwork ends are month-end assumptions); sample size known only for 2023 and 2026; the 2026 polls closed 37 to 44 days before the election; candidate lists may change at the 8 October close; closure over named candidates; one poll per seat (latest); no calibrated-probability claim.
+
+**Not done / not authorised.** No fallback or baseline for the four unpolled seats (Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau, Te Tai Tokerau stay `unpolled`); no pollster-era or bias adoption; no covariates; no coupling to the national draw (default independent); no publication or probability release; no `data/sources.json` edit; no CI registry edit; no later stage.
+
+**Checks (local, Linux x86-64).** `python3 -m scripts.maori_seat_layer.run --check`, `registry --check`, `results --check` and `verify` pass (about 3 seconds, no network). `scripts.tests.test_maori_seat_layer` 27 pass; `scripts.tests.test_ci_frozen` and `test_fold_doc_fragments` 43 pass; `python3 scripts/validate/source_files.py` passed (926 registered resources, unchanged). The full-suite and fold-check results are in the PR body. Frontend not run: no TypeScript changed. Not run locally: hosted Verify on the exact head.
+
+**Exact next action.** Coordinator reviews and merges. When Whakaata Māori publishes a poll for another seat: preserve the page bytes, register them in a new dated registry, append the record to `data/source-plans/maori-seat-layer/polls-2026.json`, remove the seat from `unpolledSeats`, rerun `python3 -m scripts.maori_seat_layer.run` and review the diff (an unknown seat, party or a single-candidate poll fails the run). Re-check the polled candidate lists after the 8 October nominations close (Stage50). James decides whether the Curia-era hypothesis, the overconfidence of poll-leader probabilities and Te Tai Tonga's sensitivity matter before any probability release. The MMP assembly consumes the winners as a separate input (Stage65 defines the shape); a coupling with the national Te Pāti Māori draw, if wanted, uses the exported shared factor and needs its own stated correlation. Reproduction: `python3 -m scripts.maori_seat_layer.registry`, `results`, `run` (add `--check` to verify); no network, no cache.
+
+---
+
+# Stage65 per-draw MMP seat layer — review-ready, 6 October 2026
+
+Branch `claude/project-thread-stage65-mmp-seat-layer-6ajejm`, based on main `9f4c95b`. Frozen design commit `f90b852` (before any seat-layer code or test). Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
+
+**What was done.** The one question: can the merged Stage49 allocator, unchanged, be wrapped into a per-draw seat layer that reproduces the official 2008–2023 seats from actual votes and winners and summarises simulated draws? New code: `src/models/mmp/seatLayer.ts` (draw allocation, share-to-vote conversion by largest remainder at 10^9, bucket handling, lot for exact ties, mergeable summary accumulator), `seatLayerStage.ts` (adapter to the Stage53 `MmpStage`), tests `seatLayer.test.ts` (37), design and results `docs/stage65-seat-layer-design.md`, one line in `src/models/mmp/README.md`. Interface: `SeatLayerConfig` (listed parties, unlisted vote buckets, optional expected electorate ids so a missing electorate is an error, blocs as configuration), `SeatLayerDraw` (party-vote shares, `generalWinners`, `maoriWinners` as a separate input). Summaries per party and bloc: seat distribution and quantiles, probability of any seat, of clearing the threshold split into party-vote and lifeboat-only, of overhang; Parliament size and overhang distributions; bloc strict-majority and exact-half probabilities; every probability with its Monte Carlo standard error.
+
+**Result.** All pre-registered checks pass on the first run, no amendment. Official reproduction: every listed party's list seats and the Parliament size match for 2008 (122), 2011 (121), 2014 (121), 2017 (120), 2020 (120) and 2023 (122), through the integer-vote and the share path; no lot was needed. Properties held on all 400 synthetic draws (accounting, size = 120 + overhang, entitlements sum to 120 minus independents, only qualified parties seated, own-vote monotonicity, order and scale invariance). Chunked summaries merge byte-identically.
+
+**Limits.** Not a forecast; synthetic draws are fixtures only. Historical Māori winners are party-count residuals (7 seats every year), not electorate identities. Majority is strictly more than half of the draw's Parliament; confidence and supply, declined seats, vacancies, list exhaustion and the by-election seat arithmetic are not modelled. A winner for a party not in `listedPartyIds` counts as an independent seat. Shares are treated as continuous (no vote-count sampling noise). All upstream uncertainty and calibration limits pass through unassessed. The live national fit (Stage62), 2026 boundaries (Stage64) and Māori seat layer (Stage66) are not wired in; the 2026 bloc choices are James's.
+
+**Not done / not authorised.** No allocator change, live inputs, 2026 blocs, probability for release, site export, publication, CI registry edit, `data/sources.json` edit or Python change.
+
+**Checks (local, Node 22.22.0, Linux).** `npx vitest run` 124 tests in 8 files PASS (37 new); `npm run typecheck` PASS; `npm run build` PASS and `npm run check:dist` PASS; `python3 -m scripts.fold_doc_fragments --check` accepted this fragment. Not run: Python suite and source validation (no Python or data changed; hosted Verify is the gate); hosted Verify on the exact head.
+
+**Exact next action.** Coordinator reviews and merges once Verify is green, then folds this fragment (decision D097). At final assembly, plug in the live Stage62 national draws, Stage64 boundaries and Stage66 Māori winners, and James declares the 2026 blocs; seat-win precision (Stage63) and the release policy stay separate. Reproduction: `npx vitest run src/models/mmp`.
+
+---
+
+# Stage64 2026 electorate set and notional baselines (audit) — review-ready, 6 October 2026
+
+Branch `claude/project-thread-stage64-boundaries-mlryxf`, based on main `9f4c95b`. Single push at review readiness; the PR number and final head SHA are in the PR body. Coordinator reviews and merges; the thread does not.
+
+**What was done.** The one question: does the repo hold the 2026 electorate set with notional 2023 results on those boundaries, and are they correct? Audited the existing artifacts (Schedule B/C controls, Stage4 crosswalk and party-vote bounds, Stage40 target frame, Stage41 coherent scenario) and built a stable-id register of all 71 targets (`data/processed/electorate-baseline/register.json`), the old-to-new mapping with source-seat fates (`mapping.json`), the national reconciliation (`reconciliation.json`) and the audit summary (`audit.json`). Joins use `nz-<scope>-2026-boundary-<code>` and `nz-<scope>-2023-electorate-NN` ids.
+
+**Findings.** Electorate set correct (71 = 64 + 7; roster, codes, names, populations equal Schedule C; 16 certified exact, 52 changed, 3 unchanged-by-name with a suppressed 0–5 edge). No official notional results found; baseline = repo reconstruction, complete for 71 of 71 and exact to the official national totals for all 17 parties (valid party votes 2,851,211). Mapping: 10 renames by plurality (Bay of Plenty→Mt Maunganui, East Coast→East Cape, Kelston→Glendene, Mana→Kenepuru, New Lynn→Waitākere, Panmure-Ōtāhuhu→Ōtāhuhu, Rongotai→Wellington Bays, Te Atatū→Henderson, Wellington Central→Wellington North, Ōtaki→Kapiti), Ōhāriu abolished; Kenepuru's plurality (Mana 49.4–51.4% vs Ōhāriu 48.6–50.6%) is not bound-identified. Cross-check (Tally Room sheet, preserved, SHA-256 `57a2d25c3e7038826dfe921e948b99fc386196f34a02c082f3ccae189cb9b3aa`, comparison only): top-two party agreement 70/71 (Kapiti), log-ratio agreement to rounding at 16 exact seats, RMSE 0.106 / max 0.451 at 55 changed seats (large: Botany, Ōtāhuhu, Kapiti, Henderson, Kenepuru, Upper Harbour, Mt Albert, Maungakiekie, Mt Roskill, Waitākere). Lead certain across bounds in 70 seats (Glendene not). Māori electorates inventoried with party-vote baselines only (no candidate-layer quantity; Stage66).
+
+**Limits.** No notional candidate results exist anywhere (official or repo). Whether historical changed-seat residuals already absorb the heterogeneity seen here is not assessed. The one comparator has an undisclosed method and is evidence of sensitivity, not ground truth. Raw third-party files carry no stated licence (removable). Clock note: retrieval timestamps use the container clock.
+
+**Not done / not authorised.** No baseline change, no re-weighting by voting place (needs a new acquisition of 2023 party votes by voting place), no change to any model scale, Stage45–48 output, Stage10 or CI registry, no `data/sources.json` edit, no later stage. Name-keyed joins elsewhere were inventoried, not fixed (Stage10 handled separately).
+
+**Checks (local, Linux x86-64).** `python3 -m scripts.electorate_baseline.build --check` PASS (artifacts regenerate deterministically); `python3 -m unittest scripts.tests.test_stage64_electorate_baseline` 19 PASS; full `python3 -m unittest discover -s scripts/tests`: 713 run, the 19 Stage64 tests pass, and 1 failure plus 42 import errors occur in this sandbox for unrelated reasons (missing `shapely`/`scipy`-class dependencies and the CI-pinned runtime fingerprint; `test_ci_selection` fails identically on main `9f4c95b`), so those are not evidence about this change and hosted Verify is the gate; `python3 -m scripts.fold_doc_fragments --check` accepted this fragment. Frontend not run: no TypeScript changed. Not run locally: hosted Verify on the exact head.
+
+**Exact next action.** Coordinator reviews and merges if acceptable, then folds this fragment (D096). Decision for James, only if he wants heterogeneity removed rather than carried as uncertainty: authorise a separate bounded stage to re-weight by 2023 voting-place party votes and measure whether any seat lead or the ten large seats' composed intervals change. Until then flag Botany, Ōtāhuhu, Kapiti, Henderson, Kenepuru and Upper Harbour as heterogeneity-sensitive in seat-level displays. Reproduction: `python3 -m scripts.electorate_baseline.build` (add `--check` to verify); no network.
+
+---
+
+# Stage62 live 2026 national poll fit complete — review-ready, 6 October 2026
+
+Branch `claude/project-thread-stage62-live-poll-fit-7az2r0`, from main `e31df9c`, with main `3a136c9` (Stage54 #66 and Stage59 #68 merged) merged in before the push. Frozen design commit `96cf6b2` (corrected before any fit in `66707b8` and `0ef9701`; the two later corrections were a design-text fix and, after the first environment-check launch stopped at its save step, a house-offset fix, `7a2cde5`). Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges.
+
+**What was done.** One question: the current national party-vote distribution as of the latest 2026 poll under the existing pinned national model. The Stage38 `gauss` variant (upstream `ef76cf65…`, all config and priors unchanged, Stage38 PRIMARY sampler settings, seed 2034) was fitted to the pinned-parser reading of the preserved Wikipedia tables (2014–2023 pages from Stage38, the 6 October 2026 REST capture from Stage52), cutoff 2026-10-06, no publication lag. #68's panel was used as the independent reconciliation: its 122 2026-cycle waves equal the 122 parsed rows key for key, the Stage59 corrections (Talbot Mills 1–10 Nov and 1–10 May 2024 present, April 2026 once) are asserted present in the primary input, so no overlay was needed. The pinned config then drops two Labour-commissioned Talbot Mills rows and the lone Anacta poll, leaving 119.
+
+**Result.** See the changelog entry and `docs/stage62-live-poll-fit-findings.md`. Arms (all accepted, first attempts): A primary; A2 seed 2035; B1/B2 recent windows (18 and 8 current-cycle polls, earlier cycles kept); E drops the two `aggregator_only` panel waves (Talbot Mills May 2024, April 2026); T merges Anacta into Talbot Mills. Max rank R-hat 1.0060, min bulk/tail ESS 740/1083, 0 divergences, 0 depth contacts, min BFMI 0.81. No arm trips the frozen material flag (|Δ| ≥ 1.0 pp NAT or LAB, or 90% width ratio outside 0.80–1.25); the recent windows shift the NAT-LAB margin by +1.3 pp (B1) and +0.8 pp (B2), reported rather than dismissed.
+
+**Limits.** Wikipedia aggregator input (fieldwork and n verified primary only since 1 June 2026); Talbot Mills n is the pinned default 1000; three cycles of history; no spread or 32-day horizon calibration; the Labour election-week sd is dominated by the Student-t(4) industry-error prior; last-data support is the week of 27 September; x86 Linux draws do not bit-match the Stage38 Mac archives (environment check passed statistically). Not adopted: a recent window (no backtest of windowed fits exists and historical national reruns are not reopened).
+
+**Not done / not authorised.** No publication, export or website use, no probability or seat output, no use in the candidate, local-party, Māori or MMP layers, no Stage36 in-house refit, no model, prior or pollster-map change.
+
+**Checks (local, Linux x86-64, Python 3.12.3, `.venv-external`; CI pins Python 3.12.2).** `live_fit.prepare` (inputs, and `--check`), `live_fit.batch` (seven fits, 4,862 s), `live_fit.summarize`, `live_fit.check` ok; `scripts.tests.test_live_fit` pass. Full unittest discover, fold check and source validation results are in the PR body. Frontend not run: no TypeScript changed.
+
+**CI.** No workflow or frozen-registry change; the committed-artifact check runs in the always-run unit suite (numpy only; MCMC is never rerun in CI). A new test makes Stage39's reuse path fall back to full validation (about 4 minutes).
+
+**Exact next action.** Coordinator reviews and merges the PR. James decides whether arm A becomes the national input for the next integration step (it stays internal until the probability-release policy is decided) and whether the recent-window question warrants a separately authorised backtest. Reproduction: see the findings doc.
+
+---
+
+# Stage61 layer calibration audit complete — review-ready, 6 October 2026
+
+Branch `claude/project-thread-stage61-layer-audit-t0bfwf`, based on main `e31df9c`. Frozen design commit `fe221eb` (before any component ratio, PIT or coverage was computed). Single push at review readiness; the PR number and the final head SHA are in the PR body. Coordinator reviews and merges; the thread does not.
+
+**What was done.** The one question: besides candidate N/L balance, are the other uncertainty layers too conservative, too tight or about right, and which component is the next-best narrowing target? Each Stage45 component (balance a, mass b, within-remainder u; seat and shared) is scored per layer against the frozen earlier-only fold scales: seat-scale ratio R with a seat bootstrap (2,000 draws, seed 61), total-law PIT central 50/80/90 coverage, a shared-effect check against a chi-square reference band, and stored Stage47 interval coverage by option group for local, candidate and composed. Width consequences use the Stage47 nine-seat ablation arithmetic. Māori electorates are excluded by scope (321 party and 257 candidate general records scored; 35 Māori frame rows not scored).
+
+**Result.** Candidate balance R 0.79 [0.65, 0.92] (conservative, 3 of 3 estimated elections below 1, about 10% off the composed National 90% width at the point, 4% at the interval's upper end). Candidate mass 0.99 [0.82, 1.14] (calibrated). Candidate within 0.75 [0.67, 0.82] (conservative, zero effect on N/L width). Local balance 0.89 [0.79, 0.98] and mass 0.82 [0.73, 0.89] (conservative on the whole record; local mass is about right in 2020 and 2023, post hoc); local within 1.08 [1.02, 1.15] (too tight, marginal). Shared parts: only local shared mass is outside its reference band (too wide, but worth 0.3pp), the candidate shared parts are within band; four or five elections cannot calibrate a shared scale. Per-election ratios swing widely (for example candidate balance 0.39 in 2020), so seat-bootstrap intervals understate the level uncertainty. Share-level coverage is mildly over-wide in the centre at every layer; composed 2017 under-covers (National 80% 0.75), 2020 and 2023 over-cover. Rule output for the next-best target: candidate within (zero width effect), so in effect none; local seat is worth at most 2.3%.
+
+**Amendment A1 (disclosed).** The first within-remainder implementation used the Stage46 residual records, which do not centre the class effect within each seat; it failed the reproduction cross-check against the saved Stage45 descriptive moments (2011 local 0.846 against 0.770). The first-attempt R values (0.852 candidate, 1.123 local) were seen before the amendment, so the correction was not blind; the amended definition reproduces every saved within seat moment to machine precision. No rule, threshold or seed changed.
+
+**Not done / not authorised.** No adoption and no scale change (balance shrink is Stage60); no refit, no national MCMC, no new source, no CI registry change, no composed or ablation rerun, no national-layer scoring, no Māori model, no frozen Stage45 to Stage48 file touched.
+
+**Limits.** All elections were used in development, so nothing is out of sample. Seats share an election effect, so bootstrap intervals describe seat noise only. Composed coverage carries 512-scenario finite-bank noise. The Stage47 ablation covers nine seats, so the width mapping is bracketed, not measured. Cheapest ways to isolate more: extend the existing ablation harness to all 193 composed seats (a new simulation run, not done) and add elections for the shared parts (no existing frame supplies them).
+
+**Checks (local, Linux x86-64, Python 3.13.16, numpy 2.2.6, scipy 1.16.0; CI pins Python 3.12.2).** `python3 -m scripts.layer_audit.run --check` PASS (about 2 seconds); `scripts.tests.test_layer_audit` 18 PASS; `python3 -m unittest discover -s scripts/tests`: 1,178 tests, the only failure after installing the pinned shapely and matplotlib is `test_ci_selection.test_runtime_must_match_previously_validated_linux_environment` (the local Python 3.13 and package set differ from the CI-attested runtime; unrelated to this change; the four shapely and matplotlib errors passed on rerun once the pinned packages from `requirements-boundaries.txt` were installed). `python3 -m scripts.fold_doc_fragments --check` accepts this fragment. Not run: frontend checks (no TypeScript changed); hosted Verify is the gate.
+
+**Exact next action.** Coordinator reviews and merges the PR if the diagnostic and its recommendation are acceptable. Then Stage60 (stronger balance-scale test) can use the finding: R 0.79 sits at the planned 0.80 grid floor, so include the likelihood-preferred value and a 0.75 multiplier, and read the 2017 composed under-coverage as a constraint on any narrowing. Stage62 (live poll fit) is unaffected.
+
+---
+
+# Stage60 stronger candidate-balance scale test complete — review-ready, 6 October 2026
+
+Branch `claude/project-thread-stage60-balance-shrink-fcvhc8`, started from main `e31df9c` (Stage55 merged) and merged with main `3a136c9` (Stage54 and the poll fixes) before the single push. Frozen design commit `30beda3` (before any arm was simulated or scored). The PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
+
+**What was done.** The one question: does a stronger global shrink of the candidate-balance seat scale than Stage48's penalised 0.93 to 0.95 improve calibration and proper scores (roadmap plan item 2)? Arms on the Stage48 component harness, scored on all 257 general-electorate candidate records (64/64/65/64) with the 193 seats of 2017/2020/2023 deciding: control 1.00, fixed 0.95/0.90/0.85/0.80, `free` (Stage48 objective with the ridge removed, `a` fitted on earlier elections only, 1.0 in 2014), and Stage48's K as a reference. Rule (frozen): an arm qualifies if it passes Stage48's IMPROVES rule against the control (pooled N/L CRPS at least 0.01pp better, interval score and energy not worse, at least 2 of 3 elections better, resolution and doubling gates) and keeps pooled 50% and 80% coverage in every election including 2014 at least `min(nominal - 0.10, control - 0.05)`; the recommended arm is the least aggressive qualifier within noise (paired seat bootstrap, seed 60) of the best.
+
+**Result (frozen rule).** Qualifying arms: grid95, grid90, grid85 and free. Free is best (pooled N/L CRPS -0.0616pp, -1.80%; by election -0.0757, -0.0227, -0.0869; interval score -0.811; energy -0.076) and the others are not within noise of it (grid85 minus free 90% interval 0.0075 to 0.0121). Finding `recommend_free_for_james_signoff`. Grid80 improves the pooled score most (-0.0648pp) but breaks the 2014 80% coverage floor (0.688 against 0.700) and is blocked; the descriptive alternative (least aggressive within 0.01pp of the best) is grid85. Free multipliers 0.8336, 0.8540, 0.7818 (2017, 2020, 2023), reproducing Stage48's reported unpenalised constants to 1e-6; descriptive 2026 refit on all four elections 0.7901 (never scored). Pooled N/L widths 9.87/18.61/23.73 to 8.87/16.76/21.40pp; coverage 0.557/0.878/0.938 against 0.622/0.915/0.956 (50/80/90). By election the free arm leaves 2020 50% coverage at 0.438 and cannot help 2014 (no earlier data; the fixed grid there lowers 80% coverage 0.812 to 0.688 at 0.80). Composed National 90% width implication (arithmetic, nine Stage47 ablation seats, not a bank): 29.89pp to 28.02 (seat part only) or 27.37 (all balance variance), i.e. -6.3% to -8.4%; -7.5% to -10.1% at the 2026 refit multiplier.
+
+**Checks.** Control and the reference arm reproduce Stage48's sealed control and K seat by seat on all 257 seats with 0.0 CRPS, energy, width, interval-score and coverage difference; non-balance draws and N+L mass identical across arms (2.2e-16); every location preserves the frozen mean (6.9e-12pp against 0.05pp); pairwise CRPS formula agrees (3.6e-15pp); doubling gates pass for all arms; Powell and gradient checks pass; the free arm is bit-for-bit control and the reference equals control in 2014. Māori electorates are excluded by electorate type: every candidate record has `scope = general` (none Māori in the inventory).
+
+**Limits.** Three reused development elections, not untouched validation; the fixed grid was set after Stage48 reported the likelihood-preferred size, so only the free arm is chronologically blind; 2014 is not improved; composed precision gates remain unmet and the composed widths are arithmetic; the 56-day horizon differs from the roughly 32-day publication horizon; parameter and scale uncertainty are omitted; only the seat balance scale moves (shared scale, local-party layer and national uncertainty unchanged); no seat-win or calibrated-probability claim.
+
+**Not done / not authorised.** No adoption: `operationalAdoption` stays null and the corrected control remains the development default until James signs off. No new composed bank, national MCMC, acquisition, source or `data/sources.json` edit, no variance predictor or conditional scale, no change to Stage45/46/47/48 outputs, no CI registry edit.
+
+**Local checks (Linux x86-64, Python 3.13.16, numpy 2.2.6, scipy 1.16.0; CI pins Python 3.12.2).** `python3 -m scripts.balance_shrink.{inputs,fit,evaluation,decision,verification,report,manifest} --check` PASS (evaluation replay about 90 seconds with four workers); `scripts.tests.test_stage60_balance_shrink` 23 PASS (about 80 seconds: one whole election and two further seats are regenerated; the four-election replay is `evaluation --check`). Not run locally: hosted Verify on the exact head.
+
+**Exact next action.** James decides whether the earlier-trained penalty-free constant (2026 value from the all-election refit, about 0.79 on the seat balance scale) becomes the default for the automatic output; the stage does not flip it. If adopted, a small separately authorised change applies the multiplier to the 2026 candidate layer and records it; the live 2026 poll fit and the layer calibration audit (Stage61) proceed independently. The `evaluation --check` replay (about 90 seconds) is not wired into CI beyond the unit test; the coordinator may register it after the current batch. Reproduction: `python3 -m scripts.balance_shrink.inputs && ... .fit && ... .evaluation && ... .decision && ... .verification && ... .report && ... .manifest` (add `--check` to verify); no network, no cache.
+
+---
+
+# Stage56 manual-adjustment interface and replay tooling — review-ready, 6 October 2026
+
+Branch `claude/project-thread-stage56-manual-interface-f70azz`, based on main `9f4c95b`. Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
+
+**What was done.** The one question: through what interface does James enter seat-level judgements for the model + James output, and what tooling does the Stage57 replay need so labels cannot be contaminated? Built, offline, standard library plus numpy: (1) versioned, validated, append-only per-seat adjustment files (author, recordedAt, expiresAt, one-line reason, dated sources, exceptional flag and reason, optional mean shift on the N/L balance or a party share in points, extra sd, the unadjusted automatic shares and a reference to the automatic forecast file's hash, previous-entry digest and entry digest); (2) the layer that applies the active entries on top of an automatic seat forecast's draws and returns a second forecast, leaving the automatic one unmodified, with the shift exact to 1e-9 and `sd(z') = sqrt(sd(z)^2 + extra^2)` in the log(N/L) or logit coordinate (no field can reduce uncertainty); (3) the Stage57 labelling tooling: a six-fact checklist (candidate change, boundary change, scandal, tactical arrangement, new strong challenger, other), a one-line reason for every yes and every label, a blind labelling template for all 257 general seat-elections 2014-2023 (64, 64, 65, 64), label validation and a freeze record. Māori seats are refused by the schema and filtered from the template by electorate type.
+
+**Template pre-fill (repo evidence only).** `boundary_change`: no 182, yes 75 (equal to the 182 exact-geography cases of the layer inventory); `candidate_change`: yes 60, no 188, blank 9 (Epsom x4, Ōhāriu x2, Upper Harbour 2014, Takanini 2020, Auckland Central 2023); `scandal`: yes 6 from Stage51 tags; the other three facts blank for all 257 seats. The template builder reads only the crosswalk, election candidate lists and source-election winners (no vote counts) and the Stage51 ledger; it never opens a model, score, residual or scale file (tested).
+
+**Not done / not authorised.** No label entered or frozen, no scale estimated (the ordinary-seat sigma comes after the Stage57 labels), no 2026 adjustment exists, no exporter from the composed draws to the layer's input format, no propagation of seat adjustments into national totals or MMP, no change to Stage44-55 outputs, scales or widths, no frontend, no Māori model, no source, no `data/sources.json` or CI registry edit.
+
+**Limits.** The no-narrowing guarantee holds in the uncertainty coordinate; in share space a shift toward 0 or 100% can mechanically compress an interval (reported as `shareWidth90Ratio`). The layer needs draws. Candidate lists come from results files (no historical pre-election nomination lists in the repo). Stage51 evidence is tool-rendered. Defaults recorded for James to change: a mean shift requires the exceptional flag; shifts are in points of candidate share; `unknown` is not allowed at freeze; labels are a CSV.
+
+**Checks (local, Linux x86-64, Python 3.13.16, numpy 2.2.6, scipy 1.16.0; CI pins Python 3.12.2).** `python3 -m scripts.tests.test_manual_adjustment` 31 PASS; `python3 -m scripts.manual_adjustment.run build-template --check` PASS; `python3 -m scripts.fold_doc_fragments --check` accepted this fragment; full `unittest discover` result is in the PR body. Frontend not run: no TypeScript changed. No Python linter is configured in the repository. Hosted Verify on the exact head is not yet run.
+
+**Exact next action.** Coordinator reviews and merges. Then James fills `data/manual-replay/labels.csv` (`python3 -m scripts.manual_adjustment.run init-labels`, then `validate-labels`), freezes with `freeze-labels --labeller James --attest-no-residuals`, and only then Stage57 estimates the ordinary-seat scale through `require_frozen_labels()`. Later separately authorised: the exporter that fills the layer's input from the composed draws and the assembly of B into national and MMP results. Reproduction: `python3 -m scripts.manual_adjustment.run build-template` (add `--check` to verify); no network.
+
+---
+
+# Data: seat-name key audit and additive Stage10 supplement — review-ready, 6 October 2026
+
+Branch `claude/project-thread-macron-fix-t721cs`, started from main `3a136c9`. One question: where do exact `electorateName` joins drop macron-variant seats, and can that be fixed without touching preserved outputs? Requested by the coordinator after the Stage55 finding that 8 of 63 general seats fall out of Stage10's 2008-11 transition.
+
+**Finding.** Nine general and three Māori seats change spelling across elections (2008 Kaikoura, 2011 Kaikōura; Whangarei 2017, Whangārei 2020; Ōhariu three spellings). Exact-name joins: Stage10 inventory (`_indexed`, `same_chain`) misses 52 records, 2 primary eligible (pinned primary 44, folded 46: same-person incumbent continuations of King and Dunne, 2008-11); Stage8 chain key and pair filter miss 17 adjacent chain links (517 exact, 534 folded) and misflag 3 persistence pairs. Other joins are macron-insensitive, same-election only, or fail closed (listed in `docs/seat-name-key-audit.md`; the list is from reading the join lines, not every file in full). `scripts/readiness/geography.py` `source_electorate` compares the exact 2023 name and raises on a miss, relevant to Stage64.
+
+**Not fixed in place.** `inventory.json` and `inventory.py` are hash-pinned by 35 data files (29 other stages' contracts) and the Stage39 fingerprint, and the repository forbids editing those pins; a regenerated Stage10 inventory would fail those preservation checks and force Stage39 full validation (about 143 s construction). Stage45 to Stage48 and Stage54 do not consume Stage8 or Stage10 (import closure and consumed paths checked with `ci_frozen.closure`; no cache dependency), so no frozen pipeline needs a rebuild either way. The fix is additive: `stage10-keyed-additions.json` lists the 52 records the unchanged builder produces under a diacritic-insensitive seat identity (run via the Stage10 `build()` with the occurrence seat names folded; every one of the 1,433 pinned records is reproduced exactly; spellings restored from the source-year occurrence).
+
+**Materiality.** Stage10's -6.64pp stays undeployed and Stage55 kept neutral R, so no live component changes. Whether Stage8 and Stage10 diagnostics would move was not measured (the Stage10 analysis could not be re-run on folded records without rebuilding its own consistency checks).
+
+**Checks (local, Linux x86-64, Python 3.13.16, numpy 2.2.6, scipy 1.16.0 in a venv; CI pins Python 3.12.2).** `python3 -m scripts.audits.seat_name_keys --check` PASS (about 1 second); `scripts.tests.test_seat_name_keys` 8 PASS; `python3 -m scripts.models.replacement_candidate.run inventory --check` PASS (Stage10 unchanged). Full-suite, source-validation and fold results are in the PR body. Not run locally: hosted Verify.
+
+**Exact next action.** Coordinator reviews and merges. Optional, separately authorized and not recommended: re-pin Stage8 and Stage10 and their dependent preservation contracts with a corrected join. New cross-election seat joins, including Stage64's, should key by electorate or occurrence ID or a diacritic-insensitive name. Reproduction: `python3 -m scripts.audits.seat_name_keys` (add `--check` to verify); no network, no cache.
+
+---
+
+# CI durable frozen-pipeline attestations — review-ready, 6 October 2026
+
+Branch `claude/project-thread-ci-attestation-durable-0ia30j`, from main `3a136c9`. One question: why did unrelated and docs-only PRs replay Stage45/46/47, and how do attestations stop expiring?
+
+**Cause (confirmed against the code and the live Actions API).** `liveAttestation.maxRuns = 10` bounded discovery to the ten newest successful, reachable runs. Reuse-only runs are correctly not attestations, so after ten later successful runs Stage47's only genuine full run (PR #54, run 37412099846) fell out; replaying `live_candidates` against the API on `3a136c9` returned ten candidates, none of which executed Stage45/46/47, while Stage48 (run 37434895393) and Stage54 (run 37452017775) were the next to drop. The global seed (`d0fa5a66`) predates Stage47, so Stage47 went full and `cacheDependencies: [stage45, stage46]` forced Stage45 and Stage46 full as well (observed in PR run 37493704569: Stage45 3m31s construction and Stage46 construction running on a docs-only PR).
+
+**Fix.** Per-pipeline pins (Git-only, checked first) plus paginated per-pipeline discovery as a fallback; see `docs/ci-validation.md` *Durable attestations* and D100. Pins: Stage45/46/47 to run 37412099846 (head `22662219a1d0fbdc6090b1d74fd07cbf1fc7a390`), Stage48 to run 37434895393 (head `2a000a1121577f779c60cc71d9b0befefef0c977`), Stage54 to run 37452017775 (head `49f296a1cb2498243f2b0fd3d4390f2a2bb7dd82`), each written by `--record-pin` from the API job record and checked: every replaced command `success` with real replay timings. Pipelines not fully executed by a run are never pinned to it.
+
+**Checks (local).** `python3 -m unittest scripts.tests.test_ci_frozen`: 53 pass. Against the real registry and repository on this branch, with the CI runtime gate patched (the container is Python 3.13 without the pinned packages), all five pipelines select `integrity` from their pins with the API disabled, the recorded selections re-prove through `select_pipeline(candidates=...)`, and with pins removed discovery against the live API finds the same three runs in 12 API calls over 11 reachable runs. `scripts/tests/test_ci_selection.py` has two failures on main as well (missing scipy/numpy in the container), unchanged by this work. Not run locally: the full unittest suite and the frozen pipelines' own `verify()` integrity checks (container lacks scipy); hosted Verify is the gate.
+
+**Limits.** Squash and rebase merges still make a PR head unreachable (merge commits are the repository convention). A pin is a fallback, not a requirement: a legitimately modified pipeline replays once on its own PR and is then found by discovery.
+
+**Exact next action.** Coordinator merges this CI PR (merge commit) once its Verify run is green, before the next batch of substantive merges; open PRs that branch from older main then pick up the pins by merging main. No pin refresh is needed unless a frozen pipeline changes; after such a PR, optionally run `python3 -m scripts.validate.ci_frozen --record-pin RUN_ID` in a maintenance PR.
+
+---
+
 # Docs: fold of the Stage54, Stage55, Stage58 and Stage59 handoff notes — review-ready, 6 October 2026
 
 Branch `claude/project-thread-docs-fold-macron-t721cs`, started from main `3a136c9` (Stage59 PR #68 merged; Stage54 #66 `9f4c95b`, Stage55 #67 `e31df9c`). Folded `handoff.d/2026-10-06-stage54.md`, `-stage55.md` and `-stage59.md` with `python3 -m scripts.fold_doc_fragments` into CHANGELOG, PROJECT_STATE, DECISIONS (D088, D090, D091), METHODOLOGY, DATA_SOURCES and the roadmap table, and added the skipped-stage record for Stage58 (D089, below). Docs only: no model or statistical code, data, registry, test or CI change.

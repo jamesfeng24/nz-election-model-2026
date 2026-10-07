@@ -1,0 +1,160 @@
+{
+  "candidateBalanceByClass": {
+    "appliesTo": "candidate N/L balance seat scale only; shared scale, means and other coordinates unchanged",
+    "decision": "D107",
+    "exceptional": {
+      "multiplier": 1.0,
+      "seat": 0.30103090369242885,
+      "shared": 0.18082182076537473,
+      "total": 0.3511639728713435
+    },
+    "ordinary": {
+      "multiplier": 0.6,
+      "seat": 0.1806185422154573,
+      "shared": 0.18082182076537473,
+      "total": 0.2555769720787502
+    }
+  },
+  "equalsStage45Descriptive": true,
+  "evidence": "development-informed and flag-selection-sensitive (D101, D107); not a validated calibration",
+  "layers": {
+    "candidate": {
+      "contributions": {
+        "balance": {
+          "seat": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.038119604977880375,
+            "priorSD": 0.35,
+            "priorVarianceContribution": 0.05249999999999999
+          },
+          "shared": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.023053673722048168,
+            "priorSD": 0.15,
+            "priorVarianceContribution": 0.009642857142857144
+          }
+        },
+        "mass": {
+          "seat": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.08011356389807574,
+            "priorSD": 0.4,
+            "priorVarianceContribution": 0.06857142857142859
+          },
+          "shared": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.02042027918280139,
+            "priorSD": 0.15,
+            "priorVarianceContribution": 0.009642857142857144
+          }
+        },
+        "within": {
+          "seat": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.12143841208221,
+            "priorSD": 0.7,
+            "priorVarianceContribution": 0.20999999999999996
+          },
+          "shared": {
+            "environments": 4,
+            "historicalVarianceContribution": 0.19037453701435325,
+            "priorSD": 0.2,
+            "priorVarianceContribution": 0.017142857142857147
+          }
+        }
+      },
+      "scales": {
+        "balance": {
+          "seat": 0.30103090369242885,
+          "shared": 0.18082182076537473
+        },
+        "mass": {
+          "seat": 0.3855969300571574,
+          "shared": 0.17338724383777065
+        },
+        "within": {
+          "seat": 0.5757068803498965,
+          "shared": 0.4555407711250557
+        }
+      },
+      "status": "strongly_pooled_earlier_elections",
+      "trainingYears": [
+        2014,
+        2017,
+        2020,
+        2023
+      ]
+    },
+    "local_party": {
+      "contributions": {
+        "balance": {
+          "seat": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.013253258996807295,
+            "priorSD": 0.15,
+            "priorVarianceContribution": 0.0084375
+          },
+          "shared": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.0013603440080685164,
+            "priorSD": 0.08,
+            "priorVarianceContribution": 0.0024000000000000002
+          }
+        },
+        "mass": {
+          "seat": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.00996688964089398,
+            "priorSD": 0.2,
+            "priorVarianceContribution": 0.015000000000000003
+          },
+          "shared": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.00040818919403011727,
+            "priorSD": 0.1,
+            "priorVarianceContribution": 0.0037500000000000007
+          }
+        },
+        "within": {
+          "seat": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.17441352563045456,
+            "priorSD": 0.5,
+            "priorVarianceContribution": 0.09375
+          },
+          "shared": {
+            "environments": 5,
+            "historicalVarianceContribution": 0.08009051852743103,
+            "priorSD": 0.15,
+            "priorVarianceContribution": 0.0084375
+          }
+        }
+      },
+      "scales": {
+        "balance": {
+          "seat": 0.14727782927788993,
+          "shared": 0.06132164387937196
+        },
+        "mass": {
+          "seat": 0.1580091441686018,
+          "shared": 0.06448402278107437
+        },
+        "within": {
+          "seat": 0.5178450787933149,
+          "shared": 0.29753658351105505
+        }
+      },
+      "status": "strongly_pooled_earlier_elections",
+      "trainingYears": [
+        2011,
+        2014,
+        2017,
+        2020,
+        2023
+      ]
+    }
+  },
+  "rule": "Stage45 fit(rows, layer, 2026), unchanged; equals the Stage45 all-election descriptive fit",
+  "stage": 72,
+  "targetYear": 2026
+}

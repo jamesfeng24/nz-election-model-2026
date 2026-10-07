@@ -1,0 +1,29 @@
+{
+  "candidates2026": {
+    "candidates": 206,
+    "meaning": "exp(theta_live.z_live - theta_previous.z_previous): change in each candidate's feature weight before the kappa floor and renormalisation",
+    "relativeWeightFactor": {
+      "max": 1.0126301723244837,
+      "median": 1.0000562948686171,
+      "min": 0.966627425593616,
+      "p05": 0.9936879659249187,
+      "p95": 1.0068433355348163
+    }
+  },
+  "contests2023": {
+    "candidates": 459,
+    "contests": 64,
+    "maxAbsShareChangePP": 1.940604453076894,
+    "meanAbsShareChangePP": 0.16538517691083146,
+    "nationalLabourMarginChangePP": {
+      "contests": 64,
+      "max": 1.1590428430081623,
+      "mean": 0.4647204551281399,
+      "p95": 0.9499705484309666
+    },
+    "p95AbsShareChangePP": 0.546778164405616,
+    "predictedWinnerChanges": 0
+  },
+  "note": "movement only, not a score: 2023 is in-sample for the live fit",
+  "stage": 75
+}
