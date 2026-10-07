@@ -49,8 +49,8 @@ function stepIntervals(values: number[]): IntervalSet {
   const s = [...values].sort((a, b) => a - b), median = stepQuantile(s, 0.5);
   return INTERVAL_LEVELS.map(level => ({ lower: stepQuantile(s, (1 - level) / 2), median, upper: stepQuantile(s, 1 - (1 - level) / 2), level, method: SEAT_METHOD }));
 }
-const probability = (flags: number[], layout: ChainOrder) => {
-  const r = batchMeansMcse(flags, layout);
+const probability = (flags: number[], layout: ChainOrder, unit = 1) => {
+  const r = batchMeansMcse(flags, layout, unit);
   return { p: r.mean, mcse: r.mcse, ess: r.ess };
 };
 
@@ -74,10 +74,10 @@ export function runSeatLayer(bank: DrawBank, config: SeatLayerConfig, electionId
   const outcomes: SeatDrawOutcome[] = [];
   for (let row = 0; row < bank.draws; row++) {
     const winners = (scope: 'general' | 'maori') => seats.filter(s => s.scope === scope)
-      .map(s => ({ electorateId: s.electorateId, partyId: s.winnerParty[row], candidateId: s.winnerCandidate[row] }));
+      .map(s => ({ electorateId: s.electorateId, partyId: s.candidateParty[s.winners[row]], candidateId: s.candidates[s.winners[row]] }));
     const outcome = allocateDraw(config, {
       electionId,
-      partyVoteShares: Object.fromEntries(bank.partyVote.groups.map((g, i) => [g, bank.partyVote.shares[row][i]])),
+      partyVoteShares: Object.fromEntries(bank.partyVote.groups.map((g, i) => [g, bank.partyVote.shares[Math.floor(row / bank.layerReplicates)][i]])),
       generalWinners: winners('general'), maoriWinners: winners('maori'),
     });
     accumulator.add(outcome);
@@ -89,7 +89,8 @@ export function runSeatLayer(bank: DrawBank, config: SeatLayerConfig, electionId
 function seatLayerSummary(bank: DrawBank, config: SeatLayerConfig, layout: ChainOrder, electionId: string) {
   const { outcomes, accumulator } = runSeatLayer(bank, config, electionId);
   const summary = accumulator.summarise();
-  const flag = (f: (o: SeatDrawOutcome) => boolean) => probability(outcomes.map(o => (f(o) ? 1 : 0)), layout);
+  const unit = bank.layerReplicates;
+  const flag = (f: (o: SeatDrawOutcome) => boolean) => probability(outcomes.map(o => (f(o) ? 1 : 0)), layout, unit);
   return {
     example: outcomes[0].allocation as MmpAllocation,
     summary: {
@@ -107,8 +108,8 @@ function seatLayerSummary(bank: DrawBank, config: SeatLayerConfig, layout: Chain
         const seats = outcomes.map(o => b.partyIds.reduce((sum, id) => sum + o.parties[id].totalSeats, 0));
         return {
           id: b.id, label: b.label, partyIds: [...b.partyIds], meanSeats: summary.blocs[i].meanSeats, seats: stepIntervals(seats),
-          probMajority: probability(outcomes.map((o, k) => (2 * seats[k] > o.parliamentSize ? 1 : 0)), layout),
-          probExactHalf: probability(outcomes.map((o, k) => (2 * seats[k] === o.parliamentSize ? 1 : 0)), layout),
+          probMajority: probability(outcomes.map((o, k) => (2 * seats[k] > o.parliamentSize ? 1 : 0)), layout, unit),
+          probExactHalf: probability(outcomes.map((o, k) => (2 * seats[k] === o.parliamentSize ? 1 : 0)), layout, unit),
         };
       }),
       parliament: {
@@ -128,7 +129,8 @@ function shareIntervals(seat: SimulatedSeat, candidateId: string): { mean: numbe
 
 export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapshotOptions): Promise<ForecastSnapshot> {
   const bank = DrawBankSchema.parse(raw);
-  const layout = chainOrder(bank.drawIds);
+  const layout = chainOrder(bank.drawIds, bank.layerReplicates);
+  const unit = bank.layerReplicates;
   const simulated = bank.seats.filter((s): s is SimulatedSeat => s.status === 'simulated');
   const unavailable = bank.seats.filter(s => s.status === 'unavailable');
   const synthetic = bank.provenance === 'synthetic-fixture';
@@ -159,7 +161,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
   };
   const electoratePredictions = simulated.map(seat => {
     const counts = new Map(seat.candidates.map(c => [c, 0]));
-    seat.winnerCandidate.forEach(c => counts.set(c, counts.get(c)! + 1));
+    seat.winners.forEach(w => counts.set(seat.candidates[w], counts.get(seat.candidates[w])! + 1));
     return {
       schemaVersion: 1 as const, id: `${options.snapshotId}:${seat.electorateId}`, electionId: options.electionId, modelVersion: options.modelVersion,
       sourceIds: [seat.source ?? 'nowcast-draw-bank'], artifactIds: [config.inputs[0].artifactId], asOf, limitations: options.limitations,
@@ -171,7 +173,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     electorateId: seat.electorateId, uncertaintyClass: seat.class,
     candidates: seat.candidates.map(candidateId => {
       const { mean, share } = shareIntervals(seat, candidateId);
-      return { candidateId, meanShare: mean, share, winProbability: probability(seat.winnerCandidate.map(w => (w === candidateId ? 1 : 0)), layout) };
+      return { candidateId, meanShare: mean, share, winProbability: probability(seat.winners.map(w => (seat.candidates[w] === candidateId ? 1 : 0)), layout, unit) };
     }),
   }));
 

@@ -37,7 +37,7 @@ class Config(unittest.TestCase):
 
     def test_live_config_is_valid_with_explicit_pending_fields(self):
         pending = V.check_config(self.config)
-        self.assertIn('simulation.draws', pending)
+        self.assertIn('release.policyApprovedBy', pending)
         self.assertIn('roster.snapshotId', pending)
         with self.assertRaises(V.ConfigError):
             V.check_config(self.config, require_complete=True)
@@ -50,7 +50,7 @@ class Config(unittest.TestCase):
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.60, 'exceptional': 1.5}),
                      lambda c: c.update(intervalLevels=[0.9]),
                      lambda c: c['national'].update(modelStateAsOf='2026-10-07'),
-                     lambda c: c['simulation'].update(draws=1000)):
+                     lambda c: c['roster'].update(snapshotId='set-while-pending')):
             config = copy.deepcopy(self.config); edit(config)
             with self.assertRaises(V.ConfigError):
                 V.check_config(config)

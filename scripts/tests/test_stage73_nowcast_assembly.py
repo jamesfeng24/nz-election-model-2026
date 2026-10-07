@@ -39,7 +39,7 @@ def synthetic_maori():
         return {'status': 'simulated', 'class': 'maori-layer', 'source': 'synthetic-test', 'candidates': ids,
                 'candidateNames': ['Synthetic A', 'Synthetic B'], 'candidateParty': parties,
                 'candidateShares': summaries.share_summaries(ids, np.array([[0.6, 0.4] if w == 0 else [0.4, 0.6] for w in win])),
-                'winnerParty': [parties[w] for w in win], 'winnerCandidate': [ids[w] for w in win]}
+                'winners': list(win)}
     return {seat: record(seat) for seat in MAORI}
 
 
@@ -124,7 +124,7 @@ class Bank(unittest.TestCase):
         self.assertEqual([s['electorateId'] for s in bank['seats']], GENERAL + MAORI)
         for seat in bank['seats']:
             self.assertEqual(seat['status'], 'simulated')
-            self.assertEqual(len(seat['winnerParty']), COUNT)
+            self.assertEqual(len(seat['winners']), COUNT)
         classes = synthetic_classification()
         for seat in bank['seats'][:64]:
             self.assertEqual(seat['multiplier'], {'ordinary': 0.60, 'exceptional': 1.00}[classes[seat['electorateId']]])

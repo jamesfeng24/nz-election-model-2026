@@ -39,11 +39,11 @@ def simulate(config, count):
             candidates = [f'{ids[seat]}-poll-candidate-{fold(c["name"])}' for c in s['poll']['candidates']]
             require(len(set(candidates)) == len(candidates), f'{seat}: duplicate poll candidate key')
             out[ids[seat]] = {'status': 'simulated', 'class': 'maori-layer', 'source': f"Stage66 default; poll {s['poll']['id']}",
+                              'pollFieldworkEnd': s['poll']['fieldworkEnd'],
                               'candidates': candidates, 'candidateNames': [c['name'] for c in s['poll']['candidates']],
                               'candidateParty': [PARTIES[code] for code in codes],
                               'candidateShares': share_summaries(candidates, s['share']),
-                              'winnerParty': [PARTIES[codes[int(i)]] for i in s['winner']],
-                              'winnerCandidate': [candidates[int(i)] for i in s['winner']]}
+                              'winners': [int(i) for i in s['winner']]}
         else:
             reason = 'unpolled; maori.unpolledSeats is pending James' if config['maori']['unpolledSeats'] is None \
                 else 'unpolled; no registered fallback implementation'

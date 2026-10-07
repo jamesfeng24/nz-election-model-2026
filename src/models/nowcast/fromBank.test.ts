@@ -17,13 +17,13 @@ function smallBank(n = 64): DrawBank {
       electorateId: id, scope, status: 'simulated' as const, class: scope === 'general' ? 'ordinary' as const : 'maori-layer' as const,
       candidates, candidateParty: ['synthetic-party-a', 'synthetic-party-b'],
       candidateShares: candidates.map(c => ({ candidateId: c, mean: 0.5, intervals: [0.5, 0.8, 0.9].map(level => ({ level, lower: 0.5 - level / 4, median: 0.5, upper: 0.5 + level / 4 })) })),
-      winnerParty: win.map(w => (w === 0 ? 'synthetic-party-a' : 'synthetic-party-b')), winnerCandidate: win.map(w => candidates[w]),
+      winners: win,
     };
   };
   const seats = [seat('synthetic-electorate-1', 'general', 0), seat('synthetic-electorate-2', 'general', 1), seat('synthetic-electorate-3', 'maori', 2)];
   return DrawBankSchema.parse({
-    schemaVersion: 2, stage: 73, electionYear: 2026, provenance: 'synthetic-fixture', configVersion: 'synthetic-config', estimand: 'nowcast',
-    modelStateAsOf: '2026-09-27', dataCutoff: '2026-10-06', nationalStateKey: 'lastDataSupport', inputs: {}, draws: n,
+    schemaVersion: 3, stage: 73, electionYear: 2026, provenance: 'synthetic-fixture', configVersion: 'synthetic-config', estimand: 'nowcast',
+    modelStateAsOf: '2026-09-27', dataCutoff: '2026-10-06', nationalStateKey: 'lastDataSupport', inputs: {}, draws: n, nationalDraws: n, layerReplicates: 1,
     drawIds: Array.from({ length: n }, (_, d) => `synthetic-chain${1 + (d % 4)}-draw${String(d).padStart(4, '0')}`),
     partyVote: { groups, otherBucket: 'other', shares: Array.from({ length: n }, (_, d) => [0.45 + 0.002 * (d % 10), 0.45 - 0.002 * (d % 10), 0.1]) },
     seats,
@@ -53,10 +53,10 @@ describe('draw bank contract', () => {
   });
   it('rejects missing winners, duplicate draw ids and class/scope mismatches', () => {
     const reject = (edit: (b: any) => void) => { const b = clone(smallBank()) as any; edit(b); expect(DrawBankSchema.safeParse(b).success).toBe(false); };
-    reject(b => { b.seats[0].winnerParty.pop(); });
+    reject(b => { b.seats[0].winners.pop(); });
     reject(b => { b.drawIds[1] = b.drawIds[0]; });
     reject(b => { b.seats[2].class = 'ordinary'; });
-    reject(b => { b.seats[0].winnerCandidate[0] = 'nobody'; });
+    reject(b => { b.seats[0].winners[0] = 7; });
     reject(b => { b.partyVote.shares[0][0] += 0.1; });
     reject(b => { b.seats[1] = { electorateId: b.seats[1].electorateId, scope: 'general', status: 'unavailable' }; });
   });
@@ -77,6 +77,13 @@ describe('batch-means Monte Carlo error', () => {
     expect(s.mcse).toBeGreaterThan(2 * Math.sqrt(0.25 / 400));
     expect(s.ess).toBeLessThan(400);
     expect(batchMeansMcse(ids.map(() => 1), chainOrder(ids))).toMatchObject({ mean: 1, mcse: 0 });
+  });
+  it('keeps each national draw\'s layer replicates together and in one batch', () => {
+    const national = ['x-chain1-draw0001', 'x-chain1-draw0000', 'x-chain2-draw0000'];
+    const layout = chainOrder(national, 2);
+    expect(layout.chains).toEqual([[2, 3, 0, 1], [4, 5]]);
+    const values = Array.from({ length: 6 }, (_, r) => Math.floor(r / 2) % 2);
+    expect(batchMeansMcse(values, layout, 2).batchSize % 2).toBe(0);
   });
   it('orders rows by chain and draw, whatever the bank order', () => {
     const shuffled = [...ids].reverse();

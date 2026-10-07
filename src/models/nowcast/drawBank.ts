@@ -19,17 +19,18 @@ const Simulated = z.object({
   class: z.enum(['ordinary', 'exceptional', 'maori-layer']),
   multiplier: z.number().positive().optional(),
   source: id.optional(),
+  pollFieldworkEnd: z.iso.date().optional(),
   candidates: z.array(id).min(2),
   candidateNames: z.array(id).optional(),
   candidateParty: z.array(id.nullable()),
   candidateShares: z.array(ShareSummarySchema),
-  winnerParty: z.array(id.nullable()),
-  winnerCandidate: z.array(id),
+  /** Per row, the index of the winning candidate in `candidates`. */
+  winners: z.array(z.number().int().nonnegative()),
 }).strict();
 const Unavailable = z.object({ electorateId: id, scope: z.enum(['general', 'maori']), status: z.literal('unavailable'), reason: id }).strict();
 
 export const DrawBankSchema = z.object({
-  schemaVersion: z.literal(2),
+  schemaVersion: z.literal(3),
   stage: z.number().int(),
   electionYear: z.number().int(),
   provenance: z.enum(['live', 'synthetic-fixture']),
@@ -39,7 +40,11 @@ export const DrawBankSchema = z.object({
   dataCutoff: z.iso.date(),
   nationalStateKey: z.literal('lastDataSupport'),
   inputs: z.record(z.string(), z.string()),
+  /** Rows: national draws times layer replicates; row r uses national draw floor(r / layerReplicates). */
   draws: z.number().int().positive(),
+  nationalDraws: z.number().int().positive(),
+  layerReplicates: z.number().int().positive(),
+  /** One id per national draw. */
   drawIds: z.array(id),
   partyVote: z.object({ groups: z.array(id).min(2), otherBucket: id, shares: z.array(z.array(z.number().finite().nonnegative())) }).strict(),
   seats: z.array(z.discriminatedUnion('status', [Simulated, Unavailable])),
@@ -53,8 +58,10 @@ export const DrawBankSchema = z.object({
 }).strict().superRefine((bank, ctx) => {
   const bad = (message: string, path: (string | number)[] = []) => ctx.addIssue({ code: 'custom', message, path });
   const n = bank.draws;
-  if (bank.drawIds.length !== n || new Set(bank.drawIds).size !== n) bad('Every row needs one distinct national draw id', ['drawIds']);
-  if (bank.partyVote.shares.length !== n) bad('Every row needs one party vote', ['partyVote', 'shares']);
+  const m = bank.nationalDraws;
+  if (n !== m * bank.layerReplicates) bad('Rows must be national draws times layer replicates', ['draws']);
+  if (bank.drawIds.length !== m || new Set(bank.drawIds).size !== m) bad('Every national draw needs one distinct id', ['drawIds']);
+  if (bank.partyVote.shares.length !== m) bad('Every national draw needs one party vote', ['partyVote', 'shares']);
   if (!bank.partyVote.groups.includes(bank.partyVote.otherBucket)) bad('The other bucket must be a national group', ['partyVote']);
   bank.partyVote.shares.forEach((row, i) => {
     if (row.length !== bank.partyVote.groups.length || Math.abs(row.reduce((a, b) => a + b, 0) - 1) > 1e-9)
@@ -64,10 +71,9 @@ export const DrawBankSchema = z.object({
   if (new Set(ids).size !== ids.length) bad('Duplicate electorate', ['seats']);
   bank.seats.forEach((s, i) => {
     if (s.status !== 'simulated') return;
-    if (s.winnerParty.length !== n || s.winnerCandidate.length !== n) bad('Every row needs one winner', ['seats', i]);
+    if (s.winners.length !== n) bad('Every row needs one winner', ['seats', i]);
     if (s.candidateParty.length !== s.candidates.length || s.candidateShares.length !== s.candidates.length) bad('Candidate arrays disagree', ['seats', i]);
-    const known = new Set(s.candidates);
-    if (s.winnerCandidate.some(c => !known.has(c))) bad('Winner is not a candidate of the seat', ['seats', i]);
+    if (s.winners.some(w => w >= s.candidates.length)) bad('Winner is not a candidate of the seat', ['seats', i]);
     if ((s.scope === 'general') !== (s.class !== 'maori-layer')) bad('Class does not match scope', ['seats', i]);
   });
 });

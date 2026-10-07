@@ -11,7 +11,7 @@ from . import general, maori, national, streams
 from .summaries import share_summaries
 from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file_sha256, AssemblyError
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 
 def live_slates(config, features=None, centred=None):
@@ -42,14 +42,20 @@ def live_classification(config):
         raise AssemblyError(f'classification invalid: {error}')
 
 
-def assemble(config, count, slates=None, classification=None, maori_records=None, workers=1):
-    """Return the draw bank. Any injected slates, classification or Maori records mark it a synthetic fixture."""
+def assemble(config, count, slates=None, classification=None, maori_records=None, workers=1, replicates=1):
+    """Return the draw bank. Any injected slates, classification or Maori records mark it a synthetic fixture.
+
+    `count` national draws, each repeated `replicates` times with independent layer noise (Stage63 layer
+    replication): row r is national draw r // replicates. Local-party conditional locations depend on the national
+    draw only, so the frozen solver's exact-row reuse computes them once per national draw."""
+    require(isinstance(replicates, int) and replicates >= 1 and not replicates & (replicates - 1), 'replicates must be a power of two')
     synthetic = any(x is not None for x in (slates, classification, maori_records))
     check_config(config)
     draws, draw_ids, groups = national.load(config, count)
     keys, national2023, base = general.baseline(config)
     continuing = general.relationships(config)
-    fine = general.fine_national(draws, groups, keys, national2023, continuing)
+    total = count * replicates
+    fine = general.fine_national(np.repeat(draws, replicates, axis=0), groups, keys, national2023, continuing)
     parameters, fit_id = general.fold_parameters(config)
     scale_file = read(config['uncertainty']['scales'])
     party_scales = scale_file['layers']['local_party']['scales']
@@ -78,12 +84,12 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
     state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
              'candidateScales': candidate_scales, 'multipliers': multipliers, 'classification': classification}
     local_means = {}
-    with streams.substituted(rows, count, config['simulation']['seedNamespace']):
+    with streams.substituted(rows, total, config['simulation']['seedNamespace']):
         for seat, (local_mean, record) in zip(general_ids, run_seats(state, general_ids, workers)):
             local_means[seat] = local_mean
             if record is not None:
                 records[seat] = record
-    records.update(maori.simulate(config, count) if maori_records is None else maori_records)
+    records.update(maori.simulate(config, total) if maori_records is None else maori_records)
 
     seats = [{'electorateId': seat, 'scope': 'general' if seat in frame['general'] else 'maori', **records[seat]}
              for seat in general_ids + sorted(frame['maori'])]
@@ -95,7 +101,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
             'inputs': {'nationalSource': config['national']['source'], 'nationalSha256': file_sha256(config['national']['source']),
                        'baseline': config['baseline']['source'], 'scales': config['uncertainty']['scales'],
                        'candidateFitId': fit_id},
-            'draws': count, 'drawIds': draw_ids,
+            'draws': total, 'nationalDraws': count, 'layerReplicates': replicates, 'drawIds': draw_ids,
             'partyVote': {'groups': groups, 'otherBucket': OTHER, 'shares': draws.tolist()},
             'seats': seats,
             'directory': directory(config, groups, frame, slates if classification is not None else {}, records),
@@ -119,8 +125,7 @@ def seat_result(seat):
     return local.mean(axis=0), {'status': 'simulated', 'class': kind, 'multiplier': s['multipliers'][kind],
                                 'candidates': candidate['ids'], 'candidateParty': candidate['partyOf'],
                                 'candidateShares': share_summaries(candidate['ids'], q),
-                                'winnerParty': [candidate['partyOf'][int(i)] for i in winner],
-                                'winnerCandidate': [candidate['ids'][int(i)] for i in winner]}
+                                'winners': winner.astype(int).tolist()}
 
 
 
@@ -197,13 +202,16 @@ def gate(bank, config):
         check('configComplete', False, str(error))
     check('provenanceLive', bank['provenance'] == 'live', bank['provenance'])
     check('nationalStateKey', bank['nationalStateKey'] == 'lastDataSupport' and bank['estimand'] == 'nowcast')
-    check('oneDrawIdPerRow', len(bank['drawIds']) == count == len(set(bank['drawIds'])) == len(bank['partyVote']['shares']))
+    national_count = bank['nationalDraws']
+    check('oneDrawIdPerRow', len(bank['drawIds']) == national_count == len(set(bank['drawIds'])) == len(bank['partyVote']['shares'])
+          and count == national_count * bank['layerReplicates'])
     shares = np.asarray(bank['partyVote']['shares'])
     check('partyVoteSimplex', np.isfinite(shares).all() and (shares >= 0).all() and np.allclose(shares.sum(axis=1), 1, atol=1e-9))
     ids = [s['electorateId'] for s in bank['seats']]
     check('universe71', ids == expected and len(ids) == 71, f'{len(ids)} seats')
     malformed = [s['electorateId'] for s in bank['seats']
-                 if not (s['status'] == 'simulated' and len(s['winnerParty']) == count)
+                 if not (s['status'] == 'simulated' and len(s['winners']) == count
+                         and all(0 <= w < len(s['candidates']) for w in s['winners']))
                  and not (s['status'] == 'unavailable' and s.get('reason'))]
     check('everySeatSimulatedOrExplicitlyUnavailable', not malformed, ', '.join(malformed))
     unavailable = [s['electorateId'] for s in bank['seats'] if s['status'] == 'unavailable']
@@ -212,7 +220,28 @@ def gate(bank, config):
     wrong = [s['electorateId'] for s in bank['seats'] if s['scope'] == 'general' and s['status'] == 'simulated'
              and s['multiplier'] != multipliers[s['class']]]
     check('classificationMultipliers', not wrong, ', '.join(wrong))
+    tolerance = config['release']['reconciliationTolerancePP']
+    gap = bank['diagnostics']['reconciliation']['maxAbsGapPP']
+    check('nationalReconciliation', gap <= tolerance, f'max gap {gap:.3f}pp, tolerance {tolerance}pp')
     return all(c['passed'] for c in checks), checks
+
+
+def staleness(bank, config, as_of):
+    """Label components older than the configured windows at the publication date. Stale is labelled, never hidden
+    and never a reason to fill or drop a value; the labels go into the snapshot's limitations."""
+    import datetime
+    day = datetime.date.fromisoformat(as_of)
+    windows = config['release']['staleDays']
+    age = lambda value: (day - datetime.date.fromisoformat(value)).days
+    labels = []
+    national = age(bank['modelStateAsOf'])
+    if national > windows['nationalState']:
+        labels.append(f"National latent state is {national} days old (week of {bank['modelStateAsOf']}); window {windows['nationalState']} days.")
+    for seat in bank['seats']:
+        end = seat.get('pollFieldworkEnd')
+        if end and age(end) > windows['maoriPoll']:
+            labels.append(f"{seat['electorateId']}: electorate poll fieldwork ended {end} ({age(end)} days); window {windows['maoriPoll']} days.")
+    return labels
 
 
 def bank_digest(bank):

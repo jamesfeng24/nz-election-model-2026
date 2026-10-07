@@ -12,26 +12,29 @@ export interface McseResult { mean: number; mcse: number; ess: number; batches: 
 
 export interface ChainOrder { order: number[]; chains: number[][] }
 
-/** Row indices grouped by chain, each chain in draw order. */
-export function chainOrder(drawIds: string[]): ChainOrder {
+/**
+ * Row indices grouped by chain, each chain in draw order. With layer replication, row r belongs to national draw
+ * floor(r / replicates); a draw's replicates stay together, so batches never split one national draw.
+ */
+export function chainOrder(drawIds: string[], replicates = 1): ChainOrder {
   const byChain = new Map<string, { row: number; index: number }[]>();
-  drawIds.forEach((drawId, row) => {
+  drawIds.forEach((drawId, national) => {
     const { chain, index } = chainPosition(drawId);
     if (!byChain.has(chain)) byChain.set(chain, []);
-    byChain.get(chain)!.push({ row, index });
+    for (let r = 0; r < replicates; r++) byChain.get(chain)!.push({ row: national * replicates + r, index: index * replicates + r });
   });
   const chains = [...byChain.keys()].sort().map(k => byChain.get(k)!.sort((a, b) => a.index - b.index).map(x => x.row));
   return { order: chains.flat(), chains };
 }
 
-export function batchMeansMcse(values: ArrayLike<number>, layout: ChainOrder): McseResult {
+export function batchMeansMcse(values: ArrayLike<number>, layout: ChainOrder, unit = 1): McseResult {
   const n = values.length;
   if (n === 0) throw new RangeError('No values');
   const mean = Array.from(values).reduce((a, b) => a + b, 0) / n;
   const variance = Array.from(values).reduce((s, v) => s + (v - mean) ** 2, 0) / Math.max(1, n - 1);
   // About sqrt(n) batches in total, spread over chains; batch size is common so the batch means are comparable.
   const target = Math.max(2, Math.floor(Math.sqrt(n)));
-  const m = Math.max(1, Math.floor(n / target));
+  const m = Math.max(unit, Math.floor(n / target / unit) * unit);
   const means: number[] = [];
   for (const rows of layout.chains) {
     for (let start = 0; start + m <= rows.length; start += m) {

@@ -32,7 +32,7 @@ def build():
         return {'status': 'simulated', 'class': 'maori-layer', 'source': 'synthetic-fixture', 'candidates': ids,
                 'candidateNames': ['Synthetic A', 'Synthetic B'], 'candidateParty': parties,
                 'candidateShares': summaries.share_summaries(ids, shares),
-                'winnerParty': [parties[0] if w else parties[1] for w in win], 'winnerCandidate': [ids[0] if w else ids[1] for w in win]}
+                'winners': [0 if w else 1 for w in win]}
     bank = A.assemble(read(CONFIG), COUNT, slates=slates, classification=classes,
                       maori_records={seat: record(k, seat) for k, seat in enumerate(maori)}, workers=2)
     bank['label'] = 'SYNTHETIC FIXTURE: invented slates, classification and Maori winners on live national draws; not a nowcast'
