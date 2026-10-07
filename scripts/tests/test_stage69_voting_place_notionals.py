@@ -119,3 +119,107 @@ class MeshblockFrame(unittest.TestCase):
         self.assertEqual(len({r['source'] for r in rows}), 65)
         self.assertEqual(len({r['target'] for r in rows}), 64)
         self.assertTrue(all(r['population'] >= 0 for r in rows))
+
+
+def without_draws(value):
+    if isinstance(value, dict):
+        return {k: without_draws(v) for k, v in value.items() if k != 'draws'}
+    if isinstance(value, list):
+        return [without_draws(v) for v in value]
+    return value
+
+
+class SavedArtifacts(unittest.TestCase):
+    """The committed outputs, pinned to their inputs and code, and the pre-registered checks they record."""
+
+    def test_manifest_pins_inputs_code_and_artifacts(self):
+        manifest = load('manifest.json')
+        for path, expected in manifest['consumedInputs'].items():
+            self.assertEqual(digest(path), expected, path)
+        for path, expected in manifest['code'].items():
+            self.assertEqual(digest(path), expected, path)
+        for path, expected in manifest['derivedArtifacts'].items():
+            self.assertEqual(digest(path), expected, path)
+        self.assertFalse(manifest['dataSourcesJsonTouched'])
+        self.assertFalse(manifest['stage64OutputsChanged'])
+        self.assertFalse(manifest['modelOrScaleChanged'])
+
+    def test_preregistered_checks_one_to_four_pass(self):
+        checks = load('comparison.json')['checks']
+        self.assertTrue(checks['tablesReconcile']['all'])
+        self.assertEqual(checks['tablesReconcile']['count'], 137)
+        self.assertEqual(checks['exactSeatPairs'], 14)
+        for kind, seats in (('party', 14), ('candidate', 13)):
+            block = checks[kind]
+            self.assertEqual(block['conservationNationalMaxAbs'], 0.0)
+            self.assertLess(block['conservationOldSeatMaxAbs'], 1e-6)
+            self.assertLess(block['conservationOldSeatColumnsMaxAbs'], 1e-6)
+            self.assertTrue(block['exactSeats']['passes'])
+            self.assertEqual(block['exactSeats']['exactSeatsChecked'], seats)
+            self.assertEqual(block['exactSeats']['maxAbsVoteDifference'], 0.0)
+        self.assertGreaterEqual(checks['locatedShareOfOrdinaryCandidateVotes'], 0.95)
+
+    def test_failed_tally_ordinary_only_check_is_recorded_not_tuned(self):
+        hypothesis = load('comparison.json')['checks']['party']['tallyOrdinaryOnlyHypothesis']
+        self.assertFalse(hypothesis['passes'])
+        self.assertGreater(hypothesis['maxOrdinaryOnlyAbsDiffPoints'], 0.1)
+
+    def test_deterministic_regeneration_matches_saved_artifacts_apart_from_draws(self):
+        from scripts.voting_place_notionals import run
+        artifacts, _ = run.build(with_draws=False)
+        self.assertEqual(set(artifacts), {'places.json', 'flows.json', 'notional-candidate.json', 'notional-party.json',
+                                          'baseline-party-vectors.json', 'comparison.json'})
+        for name, value in artifacts.items():
+            self.assertTrue(equivalent(without_draws(load(name)), without_draws(value)), name)
+
+    def test_exact_seats_reproduce_2023_and_have_no_draw_width(self):
+        party = load('notional-party.json')
+        exact = [s for s in party['seats'] if s['exactSource'] is not None]
+        self.assertEqual(len(exact), 14)
+        for seat in exact:
+            for arm in ('V', 'P', 'S'):
+                self.assertEqual(seat[arm]['shares'], seat['V']['shares'])
+            lo, _, hi = seat['draws']['nationalMinusLabourPoints']
+            self.assertAlmostEqual(lo, hi, places=9)
+            self.assertAlmostEqual(lo, seat['V']['nationalMinusLabourPoints'], places=9)
+
+    def test_party_notional_covers_all_64_seats_and_conserves_votes(self):
+        party = load('notional-party.json')
+        self.assertEqual(len(party['seats']), 64)
+        self.assertEqual(len({s['code'] for s in party['seats']}), 64)
+        for arm in ('V', 'P', 'S', 'A'):
+            self.assertEqual(round(sum(sum(s['votes'][arm].values()) for s in party['seats'])), 2659474, arm)
+
+    def test_port_waikato_candidate_notional_is_missing_not_zero(self):
+        candidate = load('notional-candidate.json')
+        seat = next(s for s in candidate['seats'] if s['name'] == 'Port Waikato')
+        self.assertEqual(seat['status'], 'missing')
+        self.assertNotIn('V', seat)
+        self.assertEqual(len(candidate['cancelledFiles']), 1)
+        self.assertEqual(sum(s['status'] != 'missing' for s in candidate['seats']), 63)
+
+    def test_tally_room_never_enters_an_allocation_module(self):
+        for name in ('allocate.py', 'engine.py', 'votes.py', 'sites.py', 'frame.py'):
+            source = (ROOT / 'scripts/voting_place_notionals' / name).read_text(encoding='utf-8').lower()
+            self.assertNotIn('tally', source, name)
+
+    def test_baseline_vectors_are_a_drop_in_for_the_assembly_reader(self):
+        from scripts.nowcast_assembly import general
+        config = {'baseline': {'source': PREFIX + '/baseline-party-vectors.json'}}
+        keys, national, seats = general.baseline(config)
+        reference = general.baseline({'baseline': {'source': 'data/processed/forecast-transport/party-construction.json'}})
+        self.assertEqual(keys, reference[0])
+        self.assertEqual(set(seats), set(reference[2]))
+        self.assertAlmostEqual(float(national.sum()), 1.0, places=9)
+        for vector in seats.values():
+            self.assertAlmostEqual(float(np.sum(vector)), 1.0, places=9)
+        # the national party-vote shares are the official 2023 ones, whichever baseline is chosen
+        self.assertTrue(np.allclose(national, reference[1], atol=1e-12))
+
+    def test_registry_lists_every_party_file_with_its_checksum(self):
+        registry = load('source-registry.json')
+        records = registry['sources']
+        by_path = {r['rawPath']: r for r in records if r.get('rawPath')}
+        for n in range(1, 73):
+            path = 'data/raw/elections/2023/statistics/csv/party-votes-by-voting-place-%d.csv' % n
+            self.assertEqual(by_path[path]['sha256'], digest(path), path)

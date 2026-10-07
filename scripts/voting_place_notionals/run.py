@@ -229,7 +229,7 @@ def draw_summary(draws, labels, t_index):
 def kind_artifact(res, roster, draws, all_targets, extras):
     """Per-target notional for one vote kind, arms V/P/S, ordinary-only O, draw summary and comparators."""
     labels = res['labels']
-    index = {t: k for k, t in enumerate(all_targets)}
+    index = {t: k for k, t in enumerate(all_targets)} if all_targets else {}
     rows = []
     for t in roster:
         code = t['code']
@@ -240,7 +240,7 @@ def kind_artifact(res, roster, draws, all_targets, extras):
                                              for arm in ('V', 'P', 'S', 'A')},
                'V': seat_view(res['targets']['V'][code], labels), 'P': seat_view(res['targets']['P'][code], labels),
                'S': seat_view(res['targets']['S'][code], labels), 'A': seat_view(res['targets']['A'][code], labels),
-               'draws': draw_summary(draws, labels, index[code])}
+               'draws': draw_summary(draws, labels, index[code]) if draws is not None else None}
         if t['exactSource'] is not None:
             row['ordinaryOnlyShares'] = seat_view(res['targets']['O'][code], labels)['shares']
         rows.append(row)
@@ -302,8 +302,9 @@ def compare_party(rows, labels, w_shares, tally, exact_checks):
 def baseline_artifact(res, roster, labels, arm='V'):
     """Drop-in for the `transitions.2023-2026.scopes.general` fields the nowcast assembly reads from the baseline source.
 
-    Same field names as data/processed/forecast-transport/party-construction.json (`partyCategories`, `nationalSourceSharesExact`,
-    `targetPartyVectors[].parties[].shareExact`, `validPartyVotes`), so adopting this baseline is a pointer change plus this file.
+    Same path and field names as data/processed/forecast-transport/party-construction.json (`transitions.2023-2026.scopes.general`:
+    `partyCategories`, `nationalSourceSharesExact`, `targetPartyVectors[].parties[].shareExact`, `validPartyVotes`), so adopting this
+    baseline is the one pointer change in config/nowcast-2026.json. No Māori scope is supplied (Stage64/Stage71 keep the Māori seats).
     """
     from fractions import Fraction
     keys = {p['sourceHeader']: p['partyKey'] for p in read(ELECTION_2023)['electorates'][0]['parties']}
@@ -320,10 +321,11 @@ def baseline_artifact(res, roster, labels, arm='V'):
             ratio = Fraction(share).limit_denominator(10 ** 15)
             parties.append({'partyKey': keys[label], 'share': share, 'shareExact': {'numerator': ratio.numerator, 'denominator': ratio.denominator}})
         vectors.append({'targetCode': t['code'], 'targetName': t['name'], 'validPartyVotes': valid, 'parties': parties})
+    general = {'partyCategories': [keys[l] for l in order],
+               'nationalSourceSharesExact': {keys[l]: {'numerator': int(round(float(national[labels.index(l)]))), 'denominator': total} for l in order},
+               'targetPartyVectors': vectors}
     return {'schemaVersion': 1, 'stage': 69, 'arm': arm, 'status': 'voting_place_allocation_not_adopted',
-            'partyCategories': [keys[l] for l in order],
-            'nationalSourceSharesExact': {keys[l]: {'numerator': int(round(float(national[labels.index(l)]))), 'denominator': total} for l in order},
-            'targetPartyVectors': vectors}
+            'transitions': {'2023-2026': {'scopes': {'general': general}}}}
 
 
 def compare_candidate(rows, labels, tally):
@@ -412,7 +414,7 @@ CODE = ['scripts/voting_place_notionals/' + n for n in ('common.py', 'parse.py',
                                                        'frame.py', 'votes.py', 'allocate.py', 'engine.py', 'run.py')]
 
 
-def build():
+def build(with_draws=True):
     all_tables = {n: parse_file(candidate_path(n)) for n in range(1, 73)}
     reconciliation = {}
     for n, table in all_tables.items():
@@ -448,7 +450,10 @@ def build():
         party_proj = {n: party_projection(t, labels_p) for n, t in party_tables.items()}
         res_p = compute_kind('party', party_tables, party_proj, labels_p, located, seats, source_of, poly2025)
         kinds['party'], labels_by_kind['party'] = res_p, labels_p
-    all_targets, draws = run_draws(kinds, seats, located, source_of, labels_by_kind)
+    if with_draws:
+        all_targets, draws = run_draws(kinds, seats, located, source_of, labels_by_kind)
+    else:
+        all_targets, draws = None, {k: None for k in kinds}
 
     tally = tally_by_name()
     missing_tally = [t['name'] for t in roster if t['name'] not in tally]
