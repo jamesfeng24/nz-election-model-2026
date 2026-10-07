@@ -567,3 +567,104 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Export snapshot schema v2: `targetType`, `modelStateAsOf`, `electionDate`, nested 50/80/90 intervals (80% primary), `provenance.configVersion`; UI copy says nowcast.
 - New test `scripts/tests/test_historical_flag_isolation.py`.
 - No statistical code, output, frozen artifact or CI change.
+
+## CI: only Stage39 and CI-policy tests force the Stage39 replay, 2026-10-07
+
+- `scripts/validate/ci_selection.py`: a new or changed test file forces the full Stage39 reconstruction (about 3 minutes) only if it is `test_stage39_candidate_integration.py`, a `test_ci_*.py` selector test, or a registered Stage39 dependency. Every test still runs in full discovery.
+- Tests in `scripts/tests/test_ci_selection.py` updated; AGENTS.md and `docs/ci-validation.md` record the rule.
+- No registry, attestation, workflow, frozen-pipeline or statistical change.
+
+## Stage50 (part 1) — official nomination refresh pipeline, 2026-10-07
+
+- Added `scripts/nominations_2026/`.
+  - `official.py` turns the official table into Stage40 claims and complete-slate declarations.
+  - `refresh.py` produces the Stage40 snapshot, then the Stage42 features, the Stage75 recentring, the reconciliation report and the config pointer.
+  - Both run the unchanged Stage40/42 builders.
+- The assembly's `live_slates` takes general seats only and can be called on in-memory features.
+- Tested end to end on an in-memory synthetic official list.
+- No official data yet. No change to frozen outputs, `data/sources.json`, models or CI.
+
+## Stage63 — layer-replicated composed simulation, 2026-10-07
+
+- Follow-up to Stage54 (D088): does drawing M independent local-party and candidate layer draws for every fixed national draw (no new national fit) meet the frozen composed precision caps? Design and contract committed before any replicate bank was scored (`docs/stage63-layer-replication-design.md`, `data/processed/layer-replication/design-contract.json`, commit `25c8534`). Nine representative seats x 64 replicates and a nine-seat win-probability panel x 8 replicates on all 4,096 cached national draws (control restriction, pinned Stage45 scales).
+- Finding under the frozen rule: **`CAPS_MET_BY_REPLICATION`** (D095). The cheapest arm meeting all six unchanged caps at its layer doubling is M = 16 (65,536 composed draws per seat); the 3-sigma rule asks for M = 16, M = 8 passed once without margin. Doubling changes at M = 16: mean 0.010, CRPS 0.019, energy 0.043, widths 0.111/0.192/0.152pp. Layer variance scales as 1/M (observed over predicted sd 0.84 to 1.08 at M <= 16); the half-split equivalence diagnostic is EQUIVALENT (mean z^2 0.89, max |z| 2.53); harness exact (45 checks, 18 seats, difference 0.0).
+- The literal Stage54 national-doubling gate (2,048 to 4,096 national draws) is **not met at any arm**: CRPS and the mean fail even at M = 64 (0.061 and 0.118pp) because of the finite national bank (floor sd up to 0.13pp CRPS, 0.12pp mean at the worst seat-candidate, medians 0.0015 and 0.0070; reported only).
+- Seat-win probabilities: layer design effect 0.39, national design effect 0.13; SE of a probability of 0.5 is 0.0056 at M = 1 and 0.0037 at M = 4 against a floor of 0.0028 that replication cannot lower.
+- Cost: exact reuse of the local-party layer's conditional-location solves (same inputs, bit-identical to the uncached path, tested) takes about 9.3 ms per composed draw measured under 4-way contention (Stage54 about 14); M = 16 is about 0.19 CPU hours per seat, about 14 CPU hours for a 71-seat slate (against about 145 for the same caps by more draws), M = 64 about 50.
+- New code `scripts/layer_replication/` (simulate, evaluation, decision, verification, report, manifest), outputs `data/processed/layer-replication/`, findings `docs/stage63-layer-replication-findings.md`, tests `scripts/tests/test_stage63_layer_replication.py`. Registered as frozen pipeline `stage63` (unpinned until its first full run). No default, scale, law, cap, source, national fit or earlier-stage output changed; `data/sources.json` untouched.
+
+## Config: nowcast baseline switched to the Stage69 voting-place notionals, 2026-10-07
+
+- `config/nowcast-2026.json`: `baseline.source` now points at `data/processed/voting-place-notionals/baseline-party-vectors.json` (Stage69, D103); the status note records the previous source. Nothing else changed: no scale, Māori seat input, Stage64 output or code.
+
+## Stage69 — voting-place notional 2023 baselines on the 2026 boundaries, 2026-10-07
+
+- New `scripts/voting_place_notionals/` and `data/processed/voting-place-notionals/`: 2023 voting places located (Nominatim, raw responses kept) and allocated to the 64 general electorates of 2026 through a meshblock nearest-site catchment frame; party vote and electorate candidate vote; arms V (primary), P, S, O, A; 1,000 seeded draws; comparison with Stage64 and with the Tally Room sheet (cross-check only).
+- 72 official party-votes-by-voting-place CSVs preserved with checksums; new standalone registry `data/processed/voting-place-notionals/source-registry.json`. `data/sources.json`, Stage64 outputs, model scales and downstream layers unchanged.
+- `baseline-party-vectors.json` has the structure the nowcast assembly reads, so adoption is one pointer change in `config/nowcast-2026.json`.
+
+## Stage70 — weekly national poll refresh, nowcast input and routine, 2026-10-07
+
+- **One command** (`scripts/polling/weekly_refresh/run.py`, docs `docs/stage70-weekly-poll-refresh.md`): captures the pinned Wikipedia REST table into a dated never-overwritten raw directory, detects new rows against the previous panel, applies blocker, review and info rules, writes the next dated panel version, a dated source registry and input contract, builds the pinned Stage62 dataset, reruns the Stage62 gauss fit with its Stage38 gates, and writes a dated estimate. It refuses to publish (exit 2 or 3, `blocked.json`) on an unmappable, revised or removed row, impossible dates, a panel/upstream mismatch or a failed gate; new pollsters, odd fieldwork dates and 1 pp shifts are flagged for a human.
+- **Nowcast input (D106):** saves only `lastDataSupport` joint draws at the model-state week, in the record format `scripts/nowcast_assembly/national.py` reads; `electionDay` is not saved or summarised. `adopt.py` points `config/nowcast-2026.json` at a reviewed run (not run in this PR).
+- **First run, 2026-10-07:** 2 new polls (1 News–Verian 1–5 Oct, Roy Morgan 31 Aug–27 Sep; Wikipedia revision 1378865337) added to the panel (124 waves from 122 plus the unchanged collapse), 121 current-cycle polls in the fit, all gates met on the first attempt. Model state as of the week of 27 Sep, polls to 7 Oct: NAT 27.9, LAB 28.6, GRN 13.6, ACT 9.6, NZF 10.8, TOP 6.5, TPM 1.7; no review flag.
+- **Routine** `trig_01LB91p9NumjAUQjJB6QKdVs`, Thursdays 06:55 NZ time, fires into the Stage70 thread session and opens a pull request per refresh; it never merges or pushes to main.
+- **Part C:** one bounded search found two general-seat electorate polls (Wellington Bays, Mt Albert; Curia), preserved and listed, not modelled.
+- Not touched: the Stage62 model, priors and files, Stage59 panel, `data/sources.json`, every other stage and layer.
+
+## Stage72 — 2026 scales, live nowcast configuration and classification schema, 2026-10-07
+
+- `data/processed/nowcast-config/scales-2026.json`: 2026 candidate and local-party scales by the frozen Stage45 rule (`fit(..., 2026)`), equal to Stage45's all-election fit, with the D107 class-specific candidate balance scales.
+- `config/nowcast-2026.json`, the single live configuration, with explicitly pending fields. `scripts/nowcast_config/validate.py` checks it, with `--require-complete` for assembly.
+- The fail-closed D107 ordinary/exceptional classification schema; no entries written.
+- Tests `scripts/tests/test_stage72_nowcast_config.py`; docs `docs/stage72-nowcast-config.md`.
+- No fit, score or frozen-output change.
+
+## Stage73 — live nowcast draw bank (Python side of the assembly), 2026-10-07
+
+- Added `scripts/nowcast_assembly/`. It contains:
+  - a national adapter that reads `lastDataSupport` only and keeps Other as one MMP bucket, split inside each seat by that seat's own 2023 mix;
+  - a 2026 layer-noise registry;
+  - the general-seat local party and candidate layers with the D107 multiplier on the candidate balance seat scale only;
+  - a Stage66 Māori re-run;
+  - a fail-closed 71-seat draw bank with a Python-side publication gate.
+- Added the development gate report `data/processed/nowcast-assembly/development-gate.json`. It is blocked: 64 general seats wait on the Stage50 roster and 4 Māori seats on James's unpolled-seat decision.
+- Extended `config/nowcast-2026.json` (configVersion 2026-10-07.2) with `national.categoryMap`, `national.otherSplit`, `partyRelationships`, `candidate` and `maori.layer`.
+- Added `docs/stage73-nowcast-assembly.md`, plus the draft classification proposal for James, `docs/general-seat-classification-2026-draft.md`, which no code reads.
+- Untouched: frozen stages, the historical noise registry, `data/sources.json` and CI.
+
+## Stage74 — draw bank to a validated v2 nowcast snapshot, 2026-10-07
+
+- **Bank schema 2 (Python):** per-candidate share intervals (`scripts/nowcast_assembly/summaries.py`), per-row winner candidates for the Māori seats too, and the export directory.
+- **Synthetic contract fixture:** `data/fixtures/synthetic/nowcast-draw-bank.json` (`scripts/nowcast_assembly/fixture.py`).
+- **TypeScript `src/models/nowcast/`:** a bank reader (zod), batch-means effective-sample MCSE, and `buildNowcastSnapshot`. It runs the Stage65 seat layer on every row.
+- **Export v2 completion:** `seatLayer` (available/unavailable), `electorateDetail` (D107 class, candidate-share intervals, win probabilities with MCSE) and optional `directory.candidates[].partyLabel`.
+- **Stage65 summaries** gain q10/q90.
+- **Untouched:** the Stage49 allocator, frozen stages, `data/sources.json` and CI. No live snapshot is published.
+
+## Stage75 — live candidate-mean fit trained on every completed election, 2026-10-07
+
+- Added `scripts/candidate_fit_2026/`. It refits the Stage33 S+R joint candidate model, design and fitter unchanged, on the 2011–2023 target contests (245; previously 181, 2011–2020).
+- Recentres the 2026 Stage42 continuous features on the new training-only means (`data/processed/candidate-fit-2026/features-2026.json`). The frozen Stage42 file is untouched.
+- Records the movement in `impact.json`.
+- Points the live config at the refit (configVersion 2026-10-07.4). Regenerates the Stage73 development gate and the Stage74 synthetic bank fixture.
+- No change to the uncertainty scales, frozen stages, `data/sources.json` or CI.
+
+## Stage76 — faster, numerically identical assembly, 2026-10-07
+
+- Added `scripts/nowcast_assembly/fastmath.py`, a BLAS and in-place softmax version of the Stage47 Gaussian-softmax expectation and Jacobian. It is substituted only while the assembly runs.
+- About 3.8× faster per seat; outputs are unchanged to ≤ 5e-15.
+- The frozen Stage47 code, its solver schedule and tolerances, every frozen pipeline and CI are untouched.
+
+## Stage77 — release steps: production runner, gate completion, precision setting, rehearsal, 2026-10-07
+
+- **Blocs:** James's blocs and the hung-parliament/TOP-kingmaker scenarios are configured and exported (`seatLayer.summary.scenarios`).
+- **Config:** `simulation` is set from Stage63 (4,096 national draws × 16 layer replicates; batch-means MCSE). The proposed `release` gate settings are pending James's release-policy approval.
+- **Assembly:**
+  - layer replication;
+  - grouped per-seat Sobol noise banks (bounded memory);
+  - bank schema 3 (winner indices);
+  - the `nationalReconciliation` gate check and staleness labels.
+- **TypeScript:** the release gate and the append-only publisher (`src/release/`, `npm run release:build` / `release:publish`). Synthetic data never goes under `public/`, and model releases go only to `public/forecasts`.
+- **Rehearsal:** at production size with labelled synthetic stand-ins; published to a gitignored archive and read back by the loader. Report: `data/processed/release-rehearsal/report.json`.
+- `.gitignore` gains `node_modules` (as a file, the cause of the Stage74 symlink slip) and `.release-build/`.
