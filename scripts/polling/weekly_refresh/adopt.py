@@ -3,7 +3,7 @@
     python3 -m scripts.polling.weekly_refresh.adopt --date YYYY-MM-DD [--check]
 
 Sets config/nowcast-2026.json national.source, modelStateAsOf and dataCutoff to the values recorded in that run's
-estimate.json (`nowcastInput`) and bumps configVersion, then validates the result with scripts.nowcast_config.validate.
+estimate.json (`nowcastInput`) and bumps configVersion (text edits of those four values only), then validates the result with scripts.nowcast_config.validate.
 Nothing else in the configuration changes. `--check` verifies that the config already carries the run's values.
 """
 import argparse
@@ -36,11 +36,20 @@ def adopt(date, check=False):
         if current != wanted:
             raise ValueError(f'config national input {current} differs from the {date} refresh {wanted}')
         return current
-    n['source'], n['modelStateAsOf'], n['dataCutoff'] = wanted
-    n['refreshOwner'] = n['refreshOwner'] if 'adopted' in n.get('refreshOwner', '') else n['refreshOwner'] + ' (adopted by scripts/polling/weekly_refresh/adopt.py)'
-    config['configVersion'] = next_version(config['configVersion'], date)
+    # Surgical text edits keep the diff to the fields adopted (other work edits this file concurrently; a re-dump would reformat it).
+    text = CONFIG.read_text(encoding='utf-8')
+    version = next_version(config['configVersion'], date)
+    for key, old_value, new_value in (('source', n['source'], wanted[0]), ('modelStateAsOf', n['modelStateAsOf'], wanted[1]), ('dataCutoff', n['dataCutoff'], wanted[2]),
+                                      ('configVersion', config['configVersion'], version)):
+        needle = f'"{key}": "{old_value}"'
+        if text.count(needle) != 1:
+            raise ValueError(f'Expected exactly one {needle} in the config')
+        text = text.replace(needle, f'"{key}": "{new_value}"')
+    config['national']['source'], config['national']['modelStateAsOf'], config['national']['dataCutoff'], config['configVersion'] = *wanted, version
+    if json.loads(text) != config:
+        raise ValueError('Surgical edit changed more than the adopted fields')
     check_config(config)
-    CONFIG.write_text(json.dumps(config, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    CONFIG.write_text(text, encoding='utf-8')
     return wanted
 
 

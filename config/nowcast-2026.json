@@ -7,11 +7,11 @@
   "electionId": "nz-general-2026",
   "electionDate": "2026-11-07",
   "national": {
-    "source": "data/processed/polling/live-fit-2026-10/fits/A/attempt1.npz",
+    "source": "data/processed/polling/weekly-refresh/2026-10-07/fit/attempt1.npz",
     "stateKey": "lastDataSupport",
     "forbiddenStateKeys": ["electionDay"],
     "modelStateAsOf": "2026-09-27",
-    "dataCutoff": "2026-10-06",
+    "dataCutoff": "2026-10-07",
     "refreshOwner": "Stage70 replaces this source and these dates with each accepted refit",
     "categoryMap": {"National": "nationalparty", "Labour": "labourparty", "Green": "greenparty", "ACT": "actnewzealand",
                     "NZ First": "newzealandfirstparty", "Te Pāti Māori": "tepatimaori", "TOP": "opportunity", "Other": "other"},

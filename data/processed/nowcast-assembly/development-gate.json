@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "bankDigest": "482ee47f961e01a979915a288d4ff33ceac26ae4a8153b7d696257d4bf56c2a7",
+=======
+  "bankDigest": "396c84deaa1669d4d362e32ebcbb90ea5422e0fab6da13c9d8151222e3d738a9",
+>>>>>>> origin/main
   "blockers": [
     {
       "electorateIds": [
@@ -139,6 +143,7 @@
     "reconciliation": {
       "byGroup": {
         "actnewzealand": {
+<<<<<<< HEAD
           "gapPP": 0.11862568912950622,
           "generalSeatWeightedLocalMeanPP": 10.001070322740864,
           "nationalMeanPP": 9.882444633611358
@@ -175,6 +180,44 @@
         }
       },
       "maxAbsGapPP": 0.3719329202552413,
+=======
+          "gapPP": 0.06763106404930053,
+          "generalSeatWeightedLocalMeanPP": 9.556171331781165,
+          "nationalMeanPP": 9.488540267731866
+        },
+        "greenparty": {
+          "gapPP": -0.2647154842072841,
+          "generalSeatWeightedLocalMeanPP": 13.21136851172556,
+          "nationalMeanPP": 13.476083995932845
+        },
+        "labourparty": {
+          "gapPP": -0.15798907537691864,
+          "generalSeatWeightedLocalMeanPP": 28.71492513022905,
+          "nationalMeanPP": 28.87291420560597
+        },
+        "nationalparty": {
+          "gapPP": 0.3864182393533644,
+          "generalSeatWeightedLocalMeanPP": 28.21889963009816,
+          "nationalMeanPP": 27.832481390744796
+        },
+        "newzealandfirstparty": {
+          "gapPP": 0.027732068865890525,
+          "generalSeatWeightedLocalMeanPP": 10.66119668421583,
+          "nationalMeanPP": 10.633464615349938
+        },
+        "opportunity": {
+          "gapPP": -0.04929172044939728,
+          "generalSeatWeightedLocalMeanPP": 6.477002006641238,
+          "nationalMeanPP": 6.526293727090636
+        },
+        "tepatimaori": {
+          "gapPP": -0.01939872884233161,
+          "generalSeatWeightedLocalMeanPP": 1.7180373186489917,
+          "nationalMeanPP": 1.7374360474913233
+        }
+      },
+      "maxAbsGapPP": 0.3864182393533644,
+>>>>>>> origin/main
       "note": "diagnostic only; the tolerance is set with the publication gate (Stage74)",
       "tolerance": null
     }
