@@ -7,7 +7,7 @@ local party layer; the 2026 layer noise has shared election keys. A seat whose i
 import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_config.validate import check_classification, check_config, ConfigError
-from . import general, maori, national, streams
+from . import fastmath, general, maori, national, streams
 from .summaries import share_summaries
 from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file_sha256, AssemblyError
 
@@ -78,7 +78,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
     state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
              'candidateScales': candidate_scales, 'multipliers': multipliers, 'classification': classification}
     local_means = {}
-    with streams.substituted(rows, count, config['simulation']['seedNamespace']):
+    with streams.substituted(rows, count, config['simulation']['seedNamespace']), fastmath.accelerated():
         for seat, (local_mean, record) in zip(general_ids, run_seats(state, general_ids, workers)):
             local_means[seat] = local_mean
             if record is not None:
