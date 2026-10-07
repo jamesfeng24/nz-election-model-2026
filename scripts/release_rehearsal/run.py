@@ -2,7 +2,7 @@
 
 python -m scripts.release_rehearsal.run [--national 4096] [--replicates 16] [--workers 4] [--check]
 
-Real inputs: the Stage70 2026-10-07 national refresh (lastDataSupport; applied in memory, adoption separate), the Stage64 population-flat baseline, the Stage72 scales,
+Real inputs: the Stage70 2026-10-07 national refresh (lastDataSupport; adopted into the config by #94), the Stage64 population-flat baseline, the Stage72 scales,
 the Stage75 candidate fit, the Stage66 Maori layer for the three polled seats, the 2026 frame. SYNTHETIC stand-ins
 (because the real inputs do not exist yet): the official candidate list (Stage50 stand-in: announcements plus
 invented Labour and independent candidates), the D107 classification, and winners for the four unpolled Maori seats.
@@ -60,9 +60,9 @@ def rehearse(national, replicates, workers):
     features = outputs[refresh.output_dir(synthetic.ACQUISITION) + 'features-raw.json']
     centred = outputs[refresh.output_dir(synthetic.ACQUISITION) + 'features-centred.json']
     config = copy.deepcopy(read(CONFIG))
-    national_input = read(STAGE70)['nowcastInput']  # Stage70 refresh, applied in memory; adoption into the config is separate
-    config['national'].update(source=national_input['source'], modelStateAsOf=national_input['modelStateAsOf'],
-                              dataCutoff=national_input['dataCutoff'])
+    national_input = read(STAGE70)['nowcastInput']
+    if (config['national']['source'], config['national']['dataCutoff']) != (national_input['source'], national_input['dataCutoff']):
+        raise SystemExit('the config no longer carries the adopted Stage70 2026-10-07 refresh; update the rehearsal')
     config['roster']['snapshotId'] = 'synthetic-rehearsal-roster'
     config['pending'].pop('roster.snapshotId')
     slates, _ = A.live_slates(config, features, centred)
@@ -78,7 +78,7 @@ def rehearse(national, replicates, workers):
               'configVersion': config['configVersion'], 'asOf': AS_OF, 'nationalDraws': national, 'layerReplicates': replicates,
               'rows': bank['draws'], 'provenance': bank['provenance'], 'syntheticStandIns': STAND_INS, 'realInputsNotYetAvailable': NOT_USED,
               'nationalInput': {'source': national_input['source'], 'modelStateAsOf': national_input['modelStateAsOf'],
-                                'dataCutoff': national_input['dataCutoff'], 'note': 'Stage70 2026-10-07 refresh, applied in memory (not yet adopted)'},
+                                'dataCutoff': national_input['dataCutoff'], 'note': 'Stage70 2026-10-07 refresh, adopted into the config (#94)'},
               'seats': {'simulated': sum(s['status'] == 'simulated' for s in bank['seats']), 'total': len(bank['seats'])},
               'gate': {'passed': passed, 'checks': checks}, 'staleness': bank['diagnostics']['staleness'],
               'reconciliation': bank['diagnostics']['reconciliation'], 'bankDigest': A.bank_digest(bank)}

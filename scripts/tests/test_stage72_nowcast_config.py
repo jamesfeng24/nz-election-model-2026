@@ -50,13 +50,8 @@ class Config(unittest.TestCase):
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.79, 'exceptional': 1.0}),
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.60, 'exceptional': 1.5}),
                      lambda c: c.update(intervalLevels=[0.9]),
-<<<<<<< HEAD
-                     lambda c: c['national'].update(modelStateAsOf='2026-10-07'),
-                     lambda c: c['roster'].update(snapshotId='set-while-pending')):
-=======
                      lambda c: c['national'].update(modelStateAsOf=(datetime.date.fromisoformat(c['national']['dataCutoff']) + datetime.timedelta(days=1)).isoformat()),   # state dated after the cutoff
-                     lambda c: c['simulation'].update(draws=1000)):
->>>>>>> origin/main
+                     lambda c: c['roster'].update(snapshotId='set-while-pending')):
             config = copy.deepcopy(self.config); edit(config)
             with self.assertRaises(V.ConfigError):
                 V.check_config(config)
