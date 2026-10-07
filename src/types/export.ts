@@ -50,6 +50,8 @@ export const SeatLayerExportSchema = z.object({
     id, label: id, partyIds: z.array(id).min(1), meanSeats: z.number().finite(), seats: IntervalSetSchema,
     probMajority: ProbabilityEstimateSchema, probExactHalf: ProbabilityEstimateSchema,
   }).strict()),
+  /** Named seat-arithmetic outcomes over blocs (for example a hung parliament); scenarios, not coalition predictions. */
+  scenarios: z.array(z.object({ id, label: id, definition: id, probability: ProbabilityEstimateSchema }).strict()),
   parliament: z.object({
     meanSize: z.number().finite(), size: IntervalSetSchema, sizeDistribution: z.record(z.string(), z.number().min(0).max(1)),
     overhangDistribution: z.record(z.string(), z.number().min(0).max(1)), probAnyOverhang: ProbabilityEstimateSchema,

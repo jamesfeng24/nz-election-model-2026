@@ -16,9 +16,10 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 | 7 | National adapter on `lastDataSupport` from the latest Stage70 refit, as-of week recorded | Stage70 | waiting |
 | 8 | Decide the four unpolled Māori seats (labelled fallback, or withhold MMP outputs) | James | open |
 | 9 | Assembly: Python draw bank → Stage65 seat layer → snapshot v2 exporter, one draw id end to end | 2–8 | Python draw bank and gate (Stage73) and bank → snapshot v2 (Stage74) done; live run blocked on 4, 5, 8, 10, 11 |
-| 10 | Production draw count and precision policy, with effective-sample Monte Carlo errors for national-driven quantities | Stage63 | waiting |
-| 11 | Bloc definitions for any coalition output | James | open |
-| 12 | Probability-release policy approved (proposal below) | James | open |
+| 10 | Production draw count and precision policy, with effective-sample Monte Carlo errors for national-driven quantities | Stage63 | set (Stage77): 4,096 national draws × 16 layer replicates (Stage63, James M = 16); batch-means MCSE within chains with replicates kept together |
+| 11 | Bloc definitions for any coalition output | James | done (James, 2026-10-07): NAT+ACT, NAT+ACT+NZF, LAB+GRN, LAB+GRN+TPM; hung parliament over NAT+ACT+NZF and LAB+GRN+TPM with TOP as kingmaker (`mmp.blocs`, `mmp.hungParliament`) |
+| 12 | Probability-release policy approved (proposal below) | James | open; the release gate thresholds (MCSE ≤ 0.01, reconciliation ≤ 1.0pp, staleness windows) are in `config/nowcast-2026.json` `release`, pending `release.policyApprovedBy` |
+| 14 | Production runner and rehearsal | — | done (Stage77): `npm run release:build` / `release:publish`; full-size rehearsal with labelled stand-ins ([stage77-release-steps.md](stage77-release-steps.md)) |
 | 13 | Export v2 completion: candidate-share intervals, Monte Carlo SE, thresholds/overhang/size/blocs, per-seat uncertainty class; 80% quantiles in Stage65 summaries | 9, 10 | done (Stage74); precision thresholds wait on Stage63, calibration status stays `uncalibrated` |
 
 ## Should do soon
@@ -45,6 +46,8 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 - candidate-quality scores.
 
 ## Publication gate (a snapshot is publishable only if all hold)
+
+Implemented (Stage77): the Python gate (`scripts/nowcast_assembly/assemble.py` `gate`, `staleness`) and the TypeScript release gate (`src/release/releaseGate.ts`) cover config completeness, provenance, universe, winners, classification multipliers, national reconciliation, staleness labels, schema, seat layer and MMP availability, and the probability MCSE threshold. Archive hash and supersession are enforced by `addToArchive` and the index schema; determinism by the bank digest.
 
 - **Universe:** 71 electorates (64 general + 7 Māori), unique ids; every seat predicted or explicitly `unavailable`, never zero.
 - **Roster and slates:** the roster snapshot hash equals the configured one; complete slates; no unknown party or candidate.

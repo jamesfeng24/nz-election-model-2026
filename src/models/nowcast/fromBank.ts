@@ -23,11 +23,14 @@ export interface NowcastSnapshotOptions {
   codeRevision: string;
   bankSha256: string;
   /** Required for the seat layer; null withholds it with a reason. */
-  mmp: { rulesVersion: string; rulesSourceIds: string[]; blocs: BlocDefinition[] } | null;
+  mmp: { rulesVersion: string; rulesSourceIds: string[]; blocs: BlocDefinition[]; hungParliament?: HungParliament | null } | null;
   nationalBasis: string;
   limitations: string[];
   syntheticLabel?: string;
 }
+
+/** Hung parliament over two named blocs, with an optional kingmaker party (James, 2026-10-07). */
+export interface HungParliament { blocs: [string, string]; kingmaker?: string | null; definition?: string }
 
 const METHOD = 'empirical-quantile (linear) of the bank rows';
 const SEAT_METHOD = 'empirical-quantile (lower step) of the bank rows';
@@ -49,8 +52,8 @@ function stepIntervals(values: number[]): IntervalSet {
   const s = [...values].sort((a, b) => a - b), median = stepQuantile(s, 0.5);
   return INTERVAL_LEVELS.map(level => ({ lower: stepQuantile(s, (1 - level) / 2), median, upper: stepQuantile(s, 1 - (1 - level) / 2), level, method: SEAT_METHOD }));
 }
-const probability = (flags: number[], layout: ChainOrder) => {
-  const r = batchMeansMcse(flags, layout);
+const probability = (flags: number[], layout: ChainOrder, unit = 1) => {
+  const r = batchMeansMcse(flags, layout, unit);
   return { p: r.mean, mcse: r.mcse, ess: r.ess };
 };
 
@@ -74,10 +77,10 @@ export function runSeatLayer(bank: DrawBank, config: SeatLayerConfig, electionId
   const outcomes: SeatDrawOutcome[] = [];
   for (let row = 0; row < bank.draws; row++) {
     const winners = (scope: 'general' | 'maori') => seats.filter(s => s.scope === scope)
-      .map(s => ({ electorateId: s.electorateId, partyId: s.winnerParty[row], candidateId: s.winnerCandidate[row] }));
+      .map(s => ({ electorateId: s.electorateId, partyId: s.candidateParty[s.winners[row]], candidateId: s.candidates[s.winners[row]] }));
     const outcome = allocateDraw(config, {
       electionId,
-      partyVoteShares: Object.fromEntries(bank.partyVote.groups.map((g, i) => [g, bank.partyVote.shares[row][i]])),
+      partyVoteShares: Object.fromEntries(bank.partyVote.groups.map((g, i) => [g, bank.partyVote.shares[Math.floor(row / bank.layerReplicates)][i]])),
       generalWinners: winners('general'), maoriWinners: winners('maori'),
     });
     accumulator.add(outcome);
@@ -86,10 +89,39 @@ export function runSeatLayer(bank: DrawBank, config: SeatLayerConfig, electionId
   return { outcomes, accumulator };
 }
 
-function seatLayerSummary(bank: DrawBank, config: SeatLayerConfig, layout: ChainOrder, electionId: string) {
+function hungScenarios(config: SeatLayerConfig, hung: HungParliament,
+  flag: (f: (o: SeatDrawOutcome) => boolean) => { p: number; mcse: number; ess: number }) {
+  const blocs = hung.blocs.map(id => config.blocs.find(b => b.id === id));
+  if (blocs.some(b => !b)) throw new RangeError('Hung-parliament blocs must be configured blocs');
+  const [a, b] = blocs as BlocDefinition[];
+  const seats = (o: SeatDrawOutcome, ids: string[]) => ids.reduce((sum, id) => sum + o.parties[id].totalSeats, 0);
+  const majority = (o: SeatDrawOutcome, ids: string[]) => 2 * seats(o, ids) > o.parliamentSize;
+  const isHung = (o: SeatDrawOutcome) => !majority(o, a.partyIds) && !majority(o, b.partyIds);
+  const out = [{ id: 'hung', label: `Hung parliament (neither ${a.label} nor ${b.label})`,
+    definition: `Neither ${a.label} nor ${b.label} holds more than half of that simulated Parliament`, probability: flag(isHung) }];
+  const k = hung.kingmaker;
+  if (k) {
+    if (!config.listedPartyIds.includes(k) || a.partyIds.includes(k) || b.partyIds.includes(k)) throw new RangeError('Kingmaker must be a listed party outside both blocs');
+    const withA = (o: SeatDrawOutcome) => isHung(o) && majority(o, [...a.partyIds, k]);
+    const withB = (o: SeatDrawOutcome) => isHung(o) && majority(o, [...b.partyIds, k]);
+    // James (2026-10-07): only the cases where the kingmaker decides are reported; hung with neither side able to
+    // reach a majority even with the kingmaker is the remainder of `hung` and is not a separate output.
+    out.push(
+      { id: `hung-${k}-kingmaker`, label: `Hung parliament, ${k} kingmaker (either side)`,
+        definition: `Hung, and adding ${k}'s seats gives either ${a.label} or ${b.label} a majority`, probability: flag(o => withA(o) && withB(o)) },
+      { id: `hung-${k}-${a.id}-only`, label: `Hung parliament, only ${a.label} with ${k}`,
+        definition: `Hung; ${a.label} plus ${k} is a majority, ${b.label} plus ${k} is not`, probability: flag(o => withA(o) && !withB(o)) },
+      { id: `hung-${k}-${b.id}-only`, label: `Hung parliament, only ${b.label} with ${k}`,
+        definition: `Hung; ${b.label} plus ${k} is a majority, ${a.label} plus ${k} is not`, probability: flag(o => withB(o) && !withA(o)) });
+  }
+  return out;
+}
+
+function seatLayerSummary(bank: DrawBank, config: SeatLayerConfig, layout: ChainOrder, electionId: string, hung: HungParliament | null) {
   const { outcomes, accumulator } = runSeatLayer(bank, config, electionId);
   const summary = accumulator.summarise();
-  const flag = (f: (o: SeatDrawOutcome) => boolean) => probability(outcomes.map(o => (f(o) ? 1 : 0)), layout);
+  const unit = bank.layerReplicates;
+  const flag = (f: (o: SeatDrawOutcome) => boolean) => probability(outcomes.map(o => (f(o) ? 1 : 0)), layout, unit);
   return {
     example: outcomes[0].allocation as MmpAllocation,
     summary: {
@@ -107,10 +139,11 @@ function seatLayerSummary(bank: DrawBank, config: SeatLayerConfig, layout: Chain
         const seats = outcomes.map(o => b.partyIds.reduce((sum, id) => sum + o.parties[id].totalSeats, 0));
         return {
           id: b.id, label: b.label, partyIds: [...b.partyIds], meanSeats: summary.blocs[i].meanSeats, seats: stepIntervals(seats),
-          probMajority: probability(outcomes.map((o, k) => (2 * seats[k] > o.parliamentSize ? 1 : 0)), layout),
-          probExactHalf: probability(outcomes.map((o, k) => (2 * seats[k] === o.parliamentSize ? 1 : 0)), layout),
+          probMajority: probability(outcomes.map((o, k) => (2 * seats[k] > o.parliamentSize ? 1 : 0)), layout, unit),
+          probExactHalf: probability(outcomes.map((o, k) => (2 * seats[k] === o.parliamentSize ? 1 : 0)), layout, unit),
         };
       }),
+      scenarios: hung ? hungScenarios(config, hung, flag) : [],
       parliament: {
         meanSize: summary.parliament.meanSize, size: stepIntervals(outcomes.map(o => o.parliamentSize)),
         sizeDistribution: summary.parliament.sizeDistribution, overhangDistribution: summary.parliament.overhangDistribution,
@@ -128,7 +161,8 @@ function shareIntervals(seat: SimulatedSeat, candidateId: string): { mean: numbe
 
 export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapshotOptions): Promise<ForecastSnapshot> {
   const bank = DrawBankSchema.parse(raw);
-  const layout = chainOrder(bank.drawIds);
+  const layout = chainOrder(bank.drawIds, bank.layerReplicates);
+  const unit = bank.layerReplicates;
   const simulated = bank.seats.filter((s): s is SimulatedSeat => s.status === 'simulated');
   const unavailable = bank.seats.filter(s => s.status === 'unavailable');
   const synthetic = bank.provenance === 'synthetic-fixture';
@@ -146,7 +180,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     seatLayer = { status: 'unavailable', reason };
     mmp = { status: 'unavailable', reason };
   } else {
-    const result = seatLayerSummary(bank, seatLayerConfig(bank, options.mmp), layout, options.electionId);
+    const result = seatLayerSummary(bank, seatLayerConfig(bank, options.mmp), layout, options.electionId, options.mmp.hungParliament ?? null);
     seatLayer = { status: 'available', summary: result.summary };
     mmp = { status: 'available', exampleDrawAllocation: result.example };
     partySeatSummaries = result.summary.parties.map(p => ({ partyId: p.partyId, seats: p.seats }));
@@ -159,7 +193,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
   };
   const electoratePredictions = simulated.map(seat => {
     const counts = new Map(seat.candidates.map(c => [c, 0]));
-    seat.winnerCandidate.forEach(c => counts.set(c, counts.get(c)! + 1));
+    seat.winners.forEach(w => counts.set(seat.candidates[w], counts.get(seat.candidates[w])! + 1));
     return {
       schemaVersion: 1 as const, id: `${options.snapshotId}:${seat.electorateId}`, electionId: options.electionId, modelVersion: options.modelVersion,
       sourceIds: [seat.source ?? 'nowcast-draw-bank'], artifactIds: [config.inputs[0].artifactId], asOf, limitations: options.limitations,
@@ -171,7 +205,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     electorateId: seat.electorateId, uncertaintyClass: seat.class,
     candidates: seat.candidates.map(candidateId => {
       const { mean, share } = shareIntervals(seat, candidateId);
-      return { candidateId, meanShare: mean, share, winProbability: probability(seat.winnerCandidate.map(w => (w === candidateId ? 1 : 0)), layout) };
+      return { candidateId, meanShare: mean, share, winProbability: probability(seat.winners.map(w => (seat.candidates[w] === candidateId ? 1 : 0)), layout, unit) };
     }),
   }));
 

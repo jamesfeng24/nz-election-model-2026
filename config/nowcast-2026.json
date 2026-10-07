@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-07.5",
+  "configVersion": "2026-10-07.7",
   "decisions": ["D106", "D107"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
@@ -40,16 +40,39 @@
   },
   "intervalLevels": [0.5, 0.8, 0.9],
   "primaryIntervalLevel": 0.8,
+  "release": {
+    "status": "Stage77 proposals; they take effect only with James's approval of the release policy (release.policyApprovedBy)",
+    "reconciliationTolerancePP": 1.0,
+    "staleDays": {"nationalState": 14, "maoriPoll": 60},
+    "probabilityMcseMax": 0.01,
+    "policyApprovedBy": null
+  },
   "pending": {
+    "release.policyApprovedBy": "James approves the probability-release policy (docs/release-checklist.md)",
     "roster.snapshotId": "Stage50: final nominations close 8 October 2026 12:00 NZDT",
-    "simulation.draws": "Stage63 precision result",
-    "simulation.precisionPolicy": "Stage63 precision result",
     "mmp.rulesVersion": "no canonical rules-version identifier is recorded yet (Stage49 tests use a test label); set at assembly",
-    "mmp.blocs": "James chooses the bloc definitions",
     "maori.unpolledSeats": "James chooses a labelled fallback or withholding for the four unpolled seats"
   },
   "roster": {"snapshotId": null},
-  "simulation": {"draws": null, "precisionPolicy": null, "seedNamespace": "nz-nowcast-2026"},
-  "mmp": {"rulesVersion": null, "blocs": null},
+  "simulation": {
+    "draws": 65536,
+    "nationalDraws": 4096,
+    "layerReplicates": 16,
+    "precisionPolicy": "Stage63 (PR #91, D095): layer Monte Carlo error is controlled by the layer replication count M per national draw (M = 16 met all six frozen Stage54 composed caps; M = 4 suffices for seat-win probabilities alone). National-driven quantities carry the finite national-bank floor that replication cannot lower and are reported with effective-sample-size Monte Carlo errors (batch means within national MCMC chains), never sqrt(p(1-p)/n). 4,096 national draws as in the Stage63 evaluation; rows = 4,096 x 16.",
+    "decidedBy": "James, relayed by the coordinator 2026-10-07 (M = 16)",
+    "seedNamespace": "nz-nowcast-2026"
+  },
+  "mmp": {
+    "rulesVersion": null,
+    "blocs": [
+      {"id": "nat-act", "label": "NAT+ACT", "partyIds": ["nationalparty", "actnewzealand"]},
+      {"id": "nat-act-nzf", "label": "NAT+ACT+NZF", "partyIds": ["nationalparty", "actnewzealand", "newzealandfirstparty"]},
+      {"id": "lab-grn", "label": "LAB+GRN", "partyIds": ["labourparty", "greenparty"]},
+      {"id": "lab-grn-tpm", "label": "LAB+GRN+TPM", "partyIds": ["labourparty", "greenparty", "tepatimaori"]}
+    ],
+    "hungParliament": {"blocs": ["nat-act-nzf", "lab-grn-tpm"], "kingmaker": "opportunity",
+                       "definition": "Hung: neither NAT+ACT+NZF nor LAB+GRN+TPM holds a majority of that draw's Parliament. TOP kingmaker: hung, and TOP's seats give either side a majority. Only NAT+ACT+NZF with TOP / only LAB+GRN+TPM with TOP: hung, and TOP's seats give that side but not the other a majority. Hung with neither side reaching a majority even with TOP is the remainder of hung and is not reported separately (James, 2026-10-07)."},
+    "decidedBy": "James, 2026-10-07"
+  },
   "maori": {"layer": "stage66-default", "unpolledSeats": null}
 }
