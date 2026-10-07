@@ -55,6 +55,18 @@ class Replication(unittest.TestCase):
                        maori_records=synthetic_maori(24), replicates=3)
 
 
+class Blocs(unittest.TestCase):
+    def test_james_blocs_use_listed_parties_and_the_hung_definition_is_closed(self):
+        mmp = read(CONFIG)['mmp']
+        listed = set(read(CONFIG)['national']['categoryMap'].values()) - {'other'}
+        self.assertEqual([b['label'] for b in mmp['blocs']], ['NAT+ACT', 'NAT+ACT+NZF', 'LAB+GRN', 'LAB+GRN+TPM'])
+        self.assertTrue(all(set(b['partyIds']) <= listed for b in mmp['blocs']))
+        ids = {b['id'] for b in mmp['blocs']}
+        hung = mmp['hungParliament']
+        self.assertTrue(set(hung['blocs']) <= ids and hung['kingmaker'] == 'opportunity')
+        self.assertFalse(any(hung['kingmaker'] in b['partyIds'] for b in mmp['blocs']))
+
+
 class Gate(unittest.TestCase):
     def test_reconciliation_tolerance_and_staleness_labels(self):
         config = read(CONFIG)

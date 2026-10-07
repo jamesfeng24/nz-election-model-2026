@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-07.6",
+  "configVersion": "2026-10-07.7",
   "decisions": ["D106", "D107"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
@@ -51,7 +51,6 @@
     "release.policyApprovedBy": "James approves the probability-release policy (docs/release-checklist.md)",
     "roster.snapshotId": "Stage50: final nominations close 8 October 2026 12:00 NZDT",
     "mmp.rulesVersion": "no canonical rules-version identifier is recorded yet (Stage49 tests use a test label); set at assembly",
-    "mmp.blocs": "James chooses the bloc definitions",
     "maori.unpolledSeats": "James chooses a labelled fallback or withholding for the four unpolled seats"
   },
   "roster": {"snapshotId": null},
@@ -63,6 +62,17 @@
     "decidedBy": "James, relayed by the coordinator 2026-10-07 (M = 16)",
     "seedNamespace": "nz-nowcast-2026"
   },
-  "mmp": {"rulesVersion": null, "blocs": null},
+  "mmp": {
+    "rulesVersion": null,
+    "blocs": [
+      {"id": "nat-act", "label": "NAT+ACT", "partyIds": ["nationalparty", "actnewzealand"]},
+      {"id": "nat-act-nzf", "label": "NAT+ACT+NZF", "partyIds": ["nationalparty", "actnewzealand", "newzealandfirstparty"]},
+      {"id": "lab-grn", "label": "LAB+GRN", "partyIds": ["labourparty", "greenparty"]},
+      {"id": "lab-grn-tpm", "label": "LAB+GRN+TPM", "partyIds": ["labourparty", "greenparty", "tepatimaori"]}
+    ],
+    "hungParliament": {"blocs": ["nat-act-nzf", "lab-grn-tpm"], "kingmaker": "opportunity",
+                       "definition": "Hung: neither NAT+ACT+NZF nor LAB+GRN+TPM holds a majority of that draw's Parliament. TOP kingmaker: hung, and adding TOP's seats to at least one of the two gives it a majority. Hung, TOP not decisive: hung and TOP cannot."},
+    "decidedBy": "James, 2026-10-07"
+  },
   "maori": {"layer": "stage66-default", "unpolledSeats": null}
 }

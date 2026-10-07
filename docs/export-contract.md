@@ -30,6 +30,12 @@ Added before any v2 snapshot was published, so `schemaVersion` stays 2 ([stage74
 - `electorateDetail`: per predicted seat, the uncertainty class (`ordinary`, `exceptional` or `maori-layer`, D107) and per-candidate `meanShare`, 50/80/90 share intervals and `winProbability {p, mcse, ess}`. A model snapshot must give it for every predicted seat.
 - `directory.candidates[].partyLabel` (optional): the ballot-group key of a candidate whose party has no national group (`partyId` null).
 - `governmentOutcomes` stays empty for nowcasts. Blocs live in `seatLayer.summary.blocs`, defined by James.
+- `seatLayer.summary.scenarios` (Stage77): named seat-arithmetic outcomes over the configured blocs, each `{id, label, definition, probability {p, mcse, ess}}`. James's configuration (`config/nowcast-2026.json` `mmp.hungParliament`) gives three:
+  - `hung`: neither NAT+ACT+NZF nor LAB+GRN+TPM has a majority;
+  - `hung-opportunity-kingmaker`: hung, and TOP's seats make one of them a majority;
+  - `hung-opportunity-not-decisive`: hung, and TOP's seats do not.
+
+  These are scenarios of seat arithmetic, not predictions of coalition agreements.
 
 Still open: per-component calibration status (every probability is `uncalibrated`) and precision thresholds (Stage63).
 

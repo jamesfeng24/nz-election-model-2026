@@ -135,7 +135,7 @@ Frozen historical scripts keep their own constants. Live code reads only this fi
 ## 9. Decisions still James's
 
 - the probability-release policy (proposal in [release-checklist.md](release-checklist.md));
-- bloc definitions for any coalition output;
+- ~~bloc definitions for any coalition output~~ (decided 2026-10-07: NAT+ACT, NAT+ACT+NZF, LAB+GRN, LAB+GRN+TPM; hung parliament with TOP as kingmaker);
 - the four unpolled Māori seats;
 - whether Māori probabilities are shown as a C–P range or withheld;
 - the 2026 ordinary/exceptional classification.

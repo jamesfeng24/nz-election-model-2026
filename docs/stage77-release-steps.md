@@ -29,6 +29,20 @@ Authorized by James on 2026-10-07. The coordinator's notes are applied:
 | Rehearsal | `scripts/release_rehearsal/run.py` | The full live chain at production settings, labelled synthetic. Writes the bank and options to the gitignored `.release-build/rehearsal/` and a deterministic report to `data/processed/release-rehearsal/report.json`. |
 | Release settings | `config/nowcast-2026.json` `release` | Reconciliation tolerance 1.0pp, staleness windows 14/60 days and MCSE limit 0.01 are proposals. They take effect only when James approves the release policy (`release.policyApprovedBy`, now in `pending`, so the gate fails closed until then). |
 
+## Blocs and the hung parliament (James, 2026-10-07)
+
+`config/nowcast-2026.json` `mmp.blocs`: NAT+ACT, NAT+ACT+NZF, LAB+GRN and LAB+GRN+TPM. For each bloc the seat layer reports:
+- the probability of a majority (more than half of that simulated Parliament, overhang included);
+- the probability of exactly half;
+- 50/80/90 seat intervals.
+
+`mmp.hungParliament` adds three scenarios, each with batch-means MCSE (`seatLayer.summary.scenarios`):
+- **hung:** neither NAT+ACT+NZF nor LAB+GRN+TPM has a majority;
+- **TOP kingmaker:** hung, and adding TOP's seats to either gives it a majority;
+- **hung, TOP not decisive:** hung, and TOP's seats give neither a majority.
+
+The last two sum to the first. The wording is seat arithmetic, not a prediction of agreements (release-policy proposal). `mmp.blocs` is no longer pending.
+
 ## Rehearsal (7 October 2026)
 
 **Real inputs:**

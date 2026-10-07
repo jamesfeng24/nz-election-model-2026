@@ -25,6 +25,7 @@ function estimates(snapshot: ForecastSnapshot): [string, Estimate][] {
         out.push([`${p.partyId}.${key}`, p[key]]);
     for (const b of s.blocs) out.push([`${b.id}.probMajority`, b.probMajority], [`${b.id}.probExactHalf`, b.probExactHalf]);
     out.push(['parliament.probAnyOverhang', s.parliament.probAnyOverhang]);
+    for (const sc of s.scenarios) out.push([`scenario.${sc.id}`, sc.probability]);
   }
   for (const d of snapshot.electorateDetail)
     for (const c of d.candidates) out.push([`${d.electorateId}.${c.candidateId}.winProbability`, c.winProbability]);

@@ -23,11 +23,14 @@ export interface NowcastSnapshotOptions {
   codeRevision: string;
   bankSha256: string;
   /** Required for the seat layer; null withholds it with a reason. */
-  mmp: { rulesVersion: string; rulesSourceIds: string[]; blocs: BlocDefinition[] } | null;
+  mmp: { rulesVersion: string; rulesSourceIds: string[]; blocs: BlocDefinition[]; hungParliament?: HungParliament | null } | null;
   nationalBasis: string;
   limitations: string[];
   syntheticLabel?: string;
 }
+
+/** Hung parliament over two named blocs, with an optional kingmaker party (James, 2026-10-07). */
+export interface HungParliament { blocs: [string, string]; kingmaker?: string | null; definition?: string }
 
 const METHOD = 'empirical-quantile (linear) of the bank rows';
 const SEAT_METHOD = 'empirical-quantile (lower step) of the bank rows';
@@ -86,7 +89,30 @@ export function runSeatLayer(bank: DrawBank, config: SeatLayerConfig, electionId
   return { outcomes, accumulator };
 }
 
-function seatLayerSummary(bank: DrawBank, config: SeatLayerConfig, layout: ChainOrder, electionId: string) {
+function hungScenarios(config: SeatLayerConfig, hung: HungParliament,
+  flag: (f: (o: SeatDrawOutcome) => boolean) => { p: number; mcse: number; ess: number }) {
+  const blocs = hung.blocs.map(id => config.blocs.find(b => b.id === id));
+  if (blocs.some(b => !b)) throw new RangeError('Hung-parliament blocs must be configured blocs');
+  const [a, b] = blocs as BlocDefinition[];
+  const seats = (o: SeatDrawOutcome, ids: string[]) => ids.reduce((sum, id) => sum + o.parties[id].totalSeats, 0);
+  const majority = (o: SeatDrawOutcome, ids: string[]) => 2 * seats(o, ids) > o.parliamentSize;
+  const isHung = (o: SeatDrawOutcome) => !majority(o, a.partyIds) && !majority(o, b.partyIds);
+  const out = [{ id: 'hung', label: `Hung parliament (neither ${a.label} nor ${b.label})`,
+    definition: `Neither ${a.label} nor ${b.label} holds more than half of that simulated Parliament`, probability: flag(isHung) }];
+  const k = hung.kingmaker;
+  if (k) {
+    if (!config.listedPartyIds.includes(k) || a.partyIds.includes(k) || b.partyIds.includes(k)) throw new RangeError('Kingmaker must be a listed party outside both blocs');
+    const decisive = (o: SeatDrawOutcome) => isHung(o) && (majority(o, [...a.partyIds, k]) || majority(o, [...b.partyIds, k]));
+    out.push(
+      { id: `hung-${k}-kingmaker`, label: `Hung parliament, ${k} kingmaker`,
+        definition: `Hung, and adding ${k}'s seats to ${a.label} or ${b.label} gives it a majority`, probability: flag(decisive) },
+      { id: `hung-${k}-not-decisive`, label: `Hung parliament, ${k} not decisive`,
+        definition: `Hung, and ${k}'s seats give neither ${a.label} nor ${b.label} a majority`, probability: flag(o => isHung(o) && !decisive(o)) });
+  }
+  return out;
+}
+
+function seatLayerSummary(bank: DrawBank, config: SeatLayerConfig, layout: ChainOrder, electionId: string, hung: HungParliament | null) {
   const { outcomes, accumulator } = runSeatLayer(bank, config, electionId);
   const summary = accumulator.summarise();
   const unit = bank.layerReplicates;
@@ -112,6 +138,7 @@ function seatLayerSummary(bank: DrawBank, config: SeatLayerConfig, layout: Chain
           probExactHalf: probability(outcomes.map((o, k) => (2 * seats[k] === o.parliamentSize ? 1 : 0)), layout, unit),
         };
       }),
+      scenarios: hung ? hungScenarios(config, hung, flag) : [],
       parliament: {
         meanSize: summary.parliament.meanSize, size: stepIntervals(outcomes.map(o => o.parliamentSize)),
         sizeDistribution: summary.parliament.sizeDistribution, overhangDistribution: summary.parliament.overhangDistribution,
@@ -148,7 +175,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     seatLayer = { status: 'unavailable', reason };
     mmp = { status: 'unavailable', reason };
   } else {
-    const result = seatLayerSummary(bank, seatLayerConfig(bank, options.mmp), layout, options.electionId);
+    const result = seatLayerSummary(bank, seatLayerConfig(bank, options.mmp), layout, options.electionId, options.mmp.hungParliament ?? null);
     seatLayer = { status: 'available', summary: result.summary };
     mmp = { status: 'available', exampleDrawAllocation: result.example };
     partySeatSummaries = result.summary.parties.map(p => ({ partyId: p.partyId, seats: p.seats }));

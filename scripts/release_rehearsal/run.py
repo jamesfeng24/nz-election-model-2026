@@ -28,7 +28,7 @@ AS_OF = '2026-10-07'
 STAND_INS = ['official candidate list (Stage50 not yet run; announcements + invented Labour/independent rows)',
              'ordinary/exceptional classification (James has not entered it)',
              'winners for the four unpolled Maori seats (James has not chosen a fallback)',
-             'MMP rules-version label (placeholder) and blocs (none)']
+             'MMP rules-version label (placeholder; the blocs are the configured ones)']
 NOT_USED = ['Stage69 voting-place notional baseline (not on main; the Stage64 population-flat baseline is used)']
 STAGE70 = 'data/processed/polling/weekly-refresh/2026-10-07/estimate.json'
 
@@ -86,7 +86,8 @@ def rehearse(national, replicates, workers):
                'dataCutoff': config['national']['dataCutoff'] + 'T00:00:00+00:00', 'electionId': 'nz-general-2026',
                'electionDate': config['electionDate'], 'boundaryVersionId': 'stats-nz-electorates-final-2025',
                'modelVersion': 'rehearsal-' + config['configVersion'], 'codeRevision': 'rehearsal',
-               'mmp': {'rulesVersion': 'UNVERIFIED-PLACEHOLDER-synthetic-only', 'rulesSourceIds': ['synthetic-rules'], 'blocs': []},
+               'mmp': {'rulesVersion': 'UNVERIFIED-PLACEHOLDER-synthetic-only', 'rulesSourceIds': ['synthetic-rules'],
+                       'blocs': config['mmp']['blocs'], 'hungParliament': config['mmp']['hungParliament']},
                'nationalBasis': 'Stage70 2026-10-07 refresh, lastDataSupport (latent state, week of ' + config['national']['modelStateAsOf'] + ')',
                'limitations': ['SYNTHETIC REHEARSAL: stand-in candidate list, classification and unpolled Maori seats; not a nowcast.'],
                'probabilityMcseMax': config['release']['probabilityMcseMax']}
