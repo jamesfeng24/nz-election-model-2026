@@ -1,0 +1,93 @@
+{
+ "polls": [
+  {
+   "candidateVotePct": {
+    "Craig Renney (LAB)": 29,
+    "Gerald Warner (NZF)": 5,
+    "Julie Anne Genter (GRN)": 29,
+    "Karunā Muthu (NAT)": 15,
+    "Kayla Kingdon-Bebb (TOP)": 3,
+    "Nicole McKee (ACT)": 5
+   },
+   "candidateVoteUndecidedTreatment": "not stated; the six published shares sum to 86%",
+   "caveats": [
+    "Newsroom: the survey is \"to be taken with a pinch of salt\"",
+    "results revealed at a pub debate; Newsroom notes the room may not be representative (this concerns the audience, not the sample method)",
+    "new electorate merging Rongotai and part of Wellington Central: no past result on the same boundaries",
+    "no primary Curia or Taxpayers’ Union release preserved (the Taxpayers’ Union page returned HTTP 403)"
+   ],
+   "commissioner": "Taxpayers' Union",
+   "electorate": "Wellington Bays",
+   "fieldwork": null,
+   "fieldworkNote": "not stated in the article; results revealed at a Taxpayers’ Union candidate debate on Tuesday 15 September 2026; reported 2026-09-16",
+   "marginOfError": null,
+   "partyVotePct": {
+    "GRN": 31,
+    "LAB": 29,
+    "NAT": 13
+   },
+   "partyVoteReported": "three parties only",
+   "pollster": "Curia",
+   "sampleSize": 400,
+   "sources": [
+    "polling-electorate2026-newsroom-wellington-bays-2026-09-16.html"
+   ],
+   "type": "general"
+  },
+  {
+   "candidateVotePct": {
+    "Alex Price (ACT)": 3,
+    "Helen White (LAB)": 33,
+    "Melissa Lee (NAT)": 32,
+    "Qiulae Wong (TOP)": 10,
+    "Ricardo Menéndez March (GRN)": 14,
+    "Sheldon Eden-Whaitiri (NZF)": 5
+   },
+   "candidateVoteUndecidedTreatment": "unsure voters excluded from the published shares; 6% of the total sample undecided",
+   "caveats": [
+    "published by The Spinoff and the NZ Herald on 2026-09-30 and 2026-10-01, revealed at The Great Mt Albert Debate",
+    "first poll of the seat in 2026 (The Spinoff)",
+    "no primary Curia tables preserved",
+    "2023 result for context: Labour won by 18 votes (NZ Herald)"
+   ],
+   "commissioner": "The Spinoff",
+   "electorate": "Mt Albert",
+   "fieldwork": [
+    "2026-09-21",
+    "2026-09-28"
+   ],
+   "marginOfError": 4.9,
+   "marginOfErrorNote": "maximum, as reported by the NZ Herald",
+   "partyVotePct": {
+    "ACT": 3,
+    "GRN": 19,
+    "LAB": 32,
+    "NAT": 32,
+    "NZF": 6,
+    "TOP": 6
+   },
+   "partyVoteReported": "unsure voters excluded",
+   "pollster": "Curia",
+   "sampleSize": 400,
+   "sources": [
+    "polling-electorate2026-spinoff-mt-albert-2026-09-30.html",
+    "polling-electorate2026-nzherald-mt-albert-poll.html"
+   ],
+   "type": "general"
+  }
+ ],
+ "schemaVersion": 1,
+ "scope": "general (non-Maori) electorates for the 2026 general election, found by one bounded web search on 2026-10-07",
+ "searchRecord": {
+  "date": "2026-10-07",
+  "found": "two general-seat polls (above); no electorate-poll table on the Wikipedia opinion-polling page; no Freshwater, Talbot Mills or Horizon electorate polls surfaced (Q+A was not searched by name)",
+  "notFound": [
+   "Taxpayers’ Union-Curia monthly national poll pages were seen in results; any further TU-Curia electorate surveys beyond Wellington Bays were not found"
+  ],
+  "outsideScope": [
+   "Te Tai Hauāuru, Te Tai Tonga and other Maori-seat polls (Curia for Whakaata Maori) belong to the Stage71 Maori layer; already preserved under data/raw/polling/current-2026-primary/"
+  ],
+  "passes": "one bounded pass of seven web searches (Taxpayers’ Union-Curia electorate polls, Freshwater, Talbot Mills, Horizon, Wikipedia electorate polling, Newsroom, The Spinoff, NZ Herald, named-seat queries)"
+ },
+ "status": "preserved and listed only; not modelled, not used by any layer (a later stage)"
+}

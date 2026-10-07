@@ -1,0 +1,35 @@
+{
+ "base": {
+  "estimate": "data/processed/polling/live-fit-2026-10/summary/A.json",
+  "estimateSha256": "c50d1fa439a4ed979a9a0aa0558f1111e02c23e73fa774e73e465651b9fec993",
+  "panel": "data/processed/polling/panel-update-2026-10/panel.json",
+  "panelSha256": "34a5253e10fa66b9109d921d316613e1319b4967e85bf4ae7e521f64cb9d8637",
+  "previousRun": null
+ },
+ "codeSha256": {
+  "scripts/polling/weekly_refresh/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scripts/polling/weekly_refresh/adopt.py": "a873a7e38a35bacfb04835b988d44b05697db9f9bf5cac842c90acf7c294a0cf",
+  "scripts/polling/weekly_refresh/capture.py": "7eedf30bfc9581fa4444804f6e7c85dcff8fa43ba5fd3a4b756ec2c3381c298a",
+  "scripts/polling/weekly_refresh/common.py": "8d96a4b1e3a05297dd559c24c66a5673aa668ae0e3a33c7f6e1a061522ab399f",
+  "scripts/polling/weekly_refresh/dataset.py": "48849986a9f9ca2af3b182100357cd79d1afb84ee8b9a2f9d7ff2705d8fb9138",
+  "scripts/polling/weekly_refresh/delta.py": "2c3365286e071f0b018d3c5643f3ec1bfd988fd0e9c1c9704a0d52227e9cb9c1",
+  "scripts/polling/weekly_refresh/electorate_polls.py": "91c3c14b984fec376bdaabc8e5e1b15ab06a05765cffbd215592b73493ebd5a5",
+  "scripts/polling/weekly_refresh/fit.py": "90e68407775d6bdb6d9819f1756d9a1acb95dda2135b25cb0808346c76f670a1",
+  "scripts/polling/weekly_refresh/run.py": "82189eeac62703657c6383fedad00bbea691a6ca46de6d931a8cb1b4359bddfd",
+  "scripts/polling/weekly_refresh/summarize.py": "0a5743167021701d62ec2534cf512382bfcfd4d4fa0985128540154f710a50fd"
+ },
+ "datasetFiles": {
+  "dataset.json": "10390a9d61a202707c0453c42a5a7b84aaf33af1be8a71df6f7b81955adb8b4e",
+  "dataset.npz": "2449b2aaa594ce320af6f83f2b1449b2c57df48156d5afbf14eb94cfedbe8475"
+ },
+ "datasetFingerprint": "4ad20f692c87f729f5de569440cb10ad21490969d528b5cdb89b055aeafc8b4c",
+ "refreshDate": "2026-10-07",
+ "schemaVersion": 1,
+ "sha256": {
+  "data/processed/polling/live-fit-2026-10/input-contract.json": "89170f4fcd0d10efc0274eca30964658ab2836474cc4bf7be1e9bcf64267d500",
+  "data/raw/polling/weekly-refresh/2026-10-07/wikipedia-opinion-polling-2026.html": "b1c4a218816390385129b88aef84adfbb06f4d28354c1deea91faa2698338317",
+  "data/raw/polling/weekly-refresh/2026-10-07/wikipedia-opinion-polling-2026.html.headers": "3bf7e42934e8f31363be034dd861399f0b6d68e74a6e4fc42d13c8d7e00f8308",
+  "requirements-external.lock": "54a6d5506df8ad94ff6f16ee959dd675b515214f58b3d75b5a3fec6b9a0b155b"
+ },
+ "wikipediaRevision": "1378865337"
+}
