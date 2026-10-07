@@ -12,6 +12,8 @@ Branch `stage/69-voting-place-notionals-72u6wn`, restarted from main `0160180` (
 
 **Effect and limits.** Any nowcast assembled from now on uses the voting-place baseline for the 64 general seats (Māori seats are unaffected: they have no baseline here). Seat-level party means move at 8 seats by 2 to 8 points of National−Labour margin and Kapiti changes leader on the 2023 baseline (PR #96). Reverting is the same one-line change.
 
+**Test fix.** The post-merge main run of #96 (Verify 37569089462, head `0160180`) failed one Stage69 test, `test_deterministic_regeneration_matches_saved_artifacts_apart_from_draws`, on `baseline-party-vectors.json` only; the PR run on the same content had passed. Cause: `shareExact` is `Fraction(share).limit_denominator(10**15)`, so a last-bit float difference between runner CPUs changes both integers, and `equivalent()` compared integers exactly. `scripts/voting_place_notionals/common.py` `equivalent` now compares `{numerator, denominator}` pairs by value to the same 1e-9 tolerance as floats (a unit test shows one-ulp noise changes the integers but not the value). Artifacts are byte-identical; only the manifest code hash changed.
+
 **Exact next action.** The coordinator reviews and merges; the docs fold then folds this and the Stage69 fragment.
 
 <!-- fold: roadmap -->

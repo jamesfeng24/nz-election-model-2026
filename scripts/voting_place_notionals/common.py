@@ -29,8 +29,18 @@ def encode(value):
     return (json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2, allow_nan=False) + '\n').encode()
 
 
+RATIO_KEYS = {'numerator', 'denominator'}
+
+
 def equivalent(expected, actual, tolerance=1e-9):
-    """Exact structure; floats agree to a stated absolute tolerance (platform last bits)."""
+    """Exact structure; floats agree to a stated absolute tolerance (platform last bits).
+
+    A {numerator, denominator} pair is a rational approximation of a float share (`limit_denominator`), so one last-bit difference
+    in the float can change both integers: such pairs are compared by value, to the same tolerance.
+    """
+    if isinstance(expected, dict) and isinstance(actual, dict) and RATIO_KEYS == set(expected) == set(actual):
+        return (expected['denominator'] != 0 and actual['denominator'] != 0
+                and abs(expected['numerator'] / expected['denominator'] - actual['numerator'] / actual['denominator']) <= tolerance)
     if isinstance(expected, dict):
         return (isinstance(actual, dict) and expected.keys() == actual.keys()
                 and all(equivalent(v, actual[k], tolerance) for k, v in expected.items()))
