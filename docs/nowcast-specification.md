@@ -2,7 +2,7 @@
 
 **This is the single source of truth for what the 2026 product is and how its parts connect.** Other active documents point here rather than restating it. Decisions: [D106](../DECISIONS.md) (nowcast estimand) and [D107](../DECISIONS.md) (general-seat candidate-balance uncertainty policy). The remaining work and the publication gate are in [release-checklist.md](release-checklist.md). Historical stage documents are records of what each stage found, not current policy.
 
-Status, 6 October 2026: every layer below exists and has been checked historically, but the live 2026 chain is **not assembled** and nothing is published.
+Status, 7 October 2026: every layer below exists and has been checked historically. Stage73 assembles the Python draw bank ([stage73-nowcast-assembly.md](stage73-nowcast-assembly.md)); it is blocked on live inputs, the TypeScript side is Stage74, and nothing is published.
 
 ## 1. Estimand
 
@@ -43,12 +43,12 @@ The local-party and candidate scales were calibrated against election-day result
 |---|---|---|---|---|---|
 | 1 | Poll sources (Stage52/59), Stage70 routine | dated poll panel | national fit | poll shares | Stage70 unpushed |
 | 2 | Stage62/70 gauss fit | `lastDataSupport` draws | national adapter | 8 category shares; one draw id shared by every seat | exists |
-| 3 | national adapter | category → 2026 ballot groups | local layer **and** MMP party vote | shares summing to 1; the **same** draw feeds both | to build |
-| 4 | local party (`local_vectors` + `invert`, `scripts/uncertainty_expectation/simulation.py`) | per-seat party affinities from the 2026 notional baseline; 2026 local-party scales | candidate layer | ballot-group shares; shared election effect + seat effect | 2026 scales and adapter to build; baseline switches to Stage69 |
-| 5 | candidate (`candidate_vectors` + `invert`, Stage45 Gaussian) | continuous S+R destinations/exponents (`data/processed/continuous-transport/readiness-2026.json`) + final slate; 2026 candidate scales × D107 multiplier | winners | candidate shares; shared + seat effects | to build after Stage50/69 |
+| 3 | national adapter (`scripts/nowcast_assembly/national.py`) | category → 2026 ballot groups | local layer **and** MMP party vote | shares summing to 1; the **same** draw feeds both; Other one MMP bucket, split inside each seat by its own 2023 mix | built (Stage73) |
+| 4 | local party (`local_vectors` + `invert`, `scripts/uncertainty_expectation/simulation.py`) | per-seat party affinities from the 2026 notional baseline; 2026 local-party scales | candidate layer | ballot-group shares; shared election effect + seat effect | built (Stage73) on the 2026 scales; baseline switches to Stage69 |
+| 5 | candidate (`candidate_vectors` + `invert`, Stage45 Gaussian) | continuous S+R destinations/exponents (`data/processed/continuous-transport/readiness-2026.json`) + final slate; 2026 candidate scales × D107 multiplier | winners | candidate shares; shared + seat effects | built (Stage73); live run waits on the Stage50 roster and the classification |
 | 6 | Stage56 manual layer | dated adjustment files | output B only | mean shifts, `extraSdPp` | exists; no 2026 entry |
 | 7 | Stage66/71 Māori layer | per-draw winners (3 polled seats; 4 `unpolled`) | MMP | independent of the national draw (coupling optional) | exists; unpolled seats block MMP |
-| 8 | Python → TypeScript bridge | draw bank: national shares + 71 winners per draw | Stage65 seat layer | shares → integer votes at 10^9 | to build |
+| 8 | Python → TypeScript bridge | draw bank: national shares + 71 winners per draw (Stage73 `scripts/nowcast_assembly`) | Stage65 seat layer | shares → integer votes at 10^9 | bank built (Stage73); reader is Stage74 |
 | 9 | Stage65 `src/models/mmp/seatLayer.ts` | seat summaries with Monte Carlo SE | exporter | seats, threshold/lifeboat, overhang, size, blocs | exists; needs 80% quantiles and effective-n SE |
 | 10 | exporter (`src/models/simulation/exporter.ts`) | snapshot v2 (`src/types/export.ts`) | archive → loader → site | 50/80/90 intervals | synthetic only so far |
 
