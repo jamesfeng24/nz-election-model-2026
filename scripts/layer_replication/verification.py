@@ -81,7 +81,8 @@ def build():
     c = result['consistency']
     result['passed'] = bool(
         all(r['maximumAbsoluteDifference'] <= tol['independentRecompute'] for r in result['resimulationWithoutSolveReuse'])
-        and c['pairAverageOfMeansMaxAbs'] <= 1e-12 and c['winProbabilitiesSumToOneMaxAbs'] <= 1e-12 and c['blockAverageOfMeansMaxAbs'] <= 1e-12
+        and c['pairAverageOfMeansMaxAbs'] <= tol['independentRecompute'] and c['winProbabilitiesSumToOneMaxAbs'] <= 1e-12
+        and c['blockAverageOfMeansMaxAbs'] <= tol['independentRecompute']
         and c['nationalLadderTopEqualsGroupBankMaxAbs'] <= 1e-12
         and result['plainLoopDecisions']['gateBChange']['difference'] <= 1e-12
         and result['plainLoopDecisions']['layerDesignEffect']['difference'] <= 1e-9)

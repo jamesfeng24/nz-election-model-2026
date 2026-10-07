@@ -64,13 +64,13 @@ def build():
     out += ['Three-sigma requirement from the 64 single-replicate banks (`s1` is the largest sd over representative seat-candidates, so it is biased high; the change on doubling M/2 to M has sd `s1 / sqrt(M)`).', '']
     rows = [[NAMES[k], req[k]['capPP'], f(req[k]['s1Max']), f(req[k]['s1Median'], 4), f'{req[k]["requiredReplicates"]:,}', f(req[k]['ratioAtM64'], 2)] for k in KEYS]
     out += table(['Quantity', 'Cap', 's1 max', 's1 median', 'Required replicates', '3 sigma / cap at M = 64'], rows)
-    sc = d['scaling']
-    out += ['Observed sd across non-overlapping groups of M replicates relative to the i.i.d. prediction `s1 / sqrt(M)` (median over seat-candidates; 1.0 is exact 1/M variance scaling).', '']
+    sc = {m: d['scaling'][m] for m in sorted(d['scaling'], key=int)}
+    out += ['Observed sd across non-overlapping groups of M replicates relative to the i.i.d. prediction `s1 / sqrt(M)` (median over seat-candidates; 1.0 is exact 1/M variance scaling; M = 32 rests on two groups and is only indicative).', '']
     out += table(['Group size M', 'Groups', *KEYS], [[m, sc[m][KEYS[0]]['groups']] + [f(sc[m][k]['medianScaledRatio'], 2) for k in KEYS] for m in sc])
     out += ['## Gate A: the literal Stage54 national doubling (2,048 to 4,096 national draws)', '',
             'Includes the difference between two national half-samples, which no layer replication can reduce; reported for comparability.', '']
     rows = []
-    for m, a in d['gateA'].items():
+    for m, a in sorted(d['gateA'].items(), key=lambda kv: int(kv[0])):
         c = a['rounds'][-1]['changesPP']
         rows.append([m] + [f(c[k]) + ('' if a['rounds'][-1]['passed'][k] else ' (fail)') for k in KEYS] + [a['verdict']])
     rows.append(['Cap'] + [str(caps[k]) for k in KEYS] + [''])
@@ -82,14 +82,14 @@ def build():
                  [[NAMES[k], q[k]['capPP'], f(q[k]['floorSdMax']), f(q[k]['floorSdMedian'], 4), f(q[k]['threeFloorOverCap'], 2), f'{q[k]["seatCandidatesAtZero"]} of {q[k]["seatCandidates"]}', q[k]['negativeRawVariances']] for k in KEYS])
     out += ['Total sd of a (4,096, M) bank relative to the national population (maximum over representative seat-candidates), and the median variance ratio to the one-draw baseline.', '']
     rows = []
-    for m, row in flo['totalSd'].items():
+    for m, row in sorted(flo['totalSd'].items(), key=lambda kv: int(kv[0])):
         rows.append([m] + [f(row[k]['totalSdMax']) + ' / ' + f(row[k]['medianVarianceRatioToBaseline'], 2) for k in KEYS])
     out += table(['M', *KEYS], rows)
     out += ['## Seat-win probabilities', '',
             f'Seat-candidates with a probability in [0.05, 0.95]: {win["all"]["seatCandidates"]} ({win["representatives"]["seatCandidates"]} representative, {win["panel"]["seatCandidates"]} panel). '
             f'Layer design effect D1 {f(win["all"]["layerDesignEffect"], 3)} (representatives {f(win["representatives"]["layerDesignEffect"], 3)}, panel {f(win["panel"]["layerDesignEffect"], 3)}), '
             f'national design effect Dn {f(win["all"]["nationalDesignEffect"], 3)}; Stage54 measured 0.594 for both at once with 512-draw banks. The standard error of a probability of 0.5 left by the national bank alone is {f(win["all"]["floorStandardErrorAtHalf"], 4)}.', '']
-    rows = [[m, f"{4096 * int(m):,}", f(v['relativeToPool'], 4), f(v['relativeToPopulation'], 4)] for m, v in win['all']['standardErrorAtHalf'].items()]
+    rows = [[m, f"{4096 * int(m):,}", f(v['relativeToPool'], 4), f(v['relativeToPopulation'], 4)] for m, v in sorted(win['all']['standardErrorAtHalf'].items(), key=lambda kv: int(kv[0]))]
     out += table(['Replicates M', 'Composed draws', 'SE(0.5) relative to the cached pool', 'SE(0.5) relative to the national population'], rows)
     rr = win['all']['requiredReplicates']
     out += [f'Replicates needed for SE(0.5) <= 0.01: {rr["0.01"]["relativeToPool"]} (pool), {rr["0.01"]["relativeToPopulation"]} (population); for <= 0.005: {rr["0.005"]["relativeToPool"]} (pool), {rr["0.005"]["relativeToPopulation"]} (population). No release threshold is set (open decision for James).', '',
@@ -98,6 +98,17 @@ def build():
             f'Stage54 used about 14 ms per composed draw without the reuse. Total CPU of the run: {f(total / 3600, 2)} hours (hardware dependent; `timing.json` is compared by structure only).', '']
     rows = [[m, f'{4096 * m:,}', f(arm_hours(m), 2), f(SLATE * arm_hours(m), 1)] for m in spec['arms']['reported']]
     out += table(['Arm M', 'Composed draws per seat', 'CPU hours per seat', f'CPU hours, {SLATE}-seat slate'], rows)
+    a = d['gateA']
+    fails = sorted({k for m in a for k, ok in a[m]['rounds'][-1]['passed'].items() if not ok} & {k for k, ok in a['64']['rounds'][-1]['passed'].items() if not ok})
+    out += ['## Reading', '',
+            f'1. **Layer replication removes the layer noise, as Stage54 predicted.** The observed sd across groups of M replicates follows `s1 / sqrt(M)` (ratios near 1.0 up to M = 8 and at M = 16), the half-split diagnostic is {eq["verdict"]}, and every harness comparison with Stage54 is exact. '
+            f'The doubling changes fall below every frozen cap from M = {min(gate["passingArms"]) if gate["passingArms"] else "n/a"} onward and the 3-sigma rule asks for M = {gate["sigmaRequiredReplicates"]}. These caps are met relative to the cached national draws, for the control restriction and the pinned scales.',
+            f'2. **The literal Stage54 national-doubling gate is still not met at any arm** (it fails for {", ".join(NAMES[k] for k in fails)} even at M = 64). That is the finite national bank, not simulation: the floor left by the 4,096 national draws is up to {f(q["crps"]["floorSdMax"], 2)}pp for CRPS and {f(q["mean"]["floorSdMax"], 2)}pp for the mean at the worst seat-candidate (medians {f(q["crps"]["floorSdMedian"], 4)} and {f(q["mean"]["floorSdMedian"], 4)}), so absolute composed CRPS and mean levels cannot be called settled at 0.05pp whatever M is; replication cuts the median variance of these by roughly 2 to 6 times and that of the interval widths by 10 to 25 times.',
+            f'3. **Win probabilities gain little beyond M = 4.** The layer design effect is {f(win["all"]["layerDesignEffect"], 2)} (Stage54: 0.594 with both sources); the national bank alone leaves SE(0.5) {f(win["all"]["floorStandardErrorAtHalf"], 4)}, so SE(0.5) is {f(win["all"]["standardErrorAtHalf"]["1"]["relativeToPopulation"], 4)} at M = 1 and {f(win["all"]["standardErrorAtHalf"]["4"]["relativeToPopulation"], 4)} at M = 4 against a floor that M cannot lower.', '',
+            '## Recommendation', '',
+            f'- If composed score, interval or mean precision matters for a later stage, use M = {gate["cheapestArm"] if gate["cheapestArm"] else 64} layer replicates per national draw on the fixed 4,096 national draws '
+            f'({f(SLATE * arm_hours(gate["cheapestArm"] or 64), 0)} CPU hours for a {SLATE}-seat slate with the exact local-solve reuse, against a Stage54 estimate of about 145 CPU hours for the same caps by more draws without replication). For seat-win probabilities alone M = 4 ({f(SLATE * arm_hours(4), 1)} CPU hours) is within a floor-limited 0.0037 and M = 1 already gives SE(0.5) below 0.006.',
+            '- State absolute composed CRPS and mean levels with the national floor above, not as settled at 0.05pp. The frozen caps are unchanged and no default is changed; adopting replication in any release path needs separate authorisation, and a Stage60 change of the balance scale reruns this study unchanged with the new scales file.', '']
     out += ['## Limits', '',
             '- Representatives are the Stage47/48/54 first, middle and last seats of each election, not the worst-precision seats; maxima over 80 seat-candidates of noisy sds are biased high, so the 3-sigma requirements are conservative.',
             '- Layer replicates are independent scrambles of a 4,096-point stream; the scrambled stream beats an i.i.d. bank for smooth statistics, so the measured layer sds are specific to this construction.',

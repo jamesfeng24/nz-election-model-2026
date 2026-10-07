@@ -1,0 +1,63 @@
+{
+  "consumedInputs": {
+    "data/processed/balance-scale/fit.json": "02b4b1c9d5ddf593830c875d6ff90e357afa1b64d516f67a18f257ff3c32b4eb",
+    "data/processed/composed-precision/design-contract.json": "9e501d847e13fbf4429c9bce1ec8e08dcf742e4fa592af82d326ad5c4a85544e",
+    "data/processed/composed-precision/evaluation.json": "366736277e70552e8e6695b0d7a2026ac5a6198cce7a129493b6b5b6880a2052",
+    "data/processed/layer-replication/design-contract.json": "f7330160b6e092e980a625a71fe6f162efa04a1bf7ea4418f277d35d407875c1",
+    "data/processed/polling/candidate-integration/national/2017-recent_report_prior.json.gz": "5989a5a72dc929cbca19043a2854b4d5204d1c8d3a225a51924bcc31ed7640f9",
+    "data/processed/polling/candidate-integration/national/2020-recent_report_prior.json.gz": "e5a22a198ebc32658bf7d5c028663a4947f1d0164c051ab6aac28871ae8485f9",
+    "data/processed/polling/candidate-integration/national/2023-recent_report_prior.json.gz": "384b651ffb2119aa5713854d6ba956b2b00e72c0fd7643c30183e7687572f4fa",
+    "data/processed/uncertainty-revision/scales.json": "4be4940be1c944fa432246f156f5b422bf757c8e3cbc59e840fe5c23e01a1cf5",
+    "data/processed/uncertainty/inventory.json": "ef03dd9dd60130a8adc70901a931b6f481921661773c0f214343c8006de6e44f",
+    "docs/stage63-layer-replication-design.md": "f395df1a29cfcea7c1188f4c212b86fd952b5e26fb6fc88ba46530fb9f599fe3",
+    "scripts/balance_scale/common.py": "da046766c51925a51fcd260dfacbf402e2ef46a3b1056c25c5f67b234ecc0534",
+    "scripts/balance_scale/evaluation.py": "05e0e3f5f3306f6ef1adedb95aad6d69dd131ed63389799065452f53508bf07f",
+    "scripts/balance_scale/simulate.py": "c53e228f929e36e10fd4e4cce291ae7d7867174c80eeee83478faf1549f35c28",
+    "scripts/balance_scale/summary.py": "31e27fbec66aa67b03a846b7d1c2917396a3281579488c4e658649193e6722d4",
+    "scripts/composed_precision/common.py": "a38b243c162b8cdf8007bb43aa3ae4b07f289f212993374611a7cb1e85a603f4",
+    "scripts/composed_precision/evaluation.py": "ad41320f96636446c219311412dff92185f6aeff1bddf597961dfa08f7d9281b",
+    "scripts/composed_precision/simulate.py": "8eb13280bedbe77d667016eef0dcd26c5168f8287ed9a9efb027131e15972808",
+    "scripts/composed_precision/stream.py": "df3a0077250cf0802793eafc7fd9c9998f92a1fd6374ab324891422ef393d0bf",
+    "scripts/uncertainty/construction.py": "aa0d8153030a1f095ace765db0b818b448a7b2a8f630b4210d1d15931b61333f",
+    "scripts/uncertainty/metrics.py": "f7f105dd0d8397a5e4180b4fabd1605b64c00a8c9ba1ce3d5b529c96d3147bf4",
+    "scripts/uncertainty/streams.py": "b23b4e13a08ac3aec7daef7e34888782d795801679232a23ed2fa6ccc77eef0b",
+    "scripts/uncertainty/transforms.py": "30158b52dae16a3ae52f218c5f13428899bcd734ce6c279ce58717d0d2c43a2b",
+    "scripts/uncertainty_expectation/audits.py": "50f06814e7051ae8478a8d7de783049bdb7d9ed4622fd1f8a7053b0a20809126",
+    "scripts/uncertainty_expectation/integration.py": "7b1e7f563fc0f3ffc35d724c46f0962ab68295d834618210c64d27165a59cb76",
+    "scripts/uncertainty_expectation/simulation.py": "4140c2caad9f12615d2a4e57c00c348a3fce4c4df374e6e7b869fcfb51b8d9ad",
+    "scripts/uncertainty_revision/coordinates.py": "4a08290a2f62474df5a80f74ca3262b44b321132a53e86e96326b8b5f0e30f1a",
+    "scripts/uncertainty_revision/estimation.py": "481261b0f67c67e759db88ddb00262cef890f548c820ec288d6c69def20c5856",
+    "scripts/uncertainty_tails/integration.py": "abc7f6d3a72d5d9a70aefbf4dd33287a3cf462034c41d2a634f610cd3f2f5ea4",
+    "scripts/uncertainty_tails/metrics.py": "852d895a02ebd940fc8b89b90c4ead06e0a55b60f9dfddc1ffc2e08be23fcf3d",
+    "scripts/uncertainty_tails/streams.py": "40ee7b2b52216febad3339b1c409fb9c875d97be09f0989c883aad8ad6ecee31"
+  },
+  "dataSourcesJsonTouched": false,
+  "derivedArtifacts": {
+    "data/processed/layer-replication/decision.json": "96d54275b580342531b44d0cc8780ffaa93a55c8bfc7b3d9dfb3fd59517cf835",
+    "data/processed/layer-replication/design-contract.json": "f7330160b6e092e980a625a71fe6f162efa04a1bf7ea4418f277d35d407875c1",
+    "data/processed/layer-replication/evaluation.json": "8729427e4349225561939ba23f33c1522e8e4f0944e9c3a3153e8d8e2352cd4c",
+    "data/processed/layer-replication/input-contract.json": "70ab10a6d0ab242274712161b08a1b82b4a2d3e38b6ccf16e192056e0c43c392",
+    "data/processed/layer-replication/timing.json": "a7d6881dcef560699cc79f93f4d0f378ffb2dfe62db914783d7576800339b2a9",
+    "data/processed/layer-replication/verification.json": "2a4d3fef4cecfb084db4d6c8f80693da21dd44100587e2b015d47883114147e4"
+  },
+  "frozenDesign": {
+    "data/processed/layer-replication/design-contract.json": "f7330160b6e092e980a625a71fe6f162efa04a1bf7ea4418f277d35d407875c1",
+    "docs/stage63-layer-replication-design.md": "f395df1a29cfcea7c1188f4c212b86fd952b5e26fb6fc88ba46530fb9f599fe3"
+  },
+  "hashesAreNotProofOfLinuxReproduction": true,
+  "newCodeAndTests": {
+    "scripts/layer_replication/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/layer_replication/common.py": "fb7582562325eeb22bdcd2b5c18b8b33cc4de5f7cae86bc0e10f68ffde547570",
+    "scripts/layer_replication/decision.py": "170833f38268b5f8f5875cffa53cfaf379bb1dbf0882f334757fcb20b6601644",
+    "scripts/layer_replication/evaluation.py": "03cf96add817b41bc0877fce1132e98d3bdd9a4b846a63af7c73798b4559ccb9",
+    "scripts/layer_replication/manifest.py": "5cfdd2c9bbda0e286899b674f1d9b7e335f68b856ad3182d97607181af8e1c1c",
+    "scripts/layer_replication/report.py": "c44ac638d7dc6845e0acea81c294d2e0abae3cf33c00f420723e53ab55d4e292",
+    "scripts/layer_replication/simulate.py": "ed5359953af079e855e3642c6fed1a78375afdf00ddb9f05da354dd614cdc73d",
+    "scripts/layer_replication/verification.py": "28456974a83645d3de30298c2ab37817702cd40dad28bf41285e9e5ba55cf9ef",
+    "scripts/tests/test_stage63_layer_replication.py": "afc828433c884e001966104e0e33e6ea69dc26f7809ed977f66679e5e1dc8073"
+  },
+  "newNationalInference": false,
+  "newSourcesOrAcquisition": false,
+  "stage": 63,
+  "timingIsHardwareDependent": true
+}

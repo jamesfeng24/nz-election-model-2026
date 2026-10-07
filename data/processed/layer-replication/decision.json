@@ -1,0 +1,1100 @@
+{
+  "equivalence": {
+    "finiteBankBiasOfSingleReplicate": {
+      "crps": {
+        "maxAbsPP": 0.0008277020819402736,
+        "maxInUnitsOfM64Sd": 0.3569299719532674
+      },
+      "energy": {
+        "maxAbsPP": 0.022143304209890857,
+        "maxInUnitsOfM64Sd": 3.6999544921305136
+      },
+      "width50": {
+        "maxAbsPP": 0.01318560531110613,
+        "maxInUnitsOfM64Sd": 0.6727120286083943
+      },
+      "width80": {
+        "maxAbsPP": 0.02439335819135735,
+        "maxInUnitsOfM64Sd": 0.9575164313654683
+      },
+      "width90": {
+        "maxAbsPP": 0.054038507579132755,
+        "maxInUnitsOfM64Sd": 1.3062268895556661
+      }
+    },
+    "halfSplitArm": 32,
+    "maxAbsZ": 2.5345941810802426,
+    "meanZSquared": 0.8901583809901847,
+    "verdict": "EQUIVALENT",
+    "zCount": 409
+  },
+  "gateA": {
+    "1": {
+      "lastDoublingRatioToCap": {
+        "crps": 3.300790639433444,
+        "energy": 2.3522456451441087,
+        "mean": 2.4261446800554154,
+        "width50": 0.9259703300553781,
+        "width80": 0.7874111725361246,
+        "width90": 1.7061194120848882
+      },
+      "rounds": [
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.23250759397844334,
+            "energy": 0.2116866824046948,
+            "mean": 0.5609311779129342,
+            "width50": 1.447052714734859,
+            "width80": 2.164639462273552,
+            "width90": 2.255377865428379
+          },
+          "earlier": 512,
+          "later": 1024,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": false,
+            "width80": false,
+            "width90": false
+          }
+        },
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.3645601154791134,
+            "energy": 0.4748523485890388,
+            "mean": 0.4515645271661981,
+            "width50": 0.5446416335237103,
+            "width80": 1.1891403171542976,
+            "width90": 1.5653009737922474
+          },
+          "earlier": 1024,
+          "later": 2048,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": false,
+            "width80": false,
+            "width90": false
+          }
+        },
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.1650395319716722,
+            "energy": 0.23522456451441087,
+            "mean": 0.12130723400277077,
+            "width50": 0.46298516502768905,
+            "width80": 0.3937055862680623,
+            "width90": 0.8530597060424441
+          },
+          "earlier": 2048,
+          "later": 4096,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": true,
+            "width80": true,
+            "width90": false
+          }
+        }
+      ],
+      "verdict": "NATIONAL_DOUBLING_NOT_MET"
+    },
+    "16": {
+      "lastDoublingRatioToCap": {
+        "crps": 1.5291185991344136,
+        "energy": 0.48825478677347434,
+        "mean": 2.429545195551839,
+        "width50": 0.32869887360251226,
+        "width80": 0.627722513467937,
+        "width90": 0.8644054170961937
+      },
+      "rounds": [
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.1880455836307391,
+            "energy": 0.18242406202790917,
+            "mean": 0.3415241785558507,
+            "width50": 0.47030793077506416,
+            "width80": 0.8709978499098909,
+            "width90": 0.7578340404539006
+          },
+          "earlier": 512,
+          "later": 1024,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": true,
+            "width80": false,
+            "width90": false
+          }
+        },
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.20754380947274242,
+            "energy": 0.13928490491035106,
+            "mean": 0.2227190137742454,
+            "width50": 0.19778411787186911,
+            "width80": 0.4127162703923233,
+            "width90": 0.39660031126994255
+          },
+          "earlier": 1024,
+          "later": 2048,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": true,
+            "width80": true,
+            "width90": true
+          }
+        },
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.07645592995672068,
+            "energy": 0.048825478677347434,
+            "mean": 0.12147725977759194,
+            "width50": 0.16434943680125613,
+            "width80": 0.3138612567339685,
+            "width90": 0.43220270854809684
+          },
+          "earlier": 2048,
+          "later": 4096,
+          "passed": {
+            "crps": false,
+            "energy": true,
+            "mean": false,
+            "width50": true,
+            "width80": true,
+            "width90": true
+          }
+        }
+      ],
+      "verdict": "NATIONAL_DOUBLING_NOT_MET"
+    },
+    "4": {
+      "lastDoublingRatioToCap": {
+        "crps": 1.579272708998758,
+        "energy": 0.7786861826726721,
+        "mean": 2.373525838661905,
+        "width50": 0.3599215448559647,
+        "width80": 0.651743661143712,
+        "width90": 1.0723397967159656
+      },
+      "rounds": [
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.23699285032270367,
+            "energy": 0.20525683172591336,
+            "mean": 0.33197369557720435,
+            "width50": 0.6056252207012669,
+            "width80": 1.0996534551592667,
+            "width90": 1.1935869804892363
+          },
+          "earlier": 512,
+          "later": 1024,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": false,
+            "width80": false,
+            "width90": false
+          }
+        },
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.16083569807473808,
+            "energy": 0.13955282563129856,
+            "mean": 0.28598401536428497,
+            "width50": 0.43895173745087135,
+            "width80": 0.6484057330391195,
+            "width90": 0.7421400262476432
+          },
+          "earlier": 1024,
+          "later": 2048,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": true,
+            "width80": false,
+            "width90": false
+          }
+        },
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.0789636354499379,
+            "energy": 0.07786861826726721,
+            "mean": 0.11867629193309526,
+            "width50": 0.17996077242798236,
+            "width80": 0.325871830571856,
+            "width90": 0.5361698983579828
+          },
+          "earlier": 2048,
+          "later": 4096,
+          "passed": {
+            "crps": false,
+            "energy": true,
+            "mean": false,
+            "width50": true,
+            "width80": true,
+            "width90": false
+          }
+        }
+      ],
+      "verdict": "NATIONAL_DOUBLING_NOT_MET"
+    },
+    "64": {
+      "lastDoublingRatioToCap": {
+        "crps": 1.223710303392025,
+        "energy": 0.43174178810581054,
+        "mean": 2.3654134111345826,
+        "width50": 0.31210985955819837,
+        "width80": 0.5850315649085474,
+        "width90": 0.7340432307492577
+      },
+      "rounds": [
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.18242836397123696,
+            "energy": 0.23295530267351694,
+            "mean": 0.33658862320579885,
+            "width50": 0.3126093881094505,
+            "width80": 0.6014625924220098,
+            "width90": 0.63886303492745
+          },
+          "earlier": 512,
+          "later": 1024,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": true,
+            "width80": false,
+            "width90": false
+          }
+        },
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.2021232548357368,
+            "energy": 0.15311106349722792,
+            "mean": 0.22194310553197028,
+            "width50": 0.08552288543544506,
+            "width80": 0.22794374817019047,
+            "width90": 0.27926416261597353
+          },
+          "earlier": 1024,
+          "later": 2048,
+          "passed": {
+            "crps": false,
+            "energy": false,
+            "mean": false,
+            "width50": true,
+            "width80": true,
+            "width90": true
+          }
+        },
+        {
+          "allPassed": false,
+          "changesPP": {
+            "crps": 0.061185515169601246,
+            "energy": 0.043174178810581054,
+            "mean": 0.11827067055672913,
+            "width50": 0.15605492977909918,
+            "width80": 0.2925157824542737,
+            "width90": 0.36702161537462885
+          },
+          "earlier": 2048,
+          "later": 4096,
+          "passed": {
+            "crps": false,
+            "energy": true,
+            "mean": false,
+            "width50": true,
+            "width80": true,
+            "width90": true
+          }
+        }
+      ],
+      "verdict": "NATIONAL_DOUBLING_NOT_MET"
+    }
+  },
+  "gateB": {
+    "cheapestArm": 16,
+    "cheapestComposedDraws": 65536,
+    "passingArms": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "rounds": [
+      {
+        "allPassed": false,
+        "arm": 2,
+        "changesPP": {
+          "crps": 0.0969090869429845,
+          "energy": 0.08844929985540517,
+          "mean": 0.05418476560236041,
+          "width50": 0.295502839602527,
+          "width80": 0.5532093030523022,
+          "width90": 0.8625490928387336
+        },
+        "composedDraws": 8192,
+        "earlier": 1,
+        "passed": {
+          "crps": false,
+          "energy": true,
+          "mean": false,
+          "width50": true,
+          "width80": false,
+          "width90": false
+        },
+        "ratioToCap": {
+          "crps": 1.93818173885969,
+          "energy": 0.8844929985540517,
+          "mean": 1.0836953120472081,
+          "width50": 0.591005679205054,
+          "width80": 1.1064186061046044,
+          "width90": 1.7250981856774672
+        }
+      },
+      {
+        "allPassed": false,
+        "arm": 4,
+        "changesPP": {
+          "crps": 0.0677309676299851,
+          "energy": 0.08035402332959052,
+          "mean": 0.05105182283543286,
+          "width50": 0.2630857311826169,
+          "width80": 0.3050476327159082,
+          "width90": 0.4219538286028097
+        },
+        "composedDraws": 16384,
+        "earlier": 2,
+        "passed": {
+          "crps": false,
+          "energy": true,
+          "mean": false,
+          "width50": true,
+          "width80": true,
+          "width90": true
+        },
+        "ratioToCap": {
+          "crps": 1.354619352599702,
+          "energy": 0.8035402332959052,
+          "mean": 1.0210364567086572,
+          "width50": 0.5261714623652338,
+          "width80": 0.6100952654318164,
+          "width90": 0.8439076572056194
+        }
+      },
+      {
+        "allPassed": true,
+        "arm": 8,
+        "changesPP": {
+          "crps": 0.04374429784774847,
+          "energy": 0.03023488560002008,
+          "mean": 0.019139356020526854,
+          "width50": 0.13891580297121564,
+          "width80": 0.19806508973643844,
+          "width90": 0.2408939926976501
+        },
+        "composedDraws": 32768,
+        "earlier": 4,
+        "passed": {
+          "crps": true,
+          "energy": true,
+          "mean": true,
+          "width50": true,
+          "width80": true,
+          "width90": true
+        },
+        "ratioToCap": {
+          "crps": 0.8748859569549694,
+          "energy": 0.3023488560002008,
+          "mean": 0.3827871204105371,
+          "width50": 0.2778316059424313,
+          "width80": 0.3961301794728769,
+          "width90": 0.4817879853953002
+        }
+      },
+      {
+        "allPassed": true,
+        "arm": 16,
+        "changesPP": {
+          "crps": 0.019132671507020582,
+          "energy": 0.04303439189265035,
+          "mean": 0.009760399838290468,
+          "width50": 0.1111575491441279,
+          "width80": 0.19235187292888867,
+          "width90": 0.15173149483776527
+        },
+        "composedDraws": 65536,
+        "earlier": 8,
+        "passed": {
+          "crps": true,
+          "energy": true,
+          "mean": true,
+          "width50": true,
+          "width80": true,
+          "width90": true
+        },
+        "ratioToCap": {
+          "crps": 0.38265343014041164,
+          "energy": 0.4303439189265035,
+          "mean": 0.19520799676580936,
+          "width50": 0.2223150982882558,
+          "width80": 0.38470374585777734,
+          "width90": 0.30346298967553054
+        }
+      },
+      {
+        "allPassed": true,
+        "arm": 32,
+        "changesPP": {
+          "crps": 0.014924184614306668,
+          "energy": 0.018022071748561075,
+          "mean": 0.010396635249443342,
+          "width50": 0.08734239817294309,
+          "width80": 0.17779965087389016,
+          "width90": 0.1877546525454008
+        },
+        "composedDraws": 131072,
+        "earlier": 16,
+        "passed": {
+          "crps": true,
+          "energy": true,
+          "mean": true,
+          "width50": true,
+          "width80": true,
+          "width90": true
+        },
+        "ratioToCap": {
+          "crps": 0.29848369228613336,
+          "energy": 0.18022071748561075,
+          "mean": 0.20793270498886685,
+          "width50": 0.17468479634588618,
+          "width80": 0.3555993017477803,
+          "width90": 0.3755093050908016
+        }
+      },
+      {
+        "allPassed": true,
+        "arm": 64,
+        "changesPP": {
+          "crps": 0.006221600665190508,
+          "energy": 0.012462038976064349,
+          "mean": 0.003668989415757551,
+          "width50": 0.05973115990587985,
+          "width80": 0.07175234345869796,
+          "width90": 0.11228900094226901
+        },
+        "composedDraws": 262144,
+        "earlier": 32,
+        "passed": {
+          "crps": true,
+          "energy": true,
+          "mean": true,
+          "width50": true,
+          "width80": true,
+          "width90": true
+        },
+        "ratioToCap": {
+          "crps": 0.12443201330381015,
+          "energy": 0.12462038976064349,
+          "mean": 0.07337978831515102,
+          "width50": 0.1194623198117597,
+          "width80": 0.14350468691739593,
+          "width90": 0.22457800188453803
+        }
+      }
+    ],
+    "sigmaRequiredReplicates": 16,
+    "verdict": "CAPS_MET_BY_REPLICATION"
+  },
+  "gateBVerdict": "CAPS_MET_BY_REPLICATION",
+  "harness": {
+    "maxAbsDifference": 0.0,
+    "replicateChecks": 45,
+    "seats": 18,
+    "verdict": "MATCHES_STAGE54"
+  },
+  "nationalFloor": {
+    "quantities": {
+      "crps": {
+        "capPP": 0.05,
+        "floorSdMax": 0.12784538158655925,
+        "floorSdMedian": 0.0014617033583063863,
+        "negativeRawVariances": 5,
+        "seatCandidates": 80,
+        "seatCandidatesAtZero": 5,
+        "threeFloorOverCap": 7.670722895193555
+      },
+      "energy": {
+        "capPP": 0.1,
+        "floorSdMax": 0.11349765853283801,
+        "floorSdMedian": 0.04487051964418595,
+        "negativeRawVariances": 0,
+        "seatCandidates": 9,
+        "seatCandidatesAtZero": 0,
+        "threeFloorOverCap": 3.4049297559851404
+      },
+      "mean": {
+        "capPP": 0.05,
+        "floorSdMax": 0.12419118804052479,
+        "floorSdMedian": 0.006990752790245629,
+        "negativeRawVariances": 6,
+        "seatCandidates": 80,
+        "seatCandidatesAtZero": 6,
+        "threeFloorOverCap": 7.451471282431488
+      },
+      "width50": {
+        "capPP": 0.5,
+        "floorSdMax": 0.11841253371900155,
+        "floorSdMedian": 0.0023977322525519746,
+        "negativeRawVariances": 18,
+        "seatCandidates": 80,
+        "seatCandidatesAtZero": 18,
+        "threeFloorOverCap": 0.7104752023140093
+      },
+      "width80": {
+        "capPP": 0.5,
+        "floorSdMax": 0.20413992357672103,
+        "floorSdMedian": 0.011763841141382049,
+        "negativeRawVariances": 16,
+        "seatCandidates": 80,
+        "seatCandidatesAtZero": 16,
+        "threeFloorOverCap": 1.2248395414603261
+      },
+      "width90": {
+        "capPP": 0.5,
+        "floorSdMax": 0.2640556779938105,
+        "floorSdMedian": 0.020743911868474615,
+        "negativeRawVariances": 11,
+        "seatCandidates": 80,
+        "seatCandidatesAtZero": 11,
+        "threeFloorOverCap": 1.584334067962863
+      }
+    },
+    "totalSd": {
+      "1": {
+        "crps": {
+          "floorShareOfVarianceAtM": 0.15245407283608342,
+          "medianVarianceRatioToBaseline": 1.0,
+          "totalSdMax": 0.1386920175344564,
+          "totalSdMedian": 0.005298056364609994
+        },
+        "energy": {
+          "floorShareOfVarianceAtM": 0.39965090877700127,
+          "medianVarianceRatioToBaseline": 1.0,
+          "totalSdMax": 0.12318287908661478,
+          "totalSdMedian": 0.06525645362914805
+        },
+        "mean": {
+          "floorShareOfVarianceAtM": 0.36403586776561603,
+          "medianVarianceRatioToBaseline": 1.0,
+          "totalSdMax": 0.12520912878208804,
+          "totalSdMedian": 0.012228844498508789
+        },
+        "width50": {
+          "floorShareOfVarianceAtM": 0.021042379230875395,
+          "medianVarianceRatioToBaseline": 1.0,
+          "totalSdMax": 0.274931878036973,
+          "totalSdMedian": 0.026118757436328098
+        },
+        "width80": {
+          "floorShareOfVarianceAtM": 0.032527642923471295,
+          "medianVarianceRatioToBaseline": 1.0,
+          "totalSdMax": 0.39760824623346996,
+          "totalSdMedian": 0.053080534157056575
+        },
+        "width90": {
+          "floorShareOfVarianceAtM": 0.033743530932074724,
+          "medianVarianceRatioToBaseline": 1.0,
+          "totalSdMax": 0.5099370141693876,
+          "totalSdMedian": 0.09723573841958469
+        }
+      },
+      "16": {
+        "crps": {
+          "floorShareOfVarianceAtM": 0.7418288802165618,
+          "medianVarianceRatioToBaseline": 0.20542569328382818,
+          "totalSdMax": 0.12855011173249037,
+          "totalSdMedian": 0.0026208624590740243
+        },
+        "energy": {
+          "floorShareOfVarianceAtM": 0.9141716399813569,
+          "medianVarianceRatioToBaseline": 0.4371727269784387,
+          "totalSdMax": 0.11412706709152577,
+          "totalSdMedian": 0.04663605558968498
+        },
+        "mean": {
+          "floorShareOfVarianceAtM": 0.9015400466965517,
+          "medianVarianceRatioToBaseline": 0.40378362603026496,
+          "totalSdMax": 0.12425505365329319,
+          "totalSdMedian": 0.007458822277634131
+        },
+        "width50": {
+          "floorShareOfVarianceAtM": 0.25589355154522103,
+          "medianVarianceRatioToBaseline": 0.08222723052894568,
+          "totalSdMax": 0.13287070296431674,
+          "totalSdMedian": 0.009321682887299024
+        },
+        "width80": {
+          "floorShareOfVarianceAtM": 0.34938154828048085,
+          "medianVarianceRatioToBaseline": 0.09299466524075434,
+          "totalSdMax": 0.2198034156855574,
+          "totalSdMedian": 0.02143911709519123
+        },
+        "width90": {
+          "floorShareOfVarianceAtM": 0.3575743090870106,
+          "medianVarianceRatioToBaseline": 0.09413456024882005,
+          "totalSdMax": 0.281910449456735,
+          "totalSdMedian": 0.03160033884773384
+        }
+      },
+      "4": {
+        "crps": {
+          "floorShareOfVarianceAtM": 0.4182616054596803,
+          "medianVarianceRatioToBaseline": 0.36434055462706255,
+          "totalSdMax": 0.13064149465887245,
+          "totalSdMedian": 0.0032957967474210826
+        },
+        "energy": {
+          "floorShareOfVarianceAtM": 0.7269840847262355,
+          "medianVarianceRatioToBaseline": 0.5497381815827509,
+          "totalSdMax": 0.11599480287644102,
+          "totalSdMedian": 0.05157127227865253
+        },
+        "mean": {
+          "floorShareOfVarianceAtM": 0.69598554842906,
+          "medianVarianceRatioToBaseline": 0.5230269008242121,
+          "totalSdMax": 0.1244464538377053,
+          "totalSdMedian": 0.008708259325526978
+        },
+        "width50": {
+          "floorShareOfVarianceAtM": 0.07917053037667934,
+          "medianVarianceRatioToBaseline": 0.2657817844231566,
+          "totalSdMax": 0.16897902354927286,
+          "totalSdMedian": 0.014518173912518306
+        },
+        "width80": {
+          "floorShareOfVarianceAtM": 0.11849325093576413,
+          "medianVarianceRatioToBaseline": 0.2743957321926035,
+          "totalSdMax": 0.2612179951581116,
+          "totalSdMedian": 0.02980480568537268
+        },
+        "width90": {
+          "floorShareOfVarianceAtM": 0.12245338677528839,
+          "medianVarianceRatioToBaseline": 0.275307648199056,
+          "totalSdMax": 0.33564472440627346,
+          "totalSdMedian": 0.05160292353380832
+        }
+      },
+      "64": {
+        "crps": {
+          "floorShareOfVarianceAtM": 0.9199231859323352,
+          "medianVarianceRatioToBaseline": 0.1656969779480196,
+          "totalSdMax": 0.1280219278146078,
+          "totalSdMedian": 0.002015409406337733
+        },
+        "energy": {
+          "floorShareOfVarianceAtM": 0.9770666618959195,
+          "medianVarianceRatioToBaseline": 0.4090313633273606,
+          "totalSdMax": 0.11365533744640385,
+          "totalSdMedian": 0.04531835246448733
+        },
+        "mean": {
+          "floorShareOfVarianceAtM": 0.9734215435202442,
+          "medianVarianceRatioToBaseline": 0.3739728073317783,
+          "totalSdMax": 0.12420715752235631,
+          "totalSdMedian": 0.007110808771469826
+        },
+        "width50": {
+          "floorShareOfVarianceAtM": 0.5790286870602963,
+          "medianVarianceRatioToBaseline": 0.036338592055392964,
+          "totalSdMax": 0.1221875690603311,
+          "totalSdMedian": 0.0076041556389799545
+        },
+        "width80": {
+          "floorShareOfVarianceAtM": 0.681938556861351,
+          "medianVarianceRatioToBaseline": 0.04764439850279206,
+          "totalSdMax": 0.20816631976665104,
+          "totalSdMedian": 0.01668860321644176
+        },
+        "width90": {
+          "floorShareOfVarianceAtM": 0.6892091058927736,
+          "medianVarianceRatioToBaseline": 0.04884128826126105,
+          "totalSdMax": 0.26863065012913695,
+          "totalSdMedian": 0.025103044495104775
+        }
+      }
+    }
+  },
+  "operationalAdoption": null,
+  "requirement": {
+    "crps": {
+      "capPP": 0.05,
+      "ratioAtM64": 0.439226049678507,
+      "requiredReplicates": 16,
+      "s1Max": 0.0585634732904676,
+      "s1Median": 0.004771184148910932,
+      "unroundedReplicates": 12.346849453835922
+    },
+    "energy": {
+      "capPP": 0.1,
+      "ratioAtM64": 0.24551891846418325,
+      "requiredReplicates": 4,
+      "s1Max": 0.06547171159044887,
+      "s1Median": 0.04787800337974485,
+      "unroundedReplicates": 3.8578905167246247
+    },
+    "mean": {
+      "capPP": 0.05,
+      "ratioAtM64": 0.31279593724116705,
+      "requiredReplicates": 8,
+      "s1Max": 0.041706124965488936,
+      "s1Median": 0.009559499573599937,
+      "unroundedReplicates": 6.261843094693128
+    },
+    "width50": {
+      "capPP": 0.5,
+      "ratioAtM64": 0.2002576454176253,
+      "requiredReplicates": 4,
+      "s1Max": 0.26701019389016706,
+      "s1Median": 0.024999759797030313,
+      "unroundedReplicates": 2.5665999710855263
+    },
+    "width80": {
+      "capPP": 0.5,
+      "ratioAtM64": 0.2634039329447819,
+      "requiredReplicates": 8,
+      "s1Max": 0.3512052439263759,
+      "s1Median": 0.050698864221311896,
+      "unroundedReplicates": 4.440424441009867
+    },
+    "width90": {
+      "capPP": 0.5,
+      "ratioAtM64": 0.3366709398873953,
+      "requiredReplicates": 8,
+      "s1Max": 0.4488945865165271,
+      "s1Median": 0.09503911553382483,
+      "unroundedReplicates": 7.254228592938378
+    }
+  },
+  "scaling": {
+    "1": {
+      "crps": {
+        "groups": 64,
+        "medianScaledRatio": 1.0
+      },
+      "energy": {
+        "groups": 64,
+        "medianScaledRatio": 1.0
+      },
+      "mean": {
+        "groups": 64,
+        "medianScaledRatio": 1.0
+      },
+      "width50": {
+        "groups": 64,
+        "medianScaledRatio": 1.0
+      },
+      "width80": {
+        "groups": 64,
+        "medianScaledRatio": 1.0
+      },
+      "width90": {
+        "groups": 64,
+        "medianScaledRatio": 1.0
+      }
+    },
+    "16": {
+      "crps": {
+        "groups": 4,
+        "medianScaledRatio": 0.9799719922878395
+      },
+      "energy": {
+        "groups": 4,
+        "medianScaledRatio": 0.9993140215046501
+      },
+      "mean": {
+        "groups": 4,
+        "medianScaledRatio": 0.8928319057001489
+      },
+      "width50": {
+        "groups": 4,
+        "medianScaledRatio": 1.0771267807044222
+      },
+      "width80": {
+        "groups": 4,
+        "medianScaledRatio": 1.0026730484548376
+      },
+      "width90": {
+        "groups": 4,
+        "medianScaledRatio": 0.8403080590256737
+      }
+    },
+    "2": {
+      "crps": {
+        "groups": 32,
+        "medianScaledRatio": 1.0389630789550162
+      },
+      "energy": {
+        "groups": 32,
+        "medianScaledRatio": 1.0041452330459106
+      },
+      "mean": {
+        "groups": 32,
+        "medianScaledRatio": 1.016558362051998
+      },
+      "width50": {
+        "groups": 32,
+        "medianScaledRatio": 1.0061041399382753
+      },
+      "width80": {
+        "groups": 32,
+        "medianScaledRatio": 1.0044370321945792
+      },
+      "width90": {
+        "groups": 32,
+        "medianScaledRatio": 0.9925495635488093
+      }
+    },
+    "32": {
+      "crps": {
+        "groups": 2,
+        "medianScaledRatio": 0.8119157163742927
+      },
+      "energy": {
+        "groups": 2,
+        "medianScaledRatio": 0.5915726748298661
+      },
+      "mean": {
+        "groups": 2,
+        "medianScaledRatio": 0.5815776318407251
+      },
+      "width50": {
+        "groups": 2,
+        "medianScaledRatio": 0.7553834275106889
+      },
+      "width80": {
+        "groups": 2,
+        "medianScaledRatio": 0.8125283401858123
+      },
+      "width90": {
+        "groups": 2,
+        "medianScaledRatio": 0.5437052070977535
+      }
+    },
+    "4": {
+      "crps": {
+        "groups": 16,
+        "medianScaledRatio": 1.0304619223024842
+      },
+      "energy": {
+        "groups": 16,
+        "medianScaledRatio": 0.9869855471059327
+      },
+      "mean": {
+        "groups": 16,
+        "medianScaledRatio": 1.0281577020853594
+      },
+      "width50": {
+        "groups": 16,
+        "medianScaledRatio": 0.9821447849321212
+      },
+      "width80": {
+        "groups": 16,
+        "medianScaledRatio": 1.022442791530001
+      },
+      "width90": {
+        "groups": 16,
+        "medianScaledRatio": 1.0042172519765136
+      }
+    },
+    "8": {
+      "crps": {
+        "groups": 8,
+        "medianScaledRatio": 1.0217462633609102
+      },
+      "energy": {
+        "groups": 8,
+        "medianScaledRatio": 0.9130805573806136
+      },
+      "mean": {
+        "groups": 8,
+        "medianScaledRatio": 0.9788227614018729
+      },
+      "width50": {
+        "groups": 8,
+        "medianScaledRatio": 1.0509104711633377
+      },
+      "width80": {
+        "groups": 8,
+        "medianScaledRatio": 0.9845272221700442
+      },
+      "width90": {
+        "groups": 8,
+        "medianScaledRatio": 0.9872354859078996
+      }
+    }
+  },
+  "stage": 63,
+  "winProbability": {
+    "all": {
+      "floorStandardErrorAtHalf": 0.0028249442450428305,
+      "layerDesignEffect": 0.3884110067169384,
+      "nationalDesignEffect": 0.13074939883684836,
+      "requiredReplicates": {
+        "0.005": {
+          "relativeToPool": 1,
+          "relativeToPopulation": 2
+        },
+        "0.01": {
+          "relativeToPool": 1,
+          "relativeToPopulation": 1
+        }
+      },
+      "seatCandidates": 31,
+      "standardErrorAtHalf": {
+        "1": {
+          "relativeToPool": 0.004868955379153534,
+          "relativeToPopulation": 0.005629123952427122
+        },
+        "16": {
+          "relativeToPool": 0.0012172388447883836,
+          "relativeToPopulation": 0.003076033223627854
+        },
+        "2": {
+          "relativeToPool": 0.0034428713658941814,
+          "relativeToPopulation": 0.004453501232703846
+        },
+        "32": {
+          "relativeToPool": 0.0008607178414735453,
+          "relativeToPopulation": 0.002953158510854351
+        },
+        "4": {
+          "relativeToPool": 0.002434477689576767,
+          "relativeToPopulation": 0.0037292079063318048
+        },
+        "64": {
+          "relativeToPool": 0.0006086194223941918,
+          "relativeToPopulation": 0.0028897625488811442
+        },
+        "8": {
+          "relativeToPool": 0.0017214356829470907,
+          "relativeToPopulation": 0.003308118921399913
+        }
+      }
+    },
+    "panel": {
+      "floorStandardErrorAtHalf": 0.0028159080581894513,
+      "layerDesignEffect": 0.3894222148555218,
+      "nationalDesignEffect": 0.12991427694061627,
+      "requiredReplicates": {
+        "0.005": {
+          "relativeToPool": 1,
+          "relativeToPopulation": 2
+        },
+        "0.01": {
+          "relativeToPool": 1,
+          "relativeToPopulation": 1
+        }
+      },
+      "seatCandidates": 18,
+      "standardErrorAtHalf": {
+        "1": {
+          "relativeToPool": 0.004875289297152308,
+          "relativeToPopulation": 0.005630078500616499
+        },
+        "16": {
+          "relativeToPool": 0.001218822324288077,
+          "relativeToPopulation": 0.0030683653710663725
+        },
+        "2": {
+          "relativeToPool": 0.003447350122262594,
+          "relativeToPopulation": 0.004451242641964175
+        },
+        "32": {
+          "relativeToPool": 0.0008618375305656486,
+          "relativeToPopulation": 0.0029448433101385515
+        },
+        "4": {
+          "relativeToPool": 0.002437644648576154,
+          "relativeToPopulation": 0.0037244395047991113
+        },
+        "64": {
+          "relativeToPool": 0.0006094111621440385,
+          "relativeToPopulation": 0.002881097040490312
+        },
+        "8": {
+          "relativeToPool": 0.001723675061131297,
+          "relativeToPopulation": 0.0033015744590334877
+        }
+      }
+    },
+    "representatives": {
+      "floorStandardErrorAtHalf": 0.00284360054559064,
+      "layerDesignEffect": 0.3863129958322113,
+      "nationalDesignEffect": 0.1324820736062814,
+      "requiredReplicates": {
+        "0.005": {
+          "relativeToPool": 1,
+          "relativeToPopulation": 2
+        },
+        "0.01": {
+          "relativeToPool": 1,
+          "relativeToPopulation": 1
+        }
+      },
+      "seatCandidates": 13,
+      "standardErrorAtHalf": {
+        "1": {
+          "relativeToPool": 0.004855787687082768,
+          "relativeToPopulation": 0.005627142980670386
+        },
+        "16": {
+          "relativeToPool": 0.001213946921770692,
+          "relativeToPopulation": 0.003091881497043495
+        },
+        "2": {
+          "relativeToPool": 0.0034335604015383664,
+          "relativeToPopulation": 0.004458183609262375
+        },
+        "32": {
+          "relativeToPool": 0.0008583901003845916,
+          "relativeToPopulation": 0.0029703362818579407
+        },
+        "4": {
+          "relativeToPool": 0.002427893843541384,
+          "relativeToPopulation": 0.003739081782789665
+        },
+        "64": {
+          "relativeToPool": 0.000606973460885346,
+          "relativeToPopulation": 0.002907658997389914
+        },
+        "8": {
+          "relativeToPool": 0.0017167802007691832,
+          "relativeToPopulation": 0.003321655960607068
+        }
+      }
+    }
+  }
+}
