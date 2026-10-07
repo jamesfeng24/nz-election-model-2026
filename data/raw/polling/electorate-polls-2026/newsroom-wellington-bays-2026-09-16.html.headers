@@ -1,0 +1,24 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+date: Tue, 06 Oct 2026 22:16:28 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+strict-transport-security: max-age=31536000
+vary: Accept-Encoding
+vary: Cookie
+host-header: Newspack
+link: <https://newsroom.co.nz/wp-json/>; rel="https://api.w.org/"
+link: <https://newsroom.co.nz/wp-json/wp/v2/posts/498750>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://newsroom.co.nz/?p=498750>; rel=shortlink
+last-modified: Sun, 04 Oct 2026 06:11:41 GMT
+cache-control: max-age=86400, must-revalidate
+x-nananana: Batcache-Set
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+x-ac: 2.dca _atomic_dca STALE
+alt-svc: h3=":443"; ma=86400
+server-timing: a8c-cdn, dc;desc=dca, cache;desc=STALE;dur=3.0
+cf-cache-status: DYNAMIC
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Xb2GsARVVpUXgNothY4OzHSgREwhR8yvDVJNSDS1YaX4FXgQMdORJ%2F8sA24MdhrKiXE0mjqy0Djsl5ZH9QgQ1C6s%2F6w7CXko%2FLH7COmJSoA4bpq%2F0iq%2FC8K2YyiXPlQQGA%3D%3D"}]}
+cf-ray: a46807d8cf04c980-IAD
+
