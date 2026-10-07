@@ -1,0 +1,598 @@
+{
+  "adopted": false,
+  "bands": {
+    "auditSeatZ": [
+      {
+        "band": ">=1.5",
+        "exceptional": {
+          "count": 9,
+          "rate": 0.23684210526315788
+        },
+        "ordinary": {
+          "count": 6,
+          "rate": 0.0273972602739726
+        }
+      },
+      {
+        "band": "1.25-<1.5",
+        "exceptional": {
+          "count": 1,
+          "rate": 0.02631578947368421
+        },
+        "ordinary": {
+          "count": 4,
+          "rate": 0.0182648401826484
+        }
+      },
+      {
+        "band": "1.0-<1.25",
+        "exceptional": {
+          "count": 3,
+          "rate": 0.07894736842105263
+        },
+        "ordinary": {
+          "count": 9,
+          "rate": 0.0410958904109589
+        }
+      },
+      {
+        "band": "0.75-<1.0",
+        "exceptional": {
+          "count": 2,
+          "rate": 0.05263157894736842
+        },
+        "ordinary": {
+          "count": 23,
+          "rate": 0.1050228310502283
+        }
+      },
+      {
+        "band": "0.5-<0.75",
+        "exceptional": {
+          "count": 6,
+          "rate": 0.15789473684210525
+        },
+        "ordinary": {
+          "count": 35,
+          "rate": 0.1598173515981735
+        }
+      },
+      {
+        "band": "0.0-<0.5",
+        "exceptional": {
+          "count": 17,
+          "rate": 0.4473684210526316
+        },
+        "ordinary": {
+          "count": 142,
+          "rate": 0.6484018264840182
+        }
+      }
+    ],
+    "auditSeatZDefinition": "|balanceSeatResidual| / frozen seat sd (election mean removed with hindsight; the metric of the audit residual table)",
+    "controlZ": [
+      {
+        "band": ">=1.5",
+        "exceptional": {
+          "count": 11,
+          "rate": 0.2894736842105263
+        },
+        "ordinary": {
+          "count": 11,
+          "rate": 0.0502283105022831
+        }
+      },
+      {
+        "band": "1.25-<1.5",
+        "exceptional": {
+          "count": 1,
+          "rate": 0.02631578947368421
+        },
+        "ordinary": {
+          "count": 10,
+          "rate": 0.045662100456621
+        }
+      },
+      {
+        "band": "1.0-<1.25",
+        "exceptional": {
+          "count": 2,
+          "rate": 0.05263157894736842
+        },
+        "ordinary": {
+          "count": 22,
+          "rate": 0.1004566210045662
+        }
+      },
+      {
+        "band": "0.75-<1.0",
+        "exceptional": {
+          "count": 4,
+          "rate": 0.10526315789473684
+        },
+        "ordinary": {
+          "count": 36,
+          "rate": 0.1643835616438356
+        }
+      },
+      {
+        "band": "0.5-<0.75",
+        "exceptional": {
+          "count": 5,
+          "rate": 0.13157894736842105
+        },
+        "ordinary": {
+          "count": 38,
+          "rate": 0.1735159817351598
+        }
+      },
+      {
+        "band": "0.0-<0.5",
+        "exceptional": {
+          "count": 15,
+          "rate": 0.39473684210526316
+        },
+        "ordinary": {
+          "count": 102,
+          "rate": 0.4657534246575342
+        }
+      }
+    ]
+  },
+  "descriptive": {
+    "byElection": {
+      "2014": {
+        "all": {
+          "abs50": 0.9267259772670703,
+          "abs80": 1.3562568729998745,
+          "abs90": 1.730435314800111,
+          "abs95": 2.1434315511401647,
+          "countAbove2": 5,
+          "maeZ": 0.9327779843193016,
+          "n": 64,
+          "rmsZ": 1.1157882065478257,
+          "shareAbove1": 0.421875,
+          "shareAbove1645": 0.125
+        },
+        "exceptional": {
+          "abs50": 1.734337715543416,
+          "abs80": 2.3941068243538295,
+          "abs90": 2.5451725695162803,
+          "abs95": 2.558991243488522,
+          "countAbove2": 4,
+          "maeZ": 1.531412498020754,
+          "n": 8,
+          "rmsZ": 1.778098947341793,
+          "shareAbove1": 0.625,
+          "shareAbove1645": 0.5
+        },
+        "ordinary": {
+          "abs50": 0.9003122526088323,
+          "abs80": 1.2379212514771378,
+          "abs90": 1.4591049058571566,
+          "abs95": 1.6932670387711375,
+          "countAbove2": 1,
+          "maeZ": 0.8472587680762368,
+          "n": 56,
+          "rmsZ": 0.985482529266879,
+          "shareAbove1": 0.39285714285714285,
+          "shareAbove1645": 0.07142857142857142
+        }
+      },
+      "2017": {
+        "all": {
+          "abs50": 0.38015401571330665,
+          "abs80": 0.7007575700412919,
+          "abs90": 0.9651576428995203,
+          "abs95": 1.4435581173809588,
+          "countAbove2": 2,
+          "maeZ": 0.5207061051984564,
+          "n": 64,
+          "rmsZ": 0.7840344032082571,
+          "shareAbove1": 0.09375,
+          "shareAbove1645": 0.03125
+        },
+        "exceptional": {
+          "abs50": 0.23059798597383918,
+          "abs80": 2.3622892017821644,
+          "abs90": 3.0860835355561322,
+          "abs95": 3.4479807024431164,
+          "countAbove2": 2,
+          "maeZ": 1.1344293530263834,
+          "n": 6,
+          "rmsZ": 1.8356247100882466,
+          "shareAbove1": 0.3333333333333333,
+          "shareAbove1645": 0.3333333333333333
+        },
+        "ordinary": {
+          "abs50": 0.3895833244035136,
+          "abs80": 0.6902066982695896,
+          "abs90": 0.9328273498547585,
+          "abs95": 1.06098672464726,
+          "countAbove2": 0,
+          "maeZ": 0.45721749335418815,
+          "n": 58,
+          "rmsZ": 0.5742210323077395,
+          "shareAbove1": 0.06896551724137931,
+          "shareAbove1645": 0.0
+        }
+      },
+      "2020": {
+        "all": {
+          "abs50": 0.7481196239437543,
+          "abs80": 1.0490305791447383,
+          "abs90": 1.4386278361318334,
+          "abs95": 1.7520981379351594,
+          "countAbove2": 3,
+          "maeZ": 0.7909317059892836,
+          "n": 65,
+          "rmsZ": 0.9330583075985198,
+          "shareAbove1": 0.23076923076923078,
+          "shareAbove1645": 0.07692307692307693
+        },
+        "exceptional": {
+          "abs50": 0.8839013355511728,
+          "abs80": 1.7319300000493547,
+          "abs90": 1.7964187825668831,
+          "abs95": 1.9656094765809322,
+          "countAbove2": 1,
+          "maeZ": 1.0998711862109773,
+          "n": 10,
+          "rmsZ": 1.2313769218579782,
+          "shareAbove1": 0.4,
+          "shareAbove1645": 0.3
+        },
+        "ordinary": {
+          "abs50": 0.7457544293604665,
+          "abs80": 1.0002696888612632,
+          "abs90": 1.2657220289539914,
+          "abs95": 1.5274190642963645,
+          "countAbove2": 2,
+          "maeZ": 0.7347608914035211,
+          "n": 55,
+          "rmsZ": 0.8678706031825631,
+          "shareAbove1": 0.2,
+          "shareAbove1645": 0.03636363636363636
+        }
+      },
+      "2023": {
+        "all": {
+          "abs50": 0.42468316658047794,
+          "abs80": 0.830375992151362,
+          "abs90": 1.1633704924737585,
+          "abs95": 1.3837518604404653,
+          "countAbove2": 3,
+          "maeZ": 0.5609898272751281,
+          "n": 64,
+          "rmsZ": 0.7909357253898963,
+          "shareAbove1": 0.140625,
+          "shareAbove1645": 0.046875
+        },
+        "exceptional": {
+          "abs50": 0.2156502487660556,
+          "abs80": 0.9472534872879297,
+          "abs90": 2.1300805167635537,
+          "abs95": 2.677356428177569,
+          "countAbove2": 2,
+          "maeZ": 0.6667359308677584,
+          "n": 14,
+          "rmsZ": 1.1239411456596828,
+          "shareAbove1": 0.21428571428571427,
+          "shareAbove1645": 0.14285714285714285
+        },
+        "ordinary": {
+          "abs50": 0.4504506789063566,
+          "abs80": 0.8292471824576085,
+          "abs90": 1.1165165961084622,
+          "abs95": 1.1850821808522278,
+          "countAbove2": 1,
+          "maeZ": 0.5313809182691918,
+          "n": 50,
+          "rmsZ": 0.6686054861273493,
+          "shareAbove1": 0.12,
+          "shareAbove1645": 0.02
+        }
+      }
+    },
+    "pooled": {
+      "all": {
+        "abs50": 0.5552914652023775,
+        "abs80": 1.05794928277121,
+        "abs90": 1.3946863578375643,
+        "abs95": 1.8589511367812508,
+        "countAbove2": 13,
+        "maeZ": 0.7016999671752847,
+        "n": 257,
+        "rmsZ": 0.9160189262919645,
+        "shareAbove1": 0.22178988326848248,
+        "shareAbove1645": 0.07003891050583658
+      },
+      "exceptional": {
+        "abs50": 0.6459524425003043,
+        "abs80": 2.1263340117067853,
+        "abs90": 2.5342486532351653,
+        "abs95": 2.6277592014575726,
+        "countAbove2": 9,
+        "maeZ": 1.0366023946469138,
+        "n": 38,
+        "rmsZ": 1.4359894664212218,
+        "shareAbove1": 0.3684210526315789,
+        "shareAbove1645": 0.2894736842105263
+      },
+      "ordinary": {
+        "abs50": 0.5283613499982098,
+        "abs80": 0.9919218476684896,
+        "abs90": 1.235883970556326,
+        "abs95": 1.4974853653517504,
+        "countAbove2": 4,
+        "maeZ": 0.6435890436870567,
+        "n": 219,
+        "rmsZ": 0.7917606662761327,
+        "shareAbove1": 0.1963470319634703,
+        "shareAbove1645": 0.0319634703196347
+      }
+    }
+  },
+  "diagnostic": "exceptional-scale",
+  "flags": {
+    "exceptionalByElection": {
+      "2014": 8,
+      "2017": 6,
+      "2020": 10,
+      "2023": 14
+    },
+    "exceptionalTotal": 38,
+    "frozenAudit": "2026-10-06 read-only historical audit; fixed before residuals were joined",
+    "seats": 257
+  },
+  "likelihood": {
+    "dropFiveLargestExceptional": {
+      "boundContact": false,
+      "converged": true,
+      "exceptionalMultiplier": 1.0199280839363172,
+      "nll": -250.72895105858322,
+      "ordinaryMultiplier": 0.6034455346964446,
+      "ratio": 1.6901742167159772
+    },
+    "leaveOneElectionOut": {
+      "2014": {
+        "heldOutNllPerSeatTwoMinusPooled": -0.19617132947378924,
+        "pooled": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 0.774299743161429,
+          "nll": -161.72347442175902,
+          "ordinaryMultiplier": 0.774299743161429,
+          "ratio": 1.0
+        },
+        "twoGroup": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 1.3693586508613722,
+          "nll": -184.22673062050887,
+          "ordinaryMultiplier": 0.6060575767589294,
+          "ratio": 2.259453067453457
+        }
+      },
+      "2017": {
+        "heldOutNllPerSeatTwoMinusPooled": -0.1972474859927863,
+        "pooled": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 0.7594890671524417,
+          "nll": -161.76995186684385,
+          "ordinaryMultiplier": 0.7594890671524417,
+          "ratio": 1.0
+        },
+        "twoGroup": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 1.3080174565717815,
+          "nll": -184.1033439458279,
+          "ordinaryMultiplier": 0.5918626053740886,
+          "ratio": 2.2100018563346215
+        }
+      },
+      "2020": {
+        "heldOutNllPerSeatTwoMinusPooled": -0.02377242241776772,
+        "pooled": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 0.8410836862036486,
+          "nll": -139.83782997190517,
+          "ordinaryMultiplier": 0.8410836862036486,
+          "ratio": 1.0
+        },
+        "twoGroup": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 1.6372052959268597,
+          "nll": -173.88460869544036,
+          "ordinaryMultiplier": 0.6079741123717786,
+          "ratio": 2.6928865269278144
+        }
+      },
+      "2023": {
+        "heldOutNllPerSeatTwoMinusPooled": -0.13708707566959277,
+        "pooled": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 0.7810241696584138,
+          "nll": -150.53207575582616,
+          "ordinaryMultiplier": 0.7810241696584138,
+          "ratio": 1.0
+        },
+        "twoGroup": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 1.5220842580763825,
+          "nll": -176.82506736078406,
+          "ordinaryMultiplier": 0.606431886187724,
+          "ratio": 2.5099014295650237
+        }
+      }
+    },
+    "likelihoodRatio": 70.23101635966731,
+    "lrPValueChi2df1": 5.2750479441542285e-17,
+    "model": "Stage48 Gaussian: Sigma_e = diag((seat_e m_i)^2) + shared_e^2 11^T, unchanged means; m_i = exp(a + b * exceptional_i); summed seat likelihood over 2014-2023; unpenalised, in-sample",
+    "perElection": {
+      "2014": {
+        "exceptionalN": 8,
+        "twoGroup": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 1.736651564579734,
+          "nll": -55.53089322904612,
+          "ordinaryMultiplier": 0.5948904786991926,
+          "ratio": 2.919279475403866
+        }
+      },
+      "2017": {
+        "exceptionalN": 6,
+        "twoGroup": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 2.0786645130803367,
+          "nll": -56.7669967117678,
+          "ordinaryMultiplier": 0.6334500494343651,
+          "ratio": 3.2814971203119585
+        }
+      },
+      "2020": {
+        "exceptionalN": 10,
+        "twoGroup": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 0.7229285374492556,
+          "nll": -69.06960806003477,
+          "ordinaryMultiplier": 0.5900952274331742,
+          "ratio": 1.2251048709441124
+        }
+      },
+      "2023": {
+        "exceptionalN": 14,
+        "twoGroup": {
+          "boundContact": false,
+          "converged": true,
+          "exceptionalMultiplier": 1.3348975141466644,
+          "nll": -62.69313731715508,
+          "ordinaryMultiplier": 0.5920188431587732,
+          "ratio": 2.254822679332622
+        }
+      }
+    },
+    "pooledOneScale": {
+      "boundContact": false,
+      "converged": true,
+      "exceptionalMultiplier": 0.7895219029792816,
+      "nll": -204.23201059278165,
+      "ordinaryMultiplier": 0.7895219029792816,
+      "ratio": 1.0
+    },
+    "twoGroup": {
+      "boundContact": false,
+      "converged": true,
+      "exceptionalMultiplier": 1.4561617395273243,
+      "nll": -239.3475187726153,
+      "ordinaryMultiplier": 0.6031861262228709,
+      "ratio": 2.414116764663927
+    }
+  },
+  "operationalChange": false,
+  "question": "Do the frozen exceptional-uncertainty flags support a narrower ordinary and wider exceptional candidate N/L balance seat scale?",
+  "resampling": {
+    "bootstrap": "seats resampled with replacement within election, labels carried",
+    "draws": 400,
+    "exceptionalMultiplier90": [
+      1.0876297410814777,
+      1.799436034217295
+    ],
+    "ordinaryMultiplier90": [
+      0.5426192220053386,
+      0.653117068799969
+    ],
+    "permutation": "flags permuted within election, two-group refit",
+    "permutationShareRatioAtLeastObserved": 0.0,
+    "pooledMultiplier90": [
+      0.6818756299027809,
+      0.8979036192749064
+    ],
+    "ratio90": [
+      1.8032604443572604,
+      3.077118978961167
+    ],
+    "seed": 20261006,
+    "shareOrdinaryBelowPooled": 1.0
+  },
+  "residual": "z = (v - l) / sqrt(shared^2 + seat^2): Stage48 balance observation v, control Gaussian location l, frozen fold scales; includes the shared election effect",
+  "widths": {
+    "2014": {
+      "evenSeat90WidthPP": {
+        "exceptional": 43.69322768587901,
+        "frozen": 31.317080038049316,
+        "ordinary": 21.29904506926557,
+        "pooledFit": 25.858718486887533
+      },
+      "exceptionalVsOrdinary": 2.051417213484756,
+      "ordinaryVsFrozen": 0.6801095454425466,
+      "ordinaryVsPooledFit": 0.8236697839479522,
+      "totalSD": {
+        "exceptional": 0.5312719255981321,
+        "frozen": 0.3807886552931954,
+        "ordinary": 0.2589779992611337,
+        "pooledFit": 0.3144196913717288
+      }
+    },
+    "2017": {
+      "evenSeat90WidthPP": {
+        "exceptional": 43.18953949561345,
+        "frozen": 31.796151138602664,
+        "ordinary": 22.93252743031569,
+        "pooledFit": 26.903258674100503
+      },
+      "exceptionalVsOrdinary": 1.8833309859478886,
+      "ordinaryVsFrozen": 0.7212359549541222,
+      "ordinaryVsPooledFit": 0.852407052547601,
+      "totalSD": {
+        "exceptional": 0.5251475120696276,
+        "frozen": 0.3866137462642533,
+        "ordinary": 0.2788397344852894,
+        "pooledFit": 0.3271203982321793
+      }
+    },
+    "2020": {
+      "evenSeat90WidthPP": {
+        "exceptional": 41.61405276233656,
+        "frozen": 30.371776645553716,
+        "ordinary": 21.515888866291615,
+        "pooledFit": 25.50258590016549
+      },
+      "exceptionalVsOrdinary": 1.9341079990207712,
+      "ordinaryVsFrozen": 0.7084171965765275,
+      "ordinaryVsPooledFit": 0.8436747924512233,
+      "totalSD": {
+        "exceptional": 0.5059909536079868,
+        "frozen": 0.3692945821792539,
+        "ordinary": 0.2616146326183271,
+        "pooledFit": 0.3100894265884473
+      }
+    },
+    "2023": {
+      "evenSeat90WidthPP": {
+        "exceptional": 40.1537008383102,
+        "frozen": 29.8132584074237,
+        "ordinary": 21.863978009053763,
+        "pooledFit": 25.40885371730769
+      },
+      "exceptionalVsOrdinary": 1.836523107628573,
+      "ordinaryVsFrozen": 0.7333642539256792,
+      "ordinaryVsPooledFit": 0.8604865946455793,
+      "totalSD": {
+        "exceptional": 0.48823433502384034,
+        "frozen": 0.3625034826068846,
+        "ordinary": 0.2658470960674583,
+        "pooledFit": 0.30894972416967925
+      }
+    }
+  }
+}

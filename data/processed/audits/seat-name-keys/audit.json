@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "question": "What do exact electorate-name joins miss that a macron-insensitive seat identity would keep?",
+  "rule": "seat identity = case- and diacritic-insensitive name within election type; stable occurrence/electorate IDs where available",
+  "frozenOutputsChanged": false,
+  "spellingFamilies": [
+    {
+      "electorateType": "general",
+      "foldedName": "kaikoura",
+      "spellings": {
+        "Kaikoura": [
+          2008
+        ],
+        "Kaikōura": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "general",
+      "foldedName": "mangere",
+      "spellings": {
+        "Mangere": [
+          2008
+        ],
+        "Māngere": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "general",
+      "foldedName": "ohariu",
+      "spellings": {
+        "Ohariu": [
+          2008
+        ],
+        "Ōhariu": [
+          2011
+        ],
+        "Ōhāriu": [
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "general",
+      "foldedName": "otaki",
+      "spellings": {
+        "Otaki": [
+          2008
+        ],
+        "Ōtaki": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "general",
+      "foldedName": "rangitikei",
+      "spellings": {
+        "Rangitikei": [
+          2008
+        ],
+        "Rangitīkei": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "general",
+      "foldedName": "tamaki",
+      "spellings": {
+        "Tamaki": [
+          2008
+        ],
+        "Tāmaki": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "general",
+      "foldedName": "taupo",
+      "spellings": {
+        "Taupo": [
+          2008
+        ],
+        "Taupō": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "general",
+      "foldedName": "te atatu",
+      "spellings": {
+        "Te Atatu": [
+          2008
+        ],
+        "Te Atatū": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "general",
+      "foldedName": "whangarei",
+      "spellings": {
+        "Whangarei": [
+          2008,
+          2011,
+          2014,
+          2017
+        ],
+        "Whangārei": [
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "maori",
+      "foldedName": "ikaroa-rawhiti",
+      "spellings": {
+        "Ikaroa-Rawhiti": [
+          2008
+        ],
+        "Ikaroa-Rāwhiti": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "maori",
+      "foldedName": "tamaki makaurau",
+      "spellings": {
+        "Tamaki Makaurau": [
+          2008
+        ],
+        "Tāmaki Makaurau": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    },
+    {
+      "electorateType": "maori",
+      "foldedName": "te tai hauauru",
+      "spellings": {
+        "Te Tai Hauauru": [
+          2008
+        ],
+        "Te Tai Hauāuru": [
+          2011,
+          2014,
+          2017,
+          2020,
+          2023
+        ]
+      }
+    }
+  ],
+  "stage10": {
+    "pinnedRecords": 1433,
+    "foldedRecords": 1485,
+    "additionalRecords": 52,
+    "pinnedPrimaryEligible": 44,
+    "foldedPrimaryEligible": 46,
+    "additionalPrimaryEligible": 2,
+    "additionsByTransition": {
+      "2008-2011 general": {
+        "records": 33,
+        "seats": [
+          "Kaikoura",
+          "Mangere",
+          "Ohariu",
+          "Otaki",
+          "Rangitikei",
+          "Tamaki",
+          "Taupo",
+          "Te Atatu"
+        ]
+      },
+      "2008-2011 maori": {
+        "records": 7,
+        "seats": [
+          "Ikaroa-Rawhiti",
+          "Tamaki Makaurau",
+          "Te Tai Hauauru"
+        ]
+      },
+      "2011-2014 general": {
+        "records": 5,
+        "seats": [
+          "Ōhariu"
+        ]
+      },
+      "2017-2020 general": {
+        "records": 7,
+        "seats": [
+          "Whangarei"
+        ]
+      }
+    },
+    "additionsByIdentityClass": {
+      "retrospective_distinct_people": 2,
+      "supported_continuation": 3,
+      "unresolved_identity": 47
+    },
+    "additionsByOutgoingStatus": {
+      "source_challenger": 39,
+      "source_winner": 13
+    },
+    "pinnedRecordsDiffering": 0,
+    "finding": "Every pinned record is reproduced exactly; the additions are records the exact-name join dropped. 2 additions are primary eligible (same-person incumbent continuations in seats whose 2008 name lacks a macron), so the pinned primary cohort is short by that many records; the rest are non-primary comparisons. Stage 51 and Stage 55 join by occurrence ID and are unaffected."
+  },
+  "stage8": {
+    "adjacentChainLinksExact": 517,
+    "adjacentChainLinksFolded": 534,
+    "chainsGainedByFolding": [
+      {
+        "candidate": "HOROMIA, Parekura Tureia",
+        "partyKey": "labourparty",
+        "seat": "ikaroa-rawhiti",
+        "electorateType": "maori",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Ikaroa-Rawhiti",
+          "Ikaroa-Rāwhiti"
+        ]
+      },
+      {
+        "candidate": "BROWNING, Steffan John",
+        "partyKey": "greenparty",
+        "seat": "kaikoura",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011,
+          2014
+        ],
+        "spellings": [
+          "Kaikoura",
+          "Kaikōura"
+        ]
+      },
+      {
+        "candidate": "KING, Colin McDonald",
+        "partyKey": "nationalparty",
+        "seat": "kaikoura",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Kaikoura",
+          "Kaikōura"
+        ]
+      },
+      {
+        "candidate": "McCASKEY, John Stuart James",
+        "partyKey": "democratsforsocialcredit",
+        "seat": "kaikoura",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011,
+          2014,
+          2017
+        ],
+        "spellings": [
+          "Kaikoura",
+          "Kaikōura"
+        ]
+      },
+      {
+        "candidate": "SIO, Su'a Viliamu",
+        "partyKey": "labourparty",
+        "seat": "mangere",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Mangere",
+          "Māngere"
+        ]
+      },
+      {
+        "candidate": "STRICKSON-PUA, Muamua Sofi",
+        "partyKey": "greenparty",
+        "seat": "mangere",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2014
+        ],
+        "spellings": [
+          "Mangere",
+          "Māngere"
+        ]
+      },
+      {
+        "candidate": "CHAUVEL, Charles Pierre",
+        "partyKey": "labourparty",
+        "seat": "ohariu",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Ohariu",
+          "Ōhariu"
+        ]
+      },
+      {
+        "candidate": "DUNNE, Peter Francis",
+        "partyKey": "unitedfuture",
+        "seat": "ohariu",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011,
+          2014
+        ],
+        "spellings": [
+          "Ohariu",
+          "Ōhariu",
+          "Ōhāriu"
+        ]
+      },
+      {
+        "candidate": "SHANKS, Katrina May",
+        "partyKey": "nationalparty",
+        "seat": "ohariu",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Ohariu",
+          "Ōhariu"
+        ]
+      },
+      {
+        "candidate": "GUY, Allen Nathan",
+        "partyKey": "nationalparty",
+        "seat": "otaki",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011,
+          2014,
+          2017
+        ],
+        "spellings": [
+          "Otaki",
+          "Ōtaki"
+        ]
+      },
+      {
+        "candidate": "McCAFFREY, Peter Edward",
+        "partyKey": "actnewzealand",
+        "seat": "otaki",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Otaki",
+          "Ōtaki"
+        ]
+      },
+      {
+        "candidate": "LECKINGER, Richard John",
+        "partyKey": "greenparty",
+        "seat": "tamaki",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Tamaki",
+          "Tāmaki"
+        ]
+      },
+      {
+        "candidate": "CURTIS, Michael James",
+        "partyKey": "greenparty",
+        "seat": "tamaki makaurau",
+        "electorateType": "maori",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Tamaki Makaurau",
+          "Tāmaki Makaurau"
+        ]
+      },
+      {
+        "candidate": "SHARPLES, Pita Russell",
+        "partyKey": "maoriparty",
+        "seat": "tamaki makaurau",
+        "electorateType": "maori",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Tamaki Makaurau",
+          "Tāmaki Makaurau"
+        ]
+      },
+      {
+        "candidate": "UPSTON, Louise Claire",
+        "partyKey": "nationalparty",
+        "seat": "taupo",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011,
+          2014,
+          2017,
+          2020
+        ],
+        "spellings": [
+          "Taupo",
+          "Taupō"
+        ]
+      },
+      {
+        "candidate": "HENARE, Raymond Tau",
+        "partyKey": "nationalparty",
+        "seat": "te atatu",
+        "electorateType": "general",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Te Atatu",
+          "Te Atatū"
+        ]
+      },
+      {
+        "candidate": "TURIA, Tariana",
+        "partyKey": "maoriparty",
+        "seat": "te tai hauauru",
+        "electorateType": "maori",
+        "years": [
+          2008,
+          2011
+        ],
+        "spellings": [
+          "Te Tai Hauauru",
+          "Te Tai Hauāuru"
+        ]
+      },
+      {
+        "candidate": "RETI, Shane Raymond",
+        "partyKey": "nationalparty",
+        "seat": "whangarei",
+        "electorateType": "general",
+        "years": [
+          2014,
+          2017,
+          2023
+        ],
+        "spellings": [
+          "Whangarei",
+          "Whangārei"
+        ]
+      }
+    ],
+    "pairsFlaggedOnlyByNameSpelling": [
+      {
+        "pairId": "nz-general-2008-electorate-20-candidate-04->nz-general-2011-electorate-20-candidate-05",
+        "sourceYear": 2008,
+        "targetYear": 2011,
+        "sourceElectorate": "Kaikoura",
+        "targetElectorate": "Kaikōura",
+        "validationEligible": false,
+        "exclusionReasons": [
+          "different_electorate_or_scope"
+        ],
+        "primaryTransition": true
+      },
+      {
+        "pairId": "nz-general-2008-electorate-35-candidate-05->nz-general-2011-electorate-35-candidate-03",
+        "sourceYear": 2008,
+        "targetYear": 2011,
+        "sourceElectorate": "Ohariu",
+        "targetElectorate": "Ōhariu",
+        "validationEligible": false,
+        "exclusionReasons": [
+          "different_electorate_or_scope"
+        ],
+        "primaryTransition": true
+      },
+      {
+        "pairId": "nz-general-2011-electorate-35-candidate-03->nz-general-2014-electorate-36-candidate-03",
+        "sourceYear": 2011,
+        "targetYear": 2014,
+        "sourceElectorate": "Ōhariu",
+        "targetElectorate": "Ōhāriu",
+        "validationEligible": false,
+        "exclusionReasons": [
+          "changed_boundary_transition",
+          "different_boundary_regime",
+          "different_electorate_or_scope"
+        ],
+        "primaryTransition": false
+      }
+    ]
+  }
+}

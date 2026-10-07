@@ -1,0 +1,2954 @@
+{
+  "adopted": false,
+  "frame": {
+    "filter": "electorate type (scope), never party",
+    "generalFrameRowsScored": {
+      "candidate": 257,
+      "party": 321
+    },
+    "maoriFrameRowsNotScored": 35
+  },
+  "narrowing": {
+    "ablationMeanWidthsNationalComposed90PP": {
+      "full": 29.889697501938095,
+      "national_at_mean": 25.413456468333965,
+      "no_candidate_balance": 20.839183288779385,
+      "no_candidate_mass": 27.31549186712897,
+      "no_candidate_seat": 21.159791644770305,
+      "no_candidate_shared": 27.73433642328441,
+      "no_candidate_within": 29.889697501938095,
+      "no_local_seat": 27.76805910841266,
+      "no_local_shared": 29.604249203593927
+    },
+    "arithmetic": "W(m) = sqrt(W_full^2 - (1 - m^2)(W_full^2 - W_without^2)); W_full and W_without are the Stage47 nine-seat ablation means; width changes are not additive variance shares and the sample is nine seats",
+    "caveat": "nine-seat ablation; widths are not additive variance shares; indicative only",
+    "rankingAll": [
+      "candidate.balance",
+      "candidate.within"
+    ],
+    "rankingExcludingCandidateBalance": [
+      "candidate.within"
+    ],
+    "rows": {
+      "candidate.balance": {
+        "R": 0.7925946136426032,
+        "RInterval90": [
+          0.6533467084043434,
+          0.9200507239884009
+        ],
+        "cutPercentAtIntervalUpper": 4.025436947816175,
+        "cutPercentAtPoint": 10.059344498193923,
+        "rankable": true,
+        "verdict": "conservative",
+        "widthAtIntervalUpper": 28.68650657510459,
+        "widthAtPoint": 26.88298986075008
+      },
+      "candidate.mass": {
+        "R": 0.9896134112046766,
+        "RInterval90": [
+          0.8239358433917774,
+          1.1382674057887778
+        ],
+        "cutPercentAtIntervalUpper": 0.0,
+        "cutPercentAtPoint": 0.17045807112912037,
+        "rankable": false,
+        "verdict": "calibrated",
+        "widthAtIntervalUpper": 29.889697501938095,
+        "widthAtPoint": 29.838748100109964
+      },
+      "candidate.shared": {
+        "cutPercentAtPoint": 0.0,
+        "multiplier": 1.269854981112395,
+        "rankable": false,
+        "reason": "shared part rests on four or five election replications and is never ranked",
+        "widthAtPoint": 29.889697501938095
+      },
+      "candidate.within": {
+        "R": 0.7480052110563922,
+        "RInterval90": [
+          0.6733626447113812,
+          0.8249322062837615
+        ],
+        "cutPercentAtIntervalUpper": 0.0,
+        "cutPercentAtPoint": 0.0,
+        "rankable": true,
+        "verdict": "conservative",
+        "widthAtIntervalUpper": 29.889697501938095,
+        "widthAtPoint": 29.889697501938095
+      },
+      "local_party.seat": {
+        "bracketR": [
+          0.8160449080186919,
+          1.0826330564786146
+        ],
+        "cutPercentAtIntervalUpper": 0.0,
+        "cutPercentAtPoint": 0.0,
+        "cutPercentRange": [
+          2.313920188040708,
+          0.0
+        ],
+        "rankable": false,
+        "reason": "three local coordinates share one ablation policy; the point cut uses the highest R",
+        "widthAtHighestR": 29.889697501938095,
+        "widthAtLowestR": 29.19807375729645
+      },
+      "local_party.shared": {
+        "cutPercentAtPoint": 0.6127526233631775,
+        "multiplier": 0.5977246485154217,
+        "rankable": false,
+        "reason": "shared part rests on four or five election replications and is never ranked",
+        "widthAtPoint": 29.70654759637965
+      }
+    }
+  },
+  "nationalMcmc": false,
+  "question": "Besides the candidate National/Labour balance term, are the other uncertainty layers and components too conservative, too tight or about right, and which is the next-best narrowing target?",
+  "refit": false,
+  "seatScale": {
+    "candidate": {
+      "components": {
+        "balance": {
+          "R": 0.7925946136426032,
+          "RInterval90": [
+            0.6533467084043434,
+            0.9200507239884009
+          ],
+          "allFoldsPooledRatio": 0.6518800415552214,
+          "perElectionRatio": {
+            "2014": 0.7229015014950833,
+            "2017": 0.8095745731149905,
+            "2020": 0.39149559020191793,
+            "2023": 0.683548501408894
+          },
+          "perElectionRatioInterval90": {
+            "2014": [
+              0.43561943695161176,
+              1.0236142599984144
+            ],
+            "2017": [
+              0.371649647625105,
+              1.3418947111933495
+            ],
+            "2020": [
+              0.25588248239290934,
+              0.5238648430325422
+            ],
+            "2023": [
+              0.35278319620291265,
+              1.0944325476496874
+            ]
+          },
+          "pit": {
+            "histogram": {
+              "allFolds": {
+                "approximatePValueIgnoringSharedEffect": 0.014416334112896417,
+                "chiSquare9": 20.626459143968873,
+                "counts": [
+                  17,
+                  30,
+                  26,
+                  40,
+                  28,
+                  32,
+                  23,
+                  28,
+                  18,
+                  15
+                ]
+              },
+              "estimatedFolds": {
+                "approximatePValueIgnoringSharedEffect": 0.00024213744748382776,
+                "chiSquare9": 31.50777202072539,
+                "counts": [
+                  3,
+                  12,
+                  19,
+                  27,
+                  22,
+                  29,
+                  23,
+                  28,
+                  16,
+                  14
+                ]
+              }
+            },
+            "perElection": {
+              "2014": {
+                "coverage": {
+                  "0.5": 0.359375,
+                  "0.8": 0.765625,
+                  "0.9": 0.875
+                },
+                "seats": 64,
+                "status": "assumed_prior_only"
+              },
+              "2017": {
+                "coverage": {
+                  "0.5": 0.765625,
+                  "0.8": 0.9375,
+                  "0.9": 0.96875
+                },
+                "seats": 64,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2020": {
+                "coverage": {
+                  "0.5": 0.47692307692307695,
+                  "0.8": 0.8615384615384616,
+                  "0.9": 0.9230769230769231
+                },
+                "seats": 65,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2023": {
+                "coverage": {
+                  "0.5": 0.71875,
+                  "0.8": 0.9375,
+                  "0.9": 0.953125
+                },
+                "seats": 64,
+                "status": "strongly_pooled_earlier_elections"
+              }
+            },
+            "pooled": {
+              "allFolds": {
+                "0.5": {
+                  "coverage": 0.5801682692307693,
+                  "interval90": [
+                    0.5334134615384616,
+                    0.6305288461538462
+                  ]
+                },
+                "0.8": {
+                  "coverage": 0.8755408653846154,
+                  "interval90": [
+                    0.8406850961538461,
+                    0.9068509615384616
+                  ]
+                },
+                "0.9": {
+                  "coverage": 0.9299879807692308,
+                  "interval90": [
+                    0.9027644230769231,
+                    0.953368389423077
+                  ]
+                }
+              },
+              "estimatedFolds": {
+                "0.5": {
+                  "coverage": 0.6537660256410257,
+                  "interval90": [
+                    0.6010136217948717,
+                    0.7057692307692308
+                  ]
+                },
+                "0.8": {
+                  "coverage": 0.9121794871794872,
+                  "interval90": [
+                    0.8762820512820513,
+                    0.9431891025641025
+                  ]
+                },
+                "0.9": {
+                  "coverage": 0.9483173076923078,
+                  "interval90": [
+                    0.9222756410256411,
+                    0.9741185897435898
+                  ]
+                }
+              }
+            }
+          },
+          "pooledRatio": 0.6282062215752675,
+          "postHocElectionHeterogeneity": {
+            "electionsBelowOne": 3,
+            "electionsScored": 3,
+            "leaveOneElectionOutR": {
+              "2017": 0.7331589498910901,
+              "2020": 0.8640379258238277,
+              "2023": 0.7749419859953739
+            },
+            "maxRatio": 0.8095745731149905,
+            "minRatio": 0.39149559020191793,
+            "note": "post hoc, not part of the frozen verdict: how consistent the pooled R is across the estimated-fold elections"
+          },
+          "rawBasisPooledRatioEstimatedFolds": 0.5815555723938575,
+          "scales": {
+            "2014": {
+              "seat": 0.35,
+              "shared": 0.15000000000000002,
+              "total": 0.3807886552931954
+            },
+            "2017": {
+              "seat": 0.3357611767386055,
+              "shared": 0.1916627793693584,
+              "total": 0.3866137462642533
+            },
+            "2020": {
+              "seat": 0.32678751819970414,
+              "shared": 0.17201280875512667,
+              "total": 0.3692945821792539
+            },
+            "2023": {
+              "seat": 0.30898037104004916,
+              "shared": 0.18957822979992564,
+              "total": 0.3625034826068846
+            }
+          },
+          "seatsPerElection": {
+            "2014": 64,
+            "2017": 64,
+            "2020": 65,
+            "2023": 64
+          },
+          "shapeFlag": "centre_too_wide",
+          "shared": {
+            "elections": 3,
+            "perElectionStandardisedEffect": {
+              "2014": -1.9408694884911195,
+              "2017": 0.12618521635731178,
+              "2020": 1.5693968175601698,
+              "2023": -0.6729037194732401
+            },
+            "perElectionStatistic": {
+              "2014": 3.76697437135578,
+              "2017": 0.015922708827141585,
+              "2020": 2.463006370967988,
+              "2023": 0.45279941568092114
+            },
+            "pooledStatistic": 0.9772428318253502,
+            "referenceBand90": [
+              0.11728210591642381,
+              2.6049093010837265
+            ],
+            "verdict": "within_band"
+          },
+          "verdict": "conservative"
+        },
+        "mass": {
+          "R": 0.9896134112046766,
+          "RInterval90": [
+            0.8239358433917774,
+            1.1382674057887778
+          ],
+          "allFoldsPooledRatio": 0.9402406740104076,
+          "perElectionRatio": {
+            "2014": 0.8229585851331614,
+            "2017": 1.0848431497289737,
+            "2020": 0.5652234804199645,
+            "2023": 1.2879374807595307
+          },
+          "perElectionRatioInterval90": {
+            "2014": [
+              0.5582068282331656,
+              1.067701136854035
+            ],
+            "2017": [
+              0.6883910526592253,
+              1.4631568387956733
+            ],
+            "2020": [
+              0.365211664938302,
+              0.7660211716178513
+            ],
+            "2023": [
+              0.5069383902533278,
+              2.1831011493878134
+            ]
+          },
+          "pit": {
+            "histogram": {
+              "allFolds": {
+                "approximatePValueIgnoringSharedEffect": 0.007649081126521701,
+                "chiSquare9": 22.416342412451364,
+                "counts": [
+                  30,
+                  26,
+                  31,
+                  35,
+                  20,
+                  29,
+                  33,
+                  20,
+                  25,
+                  8
+                ]
+              },
+              "estimatedFolds": {
+                "approximatePValueIgnoringSharedEffect": 0.1340207026922048,
+                "chiSquare9": 13.683937823834196,
+                "counts": [
+                  23,
+                  20,
+                  20,
+                  26,
+                  15,
+                  21,
+                  23,
+                  16,
+                  22,
+                  7
+                ]
+              }
+            },
+            "perElection": {
+              "2014": {
+                "coverage": {
+                  "0.5": 0.609375,
+                  "0.8": 0.875,
+                  "0.9": 0.921875
+                },
+                "seats": 64,
+                "status": "assumed_prior_only"
+              },
+              "2017": {
+                "coverage": {
+                  "0.5": 0.421875,
+                  "0.8": 0.71875,
+                  "0.9": 0.859375
+                },
+                "seats": 64,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2020": {
+                "coverage": {
+                  "0.5": 0.5692307692307692,
+                  "0.8": 0.8923076923076924,
+                  "0.9": 0.9692307692307692
+                },
+                "seats": 65,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2023": {
+                "coverage": {
+                  "0.5": 0.671875,
+                  "0.8": 0.921875,
+                  "0.9": 0.921875
+                },
+                "seats": 64,
+                "status": "strongly_pooled_earlier_elections"
+              }
+            },
+            "pooled": {
+              "allFolds": {
+                "0.5": {
+                  "coverage": 0.5680889423076922,
+                  "interval90": [
+                    0.5173647836538461,
+                    0.6151442307692307
+                  ]
+                },
+                "0.8": {
+                  "coverage": 0.8519831730769231,
+                  "interval90": [
+                    0.8167638221153846,
+                    0.8870793269230769
+                  ]
+                },
+                "0.9": {
+                  "coverage": 0.9180889423076923,
+                  "interval90": [
+                    0.8870192307692308,
+                    0.9453155048076923
+                  ]
+                }
+              },
+              "estimatedFolds": {
+                "0.5": {
+                  "coverage": 0.5543269230769231,
+                  "interval90": [
+                    0.4971955128205128,
+                    0.6114583333333333
+                  ]
+                },
+                "0.8": {
+                  "coverage": 0.8443108974358974,
+                  "interval90": [
+                    0.8028044871794872,
+                    0.885741185897436
+                  ]
+                },
+                "0.9": {
+                  "coverage": 0.9168269230769232,
+                  "interval90": [
+                    0.8806089743589745,
+                    0.9479967948717949
+                  ]
+                }
+              }
+            }
+          },
+          "pooledRatio": 0.9793347036361563,
+          "postHocElectionHeterogeneity": {
+            "electionsBelowOne": 1,
+            "electionsScored": 3,
+            "leaveOneElectionOutR": {
+              "2017": 0.9625905051421126,
+              "2020": 1.0892154585958889,
+              "2023": 0.9083134453890183
+            },
+            "maxRatio": 1.2879374807595307,
+            "minRatio": 0.5652234804199645,
+            "note": "post hoc, not part of the frozen verdict: how consistent the pooled R is across the estimated-fold elections"
+          },
+          "rawBasisPooledRatioEstimatedFolds": 0.9617028602975544,
+          "scales": {
+            "2014": {
+              "seat": 0.4,
+              "shared": 0.15000000000000002,
+              "total": 0.4272001872658766
+            },
+            "2017": {
+              "seat": 0.39069525917789644,
+              "shared": 0.13490739328250506,
+              "total": 0.4133313323550057
+            },
+            "2020": {
+              "seat": 0.3934696430360601,
+              "shared": 0.1662890665696243,
+              "total": 0.42716555766063524
+            },
+            "2023": {
+              "seat": 0.37886296232033206,
+              "shared": 0.1841319913757002,
+              "total": 0.4212383345163617
+            }
+          },
+          "seatsPerElection": {
+            "2014": 64,
+            "2017": 64,
+            "2020": 65,
+            "2023": 64
+          },
+          "shapeFlag": "none",
+          "shared": {
+            "elections": 3,
+            "perElectionStandardisedEffect": {
+              "2014": -0.845102847241326,
+              "2017": -2.2188127187501494,
+              "2020": 1.152556826581713,
+              "2023": -0.7013874987994695
+            },
+            "perElectionStatistic": {
+              "2014": 0.714198822415396,
+              "2017": 4.923129880887431,
+              "2020": 1.3283872385001083,
+              "2023": 0.4919444234721759
+            },
+            "pooledStatistic": 2.247820514286572,
+            "referenceBand90": [
+              0.11728210591642381,
+              2.6049093010837265
+            ],
+            "verdict": "within_band"
+          },
+          "verdict": "calibrated"
+        },
+        "within": {
+          "R": 0.7480052110563922,
+          "RInterval90": [
+            0.6733626447113812,
+            0.8249322062837615
+          ],
+          "perElectionRatio": {
+            "2014": 0.4257700732707714,
+            "2017": 0.5505938941545752,
+            "2020": 0.49396043921246613,
+            "2023": 0.6339810539355125
+          },
+          "perElectionRatioInterval90": {
+            "2014": [
+              0.2984100045811027,
+              0.5715376569737252
+            ],
+            "2017": [
+              0.3590862527880575,
+              0.8103432074648294
+            ],
+            "2020": [
+              0.4028369033224158,
+              0.58937382887965
+            ],
+            "2023": [
+              0.43486778641632523,
+              0.8735351508880385
+            ]
+          },
+          "pooledRatio": 0.5595117957675179,
+          "postHocElectionHeterogeneity": {
+            "electionsBelowOne": 3,
+            "electionsScored": 3,
+            "leaveOneElectionOutR": {
+              "2017": 0.7509798576353359,
+              "2020": 0.7696021530927807,
+              "2023": 0.7226874612745959
+            },
+            "maxRatio": 0.6339810539355125,
+            "minRatio": 0.49396043921246613,
+            "note": "post hoc, not part of the frozen verdict: how consistent the pooled R is across the estimated-fold elections"
+          },
+          "shapeFlag": "not_assessed_vector_component",
+          "sharedPooledRatioEstimatedFolds": 3.4684927320804166,
+          "stage45DescriptiveSeatMomentRatio": {
+            "2014": 0.4257700732707714,
+            "2017": 0.5505938941545752,
+            "2020": 0.49396043921246613,
+            "2023": 0.6339810539355125
+          },
+          "stage45DescriptiveSharedMomentRatio": {
+            "2014": 4.6612315818098455,
+            "2017": 3.7176783294122866,
+            "2020": 5.967810008395149,
+            "2023": 0.7199898584338155
+          },
+          "verdict": "conservative"
+        }
+      },
+      "momentCrosscheckMaxRelativeDifference": {
+        "balance": 0.0,
+        "mass": 0.0
+      },
+      "skippedRecords": {}
+    },
+    "local_party": {
+      "components": {
+        "balance": {
+          "R": 0.8908352790626746,
+          "RInterval90": [
+            0.7861075967153764,
+            0.9766102222144182
+          ],
+          "allFoldsPooledRatio": 0.9193446156753072,
+          "perElectionRatio": {
+            "2011": 1.4223731006858429,
+            "2014": 0.5634516801083638,
+            "2017": 1.602279238731836,
+            "2020": 0.3573827769704358,
+            "2023": 0.6512362818800577
+          },
+          "perElectionRatioInterval90": {
+            "2011": [
+              0.820575019011181,
+              2.0183570326717595
+            ],
+            "2014": [
+              0.30207157061771095,
+              0.8601017076172882
+            ],
+            "2017": [
+              1.0414338108134134,
+              2.156999933445782
+            ],
+            "2020": [
+              0.24810723929365214,
+              0.4778590441006931
+            ],
+            "2023": [
+              0.4670861742039426,
+              0.8213222988744974
+            ]
+          },
+          "pit": {
+            "histogram": {
+              "allFolds": {
+                "approximatePValueIgnoringSharedEffect": 0.0007491132073783445,
+                "chiSquare9": 28.626168224299064,
+                "counts": [
+                  23,
+                  24,
+                  25,
+                  44,
+                  44,
+                  48,
+                  36,
+                  24,
+                  31,
+                  22
+                ]
+              },
+              "estimatedFolds": {
+                "approximatePValueIgnoringSharedEffect": 0.00046901362262959367,
+                "chiSquare9": 29.829457364341085,
+                "counts": [
+                  17,
+                  20,
+                  24,
+                  43,
+                  31,
+                  40,
+                  25,
+                  18,
+                  21,
+                  19
+                ]
+              }
+            },
+            "perElection": {
+              "2011": {
+                "coverage": {
+                  "0.5": 0.6031746031746031,
+                  "0.8": 0.8571428571428571,
+                  "0.9": 0.9047619047619048
+                },
+                "seats": 63,
+                "status": "assumed_prior_only"
+              },
+              "2014": {
+                "coverage": {
+                  "0.5": 0.734375,
+                  "0.8": 0.9375,
+                  "0.9": 0.96875
+                },
+                "seats": 64,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2017": {
+                "coverage": {
+                  "0.5": 0.421875,
+                  "0.8": 0.671875,
+                  "0.9": 0.859375
+                },
+                "seats": 64,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2020": {
+                "coverage": {
+                  "0.5": 0.676923076923077,
+                  "0.8": 0.9538461538461539,
+                  "0.9": 1.0
+                },
+                "seats": 65,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2023": {
+                "coverage": {
+                  "0.5": 0.6,
+                  "0.8": 0.8769230769230769,
+                  "0.9": 0.9384615384615385
+                },
+                "seats": 65,
+                "status": "strongly_pooled_earlier_elections"
+              }
+            },
+            "pooled": {
+              "allFolds": {
+                "0.5": {
+                  "coverage": 0.607269536019536,
+                  "interval90": [
+                    0.5640359432234433,
+                    0.6508849587912088
+                  ]
+                },
+                "0.8": {
+                  "coverage": 0.8594574175824177,
+                  "interval90": [
+                    0.8283004426129426,
+                    0.8877833104395605
+                  ]
+                },
+                "0.9": {
+                  "coverage": 0.9342696886446886,
+                  "interval90": [
+                    0.9118757249694749,
+                    0.9560524648962149
+                  ]
+                }
+              },
+              "estimatedFolds": {
+                "0.5": {
+                  "coverage": 0.6082932692307692,
+                  "interval90": [
+                    0.5615955528846154,
+                    0.654930889423077
+                  ]
+                },
+                "0.8": {
+                  "coverage": 0.8600360576923077,
+                  "interval90": [
+                    0.8250000000000001,
+                    0.8947145432692308
+                  ]
+                },
+                "0.9": {
+                  "coverage": 0.9416466346153847,
+                  "interval90": [
+                    0.9182692307692308,
+                    0.9649639423076923
+                  ]
+                }
+              }
+            }
+          },
+          "pooledRatio": 0.7935874944226733,
+          "postHocElectionHeterogeneity": {
+            "electionsBelowOne": 3,
+            "electionsScored": 4,
+            "leaveOneElectionOutR": {
+              "2014": 0.9328984041831367,
+              "2017": 0.7238947296761818,
+              "2020": 0.9690144822998016,
+              "2023": 0.9170811843035191
+            },
+            "maxRatio": 1.602279238731836,
+            "minRatio": 0.3573827769704358,
+            "note": "post hoc, not part of the frozen verdict: how consistent the pooled R is across the estimated-fold elections"
+          },
+          "rawBasisPooledRatioEstimatedFolds": 0.7837136553462563,
+          "scales": {
+            "2011": {
+              "seat": 0.15000000000000002,
+              "shared": 0.08,
+              "total": 0.17
+            },
+            "2014": {
+              "seat": 0.15814704668411922,
+              "shared": 0.06961239390659137,
+              "total": 0.17278997008019714
+            },
+            "2017": {
+              "seat": 0.1511914492408859,
+              "shared": 0.06317028150114713,
+              "total": 0.16385767845448546
+            },
+            "2020": {
+              "seat": 0.15800899177668926,
+              "shared": 0.060025060178494793,
+              "total": 0.1690261794270869
+            },
+            "2023": {
+              "seat": 0.1504947093629034,
+              "shared": 0.059779658226933076,
+              "total": 0.16193290303071112
+            }
+          },
+          "seatsPerElection": {
+            "2011": 63,
+            "2014": 64,
+            "2017": 64,
+            "2020": 65,
+            "2023": 65
+          },
+          "shapeFlag": "centre_too_wide",
+          "shared": {
+            "elections": 4,
+            "perElectionStandardisedEffect": {
+              "2011": 0.11492031061794335,
+              "2014": 0.26205710579453495,
+              "2017": -0.6485521091276772,
+              "2020": -0.8628684942603897,
+              "2023": 1.099028712945083
+            },
+            "perElectionStatistic": {
+              "2011": 0.01320667779252458,
+              "2014": 0.06867392669740809,
+              "2017": 0.42061983825395866,
+              "2020": 0.7445420383871919,
+              "2023": 1.2078641118777258
+            },
+            "pooledStatistic": 0.6104249788040711,
+            "referenceBand90": [
+              0.17768075534933098,
+              2.3719322591952885
+            ],
+            "verdict": "within_band"
+          },
+          "verdict": "conservative"
+        },
+        "mass": {
+          "R": 0.8160449080186919,
+          "RInterval90": [
+            0.7280571802449725,
+            0.8901914407925932
+          ],
+          "allFoldsPooledRatio": 0.5883312206753717,
+          "perElectionRatio": {
+            "2011": 0.27793893576391704,
+            "2014": 0.21966166811839458,
+            "2017": 0.36355463760091733,
+            "2020": 1.1525190867633506,
+            "2023": 0.9279817751302789
+          },
+          "perElectionRatioInterval90": {
+            "2011": [
+              0.21088361613565992,
+              0.343351199651566
+            ],
+            "2014": [
+              0.1509204967402876,
+              0.2940081119577123
+            ],
+            "2017": [
+              0.25695033752213653,
+              0.46909312584888824
+            ],
+            "2020": [
+              0.752454083902918,
+              1.5533994442246362
+            ],
+            "2023": [
+              0.6470586220253883,
+              1.2119126170482963
+            ]
+          },
+          "pit": {
+            "histogram": {
+              "allFolds": {
+                "approximatePValueIgnoringSharedEffect": 1.011044247997481e-13,
+                "chiSquare9": 81.02492211838006,
+                "counts": [
+                  10,
+                  25,
+                  30,
+                  47,
+                  52,
+                  50,
+                  53,
+                  25,
+                  17,
+                  12
+                ]
+              },
+              "estimatedFolds": {
+                "approximatePValueIgnoringSharedEffect": 1.6935281447550953e-08,
+                "chiSquare9": 54.24806201550387,
+                "counts": [
+                  10,
+                  24,
+                  22,
+                  35,
+                  43,
+                  39,
+                  40,
+                  19,
+                  14,
+                  12
+                ]
+              }
+            },
+            "perElection": {
+              "2011": {
+                "coverage": {
+                  "0.5": 0.873015873015873,
+                  "0.8": 1.0,
+                  "0.9": 1.0
+                },
+                "seats": 63,
+                "status": "assumed_prior_only"
+              },
+              "2014": {
+                "coverage": {
+                  "0.5": 0.90625,
+                  "0.8": 0.984375,
+                  "0.9": 1.0
+                },
+                "seats": 64,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2017": {
+                "coverage": {
+                  "0.5": 0.75,
+                  "0.8": 0.984375,
+                  "0.9": 1.0
+                },
+                "seats": 64,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2020": {
+                "coverage": {
+                  "0.5": 0.5846153846153846,
+                  "0.8": 0.8307692307692308,
+                  "0.9": 0.8923076923076924
+                },
+                "seats": 65,
+                "status": "strongly_pooled_earlier_elections"
+              },
+              "2023": {
+                "coverage": {
+                  "0.5": 0.46153846153846156,
+                  "0.8": 0.8615384615384616,
+                  "0.9": 0.9538461538461539
+                },
+                "seats": 65,
+                "status": "strongly_pooled_earlier_elections"
+              }
+            },
+            "pooled": {
+              "allFolds": {
+                "0.5": {
+                  "coverage": 0.7150839438339439,
+                  "interval90": [
+                    0.6747433226495727,
+                    0.7522474816849816
+                  ]
+                },
+                "0.8": {
+                  "coverage": 0.9322115384615385,
+                  "interval90": [
+                    0.9076923076923077,
+                    0.95375
+                  ]
+                },
+                "0.9": {
+                  "coverage": 0.9692307692307691,
+                  "interval90": [
+                    0.9538461538461538,
+                    0.9846153846153847
+                  ]
+                }
+              },
+              "estimatedFolds": {
+                "0.5": {
+                  "coverage": 0.6756009615384616,
+                  "interval90": [
+                    0.6291466346153847,
+                    0.7218179086538462
+                  ]
+                },
+                "0.8": {
+                  "coverage": 0.9152644230769231,
+                  "interval90": [
+                    0.8846153846153846,
+                    0.9421875
+                  ]
+                },
+                "0.9": {
+                  "coverage": 0.9615384615384616,
+                  "interval90": [
+                    0.9423076923076923,
+                    0.9807692307692308
+                  ]
+                }
+              }
+            }
+          },
+          "pooledRatio": 0.6659292919032354,
+          "postHocElectionHeterogeneity": {
+            "electionsBelowOne": 3,
+            "electionsScored": 4,
+            "leaveOneElectionOutR": {
+              "2014": 0.9025991172708858,
+              "2017": 0.8756259722834523,
+              "2020": 0.7097412863970436,
+              "2023": 0.7606434540314453
+            },
+            "maxRatio": 1.1525190867633506,
+            "minRatio": 0.21966166811839458,
+            "note": "post hoc, not part of the frozen verdict: how consistent the pooled R is across the estimated-fold elections"
+          },
+          "rawBasisPooledRatioEstimatedFolds": 0.662234379457108,
+          "scales": {
+            "2011": {
+              "seat": 0.2,
+              "shared": 0.1,
+              "total": 0.223606797749979
+            },
+            "2014": {
+              "seat": 0.18097981758737736,
+              "shared": 0.08730174107732742,
+              "total": 0.20093603053980413
+            },
+            "2017": {
+              "seat": 0.1662153818070036,
+              "shared": 0.07888789150398567,
+              "total": 0.183986011900885
+            },
+            "2020": {
+              "seat": 0.1571666886619173,
+              "shared": 0.072163242924651,
+              "total": 0.17294190254057643
+            },
+            "2023": {
+              "seat": 0.1587798811781132,
+              "shared": 0.06778249624009444,
+              "total": 0.17264274518054376
+            }
+          },
+          "seatsPerElection": {
+            "2011": 63,
+            "2014": 64,
+            "2017": 64,
+            "2020": 65,
+            "2023": 65
+          },
+          "shapeFlag": "centre_too_wide",
+          "shared": {
+            "elections": 4,
+            "perElectionStandardisedEffect": {
+              "2011": 0.08795087265922633,
+              "2014": 0.1741500661989488,
+              "2017": 0.004610423035661315,
+              "2020": 0.30078098518998475,
+              "2023": -0.5437641269128256
+            },
+            "perElectionStatistic": {
+              "2011": 0.007735356001519446,
+              "2014": 0.030328245557098253,
+              "2017": 2.125600056775649e-05,
+              "2020": 0.0904692010518578,
+              "2023": 0.2956794257172676
+            },
+            "pooledStatistic": 0.10412453208169785,
+            "referenceBand90": [
+              0.17768075534933098,
+              2.3719322591952885
+            ],
+            "verdict": "outside_band"
+          },
+          "verdict": "conservative"
+        },
+        "within": {
+          "R": 1.0826330564786146,
+          "RInterval90": [
+            1.0171769815053298,
+            1.151169567543436
+          ],
+          "perElectionRatio": {
+            "2011": 0.7695207104018766,
+            "2014": 1.7970360645421428,
+            "2017": 0.7856941142127085,
+            "2020": 1.3762928298295038,
+            "2023": 0.7293543313365534
+          },
+          "perElectionRatioInterval90": {
+            "2011": [
+              0.5471781432454362,
+              1.0713017678147532
+            ],
+            "2014": [
+              1.3308983096334612,
+              2.3290266897641887
+            ],
+            "2017": [
+              0.6639379031986733,
+              0.9170419674089154
+            ],
+            "2020": [
+              1.1657118404237665,
+              1.6122764344584126
+            ],
+            "2023": [
+              0.6313837276757038,
+              0.8346539014956295
+            ]
+          },
+          "pooledRatio": 1.1720943349802273,
+          "postHocElectionHeterogeneity": {
+            "electionsBelowOne": 2,
+            "electionsScored": 4,
+            "leaveOneElectionOutR": {
+              "2014": 0.9817231917023532,
+              "2017": 1.1405675817633079,
+              "2020": 1.0507274480237339,
+              "2023": 1.1487707935853806
+            },
+            "maxRatio": 1.7970360645421428,
+            "minRatio": 0.7293543313365534,
+            "note": "post hoc, not part of the frozen verdict: how consistent the pooled R is across the estimated-fold elections"
+          },
+          "shapeFlag": "not_assessed_vector_component",
+          "sharedPooledRatioEstimatedFolds": 1.6874366492605337,
+          "stage45DescriptiveSeatMomentRatio": {
+            "2011": 0.7695207104018766,
+            "2014": 1.7970360645421428,
+            "2017": 0.7856941142127085,
+            "2020": 1.3762928298295038,
+            "2023": 0.7293543313365534
+          },
+          "stage45DescriptiveSharedMomentRatio": {
+            "2011": 7.302570754775249,
+            "2014": 1.6080661215580447,
+            "2017": 3.1938803760899592,
+            "2020": 1.572389271161631,
+            "2023": 0.3754108282324996
+          },
+          "verdict": "too_tight"
+        }
+      },
+      "momentCrosscheckMaxRelativeDifference": {
+        "balance": 0.0,
+        "mass": 6.3179663693281e-16
+      },
+      "skippedRecords": {}
+    }
+  },
+  "stage": 61,
+  "storedIntervalCoverage": {
+    "candidate.labour": {
+      "perElection": {
+        "2014": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.359375,
+            "0.8": 0.8125,
+            "0.9": 0.921875
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.25,
+              0.453125
+            ],
+            "0.8": [
+              0.734375,
+              0.890625
+            ],
+            "0.9": [
+              0.859375,
+              0.96875
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.765625,
+            "0.8": 0.921875,
+            "0.9": 0.953125
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.671875,
+              0.84375
+            ],
+            "0.8": [
+              0.859375,
+              0.96875
+            ],
+            "0.9": [
+              0.90625,
+              0.984375
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.7076923076923077,
+            "0.8": 0.9384615384615385,
+            "0.9": 0.9692307692307692
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6153846153846154,
+              0.8
+            ],
+            "0.8": [
+              0.8923076923076924,
+              0.9846153846153847
+            ],
+            "0.9": [
+              0.9384615384615385,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 65
+        },
+        "2023": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.65625,
+            "0.8": 0.921875,
+            "0.9": 0.953125
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.546875,
+              0.75
+            ],
+            "0.8": [
+              0.859375,
+              0.96875
+            ],
+            "0.9": [
+              0.90625,
+              0.984375
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 2.2980200402358716e-05,
+          "chiSquare6": 31.223086900129704,
+          "coverage": {
+            "0.5": 0.622235576923077,
+            "0.8": 0.8986778846153847,
+            "0.9": 0.9493389423076923
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5754807692307693,
+              0.6651442307692308
+            ],
+            "0.8": [
+              0.8673076923076923,
+              0.9260216346153847
+            ],
+            "0.9": [
+              0.9258984375,
+              0.9688701923076923
+            ]
+          },
+          "expectedPitBins": [
+            12.850000000000001,
+            12.850000000000001,
+            38.55,
+            128.5,
+            38.55,
+            12.850000000000001,
+            12.850000000000001
+          ],
+          "pitBins": [
+            7,
+            4,
+            22,
+            160,
+            49,
+            9,
+            6
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 1.0035668801502178e-06,
+          "chiSquare6": 38.25043177892919,
+          "coverage": {
+            "0.5": 0.7098557692307693,
+            "0.8": 0.9274038461538462,
+            "0.9": 0.9584935897435898
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6578525641025641,
+              0.761065705128205
+            ],
+            "0.8": [
+              0.8961538461538462,
+              0.9584134615384615
+            ],
+            "0.9": [
+              0.9325320512820513,
+              0.9792467948717949
+            ]
+          },
+          "expectedPitBins": [
+            9.65,
+            9.65,
+            28.95,
+            96.5,
+            28.95,
+            9.65,
+            9.65
+          ],
+          "pitBins": [
+            6,
+            4,
+            20,
+            137,
+            22,
+            2,
+            2
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    },
+    "candidate.national": {
+      "perElection": {
+        "2014": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.375,
+            "0.8": 0.8125,
+            "0.9": 0.875
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.28125,
+              0.46875
+            ],
+            "0.8": [
+              0.734375,
+              0.890625
+            ],
+            "0.9": [
+              0.796875,
+              0.9375
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.59375,
+            "0.8": 0.890625,
+            "0.9": 0.96875
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5,
+              0.6875
+            ],
+            "0.8": [
+              0.828125,
+              0.953125
+            ],
+            "0.9": [
+              0.921875,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.3076923076923077,
+            "0.8": 0.8461538461538461,
+            "0.9": 0.9076923076923077
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.2153846153846154,
+              0.4
+            ],
+            "0.8": [
+              0.7692307692307693,
+              0.9076923076923077
+            ],
+            "0.9": [
+              0.8461538461538461,
+              0.9692307692307692
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 65
+        },
+        "2023": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.703125,
+            "0.8": 0.96875,
+            "0.9": 0.984375
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.609375,
+              0.796875
+            ],
+            "0.8": [
+              0.9375,
+              1.0
+            ],
+            "0.9": [
+              0.953125,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 0.010935948296348775,
+          "chiSquare6": 16.584954604409866,
+          "coverage": {
+            "0.5": 0.4948918269230769,
+            "0.8": 0.8795072115384616,
+            "0.9": 0.9339543269230769
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.4480138221153846,
+              0.5451322115384616
+            ],
+            "0.8": [
+              0.8445913461538461,
+              0.9105168269230769
+            ],
+            "0.9": [
+              0.9068509615384616,
+              0.9572716346153847
+            ]
+          },
+          "expectedPitBins": [
+            12.850000000000001,
+            12.850000000000001,
+            38.55,
+            128.5,
+            38.55,
+            12.850000000000001,
+            12.850000000000001
+          ],
+          "pitBins": [
+            10,
+            8,
+            55,
+            127,
+            44,
+            6,
+            7
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 0.006748203071737169,
+          "chiSquare6": 17.801381692573404,
+          "coverage": {
+            "0.5": 0.5348557692307693,
+            "0.8": 0.9018429487179488,
+            "0.9": 0.9536057692307692
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.4778846153846154,
+              0.5919070512820513
+            ],
+            "0.8": [
+              0.86578125,
+              0.9329326923076923
+            ],
+            "0.9": [
+              0.9276442307692307,
+              0.9792467948717949
+            ]
+          },
+          "expectedPitBins": [
+            9.65,
+            9.65,
+            28.95,
+            96.5,
+            28.95,
+            9.65,
+            9.65
+          ],
+          "pitBins": [
+            2,
+            4,
+            29,
+            103,
+            42,
+            6,
+            7
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    },
+    "candidate.other": {
+      "perElection": {
+        "2014": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.6563467492260062,
+            "0.8": 0.8978328173374613,
+            "0.9": 0.9442724458204335
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6071428571428571,
+              0.7038216560509554
+            ],
+            "0.8": [
+              0.8543452906316984,
+              0.934990456359535
+            ],
+            "0.9": [
+              0.9082704159570172,
+              0.9753846153846154
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 323
+        },
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.5511551155115512,
+            "0.8": 0.8283828382838284,
+            "0.9": 0.9240924092409241
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.514105479270608,
+              0.5917753810384914
+            ],
+            "0.8": [
+              0.7960526315789473,
+              0.8642384105960265
+            ],
+            "0.9": [
+              0.8980891719745223,
+              0.9488829551549637
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 303
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.665893271461717,
+            "0.8": 0.8932714617169374,
+            "0.9": 0.9559164733178654
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6253035664427312,
+              0.7069120844982913
+            ],
+            "0.8": [
+              0.8694635087129253,
+              0.91725768321513
+            ],
+            "0.9": [
+              0.9376443418013857,
+              0.9738126343173849
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 431
+        },
+        "2023": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.7129909365558912,
+            "0.8": 0.918429003021148,
+            "0.9": 0.9486404833836858
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6697247706422018,
+              0.7559523809523809
+            ],
+            "0.8": [
+              0.8902439024390244,
+              0.9441176470588235
+            ],
+            "0.9": [
+              0.9281600591919609,
+              0.9671690653873489
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 331
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 4.528349469598884e-27,
+          "chiSquare6": 136.89529298751205,
+          "coverage": {
+            "0.5": 0.6465965181887914,
+            "0.8": 0.8844790300898437,
+            "0.9": 0.9432304529407272
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6257547061571466,
+              0.6679037116106984
+            ],
+            "0.8": [
+              0.8686880630785698,
+              0.9008821838649513
+            ],
+            "0.9": [
+              0.9304324606234374,
+              0.9549267170491481
+            ]
+          },
+          "expectedPitBins": [
+            69.4,
+            69.4,
+            208.2,
+            694.0,
+            208.2,
+            69.4,
+            69.4
+          ],
+          "pitBins": [
+            35,
+            52,
+            166,
+            902,
+            162,
+            29,
+            42
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 1.2035496161069552e-19,
+          "chiSquare6": 101.52895148669796,
+          "coverage": {
+            "0.5": 0.6433464411763864,
+            "0.8": 0.8800277676739713,
+            "0.9": 0.9428831219808251
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6202246648549092,
+              0.6677235597422065
+            ],
+            "0.8": [
+              0.8637728608950251,
+              0.8973896682657148
+            ],
+            "0.9": [
+              0.9308323595884441,
+              0.9547691546744235
+            ]
+          },
+          "expectedPitBins": [
+            53.25,
+            53.25,
+            159.75,
+            532.5,
+            159.75,
+            53.25,
+            53.25
+          ],
+          "pitBins": [
+            28,
+            42,
+            122,
+            690,
+            128,
+            24,
+            31
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    },
+    "composed.labour": {
+      "perElection": {
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.296875,
+            "0.8": 0.609375,
+            "0.9": 0.84375
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.203125,
+              0.390625
+            ],
+            "0.8": [
+              0.5,
+              0.703125
+            ],
+            "0.9": [
+              0.765625,
+              0.90625
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.7230769230769231,
+            "0.8": 0.9076923076923077,
+            "0.9": 0.9538461538461539
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6307692307692307,
+              0.8153846153846154
+            ],
+            "0.8": [
+              0.8461538461538461,
+              0.9692307692307692
+            ],
+            "0.9": [
+              0.9076923076923077,
+              0.9846153846153847
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 65
+        },
+        "2023": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.78125,
+            "0.8": 0.96875,
+            "0.9": 0.984375
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6875,
+              0.859375
+            ],
+            "0.8": [
+              0.9367187499999996,
+              1.0
+            ],
+            "0.9": [
+              0.953125,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 0.008752592072920898,
+          "chiSquare6": 17.148531951640756,
+          "coverage": {
+            "0.5": 0.6004006410256411,
+            "0.8": 0.8286057692307692,
+            "0.9": 0.927323717948718
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5484775641025641,
+              0.6520072115384615
+            ],
+            "0.8": [
+              0.7870192307692307,
+              0.865224358974359
+            ],
+            "0.9": [
+              0.8961538461538462,
+              0.9583373397435898
+            ]
+          },
+          "expectedPitBins": [
+            9.65,
+            9.65,
+            28.95,
+            96.5,
+            28.95,
+            9.65,
+            9.65
+          ],
+          "pitBins": [
+            4,
+            4,
+            24,
+            116,
+            20,
+            15,
+            10
+          ],
+          "verdict80": "consistent",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 0.008752592072920898,
+          "chiSquare6": 17.148531951640756,
+          "coverage": {
+            "0.5": 0.6004006410256411,
+            "0.8": 0.8286057692307692,
+            "0.9": 0.927323717948718
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5484775641025641,
+              0.6520072115384615
+            ],
+            "0.8": [
+              0.7870192307692307,
+              0.865224358974359
+            ],
+            "0.9": [
+              0.8961538461538462,
+              0.9583373397435898
+            ]
+          },
+          "expectedPitBins": [
+            9.65,
+            9.65,
+            28.95,
+            96.5,
+            28.95,
+            9.65,
+            9.65
+          ],
+          "pitBins": [
+            4,
+            4,
+            24,
+            116,
+            20,
+            15,
+            10
+          ],
+          "verdict80": "consistent",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    },
+    "composed.national": {
+      "perElection": {
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.453125,
+            "0.8": 0.75,
+            "0.9": 0.890625
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.34375,
+              0.5625
+            ],
+            "0.8": [
+              0.65625,
+              0.828125
+            ],
+            "0.9": [
+              0.828125,
+              0.953125
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.7384615384615385,
+            "0.8": 0.9538461538461539,
+            "0.9": 0.9692307692307692
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6461538461538462,
+              0.8307692307692308
+            ],
+            "0.8": [
+              0.9076923076923077,
+              0.9846153846153847
+            ],
+            "0.9": [
+              0.9384615384615385,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 65
+        },
+        "2023": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.78125,
+            "0.8": 0.984375,
+            "0.9": 0.984375
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.703125,
+              0.859375
+            ],
+            "0.8": [
+              0.953125,
+              1.0
+            ],
+            "0.9": [
+              0.953125,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 0.0003052714690956963,
+          "chiSquare6": 25.262521588946456,
+          "coverage": {
+            "0.5": 0.6576121794871795,
+            "0.8": 0.896073717948718,
+            "0.9": 0.9480769230769232
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6053645833333333,
+              0.7095392628205128
+            ],
+            "0.8": [
+              0.8598557692307692,
+              0.9273277243589745
+            ],
+            "0.9": [
+              0.9220352564102564,
+              0.9740384615384615
+            ]
+          },
+          "expectedPitBins": [
+            9.65,
+            9.65,
+            28.95,
+            96.5,
+            28.95,
+            9.65,
+            9.65
+          ],
+          "pitBins": [
+            7,
+            9,
+            22,
+            127,
+            24,
+            1,
+            3
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 0.0003052714690956963,
+          "chiSquare6": 25.262521588946456,
+          "coverage": {
+            "0.5": 0.6576121794871795,
+            "0.8": 0.896073717948718,
+            "0.9": 0.9480769230769232
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6053645833333333,
+              0.7095392628205128
+            ],
+            "0.8": [
+              0.8598557692307692,
+              0.9273277243589745
+            ],
+            "0.9": [
+              0.9220352564102564,
+              0.9740384615384615
+            ]
+          },
+          "expectedPitBins": [
+            9.65,
+            9.65,
+            28.95,
+            96.5,
+            28.95,
+            9.65,
+            9.65
+          ],
+          "pitBins": [
+            7,
+            9,
+            22,
+            127,
+            24,
+            1,
+            3
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    },
+    "composed.other": {
+      "perElection": {
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.6039603960396039,
+            "0.8": 0.8514851485148515,
+            "0.9": 0.9405940594059405
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5537459283387622,
+              0.656957928802589
+            ],
+            "0.8": [
+              0.8205088513138048,
+              0.8847457627118644
+            ],
+            "0.9": [
+              0.918918918918919,
+              0.961944278725689
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 303
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.5846867749419954,
+            "0.8": 0.8863109048723898,
+            "0.9": 0.9443155452436195
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5460821726298348,
+              0.6262160439344906
+            ],
+            "0.8": [
+              0.8619819669213803,
+              0.9105882352941177
+            ],
+            "0.9": [
+              0.9245669323357188,
+              0.9627082994524855
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 431
+        },
+        "2023": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.5649546827794562,
+            "0.8": 0.8549848942598187,
+            "0.9": 0.9093655589123867
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5136736792808015,
+              0.6141479099678456
+            ],
+            "0.8": [
+              0.8220753450920245,
+              0.8878787878787879
+            ],
+            "0.9": [
+              0.8828491830749896,
+              0.9354888185236493
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 331
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 7.182498707056173e-12,
+          "chiSquare6": 63.91517996870109,
+          "coverage": {
+            "0.5": 0.5845339512536851,
+            "0.8": 0.8642603158823533,
+            "0.9": 0.9314250545206489
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.558462277819567,
+              0.6116067271750308
+            ],
+            "0.8": [
+              0.8473648533518517,
+              0.8817225448492423
+            ],
+            "0.9": [
+              0.918628605998623,
+              0.9444035404091417
+            ]
+          },
+          "expectedPitBins": [
+            53.25,
+            53.25,
+            159.75,
+            532.5,
+            159.75,
+            53.25,
+            53.25
+          ],
+          "pitBins": [
+            28,
+            33,
+            109,
+            622,
+            192,
+            37,
+            44
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 7.182498707056173e-12,
+          "chiSquare6": 63.91517996870109,
+          "coverage": {
+            "0.5": 0.5845339512536851,
+            "0.8": 0.8642603158823533,
+            "0.9": 0.9314250545206489
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.558462277819567,
+              0.6116067271750308
+            ],
+            "0.8": [
+              0.8473648533518517,
+              0.8817225448492423
+            ],
+            "0.9": [
+              0.918628605998623,
+              0.9444035404091417
+            ]
+          },
+          "expectedPitBins": [
+            53.25,
+            53.25,
+            159.75,
+            532.5,
+            159.75,
+            53.25,
+            53.25
+          ],
+          "pitBins": [
+            28,
+            33,
+            109,
+            622,
+            192,
+            37,
+            44
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    },
+    "local_party.labour": {
+      "perElection": {
+        "2011": {
+          "contests": 63,
+          "coverage": {
+            "0.5": 0.5714285714285714,
+            "0.8": 0.873015873015873,
+            "0.9": 0.9365079365079365
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.47619047619047616,
+              0.6666666666666666
+            ],
+            "0.8": [
+              0.7936507936507936,
+              0.9365079365079365
+            ],
+            "0.9": [
+              0.8888888888888888,
+              0.9841269841269841
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 63
+        },
+        "2014": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.75,
+            "0.8": 0.953125,
+            "0.9": 0.96875
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.65625,
+              0.828125
+            ],
+            "0.8": [
+              0.90625,
+              0.984375
+            ],
+            "0.9": [
+              0.921875,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.46875,
+            "0.8": 0.734375,
+            "0.9": 0.859375
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.359375,
+              0.578125
+            ],
+            "0.8": [
+              0.640625,
+              0.8125
+            ],
+            "0.9": [
+              0.78125,
+              0.921875
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.6153846153846154,
+            "0.8": 0.8461538461538461,
+            "0.9": 0.9538461538461539
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5230769230769231,
+              0.7230769230769231
+            ],
+            "0.8": [
+              0.7692307692307693,
+              0.9230769230769231
+            ],
+            "0.9": [
+              0.9076923076923077,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 65
+        },
+        "2023": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.5230769230769231,
+            "0.8": 0.8307692307692308,
+            "0.9": 0.9076923076923077
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.4153846153846154,
+              0.6307692307692307
+            ],
+            "0.8": [
+              0.7538461538461538,
+              0.9076923076923077
+            ],
+            "0.9": [
+              0.8461538461538461,
+              0.9692307692307692
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 65
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 0.05241913581044898,
+          "chiSquare6": 12.462097611630321,
+          "coverage": {
+            "0.5": 0.585728021978022,
+            "0.8": 0.84748778998779,
+            "0.9": 0.9252342796092797
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5420214438339438,
+              0.6294412011599511
+            ],
+            "0.8": [
+              0.8134989316239316,
+              0.8786403388278388
+            ],
+            "0.9": [
+              0.9002311507936508,
+              0.9471161095848596
+            ]
+          },
+          "expectedPitBins": [
+            16.05,
+            16.05,
+            48.15,
+            160.5,
+            48.15,
+            16.05,
+            16.05
+          ],
+          "pitBins": [
+            12,
+            9,
+            47,
+            188,
+            37,
+            16,
+            12
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2011,
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 0.05848874621397615,
+          "chiSquare6": 12.16020671834625,
+          "coverage": {
+            "0.5": 0.5893028846153846,
+            "0.8": 0.8411057692307693,
+            "0.9": 0.9224158653846154
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5390625,
+              0.6396033653846154
+            ],
+            "0.8": [
+              0.8061899038461539,
+              0.8759645432692309
+            ],
+            "0.9": [
+              0.8950691105769231,
+              0.949462139423077
+            ]
+          },
+          "expectedPitBins": [
+            12.9,
+            12.9,
+            38.699999999999996,
+            129.0,
+            38.699999999999996,
+            12.9,
+            12.9
+          ],
+          "pitBins": [
+            12,
+            6,
+            34,
+            152,
+            31,
+            15,
+            8
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    },
+    "local_party.national": {
+      "perElection": {
+        "2011": {
+          "contests": 63,
+          "coverage": {
+            "0.5": 0.7142857142857143,
+            "0.8": 0.8412698412698413,
+            "0.9": 0.9206349206349206
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6190476190476191,
+              0.8095238095238095
+            ],
+            "0.8": [
+              0.7619047619047619,
+              0.9206349206349206
+            ],
+            "0.9": [
+              0.8571428571428571,
+              0.9682539682539683
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 63
+        },
+        "2014": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.78125,
+            "0.8": 0.96875,
+            "0.9": 0.984375
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6875,
+              0.859375
+            ],
+            "0.8": [
+              0.9375,
+              1.0
+            ],
+            "0.9": [
+              0.953125,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.40625,
+            "0.8": 0.8125,
+            "0.9": 0.921875
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.3125,
+              0.515625
+            ],
+            "0.8": [
+              0.734375,
+              0.890625
+            ],
+            "0.9": [
+              0.859375,
+              0.96875
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 64
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.7230769230769231,
+            "0.8": 0.9538461538461539,
+            "0.9": 0.9846153846153847
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6307692307692307,
+              0.8153846153846154
+            ],
+            "0.8": [
+              0.9076923076923077,
+              0.9846153846153847
+            ],
+            "0.9": [
+              0.9538461538461539,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 65
+        },
+        "2023": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.5846153846153846,
+            "0.8": 0.8769230769230769,
+            "0.9": 1.0
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.49230769230769234,
+              0.676923076923077
+            ],
+            "0.8": [
+              0.8153846153846154,
+              0.9384615384615385
+            ],
+            "0.9": [
+              1.0,
+              1.0
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 65
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 1.4873553446143652e-06,
+          "chiSquare6": 37.375908618899274,
+          "coverage": {
+            "0.5": 0.6418956043956044,
+            "0.8": 0.8906578144078144,
+            "0.9": 0.9623000610500612
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5984270833333333,
+              0.685262667887668
+            ],
+            "0.8": [
+              0.862525908119658,
+              0.9185936355311355
+            ],
+            "0.9": [
+              0.9435499847374847,
+              0.9780753968253968
+            ]
+          },
+          "expectedPitBins": [
+            16.05,
+            16.05,
+            48.15,
+            160.5,
+            48.15,
+            16.05,
+            16.05
+          ],
+          "pitBins": [
+            6,
+            8,
+            51,
+            206,
+            29,
+            15,
+            6
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2011,
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 1.951460456990262e-05,
+          "chiSquare6": 31.594315245478036,
+          "coverage": {
+            "0.5": 0.623798076923077,
+            "0.8": 0.9030048076923077,
+            "0.9": 0.9727163461538462
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.5739182692307693,
+              0.6703725961538461
+            ],
+            "0.8": [
+              0.8721123798076923,
+              0.9303515625000001
+            ],
+            "0.9": [
+              0.95703125,
+              0.98828125
+            ]
+          },
+          "expectedPitBins": [
+            12.9,
+            12.9,
+            38.699999999999996,
+            129.0,
+            38.699999999999996,
+            12.9,
+            12.9
+          ],
+          "pitBins": [
+            2,
+            7,
+            47,
+            161,
+            25,
+            11,
+            5
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    },
+    "local_party.other": {
+      "perElection": {
+        "2011": {
+          "contests": 63,
+          "coverage": {
+            "0.5": 0.6652236652236653,
+            "0.8": 0.886002886002886,
+            "0.9": 0.922077922077922
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6378066378066378,
+              0.6911976911976911
+            ],
+            "0.8": [
+              0.8701298701298701,
+              0.9018759018759018
+            ],
+            "0.9": [
+              0.9090909090909091,
+              0.935064935064935
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 693
+        },
+        "2014": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.6666666666666666,
+            "0.8": 0.8688327316486161,
+            "0.9": 0.9169675090252708
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6430288461538461,
+              0.690734055354994
+            ],
+            "0.8": [
+              0.8483754512635379,
+              0.8879585489974338
+            ],
+            "0.9": [
+              0.9012048192771084,
+              0.9326113116726835
+            ]
+          },
+          "degenerateIntervalsExcluded": 1,
+          "options": 831
+        },
+        "2017": {
+          "contests": 64,
+          "coverage": {
+            "0.5": 0.6696428571428571,
+            "0.8": 0.8616071428571429,
+            "0.9": 0.9174107142857143
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6395089285714286,
+              0.6997767857142857
+            ],
+            "0.8": [
+              0.8426339285714286,
+              0.8794642857142857
+            ],
+            "0.9": [
+              0.9084821428571429,
+              0.9263392857142857
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 896
+        },
+        "2020": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.6266666666666667,
+            "0.8": 0.8297435897435897,
+            "0.9": 0.8861538461538462
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.602,
+              0.6523076923076923
+            ],
+            "0.8": [
+              0.8133333333333334,
+              0.8471794871794872
+            ],
+            "0.9": [
+              0.8707692307692307,
+              0.9015384615384615
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 975
+        },
+        "2023": {
+          "contests": 65,
+          "coverage": {
+            "0.5": 0.6974358974358974,
+            "0.8": 0.9056410256410257,
+            "0.9": 0.9538461538461539
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6707692307692308,
+              0.7241025641025641
+            ],
+            "0.8": [
+              0.8861538461538462,
+              0.9241025641025641
+            ],
+            "0.9": [
+              0.9425641025641026,
+              0.9641025641025641
+            ]
+          },
+          "degenerateIntervalsExcluded": 0,
+          "options": 975
+        }
+      },
+      "pooled": {
+        "allYears": {
+          "approximatePValueIgnoringSharedEffect": 1.7526637217572806e-127,
+          "chiSquare6": 605.2109839816933,
+          "coverage": {
+            "0.5": 0.6651271506271506,
+            "0.8": 0.8703654751786521,
+            "0.9": 0.9192912290777814
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6535816829316187,
+              0.6772917585886337
+            ],
+            "0.8": [
+              0.8625158421740212,
+              0.8785664192230754
+            ],
+            "0.9": [
+              0.9134741660903776,
+              0.9252962200918315
+            ]
+          },
+          "expectedPitBins": [
+            218.5,
+            218.5,
+            655.5,
+            2185.0,
+            655.5,
+            218.5,
+            218.5
+          ],
+          "pitBins": [
+            246,
+            114,
+            303,
+            2906,
+            591,
+            103,
+            107
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2011,
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        },
+        "estimatedFolds": {
+          "approximatePValueIgnoringSharedEffect": 1.2724654815944808e-101,
+          "chiSquare6": 485.23642462152117,
+          "coverage": {
+            "0.5": 0.665103021978022,
+            "0.8": 0.8664561224725935,
+            "0.9": 0.9185945558277463
+          },
+          "coverageInterval90": {
+            "0.5": [
+              0.6524495037154111,
+              0.6788673027436989
+            ],
+            "0.8": [
+              0.8573938470712501,
+              0.8760106312957875
+            ],
+            "0.9": [
+              0.9119458650191425,
+              0.925114331460507
+            ]
+          },
+          "expectedPitBins": [
+            183.85000000000002,
+            183.85000000000002,
+            551.55,
+            1838.5,
+            551.55,
+            183.85000000000002,
+            183.85000000000002
+          ],
+          "pitBins": [
+            203,
+            101,
+            268,
+            2445,
+            473,
+            91,
+            96
+          ],
+          "verdict80": "over_covers",
+          "years": [
+            2014,
+            2017,
+            2020,
+            2023
+          ]
+        }
+      }
+    }
+  }
+}

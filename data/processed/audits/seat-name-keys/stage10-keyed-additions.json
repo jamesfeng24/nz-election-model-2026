@@ -1,0 +1,4111 @@
+{
+  "schemaVersion": 1,
+  "derivedFrom": "data/processed/models/replacement-candidate/inventory.json",
+  "usage": "Additive supplement; the pinned Stage 10 inventory is unchanged and stays the preserved record.",
+  "records": [
+    {
+      "eventId": "nz-general-2008-electorate-20-candidate-02->nz-general-2011-electorate-20-candidate-01",
+      "sourceOccurrenceId": "nz-general-2008-electorate-20-candidate-02",
+      "targetOccurrenceId": "nz-general-2011-electorate-20-candidate-01",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Kaikoura",
+      "partyKey": "greenparty",
+      "sourceName": "BROWNING, Steffan John",
+      "targetName": "BROWNING, Steffan John",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2011-electorate-20-candidate-01",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-20-candidate-01",
+        "sourceName": "BROWNING, Steffan John",
+        "sourceAffiliation": "Green Party",
+        "sourceElectorate": "Kaikōura",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_20.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-20-candidate-01"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.015707242529072213,
+      "targetResidual": 0.03832288870698253,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.015727983217670632,
+          "target": 0.03666457380934189
+        },
+        "log_odds": {
+          "prior": 0.01572654895199381,
+          "target": 0.03680984324012207
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-20-candidate-04->nz-general-2011-electorate-20-candidate-05",
+      "sourceOccurrenceId": "nz-general-2008-electorate-20-candidate-04",
+      "targetOccurrenceId": "nz-general-2011-electorate-20-candidate-05",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Kaikoura",
+      "partyKey": "nationalparty",
+      "sourceName": "KING, Colin McDonald",
+      "targetName": "KING, Colin McDonald",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": "parliament-former-profile-king-colin-2026-09-23",
+      "sourceCareerHistory": {
+        "status": "dated_profile",
+        "priorElectorate": true,
+        "priorList": false
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "confirmed",
+      "targetIdentityStatus": "confirmed",
+      "inheritedSourceIdentityStatus": "confirmed",
+      "inheritedTargetIdentityStatus": "confirmed",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "sourcePersonId": "parliament:king-colin",
+      "targetPersonId": "parliament:king-colin",
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2008-electorate-20-candidate-04",
+        "sourceName": "KING, Colin McDonald",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Kaikoura",
+        "sourceIds": [
+          "ec-2008-e9-csv-e9_part1.csv",
+          "ec-2008-e9-csv-e9_part4.csv",
+          "ec-2008-e9-csv-e9_part5.csv",
+          "ec-2008-e9-csv-e9_part6.csv",
+          "ec-2008-e9-csv-e9_part8_cand_20.csv",
+          "ec-2008-e9-csv-e9_part9_1.csv",
+          "ec-2008-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/king-colin/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "King, Colin",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2008-electorate-20-candidate-04"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2008-electorate-20-candidate-04",
+            "year": 2008,
+            "electionDate": "8 November 2008"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "National Party, 5 October 2005 - 20 September 2014"
+      },
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-20-candidate-05",
+        "sourceName": "KING, Colin McDonald",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Kaikōura",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_20.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/king-colin/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "King, Colin",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2011-electorate-20-candidate-05"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2011-electorate-20-candidate-05",
+            "year": 2011,
+            "electionDate": "26 November 2011"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "National Party, 5 October 2005 - 20 September 2014"
+      },
+      "sourcePreTargetAnchors": [
+        "nz-general-2008-electorate-20-candidate-04"
+      ],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": true,
+      "identityClass": "supported_continuation",
+      "identityMethod": "source_anchored_exact_chain",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": true,
+      "exclusionReasons": [],
+      "priorResidual": 0.038153135305525,
+      "targetResidual": 0.04470048638951507,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.03606888380653428,
+          "target": 0.044266017478411746
+        },
+        "log_odds": {
+          "prior": 0.038198616747642467,
+          "target": 0.04474673965205511
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-20-candidate-06->nz-general-2011-electorate-20-candidate-06",
+      "sourceOccurrenceId": "nz-general-2008-electorate-20-candidate-06",
+      "targetOccurrenceId": "nz-general-2011-electorate-20-candidate-06",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Kaikoura",
+      "partyKey": "democratsforsocialcredit",
+      "sourceName": "McCASKEY, John Stuart James",
+      "targetName": "McCASKEY, John Stuart James",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2011-electorate-20-candidate-06",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-20-candidate-06",
+        "sourceName": "McCASKEY, John Stuart James",
+        "sourceAffiliation": "Democrats for Social Credit",
+        "sourceElectorate": "Kaikōura",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_20.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-20-candidate-06",
+          "nz-general-2017-electorate-20-candidate-05"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.00013374617553607365,
+      "targetResidual": 0.00443067108420181,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.0005717145018206897,
+          "target": 0.005274486237800754
+        },
+        "log_odds": {
+          "prior": 0.0005698738270742544,
+          "target": 0.005271722261870596
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-20-candidate-07->nz-general-2011-electorate-20-candidate-02",
+      "sourceOccurrenceId": "nz-general-2008-electorate-20-candidate-07",
+      "targetOccurrenceId": "nz-general-2011-electorate-20-candidate-02",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Kaikoura",
+      "partyKey": "labourparty",
+      "sourceName": "McNAMARA, Brian Lawrence",
+      "targetName": "COLLYNS, Elizabeth Julia",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.031005850333837126,
+      "targetResidual": -0.018095644859152216,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.02878413941666741,
+          "target": 0.003415362418938639
+        },
+        "log_odds": {
+          "prior": -0.029772953730105967,
+          "target": -0.004350887418462901
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-20-candidate-08->nz-general-2011-electorate-20-candidate-03",
+      "sourceOccurrenceId": "nz-general-2008-electorate-20-candidate-08",
+      "targetOccurrenceId": "nz-general-2011-electorate-20-candidate-03",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Kaikoura",
+      "partyKey": "actnewzealand",
+      "sourceName": "TATTERSFIELD, David John",
+      "targetName": "EVANS, Richard Warwick",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2011-electorate-20-candidate-03",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-20-candidate-03",
+        "sourceName": "EVANS, Richard Warwick",
+        "sourceAffiliation": "ACT New Zealand",
+        "sourceElectorate": "Kaikōura",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_20.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-20-candidate-03",
+          "nz-general-2017-electorate-20-candidate-02",
+          "nz-general-2020-electorate-17-candidate-03"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.013465913426224194,
+      "targetResidual": -0.004744826773904082,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.01450860800411262,
+          "target": -0.004339932118564335
+        },
+        "log_odds": {
+          "prior": -0.014479258297407184,
+          "target": -0.004347364474696342
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-22-candidate-04->nz-general-2011-electorate-22-candidate-03",
+      "sourceOccurrenceId": "nz-general-2008-electorate-22-candidate-04",
+      "targetOccurrenceId": "nz-general-2011-electorate-22-candidate-03",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Mangere",
+      "partyKey": "nationalparty",
+      "sourceName": "HARRIS, Mita Whare",
+      "targetName": "HAUITI, Claudette",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.04710564761013658,
+      "targetResidual": -0.022245992980113094,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.032495095322747636,
+          "target": -0.018947402572428496
+        },
+        "log_odds": {
+          "prior": -0.037431552545864416,
+          "target": -0.01991229268606498
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-22-candidate-07->nz-general-2011-electorate-22-candidate-07",
+      "sourceOccurrenceId": "nz-general-2008-electorate-22-candidate-07",
+      "targetOccurrenceId": "nz-general-2011-electorate-22-candidate-07",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Mangere",
+      "partyKey": "labourparty",
+      "sourceName": "SIO, Su'a Viliamu",
+      "targetName": "SIO, Su'a Viliamu",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported"
+      ],
+      "priorResidual": -0.10548600372596928,
+      "targetResidual": -0.03601134358250191,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.11668359982037912,
+          "target": -0.16363173530512465
+        },
+        "log_odds": {
+          "prior": -0.1060434599652823,
+          "target": -0.026366924919624557
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-22-candidate-09->nz-general-2011-electorate-22-candidate-06",
+      "sourceOccurrenceId": "nz-general-2008-electorate-22-candidate-09",
+      "targetOccurrenceId": "nz-general-2011-electorate-22-candidate-06",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Mangere",
+      "partyKey": "greenparty",
+      "sourceName": "STRICKSON-PUA, Muamua Sofi",
+      "targetName": "ROSS, Todd Caleb",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.007614741748734454,
+      "targetResidual": 0.0394315992581072,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.0036454808601164325,
+          "target": 0.01597621129243616
+        },
+        "log_odds": {
+          "prior": 0.0037252674848347773,
+          "target": 0.01667596420899441
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-22-candidate-10->nz-general-2011-electorate-22-candidate-01",
+      "sourceOccurrenceId": "nz-general-2008-electorate-22-candidate-10",
+      "targetOccurrenceId": "nz-general-2011-electorate-22-candidate-01",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Mangere",
+      "partyKey": "actnewzealand",
+      "sourceName": "TABACHNIK, Michael",
+      "targetName": "COSTELLO, Cassandra Jane",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.004213917873519803,
+      "targetResidual": -0.005441142265217453,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.0005193413155769253,
+          "target": 4.8850569825248207e-05
+        },
+        "log_odds": {
+          "prior": 0.0005565574026382206,
+          "target": 2.0895997746937095e-05
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-35-candidate-03->nz-general-2011-electorate-35-candidate-02",
+      "sourceOccurrenceId": "nz-general-2008-electorate-35-candidate-03",
+      "targetOccurrenceId": "nz-general-2011-electorate-35-candidate-02",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Ohariu",
+      "partyKey": "labourparty",
+      "sourceName": "CHAUVEL, Charles Pierre",
+      "targetName": "CHAUVEL, Charles Pierre",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.04695758806550132,
+      "targetResidual": 0.006855227500271066,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.046699183927873034,
+          "target": 0.009542140262689736
+        },
+        "log_odds": {
+          "prior": -0.046834766049536736,
+          "target": 0.008281701844255918
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-35-candidate-05->nz-general-2011-electorate-35-candidate-03",
+      "sourceOccurrenceId": "nz-general-2008-electorate-35-candidate-05",
+      "targetOccurrenceId": "nz-general-2011-electorate-35-candidate-03",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Ohariu",
+      "partyKey": "unitedfuture",
+      "sourceName": "DUNNE, Peter Francis",
+      "targetName": "DUNNE, Peter Francis",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "confirmed",
+      "targetIdentityStatus": "confirmed",
+      "inheritedSourceIdentityStatus": "confirmed",
+      "inheritedTargetIdentityStatus": "confirmed",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "sourcePersonId": "parliament:dunne-peter",
+      "targetPersonId": "parliament:dunne-peter",
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2008-electorate-35-candidate-05",
+        "sourceName": "DUNNE, Peter Francis",
+        "sourceAffiliation": "United Future",
+        "sourceElectorate": "Ohariu",
+        "sourceIds": [
+          "ec-2008-e9-csv-e9_part1.csv",
+          "ec-2008-e9-csv-e9_part4.csv",
+          "ec-2008-e9-csv-e9_part5.csv",
+          "ec-2008-e9-csv-e9_part6.csv",
+          "ec-2008-e9-csv-e9_part8_cand_35.csv",
+          "ec-2008-e9-csv-e9_part9_1.csv",
+          "ec-2008-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/dunne-peter/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "Dunne, Peter",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2008-electorate-35-candidate-05"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2008-electorate-35-candidate-05",
+            "year": 2008,
+            "electionDate": "8 November 2008"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "Labour Party, 14 July 1984 - 12 October 1994; Independent, 12 October 1994 - 16 November 1994; Future New Zealand, 16 November 1994 - 28 June 1995; United New Zealand, 28 June 1995 - 16 November 2000; United Future, 16 November 2000 - 26 June 2013; Independent, 26 June 2013 - 20 August 2013; United Future, 20 August 2013 - 23 September 2017"
+      },
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-35-candidate-03",
+        "sourceName": "DUNNE, Peter Francis",
+        "sourceAffiliation": "United Future",
+        "sourceElectorate": "Ōhariu",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_35.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/dunne-peter/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "Dunne, Peter",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2011-electorate-35-candidate-03"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2011-electorate-35-candidate-03",
+            "year": 2011,
+            "electionDate": "26 November 2011"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "Labour Party, 14 July 1984 - 12 October 1994; Independent, 12 October 1994 - 16 November 1994; Future New Zealand, 16 November 1994 - 28 June 1995; United New Zealand, 28 June 1995 - 16 November 2000; United Future, 16 November 2000 - 26 June 2013; Independent, 26 June 2013 - 20 August 2013; United Future, 20 August 2013 - 23 September 2017"
+      },
+      "sourcePreTargetAnchors": [
+        "nz-general-2008-electorate-35-candidate-05"
+      ],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": true,
+      "identityClass": "supported_continuation",
+      "identityMethod": "source_anchored_exact_chain",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": true,
+      "exclusionReasons": [],
+      "priorResidual": 0.3055726259278791,
+      "targetResidual": 0.36824183261225474,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.3076010377344582,
+          "target": 0.36854883466831023
+        },
+        "log_odds": {
+          "prior": 0.3075630133939229,
+          "target": 0.3685435017314011
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-35-candidate-06->nz-general-2011-electorate-35-candidate-05",
+      "sourceOccurrenceId": "nz-general-2008-electorate-35-candidate-06",
+      "targetOccurrenceId": "nz-general-2011-electorate-35-candidate-05",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Ohariu",
+      "partyKey": "greenparty",
+      "sourceName": "HUGHES, Gareth Thomas Llewelyn",
+      "targetName": "HUGHES, Gareth Thomas Llewellyn",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.01549924170305464,
+      "targetResidual": -0.05276171891864329,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.013861764014043418,
+          "target": -0.044595718923780996
+        },
+        "log_odds": {
+          "prior": -0.014010730053381604,
+          "target": -0.045552451855110886
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-35-candidate-07->nz-general-2011-electorate-35-candidate-06",
+      "sourceOccurrenceId": "nz-general-2008-electorate-35-candidate-07",
+      "targetOccurrenceId": "nz-general-2011-electorate-35-candidate-06",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Ohariu",
+      "partyKey": "nationalparty",
+      "sourceName": "SHANKS, Katrina May",
+      "targetName": "SHANKS, Katrina May",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.22312487364695754,
+      "targetResidual": -0.3206874034120802,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.22256916999614135,
+          "target": -0.3206696352011555
+        },
+        "log_odds": {
+          "prior": -0.22308410167060333,
+          "target": -0.3206875157479691
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-36-candidate-01->nz-general-2011-electorate-36-candidate-01",
+      "sourceOccurrenceId": "nz-general-2008-electorate-36-candidate-01",
+      "targetOccurrenceId": "nz-general-2011-electorate-36-candidate-01",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Otaki",
+      "partyKey": "unitedfuture",
+      "sourceName": "BROWN, Diane Margaret",
+      "targetName": "BROWN, Diane",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.01161324583899308,
+      "targetResidual": -0.02642488090417986,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.011851524082443735,
+          "target": -0.023630515002968637
+        },
+        "log_odds": {
+          "prior": -0.01184775561467688,
+          "target": -0.023705640952178808
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-36-candidate-02->nz-general-2011-electorate-36-candidate-04",
+      "sourceOccurrenceId": "nz-general-2008-electorate-36-candidate-02",
+      "targetOccurrenceId": "nz-general-2011-electorate-36-candidate-04",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Otaki",
+      "partyKey": "nationalparty",
+      "sourceName": "GUY, Allen Nathan",
+      "targetName": "GUY, Allen Nathan",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": "parliament-former-profile-guy-nathan-2026-09-23",
+      "sourceCareerHistory": {
+        "status": "dated_profile",
+        "priorElectorate": false,
+        "priorList": true
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2011-electorate-36-candidate-04",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-36-candidate-04",
+        "sourceName": "GUY, Allen Nathan",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Ōtaki",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_36.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-37-candidate-02",
+          "nz-general-2017-electorate-37-candidate-03"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported"
+      ],
+      "priorResidual": 0.017428382874413617,
+      "targetResidual": 0.04412076643834972,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.018587859216515012,
+          "target": 0.044336401837962
+        },
+        "log_odds": {
+          "prior": 0.01755528176720389,
+          "target": 0.0441340907786118
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-36-candidate-03->nz-general-2011-electorate-36-candidate-02",
+      "sourceOccurrenceId": "nz-general-2008-electorate-36-candidate-03",
+      "targetOccurrenceId": "nz-general-2011-electorate-36-candidate-02",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Otaki",
+      "partyKey": "labourparty",
+      "sourceName": "HUGHES, Darren Colyn",
+      "targetName": "FOSTER, Peter Allen Cranleigh",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.07111645903010894,
+      "targetResidual": 0.0025965298320287933,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.07012567476631365,
+          "target": -0.0033682207992951074
+        },
+        "log_odds": {
+          "prior": 0.07069725471782062,
+          "target": -0.0002843909783084575
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-36-candidate-04->nz-general-2011-electorate-36-candidate-03",
+      "sourceOccurrenceId": "nz-general-2008-electorate-36-candidate-04",
+      "targetOccurrenceId": "nz-general-2011-electorate-36-candidate-03",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Otaki",
+      "partyKey": "greenparty",
+      "sourceName": "KEBBELL, James Edward",
+      "targetName": "GILCHRIST, Michael Alexander",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.024836153362503038,
+      "targetResidual": -0.014774120891427593,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.02581731851908155,
+          "target": -0.020837688554629828
+        },
+        "log_odds": {
+          "prior": -0.025762154047310675,
+          "target": -0.020374325372100176
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-36-candidate-05->nz-general-2011-electorate-36-candidate-05",
+      "sourceOccurrenceId": "nz-general-2008-electorate-36-candidate-05",
+      "targetOccurrenceId": "nz-general-2011-electorate-36-candidate-05",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Otaki",
+      "partyKey": "actnewzealand",
+      "sourceName": "McCAFFREY, Peter Edward",
+      "targetName": "McCAFFREY, Peter Edward",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.015691944152849118,
+      "targetResidual": -0.011220527350381263,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.017336738981863886,
+          "target": -0.007935674228164952
+        },
+        "log_odds": {
+          "prior": -0.01729785209065121,
+          "target": -0.0079724702970809
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-36-candidate-07->nz-general-2011-electorate-36-candidate-08",
+      "sourceOccurrenceId": "nz-general-2008-electorate-36-candidate-07",
+      "targetOccurrenceId": "nz-general-2011-electorate-36-candidate-08",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Otaki",
+      "partyKey": "newzealandfirstparty",
+      "sourceName": "SCOTT, David John",
+      "targetName": "SCOTT, David",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.042572702400916526,
+      "targetResidual": -0.01914123615468186,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.044233027159590446,
+          "target": -0.014099308058594443
+        },
+        "log_odds": {
+          "prior": -0.04412144063193549,
+          "target": -0.01434088244082848
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-42-candidate-01->nz-general-2011-electorate-42-candidate-05",
+      "sourceOccurrenceId": "nz-general-2008-electorate-42-candidate-01",
+      "targetOccurrenceId": "nz-general-2011-electorate-42-candidate-05",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Rangitikei",
+      "partyKey": "labourparty",
+      "sourceName": "ANGUS BURNEY, Jills Helen",
+      "targetName": "PAGANI, Josephine Jefcoate",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.006504172127326846,
+      "targetResidual": -0.0016151591674560262,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.008859575811300147,
+          "target": 0.01607260887454487
+        },
+        "log_odds": {
+          "prior": 0.007836629091543534,
+          "target": 0.009299792081724989
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-42-candidate-04->nz-general-2011-electorate-42-candidate-04",
+      "sourceOccurrenceId": "nz-general-2008-electorate-42-candidate-04",
+      "targetOccurrenceId": "nz-general-2011-electorate-42-candidate-04",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Rangitikei",
+      "partyKey": "nationalparty",
+      "sourceName": "POWER, Simon James",
+      "targetName": "McKELVIE, Ian Robert Flockhart",
+      "nameContrast": true,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "confirmed",
+      "targetIdentityStatus": "confirmed",
+      "inheritedSourceIdentityStatus": "confirmed",
+      "inheritedTargetIdentityStatus": "confirmed",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "sourcePersonId": "parliament:power-simon",
+      "targetPersonId": "parliament:mckelvie-ian",
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2008-electorate-42-candidate-04",
+        "sourceName": "POWER, Simon James",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Rangitikei",
+        "sourceIds": [
+          "ec-2008-e9-csv-e9_part1.csv",
+          "ec-2008-e9-csv-e9_part4.csv",
+          "ec-2008-e9-csv-e9_part5.csv",
+          "ec-2008-e9-csv-e9_part6.csv",
+          "ec-2008-e9-csv-e9_part8_cand_42.csv",
+          "ec-2008-e9-csv-e9_part9_1.csv",
+          "ec-2008-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/power-simon/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "Power, Simon",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2008-electorate-42-candidate-04"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2008-electorate-42-candidate-04",
+            "year": 2008,
+            "electionDate": "8 November 2008"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "National Party, 27 November 1999 - 26 November 2011"
+      },
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-42-candidate-04",
+        "sourceName": "McKELVIE, Ian Robert Flockhart",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Rangitīkei",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_42.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/mckelvie-ian/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "McKelvie, Ian",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2011-electorate-42-candidate-04",
+          "nz-general-2014-electorate-43-candidate-02",
+          "nz-general-2017-electorate-43-candidate-03",
+          "nz-general-2020-electorate-41-candidate-03"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2011-electorate-42-candidate-04",
+            "year": 2011,
+            "electionDate": "26 November 2011"
+          },
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-43-candidate-02",
+            "year": 2014,
+            "electionDate": "20 September 2014"
+          },
+          {
+            "candidateOccurrenceId": "nz-general-2017-electorate-43-candidate-03",
+            "year": 2017,
+            "electionDate": "23 September 2017"
+          },
+          {
+            "candidateOccurrenceId": "nz-general-2020-electorate-41-candidate-03",
+            "year": 2020,
+            "electionDate": "17 October 2020"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "National Party, 26 November 2011 - 14 October 2023"
+      },
+      "sourcePreTargetAnchors": [
+        "nz-general-2008-electorate-42-candidate-04"
+      ],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": true,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "retrospective_distinct_people",
+      "identityMethod": "distinct_official_people_target_or_later_anchor",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported"
+      ],
+      "priorResidual": 0.11241163927211228,
+      "targetResidual": 0.045593971650239706,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.11017018841942328,
+          "target": 0.04526938001909764
+        },
+        "log_odds": {
+          "prior": 0.1124816448660676,
+          "target": 0.04561930457475272
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-42-candidate-05->nz-general-2011-electorate-42-candidate-03",
+      "sourceOccurrenceId": "nz-general-2008-electorate-42-candidate-05",
+      "targetOccurrenceId": "nz-general-2011-electorate-42-candidate-03",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Rangitikei",
+      "partyKey": "actnewzealand",
+      "sourceName": "THOMPSON, Jean Grace",
+      "targetName": "FITZGERALD, Hayden Brent Richard",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.022026739673061208,
+      "targetResidual": -0.012923033914565096,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.021572001733107804,
+          "target": -0.015130452997478979
+        },
+        "log_odds": {
+          "prior": -0.021589849724964895,
+          "target": -0.01507506539825741
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-48-candidate-01->nz-general-2011-electorate-48-candidate-01",
+      "sourceOccurrenceId": "nz-general-2008-electorate-48-candidate-01",
+      "targetOccurrenceId": "nz-general-2011-electorate-48-candidate-01",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Tamaki",
+      "partyKey": "labourparty",
+      "sourceName": "BARTLEY, Josephine Ruth",
+      "targetName": "BAKULICH, Nicholas Leiloa",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.016806358121988246,
+      "targetResidual": -0.06105571908774049,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.011988772252167185,
+          "target": -0.0328716256694824
+        },
+        "log_odds": {
+          "prior": -0.01360686799733768,
+          "target": -0.04199156191224951
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-48-candidate-03->nz-general-2011-electorate-48-candidate-04",
+      "sourceOccurrenceId": "nz-general-2008-electorate-48-candidate-03",
+      "targetOccurrenceId": "nz-general-2011-electorate-48-candidate-04",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Tamaki",
+      "partyKey": "greenparty",
+      "sourceName": "LECKINGER, Richard John",
+      "targetName": "LECKINGER, Richard John",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.011348055902820217,
+      "targetResidual": 0.02510180818927696,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.009949721967829478,
+          "target": 0.01639374673514484
+        },
+        "log_odds": {
+          "prior": 0.010022770310663148,
+          "target": 0.016994822935897463
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-48-candidate-05->nz-general-2011-electorate-48-candidate-05",
+      "sourceOccurrenceId": "nz-general-2008-electorate-48-candidate-05",
+      "targetOccurrenceId": "nz-general-2011-electorate-48-candidate-05",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Tamaki",
+      "partyKey": "nationalparty",
+      "sourceName": "PEACHEY, Allan Frederick",
+      "targetName": "O'CONNOR, Simon David",
+      "nameContrast": true,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "confirmed",
+      "targetIdentityStatus": "confirmed",
+      "inheritedSourceIdentityStatus": "confirmed",
+      "inheritedTargetIdentityStatus": "confirmed",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "sourcePersonId": "parliament:peachey-allan",
+      "targetPersonId": "parliament:oconnor-simon",
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2008-electorate-48-candidate-05",
+        "sourceName": "PEACHEY, Allan Frederick",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Tamaki",
+        "sourceIds": [
+          "ec-2008-e9-csv-e9_part1.csv",
+          "ec-2008-e9-csv-e9_part4.csv",
+          "ec-2008-e9-csv-e9_part5.csv",
+          "ec-2008-e9-csv-e9_part6.csv",
+          "ec-2008-e9-csv-e9_part8_cand_48.csv",
+          "ec-2008-e9-csv-e9_part9_1.csv",
+          "ec-2008-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/peachey-allan/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "Peachey, Allan",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2008-electorate-48-candidate-05"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2008-electorate-48-candidate-05",
+            "year": 2008,
+            "electionDate": "8 November 2008"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "National Party, 5 October 2005 - 6 November 2011"
+      },
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-48-candidate-05",
+        "sourceName": "O'CONNOR, Simon David",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Tāmaki",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_48.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/oconnor-simon/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "O'Connor, Simon",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2011-electorate-48-candidate-05",
+          "nz-general-2017-electorate-49-candidate-06"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2011-electorate-48-candidate-05",
+            "year": 2011,
+            "electionDate": "26 November 2011"
+          },
+          {
+            "candidateOccurrenceId": "nz-general-2017-electorate-49-candidate-06",
+            "year": 2017,
+            "electionDate": "23 September 2017"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "National Party, 26 November 2011 - 14 October 2023"
+      },
+      "sourcePreTargetAnchors": [
+        "nz-general-2008-electorate-48-candidate-05"
+      ],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": true,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "retrospective_distinct_people",
+      "identityMethod": "distinct_official_people_target_or_later_anchor",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported"
+      ],
+      "priorResidual": 0.03395046460865425,
+      "targetResidual": 0.02861453731243946,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.027994747005891107,
+          "target": 0.02742537418068902
+        },
+        "log_odds": {
+          "prior": 0.03499513617830585,
+          "target": 0.028948257189724158
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-48-candidate-06->nz-general-2011-electorate-48-candidate-03",
+      "sourceOccurrenceId": "nz-general-2008-electorate-48-candidate-06",
+      "targetOccurrenceId": "nz-general-2011-electorate-48-candidate-03",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Tamaki",
+      "partyKey": "actnewzealand",
+      "sourceName": "SIMMONS, Christopher William",
+      "targetName": "BOSCAWEN, John Spencer",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.0302038504209202,
+      "targetResidual": -0.007240972009731103,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.025394925868332342,
+          "target": -0.015213430692078533
+        },
+        "log_odds": {
+          "prior": -0.02574624406629785,
+          "target": -0.014900554112146636
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-50-candidate-02->nz-general-2011-electorate-50-candidate-02",
+      "sourceOccurrenceId": "nz-general-2008-electorate-50-candidate-02",
+      "targetOccurrenceId": "nz-general-2011-electorate-50-candidate-02",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Taupo",
+      "partyKey": "labourparty",
+      "sourceName": "BURTON, Richard Mark",
+      "targetName": "CAMPBELL, Frances Fanny",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.09140615932118612,
+      "targetResidual": -0.07291236842224966,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.09297063633010988,
+          "target": -0.05238649762076811
+        },
+        "log_odds": {
+          "prior": 0.09225373319116059,
+          "target": -0.05996392977445922
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-50-candidate-03->nz-general-2011-electorate-50-candidate-07",
+      "sourceOccurrenceId": "nz-general-2008-electorate-50-candidate-03",
+      "targetOccurrenceId": "nz-general-2011-electorate-50-candidate-07",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Taupo",
+      "partyKey": "unitedfuture",
+      "sourceName": "EDWARDS, Maxwell Albert",
+      "targetName": "SIMMONS, Alan Frank",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2011-electorate-50-candidate-07",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-50-candidate-07",
+        "sourceName": "SIMMONS, Alan Frank",
+        "sourceAffiliation": "United Future",
+        "sourceElectorate": "Taupō",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_50.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-51-candidate-05"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.002284518175432678,
+      "targetResidual": -0.024707003238451698,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.001378491512225924,
+          "target": -0.028188221929100515
+        },
+        "log_odds": {
+          "prior": -0.0013896455813789642,
+          "target": -0.02806668522587585
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-50-candidate-05->nz-general-2011-electorate-50-candidate-08",
+      "sourceOccurrenceId": "nz-general-2008-electorate-50-candidate-05",
+      "targetOccurrenceId": "nz-general-2011-electorate-50-candidate-08",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Taupo",
+      "partyKey": "nationalparty",
+      "sourceName": "UPSTON, Louise Claire",
+      "targetName": "UPSTON, Louise Claire",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": "parliament-current-profile-upston-louise-2026-09-23",
+      "sourceCareerHistory": {
+        "status": "dated_profile",
+        "priorElectorate": false,
+        "priorList": false
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2011-electorate-50-candidate-08",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-50-candidate-08",
+        "sourceName": "UPSTON, Louise Claire",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Taupō",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_50.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-51-candidate-07",
+          "nz-general-2017-electorate-51-candidate-05",
+          "nz-general-2020-electorate-51-candidate-08"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported"
+      ],
+      "priorResidual": 0.021902996399347008,
+      "targetResidual": 0.07010161959012706,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.01898894009443397,
+          "target": 0.06965354266165114
+        },
+        "log_odds": {
+          "prior": 0.022061409128220633,
+          "target": 0.07015685294333862
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-52-candidate-02->nz-general-2011-electorate-52-candidate-01",
+      "sourceOccurrenceId": "nz-general-2008-electorate-52-candidate-02",
+      "targetOccurrenceId": "nz-general-2011-electorate-52-candidate-01",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Te Atatu",
+      "partyKey": "actnewzealand",
+      "sourceName": "BELTOWSKI, Lech Andrzej",
+      "targetName": "COSTELLO, Dominic John",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.002492024617202153,
+      "targetResidual": -0.005774474386593035,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.0014826797870889016,
+          "target": -0.0038818397367813093
+        },
+        "log_odds": {
+          "prior": 0.0015114881244381075,
+          "target": -0.00390934883897316
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-52-candidate-03->nz-general-2011-electorate-52-candidate-05",
+      "sourceOccurrenceId": "nz-general-2008-electorate-52-candidate-03",
+      "targetOccurrenceId": "nz-general-2011-electorate-52-candidate-05",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Te Atatu",
+      "partyKey": "labourparty",
+      "sourceName": "CARTER, Chris Joseph",
+      "targetName": "TWYFORD, Philip Stoner",
+      "nameContrast": true,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "confirmed",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "confirmed",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": "parliament:carter-chris",
+      "targetPersonId": "person:occurrence:nz-general-2011-electorate-52-candidate-05",
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2008-electorate-52-candidate-03",
+        "sourceName": "CARTER, Chris Joseph",
+        "sourceAffiliation": "Labour Party",
+        "sourceElectorate": "Te Atatu",
+        "sourceIds": [
+          "ec-2008-e9-csv-e9_part1.csv",
+          "ec-2008-e9-csv-e9_part4.csv",
+          "ec-2008-e9-csv-e9_part5.csv",
+          "ec-2008-e9-csv-e9_part6.csv",
+          "ec-2008-e9-csv-e9_part8_cand_52.csv",
+          "ec-2008-e9-csv-e9_part9_1.csv",
+          "ec-2008-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/carter-chris/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "Carter, Chris",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2008-electorate-52-candidate-03"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2008-electorate-52-candidate-03",
+            "year": 2008,
+            "electionDate": "8 November 2008"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "Labour Party, 6 November 1993 - 12 October 1996; 27 November 1999 - 10 August 2010; Independent, 10 August 2010 - 30 September 2011"
+      },
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-52-candidate-05",
+        "sourceName": "TWYFORD, Philip Stoner",
+        "sourceAffiliation": "Labour Party",
+        "sourceElectorate": "Te Atatū",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_52.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-53-candidate-06",
+          "nz-general-2017-electorate-53-candidate-06",
+          "nz-general-2020-electorate-53-candidate-07",
+          "nz-general-2023-electorate-53-candidate-06"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [
+        "nz-general-2008-electorate-52-candidate-03"
+      ],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported"
+      ],
+      "priorResidual": 0.10853261046178925,
+      "targetResidual": 0.07382565158585375,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.10608095547265117,
+          "target": 0.04186155560669025
+        },
+        "log_odds": {
+          "prior": 0.1076635038183672,
+          "target": 0.06277673489975438
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-52-candidate-04->nz-general-2011-electorate-52-candidate-04",
+      "sourceOccurrenceId": "nz-general-2008-electorate-52-candidate-04",
+      "targetOccurrenceId": "nz-general-2011-electorate-52-candidate-04",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Te Atatu",
+      "partyKey": "greenparty",
+      "sourceName": "GOLDIE, Xavier Heath",
+      "targetName": "STEWART, Gary Todd",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2011-electorate-52-candidate-04",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-52-candidate-04",
+        "sourceName": "STEWART, Gary Todd",
+        "sourceAffiliation": "Green Party",
+        "sourceElectorate": "Te Atatū",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_52.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-53-candidate-05"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.0019907128329327214,
+      "targetResidual": 0.021568724678346682,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.00434213507235115,
+          "target": 0.008306833637520668
+        },
+        "log_odds": {
+          "prior": -0.004249014234600154,
+          "target": 0.009059865560807054
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-52-candidate-05->nz-general-2011-electorate-52-candidate-02",
+      "sourceOccurrenceId": "nz-general-2008-electorate-52-candidate-05",
+      "targetOccurrenceId": "nz-general-2011-electorate-52-candidate-02",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "general",
+      "electorateName": "Te Atatu",
+      "partyKey": "nationalparty",
+      "sourceName": "HENARE, Raymond Tau",
+      "targetName": "HENARE, Raymond Tau",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.07588366204778252,
+      "targetResidual": -0.06271913504367316,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.07306636817843687,
+          "target": -0.06180026594479526
+        },
+        "log_odds": {
+          "prior": -0.07540947879425208,
+          "target": -0.06256386509014367
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-65-candidate-01->nz-general-2011-electorate-65-candidate-03",
+      "sourceOccurrenceId": "nz-general-2008-electorate-65-candidate-01",
+      "targetOccurrenceId": "nz-general-2011-electorate-65-candidate-03",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "maori",
+      "electorateName": "Ikaroa-Rawhiti",
+      "partyKey": "maoriparty",
+      "sourceName": "FOX, Derek Tinia",
+      "targetName": "RAIHANIA, Na Rongowhakaata",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "maori_scope_separate_diagnostic",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.15100036138662476,
+      "targetResidual": 0.008280526033475594,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.12613314883290705,
+          "target": -0.06939524752907175
+        },
+        "log_odds": {
+          "prior": -0.14636939421546513,
+          "target": -0.04618282449165481
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-65-candidate-02->nz-general-2011-electorate-65-candidate-01",
+      "sourceOccurrenceId": "nz-general-2008-electorate-65-candidate-02",
+      "targetOccurrenceId": "nz-general-2011-electorate-65-candidate-01",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "maori",
+      "electorateName": "Ikaroa-Rawhiti",
+      "partyKey": "labourparty",
+      "sourceName": "HOROMIA, Parekura Tureia",
+      "targetName": "HOROMIA, Parekura Tureia",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "maori_scope_separate_diagnostic"
+      ],
+      "priorResidual": -0.070019321345975,
+      "targetResidual": 0.03522418001196026,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.0789934411548131,
+          "target": -0.02685853442530073
+        },
+        "log_odds": {
+          "prior": -0.07105119464082288,
+          "target": 0.023020283738644953
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-66-candidate-01->nz-general-2011-electorate-66-candidate-01",
+      "sourceOccurrenceId": "nz-general-2008-electorate-66-candidate-01",
+      "targetOccurrenceId": "nz-general-2011-electorate-66-candidate-01",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "maori",
+      "electorateName": "Tamaki Makaurau",
+      "partyKey": "greenparty",
+      "sourceName": "CURTIS, Michael James",
+      "targetName": "CURTIS, Michael James",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "maori_scope_separate_diagnostic",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.012935318776023337,
+      "targetResidual": 0.022138646563634803,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.010554222853241667,
+          "target": 0.01635855360538488
+        },
+        "log_odds": {
+          "prior": 0.01064912359914319,
+          "target": 0.016802188816707656
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-66-candidate-03->nz-general-2011-electorate-66-candidate-04",
+      "sourceOccurrenceId": "nz-general-2008-electorate-66-candidate-03",
+      "targetOccurrenceId": "nz-general-2011-electorate-66-candidate-04",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "maori",
+      "electorateName": "Tamaki Makaurau",
+      "partyKey": "maoriparty",
+      "sourceName": "SHARPLES, Pita Russell",
+      "targetName": "SHARPLES, Pita Russell",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "maori_scope_separate_diagnostic"
+      ],
+      "priorResidual": 0.09855310008287776,
+      "targetResidual": 0.19962473523877244,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.10171332417808177,
+          "target": 0.14061211615807184
+        },
+        "log_odds": {
+          "prior": 0.09922019017319283,
+          "target": 0.15637507042972887
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-66-candidate-06->nz-general-2011-electorate-66-candidate-02",
+      "sourceOccurrenceId": "nz-general-2008-electorate-66-candidate-06",
+      "targetOccurrenceId": "nz-general-2011-electorate-66-candidate-02",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "maori",
+      "electorateName": "Tamaki Makaurau",
+      "partyKey": "labourparty",
+      "sourceName": "WALL, Louisa Hareruia",
+      "targetName": "JONES, Shane Geoffrey",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "maori_scope_separate_diagnostic",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.23821857496168924,
+      "targetResidual": -0.14159430547585755,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.2449718390914934,
+          "target": -0.1816311060371003
+        },
+        "log_odds": {
+          "prior": -0.23973271784272715,
+          "target": -0.1538095411903576
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-67-candidate-01->nz-general-2011-electorate-67-candidate-02",
+      "sourceOccurrenceId": "nz-general-2008-electorate-67-candidate-01",
+      "targetOccurrenceId": "nz-general-2011-electorate-67-candidate-02",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "maori",
+      "electorateName": "Te Tai Hauauru",
+      "partyKey": "labourparty",
+      "sourceName": "MASON, Errol Turuki",
+      "targetName": "PEKE-MASON, Soraya Waiata",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "maori_scope_separate_diagnostic",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.22657311525964252,
+      "targetResidual": -0.19979247615560702,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.2336508056303851,
+          "target": -0.241580073168786
+        },
+        "log_odds": {
+          "prior": -0.22806277201966352,
+          "target": -0.21219963612502984
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2008-electorate-67-candidate-02->nz-general-2011-electorate-67-candidate-04",
+      "sourceOccurrenceId": "nz-general-2008-electorate-67-candidate-02",
+      "targetOccurrenceId": "nz-general-2011-electorate-67-candidate-04",
+      "sourceYear": 2008,
+      "targetYear": 2011,
+      "electorateType": "maori",
+      "electorateName": "Te Tai Hauauru",
+      "partyKey": "maoriparty",
+      "sourceName": "TURIA, Tariana",
+      "targetName": "TURIA, Tariana",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2007",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "identity_not_pre_target_supported",
+        "maori_scope_separate_diagnostic"
+      ],
+      "priorResidual": 0.12652931679779023,
+      "targetResidual": 0.21336051756415492,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.10574897077755674,
+          "target": 0.09000914888203837
+        },
+        "log_odds": {
+          "prior": 0.12271263630026352,
+          "target": 0.1359458527302571
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2011-electorate-35-candidate-02->nz-general-2014-electorate-36-candidate-01",
+      "sourceOccurrenceId": "nz-general-2011-electorate-35-candidate-02",
+      "targetOccurrenceId": "nz-general-2014-electorate-36-candidate-01",
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "electorateType": "general",
+      "electorateName": "Ōhariu",
+      "partyKey": "labourparty",
+      "sourceName": "CHAUVEL, Charles Pierre",
+      "targetName": "ANDERSEN, Virginia Ruby",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2014",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.006855227500271066,
+      "targetResidual": 0.024645119397813664,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.009542140262689736,
+          "target": 0.030546423223558328
+        },
+        "log_odds": {
+          "prior": 0.008281701844255918,
+          "target": 0.028013324994476896
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2011-electorate-35-candidate-03->nz-general-2014-electorate-36-candidate-03",
+      "sourceOccurrenceId": "nz-general-2011-electorate-35-candidate-03",
+      "targetOccurrenceId": "nz-general-2014-electorate-36-candidate-03",
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "electorateType": "general",
+      "electorateName": "Ōhariu",
+      "partyKey": "unitedfuture",
+      "sourceName": "DUNNE, Peter Francis",
+      "targetName": "DUNNE, Peter Francis",
+      "nameContrast": false,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "confirmed",
+      "targetIdentityStatus": "confirmed",
+      "inheritedSourceIdentityStatus": "confirmed",
+      "inheritedTargetIdentityStatus": "confirmed",
+      "sourceOccurrenceConfidence": "confirmed",
+      "targetOccurrenceConfidence": "confirmed",
+      "sourcePersonId": "parliament:dunne-peter",
+      "targetPersonId": "parliament:dunne-peter",
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2011-electorate-35-candidate-03",
+        "sourceName": "DUNNE, Peter Francis",
+        "sourceAffiliation": "United Future",
+        "sourceElectorate": "Ōhariu",
+        "sourceIds": [
+          "ec-2011-e9-csv-e9_part1.csv",
+          "ec-2011-e9-csv-e9_part4.csv",
+          "ec-2011-e9-csv-e9_part5.csv",
+          "ec-2011-e9-csv-e9_part6.csv",
+          "ec-2011-e9-csv-e9_part8_cand_35.csv",
+          "ec-2011-e9-csv-e9_part9_1.csv",
+          "ec-2011-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/dunne-peter/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "Dunne, Peter",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2011-electorate-35-candidate-03"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2011-electorate-35-candidate-03",
+            "year": 2011,
+            "electionDate": "26 November 2011"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "Labour Party, 14 July 1984 - 12 October 1994; Independent, 12 October 1994 - 16 November 1994; Future New Zealand, 16 November 1994 - 28 June 1995; United New Zealand, 28 June 1995 - 16 November 2000; United Future, 16 November 2000 - 26 June 2013; Independent, 26 June 2013 - 20 August 2013; United Future, 20 August 2013 - 23 September 2017"
+      },
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2014-electorate-36-candidate-03",
+        "sourceName": "DUNNE, Peter Francis",
+        "sourceAffiliation": "United Future",
+        "sourceElectorate": "Ōhāriu",
+        "sourceIds": [
+          "ec-2014-e9-csv-e9_part1.csv",
+          "ec-2014-e9-csv-e9_part4.csv",
+          "ec-2014-e9-csv-e9_part5.csv",
+          "ec-2014-e9-csv-e9_part6.csv",
+          "ec-2014-e9-csv-e9_part8_cand_36.csv",
+          "ec-2014-e9-csv-e9_part9_1.csv",
+          "ec-2014-e9-csv-e9_part9_2.csv"
+        ],
+        "sourceUrl": "https://www3.parliament.nz/en/mps-and-electorates/former-members-of-parliament/dunne-peter/",
+        "sourceId": "parliament-former-mp-index-2026-09-23",
+        "officialSourceName": "Dunne, Peter",
+        "aliasEvidence": "Official profile display and preserved election source differ in case or middle names. Unique surname/first-name profile plus observed winner in exact full-name/affiliation/seat chain.",
+        "winnerOccurrenceIds": [
+          "nz-general-2014-electorate-36-candidate-03"
+        ],
+        "anchorOccurrences": [
+          {
+            "candidateOccurrenceId": "nz-general-2014-electorate-36-candidate-03",
+            "year": 2014,
+            "electionDate": "20 September 2014"
+          }
+        ],
+        "directOccurrenceEvidence": true,
+        "evidenceRetrievedAt": "2026-09-23T14:28:00+10:00",
+        "evidencePublishedAt": null,
+        "serviceText": "Labour Party, 14 July 1984 - 12 October 1994; Independent, 12 October 1994 - 16 November 1994; Future New Zealand, 16 November 1994 - 28 June 1995; United New Zealand, 28 June 1995 - 16 November 2000; United Future, 16 November 2000 - 26 June 2013; Independent, 26 June 2013 - 20 August 2013; United Future, 20 August 2013 - 23 September 2017"
+      },
+      "sourcePreTargetAnchors": [
+        "nz-general-2011-electorate-35-candidate-03"
+      ],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": true,
+      "identityClass": "supported_continuation",
+      "identityMethod": "source_anchored_exact_chain",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2014",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime"
+      ],
+      "priorResidual": 0.36824183261225474,
+      "targetResidual": 0.36066171735037417,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.36854883466831023,
+          "target": 0.35968022956395357
+        },
+        "log_odds": {
+          "prior": 0.3685435017314011,
+          "target": 0.35968896280647134
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2011-electorate-35-candidate-05->nz-general-2014-electorate-36-candidate-08",
+      "sourceOccurrenceId": "nz-general-2011-electorate-35-candidate-05",
+      "targetOccurrenceId": "nz-general-2014-electorate-36-candidate-08",
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "electorateType": "general",
+      "electorateName": "Ōhariu",
+      "partyKey": "greenparty",
+      "sourceName": "HUGHES, Gareth Thomas Llewellyn",
+      "targetName": "WOODLEY, Tane Hohepa",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2014-electorate-36-candidate-08",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2014-electorate-36-candidate-08",
+        "sourceName": "WOODLEY, Tane Hohepa",
+        "sourceAffiliation": "Green Party",
+        "sourceElectorate": "Ōhāriu",
+        "sourceIds": [
+          "ec-2014-e9-csv-e9_part1.csv",
+          "ec-2014-e9-csv-e9_part4.csv",
+          "ec-2014-e9-csv-e9_part5.csv",
+          "ec-2014-e9-csv-e9_part6.csv",
+          "ec-2014-e9-csv-e9_part8_cand_36.csv",
+          "ec-2014-e9-csv-e9_part9_1.csv",
+          "ec-2014-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2017-electorate-36-candidate-07"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2014",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.05276171891864329,
+      "targetResidual": -0.048514187255473254,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.044595718923780996,
+          "target": -0.039829905915789277
+        },
+        "log_odds": {
+          "prior": -0.045552451855110886,
+          "target": -0.04096739650000657
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2011-electorate-35-candidate-06->nz-general-2014-electorate-36-candidate-06",
+      "sourceOccurrenceId": "nz-general-2011-electorate-35-candidate-06",
+      "targetOccurrenceId": "nz-general-2014-electorate-36-candidate-06",
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "electorateType": "general",
+      "electorateName": "Ōhariu",
+      "partyKey": "nationalparty",
+      "sourceName": "SHANKS, Katrina May",
+      "targetName": "HUDSON, Brett John",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "probable",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "probable",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "probable",
+      "sourcePersonId": null,
+      "targetPersonId": "person:occurrence:nz-general-2014-electorate-36-candidate-06",
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2014-electorate-36-candidate-06",
+        "sourceName": "HUDSON, Brett John",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Ōhāriu",
+        "sourceIds": [
+          "ec-2014-e9-csv-e9_part1.csv",
+          "ec-2014-e9-csv-e9_part4.csv",
+          "ec-2014-e9-csv-e9_part5.csv",
+          "ec-2014-e9-csv-e9_part6.csv",
+          "ec-2014-e9-csv-e9_part8_cand_36.csv",
+          "ec-2014-e9-csv-e9_part9_1.csv",
+          "ec-2014-e9-csv-e9_part9_2.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2017-electorate-36-candidate-03",
+          "nz-general-2020-electorate-33-candidate-04"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2014",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.3206874034120802,
+      "targetResidual": -0.3378124823418679,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.3206696352011555,
+          "target": -0.3378137401335751
+        },
+        "log_odds": {
+          "prior": -0.3206875157479691,
+          "target": -0.33781248199482317
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2011-electorate-35-candidate-07->nz-general-2014-electorate-36-candidate-02",
+      "sourceOccurrenceId": "nz-general-2011-electorate-35-candidate-07",
+      "targetOccurrenceId": "nz-general-2014-electorate-36-candidate-02",
+      "sourceYear": 2011,
+      "targetYear": 2014,
+      "electorateType": "general",
+      "electorateName": "Ōhariu",
+      "partyKey": "conservative",
+      "sourceName": "WOODNUTT, Stephen Mark",
+      "targetName": "BRUNNER, Michael Johann",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2007",
+      "targetBoundaryRegime": "2014",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.008708961948123721,
+      "targetResidual": 0.0034849135042224304,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.00784886362639863,
+          "target": 0.0019662250388619504
+        },
+        "log_odds": {
+          "prior": -0.00786482618302964,
+          "target": 0.00200774481309755
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2017-electorate-63-candidate-01->nz-general-2020-electorate-64-candidate-07",
+      "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-01",
+      "targetOccurrenceId": "nz-general-2020-electorate-64-candidate-07",
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "electorateType": "general",
+      "electorateName": "Whangarei",
+      "partyKey": "actnewzealand",
+      "sourceName": "GRIEVE, Robin Barrie",
+      "targetName": "SEYMOUR, David Andrew",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "probable",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "probable",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": "person:occurrence:nz-general-2011-electorate-62-candidate-04",
+      "targetPersonId": null,
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-01",
+        "sourceName": "GRIEVE, Robin Barrie",
+        "sourceAffiliation": "ACT New Zealand",
+        "sourceElectorate": "Whangarei",
+        "sourceIds": [
+          "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+          "ec-2017-statistics-csv-candidate-votes-by-voting-place-63.csv",
+          "ec-2017-statistics-csv-overall-results-summary.csv",
+          "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+          "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+          "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+          "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2011-electorate-62-candidate-04",
+          "nz-general-2014-electorate-63-candidate-04"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2014",
+      "targetBoundaryRegime": "2020",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.011278378447777479,
+      "targetResidual": 0.007841016304346311,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.009534541278986943,
+          "target": 0.007909055204921515
+        },
+        "log_odds": {
+          "prior": -0.009559454252757105,
+          "target": 0.007905986449475433
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2017-electorate-63-candidate-02->nz-general-2020-electorate-64-candidate-01",
+      "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-02",
+      "targetOccurrenceId": "nz-general-2020-electorate-64-candidate-01",
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "electorateType": "general",
+      "electorateName": "Whangarei",
+      "partyKey": "greenparty",
+      "sourceName": "HOLWELL, Ashley James",
+      "targetName": "ARMSTRONG, Moea",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2014",
+      "targetBoundaryRegime": "2020",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.05447626896360999,
+      "targetResidual": -0.008384860464640778,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.05547954394316239,
+          "target": -0.012634780411918477
+        },
+        "log_odds": {
+          "prior": 0.0554100041928782,
+          "target": -0.012403489802078609
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2017-electorate-63-candidate-03->nz-general-2020-electorate-64-candidate-11",
+      "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-03",
+      "targetOccurrenceId": "nz-general-2020-electorate-64-candidate-11",
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "electorateType": "general",
+      "electorateName": "Whangarei",
+      "partyKey": "newzealandfirstparty",
+      "sourceName": "JONES, Shane Geoffrey",
+      "targetName": "WILSON, David Ashley",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2014",
+      "targetBoundaryRegime": "2020",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.05622575066664198,
+      "targetResidual": -0.015277961694732202,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.06420126881780436,
+          "target": -0.01445439004260643
+        },
+        "log_odds": {
+          "prior": 0.06312045930511279,
+          "target": -0.014496281516485562
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2017-electorate-63-candidate-04->nz-general-2020-electorate-64-candidate-05",
+      "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-04",
+      "targetOccurrenceId": "nz-general-2020-electorate-64-candidate-05",
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "electorateType": "general",
+      "electorateName": "Whangarei",
+      "partyKey": "democratsforsocialcredit",
+      "sourceName": "LEITCH, Christopher John",
+      "targetName": "LEITCH, Christopher John",
+      "nameContrast": false,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "probable",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "probable",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": "person:occurrence:nz-general-2014-electorate-63-candidate-07",
+      "targetPersonId": null,
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-04",
+        "sourceName": "LEITCH, Christopher John",
+        "sourceAffiliation": "Democrats for Social Credit",
+        "sourceElectorate": "Whangarei",
+        "sourceIds": [
+          "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+          "ec-2017-statistics-csv-candidate-votes-by-voting-place-63.csv",
+          "ec-2017-statistics-csv-overall-results-summary.csv",
+          "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+          "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+          "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+          "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-63-candidate-07"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2014",
+      "targetBoundaryRegime": "2020",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": 0.021625097591173956,
+      "targetResidual": 0.0030486852118072486,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.01904959950864261,
+          "target": -0.0007424958106475432
+        },
+        "log_odds": {
+          "prior": 0.019063766479130887,
+          "target": -0.0007088685948132938
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2017-electorate-63-candidate-06->nz-general-2020-electorate-64-candidate-06",
+      "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-06",
+      "targetOccurrenceId": "nz-general-2020-electorate-64-candidate-06",
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "electorateType": "general",
+      "electorateName": "Whangarei",
+      "partyKey": "nationalparty",
+      "sourceName": "RETI, Shane Raymond",
+      "targetName": "RETI, Shane",
+      "nameContrast": true,
+      "sourceWasElected": true,
+      "outgoingStatus": "source_winner",
+      "departureReason": "unknown",
+      "sourceProfileId": "parliament-current-profile-reti-shane-2026-09-23",
+      "sourceCareerHistory": {
+        "status": "dated_profile",
+        "priorElectorate": true,
+        "priorList": false
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "probable",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "probable",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "probable",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": "person:occurrence:nz-general-2014-electorate-63-candidate-10",
+      "targetPersonId": null,
+      "sourceIdentityEvidence": {
+        "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-06",
+        "sourceName": "RETI, Shane Raymond",
+        "sourceAffiliation": "National Party",
+        "sourceElectorate": "Whangarei",
+        "sourceIds": [
+          "ec-2017-statistics-csv-candidate-votes-and-turnout-by-electorate.csv",
+          "ec-2017-statistics-csv-candidate-votes-by-voting-place-63.csv",
+          "ec-2017-statistics-csv-overall-results-summary.csv",
+          "ec-2017-statistics-csv-party-votes-and-turnout-by-electorate.csv",
+          "ec-2017-statistics-csv-percentage-votes-for-registered-parties.csv",
+          "ec-2017-statistics-csv-votes-for-registered-parties-by-electorate.csv",
+          "ec-2017-statistics-csv-winning-electorate-candidates.csv"
+        ],
+        "corroboratingOccurrenceIds": [
+          "nz-general-2014-electorate-63-candidate-10"
+        ],
+        "anchorOccurrences": [],
+        "evidenceRetrievedAt": null,
+        "evidencePublishedAt": null
+      },
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2014",
+      "targetBoundaryRegime": "2020",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported"
+      ],
+      "priorResidual": 0.012631185961359537,
+      "targetResidual": 0.04364365860629338,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": 0.012612065285479424,
+          "target": 0.04679255906549279
+        },
+        "log_odds": {
+          "prior": 0.012628299355061767,
+          "target": 0.04526758668704811
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2017-electorate-63-candidate-07->nz-general-2020-electorate-64-candidate-04",
+      "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-07",
+      "targetOccurrenceId": "nz-general-2020-electorate-64-candidate-04",
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "electorateType": "general",
+      "electorateName": "Whangarei",
+      "partyKey": "labourparty",
+      "sourceName": "SAVAGE, Tony John",
+      "targetName": "HENDERSON, Lorenza Emily Preston",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2014",
+      "targetBoundaryRegime": "2020",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.1354765604065058,
+      "targetResidual": -0.045992574377782425,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.13370319727637842,
+          "target": -0.0470298211658301
+        },
+        "log_odds": {
+          "prior": -0.13462204442488945,
+          "target": -0.04608659050979552
+        }
+      }
+    },
+    {
+      "eventId": "nz-general-2017-electorate-63-candidate-08->nz-general-2020-electorate-64-candidate-02",
+      "sourceOccurrenceId": "nz-general-2017-electorate-63-candidate-08",
+      "targetOccurrenceId": "nz-general-2020-electorate-64-candidate-02",
+      "sourceYear": 2017,
+      "targetYear": 2020,
+      "electorateType": "general",
+      "electorateName": "Whangarei",
+      "partyKey": "conservative",
+      "sourceName": "TAYLOR, James Alfred",
+      "targetName": "CAMPBELL, Kerry Alex",
+      "nameContrast": true,
+      "sourceWasElected": false,
+      "outgoingStatus": "source_challenger",
+      "departureReason": "unknown",
+      "sourceProfileId": null,
+      "sourceCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingProfileId": null,
+      "incomingCareerHistory": {
+        "status": "unknown",
+        "priorElectorate": null,
+        "priorList": null
+      },
+      "incomingCareerEvidenceBasis": "unknown",
+      "sourceIdentityStatus": "unresolved",
+      "targetIdentityStatus": "unresolved",
+      "inheritedSourceIdentityStatus": "unresolved",
+      "inheritedTargetIdentityStatus": "unresolved",
+      "sourceOccurrenceConfidence": "unresolved",
+      "targetOccurrenceConfidence": "unresolved",
+      "sourcePersonId": null,
+      "targetPersonId": null,
+      "sourceIdentityEvidence": null,
+      "targetIdentityEvidence": null,
+      "sourcePreTargetAnchors": [],
+      "targetPreTargetAnchors": [],
+      "stage10IdentityEvidence": null,
+      "identityDependsOnTargetResult": false,
+      "identityDependsOnLaterOutcomeCoverage": false,
+      "candidateStatusKnownBeforeTarget": false,
+      "identityClass": "unresolved_identity",
+      "identityMethod": "name_contrast_alone_insufficient",
+      "sourceBoundaryRegime": "2014",
+      "targetBoundaryRegime": "2020",
+      "primaryEligible": false,
+      "exclusionReasons": [
+        "changed_boundary_transition",
+        "different_boundary_regime",
+        "identity_not_pre_target_supported",
+        "outgoing_challenger_separate_diagnostic"
+      ],
+      "priorResidual": -0.0021677115570616,
+      "targetResidual": -0.008857302307079313,
+      "scaleResiduals": {
+        "proportional": {
+          "prior": -0.001878531515795566,
+          "target": -0.009590026525948236
+        },
+        "log_odds": {
+          "prior": -0.0018802092693342197,
+          "target": -0.00957364377959269
+        }
+      }
+    }
+  ]
+}

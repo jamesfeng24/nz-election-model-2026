@@ -1,0 +1,1296 @@
+{
+  "arms": {
+    "C": {
+      "description": "Stage66 unchanged",
+      "maoriPartyWinsAmongPolledSeats": {
+        "distribution": [
+          0.06426,
+          0.20833,
+          0.62819,
+          0.09922
+        ],
+        "distributionIfIndependent": [
+          0.023897539792620003,
+          0.26227844222214003,
+          0.64138049617786,
+          0.07244352180738
+        ],
+        "meanWins": 1.76237
+      },
+      "polledSeats": [
+        "Te Tai Hauāuru",
+        "Te Tai Tonga",
+        "Hauraki-Waikato"
+      ],
+      "seats": {
+        "Hauraki-Waikato": {
+          "candidates": [
+            {
+              "meanShare": 0.6268349927167208,
+              "name": "Hana-Rāwhiti Maipi-Clarke",
+              "party": "MP",
+              "pollPercent": 45,
+              "share90Width": 0.3526874375945949,
+              "shareQuantiles": {
+                "0.05": 0.43953348803994946,
+                "0.25": 0.5597439969011094,
+                "0.5": 0.6334049516461567,
+                "0.75": 0.7015021195288849,
+                "0.95": 0.7922209256345444
+              },
+              "winProbability": 0.88105,
+              "winProbabilityMonteCarloSE": 0.0010237230948845493
+            },
+            {
+              "meanShare": 0.3731650072832791,
+              "name": "Kingi Kiriona",
+              "party": "LAB",
+              "pollPercent": 26,
+              "share90Width": 0.352687437594595,
+              "shareQuantiles": {
+                "0.05": 0.20777907436545548,
+                "0.25": 0.29849788047111514,
+                "0.5": 0.3665950483538433,
+                "0.75": 0.4402560030988905,
+                "0.95": 0.5604665119600505
+              },
+              "winProbability": 0.11895,
+              "winProbabilityMonteCarloSE": 0.0010237230948845493
+            }
+          ],
+          "fieldworkEnd": "2026-10-01",
+          "pollId": "2026-hauraki-waikato"
+        },
+        "Te Tai Hauāuru": {
+          "candidates": [
+            {
+              "meanShare": 0.5039820742327955,
+              "name": "Debbie Ngarewa-Packer",
+              "party": "MP",
+              "pollPercent": 38,
+              "share90Width": 0.3579505643652833,
+              "shareQuantiles": {
+                "0.05": 0.3238061931931767,
+                "0.25": 0.4332686037081728,
+                "0.5": 0.5045156491891019,
+                "0.75": 0.5758202749373508,
+                "0.95": 0.68175675755846
+              },
+              "winProbability": 0.77526,
+              "winProbabilityMonteCarloSE": 0.0013199694405553488
+            },
+            {
+              "meanShare": 0.36062686417562373,
+              "name": "Te Pūoho Katene",
+              "party": "LAB",
+              "pollPercent": 27,
+              "share90Width": 0.29870313491625416,
+              "shareQuantiles": {
+                "0.05": 0.21730211351496448,
+                "0.25": 0.2985661334929889,
+                "0.5": 0.35728926914534687,
+                "0.75": 0.41890205339479664,
+                "0.95": 0.5160052484312186
+              },
+              "winProbability": 0.22452,
+              "winProbabilityMonteCarloSE": 0.0013195104001105865
+            },
+            {
+              "meanShare": 0.13539106159158087,
+              "name": "Coral Raukawa",
+              "party": "NAT",
+              "pollPercent": 10,
+              "share90Width": 0.13495690828639675,
+              "shareQuantiles": {
+                "0.05": 0.07543798970989876,
+                "0.25": 0.1063882247184504,
+                "0.5": 0.13095495037539037,
+                "0.75": 0.15939766392849475,
+                "0.95": 0.21039489799629552
+              },
+              "winProbability": 0.00022,
+              "winProbabilityMonteCarloSE": 4.689899785709712e-05
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-hauauru"
+        },
+        "Te Tai Tonga": {
+          "candidates": [
+            {
+              "meanShare": 0.3796540042200622,
+              "name": "Mananui Ramsden",
+              "party": "LAB",
+              "pollPercent": 30,
+              "share90Width": 0.23422440962816327,
+              "shareQuantiles": {
+                "0.05": 0.26551344342734023,
+                "0.25": 0.3316504982368833,
+                "0.5": 0.37793516002873206,
+                "0.75": 0.4261424785194175,
+                "0.95": 0.4997378530555035
+              },
+              "winProbability": 0.85337,
+              "winProbabilityMonteCarloSE": 0.0011186136200672689
+            },
+            {
+              "meanShare": 0.22399766006985986,
+              "name": "Lisa Marie Murch",
+              "party": "MP",
+              "pollPercent": 17,
+              "share90Width": 0.24292609810415766,
+              "shareQuantiles": {
+                "0.05": 0.11725478590075052,
+                "0.25": 0.17145002432722475,
+                "0.5": 0.2147322977981201,
+                "0.75": 0.2655842136683151,
+                "0.95": 0.36018088400490816
+              },
+              "winProbability": 0.10606,
+              "winProbabilityMonteCarloSE": 0.0009737108215481637
+            },
+            {
+              "meanShare": 0.2045190898392821,
+              "name": "Lisa Te Morenga",
+              "party": "GRN",
+              "pollPercent": 16,
+              "share90Width": 0.15895618905571562,
+              "shareQuantiles": {
+                "0.05": 0.1316529092663144,
+                "0.25": 0.17067289963673538,
+                "0.5": 0.20068249489723655,
+                "0.75": 0.23413541341994457,
+                "0.95": 0.29060909832203
+              },
+              "winProbability": 0.02498,
+              "winProbabilityMonteCarloSE": 0.0004935179794090586
+            },
+            {
+              "meanShare": 0.19182924587079578,
+              "name": "Tākuta Ferris",
+              "party": "IND",
+              "pollPercent": 15,
+              "share90Width": 0.15159283805768325,
+              "shareQuantiles": {
+                "0.05": 0.12245916164666053,
+                "0.25": 0.15974383288633767,
+                "0.5": 0.18782355069672257,
+                "0.75": 0.21980502361767915,
+                "0.95": 0.2740519997043438
+              },
+              "winProbability": 0.01559,
+              "winProbabilityMonteCarloSE": 0.00039175185896176676
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-tonga"
+        }
+      }
+    },
+    "P": {
+      "description": "variance inflation, lambda drawn from the bootstrap of the correction",
+      "flaggedShiftOver0.10": [
+        "Hauraki-Waikato",
+        "Te Tai Hauāuru",
+        "Te Tai Tonga"
+      ],
+      "maoriPartyWinsAmongPolledSeats": {
+        "distribution": [
+          0.14519,
+          0.27248,
+          0.41181,
+          0.17052
+        ],
+        "distributionIfIndependent": [
+          0.07043455453062199,
+          0.35423778190813404,
+          0.47256077259186613,
+          0.10276689096937801
+        ],
+        "meanWins": 1.60766
+      },
+      "maxWinProbabilityChangeBySeat": {
+        "Hauraki-Waikato": 0.13972,
+        "Te Tai Hauāuru": 0.12071999999999994,
+        "Te Tai Tonga": 0.23688999999999993
+      },
+      "polledSeats": [
+        "Te Tai Hauāuru",
+        "Te Tai Tonga",
+        "Hauraki-Waikato"
+      ],
+      "seats": {
+        "Hauraki-Waikato": {
+          "candidates": [
+            {
+              "meanShare": 0.6141228272830991,
+              "name": "Hana-Rāwhiti Maipi-Clarke",
+              "party": "MP",
+              "pollPercent": 45,
+              "share90Width": 0.6193704632308678,
+              "share90WidthChangeVsControl": 0.26668302563627283,
+              "shareQuantiles": {
+                "0.05": 0.27012789257181147,
+                "0.25": 0.4937690691892745,
+                "0.5": 0.6330690155645406,
+                "0.75": 0.753948558347975,
+                "0.95": 0.8894983558026792
+              },
+              "winProbability": 0.74133,
+              "winProbabilityChangeVsControl": -0.13971999999999996,
+              "winProbabilityMonteCarloSE": 0.0013847737400023152
+            },
+            {
+              "meanShare": 0.385877172716901,
+              "name": "Kingi Kiriona",
+              "party": "LAB",
+              "pollPercent": 26,
+              "share90Width": 0.6193704632308678,
+              "share90WidthChangeVsControl": 0.2666830256362728,
+              "shareQuantiles": {
+                "0.05": 0.11050164419732056,
+                "0.25": 0.2460514416520249,
+                "0.5": 0.3669309844354594,
+                "0.75": 0.5062309308107255,
+                "0.95": 0.7298721074281883
+              },
+              "winProbability": 0.25867,
+              "winProbabilityChangeVsControl": 0.13972,
+              "winProbabilityMonteCarloSE": 0.0013847737400023155
+            }
+          ],
+          "fieldworkEnd": "2026-10-01",
+          "pollId": "2026-hauraki-waikato"
+        },
+        "Te Tai Hauāuru": {
+          "candidates": [
+            {
+              "meanShare": 0.4976003337937541,
+              "name": "Debbie Ngarewa-Packer",
+              "party": "MP",
+              "pollPercent": 38,
+              "share90Width": 0.6248269399322157,
+              "share90WidthChangeVsControl": 0.26687637556693244,
+              "shareQuantiles": {
+                "0.05": 0.18458895490815191,
+                "0.25": 0.3676867115535185,
+                "0.5": 0.498184308933611,
+                "0.75": 0.6284468759005698,
+                "0.95": 0.8094158948403677
+              },
+              "winProbability": 0.65454,
+              "winProbabilityChangeVsControl": -0.12071999999999994,
+              "winProbabilityMonteCarloSE": 0.0015037200151623972
+            },
+            {
+              "meanShare": 0.3613441677468745,
+              "name": "Te Pūoho Katene",
+              "party": "LAB",
+              "pollPercent": 27,
+              "share90Width": 0.5237559485595492,
+              "share90WidthChangeVsControl": 0.22505281364329505,
+              "shareQuantiles": {
+                "0.05": 0.11869298547528685,
+                "0.25": 0.24691508260313522,
+                "0.5": 0.3505302386533722,
+                "0.75": 0.4633153559947315,
+                "0.95": 0.642448934034836
+              },
+              "winProbability": 0.33026,
+              "winProbabilityChangeVsControl": 0.10574,
+              "winProbabilityMonteCarloSE": 0.0014872401702482353
+            },
+            {
+              "meanShare": 0.14105549845937135,
+              "name": "Coral Raukawa",
+              "party": "NAT",
+              "pollPercent": 10,
+              "share90Width": 0.25687737185069937,
+              "share90WidthChangeVsControl": 0.12192046356430261,
+              "shareQuantiles": {
+                "0.05": 0.039436201620943495,
+                "0.25": 0.08431965988073276,
+                "0.5": 0.12558850756797602,
+                "0.75": 0.1791270367942639,
+                "0.95": 0.29631357347164283
+              },
+              "winProbability": 0.0152,
+              "winProbabilityChangeVsControl": 0.01498,
+              "winProbabilityMonteCarloSE": 0.0003868974024208485
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-hauauru"
+        },
+        "Te Tai Tonga": {
+          "candidates": [
+            {
+              "meanShare": 0.3685460423565474,
+              "name": "Mananui Ramsden",
+              "party": "LAB",
+              "pollPercent": 30,
+              "share90Width": 0.4332298670508814,
+              "share90WidthChangeVsControl": 0.19900545742271813,
+              "shareQuantiles": {
+                "0.05": 0.1615787808779888,
+                "0.25": 0.2784962213712845,
+                "0.5": 0.3628341877365122,
+                "0.75": 0.45142358689034073,
+                "0.95": 0.5948086479288702
+              },
+              "winProbability": 0.61648,
+              "winProbabilityChangeVsControl": -0.23688999999999993,
+              "winProbabilityMonteCarloSE": 0.001537635878873799
+            },
+            {
+              "meanShare": 0.23612859607469971,
+              "name": "Lisa Marie Murch",
+              "party": "MP",
+              "pollPercent": 17,
+              "share90Width": 0.4552728007091146,
+              "share90WidthChangeVsControl": 0.21234670260495692,
+              "shareQuantiles": {
+                "0.05": 0.05895790722816696,
+                "0.25": 0.1345404824316937,
+                "0.5": 0.20736907922459902,
+                "0.75": 0.30501414219525946,
+                "0.95": 0.5142307079372815
+              },
+              "winProbability": 0.21179,
+              "winProbabilityChangeVsControl": 0.10573,
+              "winProbabilityMonteCarloSE": 0.0012920332654386263
+            },
+            {
+              "meanShare": 0.20382345416104972,
+              "name": "Lisa Te Morenga",
+              "party": "GRN",
+              "pollPercent": 16,
+              "share90Width": 0.29927880601960727,
+              "share90WidthChangeVsControl": 0.14032261696389164,
+              "shareQuantiles": {
+                "0.05": 0.07619423860895778,
+                "0.25": 0.13875902961886274,
+                "0.5": 0.1907832413021264,
+                "0.75": 0.25328147480842295,
+                "0.95": 0.37547304462856507
+              },
+              "winProbability": 0.09516,
+              "winProbabilityChangeVsControl": 0.07017999999999999,
+              "winProbabilityMonteCarloSE": 0.0009279255056307052
+            },
+            {
+              "meanShare": 0.19150190740770326,
+              "name": "Tākuta Ferris",
+              "party": "IND",
+              "pollPercent": 15,
+              "share90Width": 0.2856037700811196,
+              "share90WidthChangeVsControl": 0.13401093202343634,
+              "shareQuantiles": {
+                "0.05": 0.07131495527257524,
+                "0.25": 0.1296191946986541,
+                "0.5": 0.17829671354152593,
+                "0.75": 0.23781867670497048,
+                "0.95": 0.35691872535369484
+              },
+              "winProbability": 0.07657,
+              "winProbabilityChangeVsControl": 0.06098,
+              "winProbabilityMonteCarloSE": 0.0008408747534561851
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-tonga"
+        }
+      }
+    },
+    "PB": {
+      "description": "inflation plus Curia-era bias for the Maori Party candidates (mean of the 2020 and 2023 election means of D)",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tonga"
+      ],
+      "maoriPartyWinsAmongPolledSeats": {
+        "distribution": [
+          0.00957,
+          0.12897,
+          0.59974,
+          0.26172
+        ],
+        "distributionIfIndependent": [
+          0.007262964975335996,
+          0.13302283247399196,
+          0.5985554401260079,
+          0.261158762424664
+        ],
+        "meanWins": 2.11361
+      },
+      "maxWinProbabilityChangeBySeat": {
+        "Hauraki-Waikato": 0.03771000000000002,
+        "Te Tai Hauāuru": 0.09720000000000001,
+        "Te Tai Tonga": 0.32255
+      },
+      "polledSeats": [
+        "Te Tai Hauāuru",
+        "Te Tai Tonga",
+        "Hauraki-Waikato"
+      ],
+      "seats": {
+        "Hauraki-Waikato": {
+          "candidates": [
+            {
+              "meanShare": 0.7009160975546798,
+              "name": "Hana-Rāwhiti Maipi-Clarke",
+              "party": "MP",
+              "pollPercent": 45,
+              "share90Width": 0.4373573116379911,
+              "share90WidthChangeVsControl": 0.08466987404339615,
+              "shareQuantiles": {
+                "0.05": 0.450489357531776,
+                "0.25": 0.6245366765652628,
+                "0.5": 0.7187529025410053,
+                "0.75": 0.7968697272567902,
+                "0.95": 0.8878466691697671
+              },
+              "winProbability": 0.91876,
+              "winProbabilityChangeVsControl": 0.03771000000000002,
+              "winProbabilityMonteCarloSE": 0.0008639448037924644
+            },
+            {
+              "meanShare": 0.2990839024453204,
+              "name": "Kingi Kiriona",
+              "party": "LAB",
+              "pollPercent": 26,
+              "share90Width": 0.4373573116379909,
+              "share90WidthChangeVsControl": 0.0846698740433959,
+              "shareQuantiles": {
+                "0.05": 0.11215333083023275,
+                "0.25": 0.20313027274320983,
+                "0.5": 0.28124709745899457,
+                "0.75": 0.37546332343473715,
+                "0.95": 0.5495106424682237
+              },
+              "winProbability": 0.08124,
+              "winProbabilityChangeVsControl": -0.037709999999999994,
+              "winProbabilityMonteCarloSE": 0.0008639448037924646
+            }
+          ],
+          "fieldworkEnd": "2026-10-01",
+          "pollId": "2026-hauraki-waikato"
+        },
+        "Te Tai Hauāuru": {
+          "candidates": [
+            {
+              "meanShare": 0.5862067617042677,
+              "name": "Debbie Ngarewa-Packer",
+              "party": "MP",
+              "pollPercent": 38,
+              "share90Width": 0.45713158395951137,
+              "share90WidthChangeVsControl": 0.09918101959422809,
+              "shareQuantiles": {
+                "0.05": 0.3414650350861105,
+                "0.25": 0.5003063802736016,
+                "0.5": 0.5952076519621189,
+                "0.75": 0.682513278299488,
+                "0.95": 0.7985966190456218
+              },
+              "winProbability": 0.86699,
+              "winProbabilityChangeVsControl": 0.09173000000000009,
+              "winProbabilityMonteCarloSE": 0.0010738637711553546
+            },
+            {
+              "meanShare": 0.29803839178458597,
+              "name": "Te Pūoho Katene",
+              "party": "LAB",
+              "pollPercent": 27,
+              "share90Width": 0.40474971850102237,
+              "share90WidthChangeVsControl": 0.1060465835847682,
+              "shareQuantiles": {
+                "0.05": 0.12021027439035237,
+                "0.25": 0.20957300665173156,
+                "0.5": 0.28409245804892574,
+                "0.75": 0.3704574707380052,
+                "0.95": 0.5249599928913747
+              },
+              "winProbability": 0.12732,
+              "winProbabilityChangeVsControl": -0.09720000000000001,
+              "winProbabilityMonteCarloSE": 0.0010540854690204206
+            },
+            {
+              "meanShare": 0.11575484651114636,
+              "name": "Coral Raukawa",
+              "party": "NAT",
+              "pollPercent": 10,
+              "share90Width": 0.19493169825619697,
+              "share90WidthChangeVsControl": 0.05997478996980021,
+              "shareQuantiles": {
+                "0.05": 0.039468624746353376,
+                "0.25": 0.07268533727097704,
+                "0.5": 0.10299615346753929,
+                "0.75": 0.1432607893716868,
+                "0.95": 0.23440032300255034
+              },
+              "winProbability": 0.00569,
+              "winProbabilityChangeVsControl": 0.00547,
+              "winProbabilityMonteCarloSE": 0.0002378576023590585
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-hauauru"
+        },
+        "Te Tai Tonga": {
+          "candidates": [
+            {
+              "meanShare": 0.342356396367744,
+              "name": "Mananui Ramsden",
+              "party": "LAB",
+              "pollPercent": 30,
+              "share90Width": 0.396381624935437,
+              "share90WidthChangeVsControl": 0.16215721530727373,
+              "shareQuantiles": {
+                "0.05": 0.15966625290421427,
+                "0.25": 0.25877402240901454,
+                "0.5": 0.33355850121735453,
+                "0.75": 0.41543482280773775,
+                "0.95": 0.5560478778396513
+              },
+              "winProbability": 0.53082,
+              "winProbabilityChangeVsControl": -0.32255,
+              "winProbabilityMonteCarloSE": 0.001578132211191445
+            },
+            {
+              "meanShare": 0.2905791273935073,
+              "name": "Lisa Marie Murch",
+              "party": "MP",
+              "pollPercent": 17,
+              "share90Width": 0.3653170296500815,
+              "share90WidthChangeVsControl": 0.12239093154592386,
+              "shareQuantiles": {
+                "0.05": 0.12768892995481804,
+                "0.25": 0.21235279275513397,
+                "0.5": 0.279839622452944,
+                "0.75": 0.3551682519621804,
+                "0.95": 0.49300595960489957
+              },
+              "winProbability": 0.32786,
+              "winProbabilityChangeVsControl": 0.2218,
+              "winProbabilityMonteCarloSE": 0.001484479101907467
+            },
+            {
+              "meanShare": 0.1893142334729105,
+              "name": "Lisa Te Morenga",
+              "party": "GRN",
+              "pollPercent": 16,
+              "share90Width": 0.2742571934397829,
+              "share90WidthChangeVsControl": 0.11530100438406726,
+              "shareQuantiles": {
+                "0.05": 0.07473755671808702,
+                "0.25": 0.12954625800909847,
+                "0.5": 0.17599191403738046,
+                "0.75": 0.23309211518713083,
+                "0.95": 0.3489947501578699
+              },
+              "winProbability": 0.07923,
+              "winProbabilityChangeVsControl": 0.05424999999999999,
+              "winProbabilityMonteCarloSE": 0.0008541229835334019
+            },
+            {
+              "meanShare": 0.1777502427658382,
+              "name": "Tākuta Ferris",
+              "party": "IND",
+              "pollPercent": 15,
+              "share90Width": 0.261223273009321,
+              "share90WidthChangeVsControl": 0.10963043495163775,
+              "shareQuantiles": {
+                "0.05": 0.06953157315925668,
+                "0.25": 0.12105907735256058,
+                "0.5": 0.16462308654050545,
+                "0.75": 0.2186748989124837,
+                "0.95": 0.3307548461685777
+              },
+              "winProbability": 0.06209,
+              "winProbabilityChangeVsControl": 0.0465,
+              "winProbabilityMonteCarloSE": 0.0007631175001269464
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-tonga"
+        }
+      }
+    },
+    "P_lambda_hat": {
+      "description": "variance inflation fixed at the fitted lambda",
+      "flaggedShiftOver0.10": [
+        "Hauraki-Waikato",
+        "Te Tai Hauāuru",
+        "Te Tai Tonga"
+      ],
+      "maoriPartyWinsAmongPolledSeats": {
+        "distribution": [
+          0.13643,
+          0.27135,
+          0.42323,
+          0.16899
+        ],
+        "distributionIfIndependent": [
+          0.06530899067712,
+          0.34738615566864,
+          0.48452071663136,
+          0.10278413702288
+        ],
+        "meanWins": 1.62478
+      },
+      "maxWinProbabilityChangeBySeat": {
+        "Hauraki-Waikato": 0.12684,
+        "Te Tai Hauāuru": 0.10933999999999999,
+        "Te Tai Tonga": 0.21284999999999998
+      },
+      "polledSeats": [
+        "Te Tai Hauāuru",
+        "Te Tai Tonga",
+        "Hauraki-Waikato"
+      ],
+      "seats": {
+        "Hauraki-Waikato": {
+          "candidates": [
+            {
+              "meanShare": 0.6165905990828426,
+              "name": "Hana-Rāwhiti Maipi-Clarke",
+              "party": "MP",
+              "pollPercent": 45,
+              "share90Width": 0.5689813195948564,
+              "share90WidthChangeVsControl": 0.2162938820002615,
+              "shareQuantiles": {
+                "0.05": 0.30361408781808086,
+                "0.25": 0.5028430821349519,
+                "0.5": 0.6331097649531738,
+                "0.75": 0.7467441455819339,
+                "0.95": 0.8725954074129373
+              },
+              "winProbability": 0.75421,
+              "winProbabilityChangeVsControl": -0.12683999999999995,
+              "winProbabilityMonteCarloSE": 0.0013615332383015847
+            },
+            {
+              "meanShare": 0.3834094009171573,
+              "name": "Kingi Kiriona",
+              "party": "LAB",
+              "pollPercent": 26,
+              "share90Width": 0.5689813195948565,
+              "share90WidthChangeVsControl": 0.21629388200026153,
+              "shareQuantiles": {
+                "0.05": 0.12740459258706258,
+                "0.25": 0.25325585441806603,
+                "0.5": 0.3668902350468261,
+                "0.75": 0.4971569178650481,
+                "0.95": 0.6963859121819191
+              },
+              "winProbability": 0.24579,
+              "winProbabilityChangeVsControl": 0.12684,
+              "winProbabilityMonteCarloSE": 0.001361533238301585
+            }
+          ],
+          "fieldworkEnd": "2026-10-01",
+          "pollId": "2026-hauraki-waikato"
+        },
+        "Te Tai Hauāuru": {
+          "candidates": [
+            {
+              "meanShare": 0.4989792159185382,
+              "name": "Debbie Ngarewa-Packer",
+              "party": "MP",
+              "pollPercent": 38,
+              "share90Width": 0.573401671712409,
+              "share90WidthChangeVsControl": 0.2154511073471257,
+              "shareQuantiles": {
+                "0.05": 0.21096568395547108,
+                "0.25": 0.3771557000434054,
+                "0.5": 0.49956969020275843,
+                "0.75": 0.6222992004487827,
+                "0.95": 0.7843673556678801
+              },
+              "winProbability": 0.66592,
+              "winProbabilityChangeVsControl": -0.10933999999999999,
+              "winProbabilityMonteCarloSE": 0.0014915446811946333
+            },
+            {
+              "meanShare": 0.36141301838754525,
+              "name": "Te Pūoho Katene",
+              "party": "LAB",
+              "pollPercent": 27,
+              "share90Width": 0.4801927281720002,
+              "share90WidthChangeVsControl": 0.18148959325574604,
+              "shareQuantiles": {
+                "0.05": 0.13801268790690294,
+                "0.25": 0.2542735227316863,
+                "0.5": 0.35191154422501114,
+                "0.75": 0.45842281970219206,
+                "0.95": 0.6182054160789031
+              },
+              "winProbability": 0.32558,
+              "winProbabilityChangeVsControl": 0.10105999999999998,
+              "winProbabilityMonteCarloSE": 0.0014818153177774888
+            },
+            {
+              "meanShare": 0.13960776569391653,
+              "name": "Coral Raukawa",
+              "party": "NAT",
+              "pollPercent": 10,
+              "share90Width": 0.2314401932093148,
+              "share90WidthChangeVsControl": 0.09648328492291805,
+              "shareQuantiles": {
+                "0.05": 0.04634352487028209,
+                "0.25": 0.08749097264205608,
+                "0.5": 0.12649599489745056,
+                "0.75": 0.17729628604289166,
+                "0.95": 0.2777837180795969
+              },
+              "winProbability": 0.0085,
+              "winProbabilityChangeVsControl": 0.008280000000000001,
+              "winProbabilityMonteCarloSE": 0.00029030587317517364
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-hauauru"
+        },
+        "Te Tai Tonga": {
+          "candidates": [
+            {
+              "meanShare": 0.3712444080067409,
+              "name": "Mananui Ramsden",
+              "party": "LAB",
+              "pollPercent": 30,
+              "share90Width": 0.3920485046335611,
+              "share90WidthChangeVsControl": 0.15782409500539785,
+              "shareQuantiles": {
+                "0.05": 0.1855009985022368,
+                "0.25": 0.28702435421591777,
+                "0.5": 0.3654178091473276,
+                "0.75": 0.4497341612657325,
+                "0.95": 0.5775495031357979
+              },
+              "winProbability": 0.64052,
+              "winProbabilityChangeVsControl": -0.21284999999999998,
+              "winProbabilityMonteCarloSE": 0.0015174126979829844
+            },
+            {
+              "meanShare": 0.23340946395228376,
+              "name": "Lisa Marie Murch",
+              "party": "MP",
+              "pollPercent": 17,
+              "share90Width": 0.4119576172334816,
+              "share90WidthChangeVsControl": 0.16903151912932396,
+              "shareQuantiles": {
+                "0.05": 0.06945434591327769,
+                "0.25": 0.13957363590735689,
+                "0.5": 0.20875072309738624,
+                "0.75": 0.30052292765877275,
+                "0.95": 0.4814119631467593
+              },
+              "winProbability": 0.20465,
+              "winProbabilityChangeVsControl": 0.09859,
+              "winProbabilityMonteCarloSE": 0.0012758071072854235
+            },
+            {
+              "meanShare": 0.2038767833431816,
+              "name": "Lisa Te Morenga",
+              "party": "GRN",
+              "pollPercent": 16,
+              "share90Width": 0.27043982836671354,
+              "share90WidthChangeVsControl": 0.11148363931099792,
+              "shareQuantiles": {
+                "0.05": 0.0881758261042345,
+                "0.25": 0.14356077201647677,
+                "0.5": 0.19258636329918322,
+                "0.75": 0.25162843079533304,
+                "0.95": 0.35861565447094806
+              },
+              "winProbability": 0.08728,
+              "winProbabilityChangeVsControl": 0.062299999999999994,
+              "winProbabilityMonteCarloSE": 0.0008925368429370296
+            },
+            {
+              "meanShare": 0.19146934469779373,
+              "name": "Tākuta Ferris",
+              "party": "IND",
+              "pollPercent": 15,
+              "share90Width": 0.2579407685512157,
+              "share90WidthChangeVsControl": 0.10634793049353246,
+              "shareQuantiles": {
+                "0.05": 0.08180579094619896,
+                "0.25": 0.13444414235556773,
+                "0.5": 0.17972289260362528,
+                "0.75": 0.23646394775022395,
+                "0.95": 0.33974655949741467
+              },
+              "winProbability": 0.06755,
+              "winProbabilityChangeVsControl": 0.05196,
+              "winProbabilityMonteCarloSE": 0.0007936434810417081
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-tonga"
+        }
+      }
+    },
+    "P_lambda_p05": {
+      "description": "variance inflation fixed at the 5th percentile of the bootstrap",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tonga"
+      ],
+      "maoriPartyWinsAmongPolledSeats": {
+        "distribution": [
+          0.09884,
+          0.24777,
+          0.51267,
+          0.14072
+        ],
+        "distributionIfIndependent": [
+          0.04311820170240001,
+          0.3118774168928,
+          0.5516205611072,
+          0.0933838202976
+        ],
+        "meanWins": 1.69527
+      },
+      "maxWinProbabilityChangeBySeat": {
+        "Hauraki-Waikato": 0.06310000000000004,
+        "Te Tai Hauāuru": 0.05685999999999991,
+        "Te Tai Tonga": 0.10242999999999991
+      },
+      "polledSeats": [
+        "Te Tai Hauāuru",
+        "Te Tai Tonga",
+        "Hauraki-Waikato"
+      ],
+      "seats": {
+        "Hauraki-Waikato": {
+          "candidates": [
+            {
+              "meanShare": 0.6227839965870989,
+              "name": "Hana-Rāwhiti Maipi-Clarke",
+              "party": "MP",
+              "pollPercent": 45,
+              "share90Width": 0.4500352038858626,
+              "share90WidthChangeVsControl": 0.09734776629126768,
+              "shareQuantiles": {
+                "0.05": 0.3798598435191688,
+                "0.25": 0.5359004611180939,
+                "0.5": 0.6332807293091385,
+                "0.75": 0.7211030416155546,
+                "0.95": 0.8298950474050314
+              },
+              "winProbability": 0.81795,
+              "winProbabilityChangeVsControl": -0.06310000000000004,
+              "winProbabilityMonteCarloSE": 0.0012202778269722024
+            },
+            {
+              "meanShare": 0.3772160034129011,
+              "name": "Kingi Kiriona",
+              "party": "LAB",
+              "pollPercent": 26,
+              "share90Width": 0.4500352038858625,
+              "share90WidthChangeVsControl": 0.09734776629126748,
+              "shareQuantiles": {
+                "0.05": 0.1701049525949685,
+                "0.25": 0.2788969583844454,
+                "0.5": 0.3667192706908614,
+                "0.75": 0.46409953888190614,
+                "0.95": 0.620140156480831
+              },
+              "winProbability": 0.18205,
+              "winProbabilityChangeVsControl": 0.06309999999999999,
+              "winProbabilityMonteCarloSE": 0.0012202778269722022
+            }
+          ],
+          "fieldworkEnd": "2026-10-01",
+          "pollId": "2026-hauraki-waikato"
+        },
+        "Te Tai Hauāuru": {
+          "candidates": [
+            {
+              "meanShare": 0.5021035812909812,
+              "name": "Debbie Ngarewa-Packer",
+              "party": "MP",
+              "pollPercent": 38,
+              "share90Width": 0.45535796872848955,
+              "share90WidthChangeVsControl": 0.09740740436320627,
+              "shareQuantiles": {
+                "0.05": 0.27289323433177626,
+                "0.25": 0.40978240701841556,
+                "0.5": 0.5028240630874987,
+                "0.75": 0.5959089949632004,
+                "0.95": 0.7282512030602658
+              },
+              "winProbability": 0.7184,
+              "winProbabilityChangeVsControl": -0.05685999999999991,
+              "winProbabilityMonteCarloSE": 0.0014223271072436184
+            },
+            {
+              "meanShare": 0.3609910627479073,
+              "name": "Te Pūoho Katene",
+              "party": "LAB",
+              "pollPercent": 27,
+              "share90Width": 0.380055624499858,
+              "share90WidthChangeVsControl": 0.08135248958360386,
+              "shareQuantiles": {
+                "0.05": 0.18092484983317264,
+                "0.25": 0.27962275303470335,
+                "0.5": 0.35538753461473627,
+                "0.75": 0.43596030867445695,
+                "0.95": 0.5609804743330307
+              },
+              "winProbability": 0.27984,
+              "winProbabilityChangeVsControl": 0.05531999999999998,
+              "winProbabilityMonteCarloSE": 0.0014196111242167693
+            },
+            {
+              "meanShare": 0.13690535596111145,
+              "name": "Coral Raukawa",
+              "party": "NAT",
+              "pollPercent": 10,
+              "share90Width": 0.17583313486819932,
+              "share90WidthChangeVsControl": 0.040876226581802566,
+              "shareQuantiles": {
+                "0.05": 0.06177203432276527,
+                "0.25": 0.09823641533142094,
+                "0.5": 0.1293348887616148,
+                "0.75": 0.16704786813832018,
+                "0.95": 0.23760516919096458
+              },
+              "winProbability": 0.00176,
+              "winProbabilityChangeVsControl": 0.0015400000000000001,
+              "winProbabilityMonteCarloSE": 0.0001325481950084572
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-hauauru"
+        },
+        "Te Tai Tonga": {
+          "candidates": [
+            {
+              "meanShare": 0.37645016630912304,
+              "name": "Mananui Ramsden",
+              "party": "LAB",
+              "pollPercent": 30,
+              "share90Width": 0.302868722234667,
+              "share90WidthChangeVsControl": 0.06864431260650372,
+              "shareQuantiles": {
+                "0.05": 0.23031414939029707,
+                "0.25": 0.3131517496209942,
+                "0.5": 0.37339300519115953,
+                "0.75": 0.4368049381447631,
+                "0.95": 0.533182871624964
+              },
+              "winProbability": 0.75094,
+              "winProbabilityChangeVsControl": -0.10242999999999991,
+              "winProbabilityMonteCarloSE": 0.0013675858890760755
+            },
+            {
+              "meanShare": 0.22767989969237168,
+              "name": "Lisa Marie Murch",
+              "party": "MP",
+              "pollPercent": 17,
+              "share90Width": 0.31598784698319426,
+              "share90WidthChangeVsControl": 0.07306174887903662,
+              "shareQuantiles": {
+                "0.05": 0.09463646555688032,
+                "0.25": 0.1576572752424194,
+                "0.5": 0.21255804075936477,
+                "0.75": 0.2804489453418971,
+                "0.95": 0.4106243125400746
+              },
+              "winProbability": 0.15892,
+              "winProbabilityChangeVsControl": 0.052860000000000004,
+              "winProbabilityMonteCarloSE": 0.0011561333556298773
+            },
+            {
+              "meanShare": 0.2042284615338614,
+              "name": "Lisa Te Morenga",
+              "party": "GRN",
+              "pollPercent": 16,
+              "share90Width": 0.20678856679030724,
+              "share90WidthChangeVsControl": 0.04783237773459162,
+              "shareQuantiles": {
+                "0.05": 0.11206856190407469,
+                "0.25": 0.15928581548484783,
+                "0.5": 0.19768362729339609,
+                "0.75": 0.24181315720050137,
+                "0.95": 0.31885712869438193
+              },
+              "winProbability": 0.05272,
+              "winProbabilityChangeVsControl": 0.027740000000000004,
+              "winProbabilityMonteCarloSE": 0.000706686646258439
+            },
+            {
+              "meanShare": 0.1916414724646439,
+              "name": "Tākuta Ferris",
+              "party": "IND",
+              "pollPercent": 15,
+              "share90Width": 0.19724853314568455,
+              "share90WidthChangeVsControl": 0.04565569508800128,
+              "shareQuantiles": {
+                "0.05": 0.10414639864879069,
+                "0.25": 0.14906170552121795,
+                "0.5": 0.18482405834660456,
+                "0.75": 0.22709798900842532,
+                "0.95": 0.30139493179447524
+              },
+              "winProbability": 0.03742,
+              "winProbabilityChangeVsControl": 0.021830000000000002,
+              "winProbabilityMonteCarloSE": 0.0006001645074477498
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-tonga"
+        }
+      }
+    },
+    "P_lambda_p95": {
+      "description": "variance inflation fixed at the 95th percentile of the bootstrap",
+      "flaggedShiftOver0.10": [
+        "Hauraki-Waikato",
+        "Te Tai Hauāuru",
+        "Te Tai Tonga"
+      ],
+      "maoriPartyWinsAmongPolledSeats": {
+        "distribution": [
+          0.18792,
+          0.28567,
+          0.33983,
+          0.18658
+        ],
+        "distributionIfIndependent": [
+          0.09766754189542802,
+          0.381238143913716,
+          0.419451086486284,
+          0.101643227704572
+        ],
+        "meanWins": 1.52507
+      },
+      "maxWinProbabilityChangeBySeat": {
+        "Hauraki-Waikato": 0.20606999999999998,
+        "Te Tai Hauāuru": 0.17679,
+        "Te Tai Tonga": 0.35386999999999996
+      },
+      "polledSeats": [
+        "Te Tai Hauāuru",
+        "Te Tai Tonga",
+        "Hauraki-Waikato"
+      ],
+      "seats": {
+        "Hauraki-Waikato": {
+          "candidates": [
+            {
+              "meanShare": 0.6030531828867552,
+              "name": "Hana-Rāwhiti Maipi-Clarke",
+              "party": "MP",
+              "pollPercent": 45,
+              "share90Width": 0.7580758609354195,
+              "share90WidthChangeVsControl": 0.40538842334082453,
+              "shareQuantiles": {
+                "0.05": 0.17534714183045733,
+                "0.25": 0.4332990236925989,
+                "0.5": 0.6327485976920223,
+                "0.75": 0.7955625854570247,
+                "0.95": 0.9334230027658768
+              },
+              "winProbability": 0.67498,
+              "winProbabilityChangeVsControl": -0.20606999999999998,
+              "winProbabilityMonteCarloSE": 0.0014811549534062935
+            },
+            {
+              "meanShare": 0.39694681711324475,
+              "name": "Kingi Kiriona",
+              "party": "LAB",
+              "pollPercent": 26,
+              "share90Width": 0.7580758609354192,
+              "share90WidthChangeVsControl": 0.40538842334082426,
+              "shareQuantiles": {
+                "0.05": 0.06657699723412326,
+                "0.25": 0.20443741454297526,
+                "0.5": 0.36725140230797776,
+                "0.75": 0.5667009763074011,
+                "0.95": 0.8246528581695425
+              },
+              "winProbability": 0.32502,
+              "winProbabilityChangeVsControl": 0.20606999999999998,
+              "winProbabilityMonteCarloSE": 0.0014811549534062935
+            }
+          ],
+          "fieldworkEnd": "2026-10-01",
+          "pollId": "2026-hauraki-waikato"
+        },
+        "Te Tai Hauāuru": {
+          "candidates": [
+            {
+              "meanShare": 0.4911756093691941,
+              "name": "Debbie Ngarewa-Packer",
+              "party": "MP",
+              "pollPercent": 38,
+              "share90Width": 0.7578241793169878,
+              "share90WidthChangeVsControl": 0.3998736149517045,
+              "shareQuantiles": {
+                "0.05": 0.11457053356251448,
+                "0.25": 0.30983222502407715,
+                "0.5": 0.48936143859563086,
+                "0.75": 0.672862525818333,
+                "0.95": 0.8723947128795022
+              },
+              "winProbability": 0.59847,
+              "winProbabilityChangeVsControl": -0.17679,
+              "winProbabilityMonteCarloSE": 0.0015501730842070508
+            },
+            {
+              "meanShare": 0.36158587033321654,
+              "name": "Te Pūoho Katene",
+              "party": "LAB",
+              "pollPercent": 27,
+              "share90Width": 0.6461897232501654,
+              "share90WidthChangeVsControl": 0.3474865883339113,
+              "shareQuantiles": {
+                "0.05": 0.07392508125239511,
+                "0.25": 0.20388787956175597,
+                "0.5": 0.34101517499525613,
+                "0.75": 0.49981764656512695,
+                "0.95": 0.7201148045025606
+              },
+              "winProbability": 0.36228,
+              "winProbabilityChangeVsControl": 0.13776,
+              "winProbabilityMonteCarloSE": 0.0015199776366775929
+            },
+            {
+              "meanShare": 0.14723852029758944,
+              "name": "Coral Raukawa",
+              "party": "NAT",
+              "pollPercent": 10,
+              "share90Width": 0.3451634871076367,
+              "share90WidthChangeVsControl": 0.21020657882123997,
+              "shareQuantiles": {
+                "0.05": 0.02419503450056134,
+                "0.25": 0.06688645795932807,
+                "0.5": 0.11874995490831186,
+                "0.75": 0.1971965566914748,
+                "0.95": 0.36935852160819804
+              },
+              "winProbability": 0.03925,
+              "winProbabilityChangeVsControl": 0.03903,
+              "winProbabilityMonteCarloSE": 0.0006140801047094752
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-hauauru"
+        },
+        "Te Tai Tonga": {
+          "candidates": [
+            {
+              "meanShare": 0.3586944880916589,
+              "name": "Mananui Ramsden",
+              "party": "LAB",
+              "pollPercent": 30,
+              "share90Width": 0.5532104679474449,
+              "share90WidthChangeVsControl": 0.3189860583192816,
+              "shareQuantiles": {
+                "0.05": 0.10849135256516669,
+                "0.25": 0.23118410181834012,
+                "0.5": 0.34364998935227425,
+                "0.75": 0.4717488447484106,
+                "0.95": 0.6617018205126116
+              },
+              "winProbability": 0.4995,
+              "winProbabilityChangeVsControl": -0.35386999999999996,
+              "winProbabilityMonteCarloSE": 0.0015811380395145769
+            },
+            {
+              "meanShare": 0.2461537459165177,
+              "name": "Lisa Marie Murch",
+              "party": "MP",
+              "pollPercent": 17,
+              "share90Width": 0.5918612278828294,
+              "share90WidthChangeVsControl": 0.3489351297786717,
+              "shareQuantiles": {
+                "0.05": 0.034584614027889586,
+                "0.25": 0.10514836471645136,
+                "0.5": 0.1981335004040301,
+                "0.75": 0.3419568793014055,
+                "0.95": 0.626445841910719
+              },
+              "winProbability": 0.25162,
+              "winProbabilityChangeVsControl": 0.14556000000000002,
+              "winProbabilityMonteCarloSE": 0.001372251345781814
+            },
+            {
+              "meanShare": 0.20353534594838435,
+              "name": "Lisa Te Morenga",
+              "party": "GRN",
+              "pollPercent": 16,
+              "share90Width": 0.3938165617132292,
+              "share90WidthChangeVsControl": 0.23486037265751358,
+              "shareQuantiles": {
+                "0.05": 0.05023695937664415,
+                "0.25": 0.11203393280691151,
+                "0.5": 0.17852927284605793,
+                "0.75": 0.2689590477885389,
+                "0.95": 0.44405352108987334
+              },
+              "winProbability": 0.13465,
+              "winProbabilityChangeVsControl": 0.10966999999999999,
+              "winProbabilityMonteCarloSE": 0.0010794414180491686
+            },
+            {
+              "meanShare": 0.1916164200434391,
+              "name": "Tākuta Ferris",
+              "party": "IND",
+              "pollPercent": 15,
+              "share90Width": 0.37694366109608773,
+              "share90WidthChangeVsControl": 0.22535082303840448,
+              "shareQuantiles": {
+                "0.05": 0.04612566508874971,
+                "0.25": 0.1045955273079808,
+                "0.5": 0.16619705102929316,
+                "0.75": 0.2528360016373431,
+                "0.95": 0.42306932618483745
+              },
+              "winProbability": 0.11423,
+              "winProbabilityChangeVsControl": 0.09864,
+              "winProbabilityMonteCarloSE": 0.0010058901883406557
+            }
+          ],
+          "fieldworkEnd": "2026-09-24",
+          "pollId": "2026-te-tai-tonga"
+        }
+      }
+    }
+  },
+  "bootstrapSeed": 2026071,
+  "draws": 100000,
+  "fitAllFourElections": {
+    "bootstrapSkipped": 0,
+    "eraBias": {
+      "Curia": 0.39311830584415886,
+      "bootstrapSkipped": 0,
+      "lambdaHatWithEraBias": 3.349940863296861,
+      "lambdaIntervalWithEraBias90": {
+        "p05": 1.7565346936886794,
+        "p50": 3.7527737657476687,
+        "p95": 7.583447796895573,
+        "replicates": 1000
+      },
+      "tau2WithEraBias": 0.0
+    },
+    "lambdaHat": 3.0332779945521278,
+    "lambdaInterval90": {
+      "p05": 1.7216809782672111,
+      "p50": 3.563438722557667,
+      "p95": 7.0155637309043275
+    },
+    "sigma2": 0.05356729897264282,
+    "sigma2Dof": 20,
+    "tau2": 0.06418595298857725
+  },
+  "label": "INTERNAL development output; nothing adopted; not a forecast of record",
+  "polledSeats": [
+    "Hauraki-Waikato",
+    "Te Tai Hauāuru",
+    "Te Tai Tonga"
+  ],
+  "schemaVersion": 1,
+  "seed": 2026066
+}

@@ -1,5 +1,8 @@
 # Active Stage36 sequence — D067/D069, 2026-10-04
 
+> **Historical backlog.** The active remaining-work list is [release-checklist.md](release-checklist.md); the sequences below are kept as records.
+
+
 [Owned polling foundation/design](stage35-national-model-design.md) supersedes the earlier dated-input-first readiness plan. Component validation, fixed-fit input substitution and end-to-end replay are distinct. Polling replay is not a prerequisite for recognizing candidate information and isolated polling-error cancellation cannot overturn that evidence. Retain S and S+R active, R meaningful challenger/baseline control; no definitive choice required before PoP. Historical records below remain unchanged.
 
 1. Review completed Stage36 national implementation/backtest: mixed point gains, undercoverage and consequential timing/sample assumptions remain explicit. Stage35 data/design is preserved. No operational national choice or candidate replay.

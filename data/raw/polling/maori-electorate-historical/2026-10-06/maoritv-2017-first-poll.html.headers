@@ -1,0 +1,33 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 301 
+content-type: text/html; charset=utf-8
+location: https://www.maoriplus.co.nz
+permissions-policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+referrer-policy: no-referrer-when-downgrade
+x-content-type-options: nosniff
+x-powered-by: redirect.pizza
+x-server: ewr0.prod.edge.redirect.pizza
+content-length: 62
+date: Tue, 06 Oct 2026 16:12:05 GMT
+
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+accept-ch: Sec-CH-Prefers-Color-Scheme
+age: 0
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+content-type: text/html; charset=utf-8
+critical-ch: Sec-CH-Prefers-Color-Scheme
+date: Tue, 06 Oct 2026 16:12:06 GMT
+link: <https://www.maoriplus.co.nz/>; rel="alternate"; hreflang="en", <https://www.maoriplus.co.nz/mi>; rel="alternate"; hreflang="mi", <https://www.maoriplus.co.nz/>; rel="alternate"; hreflang="x-default"
+link: </_next/static/media/c9e6921c7fc300d8-s.p.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2", </_next/static/css/b1d17006e90ca8db.css?dpl=dpl_58UpoyqPnkReQEaHjVkQBm16ShCv>; rel=preload; as="style", </_next/static/css/167d4097f51c2462.css?dpl=dpl_58UpoyqPnkReQEaHjVkQBm16ShCv>; rel=preload; as="style", </_next/static/css/700be65753f79f50.css?dpl=dpl_58UpoyqPnkReQEaHjVkQBm16ShCv>; rel=preload; as="style"
+server: Vercel
+set-cookie: NEXT_LOCALE=en; Path=/; Expires=Wed, 06 Oct 2027 16:12:06 GMT; Max-Age=31536000; SameSite=lax
+strict-transport-security: max-age=63072000
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-matched-path: /[locale]/[[...slug]]
+x-powered-by: Next.js, Payload
+x-vercel-cache: MISS
+x-vercel-id: iad1::syd1::wvf2w-1791303125911-759d682f0211
+

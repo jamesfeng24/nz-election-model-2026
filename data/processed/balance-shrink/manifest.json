@@ -1,0 +1,61 @@
+{
+  "consumedInputs": {
+    "data/processed/balance-scale/design-contract.json": "3678f322c238dac283b0789757db67ecfbdeb1bcaced2d90d5033155df1f0695",
+    "data/processed/balance-scale/evaluation.json": "4d798790e05dc5217477101d2d6a76cde9b574bbae66a540948ce642793006df",
+    "data/processed/balance-scale/fit.json": "02b4b1c9d5ddf593830c875d6ff90e357afa1b64d516f67a18f257ff3c32b4eb",
+    "data/processed/balance-shrink/design-contract.json": "c8d973c8c2d9f48c2eac4e879714c413eeac05531a1d79dc7785a87b2c28f175",
+    "data/processed/uncertainty-expectation/attribution.json": "b0e739c3f1a1865beb4046afc34124698812d23623ced2bf5fbe0c3fa3feda4f",
+    "data/processed/uncertainty-revision/scales.json": "4be4940be1c944fa432246f156f5b422bf757c8e3cbc59e840fe5c23e01a1cf5",
+    "data/processed/uncertainty/inventory.json": "ef03dd9dd60130a8adc70901a931b6f481921661773c0f214343c8006de6e44f",
+    "docs/stage48-balance-scale-design.md": "50689ad600485afff12c80ed5d5ba30f999c5fe991c40d0400a90721ae091f75",
+    "docs/stage60-balance-shrink-design.md": "39be699d05747bee6abc969c00ded3c39ad0b3a5f45967811eb17e7f5c7dd0ef",
+    "scripts/balance_scale/common.py": "da046766c51925a51fcd260dfacbf402e2ef46a3b1056c25c5f67b234ecc0534",
+    "scripts/balance_scale/data.py": "35e95d2d41be3e9d495586022312824d653e001d8ac33111a650f65bbd1b83c0",
+    "scripts/balance_scale/evaluation.py": "05e0e3f5f3306f6ef1adedb95aad6d69dd131ed63389799065452f53508bf07f",
+    "scripts/balance_scale/fit.py": "2a600ce8a6612c6b7d7720e0e6b9412b6680163b9ac36dae3b63aab4e972c86a",
+    "scripts/balance_scale/simulate.py": "c53e228f929e36e10fd4e4cce291ae7d7867174c80eeee83478faf1549f35c28",
+    "scripts/balance_scale/summary.py": "31e27fbec66aa67b03a846b7d1c2917396a3281579488c4e658649193e6722d4",
+    "scripts/uncertainty/metrics.py": "f7f105dd0d8397a5e4180b4fabd1605b64c00a8c9ba1ce3d5b529c96d3147bf4",
+    "scripts/uncertainty/transforms.py": "30158b52dae16a3ae52f218c5f13428899bcd734ce6c279ce58717d0d2c43a2b",
+    "scripts/uncertainty_expectation/audits.py": "50f06814e7051ae8478a8d7de783049bdb7d9ed4622fd1f8a7053b0a20809126",
+    "scripts/uncertainty_expectation/integration.py": "7b1e7f563fc0f3ffc35d724c46f0962ab68295d834618210c64d27165a59cb76",
+    "scripts/uncertainty_expectation/simulation.py": "4140c2caad9f12615d2a4e57c00c348a3fce4c4df374e6e7b869fcfb51b8d9ad",
+    "scripts/uncertainty_revision/coordinates.py": "4a08290a2f62474df5a80f74ca3262b44b321132a53e86e96326b8b5f0e30f1a",
+    "scripts/uncertainty_revision/estimation.py": "481261b0f67c67e759db88ddb00262cef890f548c820ec288d6c69def20c5856",
+    "scripts/uncertainty_tails/integration.py": "abc7f6d3a72d5d9a70aefbf4dd33287a3cf462034c41d2a634f610cd3f2f5ea4",
+    "scripts/uncertainty_tails/metrics.py": "852d895a02ebd940fc8b89b90c4ead06e0a55b60f9dfddc1ffc2e08be23fcf3d",
+    "scripts/uncertainty_tails/streams.py": "40ee7b2b52216febad3339b1c409fb9c875d97be09f0989c883aad8ad6ecee31"
+  },
+  "dataSourcesJsonTouched": false,
+  "derivedArtifacts": {
+    "data/processed/balance-shrink/decision.json": "c752ad7246f8e26fb57f766e382afe8fb09b3fe78d1a9b86c51ac9e3cce989b8",
+    "data/processed/balance-shrink/design-contract.json": "c8d973c8c2d9f48c2eac4e879714c413eeac05531a1d79dc7785a87b2c28f175",
+    "data/processed/balance-shrink/evaluation.json": "61e9c793117337dbddb89ade3ecb8a332511fd2474ff08c13ee6ed0eb7818bd3",
+    "data/processed/balance-shrink/fit.json": "f2fd0face1fc74628f2ba8097404330540d69d64851e8f0c4068407c146f0be4",
+    "data/processed/balance-shrink/input-contract.json": "8e954dbb68b4957fd375e41988685fc71b90ab56072d324e18a1f0e988304046",
+    "data/processed/balance-shrink/verification.json": "8f0512ab2046a388a57e9046841d3cbde1923b7109a9db5457d920de60bb1a8e"
+  },
+  "frozenDesign": {
+    "data/processed/balance-shrink/design-contract.json": "c8d973c8c2d9f48c2eac4e879714c413eeac05531a1d79dc7785a87b2c28f175",
+    "docs/stage60-balance-shrink-design.md": "39be699d05747bee6abc969c00ded3c39ad0b3a5f45967811eb17e7f5c7dd0ef"
+  },
+  "hashesAreNotProofOfLinuxReproduction": true,
+  "newCodeAndTests": {
+    "scripts/balance_shrink/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/balance_shrink/common.py": "e3a7064468280edec5600a99959449fd6b387b9c8ae7e979fb1ec6e83c220014",
+    "scripts/balance_shrink/decision.py": "c9dd2650b69ab591c5d2c74ba1624eaadb99e81a008b76653eed6c986ed5da53",
+    "scripts/balance_shrink/evaluation.py": "403cbebb54bd7dd13b1f90356b8a4f6fc026b9c84423a38fa8cbd3407eedf3c5",
+    "scripts/balance_shrink/fit.py": "5a0a950d886746dd60fea3815a1c9ee1c5d6ec90ec96b4dc842716ad587d669b",
+    "scripts/balance_shrink/inputs.py": "224a35f81b561e69df34bb5e308bd154a5e85258b7d060a2f195afe9432a9141",
+    "scripts/balance_shrink/manifest.py": "5ddd8e3ad3b157fa79d88cd9a61ad6706fbe473fdc970eed9901514c55d7bb27",
+    "scripts/balance_shrink/report.py": "64525261f60940aa149f2cb573b31f1f7c84340e26f376d748a050e65870bf93",
+    "scripts/balance_shrink/summary.py": "6a6a71a592777888272c06212e8a72011c443fbc82d32b2b3ff6b5be7d704017",
+    "scripts/balance_shrink/verification.py": "ac597f8e6a024a6d0e204d024d37ecda8871949736739023ff6ea818fa683a3d",
+    "scripts/tests/test_stage60_balance_shrink.py": "194d7fd75666f63268b94cac5c27a30707067f00d837e3c5aec4b0719ff58061"
+  },
+  "newComposedBank": false,
+  "newNationalInference": false,
+  "newSourcesOrAcquisition": false,
+  "operationalAdoption": null,
+  "stage": 60
+}

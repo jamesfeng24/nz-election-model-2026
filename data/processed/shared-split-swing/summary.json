@@ -1,0 +1,125 @@
+{
+  "byElection": {
+    "2014": {
+      "heterogeneityElectionMean": -0.2818483350710972,
+      "logRatio": 0.723651607017399,
+      "partyVotes": {
+        "labourparty": 543012,
+        "nationalparty": 1119663
+      },
+      "previousLogRatio": 0.6226871359830366,
+      "seats": 64,
+      "sharedShift": -0.3032608575767375,
+      "swing": 0.10096447103436235
+    },
+    "2017": {
+      "heterogeneityElectionMean": 0.03167882410679862,
+      "logRatio": 0.28355640317958164,
+      "partyVotes": {
+        "labourparty": 858903,
+        "nationalparty": 1140489
+      },
+      "previousLogRatio": 0.723651607017399,
+      "seats": 64,
+      "sharedShift": 0.024758077834523495,
+      "swing": -0.4400952038378173
+    },
+    "2020": {
+      "heterogeneityElectionMean": 0.2601872391284814,
+      "logRatio": -0.5956622872682209,
+      "partyVotes": {
+        "labourparty": 1327675,
+        "nationalparty": 731811
+      },
+      "previousLogRatio": 0.28355640317958164,
+      "seats": 65,
+      "sharedShift": 0.27734989908965163,
+      "swing": -0.8792186904478025
+    },
+    "2023": {
+      "heterogeneityElectionMean": -0.11504905375489494,
+      "logRatio": 0.4551360338364559,
+      "partyVotes": {
+        "labourparty": 682622,
+        "nationalparty": 1076077
+      },
+      "previousLogRatio": -0.5956622872682209,
+      "seats": 64,
+      "sharedShift": -0.1301883614689641,
+      "swing": 1.0507983211046767
+    }
+  },
+  "decisionNumber": "D102",
+  "descriptiveWithIntercept": {
+    "intercept": -0.04147251817353089,
+    "slope": -0.20619876640603857
+  },
+  "finding": "record_and_stop",
+  "leaveFutureOut": {
+    "2020": {
+      "absError": 0.0983194052409902,
+      "absShift": 0.27734989908965163,
+      "beatsZero": true,
+      "beta": 0.20362453140921952,
+      "prediction": 0.17903049384866143,
+      "trainingYears": [
+        2014,
+        2017
+      ]
+    },
+    "2023": {
+      "absError": 0.1767630558862425,
+      "absShift": 0.1301883614689641,
+      "beatsZero": false,
+      "beta": 0.2921125882962171,
+      "prediction": -0.3069514173552066,
+      "trainingYears": [
+        2014,
+        2017,
+        2020
+      ]
+    }
+  },
+  "leaveOneElectionOut": {
+    "2014": {
+      "beta": 0.18907306405796134,
+      "error": -0.28417119567727933,
+      "prediction": -0.019089661899458175
+    },
+    "2017": {
+      "beta": 0.21790414017994292,
+      "error": -0.0711404891550728,
+      "prediction": 0.0958985669895963
+    },
+    "2020": {
+      "beta": 0.1363216627733494,
+      "error": 0.1574933452664004,
+      "prediction": 0.11985655382325121
+    },
+    "2023": {
+      "beta": 0.2921125882962171,
+      "error": 0.1767630558862425,
+      "prediction": -0.3069514173552066
+    }
+  },
+  "loeoRms": 0.18832390274426275,
+  "loeoRmsRatio": 0.8722717713056095,
+  "notBlind": true,
+  "operationalAdoption": null,
+  "pooledBeta": 0.2028597475502572,
+  "pooledFittedShifts": {
+    "2014": -0.020481627105576,
+    "2017": 0.08927760194861861,
+    "2020": 0.17835808158570896,
+    "2023": -0.21316468214552883
+  },
+  "rmsSharedShift": 0.21590048989248042,
+  "signsAgree": 4,
+  "stage": 68,
+  "tests": {
+    "allLoeoBetaPositive": true,
+    "leaveFutureOutBeatsZero": false,
+    "loeoRmsRatio": false,
+    "signsAgree": true
+  }
+}

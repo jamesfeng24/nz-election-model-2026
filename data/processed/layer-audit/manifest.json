@@ -1,0 +1,27 @@
+{
+  "code": {
+    "scripts/layer_audit/__init__.py": "15fc86d9f751c552ad5e6a9098998abd8134ddae0671aaf30c136d73d69ed6eb",
+    "scripts/layer_audit/analysis.py": "bcb0f17803de8a8b821ac918b9fa41ebe08c097fc374bbc60fa43bf75189f13c",
+    "scripts/layer_audit/common.py": "8db3911b121a58644e157a9ff9ae135d26c630d6dafe66bcf950c580918092ec",
+    "scripts/layer_audit/run.py": "6343a3756f128de48ba9f7ca8aee2a7e12a056bcf60dbde8bd688adb302e480d"
+  },
+  "consumedInputs": {
+    "data/processed/layer-audit/design-contract.json": "a55f258ef7537e02282d7e2e93c3741c2e56eda4f89a6e85cc0a51aa4c02f6fb",
+    "data/processed/uncertainty-expectation/attribution.json": "b0e739c3f1a1865beb4046afc34124698812d23623ced2bf5fbe0c3fa3feda4f",
+    "data/processed/uncertainty-expectation/evaluation.json": "e212cab928a9423ab7963a262e90761fb703692da422565aedde1146144f8d00",
+    "data/processed/uncertainty-revision/scales.json": "4be4940be1c944fa432246f156f5b422bf757c8e3cbc59e840fe5c23e01a1cf5",
+    "data/processed/uncertainty/inventory.json": "ef03dd9dd60130a8adc70901a931b6f481921661773c0f214343c8006de6e44f",
+    "docs/stage61-layer-audit-design.md": "31892ba2e5e74bc91aac372419f4aa456a9f0e5ae88367d46550f83ac8c90755",
+    "scripts/uncertainty/transforms.py": "30158b52dae16a3ae52f218c5f13428899bcd734ce6c279ce58717d0d2c43a2b",
+    "scripts/uncertainty_revision/coordinates.py": "4a08290a2f62474df5a80f74ca3262b44b321132a53e86e96326b8b5f0e30f1a",
+    "scripts/uncertainty_revision/estimation.py": "481261b0f67c67e759db88ddb00262cef890f548c820ec288d6c69def20c5856"
+  },
+  "dataSourcesJsonTouched": false,
+  "derivedArtifacts": {
+    "data/processed/layer-audit/summary.json": "3e208ba09b6d228966d1f1ad96e479cdacce86df30477c34b4d279ba7a4ed7b5"
+  },
+  "hashesAreNotProofOfLinuxReproduction": true,
+  "newNationalInference": false,
+  "newSourcesOrAcquisition": false,
+  "stage": 61
+}

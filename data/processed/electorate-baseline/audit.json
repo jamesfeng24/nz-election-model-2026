@@ -1,0 +1,240 @@
+{
+  "checks": {
+    "allTargetsWithinFivePercentOfQuota": true,
+    "certifiedExactTargets": {
+      "general": 14,
+      "maori": 2
+    },
+    "codeNamespaces": {
+      "collidingSameCodeDifferentName": 58,
+      "rule": "Boundary codes are vintage-specific (alphabetical per vintage); join across vintages by election-local source id or by official name only inside one vintage, never by code.",
+      "sameNameDifferentCode": 48
+    },
+    "edgeCounts": {
+      "general": 123,
+      "maori": 10
+    },
+    "everySourceSeatAccountedFor": {
+      "general": 65,
+      "maori": 7
+    },
+    "everyTargetHasCompletePartyBaseline": true,
+    "everyTargetHasPredecessors": true,
+    "idsUniqueAndWellFormed": true,
+    "namesAndCodesMatchScheduleC": true,
+    "nationalReconciliation": {
+      "electorateRows": {
+        "general": 65,
+        "maori": 7
+      },
+      "everyPartyBoundsEncloseGeneralTotal": true,
+      "everyPartyScenarioConservesGeneral": true,
+      "everyPartyScenarioConservesMaori": true,
+      "everyPartySourceEqualsOfficialTotal": true,
+      "validVotesOfficialCombined": 2851211,
+      "validVotesSourceGeneralPlusMaori": 2851211
+    },
+    "renamedPluralitySourceSeats": [
+      [
+        "Bay of Plenty",
+        "Mt Maunganui"
+      ],
+      [
+        "East Coast",
+        "East Cape"
+      ],
+      [
+        "Kelston",
+        "Glendene"
+      ],
+      [
+        "Mana",
+        "Kenepuru"
+      ],
+      [
+        "New Lynn",
+        "Waitākere"
+      ],
+      [
+        "Panmure-Ōtāhuhu",
+        "Ōtāhuhu"
+      ],
+      [
+        "Rongotai",
+        "Wellington Bays"
+      ],
+      [
+        "Te Atatū",
+        "Henderson"
+      ],
+      [
+        "Wellington Central",
+        "Wellington North"
+      ],
+      [
+        "Ōtaki",
+        "Kapiti"
+      ]
+    ],
+    "rosterCounts": {
+      "general": 64,
+      "impliedListSeats": 49,
+      "islands": {
+        "M": 7,
+        "N": 48,
+        "S": 16
+      },
+      "maori": 7,
+      "scheduleCGeneral": 64,
+      "scheduleCMaori": 7,
+      "total": 71
+    },
+    "scenarioSharesSumToOne": 1.1102230246251565e-16,
+    "sourceSeatsWithNoTargetPlurality": [
+      "Ōhāriu"
+    ]
+  },
+  "schemaVersion": 1,
+  "stage": 64,
+  "thirdPartyCrossCheck": {
+    "abolishedOldSeat": "Ōhāriu",
+    "changedSeats": {
+      "largest": [
+        {
+          "logRatioDifference": 0.4507934598730019,
+          "name": "Botany"
+        },
+        {
+          "logRatioDifference": 0.39803680995515733,
+          "name": "Ōtāhuhu"
+        },
+        {
+          "logRatioDifference": 0.2448893282679812,
+          "name": "Kapiti"
+        },
+        {
+          "logRatioDifference": -0.20375109142222655,
+          "name": "Henderson"
+        },
+        {
+          "logRatioDifference": 0.18606936071770033,
+          "name": "Kenepuru"
+        },
+        {
+          "logRatioDifference": 0.1732747395810743,
+          "name": "Upper Harbour"
+        },
+        {
+          "logRatioDifference": -0.10984034341998804,
+          "name": "Mt Albert"
+        },
+        {
+          "logRatioDifference": 0.10903494281949871,
+          "name": "Maungakiekie"
+        }
+      ],
+      "maxAbs": 0.4507934598730019,
+      "meanAbs": 0.05786593489386432,
+      "n": 55,
+      "rmse": 0.1059808848418266
+    },
+    "exactSeats": {
+      "maxAbs": 0.002747939231109664,
+      "meaning": "denominator and geography identical, so only rounding and ordinary-vote effects remain",
+      "n": 16
+    },
+    "headlineMatchesArticle": true,
+    "interpretation": "Population-weighted transport assumes uniform party voting within each source seat; the bounds cover population allocation only. Where a source seat is split between unlike areas the cross-check differs by more than rounding. Whether historical residuals already absorb this is not assessed here.",
+    "leadMarginsNotCertainAcrossBounds": [
+      "Glendene"
+    ],
+    "logRatioDifferenceClasses": {
+      "consistent_with_rounding": 29,
+      "large": 10,
+      "moderate": 32
+    },
+    "newSeatsMatched": 71,
+    "pluralityPredecessorVersusThirdPartyOldSeat": {
+      "compared": 71,
+      "disagreements": [],
+      "renamesOrAbolished": {
+        "East Cape": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "East Coast",
+          "thirdPartyOldSeat": "East Coast"
+        },
+        "Glendene": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "Kelston",
+          "thirdPartyOldSeat": "Kelston"
+        },
+        "Henderson": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "Te Atatū",
+          "thirdPartyOldSeat": "Te Atatū"
+        },
+        "Kapiti": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "Ōtaki",
+          "thirdPartyOldSeat": "Ōtaki"
+        },
+        "Kenepuru": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": false,
+          "pluralityPredecessor": "Mana",
+          "thirdPartyOldSeat": "Mana"
+        },
+        "Mt Maunganui": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "Bay of Plenty",
+          "thirdPartyOldSeat": "Bay of Plenty"
+        },
+        "Waitākere": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "New Lynn",
+          "thirdPartyOldSeat": "New Lynn"
+        },
+        "Wellington Bays": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "Rongotai",
+          "thirdPartyOldSeat": "Rongotai"
+        },
+        "Wellington North": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "Wellington Central",
+          "thirdPartyOldSeat": "Wellington Central"
+        },
+        "Ōtāhuhu": {
+          "agrees": true,
+          "pluralityIdentifiedByBounds": true,
+          "pluralityPredecessor": "Panmure-Ōtāhuhu",
+          "thirdPartyOldSeat": "Panmure-Ōtāhuhu"
+        }
+      }
+    },
+    "sheetHeadlineCandidateWinners": {
+      "ACT New Zealand": 2,
+      "Green Party": 2,
+      "Labour Party": 16,
+      "National Party": 45,
+      "Te Pāti Māori": 6
+    },
+    "sheetRows": 72,
+    "source": "stage64-tallyroom-nz-notional-2023-on-2025-boundaries-sheet (third party, comparison only)",
+    "topTwoPartyAgreement": {
+      "agree": 70,
+      "disagree": [
+        "Kapiti"
+      ],
+      "of": 71
+    }
+  }
+}

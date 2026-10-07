@@ -1,0 +1,78 @@
+{
+  "adopted": false,
+  "arms": {
+    "C": "Stage66 unchanged",
+    "P": "single variance inflation lambda on sigma^2 and tau^2, maximum likelihood on training elections, unconstrained",
+    "PB": "P plus leave-self-out same-pollster era bias for Maori Party candidates"
+  },
+  "bootstrapMaxSkipFraction": 0.05,
+  "bootstrapReplicates": 1000,
+  "calibrationZThreshold": 1.645,
+  "coverageLevels": [
+    0.5,
+    0.8,
+    0.9
+  ],
+  "dataSourcesJsonTouched": false,
+  "decisionNumber": "D105",
+  "draws": 100000,
+  "eras": {
+    "Curia": [
+      2020,
+      2023,
+      2026
+    ],
+    "Reid": [
+      2014,
+      2017
+    ]
+  },
+  "findingOrder": [
+    "insufficient_data",
+    "mixed_report_to_james",
+    "not_helpful",
+    "restored",
+    "improves_not_restored"
+  ],
+  "frozenBeforeScoring": true,
+  "generalElectorateTouched": false,
+  "leaderWinBands": [
+    0,
+    0.7,
+    0.9,
+    1.0
+  ],
+  "minimumFoldsBrierBetter": 2,
+  "pairedPollBootstrapResamples": 5000,
+  "pbCap": [
+    "suggestive_not_adopted",
+    "not_supported"
+  ],
+  "publication": false,
+  "readout2026": {
+    "curiaBias": "mean of 2020 and 2023 election means of D",
+    "flagShift": 0.1,
+    "polls": "data/source-plans/maori-seat-layer/polls-2026.json"
+  },
+  "schemaVersion": 1,
+  "schemes": {
+    "chronological": {
+      "2017": [
+        2014
+      ],
+      "2020": [
+        2014,
+        2017
+      ],
+      "2023": [
+        2014,
+        2017,
+        2020
+      ]
+    },
+    "leaveOneElectionOut": "all other elections"
+  },
+  "seed": 2026071,
+  "stage66ReadOnly": true,
+  "winnerLogScoreFloor": 0.0001
+}

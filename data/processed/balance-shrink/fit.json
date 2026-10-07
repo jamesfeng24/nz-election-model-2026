@@ -1,0 +1,361 @@
+{
+  "bound": 1.3862943611198906,
+  "descriptive2026Refit": {
+    "fit": {
+      "a": -0.235549912117315,
+      "boundContact": false,
+      "centralDifferenceGradientMaxDifference": 7.984602215516114e-11,
+      "chosenStart": 0,
+      "gradient": [
+        1.6866386412517365e-10,
+        0.021865509367251547,
+        -0.09404236640858106
+      ],
+      "multiplier": 0.7901362246526518,
+      "objective": -0.7938643473373617,
+      "powell": {
+        "a": -0.2355498938725242,
+        "maximumParameterDifference": 1.8244790789267995e-08,
+        "objective": -0.7938643473373617,
+        "objectiveDifference": 0.0
+      },
+      "projectedGradientMax": 1.6866386412517365e-10,
+      "starts": [
+        {
+          "iterations": 6,
+          "objective": -0.7938643473373617,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.235549912117315,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "iterations": 4,
+          "objective": -0.7938643473373619,
+          "start": [
+            -0.2,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.23554991220063767,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "iterations": 6,
+          "objective": -0.793864347337362,
+          "start": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "success": true,
+          "theta": [
+            -0.23554990892886118,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "meaning": "the penalty-free constant the free arm would take for the 2026 forecast; reported only",
+    "scored": false,
+    "trainingYears": [
+      2014,
+      2017,
+      2020,
+      2023
+    ]
+  },
+  "folds": {
+    "2014": {
+      "free": {
+        "a": 0.0,
+        "multiplier": 1.0,
+        "status": "no earlier candidate residual: control"
+      },
+      "multipliers": {
+        "control": 1.0,
+        "free": 1.0,
+        "grid80": 0.8,
+        "grid85": 0.85,
+        "grid90": 0.9,
+        "grid95": 0.95,
+        "penalised": 1.0
+      },
+      "targetYear": 2014,
+      "trainingSeats": 0,
+      "trainingYears": []
+    },
+    "2017": {
+      "free": {
+        "a": -0.1820545137184312,
+        "boundContact": false,
+        "centralDifferenceGradientMaxDifference": 8.893265984744048e-11,
+        "chosenStart": 0,
+        "gradient": [
+          1.67681632468053e-11,
+          0.02294392579205534,
+          -0.1149980834776615
+        ],
+        "multiplier": 0.833555898945583,
+        "objective": -0.668344353872643,
+        "powell": {
+          "a": -0.18205448919225548,
+          "maximumParameterDifference": 2.4526175729233657e-08,
+          "objective": -0.6683443538726427,
+          "objectiveDifference": 3.3306690738754696e-16
+        },
+        "projectedGradientMax": 1.67681632468053e-11,
+        "starts": [
+          {
+            "iterations": 6,
+            "objective": -0.668344353872643,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.1820545137184312,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 2,
+            "objective": -0.6683443538726426,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.18205451308560863,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.668344353872643,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.18205451129615538,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "multipliers": {
+        "control": 1.0,
+        "free": 0.833555898945583,
+        "grid80": 0.8,
+        "grid85": 0.85,
+        "grid90": 0.9,
+        "grid95": 0.95,
+        "penalised": 0.9459538655060474
+      },
+      "stage48DescriptiveUnpenalisedA": -0.1820545137184312,
+      "stage48PenalisedA": -0.05556147908346366,
+      "targetYear": 2017,
+      "trainingSeats": 64,
+      "trainingYears": [
+        2014
+      ]
+    },
+    "2020": {
+      "free": {
+        "a": -0.15787213911182454,
+        "boundContact": false,
+        "centralDifferenceGradientMaxDifference": 7.404641483299555e-11,
+        "chosenStart": 0,
+        "gradient": [
+          -1.4771427137016957e-11,
+          0.03560160238130062,
+          -0.1391278056553945
+        ],
+        "multiplier": 0.8539589629398119,
+        "objective": -0.6730075682103345,
+        "powell": {
+          "a": -0.15787211776766044,
+          "maximumParameterDifference": 2.134416410282114e-08,
+          "objective": -0.673007568210334,
+          "objectiveDifference": 4.440892098500626e-16
+        },
+        "projectedGradientMax": 1.4771427137016957e-11,
+        "starts": [
+          {
+            "iterations": 5,
+            "objective": -0.6730075682103345,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.15787213911182454,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 3,
+            "objective": -0.6730075682103343,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.1578721391044698,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.6730075682103344,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.15787213742020245,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "multipliers": {
+        "control": 1.0,
+        "free": 0.8539589629398119,
+        "grid80": 0.8,
+        "grid85": 0.85,
+        "grid90": 0.9,
+        "grid95": 0.95,
+        "penalised": 0.9525129746128697
+      },
+      "stage48DescriptiveUnpenalisedA": -0.15787213911182454,
+      "stage48PenalisedA": -0.04865155043324667,
+      "targetYear": 2020,
+      "trainingSeats": 128,
+      "trainingYears": [
+        2014,
+        2017
+      ]
+    },
+    "2023": {
+      "free": {
+        "a": -0.24614695839112544,
+        "boundContact": false,
+        "centralDifferenceGradientMaxDifference": 5.696400758499939e-11,
+        "chosenStart": 0,
+        "gradient": [
+          2.45701921771276e-10,
+          0.05837277099584834,
+          -0.10946970363373841
+        ],
+        "multiplier": 0.7818073233364001,
+        "objective": -0.7787769732611839,
+        "powell": {
+          "a": -0.24614696389321977,
+          "maximumParameterDifference": 5.5020943356964835e-09,
+          "objective": -0.7787769732611842,
+          "objectiveDifference": 3.3306690738754696e-16
+        },
+        "projectedGradientMax": 2.45701921771276e-10,
+        "starts": [
+          {
+            "iterations": 6,
+            "objective": -0.7787769732611839,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.24614695839112544,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 4,
+            "objective": -0.7787769732611842,
+            "start": [
+              -0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.24614695850068893,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "iterations": 6,
+            "objective": -0.7787769732611842,
+            "start": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "success": true,
+            "theta": [
+              -0.2461469550739492,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "multipliers": {
+        "control": 1.0,
+        "free": 0.7818073233364001,
+        "grid80": 0.8,
+        "grid85": 0.85,
+        "grid90": 0.9,
+        "grid95": 0.95,
+        "penalised": 0.9299451486808616
+      },
+      "stage48DescriptiveUnpenalisedA": -0.24614695839112544,
+      "stage48PenalisedA": -0.07262967448727085,
+      "targetYear": 2023,
+      "trainingSeats": 193,
+      "trainingYears": [
+        2014,
+        2017,
+        2020
+      ]
+    }
+  },
+  "ridge": 0.0,
+  "stage": 60
+}

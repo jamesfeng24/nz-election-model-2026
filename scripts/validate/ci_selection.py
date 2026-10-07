@@ -53,6 +53,10 @@ def runtime_errors(registry):
     return ['unattested runtime: ' + key for key, value in expected.items() if actual.get(key) != value]
 
 
+# Tests whose change forces the full Stage39 replay; any other test file is reviewed as unaffected.
+STAGE39_OWNED_TESTS = frozenset({'scripts/tests/test_stage39_candidate_integration.py'})
+
+
 def select(changed, event, registry, errors=(), history_available=True):
     """Unknown inputs or changed protection force the original full commands."""
     if event != 'pull_request':
@@ -64,8 +68,14 @@ def select(changed, event, registry, errors=(), history_available=True):
     for path in changed:
         if path in registry['dependencies']:
             return {'mode': 'full', 'reason': 'Stage39 dependency changed: ' + path}
-        if path.startswith(('.github/', 'scripts/tests/', 'scripts/validate/ci')) or path == 'AGENTS.md':
-            return {'mode': 'full', 'reason': 'CI, test or checkpoint policy changed: ' + path}
+        if path.startswith(('.github/', 'scripts/validate/ci')) or path == 'AGENTS.md':
+            return {'mode': 'full', 'reason': 'CI or checkpoint policy changed: ' + path}
+        # A test file cannot change Stage39's reconstruction; every test still runs in full discovery. Only
+        # Stage39's own tests and the CI-policy tests force the full replay (James, 2026-10-07).
+        if path.startswith('scripts/tests/'):
+            if path in STAGE39_OWNED_TESTS or path.startswith('scripts/tests/test_ci_'):
+                return {'mode': 'full', 'reason': 'Stage39 or CI-policy test changed: ' + path}
+            continue
         # Per-PR handoff fragments (see scripts/fold_doc_fragments.py) are documentation like the files they fold into.
         editorial = (path in registry['reviewedEditorialFiles'] or
                      (path.startswith(('docs/', 'handoff.d/')) and path.endswith('.md')))

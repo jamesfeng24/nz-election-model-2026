@@ -1,5 +1,8 @@
 # Architecture
 
+> **Current architecture (6 October 2026): see [nowcast-specification.md](nowcast-specification.md) §3.** The model is a hybrid: offline Python stages produce the national, local-party, candidate and Māori draws, and the TypeScript Stage49/65 MMP seat layer and the snapshot exporter run on a draw bank. The statement below that all model directories are placeholders, and the plan for TypeScript-only Monte Carlo, are Stage 1 history.
+
+
 The browser loads the static Vite bundle, React renders the shared shell, and React Router selects a page. Stage 1 makes no data requests. There are no server functions, credentials or databases.
 
 Future flow: immutable raw source → documented processing script → validated processed dataset → pure model modules → versioned output → UI. Keep large offline computation in reproducible scripts if required; choose browser execution versus precomputed static outputs in a later recorded decision, based on performance evidence.

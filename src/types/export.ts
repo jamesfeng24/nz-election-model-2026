@@ -1,10 +1,11 @@
 import { z } from 'zod';
-import { IntervalSchema, MmpAllocationSchema, SimulationResultSchema } from './domain';
+import { IntervalSetSchema, MmpAllocationSchema, SimulationResultSchema } from './domain';
 
 /**
- * Versioned website export contract (v1): the only way forecast results reach the site.
- * Draft contract; it defines a boundary and says nothing about which model fills it.
- * Missing values are explicit `unavailable` records, never zero.
+ * Versioned website export contract (v2): the only way results reach the site.
+ * The primary product is a nowcast (D106, docs/nowcast-specification.md): `targetType` names the estimand and
+ * `modelStateAsOf` the latent-state date; the election date is context only. The `Forecast*` identifiers are
+ * historical names kept for stability. Missing values are explicit `unavailable` records, never zero.
  */
 const id = z.string().trim().min(1);
 const sha256 = z.string().regex(/^[a-f0-9]{64}$/);
@@ -17,7 +18,7 @@ export const FORECAST_ARCHIVE_ROOT = 'forecasts';
 export const ProvenanceSchema = z.discriminatedUnion('kind', [
   // Synthetic fixtures exercise plumbing only. Never application results.
   z.object({ kind: z.literal('synthetic-fixture'), label: id }).strict(),
-  z.object({ kind: z.literal('model'), modelVersion: id, codeRevision: id }).strict(),
+  z.object({ kind: z.literal('model'), modelVersion: id, codeRevision: id, configVersion: id }).strict(),
 ]);
 
 const Unavailable = z.object({ status: z.literal('unavailable'), reason: id }).strict();
@@ -25,29 +26,79 @@ const Unavailable = z.object({ status: z.literal('unavailable'), reason: id }).s
 export const ForecastDirectorySchema = z.object({
   parties: z.array(z.object({ partyId: id, name: id, abbreviation: id }).strict()).min(1),
   electorates: z.array(z.object({ electorateId: id, name: id, kind: z.enum(['general', 'maori']) }).strict()).min(1),
-  candidates: z.array(z.object({ candidateId: id, name: id, electorateId: id, partyId: id.nullable() }).strict()),
+  // partyLabel keeps the ballot-group key of a candidate whose party has no national group (a minor party inside Other).
+  candidates: z.array(z.object({ candidateId: id, name: id, electorateId: id, partyId: id.nullable(), partyLabel: id.nullable().optional() }).strict()),
+}).strict();
+
+/** A probability with its effective-sample Monte Carlo standard error and effective sample size. */
+export const ProbabilityEstimateSchema = z.object({
+  p: z.number().min(0).max(1), mcse: z.number().finite().nonnegative(), ess: z.number().finite().positive(),
+}).strict();
+
+/** Stage65 seat layer over every simulated election, with nested 50/80/90 seat intervals (D106). */
+export const SeatLayerExportSchema = z.object({
+  draws: z.number().int().positive(),
+  rulesVersion: id,
+  mcseMethod: id,
+  parties: z.array(z.object({
+    partyId: id, meanSeats: z.number().finite(), meanElectorateSeats: z.number().finite(), meanListSeats: z.number().finite(),
+    seats: IntervalSetSchema, seatDistribution: z.record(z.string(), z.number().min(0).max(1)),
+    probAnySeat: ProbabilityEstimateSchema, probQualified: ProbabilityEstimateSchema, probQualifiedByPartyVote: ProbabilityEstimateSchema,
+    probQualifiedByLifeboatOnly: ProbabilityEstimateSchema, probOverhang: ProbabilityEstimateSchema,
+  }).strict()),
+  blocs: z.array(z.object({
+    id, label: id, partyIds: z.array(id).min(1), meanSeats: z.number().finite(), seats: IntervalSetSchema,
+    probMajority: ProbabilityEstimateSchema, probExactHalf: ProbabilityEstimateSchema,
+  }).strict()),
+  parliament: z.object({
+    meanSize: z.number().finite(), size: IntervalSetSchema, sizeDistribution: z.record(z.string(), z.number().min(0).max(1)),
+    overhangDistribution: z.record(z.string(), z.number().min(0).max(1)), probAnyOverhang: ProbabilityEstimateSchema,
+    meanOverhang: z.number().finite(),
+  }).strict(),
+}).strict();
+
+/** Per-seat detail: the D107 uncertainty class, candidate-share intervals and win probabilities with their errors. */
+export const ElectorateDetailSchema = z.object({
+  electorateId: id,
+  uncertaintyClass: z.enum(['ordinary', 'exceptional', 'maori-layer']),
+  candidates: z.array(z.object({
+    candidateId: id, meanShare: z.number().min(0).max(1), share: IntervalSetSchema, winProbability: ProbabilityEstimateSchema,
+  }).strict()).min(1),
 }).strict();
 
 export const BoundaryReferenceSchema = z.object({
   artifactId: id, path: z.string().regex(/^(?!\/)(?!.*\.\.)(?!.*\\).+\.geojson$/), sha256,
 }).strict();
 
+/** `nowcast` is the primary product; an election-day scenario may only ever be a separately labelled output. */
+export const TARGET_TYPES = ['nowcast', 'election-day-scenario'] as const;
+
 export const ForecastSnapshotSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
   snapshotId: id,
+  targetType: z.enum(TARGET_TYPES),
   createdAt: z.iso.datetime({ offset: true }),
   dataCutoff: z.iso.datetime({ offset: true }),
+  // Date of the latent national state the results describe (the latest poll-midpoint week), not "today".
+  modelStateAsOf: z.iso.date(),
   electionId: id,
+  // Context only: the election the nowcast refers to. Not the estimand of a nowcast.
+  electionDate: z.iso.date(),
   provenance: ProvenanceSchema,
   // The site must show uncalibrated outputs as such; the release policy is a separate decision.
   calibrationStatus: z.enum(['uncalibrated', 'validated']),
   directory: ForecastDirectorySchema,
   national: z.object({
-    partyVoteShares: z.array(z.object({ partyId: id, share: IntervalSchema }).strict()).min(1),
+    partyVoteShares: z.array(z.object({ partyId: id, share: IntervalSetSchema }).strict()).min(1),
     basis: id,
   }).strict(),
   simulation: SimulationResultSchema,
   unavailableElectorates: z.array(z.object({ electorateId: id, reason: id }).strict()),
+  electorateDetail: z.array(ElectorateDetailSchema),
+  seatLayer: z.discriminatedUnion('status', [
+    z.object({ status: z.literal('available'), summary: SeatLayerExportSchema }).strict(),
+    z.object({ status: z.literal('unavailable'), reason: z.string().trim().min(1) }).strict(),
+  ]),
   mmp: z.discriminatedUnion('status', [
     z.object({
       status: z.literal('available'),
@@ -68,6 +119,12 @@ export const ForecastSnapshotSchema = z.object({
     bad('Placeholder MMP rules are only allowed in synthetic snapshots', ['mmp', 'exampleDrawAllocation', 'rulesVersion']);
   if (!synthetic && s.calibrationStatus === 'validated' && s.simulation.limitations.length === 0)
     bad('Validated snapshots must state residual limitations', ['simulation', 'limitations']);
+  if (s.modelStateAsOf > s.dataCutoff.slice(0, 10))
+    bad('The model state cannot postdate the data cutoff', ['modelStateAsOf']);
+  if (Date.parse(s.dataCutoff) > Date.parse(s.createdAt))
+    bad('The data cutoff cannot postdate the snapshot', ['dataCutoff']);
+  if (s.targetType === 'nowcast' && s.electionDate < s.modelStateAsOf)
+    bad('A nowcast model state cannot postdate the election', ['electionDate']);
   if (s.simulation.completedDraws !== s.simulation.config.draws)
     bad('A published snapshot must contain every requested draw', ['simulation', 'completedDraws']);
   if (s.simulation.config.electionId !== s.electionId)
@@ -86,7 +143,7 @@ export const ForecastSnapshotSchema = z.object({
   });
   s.national.partyVoteShares.forEach((p, i) => {
     if (!parties.has(p.partyId)) bad('Unknown party', ['national', 'partyVoteShares', i]);
-    if (p.share.lower < 0 || p.share.upper > 1) bad('Vote-share interval must be within 0–1', ['national', 'partyVoteShares', i]);
+    if (p.share.some(v => v.lower < 0 || v.upper > 1)) bad('Vote-share interval must be within 0–1', ['national', 'partyVoteShares', i]);
   });
   if (!unique(s.national.partyVoteShares.map(p => p.partyId))) bad('Duplicate national party', ['national']);
   // Missing is never zero: a listed party without a national share must fail, not render as blank or 0%.
@@ -106,6 +163,31 @@ export const ForecastSnapshotSchema = z.object({
         bad(`Synthetic id "${value}" is not allowed in a non-synthetic snapshot`, path);
     });
   }
+
+  const detailed = s.electorateDetail.map(d => d.electorateId);
+  if (!unique(detailed)) bad('Duplicate electorate detail', ['electorateDetail']);
+  s.electorateDetail.forEach((d, i) => {
+    const prediction = s.simulation.electoratePredictions.find(p => p.electorateId === d.electorateId);
+    if (!prediction) { bad('Electorate detail without a prediction', ['electorateDetail', i]); return; }
+    const ids = new Set(prediction.candidates.map(c => c.candidateId));
+    if (d.candidates.length !== ids.size || d.candidates.some(c => !ids.has(c.candidateId)))
+      bad('Electorate detail must cover exactly the predicted candidates', ['electorateDetail', i]);
+    d.candidates.forEach(c => {
+      if (c.share.some(v => v.lower < 0 || v.upper > 1)) bad('Candidate-share interval must be within 0–1', ['electorateDetail', i]);
+    });
+  });
+  // A model snapshot carries detail for every predicted seat; only synthetic pipeline fixtures may omit it.
+  if (!synthetic && detailed.length !== s.simulation.electoratePredictions.length)
+    bad('Every predicted electorate needs its uncertainty class and candidate-share intervals', ['electorateDetail']);
+  if (s.seatLayer.status === 'available') {
+    s.seatLayer.summary.parties.forEach((p, i) => { if (!parties.has(p.partyId)) bad('Unknown party', ['seatLayer', 'summary', 'parties', i]); });
+    if (s.seatLayer.summary.draws !== s.simulation.completedDraws) bad('Seat layer must use every simulated election', ['seatLayer']);
+    if (s.mmp.status !== 'available') bad('An available seat layer needs an MMP example allocation', ['mmp']);
+    if (!synthetic && s.seatLayer.summary.rulesVersion.toUpperCase().startsWith(PLACEHOLDER_RULES_PREFIX))
+      bad('Placeholder MMP rules are only allowed in synthetic snapshots', ['seatLayer', 'summary', 'rulesVersion']);
+  }
+  if (s.seatLayer.status === 'available' && s.unavailableElectorates.length > 0)
+    bad('The seat layer needs a winner in every electorate', ['seatLayer']);
 
   const predicted = s.simulation.electoratePredictions.map(p => p.electorateId);
   const unavailable = s.unavailableElectorates.map(u => u.electorateId);

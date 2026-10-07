@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "stage": 64,
+  "note": "Standalone dated registry (data/sources.json is frozen and untouched). Records the only resources acquired by Stage64 and the bounded search for an official notional-results publication.",
+  "sources": [
+    {
+      "id": "stage64-tallyroom-nz-notional-2023-on-2025-boundaries-sheet",
+      "organisation": "The Tally Room (Ben Raue), third party",
+      "url": "https://docs.google.com/spreadsheets/d/1pu4arl7MBODmIrPtlF4ml-xcrJHawEGZrBH7ChBewZA/export?format=csv&gid=1801213922",
+      "dateOrElection": "Notional 2023 New Zealand general election results on the 2025 final boundaries; post written 2025-10-03",
+      "resource": "Public Google Sheet linked from the article below, exported as CSV (72 rows: 71 new seats plus the abolished Ōhāriu)",
+      "retrievedAt": "2026-10-06T16:14:00Z",
+      "rawPath": "data/raw/electorate-baseline/2026-10-06/tallyroom-nz-2025-redistribution-notional.csv",
+      "processingScript": "scripts/electorate_baseline/build.py",
+      "role": "comparison_only_not_model_input",
+      "limitations": [
+        "Not an official publication. Method and inputs are not disclosed on the page; estimates of first and second candidate and party votes per new seat.",
+        "Party percentages agree with official 2023 shares at the 17 certified-exact seats only up to a denominator effect (probably ordinary votes only); log ratios of two parties agree to rounding there, so the comparison uses log ratios, not shares.",
+        "Used solely as an independent cross-check of the repo's own notional party-vote baseline. Never read by any model or forecast stage."
+      ],
+      "sha256": "57a2d25c3e7038826dfe921e948b99fc386196f34a02c082f3ccae189cb9b3aa",
+      "licence": "No licence stated on the sheet or article; a 12 KB comparison file is retained for provenance and can be removed if the author objects.",
+      "schemaVersion": 1
+    },
+    {
+      "id": "stage64-tallyroom-nz-new-electoral-map-article",
+      "organisation": "The Tally Room (Ben Raue), third party",
+      "url": "https://www.tallyroom.com.au/62140",
+      "dateOrElection": "2025-10-03",
+      "resource": "Article \"New Zealand's new electoral map\" (HTML as served; describes the four partisan changes, the 45/16/6/2/2 notional seat split and links the sheet)",
+      "retrievedAt": "2026-10-06T16:12:00Z",
+      "rawPath": "data/raw/electorate-baseline/2026-10-06/tallyroom-new-zealands-new-electoral-map.html",
+      "processingScript": null,
+      "role": "comparison_only_not_model_input",
+      "limitations": [
+        "Narrative only; read by hand to confirm the sheet's headline counts (docs/stage64-electorate-baseline-audit.md).",
+        "Discussion comments on the page are not evidence."
+      ],
+      "sha256": "f5ad5b6bcb3846f98c7788aa4bf21801530f775c5d41b30bd9741c17d410af5a",
+      "licence": "No licence stated; retained for provenance only.",
+      "schemaVersion": 1
+    }
+  ],
+  "boundedSearchForOfficialNotionalResults": {
+    "question": "Do the Electoral Commission or the Representation Commission publish official notional 2023 results on the 2025 final boundaries?",
+    "performedOn": "2026-10-06",
+    "searches": [
+      "web search: notional 2023 election results new 2025 electorate boundaries New Zealand",
+      "web search: Electoral Commission notional 2023 general election results 2026 boundaries",
+      "fetch: elections.nz boundary review 2025 page (returned an Incapsula bot-protection page, as in Stage40)",
+      "fetch: Wikipedia 2026 general election, 2023 results and electorate pages (no notional results)"
+    ],
+    "outcome": "Not found. No official notional results publication was located; the Representation Commission's Schedules B and C already preserved in the repo give boundaries and populations only. Absence is not proved because the Electoral Commission site could not be read directly. Third-party notionals exist (the Tally Room sheet above; Kiwiblog and The Progress Report publish projected or paywalled margins that are a different quantity and were not acquired).",
+    "furtherSearchPolicy": "No second pass: an official table could change nothing in this stage unless it contradicted the repo's population-weighted baseline, and the Tally Room cross-check already bounds that."
+  }
+}

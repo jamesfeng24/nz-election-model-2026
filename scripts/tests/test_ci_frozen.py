@@ -6,6 +6,7 @@ from io import StringIO
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 from tempfile import TemporaryDirectory
 import unittest
@@ -14,7 +15,11 @@ from unittest.mock import patch
 from scripts.validate import ci_frozen as frozen
 
 ROOT = Path(__file__).resolve().parents[2]
+UNPINNED_UNTIL_FIRST_FULL_RUN = ('stage63',)  # registered in its own PR (no pin needed); pin after its first full run
 COMMAND = 'python3 -m scripts.pipe.entry --check'
+COMMAND2 = 'python3 -m scripts.pipe2.entry --check'
+ENV = {'GITHUB_REPOSITORY': 'o/r', 'GITHUB_TOKEN': 't'}
+NO_TOKEN = {'GITHUB_TOKEN': '', 'GH_TOKEN': ''}  # an empty token disables API discovery whatever the test environment
 RUNTIME = {'python': '3.12.2', 'system': 'Linux', 'machine': 'x86_64', 'osId': 'ubuntu', 'osVersionId': '24.04',
            'packages': {'numpy': '2.2.6'}}
 WORKFLOW = """name: Verify
@@ -30,6 +35,11 @@ jobs:
         if: steps.frozen.outputs.pipe == 'integrity'
         run: python3 -m scripts.validate.ci_frozen --check --pipeline pipe
       - run: python3 -m scripts.pipe.report --check
+      - run: python3 -m scripts.pipe2.entry --check
+        if: steps.frozen.outputs.pipe2 != 'integrity'
+      - name: Verify reused pipe2
+        if: steps.frozen.outputs.pipe2 == 'integrity'
+        run: python3 -m scripts.validate.ci_frozen --check --pipeline pipe2
 """
 
 
@@ -49,17 +59,66 @@ def commit(root, message):
     return git(root, 'rev-parse', 'HEAD')
 
 
-def registry_for(attested, evidence_sha):
-    return {'version': 3, 'liveAttestation': {'workflow': 'ci.yml', 'branch': 'main', 'events': ['push', 'pull_request'], 'job': 'python', 'maxRuns': 3},
-            'attestation': {'commit': attested, 'runs': [], 'evidencePath': '.github/validation/evidence/e.json',
-                            'evidenceSha256': evidence_sha},
+def pipeline_entry(name, **override):
+    base = {'entryModules': ['scripts.{}.entry'.format(name)], 'ownedPaths': ['scripts/' + name],
+            'outputPaths': ['data/processed/' + name], 'extraDependencies': [],
+            'cacheDirectory': '.cache/' + name, 'cacheReaderModules': [], 'cacheReaderNames': [],
+            'reviewedCacheConsumers': [], 'replacedCommands': ['python3 -m scripts.{}.entry --check'.format(name)],
+            'integrityChecks': []}
+    base.update(override)
+    return base
+
+
+def registry_for():
+    """Two pipelines: ``pipe`` (stands for Stage45/46) and ``pipe2`` (Stage47: reads the pipe cache)."""
+    return {'version': 4, 'liveAttestation': {'workflow': 'ci.yml', 'branch': 'main', 'events': ['push', 'pull_request', 'workflow_dispatch'],
+                                              'job': 'python', 'perPage': 20, 'maxPages': 10, 'maxJobFetches': 120},
             'runtime': RUNTIME,
-            'pipelines': {'pipe': {
-                'entryModules': ['scripts.pipe.entry'], 'ownedPaths': ['scripts/pipe'],
-                'outputPaths': ['data/processed/pipe'], 'extraDependencies': ['docs/spec.txt'],
-                'cacheDirectory': '.cache/pipe', 'cacheReaderModules': ['scripts.pipe.entry'],
-                'cacheReaderNames': ['arrays'], 'reviewedCacheConsumers': [], 'replacedCommands': [COMMAND],
-                'integrityChecks': []}}}
+            'pipelines': {
+                'pipe': pipeline_entry('pipe', extraDependencies=['docs/spec.txt'], cacheReaderModules=['scripts.pipe.entry'],
+                                       cacheReaderNames=['arrays']),
+                'pipe2': pipeline_entry('pipe2', cacheDependencies=['pipe'])}}
+
+
+STANDARD_STEPS = ('python3 -m unittest discover -s scripts/tests -v', 'python3 -m scripts.pipe.diagnosis --check')
+
+
+def job_steps(full=True, extra=()):
+    """The python job's steps of a run that executed every replaced command (``full``) or reused both pipelines."""
+    gated = 'success' if full else 'skipped'
+    return [{'name': 'Run ' + c, 'conclusion': 'success'} for c in STANDARD_STEPS + tuple(extra)] + \
+           [{'name': 'Run ' + c, 'conclusion': gated} for c in (COMMAND, COMMAND2)]
+
+
+def run_record(run_id, sha, full=True, event='push', branch='main', created=None, conclusion='success'):
+    return {'id': run_id, 'html_url': 'https://example.test/runs/{}'.format(run_id), 'event': event, 'head_branch': branch,
+            'head_sha': sha, 'conclusion': conclusion, 'created_at': created or '2026-10-02T00:{:02d}:00Z'.format(run_id % 60),
+            '_full': full}
+
+
+class FakeApi:
+    """The two Actions endpoints the selector reads, newest run first, with pagination and call accounting."""
+
+    def __init__(self, runs, fail=None):
+        self.runs, self.fail, self.list_calls, self.job_calls, self.calls = list(runs), fail, [], [], 0
+
+    def __call__(self, url, token):
+        self.calls += 1
+        if self.fail:
+            raise self.fail
+        single = re.search(r'/runs/(\d+)$', url)
+        if single:
+            return next({k: v for k, v in r.items() if k != '_full'} for r in self.runs if r['id'] == int(single.group(1)))
+        query = dict(part.split('=') for part in url.split('?', 1)[1].split('&')) if '?' in url else {}
+        if '/jobs' in url:
+            run_id = int(url.split('/runs/')[1].split('/')[0])
+            self.job_calls.append(run_id)
+            run = next(r for r in self.runs if r['id'] == run_id)
+            return {'jobs': [{'id': 1, 'name': 'check', 'conclusion': 'success', 'steps': []},
+                             {'id': 2, 'name': 'python', 'conclusion': 'success', 'steps': job_steps(run['_full'])}]}
+        self.list_calls.append(int(query['page']))
+        per_page, page = int(query['per_page']), int(query['page'])
+        return {'workflow_runs': [{k: v for k, v in r.items() if k != '_full'} for r in self.runs[(page - 1) * per_page:page * per_page]]}
 
 
 class Repository:
@@ -74,11 +133,15 @@ class Repository:
               "from .helper import help\nfrom scripts.shared import tool\nPATH = 'data/processed/pipe/in.json'\n"
               "SPEC = 'docs/spec.txt'\nLOCK = 'requirements-boundaries.txt'\n\ndef arrays():\n    return 1\n")
         write(self.root, 'scripts/pipe/helper.py', 'def help():\n    return 1\n')
+        write(self.root, 'scripts/pipe2/__init__.py', '')
+        write(self.root, 'scripts/pipe2/entry.py', "from .helper import help2\nPATH = 'data/processed/pipe2/in.json'\n")
+        write(self.root, 'scripts/pipe2/helper.py', 'def help2():\n    return 1\n')
         write(self.root, 'scripts/shared.py', 'def tool():\n    return 1\n')
         write(self.root, 'scripts/other/__init__.py', '')
         write(self.root, 'scripts/other/unrelated.py', 'X = 1\n')
         write(self.root, 'scripts/tests/test_x.py', 'X = 1\n')
         write(self.root, 'data/processed/pipe/in.json', '{}\n')
+        write(self.root, 'data/processed/pipe2/in.json', '{}\n')
         write(self.root, 'data/processed/other/x.json', '{}\n')
         write(self.root, 'docs/spec.txt', 'spec\n')
         write(self.root, 'docs/a.md', 'notes\n')
@@ -86,20 +149,44 @@ class Repository:
         write(self.root, '.python-version', '3.12.2\n')
         write(self.root, '.github/workflows/ci.yml', WORKFLOW)
         self.attested = commit(self.root, 'attested')
-        record = {'run': {'event': 'push', 'conclusion': 'success', 'head_sha': self.attested},
-                  'job': {'name': 'python', 'conclusion': 'success', 'steps': [
-                      {'name': 'Run ' + COMMAND, 'conclusion': 'success'},
-                      {'name': 'Run python3 -m scripts.pipe.diagnosis --check', 'conclusion': 'success'},
-                      {'name': 'Run python3 -m unittest discover -s scripts/tests -v', 'conclusion': 'success'}]}}
+        self.registry = registry_for()
+        record = {'run': {'id': 1, 'html_url': 'https://example.test/runs/1', 'event': 'push', 'conclusion': 'success',
+                          'head_sha': self.attested, 'created_at': '2026-10-01T00:00:00Z'},
+                  'job': {'name': 'python', 'conclusion': 'success', 'steps': job_steps()}}
         write(self.root, '.github/validation/evidence/e.json', json.dumps(record))
         self.sha = hashlib.sha256((self.root / '.github/validation/evidence/e.json').read_bytes()).hexdigest()
-        self.registry = registry_for(self.attested, self.sha)
+        for name, pipeline in self.registry['pipelines'].items():
+            files, literals, _ = frozen.closure(self.root, pipeline['entryModules'])
+            pipeline['pin'] = {'commit': self.attested, 'runId': 1, 'runUrl': 'https://example.test/runs/1',
+                               'createdAt': '2026-10-01T00:00:00Z', 'evidencePath': '.github/validation/evidence/e.json',
+                               'evidenceSha256': self.sha, 'scopeFingerprint': frozen.scope_fingerprint(self.root, pipeline, files, literals)}
         write(self.root, '.github/validation/frozen-pipelines.json', json.dumps(self.registry))
         self.base = commit(self.root, 'registry (earlier reviewed pull request)')
 
-    def select(self, event='pull_request', runtime=None, registry=None, candidates=None):
-        return frozen.select_pipeline('pipe', registry or self.registry, event, self.root,
-                                      RUNTIME if runtime is None else runtime, candidates)
+    def without_pins(self, *names):
+        registry = deepcopy(self.registry)
+        for name in names or registry['pipelines']:
+            del registry['pipelines'][name]['pin']
+        return registry
+
+    def discovery(self, api=None, registry=None):
+        """API discovery over a fake API, or disabled (no token) when no API is given."""
+        registry = registry or self.registry
+        if api is None:
+            return frozen.Discovery(registry, {}, root=self.root)
+        return frozen.Discovery(registry, ENV, api, self.root, lambda root, sha: frozen.is_ancestor(root, sha))
+
+    def select(self, event='pull_request', runtime=None, registry=None, candidates=None, discovery=None):
+        registry = registry or self.registry
+        return frozen.select_pipeline('pipe', registry, event, self.root, RUNTIME if runtime is None else runtime,
+                                      candidates, discovery or self.discovery(registry=registry))
+
+    def select_all(self, event='pull_request', registry=None, discovery=None):
+        registry = registry or self.registry
+        return frozen.select(registry, event, self.root, RUNTIME, discovery=discovery or self.discovery(registry=registry))
+
+    def head(self):
+        return git(self.root, 'rev-parse', 'HEAD')
 
     def live(self, commit_sha, skipped=False, event='push'):
         """A live attestation record shaped like the Actions API job record of a main push run."""
@@ -181,7 +268,7 @@ class SelectionTests(unittest.TestCase):
             self.assertFull(self.repo.select(event), 'always uses full')
         self.assertEqual(self.repo.select('push')['mode'], 'integrity')
         registry = deepcopy(self.repo.registry)
-        registry['attestation']['commit'] = '1' * 40
+        registry['pipelines']['pipe']['pin']['commit'] = '1' * 40
         self.assertFull(self.repo.select(registry=registry), 'attested run')
         self.assertIsNone(frozen.changed_files(self.repo.root, '1' * 40))
 
@@ -199,16 +286,16 @@ class SelectionTests(unittest.TestCase):
         original = json.loads(path.read_text())
         for mutate in (lambda r: r['run'].update(event='schedule'), lambda r: r['run'].update(conclusion='failure'),
                        lambda r: r['run'].update(head_sha='2' * 40), lambda r: r['job'].update(conclusion='failure'),
-                       lambda r: r['job']['steps'][0].update(conclusion='skipped'),
-                       lambda r: r['job']['steps'].pop(0)):
+                       lambda r: next(x for x in r['job']['steps'] if x['name'] == 'Run ' + COMMAND).update(conclusion='skipped'),
+                       lambda r: r['job']['steps'].remove(next(x for x in r['job']['steps'] if x['name'] == 'Run ' + COMMAND))):
             record = deepcopy(original)
             mutate(record)
             path.write_text(json.dumps(record))
             registry = deepcopy(self.repo.registry)
-            registry['attestation']['evidenceSha256'] = hashlib.sha256(path.read_bytes()).hexdigest()
+            registry['pipelines']['pipe']['pin']['evidenceSha256'] = hashlib.sha256(path.read_bytes()).hexdigest()
             commit(self.repo.root, 'tamper')
             self.assertFull(self.repo.select(registry=registry))
-        self.assertFull(self.repo.select(), 'seed attestation evidence')
+        self.assertFull(self.repo.select(), 'pinned attestation evidence missing or changed')
 
     def test_modification_runs_full_once_then_the_new_main_run_becomes_the_attestation(self):
         write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
@@ -245,10 +332,10 @@ class SelectionTests(unittest.TestCase):
         self.assertEqual(self.repo.select(candidates=[self.repo.live(head)])['mode'], 'integrity')
 
     def test_newest_provable_candidate_wins_and_failures_fall_back_to_older_ones(self):
-        seed, errors = frozen.seed_candidate(self.repo.registry, self.repo.root)
-        self.assertEqual(errors, [])
+        pin, why = frozen.pin_candidate(self.repo.registry['pipelines']['pipe'], self.repo.root)
+        self.assertIsNone(why)
         head = git(self.repo.root, 'rev-parse', 'HEAD')
-        self.assertEqual(self.repo.select(candidates=[self.repo.live(head, skipped=True), seed])['mode'], 'integrity')
+        self.assertEqual(self.repo.select(candidates=[self.repo.live(head, skipped=True), pin])['mode'], 'integrity')
         self.assertFull(self.repo.select(candidates=[]), 'no attested')
 
     def test_dynamic_imports_cannot_be_analysed_and_force_full(self):
@@ -260,6 +347,244 @@ class SelectionTests(unittest.TestCase):
         registry = deepcopy(self.repo.registry)
         registry['version'] = 1
         self.assertFull(self.repo.select(registry=registry), 'version')
+
+
+class AttestationDurabilityTests(unittest.TestCase):
+    """A genuine full attestation must not expire because newer unrelated runs exist."""
+
+    def setUp(self):
+        self.tmp = TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Repository(self.tmp.name)
+
+    def later(self, text='later unrelated work\n'):
+        write(self.repo.root, 'docs/a.md', text)
+        return commit(self.repo.root, 'unrelated ' + text.strip())
+
+    def reuse_only_runs(self, count, sha):
+        return [run_record(100 + i, sha, full=False, event='push' if i % 2 else 'pull_request',
+                           branch='main' if i % 2 else 'feature-{}'.format(i), created='2026-10-03T00:{:02d}:00Z'.format(i)) for i in range(count)][::-1]
+
+    def test_one_full_attestation_followed_by_fifty_five_reuse_only_runs_still_selects_integrity(self):
+        head = self.later()
+        full = run_record(2, self.repo.attested, created='2026-10-02T00:00:00Z')
+        runs = self.reuse_only_runs(55, head) + [full]
+        # (a) the pin proves it from Git alone: the API is never touched, however many runs have happened since.
+        api = FakeApi(runs, fail=AssertionError('the API must not be used while the pin proves reuse'))
+        result = self.repo.select(discovery=self.repo.discovery(api))
+        self.assertEqual(result['mode'], 'integrity', result)
+        self.assertEqual((result['chosen']['source'], result['chosen']['runId']), ('pin', 1))
+        self.assertEqual(api.calls, 0)
+        # (b) with no pin, paginated discovery walks past every reuse-only run to the genuine full run.
+        registry = self.repo.without_pins()
+        api = FakeApi(runs)
+        result = self.repo.select(registry=registry, discovery=self.repo.discovery(api, registry))
+        self.assertEqual(result['mode'], 'integrity', result)
+        self.assertEqual((result['chosen']['source'], result['chosen']['runId']), ('discovered-push', 2))
+        self.assertEqual(len(api.job_calls), 56)
+        self.assertEqual(api.list_calls, [1, 2, 3])  # 20 runs per page
+        self.assertIn('discovered-push attestation', result['reason'])
+        self.assertIn('run 2', result['reason'])
+
+    def test_a_reuse_only_run_is_never_an_attestation(self):
+        head = self.later()
+        registry = self.repo.without_pins()
+        api = FakeApi(self.reuse_only_runs(5, head))
+        result = self.repo.select(registry=registry, discovery=self.repo.discovery(api, registry))
+        self.assertEqual(result['mode'], 'full')
+        self.assertIn('no reachable run executed every replaced command (5 examined)', result['reason'])
+
+    def test_the_newest_applicable_full_run_wins_when_several_exist(self):
+        self.later('b\n')
+        newer = self.later('c\n')
+        runs = [run_record(5, newer, full=False), run_record(3, newer, created='2026-10-02T09:00:00Z'),
+                run_record(2, self.repo.attested, created='2026-10-02T01:00:00Z')]
+        registry = self.repo.without_pins()
+        api = FakeApi(runs)
+        result = self.repo.select(registry=registry, discovery=self.repo.discovery(api, registry))
+        self.assertEqual(result['mode'], 'integrity', result)
+        self.assertEqual(result['chosen']['runId'], 3)
+        self.assertEqual(api.job_calls, [5, 3])  # the older full run is never even requested
+
+    def test_a_newer_full_run_beats_a_stale_pin_and_the_log_says_why(self):
+        write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
+        changed = commit(self.repo.root, 'modify frozen code')
+        stale = self.repo.select()  # the pull request that modifies the pipeline replays it once
+        self.assertEqual(stale['mode'], 'full', stale)
+        self.assertIn('dependency changed', stale['reason'])
+        runs = [run_record(8, changed, event='pull_request', branch='pr', created='2026-10-04T00:00:00Z')]
+        result = self.repo.select(discovery=self.repo.discovery(FakeApi(runs)))
+        self.assertEqual(result['mode'], 'integrity', result)
+        self.assertEqual(result['chosen']['runId'], 8)
+        self.assertIn('pin not used', result['reason'])
+        self.assertIn('dependency changed: scripts/pipe/helper.py', result['reason'])
+
+    def test_a_relevant_dependency_change_selects_full_even_with_the_attested_run_in_the_api(self):
+        for path, text in (('scripts/pipe/helper.py', 'def help():\n    return 2\n'), ('scripts/shared.py', 'def tool():\n    return 9\n'),
+                           ('data/processed/pipe/in.json', '{"a": 1}\n'), ('docs/spec.txt', 'changed\n')):
+            with self.subTest(path=path):
+                git(self.repo.root, 'reset', '-q', '--hard', self.repo.base)
+                write(self.repo.root, path, text)
+                head = commit(self.repo.root, 'change ' + path)
+                runs = [run_record(5, head, full=False), run_record(2, self.repo.attested)]
+                result = self.repo.select(discovery=self.repo.discovery(FakeApi(runs)))
+                self.assertEqual(result['mode'], 'full', result)
+                self.assertIn('changed: ' + path, result['reason'])
+
+    def test_unchanged_pipe2_selects_integrity_without_forcing_pipe_full(self):
+        self.later()
+        result = self.repo.select_all()
+        self.assertEqual({n: r['mode'] for n, r in result.items()}, {'pipe': 'integrity', 'pipe2': 'integrity'})
+        self.assertEqual({r['chosen']['source'] for r in result.values()}, {'pin'})
+        # pipe2 is unchanged even though pipe changed: the dependency runs the other way round, so no coupling.
+        write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
+        commit(self.repo.root, 'modify the cache-producing pipeline only')
+        result = self.repo.select_all()
+        self.assertEqual({n: r['mode'] for n, r in result.items()}, {'pipe': 'full', 'pipe2': 'integrity'})
+
+    def test_pipe2_running_full_still_forces_the_pipelines_whose_cache_it_reads_full(self):
+        write(self.repo.root, 'scripts/pipe2/helper.py', 'def help2():\n    return 2\n')
+        commit(self.repo.root, 'modify the cache-reading pipeline')
+        result = self.repo.select_all()
+        self.assertEqual({n: r['mode'] for n, r in result.items()}, {'pipe': 'full', 'pipe2': 'full'})
+        self.assertIn('pipe2 runs in full and reads the pipe runtime cache', result['pipe']['reason'])
+
+    def test_losing_the_attestation_is_what_used_to_cascade_and_a_pin_prevents_it(self):
+        head = self.later()
+        runs = self.reuse_only_runs(55, head)  # the recency window that used to hold only reuse-only runs
+        unpinned = self.repo.without_pins('pipe2')
+        result = self.repo.select_all(registry=unpinned, discovery=self.repo.discovery(FakeApi(runs), unpinned))
+        self.assertEqual({n: r['mode'] for n, r in result.items()}, {'pipe': 'full', 'pipe2': 'full'})
+        self.assertIn('no pinned attestation', result['pipe2']['reason'])
+        pinned = self.repo.select_all(discovery=self.repo.discovery(FakeApi(runs, fail=AssertionError('no API call'))))
+        self.assertEqual({n: r['mode'] for n, r in pinned.items()}, {'pipe': 'integrity', 'pipe2': 'integrity'})
+
+    def test_api_failure_falls_back_to_the_valid_pin(self):
+        self.later()
+        for failure in (OSError('network down'), ValueError('bad json'), KeyError('workflow_runs')):
+            with self.subTest(failure=type(failure).__name__):
+                api = FakeApi([], fail=failure)
+                result = self.repo.select(discovery=self.repo.discovery(api))
+                self.assertEqual(result['mode'], 'integrity', result)
+                self.assertEqual(result['chosen']['source'], 'pin')
+                self.assertEqual(api.calls, 0)
+
+    def test_a_stale_pin_and_an_api_failure_select_full(self):
+        write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
+        commit(self.repo.root, 'modify frozen code')
+        for failure in (OSError('network down'), ValueError('bad json'), KeyError('workflow_runs')):
+            with self.subTest(failure=type(failure).__name__):
+                result = self.repo.select(discovery=self.repo.discovery(FakeApi([], fail=failure)))
+                self.assertEqual(result['mode'], 'full', result)
+                self.assertIn('dependency changed', result['reason'])
+                self.assertIn('Actions API failed', result['reason'])
+        for malformed in ({}, {'workflow_runs': [{'id': 1}]}):
+            api = lambda url, token, malformed=malformed: malformed
+            result = self.repo.select(discovery=self.repo.discovery(api))
+            self.assertEqual(result['mode'], 'full', result)
+        self.assertIn('unavailable (no token or repository)', self.repo.select()['reason'])
+
+    def test_discovery_is_bounded_and_fails_closed(self):
+        head = self.later()
+        registry = self.repo.without_pins()
+        runs = self.reuse_only_runs(60, head)
+        registry['liveAttestation']['maxJobFetches'] = 5
+        api = FakeApi(runs)
+        result = self.repo.select(registry=registry, discovery=self.repo.discovery(api, registry))
+        self.assertEqual((result['mode'], len(api.job_calls)), ('full', 5))
+        self.assertIn('job request bound (5) reached', result['reason'])
+        registry['liveAttestation'].update(maxJobFetches=500, maxPages=1)
+        api = FakeApi(runs)
+        result = self.repo.select(registry=registry, discovery=self.repo.discovery(api, registry))
+        self.assertEqual((result['mode'], api.list_calls), ('full', [1]))
+        self.assertIn('page bound (1) reached', result['reason'])
+
+    def test_unreachable_runs_cost_no_job_request(self):
+        head = self.later()
+        registry = self.repo.without_pins()
+        stray = [run_record(200 + i, '9' * 40, event='pull_request', branch='gone') for i in range(30)]
+        api = FakeApi(stray + [run_record(2, head), run_record(1, self.repo.attested)])
+        result = self.repo.select(registry=registry, discovery=self.repo.discovery(api, registry))
+        self.assertEqual(result['mode'], 'integrity', result)
+        self.assertEqual(api.job_calls, [2])
+
+    def test_a_manual_full_dispatch_of_main_attests_but_other_branches_do_not(self):
+        head = self.later()
+        registry = self.repo.without_pins()
+        feature = run_record(7, head, event='workflow_dispatch', branch='feature')
+        result = self.repo.select(registry=registry, discovery=self.repo.discovery(FakeApi([feature]), registry))
+        self.assertEqual(result['mode'], 'full', result)
+        main = run_record(6, head, event='workflow_dispatch', branch='main')
+        api = FakeApi([feature, main])
+        result = self.repo.select(registry=registry, discovery=self.repo.discovery(api, registry))
+        self.assertEqual((result['mode'], result['chosen']['source'], result['chosen']['runId']), ('integrity', 'discovered-workflow_dispatch', 6))
+        self.assertEqual(api.job_calls, [6])
+
+    def test_discovery_stops_at_the_pinned_run(self):
+        write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
+        head = commit(self.repo.root, 'modify frozen code')
+        pinned_run = run_record(1, self.repo.attested, created='2026-10-01T00:00:00Z')
+        older = run_record(0, self.repo.attested, created='2026-09-30T00:00:00Z')
+        api = FakeApi(self.reuse_only_runs(30, head) + [pinned_run, older])
+        result = self.repo.select(discovery=self.repo.discovery(api))
+        self.assertEqual(result['mode'], 'full', result)
+        self.assertEqual(len(api.job_calls), 31)  # 30 reuse-only runs and the pinned run itself; nothing older
+        self.assertNotIn(0, api.job_calls)
+        self.assertIn('no full run newer than the pinned run', result['reason'])
+
+    def test_a_pin_whose_scope_fingerprint_does_not_match_is_not_used(self):
+        registry = deepcopy(self.repo.registry)
+        registry['pipelines']['pipe']['pin']['scopeFingerprint'] = '0' * 64
+        result = self.repo.select(registry=registry)
+        self.assertEqual(result['mode'], 'full', result)
+        self.assertIn('scope fingerprint differs', result['reason'])
+
+    def test_the_selection_names_the_attestation_and_every_reason_for_full(self):
+        self.later()
+        result = self.repo.select()
+        self.assertEqual(result['chosen'], {'source': 'pin', 'commit': self.repo.attested, 'runId': 1, 'runUrl': 'https://example.test/runs/1'})
+        self.assertIn('pin attestation {} run 1'.format(self.repo.attested[:8]), result['reason'])
+        write(self.repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
+        commit(self.repo.root, 'modify')
+        reason = self.repo.select()['reason']
+        self.assertIn('pin attestation {} run 1: dependency changed: scripts/pipe/helper.py'.format(self.repo.attested[:8]), reason)
+        self.assertIn(' | ', reason)  # the pin's reason, then why discovery could not help
+
+
+class RecordPinTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Repository(self.tmp.name)
+        write(self.repo.root, 'docs/a.md', 'later\n')
+        self.head = commit(self.repo.root, 'later unrelated work')
+
+    def test_recording_a_full_run_pins_every_pipeline_it_executed_and_selection_then_reuses_it(self):
+        api = FakeApi([run_record(2, self.repo.attested, event='pull_request', branch='pr'), run_record(3, self.head, full=False)])
+        registry, report = frozen.record_pin(2, self.repo.without_pins(), self.repo.root, environ=ENV, fetch=api)
+        self.assertEqual(len(report), 2)
+        for name in ('pipe', 'pipe2'):
+            pin = registry['pipelines'][name]['pin']
+            self.assertEqual((pin['commit'], pin['runId']), (self.repo.attested, 2))
+            self.assertEqual(pin['evidencePath'], '.github/validation/evidence/frozen-run-2.json')
+            evidence = (self.repo.root / pin['evidencePath']).read_bytes()
+            self.assertEqual(hashlib.sha256(evidence).hexdigest(), pin['evidenceSha256'])
+            # the fingerprint taken in a worktree at the pinned commit equals the one computed directly there
+            self.assertEqual(pin['scopeFingerprint'], self.repo.registry['pipelines'][name]['pin']['scopeFingerprint'])
+        self.assertEqual([(x['name'], x['conclusion']) for x in json.loads(evidence)['job']['steps']],
+                         [(x['name'], x['conclusion']) for x in job_steps()])
+        result = self.repo.select(registry=registry)
+        self.assertEqual((result['mode'], result['chosen']['runId']), ('integrity', 2))
+        self.assertFalse((self.repo.root / '.git/worktrees').exists() and list((self.repo.root / '.git/worktrees').iterdir()))
+
+    def test_recording_refuses_runs_that_did_not_execute_the_pipeline_or_are_unreachable(self):
+        api = FakeApi([run_record(3, self.head, full=False), run_record(4, '9' * 40)])
+        registry, report = frozen.record_pin(3, self.repo.without_pins(), self.repo.root, environ=ENV, fetch=api)
+        self.assertEqual(registry, self.repo.without_pins())
+        self.assertTrue(all('not pinned (attested run did not execute successfully' in line for line in report), report)
+        self.assertFalse((self.repo.root / '.github/validation/evidence/frozen-run-3.json').exists())
+        with self.assertRaises(ValueError):
+            frozen.record_pin(4, self.repo.without_pins(), self.repo.root, environ=ENV, fetch=api)
 
 
 class CacheConsumerTests(unittest.TestCase):
@@ -333,7 +658,7 @@ class SelectAndVerifyTests(unittest.TestCase):
             repo = Repository(tmp)
             broken = deepcopy(repo.registry)
             del broken['pipelines']['pipe']['entryModules']
-            result = frozen.select(broken, 'pull_request', repo.root, RUNTIME)
+            result = frozen.select(broken, 'pull_request', repo.root, RUNTIME, discovery=repo.discovery())
             self.assertEqual(result['pipe']['mode'], 'full')
             self.assertIn('invalid selection inputs', result['pipe']['reason'])
 
@@ -342,7 +667,7 @@ class SelectAndVerifyTests(unittest.TestCase):
             repo = Repository(tmp)
             write(repo.root, 'scripts/pipe/helper.py', 'def help():\n    return 2\n')
             commit(repo.root, 'change')
-            with patch.object(frozen, 'runtime_errors', return_value=[]):
+            with patch.object(frozen, 'runtime_errors', return_value=[]), patch.dict(os.environ, NO_TOKEN):
                 with self.assertRaises(ValueError):
                     frozen.verify('pipe', root=repo.root)
 
@@ -353,7 +678,7 @@ class SelectAndVerifyTests(unittest.TestCase):
             registry['pipelines']['pipe']['integrityChecks'] = ['scripts.validate.ci_frozen:load_registry']
             write(repo.root, '.github/validation/frozen-pipelines.json', json.dumps(registry))
             base = commit(repo.root, 'registry with integrity check')
-            with patch.object(frozen, 'runtime_errors', return_value=[]), \
+            with patch.object(frozen, 'runtime_errors', return_value=[]), patch.dict(os.environ, NO_TOKEN), \
                     patch.object(frozen, 'load_registry', return_value=registry) as loaded:
                 result = frozen.verify('pipe', root=repo.root)
             self.assertEqual(result['mode'], 'integrity')
@@ -362,9 +687,13 @@ class SelectAndVerifyTests(unittest.TestCase):
     def test_command_line_writes_one_output_per_registered_pipeline(self):
         with TemporaryDirectory() as tmp:
             output = Path(tmp) / 'out'
+            printed = StringIO()
             with patch('sys.argv', ['ci_frozen', '--event', 'push', '--github-output', str(output)]), \
-                    redirect_stdout(StringIO()):
+                    patch.dict(os.environ, NO_TOKEN), redirect_stdout(printed):
                 frozen.main()
+            # one human-readable line per pipeline: its mode and the attestation chosen or every reason for full
+            for name in ('stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63'):
+                self.assertRegex(printed.getvalue(), r'(?m)^{}: (full|integrity) - .+'.format(name))
             lines = sorted(output.read_text().split())
             self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63'])
             # The mode depends on the runner and its Actions history, so only its form is fixed here.
@@ -409,40 +738,36 @@ class RealRegistryTests(unittest.TestCase):
         self.assertIn('scripts/uncertainty_revision/construction.py', files)
         self.assertIn('scripts/uncertainty/construction.py', files)
 
-    def test_seed_attestation_pins_a_full_push_run_that_executed_every_replaced_command(self):
-        seed, errors = frozen.seed_candidate(self.registry, ROOT)
-        self.assertEqual(errors, [])
+    def test_every_registered_pipeline_has_a_pin_that_proves_its_own_full_run(self):
+        """Each pin's evidence shows its pipeline's replaced commands executed successfully in one full run."""
         for name, pipeline in self.registry['pipelines'].items():
-            if name in ('stage47', 'stage48', 'stage54', 'stage63'):
-                continue  # their first attestation is their own PR run (live candidates), not the d0fa5a66 seed
-            errors, steps = frozen.candidate_errors(seed, pipeline['replacedCommands'])
+            if name in UNPINNED_UNTIL_FIRST_FULL_RUN:
+                continue  # registered in its own PR; the first attestation is that PR's run (discovery), pinned afterwards
+            pin, why = frozen.pin_candidate(pipeline, ROOT)
+            self.assertIsNone(why, name)
+            self.assertEqual(pin['record']['run']['id'], pin['runId'], name)
+            self.assertEqual(pin['record']['run']['head_sha'], pin['commit'], name)
+            self.assertRegex(pin['fingerprint'], '^[0-9a-f]{64}$', name)
+            errors, steps = frozen.candidate_errors(pin, pipeline['replacedCommands'])
             self.assertEqual(errors, [], name)
-            self.assertEqual(frozen.workflow_errors(ROOT, steps, self.registry), [])
+            self.assertEqual(frozen.workflow_errors(ROOT, steps, self.registry), [], name)
             self.assertNotIn('Verify previously validated Stage39 sealed integrity', steps)
+            durations = {step['name']: step for step in pin['record']['job']['steps']}
+            for command in pipeline['replacedCommands']:
+                self.assertEqual(durations['Run ' + command]['conclusion'], 'success', command)
+            try:
+                subprocess.check_output(['git', 'cat-file', '-e', pin['commit'] + '^{commit}'], cwd=ROOT, stderr=subprocess.DEVNULL)
+            except subprocess.CalledProcessError:
+                continue  # shallow checkout: the pin commit is simply not present, which fails closed at selection time
 
-    def test_live_candidates_are_read_from_the_api_for_push_and_pull_request_runs(self):
-        calls = []
-
-        def fetch(url, token):
-            calls.append(url)
-            if '/jobs' in url:
-                return {'jobs': [{'id': 9, 'name': 'check', 'conclusion': 'success', 'steps': []},
-                                 {'id': 8, 'name': 'python', 'conclusion': 'success', 'steps': [{'name': 'Run x', 'conclusion': 'success'}]}]}
-            event = 'push' if 'event=push' in url else 'pull_request'
-            return {'workflow_runs': [{'id': 1 if event == 'push' else 2, 'head_sha': ('a' if event == 'push' else 'b') * 40,
-                                       'event': event, 'conclusion': 'success',
-                                       'created_at': '2026-10-06T00:0{}:00Z'.format(1 if event == 'push' else 2)},
-                                      {'id': 3, 'head_sha': 'c' * 40, 'event': event, 'created_at': '2026-10-05T00:00:00Z'}]}
-        environ = {'GITHUB_REPOSITORY': 'o/r', 'GITHUB_TOKEN': 't'}
-        reachable = lambda root, sha: sha != 'c' * 40  # unreachable (e.g. squash-merged or unrelated) heads are never attestations
-        found = frozen.live_candidates(self.registry, environ, fetch, ROOT, reachable)
-        self.assertEqual([(c['commit'][0], c['source']) for c in found], [('b', 'live-pull_request'), ('a', 'live-push')])
-        self.assertEqual(found[0]['record']['job']['id'], 8)
-        self.assertTrue(any('event=push' in c and 'branch=main' in c and 'status=success' in c for c in calls))
-        self.assertTrue(any('event=pull_request' in c and 'branch=' not in c for c in calls))
-        self.assertEqual(frozen.live_candidates(self.registry, {}, fetch), [])
-        self.assertEqual(frozen.live_candidates(self.registry, environ, lambda *a: (_ for _ in ()).throw(OSError())), [])
-        self.assertEqual(frozen.live_candidates(self.registry, environ, lambda *a: {}), [])
+    def test_pins_cover_every_registered_pipeline_and_cache_dependencies_are_pinned_consistently(self):
+        for name, pipeline in self.registry['pipelines'].items():
+            if name not in UNPINNED_UNTIL_FIRST_FULL_RUN:
+                self.assertIn('pin', pipeline, name)
+            for dependency in pipeline.get('cacheDependencies', []):
+                self.assertIn(dependency, self.registry['pipelines'])
+        self.assertEqual(self.registry['version'], frozen.REGISTRY_VERSION)
+        self.assertNotIn('maxRuns', self.registry['liveAttestation'])  # recency windows are not how reuse is decided
 
     def test_report_modules_outside_the_closure_are_not_dependencies(self):
         stage46 = self.registry['pipelines']['stage46']
