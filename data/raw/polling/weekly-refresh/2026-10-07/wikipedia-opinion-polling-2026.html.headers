@@ -1,0 +1,38 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+date: Tue, 06 Oct 2026 22:14:19 GMT
+server: mw-api-ext.eqiad.main-8596cdcc5c-hmrk5
+cache-control: no-cache
+content-language: en
+x-mediawiki-render-id: f5ebdfa6-c1a0-11f1-98b5-554da95f5e12
+content-revision-id: 1378865337
+last-modified: Tue, 06 Oct 2026 16:13:42 GMT
+content-type: text/html; charset=utf-8; profile="https://www.mediawiki.org/wiki/Specs/HTML/2.8.0"
+access-control-allow-origin: *
+access-control-allow-methods: GET,HEAD
+access-control-allow-headers: accept, content-type, content-length, cache-control, accept-language, api-user-agent, if-match, if-modified-since, if-none-match, dnt, accept-encoding
+access-control-expose-headers: etag
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+referrer-policy: origin-when-cross-origin
+x-xss-protection: 1; mode=block
+content-security-policy: default-src 'none'; frame-ancestors 'none'
+etag: W/"1378865337/f5ebdfa6-c1a0-11f1-98b5-554da95f5e12/view"
+age: 2
+vary: x-restbase-compat, Accept-Encoding
+x-cache: cp1110 hit, cp1110 pass
+x-cache-status: hit-local
+strict-transport-security: max-age=106384710; includeSubDomains; preload
+report-to: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+set-cookie: WMF-Last-Access=06-Oct-2026;Path=/;HttpOnly;secure;Expires=Sat, 07 Nov 2026 12:00:00 GMT
+set-cookie: WMF-Last-Access-Global=06-Oct-2026;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Sat, 07 Nov 2026 12:00:00 GMT
+x-client-ip: 160.79.106.138
+set-cookie: GeoIP=US:::37.75:-97.82:v4; Path=/; secure; Domain=.wikipedia.org
+set-cookie: NetworkProbeLimit=0.001;Path=/;Secure;SameSite=None;Max-Age=3600
+set-cookie: WMF-Uniq=STQoHPv5NOn006-D4ajc8QPxAAAAAFvdT0ntEGrwJTJXWCpA11VXUmLNzgygkZxU;Domain=.wikipedia.org;Path=/;HttpOnly;secure;SameSite=None;Expires=Wed, 06 Oct 2027 00:00:00 GMT
+x-request-id: 33c61da2-a29d-450d-8e7d-6ec8864647d0
+x-analytics: 
+server-timing: cache;desc="hit-local", host;desc="cp1110",co_id;desc="814113717"
+
