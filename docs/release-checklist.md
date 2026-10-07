@@ -9,12 +9,12 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 | 1 | Decisions recorded: nowcast estimand (D106), 0.60/1.00 policy (D107) | — | done (this reconciliation) |
 | 2 | 2026 candidate and local-party scales computed with the frozen Stage45 rule over 2014–2023 | — | done (Stage72) |
 | 3 | `config/nowcast-2026.json` as the single live configuration (spec §8) | 2 | done (Stage72); pending fields listed in the file |
-| 4 | 2026 ordinary/exceptional classification for all 64 general seats, dated and sourced; a missing seat fails the build | James | schema and validator done (Stage72); entries open |
+| 4 | 2026 ordinary/exceptional classification for all 64 general seats, dated and sourced; a missing seat fails the build | James | schema and validator done (Stage72); draft proposal for James in [general-seat-classification-2026-draft.md](general-seat-classification-2026-draft.md); entries open |
 | 5 | Canonical final roster after nominations close; rebuild S/R destinations, Māori poll-to-candidate matching, export directory and MMP expected electorates from it | Stage50 (after 8 Oct, 12:00 NZDT) | waiting |
 | 6 | Cut over to the Stage69 notional baseline through one pointer; mark the Stage64 and Stage41 2026 artifacts as not live; test that only the configured baseline is read | Stage69 | waiting |
 | 7 | National adapter on `lastDataSupport` from the latest Stage70 refit, as-of week recorded | Stage70 | waiting |
 | 8 | Decide the four unpolled Māori seats (labelled fallback, or withhold MMP outputs) | James | open |
-| 9 | Assembly: Python draw bank → Stage65 seat layer → snapshot v2 exporter, one draw id end to end | 2–8 | open |
+| 9 | Assembly: Python draw bank → Stage65 seat layer → snapshot v2 exporter, one draw id end to end | 2–8 | Python draw bank and gate done (Stage73; blocked on live inputs 4, 5, 8); TypeScript side is Stage74 |
 | 10 | Production draw count and precision policy, with effective-sample Monte Carlo errors for national-driven quantities | Stage63 | waiting |
 | 11 | Bloc definitions for any coalition output | James | open |
 | 12 | Probability-release policy approved (proposal below) | James | open |

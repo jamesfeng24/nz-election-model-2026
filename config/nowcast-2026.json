@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-07.1",
+  "configVersion": "2026-10-07.2",
   "decisions": ["D106", "D107"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
@@ -12,7 +12,17 @@
     "forbiddenStateKeys": ["electionDay"],
     "modelStateAsOf": "2026-09-27",
     "dataCutoff": "2026-10-06",
-    "refreshOwner": "Stage70 replaces this source and these dates with each accepted refit"
+    "refreshOwner": "Stage70 replaces this source and these dates with each accepted refit",
+    "categoryMap": {"National": "nationalparty", "Labour": "labourparty", "Green": "greenparty", "ACT": "actnewzealand",
+                    "NZ First": "newzealandfirstparty", "Te Pāti Māori": "tepatimaori", "TOP": "opportunity", "Other": "other"},
+    "otherSplit": "Other stays one national bucket for MMP; inside each seat it is split by that seat's own 2023 notional mix of the non-core parties (Stage73, James 2026-10-07)"
+  },
+  "partyRelationships": "data/processed/forecast-readiness/snapshots/2026-10-05/party-relationships.json",
+  "candidate": {
+    "features": "data/processed/continuous-transport/readiness-2026.json",
+    "parameters": "data/processed/models/joint-candidate-share/construction.json",
+    "fold": {"branch": "primary", "targetYear": 2023, "method": "baseline_plus_S_plus_R"},
+    "status": "latest saved S+R joint fit, matching the Stage42 2026 feature centring; no refit including 2023 has been made"
   },
   "uncertainty": {
     "scales": "data/processed/nowcast-config/scales-2026.json",
@@ -37,5 +47,5 @@
   "roster": {"snapshotId": null},
   "simulation": {"draws": null, "precisionPolicy": null, "seedNamespace": "nz-nowcast-2026"},
   "mmp": {"rulesVersion": null, "blocs": null},
-  "maori": {"unpolledSeats": null}
+  "maori": {"layer": "stage66-default", "unpolledSeats": null}
 }

@@ -1,0 +1,189 @@
+"""Stage73 assembly: one deterministic draw bank of national party votes and all 71 winners, fail-closed.
+
+Each bank row is one simulated election: one national draw id feeds the MMP party vote and every general seat's
+local party layer; the 2026 layer noise has shared election keys. A seat whose inputs are missing is recorded as
+`unavailable` with a reason, never as zero or a default. The bank is publishable only when every gate check passes.
+"""
+import numpy as np
+from scripts.manual_adjustment.schema import seat_frame
+from scripts.nowcast_config.validate import check_classification, check_config, ConfigError
+from . import general, maori, national, streams
+from .common import YEAR, OTHER, ROOT, read, require, digest, file_sha256, AssemblyError
+
+SCHEMA_VERSION = 1
+
+
+def live_slates(config):
+    """{seat: slate} for seats whose 2026 slate is complete, else {seat: reason}. The roster owner is Stage50."""
+    if config['roster']['snapshotId'] is None:
+        return {}, 'roster.snapshotId is pending (Stage50 final nominations)'
+    features = read(config['candidate']['features'])
+    complete = {s['targetElectorateId'] for s in features['seatRecords'] if s['slateComplete']}
+    slates = {}
+    for c in features['candidateRecords']:
+        if c['targetElectorateId'] in complete and c['active']:
+            slates.setdefault(c['targetElectorateId'], []).append(
+                {'id': c['targetOccurrenceId'], 'group': c['ballotGroupKey'],
+                 'S': c['continuous']['S']['contribution'], 'R': c['continuous']['R']['contribution']})
+    return slates, 'slate incomplete in the configured roster'
+
+
+def live_classification(config):
+    path = config['uncertainty']['classification']
+    if not (ROOT / path).exists():
+        return None, f'classification file missing: {path} (James, D107)'
+    try:
+        return check_classification(read(path)), None
+    except ConfigError as error:
+        raise AssemblyError(f'classification invalid: {error}')
+
+
+def assemble(config, count, slates=None, classification=None, maori_records=None, workers=1):
+    """Return the draw bank. Any injected slates, classification or Maori records mark it a synthetic fixture."""
+    synthetic = any(x is not None for x in (slates, classification, maori_records))
+    check_config(config)
+    draws, draw_ids, groups = national.load(config, count)
+    keys, national2023, base = general.baseline(config)
+    continuing = general.relationships(config)
+    fine = general.fine_national(draws, groups, keys, national2023, continuing)
+    parameters, fit_id = general.fold_parameters(config)
+    scale_file = read(config['uncertainty']['scales'])
+    party_scales = scale_file['layers']['local_party']['scales']
+    candidate_scales = scale_file['layers']['candidate']['scales']
+    multipliers = config['uncertainty']['candidateBalanceSeatMultiplier']
+    frame = seat_frame()
+    general_ids = sorted(frame['general'])
+    require(set(base) == set(general_ids), 'baseline seats differ from the 2026 general frame')
+
+    roster_reason = classification_reason = None
+    if slates is None:
+        slates, roster_reason = live_slates(config)
+    if classification is None:
+        classification, classification_reason = live_classification(config)
+
+    party_rows, candidate_rows, records = {}, {}, {}
+    for seat in general_ids:
+        party_rows[seat] = general.party_row(seat, keys, base[seat], national2023, continuing)
+        if seat not in slates:
+            records[seat] = {'status': 'unavailable', 'reason': roster_reason or 'no slate supplied'}
+        elif classification is None:
+            records[seat] = {'status': 'unavailable', 'reason': classification_reason}
+        else:
+            candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters)
+    rows = list(party_rows.values()) + list(candidate_rows.values())
+    state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
+             'candidateScales': candidate_scales, 'multipliers': multipliers, 'classification': classification}
+    local_means = {}
+    with streams.substituted(rows, count, config['simulation']['seedNamespace']):
+        for seat, (local_mean, record) in zip(general_ids, run_seats(state, general_ids, workers)):
+            local_means[seat] = local_mean
+            if record is not None:
+                records[seat] = record
+    records.update(maori.simulate(config, count) if maori_records is None else maori_records)
+
+    seats = [{'electorateId': seat, 'scope': 'general' if seat in frame['general'] else 'maori', **records[seat]}
+             for seat in general_ids + sorted(frame['maori'])]
+    return {'schemaVersion': SCHEMA_VERSION, 'stage': 73, 'electionYear': YEAR,
+            'provenance': 'synthetic-fixture' if synthetic else 'live',
+            'configVersion': config['configVersion'], 'estimand': config['estimand'],
+            'modelStateAsOf': config['national']['modelStateAsOf'], 'dataCutoff': config['national']['dataCutoff'],
+            'nationalStateKey': config['national']['stateKey'],
+            'inputs': {'nationalSource': config['national']['source'], 'nationalSha256': file_sha256(config['national']['source']),
+                       'baseline': config['baseline']['source'], 'scales': config['uncertainty']['scales'],
+                       'candidateFitId': fit_id},
+            'draws': count, 'drawIds': draw_ids,
+            'partyVote': {'groups': groups, 'otherBucket': OTHER, 'shares': draws.tolist()},
+            'seats': seats,
+            'diagnostics': {'reconciliation': reconciliation(config, groups, draws, keys, continuing, local_means)}}
+
+
+_STATE = {}
+
+
+def seat_result(seat):
+    """One general seat: local party means always; candidate winners when a slate and a class exist."""
+    s = _STATE
+    candidate = s['candidate'].get(seat)
+    kind = s['classification'][seat] if candidate else None
+    local, q = general.simulate(s['party'][seat], candidate, s['fine'], s['partyScales'], s['candidateScales'],
+                                s['multipliers'][kind] if kind else 1.0)
+    if q is None:
+        return local.mean(axis=0), None
+    require(np.isfinite(q).all() and np.allclose(q.sum(axis=1), 1, atol=1e-9), f'{seat}: candidate shares do not close')
+    winner = q.argmax(axis=1)
+    return local.mean(axis=0), {'status': 'simulated', 'class': kind, 'multiplier': s['multipliers'][kind],
+                                'candidates': candidate['ids'],
+                                'winnerParty': [candidate['partyOf'][int(i)] for i in winner],
+                                'winnerCandidate': [candidate['ids'][int(i)] for i in winner]}
+
+
+def run_seats(state, seats, workers):
+    """Seats are independent given the shared national rows and the substituted stream, so they may run in forked
+    worker processes (inheriting the substitution); results are returned in seat order, so output is identical."""
+    _STATE.clear()
+    _STATE.update(state)
+    try:
+        if workers == 1:
+            return [seat_result(seat) for seat in seats]
+        import multiprocessing
+        with multiprocessing.get_context('fork').Pool(workers) as pool:
+            return pool.map(seat_result, seats, chunksize=1)
+    finally:
+        _STATE.clear()
+
+
+def reconciliation(config, groups, draws, keys, continuing, local_means):
+    """Release-gate diagnostic: party-vote-weighted mean of the general-seat local party means against the national
+    mean, per core group, in percentage points. General seats only (Maori-roll voters are outside this layer)."""
+    scope = read(config['baseline']['source'])['transitions']['2023-2026']['scopes']['general']
+    weights = {general.seat_id(t['targetCode']): t['validPartyVotes'] for t in scope['targetPartyVectors']}
+    total = sum(weights.values())
+    out = {}
+    for j, g in enumerate(groups):
+        if g == OTHER:
+            continue
+        columns = [i for i, k in enumerate(keys) if continuing.get(k) == g]
+        local = sum(weights[s] * local_means[s][columns].sum() for s in local_means) / total
+        out[g] = {'nationalMeanPP': float(100 * draws[:, j].mean()), 'generalSeatWeightedLocalMeanPP': float(100 * local),
+                  'gapPP': float(100 * (local - draws[:, j].mean()))}
+    return {'byGroup': out, 'maxAbsGapPP': max(abs(v['gapPP']) for v in out.values()),
+            'tolerance': None, 'note': 'diagnostic only; the tolerance is set with the publication gate (Stage74)'}
+
+
+def gate(bank, config):
+    """The Python-side publication gate. Returns (passed, checks); MMP, precision and schema checks are Stage74's."""
+    frame = seat_frame()
+    expected = sorted(frame['general']) + sorted(frame['maori'])
+    count = bank['draws']
+    checks = []
+
+    def check(name, passed, detail=''):
+        checks.append({'check': name, 'passed': bool(passed), 'detail': detail})
+
+    try:
+        check_config(config, require_complete=True)
+        check('configComplete', True)
+    except ConfigError as error:
+        check('configComplete', False, str(error))
+    check('provenanceLive', bank['provenance'] == 'live', bank['provenance'])
+    check('nationalStateKey', bank['nationalStateKey'] == 'lastDataSupport' and bank['estimand'] == 'nowcast')
+    check('oneDrawIdPerRow', len(bank['drawIds']) == count == len(set(bank['drawIds'])) == len(bank['partyVote']['shares']))
+    shares = np.asarray(bank['partyVote']['shares'])
+    check('partyVoteSimplex', np.isfinite(shares).all() and (shares >= 0).all() and np.allclose(shares.sum(axis=1), 1, atol=1e-9))
+    ids = [s['electorateId'] for s in bank['seats']]
+    check('universe71', ids == expected and len(ids) == 71, f'{len(ids)} seats')
+    malformed = [s['electorateId'] for s in bank['seats']
+                 if not (s['status'] == 'simulated' and len(s['winnerParty']) == count)
+                 and not (s['status'] == 'unavailable' and s.get('reason'))]
+    check('everySeatSimulatedOrExplicitlyUnavailable', not malformed, ', '.join(malformed))
+    unavailable = [s['electorateId'] for s in bank['seats'] if s['status'] == 'unavailable']
+    check('allWinnersPresent', not unavailable, f'{len(unavailable)} unavailable')
+    multipliers = config['uncertainty']['candidateBalanceSeatMultiplier']
+    wrong = [s['electorateId'] for s in bank['seats'] if s['scope'] == 'general' and s['status'] == 'simulated'
+             and s['multiplier'] != multipliers[s['class']]]
+    check('classificationMultipliers', not wrong, ', '.join(wrong))
+    return all(c['passed'] for c in checks), checks
+
+
+def bank_digest(bank):
+    return digest({k: v for k, v in bank.items() if k != 'diagnostics'})
