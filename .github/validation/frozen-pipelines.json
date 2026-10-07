@@ -262,7 +262,16 @@
    ],
    "integrityChecks": [
     "scripts.layer_replication.common:verify"
-   ]
+   ],
+   "pin": {
+    "commit": "e0bc95607a9bf317ebf7a6214c90d5d52c0acb63",
+    "runId": 37573315688,
+    "runUrl": "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37573315688",
+    "createdAt": "2026-10-07T04:49:38Z",
+    "evidencePath": ".github/validation/evidence/frozen-run-37573315688.json",
+    "evidenceSha256": "da63e18941802f0b1647826d8f3d2e0cac3c88a3bd0a42755fa1df0a7f398303",
+    "scopeFingerprint": "01d72d96955698adb4e34fe963b2df0bde92849039dd6415f8245d8279d34e4b"
+   }
   }
  }
 }
