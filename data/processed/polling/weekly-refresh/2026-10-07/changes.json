@@ -1,0 +1,53 @@
+{
+ "added": [
+  {
+   "commissioner": "1 News–Verian",
+   "fieldworkRaw": [
+    "2026-10-01",
+    "2026-10-05"
+   ],
+   "id": "nz-poll-cc8ee92dffa02a8fff35",
+   "others": "0.8",
+   "pollsterCode": "COL",
+   "sampleSize": 1001,
+   "shares": {
+    "ACT": "9",
+    "GRN": "16",
+    "LAB": "28",
+    "MRI": "0.6",
+    "NAT": "29",
+    "NZF": "10",
+    "TOP": "7"
+   }
+  },
+  {
+   "commissioner": "Roy Morgan",
+   "fieldworkRaw": [
+    "2026-08-31",
+    "2026-09-27"
+   ],
+   "id": "nz-poll-6e6e1bdf9685ff35be90",
+   "others": "0",
+   "pollsterCode": "ROY",
+   "sampleSize": 859,
+   "shares": {
+    "ACT": "11",
+    "GRN": "16",
+    "LAB": "23.5",
+    "MRI": "2",
+    "NAT": "31",
+    "NZF": "10",
+    "TOP": "6.5"
+   }
+  }
+ ],
+ "baseWaves": 498,
+ "capture": {
+  "rawPath": "data/raw/polling/weekly-refresh/2026-10-07/wikipedia-opinion-polling-2026.html",
+  "sha256": "b1c4a218816390385129b88aef84adfbb06f4d28354c1deea91faa2698338317"
+ },
+ "refreshDate": "2026-10-07",
+ "schemaVersion": 1,
+ "updatedWaves": 500,
+ "wikipediaRevision": "1378865337"
+}

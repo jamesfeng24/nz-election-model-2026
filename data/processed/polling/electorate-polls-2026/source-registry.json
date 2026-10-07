@@ -1,0 +1,74 @@
+{
+ "note": "Dated registry for the Stage70 general-seat electorate poll search; data/sources.json is frozen and not edited.",
+ "schemaVersion": 1,
+ "sources": [
+  {
+   "dateOrElection": "2026 general election; electorate polls published 2026-09-16 to 2026-10-01",
+   "id": "polling-electorate2026-newsroom-wellington-bays-2026-09-16.html",
+   "licence": "Publisher copyright; page bytes preserved unchanged for research provenance only; no text is republished.",
+   "limitations": [
+    "Secondary press report of a commissioned electorate poll; no primary Curia tables preserved.",
+    "Newsroom"
+   ],
+   "organisation": "Newsroom",
+   "processingScript": "scripts/polling/weekly_refresh/electorate_polls.py",
+   "rawPath": "data/raw/polling/electorate-polls-2026/newsroom-wellington-bays-2026-09-16.html",
+   "resource": "newsroom-wellington-bays-2026-09-16.html",
+   "retrievedAt": "2026-10-06T22:16:28Z",
+   "schemaVersion": 1,
+   "sha256": "a4ea4d955802d407a1ce5e91a64ef2288d02c79998ccf42bc78559d99dd822c7",
+   "url": "https://newsroom.co.nz/2026/09/16/early-poll-reveals-greens-and-labour-in-dead-heat-in-wellington-bays/"
+  },
+  {
+   "dateOrElection": "2026 general election; electorate polls published 2026-09-16 to 2026-10-01",
+   "id": "polling-electorate2026-spinoff-mt-albert-2026-09-30.html",
+   "licence": "Publisher copyright; page bytes preserved unchanged for research provenance only; no text is republished.",
+   "limitations": [
+    "Secondary press report of a commissioned electorate poll; no primary Curia tables preserved.",
+    "The Spinoff"
+   ],
+   "organisation": "The Spinoff",
+   "processingScript": "scripts/polling/weekly_refresh/electorate_polls.py",
+   "rawPath": "data/raw/polling/electorate-polls-2026/spinoff-mt-albert-2026-09-30.html",
+   "resource": "spinoff-mt-albert-2026-09-30.html",
+   "retrievedAt": "2026-10-06T22:16:32Z",
+   "schemaVersion": 1,
+   "sha256": "642ab815d2cb6057849255a900e7d6a2ca5ebacf76a0ed150f28536ed311d9cc",
+   "url": "https://thespinoff.co.nz/politics/30-09-2026/opportunity-knocked-qiulae-wong-trails-in-fourth-in-mt-albert-poll"
+  },
+  {
+   "dateOrElection": "2026 general election; electorate polls published 2026-09-16 to 2026-10-01",
+   "id": "polling-electorate2026-nzherald-mt-albert-poll.html",
+   "licence": "Publisher copyright; page bytes preserved unchanged for research provenance only; no text is republished.",
+   "limitations": [
+    "Secondary press report of a commissioned electorate poll; no primary Curia tables preserved.",
+    "NZ Herald"
+   ],
+   "organisation": "NZ Herald",
+   "processingScript": "scripts/polling/weekly_refresh/electorate_polls.py",
+   "rawPath": "data/raw/polling/electorate-polls-2026/nzherald-mt-albert-poll.html",
+   "resource": "nzherald-mt-albert-poll.html",
+   "retrievedAt": "2026-10-06T22:16:36Z",
+   "schemaVersion": 1,
+   "sha256": "15bd2e22e3e6db4ee265ef27a3622e96d9386ae2e792a27bed767f251e18ef6e",
+   "url": "https://www.nzherald.co.nz/nz/politics/election-2026-poll-shows-labour-barely-ahead-in-crucial-mt-albert-seat/26PQ3XERH5ABJNUWE4QKR2QEQI/"
+  },
+  {
+   "dateOrElection": "2026 general election; electorate polls published 2026-09-16 to 2026-10-01",
+   "id": "polling-electorate2026-newsroom-mt-albert-2026-10-01.html",
+   "licence": "Publisher copyright; page bytes preserved unchanged for research provenance only; no text is republished.",
+   "limitations": [
+    "Secondary press report of a commissioned electorate poll; no primary Curia tables preserved.",
+    "Newsroom (context only; not a poll source)"
+   ],
+   "organisation": "Newsroom (context only; not a poll source)",
+   "processingScript": "scripts/polling/weekly_refresh/electorate_polls.py",
+   "rawPath": "data/raw/polling/electorate-polls-2026/newsroom-mt-albert-2026-10-01.html",
+   "resource": "newsroom-mt-albert-2026-10-01.html",
+   "retrievedAt": "2026-10-06T22:16:38Z",
+   "schemaVersion": 1,
+   "sha256": "68fdbf5c161fee9b69e5a6dd282aae54b144ed1b24d9873daeb0805658ec7897",
+   "url": "https://newsroom.co.nz/2026/10/01/mt-albert-and-the-unspoken-clash-of-the-campaign/"
+  }
+ ]
+}

@@ -14,13 +14,14 @@ from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file
 SCHEMA_VERSION = 2
 
 
-def live_slates(config):
+def live_slates(config, features=None, centred=None):
     """{seat: slate} for seats whose 2026 slate is complete, else {seat: reason}. The roster owner is Stage50."""
     if config['roster']['snapshotId'] is None:
         return {}, 'roster.snapshotId is pending (Stage50 final nominations)'
-    features = read(config['candidate']['features'])
-    centred = read(config['candidate']['centredFeatures'])['candidates']
-    complete = {s['targetElectorateId'] for s in features['seatRecords'] if s['slateComplete']}
+    features = read(config['candidate']['features']) if features is None else features
+    centred = (read(config['candidate']['centredFeatures']) if centred is None else centred)['candidates']
+    # General seats only: Maori seats come from the Maori layer, never from the general candidate model.
+    complete = {s['targetElectorateId'] for s in features['seatRecords'] if s['slateComplete'] and s['scope'] == 'general'}
     slates = {}
     for c in features['candidateRecords']:
         if c['targetElectorateId'] in complete and c['active']:

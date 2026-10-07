@@ -63,8 +63,9 @@ def contribution(record, center):
     return fsum(terms)
 
 
-def recentre(fit_value):
-    readiness = read(READINESS)
+def recentre(fit_value, readiness=None, source=READINESS):
+    """Recentre a Stage42-shaped feature file (the frozen one by default; Stage50 passes a refreshed roster's)."""
+    readiness = read(source) if readiness is None else readiness
     old = readiness['developmentCenterReference']['trainingOnlyMeans']
     new = fit_value['folds'][0]['trainingOnlyMeans']
     candidates = {}
@@ -77,7 +78,7 @@ def recentre(fit_value):
             values[name] = contribution(record, new[mean])
             values[name + 'SupportedWeight'] = record['supportedWeight']
         candidates[c['targetOccurrenceId']] = values
-    return {'stage': 75, 'source': READINESS, 'previousTrainingOnlyMeans': old, 'trainingOnlyMeans': new,
+    return {'stage': 75, 'source': source, 'previousTrainingOnlyMeans': old, 'trainingOnlyMeans': new,
             'fitId': fit_value['folds'][0]['fits'][METHOD]['fitId'],
             'rule': 'Stage42 weighted contribution recomputed from stored components with the live training-only means',
             'candidates': candidates}
