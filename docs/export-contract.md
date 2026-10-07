@@ -18,6 +18,21 @@ Unchanged: the archive layout and index (`ForecastIndexSchema`, still v1), the s
 - per-component calibration status;
 - replacing the fixed-`requiredSeats` government combinations with Stage65 dynamic-majority blocs.
 
+### v2 completion (7 October 2026, Stage74)
+
+Added before any v2 snapshot was published, so `schemaVersion` stays 2 ([stage74-nowcast-snapshot.md](stage74-nowcast-snapshot.md)):
+- `seatLayer`: `available` with the Stage65 summary over every simulated election, or `unavailable` with a reason. The summary holds:
+  - party, bloc and Parliament-size 50/80/90 seat intervals;
+  - seat and size distributions;
+  - qualification, lifeboat, overhang, majority and exact-half probabilities, each `{p, mcse, ess}` by batch means within national MCMC chains.
+
+  An available seat layer requires an MMP example allocation and no unavailable electorate.
+- `electorateDetail`: per predicted seat, the uncertainty class (`ordinary`, `exceptional` or `maori-layer`, D107) and per-candidate `meanShare`, 50/80/90 share intervals and `winProbability {p, mcse, ess}`. A model snapshot must give it for every predicted seat.
+- `directory.candidates[].partyLabel` (optional): the ballot-group key of a candidate whose party has no national group (`partyId` null).
+- `governmentOutcomes` stays empty for nowcasts. Blocs live in `seatLayer.summary.blocs`, defined by James.
+
+Still open: per-component calibration status (every probability is `uncalibrated`) and precision thresholds (Stage63).
+
 The v1 text below is the original Stage53 record.
 
 Authorized by the roadmap ([D082](../DECISIONS.md), item (d)). One question: can a single versioned export contract carry a forecast from polls through MMP to the website, with synthetic data kept out of real results? This fixes the boundary only. It fits nothing, changes no Python or statistical output, and produces no forecast. Everything run through it so far is invented.

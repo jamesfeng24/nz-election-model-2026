@@ -301,7 +301,7 @@ describe('summaries', () => {
     expect(a.probAnySeat.p).toBeCloseTo(2 / 3, 12);
     expect(a.probQualified.p).toBe(1);
     expect(a.probQualifiedByLifeboatOnly.p).toBe(0);
-    expect(a.seats).toEqual({ q05: 0, q25: 0, q50: 2, q75: 3, q95: 3 });
+    expect(a.seats).toEqual({ q05: 0, q10: 0, q25: 0, q50: 2, q75: 3, q90: 3, q95: 3 });
     expect(s.parliament).toMatchObject({ meanSize: 4, meanOverhang: 0 });
     expect(s.parliament.probAnyOverhang.p).toBe(0);
   });

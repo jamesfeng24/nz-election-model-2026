@@ -8,9 +8,10 @@ import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_config.validate import check_classification, check_config, ConfigError
 from . import general, maori, national, streams
-from .common import YEAR, OTHER, ROOT, read, require, digest, file_sha256, AssemblyError
+from .summaries import share_summaries
+from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file_sha256, AssemblyError
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 
 def live_slates(config):
@@ -23,7 +24,7 @@ def live_slates(config):
     for c in features['candidateRecords']:
         if c['targetElectorateId'] in complete and c['active']:
             slates.setdefault(c['targetElectorateId'], []).append(
-                {'id': c['targetOccurrenceId'], 'group': c['ballotGroupKey'],
+                {'id': c['targetOccurrenceId'], 'group': c['ballotGroupKey'], 'name': c['displayedName'],
                  'S': c['continuous']['S']['contribution'], 'R': c['continuous']['R']['contribution']})
     return slates, 'slate incomplete in the configured roster'
 
@@ -94,6 +95,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
             'draws': count, 'drawIds': draw_ids,
             'partyVote': {'groups': groups, 'otherBucket': OTHER, 'shares': draws.tolist()},
             'seats': seats,
+            'directory': directory(config, groups, frame, slates if classification is not None else {}, records),
             'diagnostics': {'reconciliation': reconciliation(config, groups, draws, keys, continuing, local_means)}}
 
 
@@ -112,9 +114,11 @@ def seat_result(seat):
     require(np.isfinite(q).all() and np.allclose(q.sum(axis=1), 1, atol=1e-9), f'{seat}: candidate shares do not close')
     winner = q.argmax(axis=1)
     return local.mean(axis=0), {'status': 'simulated', 'class': kind, 'multiplier': s['multipliers'][kind],
-                                'candidates': candidate['ids'],
+                                'candidates': candidate['ids'], 'candidateParty': candidate['partyOf'],
+                                'candidateShares': share_summaries(candidate['ids'], q),
                                 'winnerParty': [candidate['partyOf'][int(i)] for i in winner],
                                 'winnerCandidate': [candidate['ids'][int(i)] for i in winner]}
+
 
 
 def run_seats(state, seats, workers):
@@ -130,6 +134,29 @@ def run_seats(state, seats, workers):
             return pool.map(seat_result, seats, chunksize=1)
     finally:
         _STATE.clear()
+
+
+def directory(config, groups, frame, slates, records):
+    """Display directory for the export: national groups, the 71 electorates and the candidates of simulated seats.
+    A candidate whose party has no national group (a minor party inside Other) carries partyId null and its
+    ballot-group key in partyLabel, never an invented national share."""
+    names = {r['targetGroupKey']: r['registeredName'] for r in read(config['partyRelationships'])['records']}
+    display = config['national']['display']
+    require(set(display) == set(groups), 'national.display must name every national group')
+    parties = [{'partyId': g, 'name': config['national']['otherName'] if g == OTHER else names[g], 'abbreviation': display[g]}
+               for g in groups]
+    electorates = [{'electorateId': r['targetElectorateId'], 'name': r['canonicalName'], 'kind': r['scope']}
+                   for r in read(TARGET_FRAME)['records']]
+    require(sorted(e['electorateId'] for e in electorates) == sorted(frame['general'] | frame['maori']), 'target frame differs')
+    candidates = []
+    for seat, record in records.items():
+        if record['status'] != 'simulated':
+            continue
+        labels = record.get('candidateNames') or [c['name'] for c in slates[seat]]
+        for candidate, name, party in zip(record['candidates'], labels, record['candidateParty']):
+            candidates.append({'candidateId': candidate, 'name': name, 'electorateId': seat,
+                               'partyId': party if party in groups else None, 'partyLabel': party})
+    return {'parties': parties, 'electorates': electorates, 'candidates': candidates}
 
 
 def reconciliation(config, groups, draws, keys, continuing, local_means):

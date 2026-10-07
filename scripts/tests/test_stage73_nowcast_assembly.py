@@ -5,7 +5,7 @@ import copy
 import unittest
 import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
-from scripts.nowcast_assembly import assemble as A, general, maori, national, streams
+from scripts.nowcast_assembly import assemble as A, general, maori, national, streams, summaries
 from scripts.nowcast_assembly.common import CONFIG, OTHER, read, AssemblyError
 
 GENERAL = sorted(seat_frame()['general'])
@@ -20,7 +20,8 @@ def config():
 def synthetic_slates():
     """SYNTHETIC TEST FIXTURE: invented three-party slates plus an independent; never a real roster."""
     parties = ('nationalparty', 'labourparty', 'greenparty', None)
-    return {seat: [{'id': f'synthetic-{seat}-{i}', 'group': g, 'S': 0.0, 'R': 0.0} for i, g in enumerate(parties)]
+    return {seat: [{'id': f'synthetic-{seat}-{i}', 'group': g, 'name': f'Synthetic candidate {i}', 'S': 0.0, 'R': 0.0}
+                   for i, g in enumerate(parties)]
             for seat in GENERAL}
 
 
@@ -31,8 +32,15 @@ def synthetic_classification():
 
 def synthetic_maori():
     """SYNTHETIC TEST FIXTURE: invented Maori winners for all seven seats."""
-    return {seat: {'status': 'simulated', 'source': 'synthetic-test', 'candidates': ['synthetic-a', 'synthetic-b'],
-                   'winnerParty': ['tepatimaori' if d % 2 else 'labourparty' for d in range(COUNT)]} for seat in MAORI}
+    def record(seat):
+        ids = [f'synthetic-{seat}-a', f'synthetic-{seat}-b']
+        parties = ['labourparty', 'tepatimaori']
+        win = [d % 2 for d in range(COUNT)]
+        return {'status': 'simulated', 'class': 'maori-layer', 'source': 'synthetic-test', 'candidates': ids,
+                'candidateNames': ['Synthetic A', 'Synthetic B'], 'candidateParty': parties,
+                'candidateShares': summaries.share_summaries(ids, np.array([[0.6, 0.4] if w == 0 else [0.4, 0.6] for w in win])),
+                'winnerParty': [parties[w] for w in win], 'winnerCandidate': [ids[w] for w in win]}
+    return {seat: record(seat) for seat in MAORI}
 
 
 class National(unittest.TestCase):
@@ -120,6 +128,19 @@ class Bank(unittest.TestCase):
         classes = synthetic_classification()
         for seat in bank['seats'][:64]:
             self.assertEqual(seat['multiplier'], {'ordinary': 0.60, 'exceptional': 1.00}[classes[seat['electorateId']]])
+
+    def test_bank_carries_share_intervals_and_the_export_directory(self):
+        seat = self.bank['seats'][0]
+        self.assertEqual([c['candidateId'] for c in seat['candidateShares']], seat['candidates'])
+        for c in seat['candidateShares']:
+            levels = c['intervals']
+            self.assertEqual([v['level'] for v in levels], [0.5, 0.8, 0.9])
+            self.assertTrue(all(levels[i]['lower'] <= levels[i - 1]['lower'] and levels[i]['upper'] >= levels[i - 1]['upper'] for i in (1, 2)))
+        directory = self.bank['directory']
+        self.assertEqual(len(directory['electorates']), 71)
+        self.assertEqual([p['partyId'] for p in directory['parties']], self.bank['partyVote']['groups'])
+        independents = [c for c in directory['candidates'] if c['partyLabel'] is None]
+        self.assertTrue(independents and all(c['partyId'] is None for c in independents))
 
     def test_gate_refuses_synthetic_and_incomplete_banks(self):
         passed, checks = A.gate(self.bank, self.config)

@@ -39,6 +39,13 @@ describe('forecast export contract', () => {
     const asModel = (s: any) => {
       s.snapshotId = 'model-1'; s.provenance = { kind: 'model', modelVersion: 'm', codeRevision: 'r', configVersion: 'c' };
       s.mmp = { status: 'unavailable', reason: 'no allocator' };
+      s.electorateDetail = s.simulation.electoratePredictions.map((p: any) => ({
+        electorateId: p.electorateId, uncertaintyClass: 'ordinary',
+        candidates: p.candidates.map((c: any) => ({
+          candidateId: c.candidateId, meanShare: 0.5, winProbability: { p: c.winProbability, mcse: 0, ess: 1 },
+          share: [0.5, 0.8, 0.9].map(level => ({ lower: 0.4, median: 0.5, upper: 0.6, level, method: 'm' })),
+        })),
+      }));
     };
     const model = clone(base) as any; asModel(model);
     // Rename every id so only the remaining synthetic id under test can trigger the rule.
@@ -56,6 +63,14 @@ describe('forecast export contract', () => {
       expect(r.success).toBe(false);
       expect(JSON.stringify(r.error?.issues)).toMatch(/Synthetic id/);
     }
+  });
+  it('requires per-seat detail in a model snapshot and an MMP example with an available seat layer', () => {
+    const model = clone(base) as any;
+    model.snapshotId = 'model-1'; model.provenance = { kind: 'model', modelVersion: 'm', codeRevision: 'r', configVersion: 'c' };
+    model.mmp = { status: 'unavailable', reason: 'no allocator' };
+    const r = ForecastSnapshotSchema.safeParse(JSON.parse(JSON.stringify(model).replace(/"synthetic-([^"]*)"/g, '"real-$1"')));
+    expect(JSON.stringify(r.error?.issues)).toMatch(/uncertainty class and candidate-share intervals/);
+    reject(s => { s.electorateDetail = [{ electorateId: 'nope', uncertaintyClass: 'ordinary', candidates: [] }]; }, /too_small|detail/);
   });
   it('requires a national vote share for every directory party', () => {
     reject(s => { s.national.partyVoteShares.pop(); }, /no national vote share/);

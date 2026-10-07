@@ -253,7 +253,7 @@ export interface SeatSummaryState {
 }
 
 export interface Probability { p: number; mcse: number }
-export interface SeatQuantiles { q05: number; q25: number; q50: number; q75: number; q95: number }
+export interface SeatQuantiles { q05: number; q10: number; q25: number; q50: number; q75: number; q90: number; q95: number }
 export interface PartySeatSummary {
   partyId: string;
   meanSeats: number;
@@ -306,7 +306,8 @@ function histQuantile(h: Record<string, number>, n: number, q: number): number {
   return entries[entries.length - 1][0];
 }
 const quantiles = (h: Record<string, number>, n: number): SeatQuantiles => ({
-  q05: histQuantile(h, n, 0.05), q25: histQuantile(h, n, 0.25), q50: histQuantile(h, n, 0.5), q75: histQuantile(h, n, 0.75), q95: histQuantile(h, n, 0.95),
+  q05: histQuantile(h, n, 0.05), q10: histQuantile(h, n, 0.1), q25: histQuantile(h, n, 0.25), q50: histQuantile(h, n, 0.5),
+  q75: histQuantile(h, n, 0.75), q90: histQuantile(h, n, 0.9), q95: histQuantile(h, n, 0.95),
 });
 const prob = (count: number, n: number): Probability => { const p = count / n; return { p, mcse: Math.sqrt((p * (1 - p)) / n) }; };
 const distribution = (h: Record<string, number>, n: number) => Object.fromEntries(Object.entries(sortedHist(h)).map(([k, c]) => [k, c / n]));

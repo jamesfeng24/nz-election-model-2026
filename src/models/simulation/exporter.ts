@@ -34,6 +34,8 @@ export function buildSnapshot(config: SimulationConfig, inputs: PipelineInputs, 
     },
     simulation: output.result,
     unavailableElectorates: inputs.electorates.filter(e => !predicted.has(e.id)).map(e => ({ electorateId: e.id, reason: 'No candidate model for this electorate in this run' })),
+    electorateDetail: [],
+    seatLayer: { status: 'unavailable', reason: 'The in-browser pipeline has no Stage65 seat layer; nowcast snapshots are built from the draw bank' },
     mmp: output.exampleDrawAllocation ? { status: 'available', exampleDrawAllocation: output.exampleDrawAllocation } : { status: 'unavailable', reason: 'No MMP allocator supplied' },
     boundaries: meta.boundaries, limitations: meta.limitations,
   });
