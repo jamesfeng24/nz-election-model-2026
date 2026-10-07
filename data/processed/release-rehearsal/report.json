@@ -1,12 +1,12 @@
 {
   "asOf": "2026-10-07",
-  "bankDigest": "a7152860ab2b4359e066d0d1de99e147c0bb8c4cdb0b923143428fbab66427f2",
-  "configVersion": "2026-10-07.5",
+  "bankDigest": "1cdb450f251437e56b9772f76a5faab6a517cd188028f1c5241a0d9890933dcf",
+  "configVersion": "2026-10-07.7",
   "gate": {
     "checks": [
       {
         "check": "configComplete",
-        "detail": "pending fields must be filled before assembly: maori.unpolledSeats, mmp.blocs, mmp.rulesVersion, release.policyApprovedBy",
+        "detail": "pending fields must be filled before assembly: maori.unpolledSeats, mmp.rulesVersion, release.policyApprovedBy",
         "passed": false
       },
       {
@@ -63,12 +63,12 @@
   "nationalInput": {
     "dataCutoff": "2026-10-07",
     "modelStateAsOf": "2026-09-27",
-    "note": "Stage70 2026-10-07 refresh, applied in memory (not yet adopted)",
+    "note": "Stage70 2026-10-07 refresh, adopted into the config (#94)",
     "source": "data/processed/polling/weekly-refresh/2026-10-07/fit/attempt1.npz"
   },
   "provenance": "synthetic-fixture",
   "realInputsNotYetAvailable": [
-    "Stage69 voting-place notional baseline (not on main; the Stage64 population-flat baseline is used)"
+    "Stage69 voting-place notional baseline (merged as #96 but not adopted; adoption is James's decision; the configured Stage64 population-flat baseline is used)"
   ],
   "reconciliation": {
     "byGroup": {
@@ -123,6 +123,6 @@
     "official candidate list (Stage50 not yet run; announcements + invented Labour/independent rows)",
     "ordinary/exceptional classification (James has not entered it)",
     "winners for the four unpolled Maori seats (James has not chosen a fallback)",
-    "MMP rules-version label (placeholder) and blocs (none)"
+    "MMP rules-version label (placeholder; the blocs are the configured ones)"
   ]
 }

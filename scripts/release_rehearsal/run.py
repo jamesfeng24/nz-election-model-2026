@@ -6,7 +6,7 @@ Real inputs: the Stage70 2026-10-07 national refresh (lastDataSupport; adopted i
 the Stage75 candidate fit, the Stage66 Maori layer for the three polled seats, the 2026 frame. SYNTHETIC stand-ins
 (because the real inputs do not exist yet): the official candidate list (Stage50 stand-in: announcements plus
 invented Labour and independent candidates), the D107 classification, and winners for the four unpolled Maori seats.
-The Stage69 baseline is not on main and is not used.
+The Stage69 baseline (merged, not adopted) is not used.
 
 Writes the bank and the rehearsal publication inputs under the gitignored `.release-build/rehearsal/` only (never
 `public/`), and a deterministic report `data/processed/release-rehearsal/report.json` (no timings).
@@ -29,7 +29,7 @@ STAND_INS = ['official candidate list (Stage50 not yet run; announcements + inve
              'ordinary/exceptional classification (James has not entered it)',
              'winners for the four unpolled Maori seats (James has not chosen a fallback)',
              'MMP rules-version label (placeholder; the blocs are the configured ones)']
-NOT_USED = ['Stage69 voting-place notional baseline (not on main; the Stage64 population-flat baseline is used)']
+NOT_USED = ["Stage69 voting-place notional baseline (merged as #96 but not adopted; adoption is James's decision; the configured Stage64 population-flat baseline is used)"]
 STAGE70 = 'data/processed/polling/weekly-refresh/2026-10-07/estimate.json'
 
 

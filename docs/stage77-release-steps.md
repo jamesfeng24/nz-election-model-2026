@@ -46,7 +46,7 @@ James ruled out a separate "not decisive" output: with at most one plausible ind
 ## Rehearsal (7 October 2026)
 
 **Real inputs:**
-- the Stage70 2026-10-07 national refresh (`lastDataSupport`, week of 27 September, polls to 7 October), applied in memory: adoption into the config is the coordinator's separate step;
+- the Stage70 2026-10-07 national refresh (`lastDataSupport`, week of 27 September, polls to 7 October), adopted into the config by #94;
 - the Stage64 population-flat baseline;
 - the Stage72 scales and D107 multipliers;
 - the Stage75 candidate fit;
@@ -57,24 +57,24 @@ James ruled out a separate "not decisive" output: with at most one plausible ind
 - the official candidate list: Stage50's in-memory stand-in, the announcements plus invented Labour and independent candidates;
 - the classification: every eighth general seat exceptional, not a judgement;
 - winners for the four unpolled Māori seats;
-- the MMP rules label (placeholder) and blocs (none).
+- the MMP rules label (placeholder). The blocs and hung-parliament scenarios are James's configured ones.
 
-**Not available:** the Stage69 voting-place baseline (not on main).
+**Not used:** the Stage69 voting-place baseline (merged as #96 but not adopted; adoption is a one-pointer decision for James).
 
 **Results:**
 - 65,536 rows; 71 of 71 seats simulated.
 - Python gate: every structural check passes, including `nationalReconciliation` (maximum gap 0.373pp against 1.0pp). It fails only `configComplete` (pending: Māori unpolled seats, blocs, rules version, release-policy approval) and `provenanceLive` (synthetic), as it should. No staleness labels at 7 October.
-- Bank 10.4 MB; digest `a7152860ab2b4359…`.
-- TypeScript release (rehearsal mode, MCSE limit 0.01): published to `.release-build/rehearsal/archive/` and read back by the site loader. The snapshot is 0.63 MB with 378 published probabilities.
+- Bank 10.4 MB; digest `1cdb450f251437e5…` (config 2026-10-07.7).
+- TypeScript release (rehearsal mode, MCSE limit 0.01): published to `.release-build/rehearsal/archive/` and read back by the site loader. The snapshot is 0.63 MB with 390 published probabilities, including the four blocs and the four hung-parliament scenarios.
   - The largest MCSE is 0.0051: Opportunity qualifying by party vote, a national-driven quantity with ESS about 2,900, near the national-bank floor.
   - Among probabilities between 0.05 and 0.95, the minimum ESS is about 2,900 and the median is above the row count. Seat outcomes from scrambled quasi-random layer noise can be negatively correlated within a batch, so batch means can show ESS > n.
-- Runtime: 31 minutes on 4 cores (about 118 CPU minutes) for the whole chain at production size, including the Stage76 speed-up; publishing takes 7 seconds.
+- Runtime: 31.5 minutes on 4 cores (about 2 CPU hours) for the whole chain at production size, including the Stage76 speed-up; publishing takes 7 seconds.
 
 No rehearsal figure describes 2026 seat outcomes: the candidates, classification and four Māori seats are invented.
 
 ## Limits and not done
 
-- No real release: it waits on the official roster (Stage50 part 2), James's classification, unpolled-Māori, bloc, rules-version and release-policy decisions, and the Stage69 baseline.
+- No real release: it waits on the official roster (Stage50 part 2); James's classification, unpolled-Māori, rules-version and release-policy decisions; and James's decision on adopting the Stage69 baseline.
 - No UI for the new export fields.
 - No adoption of the Stage70 refresh into the config (the coordinator's step).
 - The release settings are proposals.

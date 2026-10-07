@@ -1,5 +1,5 @@
 {
-  "bankDigest": "10287fa342b3125e102498e58b597b0a84ba553a80392eb969125a9f1ddb2d45",
+  "bankDigest": "7f336d1802a829e5332b0bc6b3b9f566610e2172b6412b7bef06e1d9a54c57df",
   "blockers": [
     {
       "electorateIds": [
@@ -85,7 +85,7 @@
   "checks": [
     {
       "check": "configComplete",
-      "detail": "pending fields must be filled before assembly: maori.unpolledSeats, mmp.blocs, mmp.rulesVersion, release.policyApprovedBy, roster.snapshotId",
+      "detail": "pending fields must be filled before assembly: maori.unpolledSeats, mmp.rulesVersion, release.policyApprovedBy, roster.snapshotId",
       "passed": false
     },
     {
@@ -134,7 +134,7 @@
       "passed": true
     }
   ],
-  "configVersion": "2026-10-07.6",
+  "configVersion": "2026-10-07.7",
   "diagnostics": {
     "reconciliation": {
       "byGroup": {
