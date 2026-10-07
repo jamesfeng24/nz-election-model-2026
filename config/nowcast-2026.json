@@ -35,8 +35,8 @@
     "extraSdOnExceptionalRequiresOptIn": true
   },
   "baseline": {
-    "source": "data/processed/forecast-transport/party-construction.json",
-    "status": "population-flat Stage41/64 scenario; replaced by the Stage69 notionals once adopted (one pointer change)"
+    "source": "data/processed/voting-place-notionals/baseline-party-vectors.json",
+    "status": "Stage69 voting-place notionals (D103), adopted 2026-10-07; previous source data/processed/forecast-transport/party-construction.json (Stage41/64 population-flat)"
   },
   "intervalLevels": [0.5, 0.8, 0.9],
   "primaryIntervalLevel": 0.8,

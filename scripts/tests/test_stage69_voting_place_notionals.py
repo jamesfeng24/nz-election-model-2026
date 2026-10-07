@@ -129,6 +129,18 @@ def without_draws(value):
     return value
 
 
+class Tolerance(unittest.TestCase):
+    def test_rational_shares_are_compared_by_value_not_by_integers(self):
+        from fractions import Fraction
+        share = 0.08917942002402485
+        a = Fraction(share).limit_denominator(10 ** 15)
+        b = Fraction(share * (1 + 2 ** -52)).limit_denominator(10 ** 15)
+        self.assertNotEqual(a, b)  # one last-bit float difference changes both integers
+        pair = lambda f: {'numerator': f.numerator, 'denominator': f.denominator}
+        self.assertTrue(equivalent({'x': pair(a)}, {'x': pair(b)}))
+        self.assertFalse(equivalent({'x': {'numerator': 1, 'denominator': 2}}, {'x': {'numerator': 2, 'denominator': 3}}))
+
+
 class SavedArtifacts(unittest.TestCase):
     """The committed outputs, pinned to their inputs and code, and the pre-registered checks they record."""
 
