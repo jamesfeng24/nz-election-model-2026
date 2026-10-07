@@ -19,13 +19,15 @@ def live_slates(config):
     if config['roster']['snapshotId'] is None:
         return {}, 'roster.snapshotId is pending (Stage50 final nominations)'
     features = read(config['candidate']['features'])
+    centred = read(config['candidate']['centredFeatures'])['candidates']
     complete = {s['targetElectorateId'] for s in features['seatRecords'] if s['slateComplete']}
     slates = {}
     for c in features['candidateRecords']:
         if c['targetElectorateId'] in complete and c['active']:
+            value = centred[c['targetOccurrenceId']]
             slates.setdefault(c['targetElectorateId'], []).append(
                 {'id': c['targetOccurrenceId'], 'group': c['ballotGroupKey'], 'name': c['displayedName'],
-                 'S': c['continuous']['S']['contribution'], 'R': c['continuous']['R']['contribution']})
+                 'S': value['S'], 'R': value['R']})
     return slates, 'slate incomplete in the configured roster'
 
 

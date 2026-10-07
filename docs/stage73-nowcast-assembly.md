@@ -53,7 +53,7 @@ The gate checks:
 
 ## Decisions, limits and things not done
 
-- **Candidate mean parameters.** No S+R joint fit includes 2023 in its training. The config points at the latest saved fold (`primary`, target 2023, trained 2014–2020, fit `aca80252…`), which matches the feature centring Stage42 used for the 2026 features. A refit including 2023 was not made: it would be a new estimate with new centring, so it is a separate question.
+- **Candidate mean parameters.** *Superseded by Stage75 (7 October 2026).* Stage73 first pointed at the latest saved fold (`primary`, target 2023, trained on the 2011–2020 contests, fit `aca80252…`), which left out 2023. Stage75 refits the same design on every completed election and recentres the 2026 features, and the config now points there ([stage75-candidate-fit-2023.md](stage75-candidate-fit-2023.md)).
 - **Runtime.** The frozen Stage47 within-remainder location solve dominates: about 35ms per draw per general seat on one core. At 8,192 draws that is about 5 hours single-core, so production runs need workers. Precision (Stage63) sets the draw count.
 - **Not done:**
   - no snapshot or forecast;

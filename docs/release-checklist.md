@@ -8,6 +8,7 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 |---|---|---|---|
 | 1 | Decisions recorded: nowcast estimand (D106), 0.60/1.00 policy (D107) | — | done (this reconciliation) |
 | 2 | 2026 candidate and local-party scales computed with the frozen Stage45 rule over 2014–2023 | — | done (Stage72) |
+| 2a | Candidate-mean (S+R) fit trained on every completed election, 2026 features recentred | — | done (Stage75) |
 | 3 | `config/nowcast-2026.json` as the single live configuration (spec §8) | 2 | done (Stage72); pending fields listed in the file |
 | 4 | 2026 ordinary/exceptional classification for all 64 general seats, dated and sourced; a missing seat fails the build | James | schema and validator done (Stage72); draft proposal for James in [general-seat-classification-2026-draft.md](general-seat-classification-2026-draft.md); entries open |
 | 5 | Canonical final roster after nominations close; rebuild S/R destinations, Māori poll-to-candidate matching, export directory and MMP expected electorates from it | Stage50 (after 8 Oct, 12:00 NZDT) | waiting |

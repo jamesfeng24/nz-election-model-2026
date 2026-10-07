@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-07.3",
+  "configVersion": "2026-10-07.4",
   "decisions": ["D106", "D107"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
@@ -23,9 +23,10 @@
   "partyRelationships": "data/processed/forecast-readiness/snapshots/2026-10-05/party-relationships.json",
   "candidate": {
     "features": "data/processed/continuous-transport/readiness-2026.json",
-    "parameters": "data/processed/models/joint-candidate-share/construction.json",
-    "fold": {"branch": "primary", "targetYear": 2023, "method": "baseline_plus_S_plus_R"},
-    "status": "latest saved S+R joint fit, matching the Stage42 2026 feature centring; no refit including 2023 has been made"
+    "centredFeatures": "data/processed/candidate-fit-2026/features-2026.json",
+    "parameters": "data/processed/candidate-fit-2026/fit.json",
+    "fold": {"branch": "live_all_elections", "targetYear": 2026, "method": "baseline_plus_S_plus_R"},
+    "status": "Stage75: the Stage33 S+R design refitted on every completed election (2011-2023 targets); 2026 features recentred on its training-only means"
   },
   "uncertainty": {
     "scales": "data/processed/nowcast-config/scales-2026.json",
