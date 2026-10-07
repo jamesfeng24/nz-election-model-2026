@@ -12,6 +12,7 @@ import math
 import numpy as np
 
 from scripts.electorate_baseline.build import nfc, third_party
+from scripts.electorate_baseline.common import PREFIX as STAGE64_PREFIX, SHEET as TALLY
 
 from . import engine
 from .common import (CSV_2023, GEOCODE_RAW, GEOMETRY_2020, GEOMETRY_2025, PREFIX, ROOT, arguments, digest, read, save)
@@ -27,9 +28,8 @@ NAT, LAB = 'National Party', 'Labour Party'
 MAIN = [NAT, LAB, 'Green Party', 'ACT New Zealand', 'New Zealand First Party', 'The Opportunities Party (TOP)', 'Te Pāti Māori']
 PARTY_FILE = CSV_2023 + 'party-votes-by-voting-place-%d.csv'
 ELECTORATE_PARTY_FILE = CSV_2023 + 'votes-for-registered-parties-by-electorate.csv'
-REGISTER = 'data/processed/electorate-baseline/register.json'
+REGISTER = STAGE64_PREFIX + '/register.json'
 ELECTION_2023 = 'data/processed/elections/2023.json'
-TALLY = 'data/raw/electorate-baseline/2026-10-06/tallyroom-nz-2025-redistribution-notional.csv'
 MATERIAL_MARGIN, MATERIAL_LOG, EXACT_TOLERANCE = 2.0, 0.10, 1e-6
 PARTY_ALIASES = {'Leighton Baker Party': 'Leighton Baker', 'New Zealand Loyal': 'NZ Loyal'}
 
