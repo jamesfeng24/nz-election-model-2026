@@ -1,0 +1,131 @@
+name: Poll refresh
+# Weekly national poll refresh (Stage70), independent of any Claude session. Opens one pull request per refresh; never merges, never pushes to main.
+# Schedule: GitHub cron is UTC. Thursday 06:55 NZDT (UTC+13, in force until 4 April 2027) is Wednesday 17:55 UTC. The refresh ends before election day
+# (7 November 2026, inside NZDT), so no winter-time (NZST) adjustment is ever needed. Runs may start a few minutes late.
+on:
+  schedule:
+    - cron: '55 17 * * 3'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Run date (NZ civil date, also the poll cutoff). Empty means today in Pacific/Auckland.'
+        required: false
+        type: string
+concurrency:
+  group: poll-refresh
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      REFRESH_TOKEN: ${{ secrets.POLL_REFRESH_TOKEN }}
+      GH_TOKEN: ${{ secrets.POLL_REFRESH_TOKEN || github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          token: ${{ secrets.POLL_REFRESH_TOKEN || github.token }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Decide the run date
+        id: when
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+        run: |
+          day="${INPUT_DATE:-$(python3 -m scripts.polling.refresh_workflow.helper nz-date)}"
+          echo "date=$day" >> "$GITHUB_OUTPUT"
+          if python3 -m scripts.polling.refresh_workflow.helper active --date "$day"; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::The weekly refresh ends before election day (7 November 2026); nothing to do for $day."
+          fi
+      - name: Refuse to duplicate an open refresh or an existing branch
+        if: steps.when.outputs.run == 'true'
+        env:
+          DAY: ${{ steps.when.outputs.date }}
+        run: |
+          if git ls-remote --exit-code --heads origin "routine/poll-refresh-$DAY" >/dev/null 2>&1; then
+            echo "::error::Branch routine/poll-refresh-$DAY already exists. Close or merge its pull request and delete the branch before rerunning."; exit 1
+          fi
+          open=$(gh pr list --state open --json number,headRefName --jq '[.[] | select(.headRefName | startswith("routine/poll-refresh-"))] | map(.number) | join(",")')
+          if [ -n "$open" ]; then
+            echo "::error::A weekly refresh pull request is still open (#$open). Merge or close it first: a new run starts from main and would repeat its polls."; exit 1
+          fi
+      - name: Build the pinned environment
+        if: steps.when.outputs.run == 'true'
+        run: |
+          python3 -m venv .venv-external
+          .venv-external/bin/pip install --quiet -r requirements-external.lock
+      - name: Run the refresh
+        id: refresh
+        if: steps.when.outputs.run == 'true'
+        env:
+          DAY: ${{ steps.when.outputs.date }}
+        run: |
+          set +e
+          .venv-external/bin/python -m scripts.polling.weekly_refresh.run --date "$DAY" 2>&1 | tee "$RUNNER_TEMP/refresh.log"
+          code=${PIPESTATUS[0]}
+          set -e
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" = 0 ] && grep -q '^NO_NEW_POLLS' "$RUNNER_TEMP/refresh.log"; then outcome=none
+          elif [ "$code" = 0 ] && grep -q '^PUBLISHED' "$RUNNER_TEMP/refresh.log"; then outcome=published
+          elif [ "$code" = 2 ] || [ "$code" = 3 ]; then outcome=blocked
+          else outcome=failed; fi
+          echo "outcome=$outcome" >> "$GITHUB_OUTPUT"
+          echo "Refresh exit code $code, outcome $outcome"
+          if [ "$outcome" = none ]; then echo "::notice::NO_NEW_POLLS for $DAY; no pull request."; fi
+          if [ "$outcome" = failed ]; then echo "::error::The refresh failed without a publish or block verdict (exit $code); see the log. No pull request."; exit 1; fi
+      - name: Run the runbook checks (published runs)
+        id: checks
+        if: steps.refresh.outputs.outcome == 'published'
+        run: |
+          checks="$RUNNER_TEMP/checks.md"; : > "$checks"; ok=true
+          run_check() {
+            if "$@" > "$RUNNER_TEMP/check.out" 2>&1; then echo "- \`${*#.venv-external/bin/}\`: ok" >> "$checks"
+            else echo "- \`${*#.venv-external/bin/}\`: **FAILED**" >> "$checks"; cat "$RUNNER_TEMP/check.out"; ok=false; fi
+          }
+          run_check .venv-external/bin/python -m scripts.polling.weekly_refresh.run --check
+          run_check .venv-external/bin/python -m unittest scripts.tests.test_weekly_refresh
+          run_check .venv-external/bin/python -m scripts.fold_doc_fragments --check
+          cat "$checks"
+          echo "ok=$ok" >> "$GITHUB_OUTPUT"
+          # A failed check does not discard the run: the pull request is opened as a draft with the failure listed.
+      - name: Commit, push and open the pull request
+        if: steps.refresh.outputs.outcome == 'published' || steps.refresh.outputs.outcome == 'blocked'
+        env:
+          DAY: ${{ steps.when.outputs.date }}
+          OUTCOME: ${{ steps.refresh.outputs.outcome }}
+          CHECKS_OK: ${{ steps.checks.outputs.ok }}
+        run: |
+          py=.venv-external/bin/python
+          [ -f "$RUNNER_TEMP/checks.md" ] || echo "- Not run: the refresh was blocked, so no estimate exists to check." > "$RUNNER_TEMP/checks.md"
+          $py -m scripts.polling.refresh_workflow.helper check-changes --date "$DAY" --outcome "$OUTCOME"
+          mode=builtin; [ -n "$REFRESH_TOKEN" ] && mode=pat
+          if [ "$OUTCOME" = published ]; then
+            git add "data/raw/polling/weekly-refresh/$DAY" "data/processed/polling/weekly-refresh/$DAY" data/processed/polling/weekly-refresh/index.json "handoff.d/$DAY-poll-refresh.md"
+          else
+            git add "data/raw/polling/weekly-refresh/$DAY" "data/processed/polling/weekly-refresh/$DAY/blocked.json" "data/processed/polling/weekly-refresh/$DAY/review.json"
+          fi
+          $py -m scripts.polling.refresh_workflow.helper pr-body --date "$DAY" --outcome "$OUTCOME" --checks "$RUNNER_TEMP/checks.md" --token-mode "$mode" > "$RUNNER_TEMP/pr.txt"
+          title=$(head -n 1 "$RUNNER_TEMP/pr.txt"); tail -n +2 "$RUNNER_TEMP/pr.txt" > "$RUNNER_TEMP/pr-body.md"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="routine/poll-refresh-$DAY"
+          git switch -c "$branch"
+          git commit -q -m "$title"
+          git push -u origin "$branch"
+          draft=(); [ "$CHECKS_OK" = false ] && draft=(--draft)
+          if ! url=$(gh pr create --base main --head "$branch" --title "$title" --body-file "$RUNNER_TEMP/pr-body.md" "${draft[@]}"); then
+            echo "::error::The branch $branch was pushed but the pull request could not be created. With the built-in token, enable Settings > Actions > General > 'Allow GitHub Actions to create and approve pull requests', or add the POLL_REFRESH_TOKEN secret."; exit 1
+          fi
+          echo "Opened $url"
+          gh pr edit "$url" --add-assignee "${{ github.repository_owner }}" || true
+          if [ "$OUTCOME" = blocked ]; then echo "::warning::The refresh was blocked; see $url"; fi
+          if [ "$CHECKS_OK" = false ]; then echo "::error::A post-refresh check failed; the pull request $url is a draft. See the check output above."; exit 1; fi

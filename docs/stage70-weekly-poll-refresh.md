@@ -31,7 +31,7 @@ If the table is unchanged (no new row, no blocker) the run removes its capture d
 
 ## Routine runbook (what the weekly session does)
 
-Fires **Thursdays 06:55 Pacific/Auckland** (after the Monday–Wednesday releases of 1News–Verian, RNZ–Reid Research, Roy Morgan and Curia are on Wikipedia; the NZ morning leaves the coordinator the day to review). Routine `trig_01LB91p9NumjAUQjJB6QKdVs` ("Weekly NZ poll refresh", cron `CRON_TZ=Pacific/Auckland 55 6 * * 4`). The project is private, so the platform does not allow a fresh session per firing: the routine wakes this Stage70 thread's own session each week, with a prompt that assumes a possibly fresh container and starts from the repository. Before the Stage70 pull request is merged it replies that it is waiting and does nothing. Steps:
+Fires **Thursdays 06:55 Pacific/Auckland** (after the Monday–Wednesday releases of 1News–Verian, RNZ–Reid Research, Roy Morgan and Curia are on Wikipedia; the NZ morning leaves the coordinator the day to review). Routine `trig_01LB91p9NumjAUQjJB6QKdVs` (superseded by the scheduled GitHub Actions workflow below once that merges; "Weekly NZ poll refresh", cron `CRON_TZ=Pacific/Auckland 55 6 * * 4`). The project is private, so the platform does not allow a fresh session per firing: the routine wakes this Stage70 thread's own session each week, with a prompt that assumes a possibly fresh container and starts from the repository. Before the Stage70 pull request is merged it replies that it is waiting and does nothing. Steps:
 
 1. Branch `routine/poll-refresh-<NZ date>` from the latest `main`. Read AGENTS.md and this document.
 2. Build `.venv-external`, run the command above, and read the log.
@@ -41,6 +41,31 @@ Fires **Thursdays 06:55 Pacific/Auckland** (after the Monday–Wednesday release
 6. Never edit an earlier run, `data/sources.json`, Stage59 or Stage62 files, or the shared handoff documents; never rerun other stages.
 
 After 5 November the routine's runs are refused by the election-day guard; disable the routine then.
+
+## Scheduled GitHub Actions workflow (D113, 2026-10-07)
+
+James asked for the weekly refresh to run without any Claude session, so `.github/workflows/poll-refresh.yml` ("Poll refresh") now reproduces the routine runbook above on a GitHub schedule. The Claude routine `trig_01LB91p9NumjAUQjJB6QKdVs` is disabled by the coordinator after this workflow merges; the two must not both run. No statistical, Verify, selector or registry file changed.
+
+**Trigger.** `cron: '55 17 * * 3'` (GitHub cron is UTC) and `workflow_dispatch` with an optional `date` input (NZ civil date, also the poll cutoff; empty means today in Pacific/Auckland). Wednesday 17:55 UTC is **Thursday 06:55 NZDT** (UTC+13), which is in force for every remaining refresh date (8, 15, 22, 29 October and 5 November); NZST (UTC+12) does not return until April 2027, after the refresh has ended, so the cron is not adjusted for it. GitHub may start a scheduled run some minutes late. The workflow never runs on `pull_request` or `push`. From 7 November 2026 (the existing election-day stop in `scripts/polling/weekly_refresh/common.py`, unchanged) a scheduled run exits cleanly with a notice instead of failing; the 5 November run is the last one.
+
+**Steps.** Checkout of the latest `main`; Python 3.12; refuses (red run) if a `routine/poll-refresh-<date>` branch exists or any refresh pull request is still open, because a new run starts from `main` and would repeat the unmerged polls; `.venv-external` from `requirements-external.lock`; `python -m scripts.polling.weekly_refresh.run --date <date>` (job timeout 120 minutes, the fit takes about 15 to 35 minutes on the four-core hosted runner). Outcome by exit status and log line:
+
+| Outcome | Workflow does |
+|---|---|
+| `NO_NEW_POLLS` (exit 0) | Notice in the run log; no branch, no pull request. |
+| `PUBLISHED` (exit 0) | Runs `run --check`, `unittest scripts.tests.test_weekly_refresh` and `fold_doc_fragments --check`; refuses to continue if anything outside the allowed paths changed; commits the raw capture, the dated run directory, `index.json` and the fragment to `routine/poll-refresh-<date>`; opens one pull request "Polls: weekly national poll refresh <date>" with the sections `Scope`, `Changes and limits`, `Local validation`, `CI and boundaries` and `Final published head and hosted validation` (new polls, headline estimate and change, review flags, gate results, the check results). If a check fails the pull request is opened as a **draft** with the failure listed and the run ends red. |
+| Blocked (exit 2 or 3) | Commits the raw capture, `blocked.json` and `review.json` and opens "Polls: weekly refresh <date> blocked (<reason>)" naming each blocker. |
+| Any other failure (network, exception) | Red run, no pull request; nothing is pushed. A failed scheduled run emails the repository owner. |
+
+It never merges, never pushes to `main`, never edits an earlier run, `data/sources.json`, Stage59 or Stage62 files or the shared handoff documents, and never edits `config/nowcast-2026.json` (adoption stays a separate reviewed pull request). The PR-body, change-guard and election-day logic is in `scripts/polling/refresh_workflow/helper.py` (a new directory, so the `weekly_refresh` code hashes recorded in each run's input contract are unchanged), tested by `scripts/tests/test_weekly_refresh_workflow.py`.
+
+**Token (setup for James, one time).** A pull request opened with the built-in `GITHUB_TOKEN` does not start Verify, so the workflow uses a repository secret named **`POLL_REFRESH_TOKEN`** when it exists:
+
+1. GitHub, Settings, Developer settings, Personal access tokens, **Fine-grained tokens**, Generate new token. Resource owner `jamesfeng24`; Repository access, **Only select repositories**, `nz-election-model-2026`; Repository permissions **Contents: Read and write** and **Pull requests: Read and write** (Metadata is added automatically); no other permissions. Set the expiry after 7 November 2026 (the refresh ends on 5 November), for example 60 days.
+2. Repository `nz-election-model-2026`, Settings, Secrets and variables, Actions, **New repository secret**: name `POLL_REFRESH_TOKEN`, value the token.
+3. After this workflow is merged, run Actions, Poll refresh, Run workflow once (it is the first real test; with no new polls it ends in `NO_NEW_POLLS` with no pull request).
+
+Without the secret the workflow falls back to `GITHUB_TOKEN`: it works only if Settings, Actions, General, Workflow permissions has **Allow GitHub Actions to create and approve pull requests** ticked, and the pull request body then says plainly that CI must be started manually (close and reopen the pull request once on the GitHub page). A GitHub App token would also work but is not wired in.
 
 ## Limits
 
