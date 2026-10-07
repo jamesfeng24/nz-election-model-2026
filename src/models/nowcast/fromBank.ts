@@ -102,12 +102,17 @@ function hungScenarios(config: SeatLayerConfig, hung: HungParliament,
   const k = hung.kingmaker;
   if (k) {
     if (!config.listedPartyIds.includes(k) || a.partyIds.includes(k) || b.partyIds.includes(k)) throw new RangeError('Kingmaker must be a listed party outside both blocs');
-    const decisive = (o: SeatDrawOutcome) => isHung(o) && (majority(o, [...a.partyIds, k]) || majority(o, [...b.partyIds, k]));
+    const withA = (o: SeatDrawOutcome) => isHung(o) && majority(o, [...a.partyIds, k]);
+    const withB = (o: SeatDrawOutcome) => isHung(o) && majority(o, [...b.partyIds, k]);
+    // James (2026-10-07): only the cases where the kingmaker decides are reported; hung with neither side able to
+    // reach a majority even with the kingmaker is the remainder of `hung` and is not a separate output.
     out.push(
-      { id: `hung-${k}-kingmaker`, label: `Hung parliament, ${k} kingmaker`,
-        definition: `Hung, and adding ${k}'s seats to ${a.label} or ${b.label} gives it a majority`, probability: flag(decisive) },
-      { id: `hung-${k}-not-decisive`, label: `Hung parliament, ${k} not decisive`,
-        definition: `Hung, and ${k}'s seats give neither ${a.label} nor ${b.label} a majority`, probability: flag(o => isHung(o) && !decisive(o)) });
+      { id: `hung-${k}-kingmaker`, label: `Hung parliament, ${k} kingmaker (either side)`,
+        definition: `Hung, and adding ${k}'s seats gives either ${a.label} or ${b.label} a majority`, probability: flag(o => withA(o) && withB(o)) },
+      { id: `hung-${k}-${a.id}-only`, label: `Hung parliament, only ${a.label} with ${k}`,
+        definition: `Hung; ${a.label} plus ${k} is a majority, ${b.label} plus ${k} is not`, probability: flag(o => withA(o) && !withB(o)) },
+      { id: `hung-${k}-${b.id}-only`, label: `Hung parliament, only ${b.label} with ${k}`,
+        definition: `Hung; ${b.label} plus ${k} is a majority, ${a.label} plus ${k} is not`, probability: flag(o => withB(o) && !withA(o)) });
   }
   return out;
 }

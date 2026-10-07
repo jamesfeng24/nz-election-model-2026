@@ -71,7 +71,7 @@
       {"id": "lab-grn-tpm", "label": "LAB+GRN+TPM", "partyIds": ["labourparty", "greenparty", "tepatimaori"]}
     ],
     "hungParliament": {"blocs": ["nat-act-nzf", "lab-grn-tpm"], "kingmaker": "opportunity",
-                       "definition": "Hung: neither NAT+ACT+NZF nor LAB+GRN+TPM holds a majority of that draw's Parliament. TOP kingmaker: hung, and adding TOP's seats to at least one of the two gives it a majority. Hung, TOP not decisive: hung and TOP cannot."},
+                       "definition": "Hung: neither NAT+ACT+NZF nor LAB+GRN+TPM holds a majority of that draw's Parliament. TOP kingmaker: hung, and TOP's seats give either side a majority. Only NAT+ACT+NZF with TOP / only LAB+GRN+TPM with TOP: hung, and TOP's seats give that side but not the other a majority. Hung with neither side reaching a majority even with TOP is the remainder of hung and is not reported separately (James, 2026-10-07)."},
     "decidedBy": "James, 2026-10-07"
   },
   "maori": {"layer": "stage66-default", "unpolledSeats": null}

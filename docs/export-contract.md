@@ -32,8 +32,10 @@ Added before any v2 snapshot was published, so `schemaVersion` stays 2 ([stage74
 - `governmentOutcomes` stays empty for nowcasts. Blocs live in `seatLayer.summary.blocs`, defined by James.
 - `seatLayer.summary.scenarios` (Stage77): named seat-arithmetic outcomes over the configured blocs, each `{id, label, definition, probability {p, mcse, ess}}`. James's configuration (`config/nowcast-2026.json` `mmp.hungParliament`) gives three:
   - `hung`: neither NAT+ACT+NZF nor LAB+GRN+TPM has a majority;
-  - `hung-opportunity-kingmaker`: hung, and TOP's seats make one of them a majority;
-  - `hung-opportunity-not-decisive`: hung, and TOP's seats do not.
+  - `hung-opportunity-kingmaker`: hung, and TOP's seats give either side a majority;
+  - `hung-opportunity-nat-act-nzf-only` and `hung-opportunity-lab-grn-tpm-only`: hung, and TOP's seats give only that side a majority.
+
+  Hung with neither side reaching a majority even with TOP is the remainder of `hung`, not a separate output (James).
 
   These are scenarios of seat arithmetic, not predictions of coalition agreements.
 

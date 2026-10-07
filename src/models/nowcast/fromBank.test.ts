@@ -136,9 +136,10 @@ describe('nowcast snapshot from a draw bank', () => {
         blocs: config.mmp.blocs, hungParliament: config.mmp.hungParliament } }));
     if (s.seatLayer.status !== 'available') throw new Error('seat layer expected');
     expect(s.seatLayer.summary.blocs.map(b => b.label)).toEqual(['NAT+ACT', 'NAT+ACT+NZF', 'LAB+GRN', 'LAB+GRN+TPM']);
-    const [hung, kingmaker, other] = s.seatLayer.summary.scenarios.map(x => x.probability.p);
-    expect(s.seatLayer.summary.scenarios.map(x => x.id)).toEqual(['hung', 'hung-opportunity-kingmaker', 'hung-opportunity-not-decisive']);
-    expect(kingmaker + other).toBeCloseTo(hung, 12);
+    const [hung, either, rightOnly, leftOnly] = s.seatLayer.summary.scenarios.map(x => x.probability.p);
+    expect(s.seatLayer.summary.scenarios.map(x => x.id)).toEqual(['hung', 'hung-opportunity-kingmaker',
+      'hung-opportunity-nat-act-nzf-only', 'hung-opportunity-lab-grn-tpm-only']);
+    expect(either + rightOnly + leftOnly).toBeLessThanOrEqual(hung + 1e-12);
     const right = s.seatLayer.summary.blocs[1].probMajority.p, left = s.seatLayer.summary.blocs[3].probMajority.p;
     expect(hung).toBeGreaterThanOrEqual(1 - right - left - 1e-12);
     await expect(buildNowcastSnapshot(pythonBank, options({ electionId: 'nz-general-2026',

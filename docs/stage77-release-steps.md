@@ -38,10 +38,10 @@ Authorized by James on 2026-10-07. The coordinator's notes are applied:
 
 `mmp.hungParliament` adds three scenarios, each with batch-means MCSE (`seatLayer.summary.scenarios`):
 - **hung:** neither NAT+ACT+NZF nor LAB+GRN+TPM has a majority;
-- **TOP kingmaker:** hung, and adding TOP's seats to either gives it a majority;
-- **hung, TOP not decisive:** hung, and TOP's seats give neither a majority.
+- **TOP kingmaker (either side):** hung, and TOP's seats give either side a majority;
+- **only NAT+ACT+NZF with TOP** and **only LAB+GRN+TPM with TOP:** hung, and TOP's seats give that side but not the other a majority.
 
-The last two sum to the first. The wording is seat arithmetic, not a prediction of agreements (release-policy proposal). `mmp.blocs` is no longer pending.
+James ruled out a separate "not decisive" output: with at most one plausible independent electorate winner, the relevant hung cases are TOP choosing a side, or only one side being able to govern with TOP. Hung with neither side reaching a majority even with TOP is the remainder of `hung`. The wording is seat arithmetic, not a prediction of agreements (release-policy proposal). `mmp.blocs` is no longer pending.
 
 ## Rehearsal (7 October 2026)
 
