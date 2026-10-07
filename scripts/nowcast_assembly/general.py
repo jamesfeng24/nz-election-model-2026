@@ -74,6 +74,9 @@ def fold_parameters(config):
     require(len(matches) == 1, 'candidate parameter fold not found exactly once')
     fit = matches[0]['fits'][spec['method']]
     require(fit['parameters']['status'] == 'fitted', 'candidate parameter fold is not fitted')
+    centred = read(config['candidate']['centredFeatures'])
+    require(centred['fitId'] == fit['fitId'] and centred['trainingOnlyMeans'] == matches[0]['trainingOnlyMeans'],
+            'the 2026 candidate features are not centred on the configured fit')
     return fit['parameters'], fit['fitId']
 
 
