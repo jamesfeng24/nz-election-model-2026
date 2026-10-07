@@ -2,7 +2,7 @@
 
 **This is the single source of truth for what the 2026 product is and how its parts connect.** Other active documents point here rather than restating it. Decisions: [D106](../DECISIONS.md) (nowcast estimand) and [D107](../DECISIONS.md) (general-seat candidate-balance uncertainty policy). The remaining work and the publication gate are in [release-checklist.md](release-checklist.md). Historical stage documents are records of what each stage found, not current policy.
 
-Status, 7 October 2026: every layer below exists and has been checked historically. Stage73 assembles the Python draw bank ([stage73-nowcast-assembly.md](stage73-nowcast-assembly.md)); it is blocked on live inputs, the TypeScript side is Stage74, and nothing is published.
+Status, 7 October 2026: every layer below exists and has been checked historically. Stage73 assembles the Python draw bank ([stage73-nowcast-assembly.md](stage73-nowcast-assembly.md)) and Stage74 turns a bank into a validated v2 snapshot ([stage74-nowcast-snapshot.md](stage74-nowcast-snapshot.md)); the live bank is blocked on inputs and nothing is published.
 
 ## 1. Estimand
 
@@ -48,9 +48,9 @@ The local-party and candidate scales were calibrated against election-day result
 | 5 | candidate (`candidate_vectors` + `invert`, Stage45 Gaussian) | continuous S+R destinations/exponents (`data/processed/continuous-transport/readiness-2026.json`) + final slate; 2026 candidate scales × D107 multiplier | winners | candidate shares; shared + seat effects | built (Stage73); live run waits on the Stage50 roster and the classification |
 | 6 | Stage56 manual layer | dated adjustment files | output B only | mean shifts, `extraSdPp` | exists; no 2026 entry |
 | 7 | Stage66/71 Māori layer | per-draw winners (3 polled seats; 4 `unpolled`) | MMP | independent of the national draw (coupling optional) | exists; unpolled seats block MMP |
-| 8 | Python → TypeScript bridge | draw bank: national shares + 71 winners per draw (Stage73 `scripts/nowcast_assembly`) | Stage65 seat layer | shares → integer votes at 10^9 | bank built (Stage73); reader is Stage74 |
-| 9 | Stage65 `src/models/mmp/seatLayer.ts` | seat summaries with Monte Carlo SE | exporter | seats, threshold/lifeboat, overhang, size, blocs | exists; needs 80% quantiles and effective-n SE |
-| 10 | exporter (`src/models/simulation/exporter.ts`) | snapshot v2 (`src/types/export.ts`) | archive → loader → site | 50/80/90 intervals | synthetic only so far |
+| 8 | Python → TypeScript bridge | draw bank: national shares + 71 winners per draw (Stage73 `scripts/nowcast_assembly`) | Stage65 seat layer | shares → integer votes at 10^9 | bank built (Stage73); reader built (Stage74, `src/models/nowcast/drawBank.ts`) |
+| 9 | Stage65 `src/models/mmp/seatLayer.ts` | seat summaries with Monte Carlo SE | exporter | seats, threshold/lifeboat, overhang, size, blocs | 80% quantiles and effective-n SE added (Stage74, `src/models/nowcast/`) |
+| 10 | exporter (`src/models/nowcast/fromBank.ts`; in-browser `src/models/simulation/exporter.ts`) | snapshot v2 (`src/types/export.ts`) | archive → loader → site | 50/80/90 intervals | bank → snapshot built (Stage74); synthetic only so far |
 
 National uncertainty enters exactly once, through step 2's draw id. The local and candidate scales condition on national truth, so they add no second national term.
 
@@ -107,14 +107,13 @@ National uncertainty enters exactly once, through step 2's draw id. The local an
 
 The synthetic leak guards are unchanged.
 
-Still to add in the assembly PR, because they depend on Stage63 and the live layers:
-- candidate-share intervals;
-- Monte Carlo SE and effective sample size;
-- threshold, overhang, size and bloc distributions (Stage65);
-- per-seat uncertainty class;
-- per-component calibration status.
+Completed by Stage74 ([stage74-nowcast-snapshot.md](stage74-nowcast-snapshot.md)):
+- `seatLayer`: Stage65 party, bloc and Parliament-size intervals, plus probabilities with effective-sample MCSE/ESS (batch means within chains);
+- `electorateDetail`: per-seat uncertainty class, candidate-share intervals and win probabilities with MCSE.
 
-Stage53's fixed `requiredSeats` government combinations are to be replaced by Stage65's dynamic-majority blocs.
+Still open: per-component calibration status and the Stage63 precision thresholds.
+
+Stage53's fixed `requiredSeats` government combinations are replaced by Stage65's dynamic-majority blocs (`seatLayer.summary.blocs`); `governmentOutcomes` stays empty for nowcasts.
 
 ## 8. Configuration (one canonical source: `config/nowcast-2026.json`, Stage72)
 

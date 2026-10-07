@@ -26,7 +26,44 @@ const Unavailable = z.object({ status: z.literal('unavailable'), reason: id }).s
 export const ForecastDirectorySchema = z.object({
   parties: z.array(z.object({ partyId: id, name: id, abbreviation: id }).strict()).min(1),
   electorates: z.array(z.object({ electorateId: id, name: id, kind: z.enum(['general', 'maori']) }).strict()).min(1),
-  candidates: z.array(z.object({ candidateId: id, name: id, electorateId: id, partyId: id.nullable() }).strict()),
+  // partyLabel keeps the ballot-group key of a candidate whose party has no national group (a minor party inside Other).
+  candidates: z.array(z.object({ candidateId: id, name: id, electorateId: id, partyId: id.nullable(), partyLabel: id.nullable().optional() }).strict()),
+}).strict();
+
+/** A probability with its effective-sample Monte Carlo standard error and effective sample size. */
+export const ProbabilityEstimateSchema = z.object({
+  p: z.number().min(0).max(1), mcse: z.number().finite().nonnegative(), ess: z.number().finite().positive(),
+}).strict();
+
+/** Stage65 seat layer over every simulated election, with nested 50/80/90 seat intervals (D106). */
+export const SeatLayerExportSchema = z.object({
+  draws: z.number().int().positive(),
+  rulesVersion: id,
+  mcseMethod: id,
+  parties: z.array(z.object({
+    partyId: id, meanSeats: z.number().finite(), meanElectorateSeats: z.number().finite(), meanListSeats: z.number().finite(),
+    seats: IntervalSetSchema, seatDistribution: z.record(z.string(), z.number().min(0).max(1)),
+    probAnySeat: ProbabilityEstimateSchema, probQualified: ProbabilityEstimateSchema, probQualifiedByPartyVote: ProbabilityEstimateSchema,
+    probQualifiedByLifeboatOnly: ProbabilityEstimateSchema, probOverhang: ProbabilityEstimateSchema,
+  }).strict()),
+  blocs: z.array(z.object({
+    id, label: id, partyIds: z.array(id).min(1), meanSeats: z.number().finite(), seats: IntervalSetSchema,
+    probMajority: ProbabilityEstimateSchema, probExactHalf: ProbabilityEstimateSchema,
+  }).strict()),
+  parliament: z.object({
+    meanSize: z.number().finite(), size: IntervalSetSchema, sizeDistribution: z.record(z.string(), z.number().min(0).max(1)),
+    overhangDistribution: z.record(z.string(), z.number().min(0).max(1)), probAnyOverhang: ProbabilityEstimateSchema,
+    meanOverhang: z.number().finite(),
+  }).strict(),
+}).strict();
+
+/** Per-seat detail: the D107 uncertainty class, candidate-share intervals and win probabilities with their errors. */
+export const ElectorateDetailSchema = z.object({
+  electorateId: id,
+  uncertaintyClass: z.enum(['ordinary', 'exceptional', 'maori-layer']),
+  candidates: z.array(z.object({
+    candidateId: id, meanShare: z.number().min(0).max(1), share: IntervalSetSchema, winProbability: ProbabilityEstimateSchema,
+  }).strict()).min(1),
 }).strict();
 
 export const BoundaryReferenceSchema = z.object({
@@ -57,6 +94,11 @@ export const ForecastSnapshotSchema = z.object({
   }).strict(),
   simulation: SimulationResultSchema,
   unavailableElectorates: z.array(z.object({ electorateId: id, reason: id }).strict()),
+  electorateDetail: z.array(ElectorateDetailSchema),
+  seatLayer: z.discriminatedUnion('status', [
+    z.object({ status: z.literal('available'), summary: SeatLayerExportSchema }).strict(),
+    z.object({ status: z.literal('unavailable'), reason: z.string().trim().min(1) }).strict(),
+  ]),
   mmp: z.discriminatedUnion('status', [
     z.object({
       status: z.literal('available'),
@@ -121,6 +163,31 @@ export const ForecastSnapshotSchema = z.object({
         bad(`Synthetic id "${value}" is not allowed in a non-synthetic snapshot`, path);
     });
   }
+
+  const detailed = s.electorateDetail.map(d => d.electorateId);
+  if (!unique(detailed)) bad('Duplicate electorate detail', ['electorateDetail']);
+  s.electorateDetail.forEach((d, i) => {
+    const prediction = s.simulation.electoratePredictions.find(p => p.electorateId === d.electorateId);
+    if (!prediction) { bad('Electorate detail without a prediction', ['electorateDetail', i]); return; }
+    const ids = new Set(prediction.candidates.map(c => c.candidateId));
+    if (d.candidates.length !== ids.size || d.candidates.some(c => !ids.has(c.candidateId)))
+      bad('Electorate detail must cover exactly the predicted candidates', ['electorateDetail', i]);
+    d.candidates.forEach(c => {
+      if (c.share.some(v => v.lower < 0 || v.upper > 1)) bad('Candidate-share interval must be within 0–1', ['electorateDetail', i]);
+    });
+  });
+  // A model snapshot carries detail for every predicted seat; only synthetic pipeline fixtures may omit it.
+  if (!synthetic && detailed.length !== s.simulation.electoratePredictions.length)
+    bad('Every predicted electorate needs its uncertainty class and candidate-share intervals', ['electorateDetail']);
+  if (s.seatLayer.status === 'available') {
+    s.seatLayer.summary.parties.forEach((p, i) => { if (!parties.has(p.partyId)) bad('Unknown party', ['seatLayer', 'summary', 'parties', i]); });
+    if (s.seatLayer.summary.draws !== s.simulation.completedDraws) bad('Seat layer must use every simulated election', ['seatLayer']);
+    if (s.mmp.status !== 'available') bad('An available seat layer needs an MMP example allocation', ['mmp']);
+    if (!synthetic && s.seatLayer.summary.rulesVersion.toUpperCase().startsWith(PLACEHOLDER_RULES_PREFIX))
+      bad('Placeholder MMP rules are only allowed in synthetic snapshots', ['seatLayer', 'summary', 'rulesVersion']);
+  }
+  if (s.seatLayer.status === 'available' && s.unavailableElectorates.length > 0)
+    bad('The seat layer needs a winner in every electorate', ['seatLayer']);
 
   const predicted = s.simulation.electoratePredictions.map(p => p.electorateId);
   const unavailable = s.unavailableElectorates.map(u => u.electorateId);

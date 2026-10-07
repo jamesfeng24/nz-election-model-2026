@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-07.2",
+  "configVersion": "2026-10-07.3",
   "decisions": ["D106", "D107"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
@@ -15,6 +15,9 @@
     "refreshOwner": "Stage70 replaces this source and these dates with each accepted refit",
     "categoryMap": {"National": "nationalparty", "Labour": "labourparty", "Green": "greenparty", "ACT": "actnewzealand",
                     "NZ First": "newzealandfirstparty", "Te Pāti Māori": "tepatimaori", "TOP": "opportunity", "Other": "other"},
+    "display": {"nationalparty": "NAT", "labourparty": "LAB", "greenparty": "GRN", "actnewzealand": "ACT",
+                "newzealandfirstparty": "NZF", "tepatimaori": "TPM", "opportunity": "TOP", "other": "OTH"},
+    "otherName": "Other parties (combined)",
     "otherSplit": "Other stays one national bucket for MMP; inside each seat it is split by that seat's own 2023 notional mix of the non-core parties (Stage73, James 2026-10-07)"
   },
   "partyRelationships": "data/processed/forecast-readiness/snapshots/2026-10-05/party-relationships.json",

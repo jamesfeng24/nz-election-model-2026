@@ -9,6 +9,7 @@ from scripts.maori_seat_layer.fit import fit
 from scripts.maori_seat_layer.run import parameters
 from scripts.maori_seat_layer.simulate import current_polls, simulate as simulate_layer
 from .common import TARGET_FRAME, read, require, namespace_seed
+from .summaries import share_summaries
 
 # Stage66 party codes -> 2026 ballot-group keys; IND is an independent (no party). Any other code fails closed.
 PARTIES = {'MP': 'tepatimaori', 'LAB': 'labourparty', 'GRN': 'greenparty', 'NAT': 'nationalparty',
@@ -35,9 +36,14 @@ def simulate(config, count):
             s = sim['seats'][seat]
             codes = [c['party'] for c in s['poll']['candidates']]
             require(all(code in PARTIES for code in codes), f'{seat}: unmapped Maori candidate party code')
-            out[ids[seat]] = {'status': 'simulated', 'source': f"Stage66 default; poll {s['poll']['id']}",
-                              'candidates': [c['name'] for c in s['poll']['candidates']],
-                              'winnerParty': [PARTIES[codes[int(i)]] for i in s['winner']]}
+            candidates = [f'{ids[seat]}-poll-candidate-{fold(c["name"])}' for c in s['poll']['candidates']]
+            require(len(set(candidates)) == len(candidates), f'{seat}: duplicate poll candidate key')
+            out[ids[seat]] = {'status': 'simulated', 'class': 'maori-layer', 'source': f"Stage66 default; poll {s['poll']['id']}",
+                              'candidates': candidates, 'candidateNames': [c['name'] for c in s['poll']['candidates']],
+                              'candidateParty': [PARTIES[code] for code in codes],
+                              'candidateShares': share_summaries(candidates, s['share']),
+                              'winnerParty': [PARTIES[codes[int(i)]] for i in s['winner']],
+                              'winnerCandidate': [candidates[int(i)] for i in s['winner']]}
         else:
             reason = 'unpolled; maori.unpolledSeats is pending James' if config['maori']['unpolledSeats'] is None \
                 else 'unpolled; no registered fallback implementation'
