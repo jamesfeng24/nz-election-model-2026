@@ -87,7 +87,7 @@ Candidates by party: Labour 71, National 65, Green 55, ACT 48, NZ First 48, inde
 
 The config validator now also requires that a non-null roster's files exist, and that a null roster is listed as pending.
 
-**Classification.** `docs/general-seat-classification-2026-draft.md` was rechecked against the official list.
+**Classification.** `docs/general-seat-classification-2026.md` was rechecked against the official list.
 - Two seats join the core exceptional list as candidate changes:
   - Christchurch Central: Duncan Webb is not standing; Labour stands George Hampton.
   - Wigram: Megan Woods is list-only; Labour stands Dominik Yanzick.

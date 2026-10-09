@@ -161,9 +161,12 @@ class Bank(unittest.TestCase):
         self.assertEqual(set(report['seatStatus']), set(GENERAL + MAORI))
         reasons = {b['reason']: b['seats'] for b in report['blockers']}
         self.assertEqual(sum(reasons.values()) + sum(v == 'simulated' for v in report['seatStatus'].values()), 71)
-        # Stage50 part 2 set the official roster; the general seats now wait only on James's classification (D107).
-        self.assertTrue(any('classification' in r and n == 64 for r, n in reasons.items()))
-        self.assertFalse(any('Stage50' in r for r in reasons))
+        # Stage50 part 2 set the official roster and James's classification (D107) is recorded: all 64 general seats
+        # simulate on the live inputs; only the four unpolled Maori seats wait, on the fallback model (D114).
+        self.assertTrue(all(report['seatStatus'][seat] == 'simulated' for seat in GENERAL))
+        self.assertEqual(len(reasons), 1)
+        self.assertTrue(any('fallback' in r and n == 4 for r, n in reasons.items()))
+        self.assertFalse(any('Stage50' in r or 'classification' in r for r in reasons))
 
 
 if __name__ == '__main__':
