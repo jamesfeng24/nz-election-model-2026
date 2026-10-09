@@ -37,11 +37,28 @@ class Config(unittest.TestCase):
         self.config = read(V.CONFIG)
 
     def test_live_config_is_valid_with_explicit_pending_fields(self):
-        pending = V.check_config(self.config)
-        self.assertEqual(pending, ['maori.unpolledFallbackModel'])
+        self.assertEqual(V.check_config(self.config), [])   # Stage80 registered the last pending field
+        self.assertEqual(V.check_config(self.config, require_complete=True), [])
         self.assertEqual(self.config['roster']['snapshotId'], 'nz-2026-official-nominations-2026-10-10')   # Stage50 part 2
+        self.assertEqual(self.config['maori']['unpolledFallbackModel'], 'stage78-f')   # Stage80 / D118: Stage78 arm F, James 2026-10-09
+        pending = copy.deepcopy(self.config)
+        pending['roster']['snapshotId'] = None
+        pending['pending'] = {'roster.snapshotId': 'test'}
+        self.assertEqual(V.check_config(pending), ['roster.snapshotId'])
         with self.assertRaises(V.ConfigError):
-            V.check_config(self.config, require_complete=True)
+            V.check_config(pending, require_complete=True)
+
+    def test_fallback_model_is_registered_or_explicitly_pending(self):
+        for edit in (lambda c: c['maori'].update(unpolledFallbackModel='stage78-fc'),       # not a registered model
+                     lambda c: c['maori'].update(unpolledFallbackModel=None),               # null but not listed as pending
+                     lambda c: c['maori'].update(unpolledSeats='withhold')):                # a model needs the labelled-fallback decision
+            broken = copy.deepcopy(self.config); edit(broken)
+            with self.assertRaises(V.ConfigError):
+                V.check_config(broken)
+        pending = copy.deepcopy(self.config)
+        pending['maori']['unpolledFallbackModel'] = None
+        pending['pending'] = {'maori.unpolledFallbackModel': 'test'}
+        self.assertEqual(V.check_config(pending), ['maori.unpolledFallbackModel'])
 
     def test_release_policy_is_recorded_as_james_decided(self):
         """D114 (James, 2026-10-07): no calibration label or staleness windows, internal reconciliation gate, MCSE 0.01."""
@@ -83,7 +100,7 @@ class Classification(unittest.TestCase):
         self.assertEqual(set(result), set(GENERAL))
         self.assertTrue(all(e['author'] == 'James' and e['recordedAt'] == '2026-10-10' and not e['extraSdOptIn'] for e in document['seats']))
         exceptional = sorted(seat[-3:] for seat, kind in result.items() if kind == 'exceptional')
-        self.assertEqual(exceptional, ['001', '010', '011', '020', '025', '037', '038', '047', '058', '059', '063', '064'])
+        self.assertEqual(exceptional, ['001', '010', '011', '020', '025', '033', '037', '038', '047', '058', '059', '063', '064'])
 
     def test_every_gap_or_conflict_fails_closed(self):
         def broken(edit):

@@ -7,10 +7,11 @@ scales from the Stage72 2026 file; the only per-seat choice is the classificatio
 from copy import deepcopy
 import numpy as np
 from scripts.polling.candidate_integration.propagation import local_vectors, candidate_vectors
+from scripts.party_vote_elasticity.transforms import ARMS, swing, swing_mixture
 from scripts.uncertainty.simulation import candidate_inputs
 from scripts.uncertainty_expectation.simulation import invert
 from scripts.seat_polls.apply import apply as apply_poll
-from .common import YEAR, OTHER, read, require, exact
+from .common import YEAR, OTHER, read, require, exact, namespace_seed
 
 
 def role(key):
@@ -100,16 +101,38 @@ def scaled(scales, multiplier):
     return result
 
 
-def simulate(party, candidate, fine, party_scales, candidate_scales, multiplier):
+def local_transform(config):
+    """Stage81 (D119): None keeps the frozen proportional layer exactly; otherwise a function (party row, fine draws, national
+    2023, rows per national draw) -> deterministic local vectors for 'P', 'A', 'L', 'H' or an equal-weight per-national-draw
+    mixture ('mixture' with `arms`). The default configuration carries no `localParty` key."""
+    setting = config.get('localParty')
+    if not setting:
+        return None
+    name = setting['transform']
+    arms = setting.get('arms')
+    require(name in ARMS or (name == 'mixture' and arms and set(arms) <= set(ARMS)), f'unknown localParty.transform {name!r}')
+    if name in ARMS:
+        return lambda party, fine, national2023, replicates: swing(name, np.array(party['mean']), national2023, fine)
+    seed = namespace_seed(config['simulation']['seedNamespace'], 'localParty-transform')
+
+    def mixture(party, fine, national2023, replicates):
+        draws = len(fine) // replicates
+        assignment = np.repeat(np.array(arms)[np.random.default_rng(seed).integers(0, len(arms), size=draws)], replicates)
+        return swing_mixture(arms, assignment, np.array(party['mean']), national2023, fine)
+    return mixture
+
+
+def simulate(party, candidate, fine, party_scales, candidate_scales, multiplier, deterministic=None):
     """Candidate shares [count, C] for one seat; the multiplier touches only the candidate balance seat scale."""
-    local, q, _ = simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, multiplier, None)
+    local, q, _ = simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, multiplier, None, deterministic)
     return local, q
 
 
-def simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, multiplier, poll):
+def simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, multiplier, poll, deterministic=None):
     """As `simulate`, plus the Stage79 seat-poll update of the balance when `poll` is given (record returned third)."""
     count = len(fine)
-    deterministic = local_vectors(fine, party['affinities'])
+    if deterministic is None:
+        deterministic = local_vectors(fine, party['affinities'])
     local, _ = invert(deterministic, party, party_scales, count)
     if candidate is None:
         return local, None, None

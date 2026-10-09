@@ -1,22 +1,11 @@
 {
-  "bankDigest": "188265387038943c662f5d96cbd12eb66e22f9a92d4af1a1fd1f5f4838ca6b10",
-  "blockers": [
-    {
-      "electorateIds": [
-        "nz-maori-2026-boundary-2",
-        "nz-maori-2026-boundary-3",
-        "nz-maori-2026-boundary-5",
-        "nz-maori-2026-boundary-7"
-      ],
-      "reason": "unpolled; labelled fallback chosen (D114) but no fallback model is registered yet (maori.unpolledFallbackModel)",
-      "seats": 4
-    }
-  ],
+  "bankDigest": "2beba39cba9f27c249b818902e688673ca43941289e464fe239e768026babc35",
+  "blockers": [],
   "checks": [
     {
       "check": "configComplete",
-      "detail": "pending fields must be filled before assembly: maori.unpolledFallbackModel",
-      "passed": false
+      "detail": "",
+      "passed": true
     },
     {
       "check": "provenanceLive",
@@ -50,8 +39,8 @@
     },
     {
       "check": "allWinnersPresent",
-      "detail": "4 unavailable",
-      "passed": false
+      "detail": "0 unavailable",
+      "passed": true
     },
     {
       "check": "classificationMultipliers",
@@ -112,7 +101,7 @@
   "draws": 64,
   "label": "DEVELOPMENT gate on live inputs at a development draw count; no bank, no forecast",
   "provenance": "live",
-  "publishable": false,
+  "publishable": true,
   "seatStatus": {
     "nz-general-2026-boundary-001": "simulated",
     "nz-general-2026-boundary-002": "simulated",
@@ -179,12 +168,12 @@
     "nz-general-2026-boundary-063": "simulated",
     "nz-general-2026-boundary-064": "simulated",
     "nz-maori-2026-boundary-1": "simulated",
-    "nz-maori-2026-boundary-2": "unavailable",
-    "nz-maori-2026-boundary-3": "unavailable",
+    "nz-maori-2026-boundary-2": "simulated",
+    "nz-maori-2026-boundary-3": "simulated",
     "nz-maori-2026-boundary-4": "simulated",
-    "nz-maori-2026-boundary-5": "unavailable",
+    "nz-maori-2026-boundary-5": "simulated",
     "nz-maori-2026-boundary-6": "simulated",
-    "nz-maori-2026-boundary-7": "unavailable"
+    "nz-maori-2026-boundary-7": "simulated"
   },
   "stage": 73
 }

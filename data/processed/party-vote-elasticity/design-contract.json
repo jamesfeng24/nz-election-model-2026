@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "stage": 81,
+  "decision": "D119",
+  "frozenBeforeScoring": true,
+  "designDocument": "docs/stage81-party-vote-elasticity-design.md",
+  "question": "how a general electorate's previous party vote should move with the national change: proportional, same points, same log-odds, or between",
+  "inputs": {
+    "records": {
+      "path": "data/processed/models/party-vote-transform/backtest-records.json",
+      "sha256": "06464b70a46f4efd40297560d100ab969515b8a2f58a971ec6397d5dfbcea602"
+    },
+    "stage5Specification": {
+      "path": "data/processed/models/party-vote-transform/specification.json",
+      "sha256": "1a0f933f6ebeda4d0b7dcfdc0581ff948529de93679ca6959bf9018d01a18088"
+    },
+    "liveConfiguration": {
+      "path": "config/nowcast-2026.json",
+      "sha256": "745aa827b1c6efc75ca66db4eff27ce7fd5ba93e646e64418ceda162ec7751cf",
+      "use": "2026 readout only"
+    },
+    "liveBaseline": {
+      "path": "data/processed/voting-place-notionals/baseline-party-vectors.json",
+      "sha256": "a53a9e2868be966cc9e439c03d4f824ab8250da753388db040afe6e4670f93e0",
+      "use": "2026 readout only"
+    }
+  },
+  "scope": "general electorates only",
+  "transitions": {
+    "primary": [
+      {
+        "sourceYear": 2014,
+        "targetYear": 2017,
+        "sourceClass": "observed"
+      },
+      {
+        "sourceYear": 2017,
+        "targetYear": 2020,
+        "sourceClass": "synthetic_bounds",
+        "evaluateAtBothBounds": true
+      },
+      {
+        "sourceYear": 2020,
+        "targetYear": 2023,
+        "sourceClass": "observed"
+      }
+    ],
+    "secondaryReportedOutsideRule": [
+      {
+        "sourceYear": 2008,
+        "targetYear": 2011,
+        "sourceClass": "observed"
+      },
+      {
+        "sourceYear": 2011,
+        "targetYear": 2014,
+        "sourceClass": "synthetic_bounds",
+        "evaluateAtBothBounds": true
+      }
+    ]
+  },
+  "eligibility": "Stage5 backtest-records eligibility unchanged; the persistent-party composition of p, P0, P1 and the actual share is renormalised to sum one; no midpoint of source bounds",
+  "arms": {
+    "primary": [
+      "P",
+      "A",
+      "L",
+      "H"
+    ],
+    "formulas": {
+      "P": "x=p*P1/P0",
+      "A": "x=max(p+P1-P0,0)",
+      "L": "x=p*OR/(1-p+p*OR); OR=P1*(1-P0)/(P0*(1-P1))",
+      "H": "x=(sqrt(p)+sqrt(P1)-sqrt(P0))_+^2",
+      "family": "x=(p^theta+P1^theta-P0^theta)_+^(1/theta); theta=1 is A, theta->0 is P, theta=0.5 is H"
+    },
+    "closure": "q=x/sum(x); p=0 keeps x=0; clipping at zero only",
+    "profileOnlyTheta": [
+      0.25,
+      0.75
+    ],
+    "fitted": []
+  },
+  "metrics": {
+    "M1": "mean absolute error of (q_NAT - q_LAB) against actual, seats equal-weighted, with signed bias overall and by tercile of previous NAT-LAB margin",
+    "M2": "macro-party MAE over persistent parties other than NAT and LAB with national share >= 1% in either election of the transition",
+    "M3": "lead-call agreement and predicted minus actual count of seats with NAT ahead of LAB",
+    "M4": "macro-party MAE, RMSE and vote-weighted MAE over all persistent parties",
+    "D1": "large movers |ln(P1/P0)| >= ln(1.5), top quartile of the party's previous share: signed error and MAE",
+    "units": "percentage points",
+    "bootstrap": {
+      "resamples": 5000,
+      "seed": 2026081,
+      "unit": "seat",
+      "status": "descriptive; ignores within-transition dependence"
+    },
+    "M5": "Stage44 CLR residual (epsilon 1e-6) mean squared norm per category, per arm and transition, and ratio to arm P; reported, not in the rule"
+  },
+  "adoptionRule": {
+    "thresholdsPP": {
+      "M1": 0.25,
+      "M2": 0.1
+    },
+    "beats": "mean over the three primary transitions lower by at least the threshold and lower in at least two of the three transitions",
+    "retainedSet": "primary arms beaten by no other primary arm on M1 and on M2",
+    "classes": {
+      "adopt_X": "retained set has one arm",
+      "carry_mixture": "retained set has two or more arms: equal-weight mixture with one arm per national draw shared by every seat",
+      "mixed_report_to_james": "retained set empty, or any comparison differs between the lower and upper 2017-2020 bounds"
+    },
+    "materialityOverride": "if across the four primary arms the 2026 count of general seats with NAT ahead of LAB differs by at most 2 and no seat's top party differs, record materially_invariant and stop refining",
+    "qualifier": "clear if the 90% paired bootstrap interval of the pooled M1 difference between the best member and the runner-up excludes zero, else weak"
+  },
+  "implementationBoundary": "optional localParty.transform configuration key defaulting to the current proportional behaviour; live default, draw bank, export and TypeScript unchanged",
+  "doNot": [
+    "fitted elasticity or theta",
+    "per-party or per-seat-type exponents",
+    "candidate-vote ratio, minor-party spread or classification changes",
+    "geography fragmentation, Student-t, mixtures of noise, regimes, sigma shrinkage",
+    "national MCMC backtest reruns",
+    "Maori seats",
+    "new sources or data/sources.json edits",
+    "change to the live configuration default, the draw bank, the export or the TypeScript",
+    "later stages"
+  ],
+  "knockOn": {
+    "amendedBeforeScoring": true,
+    "refitIfTransformChanges": [
+      "Stage33/75 candidate means S, R, kappa (trained on Stage31 constructed proportional vectors)",
+      "local_party noise scales (residuals around the proportional constructed vectors)"
+    ],
+    "recheckOnly": [
+      "candidate balance scale and D107 multipliers (conditional on observed party vote; depend on S, R, kappa)"
+    ],
+    "unaffected": [
+      "Stage69 baseline",
+      "national fit",
+      "MMP allocator",
+      "Maori layers"
+    ],
+    "followUp": "conditional separate stage; not in Stage81"
+  }
+}

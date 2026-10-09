@@ -1,0 +1,444 @@
+{
+  "bestOnM1": "H",
+  "bestVersusRunnerUpM1": {
+    "meanDifference": -0.0770888664146363,
+    "q05": -0.275572161426797,
+    "q95": 0.12162268197304191
+  },
+  "boundsAgree": true,
+  "class": "carry_mixture",
+  "comparisons": {
+    "M1": {
+      "A>H": false,
+      "A>L": false,
+      "A>P": false,
+      "H>A": false,
+      "H>L": false,
+      "H>P": false,
+      "L>A": false,
+      "L>H": false,
+      "L>P": false,
+      "P>A": false,
+      "P>H": false,
+      "P>L": false
+    },
+    "M2": {
+      "A>H": false,
+      "A>L": false,
+      "A>P": false,
+      "H>A": true,
+      "H>L": false,
+      "H>P": false,
+      "L>A": true,
+      "L>H": false,
+      "L>P": false,
+      "P>A": true,
+      "P>H": false,
+      "P>L": false
+    }
+  },
+  "comparisonsAtUpperBound": {
+    "M1": {
+      "A>H": false,
+      "A>L": false,
+      "A>P": false,
+      "H>A": false,
+      "H>L": false,
+      "H>P": false,
+      "L>A": false,
+      "L>H": false,
+      "L>P": false,
+      "P>A": false,
+      "P>H": false,
+      "P>L": false
+    },
+    "M2": {
+      "A>H": false,
+      "A>L": false,
+      "A>P": false,
+      "H>A": true,
+      "H>L": false,
+      "H>P": false,
+      "L>A": true,
+      "L>H": false,
+      "L>P": false,
+      "P>A": true,
+      "P>H": false,
+      "P>L": false
+    }
+  },
+  "invariance": {
+    "arms": [
+      "P",
+      "A",
+      "L",
+      "H"
+    ],
+    "invariant": false,
+    "nationalAheadCounts": {
+      "A": 32,
+      "H": 32,
+      "L": 32,
+      "P": 31
+    },
+    "seatsWhoseTopGroupDiffers": 1
+  },
+  "pairedBootstrap": {
+    "A minus H": {
+      "M1": {
+        "meanDifference": 0.0770888664146363,
+        "q05": -0.12162268197304181,
+        "q95": 0.275572161426797
+      },
+      "M2": {
+        "meanDifference": 0.24716210265960203,
+        "q05": 0.2253482387477129,
+        "q95": 0.26884890057290356
+      }
+    },
+    "A minus L": {
+      "M1": {
+        "meanDifference": -0.10076031320059246,
+        "q05": -0.3720692795893806,
+        "q95": 0.17752058305276835
+      },
+      "M2": {
+        "meanDifference": 0.28972397260956145,
+        "q05": 0.24846982249262073,
+        "q95": 0.3295444583964077
+      }
+    },
+    "L minus H": {
+      "M1": {
+        "meanDifference": 0.17784917961522875,
+        "q05": 0.04383968786454121,
+        "q95": 0.31368062345389996
+      },
+      "M2": {
+        "meanDifference": -0.0425618699499594,
+        "q05": -0.06872216609279874,
+        "q95": -0.014703196966899205
+      }
+    },
+    "P minus A": {
+      "M1": {
+        "meanDifference": 0.19729147702100866,
+        "q05": -0.10965107588591949,
+        "q95": 0.5139994238793244
+      },
+      "M2": {
+        "meanDifference": -0.2425259676274257,
+        "q05": -0.286368483881494,
+        "q95": -0.19759193247741583
+      }
+    },
+    "P minus H": {
+      "M1": {
+        "meanDifference": 0.27438034343564494,
+        "q05": 0.12315298572672259,
+        "q95": 0.42580964769081453
+      },
+      "M2": {
+        "meanDifference": 0.004636135032176303,
+        "q05": -0.028675948477412817,
+        "q95": 0.040354470617621326
+      }
+    },
+    "P minus L": {
+      "M1": {
+        "meanDifference": 0.0965311638204162,
+        "q05": -0.06569960529781713,
+        "q95": 0.26480511955856817
+      },
+      "M2": {
+        "meanDifference": 0.0471980049821357,
+        "q05": 0.0345937013639179,
+        "q95": 0.060498127279058005
+      }
+    }
+  },
+  "pooledM1": {
+    "A": 3.8495730954335374,
+    "H": 3.7724842290189007,
+    "L": 3.9503334086341297,
+    "P": 4.046864572454546
+  },
+  "pooledM2": {
+    "A": 0.8666824879527449,
+    "H": 0.6195203852931429,
+    "L": 0.5769585153431835,
+    "P": 0.6241565203253193
+  },
+  "pooledPrimary": {
+    "A": {
+      "M1": 3.8495730954335374,
+      "M2": 0.8666824879527449,
+      "M4": 0.8739282179644965,
+      "M5": 2.4662130869127634
+    },
+    "H": {
+      "M1": 3.7724842290189007,
+      "M2": 0.6195203852931429,
+      "M4": 0.7312812886451666,
+      "M5": 0.4298387792742342
+    },
+    "L": {
+      "M1": 3.9503334086341293,
+      "M2": 0.5769585153431835,
+      "M4": 0.7345925734052013,
+      "M5": 0.09808588909468945
+    },
+    "P": {
+      "M1": 4.046864572454545,
+      "M2": 0.6241565203253193,
+      "M4": 0.7893817511177753,
+      "M5": 0.10003621232703952
+    }
+  },
+  "qualifier": "weak",
+  "readout2026": {
+    "defaultEqualsProportional": true,
+    "draws": 256,
+    "label": "development-size general-seat run; Maori seats not run",
+    "mostArmSensitiveSeatsNationalWinProbability": [
+      {
+        "byArm": {
+          "A": 0.137,
+          "H": 0.18,
+          "L": 0.188,
+          "P": 0.223,
+          "mixture": 0.199
+        },
+        "range": 0.086,
+        "seat": "Hutt South"
+      },
+      {
+        "byArm": {
+          "A": 0.668,
+          "H": 0.625,
+          "L": 0.656,
+          "P": 0.586,
+          "mixture": 0.625
+        },
+        "range": 0.082,
+        "seat": "Tāmaki"
+      },
+      {
+        "byArm": {
+          "A": 0.391,
+          "H": 0.441,
+          "L": 0.441,
+          "P": 0.469,
+          "mixture": 0.453
+        },
+        "range": 0.078,
+        "seat": "Whanganui"
+      },
+      {
+        "byArm": {
+          "A": 0.105,
+          "H": 0.16,
+          "L": 0.164,
+          "P": 0.18,
+          "mixture": 0.172
+        },
+        "range": 0.074,
+        "seat": "Kapiti"
+      },
+      {
+        "byArm": {
+          "A": 0.59,
+          "H": 0.551,
+          "L": 0.566,
+          "P": 0.527,
+          "mixture": 0.543
+        },
+        "range": 0.062,
+        "seat": "Takanini"
+      },
+      {
+        "byArm": {
+          "A": 0.07,
+          "H": 0.109,
+          "L": 0.109,
+          "P": 0.129,
+          "mixture": 0.117
+        },
+        "range": 0.059,
+        "seat": "West Coast-Tasman"
+      },
+      {
+        "byArm": {
+          "A": 0.09,
+          "H": 0.117,
+          "L": 0.121,
+          "P": 0.141,
+          "mixture": 0.133
+        },
+        "range": 0.051,
+        "seat": "Waitākere"
+      },
+      {
+        "byArm": {
+          "A": 0.961,
+          "H": 0.93,
+          "L": 0.949,
+          "P": 0.91,
+          "mixture": 0.93
+        },
+        "range": 0.051,
+        "seat": "Papakura"
+      },
+      {
+        "byArm": {
+          "A": 0.895,
+          "H": 0.875,
+          "L": 0.875,
+          "P": 0.848,
+          "mixture": 0.867
+        },
+        "range": 0.047,
+        "seat": "Rangitata"
+      },
+      {
+        "byArm": {
+          "A": 0.805,
+          "H": 0.781,
+          "L": 0.781,
+          "P": 0.758,
+          "mixture": 0.777
+        },
+        "range": 0.047,
+        "seat": "Port Waikato"
+      }
+    ],
+    "nationalAheadOnPartyVoteAtNationalMean": {
+      "A": 32,
+      "H": 32,
+      "L": 32,
+      "P": 31
+    },
+    "settings": {
+      "A": {
+        "expectedGeneralElectorates": {
+          "actnewzealand": 1.508,
+          "greenparty": 3.535,
+          "labourparty": 27.543,
+          "nationalparty": 29.648,
+          "newzealandfirstparty": 1.406,
+          "opportunity": 0.359
+        },
+        "northland": {
+          "actnewzealand": 0.027,
+          "greenparty": 0.035,
+          "labourparty": 0.492,
+          "nationalparty": 0.129,
+          "newzealandfirstparty": 0.316
+        },
+        "reconciliationMaxAbsGapPP": 0.07067921464608273
+      },
+      "H": {
+        "expectedGeneralElectorates": {
+          "actnewzealand": 1.543,
+          "greenparty": 3.645,
+          "labourparty": 27.328,
+          "nationalparty": 29.652,
+          "newzealandfirstparty": 1.441,
+          "opportunity": 0.391
+        },
+        "northland": {
+          "actnewzealand": 0.023,
+          "greenparty": 0.035,
+          "labourparty": 0.438,
+          "nationalparty": 0.148,
+          "newzealandfirstparty": 0.355
+        },
+        "reconciliationMaxAbsGapPP": 0.31475239127120025
+      },
+      "L": {
+        "expectedGeneralElectorates": {
+          "actnewzealand": 1.543,
+          "greenparty": 3.648,
+          "labourparty": 27.051,
+          "nationalparty": 29.785,
+          "newzealandfirstparty": 1.543,
+          "opportunity": 0.43
+        },
+        "northland": {
+          "actnewzealand": 0.023,
+          "greenparty": 0.027,
+          "labourparty": 0.391,
+          "nationalparty": 0.152,
+          "newzealandfirstparty": 0.406
+        },
+        "reconciliationMaxAbsGapPP": 0.6098738015247906
+      },
+      "P": {
+        "expectedGeneralElectorates": {
+          "actnewzealand": 1.605,
+          "greenparty": 3.754,
+          "labourparty": 26.918,
+          "nationalparty": 29.605,
+          "newzealandfirstparty": 1.656,
+          "opportunity": 0.461
+        },
+        "northland": {
+          "actnewzealand": 0.023,
+          "greenparty": 0.027,
+          "labourparty": 0.355,
+          "nationalparty": 0.16,
+          "newzealandfirstparty": 0.434
+        },
+        "reconciliationMaxAbsGapPP": 0.39523514865626996
+      },
+      "default": {
+        "expectedGeneralElectorates": {
+          "actnewzealand": 1.605,
+          "greenparty": 3.754,
+          "labourparty": 26.918,
+          "nationalparty": 29.605,
+          "newzealandfirstparty": 1.656,
+          "opportunity": 0.461
+        },
+        "northland": {
+          "actnewzealand": 0.023,
+          "greenparty": 0.027,
+          "labourparty": 0.355,
+          "nationalparty": 0.16,
+          "newzealandfirstparty": 0.434
+        },
+        "reconciliationMaxAbsGapPP": 0.3952351486562755
+      },
+      "mixture": {
+        "expectedGeneralElectorates": {
+          "actnewzealand": 1.57,
+          "greenparty": 3.668,
+          "labourparty": 27.109,
+          "nationalparty": 29.711,
+          "newzealandfirstparty": 1.523,
+          "opportunity": 0.418
+        },
+        "northland": {
+          "actnewzealand": 0.023,
+          "greenparty": 0.031,
+          "labourparty": 0.391,
+          "nationalparty": 0.156,
+          "newzealandfirstparty": 0.398
+        },
+        "reconciliationMaxAbsGapPP": 0.4370178206230868
+      }
+    }
+  },
+  "retainedArms": [
+    "P",
+    "L",
+    "H"
+  ],
+  "ruleClassBeforeOverride": "carry_mixture",
+  "runnerUpOnM1": "A",
+  "sourceHashes": {
+    "classificationCopy": "00a67b865831d1427ef59650c31dc185cb6e14409ffc7d31467554935c77a901",
+    "design": "43b7e5fdec7e1f9f57f1aa41df5e8bae0abf8062ca71550c01c98dc10fc460f7",
+    "records": "06464b70a46f4efd40297560d100ab969515b8a2f58a971ec6397d5dfbcea602"
+  }
+}
