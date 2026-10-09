@@ -5,11 +5,8 @@ for every share: each number must appear in the seat's section of the preserved 
 """
 import re
 from html.parser import HTMLParser
-import numpy as np
-from scripts.uncertainty.construction import scale_for
-from scripts.uncertainty_revision.coordinates import partition, mean_logit_location
 from . import model
-from .common import ROOT, POLLS, INVENTORY, SCALES, FLAGS, RAW, read, fold
+from .common import ROOT, POLLS, RAW, read, fold
 
 SUBHEADINGS = {'partyvote', 'candidatevote', 'electoratevote'}
 ALIASES = {'mtalbert': 'mountalbert', 'ohariu': 'ohariu'}
@@ -91,36 +88,3 @@ def derived(p, design):
         out['value'] = model.poll_value(shares)
         out['samplingVariance'] = model.sampling_variance(shares, n)
     return out
-
-
-def historical_units(design):
-    """Polls with a Stage44 out-of-sample seat replay (2014-2023), with the model reference and the actual balance."""
-    inventory = [r for r in read(INVENTORY)['candidateRecords'] if r['scope'] == 'general']
-    scales = read(SCALES)
-    exceptional = {r['id']: r['exceptional'] for r in read(FLAGS)['records']['control']}
-    multipliers = design['quantity']['multiplier']
-    units = []
-    for p in polls():
-        if p['election'] == 2026:
-            continue
-        d = derived(p, design)
-        if not d['hasNationalAndLabour']:
-            continue
-        match = [r for r in inventory if r['targetYear'] == p['election'] and fold(r['name']) == fold(p['electorate'])]
-        if len(match) != 1:
-            d['status'] = 'no_replay_record'
-            units.append(d)
-            continue
-        r = match[0]
-        n, l, _ = partition(r['groups'])
-        mean, actual = np.asarray(r['mean']), np.asarray(r['actual'])
-        balance = scale_for(scales, 'candidate', p['election'])['scales']['balance']
-        multiplier = multipliers['exceptional' if exceptional[r['targetElectorateId']] else 'ordinary']
-        shared2, seat2 = balance['shared'] ** 2, (balance['seat'] * multiplier) ** 2
-        sigma2 = shared2 + seat2
-        centre = float(mean_logit_location(np.array([mean[n[0]] / (mean[n[0]] + mean[l[0]])]), sigma2 ** 0.5)[0])
-        d.update({'status': 'ok', 'seatId': r['targetElectorateId'], 'exceptional': bool(exceptional[r['targetElectorateId']]),
-                  'multiplier': multiplier, 'sharedVariance': shared2, 'sigma2': sigma2, 'centre': centre,
-                  'actual': float(np.log(actual[n[0]] / actual[l[0]])), 'seatElection': f"{p['election']}:{p['electorate']}"})
-        units.append(d)
-    return units

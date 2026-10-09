@@ -3,8 +3,8 @@
 python -m scripts.seat_polls.run [--check]
 """
 import argparse
-from . import data, model, score
-from .common import ROOT, RAW, POLLS, DESIGN, DESIGN_DOC, INVENTORY, SCALES, FLAGS, REGISTRY, read, save, digest, parameters
+from . import data, historical, model, score
+from .common import ROOT, RAW, POLLS, DESIGN, DESIGN_DOC, INVENTORY, SCALES, REGISTRY, read, save, digest, parameters
 
 ORGANISATION = 'Wikipedia'
 LIMITATION = ('Electorate-poll compilation (secondary, volunteer-edited), aggregator_only; transcribed into data/source-plans/seat-polls/polls.json and '
@@ -31,7 +31,7 @@ def build():
     design = read(DESIGN)
     rows = data.polls()
     data.verify_transcription(rows)
-    units = data.historical_units(design)
+    units = historical.historical_units(design)
     ok = [u for u in units if u['status'] == 'ok']
     eligible = [u for u in ok if u['eligible']]
     if not eligible:
@@ -73,7 +73,7 @@ def build():
 
 
 def manifest(names):
-    inputs = [DESIGN_DOC, DESIGN, POLLS, RAW + '/fetch-log.tsv', INVENTORY, SCALES, FLAGS,
+    inputs = [DESIGN_DOC, DESIGN, POLLS, RAW + '/fetch-log.tsv', INVENTORY, SCALES, historical.FLAGS,
               'scripts/uncertainty_revision/coordinates.py']
     return {'schemaVersion': 1, 'inputHashes': {p: digest(p) for p in inputs}, 'dataSourcesJsonTouched': False,
             'frozenStagesModified': False, 'outputs': sorted(names)}

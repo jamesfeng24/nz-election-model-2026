@@ -10,7 +10,6 @@ RAW = 'data/raw/polling/seat-polls/2026-10-09'
 REGISTRY = PREFIX + '/source-registry.json'
 INVENTORY = 'data/processed/uncertainty/inventory.json'
 SCALES = 'data/processed/uncertainty-revision/scales.json'
-FLAGS = 'data/processed/exceptional-balance-scale/evaluation.json'
 YEARS = (2014, 2017, 2020, 2023)
 
 

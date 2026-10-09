@@ -2,7 +2,7 @@
   "dataCutoff": "2026-10-07",
   "draws": 2048,
   "ineligible2026": "Auckland Central and Wellington Bays (Green-led polls) are context only (design amendment A2)",
-  "label": "INTERNAL development output; nothing adopted; the D107 classification does not exist yet, so both classes are shown",
+  "label": "INTERNAL development output; nothing adopted; both D107 classes are shown and the configured class is marked",
   "nationalDrawIds": [
     "weekly-2026-10-07-attempt1-chain3-draw0936",
     "weekly-2026-10-07-attempt1-chain4-draw0119",
@@ -122,6 +122,7 @@
           }
         }
       },
+      "configuredClass": "ordinary",
       "electorate": "Hutt South",
       "poll": {
         "ageWeeks": 2.5714285714285716,
@@ -245,6 +246,7 @@
           }
         }
       },
+      "configuredClass": "exceptional",
       "electorate": "Kāpiti",
       "poll": {
         "ageWeeks": 9.714285714285714,
@@ -374,6 +376,7 @@
           }
         }
       },
+      "configuredClass": "exceptional",
       "electorate": "Mt Albert",
       "poll": {
         "ageWeeks": 0.2857142857142857,
@@ -498,6 +501,7 @@
           }
         }
       },
+      "configuredClass": "ordinary",
       "electorate": "Waitaki",
       "poll": {
         "ageWeeks": 1.7142857142857142,
@@ -625,6 +629,7 @@
           }
         }
       },
+      "configuredClass": "ordinary",
       "electorate": "West Coast-Tasman",
       "poll": {
         "ageWeeks": 2.857142857142857,

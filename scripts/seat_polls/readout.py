@@ -1,7 +1,7 @@
 """Stage79 development readout: the six eligible 2026 polled seats with and without the poll update, under both D107 classes.
 
-INTERNAL development output on the live inputs (national draws, Stage50 official slates, Stage75 candidate fit). The D107
-classification does not exist yet, so each seat is shown under both classes. Nothing is adopted or published.
+INTERNAL development output on the live inputs (national draws, Stage50 official slates, Stage75 candidate fit). Each seat is shown
+under both D107 classes, and the configured class is marked. Nothing is adopted or published.
 
 python -m scripts.seat_polls.readout [--draws 2048] [--check]
 """
@@ -27,6 +27,7 @@ def build(draws):
     scale_file = read(config['uncertainty']['scales'])
     party_scales, candidate_scales = scale_file['layers']['local_party']['scales'], scale_file['layers']['candidate']['scales']
     slates, reason = A.live_slates(config)
+    classification, why = A.live_classification(config)
     multipliers = config['uncertainty']['candidateBalanceSeatMultiplier']
     seats = sorted(inputs)
     party = {s: general.party_row(s, keys, base[s], national2023, continuing) for s in seats}
@@ -35,7 +36,7 @@ def build(draws):
     out = {}
     with streams.substituted(list(party.values()) + list(candidate.values()), draws, config['simulation']['seedNamespace']), fastmath.accelerated():
         for seat in seats:
-            entry = {'electorate': inputs[seat]['electorate'], 'poll': {k: v for k, v in inputs[seat].items() if k != 'electorate'}, 'classes': {}}
+            entry = {'electorate': inputs[seat]['electorate'], 'configuredClass': classification[seat] if classification else None, 'poll': {k: v for k, v in inputs[seat].items() if k != 'electorate'}, 'classes': {}}
             for kind, multiplier in multipliers.items():
                 arms = {}
                 for arm, poll in (('modelAlone', None), ('modelPlusPoll', inputs[seat])):
@@ -50,7 +51,7 @@ def build(draws):
                                  'nationalShareMean': float(q[:, n].mean()), 'labourShareMean': float(q[:, l].mean()), 'update': record}
                 entry['classes'][kind] = arms
             out[seat] = entry
-    return {'schemaVersion': 1, 'stage': 79, 'label': 'INTERNAL development output; nothing adopted; the D107 classification does not exist yet, so both classes are shown',
+    return {'schemaVersion': 1, 'stage': 79, 'label': 'INTERNAL development output; nothing adopted; both D107 classes are shown and the configured class is marked',
             'draws': draws, 'dataCutoff': config['national']['dataCutoff'], 'nationalDrawIds': ids[:3] + ['...'], 'seats': out,
             'ineligible2026': 'Auckland Central and Wellington Bays (Green-led polls) are context only (design amendment A2)'}
 

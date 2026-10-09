@@ -60,6 +60,15 @@ describe('draw bank contract', () => {
     reject(b => { b.partyVote.shares[0][0] += 0.1; });
     reject(b => { b.seats[1] = { electorateId: b.seats[1].electorateId, scope: 'general', status: 'unavailable' }; });
   });
+  it('accepts the Stage79 seat-poll record on a general seat only and rejects an out-of-range one', () => {
+    const poll = { pollIds: ['synthetic-poll'], pollValue: 0.4, pollVariance: 0.2, ageWeeks: 2, rho: 0.8, weight: 0.5, modelCentre: -0.2, modelSD: 0.35,
+      shift: 0.1, posteriorSD: 0.3, sharedSD: 0.18 };
+    const withPoll = (edit: (b: any) => void) => { const b = clone(smallBank()) as any; edit(b); return DrawBankSchema.safeParse(b).success; };
+    expect(withPoll(b => { b.seats[0].seatPoll = poll; })).toBe(true);
+    expect(withPoll(b => { b.seats[2].seatPoll = poll; })).toBe(false);
+    expect(withPoll(b => { b.seats[0].seatPoll = { ...poll, rho: 1.5 }; })).toBe(false);
+    expect(withPoll(b => { b.seats[0].seatPoll = { ...poll, extra: 1 }; })).toBe(false);
+  });
 });
 
 describe('batch-means Monte Carlo error', () => {

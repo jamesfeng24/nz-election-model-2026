@@ -8,7 +8,7 @@ from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_assembly import assemble as A, general, national, streams, summaries
 from scripts.nowcast_assembly.common import CONFIG, read
 from scripts.nowcast_config.validate import check_config, ConfigError
-from scripts.seat_polls import apply as seat_apply, data, live, model, run, score
+from scripts.seat_polls import apply as seat_apply, data, historical, live, model, run, score
 from scripts.seat_polls.common import DESIGN, PREFIX, parameters
 from scripts.uncertainty_revision.coordinates import mean_logit_location
 
@@ -21,6 +21,18 @@ class Contract(unittest.TestCase):
     def test_frozen_numbers_parse_from_the_contract(self):
         self.assertEqual(parameters(DESIGN_DOC), {'cap': 0.6, 'halfLifeWeeks': 6.0, 'gainNats': 1.0, 'coverageBand': [0.65, 0.95], 'later': 1.5, 'mergeDays': 14})
         self.assertIn('frozen before', DESIGN_DOC['status'])
+
+
+class Isolation(unittest.TestCase):
+    def test_the_live_path_never_imports_the_historical_flags(self):
+        from pathlib import Path
+        root = Path(__file__).resolve().parents[2]
+        for name in ('live', 'apply', 'readout', 'data', 'model', 'common'):
+            text = (root / 'scripts/seat_polls' / f'{name}.py').read_text(encoding='utf-8')
+            self.assertNotRegex(text, r'import[^\n]*\bhistorical\b|from \.historical|seat_polls\.historical|\bhistorical\.', name)
+            self.assertNotIn('exceptional-balance-scale', text, name)
+        assemble = (root / 'scripts/nowcast_assembly/assemble.py').read_text(encoding='utf-8')
+        self.assertNotIn('seat_polls.historical', assemble)
 
 
 class Formulas(unittest.TestCase):
@@ -77,7 +89,7 @@ class Transcription(unittest.TestCase):
             data.verify_transcription(bad)
 
     def test_inventory_and_eligibility(self):
-        units = data.historical_units(DESIGN_DOC)
+        units = historical.historical_units(DESIGN_DOC)
         self.assertEqual(len(units), 14)
         self.assertTrue(all(u['status'] == 'ok' for u in units))
         eligible = [u for u in units if u['eligible']]
@@ -91,7 +103,7 @@ class Transcription(unittest.TestCase):
 class Scoring(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        units = data.historical_units(DESIGN_DOC)
+        units = historical.historical_units(DESIGN_DOC)
         cls.eligible = [u for u in units if u['eligible']]
         cls.arm = score.run_arm(cls.eligible, cls.eligible, DESIGN_DOC)
 
@@ -194,9 +206,12 @@ class Apply(unittest.TestCase):
 
 
 class Switch(unittest.TestCase):
-    def test_config_switch_is_fail_closed_and_default_off(self):
+    def test_config_switch_is_fail_closed(self):
         c = copy.deepcopy(read(CONFIG))
-        self.assertNotIn('seatPolls', c)
+        self.assertEqual(c['seatPolls'], {'enabled': True, 'decision': 'D117'})  # James switched it on (D117)
+        self.assertIn('D117', c['decisions'])
+        check_config(c)
+        c.pop('seatPolls')
         check_config(c)
         for bad in ({'enabled': 'yes', 'decision': 'D117'}, {'enabled': True}, {'enabled': True, 'decision': 'D117', 'x': 1}):
             d = copy.deepcopy(c)
@@ -205,11 +220,12 @@ class Switch(unittest.TestCase):
                 check_config(d)
         d = copy.deepcopy(c)
         d['seatPolls'] = {'enabled': True, 'decision': 'D117'}
-        if read(PREFIX + '/findings.json')['summary']['finding'] == 'adopt':
-            check_config(d)
+        self.assertEqual(read(PREFIX + '/findings.json')['summary']['finding'], 'adopt')
+        check_config(d)
 
     def test_enabled_bank_changes_only_polled_seats(self):
         c = copy.deepcopy(read(CONFIG))
+        c.pop('seatPolls')
         slates = {s: slate(s) for s in GENERAL}
         classes = {s: 'exceptional' if i % 8 == 0 else 'ordinary' for i, s in enumerate(GENERAL)}
         maori = {s: {'status': 'simulated', 'class': 'maori-layer', 'source': 'synthetic-test', 'candidates': ['a', 'b'], 'candidateNames': ['A', 'B'],
