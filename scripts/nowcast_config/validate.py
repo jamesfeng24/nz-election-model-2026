@@ -64,6 +64,12 @@ def check_config(config, require_complete=False):
     for path in pending:
         section, key = path.split('.')
         require(config.get(section, {}).get(key) is None, f'{path} is listed as pending but has a value')
+    if config['roster']['snapshotId'] is not None:
+        for path in ('candidate.features', 'candidate.centredFeatures', 'partyRelationships'):
+            value = config['partyRelationships'] if path == 'partyRelationships' else config['candidate'][path.split('.')[1]]
+            require((ROOT / value).exists(), f'{path} does not exist: {value}')
+    else:
+        require('roster.snapshotId' in pending, 'roster.snapshotId is null but not listed as pending')
     if require_complete:
         require(not pending, 'pending fields must be filled before assembly: ' + ', '.join(sorted(pending)))
     return sorted(pending)

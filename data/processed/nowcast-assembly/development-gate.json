@@ -1,5 +1,5 @@
 {
-  "bankDigest": "955ae76af868b3c412fd9414b49a4c9bcfccc598a687842bf2c5f772acc0c5fc",
+  "bankDigest": "32305f01b542e495173ed7689535554fd6aa0b7d548cc28f9f54ef89f48f0256",
   "blockers": [
     {
       "electorateIds": [
@@ -68,7 +68,7 @@
         "nz-general-2026-boundary-063",
         "nz-general-2026-boundary-064"
       ],
-      "reason": "roster.snapshotId is pending (Stage50 final nominations)",
+      "reason": "classification file missing: config/general-seat-classification-2026.json (James, D107)",
       "seats": 64
     },
     {
@@ -85,7 +85,7 @@
   "checks": [
     {
       "check": "configComplete",
-      "detail": "pending fields must be filled before assembly: maori.unpolledFallbackModel, roster.snapshotId",
+      "detail": "pending fields must be filled before assembly: maori.unpolledFallbackModel",
       "passed": false
     },
     {
@@ -134,7 +134,7 @@
       "passed": true
     }
   ],
-  "configVersion": "2026-10-07.8",
+  "configVersion": "2026-10-10.1",
   "diagnostics": {
     "reconciliation": {
       "byGroup": {

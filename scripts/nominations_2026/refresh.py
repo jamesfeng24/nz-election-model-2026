@@ -101,15 +101,35 @@ def reconciliation(snapshot):
             'unmappedBallotGroups': sorted({o['originalAffiliation'] for o in snapshot['occurrences'] if o['ballotGroupKey'] is None})}
 
 
-def apply_config(acquisition, outputs):
-    """Point the live config at the official roster; the pending roster field is filled with the snapshot id."""
-    config = read(CONFIG)
-    config['roster']['snapshotId'] = 'nz-2026-official-nominations-' + acquisition['snapshotDateNZ']
-    config['candidate']['features'] = output_dir(acquisition) + 'features-raw.json'
-    config['candidate']['centredFeatures'] = output_dir(acquisition) + 'features-centred.json'
-    config['partyRelationships'] = snapshot_dir(acquisition) + 'party-relationships.json'
-    config['pending'].pop('roster.snapshotId', None)
-    (ROOT / CONFIG).write_text(json.dumps(config, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+def apply_config(acquisition, outputs, text=None):
+    """Point the live config at the official roster; the pending roster field is filled with the snapshot id.
+
+    Edits only the affected values in the config text (each must occur exactly once), so the reviewed layout of
+    the rest of the file is preserved. Returns the new text; writes the file when `text` is not given."""
+    write = text is None
+    text = (ROOT / CONFIG).read_text(encoding='utf-8') if write else text
+    config = json.loads(text)
+    changes = [('"snapshotId": ' + json.dumps(config['roster']['snapshotId']),
+                '"snapshotId": ' + json.dumps('nz-2026-official-nominations-' + acquisition['snapshotDateNZ'])),
+               ('"features": ' + json.dumps(config['candidate']['features']),
+                '"features": ' + json.dumps(output_dir(acquisition) + 'features-raw.json')),
+               ('"centredFeatures": ' + json.dumps(config['candidate']['centredFeatures']),
+                '"centredFeatures": ' + json.dumps(output_dir(acquisition) + 'features-centred.json')),
+               ('"partyRelationships": ' + json.dumps(config['partyRelationships']),
+                '"partyRelationships": ' + json.dumps(snapshot_dir(acquisition) + 'party-relationships.json'))]
+    pending = config['pending'].get('roster.snapshotId')
+    if pending is not None:
+        changes.append(('    "roster.snapshotId": ' + json.dumps(pending, ensure_ascii=False) + ',\n', ''))
+    for before, after in changes:
+        if text.count(before) != 1:
+            raise ValueError(f'config value not found exactly once: {before.strip()}')
+        text = text.replace(before, after)
+    result = json.loads(text)
+    if result['roster']['snapshotId'] is None or 'roster.snapshotId' in result['pending']:
+        raise ValueError('config roster not applied')
+    if write:
+        (ROOT / CONFIG).write_text(text, encoding='utf-8')
+    return text
 
 
 def main():

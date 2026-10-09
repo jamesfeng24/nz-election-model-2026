@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-07.8",
+  "configVersion": "2026-10-10.1",
   "decisions": ["D106", "D107", "D114"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
@@ -20,10 +20,10 @@
     "otherName": "Other parties (combined)",
     "otherSplit": "Other stays one national bucket for MMP; inside each seat it is split by that seat's own 2023 notional mix of the non-core parties (Stage73, James 2026-10-07)"
   },
-  "partyRelationships": "data/processed/forecast-readiness/snapshots/2026-10-05/party-relationships.json",
+  "partyRelationships": "data/processed/forecast-readiness/snapshots/2026-10-10/party-relationships.json",
   "candidate": {
-    "features": "data/processed/continuous-transport/readiness-2026.json",
-    "centredFeatures": "data/processed/candidate-fit-2026/features-2026.json",
+    "features": "data/processed/nominations-2026/2026-10-10/features-raw.json",
+    "centredFeatures": "data/processed/nominations-2026/2026-10-10/features-centred.json",
     "parameters": "data/processed/candidate-fit-2026/fit.json",
     "fold": {"branch": "live_all_elections", "targetYear": 2026, "method": "baseline_plus_S_plus_R"},
     "status": "Stage75: the Stage33 S+R design refitted on every completed election (2011-2023 targets); 2026 features recentred on its training-only means"
@@ -51,10 +51,9 @@
     "policyApprovedBy": "James, 2026-10-07 (D114)"
   },
   "pending": {
-    "roster.snapshotId": "Stage50: final nominations close 8 October 2026 12:00 NZDT",
     "maori.unpolledFallbackModel": "James chose a labelled fallback for the four unpolled seats (D114) but the Maori layer has no no-poll estimate (Stage66/71: unpolled seats carry no values); a separately authorized bounded stage must define and register it. Until then those seats stay unavailable and block seat-count outputs"
   },
-  "roster": {"snapshotId": null},
+  "roster": {"snapshotId": "nz-2026-official-nominations-2026-10-10"},
   "simulation": {
     "draws": 65536,
     "nationalDraws": 4096,
