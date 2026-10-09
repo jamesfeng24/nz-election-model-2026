@@ -1,0 +1,57 @@
+{
+ "adoptionNote": "The record has the Stage66 current-poll shape (candidates with pollPercent, id, seat, fieldworkEnd). Adopting it would change a pinned input of Stage66, Stage71 and Stage78 and so needs regenerated, re-checked artifacts; James (2026-10-09) preferred not to update each time one electorate poll appears.",
+ "polls": [
+  {
+   "candidateVoteExcludingUndecided": {
+    "Rawiri Waititi": 52
+   },
+   "candidates": [
+    {
+     "name": "Rawiri Waititi",
+     "party": "MP",
+     "pollPercent": 42
+    },
+    {
+     "name": "Tania Waikato",
+     "party": "GRN",
+     "pollPercent": 16
+    },
+    {
+     "name": "Toni Boynton",
+     "party": "LAB",
+     "pollPercent": 14
+    },
+    {
+     "name": "Pāpā Wharewera",
+     "party": "TOP",
+     "pollPercent": 3
+    }
+   ],
+   "fieldworkEnd": "2026-10-01",
+   "fieldworkStart": "2026-09-21",
+   "id": "2026-waiariki",
+   "marginOfErrorPercent": 4.5,
+   "mode": "420 phone, 80 online panel",
+   "notes": "Candidate shares are shares of all respondents; the four named shares sum to 75% with 18% undecided and 6% other. Party-vote figures are recorded for the national-layer reconciliation and are not used in a seat forecast; their base is not stated.",
+   "otherPercent": 6,
+   "partyVotePercent": {
+    "GRN": 22,
+    "LAB": 24,
+    "MP": 23,
+    "TOP": 0,
+    "undecided": 14
+   },
+   "pollster": "Whakaata Māori–Curia (Whakatau 2026)",
+   "published": "2026-10-07",
+   "sampleSize": 500,
+   "seat": "Waiariki",
+   "sourceFiles": [
+    "data/raw/polling/maori-seat-polls-2026-10/spinoff-waiariki-2026-10-07.html"
+   ],
+   "undecidedPercent": 18
+  }
+ ],
+ "schemaVersion": 1,
+ "scope": "Waiariki (Maori electorate), 2026 general election",
+ "status": "recorded only; not in data/source-plans/maori-seat-layer/polls-2026.json and not read by any layer (Waiariki stays an unpolled seat until a separate update adopts it)"
+}

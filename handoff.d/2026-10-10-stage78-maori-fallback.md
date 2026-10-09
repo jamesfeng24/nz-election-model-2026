@@ -42,3 +42,10 @@ Estimand: for a Māori electorate without a seat poll, per draw, each candidate'
 
 <!-- fold: roadmap -->
 | Stage78 | No-poll fallback for the four unpolled Māori seats: previous result carried forward, optionally with the polled seats' swing (internal; frozen pre-registered design) | review-ready (D115 provisional): `mixed_report_to_james`; James chose 2023-only (F) |
+
+<!-- fold: sources -->
+## Waiariki poll of 2026-10-07 (Whakaata Māori–Curia), recorded 2026-10-09
+
+- Page bytes of The Spinoff's republication of the Te Ao Māori News story preserved under `data/raw/polling/maori-seat-polls-2026-10/` with headers and fetch log; dated registry and transcription in `data/processed/polling/maori-seat-polls-2026-10/` (`python3 -m scripts.polling.waiariki_poll_2026_10 --check` re-verifies the bytes and every transcribed phrase). `data/sources.json` is untouched.
+- Candidate vote: Waititi (TPM) 42, Waikato (GRN) 16, Boynton (LAB) 14, Wharewera (TOP) 3; undecided 18, other 6; 500 respondents, fieldwork 21 September to 1 October, ±4.5. Party vote: LAB 24, TPM 23, GRN 22, TOP 0, unsure 14 (base not stated). The Te Ao Māori News original and Curia tables were not found.
+- **Recorded only.** The pinned `data/source-plans/maori-seat-layer/polls-2026.json` (hash pinned by Stage66, Stage71 and Stage78) is unchanged, so Waiariki stays an unpolled seat (fallback). James (2026-10-09) preferred not to update the layer each time one electorate poll appears; adopting this record, and any other new seat polls, is one later authorized update that regenerates the pinned artifacts.
