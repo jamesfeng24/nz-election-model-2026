@@ -38,6 +38,10 @@ class Scales2026(unittest.TestCase):
         for part in ('seat', 'shared'):
             self.assertAlmostEqual(by_class['ordinary'][part], 0.55 * within[part], places=12)
             self.assertEqual(by_class['exceptional'][part], within[part])
+        mass = saved['layers']['candidate']['scales']['mass']
+        for part in ('seat', 'shared'):
+            self.assertAlmostEqual(saved['candidateMassByClass']['ordinary'][part], 0.91 * mass[part], places=12)
+            self.assertEqual(saved['candidateMassByClass']['exceptional'][part], mass[part])
         self.assertEqual(saved['layers']['candidate']['scales']['balance'], read(scales.STAGE45)['descriptive']['candidate']['scales']['balance'])
 
 
@@ -74,6 +78,8 @@ class Config(unittest.TestCase):
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.60, 'exceptional': 1.5}),
                      lambda c: c['uncertainty'].update(candidateWithinSeatMultiplier={'ordinary': 0.80, 'exceptional': 1.0}),
                      lambda c: c['uncertainty'].update(candidateWithinSeatMultiplier={'ordinary': 0.55, 'exceptional': 0.9}),
+                     lambda c: c['uncertainty'].update(candidateMassSeatMultiplier={'ordinary': 0.75, 'exceptional': 1.0}),
+                     lambda c: c['uncertainty'].update(candidateMassSeatMultiplier={'ordinary': 0.91, 'exceptional': 0.9}),
                      lambda c: c.update(intervalLevels=[0.9]),
                      lambda c: c['national'].update(modelStateAsOf=(datetime.date.fromisoformat(c['national']['dataCutoff']) + datetime.timedelta(days=1)).isoformat()),   # state dated after the cutoff
                      lambda c: c['roster'].update(snapshotId=None),   # null roster without a pending entry

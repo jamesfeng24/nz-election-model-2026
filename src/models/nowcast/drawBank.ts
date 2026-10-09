@@ -19,6 +19,7 @@ const Simulated = z.object({
   class: z.enum(['ordinary', 'exceptional', 'maori-layer']),
   multiplier: z.number().positive().optional(),
   withinMultiplier: z.number().positive().optional(),
+  massMultiplier: z.number().positive().optional(),
   source: id.optional(),
   pollFieldworkEnd: z.iso.date().optional(),
   candidates: z.array(id).min(2),
