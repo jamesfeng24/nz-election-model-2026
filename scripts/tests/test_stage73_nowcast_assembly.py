@@ -161,7 +161,9 @@ class Bank(unittest.TestCase):
         self.assertEqual(set(report['seatStatus']), set(GENERAL + MAORI))
         reasons = {b['reason']: b['seats'] for b in report['blockers']}
         self.assertEqual(sum(reasons.values()) + sum(v == 'simulated' for v in report['seatStatus'].values()), 71)
-        self.assertTrue(any('Stage50' in r for r in reasons))
+        # Stage50 part 2 set the official roster; the general seats now wait only on James's classification (D107).
+        self.assertTrue(any('classification' in r and n == 64 for r, n in reasons.items()))
+        self.assertFalse(any('Stage50' in r for r in reasons))
 
 
 if __name__ == '__main__':
