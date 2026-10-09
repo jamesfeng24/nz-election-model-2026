@@ -54,6 +54,10 @@ An arm qualifies only if, on ordinary seats in 2017, 2020 and 2023:
 
 Selection: both qualify → within_mass only if it beats within by a further 1% and passes every guard, else within; one qualifies → that arm; none → keep control (negligible, worse or mixed). Poor results do not authorise a family search.
 
+## Amendment 1 (2026-10-10): robust scale estimator, before any score
+
+After the pre-registered moment-ratio fits were run, and before any Stage83 score was computed or read, the earlier-trained multipliers were seen to be 0.69–0.97 (within 0.73–0.89), far above the 0.55 and 0.75 that the in-sample coverage diagnostic implied. The reason is that the moment ratio is dominated by a few large residuals, while coverage and CRPS score the centre; with such multipliers the pre-registered coverage band could not be met for a reason unrelated to whether narrowing works. Four arms are added (`within_robust`, `within_mass_robust` and their 17-flag versions) using `rho_y = (median |z| / 0.6745)²` in place of the mean squared ratio, same closed form, same cap, same ordinary-seat training. The law stays Gaussian; Stage46's Student-t question is not reopened. Selection tries the pre-registered moment arms first and uses the robust arms only if neither qualifies, labelling any such recommendation as amended. The moment fits are kept in `fit.json` and scored regardless.
+
 ## Pre-freeze observations and deviations from the approved draft (disclosed)
 
 The coordinator-level diagnostic had already shown, before this freeze, that narrowing mass ×0.75 in ordinary seats lowers National candidate 80% coverage from 0.731 to 0.689 (Labour 0.799 to 0.776). The reference values 0.55 (within) and 0.75 (mass) were seen on all four elections and are not pre-registered fits. Three changes from the draft James approved, made before any fit:
