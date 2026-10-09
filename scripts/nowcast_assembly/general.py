@@ -93,14 +93,17 @@ def candidate_row(electorate, slate, party, parameters):
             'partyOf': [c['group'] for c in slate]}
 
 
-def scaled(scales, multiplier):
+def scaled(scales, multiplier, within=1.0):
     result = deepcopy(scales)
     result['balance']['seat'] = scales['balance']['seat'] * float(multiplier)
+    for part in ('seat', 'shared'):
+        result['within'][part] = scales['within'][part] * float(within)
     return result
 
 
-def simulate(party, candidate, fine, party_scales, candidate_scales, multiplier):
-    """Candidate shares [count, C] for one seat; the multiplier touches only the candidate balance seat scale."""
+def simulate(party, candidate, fine, party_scales, candidate_scales, multiplier, within=1.0):
+    """Candidate shares [count, C] for one seat; `multiplier` touches only the candidate balance seat scale (D107) and
+    `within` the candidate within-remainder seat and shared scales (D121)."""
     count = len(fine)
     deterministic = local_vectors(fine, party['affinities'])
     local, _ = invert(deterministic, party, party_scales, count)
@@ -108,5 +111,5 @@ def simulate(party, candidate, fine, party_scales, candidate_scales, multiplier)
         return local, None
     destinations, exponents, kappa = candidate_inputs(candidate, party)
     conditional = candidate_vectors(local, destinations, exponents, kappa)
-    q, _ = invert(conditional, candidate, scaled(candidate_scales, multiplier), count)
+    q, _ = invert(conditional, candidate, scaled(candidate_scales, multiplier, within), count)
     return local, q

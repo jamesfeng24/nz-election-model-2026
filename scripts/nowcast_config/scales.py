@@ -22,7 +22,8 @@ LAYERS = (('local_party', 'partyRecords'), ('candidate', 'candidateRecords'))
 
 def build():
     inventory, stage45 = read(INVENTORY), read(STAGE45)['descriptive']
-    multipliers = read(CONFIG)['uncertainty']['candidateBalanceSeatMultiplier']
+    uncertainty = read(CONFIG)['uncertainty']
+    multipliers, within_multipliers = uncertainty['candidateBalanceSeatMultiplier'], uncertainty['candidateWithinSeatMultiplier']
     layers = {}
     for layer, key in LAYERS:
         result = fit(inventory[key], layer, 2026)
@@ -35,10 +36,15 @@ def build():
     effective = {kind: {'seat': balance['seat'] * m, 'shared': balance['shared'],
                         'total': math.hypot(balance['seat'] * m, balance['shared']), 'multiplier': m}
                  for kind, m in multipliers.items()}
+    within = layers['candidate']['scales']['within']
+    within_effective = {kind: {'seat': within['seat'] * m, 'shared': within['shared'] * m, 'multiplier': m}
+                        for kind, m in within_multipliers.items()}
     return {'stage': 72, 'targetYear': 2026, 'rule': 'Stage45 fit(rows, layer, 2026), unchanged; equals the Stage45 all-election descriptive fit',
             'layers': layers,
             'candidateBalanceByClass': {'decision': 'D107', 'appliesTo': 'candidate N/L balance seat scale only; shared scale, means and other coordinates unchanged',
                                         **effective},
+            'candidateWithinByClass': {'decision': 'D121', 'appliesTo': 'candidate within-remainder seat and shared scales; means and other coordinates unchanged',
+                                       **within_effective},
             'evidence': 'development-informed and flag-selection-sensitive (D101, D107); not a validated calibration',
             'equalsStage45Descriptive': True}
 

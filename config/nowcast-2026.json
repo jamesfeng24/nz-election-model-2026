@@ -31,6 +31,8 @@
   "uncertainty": {
     "scales": "data/processed/nowcast-config/scales-2026.json",
     "candidateBalanceSeatMultiplier": {"ordinary": 0.60, "exceptional": 1.00},
+    "candidateWithinSeatMultiplier": {"ordinary": 0.55, "exceptional": 1.00},
+    "candidateWithinStatus": "Stage83/D121: James's judgement (2026-10-10): candidate within-remainder noise (seat and shared parts) x0.55 in ordinary seats, 1.00 in exceptional seats; the fitted earlier-trained value was about 0.8 and the frozen rule kept control",
     "classification": "config/general-seat-classification-2026.json",
     "extraSdOnExceptionalRequiresOptIn": true
   },
