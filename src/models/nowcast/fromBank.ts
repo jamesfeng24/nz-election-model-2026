@@ -1,6 +1,6 @@
 import { INTERVAL_LEVELS, type IntervalSet, type MmpAllocation, type SimulationConfig } from '../../types/domain';
 import { z } from 'zod';
-import { ForecastSnapshotSchema, NationalPollSchema, NationalTrendSchema, SeatPollBaseSchema, SnapshotEvidenceSchema, type ForecastSnapshot } from '../../types/export';
+import { AdjustmentsSchema, ForecastSnapshotSchema, NationalPollSchema, NationalTrendSchema, SeatPollBaseSchema, SnapshotEvidenceSchema, type ForecastSnapshot } from '../../types/export';
 import { allocateDraw, SeatSummaryAccumulator, type BlocDefinition, type SeatDrawOutcome, type SeatLayerConfig } from '../mmp/seatLayer';
 import { batchMeansMcse, chainOrder, type ChainOrder } from './batchMeans';
 import { DrawBankSchema, type DrawBank, type SimulatedSeat } from './drawBank';
@@ -30,6 +30,8 @@ export interface NowcastSnapshotOptions {
   syntheticLabel?: string;
   /** Optional site evidence file written by `scripts/site_evidence/build.py`: the polls used and the national trend. */
   evidence?: unknown;
+  /** Manual adjustments made to the output, if any: `{ by, items: [{ what, why }] }`. The site shows only the adjusted numbers and says so. */
+  adjustments?: unknown;
 }
 
 /** The evidence file: national polls and trend, and seat polls keyed by electorate name (resolved against the directory). */
@@ -269,5 +271,6 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     unavailableElectorates: unavailable.map(s => ({ electorateId: s.electorateId, reason: s.reason })),
     electorateDetail, seatLayer, mmp, boundaries: null, limitations: options.limitations,
     ...(evidence ? { evidence: { source: evidence.source, nationalPolls: evidence.nationalPolls, trend: evidence.trend } } : {}),
+    ...(options.adjustments === undefined ? {} : { adjustments: AdjustmentsSchema.parse(options.adjustments) }),
   });
 }

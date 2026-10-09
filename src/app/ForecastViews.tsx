@@ -21,6 +21,7 @@ export function SnapshotBanner({ snapshot }: { snapshot: ForecastSnapshot }) {
     {snapshot.targetType === 'nowcast'
       ? <p className="banner"><strong>Forecast if the election were held today, as of {longDate(snapshot.dataCutoff)}.</strong> Polls to {longDate(snapshot.dataCutoff)}; the national picture is that of the week of {longDate(snapshot.modelStateAsOf)}. This is not a prediction of how opinion will move before election day ({longDate(snapshot.electionDate)}). Ranges are central ranges across simulated elections, not margins of error.</p>
       : <p role="note" className="banner">Election-day scenario, not the primary forecast.</p>}
+    {snapshot.adjustments && <p className="banner">Includes manual adjustments by {snapshot.adjustments.by}. <a href="../methodology/">What was changed and why</a>.</p>}
   </>;
 }
 

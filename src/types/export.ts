@@ -109,6 +109,12 @@ export const NationalTrendSchema = z.object({
   if (t.weeks.some((w, i) => i > 0 && w <= t.weeks[i - 1])) ctx.addIssue({ code: 'custom', message: 'Trend weeks must increase', path: ['weeks'] });
 });
 
+/** Manual adjustments the project owner made to the model's output. Absent unless some were made; the site then says so and why. */
+export const AdjustmentsSchema = z.object({
+  by: id,
+  items: z.array(z.object({ what: id, why: id }).strict()).min(1),
+}).strict();
+
 /** The evidence behind the national picture: the polls listed and the model's weekly path. Optional in a snapshot. */
 export const SnapshotEvidenceSchema = z.object({
   source: z.object({ label: id, url, revision: id, retrieved: id }).strict(),
@@ -168,6 +174,7 @@ export const ForecastSnapshotSchema = z.object({
   ]),
   boundaries: BoundaryReferenceSchema.nullable(),
   evidence: SnapshotEvidenceSchema.optional(),
+  adjustments: AdjustmentsSchema.optional(),
   limitations: z.array(id).min(1),
 }).strict().superRefine((s, ctx) => {
   const bad = (message: string, path: (string | number)[] = []) => ctx.addIssue({ code: 'custom', message, path });

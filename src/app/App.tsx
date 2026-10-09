@@ -32,7 +32,7 @@ export function App({ page, source = defaultSource, indexSource = defaultIndexSo
   const [index, setIndex] = useState<IndexResult | { status: 'loading' }>({ status: 'loading' });
   useEffect(() => {
     let live = true;
-    if (page === 'forecast' || page === 'electorates' || page === 'polls') source().then(r => { if (live) setResult(r); }, () => { if (live) setResult({ status: 'unavailable', reason: 'Could not load the forecast' }); });
+    if (page !== 'archive') source().then(r => { if (live) setResult(r); }, () => { if (live) setResult({ status: 'unavailable', reason: 'Could not load the forecast' }); });
     if (page === 'forecast') historySource().then(h => { if (live) setHistory(h); }, () => undefined);
     if (page === 'archive') indexSource().then(r => { if (live) setIndex(r); }, () => { if (live) setIndex({ status: 'unavailable', reason: 'Could not load the archive' }); });
     return () => { live = false; };
@@ -51,7 +51,7 @@ export function App({ page, source = defaultSource, indexSource = defaultIndexSo
           ? <p role="status">Loading the latest forecast…</p>
           : <section className="status-panel"><h2>No forecast published yet</h2><p>The first forecast will appear here after the next weekly poll refresh. <a href={href('methodology')}>How it works</a>.</p></section>}
       </>}
-      {page === 'methodology' && <><h1>{current.title}</h1><MethodologyView /></>}
+      {page === 'methodology' && <><h1>{current.title}</h1><MethodologyView adjustments={result.status === 'loaded' ? result.snapshot.adjustments : undefined} /></>}
       {page === 'archive' && <><h1>{current.title}</h1><ArchiveView result={index} /></>}
     </main>
     <footer><span>An independent research project, not an official election service.</span><a href="https://creativecommons.org/licenses/by/4.0/">Free to share with credit (CC BY 4.0)</a></footer>

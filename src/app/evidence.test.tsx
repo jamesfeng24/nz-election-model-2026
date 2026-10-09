@@ -55,4 +55,19 @@ describe('site evidence in the snapshot', () => {
     const snapshot = await syntheticBankSnapshot();
     expect(snapshot.evidence).toBeUndefined();
   });
+  it('mentions manual adjustments on the methodology and forecast pages only when the snapshot carries them', async () => {
+    const plain = await buildNowcastSnapshot(bank, options(evidenceFile));
+    const { unmount } = render(<App page="methodology" source={loaded(plain)} />);
+    expect(screen.queryByRole('heading', { name: 'Manual adjustments' })).not.toBeInTheDocument();
+    unmount();
+    const adjusted = await buildNowcastSnapshot(bank, { ...options(evidenceFile), adjustments: { by: 'James', items: [{ what: 'Invented example adjustment', why: 'Invented reason' }] } });
+    const view = render(<App page="methodology" source={loaded(adjusted)} />);
+    expect(await screen.findByRole('heading', { name: 'Manual adjustments' })).toBeInTheDocument();
+    expect(screen.getByText(/includes manual adjustments by James/)).toBeInTheDocument();
+    expect(screen.getByText(/Invented reason/)).toBeInTheDocument();
+    view.unmount();
+    render(<App page="forecast" source={loaded(adjusted)} />);
+    expect(await screen.findByText(/Includes manual adjustments by James/)).toBeInTheDocument();
+    await expect(buildNowcastSnapshot(bank, { ...options(evidenceFile), adjustments: { by: 'James', items: [] } })).rejects.toThrow();
+  });
 });

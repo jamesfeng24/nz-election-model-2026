@@ -1,5 +1,7 @@
+import type { ForecastSnapshot } from '../types/export';
+
 /** Plain-language method note for the public. Facts here come from docs/nowcast-specification.md and config/nowcast-2026.json. */
-export function MethodologyView() {
+export function MethodologyView({ adjustments }: { adjustments?: ForecastSnapshot['adjustments'] }) {
   return <article className="prose">
     <h2>What this forecast says</h2>
     <p>It answers one question: if the New Zealand general election were held under current political conditions, what would happen? It is not a prediction of how opinion will move between now and 7 November 2026, and it does not try to forecast campaign events. Each forecast carries the date of the poll refresh behind it.</p>
@@ -24,6 +26,11 @@ export function MethodologyView() {
       <li>2026 candidates: Electoral Commission nominations and party announcements.</li>
       <li>MMP rules: Electoral Act 1993.</li>
     </ul>
+    {adjustments && <>
+      <h2>Manual adjustments</h2>
+      <p>The current forecast includes manual adjustments by {adjustments.by}. Only the adjusted numbers are shown, so this section says what was changed and why.</p>
+      <ul>{adjustments.items.map(a => <li key={a.what}><b>{a.what}.</b> {a.why}</li>)}</ul>
+    </>}
     <h2>What it cannot do</h2>
     <p>It cannot see anything polls have not yet measured. Polls can be wrong in ways that move together, electorate polls are rare and small, and candidates' circumstances can change after the forecast date. The limitations listed with each forecast say what was missing or assumed at that date.</p>
     <p>This is an independent research project, not an official election service.</p>
