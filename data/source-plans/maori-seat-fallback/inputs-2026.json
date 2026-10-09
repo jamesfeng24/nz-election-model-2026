@@ -1,0 +1,39 @@
+{
+ "labelCodes": {
+  "Aotearoa Legalise Cannabis Party": "ALC",
+  "Green Party": "GRN",
+  "Independent": "IND",
+  "Labour Party": "LAB",
+  "National Party": "NAT",
+  "New Zealand First Party": "NZF",
+  "New Zealand Loyal": "NZL",
+  "Opportunity Party": "TOP",
+  "Te Pāti Māori": "MP",
+  "Te Tai Tokerau Party": "TTT",
+  "Your PIC Party": "PIC"
+ },
+ "officialTable": "data/processed/nominations-2026/2026-10-10/official-table.json",
+ "registration": {
+  "allowedChoices": [
+   "F",
+   "FC_to_FP",
+   "FC_to_FP_without_Te_Tai_Tonga"
+  ],
+  "choice": "F",
+  "decidedBy": "James (decision card in the Stage78 thread)",
+  "decidedOn": "2026-10-09",
+  "note": "Chosen by James after the frozen swing rule returned mixed_report_to_james (Stage78): the 2023 result carried forward, no polled-seat swing. The swing arms stay as flagged sensitivities. Not wired into the configuration or assembly by Stage78."
+ },
+ "schemaVersion": 1,
+ "splitIncumbents": [
+  {
+   "candidateCode": "TTT",
+   "displayName": "Mariameno KAPA-KINGI",
+   "fromCode": "MP",
+   "note": "The 2023 Te Pāti Māori winner of Te Tai Tokerau stands for the Te Tai Tokerau Party in 2026 (official list). A fraction phi of the 2023 Te Pāti Māori baseline follows her; phi is uniform on (0, 1) per draw.",
+   "priorCandidateSurname": "KAPA-KINGI",
+   "seat": "Te Tai Tokerau"
+  }
+ ],
+ "status": "Judgement inputs for the Stage78 no-poll Maori fallback; not a source of political data. Candidate names and affiliations are read from the Stage50 official table."
+}
