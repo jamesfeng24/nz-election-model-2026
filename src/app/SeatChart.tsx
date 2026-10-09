@@ -1,7 +1,7 @@
 import type { ForecastSnapshot } from '../types/export';
 import { partyLabel } from './partyNames';
 import { PRIMARY_INTERVAL_LEVEL } from '../types/domain';
-import { hemicycle, largestRemainder } from './hemicycle';
+import { hemicycle, hemicycleDot, largestRemainder } from './hemicycle';
 
 /** Left-to-right order of the headline chart, set by James (2026-10-09). Parties not in the snapshot are skipped. */
 export const HEADLINE_ORDER = ['tepatimaori', 'greenparty', 'labourparty', 'opportunity', 'newzealandfirstparty', 'nationalparty', 'actnewzealand'];
@@ -15,7 +15,7 @@ const OTHER = '#a9b4b0';
 interface Slice { key: string; label: string; mean: number; median: number; lower: number; upper: number; colour: string }
 
 function slices(snapshot: ForecastSnapshot): { slices: Slice[]; total: number } {
-  const name = (id: string) => partyLabel(snapshot, id, 'short');
+  const name = (id: string) => partyLabel(snapshot, id);
   const layer = snapshot.seatLayer.status === 'available' ? snapshot.seatLayer.summary : null;
   const rows = layer
     ? layer.parties.map(p => ({ id: p.partyId, mean: p.meanSeats, set: p.seats }))
@@ -38,9 +38,8 @@ export function SeatChart({ snapshot }: { snapshot: ForecastSnapshot }) {
   const counts = largestRemainder(parts.map(p => p.mean), total);
   const seats = hemicycle(total);
   const owner: number[] = counts.flatMap((n, i) => Array(n).fill(i) as number[]);
-  const W = 640, pad = 20, scale = (W - 2 * pad) / 2, H = 2 * pad + scale;
-  const row = Math.max(1, Math.round(Math.sqrt(total / 2.2)));
-  const dot = Math.min(11, (scale * 0.6) / (row - 1 || 1) * 0.42);
+  const W = 640, d = hemicycleDot(total);
+  const pad = (d * W / 2 + 6) / (1 + d), scale = (W - 2 * pad) / 2, dot = d * scale, H = 2 * pad + scale;   // margin = dot radius + 6, so no dot is clipped
   const summary = parts.map((p, i) => `${p.label} ${counts[i]}`).join(', ');
   return <figure className="seatchart">
     <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Expected seats, left to right: ${summary}. Parliament of ${total}.`}>

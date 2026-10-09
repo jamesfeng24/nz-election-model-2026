@@ -1,26 +1,24 @@
 import type { ForecastSnapshot } from '../types/export';
-import { longDate } from './format';
+import { dateRange, longDate } from './format';
 
 type ElectorateDetail = ForecastSnapshot['electorateDetail'][number];
 export type SeatPoll = NonNullable<ElectorateDetail['evidence']>['polls'][number];
 
-const dates = (p: SeatPoll) => p.fieldworkEnd
-  ? `fieldwork ${p.fieldworkStart ? `${longDate(p.fieldworkStart)} to ` : 'to '}${longDate(p.fieldworkEnd)}`
-  : `published ${longDate(p.published!)} (fieldwork dates not stated)`;
+/** Poll-sheet party codes, shown as the site's party names. */
+const CODES: Record<string, string> = { LAB: 'Labour', NAT: 'National', GRN: 'Greens', ACT: 'ACT', NZF: 'NZ First', TOP: 'TOP', MP: 'Te Pāti Māori', TPM: 'Te Pāti Māori', IND: 'Independent' };
 
-/** One seat poll with its citation: pollster, client, dates, sample, whether the forecast used it, and where it was published. */
-export function SeatPollTable({ poll }: { poll: SeatPoll }) {
-  return <table className="poll">
-    <caption>
-      <strong>{poll.pollster}</strong>{poll.commissioner ? `, for ${poll.commissioner}` : ''}; {dates(poll)}
-      {poll.sampleSize ? `; ${poll.sampleSize} people` : ''}{poll.marginOfError ? `; margin of error ±${poll.marginOfError} points` : ''}.{' '}
-      <em>{poll.usedInModel ? 'Used in this forecast.' : 'Found but not used in this forecast.'}</em>
-    </caption>
-    <thead><tr><th>Candidate</th><th>Poll</th></tr></thead>
-    <tbody>{poll.results.map(r => <tr key={r.name}><td>{r.name}{r.party ? ` (${r.party})` : ''}</td><td>{r.approximate ? '~' : ''}{r.percent}%</td></tr>)}</tbody>
-    <tfoot>
-      {poll.sources.length > 0 && <tr><td colSpan={2}><small>Source: {poll.sources.map((s, i) => <span key={s.label + i}>{i > 0 ? '; ' : ''}{s.url ? <a href={s.url} rel="noopener noreferrer">{s.label}</a> : s.label}</span>)}</small></td></tr>}
-      {poll.note && <tr><td colSpan={2}><small>{poll.note}</small></td></tr>}
-    </tfoot>
-  </table>;
+/** The poll's full name, client first: "Taxpayers' Union–Curia", "The Spinoff–Curia". */
+export const pollName = (poll: { pollster: string; commissioner: string | null }) =>
+  poll.commissioner && !poll.pollster.includes(poll.commissioner) ? `${poll.commissioner}–${poll.pollster}` : poll.pollster;
+
+/** One seat poll in a line or two: name, dates, sample, each candidate's figure, whether the forecast used it, and where it was published. */
+export function SeatPollLine({ poll }: { poll: SeatPoll }) {
+  return <p className="pollline">
+    <strong>{pollName(poll)}</strong>, {poll.fieldworkEnd ? dateRange(poll.fieldworkStart, poll.fieldworkEnd) : `published ${longDate(poll.published!)}`}
+    {poll.sampleSize ? `, ${poll.sampleSize} people` : ''}{poll.marginOfError ? `, ±${poll.marginOfError}` : ''}:{' '}
+    {poll.results.map(r => `${r.name}${r.party ? ` (${CODES[r.party] ?? r.party})` : ''} ${r.approximate ? '~' : ''}${r.percent}%`).join(', ')}.{' '}
+    <em>{poll.usedInModel ? 'Used in this forecast.' : 'Not used in this forecast.'}</em>
+    {poll.sources.length > 0 && <> Source: {poll.sources.map((s, i) => <span key={s.label + i}>{i > 0 ? '; ' : ''}{s.url ? <a href={s.url} rel="noopener noreferrer">{s.label}</a> : s.label}</span>)}.</>}
+    {poll.note && <><br /><small>{poll.note}</small></>}
+  </p>;
 }

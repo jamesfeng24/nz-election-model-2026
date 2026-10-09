@@ -5,7 +5,7 @@ describe('parliament chart layout', () => {
   it.each([1, 7, 61, 120, 123])('places exactly %i seats, ordered left to right', n => {
     const seats = hemicycle(n);
     expect(seats).toHaveLength(n);
-    for (let i = 1; i < n; i++) expect(seats[i].angle).toBeLessThanOrEqual(seats[i - 1].angle + 1e-12);
+    for (let i = 1; i < n; i++) expect(seats[i].order).toBeGreaterThanOrEqual(seats[i - 1].order);
     for (const s of seats) { expect(s.x).toBeGreaterThanOrEqual(0); expect(s.x).toBeLessThanOrEqual(2); expect(s.y).toBeGreaterThanOrEqual(0); expect(s.y).toBeLessThanOrEqual(1); }
   });
   it('allocates integer seats that sum to the total and stay within one of each mean', () => {

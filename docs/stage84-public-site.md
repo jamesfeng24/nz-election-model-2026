@@ -38,9 +38,16 @@ Two optional additions, so schema v2 snapshots without them stay valid. Top-leve
 
 ## Party names and the electorate map
 
-- **Names** (`src/app/partyNames.ts`, James 2026-10-09): National, Labour, ACT, New Zealand First, The Greens, The Opportunity Party, Te Pāti Māori in text and tables; NZ First, Greens, TOP and TPM where space is tight (seat chart labels, poll table columns, trend chart end labels). A party with no override keeps the export's name.
+- **Names** (`src/app/partyNames.ts`, James 2026-10-09, final): one set everywhere, the names NZ media use: National, Labour, Greens, ACT, NZ First, TOP, Te Pāti Māori. The registered names (New Zealand National Party, … The Opportunity Party (TOP), Te Pāti Māori) appear once, on the methodology page. A party with no override keeps the export's name.
 - **Map** (`src/app/ElectorateMap.tsx`, electorates page): static SVG of the 2026 electorates with a General (64) / Māori (7) toggle. Each seat is a link to its seat view and a tooltip; shading is the party of the most likely winner, paler for closer contests (opacity from 0.2 at a 40% win chance to 1 at certain). Seats are matched to the snapshot by name (case, macrons and hyphens ignored); a seat with no forecast is grey. Four enlarged windows (Auckland, Hamilton, Wellington, Christchurch) show the seats too small to click nationally. The Chatham Islands are not drawn. Outlines are simplified for drawing only (Stats NZ boundaries are the source).
 - **Producer** (`scripts/site_map/build.py`): reads the preserved 2025 general and Māori boundary files, simplifies each seat with a tolerance scaled to its own size (Douglas-Peucker), and writes `data/processed/site-map/2026/map.json` (about 71 KB, byte-reproducible, inputs hashed inside; `--check`). The map file is bundled as a lazily loaded chunk, so only the electorates page fetches it. A hex cartogram was the fallback if the outlines had proved heavy; they did not.
+
+## Revisions after review (2026-10-09, James)
+
+- **Main page:** party vote and seat tables show the median and 80% range only. The group table is now "Chance of a majority" for the four configured groups (National + ACT, National + ACT + NZ First, Labour + Greens, Labour + Greens + Te Pāti Māori) plus one "No majority" row (the hung-parliament scenario); the TOP kingmaker scenarios, group median seats and group ranges are not shown. The odds-over-time chart uses the same labels. The electorate pages keep the 50% and 80% ranges.
+- **Seat shares** are drawn in each candidate's party colour (solid 50% range, pale 80% range); independents are grey.
+- **Parliament chart:** seats are ordered by their fractional place along their own row, not by tied angle, so each party's seats form one wedge with a ragged edge and no row-end seat is stranded on the baseline; margins are sized from the dot radius so nothing is clipped.
+- **Polls:** each poll is one line (national table row, seat poll line) under its full name as Wikipedia prints it ("Taxpayers' Union–Curia", "RNZ–Reid Research", "1 News–Verian"); the separate pollster and client columns are gone. The producer reads the names from the preserved Wikipedia capture (hash-checked) by matching panel record ids; a poll the table no longer carries keeps the panel's pollster name. Seat polls show the client first ("The Spinoff–Curia").
 
 ## Not done
 

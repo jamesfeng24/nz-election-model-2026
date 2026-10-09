@@ -26,12 +26,12 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 .candidates td:nth-child(3){width:55%}
 .rangebar{position:relative;height:16px;background:#eef2ed;border-radius:3px;margin:4px 0}
 .rangebar span{position:absolute;top:0;height:100%}
-.rangebar .r80{background:#b9d8cc}
-.rangebar .r50{background:#3f8f76}
+.rangebar .r80{opacity:.3}
+.rangebar .r50{opacity:1}
 .rangebar .median{width:2px;background:#10372c;margin-left:-1px}
 .legend{font-size:13px;color:#576764}
 .key{display:inline-block;width:18px;height:10px;margin:0 4px 0 12px;vertical-align:middle}
-.key.r50{background:#3f8f76}.key.r80{background:#b9d8cc}.key.tick{width:2px;background:#10372c}
+.key.r50{background:#5d6b69}.key.r80{background:#c9d0ce}.key.tick{width:2px;background:#10372c}
 .poll{margin-top:12px}
 .seatlist tr[aria-selected]{background:#eaf0de}
 
@@ -77,3 +77,5 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 .maplegend2{font-size:.85rem;color:#576764;max-width:720px}
 .maplegend2 .fade{display:inline-block;width:3.2em;height:.7em;margin-right:.4em;border-radius:2px;background:linear-gradient(90deg,rgba(0,82,159,.2),rgba(0,82,159,1))}
 @media(max-width:700px){.mapgrid{grid-template-columns:1fr}.mapmain{max-width:340px;margin:auto}}
+.pollline{margin:.3rem 0 .9rem;font-size:.95rem;max-width:880px}
+.nationalpolls{font-size:.88rem}.nationalpolls th,.nationalpolls td{padding:.3rem .45rem}

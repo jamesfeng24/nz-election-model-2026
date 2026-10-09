@@ -30,12 +30,15 @@ describe('site evidence in the snapshot', () => {
 
     render(<App page="polls" source={loaded(snapshot)} />);
     expect(await screen.findByRole('heading', { name: 'National polls' })).toBeInTheDocument();
-    expect(screen.getByText(/121 of the 124 national polls/)).toBeInTheDocument();
+    expect(screen.getByText(/121 of 124 polls since the 2023 election/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Wikipedia, Opinion polling/ })).toHaveAttribute('href', expect.stringContaining('oldid=1378865337'));
-    const table = screen.getByRole('table', { name: /National polls, newest first/ });
+    const table = screen.getByRole('table');
     expect(within(table).getAllByRole('row')).toHaveLength(125);
     expect(screen.getAllByRole('link', { name: 'Te Ao Maori News (Whakaata Maori)' })[0]).toHaveAttribute('href', expect.stringMatching(/^https:\/\//));
-    expect(screen.getAllByText(/Found but not used in this forecast/).length).toBe(3);
+    expect(screen.getAllByText(/Not used in this forecast/).length).toBe(3);
+    expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10);
+    expect(within(table).queryByRole('columnheader', { name: /Client|Pollster/ })).toBeNull();
+    expect(screen.getByText(/The Spinoff–Curia/)).toBeInTheDocument();
   });
   it('draws the support trend on the forecast page', async () => {
     const snapshot = await buildNowcastSnapshot(bank, options(evidenceFile));

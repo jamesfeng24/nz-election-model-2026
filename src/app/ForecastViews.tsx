@@ -8,11 +8,11 @@ import { SupportTrend } from './SupportTrend';
 const at = (set: IntervalSet, level: number) => set.find(v => v.level === level)!;
 const range = (set: IntervalSet, level: number, fmt: (x: number) => string) => `${fmt(at(set, level).lower)} – ${fmt(at(set, level).upper)}`;
 const whole = (x: number) => String(x);
-/** Full lower–upper ranges, never ± half-widths: 80% is primary, 50% and 90% are shown beside it. */
+/** Full lower–upper ranges, never ± half-widths: the main page shows the median and the 80% range only. */
 function IntervalTable({ caption, label, rows, fmt }: { caption: string; label: string; rows: { key: string; label: string; set: IntervalSet }[]; fmt: (x: number) => string }) {
   return <table><caption>{caption}</caption>
-    <thead><tr><th>{label}</th><th>Median</th><th>80% range</th><th>50% range</th><th>90% range</th></tr></thead>
-    <tbody>{rows.map(r => <tr key={r.key}><td>{r.label}</td><td>{fmt(r.set[0].median)}</td><td>{range(r.set, PRIMARY_INTERVAL_LEVEL, fmt)}</td><td>{range(r.set, 0.5, fmt)}</td><td>{range(r.set, 0.9, fmt)}</td></tr>)}</tbody></table>;
+    <thead><tr><th>{label}</th><th>Median</th><th>80% range</th></tr></thead>
+    <tbody>{rows.map(r => <tr key={r.key}><td>{r.label}</td><td>{fmt(r.set[0].median)}</td><td>{range(r.set, PRIMARY_INTERVAL_LEVEL, fmt)}</td></tr>)}</tbody></table>;
 }
 
 export function SnapshotBanner({ snapshot }: { snapshot: ForecastSnapshot }) {
@@ -31,15 +31,15 @@ const partyName = (s: ForecastSnapshot) => (id: string) => partyLabel(s, id);
 function Governing({ snapshot }: { snapshot: ForecastSnapshot }) {
   if (snapshot.seatLayer.status !== 'available') return null;
   const { blocs, scenarios, parliament } = snapshot.seatLayer.summary;
+  const hung = scenarios.find(s => s.id === 'hung');
+  const group = (ids: string[]) => ids.map(id => partyLabel(snapshot, id)).join(' + ');
   return <>
-    <h2>Seats for each group of parties</h2>
+    <h2>Chance of a majority</h2>
     <p>Seat arithmetic only: it adds up each group's seats and does not predict who would agree to govern together.</p>
     <table><caption>Chance each group wins more than half of Parliament's seats</caption>
-      <thead><tr><th>Group</th><th>Median seats</th><th>80% range</th><th>Chance of a majority</th></tr></thead>
-      <tbody>{blocs.map(b => <tr key={b.id}><td>{b.label}</td><td>{b.seats[0].median}</td><td>{range(b.seats, PRIMARY_INTERVAL_LEVEL, whole)}</td><td>{prob(b.probMajority.p)}</td></tr>)}</tbody></table>
-    {scenarios.length > 0 && <table><caption>Hung parliament scenarios</caption>
-      <thead><tr><th>Scenario</th><th>Chance</th></tr></thead>
-      <tbody>{scenarios.map(s => <tr key={s.id}><td>{s.label}<br /><small>{s.definition}</small></td><td>{prob(s.probability.p)}</td></tr>)}</tbody></table>}
+      <thead><tr><th>Group</th><th>Chance of a majority</th></tr></thead>
+      <tbody>{blocs.map(b => <tr key={b.id}><td>{group(b.partyIds)}</td><td>{prob(b.probMajority.p)}</td></tr>)}
+        {hung && <tr><td>No majority<br /><small>Neither National + ACT + NZ First nor Labour + Greens + Te Pāti Māori reaches a majority</small></td><td>{prob(hung.probability.p)}</td></tr>}</tbody></table>
     <p>Parliament would have a median of {parliament.size[0].median} seats ({range(parliament.size, PRIMARY_INTERVAL_LEVEL, whole)}, 80% range); the chance of at least one overhang seat is {prob(parliament.probAnyOverhang.p)}. Probabilities are rounded to the nearest percent.</p>
   </>;
 }
@@ -75,11 +75,11 @@ export function ForecastView({ snapshot, trend = null }: { snapshot: ForecastSna
     <h2>Expected seats</h2>
     <SeatChart snapshot={snapshot} />
     <h2>Party vote</h2>
-    <IntervalTable caption={`${snapshot.national.basis}. Median with 80% (primary), 50% and 90% ranges.`} label="Party" fmt={pct}
+    <IntervalTable caption={`${snapshot.national.basis}. Median with 80% range.`} label="Party" fmt={pct}
       rows={snapshot.national.partyVoteShares.map(p => ({ key: p.partyId, label: name(p.partyId), set: p.share }))} />
     {snapshot.evidence?.trend && <><h2>How support has moved</h2><SupportTrend snapshot={snapshot} /></>}
     <h2>Seats in Parliament</h2>
-    <IntervalTable caption="Seats per party across simulated elections: median with 80% (primary), 50% and 90% ranges." label="Party" fmt={whole} rows={seats} />
+    <IntervalTable caption="Seats per party across simulated elections: median with 80% range." label="Party" fmt={whole} rows={seats} />
     <Governing snapshot={snapshot} />
     {trend && <><h2>How the odds have moved</h2>{trend}</>}
     <h2>Electorates</h2>

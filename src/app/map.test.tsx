@@ -8,11 +8,10 @@ import { partyLabel } from './partyNames';
 const noIndex = () => Promise.reject(new Error('no archive'));
 
 describe('party names', () => {
-  it('uses the long forms in text and the short forms where space is tight', async () => {
+  it('uses one set of names everywhere', async () => {
     const snapshot = await syntheticBankSnapshot();
-    expect(['nationalparty', 'labourparty', 'actnewzealand', 'newzealandfirstparty', 'greenparty', 'opportunity', 'tepatimaori'].map(id => partyLabel(snapshot, id)))
-      .toEqual(['National', 'Labour', 'ACT', 'New Zealand First', 'The Greens', 'The Opportunity Party', 'Te Pāti Māori']);
-    expect(['newzealandfirstparty', 'greenparty', 'opportunity', 'tepatimaori'].map(id => partyLabel(snapshot, id, 'short'))).toEqual(['NZ First', 'Greens', 'TOP', 'TPM']);
+    expect(['nationalparty', 'labourparty', 'greenparty', 'actnewzealand', 'newzealandfirstparty', 'opportunity', 'tepatimaori'].map(id => partyLabel(snapshot, id)))
+      .toEqual(['National', 'Labour', 'Greens', 'ACT', 'NZ First', 'TOP', 'Te Pāti Māori']);
   });
 });
 

@@ -6,17 +6,18 @@
   "data/processed/polling/weekly-refresh/2026-10-07/dataset.json": "10390a9d61a202707c0453c42a5a7b84aaf33af1be8a71df6f7b81955adb8b4e",
   "data/processed/polling/weekly-refresh/2026-10-07/estimate.json": "fea8b0415187e18abd18dbbb8a99b06f4f6c58a84b33af0b4cf784da65ba5866",
   "data/processed/polling/weekly-refresh/2026-10-07/panel.json": "c3618c1ac8db3ccaca3b1cb0f2cef104f770f0b76b655b414f536cc2f25c8a2d",
+  "data/raw/polling/weekly-refresh/2026-10-07/wikipedia-opinion-polling-2026.html": "b1c4a218816390385129b88aef84adfbb06f4d28354c1deea91faa2698338317",
   "data/source-plans/maori-seat-layer/polls-2026.json": "5e613db83309d7b77cae0f3b5066e4bee9411a797ce5505c95427d91a14e8559"
  },
  "modelStateAsOf": "2026-09-27",
  "nationalPolls": [
   {
-   "commissioner": "1 News–Verian",
+   "commissioner": null,
    "fieldworkEnd": "2026-10-05",
    "fieldworkStart": "2026-10-01",
    "id": "nz-poll-cc8ee92dffa02a8fff35",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1001,
    "shares": [
@@ -64,12 +65,12 @@
    "usedInModel": true
   },
   {
-   "commissioner": "RNZ–Reid Research",
+   "commissioner": null,
    "fieldworkEnd": "2026-10-01",
    "fieldworkStart": "2026-09-24",
    "id": "nz-poll-74bbbd7e57ad58aed228",
    "note": null,
-   "pollster": "Reid Research",
+   "pollster": "RNZ–Reid Research",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -117,7 +118,7 @@
    "usedInModel": true
   },
   {
-   "commissioner": "Roy Morgan",
+   "commissioner": null,
    "fieldworkEnd": "2026-09-27",
    "fieldworkStart": "2026-08-31",
    "id": "nz-poll-6e6e1bdf9685ff35be90",
@@ -170,12 +171,12 @@
    "usedInModel": true
   },
   {
-   "commissioner": "1 News–Verian",
+   "commissioner": null,
    "fieldworkEnd": "2026-09-27",
    "fieldworkStart": "2026-09-23",
    "id": "nz-poll-07d4d3dfd88827b0c68b",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1004,
    "shares": [
@@ -223,12 +224,12 @@
    "usedInModel": true
   },
   {
-   "commissioner": "The Post/Freshwater Strategy",
+   "commissioner": null,
    "fieldworkEnd": "2026-09-11",
    "fieldworkStart": "2026-09-04",
    "id": "nz-poll-30cfbf2955e8d4296522",
    "note": null,
-   "pollster": "Freshwater Strategy",
+   "pollster": "The Post/Freshwater Strategy",
    "publisherUrl": null,
    "sampleSize": 1011,
    "shares": [
@@ -276,7 +277,7 @@
    "usedInModel": true
   },
   {
-   "commissioner": "Anacta",
+   "commissioner": null,
    "fieldworkEnd": "2026-09-10",
    "fieldworkStart": "2026-09-04",
    "id": "nz-poll-a99409a8325dc9c1e579",
@@ -329,12 +330,12 @@
    "usedInModel": false
   },
   {
-   "commissioner": "Taxpayers' Union–Curia",
+   "commissioner": null,
    "fieldworkEnd": "2026-09-03",
    "fieldworkStart": "2026-09-01",
    "id": "nz-poll-46c143e7715bdd1c9f2b",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -382,7 +383,7 @@
    "usedInModel": true
   },
   {
-   "commissioner": "Roy Morgan",
+   "commissioner": null,
    "fieldworkEnd": "2026-08-23",
    "fieldworkStart": "2026-07-27",
    "id": "nz-poll-b9f0991f54a7fc1174ac",
@@ -435,12 +436,12 @@
    "usedInModel": true
   },
   {
-   "commissioner": "RNZ–Reid Research",
+   "commissioner": null,
    "fieldworkEnd": "2026-08-21",
    "fieldworkStart": "2026-08-14",
    "id": "nz-poll-225da58b597266138239",
    "note": null,
-   "pollster": "Reid Research",
+   "pollster": "RNZ–Reid Research",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -493,7 +494,7 @@
    "fieldworkStart": "2026-08-01",
    "id": "nz-poll-d515be98c3d9d7513aa1",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -546,7 +547,7 @@
    "fieldworkStart": "2026-08-08",
    "id": "nz-poll-51bb59b67a90be1481b1",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 847,
    "shares": [
@@ -599,7 +600,7 @@
    "fieldworkStart": "2026-08-01",
    "id": "nz-poll-76e8147b820614f04f87",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -705,7 +706,7 @@
    "fieldworkStart": "2026-07-10",
    "id": "nz-poll-0f820b8c8a26cf56b469",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -758,7 +759,7 @@
    "fieldworkStart": "2026-07-02",
    "id": "nz-poll-021bd48d0ad5ecfa83ca",
    "note": null,
-   "pollster": "Reid Research",
+   "pollster": "RNZ–Reid Research",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -811,7 +812,7 @@
    "fieldworkStart": "2026-07-01",
    "id": "nz-poll-b1ad6e7a5356798e2db7",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -917,7 +918,7 @@
    "fieldworkStart": "2026-06-13",
    "id": "nz-poll-4383ef20acef5b8c1d28",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1001,
    "shares": [
@@ -970,7 +971,7 @@
    "fieldworkStart": "2026-06-05",
    "id": "nz-poll-127e8c2a19296afe6376",
    "note": null,
-   "pollster": "Freshwater Strategy",
+   "pollster": "The Post/Freshwater Strategy",
    "publisherUrl": null,
    "sampleSize": 1038,
    "shares": [
@@ -1023,7 +1024,7 @@
    "fieldworkStart": "2026-06-01",
    "id": "nz-poll-55b9e97ad944ceb84656",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1021,
    "shares": [
@@ -1076,7 +1077,7 @@
    "fieldworkStart": "2026-06-04",
    "id": "nz-poll-24065c6f14f596d3397f",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -1182,7 +1183,7 @@
    "fieldworkStart": "2026-05-01",
    "id": "nz-poll-d1f3ace11d05a533e0ca",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -1235,7 +1236,7 @@
    "fieldworkStart": "2026-05-03",
    "id": "nz-poll-ce3e99aff2a483dad854",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -1341,7 +1342,7 @@
    "fieldworkStart": null,
    "id": "nz-poll-342c0ad79dbdb93739cf",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1082,
    "shares": [
@@ -1394,7 +1395,7 @@
    "fieldworkStart": "2026-04-11",
    "id": "nz-poll-a17dd675107ffc661a78",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1010,
    "shares": [
@@ -1447,7 +1448,7 @@
    "fieldworkStart": "2026-04-01",
    "id": "nz-poll-4ac81b4b617c2a79c8d7",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -1553,7 +1554,7 @@
    "fieldworkStart": "2026-03-12",
    "id": "nz-poll-13feed0499105ffab6ea",
    "note": null,
-   "pollster": "Reid Research",
+   "pollster": "RNZ–Reid Research",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -1606,7 +1607,7 @@
    "fieldworkStart": "2026-03-02",
    "id": "nz-poll-0afe19a64462fbeafa68",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1059,
    "shares": [
@@ -1659,7 +1660,7 @@
    "fieldworkStart": "2026-03-01",
    "id": "nz-poll-f52ca62b635ee5f6a2e2",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -1765,7 +1766,7 @@
    "fieldworkStart": "2026-02-06",
    "id": "nz-poll-9c5292ffff1a161dec31",
    "note": null,
-   "pollster": "Freshwater Strategy",
+   "pollster": "The Post/Freshwater Strategy",
    "publisherUrl": null,
    "sampleSize": 1039,
    "shares": [
@@ -1818,7 +1819,7 @@
    "fieldworkStart": "2026-02-07",
    "id": "nz-poll-3bffc9d977b7a6cc27c6",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1003,
    "shares": [
@@ -1871,7 +1872,7 @@
    "fieldworkStart": "2026-02-01",
    "id": "nz-poll-f8ec58a12c34c1a0beb4",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -1972,12 +1973,12 @@
    "usedInModel": true
   },
   {
-   "commissioner": "Talbot Mills",
+   "commissioner": null,
    "fieldworkEnd": "2026-01-26",
    "fieldworkStart": "2026-01-16",
    "id": "nz-poll-3ca45f679ce21057ce82",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1087,
    "shares": [
@@ -2030,7 +2031,7 @@
    "fieldworkStart": "2026-01-15",
    "id": "nz-poll-851f2e348b3f297b0001",
    "note": null,
-   "pollster": "Reid Research",
+   "pollster": "RNZ–Reid Research",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -2083,7 +2084,7 @@
    "fieldworkStart": "2026-01-14",
    "id": "nz-poll-727589e7bd67ab86e9dd",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -2189,7 +2190,7 @@
    "fieldworkStart": "2025-12-05",
    "id": "nz-poll-5b3ed1533fce27382419",
    "note": null,
-   "pollster": "Freshwater Strategy",
+   "pollster": "The Post/Freshwater Strategy",
    "publisherUrl": null,
    "sampleSize": 1031,
    "shares": [
@@ -2242,7 +2243,7 @@
    "fieldworkStart": "2025-12-03",
    "id": "nz-poll-2cc48bca3d0b991a1052",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -2295,7 +2296,7 @@
    "fieldworkStart": "2025-11-29",
    "id": "nz-poll-be3b2d3cee9849d5a782",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1007,
    "shares": [
@@ -2401,7 +2402,7 @@
    "fieldworkStart": "2025-11-01",
    "id": "nz-poll-d7479cd6f535445e6143",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -2454,7 +2455,7 @@
    "fieldworkStart": "2025-11-02",
    "id": "nz-poll-be49bd6eb2f92b9ebfca",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -2560,7 +2561,7 @@
    "fieldworkStart": "2025-10-01",
    "id": "nz-poll-4ceed78a7c1d1546adf4",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1097,
    "shares": [
@@ -2613,7 +2614,7 @@
    "fieldworkStart": "2025-10-04",
    "id": "nz-poll-e1f035b81e7030230f8e",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1014,
    "shares": [
@@ -2666,7 +2667,7 @@
    "fieldworkStart": "2025-10-03",
    "id": "nz-poll-b8bb558bdfc9518df40f",
    "note": null,
-   "pollster": "Freshwater Strategy",
+   "pollster": "The Post/Freshwater Strategy",
    "publisherUrl": null,
    "sampleSize": 1050,
    "shares": [
@@ -2719,7 +2720,7 @@
    "fieldworkStart": "2025-10-01",
    "id": "nz-poll-834f4ac93a1322bfd74e",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -2825,7 +2826,7 @@
    "fieldworkStart": "2025-09-04",
    "id": "nz-poll-876f9014f82594da43dc",
    "note": null,
-   "pollster": "Reid Research",
+   "pollster": "RNZ–Reid Research",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -2878,7 +2879,7 @@
    "fieldworkStart": "2025-09-01",
    "id": "nz-poll-e78ea19ce09ce55aa073",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -2931,7 +2932,7 @@
    "fieldworkStart": "2025-08-31",
    "id": "nz-poll-bf36f2e37e1ac340ade3",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3037,7 +3038,7 @@
    "fieldworkStart": "2025-08-01",
    "id": "nz-poll-d8ebc84519100aa2c5aa",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3090,7 +3091,7 @@
    "fieldworkStart": "2025-08-02",
    "id": "nz-poll-81ce304e24bfd79e3158",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1002,
    "shares": [
@@ -3143,7 +3144,7 @@
    "fieldworkStart": "2025-08-03",
    "id": "nz-poll-e4bcd074e365f91f0bcd",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3249,7 +3250,7 @@
    "fieldworkStart": "2025-07-01",
    "id": "nz-poll-fe6fde3676a3405959e9",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1090,
    "shares": [
@@ -3302,7 +3303,7 @@
    "fieldworkStart": "2025-07-02",
    "id": "nz-poll-a7f5662a87122c3bec11",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3408,7 +3409,7 @@
    "fieldworkStart": "2025-06-12",
    "id": "nz-poll-9aa838c44d06014ecc70",
    "note": null,
-   "pollster": "Freshwater Strategy",
+   "pollster": "The Post/Freshwater Strategy",
    "publisherUrl": null,
    "sampleSize": 1150,
    "shares": [
@@ -3461,7 +3462,7 @@
    "fieldworkStart": "2025-06-07",
    "id": "nz-poll-733ff5ec3b2af603c3a2",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3514,7 +3515,7 @@
    "fieldworkStart": "2025-05-23",
    "id": "nz-poll-97df03d70b2f02ee1185",
    "note": null,
-   "pollster": "Reid Research",
+   "pollster": "RNZ–Reid Research",
    "publisherUrl": null,
    "sampleSize": 1008,
    "shares": [
@@ -3567,7 +3568,7 @@
    "fieldworkStart": "2025-05-24",
    "id": "nz-poll-8efe097cc09595cb7888",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1002,
    "shares": [
@@ -3615,7 +3616,7 @@
    "usedInModel": true
   },
   {
-   "commissioner": "Roy Morgan",
+   "commissioner": null,
    "fieldworkEnd": "2025-05-25",
    "fieldworkStart": "2025-04-28",
    "id": "nz-poll-a4239a151b1a3940b069",
@@ -3673,7 +3674,7 @@
    "fieldworkStart": "2025-04-30",
    "id": "nz-poll-daa89bb570802254a8d1",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3779,7 +3780,7 @@
    "fieldworkStart": "2025-03-29",
    "id": "nz-poll-00e4c30a31593716e829",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3832,7 +3833,7 @@
    "fieldworkStart": "2025-03-29",
    "id": "nz-poll-ec748edf345c71541f60",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3885,7 +3886,7 @@
    "fieldworkStart": "2025-03-21",
    "id": "nz-poll-04c6d71bc587399ca04c",
    "note": null,
-   "pollster": "Reid Research",
+   "pollster": "RNZ–Reid Research",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -3991,7 +3992,7 @@
    "fieldworkStart": "2025-03-01",
    "id": "nz-poll-5dd9175d09c85ea95851",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1003,
    "shares": [
@@ -4044,7 +4045,7 @@
    "fieldworkStart": "2025-03-02",
    "id": "nz-poll-0dd6d9745e3e201183d3",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -4150,7 +4151,7 @@
    "fieldworkStart": "2025-02-03",
    "id": "nz-poll-04995569bdd180142800",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1002,
    "shares": [
@@ -4203,7 +4204,7 @@
    "fieldworkStart": "2025-02-02",
    "id": "nz-poll-f99217ef7f57aeb62dad",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -4256,7 +4257,7 @@
    "fieldworkStart": "2025-01-07",
    "id": "nz-poll-c2d34635d223380a8417",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1049,
    "shares": [
@@ -4362,7 +4363,7 @@
    "fieldworkStart": "2025-01-09",
    "id": "nz-poll-3e775ff37d090d98e8b7",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -4468,7 +4469,7 @@
    "fieldworkStart": "2024-11-30",
    "id": "nz-poll-76a8db033a3f83817507",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1006,
    "shares": [
@@ -4521,7 +4522,7 @@
    "fieldworkStart": "2024-12-01",
    "id": "nz-poll-cc8cec4bfb1ea00ba276",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -4574,7 +4575,7 @@
    "fieldworkStart": "2024-11-22",
    "id": "nz-poll-c141cf2b60c96a437c02",
    "note": "Listed by Wikipedia but not in the model's data set",
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Labour–Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -4627,7 +4628,7 @@
    "fieldworkStart": "2024-11-26",
    "id": "nz-poll-a2e1cd2038987bccc31c",
    "note": null,
-   "pollster": "Freshwater Strategy",
+   "pollster": "The Post/Freshwater Strategy",
    "publisherUrl": null,
    "sampleSize": 1150,
    "shares": [
@@ -4733,7 +4734,7 @@
    "fieldworkStart": "2024-11-06",
    "id": "nz-poll-7fd72041668797122d0d",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -4781,12 +4782,12 @@
    "usedInModel": true
   },
   {
-   "commissioner": "Talbot Mills",
+   "commissioner": null,
    "fieldworkEnd": "2024-11-10",
    "fieldworkStart": "2024-11-01",
    "id": "nz-poll-51599d9ddce75d678337",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -4892,7 +4893,7 @@
    "fieldworkStart": "2024-10-05",
    "id": "nz-poll-088ec5c660426cfef0cf",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -4945,7 +4946,7 @@
    "fieldworkStart": "2024-10-03",
    "id": "nz-poll-6fcf79e99a496624ca9a",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -5051,7 +5052,7 @@
    "fieldworkStart": "2024-09-01",
    "id": "nz-poll-8f2ffa2c80f45817e4f9",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -5104,7 +5105,7 @@
    "fieldworkStart": "2024-09-08",
    "id": "nz-poll-83570eddfa09d5046af5",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -5210,7 +5211,7 @@
    "fieldworkStart": "2024-08-10",
    "id": "nz-poll-e1c714157bf17aa18744",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1001,
    "shares": [
@@ -5316,7 +5317,7 @@
    "fieldworkStart": "2024-07-04",
    "id": "nz-poll-8f1b9344a789d65d04bc",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -5422,7 +5423,7 @@
    "fieldworkStart": "2024-06-15",
    "id": "nz-poll-033aa90d1faa5032a678",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1002,
    "shares": [
@@ -5475,7 +5476,7 @@
    "fieldworkStart": "2024-06-04",
    "id": "nz-poll-3d7f63656b7300ebb2d6",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -5576,12 +5577,12 @@
    "usedInModel": true
   },
   {
-   "commissioner": "Talbot Mills",
+   "commissioner": null,
    "fieldworkEnd": "2024-05-10",
    "fieldworkStart": "2024-05-01",
    "id": "nz-poll-1b2a21643e2c0e1d2ae7",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -5634,7 +5635,7 @@
    "fieldworkStart": "2024-05-05",
    "id": "nz-poll-7202dee03ec4c6c62dcb",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -5687,7 +5688,7 @@
    "fieldworkStart": null,
    "id": "nz-poll-d0cab5771d1e347ac68b",
    "note": "Listed by Wikipedia but not in the model's data set",
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Labour–Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -5740,7 +5741,7 @@
    "fieldworkStart": "2024-04-20",
    "id": "nz-poll-0f675278c9ce8785653a",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -5846,7 +5847,7 @@
    "fieldworkStart": "2024-04-02",
    "id": "nz-poll-5b06e4fad9a9160eb323",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -5952,7 +5953,7 @@
    "fieldworkStart": "2024-03-01",
    "id": "nz-poll-c8c63a688101ba1b5c39",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -6005,7 +6006,7 @@
    "fieldworkStart": "2024-03-03",
    "id": "nz-poll-6436f6d43f88cc28b231",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -6111,7 +6112,7 @@
    "fieldworkStart": "2024-02-10",
    "id": "nz-poll-2f82aed84068eeebd1e9",
    "note": null,
-   "pollster": "Verian (formerly Colmar Brunton)",
+   "pollster": "1 News–Verian",
    "publisherUrl": null,
    "sampleSize": 1002,
    "shares": [
@@ -6164,7 +6165,7 @@
    "fieldworkStart": "2024-02-01",
    "id": "nz-poll-e1e01cfac4f6f8107a8f",
    "note": null,
-   "pollster": "Talbot Mills/UMR",
+   "pollster": "Talbot Mills",
    "publisherUrl": null,
    "sampleSize": null,
    "shares": [
@@ -6217,7 +6218,7 @@
    "fieldworkStart": "2024-02-01",
    "id": "nz-poll-faa2c8b7106419bf24d5",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [
@@ -6535,7 +6536,7 @@
    "fieldworkStart": "2023-11-01",
    "id": "nz-poll-922a5c08bf5ed4a265d2",
    "note": null,
-   "pollster": "Curia",
+   "pollster": "Taxpayers' Union–Curia",
    "publisherUrl": null,
    "sampleSize": 1000,
    "shares": [

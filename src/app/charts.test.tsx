@@ -24,7 +24,7 @@ describe('headline seat chart', () => {
     const snapshot = await syntheticBankSnapshot();
     const { container } = render(<SeatChart snapshot={snapshot} />);
     const labels = [...container.querySelectorAll('.seatchart-key li b')].map(b => b.textContent);
-    const abbreviations = ['TPM', 'Greens', 'Labour', 'TOP', 'NZ First', 'National', 'ACT'];
+    const abbreviations = ['Te Pāti Māori', 'Greens', 'Labour', 'TOP', 'NZ First', 'National', 'ACT'];
     expect(labels.slice(0, abbreviations.length)).toEqual(abbreviations);
     const total = Number(container.querySelector('.seatchart-total')!.textContent);
     expect(container.querySelectorAll('circle')).toHaveLength(total);

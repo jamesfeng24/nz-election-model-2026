@@ -41,7 +41,8 @@ describe('public site', () => {
     render(<App page="forecast" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
     expect(await screen.findByRole('alert')).toHaveTextContent('SYNTHETIC DATA');
     expect(screen.getByText(/Forecast if the election were held today, as of 6 October 2026/)).toBeInTheDocument();
-    expect(screen.getByRole('table', { name: /Median with 80% \(primary\), 50% and 90% ranges/ })).toBeInTheDocument();
+    expect(screen.getByRole('table', { name: /Median with 80% range/ })).toBeInTheDocument();
+    expect(screen.queryByRole('columnheader', { name: /50% range|90% range/ })).toBeNull();
     expect(screen.getByRole('heading', { name: 'Electorates' })).toBeInTheDocument();
     expect(screen.queryByText('No forecast published yet')).not.toBeInTheDocument();
   });
@@ -57,7 +58,7 @@ describe('public site', () => {
     expect(rows[2]).toHaveTextContent('Replaced by a correction');
     expect(screen.getAllByRole('link', { name: 'JSON' })[0]).toHaveAttribute('href', '../forecasts/b/snapshot.json');
   });
-  it('shows seats for each group, hung scenarios and the electorate table from a full 71-seat snapshot', async () => {
+  it('shows the chance of a majority for each group, no-majority and the electorate table from a full 71-seat snapshot', async () => {
     const snapshot = await buildNowcastSnapshot(bank, {
       snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-07T00:00:00+00:00', dataCutoff: '2026-10-06T00:00:00+00:00',
       electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
@@ -66,9 +67,10 @@ describe('public site', () => {
       nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
     });
     render(<App page="forecast" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
-    expect(await screen.findByRole('heading', { name: 'Seats for each group of parties' })).toBeInTheDocument();
-    expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('LAB+GRN+TPM');
-    expect(screen.getByRole('table', { name: 'Hung parliament scenarios' })).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: 'Chance of a majority' })).toBeInTheDocument();
+    expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('Labour + Greens + Te Pāti Māori');
+    expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('No majority');
+    expect(screen.queryByText(/kingmaker/i)).toBeNull();
     expect(screen.getByText('All 71 electorates')).toBeInTheDocument();
     expect(screen.getAllByText(/Wider/).length).toBeGreaterThan(0);
   });
@@ -96,7 +98,7 @@ describe('public site', () => {
     expect(await screen.findByRole('heading', { level: 2, name: new RegExp(name) })).toBeInTheDocument();
     expect(screen.getAllByRole('img', { name: /50% range .* 80% range/ }).length).toBeGreaterThan(1);
     expect(screen.getByText('Invented basis text')).toBeInTheDocument();
-    expect(screen.getByText(/Found but not used in this forecast/)).toBeInTheDocument();
+    expect(screen.getByText(/Not used in this forecast/)).toBeInTheDocument();
     fireEvent.change(screen.getByRole('combobox', { name: 'Find a seat' }), { target: { value: 'zzzz' } });
     expect(screen.getByText(/0 shown/)).toBeInTheDocument();
     window.location.hash = '';

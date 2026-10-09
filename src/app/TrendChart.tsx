@@ -4,14 +4,14 @@ import { longDate, prob } from './format';
 /** The chart switches on once this many releases exist; before that nothing is drawn. */
 export const MIN_RELEASES = 3;
 const LINES = [
-  { kind: 'bloc', id: 'nat-act-nzf', colour: '#00529f', short: null },
-  { kind: 'bloc', id: 'lab-grn-tpm', colour: '#d82a20', short: null },
-  { kind: 'scenario', id: 'hung', colour: '#6b6b6b', short: 'Hung parliament' },
+  { kind: 'bloc', id: 'nat-act-nzf', colour: '#00529f', short: 'National + ACT + NZ First' },
+  { kind: 'bloc', id: 'lab-grn-tpm', colour: '#d82a20', short: 'Labour + Greens + Te Pāti Māori' },
+  { kind: 'scenario', id: 'hung', colour: '#6b6b6b', short: 'No majority' },
 ] as const;
 
 export function TrendChart({ history }: { history: ReleasePoint[] }) {
   if (history.length < MIN_RELEASES) return null;
-  const W = 640, H = 300, left = 44, right = 150, top = 16, bottom = 40;
+  const W = 640, H = 300, left = 44, right = 230, top = 16, bottom = 40;
   const t = (p: ReleasePoint) => Date.parse(p.dataCutoff);
   const t0 = t(history[0]), t1 = t(history[history.length - 1]);
   const x = (p: ReleasePoint) => left + ((t1 === t0 ? 0 : (t(p) - t0) / (t1 - t0))) * (W - left - right);
@@ -32,6 +32,6 @@ export function TrendChart({ history }: { history: ReleasePoint[] }) {
       <text x={left} y={H - 12} className="tick">{longDate(history[0].dataCutoff)}</text>
       <text x={W - right} y={H - 12} textAnchor="end" className="tick">{longDate(history[history.length - 1].dataCutoff)}</text>
     </svg>
-    <figcaption>Chance of a majority, and of a hung parliament, at each weekly release. Each point is a separate forecast of the same kind; the lines show how the picture has changed, not a prediction.</figcaption>
+    <figcaption>Chance of a majority, and of no majority, at each weekly release. Each point is a separate forecast of the same kind; the lines show how the picture has changed, not a prediction.</figcaption>
   </figure>;
 }

@@ -1,3 +1,4 @@
+import { REGISTERED_NAMES } from './partyNames';
 import type { ForecastSnapshot } from '../types/export';
 
 /** Plain-language method note for the public. Facts here come from docs/nowcast-specification.md and config/nowcast-2026.json. */
@@ -7,7 +8,7 @@ export function MethodologyView({ adjustments }: { adjustments?: ForecastSnapsho
     <p>It answers one question: if the New Zealand general election were held under current political conditions, what would happen? It is not a prediction of how opinion will move between now and 7 November 2026, and it does not try to forecast campaign events. Each forecast carries the date of the poll refresh behind it.</p>
     <p>It is updated once after each weekly poll refresh and stops updating on election day, when the last forecast stays up, labelled with its date.</p>
     <h2>How to read the ranges</h2>
-    <p>Every number comes from about 65,000 simulated elections. The 80% range is the central range of those simulations: in four of five simulated elections the result falls inside it. The 50% and 90% ranges sit alongside. These are not polling margins of error, and they do not cover movement in opinion after the forecast date. Probabilities are rounded to the nearest percent and their simulation error is under one percentage point.</p>
+    <p>Every number comes from about 65,000 simulated elections. The 80% range is the central range of those simulations: in four of five simulated elections the result falls inside it. The electorate pages also show a 50% range, which covers half of them. These are not polling margins of error, and they do not cover movement in opinion after the forecast date. Probabilities are rounded to the nearest percent and their simulation error is under one percentage point.</p>
     <h2>How it is built</h2>
     <ol>
       <li><b>National support.</b> A statistical model combines the published national polls, allowing for each pollster's habitual lean and for polling error shared by the whole industry.</li>
@@ -16,7 +17,9 @@ export function MethodologyView({ adjustments }: { adjustments?: ForecastSnapsho
       <li><b>Māori electorates.</b> These are modelled separately from seat-level polls where they exist; seats without a poll are estimated from the 2023 result carried forward and are less certain.</li>
       <li><b>Seats in Parliament.</b> Each simulated election is run through New Zealand's MMP rules (Electoral Act 1993 as at 1 January 2026): the 5% party-vote threshold or one electorate win, 120 seats shared by the Sainte-Laguë method, and overhang seats added on top.</li>
     </ol>
-    <p>Groups such as NAT+ACT+NZF or LAB+GRN+TPM are seat arithmetic. They are not predictions of coalition agreements.</p>
+    <p>Groups such as National + ACT + NZ First or Labour + Greens + Te Pāti Māori are seat arithmetic. They are not predictions of coalition agreements. "No majority" means neither of those two groups reaches more than half of Parliament's seats in that simulated election.</p>
+    <h2>Party names</h2>
+    <p>The site uses the short names New Zealanders know. In full they are: {REGISTERED_NAMES.map(([short, full]) => full === short || full.includes(`(${short})`) ? full : `${full} (${short})`).join('; ')}.</p>
     <h2>Data sources</h2>
     <p>Every poll used, and every seat poll found, is listed with its pollster, dates, sample and source on the <a href="../polls/">Polls page</a>.</p>
     <ul>

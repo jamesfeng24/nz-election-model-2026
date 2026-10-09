@@ -18,6 +18,12 @@ class SiteEvidenceTests(unittest.TestCase):
     def test_saved_file_is_reproduced_byte_for_byte(self):
         self.assertEqual(SAVED.read_text(encoding='utf-8'), build.render(self.evidence))
 
+    def test_polls_carry_the_name_wikipedia_prints_for_them(self):
+        names = {p['pollster'] for p in self.evidence['nationalPolls']}
+        self.assertTrue({"Taxpayers' Union–Curia", 'RNZ–Reid Research', 'Roy Morgan'} <= names)
+        self.assertFalse(names & {'Verian lineage', 'Talbot Mills/UMR'})
+        self.assertTrue(all(p['commissioner'] is None for p in self.evidence['nationalPolls']))
+
     def test_every_2026_cycle_poll_is_listed_and_the_used_ones_match_the_fit(self):
         panel = json.loads((REFRESH / 'panel.json').read_text(encoding='utf-8'))
         estimate = json.loads((REFRESH / 'estimate.json').read_text(encoding='utf-8'))

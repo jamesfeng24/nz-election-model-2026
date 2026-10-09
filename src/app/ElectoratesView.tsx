@@ -3,8 +3,9 @@ import { partyLabel } from './partyNames';
 import type { ForecastSnapshot } from '../types/export';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
 import { pct, prob } from './format';
-import { SeatPollTable } from './PollTables';
+import { SeatPollLine } from './PollTables';
 import { ElectorateMap } from './ElectorateMap';
+import { COLOURS } from './SeatChart';
 
 type Sort = 'name' | 'close' | 'wide';
 const level = (set: IntervalSet, l: number) => set.find(v => v.level === l)!;
@@ -23,12 +24,12 @@ function useRows(snapshot: ForecastSnapshot): Row[] {
 }
 
 /** A share range drawn on a shared axis: the 80% range in a light shade, the 50% range darker, the median as a tick. */
-function RangeBar({ set, axisMax, label }: { set: IntervalSet; axisMax: number; label: string }) {
+function RangeBar({ set, axisMax, label, colour }: { set: IntervalSet; axisMax: number; label: string; colour: string }) {
   const x = (v: number) => `${(v / axisMax) * 100}%`;
   const r80 = level(set, PRIMARY_INTERVAL_LEVEL), r50 = level(set, 0.5);
   return <div className="rangebar" role="img" aria-label={label}>
-    <span className="r80" style={{ left: x(r80.lower), width: `calc(${x(r80.upper)} - ${x(r80.lower)})` }} />
-    <span className="r50" style={{ left: x(r50.lower), width: `calc(${x(r50.upper)} - ${x(r50.lower)})` }} />
+    <span className="r80" style={{ background: colour, left: x(r80.lower), width: `calc(${x(r80.upper)} - ${x(r80.lower)})` }} />
+    <span className="r50" style={{ background: colour, left: x(r50.lower), width: `calc(${x(r50.upper)} - ${x(r50.lower)})` }} />
     <span className="median" style={{ left: x(r50.median) }} />
   </div>;
 }
@@ -53,14 +54,14 @@ function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: 
       <tbody>{rows.map(({ c, cand, share }) => <tr key={c.candidateId}>
         <td><strong>{cand?.name ?? c.candidateId}</strong><br /><small>{partyName(cand?.partyId ?? null) ?? cand?.partyLabel ?? 'Independent'}</small></td>
         <td><span className="odds">{prob(c.winProbability)}</span></td>
-        <td>{share ? <><RangeBar set={share.share} axisMax={axisMax} label={`${cand?.name}: median ${pct(share.share[0].median)}, 50% range ${pct(level(share.share, 0.5).lower)} to ${pct(level(share.share, 0.5).upper)}, 80% range ${pct(level(share.share, 0.8).lower)} to ${pct(level(share.share, 0.8).upper)}`} />
+        <td>{share ? <><RangeBar colour={(cand?.partyId && COLOURS[cand.partyId]) || '#8b8f94'} set={share.share} axisMax={axisMax} label={`${cand?.name}: median ${pct(share.share[0].median)}, 50% range ${pct(level(share.share, 0.5).lower)} to ${pct(level(share.share, 0.5).upper)}, 80% range ${pct(level(share.share, 0.8).lower)} to ${pct(level(share.share, 0.8).upper)}`} />
           <small>{pct(share.share[0].median)} median · 50%: {pct(level(share.share, 0.5).lower)} – {pct(level(share.share, 0.5).upper)} · 80%: {pct(level(share.share, 0.8).lower)} – {pct(level(share.share, 0.8).upper)}</small></> : <small>Share ranges not available</small>}</td></tr>)}</tbody></table>
-    <p className="legend"><span className="key r50" /> 50% range <span className="key r80" /> 80% range <span className="key tick" /> median. Bars run from 0% to {Math.round(axisMax * 100)}% of the vote. The ranges cover half and four-fifths of simulated elections.</p>
+    <p className="legend"><span className="key r50" /> 50% range (solid) <span className="key r80" /> 80% range (pale) <span className="key tick" /> median, in each candidate's party colour. Bars run from 0% to {Math.round(axisMax * 100)}% of the vote. The ranges cover half and four-fifths of simulated elections.</p>
     <h3>Polls</h3>
     {!detail?.evidence ? <p>No seat poll information is attached to this forecast.</p> : <>
       <p>{detail.evidence.basis}</p>
       {detail.evidence.polls.length === 0 ? <p>No seat poll has been published for this seat.</p> : <>
-        {detail.evidence.polls.map((poll, i) => <SeatPollTable key={i} poll={poll} />)}
+        {detail.evidence.polls.map((poll, i) => <SeatPollLine key={i} poll={poll} />)}
         <p><a href={`../polls/#seat-${seatId}`}>See this poll with every other poll</a></p></>}
     </>}
     <p><small>Chance of winning is the share of simulated elections the candidate wins; its simulation error is under one percentage point.</small></p>

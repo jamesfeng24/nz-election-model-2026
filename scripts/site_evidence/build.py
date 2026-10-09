@@ -29,7 +29,8 @@ ELECTION_2023 = '2023-10-15'
 PARTY_IDS = {'NAT': 'nationalparty', 'LAB': 'labourparty', 'GRN': 'greenparty', 'ACT': 'actnewzealand', 'NZF': 'newzealandfirstparty',
              'TPM': 'tepatimaori', 'MRI': 'tepatimaori', 'TOP': 'opportunity', 'OTH': 'other'}
 POLL_ORDER = ['NAT', 'LAB', 'GRN', 'ACT', 'NZF', 'MRI', 'TOP']
-POLLSTER_NAMES = {'Verian lineage': 'Verian (formerly Colmar Brunton)'}
+# Used only for a poll the Wikipedia table no longer carries (a collapsed duplicate); every other poll keeps the table's own label.
+POLLSTER_NAMES = {'Verian lineage': 'Verian', 'Talbot Mills/UMR': 'Talbot Mills'}
 WIKIPEDIA_TITLE = 'Opinion_polling_for_the_2026_New_Zealand_general_election'
 SEAT_POLL_FILES = [
     ('data/processed/polling/electorate-polls-2026/polls.json', 'general-article'),
@@ -100,7 +101,17 @@ def used_flags(panel: dict, dataset: dict) -> dict[str, bool]:
     return flags
 
 
-def national_polls(panel: dict, used: dict[str, bool]) -> list[dict]:
+def wikipedia_labels(capture: dict) -> dict[str, str]:
+    """Panel record id to the poll's name as the Wikipedia table prints it (for example "Taxpayers' Union–Curia"), from the preserved capture."""
+    from scripts.polling.weekly_refresh.delta import wiki_rows
+    path = ROOT / capture['rawPath']
+    assert sha256(path) == capture['sha256'], 'the preserved Wikipedia capture does not match the fit\'s recorded hash'
+    rows, unmapped = wiki_rows(path.read_text(encoding='utf-8'), 'site-evidence', capture['rawPath'], capture['sha256'])
+    assert not unmapped, 'unmapped Wikipedia rows'
+    return {r['id']: r['commissioner'].strip() for r in rows}
+
+
+def national_polls(panel: dict, used: dict[str, bool], labels: dict[str, str]) -> list[dict]:
     out = []
     for r in panel['records']:
         if r['cycle'] != 2026:
@@ -116,7 +127,7 @@ def national_polls(panel: dict, used: dict[str, bool]) -> list[dict]:
         other = r.get('publishedOther') or {}
         shares.append({'partyId': 'other', 'percent': round(100 * other['share'], 3) if other.get('share') is not None else None,
                        'approximate': str(other.get('published', '')).startswith('~') and other.get('share') is not None})
-        out.append({'id': r['id'], 'pollster': POLLSTER_NAMES.get(r['pollster'], r['pollster']), 'commissioner': r.get('commissioner'),
+        out.append({'id': r['id'], 'pollster': labels.get(r['id']) or POLLSTER_NAMES.get(r['pollster'], r['pollster']), 'commissioner': None,
                     'fieldworkStart': start, 'fieldworkEnd': end, 'sampleSize': r.get('sampleSize'),
                     'shares': shares, 'publisherUrl': None, 'usedInModel': used[r['id']],
                     'note': None if used[r['id']] else "Listed by Wikipedia but not in the model's data set"})
@@ -185,7 +196,8 @@ def build(refresh_dir: Path) -> dict:
     for file, _ in SEAT_POLL_FILES:
         inputs[file] = sha256(ROOT / file)
     used = used_flags(panel, dataset)
-    polls = national_polls(panel, used)
+    polls = national_polls(panel, used, wikipedia_labels(capture))
+    inputs[capture['rawPath']] = capture['sha256']
     assert sum(p['usedInModel'] for p in polls) == estimate['polls2026'], 'the polls marked used are not the polls the fit used'
     return {
         'schemaVersion': SCHEMA_VERSION, 'refreshDate': panel['refreshDate'], 'dataCutoff': estimate['dataCutoff'],
