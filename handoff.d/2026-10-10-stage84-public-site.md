@@ -1,7 +1,7 @@
 <!-- fold: changelog -->
 ## Stage84 — public static site, 2026-10-10
 
-- The app becomes the public site: `forecast/`, `methodology/` and `archive/` pages plus `404.html`, built by `npm run build` into `site/` with relative paths and the published `forecasts/` archive. Placeholder pages and `react-router-dom` removed; CC BY 4.0 footer on every page.
+- The app becomes the public site: `forecast/` (headline seat chart in James's party order, a trend chart that switches on after three releases), `electorates/` (searchable seat view), `methodology/` and `archive/` pages plus `404.html`, built by `npm run build` into `site/` with relative paths and the published `forecasts/` archive. Optional `electorateDetail[].evidence` added to the v2 export (seat polls; producers not built). Placeholder pages and `react-router-dom` removed; CC BY 4.0 footer on every page.
 - New `scripts/validate/check_site.mjs`; `npm run check:dist` now checks `site/`. No statistical, Python, export-schema or data change; nothing published.
 
 <!-- fold: state -->
@@ -13,7 +13,7 @@ Branch `claude/stage84-public-site-9y5788` from main `9d2c8f1`. Requested by Jam
 
 **What did not change.** The model, the export schema, the release publisher and gate, Python, data, `data/sources.json`, `ci.yml`. The public repository was never accessed.
 
-**Limits.** Seat-level maps and charts, a polls page and the publish step are not built. Methodology wording is plain-language and should be read by James before the first release.
+**Limits.** An electorate map, the publish step and the Python/bank producers of seat-poll evidence are not built; seat pages say no poll information is attached until they are. Methodology wording is plain-language and should be read by James before the first release.
 
 **Exact next action.** The publish step (research-repo workflow, James's token) builds `site/`, copies it to the public repository and is rehearsed without synthetic data; the first real release follows the release checklist.
 

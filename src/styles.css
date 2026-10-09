@@ -34,3 +34,19 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 .key.r50{background:#3f8f76}.key.r80{background:#b9d8cc}.key.tick{width:2px;background:#10372c}
 .poll{margin-top:12px}
 .seatlist tr[aria-selected]{background:#eaf0de}
+
+.seatchart{margin:0 0 2rem;max-width:760px}
+.seatchart svg{width:100%;height:auto;display:block}
+.seatchart-total{font-size:44px;font-weight:700;fill:#182d30}
+.seatchart-sub{font-size:14px;fill:#576764}
+.seatchart-key{list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px;padding:0;margin:8px 0 12px}
+.seatchart-key li{display:flex;align-items:center;gap:6px;font-size:15px}
+.seatchart-key span{width:12px;height:12px;border-radius:50%;display:inline-block}
+.seatchart figcaption{font-size:13px;color:#576764}
+
+.trend{margin:0 0 2rem;max-width:760px}
+.trend svg{width:100%;height:auto;display:block}
+.trend .grid{stroke:#d4dcd7;stroke-width:1}
+.trend .tick{font-size:11px;fill:#576764}
+.trend .endlabel{font-size:12px;font-weight:600}
+.trend figcaption{font-size:13px;color:#576764}

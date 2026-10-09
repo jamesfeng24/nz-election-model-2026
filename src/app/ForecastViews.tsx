@@ -1,6 +1,7 @@
 import type { ForecastSnapshot } from '../types/export';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
 import { longDate, pct, prob } from './format';
+import { SeatChart } from './SeatChart';
 
 const at = (set: IntervalSet, level: number) => set.find(v => v.level === level)!;
 const range = (set: IntervalSet, level: number, fmt: (x: number) => string) => `${fmt(at(set, level).lower)} – ${fmt(at(set, level).upper)}`;
@@ -62,18 +63,21 @@ function Electorates({ snapshot }: { snapshot: ForecastSnapshot }) {
   </details>;
 }
 
-export function ForecastView({ snapshot }: { snapshot: ForecastSnapshot }) {
+export function ForecastView({ snapshot, trend = null }: { snapshot: ForecastSnapshot; trend?: React.ReactNode }) {
   const name = partyName(snapshot);
   const seats = snapshot.seatLayer.status === 'available'
     ? snapshot.seatLayer.summary.parties.map(p => ({ key: p.partyId, label: name(p.partyId), set: p.seats }))
     : snapshot.simulation.partySeatSummaries.map(p => ({ key: p.partyId, label: name(p.partyId), set: p.seats }));
   return <section aria-label="Forecast summary">
+    <h2>Expected seats</h2>
+    <SeatChart snapshot={snapshot} />
     <h2>Party vote</h2>
     <IntervalTable caption={`${snapshot.national.basis}. Median with 80% (primary), 50% and 90% ranges.`} label="Party" fmt={pct}
       rows={snapshot.national.partyVoteShares.map(p => ({ key: p.partyId, label: name(p.partyId), set: p.share }))} />
     <h2>Seats in Parliament</h2>
     <IntervalTable caption="Seats per party across simulated elections: median with 80% (primary), 50% and 90% ranges." label="Party" fmt={whole} rows={seats} />
     <Governing snapshot={snapshot} />
+    {trend && <><h2>How the odds have moved</h2>{trend}</>}
     <h2>Electorates</h2>
     <p><a href="../electorates/">Look up any seat</a> for each candidate's chance, vote share ranges and the polls behind it.</p>
     <Electorates snapshot={snapshot} />

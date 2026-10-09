@@ -62,3 +62,43 @@ export async function loadArchiveIndex(options: LoaderOptions): Promise<IndexRes
     return { status: 'unavailable', reason: error instanceof Error ? error.message : 'Unknown loading error' };
   }
 }
+
+export interface ReleasePoint {
+  snapshotId: string;
+  dataCutoff: string;
+  /** Chance each configured bloc wins a majority, by bloc id, and the chance of the named scenarios, by scenario id. */
+  blocMajority: Record<string, { label: string; p: number }>;
+  scenarios: Record<string, { label: string; p: number }>;
+}
+
+/**
+ * Every current release (published, not withdrawn, not superseded), oldest first, each verified against its index hash and
+ * the schema. Any failure for one release drops the whole history: a chart is never drawn from unverified or partial data.
+ */
+export async function loadReleaseHistory(options: LoaderOptions): Promise<ReleasePoint[]> {
+  const { fetchText: get, allowSynthetic } = options;
+  const root = options.baseUrl.endsWith('/') ? options.baseUrl : `${options.baseUrl}/`;
+  try {
+    const index = ForecastIndexSchema.parse(JSON.parse(await get(`${root}index.json`)));
+    const withdrawn = new Set(index.snapshots.filter(e => e.status === 'withdrawn').map(e => e.snapshotId));
+    const superseded = new Set(index.snapshots.flatMap(e => (e.supersedes !== null ? [e.supersedes] : [])));
+    const current = index.snapshots.filter(e => e.status === 'published' && !withdrawn.has(e.snapshotId) && !superseded.has(e.snapshotId) &&
+      (allowSynthetic || e.provenanceKind !== 'synthetic-fixture'));
+    const points: ReleasePoint[] = [];
+    for (const entry of current) {
+      const text = await get(`${root}${entry.path}`);
+      if (await sha256Hex(text) !== entry.sha256) return [];
+      const snapshot = ForecastSnapshotSchema.parse(JSON.parse(text));
+      if (snapshot.targetType !== 'nowcast' || snapshot.seatLayer.status !== 'available') continue;
+      const { blocs, scenarios } = snapshot.seatLayer.summary;
+      points.push({
+        snapshotId: snapshot.snapshotId, dataCutoff: snapshot.dataCutoff,
+        blocMajority: Object.fromEntries(blocs.map(b => [b.id, { label: b.label, p: b.probMajority.p }])),
+        scenarios: Object.fromEntries(scenarios.map(s => [s.id, { label: s.label, p: s.probability.p }])),
+      });
+    }
+    return points.sort((a, b) => a.dataCutoff.localeCompare(b.dataCutoff));
+  } catch {
+    return [];
+  }
+}
