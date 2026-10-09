@@ -1,4 +1,4 @@
-import { ForecastIndexSchema, ForecastSnapshotSchema, type ForecastSnapshot } from '../types/export';
+import { ForecastIndexSchema, ForecastSnapshotSchema, type ForecastIndex, type ForecastSnapshot } from '../types/export';
 import { sha256Hex } from '../utils/hash';
 
 export type LoadResult =
@@ -43,6 +43,21 @@ export async function loadLatestSnapshot(options: LoaderOptions): Promise<LoadRe
       return { status: 'unavailable', reason: 'Snapshot disagrees with its index entry' };
     if (!allowSynthetic && snapshot.provenance.kind === 'synthetic-fixture') return { status: 'unavailable', reason: 'Synthetic data refused' };
     return { status: 'loaded', snapshot };
+  } catch (error) {
+    return { status: 'unavailable', reason: error instanceof Error ? error.message : 'Unknown loading error' };
+  }
+}
+
+export type IndexResult =
+  | { status: 'loaded'; index: ForecastIndex }
+  | { status: 'unavailable'; reason: string };
+
+/** The archive index for the archive page, validated. Synthetic entries are dropped unless allowed (development only). */
+export async function loadArchiveIndex(options: LoaderOptions): Promise<IndexResult> {
+  const root = options.baseUrl.endsWith('/') ? options.baseUrl : `${options.baseUrl}/`;
+  try {
+    const index = ForecastIndexSchema.parse(JSON.parse(await options.fetchText(`${root}index.json`)));
+    return { status: 'loaded', index: { ...index, snapshots: index.snapshots.filter(e => options.allowSynthetic || e.provenanceKind !== 'synthetic-fixture') } };
   } catch (error) {
     return { status: 'unavailable', reason: error instanceof Error ? error.message : 'Unknown loading error' };
   }

@@ -12,7 +12,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "build": "vite build",
-    "check:dist": "node scripts/validate/no_synthetic_in_dist.mjs dist",
+    "check:dist": "node scripts/validate/no_synthetic_in_dist.mjs site && node scripts/validate/check_site.mjs site",
     "release:build": "vite build --ssr src/release/cli.ts --outDir .release-build/cli --emptyOutDir",
     "release:publish": "node .release-build/cli/cli.js",
     "preview": "vite preview",
@@ -24,7 +24,6 @@
   "dependencies": {
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "react-router-dom": "7.18.3",
     "zod": "4.5.4"
   },
   "devDependencies": {

@@ -1,28 +1,53 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
-import { pages } from './pages';
-import { fetchText, loadLatestSnapshot, type LoadResult } from '../data/loader';
-import { ElectoratesView, ForecastView, MmpView, SnapshotBanner } from './ForecastViews';
-import type { ForecastSnapshot } from '../types/export';
+import { pages, type PageId } from './pages';
+import { fetchText, loadArchiveIndex, loadLatestSnapshot, type IndexResult, type LoadResult } from '../data/loader';
+import { ArchiveView } from './ArchiveView';
+import { ForecastView, SnapshotBanner } from './ForecastViews';
+import { MethodologyView } from './MethodologyView';
 
-/** Default source: published archive in production; in development only, also the in-memory synthetic dry run. */
+/** Default sources read the published archive next to the page (`../forecasts/`). Development also allows the in-memory synthetic dry run. */
+const options = () => ({ fetchText: fetchText(), baseUrl: new URL('../forecasts/', document.baseURI).href, allowSynthetic: import.meta.env.DEV });
+
 export async function defaultSource(): Promise<LoadResult> {
-  const published = await loadLatestSnapshot({ fetchText: fetchText(), baseUrl: `${import.meta.env.BASE_URL}forecasts`, allowSynthetic: import.meta.env.DEV });
+  const published = await loadLatestSnapshot(options());
   if (import.meta.env.DEV && published.status !== 'loaded') {
     const { runSyntheticDryRun } = await import('../dev/syntheticSnapshot');
     return { status: 'loaded', snapshot: await runSyntheticDryRun() };
   }
   return published;
 }
-const views: Record<string, (props: { snapshot: ForecastSnapshot }) => React.JSX.Element> = { '/': ForecastView, '/electorates': ElectoratesView, '/mmp': MmpView };
-function Page({ page, snapshot }: { page: typeof pages[number]; snapshot: ForecastSnapshot | null }) {
-  const View = views[page.path];
-  return <><p className="eyebrow">2026 GENERAL ELECTION / {page.label.toUpperCase()}</p><h1>{page.title}</h1><p className="intro">{page.description}</p>{snapshot && View ? <View snapshot={snapshot} /> : <section className="status-panel" aria-labelledby="status-heading"><div><span className="badge">In development</span><h2 id="status-heading">No forecast published</h2><p>{page.detail}</p></div><div className="readiness"><p className="eyebrow">BEFORE RESULTS</p><ul>{page.needs.map((need) => <li key={need}><span aria-hidden="true">○</span>{need}</li>)}</ul></div></section>}<section className="principles" aria-label="Project principles"><article><span>01 / EVIDENCE</span><h2>Traceable inputs</h2><p>Original sources and processing steps will accompany every dataset.</p></article><article><span>02 / UNCERTAINTY</span><h2>Honest estimates</h2><p>Missing evidence stays visible. Precision must be earned through validation.</p></article><article><span>03 / EXPLANATION</span><h2>Methods in the open</h2><p>Each modelling stage will document its assumptions and limitations.</p></article></section></>;
-}
-export function App({ source = defaultSource }: { source?: () => Promise<LoadResult> }) {
- const { pathname } = useLocation();
- const [snapshot, setSnapshot] = useState<ForecastSnapshot | null>(null);
- useEffect(() => { let live = true; source().then(r => { if (live && r.status === 'loaded') setSnapshot(r.snapshot); }, () => undefined); return () => { live = false; }; }, [source]);
- useEffect(() => { document.title = `${pages.find(p => p.path === pathname)?.label ?? 'Page not found'} | NZ Election Model 2026`; document.getElementById('main')?.focus(); }, [pathname]);
- return <><a className="skip" href="#main">Skip to content</a><header><Link className="brand" to="/">NZ <span>Election Model</span><b>2026</b></Link><span className="project-tag">INDEPENDENT RESEARCH PROJECT</span></header><nav aria-label="Main navigation">{pages.map(page => <NavLink key={page.path} to={page.path} end={page.path === '/'}>{page.label}</NavLink>)}</nav><main id="main" tabIndex={-1}>{snapshot && <SnapshotBanner snapshot={snapshot} />}<Routes>{pages.map(page => <Route key={page.path} path={page.path} element={<Page page={page} snapshot={snapshot} />} />)}<Route path="*" element={<><h1>Page not found</h1><p>This address does not match a project page.</p><Link to="/">Return to Forecast</Link></>} /></Routes></main><footer><span>NZ Election Model 2026 · Architecture first. Evidence next.</span><a href="https://github.com/jamesfeng24/nz-election-model-2026">Repository & documentation ↗</a></footer></>;
+export const defaultIndexSource = (): Promise<IndexResult> => loadArchiveIndex(options());
+
+type Loaded = LoadResult | { status: 'loading' };
+const href = (path: string) => `../${path}/`;
+
+export function App({ page, source = defaultSource, indexSource = defaultIndexSource }:
+  { page: PageId; source?: () => Promise<LoadResult>; indexSource?: () => Promise<IndexResult> }) {
+  const [result, setResult] = useState<Loaded>({ status: 'loading' });
+  const [index, setIndex] = useState<IndexResult | { status: 'loading' }>({ status: 'loading' });
+  useEffect(() => {
+    let live = true;
+    if (page === 'forecast') source().then(r => { if (live) setResult(r); }, () => { if (live) setResult({ status: 'unavailable', reason: 'Could not load the forecast' }); });
+    if (page === 'archive') indexSource().then(r => { if (live) setIndex(r); }, () => { if (live) setIndex({ status: 'unavailable', reason: 'Could not load the archive' }); });
+    return () => { live = false; };
+  }, [page, source, indexSource]);
+  const current = pages.find(p => p.path === page)!;
+  useEffect(() => { document.title = `${current.label} | NZ Election Model 2026`; }, [current]);
+  return <>
+    <a className="skip" href="#main">Skip to content</a>
+    <header><a className="brand" href={href('forecast')}>NZ <span>Election Model</span><b>2026</b></a><span className="project-tag">INDEPENDENT RESEARCH PROJECT</span></header>
+    <nav aria-label="Main navigation">{pages.map(p => <a key={p.path} href={href(p.path)} aria-current={p.path === page ? 'page' : undefined} className={p.path === page ? 'active' : undefined}>{p.label}</a>)}</nav>
+    <main id="main">
+      {page === 'forecast' && <>
+        {result.status === 'loaded' && <SnapshotBanner snapshot={result.snapshot} />}
+        <h1>{current.title}</h1>
+        {result.status === 'loaded' ? <ForecastView snapshot={result.snapshot} /> : result.status === 'loading'
+          ? <p role="status">Loading the latest forecast…</p>
+          : <section className="status-panel"><h2>No forecast published yet</h2><p>The first forecast will appear here after the next weekly poll refresh. <a href={href('methodology')}>How it works</a>.</p></section>}
+      </>}
+      {page === 'methodology' && <><h1>{current.title}</h1><MethodologyView /></>}
+      {page === 'archive' && <><h1>{current.title}</h1><ArchiveView result={index} /></>}
+    </main>
+    <footer><span>An independent research project, not an official election service.</span><a href="https://creativecommons.org/licenses/by/4.0/">Free to share with credit (CC BY 4.0)</a></footer>
+  </>;
 }

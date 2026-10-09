@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import { App } from './app/App';
+import { pages, type PageId } from './app/pages';
 import './styles.css';
-ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><App /></BrowserRouter></React.StrictMode>);
+
+const root = document.getElementById('root')!;
+const page = pages.find(p => p.path === root.dataset.page)?.path ?? 'forecast';
+ReactDOM.createRoot(root).render(<React.StrictMode><App page={page as PageId} /></React.StrictMode>);
