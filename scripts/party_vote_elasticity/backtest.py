@@ -77,9 +77,9 @@ def summarise(data, pred, bound, large_move=1.5, quartile=0.75):
     minors = minor_columns(data)
     abs_party = err['absParty']
     votes = data['votes']
-    out = {'M1': {'mae': float(np.abs(err['margin']).mean()), 'bias': float(err['margin'].mean()),
+    out = {'M1': {'mae': float(np.abs(err['margin']).mean()), 'rmse': float(np.sqrt((err['margin'] ** 2).mean())), 'bias': float(err['margin'].mean()),
                   'biasByTercileOfPreviousMargin': tercile_bias(err['margin'], p[:, n] - p[:, l])},
-           'M2': {'macroMinorMae': float(abs_party[:, minors].mean(axis=0).mean()),
+           'M2': {'macroMinorMae': float(abs_party[:, minors].mean(axis=0).mean()), 'minorRmse': float(np.sqrt((abs_party[:, minors] ** 2).mean())),
                   'byParty': {data['parties'][i]: float(abs_party[:, i].mean()) for i in minors}},
            'M3': {'leadCallAgreement': float(np.mean(np.sign(pred[:, n] - pred[:, l]) == np.sign(a[:, n] - a[:, l]))),
                   'nationalAheadPredicted': int((pred[:, n] > pred[:, l]).sum()), 'nationalAheadActual': int((a[:, n] > a[:, l]).sum()),

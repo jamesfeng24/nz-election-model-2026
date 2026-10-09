@@ -1,6 +1,8 @@
 # Stage81 findings: how the local party vote moves with the national change (D119)
 
-Design frozen before scoring in [stage81-party-vote-elasticity-design.md](stage81-party-vote-elasticity-design.md) (commits 2221990 and the amendment 88671e0). James approved it on 2026-10-09 and kept the choice of default for himself after the results. General seats only; the live default is unchanged (proportional).
+Design frozen before scoring in [stage81-party-vote-elasticity-design.md](stage81-party-vote-elasticity-design.md) (commits 2221990 and the amendment 88671e0). James approved it on 2026-10-09.
+
+**Decision (James, 2026-10-09): proportional stays the live default and S, R and kappa are not refitted.** The frozen rule's mixture verdict below is recorded but not adopted. Reasons: proportional has the smallest margin error in the two large National swings (2017 to 2020, 2020 to 2023), which 2026 resembles; the arms barely move the National electorate count; the minor-party gap is a seat effect under 0.3 that the separate spread and candidate-ratio work handles better. General seats only.
 
 ## Result
 
@@ -13,7 +15,7 @@ Design frozen before scoring in [stage81-party-vote-elasticity-design.md](stage8
 | M4 all-party error (macro mean absolute) | 0.79 | 0.87 | 0.73 | 0.73 |
 | M5 residual scale (CLR mean square per category) | 0.100 | 2.47 | 0.098 | 0.43 |
 
-By transition, M1: 2014 to 2017 P 5.79, A 3.70, L 4.56, H 4.34; 2017 to 2020 P 3.14, A 4.38, L 3.71, H 3.59; 2020 to 2023 P 3.21, A 3.47, L 3.57, H 3.40. The ordering flips with the election: same points is best in 2014 to 2017 (Labour's rise from 25% to 37%, which proportional scaling overstated in National's strongholds) and worst in the two large National swings, where proportional is best. The paired seat bootstrap puts H below P on the pooled M1 (0.27pp, 90% interval 0.12 to 0.43), but H is lower in only one of three elections, so by the frozen rule it does not beat P. The bootstrap ignores dependence between seats and there are three elections.
+The saved scores also hold the margin and minor-party RMSE and the lead-call figures per transition. By transition, M1: 2014 to 2017 P 5.79, A 3.70, L 4.56, H 4.34; 2017 to 2020 P 3.14, A 4.38, L 3.71, H 3.59; 2020 to 2023 P 3.21, A 3.47, L 3.57, H 3.40. The ordering flips with the election: same points is best in 2014 to 2017 (Labour's rise from 25% to 37%, which proportional scaling overstated in National's strongholds) and worst in the two large National swings, where proportional is best. The paired seat bootstrap puts H below P on the pooled M1 (0.27pp, 90% interval 0.12 to 0.43), but H is lower in only one of three elections, so by the frozen rule it does not beat P. The bootstrap ignores dependence between seats and there are three elections.
 
 **Large movers in their strongest seats (D1, top quartile of the party's previous share, mean signed error predicted minus actual, pp).**
 - National 2017 to 2020 (x0.58): P +0.2, L +2.1, H +2.3, A +3.5. Same points keeps National's strongholds too high.
@@ -32,13 +34,13 @@ By transition, M1: 2014 to 2017 P 5.79, A 3.70, L 4.56, H 4.34; 2017 to 2020 P 3
 - **Where the arms differ is the minor-party seats.** Northland (NZ First, Labour, National win probability): P 0.43 / 0.36 / 0.16; L 0.41 / 0.39 / 0.15; H 0.36 / 0.44 / 0.15; A 0.32 / 0.49 / 0.13. The most arm-sensitive seats for National's win probability (P against A): Hutt South 0.22 to 0.14, Tāmaki 0.59 to 0.67, Whanganui 0.47 to 0.39, Kapiti 0.18 to 0.11, Takanini 0.53 to 0.59.
 - The national reconciliation gap is 0.40pp (P), 0.07 (A), 0.61 (L), 0.32 (H), 0.44 (mixture), all inside the 1.0pp limit.
 
-## What the rule leaves to James
+## Points behind the decision
 
-The rule's answer is a mixture because the backtest cannot separate P, L and H. Points for the decision (a recommendation, not part of the frozen rule):
+The rule's answer is a mixture because the backtest cannot separate P, L and H. The considerations (not part of the frozen rule), which James weighed:
 
 - The consequential national quantity, the National electorate count, is the same under every arm to within 0.2 seats. The arms move individual minor-party-strong seats (Northland, Hutt South, Kapiti, Tāmaki), by up to about 0.1 in win probability.
 - Same points (A) and the halfway arm (H) produce exact zero shares for small parties in some seats, so their residual scale (M5 2.47 and 0.43) is far from the proportional layer's 0.100 that the current noise scales (`scales-2026.json`) were calibrated on. Proportional and log-odds are equal on M5 (0.100, 0.098), so a P/L mixture would not need a noise recalibration, while anything including A or H would.
-- Keeping proportional as the default is defensible: it is best on two of the three elections for the margin, best on National's large fall and on NZ First's rise in their strongest seats, and carries no refit. A P/L mixture is the cheapest way to carry the structural spread. Switching to the rule's P/L/H mixture, or to any other arm, brings the follow-up refits in the design's knock-on section (S, R, kappa and the local noise scales) and is a separate decision for James.
+- Keeping proportional as the default is defensible: it is best on two of the three elections for the margin, best on National's large fall and on NZ First's rise in their strongest seats, and carries no refit. A P/L mixture is the cheapest way to carry the structural spread. Switching to the rule's P/L/H mixture, or to any other arm, would bring the follow-up refits in the design's knock-on section (S, R, kappa and the local noise scales); they are not done.
 
 ## What was and was not done
 
