@@ -71,7 +71,7 @@ National uncertainty enters exactly once, through step 2's draw id. The local an
 **Provenance and its limits.** The decision is James's, taken after Stage67. Stage67 itself (D101) recommended holding flagged seats at 1.00 and did **not** establish the narrower ordinary scale. The roughly 0.60 ordinary multiplier is development-informed: it was fitted on 2014–2023 with flags assigned knowing the results, and it is flag-selection-sensitive (the 17 cleaner flags gave no gain over a single scale). This limitation stays attached to the policy.
 
 **The 2026 classification.**
-- One dated file classifies every 2026 general seat as `ordinary` or `exceptional`, by 2026 boundary id, with author, date, reason and sources. It is recorded in `config/general-seat-classification-2026.json` (2026-10-10; 12 exceptional, 52 ordinary; reasons in `docs/general-seat-classification-2026.md`).
+- One dated file classifies every 2026 general seat as `ordinary` or `exceptional`, by 2026 boundary id, with author, date, reason and sources. It is recorded in `config/general-seat-classification-2026.json` (2026-10-10; 13 exceptional, 51 ordinary; reasons in `docs/general-seat-classification-2026.md`).
 - The classification is exhaustive and exclusive over the 64 general seats. A missing seat **fails the build**; it never defaults to 0.60.
 - Any seat with a Stage56 entry flagged exceptional must be `exceptional` in the classification.
 - A 1.00 seat may not also carry `extraSdPp` unless James explicitly opts in, because that would be the excluded widening above 1.

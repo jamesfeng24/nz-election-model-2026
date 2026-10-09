@@ -310,9 +310,12 @@
     },
     {
       "electorateId": "nz-general-2026-boundary-033",
-      "class": "ordinary",
-      "reason": "National holder Grant Lewis McCALLUM restanding, no candidate change.",
-      "sources": [],
+      "class": "exceptional",
+      "reason": "Three-way contest: National's Grant McCallum (2023 winner on 16.3k) restands against Labour's Ashleigh Latimer and NZ First's Shane Jones (third on 8.1k in 2023, standing again); no Northland two-way is safe. Added by James.",
+      "sources": [
+        "data/processed/nominations-2026/2026-10-10/official-table.json",
+        "data/processed/historical/2008-2023/candidate-votes.json"
+      ],
       "author": "James",
       "recordedAt": "2026-10-10",
       "extraSdOptIn": false
