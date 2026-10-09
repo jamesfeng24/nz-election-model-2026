@@ -1,0 +1,138 @@
+{
+ "adopted": false,
+ "arms": {
+  "F": "previous result carried forward, no polls",
+  "FC": "F plus the polled seats' swing, Stage66 polled layer",
+  "FP": "F plus the polled seats' swing, Stage71 variance-inflated polled layer"
+ },
+ "assemblyTouched": false,
+ "bias": 0.0,
+ "biasAdoption": false,
+ "bootstrapReplicates": 1000,
+ "calibration": {
+  "classes": [
+   "calibrated",
+   "overconfident",
+   "underconfident"
+  ],
+  "coverageDeviationMax": 0.1,
+  "zThreshold": 1.645
+ },
+ "configTouched": false,
+ "contrastsPerTransition": {
+  "2017": 6,
+  "2020": 6,
+  "2023": 7
+ },
+ "coverageLevels": [
+  0.5,
+  0.8,
+  0.9
+ ],
+ "dataSourcesJsonTouched": false,
+ "decisionNumber": "D115",
+ "draws": 20000,
+ "entrantPoolSizes": {
+  "established": 6,
+  "other": 29
+ },
+ "entrantPools": [
+  "established",
+  "other"
+ ],
+ "establishedCodes": [
+  "MP",
+  "LAB",
+  "GRN",
+  "NAT",
+  "NZF",
+  "ALC",
+  "MANA"
+ ],
+ "flagShift": 0.1,
+ "frozenBeforeScoring": true,
+ "generalElectorateTouched": false,
+ "inputs": [
+  "data/processed/maori-seat-layer/historical-results.json",
+  "data/processed/nominations-2026/2026-10-10/official-table.json",
+  "data/source-plans/maori-seat-layer/historical-polls.json",
+  "data/source-plans/maori-seat-layer/polls-2026.json",
+  "data/source-plans/maori-seat-fallback/inputs-2026.json"
+ ],
+ "minimumFoldsLogScoreBetter": 2,
+ "newResources": 0,
+ "otherContrastFlagRatio": 1.5,
+ "pairedBootstrapResamples": 5000,
+ "phi": {
+  "distribution": "uniform(0,1)",
+  "sensitivityFixed": [
+   0.2,
+   0.5,
+   0.8
+  ]
+ },
+ "pollTrainingYears": {
+  "chronological": {
+   "2023": [
+    2014,
+    2017,
+    2020
+   ]
+  },
+  "leaveOneElectionOut": {
+   "2017": [
+    2014,
+    2020,
+    2023
+   ],
+   "2020": [
+    2014,
+    2017,
+    2023
+   ],
+   "2023": [
+    2014,
+    2017,
+    2020
+   ]
+  }
+ },
+ "previewDraws": 200,
+ "publication": false,
+ "question": "Fallback for Maori electorates without a seat poll: previous result carried forward plus the polled seats' swing, calibrated on 2014-2023 official results.",
+ "readoutDraws": 100000,
+ "schemaVersion": 1,
+ "schemes": {
+  "chronological": {
+   "2023": [
+    2017,
+    2020
+   ]
+  },
+  "leaveOneElectionOut": {
+   "2017": [
+    2020,
+    2023
+   ],
+   "2020": [
+    2017,
+    2023
+   ],
+   "2023": [
+    2017,
+    2020
+   ]
+  }
+ },
+ "seed": 2026078,
+ "stage": 78,
+ "stage66ReadOnly": true,
+ "stage71ReadOnly": true,
+ "swingRuleOrder": [
+  "swing_helps",
+  "swing_hurts",
+  "mixed_report_to_james"
+ ],
+ "swingSubsetSize": 3,
+ "winnerLogScoreFloor": 0.0001
+}
