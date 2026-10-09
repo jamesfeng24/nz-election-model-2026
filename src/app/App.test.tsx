@@ -6,6 +6,8 @@ import { runSyntheticDryRun } from '../dev/syntheticSnapshot';
 import bank from '../../data/fixtures/synthetic/nowcast-draw-bank.json';
 import config from '../../config/nowcast-2026.json';
 import { buildNowcastSnapshot } from '../models/nowcast/fromBank';
+import { ForecastSnapshotSchema } from '../types/export';
+import { fireEvent } from '@testing-library/react';
 import type { IndexResult, LoadResult } from '../data/loader';
 const none = () => Promise.resolve<LoadResult>({ status: 'unavailable', reason: 'test' });
 const noIndex = () => Promise.resolve<IndexResult>({ status: 'unavailable', reason: 'test' });
@@ -69,5 +71,34 @@ describe('public site', () => {
     expect(screen.getByRole('table', { name: 'Hung parliament scenarios' })).toBeInTheDocument();
     expect(screen.getByText('All 71 electorates')).toBeInTheDocument();
     expect(screen.getAllByText(/Wider/).length).toBeGreaterThan(0);
+  });
+  it('shows a seat page with odds, shaded ranges and the polls attached to the seat', async () => {
+    const base = await buildNowcastSnapshot(bank, {
+      snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-07T00:00:00+00:00', dataCutoff: '2026-10-06T00:00:00+00:00',
+      electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
+      modelVersion: 'synthetic-model', codeRevision: 'synthetic-revision', bankSha256: 'a'.repeat(64),
+      mmp: { rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only', rulesSourceIds: ['synthetic-rules'], blocs: [] },
+      nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
+    });
+    const snapshot = structuredClone(base);
+    const seat = snapshot.electorateDetail[0];
+    const candidate = snapshot.directory.candidates.find(c => c.electorateId === seat.electorateId)!;
+    const poll = { pollster: 'Invented Research', fieldworkStart: null, fieldworkEnd: '2026-09-27', sampleSize: 500, usedInModel: false, note: null,
+      results: [{ candidateId: candidate.candidateId, name: candidate.name, party: null, percent: 40 }] };
+    seat.evidence = { basis: 'Invented basis text', polls: [poll] };
+    expect(() => ForecastSnapshotSchema.parse(snapshot)).not.toThrow();
+    const bad = structuredClone(snapshot);
+    bad.electorateDetail[0].evidence!.polls[0].results[0].candidateId = 'nobody';
+    expect(() => ForecastSnapshotSchema.parse(bad)).toThrow(/unknown candidate/);
+    window.location.hash = `#seat=${seat.electorateId}`;
+    render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    const name = snapshot.directory.electorates.find(e => e.electorateId === seat.electorateId)!.name;
+    expect(await screen.findByRole('heading', { level: 2, name: new RegExp(name) })).toBeInTheDocument();
+    expect(screen.getAllByRole('img', { name: /50% range .* 80% range/ }).length).toBeGreaterThan(1);
+    expect(screen.getByText('Invented basis text')).toBeInTheDocument();
+    expect(screen.getByText(/found but not used in this forecast/)).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('combobox', { name: 'Find a seat' }), { target: { value: 'zzzz' } });
+    expect(screen.getByText(/0 shown/)).toBeInTheDocument();
+    window.location.hash = '';
   });
 });

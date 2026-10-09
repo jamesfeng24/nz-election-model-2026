@@ -4,7 +4,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
 const root = process.argv[2] ?? 'site';
-const pages = ['index.html', 'forecast/index.html', 'methodology/index.html', 'archive/index.html', '404.html'];
+const pages = ['index.html', 'forecast/index.html', 'electorates/index.html', 'methodology/index.html', 'archive/index.html', '404.html'];
 const problems = [];
 for (const page of pages) if (!existsSync(join(root, page))) problems.push(`missing ${page}`);
 const walk = dir => readdirSync(dir).flatMap(n => { const p = join(dir, n); return statSync(p).isDirectory() ? walk(p) : [p]; });

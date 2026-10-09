@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { pages, type PageId } from './pages';
 import { fetchText, loadArchiveIndex, loadLatestSnapshot, type IndexResult, type LoadResult } from '../data/loader';
 import { ArchiveView } from './ArchiveView';
+import { ElectoratesView } from './ElectoratesView';
 import { ForecastView, SnapshotBanner } from './ForecastViews';
 import { MethodologyView } from './MethodologyView';
 
@@ -27,7 +28,7 @@ export function App({ page, source = defaultSource, indexSource = defaultIndexSo
   const [index, setIndex] = useState<IndexResult | { status: 'loading' }>({ status: 'loading' });
   useEffect(() => {
     let live = true;
-    if (page === 'forecast') source().then(r => { if (live) setResult(r); }, () => { if (live) setResult({ status: 'unavailable', reason: 'Could not load the forecast' }); });
+    if (page === 'forecast' || page === 'electorates') source().then(r => { if (live) setResult(r); }, () => { if (live) setResult({ status: 'unavailable', reason: 'Could not load the forecast' }); });
     if (page === 'archive') indexSource().then(r => { if (live) setIndex(r); }, () => { if (live) setIndex({ status: 'unavailable', reason: 'Could not load the archive' }); });
     return () => { live = false; };
   }, [page, source, indexSource]);
@@ -38,10 +39,10 @@ export function App({ page, source = defaultSource, indexSource = defaultIndexSo
     <header><a className="brand" href={href('forecast')}>NZ <span>Election Model</span><b>2026</b></a><span className="project-tag">INDEPENDENT RESEARCH PROJECT</span></header>
     <nav aria-label="Main navigation">{pages.map(p => <a key={p.path} href={href(p.path)} aria-current={p.path === page ? 'page' : undefined} className={p.path === page ? 'active' : undefined}>{p.label}</a>)}</nav>
     <main id="main">
-      {page === 'forecast' && <>
+      {(page === 'forecast' || page === 'electorates') && <>
         {result.status === 'loaded' && <SnapshotBanner snapshot={result.snapshot} />}
         <h1>{current.title}</h1>
-        {result.status === 'loaded' ? <ForecastView snapshot={result.snapshot} /> : result.status === 'loading'
+        {result.status === 'loaded' ? (page === 'forecast' ? <ForecastView snapshot={result.snapshot} /> : <ElectoratesView snapshot={result.snapshot} />) : result.status === 'loading'
           ? <p role="status">Loading the latest forecast…</p>
           : <section className="status-panel"><h2>No forecast published yet</h2><p>The first forecast will appear here after the next weekly poll refresh. <a href={href('methodology')}>How it works</a>.</p></section>}
       </>}

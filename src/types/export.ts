@@ -59,10 +59,23 @@ export const SeatLayerExportSchema = z.object({
   }).strict(),
 }).strict();
 
+/** One published seat poll, with whether the model used it (a poll found but not used is still shown, labelled). */
+export const SeatPollSchema = z.object({
+  pollster: id,
+  fieldworkStart: z.iso.date().nullable(),
+  fieldworkEnd: z.iso.date(),
+  sampleSize: z.number().int().positive().nullable(),
+  results: z.array(z.object({ candidateId: id.nullable(), name: id, party: id.nullable(), percent: z.number().min(0).max(100) }).strict()).min(1),
+  usedInModel: z.boolean(),
+  note: id.nullable(),
+}).strict();
+
 /** Per-seat detail: the D107 uncertainty class, candidate-share intervals and win probabilities with their errors. */
 export const ElectorateDetailSchema = z.object({
   electorateId: id,
   uncertaintyClass: z.enum(['ordinary', 'exceptional', 'maori-layer']),
+  /** Optional: what the seat's estimate rests on. `basis` is plain text for the page; `polls` lists every seat poll found. */
+  evidence: z.object({ basis: id, polls: z.array(SeatPollSchema) }).strict().optional(),
   candidates: z.array(z.object({
     candidateId: id, meanShare: z.number().min(0).max(1), share: IntervalSetSchema, winProbability: ProbabilityEstimateSchema,
   }).strict()).min(1),
@@ -173,6 +186,9 @@ export const ForecastSnapshotSchema = z.object({
     d.candidates.forEach(c => {
       if (c.share.some(v => v.lower < 0 || v.upper > 1)) bad('Candidate-share interval must be within 0–1', ['electorateDetail', i]);
     });
+    d.evidence?.polls.forEach(poll => poll.results.forEach(r => {
+      if (r.candidateId !== null && !candidates.has(r.candidateId)) bad('Seat poll names an unknown candidate', ['electorateDetail', i, 'evidence']);
+    }));
   });
   // A model snapshot carries detail for every predicted seat; only synthetic pipeline fixtures may omit it.
   if (!synthetic && detailed.length !== s.simulation.electoratePredictions.length)

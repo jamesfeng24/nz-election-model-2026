@@ -55,7 +55,7 @@ function Electorates({ snapshot }: { snapshot: ForecastSnapshot }) {
         if (!prediction) return <tr key={e.electorateId}><td>{e.name}</td><td colSpan={3}>No forecast available: {snapshot.unavailableElectorates.find(u => u.electorateId === e.electorateId)?.reason ?? 'unknown reason'}</td></tr>;
         const [first, second] = [...prediction.candidates].sort((a, b) => b.winProbability - a.winProbability);
         const cls = snapshot.electorateDetail.find(d => d.electorateId === e.electorateId)?.uncertaintyClass;
-        return <tr key={e.electorateId}><td>{e.name}{e.kind === 'maori' ? ' (Māori)' : ''}</td><td>{cell(first.candidateId, first.winProbability)}</td>
+        return <tr key={e.electorateId}><td><a href={`../electorates/#seat=${e.electorateId}`}>{e.name}</a>{e.kind === 'maori' ? ' (Māori)' : ''}</td><td>{cell(first.candidateId, first.winProbability)}</td>
           <td>{second ? cell(second.candidateId, second.winProbability) : '–'}</td><td>{cls === 'exceptional' ? 'Wider' : cls === 'maori-layer' ? 'Wider (fewer polls)' : 'Standard'}</td></tr>;
       })}</tbody></table>
     <p><small>"Wider" marks seats with unusual local circumstances or thin polling, where the model is less certain.</small></p>
@@ -75,6 +75,7 @@ export function ForecastView({ snapshot }: { snapshot: ForecastSnapshot }) {
     <IntervalTable caption="Seats per party across simulated elections: median with 80% (primary), 50% and 90% ranges." label="Party" fmt={whole} rows={seats} />
     <Governing snapshot={snapshot} />
     <h2>Electorates</h2>
+    <p><a href="../electorates/">Look up any seat</a> for each candidate's chance, vote share ranges and the polls behind it.</p>
     <Electorates snapshot={snapshot} />
     <h2>Limitations</h2>
     <ul>{snapshot.limitations.map(l => <li key={l}>{l}</li>)}</ul>
