@@ -4,7 +4,7 @@
 
 **Answer.** Yes for the engine. On today's live inputs, the bank is correctly **blocked**:
 - **General seats:** all 64 are unavailable, because the roster is pending (Stage50) and the classification file does not exist.
-- **Māori seats:** four are unavailable because they are unpolled (James's decision is pending).
+- **Māori seats:** four are unavailable because they are unpolled (James's decision is pending). (Stage80 update: the four use the registered Stage78 fallback and all seven carry the official roster candidate ids; see [stage80-maori-fallback-wiring.md](stage80-maori-fallback-wiring.md).)
 - The three polled Māori seats are simulated.
 
 Approved by James on 2026-10-07. That approval covered:
@@ -57,7 +57,7 @@ The gate checks:
 - **Runtime.** The frozen Stage47 within-remainder location solve dominates. It was about 35ms per draw per general seat on one core (about 5 hours single-core at 8,192 draws); Stage76 makes it about 3.8× faster with identical results ([stage76-assembly-speed.md](stage76-assembly-speed.md)). Precision (Stage63) sets the draw count.
 - **Not done:**
   - no snapshot or forecast;
-  - no classification entries (a draft for James is in `docs/general-seat-classification-2026-draft.md`);
+  - no classification entries (a draft for James is in `docs/general-seat-classification-2026.md`);
   - no Stage69/70 cutover;
   - no draw count, blocs or rules version;
   - no Stage56 output B;

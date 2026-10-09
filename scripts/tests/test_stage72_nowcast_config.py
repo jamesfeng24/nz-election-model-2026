@@ -94,6 +94,14 @@ class Classification(unittest.TestCase):
         result = V.check_classification(synthetic_classification(), stage56_exceptional=[GENERAL[0]])
         self.assertEqual(len(result), 64)
 
+    def test_the_recorded_2026_classification_is_valid_and_pinned(self):
+        document = read('config/general-seat-classification-2026.json')
+        result = V.check_classification(document)
+        self.assertEqual(set(result), set(GENERAL))
+        self.assertTrue(all(e['author'] == 'James' and e['recordedAt'] == '2026-10-10' and not e['extraSdOptIn'] for e in document['seats']))
+        exceptional = sorted(seat[-3:] for seat, kind in result.items() if kind == 'exceptional')
+        self.assertEqual(exceptional, ['001', '010', '011', '020', '025', '033', '037', '038', '047', '058', '059', '063', '064'])
+
     def test_every_gap_or_conflict_fails_closed(self):
         def broken(edit):
             doc = synthetic_classification(); edit(doc); return doc

@@ -12,7 +12,7 @@ Internal development record, not published. Decision D118 (provisional; the coor
 
 ## Result
 
-With the live inputs the development gate now has one blocker left: the 64 general seats are unavailable until James's D107 classification exists (`config/general-seat-classification-2026.json`). All seven Māori seats are simulated. The development gate, the synthetic fixture and the rehearsal report change only in `configVersion`, the Māori seat statuses and the digests.
+Merged with main after the classification (#104) and Northland (#105) updates. With the live inputs the development gate now has **no blocker**: all 71 seats are simulated (64 general seats from the D107 classification, 3 polled and 4 fallback Māori seats), every Python gate check passes at the development draw count, and `publishable` is true. The development gate, the synthetic fixture and the rehearsal report change only in `configVersion`, the Māori seat statuses and the digests.
 
 Fallback win probabilities at the assembly's 4,096 draws match Stage78 within Monte Carlo error: Waiariki Waititi 0.96, Ikaroa-Rāwhiti Tangaere-Manuel 0.65 (Maxwell 0.35), Tāmaki Makaurau Kaipara and Leoni 0.50 each, Te Tai Tokerau Prime 0.66, Edwards 0.20, Kapa-Kingi 0.13.
 

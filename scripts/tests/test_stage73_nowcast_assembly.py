@@ -154,16 +154,17 @@ class Bank(unittest.TestCase):
         broken['seats'].pop()
         self.assertIn('universe71', {c['check'] for c in A.gate(broken, self.config)[1] if not c['passed']})
 
-    def test_live_inputs_are_blocked_not_defaulted(self):
+    def test_live_inputs_simulate_every_seat_and_nothing_is_defaulted(self):
         report = read('data/processed/nowcast-assembly/development-gate.json')
-        self.assertFalse(report['publishable'])
         self.assertEqual(report['provenance'], 'live')
         self.assertEqual(set(report['seatStatus']), set(GENERAL + MAORI))
-        reasons = {b['reason']: b['seats'] for b in report['blockers']}
-        self.assertEqual(sum(reasons.values()) + sum(v == 'simulated' for v in report['seatStatus'].values()), 71)
-        # Stage50 part 2 set the official roster; the general seats now wait only on James's classification (D107).
-        self.assertTrue(any('classification' in r and n == 64 for r, n in reasons.items()))
-        self.assertFalse(any('Stage50' in r for r in reasons))
+        # Stage50 part 2 (official roster), James's classification (D107) and the registered Stage78 fallback (Stage80, D118)
+        # leave nothing pending: all 71 seats simulate on the live inputs and no blocker remains. A missing input would put
+        # its seats back to `unavailable` with a reason (tested in test_stage80_maori_wiring and the pending-config tests).
+        self.assertTrue(all(v == 'simulated' for v in report['seatStatus'].values()))
+        self.assertEqual(report['blockers'], [])
+        self.assertTrue(report['publishable'])
+        self.assertTrue(all(c['passed'] for c in report['checks']))
 
 
 if __name__ == '__main__':
