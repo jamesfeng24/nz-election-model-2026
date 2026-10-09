@@ -75,10 +75,11 @@ def simulate(contract, draws, res=None, layers=None, fallback=None):
         u, swing[arm] = shifted(arm)
         arms[arm] = seats(u, phi)
     sens = {}
-    for arm in ('FC', 'FP'):
+    for arm in ('F', 'FC', 'FP'):
         for value in contract['phi']['sensitivityFixed']:
-            u, _ = shifted(arm)
+            u = np.sqrt(t2) * z if arm == 'F' else shifted(arm)[0]
             sens['%s, phi %.1f' % (arm, value)] = (arm, {'Te Tai Tokerau': seats(u, np.full(draws, value))['Te Tai Tokerau']})
+    for arm in ('FC', 'FP'):
         u, info = shifted(arm, exclude=('Te Tai Tonga',))
         sens[arm + ', swing without Te Tai Tonga'] = (arm, seats(u, phi))
         swing[arm + ' without Te Tai Tonga'] = info

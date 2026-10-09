@@ -1,0 +1,2752 @@
+{
+  "arms": {
+    "F": {
+      "seats": {
+        "Ikaroa-Rāwhiti": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.4279529263588775,
+              "entrantPool": null,
+              "meanShare": 0.4080169098017506,
+              "name": "Haley MAXWELL",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.16398203523956967,
+                "0.25": 0.29719740612714574,
+                "0.5": 0.39685536118507037,
+                "0.75": 0.5061216084586251,
+                "0.95": 0.690822012422406
+              },
+              "winProbability": 0.35765,
+              "winProbabilityMonteCarloSE": 0.0015157060318544621
+            },
+            {
+              "carriedForwardShare": 0.5410713582870862,
+              "entrantPool": null,
+              "meanShare": 0.49795446071076377,
+              "name": "Cushla TANGAERE-MANUEL",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.2517468514739234,
+                "0.25": 0.4041016795499343,
+                "0.5": 0.5008496638697801,
+                "0.75": 0.5964848171779861,
+                "0.95": 0.7335997107182287
+              },
+              "winProbability": 0.64211,
+              "winProbabilityMonteCarloSE": 0.001515931225023088
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.09402862948748567,
+              "name": "Heather TE AU-SKIPWORTH",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.028544041116604753,
+                "0.25": 0.04564450270112855,
+                "0.5": 0.0665960910592443,
+                "0.75": 0.13052188823605534,
+                "0.95": 0.23413109441958588
+              },
+              "winProbability": 0.00024,
+              "winProbabilityMonteCarloSE": 4.898391572751203e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00024,
+            "LAB": 0.64211,
+            "MP": 0.35765
+          }
+        },
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.022340728977981276,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006072410402675164,
+                "0.25": 0.011559335699690105,
+                "0.5": 0.01922060701031894,
+                "0.75": 0.03130218257415497,
+                "0.95": 0.04676430054488382
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.20610942946165925,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.013873754023134498,
+                "0.25": 0.0788801736334035,
+                "0.5": 0.17436187534581982,
+                "0.75": 0.2981860855567412,
+                "0.95": 0.5080165252451709
+              },
+              "winProbability": 0.20131,
+              "winProbabilityMonteCarloSE": 0.001268007428606
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07095965950774595,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.03812536932955119,
+                "0.25": 0.055186323617260474,
+                "0.5": 0.06838022006765723,
+                "0.75": 0.0839724526824151,
+                "0.95": 0.11252701213827256
+              },
+              "winProbability": 2e-05,
+              "winProbabilityMonteCarloSE": 1.4141994201667599e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.18989551332300558,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.015947115282322472,
+                "0.25": 0.08619633390334058,
+                "0.5": 0.1805534437980963,
+                "0.75": 0.2808243608020856,
+                "0.95": 0.40070920923558073
+              },
+              "winProbability": 0.13467,
+              "winProbabilityMonteCarloSE": 0.0010795091064923908
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.15329642840288166,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.08464707307708347,
+                "0.25": 0.12172125263398839,
+                "0.5": 0.1493635347049444,
+                "0.75": 0.1803059247868934,
+                "0.95": 0.2360582842373925
+              },
+              "winProbability": 0.00633,
+              "winProbabilityMonteCarloSE": 0.0002507973504644736
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.35739824032672635,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.21729731576418945,
+                "0.25": 0.3024461803200058,
+                "0.5": 0.3574566089906334,
+                "0.75": 0.41271972542670443,
+                "0.95": 0.500045550873012
+              },
+              "winProbability": 0.65767,
+              "winProbabilityMonteCarloSE": 0.0015004671642525203
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 2e-05,
+            "GRN": 0.00633,
+            "LAB": 0.65767,
+            "MP": 0.20131,
+            "PIC": 0.0,
+            "TTT": 0.13467
+          }
+        },
+        "Tāmaki Makaurau": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.40074831827409146,
+              "entrantPool": null,
+              "meanShare": 0.4403458610772286,
+              "name": "Oriini KAIPARA",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.18752871315088784,
+                "0.25": 0.332200469608897,
+                "0.5": 0.43385467733904404,
+                "0.75": 0.5402100055099599,
+                "0.95": 0.7157527621326627
+              },
+              "winProbability": 0.50122,
+              "winProbabilityMonteCarloSE": 0.0015811341233431147
+            },
+            {
+              "carriedForwardShare": 0.39907654340644033,
+              "entrantPool": null,
+              "meanShare": 0.43111188176180965,
+              "name": "Kerrin LEONI",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.20848090456308463,
+                "0.25": 0.34320173896515355,
+                "0.5": 0.4318770033453535,
+                "0.75": 0.5206573058425616,
+                "0.95": 0.6505826683585443
+              },
+              "winProbability": 0.49843,
+              "winProbabilityMonteCarloSE": 0.001581131035366772
+            },
+            {
+              "carriedForwardShare": 0.11642717828284838,
+              "entrantPool": null,
+              "meanShare": 0.1285422571609618,
+              "name": "Florence TE OHAERE",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.0564694072054809,
+                "0.25": 0.09398069128966628,
+                "0.5": 0.12284830830364281,
+                "0.75": 0.15698809694914245,
+                "0.95": 0.2191675276314361
+              },
+              "winProbability": 0.00035,
+              "winProbabilityMonteCarloSE": 5.9150443785317456e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00035,
+            "LAB": 0.49843,
+            "MP": 0.50122
+          }
+        },
+        "Waiariki": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.1990701306076093,
+              "entrantPool": null,
+              "meanShare": 0.19748124511049878,
+              "name": "Toni BOYNTON",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.06711418421825066,
+                "0.25": 0.12913984089944963,
+                "0.5": 0.18153763889048696,
+                "0.75": 0.24754052841938,
+                "0.95": 0.38159350188146535
+              },
+              "winProbability": 0.03487,
+              "winProbabilityMonteCarloSE": 0.0005801213933307408
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.09876957660308647,
+              "name": "Tania WAIKATO",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.022754215239004647,
+                "0.25": 0.044492407009231474,
+                "0.5": 0.07069005654201085,
+                "0.75": 0.1341882047394933,
+                "0.95": 0.25742747814300376
+              },
+              "winProbability": 0.00787,
+              "winProbabilityMonteCarloSE": 0.000279429116235227
+            },
+            {
+              "carriedForwardShare": 0.763060760931289,
+              "entrantPool": null,
+              "meanShare": 0.6811111781452209,
+              "name": "Rawiri WAITITI",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.4062817856667211,
+                "0.25": 0.5986100864106643,
+                "0.5": 0.7008787584200162,
+                "0.75": 0.7862519671071961,
+                "0.95": 0.8886990495562311
+              },
+              "winProbability": 0.95726,
+              "winProbabilityMonteCarloSE": 0.0006396349927888562
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.022638000141193812,
+              "name": "Pāpā WHAREWERA",
+              "party": "TOP",
+              "shareQuantiles": {
+                "0.05": 0.004476654285460197,
+                "0.25": 0.010221280190388492,
+                "0.5": 0.018232399392651227,
+                "0.75": 0.03072208661710468,
+                "0.95": 0.05482536463623371
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00787,
+            "LAB": 0.03487,
+            "MP": 0.95726,
+            "TOP": 0.0
+          }
+        }
+      },
+      "winCounts": {
+        "teTaiTokerauPartyWinsTeTaiTokerau": 0.13467,
+        "unpolled": {
+          "distribution": [
+            0.04154,
+            0.36117,
+            0.25809,
+            0.21671,
+            0.12249
+          ],
+          "mean": 2.01744
+        }
+      }
+    },
+    "FC": {
+      "seats": {
+        "Ikaroa-Rāwhiti": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.4279529263588775,
+              "entrantPool": null,
+              "meanShare": 0.34357938201114185,
+              "name": "Haley MAXWELL",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.17181381976110874,
+                "0.25": 0.260417852230857,
+                "0.5": 0.33373880711738835,
+                "0.75": 0.41595775844342,
+                "0.95": 0.548828110743491
+              },
+              "winProbability": 0.1686,
+              "winProbabilityMonteCarloSE": 0.0011839511814259911
+            },
+            {
+              "carriedForwardShare": 0.5410713582870862,
+              "entrantPool": null,
+              "meanShare": 0.5522764787685595,
+              "name": "Cushla TANGAERE-MANUEL",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.3589131781227011,
+                "0.25": 0.4748212734005469,
+                "0.5": 0.555118563496649,
+                "0.75": 0.6331416857542109,
+                "0.95": 0.736196827387537
+              },
+              "winProbability": 0.83114,
+              "winProbabilityMonteCarloSE": 0.0011846784390711262
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.1041441392202987,
+              "name": "Heather TE AU-SKIPWORTH",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.03692790062648618,
+                "0.25": 0.051984008182216754,
+                "0.5": 0.07351792058208487,
+                "0.75": 0.14694906883550415,
+                "0.95": 0.2477085352393049
+              },
+              "winProbability": 0.00026,
+              "winProbabilityMonteCarloSE": 5.098356597963701e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00026,
+            "LAB": 0.83114,
+            "MP": 0.1686
+          }
+        },
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.023701427798213107,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006913555318898635,
+                "0.25": 0.012449365594935575,
+                "0.5": 0.020539132079647464,
+                "0.75": 0.03301041107214909,
+                "0.95": 0.04881095608004384
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.1616166428304445,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.012690799941200117,
+                "0.25": 0.06633935768330507,
+                "0.5": 0.14170518076743338,
+                "0.75": 0.23557120045106134,
+                "0.95": 0.38005599018039926
+              },
+              "winProbability": 0.08969,
+              "winProbabilityMonteCarloSE": 0.0009035801231766888
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.0752642270938326,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04365502113064742,
+                "0.25": 0.05944124254313914,
+                "0.5": 0.07239385587104813,
+                "0.75": 0.08786896007990082,
+                "0.95": 0.11658096415220731
+              },
+              "winProbability": 2e-05,
+              "winProbabilityMonteCarloSE": 1.4141994201667599e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.19815034767579243,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.018921339768933343,
+                "0.25": 0.09566881408603084,
+                "0.5": 0.19172309457007775,
+                "0.75": 0.28983513374582504,
+                "0.95": 0.4056119114797152
+              },
+              "winProbability": 0.1391,
+              "winProbabilityMonteCarloSE": 0.001094308868647239
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.1625629477239379,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.09794782214789587,
+                "0.25": 0.13139758136259655,
+                "0.5": 0.1577762173548362,
+                "0.75": 0.18825870866420696,
+                "0.95": 0.24317470501648342
+              },
+              "winProbability": 0.00778,
+              "winProbabilityMonteCarloSE": 0.0002778393708602148
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.3787044068777794,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.25566312462229884,
+                "0.25": 0.3260420655739509,
+                "0.5": 0.3762709343374881,
+                "0.75": 0.4282556927957494,
+                "0.95": 0.5101876063136038
+              },
+              "winProbability": 0.76341,
+              "winProbabilityMonteCarloSE": 0.001343931441331737
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 2e-05,
+            "GRN": 0.00778,
+            "LAB": 0.76341,
+            "MP": 0.08969,
+            "PIC": 0.0,
+            "TTT": 0.1391
+          }
+        },
+        "Tāmaki Makaurau": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.40074831827409146,
+              "entrantPool": null,
+              "meanShare": 0.3752965746402988,
+              "name": "Oriini KAIPARA",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.1974407046391298,
+                "0.25": 0.2925965269202958,
+                "0.5": 0.36816785073385144,
+                "0.75": 0.45046634334293395,
+                "0.95": 0.5766198377609162
+              },
+              "winProbability": 0.3031,
+              "winProbabilityMonteCarloSE": 0.0014533767233584005
+            },
+            {
+              "carriedForwardShare": 0.39907654340644033,
+              "entrantPool": null,
+              "meanShare": 0.48105212918626405,
+              "name": "Kerrin LEONI",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.30497285496912846,
+                "0.25": 0.41005914087299083,
+                "0.5": 0.48283218382576376,
+                "0.75": 0.5537934902444307,
+                "0.95": 0.6527932287450101
+              },
+              "winProbability": 0.69648,
+              "winProbabilityMonteCarloSE": 0.0014539450113398374
+            },
+            {
+              "carriedForwardShare": 0.11642717828284838,
+              "entrantPool": null,
+              "meanShare": 0.1436512961734372,
+              "name": "Florence TE OHAERE",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.078011254807487,
+                "0.25": 0.11106628147163324,
+                "0.5": 0.13831435072517567,
+                "0.75": 0.16999578974125107,
+                "0.95": 0.22718717193881968
+              },
+              "winProbability": 0.00042,
+              "winProbabilityMonteCarloSE": 6.479379599930846e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00042,
+            "LAB": 0.69648,
+            "MP": 0.3031
+          }
+        },
+        "Waiariki": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.1990701306076093,
+              "entrantPool": null,
+              "meanShare": 0.22825250980318132,
+              "name": "Toni BOYNTON",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.10969364965711133,
+                "0.25": 0.1681756455860421,
+                "0.5": 0.21801701345898175,
+                "0.75": 0.27759293630327797,
+                "0.95": 0.38113746973815293
+              },
+              "winProbability": 0.02519,
+              "winProbabilityMonteCarloSE": 0.0004955347000967742
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.1139998724858213,
+              "name": "Tania WAIKATO",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.03558031434921212,
+                "0.25": 0.0560179505052554,
+                "0.5": 0.08278585012433011,
+                "0.75": 0.15786117955767123,
+                "0.95": 0.2764817817905484
+              },
+              "winProbability": 0.00614,
+              "winProbabilityMonteCarloSE": 0.0002470283465515648
+            },
+            {
+              "carriedForwardShare": 0.763060760931289,
+              "entrantPool": null,
+              "meanShare": 0.631544690552686,
+              "name": "Rawiri WAITITI",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.4164470221658699,
+                "0.25": 0.5529847939139579,
+                "0.5": 0.6403192481312852,
+                "0.75": 0.7197998748614268,
+                "0.95": 0.8144759599531607
+              },
+              "winProbability": 0.96867,
+              "winProbabilityMonteCarloSE": 0.0005508941014387427
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.026202927158311358,
+              "name": "Pāpā WHAREWERA",
+              "party": "TOP",
+              "shareQuantiles": {
+                "0.05": 0.006570193003209726,
+                "0.25": 0.013032553630476324,
+                "0.5": 0.022224065842008166,
+                "0.75": 0.035957972292020135,
+                "0.95": 0.05809910937827238
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00614,
+            "LAB": 0.02519,
+            "MP": 0.96867,
+            "TOP": 0.0
+          }
+        }
+      },
+      "winCounts": {
+        "allSeven": {
+          "distribution": [
+            0.01324,
+            0.05687,
+            0.17102,
+            0.37801,
+            0.21778,
+            0.10381,
+            0.04557,
+            0.0137
+          ],
+          "mean": 3.29243,
+          "polledSeatsMean": 1.76237
+        },
+        "teTaiTokerauPartyWinsTeTaiTokerau": 0.1391,
+        "unpolled": {
+          "distribution": [
+            0.02925,
+            0.57477,
+            0.25969,
+            0.10925,
+            0.02704
+          ],
+          "mean": 1.53006
+        }
+      }
+    },
+    "FP": {
+      "seats": {
+        "Ikaroa-Rāwhiti": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.4279529263588775,
+              "entrantPool": null,
+              "meanShare": 0.3513968423302268,
+              "name": "Haley MAXWELL",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.1256817941763793,
+                "0.25": 0.23792402786787642,
+                "0.5": 0.3344037782081263,
+                "0.75": 0.4464943263028998,
+                "0.95": 0.6362284004792614
+              },
+              "winProbability": 0.23794,
+              "winProbabilityMonteCarloSE": 0.0013465680688327642
+            },
+            {
+              "carriedForwardShare": 0.5410713582870862,
+              "entrantPool": null,
+              "meanShare": 0.5457225945576155,
+              "name": "Cushla TANGAERE-MANUEL",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.296174220882409,
+                "0.25": 0.45078438847737284,
+                "0.5": 0.5524005265391669,
+                "0.75": 0.6486288164121701,
+                "0.95": 0.7725872669753104
+              },
+              "winProbability": 0.76181,
+              "winProbabilityMonteCarloSE": 0.0013470542821282295
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.10288056311215761,
+              "name": "Heather TE AU-SKIPWORTH",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.03263456955001519,
+                "0.25": 0.05055432595027868,
+                "0.5": 0.07340495955059051,
+                "0.75": 0.14292914067896118,
+                "0.95": 0.251835133233511
+              },
+              "winProbability": 0.00025,
+              "winProbabilityMonteCarloSE": 4.9993749609326164e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00025,
+            "LAB": 0.76181,
+            "MP": 0.23794
+          }
+        },
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.023423817764444774,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.0065530221992057295,
+                "0.25": 0.012183201040956482,
+                "0.5": 0.020244610999769846,
+                "0.75": 0.03270529440358591,
+                "0.95": 0.04879124782919246
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.17108769773587948,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.010760024738270318,
+                "0.25": 0.06043821260134945,
+                "0.5": 0.13761904958361973,
+                "0.75": 0.2466389274385881,
+                "0.95": 0.4477478234675589
+              },
+              "winProbability": 0.13233,
+              "winProbabilityMonteCarloSE": 0.001071535212207233
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07438325758469592,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04097076291303498,
+                "0.25": 0.0579317612004763,
+                "0.5": 0.07156007039965956,
+                "0.75": 0.08771388801149567,
+                "0.95": 0.11749256810744219
+              },
+              "winProbability": 2e-05,
+              "winProbabilityMonteCarloSE": 1.4141994201667599e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.19618954157699,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.01790276440004784,
+                "0.25": 0.09292865079470994,
+                "0.5": 0.18877743820737175,
+                "0.75": 0.2883457804680454,
+                "0.95": 0.40452902159653475
+              },
+              "winProbability": 0.13707,
+              "winProbabilityMonteCarloSE": 0.0010875744346940121
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.16066139401442345,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.09155075107047843,
+                "0.25": 0.1279291949143366,
+                "0.5": 0.15611734612910155,
+                "0.75": 0.18808960871739078,
+                "0.95": 0.245549993913772
+              },
+              "winProbability": 0.00756,
+              "winProbabilityMonteCarloSE": 0.0002739132417390587
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.37425429132356636,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.23682737143702132,
+                "0.25": 0.3183040222689004,
+                "0.5": 0.3727711740242653,
+                "0.75": 0.4291792738604273,
+                "0.95": 0.5176259050245848
+              },
+              "winProbability": 0.72302,
+              "winProbabilityMonteCarloSE": 0.0014151398503328215
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 2e-05,
+            "GRN": 0.00756,
+            "LAB": 0.72302,
+            "MP": 0.13233,
+            "PIC": 0.0,
+            "TTT": 0.13707
+          }
+        },
+        "Tāmaki Makaurau": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.40074831827409146,
+              "entrantPool": null,
+              "meanShare": 0.381796394442087,
+              "name": "Oriini KAIPARA",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.14494915186372692,
+                "0.25": 0.26762005802416344,
+                "0.5": 0.36861292212267655,
+                "0.75": 0.48183103923839443,
+                "0.95": 0.6635843808065184
+              },
+              "winProbability": 0.35042,
+              "winProbabilityMonteCarloSE": 0.0015087273564166588
+            },
+            {
+              "carriedForwardShare": 0.39907654340644033,
+              "entrantPool": null,
+              "meanShare": 0.4759996731373376,
+              "name": "Kerrin LEONI",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.24632314473226147,
+                "0.25": 0.3869764084881495,
+                "0.5": 0.4811920399658941,
+                "0.75": 0.5708931179141028,
+                "0.95": 0.6880008898003793
+              },
+              "winProbability": 0.64905,
+              "winProbabilityMonteCarloSE": 0.0015092517931080951
+            },
+            {
+              "carriedForwardShare": 0.11642717828284838,
+              "entrantPool": null,
+              "meanShare": 0.14220393242057536,
+              "name": "Florence TE OHAERE",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.06571265548345265,
+                "0.25": 0.10513021552724298,
+                "0.5": 0.13663491068338277,
+                "0.75": 0.17318916131172868,
+                "0.95": 0.23730765730762135
+              },
+              "winProbability": 0.00053,
+              "winProbabilityMonteCarloSE": 7.278180404469238e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00053,
+            "LAB": 0.64905,
+            "MP": 0.35042
+          }
+        },
+        "Waiariki": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.1990701306076093,
+              "entrantPool": null,
+              "meanShare": 0.2323209952241766,
+              "name": "Toni BOYNTON",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.08246609839636972,
+                "0.25": 0.15402159377195154,
+                "0.5": 0.21698338572523856,
+                "0.75": 0.2940012919720583,
+                "0.95": 0.43463157267132757
+              },
+              "winProbability": 0.06847,
+              "winProbabilityMonteCarloSE": 0.0007986354556366753
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.11563339595037017,
+              "name": "Tania WAIKATO",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.0279286449323636,
+                "0.25": 0.05354428963176169,
+                "0.5": 0.08500682379321499,
+                "0.75": 0.15596555747088314,
+                "0.95": 0.296841077514795
+              },
+              "winProbability": 0.01738,
+              "winProbabilityMonteCarloSE": 0.00041325458981117196
+            },
+            {
+              "carriedForwardShare": 0.763060760931289,
+              "entrantPool": null,
+              "meanShare": 0.6253381453635128,
+              "name": "Rawiri WAITITI",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.3328367518966529,
+                "0.25": 0.5228524602207505,
+                "0.5": 0.6405779912873621,
+                "0.75": 0.7436810620736537,
+                "0.95": 0.8622520494768129
+              },
+              "winProbability": 0.91415,
+              "winProbabilityMonteCarloSE": 0.0008858881278129873
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.02670746346194037,
+              "name": "Pāpā WHAREWERA",
+              "party": "TOP",
+              "shareQuantiles": {
+                "0.05": 0.005493011399126661,
+                "0.25": 0.012256705302017255,
+                "0.5": 0.021645863997589786,
+                "0.75": 0.03641549299142831,
+                "0.95": 0.06417619202610243
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.01738,
+            "LAB": 0.06847,
+            "MP": 0.91415,
+            "TOP": 0.0
+          }
+        }
+      },
+      "winCounts": {
+        "allSeven": {
+          "distribution": [
+            0.05779,
+            0.10503,
+            0.20612,
+            0.23089,
+            0.15448,
+            0.10949,
+            0.08621,
+            0.04999
+          ],
+          "mean": 3.2425,
+          "polledSeatsMean": 1.60766
+        },
+        "teTaiTokerauPartyWinsTeTaiTokerau": 0.13707,
+        "unpolled": {
+          "distribution": [
+            0.0842,
+            0.48887,
+            0.20869,
+            0.14437,
+            0.07387
+          ],
+          "mean": 1.63484
+        }
+      }
+    }
+  },
+  "calibrationClass": {
+    "F": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "calibrated"
+    },
+    "FC": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "overconfident"
+    },
+    "FP": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "overconfident"
+    }
+  },
+  "draws": 100000,
+  "entrantPoolSizes": {
+    "established": 6,
+    "other": 29
+  },
+  "fallbackEstimate": {
+    "contrasts": 19,
+    "elections": 3,
+    "sigma2": 0.06606437821507688,
+    "sigma2Dof": 16,
+    "tau2": 0.19596963484082847
+  },
+  "label": "INTERNAL development output; labelled fallback for seats without a poll; not a forecast of record",
+  "registered": "none_report_to_james",
+  "registeredByJames": {
+    "allowedChoices": [
+      "F",
+      "FC_to_FP",
+      "FC_to_FP_without_Te_Tai_Tonga"
+    ],
+    "choice": "F",
+    "decidedBy": "James (decision card in the Stage78 thread)",
+    "decidedOn": "2026-10-09",
+    "note": "Chosen by James after the frozen swing rule returned mixed_report_to_james (Stage78): the 2023 result carried forward, no polled-seat swing. The swing arms stay as flagged sensitivities. Not wired into the configuration or assembly by Stage78."
+  },
+  "schemaVersion": 1,
+  "seed": 2026078,
+  "sensitivities": {
+    "F, phi 0.2": {
+      "against": "F",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.19039
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.022296272794808475,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.0057788370424666285,
+                "0.25": 0.011401476468327598,
+                "0.5": 0.019154969892079453,
+                "0.75": 0.031299721705213196,
+                "0.95": 0.047460028391406915
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.3205129898254599,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.1192789390913467,
+                "0.25": 0.22289283579598929,
+                "0.5": 0.30220128349476083,
+                "0.75": 0.39699354536341075,
+                "0.95": 0.5841560388122886
+              },
+              "winProbability": 0.3917,
+              "winProbabilityMonteCarloSE": 0.0015436032845261764
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07082287412016755,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.035046955175036844,
+                "0.25": 0.05387047920654513,
+                "0.5": 0.06825158344721596,
+                "0.75": 0.08487878304379512,
+                "0.95": 0.11556931067172421
+              },
+              "winProbability": 3e-05,
+              "winProbabilityMonteCarloSE": 1.732024826611905e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.076716684625421,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.03781104631958205,
+                "0.25": 0.05829031857613638,
+                "0.5": 0.07406017086753439,
+                "0.75": 0.09209344756837637,
+                "0.95": 0.1249713106819892
+              },
+              "winProbability": 2e-05,
+              "winProbabilityMonteCarloSE": 1.4141994201667599e-05
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.15298813391955945,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.07774629652821985,
+                "0.25": 0.11877883556566542,
+                "0.5": 0.14914225803898612,
+                "0.75": 0.18272209191346991,
+                "0.95": 0.24222886138298155
+              },
+              "winProbability": 0.00604,
+              "winProbabilityMonteCarloSE": 0.00024502078279199093
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.35666304471458365,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.19547869474668592,
+                "0.25": 0.29454116335327996,
+                "0.5": 0.3582973427875064,
+                "0.75": 0.4200950605992923,
+                "0.95": 0.5145777417578528
+              },
+              "winProbability": 0.60221,
+              "winProbabilityMonteCarloSE": 0.0015477503542238329
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 3e-05,
+            "GRN": 0.00604,
+            "LAB": 0.60221,
+            "MP": 0.3917,
+            "PIC": 0.0,
+            "TTT": 2e-05
+          }
+        }
+      }
+    },
+    "F, phi 0.5": {
+      "against": "F",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.13545000000000007
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.022199538465277148,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006094296586709745,
+                "0.25": 0.01150087505835491,
+                "0.5": 0.01910324061022132,
+                "0.75": 0.031150692662415137,
+                "0.95": 0.04630340756306842
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.21060002532632818,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.0677669638566923,
+                "0.25": 0.1330718133862572,
+                "0.5": 0.1881243925552224,
+                "0.75": 0.26008795861805734,
+                "0.95": 0.4274230495278249
+              },
+              "winProbability": 0.16476,
+              "winProbabilityMonteCarloSE": 0.0011730905438200412
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07049768202436442,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.038263209770707886,
+                "0.25": 0.05505437197895845,
+                "0.5": 0.06812029501515118,
+                "0.75": 0.08327492770509294,
+                "0.95": 0.11109329675228087
+              },
+              "winProbability": 4e-05,
+              "winProbabilityMonteCarloSE": 1.9999599995999918e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.1892216749366371,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.10717420403861817,
+                "0.25": 0.15250163651214976,
+                "0.5": 0.18589647291499628,
+                "0.75": 0.22227629213489458,
+                "0.95": 0.28373620219103435
+              },
+              "winProbability": 0.03351,
+              "winProbabilityMonteCarloSE": 0.0005690964760038495
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.15231466140944092,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.08527790757032921,
+                "0.25": 0.12159234950040342,
+                "0.5": 0.14855866431292222,
+                "0.75": 0.17888491757571223,
+                "0.95": 0.23282359114034334
+              },
+              "winProbability": 0.00857,
+              "winProbabilityMonteCarloSE": 0.0002914885092074814
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.35516641783795216,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.21892196450791065,
+                "0.25": 0.3019712030093669,
+                "0.5": 0.35568019191204264,
+                "0.75": 0.40975216620874355,
+                "0.95": 0.4920855475118069
+              },
+              "winProbability": 0.79312,
+              "winProbabilityMonteCarloSE": 0.0012809397550236311
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 4e-05,
+            "GRN": 0.00857,
+            "LAB": 0.79312,
+            "MP": 0.16476,
+            "PIC": 0.0,
+            "TTT": 0.03351
+          }
+        }
+      }
+    },
+    "F, phi 0.8": {
+      "against": "F",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.17981999999999998
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.022394010240835625,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006468734123885928,
+                "0.25": 0.011699934771400425,
+                "0.5": 0.01929690898509659,
+                "0.75": 0.03129443349924434,
+                "0.95": 0.046227410617835585
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.09190029308745881,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.024796687148168413,
+                "0.25": 0.05097232799006243,
+                "0.5": 0.07495474441878128,
+                "0.75": 0.10949645251401993,
+                "0.95": 0.20715481852757417
+              },
+              "winProbability": 0.02149,
+              "winProbabilityMonteCarloSE": 0.0004585649343331869
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07110334226230931,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04100309371621627,
+                "0.25": 0.056304742982218,
+                "0.5": 0.06856850700664627,
+                "0.75": 0.0831970245471077,
+                "0.95": 0.10985751147603945
+              },
+              "winProbability": 2e-05,
+              "winProbabilityMonteCarloSE": 1.4141994201667599e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.3027672162513199,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.19455611321740982,
+                "0.25": 0.2558901147462074,
+                "0.5": 0.30023063442368614,
+                "0.75": 0.34702609053253225,
+                "0.95": 0.4214016368828598
+              },
+              "winProbability": 0.31305,
+              "winProbabilityMonteCarloSE": 0.0014664572871379512
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.15363370864811193,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.09168189559693407,
+                "0.25": 0.12441427433286889,
+                "0.5": 0.14950788696729678,
+                "0.75": 0.17824189958900163,
+                "0.95": 0.2301118447254965
+              },
+              "winProbability": 0.00503,
+              "winProbabilityMonteCarloSE": 0.0002237118481439908
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.35820142950996436,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.23881521611417666,
+                "0.25": 0.3085205426266774,
+                "0.5": 0.35662387494640047,
+                "0.75": 0.4067499732590513,
+                "0.95": 0.48501789835593595
+              },
+              "winProbability": 0.66041,
+              "winProbabilityMonteCarloSE": 0.0014975601219984458
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 2e-05,
+            "GRN": 0.00503,
+            "LAB": 0.66041,
+            "MP": 0.02149,
+            "PIC": 0.0,
+            "TTT": 0.31305
+          }
+        }
+      }
+    },
+    "FC, phi 0.2": {
+      "against": "FC",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.13907
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.024330901084602743,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006989926745858666,
+                "0.25": 0.012749083115484944,
+                "0.5": 0.02115237423239124,
+                "0.75": 0.03395178740688942,
+                "0.95": 0.05022064940828894
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.2592941991064882,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.12622481947885703,
+                "0.25": 0.1926404867117797,
+                "0.5": 0.24841880908224984,
+                "0.75": 0.31452183834570074,
+                "0.95": 0.4281605954836154
+              },
+              "winProbability": 0.1977,
+              "winProbabilityMonteCarloSE": 0.0012594233204129579
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07726587284095389,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04398929577467779,
+                "0.25": 0.06069135886744133,
+                "0.5": 0.07444826100558172,
+                "0.75": 0.09049334468849712,
+                "0.95": 0.12021073227258357
+              },
+              "winProbability": 4e-05,
+              "winProbabilityMonteCarloSE": 1.9999599995999918e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.08367491088906784,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.047628962790043805,
+                "0.25": 0.06570034401230765,
+                "0.5": 0.08071616972591564,
+                "0.75": 0.09811351556086292,
+                "0.95": 0.12983805472940463
+              },
+              "winProbability": 3e-05,
+              "winProbabilityMonteCarloSE": 1.732024826611905e-05
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.1668576587084568,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.0986664899579653,
+                "0.25": 0.13426411372543814,
+                "0.5": 0.16227403556737802,
+                "0.75": 0.1942629474593459,
+                "0.95": 0.25077908506088115
+              },
+              "winProbability": 0.00885,
+              "winProbabilityMonteCarloSE": 0.0002961701791200458
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.38857645737043056,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.2571298777985132,
+                "0.25": 0.33362486590031676,
+                "0.5": 0.38752026565511843,
+                "0.75": 0.44146638303239316,
+                "0.95": 0.5245370839725615
+              },
+              "winProbability": 0.79338,
+              "winProbabilityMonteCarloSE": 0.0012803443896077335
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 4e-05,
+            "GRN": 0.00885,
+            "LAB": 0.79338,
+            "MP": 0.1977,
+            "PIC": 0.0,
+            "TTT": 3e-05
+          }
+        }
+      }
+    },
+    "FC, phi 0.5": {
+      "against": "FC",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.14305
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.023615718771359904,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006942344332032653,
+                "0.25": 0.012402006875998824,
+                "0.5": 0.020420589396022315,
+                "0.75": 0.032931022335949585,
+                "0.95": 0.048421588666515955
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.16088540298783613,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.07207426110241394,
+                "0.25": 0.11335534850036925,
+                "0.5": 0.15015721005977173,
+                "0.75": 0.19640537485504733,
+                "0.95": 0.2849511816430368
+              },
+              "winProbability": 0.04219,
+              "winProbabilityMonteCarloSE": 0.0006356886336879085
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07498694935929247,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04398149187224338,
+                "0.25": 0.05952713525198917,
+                "0.5": 0.07233750070501171,
+                "0.75": 0.08736932162166333,
+                "0.95": 0.11511131750246797
+              },
+              "winProbability": 4e-05,
+              "winProbabilityMonteCarloSE": 1.9999599995999918e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.20114711720174225,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.12442067215423486,
+                "0.25": 0.1650528772816633,
+                "0.5": 0.19698045710061418,
+                "0.75": 0.23219270672839876,
+                "0.95": 0.29235040431624504
+              },
+              "winProbability": 0.04072,
+              "winProbabilityMonteCarloSE": 0.00062499505278042
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.16197824538104788,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.0987096561229798,
+                "0.25": 0.13168077787835877,
+                "0.5": 0.15766094678205544,
+                "0.75": 0.18722773259154293,
+                "0.95": 0.24040690041210142
+              },
+              "winProbability": 0.01059,
+              "winProbabilityMonteCarloSE": 0.00032369510190918864
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.3773865662987213,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.25852011177489737,
+                "0.25": 0.3270909572825156,
+                "0.5": 0.3754978845397422,
+                "0.75": 0.4253635870753632,
+                "0.95": 0.5034513983721265
+              },
+              "winProbability": 0.90646,
+              "winProbabilityMonteCarloSE": 0.0009208163139301994
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 4e-05,
+            "GRN": 0.01059,
+            "LAB": 0.90646,
+            "MP": 0.04219,
+            "PIC": 0.0,
+            "TTT": 0.04072
+          }
+        }
+      }
+    },
+    "FC, phi 0.8": {
+      "against": "FC",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.18085
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.02308092345560216,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006830997413469329,
+                "0.25": 0.012119687599338966,
+                "0.5": 0.019924122178988684,
+                "0.75": 0.03218796182112925,
+                "0.95": 0.047378828873882096
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.06444812518309112,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.026445270153041097,
+                "0.25": 0.0428517952026253,
+                "0.5": 0.05814424312442372,
+                "0.75": 0.0787404166465524,
+                "0.95": 0.12243753276333544
+              },
+              "winProbability": 0.00092,
+              "winProbabilityMonteCarloSE": 9.587249866358965e-05
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07328477859494145,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04330506982298133,
+                "0.25": 0.05825762432570348,
+                "0.5": 0.07061878767010137,
+                "0.75": 0.08533348560807322,
+                "0.95": 0.1122366118177696
+              },
+              "winProbability": 2e-05,
+              "winProbabilityMonteCarloSE": 1.4141994201667599e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.31188069904786814,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.20663714616249537,
+                "0.25": 0.265309863899579,
+                "0.5": 0.3085546154743097,
+                "0.75": 0.3547284510764087,
+                "0.95": 0.4285178409901476
+              },
+              "winProbability": 0.31995,
+              "winProbabilityMonteCarloSE": 0.001475066091739621
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.1583282164786438,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.09712693997051457,
+                "0.25": 0.1288456108146203,
+                "0.5": 0.15387934729620045,
+                "0.75": 0.1826583258019048,
+                "0.95": 0.23493167092420758
+              },
+              "winProbability": 0.00522,
+              "winProbabilityMonteCarloSE": 0.00022787609791287896
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.36897725723985336,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.2544299911834045,
+                "0.25": 0.31962643393096113,
+                "0.5": 0.36647685264796437,
+                "0.75": 0.41542208393334895,
+                "0.95": 0.4931205465578629
+              },
+              "winProbability": 0.67389,
+              "winProbabilityMonteCarloSE": 0.0014824380860595833
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 2e-05,
+            "GRN": 0.00522,
+            "LAB": 0.67389,
+            "MP": 0.00092,
+            "PIC": 0.0,
+            "TTT": 0.31995
+          }
+        }
+      }
+    },
+    "FC, swing without Te Tai Tonga": {
+      "against": "FC",
+      "flaggedShiftOver0.10": [
+        "Ikaroa-Rāwhiti",
+        "Tāmaki Makaurau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Ikaroa-Rāwhiti": 0.11481,
+        "Te Tai Tokerau": 0.06055000000000001,
+        "Tāmaki Makaurau": 0.14463000000000004,
+        "Waiariki": 0.015549999999999953
+      },
+      "seats": {
+        "Ikaroa-Rāwhiti": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.4279529263588775,
+              "entrantPool": null,
+              "meanShare": 0.3879385392244486,
+              "name": "Haley MAXWELL",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.19962574514398862,
+                "0.25": 0.2992896177758073,
+                "0.5": 0.3802421446248092,
+                "0.75": 0.4681733466306329,
+                "0.95": 0.6028090699201374
+              },
+              "winProbability": 0.28341,
+              "winProbabilityMonteCarloSE": 0.001425092179123863
+            },
+            {
+              "carriedForwardShare": 0.5410713582870862,
+              "entrantPool": null,
+              "meanShare": 0.5148815166186331,
+              "name": "Cushla TANGAERE-MANUEL",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.3184157059540646,
+                "0.25": 0.4342934074680469,
+                "0.5": 0.51631006492337,
+                "0.75": 0.5969591761485172,
+                "0.95": 0.7076779764787849
+              },
+              "winProbability": 0.71643,
+              "winProbabilityMonteCarloSE": 0.0014253352416186166
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.0971799441569182,
+              "name": "Heather TE AU-SKIPWORTH",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.03359151174013059,
+                "0.25": 0.04795044657103034,
+                "0.5": 0.06835309192010491,
+                "0.75": 0.13674855611244657,
+                "0.95": 0.23408865662624495
+              },
+              "winProbability": 0.00016,
+              "winProbabilityMonteCarloSE": 3.9996799871989764e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00016,
+            "LAB": 0.71643,
+            "MP": 0.28341
+          }
+        },
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.02288225227791264,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.0066370079087435425,
+                "0.25": 0.011988166835075465,
+                "0.5": 0.019801586427905936,
+                "0.75": 0.031914312856645095,
+                "0.95": 0.04725387696396853
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.18802891085342952,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.015536587371765206,
+                "0.25": 0.07975400163965238,
+                "0.5": 0.16754598615539826,
+                "0.75": 0.2738910767612257,
+                "0.95": 0.43232484922586134
+              },
+              "winProbability": 0.15024,
+              "winProbabilityMonteCarloSE": 0.0011299023957846979
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07266875719934388,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04182964423936415,
+                "0.25": 0.0572110760248777,
+                "0.5": 0.06991978315383715,
+                "0.75": 0.08498165284758709,
+                "0.95": 0.11289115476964517
+              },
+              "winProbability": 2e-05,
+              "winProbabilityMonteCarloSE": 1.4141994201667599e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.1935279370208503,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.017631647737387467,
+                "0.25": 0.0908371873957406,
+                "0.5": 0.18513542324205554,
+                "0.75": 0.28469443660883265,
+                "0.95": 0.4022145682510662
+              },
+              "winProbability": 0.13812,
+              "winProbabilityMonteCarloSE": 0.0010910676679289878
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.15699143356698347,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.09365297959213177,
+                "0.25": 0.1264047932847477,
+                "0.5": 0.1522979447137936,
+                "0.75": 0.18223036982932456,
+                "0.95": 0.2361661305983086
+              },
+              "winProbability": 0.00681,
+              "winProbabilityMonteCarloSE": 0.00026006968104721475
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.36590070908148026,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.24298876329222632,
+                "0.25": 0.3133810140165754,
+                "0.5": 0.36341554266013554,
+                "0.75": 0.4153322693087041,
+                "0.95": 0.4975190459529127
+              },
+              "winProbability": 0.70481,
+              "winProbabilityMonteCarloSE": 0.0014424037711403834
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 2e-05,
+            "GRN": 0.00681,
+            "LAB": 0.70481,
+            "MP": 0.15024,
+            "PIC": 0.0,
+            "TTT": 0.13812
+          }
+        },
+        "Tāmaki Makaurau": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.40074831827409146,
+              "entrantPool": null,
+              "meanShare": 0.42114404610693457,
+              "name": "Oriini KAIPARA",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.228279393629247,
+                "0.25": 0.3342282183533489,
+                "0.5": 0.4160759382130574,
+                "0.75": 0.5028751636235893,
+                "0.95": 0.6306481743712679
+              },
+              "winProbability": 0.44773,
+              "winProbabilityMonteCarloSE": 0.0015724752688039327
+            },
+            {
+              "carriedForwardShare": 0.39907654340644033,
+              "entrantPool": null,
+              "meanShare": 0.4459096249211343,
+              "name": "Kerrin LEONI",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.2671323337395576,
+                "0.25": 0.3713756190267087,
+                "0.5": 0.44595605812815775,
+                "0.75": 0.5202910964683533,
+                "0.95": 0.625624331501686
+              },
+              "winProbability": 0.55197,
+              "winProbabilityMonteCarloSE": 0.001572574701246335
+            },
+            {
+              "carriedForwardShare": 0.11642717828284838,
+              "entrantPool": null,
+              "meanShare": 0.13294632897193115,
+              "name": "Florence TE OHAERE",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.07013708536402745,
+                "0.25": 0.10147417038281509,
+                "0.5": 0.1274545372074889,
+                "0.75": 0.15826936266662817,
+                "0.95": 0.21411188267222378
+              },
+              "winProbability": 0.0003,
+              "winProbabilityMonteCarloSE": 5.476403929587371e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.0003,
+            "LAB": 0.55197,
+            "MP": 0.44773
+          }
+        },
+        "Waiariki": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.1990701306076093,
+              "entrantPool": null,
+              "meanShare": 0.20161785176628522,
+              "name": "Toni BOYNTON",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.09188339111400055,
+                "0.25": 0.1446672435239102,
+                "0.5": 0.1905895490503699,
+                "0.75": 0.2471238971856111,
+                "0.95": 0.34766246191160743
+              },
+              "winProbability": 0.01283,
+              "winProbabilityMonteCarloSE": 0.00035588468778524314
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.10110993757538235,
+              "name": "Tania WAIKATO",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.02988972488653431,
+                "0.25": 0.04835570379746089,
+                "0.5": 0.07275571710455436,
+                "0.75": 0.13855732620489414,
+                "0.95": 0.2513118518035259
+              },
+              "winProbability": 0.00295,
+              "winProbabilityMonteCarloSE": 0.0001715021136895986
+            },
+            {
+              "carriedForwardShare": 0.763060760931289,
+              "entrantPool": null,
+              "meanShare": 0.6741520556589257,
+              "name": "Rawiri WAITITI",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.4619650250340962,
+                "0.25": 0.6005512554270579,
+                "0.5": 0.6858696838787841,
+                "0.75": 0.7601103370705753,
+                "0.95": 0.8457075011460865
+              },
+              "winProbability": 0.98422,
+              "winProbabilityMonteCarloSE": 0.00039409379086709825
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.02312015499940672,
+              "name": "Pāpā WHAREWERA",
+              "party": "TOP",
+              "shareQuantiles": {
+                "0.05": 0.005617501534426913,
+                "0.25": 0.011350813366095764,
+                "0.5": 0.019437186765585233,
+                "0.75": 0.03169221297320873,
+                "0.95": 0.05217919745842841
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00295,
+            "LAB": 0.01283,
+            "MP": 0.98422,
+            "TOP": 0.0
+          }
+        }
+      }
+    },
+    "FP, phi 0.2": {
+      "against": "FP",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.13704
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.02397772985923021,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006401793873935393,
+                "0.25": 0.012350244143340435,
+                "0.5": 0.020740590544662003,
+                "0.75": 0.03360103506698943,
+                "0.95": 0.05052751994413732
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.27007808523552734,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.08990710428938466,
+                "0.25": 0.17369329757534913,
+                "0.5": 0.24886031076789694,
+                "0.75": 0.34270881489336874,
+                "0.95": 0.5218551203129184
+              },
+              "winProbability": 0.26381,
+              "winProbabilityMonteCarloSE": 0.001393607849791325
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07614589074848215,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.039333124323765956,
+                "0.25": 0.05835993947626271,
+                "0.5": 0.07340271198355111,
+                "0.75": 0.0907126325906199,
+                "0.95": 0.12253688196739712
+              },
+              "winProbability": 4e-05,
+              "winProbabilityMonteCarloSE": 1.9999599995999918e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.08246666762506877,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.04255578188765642,
+                "0.25": 0.06317941047718005,
+                "0.5": 0.07962014707811885,
+                "0.75": 0.09847418870561805,
+                "0.95": 0.13211044280824036
+              },
+              "winProbability": 3e-05,
+              "winProbabilityMonteCarloSE": 1.732024826611905e-05
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.16443773825181404,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.08737458196478429,
+                "0.25": 0.1288911405231357,
+                "0.5": 0.16024169402763985,
+                "0.75": 0.1950995076335238,
+                "0.95": 0.2557840432097216
+              },
+              "winProbability": 0.00854,
+              "winProbabilityMonteCarloSE": 0.0002909822743742306
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.3828938882798774,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.22323085750057975,
+                "0.25": 0.32087728427452455,
+                "0.5": 0.3848061065329571,
+                "0.75": 0.4465953446130312,
+                "0.95": 0.5368619738098782
+              },
+              "winProbability": 0.72758,
+              "winProbabilityMonteCarloSE": 0.0014078612985660198
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 4e-05,
+            "GRN": 0.00854,
+            "LAB": 0.72758,
+            "MP": 0.26381,
+            "PIC": 0.0,
+            "TTT": 3e-05
+          }
+        }
+      }
+    },
+    "FP, phi 0.5": {
+      "against": "FP",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.12721000000000005
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.023285711101642573,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006565577916070133,
+                "0.25": 0.012126185590310356,
+                "0.5": 0.02013805075146361,
+                "0.75": 0.032626082678505114,
+                "0.95": 0.048290704674601136
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.17256224836229278,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.05020425715216166,
+                "0.25": 0.1012683575073578,
+                "0.5": 0.15034331387378105,
+                "0.75": 0.21779063009434485,
+                "0.95": 0.36789431250609034
+              },
+              "winProbability": 0.10213,
+              "winProbabilityMonteCarloSE": 0.0009575983662266764
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07394055315284455,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04125699921296871,
+                "0.25": 0.05790753981992039,
+                "0.5": 0.07134580709856547,
+                "0.75": 0.08690737298706154,
+                "0.95": 0.11539340891222719
+              },
+              "winProbability": 5e-05,
+              "winProbabilityMonteCarloSE": 2.2360120751015635e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.1983552260647552,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.11597253434627235,
+                "0.25": 0.16073952757124868,
+                "0.5": 0.19468411911559946,
+                "0.75": 0.2316194398175918,
+                "0.95": 0.2938206922198987
+              },
+              "winProbability": 0.0379,
+              "winProbabilityMonteCarloSE": 0.0006038508921911103
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.15972358055558364,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.0923282499683725,
+                "0.25": 0.12819600802807246,
+                "0.5": 0.15566558738747943,
+                "0.75": 0.18670361710858469,
+                "0.95": 0.24162728318010201
+              },
+              "winProbability": 0.00969,
+              "winProbabilityMonteCarloSE": 0.00030977578827274415
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.3721326807628812,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.23873857982206145,
+                "0.25": 0.3186433421743604,
+                "0.5": 0.3719414999123033,
+                "0.75": 0.4257048091799659,
+                "0.95": 0.5074867378311377
+              },
+              "winProbability": 0.85023,
+              "winProbabilityMonteCarloSE": 0.001128445599486302
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 5e-05,
+            "GRN": 0.00969,
+            "LAB": 0.85023,
+            "MP": 0.10213,
+            "PIC": 0.0,
+            "TTT": 0.0379
+          }
+        }
+      }
+    },
+    "FP, phi 0.8": {
+      "against": "FP",
+      "flaggedShiftOver0.10": [
+        "Te Tai Tokerau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Te Tai Tokerau": 0.17965
+      },
+      "seats": {
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.022881892959878188,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.0066826244053108785,
+                "0.25": 0.011981446744282576,
+                "0.5": 0.01975544576200836,
+                "0.75": 0.03195088620692561,
+                "0.95": 0.047096597122412175
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.0724367885556959,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.018132943300203888,
+                "0.25": 0.03794302353716597,
+                "0.5": 0.05829337203378401,
+                "0.75": 0.08879841639253067,
+                "0.95": 0.16921923668708627
+              },
+              "winProbability": 0.01058,
+              "winProbabilityMonteCarloSE": 0.0003235438702865502
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07265422055808952,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.04233438344915278,
+                "0.25": 0.0575708287720367,
+                "0.5": 0.06998599424212712,
+                "0.75": 0.08482898139428025,
+                "0.95": 0.11174709631448028
+              },
+              "winProbability": 2e-05,
+              "winProbabilityMonteCarloSE": 1.4141994201667599e-05
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.30922983878568916,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.20171758466325534,
+                "0.25": 0.2619657483612164,
+                "0.5": 0.3060739806213379,
+                "0.75": 0.35326878308331033,
+                "0.95": 0.4280588417874784
+              },
+              "winProbability": 0.31672,
+              "winProbabilityMonteCarloSE": 0.0014710827359465544
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.1569711293920032,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.09496762801607485,
+                "0.25": 0.12729962122409375,
+                "0.5": 0.15262221736226012,
+                "0.75": 0.18161996760964647,
+                "0.95": 0.23413398067166966
+              },
+              "winProbability": 0.00515,
+              "winProbabilityMonteCarloSE": 0.0002263509995559993
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.36582612974864404,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.24762333995150673,
+                "0.25": 0.3157024317415957,
+                "0.5": 0.36370640601093773,
+                "0.75": 0.4137943137068022,
+                "0.95": 0.49282121434849346
+              },
+              "winProbability": 0.66753,
+              "winProbabilityMonteCarloSE": 0.0014897439347082437
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 2e-05,
+            "GRN": 0.00515,
+            "LAB": 0.66753,
+            "MP": 0.01058,
+            "PIC": 0.0,
+            "TTT": 0.31672
+          }
+        }
+      }
+    },
+    "FP, swing without Te Tai Tonga": {
+      "against": "FP",
+      "flaggedShiftOver0.10": [
+        "Tāmaki Makaurau"
+      ],
+      "maxWinProbabilityShiftBySeat": {
+        "Ikaroa-Rāwhiti": 0.09508999999999998,
+        "Te Tai Tokerau": 0.05617,
+        "Tāmaki Makaurau": 0.11101,
+        "Waiariki": 0.029849999999999932
+      },
+      "seats": {
+        "Ikaroa-Rāwhiti": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.4279529263588775,
+              "entrantPool": null,
+              "meanShare": 0.3936889482764776,
+              "name": "Haley MAXWELL",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.1488887948415157,
+                "0.25": 0.274955450845954,
+                "0.5": 0.38082913204149027,
+                "0.75": 0.49865350654207324,
+                "0.95": 0.682745971008894
+              },
+              "winProbability": 0.33303,
+              "winProbabilityMonteCarloSE": 0.001490372500752748
+            },
+            {
+              "carriedForwardShare": 0.5410713582870862,
+              "entrantPool": null,
+              "meanShare": 0.5100823309608846,
+              "name": "Cushla TANGAERE-MANUEL",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.2572890148727948,
+                "0.25": 0.41044960325016755,
+                "0.5": 0.5143284971299518,
+                "0.75": 0.6142701836519587,
+                "0.95": 0.7484440379548597
+              },
+              "winProbability": 0.66676,
+              "winProbabilityMonteCarloSE": 0.0014906076022884092
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.09622872076263773,
+              "name": "Heather TE AU-SKIPWORTH",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.02909634235019444,
+                "0.25": 0.046716687100908746,
+                "0.5": 0.06849588699941542,
+                "0.75": 0.13263031251293733,
+                "0.95": 0.23978425282472027
+              },
+              "winProbability": 0.00021,
+              "winProbabilityMonteCarloSE": 4.582094499243768e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00021,
+            "LAB": 0.66676,
+            "MP": 0.33303
+          }
+        },
+        "Te Tai Tokerau": {
+          "candidates": [
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.022616924270769837,
+              "name": "Karl BARKLEY",
+              "party": "PIC",
+              "shareQuantiles": {
+                "0.05": 0.006216311670914316,
+                "0.25": 0.011720122167562198,
+                "0.5": 0.019505928680494805,
+                "0.75": 0.03163900395633873,
+                "0.95": 0.04741590652469808
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            },
+            {
+              "carriedForwardShare": 0.38777331548415883,
+              "entrantPool": null,
+              "meanShare": 0.19718185121558032,
+              "name": "Aperahama EDWARDS",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.013196150717239546,
+                "0.25": 0.07291020784832866,
+                "0.5": 0.16288783303112314,
+                "0.75": 0.2864259900448497,
+                "0.95": 0.5001644010384473
+              },
+              "winProbability": 0.1885,
+              "winProbabilityMonteCarloSE": 0.0012368013179165035
+            },
+            {
+              "carriedForwardShare": 0.07150825524319501,
+              "entrantPool": null,
+              "meanShare": 0.07182818903407011,
+              "name": "Maki HERBERT",
+              "party": "ALC",
+              "shareQuantiles": {
+                "0.05": 0.03878247269947104,
+                "0.25": 0.055646257986215544,
+                "0.5": 0.06910062938270538,
+                "0.75": 0.08496340620548049,
+                "0.95": 0.11409808968154454
+              },
+              "winProbability": 1e-05,
+              "winProbabilityMonteCarloSE": 9.999949999874999e-06
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": null,
+              "meanShare": 0.19154576735239126,
+              "name": "Mariameno KAPA-KINGI",
+              "party": "TTT",
+              "shareQuantiles": {
+                "0.05": 0.016532416164422654,
+                "0.25": 0.08789864345861842,
+                "0.5": 0.18249032462148443,
+                "0.75": 0.28333902823791923,
+                "0.95": 0.40138331257524795
+              },
+              "winProbability": 0.13539,
+              "winProbabilityMonteCarloSE": 0.001081940607889361
+            },
+            {
+              "carriedForwardShare": 0.1556968615201547,
+              "entrantPool": null,
+              "meanShare": 0.1551802155643781,
+              "name": "Hūhana LYNDON",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.08614729799056056,
+                "0.25": 0.12288324646929433,
+                "0.5": 0.15080464453957218,
+                "0.75": 0.1824128525059698,
+                "0.95": 0.23915909805400062
+              },
+              "winProbability": 0.00658,
+              "winProbabilityMonteCarloSE": 0.00025566977920747695
+            },
+            {
+              "carriedForwardShare": 0.36854826714264466,
+              "entrantPool": null,
+              "meanShare": 0.3616470525628103,
+              "name": "Willow-Jean PRIME",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.22081072959372058,
+                "0.25": 0.3051610205509898,
+                "0.5": 0.36059828269379246,
+                "0.75": 0.41748562780679305,
+                "0.95": 0.5060821760651669
+              },
+              "winProbability": 0.66952,
+              "winProbabilityMonteCarloSE": 0.0014874910742589348
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "ALC": 1e-05,
+            "GRN": 0.00658,
+            "LAB": 0.66952,
+            "MP": 0.1885,
+            "PIC": 0.0,
+            "TTT": 0.13539
+          }
+        },
+        "Tāmaki Makaurau": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.40074831827409146,
+              "entrantPool": null,
+              "meanShare": 0.4253534142729173,
+              "name": "Oriini KAIPARA",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.17103191894480346,
+                "0.25": 0.30748095298262684,
+                "0.5": 0.41630636667113685,
+                "0.75": 0.5337064076424787,
+                "0.95": 0.7105335576251234
+              },
+              "winProbability": 0.46143,
+              "winProbabilityMonteCarloSE": 0.0015764274645539516
+            },
+            {
+              "carriedForwardShare": 0.39907654340644033,
+              "entrantPool": null,
+              "meanShare": 0.44261286600669075,
+              "name": "Kerrin LEONI",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.2125744343442784,
+                "0.25": 0.34895283088695134,
+                "0.5": 0.4448689838802622,
+                "0.75": 0.5384825081330833,
+                "0.95": 0.6647450336156212
+              },
+              "winProbability": 0.53819,
+              "winProbabilityMonteCarloSE": 0.0015765199773551872
+            },
+            {
+              "carriedForwardShare": 0.11642717828284838,
+              "entrantPool": null,
+              "meanShare": 0.13203371972039185,
+              "name": "Florence TE OHAERE",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.05790513912180405,
+                "0.25": 0.09576084983154524,
+                "0.5": 0.12613723142033414,
+                "0.75": 0.16206799856122106,
+                "0.95": 0.22498896573276655
+              },
+              "winProbability": 0.00038,
+              "winProbabilityMonteCarloSE": 6.163242653019594e-05
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.00038,
+            "LAB": 0.53819,
+            "MP": 0.46143
+          }
+        },
+        "Waiariki": {
+          "candidates": [
+            {
+              "carriedForwardShare": 0.1990701306076093,
+              "entrantPool": null,
+              "meanShare": 0.20673328776024336,
+              "name": "Toni BOYNTON",
+              "party": "LAB",
+              "shareQuantiles": {
+                "0.05": 0.06868050825267423,
+                "0.25": 0.13217191800197248,
+                "0.5": 0.19031505505529206,
+                "0.75": 0.263196131242735,
+                "0.95": 0.4011509698055888
+              },
+              "winProbability": 0.04446,
+              "winProbabilityMonteCarloSE": 0.0006517922092200858
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "established",
+              "meanShare": 0.10328046003094514,
+              "name": "Tania WAIKATO",
+              "party": "GRN",
+              "shareQuantiles": {
+                "0.05": 0.02328493354795932,
+                "0.25": 0.04615301355547054,
+                "0.5": 0.07491399316898621,
+                "0.75": 0.1382558491939837,
+                "0.95": 0.2722495030766021
+              },
+              "winProbability": 0.01154,
+              "winProbabilityMonteCarloSE": 0.0003377399650618801
+            },
+            {
+              "carriedForwardShare": 0.763060760931289,
+              "entrantPool": null,
+              "meanShare": 0.6662451228384993,
+              "name": "Rawiri WAITITI",
+              "party": "MP",
+              "shareQuantiles": {
+                "0.05": 0.3771353137037225,
+                "0.25": 0.5717341786788286,
+                "0.5": 0.6859602803159668,
+                "0.75": 0.7815637450099657,
+                "0.95": 0.8867607314444687
+              },
+              "winProbability": 0.944,
+              "winProbabilityMonteCarloSE": 0.0007270763371201132
+            },
+            {
+              "carriedForwardShare": null,
+              "entrantPool": "other",
+              "meanShare": 0.023741129370312038,
+              "name": "Pāpā WHAREWERA",
+              "party": "TOP",
+              "shareQuantiles": {
+                "0.05": 0.004657866591148125,
+                "0.25": 0.010658558484136531,
+                "0.5": 0.018943035593010756,
+                "0.75": 0.03220497751499056,
+                "0.95": 0.05805392933532775
+              },
+              "winProbability": 0.0,
+              "winProbabilityMonteCarloSE": 0.0
+            }
+          ],
+          "winProbabilityByPartyCode": {
+            "GRN": 0.01154,
+            "LAB": 0.04446,
+            "MP": 0.944,
+            "TOP": 0.0
+          }
+        }
+      }
+    }
+  },
+  "swing": {
+    "FC": {
+      "meanKappa": 0.8192723200131434,
+      "seats": [
+        "Hauraki-Waikato",
+        "Te Tai Hauāuru",
+        "Te Tai Tonga"
+      ],
+      "xbarMean": -0.33608014538868347,
+      "xbarSd": 0.4099106285251827
+    },
+    "FC without Te Tai Tonga": {
+      "meanKappa": 0.7598273299211931,
+      "seats": [
+        "Hauraki-Waikato",
+        "Te Tai Hauāuru"
+      ],
+      "xbarMean": -0.09568707987673924,
+      "xbarSd": 0.4332831343668509
+    },
+    "FP": {
+      "meanKappa": 0.8192723200131434,
+      "seats": [
+        "Hauraki-Waikato",
+        "Te Tai Hauāuru",
+        "Te Tai Tonga"
+      ],
+      "xbarMean": -0.334659226816893,
+      "xbarSd": 0.8056907332711478
+    },
+    "FP without Te Tai Tonga": {
+      "meanKappa": 0.7598273299211931,
+      "seats": [
+        "Hauraki-Waikato",
+        "Te Tai Hauāuru"
+      ],
+      "xbarMean": -0.09424284784213394,
+      "xbarSd": 0.8513716661117589
+    }
+  },
+  "unpolledSeats": [
+    "Waiariki",
+    "Ikaroa-Rāwhiti",
+    "Tāmaki Makaurau",
+    "Te Tai Tokerau"
+  ]
+}

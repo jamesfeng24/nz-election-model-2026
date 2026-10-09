@@ -1,0 +1,419 @@
+{
+  "calibrationClass": {
+    "F": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "calibrated"
+    },
+    "FC": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "overconfident"
+    },
+    "FP": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "overconfident"
+    }
+  },
+  "chronologicalAgrees": false,
+  "chronologicalPooled": {
+    "F": {
+      "brierMulti": 1.0873141885714286,
+      "calibrationZ": -4.0784079191793525,
+      "contests": 7,
+      "contrastContests": 7,
+      "contrastCoverage": {
+        "0.5": 0.14285714285714285,
+        "0.8": 0.2857142857142857,
+        "0.9": 0.2857142857142857
+      },
+      "coverageBias": -0.26419753086419756,
+      "coverageDeviation": 0.26419753086419756,
+      "favouriteWinRate": 0.2857142857142857,
+      "meanFavouriteProbability": 0.813757142857143,
+      "meanLogScoreWinner": -2.1237263046594586,
+      "meanProbabilityOfWinner": 0.33859999999999996,
+      "shareCoverage": {
+        "0.5": 0.2962962962962963,
+        "0.8": 0.5185185185185185,
+        "0.9": 0.5925925925925926
+      },
+      "shareCoverageByCandidateKind": {
+        "entrant": {
+          "0.5": 0.6,
+          "0.8": 0.9,
+          "0.9": 0.9,
+          "observations": 10
+        },
+        "matched-other": {
+          "0.5": 0.3333333333333333,
+          "0.8": 0.3333333333333333,
+          "0.9": 1.0,
+          "observations": 3
+        },
+        "mp-lab": {
+          "0.5": 0.07142857142857142,
+          "0.8": 0.2857142857142857,
+          "0.9": 0.2857142857142857,
+          "observations": 14
+        }
+      },
+      "shareObservations": 27
+    },
+    "FC": {
+      "brierMulti": 1.0873141885714286,
+      "calibrationZ": -4.078407919179348,
+      "contests": 7,
+      "contrastContests": 7,
+      "contrastCoverage": {
+        "0.5": 0.14285714285714285,
+        "0.8": 0.2857142857142857,
+        "0.9": 0.2857142857142857
+      },
+      "coverageBias": -0.26419753086419756,
+      "coverageDeviation": 0.26419753086419756,
+      "favouriteWinRate": 0.2857142857142857,
+      "meanFavouriteProbability": 0.8137571428571426,
+      "meanLogScoreWinner": -2.1237263046594586,
+      "meanProbabilityOfWinner": 0.33859999999999996,
+      "shareCoverage": {
+        "0.5": 0.2962962962962963,
+        "0.8": 0.5185185185185185,
+        "0.9": 0.5925925925925926
+      },
+      "shareCoverageByCandidateKind": {
+        "entrant": {
+          "0.5": 0.6,
+          "0.8": 0.9,
+          "0.9": 0.9,
+          "observations": 10
+        },
+        "matched-other": {
+          "0.5": 0.3333333333333333,
+          "0.8": 0.3333333333333333,
+          "0.9": 1.0,
+          "observations": 3
+        },
+        "mp-lab": {
+          "0.5": 0.07142857142857142,
+          "0.8": 0.2857142857142857,
+          "0.9": 0.2857142857142857,
+          "observations": 14
+        }
+      },
+      "shareObservations": 27
+    },
+    "FP": {
+      "brierMulti": 1.0873141885714286,
+      "calibrationZ": -4.078407919179348,
+      "contests": 7,
+      "contrastContests": 7,
+      "contrastCoverage": {
+        "0.5": 0.14285714285714285,
+        "0.8": 0.2857142857142857,
+        "0.9": 0.2857142857142857
+      },
+      "coverageBias": -0.26419753086419756,
+      "coverageDeviation": 0.26419753086419756,
+      "favouriteWinRate": 0.2857142857142857,
+      "meanFavouriteProbability": 0.8137571428571426,
+      "meanLogScoreWinner": -2.1237263046594586,
+      "meanProbabilityOfWinner": 0.33859999999999996,
+      "shareCoverage": {
+        "0.5": 0.2962962962962963,
+        "0.8": 0.5185185185185185,
+        "0.9": 0.5925925925925926
+      },
+      "shareCoverageByCandidateKind": {
+        "entrant": {
+          "0.5": 0.6,
+          "0.8": 0.9,
+          "0.9": 0.9,
+          "observations": 10
+        },
+        "matched-other": {
+          "0.5": 0.3333333333333333,
+          "0.8": 0.3333333333333333,
+          "0.9": 1.0,
+          "observations": 3
+        },
+        "mp-lab": {
+          "0.5": 0.07142857142857142,
+          "0.8": 0.2857142857142857,
+          "0.9": 0.2857142857142857,
+          "observations": 14
+        }
+      },
+      "shareObservations": 27
+    }
+  },
+  "contrasts": 19,
+  "flaggedSensitivityShifts": {
+    "F, phi 0.2": [
+      "Te Tai Tokerau"
+    ],
+    "F, phi 0.5": [
+      "Te Tai Tokerau"
+    ],
+    "F, phi 0.8": [
+      "Te Tai Tokerau"
+    ],
+    "FC, phi 0.2": [
+      "Te Tai Tokerau"
+    ],
+    "FC, phi 0.5": [
+      "Te Tai Tokerau"
+    ],
+    "FC, phi 0.8": [
+      "Te Tai Tokerau"
+    ],
+    "FC, swing without Te Tai Tonga": [
+      "Ikaroa-Rāwhiti",
+      "Tāmaki Makaurau"
+    ],
+    "FP, phi 0.2": [
+      "Te Tai Tokerau"
+    ],
+    "FP, phi 0.5": [
+      "Te Tai Tokerau"
+    ],
+    "FP, phi 0.8": [
+      "Te Tai Tokerau"
+    ],
+    "FP, swing without Te Tai Tonga": [
+      "Tāmaki Makaurau"
+    ]
+  },
+  "leaveOneElectionOutPooled": {
+    "F": {
+      "brierMulti": 0.5438252109523809,
+      "calibrationZ": -0.9838243912870441,
+      "contests": 21,
+      "contrastContests": 19,
+      "contrastCoverage": {
+        "0.5": 0.631578947368421,
+        "0.8": 0.7368421052631579,
+        "0.9": 0.7368421052631579
+      },
+      "coverageBias": -0.07415730337078653,
+      "coverageDeviation": 0.07415730337078653,
+      "favouriteWinRate": 0.6666666666666666,
+      "meanFavouriteProbability": 0.7530071428571429,
+      "meanLogScoreWinner": -1.0025316058761995,
+      "meanProbabilityOfWinner": 0.565002380952381,
+      "shareCoverage": {
+        "0.5": 0.48314606741573035,
+        "0.8": 0.6966292134831461,
+        "0.9": 0.797752808988764
+      },
+      "shareCoverageByCandidateKind": {
+        "entrant": {
+          "0.5": 0.4411764705882353,
+          "0.8": 0.6764705882352942,
+          "0.9": 0.7941176470588235,
+          "observations": 34
+        },
+        "matched-other": {
+          "0.5": 0.5,
+          "0.8": 0.7142857142857143,
+          "0.9": 1.0,
+          "observations": 14
+        },
+        "mp-lab": {
+          "0.5": 0.5121951219512195,
+          "0.8": 0.7073170731707317,
+          "0.9": 0.7317073170731707,
+          "observations": 41
+        }
+      },
+      "shareObservations": 89
+    },
+    "FC": {
+      "brierMulti": 0.5446645141666667,
+      "calibrationZ": -2.024560057397385,
+      "contests": 21,
+      "contrastContests": 19,
+      "contrastCoverage": {
+        "0.5": 0.42105263157894735,
+        "0.8": 0.6947368421052631,
+        "0.9": 0.7368421052631579
+      },
+      "coverageBias": -0.14606741573033707,
+      "coverageDeviation": 0.14606741573033707,
+      "favouriteWinRate": 0.6571428571428571,
+      "meanFavouriteProbability": 0.8154902380952381,
+      "meanLogScoreWinner": -0.9934709191507423,
+      "meanProbabilityOfWinner": 0.5998811904761904,
+      "shareCoverage": {
+        "0.5": 0.38202247191011235,
+        "0.8": 0.6382022471910113,
+        "0.9": 0.7415730337078652
+      },
+      "shareCoverageByCandidateKind": {
+        "entrant": {
+          "0.5": 0.4088235294117647,
+          "0.8": 0.6235294117647059,
+          "0.9": 0.6764705882352942,
+          "observations": 34
+        },
+        "matched-other": {
+          "0.5": 0.41428571428571426,
+          "0.8": 0.6142857142857142,
+          "0.9": 0.9285714285714286,
+          "observations": 14
+        },
+        "mp-lab": {
+          "0.5": 0.3487804878048781,
+          "0.8": 0.6585365853658537,
+          "0.9": 0.7317073170731707,
+          "observations": 41
+        }
+      },
+      "shareObservations": 89
+    },
+    "FP": {
+      "brierMulti": 0.5438612000476191,
+      "calibrationZ": -1.5456489497934058,
+      "contests": 21,
+      "contrastContests": 19,
+      "contrastCoverage": {
+        "0.5": 0.531578947368421,
+        "0.8": 0.7368421052631579,
+        "0.9": 0.7368421052631579
+      },
+      "coverageBias": -0.11573033707865173,
+      "coverageDeviation": 0.11573033707865173,
+      "favouriteWinRate": 0.6571428571428571,
+      "meanFavouriteProbability": 0.7860349999999999,
+      "meanLogScoreWinner": -0.9950661224351424,
+      "meanProbabilityOfWinner": 0.5820976190476189,
+      "shareCoverage": {
+        "0.5": 0.4258426966292135,
+        "0.8": 0.6820224719101123,
+        "0.9": 0.744943820224719
+      },
+      "shareCoverageByCandidateKind": {
+        "entrant": {
+          "0.5": 0.4117647058823529,
+          "0.8": 0.6470588235294118,
+          "0.9": 0.6852941176470588,
+          "observations": 34
+        },
+        "matched-other": {
+          "0.5": 0.4571428571428572,
+          "0.8": 0.6928571428571428,
+          "0.9": 0.9285714285714286,
+          "observations": 14
+        },
+        "mp-lab": {
+          "0.5": 0.4268292682926829,
+          "0.8": 0.7073170731707317,
+          "0.9": 0.7317073170731707,
+          "observations": 41
+        }
+      },
+      "shareObservations": 89
+    }
+  },
+  "registered": "none_report_to_james",
+  "registeredByJames": {
+    "allowedChoices": [
+      "F",
+      "FC_to_FP",
+      "FC_to_FP_without_Te_Tai_Tonga"
+    ],
+    "choice": "F",
+    "decidedBy": "James (decision card in the Stage78 thread)",
+    "decidedOn": "2026-10-09",
+    "note": "Chosen by James after the frozen swing rule returned mixed_report_to_james (Stage78): the 2023 result carried forward, no polled-seat swing. The swing arms stay as flagged sensitivities. Not wired into the configuration or assembly by Stage78."
+  },
+  "schemaVersion": 1,
+  "sigma": 0.2570299169650819,
+  "swingClasses": {
+    "FC": "mixed_report_to_james",
+    "FP": "mixed_report_to_james"
+  },
+  "swingQualifiers": {
+    "FC": "weak",
+    "FP": "weak"
+  },
+  "tau": 0.4426845771436232,
+  "winProbabilities2026": {
+    "F": {
+      "Ikaroa-Rāwhiti": {
+        "Cushla TANGAERE-MANUEL": 0.64211,
+        "Haley MAXWELL": 0.35765,
+        "Heather TE AU-SKIPWORTH": 0.00024
+      },
+      "Te Tai Tokerau": {
+        "Aperahama EDWARDS": 0.20131,
+        "Hūhana LYNDON": 0.00633,
+        "Karl BARKLEY": 0.0,
+        "Maki HERBERT": 2e-05,
+        "Mariameno KAPA-KINGI": 0.13467,
+        "Willow-Jean PRIME": 0.65767
+      },
+      "Tāmaki Makaurau": {
+        "Florence TE OHAERE": 0.00035,
+        "Kerrin LEONI": 0.49843,
+        "Oriini KAIPARA": 0.50122
+      },
+      "Waiariki": {
+        "Pāpā WHAREWERA": 0.0,
+        "Rawiri WAITITI": 0.95726,
+        "Tania WAIKATO": 0.00787,
+        "Toni BOYNTON": 0.03487
+      }
+    },
+    "FC": {
+      "Ikaroa-Rāwhiti": {
+        "Cushla TANGAERE-MANUEL": 0.83114,
+        "Haley MAXWELL": 0.1686,
+        "Heather TE AU-SKIPWORTH": 0.00026
+      },
+      "Te Tai Tokerau": {
+        "Aperahama EDWARDS": 0.08969,
+        "Hūhana LYNDON": 0.00778,
+        "Karl BARKLEY": 0.0,
+        "Maki HERBERT": 2e-05,
+        "Mariameno KAPA-KINGI": 0.1391,
+        "Willow-Jean PRIME": 0.76341
+      },
+      "Tāmaki Makaurau": {
+        "Florence TE OHAERE": 0.00042,
+        "Kerrin LEONI": 0.69648,
+        "Oriini KAIPARA": 0.3031
+      },
+      "Waiariki": {
+        "Pāpā WHAREWERA": 0.0,
+        "Rawiri WAITITI": 0.96867,
+        "Tania WAIKATO": 0.00614,
+        "Toni BOYNTON": 0.02519
+      }
+    },
+    "FP": {
+      "Ikaroa-Rāwhiti": {
+        "Cushla TANGAERE-MANUEL": 0.76181,
+        "Haley MAXWELL": 0.23794,
+        "Heather TE AU-SKIPWORTH": 0.00025
+      },
+      "Te Tai Tokerau": {
+        "Aperahama EDWARDS": 0.13233,
+        "Hūhana LYNDON": 0.00756,
+        "Karl BARKLEY": 0.0,
+        "Maki HERBERT": 2e-05,
+        "Mariameno KAPA-KINGI": 0.13707,
+        "Willow-Jean PRIME": 0.72302
+      },
+      "Tāmaki Makaurau": {
+        "Florence TE OHAERE": 0.00053,
+        "Kerrin LEONI": 0.64905,
+        "Oriini KAIPARA": 0.35042
+      },
+      "Waiariki": {
+        "Pāpā WHAREWERA": 0.0,
+        "Rawiri WAITITI": 0.91415,
+        "Tania WAIKATO": 0.01738,
+        "Toni BOYNTON": 0.06847
+      }
+    }
+  }
+}

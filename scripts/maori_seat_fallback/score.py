@@ -52,7 +52,7 @@ def polled_changes(rows, res, ests, e, scheme_id, n_train, draws, seed):
     return out
 
 
-def contest_record(share, actual, new_cands, prev_lo, floor):
+def contest_record(share, actual, new_cands, prev_lo, floor, kinds=None):
     """Numeric scores of one contest: winner probabilities, favourite, share coverage and the contrast coverage."""
     draws, k = share.shape
     prob = np.bincount(np.argmax(share, axis=1), minlength=k) / draws
@@ -60,7 +60,7 @@ def contest_record(share, actual, new_cands, prev_lo, floor):
     onehot[actual] = 1.0
     fav = int(np.argmax(prob))
     rec = {'probActual': float(prob[actual]), 'logScore': math.log(max(float(prob[actual]), floor)), 'brierMulti': float(((prob - onehot) ** 2).sum()),
-           'favouriteProb': float(prob[fav]), 'favouriteWon': float(fav == actual), 'shareCover': {}}
+           'favouriteProb': float(prob[fav]), 'favouriteWon': float(fav == actual), 'shareCover': {}, 'kinds': kinds}
     actual_share = np.array([c['share'] for c in new_cands])
     for lv in LEVELS:
         lo, hi = np.quantile(share, [(1 - lv) / 2, (1 + lv) / 2], axis=0)
@@ -68,7 +68,8 @@ def contest_record(share, actual, new_cands, prev_lo, floor):
     parties = [c['party'] for c in new_cands]
     if parties.count('MP') == 1 and parties.count('LAB') == 1 and prev_lo is not None:
         i, j = parties.index('MP'), parties.index('LAB')
-        d = np.log(share[:, i]) - np.log(share[:, j]) - prev_lo
+        tiny = 1e-300
+        d = np.log(np.maximum(share[:, i], tiny)) - np.log(np.maximum(share[:, j], tiny)) - prev_lo
         actual_d = math.log(actual_share[i] / actual_share[j]) - prev_lo
         rec['contrastCover'] = {str(lv): float(np.quantile(d, (1 - lv) / 2) <= actual_d <= np.quantile(d, (1 + lv) / 2)) for lv in LEVELS}
     return rec
@@ -80,6 +81,7 @@ def average(recs):
         return recs[0]
     out = {k: float(np.mean([r[k] for r in recs])) for k in ('probActual', 'logScore', 'brierMulti', 'favouriteProb', 'favouriteWon')}
     out['shareCover'] = {lv: [float(x) for x in np.mean([r['shareCover'][lv] for r in recs], axis=0)] for lv in recs[0]['shareCover']}
+    out['kinds'] = recs[0]['kinds']
     if 'contrastCover' in recs[0]:
         out['contrastCover'] = {lv: float(np.mean([r['contrastCover'][lv] for r in recs])) for lv in recs[0]['contrastCover']}
     return out
@@ -104,10 +106,11 @@ def score_fold(res, rows, contract, scheme, e, spec, replicates, seed, draws):
         inp = history.build_inputs(prev[seat]['candidates'], new_cands)
         actual = [c['name'] for c in new_cands].index(res[e][seat]['winner'])
         prev_lo = history.prev_log_odds(prev[seat]['candidates'])
+        kinds = [('mp-lab' if c['party'] in ('MP', 'LAB') else 'matched-other' if inp['base'][i] is not None else 'entrant') for i, c in enumerate(new_cands)]
 
         def run(u):
             rng = np.random.default_rng(np.random.SeedSequence([seed, scheme_id, e, 1 + SEATS.index(seat)]))
-            return contest_record(model.simulate_seat(inp, s2, u, pools, rng), actual, new_cands, prev_lo, floor)
+            return contest_record(model.simulate_seat(inp, s2, u, pools, rng), actual, new_cands, prev_lo, floor, kinds)
         f_rec = run(np.sqrt(t2) * z)
         records['F'].append(dict(f_rec, year=e, seat=seat))
         for arm in ('FC', 'FP'):
@@ -156,6 +159,10 @@ def metrics(recs):
     out['contrastContests'] = len(con)
     out['coverageDeviation'] = float(np.mean([abs(out['shareCoverage'][str(lv)] - lv) for lv in LEVELS]))
     out['coverageBias'] = float(np.mean([out['shareCoverage'][str(lv)] - lv for lv in LEVELS]))
+    out['shareCoverageByCandidateKind'] = {kind: {'observations': int(sum(k == kind for r in recs for k in r['kinds'])),
+                                                  **{str(lv): float(np.mean([c for r in recs for c, k in zip(r['shareCover'][str(lv)], r['kinds']) if k == kind]))
+                                                     for lv in LEVELS}}
+                                           for kind in ('mp-lab', 'matched-other', 'entrant') if any(k == kind for r in recs for k in r['kinds'])}
     return out
 
 
