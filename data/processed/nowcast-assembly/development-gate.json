@@ -1,5 +1,5 @@
 {
-  "bankDigest": "32305f01b542e495173ed7689535554fd6aa0b7d548cc28f9f54ef89f48f0256",
+  "bankDigest": "076ccc66a5e77448f404e5432d690577837fe273490045b64f80c339e158b2bd",
   "blockers": [
     {
       "electorateIds": [
@@ -70,23 +70,13 @@
       ],
       "reason": "classification file missing: config/general-seat-classification-2026.json (James, D107)",
       "seats": 64
-    },
-    {
-      "electorateIds": [
-        "nz-maori-2026-boundary-2",
-        "nz-maori-2026-boundary-3",
-        "nz-maori-2026-boundary-5",
-        "nz-maori-2026-boundary-7"
-      ],
-      "reason": "unpolled; labelled fallback chosen (D114) but no fallback model is registered yet (maori.unpolledFallbackModel)",
-      "seats": 4
     }
   ],
   "checks": [
     {
       "check": "configComplete",
-      "detail": "pending fields must be filled before assembly: maori.unpolledFallbackModel",
-      "passed": false
+      "detail": "",
+      "passed": true
     },
     {
       "check": "provenanceLive",
@@ -120,7 +110,7 @@
     },
     {
       "check": "allWinnersPresent",
-      "detail": "68 unavailable",
+      "detail": "64 unavailable",
       "passed": false
     },
     {
@@ -134,7 +124,7 @@
       "passed": true
     }
   ],
-  "configVersion": "2026-10-10.1",
+  "configVersion": "2026-10-10.2",
   "diagnostics": {
     "reconciliation": {
       "byGroup": {
@@ -249,12 +239,12 @@
     "nz-general-2026-boundary-063": "unavailable",
     "nz-general-2026-boundary-064": "unavailable",
     "nz-maori-2026-boundary-1": "simulated",
-    "nz-maori-2026-boundary-2": "unavailable",
-    "nz-maori-2026-boundary-3": "unavailable",
+    "nz-maori-2026-boundary-2": "simulated",
+    "nz-maori-2026-boundary-3": "simulated",
     "nz-maori-2026-boundary-4": "simulated",
-    "nz-maori-2026-boundary-5": "unavailable",
+    "nz-maori-2026-boundary-5": "simulated",
     "nz-maori-2026-boundary-6": "simulated",
-    "nz-maori-2026-boundary-7": "unavailable"
+    "nz-maori-2026-boundary-7": "simulated"
   },
   "stage": 73
 }

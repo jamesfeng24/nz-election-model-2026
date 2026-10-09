@@ -146,7 +146,7 @@ class Bank(unittest.TestCase):
         passed, checks = A.gate(self.bank, self.config)
         failed = {c['check'] for c in checks if not c['passed']}
         self.assertFalse(passed)
-        self.assertEqual(failed, {'configComplete', 'provenanceLive'})
+        self.assertEqual(failed, {'provenanceLive'})   # Stage80 registered the last pending config field
         broken = copy.deepcopy(self.bank)
         broken['seats'][5] = {'electorateId': broken['seats'][5]['electorateId'], 'scope': 'general', 'status': 'unavailable'}
         failed = {c['check'] for c in A.gate(broken, self.config)[1] if not c['passed']}

@@ -11,17 +11,17 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 | 2a | Candidate-mean (S+R) fit trained on every completed election, 2026 features recentred | — | done (Stage75) |
 | 3 | `config/nowcast-2026.json` as the single live configuration (spec §8) | 2 | done (Stage72); pending fields listed in the file |
 | 4 | 2026 ordinary/exceptional classification for all 64 general seats, dated and sourced; a missing seat fails the build | James | schema and validator done (Stage72); draft proposal for James in [general-seat-classification-2026-draft.md](general-seat-classification-2026-draft.md); entries open |
-| 5 | Canonical final roster after nominations close; rebuild S/R destinations, Māori poll-to-candidate matching, export directory and MMP expected electorates from it | Stage50 (after 8 Oct, 12:00 NZDT) | refresh pipeline ready and tested (Stage50 part 1, [stage50-nominations.md](stage50-nominations.md)); acquisition after publication; Māori official-candidate mapping open |
+| 5 | Canonical final roster after nominations close; rebuild S/R destinations, Māori poll-to-candidate matching, export directory and MMP expected electorates from it | Stage50 (after 8 Oct, 12:00 NZDT) | done (Stage50 part 2: official list applied to the live roster; Stage80: the seven Māori seats carry the official candidate ids) |
 | 6 | Cut over to the Stage69 notional baseline through one pointer; mark the Stage64 and Stage41 2026 artifacts as not live; test that only the configured baseline is read | Stage69 | waiting |
 | 7 | National adapter on `lastDataSupport` from the latest Stage70 refit, as-of week recorded | Stage70 | waiting |
-| 8 | Decide the four unpolled Māori seats (labelled fallback, or withhold MMP outputs) | James | decided (James, 2026-10-07, D114): labelled fallback from the Māori layer without a poll. The fallback model is not defined yet: see item 15 |
-| 9 | Assembly: Python draw bank → Stage65 seat layer → snapshot v2 exporter, one draw id end to end | 2–8 | Python draw bank and gate (Stage73) and bank → snapshot v2 (Stage74) done; live run blocked on 4, 5, 8, 10, 11 |
+| 8 | Decide the four unpolled Māori seats (labelled fallback, or withhold MMP outputs) | James | decided (James, 2026-10-07, D114): labelled fallback from the Māori layer without a poll; the model is Stage78 arm F, registered by Stage80 (item 15) |
+| 9 | Assembly: Python draw bank → Stage65 seat layer → snapshot v2 exporter, one draw id end to end | 2–8 | Python draw bank and gate (Stage73) and bank → snapshot v2 (Stage74) done; live run blocked on 4 only (the D107 classification): every other input is in place |
 | 10 | Production draw count and precision policy, with effective-sample Monte Carlo errors for national-driven quantities | Stage63 | set (Stage77): 4,096 national draws × 16 layer replicates (Stage63, James M = 16); batch-means MCSE within chains with replicates kept together |
 | 11 | Bloc definitions for any coalition output | James | done (James, 2026-10-07): NAT+ACT, NAT+ACT+NZF, LAB+GRN, LAB+GRN+TPM; hung parliament over NAT+ACT+NZF and LAB+GRN+TPM with TOP as kingmaker (`mmp.blocs`, `mmp.hungParliament`) |
 | 12 | Probability-release policy approved | James | done (James, 2026-10-07, D114): no calibration label, no staleness windows, MCSE ≤ 0.01 precision gate, an internal-only reconciliation check, one release after each accepted weekly poll refresh; recorded as `release.policyApprovedBy` |
 | 12a | MMP rules version pinned | James | done (James, 2026-10-07, D114): Electoral Act 1993 version 238.0 as at 1 January 2026 (`mmp.rulesVersion`). No later amendment affecting 2026 seat allocation found on 7 October |
 | 14 | Production runner and rehearsal | — | done (Stage77): `npm run release:build` / `release:publish`; full-size rehearsal with labelled stand-ins ([stage77-release-steps.md](stage77-release-steps.md)) |
-| 15 | Labelled no-poll fallback for Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau and Te Tai Tokerau: define, calibrate and register it (the Māori layer has none; Stage66/71 left them `unpolled`) | James authorizes a bounded stage | open; until then those seats are `unavailable` and `maori.unpolledFallbackModel` keeps the config incomplete |
+| 15 | Labelled no-poll fallback for Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau and Te Tai Tokerau: define, calibrate and register it (the Māori layer has none; Stage66/71 left them `unpolled`) | James authorizes a bounded stage | done: Stage78 defined and calibrated it (arm F, the 2023 result carried forward, James 2026-10-09, D115); Stage80 registered it (`maori.unpolledFallbackModel = stage78-f`, D118) and wired it into the assembly |
 | 13 | Export v2 completion: candidate-share intervals, Monte Carlo SE, thresholds/overhang/size/blocs, per-seat uncertainty class; 80% quantiles in Stage65 summaries | 9, 10 | done (Stage74); precision thresholds set (MCSE ≤ 0.01); the calibration label was dropped (D114) |
 
 ## Should do soon
@@ -69,7 +69,7 @@ Implemented (Stage77): the Python gate (`scripts/nowcast_assembly/assemble.py` `
 |---|---|
 | National vote shares | Show 80% (50/90 on demand), labelled "latent support, week of …" |
 | General-seat candidate shares and win probabilities | Show when the Monte Carlo SE is ≤ 0.01 |
-| Māori seats | Shown as a labelled range (Stage66–Stage71 layer). The four unpolled seats use a labelled fallback from the Māori layer without a poll, once it is defined (item 15) |
+| Māori seats | Shown as a labelled range (Stage66–Stage71 layer). The four unpolled seats use the labelled Stage78 fallback (2023 result carried forward, no seat poll; wide uncertainty not calibrated for an election-wide wave like 2023) |
 | Party seats, threshold/lifeboat, overhang, Parliament size | Only when all 71 seats are defined and the effective-sample Monte Carlo SE is ≤ 0.01 |
 | Coalition/bloc probabilities | Only for blocs James defines, worded as scenarios, not predictions of agreements |
 | Unavailable or under-precise components | Withheld with a reason, never zero |

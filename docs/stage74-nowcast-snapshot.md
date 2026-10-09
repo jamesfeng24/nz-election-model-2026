@@ -37,7 +37,7 @@
   - no MMP rules-version identifier;
   - no precision thresholds (Stage63).
 - **MCSE batches.** Batch means need enough rows per chain. At the 32-row fixture size the errors are rough. At production sizes (thousands of rows over 4 chains) about sqrt(n) batches is standard.
-- **Māori candidates** use poll-derived keys (`<electorateId>-poll-candidate-<name key>`) until Stage50 roster ids exist.
+- **Māori candidates** use poll-derived keys (`<electorateId>-poll-candidate-<name key>`) until Stage50 roster ids exist. (Stage80 replaced them with the official roster ids for all seven seats.)
 - **Minor-party candidates** inside Other show `partyId` null with `partyLabel`. A display mapping is a UI question.
 
 ## Reproduction

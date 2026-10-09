@@ -44,7 +44,7 @@ class Replication(unittest.TestCase):
         self.assertEqual(len(bank['partyVote']['shares']), 8)
         self.assertTrue(all(len(s['winners']) == 16 for s in bank['seats']))
         passed, checks = A.gate(bank, self.config)
-        self.assertEqual({c['check'] for c in checks if not c['passed']}, {'configComplete', 'provenanceLive'})
+        self.assertEqual({c['check'] for c in checks if not c['passed']}, {'provenanceLive'})
 
     def test_replicates_draw_independent_layer_noise(self):
         general = [s for s in self.bank['seats'] if s['scope'] == 'general']
@@ -79,7 +79,7 @@ class Gate(unittest.TestCase):
         self.assertIn('nationalReconciliation', failed)
 
     def test_rehearsal_labels_every_stand_in(self):
-        self.assertEqual(len(rehearsal.STAND_INS), 4)
+        self.assertEqual(len(rehearsal.STAND_INS), 3)   # Stage80: the unpolled Maori seats now use the real fallback
         self.assertTrue(all('Stage69' in n for n in rehearsal.NOT_USED))
         classes = rehearsal.synthetic_classification(GENERAL)
         self.assertEqual(set(classes), set(GENERAL))
