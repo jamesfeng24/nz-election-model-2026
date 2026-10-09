@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import bank from '../../data/fixtures/synthetic/nowcast-draw-bank.json';
 import evidenceFile from '../../data/processed/site-evidence/2026-10-07/evidence.json';
 import { buildNowcastSnapshot } from '../models/nowcast/fromBank';
@@ -33,10 +33,15 @@ describe('site evidence in the snapshot', () => {
     expect(screen.getByText(/121 of 124 polls since the 2023 election/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Wikipedia, Opinion polling/ })).toHaveAttribute('href', expect.stringContaining('oldid=1378865337'));
     const table = screen.getByRole('table');
-    expect(within(table).getAllByRole('row')).toHaveLength(125);
+    // Opens on the ten newest polls under month headings; the rest sit behind "See more".
+    expect(within(table).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(11);
+    expect(within(table).getAllByRole('row').filter(r => r.className.includes('month')).length).toBeGreaterThan(0);
+    fireEvent.click(screen.getByRole('button', { name: /See more \(114 older polls\)/ }));
+    expect(within(table).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(125);
+    expect(screen.getByRole('button', { name: 'Show fewer polls' })).toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: 'Te Ao Maori News (Whakaata Maori)' })[0]).toHaveAttribute('href', expect.stringMatching(/^https:\/\//));
     expect(screen.getAllByText(/Not used in this forecast/).length).toBe(3);
-    expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10);
+    expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10);   // after See more
     expect(within(table).queryByRole('columnheader', { name: /Client|Pollster/ })).toBeNull();
     expect(screen.getByText(/The Spinoff–Curia/)).toBeInTheDocument();
   });

@@ -18,6 +18,8 @@ export function MethodologyView({ adjustments }: { adjustments?: ForecastSnapsho
       <li><b>Seats in Parliament.</b> Each simulated election is run through New Zealand's MMP rules (Electoral Act 1993 as at 1 January 2026): the 5% party-vote threshold or one electorate win, 120 seats shared by the Sainte-Laguë method, and overhang seats added on top.</li>
     </ol>
     <p>Groups such as National + ACT + NZ First or Labour + Greens + Te Pāti Māori are seat arithmetic. They are not predictions of coalition agreements. "No majority" means neither of those two groups reaches more than half of Parliament's seats in that simulated election.</p>
+    <h2>Electorate seats, list seats and overhang</h2>
+    <p>A party's seats come from two places: electorate seats, won by a candidate in a single electorate, and list seats, allocated from the party vote so that each party's total matches its share. Parliament has 120 seats. If a party wins more electorate seats than its party vote entitles it to, it keeps them all and the extra "overhang" seats are added on top, so Parliament grows. The forecast shows each party's seats split into electorate and list, and says how likely an overhang is.</p>
     <h2>Party names</h2>
     <p>The site uses the short names New Zealanders know. In full they are: {REGISTERED_NAMES.map(([short, full]) => full === short || full.includes(`(${short})`) ? full : `${full} (${short})`).join('; ')}.</p>
     <h2>Data sources</h2>

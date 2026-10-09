@@ -71,6 +71,11 @@ describe('public site', () => {
     expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('Labour + Greens + Te Pāti Māori');
     expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('No majority');
     expect(screen.queryByText(/kingmaker/i)).toBeNull();
+    expect(screen.getByRole('columnheader', { name: 'Electorate seats (average)' })).toBeInTheDocument();
+    expect(screen.getByRole('columnheader', { name: 'List seats (average)' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Overhang' })).toBeInTheDocument();
+    expect(screen.getByText(/Chance of at least one overhang seat/)).toBeInTheDocument();
+    expect(document.querySelector('.seatchart-key')!.textContent).toMatch(/\d+ electorate \+ \d+ list/);
     expect(screen.getByText('All 71 electorates')).toBeInTheDocument();
     expect(screen.getAllByText(/Wider/).length).toBeGreaterThan(0);
   });

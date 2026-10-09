@@ -65,10 +65,11 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 .maphint{min-height:1.6em;margin:.25rem 0 .5rem;font-size:.95rem}
 .mapgrid{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:1.5rem;align-items:start}
 .mapmain{width:100%;max-height:78vh;height:auto}
-.map path{stroke:#fff;stroke-width:.6px;cursor:pointer}
+.mapmain,.mapinsets svg{background:#e4edf1;border-radius:4px}
+.map path{stroke:#fff;stroke-width:.6px;cursor:pointer;fill-rule:evenodd}
 .map a:hover path,.map a:focus path,.map path.hot{stroke:#182d30;stroke-width:1.6px}
 .map a:focus-visible{outline:none}
-.mapinsets{display:grid;grid-template-columns:repeat(2,minmax(0,240px));gap:.75rem;align-items:start}
+.mapinsets{display:grid;grid-template-columns:repeat(2,minmax(0,290px));gap:.75rem;align-items:start}
 .mapinsets figure{margin:0;border:1px solid #d4dcd7;border-radius:6px;background:#fff;padding:.4rem}
 .mapinsets svg{width:100%;height:auto;display:block}
 .mapinsets figcaption{font-size:.8rem;color:#576764}
@@ -79,3 +80,5 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 @media(max-width:700px){.mapgrid{grid-template-columns:1fr}.mapmain{max-width:340px;margin:auto}}
 .pollline{margin:.3rem 0 .9rem;font-size:.95rem;max-width:880px}
 .nationalpolls{font-size:.88rem}.nationalpolls th,.nationalpolls td{padding:.3rem .45rem}
+.nationalpolls tr.month th{background:#eef2ed;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:#506965;padding:.4rem .45rem}
+.more{font:inherit;font-size:.95rem;padding:.5rem 1.1rem;border:1px solid #226e59;border-radius:6px;background:#fff;color:#185340;cursor:pointer}.more:hover{background:#eef2ed}
