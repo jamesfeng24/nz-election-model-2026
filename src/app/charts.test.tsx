@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { addToArchive } from '../models/simulation/exporter';
 import { loadReleaseHistory } from '../data/loader';
 import { syntheticBankSnapshot } from '../dev/syntheticBank';
-import { HEADLINE_ORDER, SeatChart } from './SeatChart';
+import { SeatChart } from './SeatChart';
 import { TrendChart } from './TrendChart';
 import { ForecastView } from './ForecastViews';
 
@@ -24,7 +24,7 @@ describe('headline seat chart', () => {
     const snapshot = await syntheticBankSnapshot();
     const { container } = render(<SeatChart snapshot={snapshot} />);
     const labels = [...container.querySelectorAll('.seatchart-key li b')].map(b => b.textContent);
-    const abbreviations = HEADLINE_ORDER.map(id => snapshot.directory.parties.find(p => p.partyId === id)?.abbreviation);
+    const abbreviations = ['TPM', 'Greens', 'Labour', 'TOP', 'NZ First', 'National', 'ACT'];
     expect(labels.slice(0, abbreviations.length)).toEqual(abbreviations);
     const total = Number(container.querySelector('.seatchart-total')!.textContent);
     expect(container.querySelectorAll('circle')).toHaveLength(total);

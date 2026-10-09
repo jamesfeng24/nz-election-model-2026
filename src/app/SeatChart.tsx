@@ -1,4 +1,5 @@
 import type { ForecastSnapshot } from '../types/export';
+import { partyLabel } from './partyNames';
 import { PRIMARY_INTERVAL_LEVEL } from '../types/domain';
 import { hemicycle, largestRemainder } from './hemicycle';
 
@@ -14,7 +15,7 @@ const OTHER = '#a9b4b0';
 interface Slice { key: string; label: string; mean: number; median: number; lower: number; upper: number; colour: string }
 
 function slices(snapshot: ForecastSnapshot): { slices: Slice[]; total: number } {
-  const name = (id: string) => snapshot.directory.parties.find(p => p.partyId === id)?.abbreviation ?? id;
+  const name = (id: string) => partyLabel(snapshot, id, 'short');
   const layer = snapshot.seatLayer.status === 'available' ? snapshot.seatLayer.summary : null;
   const rows = layer
     ? layer.parties.map(p => ({ id: p.partyId, mean: p.meanSeats, set: p.seats }))

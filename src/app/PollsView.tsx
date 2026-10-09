@@ -1,4 +1,5 @@
 import type { ForecastSnapshot } from '../types/export';
+import { partyLabel } from './partyNames';
 import { longDate } from './format';
 import { SeatPollTable } from './PollTables';
 
@@ -8,7 +9,7 @@ const retrieved = (text: string) => { const t = Date.parse(text); return Number.
 export function PollsView({ snapshot }: { snapshot: ForecastSnapshot }) {
   const evidence = snapshot.evidence;
   const columns = evidence?.nationalPolls[0]?.shares.map(s => s.partyId) ?? [];
-  const party = (id: string) => snapshot.directory.parties.find(p => p.partyId === id)?.abbreviation ?? id;
+  const party = (id: string) => partyLabel(snapshot, id, 'short');
   const seats = snapshot.electorateDetail.filter(d => (d.evidence?.polls.length ?? 0) > 0)
     .map(d => ({ d, name: snapshot.directory.electorates.find(e => e.electorateId === d.electorateId)?.name ?? d.electorateId }))
     .sort((a, b) => a.name.localeCompare(b.name, 'en-NZ'));

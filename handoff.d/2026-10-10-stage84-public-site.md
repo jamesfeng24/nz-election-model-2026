@@ -2,6 +2,7 @@
 ## Stage84 — public static site, 2026-10-10
 
 - The app becomes the public site: `forecast/` (headline seat chart in James's party order, a trend chart that switches on after three releases), `electorates/` (searchable seat view), `polls/` (every poll cited), `methodology/` and `archive/` pages plus `404.html`, built by `npm run build` into `site/` with relative paths and the published `forecasts/` archive. Optional `evidence` (national polls, weekly support trend) and `electorateDetail[].evidence` (seat polls) added to the v2 export; new producer `scripts/site_evidence/build.py` writes `data/processed/site-evidence/2026-10-07/evidence.json` from preserved inputs, and `release:publish` takes `--evidence`. Placeholder pages and `react-router-dom` removed; CC BY 4.0 footer on every page.
+- Party display names (National, Labour, ACT, New Zealand First, The Greens, The Opportunity Party, Te Pāti Māori; short forms NZ First, Greens, TOP, TPM in charts) and a clickable electorate map on the electorates page (general/Māori toggle, four zoom windows) drawn from `data/processed/site-map/2026/map.json`, produced by `scripts/site_map/build.py` from the preserved 2025 boundaries. The optional snapshot field `adjustments` and its methodology section appear only when manual adjustments exist.
 - New `scripts/validate/check_site.mjs`; `npm run check:dist` now checks `site/`. No statistical or frozen change; nothing published.
 
 <!-- fold: state -->
@@ -13,7 +14,7 @@ Branch `claude/stage84-public-site-9y5788` from main `9d2c8f1`. Requested by Jam
 
 **What did not change.** The model, the draw bank, the release gate, frozen stages and their data, `data/sources.json`, `ci.yml`. The release publisher gains only an optional `--evidence` argument. The public repository was never accessed.
 
-**Limits.** An electorate map, the publish step and the backcast of the seat odds and a national-poll publisher address (none is held) are not built. Methodology wording is plain-language and should be read by James before the first release.
+**Limits.** The publish step and the backcast of the seat odds and a national-poll publisher address (none is held) are not built. Methodology wording is plain-language and should be read by James before the first release.
 
 **Exact next action.** Re-run `python3 -m scripts.site_evidence.build --refresh data/processed/polling/weekly-refresh/<date>` after each adopted refresh and pass the file to `release:publish --evidence`. The publish step (research-repo workflow, James's token) builds `site/`, copies it to the public repository and is rehearsed without synthetic data; the first real release follows the release checklist.
 

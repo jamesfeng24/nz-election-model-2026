@@ -22,7 +22,7 @@ export function MethodologyView({ adjustments }: { adjustments?: ForecastSnapsho
     <ul>
       <li>Opinion polls: the Wikipedia opinion-polling tables for the 2026 election (national polls, and polls of individual electorates including the Māori electorates), read weekly; supporting press releases from pollsters where cited. Wikipedia text is licensed CC BY-SA.</li>
       <li>Past election results, 2008 to 2023: New Zealand Electoral Commission official results, including the split-vote tables.</li>
-      <li>2026 electorate boundaries and populations: Stats NZ and the Representation Commission.</li>
+      <li>2026 electorate boundaries and populations: Stats NZ and the Representation Commission. The map on the electorates page redraws the Stats NZ outlines in simplified form, for illustration only.</li>
       <li>2026 candidates: Electoral Commission nominations and party announcements.</li>
       <li>MMP rules: Electoral Act 1993.</li>
     </ul>

@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useState } from 'react';
+import { partyLabel } from './partyNames';
 import type { ForecastSnapshot } from '../types/export';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
 import { pct, prob } from './format';
 import { SeatPollTable } from './PollTables';
+import { ElectorateMap } from './ElectorateMap';
 
 type Sort = 'name' | 'close' | 'wide';
 const level = (set: IntervalSet, l: number) => set.find(v => v.level === l)!;
 const seatFromHash = () => new URLSearchParams(window.location.hash.slice(1)).get('seat');
 
-interface Row { id: string; name: string; kind: 'general' | 'maori'; leader: string; leaderP: number; second: number; wide: boolean; available: boolean }
+interface Row { id: string; name: string; kind: 'general' | 'maori'; leader: string; leaderParty: string | null; leaderPartyName: string; leaderP: number; second: number; wide: boolean; available: boolean }
 
 function useRows(snapshot: ForecastSnapshot): Row[] {
   return useMemo(() => snapshot.directory.electorates.map(e => {
@@ -16,7 +18,7 @@ function useRows(snapshot: ForecastSnapshot): Row[] {
     const sorted = prediction ? [...prediction.candidates].sort((a, b) => b.winProbability - a.winProbability) : [];
     const cls = snapshot.electorateDetail.find(d => d.electorateId === e.electorateId)?.uncertaintyClass;
     const leader = snapshot.directory.candidates.find(c => c.candidateId === sorted[0]?.candidateId);
-    return { id: e.electorateId, name: e.name, kind: e.kind, leader: leader?.name ?? '', leaderP: sorted[0]?.winProbability ?? 0, second: sorted[1]?.winProbability ?? 0, wide: cls === 'exceptional' || cls === 'maori-layer', available: !!prediction };
+    return { id: e.electorateId, name: e.name, kind: e.kind, leader: leader?.name ?? '', leaderParty: leader?.partyId ?? null, leaderPartyName: leader?.partyId ? partyLabel(snapshot, leader.partyId) : leader?.partyLabel ?? 'Independent', leaderP: sorted[0]?.winProbability ?? 0, second: sorted[1]?.winProbability ?? 0, wide: cls === 'exceptional' || cls === 'maori-layer', available: !!prediction };
   }), [snapshot]);
 }
 
@@ -35,7 +37,7 @@ function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: 
   const seat = snapshot.directory.electorates.find(e => e.electorateId === seatId)!;
   const prediction = snapshot.simulation.electoratePredictions.find(p => p.electorateId === seatId);
   const detail = snapshot.electorateDetail.find(d => d.electorateId === seatId);
-  const partyName = (id: string | null) => snapshot.directory.parties.find(p => p.partyId === id)?.name;
+  const partyName = (id: string | null) => (id ? partyLabel(snapshot, id) : undefined);
   if (!prediction) return <section aria-labelledby="seat-heading"><h2 id="seat-heading">{seat.name}</h2><p>No forecast available: {snapshot.unavailableElectorates.find(u => u.electorateId === seatId)?.reason ?? 'unknown reason'}.</p></section>;
   const rows = [...prediction.candidates].sort((a, b) => b.winProbability - a.winProbability).map(c => {
     const cand = snapshot.directory.candidates.find(x => x.candidateId === c.candidateId);
@@ -83,6 +85,8 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
     return [...shown].sort(by[sort]);
   }, [rows, query, sort]);
   const selected = rows.find(r => r.id === seatId);
+  const forecasts = useMemo(() => rows.map(r => ({ id: r.id, name: r.name, kind: r.kind, leaderParty: r.leaderParty, leaderPartyName: r.leaderPartyName, leaderName: r.leader, leaderP: r.leaderP, available: r.available })), [rows]);
+  const pick = (id: string) => { choose(id); document.getElementById('seat-heading')?.scrollIntoView?.({ block: 'start' }); };
   return <>
     <p className="intro">Pick a seat to see each candidate's chance of winning, their likely share of the vote and the polls behind it.</p>
     <div className="picker">
@@ -92,6 +96,7 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
       <label>Sort by<select value={sort} onChange={e => setSort(e.target.value as Sort)}>
         <option value="name">Name</option><option value="close">Closest contest first</option><option value="wide">Widest uncertainty first</option></select></label>
     </div>
+    <ElectorateMap snapshot={snapshot} forecasts={forecasts} onSelect={pick} />
     {selected ? <SeatDetail snapshot={snapshot} seatId={selected.id} /> : <p>Choose a seat from the list or search above.</p>}
     <table className="seatlist"><caption>All {rows.length} electorates ({listed.length} shown)</caption>
       <thead><tr><th>Electorate</th><th>Most likely winner</th><th>Chance</th></tr></thead>

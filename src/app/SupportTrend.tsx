@@ -1,4 +1,5 @@
 import type { ForecastSnapshot } from '../types/export';
+import { partyLabel } from './partyNames';
 import { COLOURS, FALLBACK } from './SeatChart';
 import { longDate } from './format';
 
@@ -9,7 +10,7 @@ export function SupportTrend({ snapshot }: { snapshot: ForecastSnapshot }) {
   const trend = snapshot.evidence?.trend;
   if (!trend) return null;
   const polls = snapshot.evidence!.nationalPolls.filter(p => p.usedInModel);
-  const abbreviation = (id: string) => snapshot.directory.parties.find(p => p.partyId === id)?.abbreviation ?? id;
+  const abbreviation = (id: string) => partyLabel(snapshot, id, 'short');
   const W = 720, H = 360, left = 40, right = 56, top = 14, bottom = 34;
   const t0 = Date.parse(trend.weeks[0]), t1 = Date.parse(trend.weeks[trend.weeks.length - 1]);
   const topValue = Math.max(...trend.parties.flatMap(p => p.upper90));

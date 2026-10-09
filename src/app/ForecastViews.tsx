@@ -1,4 +1,5 @@
 import type { ForecastSnapshot } from '../types/export';
+import { partyLabel } from './partyNames';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
 import { longDate, pct, prob } from './format';
 import { SeatChart } from './SeatChart';
@@ -25,7 +26,7 @@ export function SnapshotBanner({ snapshot }: { snapshot: ForecastSnapshot }) {
   </>;
 }
 
-const partyName = (s: ForecastSnapshot) => (id: string) => s.directory.parties.find(p => p.partyId === id)?.name ?? id;
+const partyName = (s: ForecastSnapshot) => (id: string) => partyLabel(s, id);
 
 function Governing({ snapshot }: { snapshot: ForecastSnapshot }) {
   if (snapshot.seatLayer.status !== 'available') return null;
