@@ -83,7 +83,7 @@ class Classification(unittest.TestCase):
         self.assertEqual(set(result), set(GENERAL))
         self.assertTrue(all(e['author'] == 'James' and e['recordedAt'] == '2026-10-10' and not e['extraSdOptIn'] for e in document['seats']))
         exceptional = sorted(seat[-3:] for seat, kind in result.items() if kind == 'exceptional')
-        self.assertEqual(exceptional, ['001', '010', '011', '020', '025', '037', '038', '047', '058', '059', '063', '064'])
+        self.assertEqual(exceptional, ['001', '010', '011', '020', '025', '033', '037', '038', '047', '058', '059', '063', '064'])
 
     def test_every_gap_or_conflict_fails_closed(self):
         def broken(edit):

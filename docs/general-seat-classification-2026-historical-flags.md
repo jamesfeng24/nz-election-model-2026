@@ -78,3 +78,18 @@
 | Ilam | list | PALLETT, Sarah Jean (Labour Party, 2020) | no | no | no | LAB incumbent PALLETT, Sarah Jean recontested (Stage51 continuation) |
 
 Sources: `data/processed/exceptional-balance-scale/design-contract.json` (flags), `data/processed/manual-replay/labelling-template.csv` (pre-filled facts), `docs/exceptional-scale-diagnostic.md` and `docs/stage67-exceptional-balance-scale-design.md` (how the audit was used and its bias).
+
+## Northland (added 10 October 2026)
+
+James asked for Northland to be exceptional in every election year. In the frozen audit it is flagged in **2017** (National's King 15.2k, NZ First's Peters 13.9k, Labour's Prime 8.6k) and **2020** (Labour's Prime 17.1k, National's King 16.9k, NZ First's Jones 5.1k). It is not flagged in **2014** (Sabin 18.3k, Prime 9.0k, Green 3.6k: not three-way, and the retiring John Carter makes it a plain candidate change) or **2023** (McCallum 16.3k, Prime 10.2k, Jones 8.1k: three-way).
+
+The frozen audit is not edited (Stage67: "do not add, remove or reclassify any flag"), and adding the two years would be a post-hoc change to the sample behind the 0.60 multiplier. A development-only sensitivity, run in memory with the same Stage67 diagnostic code and not written to the repository, shows the effect is small:
+
+| Flags | Total | Two-group ordinary / exceptional | Exceptional-held-at-1.00 ordinary (the D107 form) | 2014 ordinary-only |
+|---|---|---|---|---|
+| Frozen audit | 38 | 0.603 / 1.456 | 0.604 | 0.595 |
+| + Northland 2023 | 39 | 0.604 / 1.439 | 0.604 | 0.595 |
+| + Northland 2014 | 39 | 0.597 / 1.455 | 0.597 | 0.569 |
+| + both | 40 | 0.597 / 1.439 | 0.597 | 0.569 |
+
+The ordinary multiplier stays at about 0.60 (a change of at most 0.006, about 1%), and the exceptional multiplier moves by at most 0.02. The 2014 flag lowers the 2014 ordinary multiplier by 0.026 because Northland 2014 was a large miss that would leave the ordinary group. Adding it is the more result-driven of the two, and 2014 does not meet the three-way reason. The 2026 classification flags Northland on its own pre-voting facts and does not read any historical flag.
