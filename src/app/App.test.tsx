@@ -83,7 +83,7 @@ describe('public site', () => {
     const snapshot = structuredClone(base);
     const seat = snapshot.electorateDetail[0];
     const candidate = snapshot.directory.candidates.find(c => c.electorateId === seat.electorateId)!;
-    const poll = { pollster: 'Invented Research', fieldworkStart: null, fieldworkEnd: '2026-09-27', sampleSize: 500, usedInModel: false, note: null,
+    const poll = { pollster: 'Invented Research', commissioner: 'An invented client', fieldworkStart: null, fieldworkEnd: '2026-09-27', published: null, sampleSize: 500, marginOfError: 4.5, usedInModel: false, note: null, sources: [{ label: 'Invented Herald', url: 'https://example.org/poll' }],
       results: [{ candidateId: candidate.candidateId, name: candidate.name, party: null, percent: 40 }] };
     seat.evidence = { basis: 'Invented basis text', polls: [poll] };
     expect(() => ForecastSnapshotSchema.parse(snapshot)).not.toThrow();
@@ -96,7 +96,7 @@ describe('public site', () => {
     expect(await screen.findByRole('heading', { level: 2, name: new RegExp(name) })).toBeInTheDocument();
     expect(screen.getAllByRole('img', { name: /50% range .* 80% range/ }).length).toBeGreaterThan(1);
     expect(screen.getByText('Invented basis text')).toBeInTheDocument();
-    expect(screen.getByText(/found but not used in this forecast/)).toBeInTheDocument();
+    expect(screen.getByText(/Found but not used in this forecast/)).toBeInTheDocument();
     fireEvent.change(screen.getByRole('combobox', { name: 'Find a seat' }), { target: { value: 'zzzz' } });
     expect(screen.getByText(/0 shown/)).toBeInTheDocument();
     window.location.hash = '';

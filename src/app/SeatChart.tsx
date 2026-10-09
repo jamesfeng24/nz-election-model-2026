@@ -4,11 +4,11 @@ import { hemicycle, largestRemainder } from './hemicycle';
 
 /** Left-to-right order of the headline chart, set by James (2026-10-09). Parties not in the snapshot are skipped. */
 export const HEADLINE_ORDER = ['tepatimaori', 'greenparty', 'labourparty', 'opportunity', 'newzealandfirstparty', 'nationalparty', 'actnewzealand'];
-const COLOURS: Record<string, string> = {
+export const COLOURS: Record<string, string> = {
   tepatimaori: '#8c1d40', greenparty: '#1c9a47', labourparty: '#d82a20', opportunity: '#12a4c6',
   newzealandfirstparty: '#222222', nationalparty: '#00529f', actnewzealand: '#e0b800',
 };
-const FALLBACK = ['#6b5b95', '#c47f17', '#4d7c8a', '#a05195', '#7a8b3a', '#b5524b', '#5a6b73'];
+export const FALLBACK = ['#6b5b95', '#c47f17', '#4d7c8a', '#a05195', '#7a8b3a', '#b5524b', '#5a6b73'];
 const OTHER = '#a9b4b0';
 
 interface Slice { key: string; label: string; mean: number; median: number; lower: number; upper: number; colour: string }

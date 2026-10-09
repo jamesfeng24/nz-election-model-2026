@@ -2,6 +2,7 @@ import type { ForecastSnapshot } from '../types/export';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
 import { longDate, pct, prob } from './format';
 import { SeatChart } from './SeatChart';
+import { SupportTrend } from './SupportTrend';
 
 const at = (set: IntervalSet, level: number) => set.find(v => v.level === level)!;
 const range = (set: IntervalSet, level: number, fmt: (x: number) => string) => `${fmt(at(set, level).lower)} – ${fmt(at(set, level).upper)}`;
@@ -74,6 +75,7 @@ export function ForecastView({ snapshot, trend = null }: { snapshot: ForecastSna
     <h2>Party vote</h2>
     <IntervalTable caption={`${snapshot.national.basis}. Median with 80% (primary), 50% and 90% ranges.`} label="Party" fmt={pct}
       rows={snapshot.national.partyVoteShares.map(p => ({ key: p.partyId, label: name(p.partyId), set: p.share }))} />
+    {snapshot.evidence?.trend && <><h2>How support has moved</h2><SupportTrend snapshot={snapshot} /></>}
     <h2>Seats in Parliament</h2>
     <IntervalTable caption="Seats per party across simulated elections: median with 80% (primary), 50% and 90% ranges." label="Party" fmt={whole} rows={seats} />
     <Governing snapshot={snapshot} />

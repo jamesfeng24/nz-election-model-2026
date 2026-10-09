@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { ForecastSnapshot } from '../types/export';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
-import { longDate, pct, prob } from './format';
+import { pct, prob } from './format';
+import { SeatPollTable } from './PollTables';
 
 type Sort = 'name' | 'close' | 'wide';
 const level = (set: IntervalSet, l: number) => set.find(v => v.level === l)!;
@@ -56,8 +57,9 @@ function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: 
     <h3>Polls</h3>
     {!detail?.evidence ? <p>No seat poll information is attached to this forecast.</p> : <>
       <p>{detail.evidence.basis}</p>
-      {detail.evidence.polls.length === 0 ? <p>No seat poll has been published for this seat.</p> : detail.evidence.polls.map((poll, i) => <table key={i} className="poll"><caption>{poll.pollster}, fieldwork {poll.fieldworkStart ? `${longDate(poll.fieldworkStart)} to ` : 'to '}{longDate(poll.fieldworkEnd)}{poll.sampleSize ? `, ${poll.sampleSize} people` : ''}: {poll.usedInModel ? 'used in this forecast' : 'found but not used in this forecast'}</caption>
-        <thead><tr><th>Candidate</th><th>Poll</th></tr></thead><tbody>{poll.results.map(r => <tr key={r.name}><td>{r.name}{r.party ? ` (${r.party})` : ''}</td><td>{r.percent}%</td></tr>)}</tbody>{poll.note && <tfoot><tr><td colSpan={2}><small>{poll.note}</small></td></tr></tfoot>}</table>)}
+      {detail.evidence.polls.length === 0 ? <p>No seat poll has been published for this seat.</p> : <>
+        {detail.evidence.polls.map((poll, i) => <SeatPollTable key={i} poll={poll} />)}
+        <p><a href={`../polls/#seat-${seatId}`}>See this poll with every other poll</a></p></>}
     </>}
     <p><small>Chance of winning is the share of simulated elections the candidate wins; its simulation error is under one percentage point.</small></p>
   </section>;

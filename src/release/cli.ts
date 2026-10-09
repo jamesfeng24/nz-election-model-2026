@@ -6,6 +6,7 @@
  *                      modelVersion, codeRevision, mmp {rulesVersion, rulesSourceIds, blocs}, nationalBasis,
  *                      limitations, probabilityMcseMax
  *   --archive DIR      public/forecasts for a model release; a non-public directory for a rehearsal
+ *   --evidence PATH    optional site evidence (polls used and national trend) from `python -m scripts.site_evidence.build`
  *   --supersedes ID    optional earlier snapshot this one corrects
  *   --rehearsal        allow a synthetic-fixture bank (never under public/)
  *
@@ -27,6 +28,8 @@ export async function main(args: string[]): Promise<number> {
     return 2;
   }
   const options = JSON.parse(await readFile(optionsPath, 'utf8'));
+  const evidencePath = argument(args, '--evidence');
+  if (evidencePath) options.evidence = JSON.parse(await readFile(evidencePath, 'utf8'));
   const { probabilityMcseMax, ...snapshotOptions } = options;
   const result = await publish({
     bankText: await readFile(bankPath, 'utf8'), options: snapshotOptions, archiveDir,

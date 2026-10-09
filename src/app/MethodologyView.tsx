@@ -16,6 +16,7 @@ export function MethodologyView() {
     </ol>
     <p>Groups such as NAT+ACT+NZF or LAB+GRN+TPM are seat arithmetic. They are not predictions of coalition agreements.</p>
     <h2>Data sources</h2>
+    <p>Every poll used, and every seat poll found, is listed with its pollster, dates, sample and source on the <a href="../polls/">Polls page</a>.</p>
     <ul>
       <li>Opinion polls: the Wikipedia opinion-polling tables for the 2026 election (national polls, and polls of individual electorates including the Māori electorates), read weekly; supporting press releases from pollsters where cited. Wikipedia text is licensed CC BY-SA.</li>
       <li>Past election results, 2008 to 2023: New Zealand Electoral Commission official results, including the split-vote tables.</li>

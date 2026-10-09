@@ -50,3 +50,9 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 .trend .tick{font-size:11px;fill:#576764}
 .trend .endlabel{font-size:12px;font-weight:600}
 .trend figcaption{font-size:13px;color:#576764}
+
+.nationalpolls{font-size:13px}
+.nationalpolls th,.nationalpolls td{padding:.3rem .4rem;white-space:nowrap}
+.nationalpolls tr.unused{color:#6b7a76}
+.nationalpolls{display:block;overflow-x:auto}
+.poll caption{font-size:14px}
