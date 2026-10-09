@@ -82,7 +82,8 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
             candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters)
     rows = list(party_rows.values()) + list(candidate_rows.values())
     state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
-             'candidateScales': candidate_scales, 'multipliers': multipliers, 'classification': classification}
+             'candidateScales': candidate_scales, 'multipliers': multipliers, 'classification': classification,
+             'localTransform': general.local_transform(config), 'national2023': national2023, 'replicates': replicates}
     local_means = {}
     with streams.substituted(rows, total, config['simulation']['seedNamespace']), fastmath.accelerated():
         for seat, (local_mean, record) in zip(general_ids, run_seats(state, general_ids, workers)):
@@ -116,8 +117,10 @@ def seat_result(seat):
     s = _STATE
     candidate = s['candidate'].get(seat)
     kind = s['classification'][seat] if candidate else None
+    transform = s['localTransform']
+    deterministic = None if transform is None else transform(s['party'][seat], s['fine'], s['national2023'], s['replicates'])
     local, q = general.simulate(s['party'][seat], candidate, s['fine'], s['partyScales'], s['candidateScales'],
-                                s['multipliers'][kind] if kind else 1.0)
+                                s['multipliers'][kind] if kind else 1.0, deterministic)
     if q is None:
         return local.mean(axis=0), None
     require(np.isfinite(q).all() and np.allclose(q.sum(axis=1), 1, atol=1e-9), f'{seat}: candidate shares do not close')
