@@ -75,7 +75,7 @@ class Refresh(unittest.TestCase):
         from scripts.nowcast_assembly import assemble
         from scripts.tests.test_stage73_nowcast_assembly import synthetic_classification, synthetic_maori, COUNT
         config = read('config/nowcast-2026.json')
-        config['roster']['snapshotId'] = 'synthetic-test-roster'; config['pending'].pop('roster.snapshotId')
+        config['roster']['snapshotId'] = 'synthetic-test-roster'; config['pending'].pop('roster.snapshotId', None)
         slates, _ = assemble.live_slates(config, self.outputs[refresh.output_dir(ACQUISITION) + 'features-raw.json'],
                                          self.outputs[refresh.output_dir(ACQUISITION) + 'features-centred.json'])
         self.assertEqual(len(slates), 64)

@@ -1,0 +1,5312 @@
+{
+  "affectedSeatIds": [
+    "nz-general-2026-boundary-001",
+    "nz-general-2026-boundary-002",
+    "nz-general-2026-boundary-003",
+    "nz-general-2026-boundary-004",
+    "nz-general-2026-boundary-005",
+    "nz-general-2026-boundary-006",
+    "nz-general-2026-boundary-007",
+    "nz-general-2026-boundary-008",
+    "nz-general-2026-boundary-009",
+    "nz-general-2026-boundary-010",
+    "nz-general-2026-boundary-011",
+    "nz-general-2026-boundary-012",
+    "nz-general-2026-boundary-013",
+    "nz-general-2026-boundary-014",
+    "nz-general-2026-boundary-015",
+    "nz-general-2026-boundary-016",
+    "nz-general-2026-boundary-017",
+    "nz-general-2026-boundary-018",
+    "nz-general-2026-boundary-019",
+    "nz-general-2026-boundary-020",
+    "nz-general-2026-boundary-021",
+    "nz-general-2026-boundary-022",
+    "nz-general-2026-boundary-023",
+    "nz-general-2026-boundary-024",
+    "nz-general-2026-boundary-025",
+    "nz-general-2026-boundary-026",
+    "nz-general-2026-boundary-027",
+    "nz-general-2026-boundary-028",
+    "nz-general-2026-boundary-029",
+    "nz-general-2026-boundary-030",
+    "nz-general-2026-boundary-031",
+    "nz-general-2026-boundary-032",
+    "nz-general-2026-boundary-033",
+    "nz-general-2026-boundary-034",
+    "nz-general-2026-boundary-035",
+    "nz-general-2026-boundary-036",
+    "nz-general-2026-boundary-037",
+    "nz-general-2026-boundary-038",
+    "nz-general-2026-boundary-039",
+    "nz-general-2026-boundary-040",
+    "nz-general-2026-boundary-041",
+    "nz-general-2026-boundary-042",
+    "nz-general-2026-boundary-043",
+    "nz-general-2026-boundary-044",
+    "nz-general-2026-boundary-045",
+    "nz-general-2026-boundary-046",
+    "nz-general-2026-boundary-047",
+    "nz-general-2026-boundary-048",
+    "nz-general-2026-boundary-049",
+    "nz-general-2026-boundary-050",
+    "nz-general-2026-boundary-051",
+    "nz-general-2026-boundary-052",
+    "nz-general-2026-boundary-053",
+    "nz-general-2026-boundary-054",
+    "nz-general-2026-boundary-055",
+    "nz-general-2026-boundary-056",
+    "nz-general-2026-boundary-057",
+    "nz-general-2026-boundary-058",
+    "nz-general-2026-boundary-059",
+    "nz-general-2026-boundary-060",
+    "nz-general-2026-boundary-061",
+    "nz-general-2026-boundary-062",
+    "nz-general-2026-boundary-063",
+    "nz-general-2026-boundary-064",
+    "nz-maori-2026-boundary-1",
+    "nz-maori-2026-boundary-2",
+    "nz-maori-2026-boundary-3",
+    "nz-maori-2026-boundary-4",
+    "nz-maori-2026-boundary-5",
+    "nz-maori-2026-boundary-6",
+    "nz-maori-2026-boundary-7"
+  ],
+  "candidateFeatureInvalidationSeatIds": [
+    "nz-general-2026-boundary-001",
+    "nz-general-2026-boundary-002",
+    "nz-general-2026-boundary-003",
+    "nz-general-2026-boundary-004",
+    "nz-general-2026-boundary-005",
+    "nz-general-2026-boundary-006",
+    "nz-general-2026-boundary-007",
+    "nz-general-2026-boundary-008",
+    "nz-general-2026-boundary-009",
+    "nz-general-2026-boundary-010",
+    "nz-general-2026-boundary-011",
+    "nz-general-2026-boundary-012",
+    "nz-general-2026-boundary-013",
+    "nz-general-2026-boundary-014",
+    "nz-general-2026-boundary-015",
+    "nz-general-2026-boundary-016",
+    "nz-general-2026-boundary-017",
+    "nz-general-2026-boundary-018",
+    "nz-general-2026-boundary-019",
+    "nz-general-2026-boundary-020",
+    "nz-general-2026-boundary-021",
+    "nz-general-2026-boundary-022",
+    "nz-general-2026-boundary-023",
+    "nz-general-2026-boundary-024",
+    "nz-general-2026-boundary-025",
+    "nz-general-2026-boundary-026",
+    "nz-general-2026-boundary-027",
+    "nz-general-2026-boundary-028",
+    "nz-general-2026-boundary-029",
+    "nz-general-2026-boundary-030",
+    "nz-general-2026-boundary-031",
+    "nz-general-2026-boundary-032",
+    "nz-general-2026-boundary-033",
+    "nz-general-2026-boundary-034",
+    "nz-general-2026-boundary-035",
+    "nz-general-2026-boundary-036",
+    "nz-general-2026-boundary-037",
+    "nz-general-2026-boundary-038",
+    "nz-general-2026-boundary-039",
+    "nz-general-2026-boundary-040",
+    "nz-general-2026-boundary-041",
+    "nz-general-2026-boundary-042",
+    "nz-general-2026-boundary-043",
+    "nz-general-2026-boundary-044",
+    "nz-general-2026-boundary-045",
+    "nz-general-2026-boundary-046",
+    "nz-general-2026-boundary-047",
+    "nz-general-2026-boundary-048",
+    "nz-general-2026-boundary-049",
+    "nz-general-2026-boundary-050",
+    "nz-general-2026-boundary-051",
+    "nz-general-2026-boundary-052",
+    "nz-general-2026-boundary-053",
+    "nz-general-2026-boundary-054",
+    "nz-general-2026-boundary-055",
+    "nz-general-2026-boundary-056",
+    "nz-general-2026-boundary-057",
+    "nz-general-2026-boundary-058",
+    "nz-general-2026-boundary-059",
+    "nz-general-2026-boundary-060",
+    "nz-general-2026-boundary-061",
+    "nz-general-2026-boundary-062",
+    "nz-general-2026-boundary-063",
+    "nz-general-2026-boundary-064",
+    "nz-maori-2026-boundary-1",
+    "nz-maori-2026-boundary-2",
+    "nz-maori-2026-boundary-3",
+    "nz-maori-2026-boundary-4",
+    "nz-maori-2026-boundary-5",
+    "nz-maori-2026-boundary-6",
+    "nz-maori-2026-boundary-7"
+  ],
+  "comparison": "no_previous_live_snapshot",
+  "records": [
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-001",
+      "targetOccurrenceId": "nz-general-2026-boundary-001-candidate-40857422bc336951"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-001",
+      "targetOccurrenceId": "nz-general-2026-boundary-001-candidate-49768477809fa2b8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-001",
+      "targetOccurrenceId": "nz-general-2026-boundary-001-candidate-66cab4565997779d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-001",
+      "targetOccurrenceId": "nz-general-2026-boundary-001-candidate-6887936d95dd2738"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-001",
+      "targetOccurrenceId": "nz-general-2026-boundary-001-candidate-b92a15121207d779"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-001",
+      "targetOccurrenceId": "nz-general-2026-boundary-001-candidate-feb4cef38fefdb34"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "targetOccurrenceId": "nz-general-2026-boundary-002-candidate-0f9908c7a4c4a187"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "targetOccurrenceId": "nz-general-2026-boundary-002-candidate-1c1b6fd9671a8c3c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "targetOccurrenceId": "nz-general-2026-boundary-002-candidate-51076978f2bce901"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "targetOccurrenceId": "nz-general-2026-boundary-002-candidate-5e8fdd071325f372"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "targetOccurrenceId": "nz-general-2026-boundary-002-candidate-6426ce83ed8eedce"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "targetOccurrenceId": "nz-general-2026-boundary-002-candidate-a6d860992d397be0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "targetOccurrenceId": "nz-general-2026-boundary-002-candidate-d9236e0f0e19faca"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-002",
+      "targetOccurrenceId": "nz-general-2026-boundary-002-candidate-ed4408bf8e824745"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-003",
+      "targetOccurrenceId": "nz-general-2026-boundary-003-candidate-078590f3f5e73b41"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-003",
+      "targetOccurrenceId": "nz-general-2026-boundary-003-candidate-53ceb2bbf9871be9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-003",
+      "targetOccurrenceId": "nz-general-2026-boundary-003-candidate-9b012490b80d8e80"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-003",
+      "targetOccurrenceId": "nz-general-2026-boundary-003-candidate-d8393ec1f3ba276d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-253c9150bf1a36c1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-464ee5284f6ad842"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-55e4aef0680ad195"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-61efa6d8d6c68898"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-6de4162ccf735852"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-75149f73413d4987"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-cd0ea367c5dbe147"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-e53c0c0a63f446eb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-004",
+      "targetOccurrenceId": "nz-general-2026-boundary-004-candidate-f48423f3096569ef"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-286a9cd3082d8415"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-2fbee9054f53dd5d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-60ad0f156eb20fcf"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-8dd344f33591f0fb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-97150ca9e8ae950d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-a1c23a6076712759"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-af0fab828ca92bb9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-c2d5567d34c1085f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-c4319d029339d623"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-c5cdf4afffea4943"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-005",
+      "targetOccurrenceId": "nz-general-2026-boundary-005-candidate-cbce3fb038278141"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-006",
+      "targetOccurrenceId": "nz-general-2026-boundary-006-candidate-2d5dd5a8ac400d13"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-006",
+      "targetOccurrenceId": "nz-general-2026-boundary-006-candidate-5f01a73d12183763"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-006",
+      "targetOccurrenceId": "nz-general-2026-boundary-006-candidate-7909f1109682131b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-006",
+      "targetOccurrenceId": "nz-general-2026-boundary-006-candidate-81a452a792da1628"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-006",
+      "targetOccurrenceId": "nz-general-2026-boundary-006-candidate-88fde87e4abf43fb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-006",
+      "targetOccurrenceId": "nz-general-2026-boundary-006-candidate-c7b31c2131f7186b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-006",
+      "targetOccurrenceId": "nz-general-2026-boundary-006-candidate-e8aab05ee4b29a8a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "targetOccurrenceId": "nz-general-2026-boundary-007-candidate-192ad4e1f326019c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "targetOccurrenceId": "nz-general-2026-boundary-007-candidate-34963f9ebf338dbe"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "targetOccurrenceId": "nz-general-2026-boundary-007-candidate-7c07d28b374302b8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "targetOccurrenceId": "nz-general-2026-boundary-007-candidate-7e7e3a5dfaa904ff"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "targetOccurrenceId": "nz-general-2026-boundary-007-candidate-9620d9d2f087c95a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "targetOccurrenceId": "nz-general-2026-boundary-007-candidate-ce4f5c094ec72c5b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "targetOccurrenceId": "nz-general-2026-boundary-007-candidate-eaf7a47337f82a5b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-007",
+      "targetOccurrenceId": "nz-general-2026-boundary-007-candidate-f42749a014750de0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-008",
+      "targetOccurrenceId": "nz-general-2026-boundary-008-candidate-0875b1f79cc192ac"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-008",
+      "targetOccurrenceId": "nz-general-2026-boundary-008-candidate-65f0b3495625f0d3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-008",
+      "targetOccurrenceId": "nz-general-2026-boundary-008-candidate-9a0b3a15ca6e7d19"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-008",
+      "targetOccurrenceId": "nz-general-2026-boundary-008-candidate-b77b1af6401c3455"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-008",
+      "targetOccurrenceId": "nz-general-2026-boundary-008-candidate-c3c7ca8425bfc66a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-008",
+      "targetOccurrenceId": "nz-general-2026-boundary-008-candidate-ea8ec04bacc190bd"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-009",
+      "targetOccurrenceId": "nz-general-2026-boundary-009-candidate-0bd8748952339c29"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-009",
+      "targetOccurrenceId": "nz-general-2026-boundary-009-candidate-102925e78b4aaa5b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-009",
+      "targetOccurrenceId": "nz-general-2026-boundary-009-candidate-2596d569032059cd"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-009",
+      "targetOccurrenceId": "nz-general-2026-boundary-009-candidate-5578f91d564bab63"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-009",
+      "targetOccurrenceId": "nz-general-2026-boundary-009-candidate-8236124cf5e2bd3f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-009",
+      "targetOccurrenceId": "nz-general-2026-boundary-009-candidate-bebbc69ea268b015"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-010",
+      "targetOccurrenceId": "nz-general-2026-boundary-010-candidate-13fbf864ed43733e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-010",
+      "targetOccurrenceId": "nz-general-2026-boundary-010-candidate-14ec2cf89aaaf19e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-010",
+      "targetOccurrenceId": "nz-general-2026-boundary-010-candidate-48171d35aaf21fef"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-010",
+      "targetOccurrenceId": "nz-general-2026-boundary-010-candidate-6ee7c0b6d1f826f3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-010",
+      "targetOccurrenceId": "nz-general-2026-boundary-010-candidate-8bd5cc0a2ebff73e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-010",
+      "targetOccurrenceId": "nz-general-2026-boundary-010-candidate-ab7b6651f1dc3327"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-010",
+      "targetOccurrenceId": "nz-general-2026-boundary-010-candidate-cd5a2c02d4f89d6d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "targetOccurrenceId": "nz-general-2026-boundary-011-candidate-2dc6f0f223c83908"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "targetOccurrenceId": "nz-general-2026-boundary-011-candidate-3c9ac5c1e0ed9d06"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "targetOccurrenceId": "nz-general-2026-boundary-011-candidate-a7b708e8ebbb6e21"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "targetOccurrenceId": "nz-general-2026-boundary-011-candidate-b3641aa2e9bc02b4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "targetOccurrenceId": "nz-general-2026-boundary-011-candidate-c9676bb7b1d8da21"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "targetOccurrenceId": "nz-general-2026-boundary-011-candidate-df72b17cadce7eb2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "targetOccurrenceId": "nz-general-2026-boundary-011-candidate-e354fce7b2a9f930"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-011",
+      "targetOccurrenceId": "nz-general-2026-boundary-011-candidate-f48a22b07ead729d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-012",
+      "targetOccurrenceId": "nz-general-2026-boundary-012-candidate-46fcee5e39f37920"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-012",
+      "targetOccurrenceId": "nz-general-2026-boundary-012-candidate-a9b06e4819453771"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-012",
+      "targetOccurrenceId": "nz-general-2026-boundary-012-candidate-c13bb6e626330bb3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-012",
+      "targetOccurrenceId": "nz-general-2026-boundary-012-candidate-c4bd460be2bac037"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-012",
+      "targetOccurrenceId": "nz-general-2026-boundary-012-candidate-cf594bb4a3419b5c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-4a2384d409968bd9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-523b1f461320c354"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-607cc44ea54fedd0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-6b2dc01749216bef"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-7a81f091871bd0a7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-9c3a0be390fcf0d1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-a8b077ea2a0f906d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-cab3fa215490d1c9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-013",
+      "targetOccurrenceId": "nz-general-2026-boundary-013-candidate-e17d11f70e076763"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-6014a8bf2419233f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-62d32d2fa42c6cd7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-7e96af47d278157a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-878d8c61ff733801"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-8e9332086f2fdc00"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-921f94c01590714f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-c102b2d92edc51fb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-c2ec8bdc3628c942"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-014",
+      "targetOccurrenceId": "nz-general-2026-boundary-014-candidate-ed18a4a7ddb8d2f1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "targetOccurrenceId": "nz-general-2026-boundary-015-candidate-3103cd06fcf9f672"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "targetOccurrenceId": "nz-general-2026-boundary-015-candidate-352459aee887d47b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "targetOccurrenceId": "nz-general-2026-boundary-015-candidate-682ae4b908feb901"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "targetOccurrenceId": "nz-general-2026-boundary-015-candidate-cbafd10cf6f697af"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "targetOccurrenceId": "nz-general-2026-boundary-015-candidate-d33df6de93fbfac5"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "targetOccurrenceId": "nz-general-2026-boundary-015-candidate-e231a688f53523d4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "targetOccurrenceId": "nz-general-2026-boundary-015-candidate-e3d431fb4adec8f9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-015",
+      "targetOccurrenceId": "nz-general-2026-boundary-015-candidate-ee80a5bf54405fb7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-016",
+      "targetOccurrenceId": "nz-general-2026-boundary-016-candidate-16ab4efea6174f68"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-016",
+      "targetOccurrenceId": "nz-general-2026-boundary-016-candidate-18218869b7ec5d58"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-016",
+      "targetOccurrenceId": "nz-general-2026-boundary-016-candidate-40b09c32727536c3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-016",
+      "targetOccurrenceId": "nz-general-2026-boundary-016-candidate-635e72c3a0052230"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-016",
+      "targetOccurrenceId": "nz-general-2026-boundary-016-candidate-6ac75d77505806f3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-016",
+      "targetOccurrenceId": "nz-general-2026-boundary-016-candidate-caa2d6d67c0fb8e1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-017",
+      "targetOccurrenceId": "nz-general-2026-boundary-017-candidate-35818c3bfe4c70db"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-017",
+      "targetOccurrenceId": "nz-general-2026-boundary-017-candidate-7288baddb2ae428f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-017",
+      "targetOccurrenceId": "nz-general-2026-boundary-017-candidate-7777777b2fecc929"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-017",
+      "targetOccurrenceId": "nz-general-2026-boundary-017-candidate-7fe9b5d506f4f4cd"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-017",
+      "targetOccurrenceId": "nz-general-2026-boundary-017-candidate-ec7a6d33a7f7042b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-018",
+      "targetOccurrenceId": "nz-general-2026-boundary-018-candidate-193689fe7386b84a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-018",
+      "targetOccurrenceId": "nz-general-2026-boundary-018-candidate-2d80bc7eba48dde0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-018",
+      "targetOccurrenceId": "nz-general-2026-boundary-018-candidate-38f73ba793e7a95c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-018",
+      "targetOccurrenceId": "nz-general-2026-boundary-018-candidate-6974ad8ac829f469"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-018",
+      "targetOccurrenceId": "nz-general-2026-boundary-018-candidate-8e45cd9911bddd43"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-018",
+      "targetOccurrenceId": "nz-general-2026-boundary-018-candidate-bd3f1629c9635422"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-018",
+      "targetOccurrenceId": "nz-general-2026-boundary-018-candidate-d2520771f367898b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-2a523eed51895259"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-724341ab10590270"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-7b9a1dacfb368d87"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-9f6d49c11195546c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-a60339c39cdec31f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-a7410bc1abab4728"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-ab3b8874b0ee8e47"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-c1d517c4f68cf1ba"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-019",
+      "targetOccurrenceId": "nz-general-2026-boundary-019-candidate-fa1b16e70dc82a0e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-020",
+      "targetOccurrenceId": "nz-general-2026-boundary-020-candidate-29c95d1f51338225"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-020",
+      "targetOccurrenceId": "nz-general-2026-boundary-020-candidate-4d3cd864bde42ce6"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-020",
+      "targetOccurrenceId": "nz-general-2026-boundary-020-candidate-4eab8580c6474d7f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-020",
+      "targetOccurrenceId": "nz-general-2026-boundary-020-candidate-5717183e4696f34b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-020",
+      "targetOccurrenceId": "nz-general-2026-boundary-020-candidate-bd27231c67d0cf4d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-020",
+      "targetOccurrenceId": "nz-general-2026-boundary-020-candidate-c027988dd8a1d5bb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-020",
+      "targetOccurrenceId": "nz-general-2026-boundary-020-candidate-c15fa95031d58ae2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-021",
+      "targetOccurrenceId": "nz-general-2026-boundary-021-candidate-3ff5b7c4f711c904"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-021",
+      "targetOccurrenceId": "nz-general-2026-boundary-021-candidate-69a37be6a170833c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-021",
+      "targetOccurrenceId": "nz-general-2026-boundary-021-candidate-6e72af9d5dee6bda"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-021",
+      "targetOccurrenceId": "nz-general-2026-boundary-021-candidate-7aacadbe1e6d5724"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-021",
+      "targetOccurrenceId": "nz-general-2026-boundary-021-candidate-8310b0b035b72602"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-021",
+      "targetOccurrenceId": "nz-general-2026-boundary-021-candidate-8bffcefa793d76a1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-14130e122b9ef70f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-18a17ed2500ecc22"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-1994ba4d70ed3226"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-2fe840bf98ee5624"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-4726cd70879d1398"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-66ab95afa822d2f1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-758ea11d15b38fce"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-82ffbe70359c3aff"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-968a1e176b8a0f51"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-022",
+      "targetOccurrenceId": "nz-general-2026-boundary-022-candidate-ed2ba0a5b5bed0ea"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-023",
+      "targetOccurrenceId": "nz-general-2026-boundary-023-candidate-1bc8a03fea78d568"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-023",
+      "targetOccurrenceId": "nz-general-2026-boundary-023-candidate-76d2578f3bea1f2a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-023",
+      "targetOccurrenceId": "nz-general-2026-boundary-023-candidate-a669ff20aad33ca9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-023",
+      "targetOccurrenceId": "nz-general-2026-boundary-023-candidate-df090391abd05f84"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-024",
+      "targetOccurrenceId": "nz-general-2026-boundary-024-candidate-2305a95714b899eb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-024",
+      "targetOccurrenceId": "nz-general-2026-boundary-024-candidate-25cbd7a553cb15f2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-024",
+      "targetOccurrenceId": "nz-general-2026-boundary-024-candidate-336ddf661b254b6b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-024",
+      "targetOccurrenceId": "nz-general-2026-boundary-024-candidate-4c3c668b448902cb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-024",
+      "targetOccurrenceId": "nz-general-2026-boundary-024-candidate-4e0dca4750d5920e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-024",
+      "targetOccurrenceId": "nz-general-2026-boundary-024-candidate-a56d8ce9200aa873"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-025",
+      "targetOccurrenceId": "nz-general-2026-boundary-025-candidate-07a731b953fe74df"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-025",
+      "targetOccurrenceId": "nz-general-2026-boundary-025-candidate-24b04e1630a1e9c4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-025",
+      "targetOccurrenceId": "nz-general-2026-boundary-025-candidate-696ceeca5bdbf08c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-025",
+      "targetOccurrenceId": "nz-general-2026-boundary-025-candidate-765de57777f29be4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-025",
+      "targetOccurrenceId": "nz-general-2026-boundary-025-candidate-d72bc1b8375eb949"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-025",
+      "targetOccurrenceId": "nz-general-2026-boundary-025-candidate-dd58f12784ff8ff7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-025",
+      "targetOccurrenceId": "nz-general-2026-boundary-025-candidate-e4145f9d6f838cf4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-026",
+      "targetOccurrenceId": "nz-general-2026-boundary-026-candidate-1ee884c0a0022cb2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-026",
+      "targetOccurrenceId": "nz-general-2026-boundary-026-candidate-2f864fb3827c8838"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-026",
+      "targetOccurrenceId": "nz-general-2026-boundary-026-candidate-3b03e09ed95c4292"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-026",
+      "targetOccurrenceId": "nz-general-2026-boundary-026-candidate-b082c8b18f8401ae"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-026",
+      "targetOccurrenceId": "nz-general-2026-boundary-026-candidate-b1b5402428a8b122"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-026",
+      "targetOccurrenceId": "nz-general-2026-boundary-026-candidate-d1795aa858d0fd32"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-026",
+      "targetOccurrenceId": "nz-general-2026-boundary-026-candidate-e2ed710c1c2b423a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-027",
+      "targetOccurrenceId": "nz-general-2026-boundary-027-candidate-0ac40596743b782a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-027",
+      "targetOccurrenceId": "nz-general-2026-boundary-027-candidate-4e60b4b070da8f33"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-027",
+      "targetOccurrenceId": "nz-general-2026-boundary-027-candidate-521f4a090ce9eabe"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-027",
+      "targetOccurrenceId": "nz-general-2026-boundary-027-candidate-5a2500ca4e88a752"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-027",
+      "targetOccurrenceId": "nz-general-2026-boundary-027-candidate-950e18ea1d8d3da2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-027",
+      "targetOccurrenceId": "nz-general-2026-boundary-027-candidate-c28e1b393612355e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-028",
+      "targetOccurrenceId": "nz-general-2026-boundary-028-candidate-132225daa3427377"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-028",
+      "targetOccurrenceId": "nz-general-2026-boundary-028-candidate-173e3e7b824956f8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-028",
+      "targetOccurrenceId": "nz-general-2026-boundary-028-candidate-4be31dd2f9b631c2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-028",
+      "targetOccurrenceId": "nz-general-2026-boundary-028-candidate-9ff61b830fda83d0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-028",
+      "targetOccurrenceId": "nz-general-2026-boundary-028-candidate-a78c753cd9ae01e1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-028",
+      "targetOccurrenceId": "nz-general-2026-boundary-028-candidate-ca3a635b5a6f1802"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-029",
+      "targetOccurrenceId": "nz-general-2026-boundary-029-candidate-601da6d999da7610"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-029",
+      "targetOccurrenceId": "nz-general-2026-boundary-029-candidate-6e940cd0561d9be4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-029",
+      "targetOccurrenceId": "nz-general-2026-boundary-029-candidate-72cb822be917df93"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-029",
+      "targetOccurrenceId": "nz-general-2026-boundary-029-candidate-9b222bff149cffd9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-029",
+      "targetOccurrenceId": "nz-general-2026-boundary-029-candidate-a600360ad42fbd5e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-029",
+      "targetOccurrenceId": "nz-general-2026-boundary-029-candidate-d02b5ce73189499e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-029",
+      "targetOccurrenceId": "nz-general-2026-boundary-029-candidate-f99ea2f1137666e5"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-030",
+      "targetOccurrenceId": "nz-general-2026-boundary-030-candidate-1e8b7414d617f7da"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-030",
+      "targetOccurrenceId": "nz-general-2026-boundary-030-candidate-5501a6256d371339"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-030",
+      "targetOccurrenceId": "nz-general-2026-boundary-030-candidate-b4c0be25da4e452d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-030",
+      "targetOccurrenceId": "nz-general-2026-boundary-030-candidate-df6a950658c7fee9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-031",
+      "targetOccurrenceId": "nz-general-2026-boundary-031-candidate-c91749f84e014746"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-031",
+      "targetOccurrenceId": "nz-general-2026-boundary-031-candidate-dd91155df53f747f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-031",
+      "targetOccurrenceId": "nz-general-2026-boundary-031-candidate-f40a2395ff980c7c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-031",
+      "targetOccurrenceId": "nz-general-2026-boundary-031-candidate-fc22a5b81faa862e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-031",
+      "targetOccurrenceId": "nz-general-2026-boundary-031-candidate-fe40e17dc93e764e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-1e420c112283f2c2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-36dcedd84f08a7f6"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-3d0285e9e6430d8e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-5ee34d8dcab1f619"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-7e24888da76a6368"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-82f0a7453b16f38d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-90e6d0a0b8f1aafc"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-c2a1af2c8456e79e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-032",
+      "targetOccurrenceId": "nz-general-2026-boundary-032-candidate-d95a7323b402fa7b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-00a25a6d103a6417"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-0b1f1bd14c5cfd57"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-1654ae1cfe77ec31"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-32917cb20e304714"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-3ba376cb83f2266f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-49a6e9f86086f6e7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-69bf8221c29e36c7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-81ba2bd6ca5a51fb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-888453b5ac9b743c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-033",
+      "targetOccurrenceId": "nz-general-2026-boundary-033-candidate-f39f28d21d631344"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-265e0d7834ab0e21"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-4db05ea7986c6dae"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-5407b0a176078a7c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-55425c12e65976ae"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-631dd57c73ef5ce3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-7c76445da95c2611"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-86ae38b59efa765b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-8a75a0031c5342c7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-b1d819c98b5b185d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-034",
+      "targetOccurrenceId": "nz-general-2026-boundary-034-candidate-baa59a05479a7153"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-035",
+      "targetOccurrenceId": "nz-general-2026-boundary-035-candidate-1e0bf83279759308"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-035",
+      "targetOccurrenceId": "nz-general-2026-boundary-035-candidate-204f669aac00fabc"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-035",
+      "targetOccurrenceId": "nz-general-2026-boundary-035-candidate-abab22c114074dd3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-035",
+      "targetOccurrenceId": "nz-general-2026-boundary-035-candidate-b9a7dfd1751b58ad"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-036",
+      "targetOccurrenceId": "nz-general-2026-boundary-036-candidate-2985920be9f32b58"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-036",
+      "targetOccurrenceId": "nz-general-2026-boundary-036-candidate-379c40f91d38f8f8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-036",
+      "targetOccurrenceId": "nz-general-2026-boundary-036-candidate-5ab137c5504542ce"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-036",
+      "targetOccurrenceId": "nz-general-2026-boundary-036-candidate-5d3e660c650b69fe"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-036",
+      "targetOccurrenceId": "nz-general-2026-boundary-036-candidate-92476087522130b0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-036",
+      "targetOccurrenceId": "nz-general-2026-boundary-036-candidate-98b1500f5d7006b8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-037",
+      "targetOccurrenceId": "nz-general-2026-boundary-037-candidate-020180e441fd0800"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-037",
+      "targetOccurrenceId": "nz-general-2026-boundary-037-candidate-4724bf0d9f6b7fcb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-037",
+      "targetOccurrenceId": "nz-general-2026-boundary-037-candidate-531ceba83b3a4204"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-037",
+      "targetOccurrenceId": "nz-general-2026-boundary-037-candidate-5a9c1373f10a2102"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-037",
+      "targetOccurrenceId": "nz-general-2026-boundary-037-candidate-8321c29a0696332d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-038",
+      "targetOccurrenceId": "nz-general-2026-boundary-038-candidate-053a9b0938f013b0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-038",
+      "targetOccurrenceId": "nz-general-2026-boundary-038-candidate-286b9881f40734a8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-038",
+      "targetOccurrenceId": "nz-general-2026-boundary-038-candidate-9d5de9e646090115"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-038",
+      "targetOccurrenceId": "nz-general-2026-boundary-038-candidate-af94f40b34723eee"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-038",
+      "targetOccurrenceId": "nz-general-2026-boundary-038-candidate-f3f8b5fe2543535f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "targetOccurrenceId": "nz-general-2026-boundary-039-candidate-2a86dcd5e85e74e6"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "targetOccurrenceId": "nz-general-2026-boundary-039-candidate-325e51bfc1c96b06"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "targetOccurrenceId": "nz-general-2026-boundary-039-candidate-374fd44ead09ae07"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "targetOccurrenceId": "nz-general-2026-boundary-039-candidate-6fa66a618d74a048"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "targetOccurrenceId": "nz-general-2026-boundary-039-candidate-97c56c7a9fa0f8b9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "targetOccurrenceId": "nz-general-2026-boundary-039-candidate-b7efa63564f496e7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "targetOccurrenceId": "nz-general-2026-boundary-039-candidate-d2c73e588ce1b5f0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-039",
+      "targetOccurrenceId": "nz-general-2026-boundary-039-candidate-ef7aeb933d2af842"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-040",
+      "targetOccurrenceId": "nz-general-2026-boundary-040-candidate-27b04e39160e8772"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-040",
+      "targetOccurrenceId": "nz-general-2026-boundary-040-candidate-5cd2d84ad8c78115"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-040",
+      "targetOccurrenceId": "nz-general-2026-boundary-040-candidate-6af105ffa19b0c60"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-040",
+      "targetOccurrenceId": "nz-general-2026-boundary-040-candidate-6c5bfed665b28f27"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-040",
+      "targetOccurrenceId": "nz-general-2026-boundary-040-candidate-897810158d3fc1db"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-040",
+      "targetOccurrenceId": "nz-general-2026-boundary-040-candidate-8b821dec6b68282a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-040",
+      "targetOccurrenceId": "nz-general-2026-boundary-040-candidate-e0fa10b8415a88ba"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-041",
+      "targetOccurrenceId": "nz-general-2026-boundary-041-candidate-135af1e8eb82dcba"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-041",
+      "targetOccurrenceId": "nz-general-2026-boundary-041-candidate-1d255c61ad06c23e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-041",
+      "targetOccurrenceId": "nz-general-2026-boundary-041-candidate-294a4db46092307a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-041",
+      "targetOccurrenceId": "nz-general-2026-boundary-041-candidate-34859f55a24d9980"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-041",
+      "targetOccurrenceId": "nz-general-2026-boundary-041-candidate-64373a801f5d7ef3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-041",
+      "targetOccurrenceId": "nz-general-2026-boundary-041-candidate-9614e9632eb9357f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-041",
+      "targetOccurrenceId": "nz-general-2026-boundary-041-candidate-c01b589b40642733"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-042",
+      "targetOccurrenceId": "nz-general-2026-boundary-042-candidate-09e70231b22c93df"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-042",
+      "targetOccurrenceId": "nz-general-2026-boundary-042-candidate-4103ead3fca7f662"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-042",
+      "targetOccurrenceId": "nz-general-2026-boundary-042-candidate-ae1168d796aceef1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-042",
+      "targetOccurrenceId": "nz-general-2026-boundary-042-candidate-f895a9332ab6358c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "targetOccurrenceId": "nz-general-2026-boundary-043-candidate-112d7bdb2b7d7acb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "targetOccurrenceId": "nz-general-2026-boundary-043-candidate-1be0bd9fe5fced97"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "targetOccurrenceId": "nz-general-2026-boundary-043-candidate-27509fc732519a63"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "targetOccurrenceId": "nz-general-2026-boundary-043-candidate-6b599855fdae0c0b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "targetOccurrenceId": "nz-general-2026-boundary-043-candidate-ab60abeee70211d5"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "targetOccurrenceId": "nz-general-2026-boundary-043-candidate-b237c9a95f741b3f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "targetOccurrenceId": "nz-general-2026-boundary-043-candidate-c1dc61c8d8566814"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-043",
+      "targetOccurrenceId": "nz-general-2026-boundary-043-candidate-e1c7058e819c3533"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-044",
+      "targetOccurrenceId": "nz-general-2026-boundary-044-candidate-0c67314d3acc3237"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-044",
+      "targetOccurrenceId": "nz-general-2026-boundary-044-candidate-2d6ef2b5141d41e1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-044",
+      "targetOccurrenceId": "nz-general-2026-boundary-044-candidate-3c2e3c9fffd720bc"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-044",
+      "targetOccurrenceId": "nz-general-2026-boundary-044-candidate-80e56e8ecc555cb2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-044",
+      "targetOccurrenceId": "nz-general-2026-boundary-044-candidate-a54098582614fad6"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-044",
+      "targetOccurrenceId": "nz-general-2026-boundary-044-candidate-d5d92f5e295e5fda"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-045",
+      "targetOccurrenceId": "nz-general-2026-boundary-045-candidate-0079f99824399676"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-045",
+      "targetOccurrenceId": "nz-general-2026-boundary-045-candidate-29851cdb6b6aed43"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-045",
+      "targetOccurrenceId": "nz-general-2026-boundary-045-candidate-385a3de16fe9406e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-045",
+      "targetOccurrenceId": "nz-general-2026-boundary-045-candidate-430f7ef48831be48"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-045",
+      "targetOccurrenceId": "nz-general-2026-boundary-045-candidate-5437b0eec8861d79"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-045",
+      "targetOccurrenceId": "nz-general-2026-boundary-045-candidate-606322c7c8d1638d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-046",
+      "targetOccurrenceId": "nz-general-2026-boundary-046-candidate-089c2d86475de662"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-046",
+      "targetOccurrenceId": "nz-general-2026-boundary-046-candidate-12603369c51eb2d5"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-046",
+      "targetOccurrenceId": "nz-general-2026-boundary-046-candidate-2ad584d5698939f0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-046",
+      "targetOccurrenceId": "nz-general-2026-boundary-046-candidate-d279c6f8dc0337a5"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-046",
+      "targetOccurrenceId": "nz-general-2026-boundary-046-candidate-e58858612e5aa8c5"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-047",
+      "targetOccurrenceId": "nz-general-2026-boundary-047-candidate-3c87c4c19dfa0fe4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-047",
+      "targetOccurrenceId": "nz-general-2026-boundary-047-candidate-449547e784a7c6c9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-047",
+      "targetOccurrenceId": "nz-general-2026-boundary-047-candidate-4f331de81fa15777"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-047",
+      "targetOccurrenceId": "nz-general-2026-boundary-047-candidate-5a090fbe7f459fab"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-047",
+      "targetOccurrenceId": "nz-general-2026-boundary-047-candidate-9773b985d02e97f3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-047",
+      "targetOccurrenceId": "nz-general-2026-boundary-047-candidate-bf5c31cbbe72efa3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-047",
+      "targetOccurrenceId": "nz-general-2026-boundary-047-candidate-f14ca4449b5240b0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-048",
+      "targetOccurrenceId": "nz-general-2026-boundary-048-candidate-06e14bb2ccd2e7e0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-048",
+      "targetOccurrenceId": "nz-general-2026-boundary-048-candidate-7af36503f85cb5d6"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-048",
+      "targetOccurrenceId": "nz-general-2026-boundary-048-candidate-8dc7662dc20d08fa"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-048",
+      "targetOccurrenceId": "nz-general-2026-boundary-048-candidate-dacd5255d3aab14d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-048",
+      "targetOccurrenceId": "nz-general-2026-boundary-048-candidate-e91e284bb579e09e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-049",
+      "targetOccurrenceId": "nz-general-2026-boundary-049-candidate-22b9af642b4dd961"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-049",
+      "targetOccurrenceId": "nz-general-2026-boundary-049-candidate-54baaa2ce4a1f87b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-049",
+      "targetOccurrenceId": "nz-general-2026-boundary-049-candidate-54c75c1f5bb86da2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-049",
+      "targetOccurrenceId": "nz-general-2026-boundary-049-candidate-6449255c20fe18d1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-049",
+      "targetOccurrenceId": "nz-general-2026-boundary-049-candidate-7ef892833dec474d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-049",
+      "targetOccurrenceId": "nz-general-2026-boundary-049-candidate-e1c4e1b67d885478"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-050",
+      "targetOccurrenceId": "nz-general-2026-boundary-050-candidate-10bbd1f7ea8969fa"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-050",
+      "targetOccurrenceId": "nz-general-2026-boundary-050-candidate-1e66cb8bb8d11c5e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-050",
+      "targetOccurrenceId": "nz-general-2026-boundary-050-candidate-4d5a0f004133f611"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-050",
+      "targetOccurrenceId": "nz-general-2026-boundary-050-candidate-504d67ed7a01fe29"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-050",
+      "targetOccurrenceId": "nz-general-2026-boundary-050-candidate-9861b956ae5a9bb5"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-050",
+      "targetOccurrenceId": "nz-general-2026-boundary-050-candidate-b545ead6fafeaca7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-050",
+      "targetOccurrenceId": "nz-general-2026-boundary-050-candidate-c08ae997d5daab54"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-16f85d740fdb2d45"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-2c680e71c430f919"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-3002357a5bd258ab"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-4c47db8f0235137c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-4c5a84811eb605df"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-55f67a2a5d1da371"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-b3ecbf62a5214bb4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-b6fae631888422c9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-051",
+      "targetOccurrenceId": "nz-general-2026-boundary-051-candidate-fceffd3b8eb3ddf9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-052",
+      "targetOccurrenceId": "nz-general-2026-boundary-052-candidate-22639ff0b3a3d3c7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-052",
+      "targetOccurrenceId": "nz-general-2026-boundary-052-candidate-5a0e5b6c2bc2f1e3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-052",
+      "targetOccurrenceId": "nz-general-2026-boundary-052-candidate-94e0901af6c58ea9"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-052",
+      "targetOccurrenceId": "nz-general-2026-boundary-052-candidate-966c65a7e3b2897a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-052",
+      "targetOccurrenceId": "nz-general-2026-boundary-052-candidate-9ea4a99b356509c7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-052",
+      "targetOccurrenceId": "nz-general-2026-boundary-052-candidate-cef8a679390dc12d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-052",
+      "targetOccurrenceId": "nz-general-2026-boundary-052-candidate-d216a4d1b7ae9296"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-053",
+      "targetOccurrenceId": "nz-general-2026-boundary-053-candidate-0b238abb64b50725"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-053",
+      "targetOccurrenceId": "nz-general-2026-boundary-053-candidate-191554f486f98338"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-053",
+      "targetOccurrenceId": "nz-general-2026-boundary-053-candidate-3ebd589785aae022"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-053",
+      "targetOccurrenceId": "nz-general-2026-boundary-053-candidate-46deb4ba0f3de620"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-053",
+      "targetOccurrenceId": "nz-general-2026-boundary-053-candidate-81239d1701b05fcf"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-053",
+      "targetOccurrenceId": "nz-general-2026-boundary-053-candidate-c774f6ba593a6fad"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-054",
+      "targetOccurrenceId": "nz-general-2026-boundary-054-candidate-35c6eb79ecd00a9c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-054",
+      "targetOccurrenceId": "nz-general-2026-boundary-054-candidate-3f5596febe2088fb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-054",
+      "targetOccurrenceId": "nz-general-2026-boundary-054-candidate-7119f7db004e51b2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-054",
+      "targetOccurrenceId": "nz-general-2026-boundary-054-candidate-b3f62ae11661e8df"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-054",
+      "targetOccurrenceId": "nz-general-2026-boundary-054-candidate-c042e4ae7839bbe8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "targetOccurrenceId": "nz-general-2026-boundary-055-candidate-0b2678d72a9e4e8e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "targetOccurrenceId": "nz-general-2026-boundary-055-candidate-54dff6fdfac822a5"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "targetOccurrenceId": "nz-general-2026-boundary-055-candidate-5cae7a7bb775a80b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "targetOccurrenceId": "nz-general-2026-boundary-055-candidate-6b0fbc6649fdd2e3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "targetOccurrenceId": "nz-general-2026-boundary-055-candidate-8e0e746c32c7ba68"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "targetOccurrenceId": "nz-general-2026-boundary-055-candidate-b1c4f92d4d1bfb16"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "targetOccurrenceId": "nz-general-2026-boundary-055-candidate-bc5ff8e33d6b650d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-055",
+      "targetOccurrenceId": "nz-general-2026-boundary-055-candidate-cfdccab44723017d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-056",
+      "targetOccurrenceId": "nz-general-2026-boundary-056-candidate-020079b12e855565"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-056",
+      "targetOccurrenceId": "nz-general-2026-boundary-056-candidate-9f8969ff327964c0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-056",
+      "targetOccurrenceId": "nz-general-2026-boundary-056-candidate-c9d5b040e082a9a4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-056",
+      "targetOccurrenceId": "nz-general-2026-boundary-056-candidate-f6a7adf7f9a7173a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-056",
+      "targetOccurrenceId": "nz-general-2026-boundary-056-candidate-f81d2a9f84876a29"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-056",
+      "targetOccurrenceId": "nz-general-2026-boundary-056-candidate-fbfee5ec196fdd86"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "targetOccurrenceId": "nz-general-2026-boundary-057-candidate-261bdc66771c1b0f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "targetOccurrenceId": "nz-general-2026-boundary-057-candidate-5f3ba81a612b8c28"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "targetOccurrenceId": "nz-general-2026-boundary-057-candidate-8c6214055f10a8fa"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "targetOccurrenceId": "nz-general-2026-boundary-057-candidate-8e47e6255da99893"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "targetOccurrenceId": "nz-general-2026-boundary-057-candidate-b3850c093239cbdc"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "targetOccurrenceId": "nz-general-2026-boundary-057-candidate-b59c3a345b1f92dc"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "targetOccurrenceId": "nz-general-2026-boundary-057-candidate-dd31f312d654fcbd"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-057",
+      "targetOccurrenceId": "nz-general-2026-boundary-057-candidate-f985477ead9be43e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-10b359c8fc0d6c24"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-26be7927977dabcb"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-74b6d9c20bf52df8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-876504ec69d7d4a0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-8b978714cc0a5d6b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-a2b06a2aee460a3a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-be697b618495c380"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-ded8e5c3c1c95ccf"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-058",
+      "targetOccurrenceId": "nz-general-2026-boundary-058-candidate-e2b30358f334d9c2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "targetOccurrenceId": "nz-general-2026-boundary-059-candidate-223c3e4fa9e8e1a8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "targetOccurrenceId": "nz-general-2026-boundary-059-candidate-24578736a6b47d19"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "targetOccurrenceId": "nz-general-2026-boundary-059-candidate-276059ef93d6748d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "targetOccurrenceId": "nz-general-2026-boundary-059-candidate-498c57c2ec695d64"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "targetOccurrenceId": "nz-general-2026-boundary-059-candidate-7c5bde4be1c1d2d8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "targetOccurrenceId": "nz-general-2026-boundary-059-candidate-8dbfe78e0dd1775b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "targetOccurrenceId": "nz-general-2026-boundary-059-candidate-de8a8bedd01763a7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-059",
+      "targetOccurrenceId": "nz-general-2026-boundary-059-candidate-efe18889937ba04a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-1360ad9912617145"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-1c00c422aba754ed"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-394c43365501d92f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-550b767e1620191c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-64b6eb4809793df3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-6aefbaefb5a76efe"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-8303291b003c1c35"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-86598b3a7da34a84"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-9aea9eda20cbb18c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-afef74a3726cce97"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-060",
+      "targetOccurrenceId": "nz-general-2026-boundary-060-candidate-bb16e584b55f2d89"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-061",
+      "targetOccurrenceId": "nz-general-2026-boundary-061-candidate-4a42a138c5cf0e5e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-061",
+      "targetOccurrenceId": "nz-general-2026-boundary-061-candidate-68ac6eb7c945c3b6"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-061",
+      "targetOccurrenceId": "nz-general-2026-boundary-061-candidate-7c253006fbde2f91"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-061",
+      "targetOccurrenceId": "nz-general-2026-boundary-061-candidate-accaa3b5a7344abf"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-061",
+      "targetOccurrenceId": "nz-general-2026-boundary-061-candidate-c895ee76c67ba9e7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-062",
+      "targetOccurrenceId": "nz-general-2026-boundary-062-candidate-1117543c3a1f5a02"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-062",
+      "targetOccurrenceId": "nz-general-2026-boundary-062-candidate-16907a4befd95297"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-062",
+      "targetOccurrenceId": "nz-general-2026-boundary-062-candidate-c2198ac9d34d0652"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-062",
+      "targetOccurrenceId": "nz-general-2026-boundary-062-candidate-fc8c5e0ee7e1fa14"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-023f8c9cf916f49d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-08585a2a4fff966d"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-106eeb3911f07218"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-2b940dcab1e40cd2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-31b5a234ec7f81e2"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-3491cce23b337231"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-4d667f1d0189e368"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-a44e43e6cb075654"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-b06231277fb4973c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-063",
+      "targetOccurrenceId": "nz-general-2026-boundary-063-candidate-fc609ee3dbcd2a4b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-064",
+      "targetOccurrenceId": "nz-general-2026-boundary-064-candidate-55d628e4fe25ca95"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-064",
+      "targetOccurrenceId": "nz-general-2026-boundary-064-candidate-55f2927a4fa88324"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-064",
+      "targetOccurrenceId": "nz-general-2026-boundary-064-candidate-7a16537e92a2c58e"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-064",
+      "targetOccurrenceId": "nz-general-2026-boundary-064-candidate-7ff7888addc224ca"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-064",
+      "targetOccurrenceId": "nz-general-2026-boundary-064-candidate-a4454a6784f60ada"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-064",
+      "targetOccurrenceId": "nz-general-2026-boundary-064-candidate-d6fc4d0e5156fb3a"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-general-2026-boundary-064",
+      "targetOccurrenceId": "nz-general-2026-boundary-064-candidate-f79e10e7f85cdfd7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-1",
+      "targetOccurrenceId": "nz-maori-2026-boundary-1-candidate-3e35bbb5b60bd8ae"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-1",
+      "targetOccurrenceId": "nz-maori-2026-boundary-1-candidate-cba77a18b6c1a04c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-1",
+      "targetOccurrenceId": "nz-maori-2026-boundary-1-candidate-e1815ba9eede76dd"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-2",
+      "targetOccurrenceId": "nz-maori-2026-boundary-2-candidate-0c8c920bff15ac43"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-2",
+      "targetOccurrenceId": "nz-maori-2026-boundary-2-candidate-21348d59b9a9b9ce"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-2",
+      "targetOccurrenceId": "nz-maori-2026-boundary-2-candidate-9384b7f0b5849c10"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-3",
+      "targetOccurrenceId": "nz-maori-2026-boundary-3-candidate-0438a5a003766081"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-3",
+      "targetOccurrenceId": "nz-maori-2026-boundary-3-candidate-a32d2021fa8ec709"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-3",
+      "targetOccurrenceId": "nz-maori-2026-boundary-3-candidate-b56940118af95ec7"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-4",
+      "targetOccurrenceId": "nz-maori-2026-boundary-4-candidate-31c792f45de47d73"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-4",
+      "targetOccurrenceId": "nz-maori-2026-boundary-4-candidate-411b92ab24a3e03b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-4",
+      "targetOccurrenceId": "nz-maori-2026-boundary-4-candidate-99392b57fdf89761"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-5",
+      "targetOccurrenceId": "nz-maori-2026-boundary-5-candidate-87e0f626dcfef0b1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-5",
+      "targetOccurrenceId": "nz-maori-2026-boundary-5-candidate-8f0172e562212bdc"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-5",
+      "targetOccurrenceId": "nz-maori-2026-boundary-5-candidate-95c7ba90d203d2b8"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-5",
+      "targetOccurrenceId": "nz-maori-2026-boundary-5-candidate-99156e91b13dda14"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-5",
+      "targetOccurrenceId": "nz-maori-2026-boundary-5-candidate-b0cfbef9ca3fc6c1"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-5",
+      "targetOccurrenceId": "nz-maori-2026-boundary-5-candidate-c262e82e9ce368fe"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-6",
+      "targetOccurrenceId": "nz-maori-2026-boundary-6-candidate-212312a0f7d95290"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-6",
+      "targetOccurrenceId": "nz-maori-2026-boundary-6-candidate-2ddc35693c1eaaa0"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-6",
+      "targetOccurrenceId": "nz-maori-2026-boundary-6-candidate-6809df8cad6daaf4"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-6",
+      "targetOccurrenceId": "nz-maori-2026-boundary-6-candidate-a6ae17c5642fbd26"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-6",
+      "targetOccurrenceId": "nz-maori-2026-boundary-6-candidate-b728b585c50d467b"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-6",
+      "targetOccurrenceId": "nz-maori-2026-boundary-6-candidate-d3fc5362d0e35de3"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-7",
+      "targetOccurrenceId": "nz-maori-2026-boundary-7-candidate-004bcaa256bff39c"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-7",
+      "targetOccurrenceId": "nz-maori-2026-boundary-7-candidate-19b11b859e10b57f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-7",
+      "targetOccurrenceId": "nz-maori-2026-boundary-7-candidate-80a94743a035d78f"
+    },
+    {
+      "change": "added_supported_occurrence",
+      "invalidate": [
+        "slate",
+        "identity_competitor_checks",
+        "S_R_readiness",
+        "downstream_candidate_outputs"
+      ],
+      "targetElectorateId": "nz-maori-2026-boundary-7",
+      "targetOccurrenceId": "nz-maori-2026-boundary-7-candidate-9d101cf4b78eae0e"
+    }
+  ],
+  "refreshRequiresGlobalIdentityCollisionCheck": true,
+  "sourceSchemaChangeInvalidatesAllPartyInputs": true
+}

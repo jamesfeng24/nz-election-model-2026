@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "snapshotDateNZ": "2026-10-10",
+  "acquisitionCutoffUTC": "2026-10-09T15:46:00Z",
+  "sourceRegistryPath": "data/processed/nominations-2026/source-registry.json",
+  "tables": [
+    {"sourceKey": "electorate-candidates", "path": "data/processed/nominations-2026/2026-10-10/official-table.json"}
+  ],
+  "note": "Official electorate candidates published after the 12:00 NZDT 8 October 2026 close, supplied by James and preserved on 2026-10-10 NZDT (2026-10-09T15:45:30Z). The party-list publication is preserved and its headings transcribed (party-lists.json); it confirms that all 17 registered parties are 2026 ballot groups."
+}

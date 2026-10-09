@@ -64,7 +64,7 @@ def rehearse(national, replicates, workers):
     if (config['national']['source'], config['national']['dataCutoff']) != (national_input['source'], national_input['dataCutoff']):
         raise SystemExit('the config no longer carries the adopted Stage70 2026-10-07 refresh; update the rehearsal')
     config['roster']['snapshotId'] = 'synthetic-rehearsal-roster'
-    config['pending'].pop('roster.snapshotId')
+    config['pending'].pop('roster.snapshotId', None)
     slates, _ = A.live_slates(config, features, centred)
     general = sorted(slates)
     total = national * replicates

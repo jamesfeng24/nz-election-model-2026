@@ -38,7 +38,8 @@ class Config(unittest.TestCase):
 
     def test_live_config_is_valid_with_explicit_pending_fields(self):
         pending = V.check_config(self.config)
-        self.assertEqual(pending, ['maori.unpolledFallbackModel', 'roster.snapshotId'])
+        self.assertEqual(pending, ['maori.unpolledFallbackModel'])
+        self.assertEqual(self.config['roster']['snapshotId'], 'nz-2026-official-nominations-2026-10-10')   # Stage50 part 2
         with self.assertRaises(V.ConfigError):
             V.check_config(self.config, require_complete=True)
 
@@ -64,7 +65,8 @@ class Config(unittest.TestCase):
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.60, 'exceptional': 1.5}),
                      lambda c: c.update(intervalLevels=[0.9]),
                      lambda c: c['national'].update(modelStateAsOf=(datetime.date.fromisoformat(c['national']['dataCutoff']) + datetime.timedelta(days=1)).isoformat()),   # state dated after the cutoff
-                     lambda c: c['roster'].update(snapshotId='set-while-pending')):
+                     lambda c: c['roster'].update(snapshotId=None),   # null roster without a pending entry
+                     lambda c: c['candidate'].update(features='data/processed/nominations-2026/missing.json')):
             config = copy.deepcopy(self.config); edit(config)
             with self.assertRaises(V.ConfigError):
                 V.check_config(config)

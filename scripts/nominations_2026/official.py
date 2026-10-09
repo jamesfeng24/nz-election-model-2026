@@ -18,7 +18,13 @@ ALIASES = {'independent': INDEPENDENT, 'national party': 'nationalparty', 'labou
            'green party': 'greenparty', 'green party of aotearoa new zealand': 'greenparty', 'act': 'actnewzealand',
            'nz first': 'newzealandfirstparty', 'new zealand first': 'newzealandfirstparty',
            'the opportunity party': 'opportunity', 'top': 'opportunity', 'te pati maori': 'tepatimaori',
-           'maori party': 'tepatimaori'}
+           'maori party': 'tepatimaori', 'alliance party': 'alliancepartyofaotearoanewzealand'}
+# Affiliations printed in the 2026-10-10 official electorate list that are not registered parties (none appears in
+# the party-list publication). Such a candidate has no party list and no party vote: like an independent, it has no
+# ballot group. Each keeps its own key so the published label is not lost. Extend only from a preserved publication.
+UNREGISTERED = ('Progressive Party of Aotearoa New Zealand', 'Money Free Party NZ', 'NAP', "People's Party New Zealand",
+                'Economic Euthenics', 'New World Order McCann Party', 'Jobseeker Party', 'Socialist Equality Group',
+                'Te Pāti Hira', 'Balance New Zealand', 'Your PIC Party')
 
 
 class OfficialTableError(ValueError):
@@ -33,6 +39,8 @@ def affiliation_key(label):
             return target
     if key in ALIASES:
         return ALIASES[key]
+    if key in {normalize(label) for label in UNREGISTERED}:
+        return 'unregistered:' + key
     raise OfficialTableError(f'Unmapped official affiliation label: {label!r} (add an alias from the publication)')
 
 
