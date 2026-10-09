@@ -203,6 +203,12 @@ class Apply(unittest.TestCase):
         moved = np.mean(np.log(polled[:, 0] / polled[:, 1]) - np.log(plain[:, 0] / plain[:, 1]))
         self.assertAlmostEqual(moved, record['shift'], delta=0.06)
         self.assertGreater(record['shift'], 0.05)
+        # a seat whose slate has no National candidate has no balance to update: the poll is not applied and no record is made
+        short = [c for c in slate(seat_id) if c['group'] != 'nationalparty']
+        candidate = general.candidate_row(seat_id, short, party, parameters_)
+        with streams.substituted([party, candidate], 256, 'synthetic-test'):
+            _, _, record = general.simulate_with_poll(party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0, poll)
+        self.assertIsNone(record)
 
 
 class Switch(unittest.TestCase):

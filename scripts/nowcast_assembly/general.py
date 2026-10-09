@@ -10,6 +10,7 @@ from scripts.polling.candidate_integration.propagation import local_vectors, can
 from scripts.party_vote_elasticity.transforms import ARMS, swing, swing_mixture
 from scripts.uncertainty.simulation import candidate_inputs
 from scripts.uncertainty_expectation.simulation import invert
+from scripts.uncertainty_revision.coordinates import partition
 from scripts.seat_polls.apply import apply as apply_poll
 from .common import YEAR, OTHER, read, require, exact, namespace_seed
 
@@ -139,7 +140,7 @@ def simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, m
     destinations, exponents, kappa = candidate_inputs(candidate, party)
     conditional = candidate_vectors(local, destinations, exponents, kappa)
     record = None
-    if poll is not None:
+    if poll is not None and all(partition(candidate['groups'])[:2]):  # no National or no Labour candidate: no balance to update
         conditional, candidate_scales, record = apply_poll(conditional, candidate, candidate_scales, multiplier, poll)
     q, _ = invert(conditional, candidate, scaled(candidate_scales, multiplier), count)
     return local, q, record
