@@ -30,8 +30,16 @@ Added before any v2 snapshot was published, so `schemaVersion` stays 2 ([stage74
 - `electorateDetail`: per predicted seat, the uncertainty class (`ordinary`, `exceptional` or `maori-layer`, D107) and per-candidate `meanShare`, 50/80/90 share intervals and `winProbability {p, mcse, ess}`. A model snapshot must give it for every predicted seat.
 - `directory.candidates[].partyLabel` (optional): the ballot-group key of a candidate whose party has no national group (`partyId` null).
 - `governmentOutcomes` stays empty for nowcasts. Blocs live in `seatLayer.summary.blocs`, defined by James.
+- `seatLayer.summary.scenarios` (Stage77): named seat-arithmetic outcomes over the configured blocs, each `{id, label, definition, probability {p, mcse, ess}}`. James's configuration (`config/nowcast-2026.json` `mmp.hungParliament`) gives three:
+  - `hung`: neither NAT+ACT+NZF nor LAB+GRN+TPM has a majority;
+  - `hung-opportunity-kingmaker`: hung, and TOP's seats give either side a majority;
+  - `hung-opportunity-nat-act-nzf-only` and `hung-opportunity-lab-grn-tpm-only`: hung, and TOP's seats give only that side a majority.
 
-Still open: per-component calibration status (every probability is `uncalibrated`) and precision thresholds (Stage63).
+  Hung with neither side reaching a majority even with TOP is the remainder of `hung`, not a separate output (James).
+
+  These are scenarios of seat arithmetic, not predictions of coalition agreements.
+
+Calibration labels were dropped by James's release-policy decision (D114, 2026-10-07): `calibrationStatus` is no longer in the v2 contract. Precision thresholds are set (MCSE ≤ 0.01).
 
 The v1 text below is the original Stage53 record.
 
@@ -54,7 +62,6 @@ One immutable JSON file per run. It composes the existing draft types (`Simulati
 | `schemaVersion` | `1`. A breaking change bumps it; loaders reject unknown versions. |
 | `snapshotId`, `createdAt`, `dataCutoff` | Identity and dates. Ids are `synthetic-…` exactly when synthetic. |
 | `provenance` | `synthetic-fixture` (with label) or `model` (model version, code revision). |
-| `calibrationStatus` | `uncalibrated` or `validated`. The site states uncalibrated output as such. What the site may show, and the gate for it, is the still-open probability-release policy (roadmap); the contract only carries the status. |
 | `directory` | Names for parties, electorates, candidates, so pages need no other lookup. |
 | `national` | Party vote-share intervals plus a basis note. |
 | `simulation` | `SimulationResult`: seed, PRNG, draws, input hashes, code revision, electorate winner frequencies, party seat intervals, government-combination probabilities, limitations. Must contain every requested draw. |

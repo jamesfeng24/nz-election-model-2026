@@ -691,10 +691,10 @@ class SelectAndVerifyTests(unittest.TestCase):
                     patch.dict(os.environ, NO_TOKEN), redirect_stdout(printed):
                 frozen.main()
             # one human-readable line per pipeline: its mode and the attestation chosen or every reason for full
-            for name in ('stage45', 'stage46', 'stage47', 'stage48', 'stage54'):
+            for name in ('stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63'):
                 self.assertRegex(printed.getvalue(), r'(?m)^{}: (full|integrity) - .+'.format(name))
             lines = sorted(output.read_text().split())
-            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46', 'stage47', 'stage48', 'stage54'])
+            self.assertEqual([line.split('=')[0] for line in lines], ['stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63'])
             # The mode depends on the runner and its Actions history, so only its form is fixed here.
             self.assertTrue(all(line.split('=')[1] in ('full', 'integrity') for line in lines))
 

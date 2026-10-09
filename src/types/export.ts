@@ -50,6 +50,8 @@ export const SeatLayerExportSchema = z.object({
     id, label: id, partyIds: z.array(id).min(1), meanSeats: z.number().finite(), seats: IntervalSetSchema,
     probMajority: ProbabilityEstimateSchema, probExactHalf: ProbabilityEstimateSchema,
   }).strict()),
+  /** Named seat-arithmetic outcomes over blocs (for example a hung parliament); scenarios, not coalition predictions. */
+  scenarios: z.array(z.object({ id, label: id, definition: id, probability: ProbabilityEstimateSchema }).strict()),
   parliament: z.object({
     meanSize: z.number().finite(), size: IntervalSetSchema, sizeDistribution: z.record(z.string(), z.number().min(0).max(1)),
     overhangDistribution: z.record(z.string(), z.number().min(0).max(1)), probAnyOverhang: ProbabilityEstimateSchema,
@@ -85,8 +87,6 @@ export const ForecastSnapshotSchema = z.object({
   // Context only: the election the nowcast refers to. Not the estimand of a nowcast.
   electionDate: z.iso.date(),
   provenance: ProvenanceSchema,
-  // The site must show uncalibrated outputs as such; the release policy is a separate decision.
-  calibrationStatus: z.enum(['uncalibrated', 'validated']),
   directory: ForecastDirectorySchema,
   national: z.object({
     partyVoteShares: z.array(z.object({ partyId: id, share: IntervalSetSchema }).strict()).min(1),
@@ -117,8 +117,6 @@ export const ForecastSnapshotSchema = z.object({
   if (!synthetic && s.mmp.status === 'available' &&
       s.mmp.exampleDrawAllocation.rulesVersion.toUpperCase().startsWith(PLACEHOLDER_RULES_PREFIX))
     bad('Placeholder MMP rules are only allowed in synthetic snapshots', ['mmp', 'exampleDrawAllocation', 'rulesVersion']);
-  if (!synthetic && s.calibrationStatus === 'validated' && s.simulation.limitations.length === 0)
-    bad('Validated snapshots must state residual limitations', ['simulation', 'limitations']);
   if (s.modelStateAsOf > s.dataCutoff.slice(0, 10))
     bad('The model state cannot postdate the data cutoff', ['modelStateAsOf']);
   if (Date.parse(s.dataCutoff) > Date.parse(s.createdAt))

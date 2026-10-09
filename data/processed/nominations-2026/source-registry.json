@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "stage": 50,
+  "note": "Standalone Stage50 registry (data/sources.json is frozen). Verify with scripts.validate.source_files.verify_source_files.",
+  "sources": [
+    {
+      "id": "stage50-2026-electorate-candidates",
+      "organisation": "Electoral Commission",
+      "url": "https://elections.nz/",
+      "dateOrElection": "2026 General Election, official electorate candidates after nomination close",
+      "resource": "electorate-candidates",
+      "retrievedAt": "2026-10-09T15:45:30Z",
+      "rawPath": "data/raw/nominations/2026-10-10/Electorate-Candidates-2026.xlsx",
+      "sha256": "8e018da0e0aa8232768400e74d5752269e23e30a8415577d6be5d9ae309bcb85",
+      "contentStatus": "original",
+      "embeddedTimestamps": {
+        "created": "2026-10-09T00:18:14Z",
+        "modified": "2026-10-09T00:22:58Z"
+      },
+      "processingScript": "scripts/nominations_2026/extract.py",
+      "limitations": [
+        "Supplied unchanged by James (project owner), who downloaded it from the Electoral Commission's official 2026 general election publication after nominations closed (12:00 NZDT, 8 October 2026). The exact download URL was not recorded; elections.nz blocks automated retrieval (bot protection), and a bounded search on 2026-10-09 found no stable asset URL. The url field records the publishing host only.",
+        "retrievedAt is when the file reached the project (upload time); James's download was no later than this.",
+        "One sheet 'Candidates' (Name, Electorate, Party), 469 rows. Names are 'SURNAME, Given' as published. 'Party' is the affiliation as published, including 11 unregistered party names and 'Independent'."
+      ],
+      "licence": "Publisher copyright; preserved for evidence and attributed research; no licence assumed.",
+      "schemaVersion": 1
+    },
+    {
+      "id": "stage50-2026-party-lists",
+      "organisation": "Electoral Commission",
+      "url": "https://elections.nz/",
+      "dateOrElection": "2026 General Election, party lists after nomination close",
+      "resource": "party-lists",
+      "retrievedAt": "2026-10-09T15:45:30Z",
+      "rawPath": "data/raw/nominations/2026-10-10/Party-lists-for-the-2026-General-Election.pdf",
+      "sha256": "3a371c79576f495067ec776ee7663848570860d9bc4d16a47bfc4abc007eae20",
+      "contentStatus": "original",
+      "embeddedTimestamps": {
+        "modified": "2026-10-08T23:33:57Z"
+      },
+      "processingScript": "scripts/nominations_2026/extract.py",
+      "limitations": [
+        "Supplied unchanged by James (project owner), who downloaded it from the Electoral Commission's official 2026 general election publication after nominations closed (12:00 NZDT, 8 October 2026). The exact download URL was not recorded; elections.nz blocks automated retrieval (bot protection), and a bounded search on 2026-10-09 found no stable asset URL. The url field records the publishing host only.",
+        "retrievedAt is when the file reached the project (upload time); James's download was no later than this.",
+        "Three-page multi-column PDF ('Authorised by the Chief Electoral Officer'). Only the party headings are transcribed (which registered parties lodged a list); list rankings are preserved but not used by the model."
+      ],
+      "licence": "Publisher copyright; preserved for evidence and attributed research; no licence assumed.",
+      "schemaVersion": 1
+    }
+  ]
+}

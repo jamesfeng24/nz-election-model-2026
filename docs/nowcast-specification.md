@@ -35,7 +35,7 @@ The local-party and candidate scales were calibrated against election-day result
   - Polls whose fieldwork ends later are placed at their midpoint week and are incorporated coherently.
   - Outputs are labelled **"latent state as of the week of …, polls to …"**, never "today". `modelStateAsOf` in the export carries this date.
   - Stage70 should refit when polls arrive and save joint draws at the as-of week.
-- **Precision.** The 8,000 national draws are MCMC output with bulk ESS of about 1,000 to 1,800 per coordinate. Monte Carlo errors for national-driven quantities (party seats, thresholds, blocs) must use an effective sample size, for example batch means by chain, not `sqrt(p(1-p)/n)` with n = 8,000.
+- **Precision.** The 8,000 national draws are MCMC output with bulk ESS of about 1,000 to 1,800 per coordinate. Monte Carlo errors for national-driven quantities (party seats, thresholds, blocs) must use an effective sample size, for example batch means by chain, not `sqrt(p(1-p)/n)` with n = 8,000. Production uses 4,096 national draws × 16 layer replicates (Stage63; `simulation` in the config): replicates lower the layer error, not the national floor, and batch means keep each draw's replicates together (Stage77).
 
 ## 3. Pipeline (producer → interface → consumer)
 
@@ -45,16 +45,16 @@ The local-party and candidate scales were calibrated against election-day result
 | 2 | Stage62/70 gauss fit | `lastDataSupport` draws | national adapter | 8 category shares; one draw id shared by every seat | exists |
 | 3 | national adapter (`scripts/nowcast_assembly/national.py`) | category → 2026 ballot groups | local layer **and** MMP party vote | shares summing to 1; the **same** draw feeds both; Other one MMP bucket, split inside each seat by its own 2023 mix | built (Stage73) |
 | 4 | local party (`local_vectors` + `invert`, `scripts/uncertainty_expectation/simulation.py`) | per-seat party affinities from the 2026 notional baseline; 2026 local-party scales | candidate layer | ballot-group shares; shared election effect + seat effect | built (Stage73) on the 2026 scales; baseline switches to Stage69 |
-| 5 | candidate (`candidate_vectors` + `invert`, Stage45 Gaussian) | continuous S+R destinations/exponents (`data/processed/continuous-transport/readiness-2026.json`, recentred in `data/processed/candidate-fit-2026/features-2026.json`) + final slate; S+R means from the Stage75 all-elections fit; 2026 candidate scales × D107 multiplier | winners | candidate shares; shared + seat effects | built (Stage73); live run waits on the Stage50 roster and the classification |
+| 5 | candidate (`candidate_vectors` + `invert`, Stage45 Gaussian) | continuous S+R destinations/exponents (`data/processed/continuous-transport/readiness-2026.json`, recentred in `data/processed/candidate-fit-2026/features-2026.json`) + final slate; S+R means from the Stage75 all-elections fit; 2026 candidate scales × D107 multiplier | winners | candidate shares; shared + seat effects | built (Stage73); the official roster (Stage50) and the classification (2026-10-10) are in, so the live run simulates all 64 general seats |
 | 6 | Stage56 manual layer | dated adjustment files | output B only | mean shifts, `extraSdPp` | exists; no 2026 entry |
-| 7 | Stage66/71 Māori layer | per-draw winners (3 polled seats; 4 `unpolled`) | MMP | independent of the national draw (coupling optional) | exists; unpolled seats block MMP |
+| 7 | Stage66/71 Māori layer | per-draw winners (3 polled seats; 4 `unpolled`) | MMP | independent of the national draw (coupling optional) | exists; unpolled seats block MMP until the labelled fallback (D114) is defined |
 | 8 | Python → TypeScript bridge | draw bank: national shares + 71 winners per draw (Stage73 `scripts/nowcast_assembly`) | Stage65 seat layer | shares → integer votes at 10^9 | bank built (Stage73); reader built (Stage74, `src/models/nowcast/drawBank.ts`) |
 | 9 | Stage65 `src/models/mmp/seatLayer.ts` | seat summaries with Monte Carlo SE | exporter | seats, threshold/lifeboat, overhang, size, blocs | 80% quantiles and effective-n SE added (Stage74, `src/models/nowcast/`) |
 | 10 | exporter (`src/models/nowcast/fromBank.ts`; in-browser `src/models/simulation/exporter.ts`) | snapshot v2 (`src/types/export.ts`) | archive → loader → site | 50/80/90 intervals | bank → snapshot built (Stage74); synthetic only so far |
 
 National uncertainty enters exactly once, through step 2's draw id. The local and candidate scales condition on national truth, so they add no second national term.
 
-**National reconciliation with turnout and denominators** is not needed for the nowcast. MMP uses the national draw's party-vote shares directly, and electorate winners use within-seat candidate shares. What remains is a release-gate diagnostic: the turnout-weighted aggregate of local party means must match the national mean within tolerance, to catch a broken affinity table.
+**National reconciliation with turnout and denominators** is not needed for the nowcast. MMP uses the national draw's party-vote shares directly, and electorate winners use within-seat candidate shares. What remains is an internal release-gate check (never shown to users): the turnout-weighted aggregate of local party means must match the national mean within tolerance, to catch a broken affinity table.
 
 **Superseded or inactive inputs:**
 - Stage64's population-flat baseline and the Stage41 `forecast-transport/readiness-2026.json` stop being live when Stage69 is adopted.
@@ -71,7 +71,7 @@ National uncertainty enters exactly once, through step 2's draw id. The local an
 **Provenance and its limits.** The decision is James's, taken after Stage67. Stage67 itself (D101) recommended holding flagged seats at 1.00 and did **not** establish the narrower ordinary scale. The roughly 0.60 ordinary multiplier is development-informed: it was fitted on 2014–2023 with flags assigned knowing the results, and it is flag-selection-sensitive (the 17 cleaner flags gave no gain over a single scale). This limitation stays attached to the policy.
 
 **The 2026 classification.**
-- One dated file classifies every 2026 general seat as `ordinary` or `exceptional`, by 2026 boundary id, with author, date, reason and sources. It does not exist yet.
+- One dated file classifies every 2026 general seat as `ordinary` or `exceptional`, by 2026 boundary id, with author, date, reason and sources. It is recorded in `config/general-seat-classification-2026.json` (2026-10-10; 13 exceptional, 51 ordinary; reasons in `docs/general-seat-classification-2026.md`).
 - The classification is exhaustive and exclusive over the 64 general seats. A missing seat **fails the build**; it never defaults to 0.60.
 - Any seat with a Stage56 entry flagged exceptional must be `exceptional` in the classification.
 - A 1.00 seat may not also carry `extraSdPp` unless James explicitly opts in, because that would be the excluded widening above 1.
@@ -84,7 +84,7 @@ National uncertainty enters exactly once, through step 2's draw id. The local an
 - **Layer:** Stage66 (default) and Stage71 (single variance inflation, `improves_not_restored`, not adopted).
 - **Both are calibrated against election results.** Their errors therefore mix poll error with post-poll campaign movement, and four elections cannot separate the two. For the nowcast, Stage71's inflation is **not** applied silently. Before any Māori probability is shown, either both C and P are shown as a labelled range, or the probabilities are withheld.
 - **Still required before a single published Māori probability:** a structure-specific minor-candidate scale. Stage71 found its single factor over-widens the Māori Party-versus-Labour contest.
-- **Unpolled seats.** Four seats (Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau, Te Tai Tokerau) have no estimate. Stage65 requires all 71 winners, so they block every MMP output until James chooses a labelled fallback or more polls arrive.
+- **Unpolled seats.** Four seats (Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau, Te Tai Tokerau) have no estimate. Stage65 requires all 71 winners, so they block every MMP output until the labelled fallback James chose (D114) is defined or more polls arrive.
 - **Dependence.** Māori draws are independent of national Te Pāti Māori support by default; Stage66 exports a shared factor for optional coupling. Independence understates the link between electorate wins and party vote, which drives overhang. Any coupling needs a stated correlation.
 - **Refresh.** Candidate lists are rechecked against the Stage50 roster, and new Whakatau polls are added through the Stage66 procedure.
 
@@ -134,8 +134,8 @@ Frozen historical scripts keep their own constants. Live code reads only this fi
 
 ## 9. Decisions still James's
 
-- the probability-release policy (proposal in [release-checklist.md](release-checklist.md));
-- bloc definitions for any coalition output;
-- the four unpolled Māori seats;
-- whether Māori probabilities are shown as a C–P range or withheld;
+- ~~the probability-release policy~~ (decided 2026-10-07, D114: [release-checklist.md](release-checklist.md));
+- ~~bloc definitions for any coalition output~~ (decided 2026-10-07: NAT+ACT, NAT+ACT+NZF, LAB+GRN, LAB+GRN+TPM; hung parliament with TOP as kingmaker);
+- ~~the four unpolled Māori seats~~ (decided 2026-10-07, D114: a labelled fallback; the fallback model itself is not yet defined);
+- ~~whether Māori probabilities are shown as a C–P range or withheld~~ (decided 2026-10-07, D114: a labelled range);
 - the 2026 ordinary/exceptional classification.

@@ -1,0 +1,31 @@
+{
+  "consistency": {
+    "blockAverageOfMeansMaxAbs": 1.4068746168049984e-12,
+    "nationalLadderTopEqualsGroupBankMaxAbs": 0.0,
+    "pairAverageOfMeansMaxAbs": 4.121147867408581e-13,
+    "winProbabilitiesSumToOneMaxAbs": 0.0
+  },
+  "passed": true,
+  "plainLoopDecisions": {
+    "gateBChange": {
+      "difference": 0.0
+    },
+    "layerDesignEffect": {
+      "difference": 0.0,
+      "plainLoop": 0.3884110067169384
+    }
+  },
+  "resimulationWithoutSolveReuse": [
+    {
+      "id": "nz-general-2017-electorate-01",
+      "maximumAbsoluteDifference": 0.0,
+      "replicate": 3
+    },
+    {
+      "id": "nz-general-2020-electorate-57",
+      "maximumAbsoluteDifference": 0.0,
+      "replicate": 5
+    }
+  ],
+  "stage": 63
+}

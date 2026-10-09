@@ -1,5 +1,6 @@
 """Stage72: 2026 scales by the frozen Stage45 rule, the live nowcast config and the fail-closed D107 classification."""
 import copy
+import datetime
 import unittest
 from scripts.balance_scale.common import equivalent
 from scripts.manual_adjustment.schema import seat_frame
@@ -37,10 +38,24 @@ class Config(unittest.TestCase):
 
     def test_live_config_is_valid_with_explicit_pending_fields(self):
         pending = V.check_config(self.config)
-        self.assertIn('simulation.draws', pending)
-        self.assertIn('roster.snapshotId', pending)
+        self.assertEqual(pending, ['maori.unpolledFallbackModel'])
+        self.assertEqual(self.config['roster']['snapshotId'], 'nz-2026-official-nominations-2026-10-10')   # Stage50 part 2
         with self.assertRaises(V.ConfigError):
             V.check_config(self.config, require_complete=True)
+
+    def test_release_policy_is_recorded_as_james_decided(self):
+        """D114 (James, 2026-10-07): no calibration label or staleness windows, internal reconciliation gate, MCSE 0.01."""
+        config = self.config
+        release = config['release']
+        self.assertEqual(release['policyApprovedBy'], 'James, 2026-10-07 (D114)')
+        self.assertEqual(release['probabilityMcseMax'], 0.01)
+        self.assertNotIn('staleDays', release)
+        self.assertEqual(config['mmp']['rulesVersion'], 'electoral-act-1993-2026-01-01')
+        self.assertEqual(config['maori']['unpolledSeats'], 'labelled-fallback')
+        self.assertEqual(config['maori']['presentation'], 'labelled-range')
+        broken = copy.deepcopy(config); broken['maori']['unpolledSeats'] = 'guess'
+        with self.assertRaises(V.ConfigError):
+            V.check_config(broken)
 
     def test_config_rejects_forecast_semantics_and_other_multipliers(self):
         for edit in (lambda c: c.update(estimand='forecast'),
@@ -49,8 +64,9 @@ class Config(unittest.TestCase):
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.79, 'exceptional': 1.0}),
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.60, 'exceptional': 1.5}),
                      lambda c: c.update(intervalLevels=[0.9]),
-                     lambda c: c['national'].update(modelStateAsOf='2026-10-07'),
-                     lambda c: c['simulation'].update(draws=1000)):
+                     lambda c: c['national'].update(modelStateAsOf=(datetime.date.fromisoformat(c['national']['dataCutoff']) + datetime.timedelta(days=1)).isoformat()),   # state dated after the cutoff
+                     lambda c: c['roster'].update(snapshotId=None),   # null roster without a pending entry
+                     lambda c: c['candidate'].update(features='data/processed/nominations-2026/missing.json')):
             config = copy.deepcopy(self.config); edit(config)
             with self.assertRaises(V.ConfigError):
                 V.check_config(config)
@@ -60,6 +76,14 @@ class Classification(unittest.TestCase):
     def test_a_complete_classification_passes(self):
         result = V.check_classification(synthetic_classification(), stage56_exceptional=[GENERAL[0]])
         self.assertEqual(len(result), 64)
+
+    def test_the_recorded_2026_classification_is_valid_and_pinned(self):
+        document = read('config/general-seat-classification-2026.json')
+        result = V.check_classification(document)
+        self.assertEqual(set(result), set(GENERAL))
+        self.assertTrue(all(e['author'] == 'James' and e['recordedAt'] == '2026-10-10' and not e['extraSdOptIn'] for e in document['seats']))
+        exceptional = sorted(seat[-3:] for seat, kind in result.items() if kind == 'exceptional')
+        self.assertEqual(exceptional, ['001', '010', '011', '020', '025', '033', '037', '038', '047', '058', '059', '063', '064'])
 
     def test_every_gap_or_conflict_fails_closed(self):
         def broken(edit):

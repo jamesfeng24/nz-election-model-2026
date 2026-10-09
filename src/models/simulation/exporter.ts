@@ -11,7 +11,6 @@ export interface SnapshotMeta {
   modelStateAsOf: string;
   electionDate: string;
   provenance: ForecastSnapshot['provenance'];
-  calibrationStatus: ForecastSnapshot['calibrationStatus'];
   nationalBasis: string;
   limitations: string[];
   boundaries: ForecastSnapshot['boundaries'];
@@ -22,7 +21,7 @@ export function buildSnapshot(config: SimulationConfig, inputs: PipelineInputs, 
   const predicted = new Set(output.result.electoratePredictions.map(p => p.electorateId));
   return ForecastSnapshotSchema.parse({
     schemaVersion: 2, snapshotId: meta.snapshotId, targetType: meta.targetType, createdAt: meta.createdAt, dataCutoff: meta.dataCutoff,
-    modelStateAsOf: meta.modelStateAsOf, electionId: config.electionId, electionDate: meta.electionDate, provenance: meta.provenance, calibrationStatus: meta.calibrationStatus,
+    modelStateAsOf: meta.modelStateAsOf, electionId: config.electionId, electionDate: meta.electionDate, provenance: meta.provenance,
     directory: {
       parties: inputs.parties.map(p => ({ partyId: p.id, name: p.name, abbreviation: p.abbreviation })),
       electorates: inputs.electorates.map(e => ({ electorateId: e.id, name: e.name, kind: e.kind })),

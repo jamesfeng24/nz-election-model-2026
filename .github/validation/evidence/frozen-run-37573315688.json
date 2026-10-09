@@ -1,0 +1,993 @@
+{
+ "description": "Subset of the GitHub Actions API records of the successful Verify run 37573315688 (head e0bc95607a9bf317ebf7a6214c90d5d52c0acb63): the run, its python job and every step with its conclusion and timestamps. The live API records are the source of truth; this copy pins the step conclusions the reuse registry relies on.",
+ "job": {
+  "completed_at": "2026-10-07T05:28:29Z",
+  "conclusion": "success",
+  "id": 112636602122,
+  "name": "python",
+  "started_at": "2026-10-07T04:49:43Z",
+  "steps": [
+   {
+    "completed_at": "2026-10-07T04:49:45Z",
+    "conclusion": "success",
+    "name": "Set up job",
+    "started_at": "2026-10-07T04:49:44Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:49:58Z",
+    "conclusion": "success",
+    "name": "Run actions/checkout@v5",
+    "started_at": "2026-10-07T04:49:45Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:50:07Z",
+    "conclusion": "success",
+    "name": "Run actions/setup-python@v6",
+    "started_at": "2026-10-07T04:49:58Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:50:22Z",
+    "conclusion": "success",
+    "name": "Run python3 -m pip install -r requirements-boundaries.txt",
+    "started_at": "2026-10-07T04:50:07Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:50:23Z",
+    "conclusion": "success",
+    "name": "Select bounded Stage39 validation",
+    "started_at": "2026-10-07T04:50:22Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:50:37Z",
+    "conclusion": "success",
+    "name": "Select frozen-pipeline reuse",
+    "started_at": "2026-10-07T04:50:23Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:50:38Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.external_comparison.archive --check",
+    "started_at": "2026-10-07T04:50:37Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:50:40Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.external_comparison.evaluation --check",
+    "started_at": "2026-10-07T04:50:38Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:50:58Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.category_interface.run --check",
+    "started_at": "2026-10-07T04:50:40Z"
+   },
+   {
+    "completed_at": "2026-10-07T04:51:16Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_model.evaluation --check",
+    "started_at": "2026-10-07T04:50:58Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:47Z",
+    "conclusion": "success",
+    "name": "Run python3 -m unittest discover -s scripts/tests -v",
+    "started_at": "2026-10-07T04:51:16Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:47Z",
+    "conclusion": "success",
+    "name": "Run python3 scripts/validate/source_files.py",
+    "started_at": "2026-10-07T05:00:47Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:52Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transform.historical_panel --check --verify-years",
+    "started_at": "2026-10-07T05:00:47Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:53Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transform.modern_election --check",
+    "started_at": "2026-10-07T05:00:52Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:53Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transform.modern_election --year 2020 --check",
+    "started_at": "2026-10-07T05:00:53Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:53Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.complete_party_vector.inventory --check",
+    "started_at": "2026-10-07T05:00:53Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:54Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.complete_party_vector.construction --check",
+    "started_at": "2026-10-07T05:00:53Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:54Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.complete_party_vector.evaluation --check",
+    "started_at": "2026-10-07T05:00:54Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:54Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.stage24_inventory --check",
+    "started_at": "2026-10-07T05:00:54Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:55Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.stage24_construction --check",
+    "started_at": "2026-10-07T05:00:54Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:56Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.stage24_evaluation --check",
+    "started_at": "2026-10-07T05:00:55Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:56Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.stage25_geography --check",
+    "started_at": "2026-10-07T05:00:56Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:57Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.stage25_availability --check",
+    "started_at": "2026-10-07T05:00:56Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:00:57Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.stage25_design --check",
+    "started_at": "2026-10-07T05:00:57Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:02Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.evidence.practical_candidate_linkage.run --check",
+    "started_at": "2026-10-07T05:00:57Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:05Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.exact_geography_retests.inventory --check",
+    "started_at": "2026-10-07T05:01:02Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:11Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.exact_geography_retests.construction --check",
+    "started_at": "2026-10-07T05:01:05Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:18Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.exact_geography_retests.evaluation --check",
+    "started_at": "2026-10-07T05:01:11Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:23Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.validate.stage27_independent --check",
+    "started_at": "2026-10-07T05:01:18Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:23Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.stage28_design --check",
+    "started_at": "2026-10-07T05:01:23Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:24Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.asymmetric_response_test.construction --check",
+    "started_at": "2026-10-07T05:01:23Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:24Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.asymmetric_response_test.evaluation --check",
+    "started_at": "2026-10-07T05:01:24Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:24Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.asymmetric_response_test.verification --check",
+    "started_at": "2026-10-07T05:01:24Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:25Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.asymmetric_response_test.descriptive_diagnostic --check",
+    "started_at": "2026-10-07T05:01:24Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:26Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.asymmetric_response_test.supplement_evaluation --check",
+    "started_at": "2026-10-07T05:01:25Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:27Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_candidate_persistence.inventory --check",
+    "started_at": "2026-10-07T05:01:26Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:28Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_candidate_persistence.construction --check",
+    "started_at": "2026-10-07T05:01:27Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:31Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_candidate_persistence.evaluation --check",
+    "started_at": "2026-10-07T05:01:28Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:32Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_candidate_persistence.verification --check",
+    "started_at": "2026-10-07T05:01:31Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:32Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_candidate_persistence.report --check",
+    "started_at": "2026-10-07T05:01:32Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:33Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_party_substitution.inventory --check",
+    "started_at": "2026-10-07T05:01:32Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:34Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_party_substitution.construction --check",
+    "started_at": "2026-10-07T05:01:33Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:39Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_party_substitution.evaluation --check",
+    "started_at": "2026-10-07T05:01:34Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:40Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_party_substitution.verification --check",
+    "started_at": "2026-10-07T05:01:39Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:41Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.expanded_party_substitution.report --check",
+    "started_at": "2026-10-07T05:01:40Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:44Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.joint_candidate_share.run --check",
+    "started_at": "2026-10-07T05:01:41Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:45Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.checkpoints.joint_candidate_share.report --check",
+    "started_at": "2026-10-07T05:01:44Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:01:50Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.joint_candidate_share.construction --check",
+    "started_at": "2026-10-07T05:01:45Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:00Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.joint_candidate_share.evaluation --check",
+    "started_at": "2026-10-07T05:01:50Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:04Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.joint_candidate_share.verification --check",
+    "started_at": "2026-10-07T05:02:00Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:06Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.models.joint_candidate_share.report --check",
+    "started_at": "2026-10-07T05:02:04Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:08Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.diagnostics.s_r_robustness.inventory --check",
+    "started_at": "2026-10-07T05:02:06Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:09Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.diagnostics.s_r_robustness.movement --check",
+    "started_at": "2026-10-07T05:02:08Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:12Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.diagnostics.s_r_robustness.analysis --check",
+    "started_at": "2026-10-07T05:02:09Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:15Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.diagnostics.s_r_robustness.verification --check",
+    "started_at": "2026-10-07T05:02:12Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:16Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.diagnostics.s_r_robustness.report --check",
+    "started_at": "2026-10-07T05:02:15Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:18Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_foundation.run --check",
+    "started_at": "2026-10-07T05:02:16Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:18Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_foundation.design --check",
+    "started_at": "2026-10-07T05:02:18Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:18Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_foundation.verification --check",
+    "started_at": "2026-10-07T05:02:18Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:22Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_model.inventory --check",
+    "started_at": "2026-10-07T05:02:18Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:22Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_model.archive --check",
+    "started_at": "2026-10-07T05:02:22Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:36Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_model.verification --check",
+    "started_at": "2026-10-07T05:02:22Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:43Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_model.report --check",
+    "started_at": "2026-10-07T05:02:36Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:47Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.national_model.outputs --check",
+    "started_at": "2026-10-07T05:02:43Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:51Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.category_interface.verification --check",
+    "started_at": "2026-10-07T05:02:47Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:51Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.category_interface.report --check",
+    "started_at": "2026-10-07T05:02:51Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:51Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.category_interface.handoff --check",
+    "started_at": "2026-10-07T05:02:51Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:52Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.external_comparison.numerical_audit --check",
+    "started_at": "2026-10-07T05:02:51Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:55Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.external_comparison.verification --check",
+    "started_at": "2026-10-07T05:02:52Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:55Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.external_comparison.report --check",
+    "started_at": "2026-10-07T05:02:55Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:55Z",
+    "conclusion": "skipped",
+    "name": "Verify previously validated Stage39 sealed integrity",
+    "started_at": "2026-10-07T05:02:55Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:02:56Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.candidate_integration.inventory --check",
+    "started_at": "2026-10-07T05:02:55Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:25Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.candidate_integration.construction --check",
+    "started_at": "2026-10-07T05:02:56Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:26Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.candidate_integration.evaluation --check",
+    "started_at": "2026-10-07T05:06:25Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:31Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.candidate_integration.verification --check",
+    "started_at": "2026-10-07T05:06:26Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:32Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.polling.candidate_integration.report --check",
+    "started_at": "2026-10-07T05:06:31Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:33Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.readiness.run --check",
+    "started_at": "2026-10-07T05:06:32Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:33Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.readiness.report --check",
+    "started_at": "2026-10-07T05:06:33Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:34Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.readiness.verification --check",
+    "started_at": "2026-10-07T05:06:33Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:35Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.freeze --check",
+    "started_at": "2026-10-07T05:06:34Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:37Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.party --check",
+    "started_at": "2026-10-07T05:06:35Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:38Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.construction --check",
+    "started_at": "2026-10-07T05:06:37Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:39Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.evaluation --check",
+    "started_at": "2026-10-07T05:06:38Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:41Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.readiness --check",
+    "started_at": "2026-10-07T05:06:39Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:43Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.verification --check",
+    "started_at": "2026-10-07T05:06:41Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:43Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.report --check",
+    "started_at": "2026-10-07T05:06:43Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:44Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.manifest --check",
+    "started_at": "2026-10-07T05:06:43Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:46Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.continuous.freeze --check",
+    "started_at": "2026-10-07T05:06:44Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:47Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.continuous.construction --check",
+    "started_at": "2026-10-07T05:06:46Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:48Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.continuous.evaluation --check",
+    "started_at": "2026-10-07T05:06:47Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:51Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.continuous.readiness --check",
+    "started_at": "2026-10-07T05:06:48Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:52Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.continuous.verification --check",
+    "started_at": "2026-10-07T05:06:51Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:53Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.continuous.report --check",
+    "started_at": "2026-10-07T05:06:52Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:53Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.continuous.manifest --check",
+    "started_at": "2026-10-07T05:06:53Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:54Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.comparison.construction --check",
+    "started_at": "2026-10-07T05:06:53Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:56Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.comparison.evaluation --check",
+    "started_at": "2026-10-07T05:06:54Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:57Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.comparison.verification --check",
+    "started_at": "2026-10-07T05:06:56Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:58Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.comparison.report --check",
+    "started_at": "2026-10-07T05:06:57Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:06:59Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.transport.comparison.manifest --check",
+    "started_at": "2026-10-07T05:06:58Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:00Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty.inventory --check",
+    "started_at": "2026-10-07T05:06:59Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:02Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty.estimation --check",
+    "started_at": "2026-10-07T05:07:00Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:33Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty.construction --check",
+    "started_at": "2026-10-07T05:07:02Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:41Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty.evaluation --check",
+    "started_at": "2026-10-07T05:07:33Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:46Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty.precision --check",
+    "started_at": "2026-10-07T05:07:41Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:53Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty.verification --check",
+    "started_at": "2026-10-07T05:07:46Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:53Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty.report --check",
+    "started_at": "2026-10-07T05:07:53Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:54Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty.manifest --check",
+    "started_at": "2026-10-07T05:07:53Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:55Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_revision.diagnosis --check",
+    "started_at": "2026-10-07T05:07:54Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:56Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_revision.priors --check",
+    "started_at": "2026-10-07T05:07:55Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:57Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_revision.estimation --check",
+    "started_at": "2026-10-07T05:07:56Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:57Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_revision.construction --check",
+    "started_at": "2026-10-07T05:07:57Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:57Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_revision.evaluation --check",
+    "started_at": "2026-10-07T05:07:57Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:57Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_revision.mean_audit --check",
+    "started_at": "2026-10-07T05:07:57Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:07:57Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_revision.verification --check",
+    "started_at": "2026-10-07T05:07:57Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:00Z",
+    "conclusion": "success",
+    "name": "Verify reused Stage45 frozen pipeline",
+    "started_at": "2026-10-07T05:07:57Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:00Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_revision.report --check",
+    "started_at": "2026-10-07T05:08:00Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:01Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_revision.manifest --check",
+    "started_at": "2026-10-07T05:08:00Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:03Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_tails.diagnosis --check",
+    "started_at": "2026-10-07T05:08:01Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:05Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_tails.estimation --check",
+    "started_at": "2026-10-07T05:08:03Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:14Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_tails.numerics --check",
+    "started_at": "2026-10-07T05:08:05Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:14Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_tails.construction --check",
+    "started_at": "2026-10-07T05:08:14Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:14Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_tails.evaluation --check",
+    "started_at": "2026-10-07T05:08:14Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:14Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_tails.verification --check",
+    "started_at": "2026-10-07T05:08:14Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:18Z",
+    "conclusion": "success",
+    "name": "Verify reused Stage46 frozen pipeline",
+    "started_at": "2026-10-07T05:08:14Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:19Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.diagnostics.uncertainty_tails_reference --check",
+    "started_at": "2026-10-07T05:08:18Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:21Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.diagnostics.uncertainty_tails_report --check",
+    "started_at": "2026-10-07T05:08:19Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:22Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.diagnostics.uncertainty_tails_manifest --check",
+    "started_at": "2026-10-07T05:08:21Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:34Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_expectation.pilot --check",
+    "started_at": "2026-10-07T05:08:22Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:40Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_expectation.prior --check",
+    "started_at": "2026-10-07T05:08:34Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:40Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_expectation.audits --check",
+    "started_at": "2026-10-07T05:08:40Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:43Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_expectation.structure --check",
+    "started_at": "2026-10-07T05:08:40Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:45Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_expectation.structural_diagnostics --check",
+    "started_at": "2026-10-07T05:08:43Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:45Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_expectation.construction --check",
+    "started_at": "2026-10-07T05:08:45Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:45Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_expectation.evaluation --check",
+    "started_at": "2026-10-07T05:08:45Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:47Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_expectation.pair_widths --check",
+    "started_at": "2026-10-07T05:08:45Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:47Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_expectation.attribution --check",
+    "started_at": "2026-10-07T05:08:47Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:47Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.uncertainty_expectation.verification --check",
+    "started_at": "2026-10-07T05:08:47Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:50Z",
+    "conclusion": "success",
+    "name": "Verify reused Stage47 frozen pipeline",
+    "started_at": "2026-10-07T05:08:47Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:52Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_expectation.report --check",
+    "started_at": "2026-10-07T05:08:50Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:08:53Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.uncertainty_expectation.manifest --check",
+    "started_at": "2026-10-07T05:08:52Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:01Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.balance_scale.fit --check",
+    "started_at": "2026-10-07T05:08:53Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:01Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.balance_scale.evaluation --check",
+    "started_at": "2026-10-07T05:09:01Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:02Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.balance_scale.decision --check",
+    "started_at": "2026-10-07T05:09:01Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:02Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.balance_scale.verification --check",
+    "started_at": "2026-10-07T05:09:02Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:04Z",
+    "conclusion": "success",
+    "name": "Verify reused Stage48 frozen pipeline",
+    "started_at": "2026-10-07T05:09:02Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:04Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.balance_scale.report --check",
+    "started_at": "2026-10-07T05:09:04Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:04Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.balance_scale.manifest --check",
+    "started_at": "2026-10-07T05:09:04Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:04Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.composed_precision.evaluation --check",
+    "started_at": "2026-10-07T05:09:04Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:05Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.composed_precision.decision --check",
+    "started_at": "2026-10-07T05:09:04Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:05Z",
+    "conclusion": "skipped",
+    "name": "Run python3 -m scripts.composed_precision.verification --check",
+    "started_at": "2026-10-07T05:09:05Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:07Z",
+    "conclusion": "success",
+    "name": "Verify reused Stage54 frozen pipeline",
+    "started_at": "2026-10-07T05:09:05Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:07Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.composed_precision.report --check",
+    "started_at": "2026-10-07T05:09:07Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:09:07Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.composed_precision.manifest --check",
+    "started_at": "2026-10-07T05:09:07Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:24:44Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.layer_replication.evaluation --check",
+    "started_at": "2026-10-07T05:09:07Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:24:44Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.layer_replication.decision --check",
+    "started_at": "2026-10-07T05:24:44Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:28:27Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.layer_replication.verification --check",
+    "started_at": "2026-10-07T05:24:44Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:28:27Z",
+    "conclusion": "skipped",
+    "name": "Verify reused Stage63 frozen pipeline",
+    "started_at": "2026-10-07T05:28:27Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:28:27Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.layer_replication.report --check",
+    "started_at": "2026-10-07T05:28:27Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:28:27Z",
+    "conclusion": "success",
+    "name": "Run python3 -m scripts.layer_replication.manifest --check",
+    "started_at": "2026-10-07T05:28:27Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:28:27Z",
+    "conclusion": "success",
+    "name": "Post Run actions/setup-python@v6",
+    "started_at": "2026-10-07T05:28:27Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:28:27Z",
+    "conclusion": "success",
+    "name": "Post Run actions/checkout@v5",
+    "started_at": "2026-10-07T05:28:27Z"
+   },
+   {
+    "completed_at": "2026-10-07T05:28:27Z",
+    "conclusion": "success",
+    "name": "Complete job",
+    "started_at": "2026-10-07T05:28:27Z"
+   }
+  ]
+ },
+ "run": {
+  "conclusion": "success",
+  "created_at": "2026-10-07T04:49:38Z",
+  "event": "push",
+  "head_sha": "e0bc95607a9bf317ebf7a6214c90d5d52c0acb63",
+  "html_url": "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37573315688",
+  "id": 37573315688
+ },
+ "source": "recorded by scripts.validate.ci_frozen --record-pin"
+}

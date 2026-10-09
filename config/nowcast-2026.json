@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-07.4",
-  "decisions": ["D106", "D107"],
+  "configVersion": "2026-10-10.1",
+  "decisions": ["D106", "D107", "D114"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
   "electionId": "nz-general-2026",
   "electionDate": "2026-11-07",
   "national": {
-    "source": "data/processed/polling/live-fit-2026-10/fits/A/attempt1.npz",
+    "source": "data/processed/polling/weekly-refresh/2026-10-07/fit/attempt1.npz",
     "stateKey": "lastDataSupport",
     "forbiddenStateKeys": ["electionDay"],
     "modelStateAsOf": "2026-09-27",
-    "dataCutoff": "2026-10-06",
+    "dataCutoff": "2026-10-07",
     "refreshOwner": "Stage70 replaces this source and these dates with each accepted refit",
     "categoryMap": {"National": "nationalparty", "Labour": "labourparty", "Green": "greenparty", "ACT": "actnewzealand",
                     "NZ First": "newzealandfirstparty", "Te Pāti Māori": "tepatimaori", "TOP": "opportunity", "Other": "other"},
@@ -20,10 +20,10 @@
     "otherName": "Other parties (combined)",
     "otherSplit": "Other stays one national bucket for MMP; inside each seat it is split by that seat's own 2023 notional mix of the non-core parties (Stage73, James 2026-10-07)"
   },
-  "partyRelationships": "data/processed/forecast-readiness/snapshots/2026-10-05/party-relationships.json",
+  "partyRelationships": "data/processed/forecast-readiness/snapshots/2026-10-10/party-relationships.json",
   "candidate": {
-    "features": "data/processed/continuous-transport/readiness-2026.json",
-    "centredFeatures": "data/processed/candidate-fit-2026/features-2026.json",
+    "features": "data/processed/nominations-2026/2026-10-10/features-raw.json",
+    "centredFeatures": "data/processed/nominations-2026/2026-10-10/features-centred.json",
     "parameters": "data/processed/candidate-fit-2026/fit.json",
     "fold": {"branch": "live_all_elections", "targetYear": 2026, "method": "baseline_plus_S_plus_R"},
     "status": "Stage75: the Stage33 S+R design refitted on every completed election (2011-2023 targets); 2026 features recentred on its training-only means"
@@ -35,21 +35,47 @@
     "extraSdOnExceptionalRequiresOptIn": true
   },
   "baseline": {
-    "source": "data/processed/forecast-transport/party-construction.json",
-    "status": "population-flat Stage41/64 scenario; replaced by the Stage69 notionals once adopted (one pointer change)"
+    "source": "data/processed/voting-place-notionals/baseline-party-vectors.json",
+    "status": "Stage69 voting-place notionals (D103), adopted 2026-10-07; previous source data/processed/forecast-transport/party-construction.json (Stage41/64 population-flat)"
   },
   "intervalLevels": [0.5, 0.8, 0.9],
   "primaryIntervalLevel": 0.8,
-  "pending": {
-    "roster.snapshotId": "Stage50: final nominations close 8 October 2026 12:00 NZDT",
-    "simulation.draws": "Stage63 precision result",
-    "simulation.precisionPolicy": "Stage63 precision result",
-    "mmp.rulesVersion": "no canonical rules-version identifier is recorded yet (Stage49 tests use a test label); set at assembly",
-    "mmp.blocs": "James chooses the bloc definitions",
-    "maori.unpolledSeats": "James chooses a labelled fallback or withholding for the four unpolled seats"
+  "release": {
+    "status": "Release policy approved by James, 2026-10-07 (D114): no calibration label; no staleness windows (every output states its refresh date); precision gate MCSE <= 0.01; one release after each accepted weekly poll refresh",
+    "reconciliationTolerancePP": 1.0,
+    "reconciliationNote": "Internal build gate only: the 64 general seats' party-vote means, weighted by valid party votes, must match the national mean within this many points. It is never shown to users",
+    "probabilityMcseMax": 0.01,
+    "cadence": "one release after each accepted weekly poll refresh",
+    "asOfLabel": "Site copy says \"Forecast if the election were held today, as of <dataCutoff date>\" (the date of the poll refresh behind it); the estimand stays the D106 nowcast in specs, docs and field names (James, 2026-10-07)",
+    "afterElection": "From election day (2026-11-07) outputs are frozen and labelled as of the last release; no further refreshes",
+    "policyApprovedBy": "James, 2026-10-07 (D114)"
   },
-  "roster": {"snapshotId": null},
-  "simulation": {"draws": null, "precisionPolicy": null, "seedNamespace": "nz-nowcast-2026"},
-  "mmp": {"rulesVersion": null, "blocs": null},
-  "maori": {"layer": "stage66-default", "unpolledSeats": null}
+  "pending": {
+    "maori.unpolledFallbackModel": "James chose a labelled fallback for the four unpolled seats (D114) but the Maori layer has no no-poll estimate (Stage66/71: unpolled seats carry no values); a separately authorized bounded stage must define and register it. Until then those seats stay unavailable and block seat-count outputs"
+  },
+  "roster": {"snapshotId": "nz-2026-official-nominations-2026-10-10"},
+  "simulation": {
+    "draws": 65536,
+    "nationalDraws": 4096,
+    "layerReplicates": 16,
+    "precisionPolicy": "Stage63 (PR #91, D095): layer Monte Carlo error is controlled by the layer replication count M per national draw (M = 16 met all six frozen Stage54 composed caps; M = 4 suffices for seat-win probabilities alone). National-driven quantities carry the finite national-bank floor that replication cannot lower and are reported with effective-sample-size Monte Carlo errors (batch means within national MCMC chains), never sqrt(p(1-p)/n). 4,096 national draws as in the Stage63 evaluation; rows = 4,096 x 16.",
+    "decidedBy": "James, relayed by the coordinator 2026-10-07 (M = 16)",
+    "seedNamespace": "nz-nowcast-2026"
+  },
+  "mmp": {
+    "rulesVersion": "electoral-act-1993-2026-01-01",
+    "rulesSourceIds": ["mmp-electoral-act-1993-v238-2026-01-01"],
+    "rulesNote": "Electoral Act 1993 version 238.0 as at 1 January 2026 (D084, docs/mmp-rules-verification.md): 5% or one electorate, Sainte-Lague over 120, s 192 overhang added on top. No later amendment found affecting 2026 seat allocation (checked 2026-10-07)",
+    "blocs": [
+      {"id": "nat-act", "label": "NAT+ACT", "partyIds": ["nationalparty", "actnewzealand"]},
+      {"id": "nat-act-nzf", "label": "NAT+ACT+NZF", "partyIds": ["nationalparty", "actnewzealand", "newzealandfirstparty"]},
+      {"id": "lab-grn", "label": "LAB+GRN", "partyIds": ["labourparty", "greenparty"]},
+      {"id": "lab-grn-tpm", "label": "LAB+GRN+TPM", "partyIds": ["labourparty", "greenparty", "tepatimaori"]}
+    ],
+    "hungParliament": {"blocs": ["nat-act-nzf", "lab-grn-tpm"], "kingmaker": "opportunity",
+                       "definition": "Hung: neither NAT+ACT+NZF nor LAB+GRN+TPM holds a majority of that draw's Parliament. TOP kingmaker: hung, and TOP's seats give either side a majority. Only NAT+ACT+NZF with TOP / only LAB+GRN+TPM with TOP: hung, and TOP's seats give that side but not the other a majority. Hung with neither side reaching a majority even with TOP is the remainder of hung and is not reported separately (James, 2026-10-07)."},
+    "decidedBy": "James, 2026-10-07"
+  },
+  "maori": {"layer": "stage66-default", "presentation": "labelled-range", "unpolledSeats": "labelled-fallback", "unpolledFallbackModel": null,
+           "decidedBy": "James, 2026-10-07 (D114): Maori seats are shown as a labelled range; the four unpolled seats use a labelled fallback from the Maori layer without a poll"}
 }

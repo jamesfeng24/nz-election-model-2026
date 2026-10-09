@@ -39,7 +39,7 @@ def synthetic_maori():
         return {'status': 'simulated', 'class': 'maori-layer', 'source': 'synthetic-test', 'candidates': ids,
                 'candidateNames': ['Synthetic A', 'Synthetic B'], 'candidateParty': parties,
                 'candidateShares': summaries.share_summaries(ids, np.array([[0.6, 0.4] if w == 0 else [0.4, 0.6] for w in win])),
-                'winnerParty': [parties[w] for w in win], 'winnerCandidate': [ids[w] for w in win]}
+                'winners': list(win)}
     return {seat: record(seat) for seat in MAORI}
 
 
@@ -124,7 +124,7 @@ class Bank(unittest.TestCase):
         self.assertEqual([s['electorateId'] for s in bank['seats']], GENERAL + MAORI)
         for seat in bank['seats']:
             self.assertEqual(seat['status'], 'simulated')
-            self.assertEqual(len(seat['winnerParty']), COUNT)
+            self.assertEqual(len(seat['winners']), COUNT)
         classes = synthetic_classification()
         for seat in bank['seats'][:64]:
             self.assertEqual(seat['multiplier'], {'ordinary': 0.60, 'exceptional': 1.00}[classes[seat['electorateId']]])
@@ -161,7 +161,12 @@ class Bank(unittest.TestCase):
         self.assertEqual(set(report['seatStatus']), set(GENERAL + MAORI))
         reasons = {b['reason']: b['seats'] for b in report['blockers']}
         self.assertEqual(sum(reasons.values()) + sum(v == 'simulated' for v in report['seatStatus'].values()), 71)
-        self.assertTrue(any('Stage50' in r for r in reasons))
+        # Stage50 part 2 set the official roster and James's classification (D107) is recorded: all 64 general seats
+        # simulate on the live inputs; only the four unpolled Maori seats wait, on the fallback model (D114).
+        self.assertTrue(all(report['seatStatus'][seat] == 'simulated' for seat in GENERAL))
+        self.assertEqual(len(reasons), 1)
+        self.assertTrue(any('fallback' in r and n == 4 for r, n in reasons.items()))
+        self.assertFalse(any('Stage50' in r or 'classification' in r for r in reasons))
 
 
 if __name__ == '__main__':

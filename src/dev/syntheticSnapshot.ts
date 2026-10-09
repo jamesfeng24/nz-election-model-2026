@@ -31,7 +31,7 @@ export async function runSyntheticDryRun(options: { draws?: number; seed?: strin
     snapshotId: 'synthetic-dry-run-1', targetType: 'nowcast', createdAt: asOf, dataCutoff: asOf,
     modelStateAsOf: '2026-09-27', electionDate: '2026-11-07',
     provenance: { kind: 'synthetic-fixture', label: 'End-to-end dry run on invented fixtures. Not a forecast.' },
-    calibrationStatus: 'uncalibrated', nationalBasis: 'Synthetic poll average with invented noise',
+    nationalBasis: 'Synthetic poll average with invented noise',
     limitations, boundaries: null,
   });
 }

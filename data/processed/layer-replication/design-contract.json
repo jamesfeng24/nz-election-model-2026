@@ -1,0 +1,54 @@
+{
+  "stage": 63,
+  "status": "frozen before any replicate bank other than the pre-freeze timing and stream-prefix checks was simulated or scored",
+  "designDocument": "docs/stage63-layer-replication-design.md",
+  "inherited": {
+    "composedFrame": "Stage54 control composed 56-day banks: local-party layer then candidate layer on the cached external-gauss national draws, Stage47 corrected Gaussian law, scales read from the pinned Stage45 scales file (scale is an input, not a constant of the method)",
+    "stage54Contract": "data/processed/composed-precision/design-contract.json",
+    "excludedElectorates": "Maori electorates are not in the Stage47/Stage48/Stage54 composed seat inventory and are not added"
+  },
+  "years": [2017, 2020, 2023],
+  "restriction": "control",
+  "nationalPool": 4096,
+  "nationalOrder": "permutation(4096, 'national:<year>') of the balanced 4,096 cached draws, the Stage47 order; draw position i of every replicate pairs national draw order[i] with point i of that replicate's layer stream",
+  "replicateStream": "scrambled Sobol, 4,096 points, Stage46 key registry, seed 460046 + year + 1000 * replicateIndex; replicateIndex r uses the same stream as Stage54 scramble r, and the first 512 points of replicate r equal Stage54's 512-point stream for scramble r",
+  "arms": {"baseline": 1, "reported": [4, 16, 64], "nested": [1, 2, 4, 8, 16, 32, 64], "armIsTheFirstMReplicates": true},
+  "populations": {
+    "representatives": {"seats": "the nine Stage47/Stage48/Stage54 representative seats", "replicates": 64, "chunkReplicates": 16},
+    "winPanel": {
+      "rule": "per election, the three non-representative seats whose Stage54 control National win probability (mean of seats[id].blocks[0..3].control.majorWin[0] in data/processed/composed-precision/evaluation.json) is closest to 0.5, ties by electorate id",
+      "seats": [
+        "nz-general-2017-electorate-29", "nz-general-2017-electorate-31", "nz-general-2017-electorate-09",
+        "nz-general-2020-electorate-57", "nz-general-2020-electorate-04", "nz-general-2020-electorate-30",
+        "nz-general-2023-electorate-48", "nz-general-2023-electorate-62", "nz-general-2023-electorate-27"
+      ],
+      "replicates": 8
+    }
+  },
+  "gatesPP": {"mean": 0.05, "crps": 0.05, "energy": 0.1, "width50": 0.5, "width80": 0.5, "width90": 0.5},
+  "gateAnationalDoubling": {"arms": [1, 4, 16, 64], "nationalCounts": [512, 1024, 2048, 4096], "lastDoubling": [2048, 4096], "note": "literal Stage54 gate; includes national half-sampling that replication cannot reduce"},
+  "gateBlayerDoubling": {"arms": [2, 4, 8, 16, 32, 64], "nationalCount": 4096, "note": "change when M/2 is doubled to M at the full fixed national pool; the simulation error relative to the cached national draws"},
+  "requirement": {"sigmaMultiple": 3, "powerOfTwo": true, "layerSdFrom": "sd (ddof 1) over the 64 single-replicate banks of the maximum over representative seat-candidates, per quantity", "formula": "smallest power-of-two M with sigmaMultiple * s1 / sqrt(M) <= cap"},
+  "nationalFloor": {"blocks": 8, "blockDraws": 512, "pooledReplicates": 64, "formula": "floor variance of a 4,096-draw estimate = max(0, var_b(T_b(M=64)) - mean_b(var_r(T_b(M=1))) / 64) / 8, ddof 1 over the 8 national blocks; reported only, never a gate; 7 degrees of freedom, maxima biased high; blocks without replacement from the pool (up to sqrt(7/8) below i.i.d.)"},
+  "equivalence": {"halfSplitArm": 32, "zFormula": "(T_32(first half) - T_32(second half)) / (s1 * sqrt(2 / 32))", "meanZSquaredBand": [0.6, 1.6], "maxAbsZ": 4.5, "reportedOnly": false, "flagMeansReportToJames": true},
+  "winProbability": {"inclusionRange": [0.05, 0.95], "targetStandardErrors": [0.01, 0.005], "layerDesignEffect": "D1 = sum_i 4096 var_r(p_i) / sum_i p_i (1 - p_i) over seat-candidates with the largest-arm probability in range, var over single-replicate banks", "nationalDesignEffect": "Dn = sum_i 512 Vnat_i / sum_i p_i (1 - p_i) with the nationalFloor formula", "standardError": "sqrt(0.25 * (Dn + D1 / M) / 4096) relative to the national population; sqrt(0.25 * D1 / (4096 * M)) relative to the cached pool"},
+  "cpu": {"measured": "process CPU seconds of each replicate bank and of the one-off local-layer solves, written to timing.json (hardware dependent, not compared by --check)", "slateSeats": 71, "stage54MsPerCompositeDraw": 14},
+  "tolerance": {"stage54Reproduction": 1e-9, "uncachedIdentity": 0.0, "independentRecompute": 1e-9},
+  "numerics": "Stage47 conditional-location solves unchanged. Exact reuse only: the local-party layer's solves depend on the national draw alone, so they are computed once per task and reused across replicates (keyed by the full input bytes, scales and tags). The result is bit-identical to the uncached path (tested). The candidate layer's solves depend on the replicate's local draws and are never shared.",
+  "verdicts": {
+    "harness": ["MATCHES_STAGE54", "STOP"],
+    "gateB": ["CAPS_MET_BY_REPLICATION", "CAPS_MET_NOT_3SIGMA_SAFE", "CAPS_NOT_MET_BY_64"],
+    "gateA": ["NATIONAL_DOUBLING_MET", "NATIONAL_DOUBLING_NOT_MET"],
+    "equivalence": ["EQUIVALENT", "FLAG"]
+  },
+  "operationalAdoption": null,
+  "doNot": [
+    "no change to any model default, scale, mean, law, existing draw count or frozen cap; Stage47, Stage48 and Stage54 results, decisions and findings are not altered",
+    "no new national MCMC, no regeneration of national draws, no use of cached draws outside the balanced 4,096 subset",
+    "no emulator, interpolation or approximation of the conditional-location solves; only exact reuse of identical-input solves",
+    "no choice or change of arms, replicate counts, populations, panel seats, scramble indices, caps, multiples, tolerances or rules after any replicate result is read",
+    "no K or F restriction, no horizon refit, no Maori electorates, no replacement, manual-adjustment, MMP, nominations or Stage60/61/62 content",
+    "no new source or acquisition and no data/sources.json edit",
+    "no probability-release threshold, publication, calibration claim or 2026 forecast"
+  ]
+}

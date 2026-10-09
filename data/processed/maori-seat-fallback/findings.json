@@ -1,0 +1,54 @@
+{
+  "calibrationClass": {
+    "F": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "calibrated"
+    },
+    "FC": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "overconfident"
+    },
+    "FP": {
+      "chronological2023": "overconfident",
+      "leaveOneElectionOut": "overconfident"
+    }
+  },
+  "chronologicalAgrees": false,
+  "chronologicalCalibration": [
+    "overconfident"
+  ],
+  "headlineCalibration": [
+    "calibrated",
+    "overconfident"
+  ],
+  "registered": "none_report_to_james",
+  "registeredByJames": {
+    "allowedChoices": [
+      "F",
+      "FC_to_FP",
+      "FC_to_FP_without_Te_Tai_Tonga"
+    ],
+    "choice": "F",
+    "decidedBy": "James (decision card in the Stage78 thread)",
+    "decidedOn": "2026-10-09",
+    "note": "Chosen by James after the frozen swing rule returned mixed_report_to_james (Stage78): the 2023 result carried forward, no polled-seat swing. The swing arms stay as flagged sensitivities. Not wired into the configuration or assembly by Stage78."
+  },
+  "reportedArms": [
+    "F",
+    "FC",
+    "FP"
+  ],
+  "schemaVersion": 1,
+  "swingRule": {
+    "FC": {
+      "class": "mixed_report_to_james",
+      "evidenceQualifier": "weak",
+      "foldsLogScoreBetter": 2
+    },
+    "FP": {
+      "class": "mixed_report_to_james",
+      "evidenceQualifier": "weak",
+      "foldsLogScoreBetter": 2
+    }
+  }
+}

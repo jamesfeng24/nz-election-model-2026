@@ -1,0 +1,127 @@
+{
+  "asOf": "2026-10-07",
+  "bankDigest": "5c0e93271adc2246399b97a6b97805553265153fe0d5a649828ac4b79f119c9c",
+  "configVersion": "2026-10-10.1",
+  "gate": {
+    "checks": [
+      {
+        "check": "configComplete",
+        "detail": "pending fields must be filled before assembly: maori.unpolledFallbackModel",
+        "passed": false
+      },
+      {
+        "check": "provenanceLive",
+        "detail": "synthetic-fixture",
+        "passed": false
+      },
+      {
+        "check": "nationalStateKey",
+        "detail": "",
+        "passed": true
+      },
+      {
+        "check": "oneDrawIdPerRow",
+        "detail": "",
+        "passed": true
+      },
+      {
+        "check": "partyVoteSimplex",
+        "detail": "",
+        "passed": true
+      },
+      {
+        "check": "universe71",
+        "detail": "71 seats",
+        "passed": true
+      },
+      {
+        "check": "everySeatSimulatedOrExplicitlyUnavailable",
+        "detail": "",
+        "passed": true
+      },
+      {
+        "check": "allWinnersPresent",
+        "detail": "0 unavailable",
+        "passed": true
+      },
+      {
+        "check": "classificationMultipliers",
+        "detail": "",
+        "passed": true
+      },
+      {
+        "check": "nationalReconciliation",
+        "detail": "max gap 0.390pp, tolerance 1.0pp",
+        "passed": true
+      }
+    ],
+    "passed": false
+  },
+  "label": "REHEARSAL with labelled synthetic stand-ins; not a nowcast and never published",
+  "layerReplicates": 16,
+  "nationalDraws": 4096,
+  "nationalInput": {
+    "dataCutoff": "2026-10-07",
+    "modelStateAsOf": "2026-09-27",
+    "note": "Stage70 2026-10-07 refresh, adopted into the config (#94)",
+    "source": "data/processed/polling/weekly-refresh/2026-10-07/fit/attempt1.npz"
+  },
+  "provenance": "synthetic-fixture",
+  "realInputsNotYetAvailable": [
+    "Stage69 voting-place notional baseline (merged as #96 but not adopted; adoption is James's decision; the configured Stage64 population-flat baseline is used)"
+  ],
+  "reconciliation": {
+    "byGroup": {
+      "actnewzealand": {
+        "gapPP": 0.12896910242891774,
+        "generalSeatWeightedLocalMeanPP": 9.749685632041517,
+        "nationalMeanPP": 9.620716529612599
+      },
+      "greenparty": {
+        "gapPP": -0.22339265105670858,
+        "generalSeatWeightedLocalMeanPP": 13.347366666103905,
+        "nationalMeanPP": 13.570759317160613
+      },
+      "labourparty": {
+        "gapPP": -0.17795155081636316,
+        "generalSeatWeightedLocalMeanPP": 28.4232436317244,
+        "nationalMeanPP": 28.601195182540764
+      },
+      "nationalparty": {
+        "gapPP": 0.3897680336908904,
+        "generalSeatWeightedLocalMeanPP": 28.282562611391356,
+        "nationalMeanPP": 27.892794577700464
+      },
+      "newzealandfirstparty": {
+        "gapPP": 0.04579591450496606,
+        "generalSeatWeightedLocalMeanPP": 10.80368498895466,
+        "nationalMeanPP": 10.757889074449693
+      },
+      "opportunity": {
+        "gapPP": -0.15970469139232057,
+        "generalSeatWeightedLocalMeanPP": 6.302758773786202,
+        "nationalMeanPP": 6.462463465178522
+      },
+      "tepatimaori": {
+        "gapPP": -0.013154981551433825,
+        "generalSeatWeightedLocalMeanPP": 1.6651330138957372,
+        "nationalMeanPP": 1.678287995447171
+      }
+    },
+    "maxAbsGapPP": 0.3897680336908904,
+    "note": "diagnostic only; the tolerance is set with the publication gate (Stage74)",
+    "tolerance": null
+  },
+  "rows": 65536,
+  "seats": {
+    "simulated": 71,
+    "total": 71
+  },
+  "stage": 77,
+  "syntheticStandIns": [
+    "official candidate list (Stage50 not yet run; announcements + invented Labour/independent rows)",
+    "ordinary/exceptional classification (James has not entered it)",
+    "winners for the four unpolled Maori seats (James has not chosen a fallback)",
+    "MMP rules-version label (placeholder; the blocs are the configured ones)"
+  ]
+}

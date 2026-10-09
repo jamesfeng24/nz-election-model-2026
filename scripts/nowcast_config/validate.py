@@ -53,6 +53,10 @@ def check_config(config, require_complete=False):
     require(multipliers == {'ordinary': 0.60, 'exceptional': 1.00}, 'D107 multipliers are 0.60 ordinary and 1.00 exceptional')
     require(config['uncertainty']['extraSdOnExceptionalRequiresOptIn'] is True, 'extra sd on 1.00 seats needs an explicit opt-in (D107)')
     require(config['intervalLevels'] == INTERVAL_LEVELS and config['primaryIntervalLevel'] == 0.8, 'intervals are 50/80/90 with 80% primary')
+    require(config['maori']['unpolledSeats'] in (None, 'labelled-fallback', 'withhold'),
+            'maori.unpolledSeats is a labelled fallback or withhold (D114), or still pending')
+    require(0 < config['release']['probabilityMcseMax'] < 0.5 and config['release']['reconciliationTolerancePP'] > 0,
+            'release thresholds must be positive and the MCSE limit below 0.5')
     for path in ('national.source', 'uncertainty.scales', 'baseline.source'):
         section, key = path.split('.')
         require((ROOT / config[section][key]).exists(), f'{path} does not exist: {config[section][key]}')
@@ -60,6 +64,12 @@ def check_config(config, require_complete=False):
     for path in pending:
         section, key = path.split('.')
         require(config.get(section, {}).get(key) is None, f'{path} is listed as pending but has a value')
+    if config['roster']['snapshotId'] is not None:
+        for path in ('candidate.features', 'candidate.centredFeatures', 'partyRelationships'):
+            value = config['partyRelationships'] if path == 'partyRelationships' else config['candidate'][path.split('.')[1]]
+            require((ROOT / value).exists(), f'{path} does not exist: {value}')
+    else:
+        require('roster.snapshotId' in pending, 'roster.snapshotId is null but not listed as pending')
     if require_complete:
         require(not pending, 'pending fields must be filled before assembly: ' + ', '.join(sorted(pending)))
     return sorted(pending)

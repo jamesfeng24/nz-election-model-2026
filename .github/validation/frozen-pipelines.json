@@ -239,6 +239,39 @@
     "evidenceSha256": "32d6053a0367b5e4e4b04d3ae0803726fc75c21d2493ec7331ff28e6e7105018",
     "scopeFingerprint": "78b4f409ac48a45217ff4e8b74e22329dfde1093a4e2fe1f69d3fa747c19f49b"
    }
+  },
+  "stage63": {
+   "entryModules": [
+    "scripts.layer_replication.evaluation",
+    "scripts.layer_replication.verification"
+   ],
+   "ownedPaths": [
+    "scripts/layer_replication"
+   ],
+   "outputPaths": [
+    "data/processed/layer-replication"
+   ],
+   "extraDependencies": [],
+   "cacheDirectory": ".cache/stage63",
+   "cacheReaderModules": [],
+   "cacheReaderNames": [],
+   "reviewedCacheConsumers": [],
+   "replacedCommands": [
+    "python3 -m scripts.layer_replication.evaluation --check",
+    "python3 -m scripts.layer_replication.verification --check"
+   ],
+   "integrityChecks": [
+    "scripts.layer_replication.common:verify"
+   ],
+   "pin": {
+    "commit": "e0bc95607a9bf317ebf7a6214c90d5d52c0acb63",
+    "runId": 37573315688,
+    "runUrl": "https://github.com/jamesfeng24/nz-election-model-2026/actions/runs/37573315688",
+    "createdAt": "2026-10-07T04:49:38Z",
+    "evidencePath": ".github/validation/evidence/frozen-run-37573315688.json",
+    "evidenceSha256": "da63e18941802f0b1647826d8f3d2e0cac3c88a3bd0a42755fa1df0a7f398303",
+    "scopeFingerprint": "01d72d96955698adb4e34fe963b2df0bde92849039dd6415f8245d8279d34e4b"
+   }
   }
  }
 }

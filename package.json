@@ -13,6 +13,8 @@
     "typecheck": "tsc --noEmit",
     "build": "vite build",
     "check:dist": "node scripts/validate/no_synthetic_in_dist.mjs dist",
+    "release:build": "vite build --ssr src/release/cli.ts --outDir .release-build/cli --emptyOutDir",
+    "release:publish": "node .release-build/cli/cli.js",
     "preview": "vite preview",
     "check": "npm run test && npm run typecheck && npm run build",
     "test:python": "python3 -m unittest discover -s scripts/tests -v",

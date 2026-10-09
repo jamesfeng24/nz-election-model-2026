@@ -54,10 +54,10 @@ The gate checks:
 ## Decisions, limits and things not done
 
 - **Candidate mean parameters.** *Superseded by Stage75 (7 October 2026).* Stage73 first pointed at the latest saved fold (`primary`, target 2023, trained on the 2011–2020 contests, fit `aca80252…`), which left out 2023. Stage75 refits the same design on every completed election and recentres the 2026 features, and the config now points there ([stage75-candidate-fit-2023.md](stage75-candidate-fit-2023.md)).
-- **Runtime.** The frozen Stage47 within-remainder location solve dominates: about 35ms per draw per general seat on one core. At 8,192 draws that is about 5 hours single-core, so production runs need workers. Precision (Stage63) sets the draw count.
+- **Runtime.** The frozen Stage47 within-remainder location solve dominates. It was about 35ms per draw per general seat on one core (about 5 hours single-core at 8,192 draws); Stage76 makes it about 3.8× faster with identical results ([stage76-assembly-speed.md](stage76-assembly-speed.md)). Precision (Stage63) sets the draw count.
 - **Not done:**
   - no snapshot or forecast;
-  - no classification entries (a draft for James is in `docs/general-seat-classification-2026-draft.md`);
+  - no classification entries (a draft for James is in `docs/general-seat-classification-2026.md`);
   - no Stage69/70 cutover;
   - no draw count, blocs or rules version;
   - no Stage56 output B;
