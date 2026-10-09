@@ -1,0 +1,1839 @@
+{
+  "chronological": {
+    "byFold": {
+      "F": {
+        "2023": {
+          "brierMulti": 1.0873141885714286,
+          "calibrationZ": -4.0784079191793525,
+          "contests": 7,
+          "contrastContests": 7,
+          "contrastCoverage": {
+            "0.5": 0.14285714285714285,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857
+          },
+          "coverageBias": -0.26419753086419756,
+          "coverageDeviation": 0.26419753086419756,
+          "favouriteWinRate": 0.2857142857142857,
+          "meanFavouriteProbability": 0.813757142857143,
+          "meanLogScoreWinner": -2.1237263046594586,
+          "meanProbabilityOfWinner": 0.33859999999999996,
+          "shareCoverage": {
+            "0.5": 0.2962962962962963,
+            "0.8": 0.5185185185185185,
+            "0.9": 0.5925925925925926
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6,
+              "0.8": 0.9,
+              "0.9": 0.9,
+              "observations": 10
+            },
+            "matched-other": {
+              "0.5": 0.3333333333333333,
+              "0.8": 0.3333333333333333,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "mp-lab": {
+              "0.5": 0.07142857142857142,
+              "0.8": 0.2857142857142857,
+              "0.9": 0.2857142857142857,
+              "observations": 14
+            }
+          },
+          "shareObservations": 27
+        }
+      },
+      "FC": {
+        "2023": {
+          "brierMulti": 1.0873141885714286,
+          "calibrationZ": -4.078407919179348,
+          "contests": 7,
+          "contrastContests": 7,
+          "contrastCoverage": {
+            "0.5": 0.14285714285714285,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857
+          },
+          "coverageBias": -0.26419753086419756,
+          "coverageDeviation": 0.26419753086419756,
+          "favouriteWinRate": 0.2857142857142857,
+          "meanFavouriteProbability": 0.8137571428571426,
+          "meanLogScoreWinner": -2.1237263046594586,
+          "meanProbabilityOfWinner": 0.33859999999999996,
+          "shareCoverage": {
+            "0.5": 0.2962962962962963,
+            "0.8": 0.5185185185185185,
+            "0.9": 0.5925925925925926
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6,
+              "0.8": 0.9,
+              "0.9": 0.9,
+              "observations": 10
+            },
+            "matched-other": {
+              "0.5": 0.3333333333333333,
+              "0.8": 0.3333333333333333,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "mp-lab": {
+              "0.5": 0.07142857142857142,
+              "0.8": 0.2857142857142857,
+              "0.9": 0.2857142857142857,
+              "observations": 14
+            }
+          },
+          "shareObservations": 27
+        }
+      },
+      "FP": {
+        "2023": {
+          "brierMulti": 1.0873141885714286,
+          "calibrationZ": -4.078407919179348,
+          "contests": 7,
+          "contrastContests": 7,
+          "contrastCoverage": {
+            "0.5": 0.14285714285714285,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857
+          },
+          "coverageBias": -0.26419753086419756,
+          "coverageDeviation": 0.26419753086419756,
+          "favouriteWinRate": 0.2857142857142857,
+          "meanFavouriteProbability": 0.8137571428571426,
+          "meanLogScoreWinner": -2.1237263046594586,
+          "meanProbabilityOfWinner": 0.33859999999999996,
+          "shareCoverage": {
+            "0.5": 0.2962962962962963,
+            "0.8": 0.5185185185185185,
+            "0.9": 0.5925925925925926
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6,
+              "0.8": 0.9,
+              "0.9": 0.9,
+              "observations": 10
+            },
+            "matched-other": {
+              "0.5": 0.3333333333333333,
+              "0.8": 0.3333333333333333,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "mp-lab": {
+              "0.5": 0.07142857142857142,
+              "0.8": 0.2857142857142857,
+              "0.9": 0.2857142857142857,
+              "observations": 14
+            }
+          },
+          "shareObservations": 27
+        }
+      }
+    },
+    "comparisons": {
+      "FC against F": {
+        "brierDifference": -8.698399143826562e-17,
+        "brierInterval90": [
+          -1.6628563605434823e-16,
+          -7.93016446160826e-18
+        ],
+        "logScoreDifference": 7.831037405838158e-17,
+        "logScoreInterval90": [
+          -1.6851599480917553e-17,
+          1.9032394707859825e-16
+        ]
+      },
+      "FP against F": {
+        "brierDifference": -8.698399143826562e-17,
+        "brierInterval90": [
+          -1.6628563605434823e-16,
+          -7.93016446160826e-18
+        ],
+        "logScoreDifference": 7.831037405838158e-17,
+        "logScoreInterval90": [
+          -1.6851599480917553e-17,
+          1.9032394707859825e-16
+        ]
+      }
+    },
+    "contests": {
+      "F": [
+        {
+          "brierMulti": 1.968326405,
+          "favouriteProb": 0.99205,
+          "favouriteWon": 0.0,
+          "logScore": -4.834583350315897,
+          "probActual": 0.00795,
+          "seat": "Hauraki-Waikato",
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.0046464800000000014,
+          "favouriteProb": 0.9518,
+          "favouriteWon": 1.0,
+          "logScore": -0.04940035029512699,
+          "probActual": 0.9518,
+          "seat": "Ikaroa-Rāwhiti",
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.7487855250000001,
+          "favouriteProb": 0.60835,
+          "favouriteWon": 0.0,
+          "logScore": -0.9554214490771934,
+          "probActual": 0.38465,
+          "seat": "Tāmaki Makaurau",
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.741092345,
+          "favouriteProb": 0.6086,
+          "favouriteWon": 0.0,
+          "logScore": -0.9386641608510474,
+          "probActual": 0.39115,
+          "seat": "Te Tai Hauāuru",
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.9372011949999999,
+          "favouriteProb": 0.9839,
+          "favouriteWon": 0.0,
+          "logScore": -4.163694640356894,
+          "probActual": 0.01555,
+          "seat": "Te Tai Tokerau",
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.8672781250000001,
+          "favouriteProb": 0.96625,
+          "favouriteWon": 0.0,
+          "logScore": -3.388774861663598,
+          "probActual": 0.03375,
+          "seat": "Te Tai Tonga",
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.343869245,
+          "favouriteProb": 0.58535,
+          "favouriteWon": 1.0,
+          "logScore": -0.5355453200564555,
+          "probActual": 0.58535,
+          "seat": "Waiariki",
+          "year": 2023
+        }
+      ],
+      "FC": [
+        {
+          "brierMulti": 1.9683264049999998,
+          "favouriteProb": 0.9920499999999999,
+          "favouriteWon": 0.0,
+          "logScore": -4.834583350315897,
+          "probActual": 0.007950000000000002,
+          "seat": "Hauraki-Waikato",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.004646480000000003,
+          "favouriteProb": 0.9517999999999998,
+          "favouriteWon": 1.0,
+          "logScore": -0.049400350295126995,
+          "probActual": 0.9517999999999998,
+          "seat": "Ikaroa-Rāwhiti",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.7487855250000002,
+          "favouriteProb": 0.60835,
+          "favouriteWon": 0.0,
+          "logScore": -0.9554214490771933,
+          "probActual": 0.38464999999999994,
+          "seat": "Tāmaki Makaurau",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.741092345,
+          "favouriteProb": 0.6085999999999998,
+          "favouriteWon": 0.0,
+          "logScore": -0.9386641608510475,
+          "probActual": 0.39114999999999994,
+          "seat": "Te Tai Hauāuru",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.9372011949999997,
+          "favouriteProb": 0.9838999999999997,
+          "favouriteWon": 0.0,
+          "logScore": -4.163694640356894,
+          "probActual": 0.01555,
+          "seat": "Te Tai Tokerau",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.867278125,
+          "favouriteProb": 0.9662499999999998,
+          "favouriteWon": 0.0,
+          "logScore": -3.3887748616635975,
+          "probActual": 0.03374999999999999,
+          "seat": "Te Tai Tonga",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.34386924499999993,
+          "favouriteProb": 0.58535,
+          "favouriteWon": 1.0,
+          "logScore": -0.5355453200564554,
+          "probActual": 0.58535,
+          "seat": "Waiariki",
+          "subsets": 20,
+          "year": 2023
+        }
+      ],
+      "FP": [
+        {
+          "brierMulti": 1.9683264049999998,
+          "favouriteProb": 0.9920499999999999,
+          "favouriteWon": 0.0,
+          "logScore": -4.834583350315897,
+          "probActual": 0.007950000000000002,
+          "seat": "Hauraki-Waikato",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.004646480000000003,
+          "favouriteProb": 0.9517999999999998,
+          "favouriteWon": 1.0,
+          "logScore": -0.049400350295126995,
+          "probActual": 0.9517999999999998,
+          "seat": "Ikaroa-Rāwhiti",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.7487855250000002,
+          "favouriteProb": 0.60835,
+          "favouriteWon": 0.0,
+          "logScore": -0.9554214490771933,
+          "probActual": 0.38464999999999994,
+          "seat": "Tāmaki Makaurau",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.741092345,
+          "favouriteProb": 0.6085999999999998,
+          "favouriteWon": 0.0,
+          "logScore": -0.9386641608510475,
+          "probActual": 0.39114999999999994,
+          "seat": "Te Tai Hauāuru",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.9372011949999997,
+          "favouriteProb": 0.9838999999999997,
+          "favouriteWon": 0.0,
+          "logScore": -4.163694640356894,
+          "probActual": 0.01555,
+          "seat": "Te Tai Tokerau",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.867278125,
+          "favouriteProb": 0.9662499999999998,
+          "favouriteWon": 0.0,
+          "logScore": -3.3887748616635975,
+          "probActual": 0.03374999999999999,
+          "seat": "Te Tai Tonga",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.34386924499999993,
+          "favouriteProb": 0.58535,
+          "favouriteWon": 1.0,
+          "logScore": -0.5355453200564554,
+          "probActual": 0.58535,
+          "seat": "Waiariki",
+          "subsets": 20,
+          "year": 2023
+        }
+      ]
+    },
+    "fits": {
+      "2023": {
+        "eligiblePolledSeats": [
+          "Hauraki-Waikato",
+          "Ikaroa-Rāwhiti",
+          "Te Tai Hauāuru",
+          "Te Tai Tokerau",
+          "Te Tai Tonga",
+          "Tāmaki Makaurau",
+          "Waiariki"
+        ],
+        "fallback": {
+          "contrasts": 12,
+          "elections": 2,
+          "sigma2": 0.05084399833491583,
+          "sigma2Dof": 10,
+          "tau2": 0.0,
+          "trainYears": [
+            2017,
+            2020
+          ]
+        },
+        "lambdaInterval": {
+          "p05": 1.284393127659448,
+          "p50": 3.3420420774711648,
+          "p95": 7.993217808860498,
+          "replicates": 1000
+        },
+        "meanKappa": {
+          "FC": 0.0,
+          "FP": 0.0
+        },
+        "pollTrainYears": [
+          2014,
+          2017,
+          2020
+        ]
+      }
+    },
+    "foldsScored": [
+      2023
+    ],
+    "pooled": {
+      "F": {
+        "brierMulti": 1.0873141885714286,
+        "calibrationZ": -4.0784079191793525,
+        "contests": 7,
+        "contrastContests": 7,
+        "contrastCoverage": {
+          "0.5": 0.14285714285714285,
+          "0.8": 0.2857142857142857,
+          "0.9": 0.2857142857142857
+        },
+        "coverageBias": -0.26419753086419756,
+        "coverageDeviation": 0.26419753086419756,
+        "favouriteWinRate": 0.2857142857142857,
+        "meanFavouriteProbability": 0.813757142857143,
+        "meanLogScoreWinner": -2.1237263046594586,
+        "meanProbabilityOfWinner": 0.33859999999999996,
+        "shareCoverage": {
+          "0.5": 0.2962962962962963,
+          "0.8": 0.5185185185185185,
+          "0.9": 0.5925925925925926
+        },
+        "shareCoverageByCandidateKind": {
+          "entrant": {
+            "0.5": 0.6,
+            "0.8": 0.9,
+            "0.9": 0.9,
+            "observations": 10
+          },
+          "matched-other": {
+            "0.5": 0.3333333333333333,
+            "0.8": 0.3333333333333333,
+            "0.9": 1.0,
+            "observations": 3
+          },
+          "mp-lab": {
+            "0.5": 0.07142857142857142,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857,
+            "observations": 14
+          }
+        },
+        "shareObservations": 27
+      },
+      "FC": {
+        "brierMulti": 1.0873141885714286,
+        "calibrationZ": -4.078407919179348,
+        "contests": 7,
+        "contrastContests": 7,
+        "contrastCoverage": {
+          "0.5": 0.14285714285714285,
+          "0.8": 0.2857142857142857,
+          "0.9": 0.2857142857142857
+        },
+        "coverageBias": -0.26419753086419756,
+        "coverageDeviation": 0.26419753086419756,
+        "favouriteWinRate": 0.2857142857142857,
+        "meanFavouriteProbability": 0.8137571428571426,
+        "meanLogScoreWinner": -2.1237263046594586,
+        "meanProbabilityOfWinner": 0.33859999999999996,
+        "shareCoverage": {
+          "0.5": 0.2962962962962963,
+          "0.8": 0.5185185185185185,
+          "0.9": 0.5925925925925926
+        },
+        "shareCoverageByCandidateKind": {
+          "entrant": {
+            "0.5": 0.6,
+            "0.8": 0.9,
+            "0.9": 0.9,
+            "observations": 10
+          },
+          "matched-other": {
+            "0.5": 0.3333333333333333,
+            "0.8": 0.3333333333333333,
+            "0.9": 1.0,
+            "observations": 3
+          },
+          "mp-lab": {
+            "0.5": 0.07142857142857142,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857,
+            "observations": 14
+          }
+        },
+        "shareObservations": 27
+      },
+      "FP": {
+        "brierMulti": 1.0873141885714286,
+        "calibrationZ": -4.078407919179348,
+        "contests": 7,
+        "contrastContests": 7,
+        "contrastCoverage": {
+          "0.5": 0.14285714285714285,
+          "0.8": 0.2857142857142857,
+          "0.9": 0.2857142857142857
+        },
+        "coverageBias": -0.26419753086419756,
+        "coverageDeviation": 0.26419753086419756,
+        "favouriteWinRate": 0.2857142857142857,
+        "meanFavouriteProbability": 0.8137571428571426,
+        "meanLogScoreWinner": -2.1237263046594586,
+        "meanProbabilityOfWinner": 0.33859999999999996,
+        "shareCoverage": {
+          "0.5": 0.2962962962962963,
+          "0.8": 0.5185185185185185,
+          "0.9": 0.5925925925925926
+        },
+        "shareCoverageByCandidateKind": {
+          "entrant": {
+            "0.5": 0.6,
+            "0.8": 0.9,
+            "0.9": 0.9,
+            "observations": 10
+          },
+          "matched-other": {
+            "0.5": 0.3333333333333333,
+            "0.8": 0.3333333333333333,
+            "0.9": 1.0,
+            "observations": 3
+          },
+          "mp-lab": {
+            "0.5": 0.07142857142857142,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857,
+            "observations": 14
+          }
+        },
+        "shareObservations": 27
+      }
+    }
+  },
+  "leaveOneElectionOut": {
+    "byFold": {
+      "F": {
+        "2017": {
+          "brierMulti": 0.3196684935714286,
+          "calibrationZ": 0.8637303497713863,
+          "contests": 7,
+          "contrastContests": 6,
+          "contrastCoverage": {
+            "0.5": 0.8333333333333334,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "coverageBias": 0.11515151515151512,
+          "coverageDeviation": 0.11515151515151512,
+          "favouriteWinRate": 0.8571428571428571,
+          "meanFavouriteProbability": 0.7140714285714286,
+          "meanLogScoreWinner": -0.49334300093338573,
+          "meanProbabilityOfWinner": 0.6473142857142857,
+          "shareCoverage": {
+            "0.5": 0.6363636363636364,
+            "0.8": 0.9090909090909091,
+            "0.9": 1.0
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6666666666666666,
+              "0.8": 0.6666666666666666,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "matched-other": {
+              "0.5": 0.5,
+              "0.8": 1.0,
+              "0.9": 1.0,
+              "observations": 6
+            },
+            "mp-lab": {
+              "0.5": 0.6923076923076923,
+              "0.8": 0.9230769230769231,
+              "0.9": 1.0,
+              "observations": 13
+            }
+          },
+          "shareObservations": 22
+        },
+        "2020": {
+          "brierMulti": 0.22145330285714282,
+          "calibrationZ": 0.8003078988966063,
+          "contests": 7,
+          "contrastContests": 6,
+          "contrastCoverage": {
+            "0.5": 1.0,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "coverageBias": -0.050000000000000044,
+          "coverageDeviation": 0.06666666666666672,
+          "favouriteWinRate": 0.8571428571428571,
+          "meanFavouriteProbability": 0.7301,
+          "meanLogScoreWinner": -0.3737042520714269,
+          "meanProbabilityOfWinner": 0.7100428571428571,
+          "shareCoverage": {
+            "0.5": 0.525,
+            "0.8": 0.7,
+            "0.9": 0.825
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.3333333333333333,
+              "0.8": 0.5714285714285714,
+              "0.9": 0.7142857142857143,
+              "observations": 21
+            },
+            "matched-other": {
+              "0.5": 0.6,
+              "0.8": 0.6,
+              "0.9": 1.0,
+              "observations": 5
+            },
+            "mp-lab": {
+              "0.5": 0.7857142857142857,
+              "0.8": 0.9285714285714286,
+              "0.9": 0.9285714285714286,
+              "observations": 14
+            }
+          },
+          "shareObservations": 40
+        },
+        "2023": {
+          "brierMulti": 1.0903538364285714,
+          "calibrationZ": -4.097096702014169,
+          "contests": 7,
+          "contrastContests": 7,
+          "contrastCoverage": {
+            "0.5": 0.14285714285714285,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857
+          },
+          "coverageBias": -0.26419753086419756,
+          "coverageDeviation": 0.26419753086419756,
+          "favouriteWinRate": 0.2857142857142857,
+          "meanFavouriteProbability": 0.8148500000000001,
+          "meanLogScoreWinner": -2.1405475646237857,
+          "meanProbabilityOfWinner": 0.33765,
+          "shareCoverage": {
+            "0.5": 0.2962962962962963,
+            "0.8": 0.5185185185185185,
+            "0.9": 0.5925925925925926
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6,
+              "0.8": 0.9,
+              "0.9": 0.9,
+              "observations": 10
+            },
+            "matched-other": {
+              "0.5": 0.3333333333333333,
+              "0.8": 0.3333333333333333,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "mp-lab": {
+              "0.5": 0.07142857142857142,
+              "0.8": 0.2857142857142857,
+              "0.9": 0.2857142857142857,
+              "observations": 14
+            }
+          },
+          "shareObservations": 27
+        }
+      },
+      "FC": {
+        "2017": {
+          "brierMulti": 0.33985094135714283,
+          "calibrationZ": 0.4174473259297592,
+          "contests": 7,
+          "contrastContests": 6,
+          "contrastCoverage": {
+            "0.5": 0.5666666666666668,
+            "0.8": 0.9500000000000001,
+            "0.9": 1.0
+          },
+          "coverageBias": 0.02878787878787877,
+          "coverageDeviation": 0.040909090909090895,
+          "favouriteWinRate": 0.8285714285714285,
+          "meanFavouriteProbability": 0.7650914285714286,
+          "meanLogScoreWinner": -0.5192525527530396,
+          "meanProbabilityOfWinner": 0.6703614285714286,
+          "shareCoverage": {
+            "0.5": 0.4818181818181818,
+            "0.8": 0.8045454545454546,
+            "0.9": 1.0
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6666666666666666,
+              "0.8": 0.6666666666666666,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "matched-other": {
+              "0.5": 0.3,
+              "0.8": 0.7666666666666666,
+              "0.9": 1.0,
+              "observations": 6
+            },
+            "mp-lab": {
+              "0.5": 0.5230769230769231,
+              "0.8": 0.8538461538461537,
+              "0.9": 1.0,
+              "observations": 13
+            }
+          },
+          "shareObservations": 22
+        },
+        "2020": {
+          "brierMulti": 0.20378876471428573,
+          "calibrationZ": -0.07600425717829985,
+          "contests": 7,
+          "contrastContests": 6,
+          "contrastCoverage": {
+            "0.5": 0.6,
+            "0.8": 0.9166666666666666,
+            "0.9": 1.0
+          },
+          "coverageBias": -0.16250000000000003,
+          "coverageDeviation": 0.16250000000000003,
+          "favouriteWinRate": 0.8571428571428571,
+          "meanFavouriteProbability": 0.8665292857142857,
+          "meanLogScoreWinner": -0.3206126400754014,
+          "meanProbabilityOfWinner": 0.7916321428571429,
+          "shareCoverage": {
+            "0.5": 0.38499999999999995,
+            "0.8": 0.6275000000000001,
+            "0.9": 0.7
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.28095238095238095,
+              "0.8": 0.48571428571428565,
+              "0.9": 0.5238095238095238,
+              "observations": 21
+            },
+            "matched-other": {
+              "0.5": 0.6,
+              "0.8": 0.6,
+              "0.9": 0.8,
+              "observations": 5
+            },
+            "mp-lab": {
+              "0.5": 0.4642857142857143,
+              "0.8": 0.85,
+              "0.9": 0.9285714285714286,
+              "observations": 14
+            }
+          },
+          "shareObservations": 40
+        },
+        "2023": {
+          "brierMulti": 1.0903538364285714,
+          "calibrationZ": -4.097096702014169,
+          "contests": 7,
+          "contrastContests": 7,
+          "contrastCoverage": {
+            "0.5": 0.14285714285714285,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857
+          },
+          "coverageBias": -0.26419753086419756,
+          "coverageDeviation": 0.26419753086419756,
+          "favouriteWinRate": 0.2857142857142857,
+          "meanFavouriteProbability": 0.81485,
+          "meanLogScoreWinner": -2.1405475646237853,
+          "meanProbabilityOfWinner": 0.33765,
+          "shareCoverage": {
+            "0.5": 0.2962962962962963,
+            "0.8": 0.5185185185185185,
+            "0.9": 0.5925925925925926
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6,
+              "0.8": 0.9,
+              "0.9": 0.9,
+              "observations": 10
+            },
+            "matched-other": {
+              "0.5": 0.3333333333333333,
+              "0.8": 0.3333333333333333,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "mp-lab": {
+              "0.5": 0.07142857142857142,
+              "0.8": 0.2857142857142857,
+              "0.9": 0.2857142857142857,
+              "observations": 14
+            }
+          },
+          "shareObservations": 27
+        }
+      },
+      "FP": {
+        "2017": {
+          "brierMulti": 0.33913807599999996,
+          "calibrationZ": 0.7280599585017047,
+          "contests": 7,
+          "contrastContests": 6,
+          "contrastCoverage": {
+            "0.5": 0.7666666666666666,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "coverageBias": 0.10303030303030299,
+          "coverageDeviation": 0.10303030303030299,
+          "favouriteWinRate": 0.8285714285714285,
+          "meanFavouriteProbability": 0.7070692857142857,
+          "meanLogScoreWinner": -0.5169934826500852,
+          "meanProbabilityOfWinner": 0.6364757142857143,
+          "shareCoverage": {
+            "0.5": 0.6136363636363636,
+            "0.8": 0.8954545454545454,
+            "0.9": 1.0
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6666666666666666,
+              "0.8": 0.6666666666666666,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "matched-other": {
+              "0.5": 0.39999999999999997,
+              "0.8": 0.9500000000000001,
+              "0.9": 1.0,
+              "observations": 6
+            },
+            "mp-lab": {
+              "0.5": 0.6999999999999998,
+              "0.8": 0.9230769230769231,
+              "0.9": 1.0,
+              "observations": 13
+            }
+          },
+          "shareObservations": 22
+        },
+        "2020": {
+          "brierMulti": 0.20209168771428573,
+          "calibrationZ": 0.15596503879539186,
+          "contests": 7,
+          "contrastContests": 6,
+          "contrastCoverage": {
+            "0.5": 0.75,
+            "0.8": 1.0,
+            "0.9": 1.0
+          },
+          "coverageBias": -0.13583333333333333,
+          "coverageDeviation": 0.13583333333333333,
+          "favouriteWinRate": 0.8571428571428571,
+          "meanFavouriteProbability": 0.8361857142857144,
+          "meanLogScoreWinner": -0.32765732003155684,
+          "meanProbabilityOfWinner": 0.7721671428571428,
+          "shareCoverage": {
+            "0.5": 0.41,
+            "0.8": 0.675,
+            "0.9": 0.7075
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.2857142857142857,
+              "0.8": 0.5238095238095238,
+              "0.9": 0.5380952380952382,
+              "observations": 21
+            },
+            "matched-other": {
+              "0.5": 0.6,
+              "0.8": 0.6,
+              "0.9": 0.8,
+              "observations": 5
+            },
+            "mp-lab": {
+              "0.5": 0.5285714285714285,
+              "0.8": 0.9285714285714286,
+              "0.9": 0.9285714285714286,
+              "observations": 14
+            }
+          },
+          "shareObservations": 40
+        },
+        "2023": {
+          "brierMulti": 1.0903538364285714,
+          "calibrationZ": -4.097096702014169,
+          "contests": 7,
+          "contrastContests": 7,
+          "contrastCoverage": {
+            "0.5": 0.14285714285714285,
+            "0.8": 0.2857142857142857,
+            "0.9": 0.2857142857142857
+          },
+          "coverageBias": -0.26419753086419756,
+          "coverageDeviation": 0.26419753086419756,
+          "favouriteWinRate": 0.2857142857142857,
+          "meanFavouriteProbability": 0.81485,
+          "meanLogScoreWinner": -2.1405475646237853,
+          "meanProbabilityOfWinner": 0.33765,
+          "shareCoverage": {
+            "0.5": 0.2962962962962963,
+            "0.8": 0.5185185185185185,
+            "0.9": 0.5925925925925926
+          },
+          "shareCoverageByCandidateKind": {
+            "entrant": {
+              "0.5": 0.6,
+              "0.8": 0.9,
+              "0.9": 0.9,
+              "observations": 10
+            },
+            "matched-other": {
+              "0.5": 0.3333333333333333,
+              "0.8": 0.3333333333333333,
+              "0.9": 1.0,
+              "observations": 3
+            },
+            "mp-lab": {
+              "0.5": 0.07142857142857142,
+              "0.8": 0.2857142857142857,
+              "0.9": 0.2857142857142857,
+              "observations": 14
+            }
+          },
+          "shareObservations": 27
+        }
+      }
+    },
+    "comparisons": {
+      "FC against F": {
+        "brierDifference": 0.0008393032142857349,
+        "brierInterval90": [
+          -0.047820855709523775,
+          0.05758624173333336
+        ],
+        "logScoreDifference": 0.009060686725457234,
+        "logScoreInterval90": [
+          -0.06804584485116455,
+          0.07512959830554687
+        ]
+      },
+      "FP against F": {
+        "brierDifference": 3.598909523809336e-05,
+        "brierInterval90": [
+          -0.034871168270238076,
+          0.04169888101309523
+        ],
+        "logScoreDifference": 0.007465483441056969,
+        "logScoreInterval90": [
+          -0.0430153502866822,
+          0.050914055346735196
+        ]
+      }
+    },
+    "contests": {
+      "F": [
+        {
+          "brierMulti": 0.035457844999999995,
+          "favouriteProb": 0.86685,
+          "favouriteWon": 1.0,
+          "logScore": -0.14288932755024036,
+          "probActual": 0.86685,
+          "seat": "Hauraki-Waikato",
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.04105590499999998,
+          "favouriteProb": 0.85645,
+          "favouriteWon": 1.0,
+          "logScore": -0.15495934003814302,
+          "probActual": 0.85645,
+          "seat": "Ikaroa-Rāwhiti",
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.314138135,
+          "favouriteProb": 0.6003,
+          "favouriteWon": 1.0,
+          "logScore": -0.5103257487243398,
+          "probActual": 0.6003,
+          "seat": "Tāmaki Makaurau",
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.30926668500000004,
+          "favouriteProb": 0.6052,
+          "favouriteWon": 1.0,
+          "logScore": -0.5021962970679362,
+          "probActual": 0.6052,
+          "seat": "Te Tai Hauāuru",
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.333051375,
+          "favouriteProb": 0.59145,
+          "favouriteWon": 1.0,
+          "logScore": -0.5251781299903912,
+          "probActual": 0.59145,
+          "seat": "Te Tai Tokerau",
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.12822486499999997,
+          "favouriteProb": 0.7446,
+          "favouriteWon": 1.0,
+          "logScore": -0.2949081175435205,
+          "probActual": 0.7446,
+          "seat": "Te Tai Tonga",
+          "year": 2017
+        },
+        {
+          "brierMulti": 1.076484645,
+          "favouriteProb": 0.73365,
+          "favouriteWon": 0.0,
+          "logScore": -1.322944045619129,
+          "probActual": 0.26635,
+          "seat": "Waiariki",
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.048112020000000005,
+          "favouriteProb": 0.8449,
+          "favouriteWon": 1.0,
+          "logScore": -0.16853700182333795,
+          "probActual": 0.8449,
+          "seat": "Hauraki-Waikato",
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.19065318499999995,
+          "favouriteProb": 0.69115,
+          "favouriteWon": 1.0,
+          "logScore": -0.3693984020717707,
+          "probActual": 0.69115,
+          "seat": "Ikaroa-Rāwhiti",
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.15636919499999996,
+          "favouriteProb": 0.70825,
+          "favouriteWon": 1.0,
+          "logScore": -0.34495814027151106,
+          "probActual": 0.70825,
+          "seat": "Tāmaki Makaurau",
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.39747527999999993,
+          "favouriteProb": 0.5542,
+          "favouriteWon": 1.0,
+          "logScore": -0.5902296465532589,
+          "probActual": 0.5542,
+          "seat": "Te Tai Hauāuru",
+          "year": 2020
+        },
+        {
+          "brierMulti": 1.9999999999997797e-08,
+          "favouriteProb": 0.9999,
+          "favouriteWon": 1.0,
+          "logScore": -0.00010000500033334732,
+          "probActual": 0.9999,
+          "seat": "Te Tai Tokerau",
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.10730734000000001,
+          "favouriteProb": 0.7421,
+          "favouriteWon": 1.0,
+          "logScore": -0.2982712740060492,
+          "probActual": 0.7421,
+          "seat": "Te Tai Tonga",
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.6502560800000001,
+          "favouriteProb": 0.5702,
+          "favouriteWon": 0.0,
+          "logScore": -0.8444352947737269,
+          "probActual": 0.4298,
+          "seat": "Waiariki",
+          "year": 2020
+        },
+        {
+          "brierMulti": 1.9699140050000001,
+          "favouriteProb": 0.99245,
+          "favouriteWon": 0.0,
+          "logScore": -4.886207715721204,
+          "probActual": 0.00755,
+          "seat": "Hauraki-Waikato",
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.004569679999999996,
+          "favouriteProb": 0.9522,
+          "favouriteWon": 1.0,
+          "logScore": -0.04898018222171861,
+          "probActual": 0.9522,
+          "seat": "Ikaroa-Rāwhiti",
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.7596650550000001,
+          "favouriteProb": 0.6125,
+          "favouriteWon": 0.0,
+          "logScore": -0.9677156138663431,
+          "probActual": 0.37995,
+          "seat": "Tāmaki Makaurau",
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.74066622,
+          "favouriteProb": 0.6085,
+          "favouriteWon": 0.0,
+          "logScore": -0.9380252240201611,
+          "probActual": 0.3914,
+          "seat": "Te Tai Hauāuru",
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.935233165,
+          "favouriteProb": 0.9835,
+          "favouriteWon": 0.0,
+          "logScore": -4.125835229313472,
+          "probActual": 0.01615,
+          "seat": "Te Tai Tokerau",
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.8788911249999998,
+          "favouriteProb": 0.96925,
+          "favouriteWon": 0.0,
+          "logScore": -3.48186528472961,
+          "probActual": 0.03075,
+          "seat": "Te Tai Tonga",
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.34353760499999997,
+          "favouriteProb": 0.58555,
+          "favouriteWon": 1.0,
+          "logScore": -0.5352037024939907,
+          "probActual": 0.58555,
+          "seat": "Waiariki",
+          "year": 2023
+        }
+      ],
+      "FC": [
+        {
+          "brierMulti": 0.01073692,
+          "favouriteProb": 0.93132,
+          "favouriteWon": 1.0,
+          "logScore": -0.07153186095945323,
+          "probActual": 0.93132,
+          "seat": "Hauraki-Waikato",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.006185157000000002,
+          "favouriteProb": 0.9462999999999999,
+          "favouriteWon": 1.0,
+          "logScore": -0.05532858022059053,
+          "probActual": 0.9462999999999999,
+          "seat": "Ikaroa-Rāwhiti",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.33115303,
+          "favouriteProb": 0.6152650000000001,
+          "favouriteWon": 0.8,
+          "logScore": -0.5212414114847289,
+          "probActual": 0.601255,
+          "seat": "Tāmaki Makaurau",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.22150165250000003,
+          "favouriteProb": 0.6738449999999999,
+          "favouriteWon": 1.0,
+          "logScore": -0.400709914669351,
+          "probActual": 0.6738449999999999,
+          "seat": "Te Tai Hauāuru",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.33305137500000004,
+          "favouriteProb": 0.59145,
+          "favouriteWon": 1.0,
+          "logScore": -0.525178129990391,
+          "probActual": 0.59145,
+          "seat": "Te Tai Tokerau",
+          "subsets": 20,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.10925074800000001,
+          "favouriteProb": 0.77291,
+          "favouriteWon": 1.0,
+          "logScore": -0.26099308594255255,
+          "probActual": 0.77291,
+          "seat": "Te Tai Tonga",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 1.367077707,
+          "favouriteProb": 0.82455,
+          "favouriteWon": 0.0,
+          "logScore": -1.7997848860042105,
+          "probActual": 0.17545,
+          "seat": "Waiariki",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.0025222154999999997,
+          "favouriteProb": 0.9659850000000001,
+          "favouriteWon": 1.0,
+          "logScore": -0.03466270650010646,
+          "probActual": 0.9659850000000001,
+          "seat": "Hauraki-Waikato",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.0431049675,
+          "favouriteProb": 0.858145,
+          "favouriteWon": 1.0,
+          "logScore": -0.1539740505441992,
+          "probActual": 0.858145,
+          "seat": "Ikaroa-Rāwhiti",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.0166489885,
+          "favouriteProb": 0.8967500000000002,
+          "favouriteWon": 1.0,
+          "logScore": -0.1090079470487626,
+          "probActual": 0.8967500000000002,
+          "seat": "Tāmaki Makaurau",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.16894949,
+          "favouriteProb": 0.7159,
+          "favouriteWon": 1.0,
+          "logScore": -0.33785821611371947,
+          "probActual": 0.7159,
+          "seat": "Te Tai Hauāuru",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 1.9999999999997797e-08,
+          "favouriteProb": 0.9999,
+          "favouriteWon": 1.0,
+          "logScore": -0.00010000500033334732,
+          "probActual": 0.9999,
+          "seat": "Te Tai Tokerau",
+          "subsets": 20,
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.027475668500000005,
+          "favouriteProb": 0.8668850000000001,
+          "favouriteWon": 1.0,
+          "logScore": -0.1429771130276168,
+          "probActual": 0.8668850000000001,
+          "seat": "Te Tai Tonga",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 1.167820003,
+          "favouriteProb": 0.7621399999999999,
+          "favouriteWon": 0.0,
+          "logScore": -1.4657084422930722,
+          "probActual": 0.23786000000000002,
+          "seat": "Waiariki",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 1.9699140050000001,
+          "favouriteProb": 0.9924500000000004,
+          "favouriteWon": 0.0,
+          "logScore": -4.886207715721203,
+          "probActual": 0.007549999999999999,
+          "seat": "Hauraki-Waikato",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.004569679999999995,
+          "favouriteProb": 0.9522000000000002,
+          "favouriteWon": 1.0,
+          "logScore": -0.04898018222171861,
+          "probActual": 0.9522000000000002,
+          "seat": "Ikaroa-Rāwhiti",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.7596650549999999,
+          "favouriteProb": 0.6125000000000002,
+          "favouriteWon": 0.0,
+          "logScore": -0.9677156138663431,
+          "probActual": 0.37995,
+          "seat": "Tāmaki Makaurau",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.7406662199999999,
+          "favouriteProb": 0.6084999999999999,
+          "favouriteWon": 0.0,
+          "logScore": -0.9380252240201612,
+          "probActual": 0.3914,
+          "seat": "Te Tai Hauāuru",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.935233165,
+          "favouriteProb": 0.9834999999999999,
+          "favouriteWon": 0.0,
+          "logScore": -4.125835229313471,
+          "probActual": 0.01615,
+          "seat": "Te Tai Tokerau",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.8788911250000002,
+          "favouriteProb": 0.9692499999999997,
+          "favouriteWon": 0.0,
+          "logScore": -3.48186528472961,
+          "probActual": 0.03075000000000001,
+          "seat": "Te Tai Tonga",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.34353760499999997,
+          "favouriteProb": 0.5855499999999999,
+          "favouriteWon": 1.0,
+          "logScore": -0.5352037024939909,
+          "probActual": 0.5855499999999999,
+          "seat": "Waiariki",
+          "subsets": 20,
+          "year": 2023
+        }
+      ],
+      "FP": [
+        {
+          "brierMulti": 0.04723083400000001,
+          "favouriteProb": 0.8496,
+          "favouriteWon": 1.0,
+          "logScore": -0.16368489183045393,
+          "probActual": 0.8496,
+          "seat": "Hauraki-Waikato",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.0352109405,
+          "favouriteProb": 0.8689250000000002,
+          "favouriteWon": 1.0,
+          "logScore": -0.140822085211701,
+          "probActual": 0.8689250000000002,
+          "seat": "Ikaroa-Rāwhiti",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.37732936499999997,
+          "favouriteProb": 0.578005,
+          "favouriteWon": 0.8,
+          "logScore": -0.5726559287933106,
+          "probActual": 0.56787,
+          "seat": "Tāmaki Makaurau",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.28970403999999994,
+          "favouriteProb": 0.62139,
+          "favouriteWon": 1.0,
+          "logScore": -0.4794352616193532,
+          "probActual": 0.62139,
+          "seat": "Te Tai Hauāuru",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.33305137500000004,
+          "favouriteProb": 0.59145,
+          "favouriteWon": 1.0,
+          "logScore": -0.525178129990391,
+          "probActual": 0.59145,
+          "seat": "Te Tai Tokerau",
+          "subsets": 20,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.1848859215,
+          "favouriteProb": 0.698105,
+          "favouriteWon": 1.0,
+          "logScore": -0.3620921276380512,
+          "probActual": 0.698105,
+          "seat": "Te Tai Tonga",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 1.1065540559999998,
+          "favouriteProb": 0.74201,
+          "favouriteWon": 0.0,
+          "logScore": -1.3750859534673345,
+          "probActual": 0.25798999999999994,
+          "seat": "Waiariki",
+          "subsets": 10,
+          "year": 2017
+        },
+        {
+          "brierMulti": 0.008294519500000002,
+          "favouriteProb": 0.9373750000000001,
+          "favouriteWon": 1.0,
+          "logScore": -0.064799955826337,
+          "probActual": 0.9373750000000001,
+          "seat": "Hauraki-Waikato",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.070868206,
+          "favouriteProb": 0.8155000000000001,
+          "favouriteWon": 1.0,
+          "logScore": -0.20503225707859513,
+          "probActual": 0.8155000000000001,
+          "seat": "Ikaroa-Rāwhiti",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.03275433200000001,
+          "favouriteProb": 0.858995,
+          "favouriteWon": 1.0,
+          "logScore": -0.1520486364815403,
+          "probActual": 0.858995,
+          "seat": "Tāmaki Makaurau",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.20721873949999997,
+          "favouriteProb": 0.6826549999999999,
+          "favouriteWon": 1.0,
+          "logScore": -0.3848541473530965,
+          "probActual": 0.6826549999999999,
+          "seat": "Te Tai Hauāuru",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 1.9999999999997797e-08,
+          "favouriteProb": 0.9999,
+          "favouriteWon": 1.0,
+          "logScore": -0.00010000500033334732,
+          "probActual": 0.9999,
+          "seat": "Te Tai Tokerau",
+          "subsets": 20,
+          "year": 2020
+        },
+        {
+          "brierMulti": 0.0417386995,
+          "favouriteProb": 0.83481,
+          "favouriteWon": 1.0,
+          "logScore": -0.18079121812964793,
+          "probActual": 0.83481,
+          "seat": "Te Tai Tonga",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 1.0537672975,
+          "favouriteProb": 0.7240650000000001,
+          "favouriteWon": 0.0,
+          "logScore": -1.3059750203513476,
+          "probActual": 0.275935,
+          "seat": "Waiariki",
+          "subsets": 10,
+          "year": 2020
+        },
+        {
+          "brierMulti": 1.9699140050000001,
+          "favouriteProb": 0.9924500000000004,
+          "favouriteWon": 0.0,
+          "logScore": -4.886207715721203,
+          "probActual": 0.007549999999999999,
+          "seat": "Hauraki-Waikato",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.004569679999999995,
+          "favouriteProb": 0.9522000000000002,
+          "favouriteWon": 1.0,
+          "logScore": -0.04898018222171861,
+          "probActual": 0.9522000000000002,
+          "seat": "Ikaroa-Rāwhiti",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.7596650549999999,
+          "favouriteProb": 0.6125000000000002,
+          "favouriteWon": 0.0,
+          "logScore": -0.9677156138663431,
+          "probActual": 0.37995,
+          "seat": "Tāmaki Makaurau",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.7406662199999999,
+          "favouriteProb": 0.6084999999999999,
+          "favouriteWon": 0.0,
+          "logScore": -0.9380252240201612,
+          "probActual": 0.3914,
+          "seat": "Te Tai Hauāuru",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.935233165,
+          "favouriteProb": 0.9834999999999999,
+          "favouriteWon": 0.0,
+          "logScore": -4.125835229313471,
+          "probActual": 0.01615,
+          "seat": "Te Tai Tokerau",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 1.8788911250000002,
+          "favouriteProb": 0.9692499999999997,
+          "favouriteWon": 0.0,
+          "logScore": -3.48186528472961,
+          "probActual": 0.03075000000000001,
+          "seat": "Te Tai Tonga",
+          "subsets": 20,
+          "year": 2023
+        },
+        {
+          "brierMulti": 0.34353760499999997,
+          "favouriteProb": 0.5855499999999999,
+          "favouriteWon": 1.0,
+          "logScore": -0.5352037024939909,
+          "probActual": 0.5855499999999999,
+          "seat": "Waiariki",
+          "subsets": 20,
+          "year": 2023
+        }
+      ]
+    },
+    "fits": {
+      "2017": {
+        "eligiblePolledSeats": [
+          "Hauraki-Waikato",
+          "Ikaroa-Rāwhiti",
+          "Te Tai Hauāuru",
+          "Te Tai Tonga",
+          "Tāmaki Makaurau",
+          "Waiariki"
+        ],
+        "fallback": {
+          "contrasts": 13,
+          "elections": 2,
+          "sigma2": 0.05939519198157112,
+          "sigma2Dof": 11,
+          "tau2": 0.30378404788891533,
+          "trainYears": [
+            2020,
+            2023
+          ]
+        },
+        "lambdaInterval": {
+          "p05": 1.6539913329764349,
+          "p50": 3.9534249745530943,
+          "p95": 8.728738931527658,
+          "replicates": 1000
+        },
+        "meanKappa": {
+          "FC": 0.8814425760325231,
+          "FP": 0.8814425760325231
+        },
+        "pollTrainYears": [
+          2014,
+          2020,
+          2023
+        ]
+      },
+      "2020": {
+        "eligiblePolledSeats": [
+          "Hauraki-Waikato",
+          "Ikaroa-Rāwhiti",
+          "Te Tai Hauāuru",
+          "Te Tai Tonga",
+          "Tāmaki Makaurau",
+          "Waiariki"
+        ],
+        "fallback": {
+          "contrasts": 13,
+          "elections": 2,
+          "sigma2": 0.08657027343054725,
+          "sigma2Dof": 11,
+          "tau2": 0.29388497659353163,
+          "trainYears": [
+            2017,
+            2023
+          ]
+        },
+        "lambdaInterval": {
+          "p05": 1.1714758117915356,
+          "p50": 2.5740788264503487,
+          "p95": 5.321449404378534,
+          "replicates": 1000
+        },
+        "meanKappa": {
+          "FC": 0.8398970068747058,
+          "FP": 0.8398970068747058
+        },
+        "pollTrainYears": [
+          2014,
+          2017,
+          2023
+        ]
+      },
+      "2023": {
+        "eligiblePolledSeats": [
+          "Hauraki-Waikato",
+          "Ikaroa-Rāwhiti",
+          "Te Tai Hauāuru",
+          "Te Tai Tokerau",
+          "Te Tai Tonga",
+          "Tāmaki Makaurau",
+          "Waiariki"
+        ],
+        "fallback": {
+          "contrasts": 12,
+          "elections": 2,
+          "sigma2": 0.05084399833491583,
+          "sigma2Dof": 10,
+          "tau2": 0.0,
+          "trainYears": [
+            2017,
+            2020
+          ]
+        },
+        "lambdaInterval": {
+          "p05": 1.2557624370819154,
+          "p50": 3.368616214255789,
+          "p95": 7.936271016756139,
+          "replicates": 1000
+        },
+        "meanKappa": {
+          "FC": 0.0,
+          "FP": 0.0
+        },
+        "pollTrainYears": [
+          2014,
+          2017,
+          2020
+        ]
+      }
+    },
+    "foldsScored": [
+      2017,
+      2020,
+      2023
+    ],
+    "pooled": {
+      "F": {
+        "brierMulti": 0.5438252109523809,
+        "calibrationZ": -0.9838243912870441,
+        "contests": 21,
+        "contrastContests": 19,
+        "contrastCoverage": {
+          "0.5": 0.631578947368421,
+          "0.8": 0.7368421052631579,
+          "0.9": 0.7368421052631579
+        },
+        "coverageBias": -0.07415730337078653,
+        "coverageDeviation": 0.07415730337078653,
+        "favouriteWinRate": 0.6666666666666666,
+        "meanFavouriteProbability": 0.7530071428571429,
+        "meanLogScoreWinner": -1.0025316058761995,
+        "meanProbabilityOfWinner": 0.565002380952381,
+        "shareCoverage": {
+          "0.5": 0.48314606741573035,
+          "0.8": 0.6966292134831461,
+          "0.9": 0.797752808988764
+        },
+        "shareCoverageByCandidateKind": {
+          "entrant": {
+            "0.5": 0.4411764705882353,
+            "0.8": 0.6764705882352942,
+            "0.9": 0.7941176470588235,
+            "observations": 34
+          },
+          "matched-other": {
+            "0.5": 0.5,
+            "0.8": 0.7142857142857143,
+            "0.9": 1.0,
+            "observations": 14
+          },
+          "mp-lab": {
+            "0.5": 0.5121951219512195,
+            "0.8": 0.7073170731707317,
+            "0.9": 0.7317073170731707,
+            "observations": 41
+          }
+        },
+        "shareObservations": 89
+      },
+      "FC": {
+        "brierMulti": 0.5446645141666667,
+        "calibrationZ": -2.024560057397385,
+        "contests": 21,
+        "contrastContests": 19,
+        "contrastCoverage": {
+          "0.5": 0.42105263157894735,
+          "0.8": 0.6947368421052631,
+          "0.9": 0.7368421052631579
+        },
+        "coverageBias": -0.14606741573033707,
+        "coverageDeviation": 0.14606741573033707,
+        "favouriteWinRate": 0.6571428571428571,
+        "meanFavouriteProbability": 0.8154902380952381,
+        "meanLogScoreWinner": -0.9934709191507423,
+        "meanProbabilityOfWinner": 0.5998811904761904,
+        "shareCoverage": {
+          "0.5": 0.38202247191011235,
+          "0.8": 0.6382022471910113,
+          "0.9": 0.7415730337078652
+        },
+        "shareCoverageByCandidateKind": {
+          "entrant": {
+            "0.5": 0.4088235294117647,
+            "0.8": 0.6235294117647059,
+            "0.9": 0.6764705882352942,
+            "observations": 34
+          },
+          "matched-other": {
+            "0.5": 0.41428571428571426,
+            "0.8": 0.6142857142857142,
+            "0.9": 0.9285714285714286,
+            "observations": 14
+          },
+          "mp-lab": {
+            "0.5": 0.3487804878048781,
+            "0.8": 0.6585365853658537,
+            "0.9": 0.7317073170731707,
+            "observations": 41
+          }
+        },
+        "shareObservations": 89
+      },
+      "FP": {
+        "brierMulti": 0.5438612000476191,
+        "calibrationZ": -1.5456489497934058,
+        "contests": 21,
+        "contrastContests": 19,
+        "contrastCoverage": {
+          "0.5": 0.531578947368421,
+          "0.8": 0.7368421052631579,
+          "0.9": 0.7368421052631579
+        },
+        "coverageBias": -0.11573033707865173,
+        "coverageDeviation": 0.11573033707865173,
+        "favouriteWinRate": 0.6571428571428571,
+        "meanFavouriteProbability": 0.7860349999999999,
+        "meanLogScoreWinner": -0.9950661224351424,
+        "meanProbabilityOfWinner": 0.5820976190476189,
+        "shareCoverage": {
+          "0.5": 0.4258426966292135,
+          "0.8": 0.6820224719101123,
+          "0.9": 0.744943820224719
+        },
+        "shareCoverageByCandidateKind": {
+          "entrant": {
+            "0.5": 0.4117647058823529,
+            "0.8": 0.6470588235294118,
+            "0.9": 0.6852941176470588,
+            "observations": 34
+          },
+          "matched-other": {
+            "0.5": 0.4571428571428572,
+            "0.8": 0.6928571428571428,
+            "0.9": 0.9285714285714286,
+            "observations": 14
+          },
+          "mp-lab": {
+            "0.5": 0.4268292682926829,
+            "0.8": 0.7073170731707317,
+            "0.9": 0.7317073170731707,
+            "observations": 41
+          }
+        },
+        "shareObservations": 89
+      }
+    }
+  },
+  "schemaVersion": 1
+}

@@ -27,7 +27,7 @@ Decision D109 (provisional; D108 is proposed for the CI rule in #85). Approved b
 
    **Validator:** `python3 -m scripts.nowcast_config.validate`. It accepts pending fields now and rejects them with `--require-complete`, which the assembly must use.
 
-3. **The D107 classification schema** (`config/general-seat-classification-2026.json`, not yet written). Validated by `check_classification`. Fields per seat: `electorateId`, `class` (`ordinary`/`exceptional`), `reason`, `sources`, `author`, `recordedAt`, `extraSdOptIn`. It requires:
+3. **The D107 classification schema** (`config/general-seat-classification-2026.json`, written 2026-10-10). Validated by `check_classification`. Fields per seat: `electorateId`, `class` (`ordinary`/`exceptional`), `reason`, `sources`, `author`, `recordedAt`, `extraSdOptIn`. It requires:
    - every one of the 64 general seats exactly once (Stage56's 2026 target frame), with no Māori ids;
    - a missing file or seat fails, never defaulting to 0.60;
    - exceptional seats cite a source;
