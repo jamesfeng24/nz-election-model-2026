@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import { syntheticBankSnapshot } from '../dev/syntheticBank';
 import { App } from './App';
-import { opacityFor } from './ElectorateMap';
+import { incumbentNote, opacityFor, type MapForecast } from './ElectorateMap';
 import { partyLabel } from './partyNames';
 
 const noIndex = () => Promise.reject(new Error('no archive'));
@@ -12,6 +12,19 @@ describe('party names', () => {
     const snapshot = await syntheticBankSnapshot();
     expect(['nationalparty', 'labourparty', 'greenparty', 'actnewzealand', 'newzealandfirstparty', 'opportunity', 'tepatimaori'].map(id => partyLabel(snapshot, id)))
       .toEqual(['National', 'Labour', 'Greens', 'ACT', 'NZ First', 'TOP', 'Te Pāti Māori']);
+  });
+});
+
+describe('incumbent note', () => {
+  const seat: MapForecast = { id: 'a', name: 'Seat', kind: 'general', leaderParty: null, leaderPartyName: 'Independent', leaderName: 'A B', leaderP: 0.6, available: true, incumbent: 'A B', incumbentStatus: 'leads' };
+  it('names the sitting MP and whether they are the favourite', () => {
+    expect(incumbentNote(seat)).toBe('. Incumbent: A B (most likely winner)');
+    expect(incumbentNote({ ...seat, incumbentStatus: 'trails' })).toBe('. Incumbent: A B (not the most likely winner)');
+    expect(incumbentNote({ ...seat, incumbentStatus: 'standing' })).toBe('. Incumbent: A B');
+    expect(incumbentNote({ ...seat, incumbent: null, incumbentStatus: 'open' })).toBe('. No sitting MP is standing');
+  });
+  it('says nothing when no incumbency data is attached', () => {
+    expect(incumbentNote({ ...seat, incumbent: null, incumbentStatus: 'unknown' })).toBe('');
   });
 });
 

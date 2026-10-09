@@ -2,7 +2,7 @@ import { REGISTERED_NAMES } from './partyNames';
 import type { ForecastSnapshot } from '../types/export';
 
 /** Plain-language method note for the public. Facts here come from docs/nowcast-specification.md and config/nowcast-2026.json. */
-export function MethodologyView({ adjustments }: { adjustments?: ForecastSnapshot['adjustments'] }) {
+export function MethodologyView({ adjustments, incumbency }: { adjustments?: ForecastSnapshot['adjustments']; incumbency?: ForecastSnapshot['incumbency'] }) {
   return <article className="prose">
     <h2>What this forecast says</h2>
     <p>It answers one question: if the New Zealand general election were held under current political conditions, what would happen? It is not a prediction of how opinion will move between now and 7 November 2026, and it does not try to forecast campaign events. Each forecast carries the date of the poll refresh behind it.</p>
@@ -29,6 +29,7 @@ export function MethodologyView({ adjustments }: { adjustments?: ForecastSnapsho
       <li>Past election results, 2008 to 2023: New Zealand Electoral Commission official results, including the split-vote tables.</li>
       <li>2026 electorate boundaries and populations: Stats NZ and the Representation Commission. The map on the electorates page redraws the Stats NZ outlines in simplified form, for illustration only.</li>
       <li>2026 candidates: Electoral Commission nominations and party announcements.</li>
+      {incumbency && <li>Incumbents: a candidate is marked as the incumbent when they are the sitting electorate MP, as shown on <a href={incumbency.url}>{incumbency.label}</a> ({incumbency.asOf}), and are standing in that seat or the 2026 seat that took over most of it. List MPs are not marked. The marker is shown so you can see who the sitting MP is; it does not change the forecast.</li>}
       <li>MMP rules: Electoral Act 1993.</li>
     </ul>
     {adjustments && <>

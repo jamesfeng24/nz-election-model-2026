@@ -3,6 +3,7 @@ import { partyLabel } from './partyNames';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
 import { longDate, pct, prob } from './format';
 import { SeatChart } from './SeatChart';
+import { SeatBars, OverhangNote } from './SeatBars';
 import { SupportTrend } from './SupportTrend';
 
 const at = (set: IntervalSet, level: number) => set.find(v => v.level === level)!;
@@ -43,30 +44,12 @@ function Governing({ snapshot }: { snapshot: ForecastSnapshot }) {
   </>;
 }
 
-/** Seats per party, always split into electorate and list seats, with overhang stated plainly. */
-function SeatsTable({ snapshot, fallback }: { snapshot: ForecastSnapshot; fallback: React.ReactNode }) {
-  if (snapshot.seatLayer.status !== 'available') return <>{fallback}</>;
-  const { parties, parliament } = snapshot.seatLayer.summary;
-  const dist = Object.entries(parliament.overhangDistribution).map(([n, p]) => [Number(n), p] as const).sort((a, b) => a[0] - b[0]);
-  const upTo = (k: number) => dist.filter(([n]) => n < k).reduce((s, [, p]) => s + p, 0);
-  const atLeast = (k: number) => dist.filter(([n]) => n >= k).reduce((s, [, p]) => s + p, 0);
-  return <>
-    <table><caption>Seats per party across simulated elections: median with 80% range, and the average split into electorate seats (won in an electorate) and list seats (allocated from the party vote).</caption>
-      <thead><tr><th>Party</th><th>Median seats</th><th>80% range</th><th>Electorate seats (average)</th><th>List seats (average)</th><th>Chance of overhang</th></tr></thead>
-      <tbody>{parties.map(p => <tr key={p.partyId}><td>{partyLabel(snapshot, p.partyId)}</td><td>{p.seats[0].median}</td><td>{range(p.seats, PRIMARY_INTERVAL_LEVEL, whole)}</td>
-        <td>{p.meanElectorateSeats.toFixed(1)}</td><td>{p.meanListSeats.toFixed(1)}</td><td>{prob(p.probOverhang.p)}</td></tr>)}</tbody></table>
-    <h3>Overhang</h3>
-    <p>Parliament has 120 seats unless a party wins more electorate seats than its share of the party vote entitles it to. Those extra "overhang" seats are added on top, so Parliament grows. Chance of at least one overhang seat: <strong>{prob(parliament.probAnyOverhang.p)}</strong>; average {parliament.meanOverhang.toFixed(1)} seat{parliament.meanOverhang.toFixed(1) === '1.0' ? '' : 's'}. Chance of no overhang {prob(upTo(1))}, one seat {prob(dist.find(([n]) => n === 1)?.[1] ?? 0)}, two seats {prob(dist.find(([n]) => n === 2)?.[1] ?? 0)}, three or more {prob(atLeast(3))}.
-      Parliament would have a median of {parliament.size[0].median} seats ({range(parliament.size, PRIMARY_INTERVAL_LEVEL, whole)}, 80% range).</p>
-  </>;
-}
-
 function Electorates({ snapshot }: { snapshot: ForecastSnapshot }) {
   const name = partyName(snapshot);
   const electorates = [...snapshot.directory.electorates].sort((a, b) => a.name.localeCompare(b.name, 'en-NZ'));
   const cell = (candidateId: string, p: number) => {
     const c = snapshot.directory.candidates.find(x => x.candidateId === candidateId);
-    return <>{c?.name ?? candidateId} ({c?.partyId ? name(c.partyId) : c?.partyLabel ?? 'Independent'}) {prob(p)}</>;
+    return <>{c?.name ?? candidateId}{c?.incumbent ? ' – incumbent' : ''} ({c?.partyId ? name(c.partyId) : c?.partyLabel ?? 'Independent'}) {prob(p)}</>;
   };
   return <details><summary>All {electorates.length} electorates</summary>
     <table><caption>Chance of winning each electorate, two most likely candidates</caption>
@@ -91,13 +74,14 @@ export function ForecastView({ snapshot, trend = null }: { snapshot: ForecastSna
   return <section aria-label="Forecast summary">
     <h2>Expected seats</h2>
     <SeatChart snapshot={snapshot} />
+    {snapshot.seatLayer.status === 'available'
+      ? <><SeatBars snapshot={snapshot} /><OverhangNote snapshot={snapshot} /></>
+      : <IntervalTable caption="Seats per party across simulated elections: median with 80% range." label="Party" fmt={whole} rows={seats} />}
+    <Governing snapshot={snapshot} />
     <h2>Party vote</h2>
     <IntervalTable caption={`${snapshot.national.basis}. Median with 80% range.`} label="Party" fmt={pct}
       rows={snapshot.national.partyVoteShares.map(p => ({ key: p.partyId, label: name(p.partyId), set: p.share }))} />
     {snapshot.evidence?.trend && <><h2>How support has moved</h2><SupportTrend snapshot={snapshot} /></>}
-    <h2>Seats in Parliament</h2>
-    <SeatsTable snapshot={snapshot} fallback={<IntervalTable caption="Seats per party across simulated elections: median with 80% range." label="Party" fmt={whole} rows={seats} />} />
-    <Governing snapshot={snapshot} />
     {trend && <><h2>How the odds have moved</h2>{trend}</>}
     <h2>Electorates</h2>
     <p><a href="../electorates/">Look up any seat</a> for each candidate's chance, vote share ranges and the polls behind it.</p>

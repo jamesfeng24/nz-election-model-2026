@@ -8,7 +8,10 @@ interface MapSeat { id: string; name: string; kind: 'general' | 'maori'; path: s
 interface MapData { width: number; height: number; insets: { name: string; box: [number, number, number, number] }[]; seats: MapSeat[]; source: string }
 
 /** One forecast seat as the map needs it. */
-export interface MapForecast { id: string; name: string; kind: 'general' | 'maori'; leaderParty: string | null; leaderPartyName: string; leaderName: string; leaderP: number; available: boolean }
+export interface MapForecast { id: string; name: string; kind: 'general' | 'maori'; leaderParty: string | null; leaderPartyName: string; leaderName: string; leaderP: number; available: boolean;
+  /** Sitting MP standing in this seat, or null. `incumbentStatus`: no incumbency data attached, no sitting MP standing, standing with no forecast, or the favourite / not the favourite. */
+  incumbent: string | null; incumbentStatus: IncumbentStatus }
+export type IncumbentStatus = 'unknown' | 'open' | 'standing' | 'leads' | 'trails';
 
 const INDEPENDENT = '#8b8f94';
 const NO_FORECAST = '#d9dedb';
@@ -30,13 +33,20 @@ function Shapes({ seats, forecasts, onSelect, hrefBase, hover, setHover }: {
   return <>{seats.map(shape => {
     const f = forecasts.get(`${shape.kind}:${key(shape.name)}`);
     const { fill, opacity } = fillFor(f);
-    const body = <path d={shape.path} fill={fill} fillOpacity={opacity} className={hover === f?.id && f ? 'hot' : undefined} vectorEffect="non-scaling-stroke" />;
+    const body = <path d={shape.path} fill={fill} fillOpacity={opacity} className={[hover === f?.id && f ? 'hot' : '', f?.incumbentStatus === 'trails' ? 'flip' : ''].filter(Boolean).join(' ') || undefined} vectorEffect="non-scaling-stroke" />;
     if (!f) return <g key={shape.id}>{body}<title>{shape.name}</title></g>;
     return <a key={shape.id} href={`${hrefBase}#seat=${f.id}`} onClick={onSelect ? e => { e.preventDefault(); onSelect(f.id); } : undefined}
       onMouseEnter={() => setHover(f.id)} onMouseLeave={() => setHover(null)} onFocus={() => setHover(f.id)} onBlur={() => setHover(null)}
-      aria-label={`${shape.name}: ${f.available ? `${f.leaderName} ${prob(f.leaderP)} to win` : 'no forecast'}`}>
-      {body}<title>{shape.name}{f.available ? `: ${f.leaderName} (${f.leaderPartyName}) ${prob(f.leaderP)}` : ': no forecast'}</title></a>;
+      aria-label={`${shape.name}: ${f.available ? `${f.leaderName} ${prob(f.leaderP)} to win` : 'no forecast'}${incumbentNote(f)}`}>
+      {body}<title>{shape.name}{f.available ? `: ${f.leaderName} (${f.leaderPartyName}) ${prob(f.leaderP)}` : ': no forecast'}{incumbentNote(f)}</title></a>;
   })}</>;
+}
+
+/** What the map says about the sitting MP: who they are and whether they are the favourite. Empty when no incumbency data is attached. */
+export function incumbentNote(f: MapForecast) {
+  if (f.incumbentStatus === 'unknown') return '';
+  if (f.incumbentStatus === 'open' || !f.incumbent) return '. No sitting MP is standing';
+  return `. Incumbent: ${f.incumbent}${f.incumbentStatus === 'leads' ? ' (most likely winner)' : f.incumbentStatus === 'trails' ? ' (not the most likely winner)' : ''}`;
 }
 
 const intersects = (a: [number, number, number, number], [x, y, w, h]: [number, number, number, number]) =>
@@ -53,6 +63,7 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
   if (data === null) return <p role="status">Loading map…</p>;
   if (data === 'failed') return null;
   const shown = data.seats.filter(s => s.kind === kind);
+  const hasIncumbency = forecasts.some(f => f.incumbentStatus !== 'unknown');
   const hot = hover ? forecasts.find(f => f.id === hover) : undefined;
   const shared = { forecasts: byName, onSelect, hrefBase, hover, setHover };
   const legendOf = (id: string | null) => ({ id: id ?? 'independent', name: id ? partyLabel(snapshot, id) : 'Independent', colour: id ? COLOURS[id] ?? INDEPENDENT : INDEPENDENT });
@@ -62,7 +73,7 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
       <button type="button" aria-pressed={kind === 'general'} onClick={() => setKind('general')}>General (64)</button>
       <button type="button" aria-pressed={kind === 'maori'} onClick={() => setKind('maori')}>Māori (7)</button>
     </div>
-    <p className="maphint" aria-live="polite">{hot ? (hot.available ? `${hot.name}: ${hot.leaderName}, ${hot.leaderPartyName}, ${prob(hot.leaderP)} to win` : `${hot.name}: no forecast available`) : 'Select a seat to see its forecast.'}</p>
+    <p className="maphint" aria-live="polite">{hot ? ((hot.available ? `${hot.name}: ${hot.leaderName}, ${hot.leaderPartyName}, ${prob(hot.leaderP)} to win` : `${hot.name}: no forecast available`) + incumbentNote(hot)) : 'Select a seat to see its forecast.'}</p>
     <div className="mapgrid">
       <svg viewBox={`0 0 ${data.width} ${data.height}`} className="mapmain" role="group" aria-label={`Map of the ${kind === 'general' ? 'general' : 'Māori'} electorates, coloured by the most likely winner's party`}>
         <Shapes seats={shown} {...shared} />
@@ -72,6 +83,6 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
         <figcaption>{inset.name}</figcaption></figure>)}</div>}
     </div>
     <ul className="maplegend" aria-label="Colour key">{parties.map(legendOf).map(l => <li key={l.id}><span style={{ background: l.colour }} aria-hidden="true" />{l.name}</li>)}</ul>
-    <p className="maplegend2"><span className="fade" aria-hidden="true" /> Paler seats are closer contests; solid seats are safer. Colour shows the party of the candidate most likely to win, not a poll of that seat. Outlines are simplified for drawing and the Chatham Islands are not shown.</p>
+    <p className="maplegend2"><span className="fade" aria-hidden="true" /> Paler seats are closer contests; solid seats are safer. Colour shows the party of the candidate most likely to win, not a poll of that seat.{hasIncumbency && <> <span className="flipkey" aria-hidden="true" /> A dashed outline marks a seat where the sitting MP is standing but is not the most likely winner; hover or select any seat to see its incumbent.</>} Outlines are simplified for drawing and the Chatham Islands are not shown.</p>
   </section>;
 }

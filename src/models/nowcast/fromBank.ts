@@ -32,7 +32,15 @@ export interface NowcastSnapshotOptions {
   evidence?: unknown;
   /** Manual adjustments made to the output, if any: `{ by, items: [{ what, why }] }`. The site shows only the adjusted numbers and says so. */
   adjustments?: unknown;
+  /** Optional incumbents file written by `scripts/site_incumbents/build.py`: the sitting MPs standing in each seat. */
+  incumbents?: unknown;
 }
+
+/** The incumbents file: candidates (by occurrence id, which is the draw bank's candidate id) who are the sitting MP for the seat. */
+export const IncumbentsFileSchema = z.object({
+  source: z.object({ label: z.string().trim().min(1), url: z.string().url(), asOf: z.string().trim().min(1) }).strict(),
+  incumbents: z.array(z.object({ targetOccurrenceId: z.string().trim().min(1) }).loose()),
+}).loose();
 
 /** The evidence file: national polls and trend, and seat polls keyed by electorate name (resolved against the directory). */
 export const EvidenceFileSchema = z.object({
@@ -244,6 +252,12 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     const unknown = [...new Set(evidence.seatPolls.map(p => p.electorateName))].filter(n => !known.has(plain(n)));
     if (unknown.length) throw new Error(`Seat polls name electorates that are not in the directory: ${unknown.join(', ')}`);
   }
+  const incumbents = options.incumbents === undefined ? null : IncumbentsFileSchema.parse(options.incumbents);
+  const incumbentIds = new Set(incumbents?.incumbents.map(i => i.targetOccurrenceId));
+  const directory = incumbents
+    ? { ...bank.directory, candidates: bank.directory.candidates.map(c => (incumbentIds.has(c.candidateId) ? { ...c, incumbent: true as const } : c)) }
+    : bank.directory;
+  const flagged = incumbents ? directory.candidates.some(c => 'incumbent' in c) : false;
   const electorateDetail = simulated.map(seat => ({
     electorateId: seat.electorateId, uncertaintyClass: seat.class,
     ...(evidence ? { evidence: seatEvidence(seat, bank.directory.electorates.find(e => e.electorateId === seat.electorateId)!.name, bank, evidence) } : {}),
@@ -259,7 +273,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     provenance: synthetic
       ? { kind: 'synthetic-fixture', label: options.syntheticLabel ?? 'Synthetic draw bank; not a nowcast' }
       : { kind: 'model', modelVersion: options.modelVersion, codeRevision: options.codeRevision, configVersion: bank.configVersion },
-    directory: bank.directory,
+    directory,
     national: {
       partyVoteShares: bank.partyVote.groups.map((g, i) => ({ partyId: g, share: linearIntervals(bank.partyVote.shares.map(row => row[i])) })),
       basis: options.nationalBasis,
@@ -270,6 +284,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     },
     unavailableElectorates: unavailable.map(s => ({ electorateId: s.electorateId, reason: s.reason })),
     electorateDetail, seatLayer, mmp, boundaries: null, limitations: options.limitations,
+    ...(incumbents && flagged ? { incumbency: incumbents.source } : {}),
     ...(evidence ? { evidence: { source: evidence.source, nationalPolls: evidence.nationalPolls, trend: evidence.trend } } : {}),
     ...(options.adjustments === undefined ? {} : { adjustments: AdjustmentsSchema.parse(options.adjustments) }),
   });

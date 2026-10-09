@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import { App } from './App';
 import { pages } from './pages';
 import { runSyntheticDryRun } from '../dev/syntheticSnapshot';
@@ -71,13 +71,42 @@ describe('public site', () => {
     expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('Labour + Greens + Te Pāti Māori');
     expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('No majority');
     expect(screen.queryByText(/kingmaker/i)).toBeNull();
-    expect(screen.getByRole('columnheader', { name: 'Electorate seats (average)' })).toBeInTheDocument();
-    expect(screen.getByRole('columnheader', { name: 'List seats (average)' })).toBeInTheDocument();
+    const seatTable = screen.getByRole('table', { name: /Seats by party across simulated elections/ });
+    ['Median', '80% range', 'Electorate', 'List', 'Overhang'].forEach(h => expect(within(seatTable).getByRole('columnheader', { name: h })).toBeInTheDocument());
+    expect(seatTable.querySelectorAll('.seatbar').length).toBeGreaterThan(3);
     expect(screen.getByRole('heading', { name: 'Overhang' })).toBeInTheDocument();
     expect(screen.getByText(/Chance of at least one overhang seat/)).toBeInTheDocument();
-    expect(document.querySelector('.seatchart-key')!.textContent).toMatch(/\d+ electorate \+ \d+ list/);
     expect(screen.getByText('All 71 electorates')).toBeInTheDocument();
     expect(screen.getAllByText(/Wider/).length).toBeGreaterThan(0);
+  });
+  it('marks the sitting MP on the seat page and in the seat list, and rejects inconsistent incumbent flags', async () => {
+    const options = {
+      snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-07T00:00:00+00:00', dataCutoff: '2026-10-06T00:00:00+00:00',
+      electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
+      modelVersion: 'synthetic-model', codeRevision: 'synthetic-revision', bankSha256: 'a'.repeat(64),
+      mmp: { rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only', rulesSourceIds: ['synthetic-rules'], blocs: [] },
+      nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
+    };
+    const plain = await buildNowcastSnapshot(bank, options);
+    expect(plain.incumbency).toBeUndefined();
+    const seatId = plain.directory.electorates[0].electorateId;
+    const sitting = plain.directory.candidates.find(c => c.electorateId === seatId)!;
+    const snapshot = await buildNowcastSnapshot(bank, { ...options, incumbents: {
+      source: { label: 'Invented list of MPs', url: 'https://example.org/mps', asOf: '2026-09-23' }, incumbents: [{ targetOccurrenceId: sitting.candidateId }, { targetOccurrenceId: 'not-in-this-bank' }] } });
+    expect(snapshot.directory.candidates.filter(c => c.incumbent).map(c => c.candidateId)).toEqual([sitting.candidateId]);
+    expect(snapshot.incumbency?.asOf).toBe('2026-09-23');
+    const noSource = structuredClone(snapshot); delete noSource.incumbency;
+    expect(() => ForecastSnapshotSchema.parse(noSource)).toThrow(/need their source/);
+    const two = structuredClone(snapshot);
+    two.directory.candidates.find(c => c.electorateId === seatId && c.candidateId !== sitting.candidateId)!.incumbent = true;
+    expect(() => ForecastSnapshotSchema.parse(two)).toThrow(/only one incumbent/);
+    window.location.hash = `#seat=${seatId}`;
+    render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    const row = (await screen.findAllByRole('row')).find(r => r.textContent?.startsWith(sitting.name))!;
+    expect(within(row).getByText('Incumbent')).toBeInTheDocument();
+    expect(screen.getByRole('columnheader', { name: 'Incumbent' })).toBeInTheDocument();
+    expect(screen.getAllByText('None standing').length).toBeGreaterThan(0);
+    window.location.hash = '';
   });
   it('shows a seat page with odds, shaded ranges and the polls attached to the seat', async () => {
     const base = await buildNowcastSnapshot(bank, {

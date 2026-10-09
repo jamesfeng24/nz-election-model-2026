@@ -4,14 +4,14 @@ import type { ForecastSnapshot } from '../types/export';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
 import { pct, prob } from './format';
 import { SeatPollLine } from './PollTables';
-import { ElectorateMap } from './ElectorateMap';
+import { ElectorateMap, type IncumbentStatus } from './ElectorateMap';
 import { COLOURS } from './SeatChart';
 
 type Sort = 'name' | 'close' | 'wide';
 const level = (set: IntervalSet, l: number) => set.find(v => v.level === l)!;
 const seatFromHash = () => new URLSearchParams(window.location.hash.slice(1)).get('seat');
 
-interface Row { id: string; name: string; kind: 'general' | 'maori'; leader: string; leaderParty: string | null; leaderPartyName: string; leaderP: number; second: number; wide: boolean; available: boolean }
+interface Row { id: string; name: string; kind: 'general' | 'maori'; leader: string; leaderParty: string | null; leaderPartyName: string; leaderP: number; second: number; wide: boolean; available: boolean; incumbent: string | null; incumbentStatus: IncumbentStatus }
 
 function useRows(snapshot: ForecastSnapshot): Row[] {
   return useMemo(() => snapshot.directory.electorates.map(e => {
@@ -19,7 +19,9 @@ function useRows(snapshot: ForecastSnapshot): Row[] {
     const sorted = prediction ? [...prediction.candidates].sort((a, b) => b.winProbability - a.winProbability) : [];
     const cls = snapshot.electorateDetail.find(d => d.electorateId === e.electorateId)?.uncertaintyClass;
     const leader = snapshot.directory.candidates.find(c => c.candidateId === sorted[0]?.candidateId);
-    return { id: e.electorateId, name: e.name, kind: e.kind, leader: leader?.name ?? '', leaderParty: leader?.partyId ?? null, leaderPartyName: leader?.partyId ? partyLabel(snapshot, leader.partyId) : leader?.partyLabel ?? 'Independent', leaderP: sorted[0]?.winProbability ?? 0, second: sorted[1]?.winProbability ?? 0, wide: cls === 'exceptional' || cls === 'maori-layer', available: !!prediction };
+    const sitting = snapshot.incumbency ? snapshot.directory.candidates.find(c => c.electorateId === e.electorateId && c.incumbent) : undefined;
+    return { incumbent: sitting?.name ?? null, incumbentStatus: (!snapshot.incumbency ? 'unknown' : !sitting ? 'open' : !prediction ? 'standing' : sitting.candidateId === leader?.candidateId ? 'leads' : 'trails') as IncumbentStatus,
+       id: e.electorateId, name: e.name, kind: e.kind, leader: leader?.name ?? '', leaderParty: leader?.partyId ?? null, leaderPartyName: leader?.partyId ? partyLabel(snapshot, leader.partyId) : leader?.partyLabel ?? 'Independent', leaderP: sorted[0]?.winProbability ?? 0, second: sorted[1]?.winProbability ?? 0, wide: cls === 'exceptional' || cls === 'maori-layer', available: !!prediction };
   }), [snapshot]);
 }
 
@@ -48,11 +50,12 @@ function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: 
   const axisMax = Math.min(1, Math.ceil(top * 20) / 20);
   return <section aria-labelledby="seat-heading" className="seat">
     <h2 id="seat-heading">{seat.name}{seat.kind === 'maori' ? ' (Māori electorate)' : ''}</h2>
+    {snapshot.incumbency && !rows.some(r => r.cand?.incumbent) && <p className="note">No sitting MP for this seat is standing here.</p>}
     {detail && detail.uncertaintyClass !== 'ordinary' && <p className="note">{detail.uncertaintyClass === 'maori-layer' ? 'Māori electorates are modelled separately, with fewer polls, so ranges here are wider.' : 'This seat has unusual local circumstances, so the model allows wider uncertainty.'}</p>}
     <table className="candidates"><caption>Chance of winning and share of the electorate vote</caption>
       <thead><tr><th>Candidate</th><th>Chance of winning</th><th>Share of electorate vote</th></tr></thead>
       <tbody>{rows.map(({ c, cand, share }) => <tr key={c.candidateId}>
-        <td><strong>{cand?.name ?? c.candidateId}</strong><br /><small>{partyName(cand?.partyId ?? null) ?? cand?.partyLabel ?? 'Independent'}</small></td>
+        <td><strong>{cand?.name ?? c.candidateId}</strong>{cand?.incumbent && <> <span className="incumbent" title="The sitting MP for this seat">Incumbent</span></>}<br /><small>{partyName(cand?.partyId ?? null) ?? cand?.partyLabel ?? 'Independent'}</small></td>
         <td><span className="odds">{prob(c.winProbability)}</span></td>
         <td>{share ? <><RangeBar colour={(cand?.partyId && COLOURS[cand.partyId]) || '#8b8f94'} set={share.share} axisMax={axisMax} label={`${cand?.name}: median ${pct(share.share[0].median)}, 50% range ${pct(level(share.share, 0.5).lower)} to ${pct(level(share.share, 0.5).upper)}, 80% range ${pct(level(share.share, 0.8).lower)} to ${pct(level(share.share, 0.8).upper)}`} />
           <small>{pct(share.share[0].median)} median · 50%: {pct(level(share.share, 0.5).lower)} – {pct(level(share.share, 0.5).upper)} · 80%: {pct(level(share.share, 0.8).lower)} – {pct(level(share.share, 0.8).upper)}</small></> : <small>Share ranges not available</small>}</td></tr>)}</tbody></table>
@@ -86,7 +89,7 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
     return [...shown].sort(by[sort]);
   }, [rows, query, sort]);
   const selected = rows.find(r => r.id === seatId);
-  const forecasts = useMemo(() => rows.map(r => ({ id: r.id, name: r.name, kind: r.kind, leaderParty: r.leaderParty, leaderPartyName: r.leaderPartyName, leaderName: r.leader, leaderP: r.leaderP, available: r.available })), [rows]);
+  const forecasts = useMemo(() => rows.map(r => ({ id: r.id, name: r.name, kind: r.kind, leaderParty: r.leaderParty, leaderPartyName: r.leaderPartyName, leaderName: r.leader, leaderP: r.leaderP, available: r.available, incumbent: r.incumbent, incumbentStatus: r.incumbentStatus })), [rows]);
   const pick = (id: string) => { choose(id); document.getElementById('seat-heading')?.scrollIntoView?.({ block: 'start' }); };
   return <>
     <p className="intro">Pick a seat to see each candidate's chance of winning, their likely share of the vote and the polls behind it.</p>
@@ -100,8 +103,8 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
     <ElectorateMap snapshot={snapshot} forecasts={forecasts} onSelect={pick} />
     {selected ? <SeatDetail snapshot={snapshot} seatId={selected.id} /> : <p>Choose a seat from the list or search above.</p>}
     <table className="seatlist"><caption>All {rows.length} electorates ({listed.length} shown)</caption>
-      <thead><tr><th>Electorate</th><th>Most likely winner</th><th>Chance</th></tr></thead>
+      <thead><tr><th>Electorate</th><th>Most likely winner</th><th>Chance</th>{snapshot.incumbency && <th>Incumbent</th>}</tr></thead>
       <tbody>{listed.map(r => <tr key={r.id} aria-selected={r.id === seatId || undefined}><td><a href={`#seat=${r.id}`} onClick={() => setSeatId(r.id)}>{r.name}</a>{r.kind === 'maori' ? ' (Māori)' : ''}{r.wide ? ' · wider' : ''}</td>
-        <td>{r.available ? r.leader : '–'}</td><td>{r.available ? prob(r.leaderP) : 'No forecast'}</td></tr>)}</tbody></table>
+        <td>{r.available ? r.leader : '–'}</td><td>{r.available ? prob(r.leaderP) : 'No forecast'}</td>{snapshot.incumbency && <td>{r.incumbent ?? 'None standing'}</td>}</tr>)}</tbody></table>
   </>;
 }

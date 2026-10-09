@@ -6,6 +6,7 @@
  *                      modelVersion, codeRevision, mmp {rulesVersion, rulesSourceIds, blocs}, nationalBasis,
  *                      limitations, probabilityMcseMax
  *   --archive DIR      public/forecasts for a model release; a non-public directory for a rehearsal
+ *   --incumbents PATH  optional sitting-MP flags from `python -m scripts.site_incumbents.build`
  *   --evidence PATH    optional site evidence (polls used and national trend) from `python -m scripts.site_evidence.build`
  *   --supersedes ID    optional earlier snapshot this one corrects
  *   --rehearsal        allow a synthetic-fixture bank (never under public/)
@@ -24,12 +25,14 @@ function argument(args: string[], name: string): string | undefined {
 export async function main(args: string[]): Promise<number> {
   const bankPath = argument(args, '--bank'), optionsPath = argument(args, '--options'), archiveDir = argument(args, '--archive');
   if (!bankPath || !optionsPath || !archiveDir) {
-    console.error('Usage: --bank PATH --options PATH --archive DIR [--supersedes ID] [--rehearsal]');
+    console.error('Usage: --bank PATH --options PATH --archive DIR [--evidence PATH] [--incumbents PATH] [--supersedes ID] [--rehearsal]');
     return 2;
   }
   const options = JSON.parse(await readFile(optionsPath, 'utf8'));
   const evidencePath = argument(args, '--evidence');
   if (evidencePath) options.evidence = JSON.parse(await readFile(evidencePath, 'utf8'));
+  const incumbentsPath = argument(args, '--incumbents');
+  if (incumbentsPath) options.incumbents = JSON.parse(await readFile(incumbentsPath, 'utf8'));
   const { probabilityMcseMax, ...snapshotOptions } = options;
   const result = await publish({
     bankText: await readFile(bankPath, 'utf8'), options: snapshotOptions, archiveDir,
