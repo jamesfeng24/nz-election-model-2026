@@ -5,7 +5,7 @@ import copy
 import unittest
 import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
-from scripts.nowcast_assembly import assemble as A, general, maori, national, streams, summaries
+from scripts.nowcast_assembly import assemble as A, general, maori, national, run as gate_run, streams, summaries
 from scripts.nowcast_assembly.common import CONFIG, OTHER, read, AssemblyError
 
 GENERAL = sorted(seat_frame()['general'])
@@ -213,6 +213,23 @@ class Bank(unittest.TestCase):
         self.assertEqual(report['blockers'], [])
         self.assertTrue(report['publishable'])
         self.assertTrue(all(c['passed'] for c in report['checks']))
+
+    def test_rounded_digest_ignores_maths_kernel_noise_but_not_real_change(self):
+        # AVX2 and AVX-512 OpenBLAS kernels differ by about 1e-14 relative, which changes the exact digest.
+        def shifted(value, delta):
+            if isinstance(value, float):
+                return value * (1 + delta)
+            if isinstance(value, dict):
+                return {k: shifted(v, delta) for k, v in value.items()}
+            if isinstance(value, list):
+                return [shifted(v, delta) for v in value]
+            return value
+        bank = {'seats': [{'p': 0.123456789012, 'n': 3, 'q': [0.5, 0.25, 0.0]}], 'draws': 64, 'diagnostics': {'x': 1.0}}
+        self.assertNotEqual(A.bank_digest(bank), A.bank_digest(shifted(bank, 1e-14)))
+        self.assertEqual(gate_run.bank_digest_rounded(bank), gate_run.bank_digest_rounded(shifted(bank, 1e-14)))
+        self.assertNotEqual(gate_run.bank_digest_rounded(bank), gate_run.bank_digest_rounded(shifted(bank, 1e-4)))
+        self.assertEqual(read('data/processed/nowcast-assembly/development-gate.json')['bankDigestRounded'],
+                         gate_run.bank_digest_rounded(A.assemble(self.config, 64, workers=2)))
 
 
 if __name__ == '__main__':
