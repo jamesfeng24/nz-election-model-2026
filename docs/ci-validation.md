@@ -136,3 +136,15 @@ Every other test still runs in full standard discovery, so no test is skipped.
 - The frozen-pipeline selector (`ci_frozen`) is not affected.
 
 The registry (`.github/validation/stage39.json`) and its attestation are not edited. The other proposed savings (main-push reuse, archival test skipping, a docs-only fast path) were not adopted.
+
+# Parallel full replay (2026-10-10)
+
+**Why.** The Verify `python` job has `timeout-minutes: 180` (a runaway guard set when Stage47 made a fully executed run about 2 hours; see *Job limits* above). With Stage45, 46, 47, 48, 54 and 63 all replayed in one job, a manual `workflow_dispatch` of Verify, the explicit full gate, now exceeds that cap (PR #95 was cancelled at 3 hours when a new workflow file forced the full replay). GitHub's own limit is 6 hours per job, so the cap is ours, not GitHub's.
+
+**What.** `.github/workflows/full-replay.yml` ("Full replay", `workflow_dispatch` only) runs the same commands as the Verify `python` job as parallel matrix jobs, plus the frontend `check`, with no reuse and no selection step. The command list is not copied: `scripts/validate/ci_full_replay.py` reads it from `ci.yml` and runs one group in workflow order, ignoring `if:` gates and skipping the named reuse steps. Groups: `stage39` (candidate integration), `stage45-47` (one job, because Stage47 reads the Stage45 and Stage46 banks that their constructions write earlier in the same job), `stage48`, `stage54`, `stage63`, and `base` (everything else, including the full unittest discovery and source validation). A final `Full replay passed` job requires every job to succeed.
+
+**Guards.** `python3 -m scripts.validate.ci_full_replay --check` (run by every group, and by `scripts/tests/test_ci_full_replay.py` in standard discovery) fails if a `ci.yml` command would be lost or duplicated or a group is empty; the test also requires every registered pipeline's `replacedCommands` to sit in a non-base group (so a newly registered stage must be given its own group and matrix entry rather than silently lengthening `base`), keeps the workflow's group list equal to the script's, and requires the workflow to stay manual-only and unnamed in `ci.yml`.
+
+**Unchanged.** `ci.yml`, the pull-request/main-push selectors, the registry and every pin. Verify's own manual dispatch still exists but is now the slow single-job path; use Full replay for the pre-release gate. A Full replay run is **not** an attestation to the discovery walk, which reads only `ci.yml` runs' `python` job; the durable pins and pull-request runs keep attesting. `full-replay.yml` is listed in `NON_VERIFY_WORKFLOWS` in `ci_frozen.py` (with `poll-refresh.yml`) so adding it does not force a frozen replay on its own PR.
+
+**Timeouts are estimates.** Per-group limits (base 150, stage39 45, stage45-47 270, stage48 120, stage54 180, stage63 120 minutes) are set from the durations recorded above and not yet measured on this workflow; each group writes a per-command timing table to its job summary, and the first run should be used to tighten them.
