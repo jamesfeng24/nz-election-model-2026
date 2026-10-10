@@ -46,7 +46,7 @@ describe('public site', () => {
     const snapshot = await runSyntheticDryRun({ draws: 50 });
     render(<App page="forecast" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
     expect(await screen.findByRole('alert')).toHaveTextContent('SYNTHETIC DATA');
-    expect(screen.getByText(/Forecast if the election were held today, as of 6 October 2026/)).toBeInTheDocument();
+    expect(screen.getByText(/Forecast as of 6 October 2026/)).toBeInTheDocument();
     expect(screen.getByRole('table', { name: /Median with 80% range/ })).toBeInTheDocument();
     expect(screen.queryByRole('columnheader', { name: /50% range|90% range/ })).toBeNull();
     expect(screen.getByRole('heading', { name: 'Electorates' })).toBeInTheDocument();

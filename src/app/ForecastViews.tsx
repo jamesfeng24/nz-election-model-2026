@@ -21,7 +21,7 @@ export function SnapshotBanner({ snapshot }: { snapshot: ForecastSnapshot }) {
   return <>
     {synthetic && <p role="alert" className="banner banner-synthetic"><strong>SYNTHETIC DATA.</strong> {snapshot.provenance.kind === 'synthetic-fixture' ? snapshot.provenance.label : ''}</p>}
     {snapshot.targetType === 'nowcast'
-      ? <p className="banner"><strong>Forecast if the election were held today, as of {longDate(snapshot.dataCutoff)}.</strong> Polls to {longDate(snapshot.dataCutoff)}; national picture from the week of {longDate(snapshot.modelStateAsOf)}. Not a prediction of how opinion will change before election day ({longDate(snapshot.electionDate)}). Ranges are central ranges of simulated elections, not margins of error.</p>
+      ? <p className="banner"><strong>Forecast as of {longDate(snapshot.dataCutoff)}</strong> (most recent update)</p>
       : <p role="note" className="banner">Election-day scenario, not the primary forecast.</p>}
     {snapshot.adjustments && <p className="banner">Includes manual adjustments by {snapshot.adjustments.by}. <a href="../methodology/">What was changed and why</a>.</p>}
   </>;

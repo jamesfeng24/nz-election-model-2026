@@ -10,7 +10,7 @@ export function ArchiveView({ result }: { result: IndexResult | { status: 'loadi
   return <>
     <p className="intro">Every forecast is kept as published. A correction is a new entry; the old file stays.</p>
     <table><caption>Published forecasts, newest first</caption>
-      <thead><tr><th>As of</th><th>Published</th><th>Status</th><th>File</th></tr></thead>
+      <thead><tr><th>Refreshed</th><th>Published</th><th>Status</th><th>File</th></tr></thead>
       <tbody>{[...snapshots].reverse().map(e => <tr key={e.snapshotId}>
         <td>{longDate(e.dataCutoff)}</td><td>{longDate(e.createdAt)}</td>
         <td>{e.status === 'withdrawn' ? `Withdrawn: ${e.withdrawnReason}` : superseded.has(e.snapshotId) ? 'Replaced by a correction' : e.supersedes ? `Correction of ${e.supersedes}` : 'Published'}</td>

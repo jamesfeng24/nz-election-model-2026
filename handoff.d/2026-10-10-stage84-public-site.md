@@ -19,6 +19,8 @@ Branch `claude/stage84-public-site-9y5788` from main `9d2c8f1`. Requested by Jam
 
 **Limits.** The publish step and the backcast of the seat odds and a national-poll publisher address (none is held) are not built. Methodology wording is plain-language and should be read by James before the first release.
 
+**Copy change (James, 2026-10-10).** The forecast-page banner is now one line, "Forecast as of <date> (most recent update)": date only, never a time. It no longer says "if the election were held today" (D106 nowcast framing, D114 copy rule) or lists the poll and national-picture dates; that framing remains on the methodology page. Revert or reword if James wants the safeguard back on the page.
+
 **Exact next action.** Re-run `python3 -m scripts.site_evidence.build --refresh data/processed/polling/weekly-refresh/<date>` after each adopted refresh and pass the file to `release:publish --evidence`. The publish step (research-repo workflow, James's token) builds `site/`, copies it to the public repository and is rehearsed without synthetic data; the first real release follows the release checklist.
 
 <!-- fold: decisions -->
