@@ -339,8 +339,10 @@ describe('public site', () => {
     expect(first.closest('tr')!.nextElementSibling).toBe(detail);
     await waitFor(() => expect(scrollTo).toHaveBeenCalled());
     fireEvent.click(first);
-    expect(document.querySelector('.seatdetail')).toBeNull();
+    // It folds shut before it is removed, and the address is cleared at once.
+    expect(first).toHaveAttribute('aria-expanded', 'false');
     expect(window.location.hash).toBe('');
+    await waitFor(() => expect(document.querySelector('.seatdetail')).toBeNull());
   });
   it('suggests seats in a styled list while typing, and opens the one picked', async () => {
     const snapshot = await syntheticBankSnapshot();

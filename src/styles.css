@@ -561,6 +561,23 @@ table td:not(:first-child),
   border-bottom: 1px solid #222;
   background: #fff;
 }
+.collapsible {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.collapsible.is-open {
+  grid-template-rows: 1fr;
+}
+.collapsible-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsible {
+    transition: none;
+  }
+}
 .seat {
   position: relative;
   margin: 0 0 32px;

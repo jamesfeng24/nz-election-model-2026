@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
+import { Collapsible } from './Collapsible';
 import { chance } from '../format';
 import type { SeatRow } from './rows';
 
@@ -19,6 +20,12 @@ export function SeatList({
   detail: ReactNode;
   onToggle: (id: string) => void;
 }) {
+  // A seat closed by its own row stays on screen while it folds shut; any other change is immediate.
+  const [closing, setClosing] = useState<{ id: string; detail: ReactNode } | null>(null);
+  const toggle = (id: string) => {
+    if (id === selectedId) setClosing({ id, detail });
+    onToggle(id);
+  };
   return (
     <table className="seatlist">
       <caption>
@@ -38,7 +45,7 @@ export function SeatList({
           return [
             <tr key={row.id} id={`seatrow-${row.id}`} aria-selected={open || undefined}>
               <td>
-                <button type="button" className="rowlink" aria-expanded={open} onClick={() => onToggle(row.id)}>
+                <button type="button" className="rowlink" aria-expanded={open} onClick={() => toggle(row.id)}>
                   {row.name}
                 </button>
                 {row.kind === 'maori' ? ' (Māori)' : ''}
@@ -55,10 +62,14 @@ export function SeatList({
               <td>{row.available ? chance(row.leaderP, row.leaderRange) : 'No forecast'}</td>
               <td>{row.margin === null ? '–' : `${(row.margin * 100).toFixed(1)} pts`}</td>
             </tr>,
-            ...(open
+            ...(open || closing?.id === row.id
               ? [
                   <tr key={`${row.id}-detail`} className="seatdetail">
-                    <td colSpan={COLUMNS}>{detail}</td>
+                    <td colSpan={COLUMNS}>
+                      <Collapsible open={open} onClosed={() => setClosing(null)}>
+                        {open ? detail : closing?.detail}
+                      </Collapsible>
+                    </td>
                   </tr>,
                 ]
               : []),
