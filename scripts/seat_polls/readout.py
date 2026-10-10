@@ -10,6 +10,7 @@ import numpy as np
 from scripts.nowcast_assembly import assemble as A, fastmath, general, national, streams
 from scripts.nowcast_assembly.common import CONFIG, read, encode, ROOT
 from scripts.balance_scale.common import equivalent
+from scripts.polling import electorate_live
 from . import live
 from .common import PREFIX
 
@@ -18,7 +19,7 @@ OUTPUT = PREFIX + '/readout-2026.json'
 
 def build(draws):
     config = read(CONFIG)
-    inputs = live.inputs(config['national']['dataCutoff'])
+    inputs = live.inputs(config['national']['dataCutoff'], rows=live.live_rows(*electorate_live.pinned(config)))
     shares, ids, groups = national.load(config, draws)
     keys, national2023, base = general.baseline(config)
     continuing = general.relationships(config)

@@ -7,6 +7,7 @@ import unittest
 import unittest.mock
 import numpy as np
 from scripts.maori_seat_layer import live
+from scripts.polling import electorate_live
 from scripts.maori_seat_layer.common import CURRENT_POLLS, SEATS, fold, read as read_plan
 from scripts.maori_seat_layer.fit import fit
 from scripts.maori_seat_layer.run import parameters
@@ -45,14 +46,14 @@ class Reader(Fixture):
         self.assertEqual(superseded, [])
 
     def test_hash_mismatch_with_the_index_fails_closed(self):
-        real = live.read
+        real = electorate_live.read
         def tampered(path):
             value = real(path)
             if path.endswith('/polls.json'):
                 value = copy.deepcopy(value)
                 value['polls'].pop()
             return value
-        with unittest.mock.patch.object(live, 'read', side_effect=tampered), self.assertRaises(ValueError):
+        with unittest.mock.patch.object(electorate_live, 'read', side_effect=tampered), self.assertRaises(ValueError):
             live.live_polls()
 
     def test_candidates_agree_with_the_pinned_transcription_and_shares_within_rounding(self):
@@ -127,12 +128,32 @@ class Assembly(Fixture):
 
     def test_a_new_poll_moves_only_its_own_seat(self):
         before = self.records
-        extra = [dict(p) for p in self.rows] + [self.row('Te Tai Tokerau', '2026-10-30', {'LAB': 45.0, 'TPM': 25.0, 'IND': 20.0}, poll_id='synthetic-ttt')]
+        extra = [dict(p) for p in self.rows] + [self.row('Te Tai Tokerau', '2026-10-05', {'LAB': 45.0, 'TPM': 25.0, 'IND': 20.0}, poll_id='synthetic-ttt')]
         with unittest.mock.patch.object(live, 'live_polls', return_value=extra):
             after = maori.simulate(self.config, COUNT)
         moved = {s for s in SEATS if after[self.ids[s]] != before[self.ids[s]]}
         self.assertEqual(moved, {'Te Tai Tokerau'})
         self.assertTrue(after[self.ids['Te Tai Tokerau']]['source'].startswith('Stage66 default; poll synthetic-ttt'))
+
+    def test_a_poll_ending_after_the_data_cutoff_is_not_read(self):
+        # Audit J2 (James, 2026-10-10): Maori seat polls are cut at the data cutoff, as the general-seat polls are.
+        late = [dict(p) for p in self.rows] + [self.row('Te Tai Tokerau', '2026-10-30', {'LAB': 45.0, 'TPM': 25.0, 'IND': 20.0}, poll_id='synthetic-late')]
+        self.assertLess(self.config['national']['dataCutoff'], '2026-10-30')
+        with unittest.mock.patch.object(live, 'live_polls', return_value=late):
+            after = maori.simulate(self.config, COUNT)
+        self.assertEqual(after, self.records)
+        polls, _ = live.current_polls(self.resolve, late)
+        self.assertIn('Te Tai Tokerau', polls)  # without a cutoff the reader would take it
+        self.assertNotIn('Te Tai Tokerau', live.current_polls(self.resolve, late, self.config['national']['dataCutoff'])[0])
+
+    def test_the_assembly_reads_the_pinned_run(self):
+        # Audit J2: the configuration names the electorate-live run; a hash that does not match it fails the build.
+        run = self.config['seatPolls']['electorateRun']
+        self.assertEqual(run['pollsSha256'], electorate_live.run_entry(run['date'])['pollsSha256'])
+        bad = copy.deepcopy(self.config)
+        bad['seatPolls']['electorateRun'] = dict(run, pollsSha256='0' * 64)
+        with self.assertRaises(ValueError):
+            maori.simulate(bad, COUNT)
 
     def test_removing_the_waiariki_poll_restores_the_fallback_and_leaves_the_other_seats(self):
         rest = [p for p in self.rows if live.seat_name(p['seat']) != 'Waiariki']

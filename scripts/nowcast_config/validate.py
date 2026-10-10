@@ -12,6 +12,7 @@ import datetime
 import json
 import sys
 from scripts.manual_adjustment.schema import seat_frame
+from scripts.polling import electorate_live
 from scripts.uncertainty_revision.common import ROOT, read
 
 CONFIG = 'config/nowcast-2026.json'
@@ -71,8 +72,16 @@ def check_config(config, require_complete=False):
         require((ROOT / config[section][key]).exists(), f'{path} does not exist: {config[section][key]}')
     seat_polls = config.get('seatPolls')
     if seat_polls is not None:
-        require(set(seat_polls) == {'enabled', 'decision'} and isinstance(seat_polls['enabled'], bool), 'seatPolls is {enabled: bool, decision}')
+        require(set(seat_polls) == {'enabled', 'decision', 'electorateRun'} and isinstance(seat_polls['enabled'], bool),
+                'seatPolls is {enabled: bool, decision, electorateRun}')
+        run = seat_polls['electorateRun']
+        require(run is None or (isinstance(run, dict) and set(run) == {'date', 'pollsSha256'}), 'seatPolls.electorateRun is {date, pollsSha256} or null')
+        if run is not None:
+            entry = [r for r in electorate_live.runs() if r['date'] == run['date']]
+            require(len(entry) == 1 and entry[0]['pollsSha256'] == run['pollsSha256'],
+                    'seatPolls.electorateRun must name an electorate-live run and its polls.json hash (audit J2)')
         if seat_polls['enabled']:
+            require(run is not None, 'enabled seat polls need a pinned seatPolls.electorateRun (audit J2)')
             findings = 'data/processed/seat-polls/findings.json'
             require((ROOT / findings).exists() and read(findings)['summary']['finding'] == 'adopt',
                     'seat polls can be enabled only when the frozen Stage79 finding is adopt (D117)')

@@ -1,7 +1,8 @@
 """Maori seats: the Stage66 default layer re-run for the polled seats; the unpolled seats use the registered Stage78 fallback.
 
-The polled seats are those with a Maori poll in the newest Stage82 live-inputs run (Stage86, D125), not the pinned 2026-10-07 transcription: a new
-Maori seat poll is a data-only addition and moves its seat from the fallback to the Stage66 layer. The calibration is unchanged.
+The polled seats are those with a Maori poll, ending by the data cutoff, in the Stage82 live-inputs run that `seatPolls.electorateRun` pins (Stage86,
+D125; audit J2), not the 2026-10-07 transcription: a new Maori seat poll is a data-only addition and moves its seat from the fallback to the
+Stage66 layer once its run is adopted. The calibration is unchanged.
 
 Stage66 stores only a 500-draw preview, so the registered model is re-simulated here with the assembly's draw
 count. Maori draws are independent of the national draw (Stage66 default; any coupling needs a stated correlation).
@@ -17,7 +18,8 @@ from scripts.maori_seat_fallback.draws import f_shares
 from scripts.maori_seat_layer.common import SEATS, fold
 from scripts.maori_seat_layer.fit import fit
 from scripts.maori_seat_layer.run import parameters
-from scripts.maori_seat_layer.live import current_polls
+from scripts.maori_seat_layer import live as maori_live
+from scripts.polling import electorate_live
 from scripts.maori_seat_layer.simulate import simulate as simulate_layer
 from .common import TARGET_FRAME, read, require, namespace_seed
 from .summaries import share_summaries
@@ -115,7 +117,8 @@ def simulate(config, count):
     require(fallback is None or config['maori']['unpolledSeats'] == 'labelled-fallback', 'a fallback model needs maori.unpolledSeats = labelled-fallback')
     ids = electorate_ids()
     people = roster(config, ids)
-    polls, _ = current_polls(resolver(people))
+    run, sha = electorate_live.pinned(config)
+    polls, _ = maori_live.current_polls(resolver(people), maori_live.live_polls(run, sha), config['national']['dataCutoff'])
     fitted = fit()[0]['fit']
     sim = simulate_layer(polls, parameters(fitted), count, namespace_seed(config['simulation']['seedNamespace'], 'maori'))
     unpolled = [seat for seat in SEATS if seat not in sim['seats']]

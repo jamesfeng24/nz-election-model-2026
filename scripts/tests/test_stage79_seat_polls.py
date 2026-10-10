@@ -9,6 +9,7 @@ from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_assembly import assemble as A, general, national, streams, summaries
 from scripts.nowcast_assembly.common import CONFIG, read
 from scripts.nowcast_config.validate import check_config, ConfigError
+from scripts.polling import electorate_live
 from scripts.seat_polls import apply as seat_apply, data, historical, live, model, run, score
 from scripts.seat_polls.common import DESIGN, PREFIX, parameters
 from scripts.uncertainty_revision.coordinates import mean_logit_location
@@ -209,7 +210,7 @@ class Live(unittest.TestCase):
         rows[0]['electorate'] = 'Nowhere'
         with self.assertRaises(ValueError):
             live.inputs('2026-10-07', rows=rows)
-        with unittest.mock.patch.object(live, 'read', side_effect=lambda path, real=live.read: (
+        with unittest.mock.patch.object(electorate_live, 'read', side_effect=lambda path, real=electorate_live.read: (
                 {**real(path), 'runs': [{**real(path)['runs'][-1], 'pollsSha256': '0' * 64}]} if path.endswith('index.json') else real(path))):
             with self.assertRaises(ValueError):
                 live.live_rows()
@@ -273,31 +274,37 @@ class Apply(unittest.TestCase):
 class Switch(unittest.TestCase):
     def test_config_switch_is_fail_closed(self):
         c = copy.deepcopy(read(CONFIG))
-        self.assertEqual(c['seatPolls'], {'enabled': True, 'decision': 'D117'})  # James switched it on (D117)
+        run = c['seatPolls']['electorateRun']
+        self.assertEqual(c['seatPolls'], {'enabled': True, 'decision': 'D117', 'electorateRun': run})  # James switched it on (D117)
         self.assertIn('D117', c['decisions'])
         check_config(c)
         c.pop('seatPolls')
         check_config(c)
-        for bad in ({'enabled': 'yes', 'decision': 'D117'}, {'enabled': True}, {'enabled': True, 'decision': 'D117', 'x': 1}):
+        for bad in ({'enabled': 'yes', 'decision': 'D117', 'electorateRun': run}, {'enabled': True}, {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'x': 1},
+                    {'enabled': True, 'decision': 'D117'}, {'enabled': True, 'decision': 'D117', 'electorateRun': None},  # enabled polls need a pinned run (audit J2)
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': dict(run, pollsSha256='0' * 64)},
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': dict(run, date='2026-01-01')}):
             d = copy.deepcopy(c)
             d['seatPolls'] = bad
             with self.assertRaises(ConfigError):
                 check_config(d)
         d = copy.deepcopy(c)
-        d['seatPolls'] = {'enabled': True, 'decision': 'D117'}
+        d['seatPolls'] = {'enabled': True, 'decision': 'D117', 'electorateRun': run}
         self.assertEqual(read(PREFIX + '/findings.json')['summary']['finding'], 'adopt')
+        check_config(d)
+        d['seatPolls'] = {'enabled': False, 'decision': 'D117', 'electorateRun': None}
         check_config(d)
 
     def test_enabled_bank_changes_only_polled_seats(self):
         c = copy.deepcopy(read(CONFIG))
-        c.pop('seatPolls')
+        pinned = c.pop('seatPolls')
         slates = {s: slate(s) for s in GENERAL}
         classes = {s: 'exceptional' if i % 8 == 0 else 'ordinary' for i, s in enumerate(GENERAL)}
         maori = {s: {'status': 'simulated', 'class': 'maori-layer', 'source': 'synthetic-test', 'candidates': ['a', 'b'], 'candidateNames': ['A', 'B'],
                      'candidateParty': ['labourparty', 'tepatimaori'], 'candidateShares': summaries.share_summaries(['a', 'b'], np.array([[0.6, 0.4]] * 8)),
                      'winners': [0] * 8} for s in MAORI}
         off = A.assemble(c, 8, slates=slates, classification=classes, maori_records=maori)
-        c['seatPolls'] = {'enabled': True, 'decision': 'D117'}
+        c['seatPolls'] = pinned
         on = A.assemble(c, 8, slates=slates, classification=classes, maori_records=maori)
         polled = set(live.inputs(c['national']['dataCutoff']))
         self.assertTrue(polled)

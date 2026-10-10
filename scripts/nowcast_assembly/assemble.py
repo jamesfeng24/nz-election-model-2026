@@ -8,6 +8,7 @@ import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_config.validate import check_classification, check_config, ConfigError
 from scripts.seat_polls import live as seat_polls
+from scripts.polling import electorate_live
 from . import evidence, fastmath, general, maori, national, streams
 from .summaries import share_summaries
 from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file_sha256, AssemblyError
@@ -84,7 +85,9 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
         else:
             candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters)
     rows = list(party_rows.values()) + list(candidate_rows.values())
-    polls = seat_polls.inputs(config['national']['dataCutoff']) if config.get('seatPolls', {}).get('enabled') else {}
+    run, sha = electorate_live.pinned(config)
+    polls = (seat_polls.inputs(config['national']['dataCutoff'], rows=seat_polls.live_rows(run, sha))
+             if config.get('seatPolls', {}).get('enabled') else {})
     state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
              'candidateScales': candidate_scales, 'multipliers': multipliers, 'withinMultipliers': within,
              'massMultipliers': mass, 'classification': classification, 'polls': polls,
@@ -107,12 +110,19 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
             'nationalStateKey': config['national']['stateKey'],
             'inputs': {'nationalSource': config['national']['source'], 'nationalSha256': file_sha256(config['national']['source']),
                        'baseline': config['baseline']['source'], 'scales': config['uncertainty']['scales'],
-                       'candidateFitId': fit_id},
+                       'candidateFitId': fit_id, **electorate_run_inputs(config)},
             'draws': total, 'nationalDraws': count, 'layerReplicates': replicates, 'drawIds': draw_ids,
             'partyVote': {'groups': groups, 'otherBucket': OTHER, 'shares': draws.tolist()},
             'seats': seats, 'seatEvidence': seat_evidence,
             'directory': directory(config, groups, frame, slates if classification is not None else {}, records),
             'diagnostics': {'reconciliation': reconciliation(config, groups, draws, keys, continuing, local_means)}}
+
+
+
+def electorate_run_inputs(config):
+    """The pinned electorate-poll run as bank inputs (strings, as the TypeScript bank schema reads them); nothing when none is pinned."""
+    run, sha = electorate_live.pinned(config)
+    return {} if run is None else {'electorateRun': run, 'electorateRunSha256': sha}
 
 
 _STATE = {}
