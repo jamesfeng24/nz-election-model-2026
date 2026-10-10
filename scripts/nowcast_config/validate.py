@@ -79,7 +79,7 @@ def check_config(config, require_complete=False):
         if run is not None:
             entry = [r for r in electorate_live.runs() if r['date'] == run['date']]
             require(len(entry) == 1 and entry[0]['pollsSha256'] == run['pollsSha256'],
-                    'seatPolls.electorateRun must name an electorate-live run and its polls.json hash (audit J2)')
+                    'seatPolls.electorateRun must name a Stage82 electorate-poll run and its polls.json hash (audit J2)')
         if seat_polls['enabled']:
             require(run is not None, 'enabled seat polls need a pinned seatPolls.electorateRun (audit J2)')
             findings = 'data/processed/seat-polls/findings.json'

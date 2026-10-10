@@ -3,11 +3,11 @@
     python3 -m scripts.polling.weekly_refresh.adopt --date YYYY-MM-DD [--electorate-date YYYY-MM-DD] [--check]
 
 Sets config/nowcast-2026.json national.source, modelStateAsOf and dataCutoff to the values recorded in that run's
-estimate.json (`nowcastInput`), pins seatPolls.electorateRun to an electorate-live run (`--electorate-date`, default the newest run: a
+estimate.json (`nowcastInput`), pins seatPolls.electorateRun to a Stage82 electorate-poll run (`--electorate-date`, default the newest run: a
 refresh writes an electorate run only when the electorate polls changed; the assembly still reads only polls ending by the data cutoff; audit
 J2) and bumps configVersion (text edits of those values only), then validates the result with scripts.nowcast_config.validate. Nothing else
 in the configuration changes. `--check` verifies that the config already carries the run's national values and, when `--electorate-date` is
-given, that electorate run (the validator checks any pinned run against the electorate-live index).
+given, that electorate run (the validator checks any pinned run against the electorate-poll index).
 """
 import argparse
 import json
@@ -26,7 +26,7 @@ def target(date):
 
 
 def electorate_target(date=None):
-    """{date, pollsSha256} of the electorate-live run on `date` (the newest when None), or None when there is none yet."""
+    """{date, pollsSha256} of the Stage82 electorate-poll run on `date` (the newest when None), or None when there is none yet."""
     run = electorate_live.run_entry(date)
     return None if run is None else {'date': run['date'], 'pollsSha256': run['pollsSha256']}
 

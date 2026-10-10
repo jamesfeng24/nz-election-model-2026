@@ -1,7 +1,7 @@
 """Stage86 (D125): the 2026 Maori seat polls from the Stage82 live-inputs file, in the shape the Stage66 simulation reads.
 
 The nowcast assembly used to read the pinned transcription `data/source-plans/maori-seat-layer/polls-2026.json`. It now reads the run of
-`data/processed/polling/electorate-live/` that `seatPolls.electorateRun` pins (append-only, hash-checked against `index.json`; audit J2), up to
+Stage82 electorate-poll runs (`scripts.polling.electorate_live`) that `seatPolls.electorateRun` pins (append-only, hash-checked against `index.json`; audit J2), up to
 the data cutoff as for the general seats, so a new Maori seat poll is a data-only addition once that run is adopted:
 the Stage66 calibration and the Stage71 and Stage78 decisions are untouched and nothing is refitted. The pinned file still serves the recorded
 Stage66, Stage71 and Stage78 artifacts (a 2026-10-07 snapshot of three seats); the assembly no longer reads it.

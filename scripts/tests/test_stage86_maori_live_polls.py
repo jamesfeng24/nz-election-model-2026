@@ -147,7 +147,7 @@ class Assembly(Fixture):
         self.assertNotIn('Te Tai Tokerau', live.current_polls(self.resolve, late, self.config['national']['dataCutoff'])[0])
 
     def test_the_assembly_reads_the_pinned_run(self):
-        # Audit J2: the configuration names the electorate-live run; a hash that does not match it fails the build.
+        # Audit J2: the configuration names the electorate-poll run; a hash that does not match it fails the build.
         run = self.config['seatPolls']['electorateRun']
         self.assertEqual(run['pollsSha256'], electorate_live.run_entry(run['date'])['pollsSha256'])
         bad = copy.deepcopy(self.config)
