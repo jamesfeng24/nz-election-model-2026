@@ -738,7 +738,7 @@ The 2026 uncertainty scales are the frozen Stage45 rule with target 2026, which 
 - **Precision gate.** Every published probability needs a Monte Carlo SE of at most 0.01 (unchanged).
 - **Reconciliation.** The 1.0pp check that the 64 general seats' party-vote means agree with the national mean stays as an internal build gate. The pipeline computes a party-vote mean per general seat only as an intermediate (the candidate shares are derived from it); no per-seat party vote is exported or shown. The check guards against a broken affinity table. Latest development run: maximum gap 0.38pp.
 - **Cadence.** One release after each accepted weekly poll refresh.
-- **Māori seats.** Shown as a labelled range (the Stage66/71 layer). The four unpolled seats (Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau, Te Tai Tokerau) use a labelled fallback from the Māori layer without a poll. The Māori layer has no no-poll estimate (Stage66 and Stage71 left those seats `unpolled`), so this decision sets the policy only: the fallback model must be defined, calibrated and registered in a separately authorized bounded stage. Until then those seats are `unavailable` and `maori.unpolledFallbackModel` keeps the config pending.
+- **Māori seats.** Shown as a labelled range (the Stage66/71 layer; superseded on display by D131, which shows C alone). The four unpolled seats (Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau, Te Tai Tokerau) use a labelled fallback from the Māori layer without a poll. The Māori layer has no no-poll estimate (Stage66 and Stage71 left those seats `unpolled`), so this decision sets the policy only: the fallback model must be defined, calibrated and registered in a separately authorized bounded stage. Until then those seats are `unavailable` and `maori.unpolledFallbackModel` keeps the config pending.
 - **MMP rules.** Electoral Act 1993 version 238.0 as at 1 January 2026 (D084): 5% or one electorate, Sainte-Laguë over 120, s 192 overhang added on top. A search on 2026-10-07 found no later amendment affecting 2026 seat allocation: the Electoral Amendment Act 2025 (Royal Assent December 2025) covers enrolment, prisoner voting and donations, and the Electoral (District Boundaries) Amendment Bill 2026 only moves boundary-review timing to 2030 onward. The legislation site blocked direct fetches, so this rests on the Stage49 verification and secondary pages.
 
 ## D115 — 2026-10-10 — labelled fallback for the four unpolled Māori seats (Stage78)
@@ -788,6 +788,10 @@ Frozen rule outcome `keep_control_mixed`; James then set 0.55 on the within-rema
 - **What the fitted version would have done:** the descriptive refit (within 0.80, mass 0.91) lowers win probability of low-share minor candidates in ordinary seats by about 10 to 30 percent of their value (Tauranga ACT 3.1% to 2.2%, Banks Peninsula Green 11.9% to 10.3%). It does not remove the tail-driven oddities, which sit in the skewed within-remainder law and the local-party layer, neither of which this stage changes.
 - **Limits that stay attached:** the Stage67 flags were selected with all results known; the Gaussian law over-covers the centre of the minor-candidate distribution while fitting its tails, a heavy-tail signature (Student-t and mixtures remain closed); independents are already under-covered and the arms slightly worsen them. Limiting the multipliers to party-affiliated candidates, or a mass value below the fitted one (0.75 breaches the National coverage guard), remain open and are James's decision.
 
+## D122 — 2026-10-10 — The public site is a static multi-page build of the existing app (Stage84)
+
+The public site lives in the research repository and is built into `site/` (one HTML file per page, relative paths) for a later publish step to copy as it is. It reads only the published snapshot archive (schema v2) through the validating loader and shows "No forecast published yet" when the archive is empty and "The forecast could not be loaded" when a forecast exists but fails to load or verify. The licence notice is a footer line on every page ("Licensed under CC BY 4.0"), not a LICENSE file in the public repository (James, 2026-10-09). Site output must not contain synthetic content, source maps, extra documents or any mention of the tooling that wrote the code.
+
 ## D123 — 2026-10-10 — Stage79 follow-up: new general-electorate polls are data-only, read from the Stage82 live file; pollsters combine by inverse variance
 
 The seat-poll layer reads the newest Stage82 electorate-live run instead of the pinned transcription. A new poll changes only its seat's input at run time: the inflation (5.3), half-life (6 weeks), cap (0.60) and the 0.12 SD Labour-aligned allowance stay as fitted, and nothing is refitted. Within a seat, polls of one source (the pollster behind the fieldwork) within 14 days merge as in the frozen design; an older poll of one source beyond that gap is superseded by the newer one. Different sources combine by inverse variance with each source's own allowance, a source older than the freshest having its variance divided by the square of its relative age factor; the combined poll takes the freshest source's age. James chose the rule on 2026-10-10 ("use the combining rule you prefer"). The frozen scoring evaluates each historical poll on its own, so the combining rule is a development choice, not an estimate. Number provisional (allocated by the coordinator).
@@ -803,3 +807,40 @@ The nowcast assembly takes the 2026 Māori seat polls from the newest Stage82 li
 ## D126 — 2026-10-10 — layer-noise groups take independent row orders (Stage87)
 
 Separately seeded scrambled Sobol engines are not independent when paired by row, so the 2026 layer-noise key groups are each read in an independent seeded permutation of the rows of their own Sobol bank (shared group in natural order). Alternative rejected: one joint engine of every key (0.77 GB at production size and still leaves pairs with |r| up to 0.12). Consequence: seat win probabilities in the assembly change (largest shift 0.14 in the synthetic rehearsal), bloc probabilities by at most 0.02. Number final (allocated by the coordinator; merged in #117).
+
+## D127 — 2026-10-10 — Māori seats show the C–P range: Stage71 arm P beside the Stage66 control for each polled seat (Stage88, James)
+
+D114 said Māori probabilities are shown as a labelled C–P range or withheld, but only C was built (audit J1). James chose the range (2026-10-10).
+- Each polled seat is also simulated under Stage71's arm P: the control fit, with σ² and τ² times a λ drawn per draw from Stage71's frozen bootstrap.
+- The snapshot carries `winProbabilityInflation` beside `winProbability`. The release gate holds both to MCSE ≤ 0.01.
+- Seat totals, MMP and electorate predictions stay on C, one law per draw.
+- Fallback seats keep their single labelled number.
+
+Alternatives rejected: C only (known overconfident, Stage71), and P only (Stage71's P was `improves_not_restored` and not adopted).
+
+**Superseded on display by D131 (2026-10-10):** the site shows C only, one chance per Māori seat. The build, the export's `winProbabilityInflation` and the release gate described here are unchanged.
+
+## D128 — 2026-10-10 — the configuration pins the electorate-poll run; Māori polls are cut at the data cutoff (Stage88, James)
+
+The assembly read the newest electorate-live run, so merging a poll refresh changed the forecast before adoption, and the bank did not record which run it used (audit J2). James chose to pin (2026-10-10).
+- `seatPolls.electorateRun {date, pollsSha256}` is required when seat polls are enabled. It is set by `weekly_refresh.adopt` and recorded in the bank inputs.
+- Māori seat polls take the same `dataCutoff` as general-seat polls.
+
+Alternative rejected: keep reading the newest run.
+
+## D129 — 2026-10-10 — an electorate win by a party-list party simulated inside Other is overhang (Stage88, James)
+
+The seat layer counted any winner outside the simulated party groups as an s 191(8) independent. That includes Te Tai Tokerau Party, which is on the 2026 party list (audit J3). James chose overhang (2026-10-10).
+- Such a party qualifies by its electorate (s 191(4)(b)) with zero party votes of its own, so its seat is overhang (s 192(5)) and Parliament grows.
+- Party-less winners stay s 191(8).
+- Approximation: the party's own vote stays in Other, so a list-entitled seat for it (about 0.4% of the vote) is not modelled.
+
+Alternative rejected: keep the independent rule as an approximation.
+
+## D130 — 2026-10-10 — the Publish workflow adopts the newest refresh and publishes; nothing is pushed without an explicit go
+
+James decided on 2026-10-10 that merging the weekly poll-refresh pull request is his only manual step: a GitHub Actions workflow (`.github/workflows/publish.yml`) adopts the newest refresh (`weekly_refresh.adopt`) in its runner, reruns the forecast, runs every release gate and pushes the built site and forecast archive to the public site repository, with a failed gate stopping it before anything is pushed. This replaces keeping adoption manual for the weekly chain; the refresh routine itself still never edits the configuration (Stage70). Alternatives rejected: committing the adoption straight to main (shared history is never pushed to directly) and leaving adoption manual (a second manual step each Monday). The runner's adoption reaches main later through a bookkeeping pull request, so main's configuration can trail the published forecast until that is merged. The first publish and every later one needs an explicit go: a manual run with the publish box ticked, or the repository variable `PUBLISH_AUTO=true` that James sets after approving the first publish. Public commits carry James's identity, a plain message and no trailers.
+
+## D131 — 2026-10-10 — The site shows one chance per Māori seat, C only; D127's labelled range is superseded on display
+
+James decided on 2026-10-10 (21:53Z) that every polled Māori seat shows a single win chance, `winProbability` (the Stage66 layer, C), for consistency with the seat totals, the favourite, the margin, the filters and the map shading, all of which already use C. D127's labelled C–P range is therefore **superseded on display only**: the export still carries `winProbabilityInflation` (P), the simulation, the bank, the release gate, seat totals and MMP are unchanged, and the Stage88 build stays as the record of the sensitivity. The public JSON therefore carries P for anyone who opens it; the site never shows it. The configuration field `maori.presentation` (`"labelled-range"`, D114) is deliberately **not** edited, because a configuration change would force the full hosted replay for a display-only decision; the field is retained and not read by the site, so a reader should take this decision, not the field, as the current presentation. The four unpolled seats keep their single labelled fallback number. Alternative rejected: keep the range on the site (it gave a seat two numbers that the seat totals could not both match). If the range is wanted again, the display change is small and the export already carries it.
