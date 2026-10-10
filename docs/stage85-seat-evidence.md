@@ -26,19 +26,19 @@
 
 **Unused polls** are listed as context with a plain reason: excluded, not a National-versus-Labour poll (for example Green-led Auckland Central and Wellington Bays), fieldwork after the data cutoff, superseded by a newer poll of the same pollster, or the seat has no National or no Labour candidate.
 
-**Māori seats** (as they stand): the latest poll of the seat is the Stage66 layer's input (`status: used`, no `shareOfPoll`, no `weight`, no `pollUpdate`); earlier polls of the seat are `not-used` ("superseded"). Unpolled seats and the synthetic fixture have `polls: []`. The fallback model draws no poll.
+**Māori seats.** The polls are those the Māori layer reads, the Māori rows of the newest Stage82 live file (Stage86, D125). The latest poll of a seat is the layer's input (`status: used`, no `shareOfPoll`, no `weight`, no `pollUpdate`); earlier polls of the seat are `not-used` ("superseded"). Shares are the published electorate-vote percentages excluding undecided respondents, by the poll's own party labels (`TPM`, `LAB`, ...), not candidate names. Seats on the fallback model and the synthetic fixture have `polls: []`; the fallback draws no poll.
 
 ## Where it lives
 
 - `scripts/seat_polls/live.py`: `combine()` returns the unchanged `inputs()` result and the per-poll detail; `live_rows()` rows also carry `approximate` and `evidenceGrade` (extra keys, read by nothing else).
-- `scripts/nowcast_assembly/evidence.py`, wired in `assemble.py`; the Māori part reads `current_polls()` and checks that the record's poll is the latest.
+- `scripts/nowcast_assembly/evidence.py`, wired in `assemble.py`; the Māori part reads the same Stage82 live rows as `scripts/maori_seat_layer/live.py` and checks that the record's poll is the latest.
 - `src/types/export.ts` (`SeatEvidenceSchema`, optional `seatEvidence` on the snapshot), `src/models/nowcast/drawBank.ts`, `src/models/nowcast/fromBank.ts` (copied through unchanged). No site code.
 - `data/fixtures/synthetic/nowcast-draw-bank.json` regenerated: synthetic slates and classification, real 2026 polls, as before.
 
 ## Limits and not done
 
 - Display data only; the release gate does not require it (a block, if given, must be complete).
-- A Māori seat's poll list reads the pinned Māori poll file; the separate Māori poll switch-over (Stage86) will change that source, and `evidence.maori_polls` is the one place to adapt.
+- A Māori seat lists only its polls, not its candidates' share of the unnamed remainder; the Stage86 equal split of the remainder to unpolled candidates is a placeholder and is not shown as evidence.
 - No site change; the seat-page text is the site's.
 
 ## Reproduction

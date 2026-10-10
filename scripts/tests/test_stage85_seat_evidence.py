@@ -4,6 +4,7 @@ import math
 import unittest
 from scripts.nowcast_assembly import assemble as A, evidence
 from scripts.nowcast_assembly.common import read
+from scripts.maori_seat_layer import live as maori_live
 from scripts.seat_polls import live
 
 FIXTURE = 'data/fixtures/synthetic/nowcast-draw-bank.json'
@@ -115,11 +116,22 @@ class Bank(unittest.TestCase):
 class Maori(unittest.TestCase):
     def test_a_polled_seat_lists_its_polls_and_a_mismatch_fails_closed(self):
         rows = evidence.maori_polls('Te Tai Tonga', {'pollFieldworkEnd': '2026-09-24'})
-        self.assertEqual([(r['pollId'], r['status'], r['weight']) for r in rows], [('2026-te-tai-tonga', 'used', None)])
-        self.assertEqual({c['party'] for c in rows[0]['candidateVotePct']}, {'LAB', 'MP', 'GRN', 'IND'})
-        self.assertEqual(evidence.maori_polls('Waiariki', {}), [])
+        self.assertEqual([(r['pollId'], r['status'], r['weight']) for r in rows], [('nz-seatpoll-12c8e1ed977e9782d67d', 'used', None)])
+        self.assertEqual({c['party'] for c in rows[0]['candidateVotePct']}, {'LAB', 'TPM', 'GRN', 'IND'})
+        self.assertEqual(evidence.maori_polls('Te Tai Tonga', {}), [])  # a seat on the fallback has no poll
         with self.assertRaises(Exception):
             evidence.maori_polls('Te Tai Tonga', {'pollFieldworkEnd': '2026-01-01'})
+
+    def test_earlier_polls_of_a_seat_are_superseded_by_the_latest(self):
+        live_rows = [p for p in maori_live.live_polls() if p['seat'] == 'Waiariki']
+        older = dict(live_rows[0], id='older', fieldwork={'start': '2026-08-01', 'end': '2026-08-07', 'raw': ''})
+        rows = evidence.maori_polls('Waiariki', {'pollFieldworkEnd': '2026-10-01'}, polls=live_rows + [older])
+        self.assertEqual([(r['pollId'], r['status']) for r in rows], [('older', 'not-used'), (live_rows[0]['id'], 'used')])
+        self.assertIn('superseded', rows[0]['reason'])
+
+    def test_every_live_maori_poll_is_listed_for_a_polled_seat_in_the_assembly(self):
+        polled = {maori_live.seat_name(p['seat']) for p in maori_live.live_polls()}
+        self.assertEqual(polled, {'Te Tai Hauāuru', 'Te Tai Tonga', 'Hauraki-Waikato', 'Waiariki'})
 
 
 if __name__ == '__main__':

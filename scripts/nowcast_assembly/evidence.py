@@ -8,9 +8,10 @@ bank digest (`assemble.bank_digest`), so adding or changing it never changes a b
 Polls: a general seat's `weight` is exactly its contribution to the updated National/Labour balance. The update is linear in the
 combined poll, centre = model + k (poll - model) with k = rho * w, and the combined poll is the share-weighted mean of the polls, so
 poll i moves the centre by `weight` = k * share_i of the gap to its own value and the model keeps 1 - k (`pollUpdate.modelWeight`).
-A Maori seat's poll is the one input of the Stage66 layer, so it has no share or weight.
+A Maori seat's latest poll (from the Stage82 live file since Stage86) is the one input of the Stage66 layer, so it has no share or weight.
 """
-from scripts.maori_seat_layer.simulate import current_polls
+from scripts.maori_seat_layer import live as maori_live
+from scripts.maori_seat_layer.live import live_polls
 from scripts.seat_polls import live as seat_polls
 from . import maori
 from .common import OTHER, require
@@ -53,24 +54,24 @@ def general_seat(seat, record, row, keys, groups, continuing, polls):
             'polls': [poll_row(p, update is not None, scale, note) for p in polls]}
 
 
-def maori_polls(seat_name, record):
-    """The Maori layer's poll rows for one seat: the latest poll is the input, earlier ones are listed as superseded. A seat without a
-    poll has none. The polls are read the way the layer reads them (`current_polls`); the latest must be the poll the record used."""
+def maori_polls(seat_name, record, polls=None):
+    """The Maori layer's poll rows for one seat, read from the Stage82 live file the way the layer reads it (Stage86, D125): the latest poll by
+    fieldwork end is the input, earlier ones are listed as superseded. A seat without a poll has none. Shares are the published
+    electorate-vote percentages excluding undecided respondents, by the poll's own party labels. The latest must be the poll the record used.
+    `polls` overrides the file (tests)."""
     if 'pollFieldworkEnd' not in record:
         return []
-    latest, superseded, data = current_polls()
-    require(seat_name in latest and latest[seat_name]['fieldworkEnd'] == record['pollFieldworkEnd'],
-            f'{seat_name}: the bank record does not match the current Maori poll')
-    rows = []
-    for poll in [p for p in data['polls'] if p['seat'] == seat_name]:
-        used = poll['id'] == latest[seat_name]['id']
-        rows.append({'pollId': poll['id'], 'pollster': poll.get('pollster'), 'sponsorGroup': None,
-                     'fieldworkStart': poll['fieldworkStart'], 'fieldworkEnd': poll['fieldworkEnd'],
-                     'sampleSize': poll.get('sampleSize'), 'sampleSizeAssumed': False,
-                     'candidateVotePct': [{'party': c['party'], 'pct': float(c['pollPercent']), 'name': c['name']} for c in poll['candidates']],
-                     'approximate': [], 'evidenceGrade': None, 'status': 'used' if used else 'not-used',
-                     'reason': None if used else 'superseded by a newer poll for the seat', 'shareOfPoll': None, 'weight': None})
-    return sorted(rows, key=lambda r: (r['fieldworkEnd'], r['pollId']))
+    mine = sorted((p for p in (live_polls() if polls is None else polls) if maori_live.seat_name(p['seat']) == seat_name),
+                  key=lambda p: (p['fieldwork']['end'], p['id']))
+    require(mine and mine[-1]['fieldwork']['end'] == record['pollFieldworkEnd'], f'{seat_name}: the bank record does not match the current Maori poll')
+    return [{'pollId': poll['id'], 'pollster': poll.get('pollster'), 'sponsorGroup': None,
+             'fieldworkStart': poll['fieldwork']['start'], 'fieldworkEnd': poll['fieldwork']['end'],
+             'sampleSize': poll.get('sampleSize'), 'sampleSizeAssumed': False,
+             'candidateVotePct': [{'party': k, 'pct': float(v)} for k, v in sorted(poll['electorateVotePct'].items())],
+             'approximate': sorted(k for k, v in poll.get('electorateVoteFlags', {}).items() if v == 'approx'),
+             'evidenceGrade': poll.get('evidenceGrade'), 'status': 'used' if poll is mine[-1] else 'not-used',
+             'reason': None if poll is mine[-1] else 'superseded by a newer poll for the seat', 'shareOfPoll': None, 'weight': None}
+            for poll in mine]
 
 
 def build(config, bank_seats, keys, groups, base, continuing, as_of, synthetic_maori):

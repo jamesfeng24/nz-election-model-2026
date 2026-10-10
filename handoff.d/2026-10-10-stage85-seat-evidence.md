@@ -8,13 +8,13 @@
 <!-- fold: state -->
 # Stage85 per-seat evidence export — review-ready, 2026-10-10
 
-Branch `claude/stage85-seat-evidence-export-djpg5v`, from main `50cb5e8` (after #113). Authorized by James on 2026-10-10 (the coordinator's brief, "yeah go ahead"); decision number D124 (coordinator, provisional until main is checked).
+Branch `claude/stage85-seat-evidence-export-djpg5v`, from main `50cb5e8` (after #113), with main `59edb70` (Stage86, #115) merged in. Authorized by James on 2026-10-10 (the coordinator's brief, "yeah go ahead"); decision number D124 (coordinator, provisional until main is checked).
 
 **What changed.** The optional `seatEvidence` block (bank and snapshot; see `docs/stage85-seat-evidence.md` for the shape the site may rely on), `live.combine()`, `evidence.py`, the TypeScript schemas, the regenerated synthetic fixture, `docs/stage85-seat-evidence.md`, `docs/export-contract.md`, 9 Python and 3 TypeScript tests. **What did not.** Every simulated number, the configuration, the development gate, the Māori layer and its inputs (the Māori poll switch-over, Stage86, is a separate thread), `data/sources.json`, the site.
 
-**Counts.** 71 records per bank (64 general, 7 Māori). On the current cutoff five general seats have a used poll (Hutt South, Kāpiti, Mt Albert, Waitaki, West Coast-Tasman; Mt Albert's two Curia polls merge into one source); Auckland Central and Wellington Bays list their Green-led polls as unused context; three Māori seats (Te Tai Tonga, Te Tai Hauāuru, Hauraki-Waikato) list their poll.
+**Counts.** 71 records per bank (64 general, 7 Māori). On the current cutoff five general seats have a used poll (Hutt South, Kāpiti, Mt Albert, Waitaki, West Coast-Tasman; Mt Albert's two Curia polls merge into one source); Auckland Central and Wellington Bays list their Green-led polls as unused context; the four polled Māori seats (Te Tai Tonga, Te Tai Hauāuru, Hauraki-Waikato, Waiariki) list their poll from the Stage82 live file.
 
-**Limits.** Display only; the release gate does not require the block. Per-poll `weight` is exact for the updated balance centre, not for win probabilities. The Māori poll list reads the pinned Māori poll file through `current_polls()`; when Stage86 changes that source, `evidence.maori_polls` is the one function to adapt.
+**Limits.** Display only; the release gate does not require the block. Per-poll `weight` is exact for the updated balance centre, not for win probabilities. The Māori poll list reads the Stage82 live file as Stage86 (D125) does, after main `59edb70` was merged in; shares are by party label, not candidate.
 
 **Exact next action.** The coordinator reviews and merges. Then the site (#108) can read `seatEvidence` for its "polls we used" section. Not started: any site change.
 
