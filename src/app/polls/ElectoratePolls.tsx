@@ -57,7 +57,7 @@ function partyColumns(polls: ElectoratePoll[], nationalParties: string[]) {
 export function ElectoratePolls({ snapshot }: { snapshot: ForecastSnapshot }) {
   const polls = electoratePolls(snapshot);
   const nationalParties = (snapshot.evidence?.nationalPolls[0]?.shares ?? []).map((share) =>
-    share.partyId === 'other' ? 'Other' : partyLabel(snapshot, share.partyId),
+    partyLabel(snapshot, share.partyId),
   );
   const columns = partyColumns(polls, nationalParties);
   // A link to #seat-ID (from a seat page) needs that seat's row on the page.

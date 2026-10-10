@@ -87,20 +87,31 @@ function Governing({ snapshot }: { snapshot: ForecastSnapshot }) {
       <h2>Chance of a majority</h2>
       <p>Seat arithmetic only. It does not predict who would govern together.</p>
       <table>
-        <caption>Chance each group wins more than half of Parliament's seats</caption>
+        <caption>
+          Chance each group wins more than half of Parliament's seats, with the group's seats across simulated elections
+        </caption>
         <thead>
           <tr>
             <th>Group</th>
             <th>Chance of a majority</th>
+            <th>Median seats</th>
+            <th>80% range</th>
           </tr>
         </thead>
         <tbody>
-          {blocs.map((bloc) => (
-            <tr key={bloc.id}>
-              <td>{groupName(bloc.partyIds)}</td>
-              <td>{prob(bloc.probMajority.p)}</td>
-            </tr>
-          ))}
+          {blocs.map((bloc) => {
+            const range = mainRange(bloc.seats);
+            return (
+              <tr key={bloc.id}>
+                <td>{groupName(bloc.partyIds)}</td>
+                <td>{prob(bloc.probMajority.p)}</td>
+                <td>{bloc.seats[0].median}</td>
+                <td>
+                  {range.lower} – {range.upper}
+                </td>
+              </tr>
+            );
+          })}
           {noMajority && (
             <tr>
               <td>
@@ -109,6 +120,8 @@ function Governing({ snapshot }: { snapshot: ForecastSnapshot }) {
                 <small>Neither National + ACT + NZ First nor Labour + Greens + Te Pāti Māori reaches a majority</small>
               </td>
               <td>{prob(noMajority.probability.p)}</td>
+              <td>–</td>
+              <td>–</td>
             </tr>
           )}
         </tbody>
@@ -143,7 +156,6 @@ export function ForecastView({ snapshot, trend = null }: { snapshot: ForecastSna
           rows={seatRows}
         />
       )}
-      <Governing snapshot={snapshot} />
       <h2>Party vote</h2>
       <IntervalTable
         caption={`${snapshot.national.basis}. Median with 80% range.`}
@@ -155,6 +167,7 @@ export function ForecastView({ snapshot, trend = null }: { snapshot: ForecastSna
           set: p.share,
         }))}
       />
+      <Governing snapshot={snapshot} />
       {snapshot.evidence?.trend && (
         <>
           <h2>How support has moved</h2>

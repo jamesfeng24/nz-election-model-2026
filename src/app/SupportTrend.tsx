@@ -17,7 +17,6 @@ export function SupportTrend({ snapshot }: { snapshot: ForecastSnapshot }) {
   const trend = snapshot.evidence?.trend;
   if (!trend) return null;
   const polls = snapshot.evidence!.nationalPolls.filter((poll) => poll.usedInModel);
-  const partyName = (id: string) => (id === 'other' ? 'Other' : partyLabel(snapshot, id));
   const colour = (id: string, index: number) => COLOURS[id] ?? FALLBACK[index % FALLBACK.length];
 
   const firstWeek = Date.parse(trend.weeks[0]);
@@ -50,7 +49,7 @@ export function SupportTrend({ snapshot }: { snapshot: ForecastSnapshot }) {
   });
 
   const summary = trend.parties
-    .map((p) => `${partyName(p.partyId)} ${p.mean[p.mean.length - 1].toFixed(1)}%`)
+    .map((p) => `${partyLabel(snapshot, p.partyId)} ${p.mean[p.mean.length - 1].toFixed(1)}%`)
     .join(', ');
   const plotRight = WIDTH - MARGIN.right;
   const axisBottom = HEIGHT - MARGIN.bottom;
@@ -108,7 +107,7 @@ export function SupportTrend({ snapshot }: { snapshot: ForecastSnapshot }) {
             fill={colour(party.partyId, index)}
             className="endlabel"
           >
-            {partyName(party.partyId)}
+            {partyLabel(snapshot, party.partyId)}
           </text>
         ))}
       </svg>

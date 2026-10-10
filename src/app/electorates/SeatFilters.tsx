@@ -83,7 +83,7 @@ export function SeatFilters({
       {hasIncumbency && (
         <label className="check">
           <input type="checkbox" checked={filters.flip} onChange={(event) => set('flip', event.target.checked)} />{' '}
-          Projected flips (sitting MP trails)
+          Projected flips
         </label>
       )}
       {anyFilterSet(filters) && (

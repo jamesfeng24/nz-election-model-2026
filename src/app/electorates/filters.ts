@@ -20,7 +20,7 @@ export const anyFilterSet = (filters: Filters) => JSON.stringify(filters) !== JS
 export const passesFilters = (row: SeatRow, filters: Filters) =>
   (filters.winner === 'any' || (row.available && (row.leaderParty ?? 'independent') === filters.winner)) &&
   (filters.incumbent === 'any' || row.incumbentParty === filters.incumbent) &&
-  (!filters.flip || row.incumbentStatus === 'trails') &&
+  (!filters.flip || row.partyFlip) &&
   (filters.kind === 'any' || row.kind === filters.kind) &&
   (!filters.close || (row.available && row.leaderP < CLOSE_BELOW));
 

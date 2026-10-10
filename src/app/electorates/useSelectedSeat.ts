@@ -14,5 +14,9 @@ export function useSelectedSeat() {
     window.location.hash = `seat=${id}`;
     setSeatId(id);
   };
-  return { seatId, setSeatId, choose };
+  const clear = () => {
+    window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    setSeatId(null);
+  };
+  return { seatId, choose, clear };
 }

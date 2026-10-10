@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { ForecastSnapshot } from '../types/export';
 import { ElectorateMap } from './ElectorateMap';
 import {
@@ -15,12 +15,14 @@ import { SeatDetail } from './electorates/SeatDetail';
 import { SeatFilters } from './electorates/SeatFilters';
 import { SeatList } from './electorates/SeatList';
 import { SeatSearch } from './electorates/SeatSearch';
+import { glideTo } from './electorates/scroll';
 import { useSelectedSeat } from './electorates/useSelectedSeat';
 
 /** Search, filters, map and seat pages for every electorate. */
 export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
   const rows = useSeatRows(snapshot);
-  const { seatId, setSeatId, choose } = useSelectedSeat();
+  const { seatId, choose, clear } = useSelectedSeat();
+  const [scrollRequest, setScrollRequest] = useState<{ id: string } | null>(null);
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState<SortKey>('name');
   const [filters, setFilters] = useState<Filters>(NO_FILTERS);
@@ -38,16 +40,26 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
         .sort(SORTS[sort]),
     [rows, query, sort, filters],
   );
-  const pick = (id: string) => {
+  const open = (id: string) => {
     choose(id);
-    document.getElementById('seat-heading')?.scrollIntoView?.({ block: 'start' });
+    setScrollRequest({ id });
   };
+  const toggle = (id: string) => (id === seatId ? clear() : open(id));
+
+  // Glide to the seat once its detail has rendered, so the target sits where the page ends up.
+  useEffect(() => {
+    if (scrollRequest) glideTo(document.getElementById(`seatrow-${scrollRequest.id}`));
+  }, [scrollRequest]);
+
+  const selected = seatId && rows.some((row) => row.id === seatId) ? seatId : null;
+  const detail = selected ? <SeatDetail snapshot={snapshot} seatId={selected} /> : null;
+  const inList = selected !== null && listed.some((row) => row.id === selected);
 
   return (
     <>
       <p className="intro">Pick a seat for each candidate's chance of winning, vote share and polls.</p>
       <div className="picker">
-        <SeatSearch rows={rows} query={query} onQueryChange={setQuery} onChoose={choose} onPick={pick} />
+        <SeatSearch rows={rows} query={query} onQueryChange={setQuery} onChoose={choose} onPick={open} />
         <label>
           Sort by
           <select value={sort} onChange={(event) => setSort(event.target.value as SortKey)}>
@@ -57,17 +69,14 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
         </label>
       </div>
       <SeatFilters rows={rows} hasIncumbency={hasIncumbency} filters={filters} onChange={setFilters} />
-      <ElectorateMap snapshot={snapshot} forecasts={rows} onSelect={pick} highlight={matching} />
-      {seatId && rows.some((row) => row.id === seatId) ? (
-        <SeatDetail snapshot={snapshot} seatId={seatId} />
-      ) : (
-        <p>Pick a seat on the map, in the list or in the search box.</p>
-      )}
+      <ElectorateMap snapshot={snapshot} forecasts={rows} onSelect={open} highlight={matching} />
+      {selected && !inList && <div id={`seatrow-${selected}`}>{detail}</div>}
       <SeatList
         rows={listed}
         caption={filtered ? 'Electorates matching the filters' : `All ${rows.length} electorates`}
-        selectedId={seatId}
-        onSelect={setSeatId}
+        selectedId={selected}
+        detail={detail}
+        onToggle={toggle}
       />
     </>
   );

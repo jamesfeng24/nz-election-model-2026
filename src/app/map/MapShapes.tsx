@@ -61,7 +61,7 @@ export function MapShapes({
               className={forecast && hover === forecast.id ? 'hot' : undefined}
               vectorEffect="non-scaling-stroke"
             />
-            {forecast?.incumbentStatus === 'trails' && (!highlight || highlight.has(forecast.id)) && (
+            {forecast?.partyFlip && (!highlight || highlight.has(forecast.id)) && (
               <path d={shape.path} fill={`url(#${stripePattern})`} className="flip" pointerEvents="none" />
             )}
           </>

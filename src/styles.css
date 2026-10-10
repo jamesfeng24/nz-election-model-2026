@@ -321,7 +321,7 @@ table td:not(:first-child),
   font-size: 0.9em;
   font-variant-numeric: tabular-nums;
 }
-.seatlist td:nth-child(2),
+.seatlist > tbody > tr > td:nth-child(2),
 .candidates td:first-child,
 .nationalpolls td:nth-child(2) {
   font-family: inherit;
@@ -527,8 +527,35 @@ table td:not(:first-child),
 }
 
 /* Electorate list and seat detail */
-.seatlist tr[aria-selected] {
+.seatlist > tbody > tr {
+  scroll-margin-top: 12px;
+}
+.seatlist > tbody > tr[aria-selected] {
   background: #f2f2f2;
+}
+.seatlist .rowlink {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.seatlist .rowlink::before {
+  content: '▸';
+  display: inline-block;
+  width: 1.1em;
+  text-decoration: none;
+  color: #6b6b6b;
+}
+.seatlist .rowlink[aria-expanded='true']::before {
+  content: '▾';
+}
+.seatlist > tbody > tr.seatdetail > td {
+  padding: 0 0 8px;
+  border-bottom: 1px solid #222;
+  background: #fff;
 }
 .seat {
   position: relative;

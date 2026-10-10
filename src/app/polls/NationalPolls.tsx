@@ -11,7 +11,6 @@ export function NationalPolls({ snapshot, polls: allPolls }: { snapshot: Forecas
   const polls = allPolls.filter((poll) => poll.usedInModel);
   const [expanded, setExpanded] = useState(false);
   const parties = allPolls[0]?.shares.map((share) => share.partyId) ?? [];
-  const partyName = (id: string) => (id === 'other' ? 'Other' : partyLabel(snapshot, id));
   const shown = expanded ? polls : polls.slice(0, INITIAL_POLLS);
   return (
     <>
@@ -22,7 +21,7 @@ export function NationalPolls({ snapshot, polls: allPolls }: { snapshot: Forecas
             <th>Dates</th>
             <th>Sample</th>
             {parties.map((id) => (
-              <th key={id}>{partyName(id)}</th>
+              <th key={id}>{partyLabel(snapshot, id)}</th>
             ))}
           </tr>
         </thead>

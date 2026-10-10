@@ -7,11 +7,6 @@ import { SeatPollLine } from '../polls/SeatPollLine';
 import { RangeBar, ShareAxis } from './RangeBar';
 import { chanceRange } from './rows';
 
-const UNCERTAINTY_NOTES: Record<string, string> = {
-  'maori-layer': 'Māori electorates are modelled separately, with fewer polls, so ranges here are wider.',
-  exceptional: 'This seat has unusual local circumstances, so the model allows wider uncertainty.',
-};
-
 const RANGE_NOTE =
   "Chances are a range between two estimates: one takes the seat polls at face value, the other allows for past Māori seat polls having ended up further from the results than the model's uncertainty implied.";
 
@@ -42,8 +37,6 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
   const hasRange = rows.some((row) => row.range);
   const widestUpper = Math.max(0.1, ...rows.map((r) => (r.share ? mainRange(r.share.share).upper : 0)));
   const axisMax = Math.min(1, Math.ceil(widestUpper * 20) / 20);
-  const uncertaintyNote =
-    detail && detail.uncertaintyClass !== 'ordinary' && UNCERTAINTY_NOTES[detail.uncertaintyClass];
   const rangeLabel = (name: string | undefined, share: NonNullable<(typeof rows)[number]['share']>) => {
     const range50 = intervalAt(share.share, 0.5);
     const range80 = mainRange(share.share);
@@ -59,7 +52,6 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
       {snapshot.incumbency && !rows.some((r) => r.candidate?.incumbent) && (
         <p className="note">No sitting MP for this seat is standing here.</p>
       )}
-      {uncertaintyNote && <p className="note">{uncertaintyNote}</p>}
       {hasRange && <p className="note">{RANGE_NOTE}</p>}
       <table className="candidates">
         <caption>Chance of winning and share of the electorate vote</caption>

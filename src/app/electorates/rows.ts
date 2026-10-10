@@ -21,11 +21,12 @@ export interface SeatRow {
   secondP: number;
   /** Most likely winner's median vote share minus the runner-up's; null without two shares. */
   margin: number | null;
-  wide: boolean;
   incumbent: string | null;
   incumbentParty: string | null;
   incumbentPartyName: string | null;
   incumbentStatus: IncumbentStatus;
+  /** The sitting MP is standing and the projected winner is from a different party. */
+  partyFlip: boolean;
   candidates: MapCandidate[];
 }
 
@@ -86,7 +87,6 @@ function buildRow(snapshot: ForecastSnapshot, electorate: Directory['electorates
   const [first, second] = candidates;
   const margin = first?.share != null && second?.share != null ? first.share - second.share : null;
   const sittingParty = sitting ? (sitting.partyId ?? 'independent') : null;
-  const uncertaintyClass = detail?.uncertaintyClass;
   return {
     id: electorateId,
     name: electorate.name,
@@ -99,11 +99,11 @@ function buildRow(snapshot: ForecastSnapshot, electorate: Directory['electorates
     leaderRange: ranked[0] ? chanceRange(ranked[0].winProbability, detail, ranked[0].candidateId) : null,
     secondP: ranked[1]?.winProbability ?? 0,
     margin,
-    wide: uncertaintyClass === 'exceptional' || uncertaintyClass === 'maori-layer',
     incumbent: sitting?.name ?? null,
     incumbentParty: sittingParty,
     incumbentPartyName:
       sittingParty && (sittingParty === 'independent' ? 'Independent' : partyLabel(snapshot, sittingParty)),
+    partyFlip: !!sitting && !!prediction && (leader?.partyId ?? 'independent') !== sittingParty,
     incumbentStatus: incumbentStatusOf(snapshot, sitting, !!prediction, leader?.candidateId),
     candidates,
   };

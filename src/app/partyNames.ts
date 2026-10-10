@@ -9,6 +9,7 @@ const NAMES: Record<string, string> = {
   newzealandfirstparty: 'NZ First',
   opportunity: 'TOP',
   tepatimaori: 'Te Pāti Māori',
+  other: 'Other',
 };
 
 /** Parties with no name here keep the name from the export. */

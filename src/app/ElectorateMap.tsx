@@ -151,8 +151,9 @@ export function ElectorateMap({
         {hasIncumbency && (
           <>
             {' '}
-            <span className="flipkey" aria-hidden="true" /> Diagonal stripes mark a seat where the sitting MP is
-            standing but is not the most likely winner; hover or select any seat to see its incumbent.
+            <span className="flipkey" aria-hidden="true" /> Diagonal stripes mark a projected flip, a seat where the
+            sitting MP is standing but the most likely winner is from another party. Hover or select any seat to see its
+            incumbent.
           </>
         )}{' '}
         Outlines are simplified for drawing and the Chatham Islands are not shown.

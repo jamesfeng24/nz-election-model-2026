@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { render, screen, within } from '@testing-library/react';
+import { beforeAll, describe, it, expect, vi } from 'vitest';
+import { render, screen, waitFor, within } from '@testing-library/react';
 import { syntheticBankSnapshot } from '../dev/syntheticBank';
 import { App } from './App';
 import { pages } from './pages';
@@ -15,6 +15,10 @@ const noIndex = () => Promise.resolve<IndexResult>({ status: 'unavailable', reas
 const mmp = (config as any).mmp;
 const footer = 'Licensed under CC BY 4.0';
 describe('public site', () => {
+  const scrollTo = vi.fn();
+  beforeAll(() => {
+    window.scrollTo = scrollTo as unknown as typeof window.scrollTo;
+  });
   it.each(pages)('renders $label with navigation, title and the licence footer', async (page) => {
     render(<App page={page.path} source={none} indexSource={noIndex} />);
     expect(screen.getByRole('heading', { level: 1, name: page.title })).toBeInTheDocument();
@@ -134,6 +138,19 @@ describe('public site', () => {
     expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent(
       'No majority',
     );
+    ['Chance of a majority', 'Median seats', '80% range'].forEach((h) =>
+      expect(
+        within(screen.getByRole('table', { name: /Chance each group wins more than half/ })).getByRole('columnheader', {
+          name: h,
+        }),
+      ).toBeInTheDocument(),
+    );
+    const majorityRows = within(
+      screen.getByRole('table', { name: /Chance each group wins more than half/ }),
+    ).getAllByRole('row');
+    expect(majorityRows[1].querySelectorAll('td')[2].textContent).toMatch(/^\d+$/);
+    expect(majorityRows[1].querySelectorAll('td')[3].textContent).toMatch(/^\d+ – \d+$/);
+    expect(screen.queryByText(/combined/)).toBeNull();
     expect(screen.queryByText(/kingmaker/i)).toBeNull();
     const seatTable = screen.getByRole('table', { name: /Seats by party across simulated elections/ });
     ['Median', '80% range', 'Electorate', 'List', 'Overhang'].forEach((h) =>
@@ -238,6 +255,17 @@ describe('public site', () => {
     fireEvent.click(screen.getByRole('checkbox', { name: /Projected flips/ }));
     const flips = screen.getAllByText('Flip').length;
     expect(flips).toBeGreaterThan(0);
+    // A projected flip is a seat whose projected winner is from a different party than the standing sitting MP.
+    const partyOf = (candidateId: string | undefined) =>
+      snapshot.directory.candidates.find((c) => c.candidateId === candidateId)?.partyId ?? 'independent';
+    const expectedFlips = snapshot.directory.electorates.filter((e) => {
+      const sitting = snapshot.directory.candidates.find((c) => c.electorateId === e.electorateId && c.incumbent);
+      const prediction = snapshot.simulation.electoratePredictions.find((p) => p.electorateId === e.electorateId);
+      if (!sitting || !prediction) return false;
+      const leader = [...prediction.candidates].sort((a, b) => b.winProbability - a.winProbability)[0];
+      return partyOf(leader.candidateId) !== partyOf(sitting.candidateId);
+    }).length;
+    expect(flips).toBe(expectedFlips);
     expect(screen.getByText(new RegExp(`\\(${flips} shown\\)`))).toBeInTheDocument();
     fireEvent.click(screen.getByRole('checkbox', { name: /Projected flips/ }));
     const party = screen.getByRole('combobox', { name: "Projected winner's party" }) as HTMLSelectElement;
@@ -257,6 +285,28 @@ describe('public site', () => {
     const close = Number(/\((\d+) shown\)/.exec(document.querySelector('.seatlist caption')!.textContent!)![1]);
     expect(close).toBeLessThan(71);
     window.location.hash = '';
+  });
+  it('opens a seat inside the list, glides to it, and closes it again', async () => {
+    const snapshot = await syntheticBankSnapshot();
+    window.location.hash = '';
+    render(
+      <App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
+    const first = (await screen.findAllByRole('button', { name: /^[A-Z]/ })).find((b) => b.closest('.seatlist'))!;
+    expect(first).toHaveAttribute('aria-expanded', 'false');
+    expect(document.querySelector('.seatdetail')).toBeNull();
+    scrollTo.mockClear();
+    fireEvent.click(first);
+    const detail = document.querySelector('.seatlist .seatdetail')!;
+    expect(detail).not.toBeNull();
+    expect(within(detail as HTMLElement).getByRole('heading', { level: 2 })).toBeInTheDocument();
+    expect(first).toHaveAttribute('aria-expanded', 'true');
+    // The detail sits directly under the row that opened it.
+    expect(first.closest('tr')!.nextElementSibling).toBe(detail);
+    await waitFor(() => expect(scrollTo).toHaveBeenCalled());
+    fireEvent.click(first);
+    expect(document.querySelector('.seatdetail')).toBeNull();
+    expect(window.location.hash).toBe('');
   });
   it('suggests seats in a styled list while typing, and opens the one picked', async () => {
     const snapshot = await syntheticBankSnapshot();

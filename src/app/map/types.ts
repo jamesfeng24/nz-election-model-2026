@@ -48,6 +48,8 @@ export interface MapForecast {
   available: boolean;
   incumbent: string | null;
   incumbentStatus: IncumbentStatus;
+  /** The projected winner's party differs from the sitting MP's party. */
+  partyFlip?: boolean;
   candidates: MapCandidate[];
 }
 

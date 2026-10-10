@@ -60,7 +60,7 @@ describe('win chance as a range', () => {
     // A seat without the second estimate keeps its single figure and no note.
     const other = snapshot.electorateDetail.find((d) => d.uncertaintyClass === 'ordinary')!;
     const otherName = snapshot.directory.electorates.find((e) => e.electorateId === other.electorateId)!.name;
-    fireEvent.click(screen.getAllByRole('link', { name: otherName })[0]);
+    fireEvent.click(screen.getAllByRole('button', { name: otherName })[0]);
     expect(await screen.findByRole('heading', { level: 2, name: new RegExp(otherName) })).toBeInTheDocument();
     expect(screen.queryByText(/Chances are a range between two estimates/)).toBeNull();
     window.location.hash = '';
