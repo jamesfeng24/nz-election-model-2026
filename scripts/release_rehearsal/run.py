@@ -2,12 +2,11 @@
 
 python -m scripts.release_rehearsal.run [--national 4096] [--replicates 16] [--workers 4] [--check]
 
-Real inputs: the Stage70 2026-10-07 national refresh (lastDataSupport; adopted into the config by #94), the Stage64 population-flat baseline, the Stage72 scales,
-the Stage75 candidate fit, the Stage66 Maori layer for the three polled seats, the 2026 frame. SYNTHETIC stand-ins
-(because the real inputs do not exist yet): the official candidate list (Stage50 stand-in: announcements plus
-invented Labour and independent candidates) and the D107 classification. The four unpolled Maori seats use the real registered Stage78
-fallback (Stage80, D118) with the official Maori roster, not a stand-in.
-The Stage69 baseline (merged, not adopted) is not used.
+Real inputs: the national refresh the configuration adopts (lastDataSupport; read from the config's `national.source`, so the report follows each
+adoption), the Stage69 voting-place baseline the config points to (D103), the Stage72 scales, the Stage75 candidate fit, the Stage66 Maori layer
+for the polled seats, the 2026 frame. SYNTHETIC stand-ins, kept so the rehearsal never depends on the real roster or classification: the general-seat
+candidate list (Stage50 stand-in: announcements plus invented Labour and independent candidates) and a classification that marks every eighth
+general seat exceptional. The unpolled Maori seats use the real registered Stage78 fallback (Stage80, D118) with the official Maori roster, not a stand-in.
 
 Writes the bank and the rehearsal publication inputs under the gitignored `.release-build/rehearsal/` only (never
 `public/`), and a deterministic report `data/processed/release-rehearsal/report.json` (no timings).
@@ -24,12 +23,10 @@ from scripts.nowcast_assembly.common import CONFIG, ROOT, encode, read
 
 REPORT = 'data/processed/release-rehearsal/report.json'
 BUILD = '.release-build/rehearsal/'
-AS_OF = '2026-10-07'
-STAND_INS = ['official candidate list (Stage50 not yet run; announcements + invented Labour/independent rows)',
-             'ordinary/exceptional classification (James has not entered it)',
+STAND_INS = ['general-seat candidate list (Stage50 stand-in: announcements plus invented Labour/independent rows; the official list exists and is not used here)',
+             'ordinary/exceptional classification (every eighth general seat; the real 64-seat classification exists and is not used here)',
              'MMP rules-version label (placeholder; the blocs are the configured ones)']
-NOT_USED = ["Stage69 voting-place notional baseline (merged as #96 but not adopted; adoption is James's decision; the configured Stage64 population-flat baseline is used)"]
-STAGE70 = 'data/processed/polling/weekly-refresh/2026-10-07/estimate.json'
+NOT_USED = ['the official general-seat candidate list and the real ordinary/exceptional classification (the rehearsal stays independent of them; the real inputs are used by the development gate and the production run)']
 
 
 def synthetic_classification(general):
@@ -43,9 +40,11 @@ def rehearse(national, replicates, workers):
     features = outputs[refresh.output_dir(synthetic.ACQUISITION) + 'features-raw.json']
     centred = outputs[refresh.output_dir(synthetic.ACQUISITION) + 'features-centred.json']
     config = copy.deepcopy(read(CONFIG))
-    national_input = read(STAGE70)['nowcastInput']
-    if (config['national']['source'], config['national']['dataCutoff']) != (national_input['source'], national_input['dataCutoff']):
-        raise SystemExit('the config no longer carries the adopted Stage70 2026-10-07 refresh; update the rehearsal')
+    national_input = read(os.path.join(os.path.dirname(os.path.dirname(config['national']['source'])), 'estimate.json'))['nowcastInput']
+    if (config['national']['source'], config['national']['modelStateAsOf'], config['national']['dataCutoff']) != (
+            national_input['source'], national_input['modelStateAsOf'], national_input['dataCutoff']):
+        raise SystemExit("the config's national input does not match its refresh's estimate.json (nowcastInput); adopt it with weekly_refresh.adopt")
+    as_of = config['national']['dataCutoff']
     config['roster']['snapshotId'] = 'synthetic-rehearsal-roster'
     config['pending'].pop('roster.snapshotId', None)
     slates, _ = A.live_slates(config, features, centred)
@@ -57,20 +56,20 @@ def rehearse(national, replicates, workers):
     passed, checks = A.gate(bank, config)
     elapsed = time.time() - started
     report = {'stage': 77, 'label': 'REHEARSAL with labelled synthetic stand-ins; not a nowcast and never published',
-              'configVersion': config['configVersion'], 'asOf': AS_OF, 'nationalDraws': national, 'layerReplicates': replicates,
+              'configVersion': config['configVersion'], 'asOf': as_of, 'nationalDraws': national, 'layerReplicates': replicates,
               'rows': bank['draws'], 'provenance': bank['provenance'], 'syntheticStandIns': STAND_INS, 'realInputsNotYetAvailable': NOT_USED,
               'nationalInput': {'source': national_input['source'], 'modelStateAsOf': national_input['modelStateAsOf'],
-                                'dataCutoff': national_input['dataCutoff'], 'note': 'Stage70 2026-10-07 refresh, adopted into the config (#94)'},
+                                'dataCutoff': national_input['dataCutoff'], 'note': 'the national refresh the configuration adopts'},
               'seats': {'simulated': sum(s['status'] == 'simulated' for s in bank['seats']), 'total': len(bank['seats'])},
               'gate': {'passed': passed, 'checks': checks},
               'reconciliation': bank['diagnostics']['reconciliation'], 'bankDigest': A.bank_digest(bank)}
-    options = {'snapshotId': 'synthetic-rehearsal-' + AS_OF, 'createdAt': AS_OF + 'T00:00:00+00:00',
+    options = {'snapshotId': 'synthetic-rehearsal-' + as_of, 'createdAt': as_of + 'T00:00:00+00:00',
                'dataCutoff': config['national']['dataCutoff'] + 'T00:00:00+00:00', 'electionId': 'nz-general-2026',
                'electionDate': config['electionDate'], 'boundaryVersionId': 'stats-nz-electorates-final-2025',
                'modelVersion': 'rehearsal-' + config['configVersion'], 'codeRevision': 'rehearsal',
                'mmp': {'rulesVersion': 'UNVERIFIED-PLACEHOLDER-synthetic-only', 'rulesSourceIds': ['synthetic-rules'],
                        'blocs': config['mmp']['blocs'], 'hungParliament': config['mmp']['hungParliament']},
-               'nationalBasis': 'Stage70 2026-10-07 refresh, lastDataSupport (latent state, week of ' + config['national']['modelStateAsOf'] + ')',
+               'nationalBasis': 'Stage70 ' + config['national']['dataCutoff'] + ' refresh, lastDataSupport (latent state, week of ' + config['national']['modelStateAsOf'] + ')',
                'limitations': ['SYNTHETIC REHEARSAL: stand-in general-seat candidate list and classification; not a nowcast.'],
                'probabilityMcseMax': config['release']['probabilityMcseMax']}
     return report, bank, options, elapsed
