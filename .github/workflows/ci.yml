@@ -30,6 +30,43 @@ jobs:
           else
             echo "check:dist is not defined yet; skipped"
           fi
+  live:
+    # The live 2026 chain (Stage50 to Stage83): each stage's own --check, run beside the long `python` job so wall time does
+    # not grow. Not here: the development gate, the synthetic bank fixture and the Stage79 2026 readout, which read the newest
+    # weekly electorate-poll run and so change with every refresh until the config pins that run.
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version-file: .python-version
+      - run: python3 -m pip install -r requirements-boundaries.txt
+      - run: python3 -m scripts.nowcast_config.validate --require-complete
+      - run: python3 -m scripts.nowcast_config.scales --check
+      - run: python3 -m scripts.polling.weekly_refresh.run --check
+      - run: python3 -m scripts.polling.weekly_refresh.electorate_polls --check
+      - run: python3 -m scripts.polling.electorate_refresh.run --check
+      - run: python3 -m scripts.nominations_2026.refresh --acquisition data/processed/nominations-2026/2026-10-10/acquisition.json --check
+      - run: python3 -m scripts.voting_place_notionals.run --check
+      - run: python3 -m scripts.electorate_baseline.build --check
+      - run: python3 -m scripts.exceptional_scale.run --check
+      - run: python3 -m scripts.maori_seat_layer.run --check
+      - run: python3 -m scripts.maori_seat_layer.results --check
+      - run: python3 -m scripts.maori_seat_calibration.run --check
+      - run: python3 -m scripts.maori_seat_fallback.run --check
+      - run: python3 -m scripts.shared_split_swing.run --check
+      - run: python3 -m scripts.party_vote_elasticity.run --check
+      - run: python3 -m scripts.party_vote_elasticity.run --stage findings --check
+      - run: python3 -m scripts.seat_polls.run --check
+      - run: python3 -m scripts.exceptional_balance_scale.inputs --check
+      - run: python3 -m scripts.exceptional_balance_scale.fit --check
+      - run: python3 -m scripts.exceptional_balance_scale.decision --check
+      - run: python3 -m scripts.ordinary_minor_spread.inputs --check
+      - run: python3 -m scripts.ordinary_minor_spread.fit --check
+      - run: python3 -m scripts.ordinary_minor_spread.decision --check
+      - run: python3 -m scripts.manual_adjustment.run build-template --check
+      - run: python3 -m scripts.candidate_fit_2026.run --check
   python:
     runs-on: ubuntu-latest
     timeout-minutes: 180

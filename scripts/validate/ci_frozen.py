@@ -37,6 +37,8 @@ WORKFLOW = '.github/workflows/ci.yml'
 # Python environment files: any change forces full validation of every registered pipeline.
 ENVIRONMENT = ('.python-version', 'pyproject.toml', 'requirements-boundaries.txt', 'requirements-external.lock',
                'requirements-polling.lock')
+# Top-level directories that a bare string literal (no slash) in pipeline code may name as a whole-directory dependency.
+SOURCE_DIRECTORIES = ('config', 'data', 'docs', 'scripts', 'src')
 # CI selection machinery and policy files: they are not pipeline dependencies, so edits to them neither force a replay
 # nor count as a pipeline change. They are guarded instead by the selector's own always-run unit tests and by
 # ``workflow_errors`` (no attested validation may be removed or newly conditioned).
@@ -117,7 +119,11 @@ def closure(root, entries):
                     continue
                 segments = [s for s in value.split('/') if s]
                 if value in tops and '/' not in value:
-                    paths.add(value)
+                    # A bare name is a dependency when it is a top-level file, or a source directory a pipeline could read
+                    # whole. Other top-level directories (the site's route folders such as `electorates/`) share their
+                    # names with dictionary keys in pipeline code and are never read by a replay.
+                    if value in SOURCE_DIRECTORIES or not (root / value).is_dir():
+                        paths.add(value)
                 elif len(segments) >= 2 and segments[0] in tops and segments[0] != '.cache':
                     if segments[0] == 'data' and len(segments) < 3:
                         continue
