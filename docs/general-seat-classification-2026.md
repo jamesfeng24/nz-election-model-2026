@@ -99,7 +99,7 @@
 - **Checked:** every 2023 holder of the largest predecessor seat was matched to the official 2026 electorate list by surname and given name. In the ordinary table the holder restands in 47 seats and the other 4 are the plain candidate changes above. Papakura, Port Waikato, Tāmaki, Wigram and Whangārei (exceptional) have a holder who is not restanding. Port Waikato has no 2023 electorate result.
 - **Scandal check (10 Oct, one bounded news pass, not exhaustive):** nothing found touching any major-party general-seat candidate. Two controversies, ACT's Lyra Yan Zhang in Kenepuru (undisclosed link to a Chinese political group; resigned in July) and NZ First's Murray Chong in New Plymouth (Confederate flag), concern candidates who are not on the official list, so they do not affect any class. No class changed.
 - **Not checked:** electorate-level polls (none exist for general seats), tactical arrangements announced outside the official list (other than the TOP campaign in Mt Albert, which is James's information), and candidate profiles beyond general knowledge. The Opportunity Party's candidate in Mt Albert is listed in the official table as Qiulae Wong.
-- The Māori seats are separate and not classified here (they wait on the unpolled-seat fallback stage).
+- The Māori seats are separate and not classified here (the four unpolled ones use the Stage78 fallback wired in by Stage80; the three polled ones use their seat polls).
 
 ## Sources (repository paths)
 

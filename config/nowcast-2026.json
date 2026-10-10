@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-10.1",
-  "decisions": ["D106", "D107", "D114"],
+  "configVersion": "2026-10-10.2",
+  "decisions": ["D106", "D107", "D114", "D115", "D118"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
   "electionId": "nz-general-2026",
@@ -53,9 +53,7 @@
     "afterElection": "From election day (2026-11-07) outputs are frozen and labelled as of the last release; no further refreshes",
     "policyApprovedBy": "James, 2026-10-07 (D114)"
   },
-  "pending": {
-    "maori.unpolledFallbackModel": "James chose a labelled fallback for the four unpolled seats (D114) but the Maori layer has no no-poll estimate (Stage66/71: unpolled seats carry no values); a separately authorized bounded stage must define and register it. Until then those seats stay unavailable and block seat-count outputs"
-  },
+  "pending": {},
   "roster": {"snapshotId": "nz-2026-official-nominations-2026-10-10"},
   "simulation": {
     "draws": 65536,
@@ -79,6 +77,6 @@
                        "definition": "Hung: neither NAT+ACT+NZF nor LAB+GRN+TPM holds a majority of that draw's Parliament. TOP kingmaker: hung, and TOP's seats give either side a majority. Only NAT+ACT+NZF with TOP / only LAB+GRN+TPM with TOP: hung, and TOP's seats give that side but not the other a majority. Hung with neither side reaching a majority even with TOP is the remainder of hung and is not reported separately (James, 2026-10-07)."},
     "decidedBy": "James, 2026-10-07"
   },
-  "maori": {"layer": "stage66-default", "presentation": "labelled-range", "unpolledSeats": "labelled-fallback", "unpolledFallbackModel": null,
-           "decidedBy": "James, 2026-10-07 (D114): Maori seats are shown as a labelled range; the four unpolled seats use a labelled fallback from the Maori layer without a poll"}
+  "maori": {"layer": "stage66-default", "presentation": "labelled-range", "unpolledSeats": "labelled-fallback", "unpolledFallbackModel": "stage78-f",
+           "decidedBy": "James, 2026-10-07 (D114): Maori seats are shown as a labelled range; the four unpolled seats use a labelled fallback from the Maori layer without a poll. Stage78 / D115: the fallback is arm F (the 2023 result carried forward, no polled-seat swing), chosen by James on 2026-10-09; registered here by Stage80 / D118"}
 }

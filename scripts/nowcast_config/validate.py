@@ -59,6 +59,11 @@ def check_config(config, require_complete=False):
     require(config['intervalLevels'] == INTERVAL_LEVELS and config['primaryIntervalLevel'] == 0.8, 'intervals are 50/80/90 with 80% primary')
     require(config['maori']['unpolledSeats'] in (None, 'labelled-fallback', 'withhold'),
             'maori.unpolledSeats is a labelled fallback or withhold (D114), or still pending')
+    model = config['maori']['unpolledFallbackModel']
+    require(model in (None, 'stage78-f'), 'maori.unpolledFallbackModel is stage78-f (Stage78 arm F, D115) or still pending')
+    require(model is None or config['maori']['unpolledSeats'] == 'labelled-fallback', 'a registered fallback model needs maori.unpolledSeats = labelled-fallback')
+    require(model is not None or config['maori']['unpolledSeats'] != 'labelled-fallback' or 'maori.unpolledFallbackModel' in config.get('pending', {}),
+            'a labelled fallback without a registered model must be listed as pending')
     require(0 < config['release']['probabilityMcseMax'] < 0.5 and config['release']['reconciliationTolerancePP'] > 0,
             'release thresholds must be positive and the MCSE limit below 0.5')
     for path in ('national.source', 'uncertainty.scales', 'baseline.source'):
