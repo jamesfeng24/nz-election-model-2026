@@ -8,6 +8,7 @@
 N is none|published|blocked (national refresh); E is none|updated|blocked (electorate polls).
 """
 import argparse
+from email.utils import parsedate_to_datetime
 import json
 import subprocess
 import sys
@@ -88,8 +89,29 @@ def poll_table(polls):
     return '\n'.join(rows)
 
 
+def nz_date(http_date):
+    """The date part of an HTTP Last-Modified value ('Tue, 06 Oct 2026 16:13:42 GMT'), in New Zealand time, without the time."""
+    try:
+        moment = parsedate_to_datetime(http_date).astimezone(ZoneInfo(TIMEZONE))
+    except (TypeError, ValueError):
+        return str(http_date)
+    return f"{moment.day} {moment.strftime('%b %Y')}"
+
+
+def flag_detail(detail):
+    if isinstance(detail, dict):
+        return ', '.join(f"{k} ~" if v == 'approx' else f"{k} {v}" for k, v in detail.items())
+    return str(detail)
+
+
 def flag_lines(review):
-    lines = [f"- **{r['kind']}** ({r.get('pollster', 'all')}, {' to '.join(r.get('fieldwork', [])) if isinstance(r.get('fieldwork'), list) else r.get('fieldwork', 'n/a')}): {r.get('detail', '')} {r.get('action', '')}".strip() for r in review['reviews']]
+    lines = []
+    for r in review['reviews']:
+        fieldwork = r.get('fieldwork', 'n/a')
+        if isinstance(fieldwork, list):
+            fieldwork = ' to '.join(fieldwork)
+        text = ' '.join(x for x in (flag_detail(r['detail']) if r.get('detail') else '', r.get('action', '')) if x)
+        lines.append(f"- **{r['kind']}** ({r.get('pollster', 'all')}, {fieldwork}): {text}".rstrip(': '))
     return '\n'.join(lines) or '- None.'
 
 
@@ -161,7 +183,7 @@ def national_body(day):
     infos = sorted({i['kind'] for i in est['review']['infos']})
     text = f"""### National polls ({len(ch['added'])} new)
 
-From Wikipedia revision {cap['revision']} (last modified {cap['lastModified']}):
+From Wikipedia revision {cap['revision']} (last modified {nz_date(cap['lastModified'])}):
 
 {poll_table(ch['added'])}
 

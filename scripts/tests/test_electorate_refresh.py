@@ -193,7 +193,7 @@ class RunTests(unittest.TestCase):
         self.assertEqual(len(run.load_index()['runs']), 1)
         self.assertEqual(run.check(), ['2026-10-12'])      # the blocked run is not part of the chain
 
-    def test_election_day_and_repeat_runs_are_refused(self):
+    def test_election_day_blocked_reruns_are_refused_and_published_reruns_are_no_ops(self):
         with self.assertRaises(ValueError):
             run.run('2026-11-07', use_existing=True)
         base = self.scratch(); patches, nat = self.patches(base)
@@ -201,8 +201,19 @@ class RunTests(unittest.TestCase):
             p.start(); self.addCleanup(p.stop)
         self.put_capture(nat, '2026-10-12', PAGE)
         run.run('2026-10-12', use_existing=True)
+        before = sorted(p.name for p in (run.OUT / '2026-10-12').iterdir())
+        # a same-date rerun of a published run ends cleanly and edits nothing, whether or not the page changed
+        self.assertEqual(run.run('2026-10-12', use_existing=True), 0)
+        (nat / '2026-10-12' / CAPTURE).write_text(edit_section(PAGE, '>28</td>', '>27</td>'), encoding='utf-8')
+        self.assertEqual(run.run('2026-10-12', use_existing=True), 0)
+        self.assertEqual(sorted(p.name for p in (run.OUT / '2026-10-12').iterdir()), before)
+        self.assertEqual(len(run.load_index()['runs']), 1)
+        self.assertEqual(run.check(), ['2026-10-12'])
+        # a blocked date is not silently accepted on a rerun
+        self.put_capture(nat, '2026-10-26', edit_section(PAGE, '>28</td>', '>27</td>'))
+        self.assertEqual(run.run('2026-10-26', use_existing=True), run.EXIT_BLOCKED)
         with self.assertRaises(FileExistsError):
-            run.run('2026-10-12', use_existing=True)
+            run.run('2026-10-26', use_existing=True)
 
 
 class CommittedRunTests(unittest.TestCase):

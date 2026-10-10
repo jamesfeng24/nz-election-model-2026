@@ -9,7 +9,7 @@ fetches it first and the national step then reuses it with --use-existing-captur
 else changed. Output on a change: data/processed/polling/electorate-live/<date>/ (cumulative polls.json = previous + additions, changes, review,
 registry, seat list, manifest), a byte copy of the capture under data/raw/polling/electorate-live/<date>/, index.json and one handoff fragment.
 Earlier dates are never edited. Nothing here is read by any model layer: wiring is a separate, authorised stage. No refit is implied: a data change only.
-Exit 0: ELECTORATE_NO_CHANGE or ELECTORATE_UPDATED. Exit 2: ELECTORATE_BLOCKED (blocked.json and review.json written, nothing published)."""
+Exit 0: ELECTORATE_NO_CHANGE (including a same-date rerun of a published run) or ELECTORATE_UPDATED. Exit 2: ELECTORATE_BLOCKED (blocked.json and review.json written, nothing published)."""
 import argparse
 import json
 import shutil
@@ -96,14 +96,22 @@ def run(run_date, use_existing=False, html_path=None):
     if datetime.fromisoformat(run_date).date() >= ELECTION_DAY:
         raise ValueError('The refresh ends before election day (7 Nov 2026)')
     out = OUT / run_date
-    if out.exists():
-        raise FileExistsError('Run directory exists; earlier runs are never edited: ' + str(out))
+    published = out.exists() and not (out / 'blocked.json').exists()
+    if out.exists() and not published:
+        raise FileExistsError('A blocked run exists for this date; a human resolves it first: ' + str(out))
     src = NATIONAL_RAW / run_date
     if not use_existing:
         capture.fetch(run_date)
     cap = src / CAPTURE
     if not cap.exists():
         raise FileNotFoundError(str(cap))
+    if published:
+        # Same-date rerun of a published run: the committed run is never edited. Report it and exit cleanly; a page
+        # that changed since is read by the next dated run, which compares against the cumulative file.
+        same = (RAW / run_date / CAPTURE).exists() and sha(RAW / run_date / CAPTURE) == sha(cap)
+        print('ELECTORATE_NO_CHANGE', run_date, 'already published;', 'capture identical to the committed one' if same
+              else 'the page has changed since; the next dated run will read it')
+        return 0
     rev, last_modified = capture.revision(run_date)
     html = cap.read_text(encoding='utf-8')
     base, base_date = latest_polls()

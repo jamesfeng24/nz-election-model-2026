@@ -1,10 +1,11 @@
 name: Poll refresh
 # Weekly poll refresh (Stage70 national polls, Stage82 electorate polls), independent of any Claude session. Opens one pull request per refresh; never merges, never pushes to main.
-# Schedule: GitHub cron is UTC. Thursday 06:55 NZDT (UTC+13, in force until 4 April 2027) is Wednesday 17:55 UTC. The refresh ends before election day
-# (7 November 2026, inside NZDT), so no winter-time (NZST) adjustment is ever needed. Runs may start a few minutes late.
+# Schedule: GitHub cron is UTC. Monday 00:00 NZDT (UTC+13) is Sunday 11:00 UTC. NZDT is in force for the whole campaign, and the refresh ends
+# before election day (7 November 2026); in NZST (from 4 April 2027) the same cron would fire at 01:00 Monday, so adjust it if this is ever reused.
+# Runs may start a few minutes late; the run date is the New Zealand date when the job starts.
 on:
   schedule:
-    - cron: '55 17 * * 3'
+    - cron: '0 11 * * 0'
   workflow_dispatch:
     inputs:
       date:
@@ -152,6 +153,8 @@ jobs:
           fi
           echo "Opened $url"
           gh pr edit "$url" --add-assignee "${{ github.repository_owner }}" || true
+          gh label create poll-refresh --color 0e8a16 --description "Automated weekly poll refresh" >/dev/null 2>&1 || true
+          gh pr edit "$url" --add-label poll-refresh || true
           if [ "$NATIONAL" = blocked ] || [ "$ELECTORATE" = blocked ]; then echo "::warning::A refresh step was blocked; see $url"; fi
           if [ "$CHECKS_OK" = false ]; then echo "::error::A post-refresh check failed; the pull request $url is a draft. See the check output above."; exit 1; fi
           # Publication stub: a later stage may push the reviewed result to the public repository once it exists. Nothing is pushed anywhere else.
