@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useId, useMemo, useState } from 'react';
 import type { ForecastSnapshot } from '../types/export';
 import { COLOURS } from './SeatChart';
 import { partyLabel } from './partyNames';
@@ -26,14 +26,17 @@ function fillFor(seat: MapForecast | undefined) {
   return { fill: seat.leaderParty ? COLOURS[seat.leaderParty] ?? INDEPENDENT : INDEPENDENT, opacity: opacityFor(seat.leaderP) };
 }
 
-function Shapes({ seats, forecasts, onSelect, hrefBase, hover, setHover }: {
+/** `stripe` is the stripe period in drawing units, chosen per drawing so the stripes look the same size on screen. */
+function Shapes({ seats, forecasts, onSelect, hrefBase, hover, setHover, stripe }: {
   seats: MapSeat[]; forecasts: Map<string, MapForecast>; onSelect?: (id: string) => void; hrefBase: string;
-  hover: string | null; setHover: (id: string | null) => void;
+  hover: string | null; setHover: (id: string | null) => void; stripe: number;
 }) {
-  return <>{seats.map(shape => {
+  const stripes = useId().replace(/:/g, '');
+  return <><defs><pattern id={stripes} width={stripe} height={stripe} patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width={stripe / 2} height={stripe} fill="#fff" fillOpacity=".7" /></pattern></defs>{seats.map(shape => {
     const f = forecasts.get(`${shape.kind}:${key(shape.name)}`);
     const { fill, opacity } = fillFor(f);
-    const body = <path d={shape.path} fill={fill} fillOpacity={opacity} className={[hover === f?.id && f ? 'hot' : '', f?.incumbentStatus === 'trails' ? 'flip' : ''].filter(Boolean).join(' ') || undefined} vectorEffect="non-scaling-stroke" />;
+    const body = <><path d={shape.path} fill={fill} fillOpacity={opacity} className={hover === f?.id && f ? 'hot' : undefined} vectorEffect="non-scaling-stroke" />
+      {f?.incumbentStatus === 'trails' && <path d={shape.path} fill={`url(#${stripes})`} className="flip" pointerEvents="none" />}</>;
     if (!f) return <g key={shape.id}>{body}<title>{shape.name}</title></g>;
     return <a key={shape.id} href={`${hrefBase}#seat=${f.id}`} onClick={onSelect ? e => { e.preventDefault(); onSelect(f.id); } : undefined}
       onMouseEnter={() => setHover(f.id)} onMouseLeave={() => setHover(null)} onFocus={() => setHover(f.id)} onBlur={() => setHover(null)}
@@ -76,13 +79,13 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
     <p className="maphint" aria-live="polite">{hot ? ((hot.available ? `${hot.name}: ${hot.leaderName}, ${hot.leaderPartyName}, ${prob(hot.leaderP)} to win` : `${hot.name}: no forecast available`) + incumbentNote(hot)) : 'Select a seat to see its forecast.'}</p>
     <div className="mapgrid">
       <svg viewBox={`0 0 ${data.width} ${data.height}`} className="mapmain" role="group" aria-label={`Map of the ${kind === 'general' ? 'general' : 'Māori'} electorates, coloured by the most likely winner's party`}>
-        <Shapes seats={shown} {...shared} />
+        <Shapes seats={shown} {...shared} stripe={data.width / 110} />
       </svg>
       {kind === 'general' && <div className="mapinsets">{data.insets.map(inset => <figure key={inset.name}>
-        <svg viewBox={inset.box.join(' ')} role="group" aria-label={`${inset.name}, enlarged`}><Shapes seats={shown.filter(s => intersects(s.box, inset.box))} {...shared} /></svg>
+        <svg viewBox={inset.box.join(' ')} role="group" aria-label={`${inset.name}, enlarged`}><Shapes seats={shown.filter(s => intersects(s.box, inset.box))} {...shared} stripe={inset.box[2] / 38} /></svg>
         <figcaption>{inset.name}</figcaption></figure>)}</div>}
     </div>
     <ul className="maplegend" aria-label="Colour key">{parties.map(legendOf).map(l => <li key={l.id}><span style={{ background: l.colour }} aria-hidden="true" />{l.name}</li>)}</ul>
-    <p className="maplegend2"><span className="fade" aria-hidden="true" /> Paler seats are closer contests; solid seats are safer. Colour shows the party of the candidate most likely to win, not a poll of that seat.{hasIncumbency && <> <span className="flipkey" aria-hidden="true" /> A dashed outline marks a seat where the sitting MP is standing but is not the most likely winner; hover or select any seat to see its incumbent.</>} Outlines are simplified for drawing and the Chatham Islands are not shown.</p>
+    <p className="maplegend2"><span className="fade" aria-hidden="true" /> Paler seats are closer contests; solid seats are safer. Colour shows the party of the candidate most likely to win, not a poll of that seat.{hasIncumbency && <> <span className="flipkey" aria-hidden="true" /> Diagonal stripes mark a seat where the sitting MP is standing but is not the most likely winner; hover or select any seat to see its incumbent.</>} Outlines are simplified for drawing and the Chatham Islands are not shown.</p>
   </section>;
 }

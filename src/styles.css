@@ -68,9 +68,9 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 .mapmain,.mapinsets svg{background:#e4edf1;border-radius:4px}
 .map path{stroke:#fff;stroke-width:.6px;cursor:pointer;fill-rule:evenodd}
 .map a:hover path,.map a:focus path,.map path.hot{stroke:#182d30;stroke-width:1.6px}
-.map path.flip{stroke:#182d30;stroke-width:1.5px;stroke-dasharray:4 2.5}
+.map path.flip{stroke:none}
 .map a:focus-visible{outline:none}
-.flipkey{display:inline-block;width:1.4em;height:.7em;margin:0 .3em 0 .1em;border:2px dashed #182d30;border-radius:2px;vertical-align:-1px}
+.flipkey{display:inline-block;width:1.4em;height:.8em;margin:0 .3em 0 .1em;border-radius:2px;vertical-align:-1px;background:repeating-linear-gradient(135deg,#576764 0 3px,#fff 3px 6px)}
 .incumbent{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;border:1px solid #182d30;color:#182d30;border-radius:3px;padding:0 .35em;margin-left:.25em;vertical-align:1px}
 .mapinsets{display:grid;grid-template-columns:repeat(2,minmax(0,290px));gap:.75rem;align-items:start}
 .mapinsets figure{margin:0;border:1px solid #d4dcd7;border-radius:6px;background:#fff;padding:.4rem}
