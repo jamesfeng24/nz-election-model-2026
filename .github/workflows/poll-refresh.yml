@@ -1,0 +1,157 @@
+name: Poll refresh
+# Weekly poll refresh (Stage70 national polls, Stage82 electorate polls), independent of any Claude session. Opens one pull request per refresh; never merges, never pushes to main.
+# Schedule: GitHub cron is UTC. Thursday 06:55 NZDT (UTC+13, in force until 4 April 2027) is Wednesday 17:55 UTC. The refresh ends before election day
+# (7 November 2026, inside NZDT), so no winter-time (NZST) adjustment is ever needed. Runs may start a few minutes late.
+on:
+  schedule:
+    - cron: '55 17 * * 3'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Run date (NZ civil date, also the poll cutoff). Empty means today in Pacific/Auckland.'
+        required: false
+        type: string
+concurrency:
+  group: poll-refresh
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      REFRESH_TOKEN: ${{ secrets.POLL_REFRESH_TOKEN }}
+      GH_TOKEN: ${{ secrets.POLL_REFRESH_TOKEN || github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          token: ${{ secrets.POLL_REFRESH_TOKEN || github.token }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Decide the run date
+        id: when
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+        run: |
+          day="${INPUT_DATE:-$(python3 -m scripts.polling.refresh_workflow.helper nz-date)}"
+          echo "date=$day" >> "$GITHUB_OUTPUT"
+          if python3 -m scripts.polling.refresh_workflow.helper active --date "$day"; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::The weekly refresh ends before election day (7 November 2026); nothing to do for $day."
+          fi
+      - name: Refuse to duplicate an open refresh or an existing branch
+        if: steps.when.outputs.run == 'true'
+        env:
+          DAY: ${{ steps.when.outputs.date }}
+        run: |
+          if git ls-remote --exit-code --heads origin "routine/poll-refresh-$DAY" >/dev/null 2>&1; then
+            echo "::error::Branch routine/poll-refresh-$DAY already exists. Close or merge its pull request and delete the branch before rerunning."; exit 1
+          fi
+          open=$(gh pr list --state open --json number,headRefName --jq '[.[] | select(.headRefName | startswith("routine/poll-refresh-"))] | map(.number) | join(",")')
+          if [ -n "$open" ]; then
+            echo "::error::A weekly refresh pull request is still open (#$open). Merge or close it first: a new run starts from main and would repeat its polls."; exit 1
+          fi
+      - name: Build the pinned environment
+        if: steps.when.outputs.run == 'true'
+        run: |
+          python3 -m venv .venv-external
+          .venv-external/bin/pip install --quiet -r requirements-external.lock
+      - name: Capture the page and read the electorate polls
+        id: electorate
+        if: steps.when.outputs.run == 'true'
+        env:
+          DAY: ${{ steps.when.outputs.date }}
+        run: |
+          set +e
+          .venv-external/bin/python -m scripts.polling.electorate_refresh.run --date "$DAY" 2>&1 | tee "$RUNNER_TEMP/electorate.log"
+          code=${PIPESTATUS[0]}
+          set -e
+          if [ "$code" = 0 ] && grep -q '^ELECTORATE_NO_CHANGE' "$RUNNER_TEMP/electorate.log"; then outcome=none
+          elif [ "$code" = 0 ] && grep -q '^ELECTORATE_UPDATED' "$RUNNER_TEMP/electorate.log"; then outcome=updated
+          elif [ "$code" = 2 ]; then outcome=blocked
+          else outcome=failed; fi
+          echo "outcome=$outcome" >> "$GITHUB_OUTPUT"
+          echo "Electorate step exit code $code, outcome $outcome"
+          if [ "$outcome" = failed ]; then echo "::error::The capture or the electorate step failed without a verdict (exit $code); see the log. No pull request."; exit 1; fi
+      - name: Run the national refresh
+        id: refresh
+        if: steps.when.outputs.run == 'true'
+        env:
+          DAY: ${{ steps.when.outputs.date }}
+        run: |
+          set +e
+          .venv-external/bin/python -m scripts.polling.weekly_refresh.run --date "$DAY" --use-existing-capture 2>&1 | tee "$RUNNER_TEMP/refresh.log"
+          code=${PIPESTATUS[0]}
+          set -e
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" = 0 ] && grep -q '^NO_NEW_POLLS' "$RUNNER_TEMP/refresh.log"; then outcome=none
+          elif [ "$code" = 0 ] && grep -q '^PUBLISHED' "$RUNNER_TEMP/refresh.log"; then outcome=published
+          elif [ "$code" = 2 ] || [ "$code" = 3 ]; then outcome=blocked
+          else outcome=failed; fi
+          echo "outcome=$outcome" >> "$GITHUB_OUTPUT"
+          echo "Refresh exit code $code, outcome $outcome"
+          if [ "$outcome" = none ]; then echo "::notice::NO_NEW_POLLS (national) for $DAY."; fi
+          if [ "$outcome" = failed ]; then echo "::error::The refresh failed without a publish or block verdict (exit $code); see the log. No pull request."; exit 1; fi
+      - name: Run the runbook checks (published or updated runs)
+        id: checks
+        if: steps.refresh.outputs.outcome == 'published' || steps.electorate.outputs.outcome == 'updated'
+        env:
+          NATIONAL: ${{ steps.refresh.outputs.outcome }}
+          ELECTORATE: ${{ steps.electorate.outputs.outcome }}
+        run: |
+          py=.venv-external/bin/python
+          checks="$RUNNER_TEMP/checks.md"; : > "$checks"; ok=true
+          run_check() {
+            if "$@" > "$RUNNER_TEMP/check.out" 2>&1; then echo "- \`${*#.venv-external/bin/}\`: ok" >> "$checks"
+            else echo "- \`${*#.venv-external/bin/}\`: **FAILED**" >> "$checks"; cat "$RUNNER_TEMP/check.out"; ok=false; fi
+          }
+          if [ "$NATIONAL" = published ]; then
+            run_check $py -m scripts.polling.weekly_refresh.run --check
+            run_check $py -m unittest scripts.tests.test_weekly_refresh
+          fi
+          if [ "$ELECTORATE" = updated ]; then
+            run_check $py -m scripts.polling.electorate_refresh.run --check
+            run_check $py -m unittest scripts.tests.test_electorate_refresh
+          fi
+          run_check $py -m scripts.fold_doc_fragments --check
+          cat "$checks"
+          echo "ok=$ok" >> "$GITHUB_OUTPUT"
+          # A failed check does not discard the run: the pull request is opened as a draft with the failure listed.
+      - name: Commit, push and open the pull request
+        if: steps.refresh.outputs.outcome == 'published' || steps.refresh.outputs.outcome == 'blocked' || steps.electorate.outputs.outcome == 'updated' || steps.electorate.outputs.outcome == 'blocked'
+        env:
+          DAY: ${{ steps.when.outputs.date }}
+          NATIONAL: ${{ steps.refresh.outputs.outcome }}
+          ELECTORATE: ${{ steps.electorate.outputs.outcome }}
+          CHECKS_OK: ${{ steps.checks.outputs.ok }}
+        run: |
+          py=.venv-external/bin/python
+          helper="$py -m scripts.polling.refresh_workflow.helper"
+          [ -f "$RUNNER_TEMP/checks.md" ] || echo "- Not run: no run was published, so there is nothing to check." > "$RUNNER_TEMP/checks.md"
+          $helper check-changes --date "$DAY" --national "$NATIONAL" --electorate "$ELECTORATE"
+          mode=builtin; [ -n "$REFRESH_TOKEN" ] && mode=pat
+          $helper paths --date "$DAY" --national "$NATIONAL" --electorate "$ELECTORATE" | xargs -d '\n' git add --
+          $helper pr-body --date "$DAY" --national "$NATIONAL" --electorate "$ELECTORATE" --checks "$RUNNER_TEMP/checks.md" --token-mode "$mode" > "$RUNNER_TEMP/pr.txt"
+          title=$(head -n 1 "$RUNNER_TEMP/pr.txt"); tail -n +2 "$RUNNER_TEMP/pr.txt" > "$RUNNER_TEMP/pr-body.md"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="routine/poll-refresh-$DAY"
+          git switch -c "$branch"
+          git commit -q -m "$title"
+          git push -u origin "$branch"
+          draft=(); [ "$CHECKS_OK" = false ] && draft=(--draft)
+          if ! url=$(gh pr create --base main --head "$branch" --title "$title" --body-file "$RUNNER_TEMP/pr-body.md" "${draft[@]}"); then
+            echo "::error::The branch $branch was pushed but the pull request could not be created. With the built-in token, enable Settings > Actions > General > 'Allow GitHub Actions to create and approve pull requests', or add the POLL_REFRESH_TOKEN secret."; exit 1
+          fi
+          echo "Opened $url"
+          gh pr edit "$url" --add-assignee "${{ github.repository_owner }}" || true
+          if [ "$NATIONAL" = blocked ] || [ "$ELECTORATE" = blocked ]; then echo "::warning::A refresh step was blocked; see $url"; fi
+          if [ "$CHECKS_OK" = false ]; then echo "::error::A post-refresh check failed; the pull request $url is a draft. See the check output above."; exit 1; fi
+          # Publication stub: a later stage may push the reviewed result to the public repository once it exists. Nothing is pushed anywhere else.
