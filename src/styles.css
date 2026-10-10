@@ -586,6 +586,8 @@ table td:not(:first-child),
   background: #fff;
 }
 .collapsible {
+  /* The open detail sizes itself to the list's width, rather than widening the list to fit its content. */
+  contain: inline-size;
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.45s ease;
@@ -689,10 +691,10 @@ table td:not(:first-child),
   font-size: 0.72rem;
   color: #6b6b6b;
 }
-.shareaxis span:first-child {
+.shareaxis span.start {
   transform: none;
 }
-.shareaxis span:last-child {
+.shareaxis span.end {
   transform: translateX(-100%);
 }
 .shareaxis span::before {
@@ -703,10 +705,10 @@ table td:not(:first-child),
   height: 0.35rem;
   border-left: 1px solid #222;
 }
-.shareaxis span:first-child::before {
+.shareaxis span.start::before {
   left: 0;
 }
-.shareaxis span:last-child::before {
+.shareaxis span.end::before {
   left: auto;
   right: 0;
 }
@@ -972,6 +974,71 @@ table td:not(:first-child),
   }
   .seatbars {
     overflow-x: auto;
+  }
+  /* Each candidate is a card: name, chance and median on the first line, the vote-share bar full width below it, so the
+     bar and its scale have room to be read. */
+  .seatlist {
+    font-size: 15px;
+  }
+  .seatlist th,
+  .seatlist td {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .seatlist th {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+  .candidates caption {
+    display: block;
+  }
+  .candidates thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .candidates tbody,
+  .candidates tfoot {
+    display: block;
+  }
+  .candidates tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 92px 76px;
+    column-gap: 16px;
+    align-items: start;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  .candidates tbody td {
+    border-bottom: 0;
+  }
+  .candidates tbody td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #6b6b6b;
+  }
+  .candidates td.barcell {
+    grid-column: 1 / -1;
+    width: auto;
+    padding-top: 0;
+  }
+  .candidates tfoot tr {
+    display: block;
+  }
+  .candidates tfoot td:first-child {
+    display: none;
+  }
+  .candidates tfoot td.axiscell {
+    display: block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .candidates td:nth-child(4) {
+    width: auto;
   }
   .mapgrid {
     grid-template-columns: 1fr;

@@ -18,6 +18,7 @@
 - Seat detail on the electorates page eases open and shut over about 0.45 s (`electorates/Collapsible.tsx`), the previous seat folding shut as the new one opens, instead of snapping. Display only.
 - Charts (James, 2026-10-10): hovering a band on "How support has moved" shows the party, week and exact median with its 90% range (nearest estimate where bands overlap), and hovering "How the odds have moved" shows the nearest line, release date and chance. The support chart opens at 1 January 2026 with a "Since the 2023 election" tick box for the whole run. Display only; the export is unchanged.
 - Tab icon and share card (James, 2026-10-10): a soft orange tile with bars and "NZ" (`public/favicon.svg`, `apple-touch-icon.png`, `social-card.png`; card source in `scripts/site_art/`), linked from every page with Open Graph and Twitter tags; the share image uses the absolute address `https://jamesfeng24.github.io/social-card.png`. Display only.
+- Phone layout (James, 2026-10-10): the seat page's candidate table becomes a card per candidate on phones with the bar full width, the shared percentage scale thins its labels to the measured width (and no longer labels past the axis end), and the seat list fits a 360 px screen. Display only.
 
 <!-- fold: state -->
 # Stage84 public site — review-ready, 2026-10-10

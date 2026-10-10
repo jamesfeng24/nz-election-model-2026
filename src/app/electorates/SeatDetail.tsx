@@ -79,10 +79,10 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
                 <br />
                 <small>{candidatePartyName(snapshot, candidate)}</small>
               </td>
-              <td>
+              <td data-label="Chance">
                 <span className="odds">{chance(entry.winProbability, range)}</span>
               </td>
-              <td className="num">
+              <td className="num" data-label="Median">
                 <strong>{share ? pct(share.share[0].median) : '–'}</strong>
               </td>
               <td className="barcell">

@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import type { IntervalSet } from '../../types/domain';
 import { pct } from '../format';
 import { intervalAt, mainRange } from '../intervals';
 
-/** Tick spacing on the share axis, as a share of the vote. */
-const tickStep = (axisMax: number) => (axisMax <= 0.25 ? 0.05 : 0.1);
+/** The spacing of the bars' faint gridlines, as a share of the vote. */
+const gridStep = (axisMax: number) => (axisMax <= 0.25 ? 0.05 : 0.1);
+/** Label spacings tried on the share axis (always a whole number of gridlines) and the least room a label needs. */
+const LABEL_STEPS = [0.05, 0.1, 0.2, 0.5, 1];
+const LABEL_ROOM_PX = 42;
 
 interface Range {
   lower: number;
@@ -45,7 +48,7 @@ export function RangeBar({
       className="rangebar"
       role="img"
       aria-label={label}
-      style={{ '--step': `${(tickStep(axisMax) / axisMax) * 100}%` } as React.CSSProperties}
+      style={{ '--step': `${(gridStep(axisMax) / axisMax) * 100}%` } as React.CSSProperties}
       onMouseLeave={() => setTip(null)}
     >
       <span
@@ -70,17 +73,44 @@ export function RangeBar({
   );
 }
 
-/** The percentage scale shared by every bar in the table. */
+/**
+ * The percentage scale shared by every bar in the table. Labels thin out on a narrow screen: the smallest tick
+ * spacing that leaves each label its room is used.
+ */
 export function ShareAxis({ axisMax }: { axisMax: number }) {
-  const step = tickStep(axisMax);
-  const ticks = Array.from({ length: Math.round(axisMax / step) + 1 }, (_, i) => i * step);
+  const ref = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
+  useLayoutEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+    const measure = () => setWidth(element.getBoundingClientRect().width);
+    measure();
+    if (typeof ResizeObserver === 'undefined') return;
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  // Without a measured width (before layout) the gridline spacing is used.
+  const step =
+    LABEL_STEPS.find(
+      (candidate) => candidate >= gridStep(axisMax) && (width <= 0 || (candidate / axisMax) * width >= LABEL_ROOM_PX),
+    ) ?? 1;
+  const ticks = Array.from({ length: Math.floor(axisMax / step + 1e-9) + 1 }, (_, i) => i * step);
   return (
-    <div className="shareaxis" aria-hidden="true">
-      {ticks.map((tick) => (
-        <span key={tick} style={{ left: `${(tick / axisMax) * 100}%` }}>
-          {Math.round(tick * 100)}%
-        </span>
-      ))}
+    <div className="shareaxis" aria-hidden="true" ref={ref}>
+      {ticks.map((tick) => {
+        const atEnd = Math.abs(tick - axisMax) < 1e-9;
+        return (
+          <span
+            key={tick}
+            className={tick === 0 ? 'start' : atEnd ? 'end' : undefined}
+            style={{ left: `${(tick / axisMax) * 100}%` }}
+          >
+            {Math.round(tick * 100)}%
+          </span>
+        );
+      })}
     </div>
   );
 }
