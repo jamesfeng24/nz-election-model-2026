@@ -24,8 +24,8 @@ describe('public site', () => {
   });
   it('lists the owner links on the About page, only those with an address', () => {
     render(<App page="about" source={none} indexSource={noIndex} />);
-    expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', expect.stringMatching(/^https:\/\/github\.com\//));
-    expect(screen.queryByRole('link', { name: 'Ko-fi' })).toBeNull();
+    expect(screen.getByRole('link', { name: 'github.com/jamesfeng24' })).toHaveAttribute('href', expect.stringMatching(/^https:\/\/github\.com\//));
+    expect(screen.queryByText('Ko-fi')).toBeNull();
   });
   it('links pages with relative addresses', () => {
     render(<App page="forecast" source={none} indexSource={noIndex} />);

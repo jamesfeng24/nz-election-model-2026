@@ -178,3 +178,4 @@ th[scope=row]{font-size:inherit;font-weight:700;text-transform:none;letter-spaci
 
 .linklist{list-style:none;padding:0;margin:0}.linklist li{padding:.6rem 0;border-bottom:1px solid #d9d9d9;font-weight:600}.linklist span{display:block;font-weight:400;color:#555;font-size:.95rem}
 .find{position:relative}.suggest{position:absolute;z-index:5;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:#fff;border:1px solid #cfd2d6;box-shadow:0 4px 12px rgba(0,0,0,.08);max-height:18rem;overflow:auto}.suggest button{display:block;width:100%;text-align:left;font:inherit;font-weight:400;color:#222;background:none;border:0;padding:.5rem .75rem;cursor:pointer}.suggest button:hover,.suggest button:focus{background:#eceef0}
+.linklist .linklabel{display:inline-block;min-width:5.5rem;font-weight:400;color:#555}

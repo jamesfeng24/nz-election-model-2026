@@ -1,7 +1,7 @@
-/** The project owner's own pages, listed on the About page. A link with no address is not shown until one is added here (an email goes in as `mailto:name@example.org`). */
-export const SITE_LINKS: { label: string; note: string; url: string | null }[] = [
-  { label: 'GitHub', note: 'Code and project updates', url: 'https://github.com/jamesfeng24' },
-  { label: 'X', note: 'News and updates', url: 'https://x.com/jamesfeng24' },
-  { label: 'Email', note: 'Questions about the forecast', url: 'mailto:james.jiayi.feng@gmail.com' },
-  { label: 'Ko-fi', note: 'Buy me a coffee if you find this useful', url: null },
+/** The project owner's own pages, listed on the About page. A link with no address is not shown until one is added here; `shown` is the handle or address printed as the link text (an email goes in as `mailto:name@example.org`). */
+export const SITE_LINKS: { label: string; shown: string; note: string; url: string | null }[] = [
+  { label: 'GitHub', shown: 'github.com/jamesfeng24', note: 'Code and project updates', url: 'https://github.com/jamesfeng24' },
+  { label: 'X', shown: '@jamesfeng24', note: 'News and updates', url: 'https://x.com/jamesfeng24' },
+  { label: 'Email', shown: 'james.jiayi.feng@gmail.com', note: 'Questions about the forecast', url: 'mailto:james.jiayi.feng@gmail.com' },
+  { label: 'Ko-fi', shown: '', note: 'Buy me a coffee if you find this useful', url: null },
 ];
