@@ -21,6 +21,8 @@ Each page is its own static HTML file (`<page>/index.html`, listed in `src/app/p
 - **About** (`AboutView.tsx`, addresses in `siteLinks.ts`): who runs the site and how to get in touch. Each link shows its name above the address and a short note. A link with no address is not shown.
 - **Footer on every page:** "Licensed under CC BY 4.0", linked to the licence text. There is no LICENSE file in the public repository.
 
+Tab icon and share card: `public/favicon.svg` (a soft orange tile with three white bars and "NZ"), `public/apple-touch-icon.png` (the same tile, square, 180 px) and `public/social-card.png` (1200 x 630: the tile, the site name and "Forecast if the election were held today"; source `scripts/site_art/social-card.html`, screenshot at that size). Every page links the icons by relative path and carries Open Graph and Twitter card tags; the share image's address is absolute (`https://jamesfeng24.github.io/social-card.png`) because link previews need one, so change it in the seven page heads if the site address changes. `404.html` has none.
+
 Site name: "NZ Election Forecast". Look: white page, dark masthead with an orange accent (`#f08a24`), square corners, Libre Franklin headings and IBM Plex Mono figures (both SIL OFL, self-hosted as latin and latin-ext woff2 files in `public/fonts/` with their licences; no third-party font request). The stylesheet is `src/styles.css`, arranged by section.
 
 ## Data and loading
