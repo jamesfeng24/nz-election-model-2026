@@ -228,7 +228,7 @@ class CommittedRunTests(unittest.TestCase):
         hits = [p.relative_to(ROOT).as_posix() for p in (ROOT / 'scripts').rglob('*.py')
                 if 'electorate-live' in p.read_text(errors='ignore') and 'electorate_refresh' not in str(p)
                 and 'refresh_workflow' not in str(p) and 'test_electorate_refresh' not in str(p) and 'test_weekly_refresh_workflow' not in str(p)]
-        self.assertEqual(hits, ['scripts/maori_seat_layer/live.py', 'scripts/seat_polls/live.py'])
+        self.assertEqual(sorted(hits), ['scripts/maori_seat_layer/live.py', 'scripts/seat_polls/live.py'])
 
 
 if __name__ == '__main__':
