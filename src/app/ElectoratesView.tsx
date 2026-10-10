@@ -8,6 +8,11 @@ import { ElectorateMap, type IncumbentStatus, type MapCandidate } from './Electo
 import { COLOURS } from './SeatChart';
 
 type Sort = 'name' | 'close' | 'wide';
+type Status = 'any' | 'flip' | 'held' | 'open';
+interface Filters { party: string; status: Status; kind: 'any' | 'general' | 'maori'; close: boolean }
+const NO_FILTERS: Filters = { party: 'any', status: 'any', kind: 'any', close: false };
+/** A seat counts as close when its most likely winner has under 70% chance. */
+const CLOSE_BELOW = 0.7;
 const level = (set: IntervalSet, l: number) => set.find(v => v.level === l)!;
 const seatFromHash = () => new URLSearchParams(window.location.hash.slice(1)).get('seat');
 
@@ -32,15 +37,35 @@ function useRows(snapshot: ForecastSnapshot): Row[] {
   }), [snapshot]);
 }
 
-/** A share range drawn on a shared axis: the 80% range in a light shade, the 50% range darker, the median as a tick. */
+/** Tick spacing on the share axis, in vote share. */
+const tickStep = (axisMax: number) => (axisMax <= 0.25 ? 0.05 : 0.1);
+
+/**
+ * A candidate's share range on the seat's shared axis: the 80% range in a light shade, the 50% range solid, the median as a
+ * line. Hovering the solid part says the 50% range, hovering the light part the 80% range; the median is always in the tip.
+ */
 function RangeBar({ set, axisMax, label, colour }: { set: IntervalSet; axisMax: number; label: string; colour: string }) {
+  const [tip, setTip] = useState<{ text: string; x: number } | null>(null);
   const x = (v: number) => `${(v / axisMax) * 100}%`;
   const r80 = level(set, PRIMARY_INTERVAL_LEVEL), r50 = level(set, 0.5);
-  return <div className="rangebar" role="img" aria-label={label}>
-    <span className="r80" style={{ background: colour, left: x(r80.lower), width: `calc(${x(r80.upper)} - ${x(r80.lower)})` }} />
-    <span className="r50" style={{ background: colour, left: x(r50.lower), width: `calc(${x(r50.upper)} - ${x(r50.lower)})` }} />
+  const text = (name: string, r: { lower: number; upper: number }) => `${name} range ${pct(r.lower)} – ${pct(r.upper)} · median ${pct(r50.median)}`;
+  const show = (name: string, r: { lower: number; upper: number }) => (e: React.MouseEvent) => {
+    const box = (e.currentTarget.parentElement as HTMLElement).getBoundingClientRect();
+    setTip({ text: text(name, r), x: e.clientX - box.left });
+  };
+  return <div className="rangebar" role="img" aria-label={label} style={{ '--step': `${(tickStep(axisMax) / axisMax) * 100}%` } as React.CSSProperties} onMouseLeave={() => setTip(null)}>
+    <span className="r80" style={{ background: colour, left: x(r80.lower), width: `calc(${x(r80.upper)} - ${x(r80.lower)})` }} onMouseMove={show('80%', r80)} onMouseEnter={show('80%', r80)} />
+    <span className="r50" style={{ background: colour, left: x(r50.lower), width: `calc(${x(r50.upper)} - ${x(r50.lower)})` }} onMouseMove={show('50%', r50)} onMouseEnter={show('50%', r50)} />
     <span className="median" style={{ left: x(r50.median) }} />
+    {tip && <span className="rangetip" style={{ left: tip.x }}>{tip.text}</span>}
   </div>;
+}
+
+/** One shared percentage scale for every bar in the table, drawn as a line with ticks. */
+function ShareAxis({ axisMax }: { axisMax: number }) {
+  const step = tickStep(axisMax);
+  const ticks = Array.from({ length: Math.round(axisMax / step) + 1 }, (_, i) => i * step);
+  return <div className="shareaxis" aria-hidden="true">{ticks.map(t => <span key={t} style={{ left: `${(t / axisMax) * 100}%` }}>{Math.round(t * 100)}%</span>)}</div>;
 }
 
 function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: string }) {
@@ -60,13 +85,14 @@ function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: 
     {snapshot.incumbency && !rows.some(r => r.cand?.incumbent) && <p className="note">No sitting MP for this seat is standing here.</p>}
     {detail && detail.uncertaintyClass !== 'ordinary' && <p className="note">{detail.uncertaintyClass === 'maori-layer' ? 'Māori electorates are modelled separately, with fewer polls, so ranges here are wider.' : 'This seat has unusual local circumstances, so the model allows wider uncertainty.'}</p>}
     <table className="candidates"><caption>Chance of winning and share of the electorate vote</caption>
-      <thead><tr><th>Candidate</th><th>Chance of winning</th><th>Share of electorate vote</th></tr></thead>
+      <thead><tr><th>Candidate</th><th>Chance of winning</th><th>Median share</th><th>Share of electorate vote</th></tr></thead>
       <tbody>{rows.map(({ c, cand, share }) => <tr key={c.candidateId}>
         <td><strong>{cand?.name ?? c.candidateId}</strong>{cand?.incumbent && <> <span className="incumbent" title="The sitting MP for this seat">Incumbent</span></>}<br /><small>{partyName(cand?.partyId ?? null) ?? cand?.partyLabel ?? 'Independent'}</small></td>
         <td><span className="odds">{prob(c.winProbability)}</span></td>
-        <td>{share ? <><RangeBar colour={(cand?.partyId && COLOURS[cand.partyId]) || '#8b8f94'} set={share.share} axisMax={axisMax} label={`${cand?.name}: median ${pct(share.share[0].median)}, 50% range ${pct(level(share.share, 0.5).lower)} to ${pct(level(share.share, 0.5).upper)}, 80% range ${pct(level(share.share, 0.8).lower)} to ${pct(level(share.share, 0.8).upper)}`} />
-          <small>{pct(share.share[0].median)} median · 50%: {pct(level(share.share, 0.5).lower)} – {pct(level(share.share, 0.5).upper)} · 80%: {pct(level(share.share, 0.8).lower)} – {pct(level(share.share, 0.8).upper)}</small></> : <small>Share ranges not available</small>}</td></tr>)}</tbody></table>
-    <p className="legend"><span className="key r50" /> 50% range (solid) <span className="key r80" /> 80% range (pale) <span className="key tick" /> median, in each candidate's party colour. Bars run from 0% to {Math.round(axisMax * 100)}% of the vote. Ranges cover half and four-fifths of simulated elections.</p>
+        <td className="num"><strong>{share ? pct(share.share[0].median) : '–'}</strong></td>
+        <td className="barcell">{share ? <RangeBar colour={(cand?.partyId && COLOURS[cand.partyId]) || '#8b8f94'} set={share.share} axisMax={axisMax} label={`${cand?.name}: median ${pct(share.share[0].median)}, 50% range ${pct(level(share.share, 0.5).lower)} to ${pct(level(share.share, 0.5).upper)}, 80% range ${pct(level(share.share, 0.8).lower)} to ${pct(level(share.share, 0.8).upper)}`} /> : <small>Not available</small>}</td></tr>)}</tbody>
+      <tfoot><tr><td colSpan={3} /><td className="axiscell"><ShareAxis axisMax={axisMax} /></td></tr></tfoot></table>
+    <p className="legend">Bars show each candidate's share of the electorate vote on the scale below. Hover the solid part for the 50% range and the light part for the 80% range; the median is the line and the number. Ranges cover half and four-fifths of simulated elections.</p>
     <h3>Polls</h3>
     {!detail?.evidence ? <p>No seat poll information for this forecast.</p> : <>
       <p>{detail.evidence.basis}</p>
@@ -83,18 +109,26 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
   const [seatId, setSeatId] = useState<string | null>(seatFromHash);
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState<Sort>('name');
+  const [filters, setFilters] = useState<Filters>(NO_FILTERS);
+  const set = <K extends keyof Filters>(k: K, v: Filters[K]) => setFilters(f => ({ ...f, [k]: v }));
+  const filtered = JSON.stringify(filters) !== JSON.stringify(NO_FILTERS);
+  const passes = (r: Row) => (filters.party === 'any' || (r.available && (r.leaderParty ?? 'independent') === filters.party))
+    && (filters.status === 'any' || (filters.status === 'flip' ? r.incumbentStatus === 'trails' : filters.status === 'held' ? r.incumbentStatus === 'leads' : r.incumbentStatus === 'open'))
+    && (filters.kind === 'any' || r.kind === filters.kind) && (!filters.close || (r.available && r.leaderP < CLOSE_BELOW));
+  const winnerParties = useMemo(() => [...new Map(rows.filter(r => r.available).map(r => [r.leaderParty ?? 'independent', r.leaderPartyName])).entries()].sort((a, b) => a[1].localeCompare(b[1], 'en-NZ')), [rows]);
+  const matching = useMemo(() => (filtered ? new Set(rows.filter(passes).map(r => r.id)) : null), [rows, filters]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { const on = () => setSeatId(seatFromHash()); window.addEventListener('hashchange', on); return () => window.removeEventListener('hashchange', on); }, []);
   const choose = (id: string) => { window.location.hash = `seat=${id}`; setSeatId(id); };
   const listed = useMemo(() => {
     const q = query.trim().toLocaleLowerCase('en-NZ');
-    const shown = rows.filter(r => !q || r.name.toLocaleLowerCase('en-NZ').includes(q));
+    const shown = rows.filter(r => (!q || r.name.toLocaleLowerCase('en-NZ').includes(q)) && passes(r));
     const by: Record<Sort, (a: Row, b: Row) => number> = {
       name: (a, b) => a.name.localeCompare(b.name, 'en-NZ'),
       close: (a, b) => (a.leaderP - a.second) - (b.leaderP - b.second) || a.name.localeCompare(b.name, 'en-NZ'),
       wide: (a, b) => Number(b.wide) - Number(a.wide) || a.name.localeCompare(b.name, 'en-NZ'),
     };
     return [...shown].sort(by[sort]);
-  }, [rows, query, sort]);
+  }, [rows, query, sort, filters]); // eslint-disable-line react-hooks/exhaustive-deps
   const selected = rows.find(r => r.id === seatId);
   const forecasts = useMemo(() => rows.map(r => ({ id: r.id, name: r.name, kind: r.kind, leaderParty: r.leaderParty, leaderPartyName: r.leaderPartyName, leaderName: r.leader, leaderP: r.leaderP, available: r.available, incumbent: r.incumbent, incumbentStatus: r.incumbentStatus, candidates: r.candidates })), [rows]);
   const pick = (id: string) => { choose(id); document.getElementById('seat-heading')?.scrollIntoView?.({ block: 'start' }); };
@@ -107,11 +141,21 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
       <label>Sort by<select value={sort} onChange={e => setSort(e.target.value as Sort)}>
         <option value="name">Name</option><option value="close">Closest contest first</option><option value="wide">Widest uncertainty first</option></select></label>
     </div>
-    <ElectorateMap snapshot={snapshot} forecasts={forecasts} onSelect={pick} />
+    <div className="picker filters" role="group" aria-label="Filter seats">
+      <label>Winner's party<select value={filters.party} onChange={e => set('party', e.target.value)}>
+        <option value="any">Any party</option>{winnerParties.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+      {snapshot.incumbency && <label>Sitting MP<select value={filters.status} onChange={e => set('status', e.target.value as Status)}>
+        <option value="any">Any</option><option value="flip">Projected flip (MP not favoured)</option><option value="held">MP favoured</option><option value="open">No sitting MP standing</option></select></label>}
+      <label>Type<select value={filters.kind} onChange={e => set('kind', e.target.value as Filters['kind'])}>
+        <option value="any">General and Māori</option><option value="general">General</option><option value="maori">Māori</option></select></label>
+      <label className="check"><input type="checkbox" checked={filters.close} onChange={e => set('close', e.target.checked)} /> Close contests (winner under 70%)</label>
+      {filtered && <button type="button" className="more" onClick={() => setFilters(NO_FILTERS)}>Clear filters</button>}
+    </div>
+    <ElectorateMap snapshot={snapshot} forecasts={forecasts} onSelect={pick} highlight={matching} />
     {selected ? <SeatDetail snapshot={snapshot} seatId={selected.id} /> : <p>Pick a seat on the map, in the list or in the search box.</p>}
-    <table className="seatlist"><caption>All {rows.length} electorates ({listed.length} shown)</caption>
+    <table className="seatlist"><caption>{filtered ? 'Electorates matching the filters' : `All ${rows.length} electorates`} ({listed.length} shown)</caption>
       <thead><tr><th>Electorate</th><th>Most likely winner</th><th>Chance</th>{snapshot.incumbency && <th>Incumbent</th>}</tr></thead>
       <tbody>{listed.map(r => <tr key={r.id} aria-selected={r.id === seatId || undefined}><td><a href={`#seat=${r.id}`} onClick={() => setSeatId(r.id)}>{r.name}</a>{r.kind === 'maori' ? ' (Māori)' : ''}{r.wide ? ' · wider' : ''}</td>
-        <td>{r.available ? r.leader : '–'}</td><td>{r.available ? prob(r.leaderP) : 'No forecast'}</td>{snapshot.incumbency && <td>{r.incumbent ?? 'None standing'}</td>}</tr>)}</tbody></table>
+        <td>{r.available ? r.leader : '–'}{r.incumbentStatus === 'trails' && <> <span className="flip-tag">Flip</span></>}</td><td>{r.available ? prob(r.leaderP) : 'No forecast'}</td>{snapshot.incumbency && <td>{r.incumbent ?? 'None standing'}</td>}</tr>)}</tbody></table>
   </>;
 }

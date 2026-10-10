@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
+import { syntheticBankSnapshot } from '../dev/syntheticBank';
 import { App } from './App';
 import { pages } from './pages';
 import { runSyntheticDryRun } from '../dev/syntheticSnapshot';
@@ -106,6 +107,55 @@ describe('public site', () => {
     expect(within(row).getByText('Incumbent')).toBeInTheDocument();
     expect(screen.getByRole('columnheader', { name: 'Incumbent' })).toBeInTheDocument();
     expect(screen.getAllByText('None standing').length).toBeGreaterThan(0);
+    window.location.hash = '';
+  });
+  it('filters the seat list by winner party, flips, seat type and close contests', async () => {
+    const options = {
+      snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-07T00:00:00+00:00', dataCutoff: '2026-10-06T00:00:00+00:00',
+      electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
+      modelVersion: 'synthetic-model', codeRevision: 'synthetic-revision', bankSha256: 'a'.repeat(64),
+      mmp: { rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only', rulesSourceIds: ['synthetic-rules'], blocs: [] },
+      nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
+    };
+    const plain = await buildNowcastSnapshot(bank, options);
+    const incumbents = plain.directory.electorates.flatMap((e, i) => (i % 4 === 3 ? [] : [{ targetOccurrenceId: plain.directory.candidates.filter(c => c.electorateId === e.electorateId)[i % 4 === 2 ? 1 : 0].candidateId }]));
+    const snapshot = await buildNowcastSnapshot(bank, { ...options, incumbents: { source: { label: 'Invented list', url: 'https://example.org/mps', asOf: '2026-09-23' }, incumbents } });
+    window.location.hash = '';
+    render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    expect(await screen.findByText(/All 71 electorates \(71 shown\)/)).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('combobox', { name: 'Type' }), { target: { value: 'maori' } });
+    expect(screen.getByText(/Electorates matching the filters \(7 shown\)/)).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('combobox', { name: 'Type' }), { target: { value: 'any' } });
+    fireEvent.change(screen.getByRole('combobox', { name: 'Sitting MP' }), { target: { value: 'flip' } });
+    const flips = screen.getAllByText('Flip').length;
+    expect(flips).toBeGreaterThan(0);
+    expect(screen.getByText(new RegExp(`\\(${flips} shown\\)`))).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('combobox', { name: 'Sitting MP' }), { target: { value: 'any' } });
+    const party = screen.getByRole('combobox', { name: "Winner's party" }) as HTMLSelectElement;
+    fireEvent.change(party, { target: { value: party.options[1].value } });
+    const byParty = Number(/\((\d+) shown\)/.exec(document.querySelector('.seatlist caption')!.textContent!)![1]);
+    expect(byParty).toBeGreaterThan(0);
+    expect(byParty).toBeLessThan(71);
+    fireEvent.click(screen.getByRole('button', { name: 'Clear filters' }));
+    fireEvent.click(screen.getByRole('checkbox', { name: /Close contests/ }));
+    const close = Number(/\((\d+) shown\)/.exec(document.querySelector('.seatlist caption')!.textContent!)![1]);
+    expect(close).toBeLessThan(71);
+    window.location.hash = '';
+  });
+  it('shows the 50% range on the solid bar, the 80% range on the light bar and always the median', async () => {
+    const snapshot = await syntheticBankSnapshot();
+    window.location.hash = `#seat=${snapshot.directory.electorates[0].electorateId}`;
+    const { container } = render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    await screen.findByRole('heading', { level: 2, name: new RegExp(snapshot.directory.electorates[0].name) });
+    const bar = container.querySelector('.rangebar')!;
+    fireEvent.mouseEnter(bar.querySelector('.r50')!, { clientX: 10 });
+    expect(bar.querySelector('.rangetip')!.textContent).toMatch(/^50% range .*median/);
+    fireEvent.mouseEnter(bar.querySelector('.r80')!, { clientX: 10 });
+    expect(bar.querySelector('.rangetip')!.textContent).toMatch(/^80% range .*median/);
+    fireEvent.mouseLeave(bar);
+    expect(bar.querySelector('.rangetip')).toBeNull();
+    expect(container.querySelector('.shareaxis')!.textContent).toMatch(/0%.*%/);
+    expect(screen.getByRole('columnheader', { name: 'Median share' })).toBeInTheDocument();
     window.location.hash = '';
   });
   it('shows a seat page with odds, shaded ranges and the polls attached to the seat', async () => {

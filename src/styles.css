@@ -29,7 +29,7 @@ nav a[aria-current=page]{border-color:#ff2700;color:#222222;font-weight:700}
 .note{font-size:14px;color:#6b6b6b}
 .odds{font-size:22px;font-weight:700}
 .candidates td{vertical-align:top}
-.candidates td:nth-child(3){width:55%}
+.candidates td:nth-child(4){width:50%}
 .rangebar{position:relative;height:16px;background:#f2f2f2;border-radius:0;margin:4px 0}
 .rangebar span{position:absolute;top:0;height:100%}
 .rangebar .r80{opacity:.3}
@@ -155,3 +155,23 @@ footer{border-top:3px solid #222;color:#6b6b6b}
 th[scope=row]{font-size:inherit;font-weight:700;text-transform:none;letter-spacing:0;color:inherit;border-bottom:1px solid #e4e4e4}
 .seatlist td:nth-child(2),.seatlist td:nth-child(4),.candidates td:first-child,.nationalpolls td:nth-child(2){font-family:inherit;font-size:1em}
 .seat{border-top:0;padding-top:0}
+
+.rangebar{--step:10%;background-color:#f2f2f2;background-image:repeating-linear-gradient(to right,#d9d9d9 0 1px,transparent 1px var(--step));height:20px}
+.rangebar .rangetip{position:absolute;bottom:calc(100% + 6px);transform:translateX(-50%);height:auto;white-space:nowrap;background:#222;color:#fff;font-size:.75rem;padding:.15rem .5rem;pointer-events:none;z-index:3;font-family:var(--mono)}
+.candidates .num{text-align:right;white-space:nowrap}
+.candidates td.axiscell{padding-top:0;border-bottom:0}
+.candidates tfoot td{border-bottom:0}
+.shareaxis{position:relative;height:1.6rem;border-top:2px solid #222;margin-top:-1px}
+.shareaxis span{position:absolute;top:.15rem;transform:translateX(-50%);font-size:.72rem;color:#6b6b6b;font-family:var(--mono)}
+.shareaxis span:first-child{transform:none}
+.shareaxis span:last-child{transform:translateX(-100%)}
+.shareaxis span::before{content:"";position:absolute;top:-.15rem;left:50%;height:.35rem;border-left:1px solid #222}
+.shareaxis span:first-child::before{left:0}
+.shareaxis span:last-child::before{left:auto;right:0}
+.filters{margin-top:-8px}
+.filters .check{flex-direction:row;align-items:center;gap:6px;font-weight:400;font-size:14px;color:#222;align-self:end;padding-bottom:8px}
+.filters select{min-width:200px}
+.filters .more{align-self:end;margin-bottom:2px;padding:.4rem .9rem}
+.flip-tag{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:#222;color:#fff;padding:0 .35em;margin-left:.25em;vertical-align:1px}
+.rangebar span.rangetip{top:auto;bottom:calc(100% + 6px);height:auto}
+.filters .check input{min-width:0;padding:0}

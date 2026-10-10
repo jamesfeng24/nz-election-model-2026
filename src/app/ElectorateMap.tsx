@@ -24,22 +24,23 @@ const key = (name: string) => name.normalize('NFD').replace(/[̀-ͯ]/g, '').toLo
 /** Darker for seats the model is surer of: toss-ups are pale, safe seats solid. */
 export const opacityFor = (p: number) => 0.2 + 0.8 * Math.max(0, Math.min(1, (p - 0.4) / 0.6));
 
-function fillFor(seat: MapForecast | undefined) {
+function fillFor(seat: MapForecast | undefined, highlight: Set<string> | null) {
   if (!seat || !seat.available) return { fill: NO_FORECAST, opacity: 1 };
+  if (highlight && !highlight.has(seat.id)) return { fill: NO_FORECAST, opacity: 1 };
   return { fill: seat.leaderParty ? COLOURS[seat.leaderParty] ?? INDEPENDENT : INDEPENDENT, opacity: opacityFor(seat.leaderP) };
 }
 
 /** `stripe` is the stripe period in drawing units, chosen per drawing so the stripes look the same size on screen. */
-function Shapes({ seats, forecasts, onSelect, hrefBase, hover, setHover, stripe }: {
+function Shapes({ seats, forecasts, onSelect, hrefBase, hover, setHover, stripe, highlight }: {
   seats: MapSeat[]; forecasts: Map<string, MapForecast>; onSelect?: (id: string) => void; hrefBase: string;
-  hover: string | null; setHover: (id: string | null) => void; stripe: number;
+  hover: string | null; setHover: (id: string | null) => void; stripe: number; highlight: Set<string> | null;
 }) {
   const stripes = useId().replace(/:/g, '');
   return <><defs><pattern id={stripes} width={stripe} height={stripe} patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width={stripe / 2} height={stripe} fill="#fff" fillOpacity=".7" /></pattern></defs>{seats.map(shape => {
     const f = forecasts.get(`${shape.kind}:${key(shape.name)}`);
-    const { fill, opacity } = fillFor(f);
+    const { fill, opacity } = fillFor(f, highlight);
     const body = <><path d={shape.path} fill={fill} fillOpacity={opacity} className={hover === f?.id && f ? 'hot' : undefined} vectorEffect="non-scaling-stroke" />
-      {f?.incumbentStatus === 'trails' && <path d={shape.path} fill={`url(#${stripes})`} className="flip" pointerEvents="none" />}</>;
+      {f?.incumbentStatus === 'trails' && (!highlight || highlight.has(f.id)) && <path d={shape.path} fill={`url(#${stripes})`} className="flip" pointerEvents="none" />}</>;
     if (!f) return <g key={shape.id}>{body}<title>{shape.name}</title></g>;
     return <a key={shape.id} href={`${hrefBase}#seat=${f.id}`} onClick={onSelect ? e => { e.preventDefault(); onSelect(f.id); } : undefined}
       onMouseEnter={() => setHover(f.id)} onMouseLeave={() => setHover(null)} onFocus={() => setHover(f.id)} onBlur={() => setHover(null)}
@@ -72,7 +73,7 @@ const intersects = (a: [number, number, number, number], [x, y, w, h]: [number, 
   !(a[2] < x || a[0] > x + w || a[3] < y || a[1] > y + h);
 
 /** Clickable map of the 2026 electorates, shaded by the most likely winner's party and how sure the model is. */
-export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: { snapshot: ForecastSnapshot; forecasts: MapForecast[]; onSelect?: (id: string) => void; hrefBase?: string }) {
+export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '', highlight = null }: { snapshot: ForecastSnapshot; forecasts: MapForecast[]; onSelect?: (id: string) => void; hrefBase?: string; highlight?: Set<string> | null }) {
   const [data, setData] = useState<MapData | 'failed' | null>(null);
   const [kind, setKind] = useState<'general' | 'maori'>('general');
   const [hover, setHover] = useState<string | null>(null);
@@ -88,7 +89,7 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
   const shown = data.seats.filter(s => s.kind === kind);
   const hasIncumbency = forecasts.some(f => f.incumbentStatus !== 'unknown');
   const hot = hover ? forecasts.find(f => f.id === hover) : undefined;
-  const shared = { forecasts: byName, onSelect, hrefBase, hover, setHover };
+  const shared = { forecasts: byName, onSelect, hrefBase, hover, setHover, highlight };
   const legendOf = (id: string | null) => ({ id: id ?? 'independent', name: id ? partyLabel(snapshot, id) : 'Independent', colour: id ? COLOURS[id] ?? INDEPENDENT : INDEPENDENT });
   return <section className="map" aria-labelledby="map-heading">
     <h2 id="map-heading">Map</h2>
@@ -96,7 +97,7 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
       <button type="button" aria-pressed={kind === 'general'} onClick={() => setKind('general')}>General (64)</button>
       <button type="button" aria-pressed={kind === 'maori'} onClick={() => setKind('maori')}>Māori (7)</button>
     </div>
-    <p className="maphint">Hover over a seat for its candidates. Click it for full details.</p>
+    <p className="maphint">Hover over a seat for its candidates. Click it for full details.{highlight && ' Seats outside the filters are greyed out.'}</p>
     <p className="sr-only" aria-live="polite">{hot ? (hot.available ? `${hot.name}: ${hot.leaderName}, ${hot.leaderPartyName}, ${prob(hot.leaderP)} to win` : `${hot.name}: no forecast available`) + incumbentNote(hot) : ''}</p>
     <div className="mapgrid" ref={grid} onMouseMove={e => track(e.clientX, e.clientY)}
       onFocusCapture={e => { const r = (e.target as Element).getBoundingClientRect(); track(r.left + r.width / 2, r.top + r.height / 2); }}>
