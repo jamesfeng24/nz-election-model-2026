@@ -80,7 +80,9 @@ class Gate(unittest.TestCase):
 
     def test_rehearsal_labels_every_stand_in(self):
         self.assertEqual(len(rehearsal.STAND_INS), 3)   # Stage80: the unpolled Maori seats now use the real fallback
-        self.assertTrue(all('Stage69' in n for n in rehearsal.NOT_USED))
+        self.assertTrue(all('real' in n for n in rehearsal.NOT_USED))
+        self.assertFalse([t for t in rehearsal.STAND_INS + rehearsal.NOT_USED if 'Stage64' in t or 'not yet run' in t or 'has not entered' in t])  # audit C4: no stale claims
+        self.assertFalse(hasattr(rehearsal, 'AS_OF') or hasattr(rehearsal, 'STAGE70'))  # the report follows the config's adopted refresh
         classes = rehearsal.synthetic_classification(GENERAL)
         self.assertEqual(set(classes), set(GENERAL))
 

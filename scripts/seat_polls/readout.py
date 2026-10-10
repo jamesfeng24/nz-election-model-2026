@@ -29,7 +29,9 @@ def build(draws):
     party_scales, candidate_scales = scale_file['layers']['local_party']['scales'], scale_file['layers']['candidate']['scales']
     slates, reason = A.live_slates(config)
     classification, why = A.live_classification(config)
-    multipliers = config['uncertainty']['candidateBalanceSeatMultiplier']
+    uncertainty = config['uncertainty']
+    multipliers, within, mass = (uncertainty['candidateBalanceSeatMultiplier'], uncertainty['candidateWithinSeatMultiplier'],
+                                 uncertainty['candidateMassSeatMultiplier'])  # the live assembly's three seat multipliers (D107, D121)
     seats = sorted(inputs)
     party = {s: general.party_row(s, keys, base[s], national2023, continuing) for s in seats}
     candidate = {s: general.candidate_row(s, slates[s], party[s], parameters) for s in seats}
@@ -41,7 +43,8 @@ def build(draws):
             for kind, multiplier in multipliers.items():
                 arms = {}
                 for arm, poll in (('modelAlone', None), ('modelPlusPoll', inputs[seat])):
-                    _, q, record = general.simulate_with_poll(party[seat], candidate[seat], fine, party_scales, candidate_scales, multiplier, poll)
+                    _, q, record = general.simulate_with_poll(party[seat], candidate[seat], fine, party_scales, candidate_scales, multiplier, poll,
+                                                  within=within[kind], mass=mass[kind])
                     winner = np.bincount(q.argmax(axis=1), minlength=q.shape[1]) / draws
                     cand = candidate[seat]
                     n, l = cand['groups'].index('national'), cand['groups'].index('labour')
