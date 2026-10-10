@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { pages, type PageId } from './pages';
 import { fetchText, loadArchiveIndex, loadLatestSnapshot, loadReleaseHistory, type IndexResult, type LoadResult, type ReleasePoint } from '../data/loader';
+import { AboutView } from './AboutView';
 import { ArchiveView } from './ArchiveView';
 import { ElectoratesView } from './ElectoratesView';
 import { ForecastView, SnapshotBanner } from './ForecastViews';
@@ -32,7 +33,7 @@ export function App({ page, source = defaultSource, indexSource = defaultIndexSo
   const [index, setIndex] = useState<IndexResult | { status: 'loading' }>({ status: 'loading' });
   useEffect(() => {
     let live = true;
-    if (page !== 'archive') source().then(r => { if (live) setResult(r); }, () => { if (live) setResult({ status: 'unavailable', reason: 'Could not load the forecast' }); });
+    if (page !== 'archive' && page !== 'about') source().then(r => { if (live) setResult(r); }, () => { if (live) setResult({ status: 'unavailable', reason: 'Could not load the forecast' }); });
     if (page === 'forecast') historySource().then(h => { if (live) setHistory(h); }, () => undefined);
     if (page === 'archive') indexSource().then(r => { if (live) setIndex(r); }, () => { if (live) setIndex({ status: 'unavailable', reason: 'Could not load the archive' }); });
     return () => { live = false; };
@@ -52,6 +53,7 @@ export function App({ page, source = defaultSource, indexSource = defaultIndexSo
           : <section className="status-panel"><h2>No forecast published yet</h2><p>The first forecast will appear here after the next weekly poll refresh. <a href={href('methodology')}>How it works</a>.</p></section>}
       </>}
       {page === 'methodology' && <><h1>{current.title}</h1><MethodologyView adjustments={result.status === 'loaded' ? result.snapshot.adjustments : undefined} incumbency={result.status === 'loaded' ? result.snapshot.incumbency : undefined} /></>}
+      {page === 'about' && <><h1>{current.title}</h1><AboutView /></>}
       {page === 'archive' && <><h1>{current.title}</h1><ArchiveView result={index} /></>}
     </main>
     <footer><span>An independent research project, not an official election service.</span><a href="https://creativecommons.org/licenses/by/4.0/">Free to share with credit (CC BY 4.0)</a></footer>

@@ -5,5 +5,6 @@ export const pages = [
   { path: 'polls', label: 'Polls', title: 'Polls' },
   { path: 'methodology', label: 'Methodology', title: 'Methodology' },
   { path: 'archive', label: 'Archive', title: 'Archive' },
+  { path: 'about', label: 'About', title: 'About' },
 ] as const;
 export type PageId = typeof pages[number]['path'];

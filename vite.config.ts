@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     outDir: 'site',
     emptyOutDir: true,
-    rollupOptions: { input: { index: resolve(import.meta.dirname, 'index.html'), forecast: resolve(import.meta.dirname, 'forecast/index.html'), electorates: resolve(import.meta.dirname, 'electorates/index.html'), polls: resolve(import.meta.dirname, 'polls/index.html'), methodology: resolve(import.meta.dirname, 'methodology/index.html'), archive: resolve(import.meta.dirname, 'archive/index.html') } },
+    rollupOptions: { input: { index: resolve(import.meta.dirname, 'index.html'), forecast: resolve(import.meta.dirname, 'forecast/index.html'), electorates: resolve(import.meta.dirname, 'electorates/index.html'), polls: resolve(import.meta.dirname, 'polls/index.html'), methodology: resolve(import.meta.dirname, 'methodology/index.html'), archive: resolve(import.meta.dirname, 'archive/index.html'), about: resolve(import.meta.dirname, 'about/index.html') } },
   },
   test: { environment: 'jsdom', setupFiles: './src/test/setup.ts' },
 });

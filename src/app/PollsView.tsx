@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { ForecastSnapshot } from '../types/export';
 import { partyLabel } from './partyNames';
 import { dateRange, longDate } from './format';
-import { SeatPollLine, pollName } from './PollTables';
+import { CODES, pollName } from './PollTables';
 
 const retrieved = (text: string) => { const t = Date.parse(text); return Number.isNaN(t) ? text : longDate(new Date(t).toISOString()); };
 
@@ -16,9 +16,16 @@ export function PollsView({ snapshot }: { snapshot: ForecastSnapshot }) {
   const [all, setAll] = useState(false);
   const columns = evidence?.nationalPolls[0]?.shares.map(s => s.partyId) ?? [];
   const party = (id: string) => (id === 'other' ? 'Other' : partyLabel(snapshot, id));
-  const seats = snapshot.electorateDetail.filter(d => (d.evidence?.polls.length ?? 0) > 0)
-    .map(d => ({ d, name: snapshot.directory.electorates.find(e => e.electorateId === d.electorateId)?.name ?? d.electorateId }))
-    .sort((a, b) => a.name.localeCompare(b.name, 'en-NZ'));
+  const columnOf = (code: string | null) => { const label = code ? CODES[code] ?? code : null; return label && label !== 'Independent' ? label : 'Other'; };
+  const seatPolls = snapshot.electorateDetail.flatMap(d => {
+    const seatName = snapshot.directory.electorates.find(e => e.electorateId === d.electorateId)?.name ?? d.electorateId;
+    return (d.evidence?.polls ?? []).map(poll => ({ poll, seatId: d.electorateId, seatName, date: (poll.fieldworkEnd ?? poll.published)!, first: false }));
+  }).sort((a, b) => b.date.localeCompare(a.date) || a.seatName.localeCompare(b.seatName, 'en-NZ'));
+  seatPolls.forEach((p, i) => { p.first = seatPolls.findIndex(q => q.seatId === p.seatId) === i; });
+  const nationalLabels = columns.map(c => party(c));
+  const seatLabels = new Set(seatPolls.flatMap(p => p.poll.results.map(r => columnOf(r.party))));
+  const seatColumns = [...nationalLabels.filter(l => seatLabels.has(l)), ...[...seatLabels].filter(l => !nationalLabels.includes(l) && l !== 'Other'), ...(seatLabels.has('Other') ? ['Other'] : [])];
+  const [allSeat, setAllSeat] = useState(() => typeof window !== 'undefined' && window.location.hash.startsWith('#seat-'));
   const used = evidence?.nationalPolls.filter(p => p.usedInModel).length ?? 0;
   return <>
     <h2>National polls</h2>
@@ -37,12 +44,20 @@ export function PollsView({ snapshot }: { snapshot: ForecastSnapshot }) {
         {all ? 'Show fewer polls' : `See more (${evidence.nationalPolls.length - INITIAL_POLLS} older polls)`}</button></p>}
     </> : <p>No national poll list.</p>}
     <h2>Electorate polls</h2>
-    {seats.length === 0 ? <p>No electorate polls.</p> : <>
-      <p>Seat polls are rare and small. All are listed, used or not.</p>
-      {seats.map(({ d, name }) => <section key={d.electorateId} id={`seat-${d.electorateId}`}>
-        <h3>{name} (<a href={`../electorates/#seat=${d.electorateId}`}>forecast for this seat</a>)</h3>
-        {d.evidence!.polls.map((poll, i) => <SeatPollLine key={i} poll={poll} />)}
-      </section>)}
+    {seatPolls.length === 0 ? <p>No electorate polls.</p> : <>
+      <p>Polls of single electorates are rare and small. Same layout as above, with the electorate in its own column. Figures are percent of the electorate vote for the candidate of that party; hover over a figure for the candidate's name. Candidates without a party are under Other.</p>
+      <table className="nationalpolls">
+        <thead><tr><th>Poll</th><th>Electorate</th><th>Dates</th><th>Sample</th>{seatColumns.map(c => <th key={c}>{c}</th>)}<th>In model</th></tr></thead>
+        <tbody>{(allSeat ? seatPolls : seatPolls.slice(0, INITIAL_POLLS)).flatMap((p, i, shown) => [
+          ...(i === 0 || monthOf(p.date) !== monthOf(shown[i - 1].date) ? [<tr key={`m-${i}`} className="month"><th colSpan={seatColumns.length + 5} scope="colgroup">{monthOf(p.date)}</th></tr>] : []),
+          <tr key={i} id={p.first ? `seat-${p.seatId}` : undefined} className={p.poll.usedInModel ? undefined : 'unused'}>
+            <td>{p.poll.sources.find(s => s.url) ? <a href={p.poll.sources.find(s => s.url)!.url!} rel="noopener noreferrer">{pollName(p.poll)}</a> : pollName(p.poll)}</td>
+            <td><a href={`../electorates/#seat=${p.seatId}`}>{p.seatName}</a></td>
+            <td>{p.poll.fieldworkEnd ? dateRange(p.poll.fieldworkStart, p.poll.fieldworkEnd) : `published ${longDate(p.poll.published!)}`}</td><td>{p.poll.sampleSize ?? '–'}</td>
+            {seatColumns.map(c => { const r = p.poll.results.find(x => columnOf(x.party) === c); return <td key={c}>{r ? <span title={r.name}>{r.approximate ? '~' : ''}{r.percent}<span className="sr-only"> ({r.name})</span></span> : '–'}</td>; })}
+            <td>{p.poll.usedInModel ? 'Yes' : <span title={p.poll.note ?? undefined}>No</span>}</td></tr>])}</tbody></table>
+      {seatPolls.length > INITIAL_POLLS && <p><button type="button" className="more" aria-expanded={allSeat} onClick={() => setAllSeat(v => !v)}>
+        {allSeat ? 'Show fewer polls' : `See more (${seatPolls.length - INITIAL_POLLS} older polls)`}</button></p>}
     </>}
   </>;
 }

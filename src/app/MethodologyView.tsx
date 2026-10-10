@@ -1,4 +1,3 @@
-import { REGISTERED_NAMES } from './partyNames';
 import type { ForecastSnapshot } from '../types/export';
 
 /** Plain-language method note for the public. Facts here come from docs/nowcast-specification.md and config/nowcast-2026.json. */
@@ -20,8 +19,6 @@ export function MethodologyView({ adjustments, incumbency }: { adjustments?: For
     <p>Groups such as National + ACT + NZ First or Labour + Greens + Te Pāti Māori are seat arithmetic, not predictions of coalition deals. "No majority" means neither of those two groups gets more than half of Parliament's seats.</p>
     <h2>Electorate seats, list seats and overhang</h2>
     <p>A party's seats come from two places: electorate seats, won by a candidate in one electorate, and list seats, allocated from the party vote so each party's total matches its share. Parliament has 120 seats. If a party wins more electorate seats than its party vote entitles it to, it keeps them all and the extra "overhang" seats are added on top. The forecast splits each party's seats into electorate and list and gives the chance of overhang.</p>
-    <h2>Party names</h2>
-    <p>Short names are used on the site. In full: {REGISTERED_NAMES.map(([short, full]) => full === short || full.includes(`(${short})`) ? full : `${full} (${short})`).join('; ')}.</p>
     <h2>Data sources</h2>
     <p>Every poll is listed with its pollster, dates, sample and source on the <a href="../polls/">Polls page</a>.</p>
     <ul>
@@ -37,8 +34,5 @@ export function MethodologyView({ adjustments, incumbency }: { adjustments?: For
       <p>The current forecast includes manual adjustments by {adjustments.by}. Only the adjusted numbers are shown, so this section says what was changed and why.</p>
       <ul>{adjustments.items.map(a => <li key={a.what}><b>{a.what}.</b> {a.why}</li>)}</ul>
     </>}
-    <h2>What it cannot do</h2>
-    <p>It cannot see what polls have not measured. Polls can be wrong together, electorate polls are rare and small, and candidates' circumstances can change. Each forecast lists what was missing or assumed at its date.</p>
-    <p>This is an independent research project, not an official election service.</p>
   </article>;
 }

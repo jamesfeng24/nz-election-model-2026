@@ -22,6 +22,11 @@ describe('public site', () => {
     expect(screen.getByRole('link', { name: footer })).toHaveAttribute('href', 'https://creativecommons.org/licenses/by/4.0/');
     expect(await screen.findByRole('navigation')).toBeInTheDocument();
   });
+  it('lists the owner links on the About page, only those with an address', () => {
+    render(<App page="about" source={none} indexSource={noIndex} />);
+    expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', expect.stringMatching(/^https:\/\/github\.com\//));
+    expect(screen.queryByRole('link', { name: 'Ko-fi' })).toBeNull();
+  });
   it('links pages with relative addresses', () => {
     render(<App page="forecast" source={none} indexSource={noIndex} />);
     expect(screen.getByRole('link', { name: 'Archive' })).toHaveAttribute('href', '../archive/');

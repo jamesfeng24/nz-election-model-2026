@@ -32,15 +32,19 @@ describe('site evidence in the snapshot', () => {
     expect(await screen.findByRole('heading', { name: 'National polls' })).toBeInTheDocument();
     expect(screen.getByText(/121 of 124 polls since the 2023 election/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Wikipedia, Opinion polling/ })).toHaveAttribute('href', expect.stringContaining('oldid=1378865337'));
-    const table = screen.getByRole('table');
+    const [table, seatTable] = screen.getAllByRole('table');
     // Opens on the ten newest polls under month headings; the rest sit behind "See more".
     expect(within(table).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(11);
     expect(within(table).getAllByRole('row').filter(r => r.className.includes('month')).length).toBeGreaterThan(0);
     fireEvent.click(screen.getByRole('button', { name: /See more \(114 older polls\)/ }));
     expect(within(table).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(125);
     expect(screen.getByRole('button', { name: 'Show fewer polls' })).toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: 'Te Ao Maori News (Whakaata Maori)' })[0]).toHaveAttribute('href', expect.stringMatching(/^https:\/\//));
-    expect(screen.getAllByText(/Not used in this forecast/).length).toBe(3);
+    expect(within(seatTable).getAllByRole('link').some(a => /^https:\/\//.test(a.getAttribute('href') ?? ''))).toBe(true);
+    // Electorate polls share the national layout, with an Electorate column; the newest ten show first.
+    expect(within(seatTable).getByRole('columnheader', { name: 'Electorate' })).toBeInTheDocument();
+    expect(within(seatTable).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(7);
+    expect(within(seatTable).getAllByRole('cell', { name: 'No' }).length).toBe(3);
+    expect(within(seatTable).getAllByRole('link').filter(a => (a.getAttribute('href') ?? '').startsWith('../electorates/#seat=')).length).toBe(6);
     expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10);   // after See more
     expect(within(table).queryByRole('columnheader', { name: /Client|Pollster/ })).toBeNull();
     expect(screen.getByText(/The Spinoff–Curia/)).toBeInTheDocument();

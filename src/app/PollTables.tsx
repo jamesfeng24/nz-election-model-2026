@@ -5,7 +5,7 @@ type ElectorateDetail = ForecastSnapshot['electorateDetail'][number];
 export type SeatPoll = NonNullable<ElectorateDetail['evidence']>['polls'][number];
 
 /** Poll-sheet party codes, shown as the site's party names. */
-const CODES: Record<string, string> = { LAB: 'Labour', NAT: 'National', GRN: 'Greens', ACT: 'ACT', NZF: 'NZ First', TOP: 'TOP', MP: 'Te Pāti Māori', TPM: 'Te Pāti Māori', IND: 'Independent' };
+export const CODES: Record<string, string> = { LAB: 'Labour', NAT: 'National', GRN: 'Greens', ACT: 'ACT', NZF: 'NZ First', TOP: 'TOP', MP: 'Te Pāti Māori', TPM: 'Te Pāti Māori', IND: 'Independent' };
 
 /** The poll's full name, client first: "Taxpayers' Union–Curia", "The Spinoff–Curia". */
 export const pollName = (poll: { pollster: string; commissioner: string | null }) =>

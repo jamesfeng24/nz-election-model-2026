@@ -86,8 +86,6 @@ export function ForecastView({ snapshot, trend = null }: { snapshot: ForecastSna
     <h2>Electorates</h2>
     <p><a href="../electorates/">Look up any seat</a> for candidate chances, vote shares and polls.</p>
     <Electorates snapshot={snapshot} />
-    <h2>Limitations</h2>
-    <ul>{snapshot.limitations.map(l => <li key={l}>{l}</li>)}</ul>
     <p>Updated weekly until election day. <a href="../methodology/">How it works and where the data comes from</a>.</p>
   </section>;
 }
