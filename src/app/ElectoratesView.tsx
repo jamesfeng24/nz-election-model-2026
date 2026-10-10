@@ -4,14 +4,14 @@ import type { ForecastSnapshot } from '../types/export';
 import { PRIMARY_INTERVAL_LEVEL, type IntervalSet } from '../types/domain';
 import { pct, prob } from './format';
 import { SeatPollLine } from './PollTables';
-import { ElectorateMap, type IncumbentStatus } from './ElectorateMap';
+import { ElectorateMap, type IncumbentStatus, type MapCandidate } from './ElectorateMap';
 import { COLOURS } from './SeatChart';
 
 type Sort = 'name' | 'close' | 'wide';
 const level = (set: IntervalSet, l: number) => set.find(v => v.level === l)!;
 const seatFromHash = () => new URLSearchParams(window.location.hash.slice(1)).get('seat');
 
-interface Row { id: string; name: string; kind: 'general' | 'maori'; leader: string; leaderParty: string | null; leaderPartyName: string; leaderP: number; second: number; wide: boolean; available: boolean; incumbent: string | null; incumbentStatus: IncumbentStatus }
+interface Row { id: string; name: string; kind: 'general' | 'maori'; leader: string; leaderParty: string | null; leaderPartyName: string; leaderP: number; second: number; wide: boolean; available: boolean; incumbent: string | null; incumbentStatus: IncumbentStatus; candidates: MapCandidate[] }
 
 function useRows(snapshot: ForecastSnapshot): Row[] {
   return useMemo(() => snapshot.directory.electorates.map(e => {
@@ -19,8 +19,15 @@ function useRows(snapshot: ForecastSnapshot): Row[] {
     const sorted = prediction ? [...prediction.candidates].sort((a, b) => b.winProbability - a.winProbability) : [];
     const cls = snapshot.electorateDetail.find(d => d.electorateId === e.electorateId)?.uncertaintyClass;
     const leader = snapshot.directory.candidates.find(c => c.candidateId === sorted[0]?.candidateId);
+    const detail = snapshot.electorateDetail.find(d => d.electorateId === e.electorateId);
+    const candidates: MapCandidate[] = sorted.flatMap(c => {
+      const cand = snapshot.directory.candidates.find(x => x.candidateId === c.candidateId);
+      if (!cand) return [];
+      return [{ id: cand.candidateId, name: cand.name, partyName: cand.partyId ? partyLabel(snapshot, cand.partyId) : cand.partyLabel ?? 'Independent', colour: (cand.partyId && COLOURS[cand.partyId]) || '#8b8f94',
+        winP: c.winProbability, share: detail?.candidates.find(d => d.candidateId === c.candidateId)?.share[0].median ?? null, incumbent: cand.incumbent === true }];
+    });
     const sitting = snapshot.incumbency ? snapshot.directory.candidates.find(c => c.electorateId === e.electorateId && c.incumbent) : undefined;
-    return { incumbent: sitting?.name ?? null, incumbentStatus: (!snapshot.incumbency ? 'unknown' : !sitting ? 'open' : !prediction ? 'standing' : sitting.candidateId === leader?.candidateId ? 'leads' : 'trails') as IncumbentStatus,
+    return { incumbent: sitting?.name ?? null, candidates, incumbentStatus: (!snapshot.incumbency ? 'unknown' : !sitting ? 'open' : !prediction ? 'standing' : sitting.candidateId === leader?.candidateId ? 'leads' : 'trails') as IncumbentStatus,
        id: e.electorateId, name: e.name, kind: e.kind, leader: leader?.name ?? '', leaderParty: leader?.partyId ?? null, leaderPartyName: leader?.partyId ? partyLabel(snapshot, leader.partyId) : leader?.partyLabel ?? 'Independent', leaderP: sorted[0]?.winProbability ?? 0, second: sorted[1]?.winProbability ?? 0, wide: cls === 'exceptional' || cls === 'maori-layer', available: !!prediction };
   }), [snapshot]);
 }
@@ -89,7 +96,7 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
     return [...shown].sort(by[sort]);
   }, [rows, query, sort]);
   const selected = rows.find(r => r.id === seatId);
-  const forecasts = useMemo(() => rows.map(r => ({ id: r.id, name: r.name, kind: r.kind, leaderParty: r.leaderParty, leaderPartyName: r.leaderPartyName, leaderName: r.leader, leaderP: r.leaderP, available: r.available, incumbent: r.incumbent, incumbentStatus: r.incumbentStatus })), [rows]);
+  const forecasts = useMemo(() => rows.map(r => ({ id: r.id, name: r.name, kind: r.kind, leaderParty: r.leaderParty, leaderPartyName: r.leaderPartyName, leaderName: r.leader, leaderP: r.leaderP, available: r.available, incumbent: r.incumbent, incumbentStatus: r.incumbentStatus, candidates: r.candidates })), [rows]);
   const pick = (id: string) => { choose(id); document.getElementById('seat-heading')?.scrollIntoView?.({ block: 'start' }); };
   return <>
     <p className="intro">Pick a seat to see each candidate's chance of winning, their likely share of the vote and the polls behind it.</p>

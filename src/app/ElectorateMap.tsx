@@ -7,10 +7,13 @@ import { prob } from './format';
 interface MapSeat { id: string; name: string; kind: 'general' | 'maori'; path: string; box: [number, number, number, number] }
 interface MapData { width: number; height: number; insets: { name: string; box: [number, number, number, number] }[]; seats: MapSeat[]; source: string }
 
+/** One candidate as the hover card lists them, most likely winner first. */
+export interface MapCandidate { id: string; name: string; partyName: string; colour: string; winP: number; share: number | null; incumbent: boolean }
+
 /** One forecast seat as the map needs it. */
 export interface MapForecast { id: string; name: string; kind: 'general' | 'maori'; leaderParty: string | null; leaderPartyName: string; leaderName: string; leaderP: number; available: boolean;
   /** Sitting MP standing in this seat, or null. `incumbentStatus`: no incumbency data attached, no sitting MP standing, standing with no forecast, or the favourite / not the favourite. */
-  incumbent: string | null; incumbentStatus: IncumbentStatus }
+  incumbent: string | null; incumbentStatus: IncumbentStatus; candidates: MapCandidate[] }
 export type IncumbentStatus = 'unknown' | 'open' | 'standing' | 'leads' | 'trails';
 
 const INDEPENDENT = '#8b8f94';
@@ -45,6 +48,19 @@ function Shapes({ seats, forecasts, onSelect, hrefBase, hover, setHover, stripe 
   })}</>;
 }
 
+/** Everything the map knows about one seat: the favourite, then every candidate with chance of winning, median vote share and the incumbent tag. */
+function HoverCard({ seat }: { seat: MapForecast }) {
+  if (!seat.available) return <><h3>{seat.name}</h3><p>No forecast available.</p></>;
+  return <>
+    <h3>{seat.name}</h3>
+    <p className="winner">Most likely winner: <strong>{seat.leaderName}</strong> ({seat.leaderPartyName}), {prob(seat.leaderP)}{seat.incumbentStatus === 'unknown' ? '' : seat.incumbent ? '' : '. No sitting MP is standing here'}</p>
+    <table><thead><tr><th>Candidate</th><th>Chance of winning</th><th>Share of electorate vote</th></tr></thead>
+      <tbody>{seat.candidates.map((c, i) => <tr key={c.id} className={i === 0 ? 'lead' : undefined}>
+        <td><span className="dot" style={{ background: c.colour }} aria-hidden="true" />{c.name} <small>{c.partyName}</small>{c.incumbent && <> <span className="incumbent">Incumbent</span></>}</td>
+        <td className="num">{prob(c.winP)}</td><td className="num">{c.share === null ? '–' : `${(c.share * 100).toFixed(1)}%`}</td></tr>)}</tbody></table>
+  </>;
+}
+
 /** What the map says about the sitting MP: who they are and whether they are the favourite. Empty when no incumbency data is attached. */
 export function incumbentNote(f: MapForecast) {
   if (f.incumbentStatus === 'unknown') return '';
@@ -76,7 +92,7 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
       <button type="button" aria-pressed={kind === 'general'} onClick={() => setKind('general')}>General (64)</button>
       <button type="button" aria-pressed={kind === 'maori'} onClick={() => setKind('maori')}>Māori (7)</button>
     </div>
-    <p className="maphint" aria-live="polite">{hot ? ((hot.available ? `${hot.name}: ${hot.leaderName}, ${hot.leaderPartyName}, ${prob(hot.leaderP)} to win` : `${hot.name}: no forecast available`) + incumbentNote(hot)) : 'Select a seat to see its forecast.'}</p>
+    <div className="mapcard" aria-live="polite">{hot ? <HoverCard seat={hot} /> : <p className="maphint">Hover over or select a seat to see its candidates, their chance of winning and their share of the vote.</p>}</div>
     <div className="mapgrid">
       <svg viewBox={`0 0 ${data.width} ${data.height}`} className="mapmain" role="group" aria-label={`Map of the ${kind === 'general' ? 'general' : 'Māori'} electorates, coloured by the most likely winner's party`}>
         <Shapes seats={shown} {...shared} stripe={data.width / 110} />
