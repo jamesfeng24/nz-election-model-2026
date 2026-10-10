@@ -8,8 +8,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OWNERS = {'exceptional_scale': 'data/processed/exceptional-scale', 'exceptional_balance_scale': 'data/processed/exceptional-balance-scale'}
+# scripts/seat_polls/historical.py: the Stage79 scoring diagnostic reads the Stage67 flags for the historical multiplier class
+# (development only); the live path never imports it (test_stage79_seat_polls.Isolation).
 ALLOWED_FILES = {'scripts/tests/test_exceptional_scale.py', 'scripts/tests/test_stage67_exceptional_balance_scale.py',
-                 'scripts/tests/test_historical_flag_isolation.py'}
+                 'scripts/tests/test_historical_flag_isolation.py', 'scripts/seat_polls/historical.py'}
 
 
 def sources():

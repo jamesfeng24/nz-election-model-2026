@@ -1,0 +1,115 @@
+{
+  "note": "Dated standalone registry for Stage79. data/sources.json is frozen and untouched.",
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "bytes": 0,
+      "dateOrElection": "General-electorate polls 2011",
+      "id": "stage79-wikipedia-opinion-polling-2011.html",
+      "licence": "Wikipedia text CC BY-SA; preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited), aggregator_only; transcribed into data/source-plans/seat-polls/polls.json and checked against these bytes. James confirmed on 2026-10-09 that the 2026 numbers match the underlying articles. Not a primary release.",
+        "Not retrieved (rate-limited); the 2011 election precedes the out-of-sample seat replay (2014 onwards), so it is not needed."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/seat_polls/run.py",
+      "rawPath": null,
+      "resource": "wikipedia-opinion-polling-2011.html",
+      "retrievedAt": "2026-10-09T17:40:30Z",
+      "schemaVersion": 1,
+      "sha256": null,
+      "status": "429 Too Many Requests (4 attempts)",
+      "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2011_New_Zealand_general_election"
+    },
+    {
+      "bytes": 728660,
+      "dateOrElection": "General-electorate polls 2014",
+      "id": "stage79-wikipedia-opinion-polling-2014.html",
+      "licence": "Wikipedia text CC BY-SA; preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited), aggregator_only; transcribed into data/source-plans/seat-polls/polls.json and checked against these bytes. James confirmed on 2026-10-09 that the 2026 numbers match the underlying articles. Not a primary release."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/seat_polls/run.py",
+      "rawPath": "data/raw/polling/seat-polls/2026-10-09/wikipedia-opinion-polling-2014.html",
+      "resource": "wikipedia-opinion-polling-2014.html",
+      "retrievedAt": "2026-10-09T17:39:30Z",
+      "schemaVersion": 1,
+      "sha256": "7e12f383f3aad850ca387a63a4c023e342ab138ae041b2ba5636c66e2b680e81",
+      "status": "200 OK",
+      "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2014_New_Zealand_general_election"
+    },
+    {
+      "bytes": 845439,
+      "dateOrElection": "General-electorate polls 2017",
+      "id": "stage79-wikipedia-opinion-polling-2017.html",
+      "licence": "Wikipedia text CC BY-SA; preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited), aggregator_only; transcribed into data/source-plans/seat-polls/polls.json and checked against these bytes. James confirmed on 2026-10-09 that the 2026 numbers match the underlying articles. Not a primary release."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/seat_polls/run.py",
+      "rawPath": "data/raw/polling/seat-polls/2026-10-09/wikipedia-opinion-polling-2017.html",
+      "resource": "wikipedia-opinion-polling-2017.html",
+      "retrievedAt": "2026-10-09T17:23:10Z",
+      "schemaVersion": 1,
+      "sha256": "16a94132c2d33c775164e9d9316bc703160bd32575b51c22722e5639e93943a7",
+      "status": "200 OK",
+      "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2017_New_Zealand_general_election"
+    },
+    {
+      "bytes": 313897,
+      "dateOrElection": "General-electorate polls 2020",
+      "id": "stage79-wikipedia-opinion-polling-2020.html",
+      "licence": "Wikipedia text CC BY-SA; preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited), aggregator_only; transcribed into data/source-plans/seat-polls/polls.json and checked against these bytes. James confirmed on 2026-10-09 that the 2026 numbers match the underlying articles. Not a primary release."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/seat_polls/run.py",
+      "rawPath": "data/raw/polling/seat-polls/2026-10-09/wikipedia-opinion-polling-2020.html",
+      "resource": "wikipedia-opinion-polling-2020.html",
+      "retrievedAt": "2026-10-09T17:24:20Z",
+      "schemaVersion": 1,
+      "sha256": "07851c45a1c19b8c619b6af8638afda3cc4a27e7c3ef3da2e0944b5f2fe5c583",
+      "status": "200 OK",
+      "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2020_New_Zealand_general_election"
+    },
+    {
+      "bytes": 395093,
+      "dateOrElection": "General-electorate polls 2023",
+      "id": "stage79-wikipedia-opinion-polling-2023.html",
+      "licence": "Wikipedia text CC BY-SA; preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited), aggregator_only; transcribed into data/source-plans/seat-polls/polls.json and checked against these bytes. James confirmed on 2026-10-09 that the 2026 numbers match the underlying articles. Not a primary release."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/seat_polls/run.py",
+      "rawPath": "data/raw/polling/seat-polls/2026-10-09/wikipedia-opinion-polling-2023.html",
+      "resource": "wikipedia-opinion-polling-2023.html",
+      "retrievedAt": "2026-10-09T17:24:05Z",
+      "schemaVersion": 1,
+      "sha256": "bb674cfc72fcf0947d01eaed760875414e79a5558dbe810ae42d1b6fbc3389e7",
+      "status": "200 OK",
+      "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2023_New_Zealand_general_election"
+    },
+    {
+      "bytes": 756178,
+      "dateOrElection": "General-electorate polls 2026",
+      "id": "stage79-wikipedia-opinion-polling-2026.html",
+      "licence": "Wikipedia text CC BY-SA; preserved unchanged for research provenance only, not redistributed in application results.",
+      "limitations": [
+        "Electorate-poll compilation (secondary, volunteer-edited), aggregator_only; transcribed into data/source-plans/seat-polls/polls.json and checked against these bytes. James confirmed on 2026-10-09 that the 2026 numbers match the underlying articles. Not a primary release."
+      ],
+      "organisation": "Wikipedia",
+      "processingScript": "scripts/seat_polls/run.py",
+      "rawPath": "data/raw/polling/seat-polls/2026-10-09/wikipedia-opinion-polling-2026.html",
+      "resource": "wikipedia-opinion-polling-2026.html",
+      "retrievedAt": "2026-10-09T17:22:40Z",
+      "schemaVersion": 1,
+      "sha256": "24a71defc79bbd18c4383f4af597daddf50cf54118b51ae441b7f549d738f5c8",
+      "status": "200 OK",
+      "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2026_New_Zealand_general_election"
+    }
+  ]
+}

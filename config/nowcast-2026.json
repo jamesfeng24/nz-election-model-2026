@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-10.2",
-  "decisions": ["D106", "D107", "D114", "D115", "D118"],
+  "configVersion": "2026-10-10.3",
+  "decisions": ["D106", "D107", "D114", "D115", "D117", "D118"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
   "electionId": "nz-general-2026",
@@ -75,5 +75,6 @@
     "decidedBy": "James, 2026-10-07"
   },
   "maori": {"layer": "stage66-default", "presentation": "labelled-range", "unpolledSeats": "labelled-fallback", "unpolledFallbackModel": "stage78-f",
-           "decidedBy": "James, 2026-10-07 (D114): Maori seats are shown as a labelled range; the four unpolled seats use a labelled fallback from the Maori layer without a poll. Stage78 / D115: the fallback is arm F (the 2023 result carried forward, no polled-seat swing), chosen by James on 2026-10-09; registered here by Stage80 / D118"}
+           "decidedBy": "James, 2026-10-07 (D114): Maori seats are shown as a labelled range; the four unpolled seats use a labelled fallback from the Maori layer without a poll. Stage78 / D115: the fallback is arm F (the 2023 result carried forward, no polled-seat swing), chosen by James on 2026-10-09; registered here by Stage80 / D118"},
+  "seatPolls": {"enabled": true, "decision": "D117"}
 }

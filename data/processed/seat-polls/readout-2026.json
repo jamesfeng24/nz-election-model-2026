@@ -1,0 +1,647 @@
+{
+  "dataCutoff": "2026-10-07",
+  "draws": 2048,
+  "ineligible2026": "Auckland Central and Wellington Bays (Green-led polls) are context only (design amendment A2)",
+  "label": "INTERNAL development output; nothing adopted; both D107 classes are shown and the configured class is marked",
+  "nationalDrawIds": [
+    "weekly-2026-10-07-attempt1-chain3-draw0936",
+    "weekly-2026-10-07-attempt1-chain4-draw0119",
+    "weekly-2026-10-07-attempt1-chain4-draw0374",
+    "..."
+  ],
+  "schemaVersion": 1,
+  "seats": {
+    "nz-general-2026-boundary-015": {
+      "classes": {
+        "exceptional": {
+          "modelAlone": {
+            "balance": {
+              "mean": -0.2759432992575269,
+              "p10": -0.8474423353008012,
+              "p90": 0.14109437463390118
+            },
+            "labourShareMean": 0.3972704231559684,
+            "labourWins": 0.74267578125,
+            "nationalShareMean": 0.3048931482767969,
+            "nationalWins": 0.20703125,
+            "update": null,
+            "winProbability": {
+              "Alistair BOYCE": 0.01025390625,
+              "Ben WYLIE-VAN EERD": 0.01123046875,
+              "Chris BISHOP": 0.20703125,
+              "Courtney WHITE": 0.02880859375,
+              "Ginny ANDERSEN": 0.74267578125
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": -0.3029093944477308,
+              "p10": -0.7604316531402606,
+              "p90": 0.03551884884171006
+            },
+            "labourShareMean": 0.40249291186574737,
+            "labourWins": 0.8291015625,
+            "nationalShareMean": 0.29967065956701794,
+            "nationalWins": 0.12060546875,
+            "update": {
+              "ageWeeks": 2.5714285714285716,
+              "modelCentre": -0.27597271293619363,
+              "modelSD": 0.3511639728713435,
+              "pollIds": [
+                "2026:Hutt South:Victor Consulting:2026-09-17"
+              ],
+              "pollValue": -0.3364722366212129,
+              "pollVariance": 0.0710899503735648,
+              "posteriorSD": 0.2833026900432818,
+              "rho": 0.7429971445684742,
+              "sharedSD": 0.18082182076537473,
+              "shift": -0.02697058400743324,
+              "weight": 0.6
+            },
+            "winProbability": {
+              "Alistair BOYCE": 0.009765625,
+              "Ben WYLIE-VAN EERD": 0.01171875,
+              "Chris BISHOP": 0.12060546875,
+              "Courtney WHITE": 0.02880859375,
+              "Ginny ANDERSEN": 0.8291015625
+            }
+          }
+        },
+        "ordinary": {
+          "modelAlone": {
+            "balance": {
+              "mean": -0.27226633231055947,
+              "p10": -0.678518058617202,
+              "p90": 0.03312365061093343
+            },
+            "labourShareMean": 0.3975954819626989,
+            "labourWins": 0.82470703125,
+            "nationalShareMean": 0.30456808947006636,
+            "nationalWins": 0.123046875,
+            "update": null,
+            "winProbability": {
+              "Alistair BOYCE": 0.01025390625,
+              "Ben WYLIE-VAN EERD": 0.01171875,
+              "Chris BISHOP": 0.123046875,
+              "Courtney WHITE": 0.0302734375,
+              "Ginny ANDERSEN": 0.82470703125
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": -0.2950938836954382,
+              "p10": -0.6342754045001331,
+              "p90": -0.028657575626108545
+            },
+            "labourShareMean": 0.4017799673307267,
+            "labourWins": 0.884765625,
+            "nationalShareMean": 0.3003836041020387,
+            "nationalWins": 0.064453125,
+            "update": {
+              "ageWeeks": 2.5714285714285716,
+              "modelCentre": -0.2723022629012616,
+              "modelSD": 0.25557697207875013,
+              "pollIds": [
+                "2026:Hutt South:Victor Consulting:2026-09-17"
+              ],
+              "pollValue": -0.3364722366212129,
+              "pollVariance": 0.0710899503735648,
+              "posteriorSD": 0.2192090483759033,
+              "rho": 0.7429971445684742,
+              "sharedSD": 0.18082182076537473,
+              "shift": -0.022830620021554726,
+              "weight": 0.4788491268366061
+            },
+            "winProbability": {
+              "Alistair BOYCE": 0.01025390625,
+              "Ben WYLIE-VAN EERD": 0.01220703125,
+              "Chris BISHOP": 0.064453125,
+              "Courtney WHITE": 0.0283203125,
+              "Ginny ANDERSEN": 0.884765625
+            }
+          }
+        }
+      },
+      "configuredClass": "ordinary",
+      "electorate": "Hutt South",
+      "poll": {
+        "ageWeeks": 2.5714285714285716,
+        "cap": 0.6,
+        "pollIds": [
+          "2026:Hutt South:Victor Consulting:2026-09-17"
+        ],
+        "rho": 0.7429971445684742,
+        "value": -0.3364722366212129,
+        "variance": 0.0710899503735648
+      }
+    },
+    "nz-general-2026-boundary-020": {
+      "classes": {
+        "exceptional": {
+          "modelAlone": {
+            "balance": {
+              "mean": -0.3091738332879832,
+              "p10": -0.6826824564439662,
+              "p90": 0.07730219822031771
+            },
+            "labourShareMean": 0.3990346562343558,
+            "labourWins": 0.81201171875,
+            "nationalShareMean": 0.2947115363334211,
+            "nationalWins": 0.162109375,
+            "update": null,
+            "winProbability": {
+              "Chee Khiang (CK) SNG": 0.00390625,
+              "Melody WILLIS": 0.0087890625,
+              "Penny GAYLOR": 0.01318359375,
+              "Sophie HANDFORD": 0.81201171875,
+              "Tim COSTLEY": 0.162109375
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": -0.2702081113014211,
+              "p10": -0.6386208016762751,
+              "p90": 0.11324536808982655
+            },
+            "labourShareMean": 0.39259178364389197,
+            "labourWins": 0.78173828125,
+            "nationalShareMean": 0.3011544089238849,
+            "nationalWins": 0.19140625,
+            "update": {
+              "ageWeeks": 9.714285714285714,
+              "modelCentre": -0.30933035076295234,
+              "modelSD": 0.3511639728713435,
+              "pollIds": [
+                "2026:Kāpiti:Community:2026-07-29"
+              ],
+              "pollValue": -0.10981486600720655,
+              "pollVariance": 0.05074354050517195,
+              "posteriorSD": 0.3380442147169469,
+              "rho": 0.325550301773308,
+              "sharedSD": 0.18082182076537473,
+              "shift": 0.038971395762408545,
+              "weight": 0.6
+            },
+            "winProbability": {
+              "Chee Khiang (CK) SNG": 0.0029296875,
+              "Melody WILLIS": 0.01025390625,
+              "Penny GAYLOR": 0.013671875,
+              "Sophie HANDFORD": 0.78173828125,
+              "Tim COSTLEY": 0.19140625
+            }
+          }
+        },
+        "ordinary": {
+          "modelAlone": {
+            "balance": {
+              "mean": -0.3051081408368133,
+              "p10": -0.6484939716755206,
+              "p90": 0.08312168627883397
+            },
+            "labourShareMean": 0.39855465683621516,
+            "labourWins": 0.82470703125,
+            "nationalShareMean": 0.29519153573156176,
+            "nationalWins": 0.15234375,
+            "update": null,
+            "winProbability": {
+              "Chee Khiang (CK) SNG": 0.00244140625,
+              "Melody WILLIS": 0.00927734375,
+              "Penny GAYLOR": 0.01123046875,
+              "Sophie HANDFORD": 0.82470703125,
+              "Tim COSTLEY": 0.15234375
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": -0.26931050995102235,
+              "p10": -0.6141290695121551,
+              "p90": 0.12038775140968806
+            },
+            "labourShareMean": 0.392573232759295,
+            "labourWins": 0.7998046875,
+            "nationalShareMean": 0.30117295980848185,
+            "nationalWins": 0.177734375,
+            "update": {
+              "ageWeeks": 9.714285714285714,
+              "modelCentre": -0.3052203337052968,
+              "modelSD": 0.25557697207875013,
+              "pollIds": [
+                "2026:Kāpiti:Community:2026-07-29"
+              ],
+              "pollValue": -0.10981486600720655,
+              "pollVariance": 0.05074354050517195,
+              "posteriorSD": 0.24783764882237092,
+              "rho": 0.325550301773308,
+              "sharedSD": 0.18082182076537473,
+              "shift": 0.035801727259022864,
+              "weight": 0.5627936204072648
+            },
+            "winProbability": {
+              "Chee Khiang (CK) SNG": 0.001953125,
+              "Melody WILLIS": 0.00927734375,
+              "Penny GAYLOR": 0.01123046875,
+              "Sophie HANDFORD": 0.7998046875,
+              "Tim COSTLEY": 0.177734375
+            }
+          }
+        }
+      },
+      "configuredClass": "exceptional",
+      "electorate": "Kāpiti",
+      "poll": {
+        "ageWeeks": 9.714285714285714,
+        "cap": 0.6,
+        "pollIds": [
+          "2026:Kāpiti:Community:2026-07-29"
+        ],
+        "rho": 0.325550301773308,
+        "value": -0.10981486600720655,
+        "variance": 0.05074354050517195
+      }
+    },
+    "nz-general-2026-boundary-025": {
+      "classes": {
+        "exceptional": {
+          "modelAlone": {
+            "balance": {
+              "mean": -0.4086319700411689,
+              "p10": -0.8520545979002648,
+              "p90": 0.029946894072372884
+            },
+            "labourShareMean": 0.3516580487713152,
+            "labourWins": 0.6142578125,
+            "nationalShareMean": 0.23665436273193785,
+            "nationalWins": 0.07568359375,
+            "update": null,
+            "winProbability": {
+              "Alex PRICE": 0.01171875,
+              "Helen WHITE": 0.6142578125,
+              "Melissa LEE": 0.07568359375,
+              "Qiulae WONG": 0.0302734375,
+              "Ricardo MENENDEZ MARCH": 0.248046875,
+              "Sheldon EDEN-WHAITIRI": 0.02001953125
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": -0.22018185219123104,
+              "p10": -0.473541872127961,
+              "p90": 0.03383143370668232
+            },
+            "labourShareMean": 0.3261016213490301,
+            "labourWins": 0.56689453125,
+            "nationalShareMean": 0.2622107901542229,
+            "nationalWins": 0.08251953125,
+            "update": {
+              "ageWeeks": 0.2857142857142857,
+              "modelCentre": -0.4086468225861693,
+              "modelSD": 0.3511639728713435,
+              "pollIds": [
+                "2026:Mt Albert:Curia:2026-09-21",
+                "2026:Mt Albert:Curia:2026-10-01"
+              ],
+              "pollValue": -0.08405797343483383,
+              "pollVariance": 0.05149129348161829,
+              "posteriorSD": 0.20904676416549825,
+              "rho": 0.9675317785238916,
+              "sharedSD": 0.18082182076537473,
+              "shift": 0.18843001590504888,
+              "weight": 0.6
+            },
+            "winProbability": {
+              "Alex PRICE": 0.01513671875,
+              "Helen WHITE": 0.56689453125,
+              "Melissa LEE": 0.08251953125,
+              "Qiulae WONG": 0.0361328125,
+              "Ricardo MENENDEZ MARCH": 0.275390625,
+              "Sheldon EDEN-WHAITIRI": 0.02392578125
+            }
+          }
+        },
+        "ordinary": {
+          "modelAlone": {
+            "balance": {
+              "mean": -0.4032164195195708,
+              "p10": -0.728246041564305,
+              "p90": -0.08350702572780383
+            },
+            "labourShareMean": 0.3517740812669345,
+            "labourWins": 0.6494140625,
+            "nationalShareMean": 0.23653833023631854,
+            "nationalWins": 0.03125,
+            "update": null,
+            "winProbability": {
+              "Alex PRICE": 0.01318359375,
+              "Helen WHITE": 0.6494140625,
+              "Melissa LEE": 0.03125,
+              "Qiulae WONG": 0.0302734375,
+              "Ricardo MENENDEZ MARCH": 0.255859375,
+              "Sheldon EDEN-WHAITIRI": 0.02001953125
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": -0.2305072988128089,
+              "p10": -0.4261982547630078,
+              "p90": -0.04021099452186769
+            },
+            "labourShareMean": 0.32774394153757347,
+            "labourWins": 0.60205078125,
+            "nationalShareMean": 0.26056846996567956,
+            "nationalWins": 0.04296875,
+            "update": {
+              "ageWeeks": 0.2857142857142857,
+              "modelCentre": -0.4032436134300734,
+              "modelSD": 0.25557697207875013,
+              "pollIds": [
+                "2026:Mt Albert:Curia:2026-09-21",
+                "2026:Mt Albert:Curia:2026-10-01"
+              ],
+              "pollValue": -0.08405797343483383,
+              "pollVariance": 0.05149129348161829,
+              "posteriorSD": 0.18082182076537473,
+              "rho": 0.9675317785238916,
+              "sharedSD": 0.18082182076537473,
+              "shift": 0.17269060865851174,
+              "weight": 0.5591909543107503
+            },
+            "winProbability": {
+              "Alex PRICE": 0.0166015625,
+              "Helen WHITE": 0.60205078125,
+              "Melissa LEE": 0.04296875,
+              "Qiulae WONG": 0.03515625,
+              "Ricardo MENENDEZ MARCH": 0.2802734375,
+              "Sheldon EDEN-WHAITIRI": 0.02294921875
+            }
+          }
+        }
+      },
+      "configuredClass": "exceptional",
+      "electorate": "Mt Albert",
+      "poll": {
+        "ageWeeks": 0.2857142857142857,
+        "cap": 0.6,
+        "pollIds": [
+          "2026:Mt Albert:Curia:2026-09-21",
+          "2026:Mt Albert:Curia:2026-10-01"
+        ],
+        "rho": 0.9675317785238916,
+        "value": -0.08405797343483383,
+        "variance": 0.05149129348161829
+      }
+    },
+    "nz-general-2026-boundary-057": {
+      "classes": {
+        "exceptional": {
+          "modelAlone": {
+            "balance": {
+              "mean": 0.3434686637832616,
+              "p10": -0.09507386254993434,
+              "p90": 0.7653841632117131
+            },
+            "labourShareMean": 0.29271693248063096,
+            "labourWins": 0.130859375,
+            "nationalShareMean": 0.4090106757770877,
+            "nationalWins": 0.81494140625,
+            "update": null,
+            "winProbability": {
+              "Damien O'CONNOR": 0.130859375,
+              "Helen TAIT": 0.005859375,
+              "Michael LAWS": 0.03515625,
+              "Miles John ANDERSON": 0.81494140625,
+              "Sean BEAMISH": 0.01318359375
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": 0.5287909336572743,
+              "p10": 0.19896542472509607,
+              "p90": 0.8440828737222256
+            },
+            "labourShareMean": 0.2616248873262719,
+            "labourWins": 0.0302734375,
+            "nationalShareMean": 0.4401027209314467,
+            "nationalWins": 0.92529296875,
+            "update": {
+              "ageWeeks": 1.7142857142857142,
+              "modelCentre": 0.34334449067763684,
+              "modelSD": 0.3511639728713435,
+              "pollIds": [
+                "2026:Waitaki:Curia:2026-09-18"
+              ],
+              "pollValue": 0.7396671961948382,
+              "pollVariance": 0.09299352891534814,
+              "posteriorSD": 0.27569332778454986,
+              "rho": 0.820335356007638,
+              "sharedSD": 0.18082182076537473,
+              "shift": 0.18534649045181273,
+              "weight": 0.570090735338485
+            },
+            "winProbability": {
+              "Damien O'CONNOR": 0.0302734375,
+              "Helen TAIT": 0.00439453125,
+              "Michael LAWS": 0.02978515625,
+              "Miles John ANDERSON": 0.92529296875,
+              "Sean BEAMISH": 0.01025390625
+            }
+          }
+        },
+        "ordinary": {
+          "modelAlone": {
+            "balance": {
+              "mean": 0.33888334029154077,
+              "p10": 0.041267413666189696,
+              "p90": 0.6235202801902484
+            },
+            "labourShareMean": 0.2928196201786978,
+            "labourWins": 0.06982421875,
+            "nationalShareMean": 0.4089079880790209,
+            "nationalWins": 0.87451171875,
+            "update": null,
+            "winProbability": {
+              "Damien O'CONNOR": 0.06982421875,
+              "Helen TAIT": 0.005859375,
+              "Michael LAWS": 0.037109375,
+              "Miles John ANDERSON": 0.87451171875,
+              "Sean BEAMISH": 0.0126953125
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": 0.4745516593373157,
+              "p10": 0.22963342606756346,
+              "p90": 0.7086608215702905
+            },
+            "labourShareMean": 0.26997642508212194,
+            "labourWins": 0.01220703125,
+            "nationalShareMean": 0.4317511831755967,
+            "nationalWins": 0.9423828125,
+            "update": {
+              "ageWeeks": 1.7142857142857142,
+              "modelCentre": 0.3387905540446638,
+              "modelSD": 0.25557697207875013,
+              "pollIds": [
+                "2026:Waitaki:Curia:2026-09-18"
+              ],
+              "pollValue": 0.7396671961948382,
+              "pollVariance": 0.09299352891534814,
+              "posteriorSD": 0.21721674743743266,
+              "rho": 0.820335356007638,
+              "sharedSD": 0.18082182076537473,
+              "shift": 0.13568402606431595,
+              "weight": 0.4125974502846576
+            },
+            "winProbability": {
+              "Damien O'CONNOR": 0.01220703125,
+              "Helen TAIT": 0.00390625,
+              "Michael LAWS": 0.02978515625,
+              "Miles John ANDERSON": 0.9423828125,
+              "Sean BEAMISH": 0.01171875
+            }
+          }
+        }
+      },
+      "configuredClass": "ordinary",
+      "electorate": "Waitaki",
+      "poll": {
+        "ageWeeks": 1.7142857142857142,
+        "cap": 0.6,
+        "pollIds": [
+          "2026:Waitaki:Curia:2026-09-18"
+        ],
+        "rho": 0.820335356007638,
+        "value": 0.7396671961948382,
+        "variance": 0.09299352891534814
+      }
+    },
+    "nz-general-2026-boundary-060": {
+      "classes": {
+        "exceptional": {
+          "modelAlone": {
+            "balance": {
+              "mean": -0.20023862614427107,
+              "p10": -0.5293421397497924,
+              "p90": 0.14151790343049037
+            },
+            "labourShareMean": 0.30658165094817885,
+            "labourWins": 0.65625,
+            "nationalShareMean": 0.25145086923923515,
+            "nationalWins": 0.1708984375,
+            "update": null,
+            "winProbability": {
+              "Andrew Charles BEAUMONT": 0.04296875,
+              "Cindie UDDSTROM": 0.0048828125,
+              "Jamie CLEINE": 0.09326171875,
+              "Janelle HOCKING": 0.03173828125,
+              "Katie MILNE": 0.1708984375,
+              "Rory William PATERSON": 0.65625
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": -0.03522751332447432,
+              "p10": -0.3451778054023216,
+              "p90": 0.2770183808971818
+            },
+            "labourShareMean": 0.2840362628255123,
+            "labourWins": 0.45166015625,
+            "nationalShareMean": 0.2739962573619018,
+            "nationalWins": 0.3623046875,
+            "update": {
+              "ageWeeks": 2.857142857142857,
+              "modelCentre": -0.20020002345480298,
+              "modelSD": 0.3511639728713435,
+              "pollIds": [
+                "2026:West Coast-Tasman:Curia:2026-09-10"
+              ],
+              "pollValue": 0.18232155679395456,
+              "pollVariance": 0.08078514768338448,
+              "posteriorSD": 0.29122947872807,
+              "rho": 0.7188733487225089,
+              "sharedSD": 0.18082182076537473,
+              "shift": 0.16499074161123012,
+              "weight": 0.6
+            },
+            "winProbability": {
+              "Andrew Charles BEAUMONT": 0.046875,
+              "Cindie UDDSTROM": 0.005859375,
+              "Jamie CLEINE": 0.09814453125,
+              "Janelle HOCKING": 0.03515625,
+              "Katie MILNE": 0.3623046875,
+              "Rory William PATERSON": 0.45166015625
+            }
+          }
+        },
+        "ordinary": {
+          "modelAlone": {
+            "balance": {
+              "mean": -0.19753446326408902,
+              "p10": -0.5084512221189029,
+              "p90": 0.09124406323482856
+            },
+            "labourShareMean": 0.3062711856762148,
+            "labourWins": 0.6669921875,
+            "nationalShareMean": 0.2517613345111992,
+            "nationalWins": 0.1552734375,
+            "update": null,
+            "winProbability": {
+              "Andrew Charles BEAUMONT": 0.04443359375,
+              "Cindie UDDSTROM": 0.0048828125,
+              "Jamie CLEINE": 0.095703125,
+              "Janelle HOCKING": 0.03271484375,
+              "Katie MILNE": 0.1552734375,
+              "Rory William PATERSON": 0.6669921875
+            }
+          },
+          "modelPlusPoll": {
+            "balance": {
+              "mean": -0.07544083621425751,
+              "p10": -0.39332640238412403,
+              "p90": 0.21709303214815381
+            },
+            "labourShareMean": 0.28953971239327847,
+            "labourWins": 0.498046875,
+            "nationalShareMean": 0.26849280779413554,
+            "nationalWins": 0.3154296875,
+            "update": {
+              "ageWeeks": 2.857142857142857,
+              "modelCentre": -0.19752958403391027,
+              "modelSD": 0.25557697207875013,
+              "pollIds": [
+                "2026:West Coast-Tasman:Curia:2026-09-10"
+              ],
+              "pollValue": 0.18232155679395456,
+              "pollVariance": 0.08078514768338448,
+              "posteriorSD": 0.2241166310213529,
+              "rho": 0.7188733487225089,
+              "sharedSD": 0.18082182076537473,
+              "shift": 0.12208012474237383,
+              "weight": 0.44707372459706646
+            },
+            "winProbability": {
+              "Andrew Charles BEAUMONT": 0.0458984375,
+              "Cindie UDDSTROM": 0.00537109375,
+              "Jamie CLEINE": 0.09814453125,
+              "Janelle HOCKING": 0.037109375,
+              "Katie MILNE": 0.3154296875,
+              "Rory William PATERSON": 0.498046875
+            }
+          }
+        }
+      },
+      "configuredClass": "ordinary",
+      "electorate": "West Coast-Tasman",
+      "poll": {
+        "ageWeeks": 2.857142857142857,
+        "cap": 0.6,
+        "pollIds": [
+          "2026:West Coast-Tasman:Curia:2026-09-10"
+        ],
+        "rho": 0.7188733487225089,
+        "value": 0.18232155679395456,
+        "variance": 0.08078514768338448
+      }
+    }
+  },
+  "stage": 79
+}

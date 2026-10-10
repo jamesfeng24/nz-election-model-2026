@@ -65,6 +65,13 @@ def check_config(config, require_complete=False):
     for path in ('national.source', 'uncertainty.scales', 'baseline.source'):
         section, key = path.split('.')
         require((ROOT / config[section][key]).exists(), f'{path} does not exist: {config[section][key]}')
+    seat_polls = config.get('seatPolls')
+    if seat_polls is not None:
+        require(set(seat_polls) == {'enabled', 'decision'} and isinstance(seat_polls['enabled'], bool), 'seatPolls is {enabled: bool, decision}')
+        if seat_polls['enabled']:
+            findings = 'data/processed/seat-polls/findings.json'
+            require((ROOT / findings).exists() and read(findings)['summary']['finding'] == 'adopt',
+                    'seat polls can be enabled only when the frozen Stage79 finding is adopt (D117)')
     pending = config.get('pending', {})
     for path in pending:
         section, key = path.split('.')

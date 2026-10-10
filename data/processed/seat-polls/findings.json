@@ -1,0 +1,93 @@
+{
+  "decisions": {
+    "S1_dropAssumedSampleSize": {
+      "coverage80ModelPlusPoll": 0.8,
+      "coverageBand": [
+        0.65,
+        0.95
+      ],
+      "coverageMet": true,
+      "finding": "not_established",
+      "gainMet": false,
+      "gainThresholdNats": 1.0,
+      "ruleText": "total leave-one-out log score gain >= 1.0 nat AND modelPlusPoll 80% coverage in [0.65, 0.95]",
+      "totalLogScoreGain": -0.022380677892245182
+    },
+    "S2_noInflation": {
+      "coverage80ModelPlusPoll": 0.7777777777777778,
+      "coverageBand": [
+        0.65,
+        0.95
+      ],
+      "coverageMet": true,
+      "finding": "adopt",
+      "gainMet": true,
+      "gainThresholdNats": 1.0,
+      "ruleText": "total leave-one-out log score gain >= 1.0 nat AND modelPlusPoll 80% coverage in [0.65, 0.95]",
+      "totalLogScoreGain": 1.483737030488913
+    },
+    "S3_inflationFromAllNationalLabourPolls": {
+      "coverage80ModelPlusPoll": 0.7777777777777778,
+      "coverageBand": [
+        0.65,
+        0.95
+      ],
+      "coverageMet": true,
+      "finding": "adopt",
+      "gainMet": true,
+      "gainThresholdNats": 1.0,
+      "ruleText": "total leave-one-out log score gain >= 1.0 nat AND modelPlusPoll 80% coverage in [0.65, 0.95]",
+      "totalLogScoreGain": 1.4959727718073352
+    },
+    "primary": {
+      "coverage80ModelPlusPoll": 0.7777777777777778,
+      "coverageBand": [
+        0.65,
+        0.95
+      ],
+      "coverageMet": true,
+      "finding": "adopt",
+      "gainMet": true,
+      "gainThresholdNats": 1.0,
+      "ruleText": "total leave-one-out log score gain >= 1.0 nat AND modelPlusPoll 80% coverage in [0.65, 0.95]",
+      "totalLogScoreGain": 1.8498191122635577
+    }
+  },
+  "schemaVersion": 1,
+  "stage": 79,
+  "summary": {
+    "coverage80Model": 1.0,
+    "coverage80ModelPlusPoll": 0.7777777777777778,
+    "eligibleHistoricalPolls": 9,
+    "finding": "adopt",
+    "ineligibleHistorical": [
+      "2017:Whangārei:Colmar:2017-08-19",
+      "2017:Ōhāriu:Colmar:2017-08-05",
+      "2023:Auckland Central:Taxpayers':2023-09-24",
+      "2023:Tāmaki:Sentio:2023-07-20",
+      "2023:Tāmaki:Taxpayers':2023-09-18"
+    ],
+    "logScoreGainDecomposition": {
+      "both": 1.8498191122635579,
+      "centreOnly": 0.42935766022662747,
+      "varianceOnly": 0.7254374803231584
+    },
+    "modelAloneRmsZ": 0.736795965947231,
+    "polledHistoricalWithNationalAndLabour": 14,
+    "pollsImproved": 7,
+    "pollsWorsened": 2,
+    "qualifier": "exploratory sample: nine polls in seven seat-elections; the gain depends on 2020 polls whose sample size is assumed (S1 drops them)",
+    "seatElections": 7,
+    "sensitivityFindings": {
+      "S1_dropAssumedSampleSize": "not_established",
+      "S2_noInflation": "adopt",
+      "S3_inflationFromAllNationalLabourPolls": "adopt"
+    },
+    "sensitivityGains": {
+      "S1_dropAssumedSampleSize": -0.022380677892245182,
+      "S2_noInflation": 1.483737030488913,
+      "S3_inflationFromAllNationalLabourPolls": 1.4959727718073352
+    },
+    "totalLogScoreGain": 1.8498191122635577
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "fittedOn": [
+    "2020:Auckland Central:Colmar:2020-09-24",
+    "2020:Auckland Central:Newshub:2020-09",
+    "2020:East Coast:Community:2020-09-22",
+    "2020:Northland:Colmar:2020-07-29",
+    "2023:Ilam:Taxpayers':2023-08-23",
+    "2023:Napier:Curia:2022-11-09",
+    "2023:Napier:Taxpayers':2023-08-20",
+    "2023:Northland:Taxpayers':2023-09-10",
+    "2023:Wellington Central:Newshub-Reid:2023-09-03"
+  ],
+  "inflation": 5.287755121094257,
+  "note": "c for the 2026 layer: fitted on every eligible historical poll (no hold-out). Used only if the finding is adopt and seatPolls.enabled is true.",
+  "parameters": {
+    "cap": 0.6,
+    "coverageBand": [
+      0.65,
+      0.95
+    ],
+    "gainNats": 1.0,
+    "halfLifeWeeks": 6.0,
+    "later": 1.5,
+    "mergeDays": 14
+  },
+  "pollErrorRms": 0.2738716022305134,
+  "schemaVersion": 1,
+  "stage": 79
+}
