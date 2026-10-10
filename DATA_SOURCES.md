@@ -377,3 +377,11 @@ The Electoral Commission's official 2026 electorate candidates (`Electorate-Cand
 ## General-electorate poll pages (Stage79)
 
 The electorate-polling sections of the Wikipedia opinion-polling pages for 2014, 2017, 2020, 2023 and 2026 are preserved unchanged under `data/raw/polling/seat-polls/2026-10-09/` and registered with SHA-256 in the standalone `data/processed/seat-polls/source-registry.json` (secondary compilation, `aggregator_only`; James confirmed on 2026-10-09 that the 2026 numbers match the underlying articles). The 2011 page was rate-limited (HTTP 429, four attempts) and not retrieved; the out-of-sample replay starts in 2014. The 22 candidate-vote rows are hand-transcribed to `data/source-plans/seat-polls/polls.json`, which `scripts.seat_polls.data` checks against the preserved text. `data/sources.json` is untouched. Sponsor facts for Hutt South and Kāpiti (one Labour-aligned operator; Community Engagement Limited conducted both) come from James (2026-10-09).
+
+## Electorate poll file read by the seat-poll layer (D123)
+
+`scripts/seat_polls/live.py` reads `data/processed/polling/electorate-live/<newest run>/polls.json` (Stage82; Wikipedia aggregator evidence; hash and count checked against `index.json`). Sponsor groups for the poll-error allowance are in `data/source-plans/seat-polls/sponsor-groups.json` (Victor Consulting and Community Engagement Limited: Labour-aligned, from James, 2026-10-09). `data/sources.json` is untouched.
+
+## Māori seat polls read by the nowcast assembly (D125)
+
+`scripts/maori_seat_layer/live.py` reads `data/processed/polling/electorate-live/<newest run>/polls.json` (Stage82; Wikipedia aggregator evidence; hash and count checked against `index.json`), the Māori rows only. The pinned `data/source-plans/maori-seat-layer/polls-2026.json` still serves the recorded Stage66, Stage71 and Stage78 artifacts. The Waiariki poll also exists as the preserved Spinoff page (`data/processed/polling/maori-seat-polls-2026-10/`); the assembly does not read it. `data/sources.json` is untouched.

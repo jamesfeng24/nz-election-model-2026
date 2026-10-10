@@ -766,3 +766,33 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - Folded the 11 pending fragments (CI Stage63 pin, release policy, 2026 classification, electorate poll refresh, Stage82 workflow, Stage50 part 2, Stage78, Stage79, Stage80, Stage81, Stage83) into the shared documents; D114 to D121 are recorded.
 - Corrected stale wording: merged status and PR numbers on the PROJECT_STATE headings from Stage67 on and on the roadmap rows from Stage50 part 2 to Stage83; final D109 to D112, D115, D116 and D121 headings; the roadmap's next-free paragraph (Stage85, D124) and decision list; release-checklist items 6 and 7 marked done.
 - Not touched: any model, data, code, workflow or CI file. The public site (#108) and the electorate-poll follow-up are not part of this fold.
+
+## Poll refresh moved to Monday 00:00 NZ time, 2026-10-10
+
+- `.github/workflows/poll-refresh.yml` now fires weekly at Monday 00:00 NZDT (`0 11 * * 0` UTC) instead of Thursday 06:55, at James's request; refresh dates are 12, 19 and 26 October and 2 November (the last before election day). Wording is date-only: the PR text gives the Wikipedia last-modified as a date, and the site wording ("Most recently refreshed <date>") is the site build's.
+- A same-date rerun of a published electorate run (second manual dispatch) now exits 0 as `ELECTORATE_NO_CHANGE` and edits nothing; a blocked date still fails. Refresh PRs get the `poll-refresh` label; review-flag lines in the PR body read plainly. Selector, registry and statistical code untouched.
+
+## Stage79 follow-up — new general-electorate polls are data-only (D123), 2026-10-10
+
+- `scripts/seat_polls/live.py` now reads the newest run of the Stage82 live-inputs file (`data/processed/polling/electorate-live/`, hash-checked against `index.json`) instead of the pinned transcription, which still serves the historical scoring. A new electorate poll needs no refit and no stage regeneration; the fitted inflation, half-life, cap and allowance are fixed.
+- Pollsters in one seat combine by inverse variance (age-discounted relative to the freshest source); an older poll of one source beyond 14 days is superseded; same-source polls within 14 days merge as before.
+- `data/source-plans/seat-polls/sponsor-groups.json` holds the Labour-aligned sponsor list as data.
+- On the current cutoff the inputs equal the pinned ones; only poll ids in the seat records change, so the development gate, synthetic fixture, rehearsal report and the 2026 readout were regenerated for those ids. Config unchanged.
+
+## Stage85 — per-seat evidence block in the export, 2026-10-10
+
+- The draw bank and the snapshot gain an optional `seatEvidence` array: per predicted seat, the D107 class and multipliers, the 2023 party-vote baseline by national group, the 2026 polls found (used with `shareOfPoll` and `weight`, or unused with a reason) and the National/Labour poll update. Display data for the site's seat pages. Snapshot schema 2 and bank schema 3 are unchanged in version (the field is optional).
+- No forecast number changes: `bank_digest` leaves the block out, the development gate reproduces, and a live bank built on main and on this branch is identical once the block is removed. The synthetic fixture was regenerated and differs only by the added key.
+- `scripts/seat_polls/live.py` gains `combine()` (the `inputs()` result plus per-poll detail); new `scripts/nowcast_assembly/evidence.py`; `src/types/export.ts`, `drawBank.ts`, `fromBank.ts`. No site code, config, data or registry change.
+
+## Stage86 — Māori seat polls come from the weekly refresh (D125), 2026-10-10
+
+- `scripts/maori_seat_layer/live.py` reads the Māori rows of the newest Stage82 live-inputs run (hash-checked against `index.json`) in the form the Stage66 simulation reads; `scripts/nowcast_assembly/maori.py` uses it instead of the pinned `polls-2026.json`. A new Māori seat poll is a data-only addition: no refit, no stage regeneration. Poll parties are resolved to the one official candidate of that ballot group (an independent column only when the seat has exactly one independent).
+- Waiariki is now polled (21 September to 1 October Whakaata Māori–Curia) and leaves the Stage78 fallback; three seats remain on the fallback. Māori Party win probability: Hauraki-Waikato 0.881 to 0.884, Te Tai Hauāuru 0.772 to 0.745, Te Tai Tonga 0.106 to 0.118, Waiariki 0.957 to 0.966. The only cause is the poll shares (published ex-undecided and rounded, against the primary release's shares of all respondents); see `docs/stage86-maori-live-polls.md`.
+- Every officially nominated candidate now appears in a polled seat's output (audit finding): Neil Denby (Hauraki-Waikato), Christine Fisher and Tania Lee Henare (Te Tai Tonga) were missing because the Stage66 layer simulates only the candidates a poll names. Each unpolled candidate gets an equal part of the unnamed remainder (placeholder allocation); winners are unchanged, so they win with probability 0 by construction.
+- Not changed: Stage66 calibration and artifacts, Stage71, Stage78, the pinned transcription, the config, the Stage82 files, the export code, `data/sources.json`. The development gate digest and the rehearsal report are regenerated.
+
+## Stage87 — independent row order for the 2026 layer-noise groups, 2026-10-10
+
+- `scripts/nowcast_assembly/streams.py`: each non-shared key group (one per seat and layer) now takes its rows of the scrambled Sobol bank in an independent seeded permutation; the shared bank keeps its natural order. Before this, separately seeded groups were strongly correlated when paired by row (up to 0.98 at 65,536 rows). Seat odds in the assembly change; the national draws, the shared noise, the model, the configuration and every frozen stage are unchanged.
+- New test `scripts/tests/test_stage87_stream_independence.py` (production size, 7 tests, about 2 s). Regenerated: `data/processed/nowcast-assembly/development-gate.json` (digest only moves) and `data/processed/seat-polls/readout-2026.json`. The Stage77 rehearsal report (last regenerated by Stage86) is not regenerated here, so its digest is stale again until the final full run refreshes it.
