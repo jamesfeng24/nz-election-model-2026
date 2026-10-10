@@ -139,6 +139,24 @@ describe('nowcast snapshot from a draw bank', () => {
     });
   });
 
+  it('exports the Māori C–P range from the inflation winners and keeps the seat totals on the control (D127)', async () => {
+    const plain = await buildNowcastSnapshot(smallBank(), options());
+    const bank = clone(smallBank()) as any;
+    bank.seats[2].inflationWinners = bank.seats[2].winners.map((_: number, d: number) => (d % 2));
+    const parsed = DrawBankSchema.parse(bank);
+    const s = await buildNowcastSnapshot(parsed, options());
+    const maori = s.electorateDetail[2];
+    expect(maori.candidates.map(c => c.winProbabilityInflation?.p)).toEqual([0.5, 0.5]);
+    expect(maori.candidates.map(c => c.winProbability)).toEqual(plain.electorateDetail[2].candidates.map(c => c.winProbability));
+    expect(s.electorateDetail[0].candidates.every(c => c.winProbabilityInflation === undefined)).toBe(true);
+    expect(s.seatLayer).toEqual(plain.seatLayer);
+    expect(s.simulation.electoratePredictions).toEqual(plain.simulation.electoratePredictions);
+    const reject = (edit: (b: any) => void) => { const b = clone(bank); edit(b); expect(DrawBankSchema.safeParse(b).success).toBe(false); };
+    reject(b => { b.seats[0].inflationWinners = b.seats[0].winners; });  // general seats have no calibration range
+    reject(b => { b.seats[2].inflationWinners.pop(); });
+    reject(b => { b.seats[2].inflationWinners[0] = 5; });
+  });
+
   it('withholds the seat layer and MMP when any seat is unavailable, never zero-filling', async () => {
     const bank = clone(smallBank()) as any;
     bank.seats[1] = { electorateId: bank.seats[1].electorateId, scope: 'general', status: 'unavailable', reason: 'roster pending' };

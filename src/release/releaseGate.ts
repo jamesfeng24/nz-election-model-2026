@@ -28,7 +28,10 @@ function estimates(snapshot: ForecastSnapshot): [string, Estimate][] {
     for (const sc of s.scenarios) out.push([`scenario.${sc.id}`, sc.probability]);
   }
   for (const d of snapshot.electorateDetail)
-    for (const c of d.candidates) out.push([`${d.electorateId}.${c.candidateId}.winProbability`, c.winProbability]);
+    for (const c of d.candidates) {
+      out.push([`${d.electorateId}.${c.candidateId}.winProbability`, c.winProbability]);
+      if (c.winProbabilityInflation) out.push([`${d.electorateId}.${c.candidateId}.winProbabilityInflation`, c.winProbabilityInflation]);
+    }
   return out;
 }
 

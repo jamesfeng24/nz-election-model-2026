@@ -14,6 +14,8 @@ Candidates carry the official roster ids (`config.candidate.features`, Stage50 p
 surname and party; any candidate that does not match exactly one roster entry fails the build.
 """
 import numpy as np
+from scripts.maori_seat_calibration.inflation import arm_p
+from scripts.maori_seat_calibration.readout import simulate as stage71_simulate
 from scripts.maori_seat_fallback.draws import f_shares
 from scripts.maori_seat_layer.common import SEATS, fold
 from scripts.maori_seat_layer.fit import fit
@@ -109,9 +111,24 @@ def record(source, people, shares, extra=None, named=None):
             'winners': [int(i) for i in shares[:, :named].argmax(axis=1)]}
 
 
+def inflation_winners(polls, count, namespace):
+    """{seat: winner index per draw} of the polled seats under Stage71's arm P (audit J1, D127): the same polls and Stage66 control fit with
+    sigma^2 and tau^2 multiplied by a lambda drawn per draw from Stage71's bootstrap, simulated by Stage71's readout simulator on its own seed
+    streams. Indices follow the poll's candidate order, which is the order of the record's named candidates. Only the winners are kept: the
+    published shares and the MMP layer stay on the Stage66 control (C), so P is the other end of the labelled range, never a second law."""
+    if not polls:
+        return {}
+    est, lam = arm_p()
+    pick = np.random.default_rng(namespace_seed(namespace, 'maori-inflation-lambda')).integers(0, len(lam), count)
+    # The unnamed-remainder list only advances each seat's stream after its winners are drawn, so a placeholder leaves the winners unchanged.
+    sim = stage71_simulate(polls, est, lam[pick], 0.0, [0.0], namespace_seed(namespace, 'maori-inflation'), count)
+    return {seat: s['winner'] for seat, s in sim['seats'].items()}
+
+
 def simulate(config, count):
     """Return {electorateId: record}; records are simulated (winner party per draw) or unavailable with a reason."""
     require(config['maori']['layer'] == 'stage66-default', 'only the Stage66 default Maori layer is registered')
+    require(config['maori']['presentation'] == 'labelled-range', 'only the labelled C-P range presentation is registered (D114, D127)')
     fallback = config['maori']['unpolledFallbackModel']
     require(fallback in (None, FALLBACK_MODEL), f'unregistered Maori fallback model: {fallback}')
     require(fallback is None or config['maori']['unpolledSeats'] == 'labelled-fallback', 'a fallback model needs maori.unpolledSeats = labelled-fallback')
@@ -121,6 +138,7 @@ def simulate(config, count):
     polls, _ = maori_live.current_polls(resolver(people), maori_live.live_polls(run, sha), config['national']['dataCutoff'])
     fitted = fit()[0]['fit']
     sim = simulate_layer(polls, parameters(fitted), count, namespace_seed(config['simulation']['seedNamespace'], 'maori'))
+    inflated = inflation_winners(polls, count, config['simulation']['seedNamespace'])
     unpolled = [seat for seat in SEATS if seat not in sim['seats']]
     drawn = (f_shares(unpolled, count, namespace_seed(config['simulation']['seedNamespace'], 'maori-fallback'))
              if fallback is not None and unpolled else {})
@@ -131,7 +149,10 @@ def simulate(config, count):
             matched = [match(seat, c['name'], c['party'], people[seat]) for c in s['poll']['candidates']]
             require(len({p['id'] for p in matched}) == len(matched), f'{seat}: two poll candidates match one roster candidate')
             everyone, shares, named = with_unpolled_candidates(people[seat], matched, s['share'])
-            out[ids[seat]] = record(f"Stage66 default; poll {s['poll']['id']}", everyone, shares, {'pollFieldworkEnd': s['poll']['fieldworkEnd']}, named)
+            extra = {'pollFieldworkEnd': s['poll']['fieldworkEnd']}
+            if seat in inflated:
+                extra['inflationWinners'] = [int(i) for i in inflated[seat]]
+            out[ids[seat]] = record(f"Stage66 default; poll {s['poll']['id']}", everyone, shares, extra, named)
         elif seat in drawn:
             inp, shares = drawn[seat]
             slate = []

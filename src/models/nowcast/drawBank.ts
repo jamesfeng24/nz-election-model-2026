@@ -39,6 +39,8 @@ const Simulated = z.object({
   candidateShares: z.array(ShareSummarySchema),
   /** Per row, the index of the winning candidate in `candidates`. */
   winners: z.array(z.number().int().nonnegative()),
+  /** Polled Māori seats only: per row, the winner under Stage71's variance-inflation arm P, the other end of the labelled range (D127). */
+  inflationWinners: z.array(z.number().int().nonnegative()).optional(),
 }).strict();
 const Unavailable = z.object({ electorateId: id, scope: z.enum(['general', 'maori']), status: z.literal('unavailable'), reason: id }).strict();
 
@@ -109,6 +111,11 @@ export const DrawBankSchema = z.object({
     if (s.winners.some(w => w >= s.candidates.length)) bad('Winner is not a candidate of the seat', ['seats', i]);
     if ((s.scope === 'general') !== (s.class !== 'maori-layer')) bad('Class does not match scope', ['seats', i]);
     if (s.seatPoll && s.scope !== 'general') bad('A seat poll update applies to general seats only', ['seats', i]);
+    if (s.inflationWinners) {
+      if (s.class !== 'maori-layer') bad('The calibration range applies to Māori seats only', ['seats', i]);
+      if (s.inflationWinners.length !== n) bad('Every row needs one inflation winner', ['seats', i]);
+      if (s.inflationWinners.some(w => w >= s.candidates.length)) bad('Inflation winner is not a candidate of the seat', ['seats', i]);
+    }
   });
 });
 export type DrawBank = z.infer<typeof DrawBankSchema>;

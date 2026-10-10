@@ -52,4 +52,19 @@ describe('release publication', () => {
     partial.seatLayer = { status: 'unavailable', reason: 'test' };
     expect(releaseGate(partial, { probabilityMcseMax: 0.49, allowSynthetic: true }).passed).toBe(false);
   });
+
+  it('holds the Māori calibration range to the same precision threshold (D127)', async () => {
+    const io = memory();
+    const result = await publish({ bankText, options: options('synthetic-r'), archiveDir: '.release-build/archive',
+      policy: { probabilityMcseMax: 0.49, allowSynthetic: true } }, io);
+    if (result.status !== 'published') throw new Error('expected publication');
+    const ranged = structuredClone(result.snapshot) as any;
+    const seat = ranged.electorateDetail.find((d: any) => d.uncertaintyClass === 'maori-layer');
+    for (const c of seat.candidates) c.winProbabilityInflation = { ...c.winProbability };
+    expect(releaseGate(ranged, { probabilityMcseMax: 0.49, allowSynthetic: true }).passed).toBe(true);
+    seat.candidates[0].winProbabilityInflation.mcse = 0.495;
+    const gate = releaseGate(ranged, { probabilityMcseMax: 0.49, allowSynthetic: true });
+    expect(gate.passed).toBe(false);
+    expect(gate.failures.join(' ')).toMatch(/winProbabilityInflation/);
+  });
 });

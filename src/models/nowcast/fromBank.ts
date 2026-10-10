@@ -207,7 +207,9 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     electorateId: seat.electorateId, uncertaintyClass: seat.class,
     candidates: seat.candidates.map(candidateId => {
       const { mean, share } = shareIntervals(seat, candidateId);
-      return { candidateId, meanShare: mean, share, winProbability: probability(seat.winners.map(w => (seat.candidates[w] === candidateId ? 1 : 0)), layout, unit) };
+      const win = (winners: number[]) => probability(winners.map(w => (seat.candidates[w] === candidateId ? 1 : 0)), layout, unit);
+      return { candidateId, meanShare: mean, share, winProbability: win(seat.winners),
+        ...(seat.inflationWinners ? { winProbabilityInflation: win(seat.inflationWinners) } : {}) };
     }),
   }));
 
