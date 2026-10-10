@@ -27,7 +27,8 @@ export const ForecastDirectorySchema = z.object({
   parties: z.array(z.object({ partyId: id, name: id, abbreviation: id }).strict()).min(1),
   electorates: z.array(z.object({ electorateId: id, name: id, kind: z.enum(['general', 'maori']) }).strict()).min(1),
   // partyLabel keeps the ballot-group key of a candidate whose party has no national group (a minor party inside Other).
-  candidates: z.array(z.object({ candidateId: id, name: id, electorateId: id, partyId: id.nullable(), partyLabel: id.nullable().optional() }).strict()),
+  // incumbent is present (true) only for the sitting MP standing again in this seat's successor; absent otherwise, never false.
+  candidates: z.array(z.object({ candidateId: id, name: id, electorateId: id, partyId: id.nullable(), partyLabel: id.nullable().optional(), incumbent: z.literal(true).optional() }).strict()),
 }).strict();
 
 /** A probability with its effective-sample Monte Carlo standard error and effective sample size. */
@@ -59,6 +60,72 @@ export const SeatLayerExportSchema = z.object({
   }).strict(),
 }).strict();
 
+const url = z.string().url().regex(/^https:\/\//);
+const SourceLink = z.object({ label: id, url: url.nullable() }).strict();
+
+/** One published seat poll, with whether the model used it (a poll found but not used is still shown, labelled). */
+export const SeatPollBaseSchema = z.object({
+  pollster: id,
+  /** Who paid for it, where the publisher says. */
+  commissioner: id.nullable(),
+  fieldworkStart: z.iso.date().nullable(),
+  fieldworkEnd: z.iso.date().nullable(),
+  /** Date the results were published, used when fieldwork dates are not stated. */
+  published: z.iso.date().nullable(),
+  sampleSize: z.number().int().positive().nullable(),
+  marginOfError: z.number().positive().nullable(),
+  results: z.array(z.object({ candidateId: id.nullable(), name: id, party: id.nullable(), percent: z.number().min(0).max(100), approximate: z.boolean().optional() }).strict()).min(1),
+  usedInModel: z.boolean(),
+  note: id.nullable(),
+  /** Press pages the figures come from; `url` is the publisher's address where a registry records one. */
+  sources: z.array(SourceLink),
+}).strict();
+export const SeatPollSchema = SeatPollBaseSchema.refine(p => p.fieldworkEnd !== null || p.published !== null, 'A seat poll needs fieldwork or publication dates');
+
+/** One national poll as listed by the aggregator, with whether the national model used it. */
+export const NationalPollSchema = z.object({
+  id,
+  pollster: id,
+  commissioner: id.nullable(),
+  fieldworkStart: z.iso.date().nullable(),
+  fieldworkEnd: z.iso.date(),
+  sampleSize: z.number().int().positive().nullable(),
+  /** Percent as published; null where the poll did not report the party. `approximate` marks values published as "~". */
+  shares: z.array(z.object({ partyId: id, percent: z.number().min(0).max(100).nullable(), approximate: z.boolean() }).strict()),
+  publisherUrl: url.nullable(),
+  usedInModel: z.boolean(),
+  note: id.nullable(),
+}).strict();
+
+/** Weekly national support from the national model, to the last week with poll data (percent). */
+export const NationalTrendSchema = z.object({
+  basis: id,
+  weeks: z.array(z.iso.date()).min(2),
+  parties: z.array(z.object({ partyId: id, mean: z.array(z.number()), lower90: z.array(z.number()), upper90: z.array(z.number()) }).strict()).min(1),
+}).strict().superRefine((t, ctx) => {
+  t.parties.forEach((p, i) => {
+    if (p.mean.length !== t.weeks.length || p.lower90.length !== t.weeks.length || p.upper90.length !== t.weeks.length)
+      ctx.addIssue({ code: 'custom', message: 'Trend series must have one value per week', path: ['parties', i] });
+  });
+  if (t.weeks.some((w, i) => i > 0 && w <= t.weeks[i - 1])) ctx.addIssue({ code: 'custom', message: 'Trend weeks must increase', path: ['weeks'] });
+});
+
+/** Manual adjustments the project owner made to the model's output. Absent unless some were made; the site then says so and why. */
+export const AdjustmentsSchema = z.object({
+  by: id,
+  items: z.array(z.object({ what: id, why: id }).strict()).min(1),
+}).strict();
+
+/** Source of the incumbent flags: the official list of sitting MPs and when it was read. */
+export const IncumbencySchema = z.object({ label: id, url, asOf: id }).strict();
+
+/** The evidence behind the national picture: the polls listed and the model's weekly path. Optional in a snapshot. */
+export const SnapshotEvidenceSchema = z.object({
+  source: z.object({ label: id, url, revision: id, retrieved: id }).strict(),
+  nationalPolls: z.array(NationalPollSchema),
+  trend: NationalTrendSchema.nullable(),
+}).strict();
+
 /**
  * Per-seat detail: the D107 uncertainty class, candidate-share intervals and win probabilities with their errors. A polled Māori seat
  * also carries `winProbabilityInflation`, the win probability under Stage71's variance-inflation calibration (arm P): with
@@ -67,6 +134,8 @@ export const SeatLayerExportSchema = z.object({
 export const ElectorateDetailSchema = z.object({
   electorateId: id,
   uncertaintyClass: z.enum(['ordinary', 'exceptional', 'maori-layer']),
+  /** Optional: what the seat's estimate rests on. `basis` is plain text for the page; `polls` lists every seat poll found. */
+  evidence: z.object({ basis: id, polls: z.array(SeatPollSchema) }).strict().optional(),
   candidates: z.array(z.object({
     candidateId: id, meanShare: z.number().min(0).max(1), share: IntervalSetSchema, winProbability: ProbabilityEstimateSchema,
     winProbabilityInflation: ProbabilityEstimateSchema.optional(),
@@ -176,6 +245,10 @@ export const ForecastSnapshotSchema = z.object({
     Unavailable,
   ]),
   boundaries: BoundaryReferenceSchema.nullable(),
+  evidence: SnapshotEvidenceSchema.optional(),
+  /** Where the incumbent flags in the directory come from. Present exactly when some candidate is flagged. */
+  incumbency: IncumbencySchema.optional(),
+  adjustments: AdjustmentsSchema.optional(),
   limitations: z.array(id).min(1),
 }).strict().superRefine((s, ctx) => {
   const bad = (message: string, path: (string | number)[] = []) => ctx.addIssue({ code: 'custom', message, path });
@@ -207,6 +280,10 @@ export const ForecastSnapshotSchema = z.object({
     if (!electorates.has(c.electorateId) || (c.partyId !== null && !parties.has(c.partyId)))
       bad('Candidate references unknown electorate or party', ['directory', 'candidates', i]);
   });
+  const flagged = s.directory.candidates.filter(c => c.incumbent);
+  if (flagged.length > 0 && !s.incumbency) bad('Incumbent flags need their source', ['incumbency']);
+  if (flagged.length === 0 && s.incumbency) bad('An incumbency source with no incumbent candidate', ['incumbency']);
+  if (!unique(flagged.map(c => c.electorateId))) bad('A seat can have only one incumbent', ['directory', 'candidates']);
   s.national.partyVoteShares.forEach((p, i) => {
     if (!parties.has(p.partyId)) bad('Unknown party', ['national', 'partyVoteShares', i]);
     if (p.share.some(v => v.lower < 0 || v.upper > 1)) bad('Vote-share interval must be within 0–1', ['national', 'partyVoteShares', i]);
@@ -241,6 +318,9 @@ export const ForecastSnapshotSchema = z.object({
     d.candidates.forEach(c => {
       if (c.share.some(v => v.lower < 0 || v.upper > 1)) bad('Candidate-share interval must be within 0–1', ['electorateDetail', i]);
     });
+    d.evidence?.polls.forEach(poll => poll.results.forEach(r => {
+      if (r.candidateId !== null && !candidates.has(r.candidateId)) bad('Seat poll names an unknown candidate', ['electorateDetail', i, 'evidence']);
+    }));
   });
   // A model snapshot carries detail for every predicted seat; only synthetic pipeline fixtures may omit it.
   if (!synthetic && detailed.length !== s.simulation.electoratePredictions.length)
@@ -266,6 +346,16 @@ export const ForecastSnapshotSchema = z.object({
   if (s.seatLayer.status === 'available' && s.unavailableElectorates.length > 0)
     bad('The seat layer needs a winner in every electorate', ['seatLayer']);
 
+  if (s.evidence) {
+    const cutoff = s.dataCutoff.slice(0, 10);
+    s.evidence.nationalPolls.forEach((p, i) => {
+      if (p.fieldworkEnd > cutoff) bad('A national poll cannot postdate the data cutoff', ['evidence', 'nationalPolls', i]);
+      p.shares.forEach(x => { if (!parties.has(x.partyId)) bad('Poll names an unknown party', ['evidence', 'nationalPolls', i]); });
+    });
+    s.evidence.trend?.parties.forEach((p, i) => { if (!parties.has(p.partyId)) bad('Trend names an unknown party', ['evidence', 'trend', 'parties', i]); });
+    if (s.evidence.trend && s.evidence.trend.weeks[s.evidence.trend.weeks.length - 1] > s.modelStateAsOf)
+      bad('The trend cannot run past the model state date', ['evidence', 'trend', 'weeks']);
+  }
   const predicted = s.simulation.electoratePredictions.map(p => p.electorateId);
   const unavailable = s.unavailableElectorates.map(u => u.electorateId);
   if (!unique([...predicted, ...unavailable]) || [...predicted, ...unavailable].some(e => !electorates.has(e)) ||

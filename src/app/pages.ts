@@ -1,9 +1,11 @@
+/** Each page is its own static HTML file at `<path>/index.html`, so links between them are relative. */
 export const pages = [
-  { path: '/', label: 'Forecast', title: 'A clearer view of the election.', description: 'What would happen if an election were held under current political conditions: national support, electorate contests and the shape of Parliament.', detail: 'Forecasts if the election were held today, of national support and seats will appear here once the live model is assembled and a release is approved.', needs: ['Validated polling inputs', 'Electorate models', 'Calibrated simulations'] },
-  { path: '/electorates', label: 'Electorates', title: 'Every electorate. Explained.', description: 'Understand the local evidence behind each electorate forecast.', detail: 'This section will connect boundary reconstruction, local party and candidate votes, split voting and candidate effects.', needs: ['Verified 2026 boundaries', 'Reconstructed 2023 results', 'Candidate evidence'] },
-  { path: '/polls', label: 'Polls', title: 'The national picture.', description: 'An auditable view of polling evidence and its uncertainty.', detail: 'Polls and estimates have not been loaded. Future work will document fieldwork dates, pollster methods and modelling assumptions.', needs: ['Source register', 'Poll validation', 'Aggregation methodology'] },
-  { path: '/mmp', label: 'MMP / Overhang', title: 'From votes to Parliament.', description: 'Explore how future simulations translate votes and electorate wins into seats.', detail: 'Qualification, the electorate lifeboat, Sainte-Laguë allocation, list MPs and overhangs are implemented and verified against the official 2008–2023 results; seat results appear once a forecast is published.', needs: ['Verified electoral rules', 'Allocation tests', 'Simulation integration'] },
-  { path: '/methodology', label: 'Methodology', title: 'Open assumptions. Visible uncertainty.', description: 'The methods should be as inspectable as the results.', detail: 'Methods are documented stage by stage in the project repository; the public methodology will be written for the first published forecast.', needs: ['Documented estimands', 'Validation design', 'Uncertainty reporting'] },
-  { path: '/data', label: 'Data / Sources', title: 'Evidence with a paper trail.', description: 'Every future dataset must be traceable to its original resource.', detail: 'Historical results, boundaries and polls are preserved with checksums and provenance; a public source list will accompany the first published forecast.', needs: ['Exact source resource', 'Retrieval date and checksum', 'Reproducible processing script'] },
-  { path: '/about', label: 'About', title: 'Built to be inspected.', description: 'An independent project modelling the 2026 New Zealand general election.', detail: 'This is an independent project, not an official election service. No forecast is published yet.', needs: ['Public methodology', 'Versioned evidence', 'Reproducible results'] },
+  { path: 'forecast', label: 'Forecast', title: 'Forecast' },
+  { path: 'electorates', label: 'Electorates', title: 'Electorates' },
+  { path: 'polls', label: 'Polls', title: 'Polls' },
+  { path: 'methodology', label: 'Methodology', title: 'Methodology' },
+  { path: 'archive', label: 'Archive', title: 'Archive' },
+  { path: 'about', label: 'About', title: 'About' },
 ] as const;
+
+export type PageId = (typeof pages)[number]['path'];

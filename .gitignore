@@ -157,3 +157,7 @@ __pycache__/
 # Reproducible Stage39 deterministic candidate draw transforms
 .cache/stage39/
 .release-build/
+
+# Public site build output (copied as-is to the public repository by the publish workflow)
+site
+site-archived

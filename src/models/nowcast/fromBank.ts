@@ -1,5 +1,6 @@
 import { INTERVAL_LEVELS, type IntervalSet, type MmpAllocation, type SimulationConfig } from '../../types/domain';
-import { ForecastSnapshotSchema, type ForecastSnapshot } from '../../types/export';
+import { z } from 'zod';
+import { AdjustmentsSchema, ForecastSnapshotSchema, NationalPollSchema, NationalTrendSchema, SeatPollBaseSchema, SnapshotEvidenceSchema, type ForecastSnapshot } from '../../types/export';
 import { allocateDraw, SeatSummaryAccumulator, type BlocDefinition, type SeatDrawOutcome, type SeatLayerConfig } from '../mmp/seatLayer';
 import { batchMeansMcse, chainOrder, type ChainOrder } from './batchMeans';
 import { DrawBankSchema, type DrawBank, type SimulatedSeat } from './drawBank';
@@ -27,6 +28,50 @@ export interface NowcastSnapshotOptions {
   nationalBasis: string;
   limitations: string[];
   syntheticLabel?: string;
+  /** Optional site evidence file written by `scripts/site_evidence/build.py`: the polls used and the national trend. */
+  evidence?: unknown;
+  /** Manual adjustments made to the output, if any: `{ by, items: [{ what, why }] }`. The site shows only the adjusted numbers and says so. */
+  adjustments?: unknown;
+  /** Optional incumbents file written by `scripts/site_incumbents/build.py`: the sitting MPs standing in each seat. */
+  incumbents?: unknown;
+}
+
+/** The incumbents file: candidates (by occurrence id, which is the draw bank's candidate id) who are the sitting MP for the seat. */
+export const IncumbentsFileSchema = z.object({
+  source: z.object({ label: z.string().trim().min(1), url: z.string().url(), asOf: z.string().trim().min(1) }).strict(),
+  incumbents: z.array(z.object({ targetOccurrenceId: z.string().trim().min(1) }).loose()),
+}).loose();
+
+/** The evidence file: national polls and trend, and seat polls keyed by electorate name (resolved against the directory). */
+export const EvidenceFileSchema = z.object({
+  source: SnapshotEvidenceSchema.shape.source,
+  nationalPolls: z.array(NationalPollSchema),
+  trend: NationalTrendSchema.nullable(),
+  seatPolls: z.array(SeatPollBaseSchema.omit({ results: true }).extend({
+    electorateName: z.string().trim().min(1),
+    results: z.array(z.object({ name: z.string().trim().min(1), party: z.string().nullable(), percent: z.number().min(0).max(100), approximate: z.boolean().optional() }).strict()).min(1),
+  })),
+}).loose();
+
+const plain = (text: string) => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+const BASIS_GENERAL = 'No seat poll feeds this seat. The estimate starts from the 2023 result on the 2026 boundaries, is moved with the national picture, and allows for candidate effects.';
+const BASIS_FALLBACK = 'No seat poll feeds this seat. It starts from the 2023 result carried forward, with wide uncertainty.';
+const BASIS_POLLED = 'Estimated from the seat poll listed below together with earlier results at the 2026 boundaries.';
+
+/** Per-seat evidence: the polls found for this seat (matched by name, never guessed) and a plain statement of what the estimate rests on. */
+function seatEvidence(seat: SimulatedSeat, electorateName: string, bank: DrawBank, file: z.infer<typeof EvidenceFileSchema>) {
+  const polls = file.seatPolls.filter(p => plain(p.electorateName) === plain(electorateName)).map(({ electorateName: _name, results, ...rest }) => ({
+    ...rest,
+    results: results.map(r => {
+      const matches = bank.directory.candidates.filter(c => c.electorateId === seat.electorateId && plain(c.name) === plain(r.name));
+      return { candidateId: matches.length === 1 ? matches[0].candidateId : null, name: r.name, party: r.party, percent: r.percent, ...(r.approximate === undefined ? {} : { approximate: r.approximate }) };
+    }),
+  }));
+  const used = polls.some(p => p.usedInModel);
+  const unused = polls.length > 0 && !used ? ' A poll for this seat was found but is not used in this forecast.' : '';
+  const basis = (seat.source ?? '').toLowerCase().includes('fallback') ? BASIS_FALLBACK + unused : used ? BASIS_POLLED : BASIS_GENERAL + unused;
+  return { basis, polls };
 }
 
 /** Hung parliament over two named blocs, with an optional kingmaker party (James, 2026-10-07). */
@@ -203,8 +248,21 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
       candidates: seat.candidates.map(candidateId => ({ candidateId, winProbability: counts.get(candidateId)! / bank.draws })),
     };
   });
+  const evidence = options.evidence === undefined ? null : EvidenceFileSchema.parse(options.evidence);
+  if (evidence) {
+    const known = new Set(bank.directory.electorates.map(e => plain(e.name)));
+    const unknown = [...new Set(evidence.seatPolls.map(p => p.electorateName))].filter(n => !known.has(plain(n)));
+    if (unknown.length) throw new Error(`Seat polls name electorates that are not in the directory: ${unknown.join(', ')}`);
+  }
+  const incumbents = options.incumbents === undefined ? null : IncumbentsFileSchema.parse(options.incumbents);
+  const incumbentIds = new Set(incumbents?.incumbents.map(i => i.targetOccurrenceId));
+  const directory = incumbents
+    ? { ...bank.directory, candidates: bank.directory.candidates.map(c => (incumbentIds.has(c.candidateId) ? { ...c, incumbent: true as const } : c)) }
+    : bank.directory;
+  const flagged = incumbents ? directory.candidates.some(c => 'incumbent' in c) : false;
   const electorateDetail = simulated.map(seat => ({
     electorateId: seat.electorateId, uncertaintyClass: seat.class,
+    ...(evidence ? { evidence: seatEvidence(seat, bank.directory.electorates.find(e => e.electorateId === seat.electorateId)!.name, bank, evidence) } : {}),
     candidates: seat.candidates.map(candidateId => {
       const { mean, share } = shareIntervals(seat, candidateId);
       const win = (winners: number[]) => probability(winners.map(w => (seat.candidates[w] === candidateId ? 1 : 0)), layout, unit);
@@ -219,7 +277,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     provenance: synthetic
       ? { kind: 'synthetic-fixture', label: options.syntheticLabel ?? 'Synthetic draw bank; not a nowcast' }
       : { kind: 'model', modelVersion: options.modelVersion, codeRevision: options.codeRevision, configVersion: bank.configVersion },
-    directory: bank.directory,
+    directory,
     national: {
       partyVoteShares: bank.partyVote.groups.map((g, i) => ({ partyId: g, share: linearIntervals(bank.partyVote.shares.map(row => row[i])) })),
       basis: options.nationalBasis,
@@ -230,5 +288,8 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     },
     unavailableElectorates: unavailable.map(s => ({ electorateId: s.electorateId, reason: s.reason })),
     electorateDetail, ...(bank.seatEvidence ? { seatEvidence: bank.seatEvidence } : {}), seatLayer, mmp, boundaries: null, limitations: options.limitations,
+    ...(incumbents && flagged ? { incumbency: incumbents.source } : {}),
+    ...(evidence ? { evidence: { source: evidence.source, nationalPolls: evidence.nationalPolls, trend: evidence.trend } } : {}),
+    ...(options.adjustments === undefined ? {} : { adjustments: AdjustmentsSchema.parse(options.adjustments) }),
   });
 }

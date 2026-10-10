@@ -11,8 +11,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "build": "vite build",
-    "check:dist": "node scripts/validate/no_synthetic_in_dist.mjs dist",
+    "check:dist": "node scripts/validate/no_synthetic_in_dist.mjs site && node scripts/validate/check_site.mjs site",
     "release:build": "vite build --ssr src/release/cli.ts --outDir .release-build/cli --emptyOutDir",
     "release:publish": "node .release-build/cli/cli.js",
     "preview": "vite preview",
@@ -24,7 +26,6 @@
   "dependencies": {
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "react-router-dom": "7.18.3",
     "zod": "4.5.4"
   },
   "devDependencies": {
@@ -35,6 +36,7 @@
     "@types/react-dom": "19.2.7",
     "@vitejs/plugin-react": "6.1.1",
     "jsdom": "29.1.1",
+    "prettier": "3.9.9",
     "typescript": "7.0.2",
     "vite": "8.2.2",
     "vitest": "5.0.0"

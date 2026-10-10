@@ -89,7 +89,7 @@ describe('archive and loader', () => {
   });
   it('refuses synthetic snapshots when not allowed (production)', async () => {
     const a = await archive();
-    expect(await loadLatestSnapshot({ fetchText: a.fetchText, baseUrl: '/f', allowSynthetic: false })).toEqual({ status: 'unavailable', reason: 'No published forecast snapshot' });
+    expect(await loadLatestSnapshot({ fetchText: a.fetchText, baseUrl: '/f', allowSynthetic: false })).toEqual({ status: 'unavailable', reason: 'No published forecast snapshot', cause: 'none-published' });
   });
   it('detects a changed snapshot file by hash', async () => {
     const a = await archive({ tamper: true });
