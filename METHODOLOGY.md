@@ -477,3 +477,15 @@ For a polled general seat the candidate balance `z = log(National / Labour)` is 
 ## Stage81 local party vote and the national change (D119)
 
 Estimand: the closed party composition of a general electorate in the target election given its source composition and the source and target national compositions. Arms map `(p, P0, P1)` to unclosed `x` and close: P `p P1/P0`; A `max(p + P1 - P0, 0)`; L `p OR/(1 - p + p OR)` with `OR = P1(1 - P0)/(P0(1 - P1))`; H `(sqrt p + sqrt P1 - sqrt P0)_+^2`; a category with `p = 0` stays zero. Backtest on the Stage5 general-seat records restricted to each transition's persistent parties and renormalised, so the national shares are realised, not forecast. Adoption: an arm beats another on a metric if it is lower on average by the threshold (0.25pp on the National minus Labour margin, 0.10pp on minor-party composition) and in at least two of three elections; the retained arms are those no other arm beats on either metric; one retained arm is adopted, several are carried as an equal-weight mixture drawn once per national draw and shared by all seats.
+
+## Combining several general-seat polls (Stage79 follow-up, D123)
+
+For a seat with polls from several sources, each source's polls merge as in Stage79 (within 14 days, later poll at 1.5 times the variance; an older poll beyond that gap is superseded). Source `s` then has value `y_s`, variance `v_s` (inflated sampling variance plus its sponsor allowance squared) and age factor `rho_s = 0.5^(age_s/6)`. With `rho_f` the freshest source's factor, the combined poll is `y = sum(a_s y_s) / sum(a_s)`, `v = 1 / sum(a_s)` with `a_s = (rho_s / rho_f)^2 / v_s`, and it enters the unchanged update with age and `rho_f`. One source reduces exactly to the Stage79 form.
+
+## Per-seat poll weights (Stage85, D124)
+
+For a general seat the Stage79 update is centre = mu + k (y - mu) with k = rho x w, where y is the share-weighted mean of the seat's used polls (sources combined by inverse variance with an age discount relative to the freshest source; later same-source polls at 1.5 times the variance). Poll i therefore moves the centre by `weight` = k x share_i x (y_i - mu), the weights sum to k, and the model keeps 1 - k. This is an exact decomposition of the balance centre, not of the win probability or of the posterior spread.
+
+## Māori seat polls from the live file (Stage86, D125)
+
+For each Māori seat the newest poll in the Stage82 live file (fieldwork end, then id) enters the unchanged Stage66 default layer: candidate shares are the published electorate-vote percentages, closed over the named candidates (the excluded undecided and "other" shares drop out, as in the pinned transcription). Candidates are ordered by descending share. A seat with a poll uses the Stage66 layer; a seat without one uses the Stage78 arm F fallback. No weight on pollster, sample size or age is added.
