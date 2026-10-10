@@ -4,6 +4,7 @@ Each bank row is one simulated election: one national draw id feeds the MMP part
 local party layer; the 2026 layer noise has shared election keys. A seat whose inputs are missing is recorded as
 `unavailable` with a reason, never as zero or a default. The bank is publishable only when every gate check passes.
 """
+from pathlib import Path
 import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_config.validate import check_classification, check_config, ConfigError
@@ -112,11 +113,22 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
                        'baseline': config['baseline']['source'], 'scales': config['uncertainty']['scales'],
                        'candidateFitId': fit_id, **electorate_run_inputs(config)},
             'draws': total, 'nationalDraws': count, 'layerReplicates': replicates, 'drawIds': draw_ids,
-            'partyVote': {'groups': groups, 'otherBucket': OTHER, 'shares': draws.tolist()},
+            'partyVote': {'groups': groups, 'otherBucket': OTHER, 'ballotPartyIds': ballot_parties(config, groups), 'shares': draws.tolist()},
             'seats': seats, 'seatEvidence': seat_evidence,
             'directory': directory(config, groups, frame, slates if classification is not None else {}, records),
             'diagnostics': {'reconciliation': reconciliation(config, groups, draws, keys, continuing, local_means)}}
 
+
+
+def ballot_parties(config, groups):
+    """Every registered party with a 2026 party list (the party-vote ballot), from the roster snapshot beside the candidate features. The
+    seat layer seats an electorate winner of one simulated inside the other bucket as that party's overhang seat (audit J3)."""
+    path = str(Path(config['candidate']['features']).parent / 'party-lists.json')
+    lists = read(path)
+    require(lists['schemaVersion'] == 1 and lists['parties'], f'{path}: no party lists')
+    ids = sorted(p['targetGroupKey'] for p in lists['parties'])
+    require(len(set(ids)) == len(ids) and all(g in ids for g in groups if g != OTHER), 'every national party group must be on the party-list ballot')
+    return ids
 
 
 def electorate_run_inputs(config):

@@ -62,6 +62,8 @@ export function seatLayerConfig(bank: DrawBank, mmp: NonNullable<NowcastSnapshot
   return {
     rulesVersion: mmp.rulesVersion, rulesSourceIds: mmp.rulesSourceIds, blocs: mmp.blocs,
     listedPartyIds: bank.partyVote.groups.filter(g => g !== other), unlistedBucketIds: [other],
+    // A party on the ballot whose vote is inside the other bucket wins an electorate as an overhang seat, not an independent's (audit J3).
+    zeroVotePartyIds: bank.partyVote.ballotPartyIds.filter(p => !bank.partyVote.groups.includes(p)),
     expectedElectorateIds: {
       general: bank.seats.filter(s => s.scope === 'general').map(s => s.electorateId),
       maori: bank.seats.filter(s => s.scope === 'maori').map(s => s.electorateId),
