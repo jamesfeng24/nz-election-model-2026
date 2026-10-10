@@ -130,7 +130,7 @@ class Repository:
         write(self.root, 'scripts/pipe/__init__.py', '')
         write(self.root, 'scripts/pipe/entry.py',
               "from .helper import help\nfrom scripts.shared import tool\nPATH = 'data/processed/pipe/in.json'\n"
-              "SPEC = 'docs/spec.txt'\nLOCK = 'requirements-boundaries.txt'\n\ndef arrays():\n    return 1\n")
+              "SPEC = 'docs/spec.txt'\nLOCK = 'requirements-boundaries.txt'\nKEY = 'electorates'\n\ndef arrays():\n    return 1\n")
         write(self.root, 'scripts/pipe/helper.py', 'def help():\n    return 1\n')
         write(self.root, 'scripts/pipe2/__init__.py', '')
         write(self.root, 'scripts/pipe2/entry.py', "from .helper import help2\nPATH = 'data/processed/pipe2/in.json'\n")
@@ -218,6 +218,18 @@ class SelectionTests(unittest.TestCase):
         write(self.repo.root, 'data/processed/newstage/out.json', '{}\n')
         write(self.repo.root, 'src/App.tsx', 'x\n')
         commit(self.repo.root, 'unrelated work and a new stage')
+        self.assertEqual(self.repo.select()['mode'], 'integrity')
+
+    def test_a_new_top_level_directory_named_like_a_dictionary_key_is_not_a_dependency(self):
+        """The site's route folders (`electorates/`, ...) share names with keys in pipeline code; adding them is no replay."""
+        write(self.repo.root, 'electorates/index.html', '<!doctype html>\n')
+        commit(self.repo.root, 'site route folder')
+        self.assertEqual(self.repo.select()['mode'], 'integrity')
+        files, literals, _ = frozen.closure(self.repo.root, ['scripts.pipe.entry'])
+        self.assertNotIn('electorates', literals)
+        self.assertIn('requirements-boundaries.txt', literals)
+        write(self.repo.root, 'electorates/index.html', '<!doctype html><title>changed</title>\n')
+        commit(self.repo.root, 'site route edited')
         self.assertEqual(self.repo.select()['mode'], 'integrity')
 
     def test_every_dependency_class_forces_full(self):

@@ -1,6 +1,6 @@
 # Release checklist: remaining work and publication gate (2026 nowcast)
 
-The only active remaining-work list. Design and definitions live in [nowcast-specification.md](nowcast-specification.md). Update an item here when it changes rather than restating it elsewhere. Status as of 7 October 2026.
+The only active remaining-work list. Design and definitions live in [nowcast-specification.md](nowcast-specification.md). Update an item here when it changes rather than restating it elsewhere. Status as of 10 October 2026.
 
 ## Must happen before the first public nowcast
 
@@ -26,9 +26,9 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 
 ## Should do soon
 
-- **Stage70:** save joint national draws at the as-of week.
+- ~~**Stage70:** save joint national draws at the as-of week~~ (done: each refresh saves the joint `lastDataSupport` draws, `fit/attempt1.npz`, Stage70).
 - **Māori:** a structure-specific minor-candidate scale; optionally couple the shared factor with national Te Pāti Māori support, with a stated correlation.
-- **General-seat electorate polls:** use the Stage56 route for now; a measurement interface can follow.
+- ~~**General-seat electorate polls:** use the Stage56 route for now; a measurement interface can follow~~ (done: the Stage79 poll update of the National/Labour balance, D117, switched on by James; several pollsters combined by inverse variance, D123).
 
 ## Optional or post-launch
 
