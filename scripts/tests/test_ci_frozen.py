@@ -238,6 +238,22 @@ class SelectionTests(unittest.TestCase):
                 commit(self.repo.root, 'change ' + name)
                 self.assertFull(self.repo.select())
 
+    def test_scheduled_workflow_outside_verify_does_not_force_replay(self):
+        write(self.repo.root, '.github/workflows/poll-refresh.yml', 'name: Poll refresh\n')
+        commit(self.repo.root, 'scheduled workflow')
+        self.assertEqual(self.repo.select()['mode'], 'integrity')
+        # Any other workflow file still forces full.
+        write(self.repo.root, '.github/workflows/other.yml', 'name: Other\n')
+        commit(self.repo.root, 'another workflow')
+        self.assertFull(self.repo.select(), 'CI configuration changed')
+        # So does the exempt file once Verify names it.
+        git(self.repo.root, 'reset', '-q', '--hard', self.repo.base)
+        text = (self.repo.root / '.github/workflows/ci.yml').read_text()
+        write(self.repo.root, '.github/workflows/ci.yml', text + '# calls poll-refresh.yml\n')
+        write(self.repo.root, '.github/workflows/poll-refresh.yml', 'name: Poll refresh\n')
+        commit(self.repo.root, 'verify names the scheduled workflow')
+        self.assertFull(self.repo.select(), 'CI configuration changed')
+
     def test_deleted_existing_data_forces_full(self):
         git(self.repo.root, 'rm', '-q', 'data/processed/other/x.json')
         commit(self.repo.root, 'delete')

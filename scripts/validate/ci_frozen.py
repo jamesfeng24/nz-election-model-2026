@@ -41,6 +41,10 @@ ENVIRONMENT = ('.python-version', 'pyproject.toml', 'requirements-boundaries.txt
 # nor count as a pipeline change. They are guarded instead by the selector's own always-run unit tests and by
 # ``workflow_errors`` (no attested validation may be removed or newly conditioned).
 MACHINERY = ('.github/validation/', 'scripts/validate/ci_', 'AGENTS.md')
+# Scheduled workflows that Verify never calls (D120). They run no pipeline code and cannot change what Verify
+# executes, so adding or editing them is not a CI-configuration change; any other `.github/` path still is. The
+# exemption lapses if ci.yml names the file (see ``non_verify_workflow``).
+NON_VERIFY_WORKFLOWS = ('.github/workflows/poll-refresh.yml',)
 KNOWN = ('stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63')
 EVENTS = ('pull_request', 'push')  # workflow_dispatch and anything unknown are always full
 ATTESTING_EVENTS = ('pull_request', 'push', 'workflow_dispatch')  # a manual full dispatch of main is a valid reference
@@ -433,6 +437,16 @@ def select_pipeline(name, registry, event, root=ROOT, actual_runtime=None, candi
     return {'mode': 'full', 'reason': ' | '.join(reasons)}
 
 
+def non_verify_workflow(root, path):
+    """True for a registered scheduled workflow that the Verify workflow does not reference."""
+    if path not in NON_VERIFY_WORKFLOWS:
+        return False
+    try:
+        return Path(path).name not in (Path(root) / WORKFLOW).read_text()
+    except OSError:
+        return False
+
+
 def select_against(name, registry, root, candidate):
     pipeline = registry['pipelines'][name]
     commit = candidate['commit']
@@ -462,6 +476,8 @@ def select_against(name, registry, root, candidate):
             continue  # judged by workflow_errors above, against the steps that actually passed
         if any(path.startswith(m) for m in MACHINERY):
             continue  # not a pipeline dependency; guarded by always-run selector tests and workflow_errors
+        if non_verify_workflow(root, path):
+            continue  # scheduled workflow outside Verify; cannot change what Verify runs
         if path in watched:
             return full('dependency changed: ' + path)
         if any(under(path, prefix) for prefix in prefixes):
