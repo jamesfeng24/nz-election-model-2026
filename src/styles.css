@@ -130,12 +130,6 @@ header {
 .brand span {
   font-weight: 800;
 }
-.project-tag {
-  font-size: 11px;
-  font-weight: 650;
-  letter-spacing: 1.8px;
-  color: #bdbdbd;
-}
 nav {
   display: flex;
   gap: 28px;
@@ -917,9 +911,6 @@ table td:not(:first-child),
   }
   footer {
     flex-direction: column;
-  }
-  .project-tag {
-    display: none;
   }
   table {
     display: block;

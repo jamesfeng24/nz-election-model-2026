@@ -138,7 +138,6 @@ export function App({
         <a className="brand" href={pageHref('forecast')}>
           NZ <span>Election Forecast</span>
         </a>
-        <span className="project-tag">INDEPENDENT RESEARCH PROJECT</span>
       </header>
       <nav aria-label="Main navigation">
         {pages.map((p) => (
