@@ -100,7 +100,7 @@ class ScheduleTests(unittest.TestCase):
 class WorkflowShapeTests(unittest.TestCase):
     def test_triggers_are_schedule_and_dispatch_only(self):
         on = WORKFLOW.split('\njobs:')[0]
-        self.assertRegex(on, r"cron: '55 17 \* \* 3'")      # Wednesday 17:55 UTC = Thursday 06:55 NZDT (UTC+13)
+        self.assertRegex(on, r"cron: '0 11 \* \* 0'")       # Sunday 11:00 UTC = Monday 00:00 NZDT (UTC+13)
         self.assertIn('workflow_dispatch:', on)
         self.assertNotRegex(on, r'(?m)^\s+(pull_request|push|pull_request_target):')
 
