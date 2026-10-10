@@ -40,21 +40,21 @@ jobs:
       matrix:
         include:
           - group: base
-            timeout: 120
+            timeout: 30
           - group: tests
-            timeout: 90
+            timeout: 45
           - group: live
             timeout: 40
           - group: stage39
-            timeout: 30
+            timeout: 20
           - group: stage45-47
-            timeout: 180
+            timeout: 165
           - group: stage48
-            timeout: 90
+            timeout: 60
           - group: stage54
-            timeout: 150
+            timeout: 120
           - group: stage63
-            timeout: 90
+            timeout: 60
     steps:
       - uses: actions/checkout@v5
         with:
