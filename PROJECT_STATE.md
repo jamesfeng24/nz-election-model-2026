@@ -1,4 +1,173 @@
-# Stage77 release steps — review-ready, 2026-10-07
+# Docs: fold of the Stage50 part 2, 78–83, config, CI-pin and poll-refresh fragments — 10 October 2026
+
+Branch `claude/docs-fold-stages-79-83-wlfwte`, from main `e56d487` (after #109 Stage83, #95 Stage82, #110 Stage79). Docs only: no model, statistical code, data, registry, workflow or CI change. Authorized by James on 2026-10-10 (the coordinator's brief); the public site (#108) is not part of it.
+
+**What changed.**
+- Ran `python3 -m scripts.fold_doc_fragments` over the 11 pending fragments (CI Stage63 pin, release policy, 2026 classification, electorate poll refresh, Stage82 workflow, Stage50 part 2, Stage78, Stage79, Stage80, Stage81, Stage83) into CHANGELOG, PROJECT_STATE, DECISIONS (D114 to D121), METHODOLOGY, DATA_SOURCES and the roadmap table. `handoff.d/` now holds only its README.
+- Corrected stale wording. Entry headings from Stage67 on now read "merged (#NN)" instead of "review-ready" (PR numbers checked against main's merge history); the earlier D110 to D112 "provisional number" headings, the D109 and D116 and D121 number notes and the D115 "next free" line are final; roadmap rows Stage50 part 2 to Stage83 read merged with PR numbers (Stage82's row moved into number order); the roadmap's "Next free" paragraph now says Stage85 and D124 and lists D108 to D121; release-checklist items 6 and 7 are marked done (Stage69 pointer #97, Stage70 refresh #94). The entry bodies are the historical record as written and are not rewritten, so their "exact next action" lines describe the state at the time.
+
+**Current state (main `e56d487`).** Every Stage47 to Stage83 PR is merged; the only open PR is the public-site PR #108 (Stage84, D122 allocated, not merged). D123 is allocated to the electorate-poll follow-up (combine the pollsters' electorate polls from the Stage82 live file by inverse variance), in progress in another thread; its fragment will land separately. The live development gate simulates all 71 seats (Stage80). The Stage81 default stays proportional; the Stage83 multipliers are 0.55 (within) and 0.91 (mass) on ordinary seats.
+
+**Checks.** `python3 -m scripts.fold_doc_fragments --check` before and after; `git diff --check`; see the PR body for the hosted run.
+
+**Exact next action.** Open items, none started here: (1) the electorate-poll follow-up (D123); (2) one combined Māori seat-poll update that adopts the new polls (Waiariki and any others) into the pinned seat-poll file and regenerates Stage66, Stage71, Stage78 and the assembly outputs; (3) the first real run (`npm run release:build`) and release steps under a separately authorized release; (4) the parked parallel full-replay CI job, only after all stages merge and before the final full pre-release run.
+
+---
+
+# Stage83 ordinary-seat minor-candidate spread — merged (#109), 0.55 within and 0.91 mass adopted by James, 2026-10-10
+
+Branch `claude/project-thread-uuzsp9` from main `9d2c8f1`. Frozen design `d1fd448`, amendment 1 `192cbab` (both before any score). Authorized by James on 2026-10-10 (D121, the coordinator's brief). Changed by James's decision: the configuration, the assembly (within multiplier), the development gate digest, the scales file, the synthetic fixture and the TypeScript draw-bank schema. Not changed: the draw-bank schema version, `data/sources.json`, CI and the validation registry.
+
+- **Counts.** 257 candidate records, 219 ordinary (56, 58, 55 and 50 in 2014, 2017, 2020 and 2023) and 38 flagged; decision seats 163 ordinary (58, 55, 50) in 2017, 2020 and 2023; 38 flagged seats held at control, maximum absolute difference from control 0.0. 32,768 draws, 16,384 prefix.
+- **Result.** `keep_control_mixed` (see D121 and `docs/stage83-ordinary-minor-spread-findings.md`). All guards pass except the registered ordinary-seat minor 80% coverage band.
+- **Decided by James.** 0.55 on the within noise and the fitted 0.91 on the mass noise, ordinary seats (see D121). Open option he has not chosen: exempting independents.
+- **Checks.** See the PR body.
+- **Exact next action.** The coordinator reviews and merges. Then wait for James's decision on adoption; nothing else follows from this stage.
+- **Reproduction.** `python3 -m scripts.ordinary_minor_spread.inputs --check`, then `fit`, `evaluation` (about 10 minutes on four cores) and `decision` with `--check`, and `python3 -m unittest scripts.tests.test_stage83_ordinary_minor_spread`.
+
+---
+
+# Stage81 party-vote elasticity — merged (#106), 2026-10-10
+
+Branch `claude/stage81-elasticity-ge0ebx` from main `b0fc604`. Opened by James on 2026-10-09; design approved by James the same day. **James kept proportional as the live default and chose no refit of S, R and kappa (2026-10-09); the frozen rule's `carry_mixture` verdict is recorded but not adopted.**
+
+**Results.** See `docs/stage81-party-vote-elasticity-findings.md`.
+- **Rule:** `carry_mixture` of P, L, H, `weak`. Pooled M1 (margin error, pp): P 4.05, A 3.85, L 3.95, H 3.77; M2 (minor parties): 0.62, 0.87, 0.58, 0.62. A is beaten on M2 by every other arm; no arm beats another on M1 (H beats P pooled by 0.27pp but is lower in only one of three elections). Proportional is best on National's 2017 to 2020 fall and on NZ First's 2020 to 2023 rise in its strongest seats (signed error +0.2 and -0.9pp).
+- **2026 readout** (256 draws, general seats, PR #104 classification as a copy): National 29.6 to 29.8 electorates under every arm; the arms differ only in minor-party-strong seats (Northland NZ First 0.43 P, 0.41 L, 0.36 H, 0.32 A).
+- **Knock-on if the default changes:** S, R, kappa (trained on proportional-built party vectors) and the local noise scales need a refit; the candidate balance scale and D107 multipliers a recheck; M5 shows P and L share a residual scale while A and H do not.
+
+**Checks.** See the PR body. **Limits.** Three elections; persistent-party closure; realised national shares; readout is development-size and general seats only.
+
+**Exact next action.**
+1. None for this stage: the decision is made (proportional stays; no mixture, no refit).
+2. Only if the default is ever changed, a separate small stage sets `localParty` in the configuration, rebuilds the constructed party vectors with the new transform, refits S, R, kappa and the party noise scales, and regenerates the development gate and rehearsal.
+3. The candidate-vote ratio and minor-party spread questions are handled elsewhere.
+
+---
+
+# Stage80 Māori fallback wiring — merged (#107), 2026-10-10
+
+Branch `claude/project-thread-0lxx4d` restarted from main `b0fc604` (PR #103 merged), then merged with main `9d2c8f1` (classification #104, #105). Authorized by the coordinator as the planned next step after Stage78 (release-checklist item 15).
+
+**State.** All 71 seats are simulated in the live development gate (64 general from the D107 classification, 3 polled and 4 fallback Māori seats); no blocker remains, `publishable` is true at the development draw count. Fallback win probabilities at 4,096 draws match Stage78 arm F within Monte Carlo error (Waiariki Waititi 0.96; Ikaroa-Rāwhiti Tangaere-Manuel 0.65; Tāmaki Makaurau 0.50 / 0.50; Te Tai Tokerau Prime 0.66, Edwards 0.20, Kapa-Kingi 0.13). With the Stage78 seed and 100,000 draws the stored arm F is reproduced exactly (tested).
+
+**Limits.** The fallback block is independent of the polled block; the Stage78 limits stand; the new Waiariki poll is recorded but not adopted (one later combined update, James 2026-10-09).
+
+**Exact next action.**
+1. The first real run (`npm run release:build`) and review of its gate, precision and snapshot.
+2. Separately authorized: one update that adopts the new Māori seat polls (Waiariki and any others) into the pinned seat-poll file and regenerates Stage66, Stage71, Stage78 and the assembly outputs.
+
+---
+
+# Stage79 general-seat polls — merged (#110), 2026-10-10
+
+Branch `claude/project-thread-nzkrgh` from main `4b20089`, merged with main `d29fbe6` (#103, #104). Authorized by James on 2026-10-09 after the brief of that day; the coordinator allocated Stage79 and D117. The raw acquisition (`3b7bea3`) and the frozen design (`294ddc5`) were committed before any score.
+
+**Results.**
+- **Frozen finding `adopt`.** Nine eligible polls in seven seat-elections (2020, 2023): total leave-one-out log score gain +1.85 nats (threshold 1.0); model-plus-poll 80% coverage 0.78 (band 0.65 to 0.95); mean CRPS 0.147 to 0.125; 7 polls improved, 2 worsened.
+- **Weak evidence.** Dropping the four 2020 polls with an assumed sample size (S1): −0.02 nats, `not_established`. Fixed inflation 1 (S2): +1.48. Inflation from all N/L polls (S3): +1.50. The gain splits +0.73 narrowing only, +0.43 centre only; the model alone is already over-wide in these (mostly flagged) seats.
+- **Poll error.** Variance inflation 5.3 over the sampling floor; poll weight about 0.4 to 0.6 (cap 0.60).
+- **2026 readout.** Five eligible seats (Hutt South, Kāpiti, Mt Albert, Waitaki, West Coast-Tasman). The only large move is West Coast-Tasman (National win about 16% to 32% in its configured ordinary class). Auckland Central and Wellington Bays polls are Green-led, so they are context only.
+
+**Not changed.** The Māori layer, D107 multipliers, the classification, the national and party layers, every frozen stage and `data/sources.json`.
+
+**Checks.** See the PR body for exact counts.
+
+**Limits.** Small, selected sample; the historical reference is conditional on the observed local party vote; independence of poll and model error assumed; the 6-week half-life, the 0.60 cap and the 0.12 SD Labour-aligned allowance are development choices; the decay is not validated. The update moves only the National/Labour coordinate, so a Green-led contest cannot use a poll (a third candidate can gain when the poll closes the National–Labour gap).
+
+**Exact next action.** The coordinator reviews and merges the PR. Not started: showing the polls on the published site, Green-led seat polls, any change to the shared candidate-split shift, and one combined Māori poll update.
+
+---
+
+# Stage78 no-poll fallback for the unpolled Māori seats — merged (#103), 2026-10-10
+
+Branch `claude/project-thread-0lxx4d` from main `2287e57` with the Stage50 part 2 branch (PR #102) merged in, because the 2026 slates are read from its official table; rebase onto main once #102 has merged. Authorized by James (release-checklist item 15 and D114, 2026-10-07); started after the official candidate list was published.
+
+**Results.**
+- **Calibration** (3 transitions, 19 contrasts): `sigma` 0.257 (16 degrees of freedom), `tau` 0.443 (3 elections). Election means of the MP-versus-Labour log-odds change: -0.08 (2017), +0.10 (2020), +0.80 (2023).
+- **Leave-one-election-out, 21 seat contests:**
+  - 2023-only (F): log score of the winner -1.003, favourites 0.753 predicted against 0.667 observed (z -0.98), class `calibrated`;
+  - swing arms FC and FP: -0.993 and -0.995, Brier no better, class `overconfident`; rule `mixed_report_to_james`, evidence `weak`.
+- **Chronological 2023:** F `overconfident` (favourite z -4.08): trained on quiet elections, `tau^2 = 0`; the 2023 wave was unanticipated.
+- **2026, win probability by seat (F; FC to FP):** Waiariki Waititi (TPM) 0.96; 0.97 to 0.91. Ikaroa-Rāwhiti Tangaere-Manuel (LAB) 0.64; 0.83 to 0.76. Tāmaki Makaurau Leoni (LAB) 0.50; 0.70 to 0.65. Te Tai Tokerau Prime (LAB) 0.66; 0.76 to 0.72. The whole gap between F and the swing arms is Te Tai Tonga's poll (the incumbent is an independent). Without it the swing arms land near F.
+- **Assumption:** `phi` (share of the 2023 Te Pāti Māori vote that follows the Te Tai Tokerau Party candidate) is uniform; 0.2, 0.5 and 0.8 move the Te Tai Tokerau Labour probability from 0.60 to 0.79.
+
+**Checks.** See the PR body. **Limits.** Three transitions; `tau` rests on one wave; party-label carry-forward only (no incumbency or mean reversion); leave-one-election-out is not out of sample in time; no national input.
+
+**Exact next action.**
+1. A separate small stage wires the chosen F into `scripts/nowcast_assembly/maori.py`, sets `maori.unpolledFallbackModel`, maps the official Māori candidates to export ids and adds the export label.
+2. Then the first real run once the general-seat classification is entered.
+
+---
+
+# Stage50 part 2 official nominations — merged (#102), 2026-10-10
+
+Branch `stage/50-official-nominations` from main `2287e57` (after #101). James supplied the official files on 2026-10-10 NZDT under the Stage50 authorization of 2026-10-07; this was the procedure's part 2. The acquisition checkpoint was committed before any transformation (`01948a3`).
+
+**Results.**
+- **Roster:** 469 official nominations; 71 of 71 seats are official complete slates; no conflicts and no unmatched claims; 64 general slates for the assembly.
+- **Reconciliation against the 2026-10-05 announcements:**
+  - 179 of 206 match exactly;
+  - the other 27 are the same people under official spellings (checked pair by pair);
+  - 290 candidates are new.
+- **Identity links:** none lost under the official spellings, one gained (Menéndez March).
+- **Development gate:** accepts the live roster. It is still unpublishable on two counts: the classification (James) and `maori.unpolledFallbackModel` (D114).
+- **Not changed:**
+  - any model, scale or fit;
+  - the 2026-10-05 snapshot;
+  - frozen Stage40/42 outputs;
+  - `data/sources.json`.
+
+**Checks.** See the PR body for exact counts.
+
+**Limits.**
+- The exact download URLs were not recorded (elections.nz blocks automated retrieval); the registry records the publishing host.
+- Claims are dated by the spreadsheet's embedded modification time.
+- Māori-seat candidates are not yet mapped to the Māori layer's poll-derived keys.
+
+**Exact next action.**
+1. James enters the 64-seat classification. The rechecked draft is `docs/general-seat-classification-2026-draft.md`: core 15 exceptional, a 9-seat boundary block for James, the rest ordinary.
+2. A separately authorized bounded stage defines the no-poll fallback for the four unpolled Māori seats.
+3. Then the first real run: `scripts.nowcast_assembly.run --require-complete`, then `npm run release:publish`.
+
+---
+
+# Stage82 weekly poll refresh workflow and electorate polls — merged (#95), 2026-10-10
+
+Branch `ci/scheduled-poll-refresh-kf6s0c` (PR #95, reworked from the national-only workflow), main `9d2c8f1` merged in. Decision D120 (D113 was taken by Stage77 while the PR was on hold).
+
+**What was done.** The Stage70 weekly refresh runs as a scheduled GitHub Actions workflow independent of Claude. Stage82 adds electorate polls (general and Māori) from the same Wikipedia capture into an append-only dated live-inputs file, with a strict header-driven reader (merged cells expanded first), approximate and missing-value handling, seat-name matching to the official list, and blockers for revised, removed or unrecognised rows. First live run committed (2026-10-10, 12 polls, 3 review flags). Details, outputs and limits: `docs/stage82-electorate-poll-refresh.md`, `docs/stage70-weekly-poll-refresh.md` (workflow section).
+
+**Not done.** Nothing consumes the electorate file (Stage79 general-seat update and the Māori layer wiring are separate stages); no refit or estimate changed; the public-repository push is a commented stub; the workflow has not run on GitHub (it can only be dispatched once on `main`, and the secret does not exist yet).
+
+**Exact next action.** James adds the `POLL_REFRESH_TOKEN` secret (steps in the Stage70 doc). The coordinator merges this PR when green and dispatches the workflow once; after one good run the Claude routine `trig_01LB91p9NumjAUQjJB6QKdVs` is disabled. Merge each weekly refresh PR before the next Thursday (an open refresh PR makes the next run fail on purpose).
+
+---
+
+# Config: 2026 general-seat classification — merged (#104, #105), 2026-10-10
+
+Branch `claude/project-thread-o98s91`, from main `4b20089` (after #102). Records James's approved classification (release-checklist item 4) and regenerates the live development gate. Not changed: any model, scale, fit, the configuration, the assembly code, the export, `data/sources.json`, the rehearsal.
+
+- **Counts.** 64 general seats: 13 exceptional (Auckland Central, Epsom, Glendene, Kapiti, Mt Albert, Northland, Papakura, Port Waikato, Tāmaki, Wellington Bays, Wellington North, Whangārei, Wigram), 51 ordinary. No Stage56 adjustment files exist, so no seat is forced exceptional from that route.
+- **Development gate (live, 64 national draws).** 67 of 71 seats simulated (all 64 general, 3 polled Māori); 4 unavailable (the unpolled Māori seats). Failed checks: `configComplete` (pending `maori.unpolledFallbackModel`) and `allWinnersPresent` (4 unavailable). Classification multipliers and national reconciliation pass. Still unpublishable.
+- **Not done:** the no-poll Māori fallback (Stage78, PR #103, wires into the assembly separately), seat counts and Parliament outputs, the first real run, any release. The rehearsal (`scripts.release_rehearsal`) still uses its synthetic stand-in classification and is unchanged.
+- **Local checks.** See the PR body for exact counts.
+- **Exact next action.** The coordinator reviews and merges this PR. Then, after #103 (the Māori fallback stage) and its wiring, run `python3 -m scripts.nowcast_assembly.run --require-complete` and the release steps. Any later change to the classification is a new dated entry set by James, with the Stage73 test pin updated.
+
+---
+
+# Config: release policy decisions — merged (#101), 2026-10-07
+
+Branch `claude/config-release-policy-1evrj1`, from main `767d491`. Records D114 (James's release policy, Māori presentation and MMP rules version) in `config/nowcast-2026.json` and removes the code that read the dropped settings (calibration label, staleness windows). Not changed: any model, draw, scale or statistic; the roster and classification; `data/sources.json`.
+
+- **Config pending list now:** `roster.snapshotId` (Stage50 part 2, after nominations close 12:00 NZDT 8 October) and `maori.unpolledFallbackModel` (new). `release.policyApprovedBy`, `mmp.rulesVersion` and `maori.unpolledSeats` are set.
+- **Important:** James's labelled fallback for the four unpolled Māori seats cannot be switched on by config alone: no no-poll Māori estimate exists. Seat counts and Parliament outputs stay blocked until a fallback model is defined and calibrated in a separately authorized stage (release checklist item 15).
+- **Checks run:** see the PR body for exact counts.
+- **Exact next action:** James reviews the PR (the coordinator merges). Then, when authorized, a bounded stage defines the labelled no-poll fallback for the four Māori seats. Stage50 part 2 still follows the official nominations list. The classification of the 64 general seats still waits for official candidates.
+
+---
+
+# Stage77 release steps — merged (#98), 2026-10-07
 
 Branch `stage/77-release-steps`, with main merged (Stage50 part 1, Stage70, Stage76). Authorized by James on 2026-10-07. The coordinator's notes are applied (precision from #91, M = 16; config shared with Stage70; stand-ins labelled; next free decision number D113).
 
@@ -24,7 +193,7 @@ Then run `scripts.nowcast_assembly.run --require-complete` and `npm run release:
 
 ---
 
-# Stage76 faster assembly — review-ready, 2026-10-07
+# Stage76 faster assembly — merged (#92), 2026-10-07
 
 Branch `stage/76-assembly-speed` from main `e429222`. Requested by James on 2026-10-07.
 
@@ -43,7 +212,7 @@ Branch `stage/76-assembly-speed` from main `e429222`. Requested by James on 2026
 
 ---
 
-# Stage75 live candidate-mean refit — review-ready, 2026-10-07
+# Stage75 live candidate-mean refit — merged (#89), 2026-10-07
 
 Branch `stage/75-candidate-fit-2023` from main `b76c270` (after #88). Raised and authorized by James on 2026-10-07.
 
@@ -71,7 +240,7 @@ Branch `stage/75-candidate-fit-2023` from main `b76c270` (after #88). Raised and
 
 ---
 
-# Stage74 nowcast snapshot from the draw bank — review-ready, 2026-10-07
+# Stage74 nowcast snapshot from the draw bank — merged (#88), 2026-10-07
 
 Branch `stage/74-nowcast-snapshot` from Stage73 (merged with main after #87). Pre-approved by James on 2026-10-07 to follow Stage73 as a separate PR.
 
@@ -108,7 +277,7 @@ Then a separately authorized first live run and a release decision.
 
 ---
 
-# Stage73 live nowcast draw bank — review-ready, 2026-10-07
+# Stage73 live nowcast draw bank — merged (#87), 2026-10-07
 
 Branch `stage/73-draw-bank` from main `143d58d` (after #85 and #86). Approved by James on 2026-10-07, including the local 2023 Other split and a separate Stage74 PR (pre-approved to start after Stage73).
 
@@ -137,7 +306,7 @@ Branch `stage/73-draw-bank` from main `143d58d` (after #85 and #86). Approved by
 
 ---
 
-# Stage72 nowcast configuration — review-ready, 7 October 2026
+# Stage72 nowcast configuration — merged (#86), 7 October 2026
 
 Branch `stage/72-nowcast-config` from main `4f6ca8a` (#84 merged). Approved by James on 2026-10-07; independent of the running Stage63/69/70 threads.
 
@@ -168,7 +337,7 @@ Also still open:
 
 ---
 
-# Stage70 weekly poll refresh, nowcast input and routine — review-ready, 7 October 2026
+# Stage70 weekly poll refresh, nowcast input and routine — merged (#93, first refresh adopted in #94), 7 October 2026
 
 Branch `stage/70-weekly-poll-routine-g9w7ri`, from main `823f065`, with main `e429222` (D106 nowcast, Stage72–75) merged before the single push. Decision D104. The coordinator reviews and merges.
 
@@ -188,7 +357,7 @@ Branch `stage/70-weekly-poll-routine-g9w7ri`, from main `823f065`, with main `e4
 
 ---
 
-# Stage69 voting-place notional baselines — review-ready, 7 October 2026
+# Stage69 voting-place notional baselines — merged (#96), 7 October 2026
 
 Branch `stage/69-voting-place-notionals-72u6wn`; frozen design commit `9aaf67a` (before any result), raw party files `b5c23e6`. Main merged in, not rebased. Design, amendments and results: `docs/stage69-voting-place-notionals.md`.
 
@@ -206,7 +375,7 @@ Reproduce: `python3 -m scripts.voting_place_notionals.registry && python3 -m scr
 
 ---
 
-# Config: Stage69 baseline adopted in the nowcast config — review-ready, 7 October 2026
+# Config: Stage69 baseline adopted in the nowcast config — merged (#97), 7 October 2026
 
 Branch `stage/69-voting-place-notionals-72u6wn`, restarted from main `0160180` (merge of Stage69 PR #96, whose branch history was fully merged). One-line pointer change after James's "Stage 69 looks good" (relayed by the coordinator as approval of the result and of adopting the baseline). The Stage69 file has the same `transitions.2023-2026.scopes.general` structure the assembly reads: the 17 party categories and 64 general seats load through `scripts/nowcast_assembly/general.py` `baseline`, and `check_config` accepts the config (pending fields unchanged: `maori.unpolledSeats`, `mmp.blocs`, `mmp.rulesVersion`, `roster.snapshotId`, `simulation.draws`, `simulation.precisionPolicy`).
 
@@ -220,7 +389,7 @@ Branch `stage/69-voting-place-notionals-72u6wn`, restarted from main `0160180` (
 
 ---
 
-# Stage63 layer-replicated composed simulation complete — review-ready, 7 October 2026
+# Stage63 layer-replicated composed simulation complete — merged (#91), 7 October 2026
 
 Branch `claude/project-thread-stage63-layer-replication-3jygiu`, base main `e429222` (merged in; Stage54 PR #66 merged earlier). Commits: `25c8534` design freeze (before any replicate bank was scored; only a one-seat timing, the Sobol prefix identity and the panel rule from committed Stage54 data preceded it), results and decision `b3c234a`, final review commit follows. Pushed once at review readiness; PR left unmerged for the coordinator. Decision D095.
 
@@ -240,7 +409,7 @@ Branch `claude/project-thread-stage63-layer-replication-3jygiu`, base main `e429
 
 ---
 
-# Stage50 part 1 official nomination pipeline — review-ready, 2026-10-07
+# Stage50 part 1 official nomination pipeline — merged (#90), 2026-10-07
 
 Branch `stage/50-nominations` from main `e429222`. Authorized by James on 2026-10-07: James supplies the official files (tool-rendered text as a fallback), and the official list replaces party announcements in the live roster.
 
@@ -265,7 +434,7 @@ Branch `stage/50-nominations` from main `e429222`. Authorized by James on 2026-1
 
 ---
 
-# CI: Stage39 owned-test rule — review-ready, 7 October 2026
+# CI: Stage39 owned-test rule — merged (#85), 7 October 2026
 
 Branch `claude/ci-stage39-owned-tests` from main `ce61569`, independent of the open docs PR #84 (no shared files). James chose one of four proposed CI savings: other test files no longer force the Stage39 replay. He did not adopt main-push reuse, archival test skipping or a docs-only fast path.
 
@@ -277,7 +446,7 @@ Branch `claude/ci-stage39-owned-tests` from main `ce61569`, independent of the o
 
 ---
 
-# Docs/architecture: nowcast reconciliation and current-state cleanup — review-ready, 6 October 2026
+# Docs/architecture: nowcast reconciliation and current-state cleanup — merged (#84), 6 October 2026
 
 Branch `claude/cool-dirac-mq8787`, restarted from main `ce61569` (its earlier PR #78 is merged). Commits: `49b0b84` mechanical fold of the four pending fragments (exceptional-scale/#78, Stage67, Stage68, Stage71), then the reconciliation commit. The PR number and final head are in the PR body.
 
@@ -319,7 +488,7 @@ Branch `claude/cool-dirac-mq8787`, restarted from main `ce61569` (its earlier PR
 
 ---
 
-# Stage71 Māori seat calibration complete — review-ready, 6 October 2026
+# Stage71 Māori seat calibration complete — merged (#82), 6 October 2026
 
 Branch `stage/71-maori-seat-calibration-los82r`, from main `5e22a83`. Commits: `ea1c9fc` frozen design (before any corrected arm was scored), a design clarification (zero-sigma bootstrap replicates are skipped, before any score was displayed), then the final head (code, outputs, findings, tests, this fragment). Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
 
@@ -337,7 +506,7 @@ Branch `stage/71-maori-seat-calibration-los82r`, from main `5e22a83`. Commits: `
 
 ---
 
-# Stage68 shared split-shift swing check complete — review-ready, 6 October 2026
+# Stage68 shared split-shift swing check complete — merged (#81), 6 October 2026
 
 Branch `stage/68-shared-split-swing` from main `5e22a83`. Frozen design `8bf4a5f`. Decision D102.
 
@@ -349,7 +518,7 @@ Branch `stage/68-shared-split-swing` from main `5e22a83`. Frozen design `8bf4a5f
 
 ---
 
-# Stage67 ordinary versus exceptional balance scale complete — review-ready, 6 October 2026
+# Stage67 ordinary versus exceptional balance scale complete — merged (#80), 6 October 2026
 
 Branch `stage/67-exceptional-balance-scale` from main `5e22a83`. Design freeze `790cae1` (before any fit); amendment 1 `e60142b`, which added `twogroup_exc1` at the coordinator's request after the original arms were fitted and before any score was read (one unread bank deleted). Decision D101. The PR number and final head are in the PR body. The coordinator reviews and merges.
 
@@ -373,7 +542,7 @@ Branch `stage/67-exceptional-balance-scale` from main `5e22a83`. Design freeze `
 
 ---
 
-# Diagnostics: exceptional-seat balance scale — review-ready, 2026-10-06
+# Diagnostics: exceptional-seat balance scale — merged (#78), 2026-10-06
 
 Branch `claude/cool-dirac-mq8787` from main `3a136c9`. One question: do the frozen 38/257 exceptional-uncertainty flags (2026-10-06 read-only audit) support separate ordinary and exceptional candidate N/L balance seat scales? This reuses the Stage48 loader and Gaussian likelihood unchanged, with an unpenalised two-group seat multiplier.
 
@@ -387,7 +556,7 @@ Branch `claude/cool-dirac-mq8787` from main `3a136c9`. One question: do the froz
 
 ---
 
-# Docs: fold of the Stage56, 60, 61, 62, 64, 65, 66, macron-audit and CI-attestation handoff fragments — review-ready, 6 October 2026
+# Docs: fold of the Stage56, 60, 61, 62, 64, 65, 66, macron-audit and CI-attestation handoff fragments — merged (#83), 6 October 2026
 
 Branch `claude/docs-fold-stage60-66-t721cs`, started from main `823f065` (PRs #69 to #77 and #79 merged). Folded the nine pending fragments in `handoff.d/` with `python3 -m scripts.fold_doc_fragments` into CHANGELOG, PROJECT_STATE, DECISIONS (D092, D093, D094, D096, D097, D098, D099, D100), METHODOLOGY, DATA_SOURCES and the roadmap table: Stage56, Stage60, Stage61, Stage62, Stage64, Stage65, Stage66, the seat-name key audit (#74, no decision number) and the durable frozen-pipeline attestation fix (#77, D100). Docs only: no model or statistical code, data, registry, test or CI change, and no wording of the folded entries changed. `handoff.d/` now holds only README.md.
 
@@ -404,7 +573,7 @@ Branch `claude/docs-fold-stage60-66-t721cs`, started from main `823f065` (PRs #6
 
 ---
 
-# Stage66 Māori electorate seat layer complete — review-ready, 6 October 2026
+# Stage66 Māori electorate seat layer complete — merged (#75), 6 October 2026
 
 Branch `claude/project-thread-stage66-maori-layer-dua3bt`, based on main `9f4c95b`. Commits: `7a25ea2` raw acquisition (before any transformation), `615ecff` frozen design, curated polls, official results and registry, a second design amendment commit (2017 Te Tai Tokerau has no Māori Party candidate: contrast sample 24 polls, 20 degrees of freedom), then the final head (calibration, simulation, runner, findings, tests, this fragment). Single push at review readiness; the PR number and the final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
 
@@ -424,7 +593,7 @@ Branch `claude/project-thread-stage66-maori-layer-dua3bt`, based on main `9f4c95
 
 ---
 
-# Stage65 per-draw MMP seat layer — review-ready, 6 October 2026
+# Stage65 per-draw MMP seat layer — merged (#71), 6 October 2026
 
 Branch `claude/project-thread-stage65-mmp-seat-layer-6ajejm`, based on main `9f4c95b`. Frozen design commit `f90b852` (before any seat-layer code or test). Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
 
@@ -442,7 +611,7 @@ Branch `claude/project-thread-stage65-mmp-seat-layer-6ajejm`, based on main `9f4
 
 ---
 
-# Stage64 2026 electorate set and notional baselines (audit) — review-ready, 6 October 2026
+# Stage64 2026 electorate set and notional baselines (audit) — merged (#72), 6 October 2026
 
 Branch `claude/project-thread-stage64-boundaries-mlryxf`, based on main `9f4c95b`. Single push at review readiness; the PR number and final head SHA are in the PR body. Coordinator reviews and merges; the thread does not.
 
@@ -460,7 +629,7 @@ Branch `claude/project-thread-stage64-boundaries-mlryxf`, based on main `9f4c95b
 
 ---
 
-# Stage62 live 2026 national poll fit complete — review-ready, 6 October 2026
+# Stage62 live 2026 national poll fit complete — merged (#79), 6 October 2026
 
 Branch `claude/project-thread-stage62-live-poll-fit-7az2r0`, from main `e31df9c`, with main `3a136c9` (Stage54 #66 and Stage59 #68 merged) merged in before the push. Frozen design commit `96cf6b2` (corrected before any fit in `66707b8` and `0ef9701`; the two later corrections were a design-text fix and, after the first environment-check launch stopped at its save step, a house-offset fix, `7a2cde5`). Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges.
 
@@ -480,7 +649,7 @@ Branch `claude/project-thread-stage62-live-poll-fit-7az2r0`, from main `e31df9c`
 
 ---
 
-# Stage61 layer calibration audit complete — review-ready, 6 October 2026
+# Stage61 layer calibration audit complete — merged (#70), 6 October 2026
 
 Branch `claude/project-thread-stage61-layer-audit-t0bfwf`, based on main `e31df9c`. Frozen design commit `fe221eb` (before any component ratio, PIT or coverage was computed). Single push at review readiness; the PR number and the final head SHA are in the PR body. Coordinator reviews and merges; the thread does not.
 
@@ -500,7 +669,7 @@ Branch `claude/project-thread-stage61-layer-audit-t0bfwf`, based on main `e31df9
 
 ---
 
-# Stage60 stronger candidate-balance scale test complete — review-ready, 6 October 2026
+# Stage60 stronger candidate-balance scale test complete — merged (#73), 6 October 2026
 
 Branch `claude/project-thread-stage60-balance-shrink-fcvhc8`, started from main `e31df9c` (Stage55 merged) and merged with main `3a136c9` (Stage54 and the poll fixes) before the single push. Frozen design commit `30beda3` (before any arm was simulated or scored). The PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
 
@@ -520,7 +689,7 @@ Branch `claude/project-thread-stage60-balance-shrink-fcvhc8`, started from main 
 
 ---
 
-# Stage56 manual-adjustment interface and replay tooling — review-ready, 6 October 2026
+# Stage56 manual-adjustment interface and replay tooling — merged (#76), 6 October 2026
 
 Branch `claude/project-thread-stage56-manual-interface-f70azz`, based on main `9f4c95b`. Single push at review readiness; the PR number and final head SHA are in the PR body. The coordinator reviews and merges; the thread does not.
 
@@ -538,7 +707,7 @@ Branch `claude/project-thread-stage56-manual-interface-f70azz`, based on main `9
 
 ---
 
-# Data: seat-name key audit and additive Stage10 supplement — review-ready, 6 October 2026
+# Data: seat-name key audit and additive Stage10 supplement — merged (#74), 6 October 2026
 
 Branch `claude/project-thread-macron-fix-t721cs`, started from main `3a136c9`. One question: where do exact `electorateName` joins drop macron-variant seats, and can that be fixed without touching preserved outputs? Requested by the coordinator after the Stage55 finding that 8 of 63 general seats fall out of Stage10's 2008-11 transition.
 
@@ -554,7 +723,7 @@ Branch `claude/project-thread-macron-fix-t721cs`, started from main `3a136c9`. O
 
 ---
 
-# CI durable frozen-pipeline attestations — review-ready, 6 October 2026
+# CI durable frozen-pipeline attestations — merged (#77), 6 October 2026
 
 Branch `claude/project-thread-ci-attestation-durable-0ia30j`, from main `3a136c9`. One question: why did unrelated and docs-only PRs replay Stage45/46/47, and how do attestations stop expiring?
 
@@ -570,7 +739,7 @@ Branch `claude/project-thread-ci-attestation-durable-0ia30j`, from main `3a136c9
 
 ---
 
-# Docs: fold of the Stage54, Stage55, Stage58 and Stage59 handoff notes — review-ready, 6 October 2026
+# Docs: fold of the Stage54, Stage55, Stage58 and Stage59 handoff notes — merged (#69), 6 October 2026
 
 Branch `claude/project-thread-docs-fold-macron-t721cs`, started from main `3a136c9` (Stage59 PR #68 merged; Stage54 #66 `9f4c95b`, Stage55 #67 `e31df9c`). Folded `handoff.d/2026-10-06-stage54.md`, `-stage55.md` and `-stage59.md` with `python3 -m scripts.fold_doc_fragments` into CHANGELOG, PROJECT_STATE, DECISIONS (D088, D090, D091), METHODOLOGY, DATA_SOURCES and the roadmap table, and added the skipped-stage record for Stage58 (D089, below). Docs only: no model or statistical code, data, registry, test or CI change.
 

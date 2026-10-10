@@ -356,3 +356,24 @@ New dated registry `data/processed/maori-seat-layer/source-registry.json` (13 so
 ## Weekly poll refresh captures and electorate poll pages (Stage70)
 
 Dated Wikipedia REST captures of the 2026 opinion-polling table are preserved under `data/raw/polling/weekly-refresh/<date>/` with response headers and fetch log, each registered with its SHA-256 in `data/processed/polling/weekly-refresh/<date>/source-registry.json` (Wikipedia text is CC BY-SA; aggregator evidence only). Four press pages for two 2026 general-seat Curia electorate polls (Wellington Bays; Mt Albert) are preserved under `data/raw/polling/electorate-polls-2026/` and registered in `data/processed/polling/electorate-polls-2026/source-registry.json` with transcribed facts in `polls.json` (publisher copyright; hashes only, no republication). `data/sources.json` is not edited.
+
+## Wikipedia electorate polling tables (Stage82)
+
+Byte copies of the Wikipedia REST page (Opinion polling for the 2026 New Zealand general election, Electorate polling section) are preserved per change under `data/raw/polling/electorate-live/<date>/` with headers and fetch log, each registered with its SHA-256 in `data/processed/polling/electorate-live/<date>/source-registry.json` (Wikipedia text is CC BY-SA; aggregator evidence only, primary releases not verified). `data/sources.json` is not edited.
+
+### Official 2026 nominations (Stage50 part 2, preserved 2026-10-10)
+
+The Electoral Commission's official 2026 electorate candidates (`Electorate-Candidates-2026.xlsx`, 469 rows) and party lists (`Party-lists-for-the-2026-General-Election.pdf`, 17 parties) were supplied unchanged by James after nominations closed (12:00 NZDT, 8 October 2026).
+- Preserved under `data/raw/nominations/2026-10-10/` and registered in `data/processed/nominations-2026/source-registry.json`, with SHA-256 checksums and embedded file timestamps.
+- The exact download URLs were not recorded, because elections.nz blocks automated retrieval; the registry records the publishing host and states this limitation.
+- Publisher copyright; preserved for evidence; no licence assumed.
+
+## Waiariki poll of 2026-10-07 (Whakaata Māori–Curia), recorded 2026-10-09
+
+- Page bytes of The Spinoff's republication of the Te Ao Māori News story preserved under `data/raw/polling/maori-seat-polls-2026-10/` with headers and fetch log; dated registry and transcription in `data/processed/polling/maori-seat-polls-2026-10/` (`python3 -m scripts.polling.waiariki_poll_2026_10 --check` re-verifies the bytes and every transcribed phrase). `data/sources.json` is untouched.
+- Candidate vote: Waititi (TPM) 42, Waikato (GRN) 16, Boynton (LAB) 14, Wharewera (TOP) 3; undecided 18, other 6; 500 respondents, fieldwork 21 September to 1 October, ±4.5. Party vote: LAB 24, TPM 23, GRN 22, TOP 0, unsure 14 (base not stated). The Te Ao Māori News original and Curia tables were not found.
+- **Recorded only.** The pinned `data/source-plans/maori-seat-layer/polls-2026.json` (hash pinned by Stage66, Stage71 and Stage78) is unchanged, so Waiariki stays an unpolled seat (fallback). James (2026-10-09) preferred not to update the layer each time one electorate poll appears; adopting this record, and any other new seat polls, is one later authorized update that regenerates the pinned artifacts.
+
+## General-electorate poll pages (Stage79)
+
+The electorate-polling sections of the Wikipedia opinion-polling pages for 2014, 2017, 2020, 2023 and 2026 are preserved unchanged under `data/raw/polling/seat-polls/2026-10-09/` and registered with SHA-256 in the standalone `data/processed/seat-polls/source-registry.json` (secondary compilation, `aggregator_only`; James confirmed on 2026-10-09 that the 2026 numbers match the underlying articles). The 2011 page was rate-limited (HTTP 429, four attempts) and not retrieved; the out-of-sample replay starts in 2014. The 22 candidate-vote rows are hand-transcribed to `data/source-plans/seat-polls/polls.json`, which `scripts.seat_polls.data` checks against the preserved text. `data/sources.json` is untouched. Sponsor facts for Hutt South and Kāpiti (one Labour-aligned operator; Community Engagement Limited conducted both) come from James (2026-10-09).

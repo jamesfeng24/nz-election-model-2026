@@ -1,4 +1,0 @@
-<!-- fold: changelog -->
-## Electorate poll refresh 2026-10-10
-
-- 12 new electorate poll(s) added to the dated live-inputs file `data/processed/polling/electorate-live/2026-10-10/polls.json` (12 in total) from Wikipedia revision 1379243489: Auckland Central (Taxpayers' Union–Curia), Hauraki-Waikato (Whakaata Māori–Curia), Hutt South (Victor Consulting), Kapiti (Community Engagement Limited), Mt Albert (Curia), Mt Albert (Taxpayers' Union – Curia), Te Tai Hauāuru (Whakaata Māori–Curia), Te Tai Tonga (Whakaata Māori–Curia), Waiariki (Whakaata Māori–Curia), Waitaki (Taxpayers' Union–Curia), Wellington Bays (Taxpayers' Union–Curia), West Coast-Tasman (Taxpayers' Union–Curia). 3 item(s) flagged for human review. Wikipedia aggregator evidence only; not read by any model layer. Data change only, no refit.
