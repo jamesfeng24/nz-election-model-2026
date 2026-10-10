@@ -70,7 +70,7 @@ Implemented (Stage77): the Python gate (`scripts/nowcast_assembly/assemble.py` `
 |---|---|
 | National vote shares | Show 80% (50/90 on demand), labelled "latent support, week of …" |
 | General-seat candidate shares and win probabilities | Show when the Monte Carlo SE is ≤ 0.01 |
-| Māori seats | Shown as a labelled range (Stage66–Stage71 layer; built by Stage88, D127: `winProbability` C and `winProbabilityInflation` P for each polled seat). The four unpolled seats use the labelled Stage78 fallback (2023 result carried forward, no seat poll; wide uncertainty not calibrated for an election-wide wave like 2023) |
+| Māori seats | The site shows one chance per polled seat, `winProbability` (C, the Stage66 layer; D131, 2026-10-10, which supersedes D114/D127's labelled range on display only). The export still carries `winProbabilityInflation` (P, Stage71, built by Stage88, D127) for each polled seat; `maori.presentation` in the configuration still reads `labelled-range` and is not read by the site. The four unpolled seats use the labelled Stage78 fallback (2023 result carried forward, no seat poll; wide uncertainty not calibrated for an election-wide wave like 2023) |
 | Party seats, threshold/lifeboat, overhang, Parliament size | Only when all 71 seats are defined and the effective-sample Monte Carlo SE is ≤ 0.01 |
 | Coalition/bloc probabilities | Only for blocs James defines, worded as scenarios, not predictions of agreements |
 | Unavailable or under-precise components | Withheld with a reason, never zero |

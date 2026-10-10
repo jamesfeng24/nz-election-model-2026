@@ -28,7 +28,7 @@ The 2026-10-10 repository audit (`docs/audits/2026-10-10-repository-audit.md`) l
   - Stage71's readout simulator on its own seed streams.
 - The record keeps P's winners only (`inflationWinners`).
 - The snapshot gives each candidate `winProbabilityInflation {p, mcse, ess}` beside `winProbability` (C). The release gate holds both to the MCSE ≤ 0.01 threshold.
-- The seat totals, MMP and `electoratePredictions` stay on C, one law per draw. The site shows C and P as the labelled range; the site work is separate.
+- The seat totals, MMP and `electoratePredictions` stay on C, one law per draw. The site was to show C and P as the labelled range; D131 (2026-10-10) superseded that on display, and the site shows C only. The export, the gate and this build are unchanged.
 - Seats on the Stage78 fallback (three today) have no P: Stage78 froze no inflation of the fallback. They keep their single labelled fallback number.
 - **Development run (65,536 draws), leader's win probability, C to P:**
 
@@ -55,7 +55,7 @@ npm run check
 ## Not done
 
 - No production run; that remains the coordinator's final check.
-- No site change; the site thread renders `winProbabilityInflation`.
+- No site change in this stage. (The site thread first rendered `winProbabilityInflation` as the range; D131 then reduced the display to C.)
 - No change to Stage66, 71 or 78 outputs.
 - No inflation of the fallback.
 - No modelling of minor-party list votes inside Other.

@@ -1,3 +1,124 @@
+# Docs: fold of the 2026-10-10 launch fragments (D122, D127 to D131) — 10 October 2026
+
+Branch `claude/docs-fold-launch-5zie5y`, from main `44442c0` (after #114, #118, #120, #121, #122, #123, #108 and #124). Docs only: no model, statistical code, data, registry, workflow, configuration or CI change; the public site repository was not accessed. Requested by James via the coordinator (2026-10-10).
+
+**What changed.**
+- Ran `python3 -m scripts.fold_doc_fragments` over the 8 pending fragments (parallel full replay, final-checks refresh, full-replay timeouts, audit CI fixes, Stage88 audit decisions, Monday poll refresh, Stage84 public site, Publish workflow) into CHANGELOG, PROJECT_STATE, DECISIONS (D122, D127 to D131), the roadmap table and nothing else (no methodology or sources sections were pending). The fragments are deleted; `handoff.d/README.md` stays.
+- Folded text corrected: headings read "merged (#NN)" (#108, #118, #120, #121, #122, #124; #123 and #114 have changelog entries only), the "provisional / number from the coordinator" notes on D122, D127 to D130 are removed, the roadmap rows for Stage84 and Stage88 read merged.
+- **D131 (new, James, 2026-10-10 21:53Z):** the site shows one chance per Māori seat, C only; D127's labelled range is superseded on display only. The export still carries `winProbabilityInflation`; the model, seat totals and MMP are unchanged. `config/nowcast-2026.json` `maori.presentation` was deliberately **not** edited (it still reads `labelled-range`, which would force the ~3 h full hosted replay for a display-only change); the field is retained and not read by the site. Recorded in D131, a pointer under D114 and D127, `docs/nowcast-specification.md` section 5, `docs/release-checklist.md` and `docs/stage88-audit-decisions.md`.
+
+**What did not change.** The configuration, the site source, the export, any number, `data/sources.json`, frozen pipelines.
+
+**Current state (main `44442c0`).** Every PR listed above is merged and the site is built but nothing has been published: the first publish still needs James's separate explicit go. Decision numbers D100 to D131 are final on main; the next free number is D132 (check main first, because James's other chats also allocate numbers).
+
+**Checks.** `python3 -m scripts.fold_doc_fragments --check` before and after the fold; `git diff --check`. No Python, frontend or data checks apply to a docs-only change.
+
+**Exact next action.** (1) James's go on this docs PR (coordinator merges). (2) Per `docs/publish-workflow.md`: James sets up the public side, the Publish workflow is run manually from main as a dry run, and only on James's explicit go with the publish box ticked is the first forecast published; then James sets `PUBLISH_AUTO=true`. (3) Pending James: whether to backcast the past-week seat odds for the site's odds chart. No later stage starts without his authorization.
+
+---
+
+# Stage88 James's audit decisions (D127–D129) — merged (#121), 2026-10-10
+
+Branch `claude/audit-fixes-jdkx6w` (restarted from main `ad2937d` after #118 merged). One commit per decision: J2 pin (D128), J3 overhang (D129), J1 range (D127). James chose Range, Pin and Overhang on 2026-10-10 and approved one PR.
+
+**What changed.**
+- `seatPolls.electorateRun` is pinned to the 2026-10-10 run (12 polls, sha256 `e746a5da…1641`).
+- Māori polls are cut at `national.dataCutoff`.
+- The bank gains `inputs.electorateRun`/`electorateRunSha256` and `partyVote.ballotPartyIds` (17 parties), plus `inflationWinners` on polled Māori seats.
+- In TypeScript: `zeroVotePartyIds` (seat layer), `winProbabilityInflation` (export detail) and the release gate check on it.
+- Config version `2026-10-10.4`.
+
+**What did not change.** Stage66, 71 and 78 outputs, D107 and D121 multipliers, frozen pipelines, `data/sources.json`, the site.
+
+**Effects.**
+- Pin: none today, because all pinned polls ended by the 2026-10-07 cutoff.
+- Overhang (development bank, 4,096 rows): a bucketed list party wins an electorate in 13.1% of draws. Mean Parliament size goes from 124.73 to 124.83, and bloc majorities move by at most 0.002.
+- Range (65,536 draws), leader's chance C to P: Hauraki-Waikato 0.88 to 0.74, Te Tai Hauāuru 0.74 to 0.64, Te Tai Tonga 0.84 to 0.61, Waiariki 0.97 to 0.82.
+
+**Checks.** See the PR body.
+
+**Limits.**
+- A list party's own vote stays in Other, so a list-entitled seat for it is not modelled.
+- The fallback seats have no P.
+- A full frozen replay still takes about 170 of 180 minutes.
+
+**Exact next action.** The coordinator merges on James's go. The site thread then renders `winProbabilityInflation` as the labelled range. Then come the final checks (parallel CI PR, then the production run, which also refreshes the Stage80 rehearsal report: audit C4).
+
+---
+
+# Stage84 public site — merged (#108), 2026-10-10
+
+Branch `claude/stage84-public-site-9y5788` from main `9d2c8f1`. Requested by James on 2026-10-09 (outline shown first; no LICENSE file, CC BY footer instead).
+
+**What changed.** The TypeScript app is now the public site (`docs/stage84-public-site.md`): three pages and a 404, built into `site/`, reading only `forecasts/` through the existing validating loader. New loader function `loadArchiveIndex`, `scripts/validate/check_site.mjs`, tests in `src/app/App.test.tsx` and `src/data/loader.test.ts`.
+
+**What did not change.** The model, the draw bank, the release gate, frozen stages and their data, `data/sources.json`, `ci.yml`. The release publisher gains only an optional `--evidence` argument. The public repository was never accessed.
+
+**Limits.** The publish step and the backcast of the seat odds and a national-poll publisher address (none is held) are not built. Methodology wording is plain-language and should be read by James before the first release.
+
+**Source cleanup (2026-10-10).** Module split, one sectioned stylesheet, comments trimmed, Prettier added (site code only; ESLint not added because typescript-eslint does not support TypeScript 7, so `tsc`'s unused-variable checks stand in), loader `cause` field with a distinct load-failure message, `check_site.mjs` page list read from `pages.ts`. `package.json` and the lockfile changed (Prettier 3.9.9 devDependency), so hosted CI will run in full. Checked: `tsc` clean, 173 Vitest tests, `npm run build`, `npm run check:dist`, `prettier --check`, and a DOM and screenshot comparison of every page against the previous build (identical markup; at most 1/32 px table-column differences).
+
+**Copy change (James, 2026-10-10).** The forecast-page banner is one line, "Forecast if the election were held today · Updated <date>" (James chose this wording): date only, never a time. It keeps the D106 nowcast framing and drops the poll and national-picture dates and the extra caveats.
+
+**Exact next action.** Re-run `python3 -m scripts.site_evidence.build --refresh data/processed/polling/weekly-refresh/<date>` after each adopted refresh and pass the file to `release:publish --evidence`. The publish step (research-repo workflow, James's token) builds `site/`, copies it to the public repository and is rehearsed without synthetic data; the first real release follows the release checklist.
+
+---
+
+# CI: Publish workflow — merged (#124), 2026-10-10
+
+Branch `claude/publish-workflow-73jiib` from main `518a454`. Requested by James on 2026-10-10 (the coordinator's brief); decision D130. Depends on the Stage84 site pull request (#108) being merged first: the workflow's first check fails if the site code is not on the ref. The public site repository was never accessed from any session.
+
+**What changed.** `.github/workflows/publish.yml`, `scripts/publish_workflow/`, `scripts/tests/test_publish_workflow.py`, `docs/publish-workflow.md`, one line in `scripts/validate/ci_frozen.py` (`NON_VERIFY_WORKFLOWS`), and short updates to `docs/nowcast-specification.md`, `docs/release-checklist.md` (item 16) and `docs/stage70-weekly-poll-refresh.md`. **What did not.** The site source, the model, the configuration, data, `ci.yml`, the frozen-pipeline registry and `data/sources.json`.
+
+**Behaviour.** See `docs/publish-workflow.md`. Key points: the refresh routine still never edits the configuration; Publish adopts inside the runner and, after a successful publish, and only when the repository variable `ADOPTION_PR` is `true` (off by default, to keep the weekly run lean), opens a bookkeeping pull request (`publish-adoption` label) so main's configuration, development gate, synthetic fixture and Stage79 readout match what was published. The snapshot's `codeRevision` is the adoption commit, pushed to a `publish/` branch before the public push. One release per data cutoff (`nowcast-<cutoff>`, so only new national polls make a new forecast); a correction is a manual run with a supersedes id and rebuilds its own week's frozen site folder. A site-code change on main republishes the live root only (site-only run), never a frozen copy. Logs print ids and pass/fail only, because run logs of this public repository are public.
+
+**Checks run.** `python3 -m unittest scripts.tests.test_publish_workflow` (57) together with `test_ci_frozen`, `test_weekly_refresh_workflow` and `test_ci_full_replay` (138 pass), `actionlint` on the workflow, `python3 -m scripts.fold_doc_fragments --check`, and a local end-to-end rehearsal on the real 2026-10-10 inputs (adopt the 10 October refresh, production run at 65,536 draws with the Python gate, release gate and archive, site build and checks, push into a local bare repository standing in for the public one, then, against the PR #108 site build, a second site-only run (nothing changed: no commit), a site-only run after a design change (live root rewritten, the frozen folder byte-identical), and a `-r2` correction release that rebuilt only its own frozen folder), including the post-publish regeneration of the development gate, fixture and readout. Not run: the workflow itself on GitHub (it runs only there); the first dry run on main is its first full execution.
+
+**Limits.** The site's polls page reads the preserved seat-poll files, not the weekly electorate file, so new electorate polls move the forecast but appear on the polls page only after the evidence builder reads the live file (site source, PR #108). The Stage77 rehearsal report is not regenerated by the workflow. The first real push cannot be rehearsed against the real public repository.
+
+**Exact next action.** (1) Done: merged after PR #108 (#124), on James's go. (2) James sets up the public side (token scope and expiry, Pages from `main` `/`, no stray files in the public repository). (3) Run Publish manually from main with the publish box unticked (dry run, which rehearses a release and its frozen copy) and read the result. (4) On James's explicit go, run it again with the publish box ticked (first publish). (5) After that, James sets the repository variable `PUBLISH_AUTO` to `true` so merging a Monday refresh with new polls publishes a new forecast by itself, and merging a site-code change republishes the live site by itself.
+
+---
+
+# Final checks: rehearsal and readout refresh, production run — merged (#122), 2026-10-10
+
+Branch `claude/parallel-full-replay-qikw5y` restarted from main `a8cec13` (after #120 and #121 merged). Authorized by the coordinator's brief (James's final-check plan, 2026-10-10).
+
+**Production run (local, not published).** `python3 -m scripts.nowcast_assembly.run --require-complete --bank .release-build/production/bank.json` at 4,096 national draws x 16 layer replicates (65,536 rows, 71 of 71 seats) on config 2026-10-10.4: the config validates complete, the Python gate passes (bank digest `2d3e1744…`, about 34 minutes on 4 cores), and a dry-run snapshot built with `release:publish --rehearsal` into the gitignored `.release-build/production/archive/` passes the TypeScript release gate (every probability's MCSE at most 0.01). Nothing under `public/` or any archive path was written. Basis: national refresh of 2026-10-07 (week of 2026-09-27); the 2026-10-10 refresh (#114) is not adopted.
+- Seats, median (80% range): National 35 (32 to 42), Labour 35 (32 to 41), Green 17 (15 to 18), NZ First 13 (11 to 15), ACT 12 (10 to 13), TOP 8 (6 to 10), Te Pāti Māori 4 (2 to 6). Mean Parliament 124.82 (mean overhang 4.82).
+- Bloc P(majority): NAT+ACT+NZF 0.278, LAB+GRN+TPM 0.053, LAB+GRN 0.009, NAT+ACT 0.0001. Hung 0.669; TOP kingmaker either side 0.597.
+- Polled Māori seats, leader's chance C to P: Hauraki-Waikato 0.88 to 0.74, Te Tai Hauāuru 0.74 to 0.64, Te Tai Tonga 0.84 to 0.61, Waiariki 0.97 to 0.82; fallback seats single numbers (Ikaroa-Rāwhiti 0.64, Tāmaki Makaurau 0.50, Te Tai Tokerau 0.66). Full tables: project file `final-checks/production-run-2026-10-10.md`.
+
+**Finding.** The weekly Poll refresh workflow does not run `weekly_refresh.adopt`, by design (spec row 1; the routine never edits the config). With the electorate-poll run now pinned (D128), new national and electorate polls reach the forecast only when someone adopts a merged refresh and regenerates the development gate, fixture and readout. Four Mondays remain before election day; left manual.
+
+**Not done here.** `pyproject.toml` description text (audit C5): editing it forces every frozen pipeline to replay (about 170 of 180 minutes), so it goes in its own PR. Audit C6 was already completed by Stage88.
+
+**Checks.** See the PR body.
+
+**Exact next action.** The coordinator reviews and merges on James's go. Then the `pyproject.toml` PR, then one manual dispatch of the Full replay workflow on main to record per-group durations and tighten its timeouts. Adoption of the 2026-10-10 refresh waits on James.
+
+---
+
+# CI: parallel full replay — merged (#120), 2026-10-10
+
+Branch `claude/parallel-full-replay-qikw5y`. Adds the manual Full replay workflow and `ci_full_replay` partition script described in `docs/ci-validation.md` (section "Parallel full replay"). Pull-request and main-push validation are unchanged. Group timeouts are estimates from earlier recorded durations; the first manual run should be read from the per-command job summaries and the limits tightened. The pre-release gate is a single manual dispatch of Full replay on main after the last stage merges. A Full replay run is not an attestation for the frozen-pipeline discovery walk (pins and PR runs still attest). **Exact next action:** after merge, dispatch Full replay on main once when the last stage has merged, record the per-group durations, and adjust timeouts if needed.
+
+---
+
+# CI and docs: repository audit fixes — merged (#118), 2026-10-10
+
+Branch `claude/audit-fixes-jdkx6w` from main. Authorized by James on 2026-10-10 (repository audit; clear single-answer fixes). No model, statistical code, data, registry, pin or `data/sources.json` change.
+
+**What changed.** `ci_frozen.closure` ignores bare literals that name top-level directories other than the source directories, so the site's route folders are not frozen-pipeline dependencies (test `test_a_new_top_level_directory_named_like_a_dictionary_key_is_not_a_dependency`). A `live` job in Verify runs 25 of the live chain's checks (about 10 minutes locally). `docs/ci-validation.md` records both. Stale status text corrected in the specification, release checklist and `scripts/README.md`; the audit is `docs/audits/2026-10-10-repository-audit.md`.
+
+**Checks.** See the PR body.
+
+**Limits.** A full replay of every frozen pipeline still takes about 170 of the `python` job's 180 minutes; splitting it is the parked parallel-replay CI work. The development gate is still checked only locally.
+
+**Exact next action.** The coordinator reviews and merges, ideally before the site PR (#108) merges so its merge push reuses the frozen pipelines. Open for James: the audit's three questions (J1 to J3). At the final-check regeneration: correct the release rehearsal's text (audit C4), the config metadata (C6) and `pyproject.toml` (C5, forces a full replay).
+
+---
+
 # Docs: fold of the Stage79 follow-up, Stage85, Stage86, Stage87 and Monday poll-refresh fragments — 10 October 2026
 
 Branch `claude/docs-fold-d123-d126-84c6wf`, from main `29129b2` (after #112 poll refresh to Monday, #113 Stage79 follow-up, #115 Stage86, #116 Stage85, #117 Stage87). Docs only: no model, statistical code, data, registry, workflow or CI change. Authorized by James on 2026-10-10 (scheduled for after the evidence export and the Māori switch-over merged; the coordinator's brief). The public site (#108, D122) is not part of it.
