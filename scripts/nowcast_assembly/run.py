@@ -10,10 +10,29 @@ import argparse
 import os
 from scripts.nowcast_config.validate import check_config, ConfigError
 from .assemble import assemble, gate, bank_digest
-from .common import CONFIG, OUTPUT, ROOT, read, encode, require, AssemblyError
+from .common import CONFIG, OUTPUT, ROOT, read, encode, require, digest, AssemblyError
 from scripts.balance_scale.common import equivalent
 
 DEVELOPMENT_DRAWS = 64
+ROUNDING = 6  # decimal places of the kernel-independent digest
+
+
+def rounded(value):
+    if isinstance(value, float):
+        return round(value, ROUNDING) + 0.0  # + 0.0 turns -0.0 into 0.0
+    if isinstance(value, dict):
+        return {k: rounded(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [rounded(v) for v in value]
+    return value
+
+
+def bank_digest_rounded(bank):
+    """Digest of the simulated content with floats rounded to 6 places. The exact `bankDigest` hashes every float to
+    the last bit, and CPUs with different maths-library kernels (AVX2 versus AVX-512 OpenBLAS) differ by about 1e-14
+    relative, so it only reproduces on the same kind of CPU. This one reproduces across them (flip chance per number
+    about 1e-8) and still catches any change of 1e-6 or more."""
+    return digest(rounded({k: v for k, v in bank.items() if k not in ('diagnostics', 'seatEvidence')}))
 
 
 def development_report(config, workers):
@@ -28,7 +47,8 @@ def development_report(config, workers):
             'publishable': passed, 'checks': checks,
             'seatStatus': {s['electorateId']: s['status'] for s in bank['seats']},
             'blockers': [{'reason': r, 'seats': len(v), 'electorateIds': v} for r, v in sorted(blockers.items())],
-            'diagnostics': bank['diagnostics'], 'bankDigest': bank_digest(bank)}
+            'diagnostics': bank['diagnostics'], 'bankDigest': bank_digest(bank),
+            'bankDigestRounded': bank_digest_rounded(bank)}
 
 
 def main():
@@ -56,7 +76,9 @@ def main():
         return
     value = development_report(config, args.workers)
     if args.check:
-        if not equivalent(read(OUTPUT), value, 1e-9):
+        # The exact bankDigest is kernel-dependent (see bank_digest_rounded); the rounded digest stands in for it here.
+        expected = {k: v for k, v in read(OUTPUT).items() if k != 'bankDigest'}
+        if not equivalent(expected, {k: v for k, v in value.items() if k != 'bankDigest'}, 1e-9):
             raise SystemExit('Stale ' + OUTPUT)
         print('Stage73 development gate reproduced')
         return
