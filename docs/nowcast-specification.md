@@ -41,7 +41,7 @@ The local-party and candidate scales were calibrated against election-day result
 
 | Step | Producer | Interface | Consumer | Units and dependence | State |
 |---|---|---|---|---|---|
-| 1 | Poll sources (Stage52/59), Stage70 refresh (weekly workflow, Stage82) | dated poll panel | national fit | poll shares | exists; each refresh is adopted into the config by a reviewed step (`scripts.polling.weekly_refresh.adopt`) |
+| 1 | Poll sources (Stage52/59), Stage70 refresh (weekly workflow, Stage82) | dated poll panel | national fit | poll shares | exists; the Publish workflow adopts the newest merged refresh into the config in its runner (`scripts.polling.weekly_refresh.adopt`, D130; [publish-workflow.md](publish-workflow.md)) and opens a bookkeeping pull request so main follows; the refresh routine itself never edits the config |
 | 2 | Stage62/70 gauss fit | `lastDataSupport` draws | national adapter | 8 category shares; one draw id shared by every seat | exists |
 | 3 | national adapter (`scripts/nowcast_assembly/national.py`) | category → 2026 ballot groups | local layer **and** MMP party vote | shares summing to 1; the **same** draw feeds both; Other one MMP bucket, split inside each seat by its own 2023 mix | built (Stage73) |
 | 4 | local party (`local_vectors` + `invert`, `scripts/uncertainty_expectation/simulation.py`) | per-seat party affinities from the 2026 notional baseline; 2026 local-party scales | candidate layer | ballot-group shares; shared election effect + seat effect | built (Stage73) on the 2026 scales and the Stage69 baseline |

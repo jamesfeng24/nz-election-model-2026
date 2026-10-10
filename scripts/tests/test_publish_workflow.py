@@ -1,0 +1,421 @@
+"""Publish workflow: run mode, release ids, options, the independent archive and tree checks, the public-repository push (against a local bare
+repository), and the shape of .github/workflows/publish.yml (stdlib only; no network)."""
+import hashlib
+import json
+import re
+import shutil
+import subprocess
+import tempfile
+import unittest
+from datetime import datetime, timezone
+from pathlib import Path
+
+from scripts.publish_workflow import plan, public, verify
+
+ROOT = Path(__file__).resolve().parents[2]
+WORKFLOW = (ROOT / '.github/workflows/publish.yml').read_text(encoding='utf-8')
+CODE = '\n'.join(line for line in WORKFLOW.splitlines() if not line.lstrip().startswith('#'))
+CONFIG = json.loads((ROOT / 'config/nowcast-2026.json').read_text(encoding='utf-8'))
+
+
+def steps():
+    """The steps of the single job as (name, text) pairs."""
+    body = CODE.split('    steps:\n', 1)[1]
+    parts = re.split(r'\n      - (?=name:|uses:)', '\n' + body)
+    return [(re.match(r'(?:name|uses): (.*)', p).group(1), p) for p in parts if p.strip()]
+
+
+class ModeTests(unittest.TestCase):
+    def test_nothing_publishes_without_an_explicit_go(self):
+        self.assertEqual(plan.decide_mode('workflow_dispatch', 'false', '', 'refs/heads/main')[0], 'dry-run')
+        self.assertEqual(plan.decide_mode('workflow_dispatch', '', 'true', 'refs/heads/main')[0], 'dry-run')   # the variable never applies to a manual run
+        self.assertEqual(plan.decide_mode('push', '', '', 'refs/heads/main')[0], 'dry-run')
+        self.assertEqual(plan.decide_mode('push', '', 'True ', 'refs/heads/main')[0], 'dry-run')               # exactly 'true'
+        self.assertEqual(plan.decide_mode('push', 'true', 'yes', 'refs/heads/main')[0], 'dry-run')
+        self.assertEqual(plan.decide_mode('schedule', 'true', 'true', 'refs/heads/main')[0], 'dry-run')
+        self.assertEqual(plan.decide_mode('', '', '', '')[0], 'dry-run')
+
+    def test_the_two_explicit_go_routes(self):
+        self.assertEqual(plan.decide_mode('workflow_dispatch', 'true', '', 'refs/heads/main')[0], 'publish')
+        self.assertEqual(plan.decide_mode('push', '', 'true', 'refs/heads/main')[0], 'publish')
+
+    def test_publishing_from_another_ref_is_refused_not_downgraded(self):
+        with self.assertRaises(plan.Refused):
+            plan.decide_mode('workflow_dispatch', 'true', '', 'refs/heads/claude/x')
+        self.assertEqual(plan.decide_mode('workflow_dispatch', 'false', '', 'refs/heads/claude/x')[0], 'dry-run')
+
+
+class ReleaseTests(unittest.TestCase):
+    def test_latest_refresh_on_the_repository(self):
+        found = plan.latest_refresh()
+        self.assertEqual(found['releaseDate'], max(d for d in (found['nationalDate'], found['electorateDate']) if d))
+
+    def test_release_date_is_the_newest_of_national_and_electorate_runs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            for rel, dates in ((plan.WEEKLY, ['2026-10-07', '2026-10-14']), (plan.ELECTORATE, ['2026-10-10', '2026-10-17'])):
+                (Path(tmp) / rel).mkdir(parents=True)
+                (Path(tmp) / rel / 'index.json').write_text(json.dumps({'runs': [{'date': d} for d in dates]}))
+            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'electorateDate': '2026-10-17', 'releaseDate': '2026-10-17'})
+            shutil.rmtree(Path(tmp) / plan.ELECTORATE)
+            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'electorateDate': None, 'releaseDate': '2026-10-14'})
+
+    def test_snapshot_ids(self):
+        self.assertEqual(plan.snapshot_id('2026-10-12', []), ('nowcast-2026-10-12', None))
+        self.assertEqual(plan.snapshot_id('2026-10-12', ['nowcast-2026-10-05']), ('nowcast-2026-10-12', None))
+        self.assertEqual(plan.snapshot_id('2026-10-12', ['nowcast-2026-10-12']), (None, None))               # already published: nothing to do
+        self.assertEqual(plan.snapshot_id('2026-10-12', ['nowcast-2026-10-12'], 'nowcast-2026-10-12'), ('nowcast-2026-10-12-r2', 'nowcast-2026-10-12'))
+        self.assertEqual(plan.snapshot_id('2026-10-12', ['nowcast-2026-10-12', 'nowcast-2026-10-12-r2'], 'nowcast-2026-10-12-r2'),
+                         ('nowcast-2026-10-12-r3', 'nowcast-2026-10-12-r2'))
+        with self.assertRaises(plan.Refused):
+            plan.snapshot_id('2026-10-12', ['nowcast-2026-10-05'], 'nowcast-1999-01-01')
+        with self.assertRaises(plan.Refused):
+            plan.snapshot_id('12 October', [])
+
+    def test_existing_ids_read_an_index(self):
+        self.assertEqual(plan.existing_ids(''), [])
+        self.assertEqual(plan.existing_ids(json.dumps({'schemaVersion': 1, 'snapshots': [{'snapshotId': 'a'}, {'snapshotId': 'b'}]})), ['a', 'b'])
+
+    def test_no_release_from_election_day_on(self):
+        plan.election_guard('2026-11-02', CONFIG)
+        for day in ('2026-11-07', '2026-11-09'):
+            with self.assertRaises(plan.Refused):
+                plan.election_guard(day, CONFIG)
+
+
+class OptionsTests(unittest.TestCase):
+    def options(self, now=None):
+        return plan.build_options(CONFIG, 'nowcast-2026-10-10', '2026-10-10', 'abc123', now or datetime(2026, 10, 12, 0, 5, 3, 999, tzinfo=timezone.utc))
+
+    def test_options_carry_the_configuration_and_the_required_fields(self):
+        o = self.options()
+        for key in ('snapshotId', 'createdAt', 'dataCutoff', 'electionId', 'electionDate', 'boundaryVersionId', 'modelVersion', 'codeRevision', 'mmp',
+                    'nationalBasis', 'limitations', 'probabilityMcseMax'):
+            self.assertIn(key, o)
+        self.assertEqual(o['createdAt'], '2026-10-12T00:05:03+00:00')
+        self.assertEqual(o['dataCutoff'], CONFIG['national']['dataCutoff'] + 'T00:00:00+00:00')
+        self.assertEqual(o['mmp']['blocs'], CONFIG['mmp']['blocs'])
+        self.assertEqual(o['mmp']['rulesVersion'], CONFIG['mmp']['rulesVersion'])
+        self.assertEqual(o['probabilityMcseMax'], CONFIG['release']['probabilityMcseMax'])
+        self.assertEqual(o['codeRevision'], 'abc123')
+        self.assertTrue(o['limitations'])
+
+    def test_a_cutoff_after_the_creation_time_is_refused(self):
+        with self.assertRaises(plan.Refused):
+            self.options(datetime(2026, 1, 1, tzinfo=timezone.utc))
+
+    def test_nothing_in_the_options_looks_synthetic_or_names_a_tool(self):
+        text = json.dumps(self.options()).lower()
+        for word in ('synthetic', 'rehearsal', 'placeholder', 'unverified', 'claude', 'anthropic'):
+            self.assertNotIn(word, text)
+
+    def test_boundary_version_matches_the_rehearsal_and_is_a_real_id(self):
+        self.assertIn(f"'{plan.BOUNDARY_VERSION_ID}'", (ROOT / 'scripts/release_rehearsal/run.py').read_text(encoding='utf-8'))
+
+    def test_adoption_text(self):
+        fragment = plan.adoption_fragment('nowcast-2026-10-12', '2026-10-12', '2026-10-12', None, '2026-10-12.1', 'abc')
+        self.assertTrue(fragment.startswith('<!-- fold: changelog -->\n## Publish nowcast-2026-10-12 — 2026-10-12'))
+        title, body = plan.adoption_pr('nowcast-2026-10-12', '2026-10-12', '2026-10-12', '2026-10-12', '2026-10-12.1', 'abc', 'https://example.test/run/1')
+        self.assertTrue(title.startswith('Polls: '))
+        for heading in ('## Scope', '## Changes and limits', '## Decisions recorded', '## Local validation', '## CI and boundaries', '## Final published head and hosted validation'):
+            self.assertIn(heading, body)
+
+
+def snapshot_for(snapshot_id, cutoff, kind='model'):
+    return {'schemaVersion': 2, 'snapshotId': snapshot_id, 'targetType': 'nowcast', 'dataCutoff': cutoff + 'T00:00:00+00:00', 'provenance': {'kind': kind}}
+
+
+def write_release(archive, snapshot_id, cutoff, supersedes=None, kind='model'):
+    """Append one release to an archive directory, as the TypeScript publisher does."""
+    archive = Path(archive)
+    text = json.dumps(snapshot_for(snapshot_id, cutoff, kind), sort_keys=True)
+    (archive / snapshot_id).mkdir(parents=True, exist_ok=True)
+    (archive / snapshot_id / 'snapshot.json').write_text(text)
+    index = json.loads((archive / 'index.json').read_text()) if (archive / 'index.json').exists() else {'schemaVersion': 1, 'snapshots': []}
+    index['snapshots'].append({'snapshotId': snapshot_id, 'createdAt': cutoff + 'T01:00:00+00:00', 'dataCutoff': cutoff + 'T00:00:00+00:00', 'provenanceKind': kind,
+                               'path': snapshot_id + '/snapshot.json', 'sha256': hashlib.sha256(text.encode()).hexdigest(), 'supersedes': supersedes, 'status': 'published',
+                               'withdrawnReason': None})
+    (archive / 'index.json').write_text(json.dumps(index, sort_keys=True))
+
+
+class ArchiveCheckTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp, True)
+        self.prev, self.new = self.tmp / 'prev', self.tmp / 'new'
+        self.prev.mkdir()
+        write_release(self.prev, 'nowcast-2026-10-05', '2026-10-05')
+        shutil.copytree(self.prev, self.new)
+        write_release(self.new, 'nowcast-2026-10-12', '2026-10-12')
+
+    def check(self, **kw):
+        args = dict(new_dir=self.new, previous_dir=self.prev, snapshot_id='nowcast-2026-10-12', cutoff='2026-10-12')
+        args.update(kw)
+        return verify.check_archive(**args)
+
+    def test_a_clean_append_passes(self):
+        self.assertEqual(self.check(), [])
+
+    def test_first_release_into_an_empty_archive(self):
+        first = self.tmp / 'first'
+        first.mkdir()
+        write_release(first, 'nowcast-2026-10-12', '2026-10-12')
+        self.assertEqual(verify.check_archive(first, None, 'nowcast-2026-10-12', '2026-10-12'), [])
+
+    def test_a_correction_must_say_what_it_supersedes(self):
+        write_release(self.new, 'nowcast-2026-10-12-r2', '2026-10-12', supersedes='nowcast-2026-10-12')
+        # the 10-12 release is itself new here, so build the realistic case: previous holds it
+        shutil.rmtree(self.new)
+        shutil.copytree(self.prev, self.new)
+        write_release(self.prev, 'nowcast-2026-10-12', '2026-10-12')
+        shutil.rmtree(self.new)
+        shutil.copytree(self.prev, self.new)
+        write_release(self.new, 'nowcast-2026-10-12-r2', '2026-10-12', supersedes='nowcast-2026-10-12')
+        self.assertEqual(self.check(snapshot_id='nowcast-2026-10-12-r2', supersedes='nowcast-2026-10-12'), [])
+        self.assertTrue(self.check(snapshot_id='nowcast-2026-10-12-r2'))
+
+    def test_changing_an_earlier_release_is_caught(self):
+        (self.new / 'nowcast-2026-10-05' / 'snapshot.json').write_text('{"tampered": true}')
+        self.assertTrue(any('hash' in e for e in self.check()))
+
+    def test_rewriting_an_earlier_index_entry_is_caught(self):
+        index = json.loads((self.new / 'index.json').read_text())
+        index['snapshots'][0]['status'] = 'withdrawn'
+        (self.new / 'index.json').write_text(json.dumps(index))
+        self.assertTrue(any('append-only' in e for e in self.check()))
+
+    def test_dropping_an_earlier_release_is_caught(self):
+        index = json.loads((self.new / 'index.json').read_text())
+        index['snapshots'] = index['snapshots'][1:]
+        (self.new / 'index.json').write_text(json.dumps(index))
+        self.assertTrue(self.check())
+
+    def test_synthetic_releases_are_refused(self):
+        bad = self.tmp / 'bad'
+        shutil.copytree(self.prev, bad)
+        write_release(bad, 'synthetic-rehearsal-2026-10-12', '2026-10-12', kind='synthetic-fixture')
+        self.assertTrue(verify.check_archive(bad, self.prev, 'synthetic-rehearsal-2026-10-12', '2026-10-12'))
+
+    def test_stray_directories_files_and_extra_releases_are_caught(self):
+        (self.new / 'rehearsal').mkdir()
+        self.assertTrue(any('stray' in e for e in self.check()))
+        shutil.rmtree(self.new / 'rehearsal')
+        (self.new / 'notes.txt').write_text('x')
+        self.assertTrue(any('Unexpected files' in e for e in self.check()))
+        (self.new / 'notes.txt').unlink()
+        write_release(self.new, 'nowcast-2026-10-13', '2026-10-13')
+        self.assertTrue(any('exactly one new entry' in e for e in self.check()))
+
+    def test_wrong_cutoff_or_id_is_caught(self):
+        self.assertTrue(any('data cutoff' in e for e in self.check(cutoff='2026-10-11')))
+        self.assertTrue(self.check(snapshot_id='nowcast-2026-10-19'))
+
+
+class TreeCheckTests(unittest.TestCase):
+    PAGES = ['forecast', 'polls']
+
+    def make(self, tmp):
+        site = Path(tmp)
+        for rel in ('index.html', '404.html', 'forecasts/index.json', 'forecast/index.html', 'polls/index.html', 'assets/app.js'):
+            (site / rel).parent.mkdir(parents=True, exist_ok=True)
+            (site / rel).write_text('x')
+        return site
+
+    def test_clean_tree_and_each_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            site = self.make(tmp)
+            self.assertEqual(verify.check_tree(site, self.PAGES), [])
+            (site / 'polls/index.html').unlink()
+            self.assertTrue(verify.check_tree(site, self.PAGES))
+            (site / 'polls/index.html').write_text('x')
+            for bad in ('assets/app.js.map', 'README.md', '.DS_Store', 'assets/synthetic-data.json'):
+                (site / bad).write_text('x')
+                self.assertTrue(verify.check_tree(site, self.PAGES), bad)
+                (site / bad).unlink()
+
+    def test_pages_are_read_from_the_site_source_when_present(self):
+        if all((ROOT / p).is_file() for p in plan.SITE_FILES):         # the site code (PR #108) is on this ref
+            self.assertIn('forecast', verify.site_pages(ROOT))
+
+
+def git(cwd, *args):
+    return subprocess.run(['git', *args], cwd=cwd, check=True, capture_output=True, text=True).stdout.strip()
+
+
+class PublicPushTests(unittest.TestCase):
+    """The push logic against a local bare repository standing in for the public one (no network, no token)."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp, True)
+        self.remote = self.tmp / 'remote.git'
+        subprocess.run(['git', 'init', '-q', '--bare', '--initial-branch=main', str(self.remote)], check=True)
+        self.url = self.remote.as_uri()
+        self.site = self.tmp / 'site'
+        for rel, text in (('index.html', 'home'), ('404.html', 'nf'), ('forecast/index.html', 'f'), ('forecasts/index.json', '{}'), ('assets/a.js', 'js')):
+            (self.site / rel).parent.mkdir(parents=True, exist_ok=True)
+            (self.site / rel).write_text(text)
+
+    def publish(self, message='Update forecast 2026-10-12', site=None):
+        clone = self.tmp / ('clone-%d' % len(list(self.tmp.glob('clone-*'))))
+        head = public.preflight(clone, self.tmp / 'archive', self.url)
+        public.sync_tree(site or self.site, clone)
+        return public.commit_and_push(clone, message, self.url, expected_head=head), clone
+
+    def test_first_publish_into_an_empty_repository(self):
+        result, _ = self.publish()
+        self.assertEqual(result, 'pushed')
+        check = self.tmp / 'check'
+        subprocess.run(['git', 'clone', '-q', self.url, str(check)], check=True)
+        self.assertEqual(git(check, 'log', '-1', '--format=%an|%ae|%cn|%ce|%B').rstrip(), 'jamesfeng24|233003834+jamesfeng24@users.noreply.github.com|jamesfeng24|233003834+jamesfeng24@users.noreply.github.com|Update forecast 2026-10-12')
+        self.assertEqual(git(check, 'rev-list', '--count', 'HEAD'), '1')
+        self.assertEqual(sorted(p.name for p in check.iterdir() if p.name != '.git'), ['.nojekyll', '404.html', 'README.md', 'assets', 'forecast', 'forecasts', 'index.html'])
+        readme = (check / 'README.md').read_text()
+        for word in ('claude', 'anthropic', 'generated by'):
+            self.assertNotIn(word, readme.lower())
+
+    def test_an_unchanged_site_pushes_nothing(self):
+        self.publish()
+        result, _ = self.publish(message='Update forecast 2026-10-19')
+        self.assertEqual(result, 'unchanged')
+
+    def test_second_publish_adds_a_commit_and_replaces_stale_files(self):
+        self.publish()
+        (self.site / 'assets/a.js').unlink()
+        (self.site / 'assets/b.js').write_text('js2')
+        (self.site / 'forecasts/index.json').write_text('{"n": 2}')
+        result, _ = self.publish(message='Update forecast 2026-10-19')
+        self.assertEqual(result, 'pushed')
+        check = self.tmp / 'check'
+        subprocess.run(['git', 'clone', '-q', self.url, str(check)], check=True)
+        self.assertEqual(git(check, 'rev-list', '--count', 'HEAD'), '2')
+        self.assertFalse((check / 'assets/a.js').exists())
+        self.assertEqual((check / 'assets/b.js').read_text(), 'js2')
+
+    def test_the_archive_is_read_back_from_the_public_repository(self):
+        self.publish()
+        clone = self.tmp / 'again'
+        public.preflight(clone, self.tmp / 'archive2', self.url)
+        self.assertEqual((self.tmp / 'archive2' / 'index.json').read_text(), '{}')
+
+    def test_unexpected_files_stop_the_run_before_anything_is_deleted(self):
+        seed = self.tmp / 'seed'
+        subprocess.run(['git', 'clone', '-q', self.url, str(seed)], check=True, capture_output=True)
+        (seed / 'LICENSE').write_text('mit')
+        git(seed, 'checkout', '-q', '-B', 'main')
+        git(seed, '-c', 'user.name=x', '-c', 'user.email=x@x', 'add', '-A')
+        git(seed, '-c', 'user.name=x', '-c', 'user.email=x@x', 'commit', '-q', '-m', 'seed')
+        git(seed, 'push', '-q', 'origin', 'main')
+        with self.assertRaises(public.PublicError) as caught:
+            public.preflight(self.tmp / 'c', self.tmp / 'a', self.url)
+        self.assertIn('LICENSE', str(caught.exception))
+
+    def test_a_change_to_the_public_repository_during_the_build_refuses_the_push(self):
+        clone = self.tmp / 'clone-x'
+        self.publish()
+        head = public.preflight(clone, self.tmp / 'archive', self.url)
+        other = self.tmp / 'other'
+        subprocess.run(['git', 'clone', '-q', self.url, str(other)], check=True, capture_output=True)
+        (other / 'extra.txt').write_text('x')
+        git(other, '-c', 'user.name=x', '-c', 'user.email=x@x', 'add', '-A')
+        git(other, '-c', 'user.name=x', '-c', 'user.email=x@x', 'commit', '-q', '-m', 'someone else')
+        git(other, 'push', '-q', 'origin', 'main')
+        (self.site / 'index.html').write_text('changed')
+        public.sync_tree(self.site, clone)
+        with self.assertRaises(public.PublicError):
+            public.commit_and_push(clone, 'Update forecast 2026-10-19', self.url, expected_head=head)
+        self.assertEqual(git(self.remote, 'log', '-1', '--format=%s', 'main'), 'someone else')
+
+    def test_a_repository_on_another_branch_is_refused(self):
+        seed = self.tmp / 'seed'
+        subprocess.run(['git', 'clone', '-q', self.url, str(seed)], check=True, capture_output=True)
+        (seed / 'README.md').write_text('x')
+        git(seed, 'checkout', '-q', '-B', 'gh-pages')
+        git(seed, '-c', 'user.name=x', '-c', 'user.email=x@x', 'add', '-A')
+        git(seed, '-c', 'user.name=x', '-c', 'user.email=x@x', 'commit', '-q', '-m', 'seed')
+        git(seed, 'push', '-q', 'origin', 'gh-pages')
+        git(self.remote, 'symbolic-ref', 'HEAD', 'refs/heads/gh-pages')
+        with self.assertRaises(public.PublicError):
+            public.preflight(self.tmp / 'c', self.tmp / 'a', self.url)
+
+    def test_the_token_is_a_header_and_is_masked(self):
+        args = public.header_args('s3cret')
+        self.assertEqual(args[0], '-c')
+        self.assertNotIn('s3cret', ' '.join(args))
+        self.assertEqual(public.header_args(''), [])
+        self.assertEqual(public.scrub('x s3cret y ' + args[1].split('basic ')[1], 's3cret'), 'x *** y ***')
+
+    def test_only_publish_branches_may_be_pushed_to_the_research_repository(self):
+        with self.assertRaises(public.PublicError):
+            public.push_branch('main')
+
+
+class WorkflowShapeTests(unittest.TestCase):
+    def test_triggers(self):
+        self.assertIn('workflow_dispatch:', CODE)
+        self.assertRegex(CODE, r'publish:\n\s+description:[^\n]*\n\s+required: false\n\s+type: boolean\n\s+default: false')
+        self.assertIn('data/processed/polling/weekly-refresh/index.json', CODE)
+        self.assertNotIn('pull_request', CODE)
+        self.assertNotIn('schedule:', CODE)
+
+    def test_limits_and_permissions(self):
+        self.assertIn('permissions:\n  contents: read', CODE)
+        self.assertLessEqual(int(re.search(r'timeout-minutes: (\d+)', CODE).group(1)), 180)
+        self.assertIn('cancel-in-progress: false', CODE)
+        self.assertIn('persist-credentials: false', CODE)
+
+    def test_the_token_reaches_only_publish_mode_steps(self):
+        for name, text in steps():
+            if 'secrets.POLL_REFRESH_TOKEN' in text:
+                self.assertIn("steps.mode.outputs.mode == 'publish'", text, name)
+        self.assertEqual(sum('secrets.POLL_REFRESH_TOKEN' in t for _, t in steps()) >= 4, True)
+
+    def test_the_token_is_not_used_by_checkout_or_the_build(self):
+        for name, text in steps():
+            if any(k in text for k in ('actions/checkout', 'npm ', 'nowcast_assembly.run --require-complete', 'weekly_refresh.adopt')):
+                self.assertNotIn('secrets.', text, name)
+
+    def test_nothing_forces_or_rewrites_history_or_names_the_public_repo(self):
+        for forbidden in ('--force', '-f origin', 'push -f', 'reset --hard', 'jamesfeng24.github.io', 'Co-Authored-By', 'Generated by'):
+            self.assertNotIn(forbidden, WORKFLOW, forbidden)
+
+    def test_the_dry_run_path_never_reads_or_writes_the_public_repository(self):
+        for name, text in steps():
+            if 'scripts.publish_workflow.public' in text:
+                self.assertIn("steps.mode.outputs.mode == 'publish'", text, name)
+
+    def test_publication_gates_run_before_any_push_and_the_push_is_last_but_bookkeeping(self):
+        order = [name for name, _ in steps()]
+        position = {key: next(i for i, n in enumerate(order) if key in n) for key in
+                    ('Production run', 'Release gate and archive', 'Build the site and check', 'Push the adoption branch', 'Push to the public repository', 'Open the adoption')}
+        self.assertLess(position['Production run'], position['Release gate and archive'])
+        self.assertLess(position['Release gate and archive'], position['Build the site and check'])
+        self.assertLess(position['Build the site and check'], position['Push the adoption branch'])
+        self.assertLess(position['Push the adoption branch'], position['Push to the public repository'])
+        self.assertLess(position['Push to the public repository'], position['Open the adoption'])
+        self.assertEqual(order[-1][:4], 'Open')
+        adoption = dict(steps())[order[-1]]
+        self.assertIn('continue-on-error: true', adoption)       # bookkeeping after the fact cannot fail a published run
+
+    def test_the_run_stops_when_nothing_is_new(self):
+        for name, text in steps():
+            if name.startswith(('Switch', 'Development', 'Build the site evidence', 'Production', 'Release gate', 'Build the site', 'Push', 'Open')):
+                self.assertIn("steps.release.outputs.skip != 'true'", text, name)
+
+    def test_logs_print_no_forecast_numbers(self):
+        # public logs: no step prints or summarises seats, probabilities or shares
+        for word in ('seats by party', 'median', 'P(majority)', 'probability'):
+            self.assertNotIn(word, CODE.lower().replace('probabilitymcse', ''))
+
+    def test_the_site_is_not_edited_by_this_workflow(self):
+        self.assertNotIn('src/app', CODE)
+
+
+class SelectorExemptionTests(unittest.TestCase):
+    def test_the_publish_workflow_is_a_non_verify_workflow(self):
+        from scripts.validate import ci_frozen
+        self.assertIn('.github/workflows/publish.yml', ci_frozen.NON_VERIFY_WORKFLOWS)
+        self.assertNotIn('publish.yml', (ROOT / '.github/workflows/ci.yml').read_text(encoding='utf-8'))
+
+
+if __name__ == '__main__':
+    unittest.main()
