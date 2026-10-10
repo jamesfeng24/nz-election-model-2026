@@ -2,6 +2,7 @@
 scoring and the assembly hook. Assembly tests use SYNTHETIC slates over the real 2026 ids; no bank here is a forecast."""
 import copy
 import unittest
+import unittest.mock
 import numpy as np
 from scripts.balance_scale.common import equivalent
 from scripts.manual_adjustment.schema import seat_frame
@@ -143,17 +144,75 @@ class Live(unittest.TestCase):
         self.assertNotIn(ids['aucklandcentral'], inputs)
         self.assertEqual(sorted(live.inputs('2026-09-01')), [ids['kapiti']])
 
-    def test_undefined_cases_fail_closed(self):
-        rows = copy.deepcopy(data.polls())
-        two = [r for r in rows if r['electorate'] == 'Mt Albert' and r['election'] == 2026]
-        two[1]['pollster'] = 'Another'
+    def test_the_live_file_gives_the_same_inputs_as_the_pinned_transcription(self):
+        live_now, pinned = live.inputs('2026-10-07'), live.inputs('2026-10-07', rows=data.polls())
+        self.assertEqual(sorted(live_now), sorted(pinned))
+        for seat, a in live_now.items():
+            for key in ('value', 'variance', 'ageWeeks', 'rho', 'cap'):
+                self.assertAlmostEqual(a[key], pinned[seat][key], places=12, msg=key)
+
+    def test_live_rows_read_general_polls_only_and_map_sponsors(self):
+        rows = live.live_rows()
+        self.assertTrue(rows and all(r['election'] == 2026 for r in rows))
+        self.assertFalse({'Waiariki', 'Te Tai Tonga', 'Hauraki-Waikato', 'Te Tai Hauāuru'} & {r['electorate'] for r in rows})
+        groups = {r['pollster']: r['sponsorGroup'] for r in rows}
+        self.assertEqual(groups['Victor Consulting'], 'labour-aligned')
+        self.assertEqual(groups['Community Engagement Limited'], 'labour-aligned')
+        self.assertEqual(groups["Taxpayers' Union\u2013Curia"], 'all other groups')
+        self.assertEqual({live.source_key(x) for x in ("Taxpayers' Union\u2013Curia", "Taxpayers' Union \u2013 Curia", 'Whakaata Māori–Curia', 'Curia')}, {'curia'})
+
+    def test_a_new_poll_is_a_data_only_addition(self):
+        rows = copy.deepcopy(live.live_rows())
+        before = live.inputs('2026-10-07', rows=rows)
+        extra = copy.deepcopy([r for r in rows if r['electorate'] == 'Waitaki'][0])
+        extra.update(id='test-new', fieldworkStart='2026-10-03', fieldworkEnd='2026-10-06', candidateVotePct={'NAT': 38, 'LAB': 30, 'GRN': 5})
+        after = live.inputs('2026-10-07', rows=rows + [extra])
+        seat = live.seat_ids()['waitaki']
+        self.assertEqual({k: v for k, v in before.items() if k != seat}, {k: v for k, v in after.items() if k != seat})
+        self.assertNotEqual(before[seat]['value'], after[seat]['value'])
+        self.assertEqual(after[seat]['pollIds'][-1], 'test-new')
+
+    def test_different_pollsters_combine_by_inverse_variance_with_an_age_discount(self):
+        rows = copy.deepcopy(live.live_rows())
+        mt = [r for r in rows if r['electorate'] == 'Mt Albert']
+        rows = [r for r in rows if r['electorate'] != 'Mt Albert']
+        first = dict(mt[0], id='a', pollster='Curia', fieldworkStart='2026-09-30', fieldworkEnd='2026-10-05', sampleSize=400,
+                     candidateVotePct={'NAT': 40, 'LAB': 30}, sponsorGroup='all other groups')
+        second = dict(first, id='b', pollster='Other Pollster', fieldworkStart='2026-09-30', fieldworkEnd='2026-10-05', sampleSize=1600,
+                      candidateVotePct={'NAT': 30, 'LAB': 40})
+        out = live.inputs('2026-10-07', rows=rows + [first, second])[live.seat_ids()['mtalbert']]
+        one = live.inputs('2026-10-07', rows=rows + [first])[live.seat_ids()['mtalbert']]
+        two = live.inputs('2026-10-07', rows=rows + [second])[live.seat_ids()['mtalbert']]
+        self.assertAlmostEqual(out['variance'], 1 / (1 / one['variance'] + 1 / two['variance']))
+        w = (1 / one['variance']) / (1 / one['variance'] + 1 / two['variance'])
+        self.assertAlmostEqual(out['value'], w * one['value'] + (1 - w) * two['value'])
+        self.assertEqual(out['sources'], 2)
+        # an older poll of another pollster counts for less than the same poll if it were fresh
+        older = dict(second, fieldworkStart='2026-08-01', fieldworkEnd='2026-08-05')
+        stale = live.inputs('2026-10-07', rows=rows + [first, older])[live.seat_ids()['mtalbert']]
+        self.assertGreater(stale['variance'], out['variance'])
+        self.assertAlmostEqual(stale['ageWeeks'], out['ageWeeks'])
+
+    def test_an_older_poll_of_one_source_beyond_the_merge_gap_is_superseded(self):
+        rows = copy.deepcopy(live.live_rows())
+        base = [r for r in rows if r['electorate'] == 'Waitaki'][0]
+        rest = [r for r in rows if r['electorate'] != 'Waitaki']
+        newer = dict(base, id='newer', fieldworkStart='2026-10-01', fieldworkEnd='2026-10-05', candidateVotePct={'NAT': 41, 'LAB': 28})
+        older = dict(base, id='older', fieldworkStart='2026-07-01', fieldworkEnd='2026-07-05', candidateVotePct={'NAT': 20, 'LAB': 40})
+        out = live.inputs('2026-10-07', rows=rest + [older, newer])[live.seat_ids()['waitaki']]
+        alone = live.inputs('2026-10-07', rows=rest + [newer])[live.seat_ids()['waitaki']]
+        self.assertEqual(out['pollIds'], ['newer'])
+        self.assertAlmostEqual(out['value'], alone['value'])
+
+    def test_unknown_seats_and_a_stale_index_fail_closed(self):
+        rows = copy.deepcopy(live.live_rows())
+        rows[0]['electorate'] = 'Nowhere'
         with self.assertRaises(ValueError):
             live.inputs('2026-10-07', rows=rows)
-        rows = copy.deepcopy(data.polls())
-        two = [r for r in rows if r['electorate'] == 'Mt Albert' and r['election'] == 2026]
-        two[1]['fieldworkStart'] = '2026-12-01'
-        with self.assertRaises(ValueError):
-            live.inputs('2026-12-31', rows=rows)
+        with unittest.mock.patch.object(live, 'read', side_effect=lambda path, real=live.read: (
+                {**real(path), 'runs': [{**real(path)['runs'][-1], 'pollsSha256': '0' * 64}]} if path.endswith('index.json') else real(path))):
+            with self.assertRaises(ValueError):
+                live.live_rows()
 
 
 def slate(seat):
