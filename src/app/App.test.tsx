@@ -15,16 +15,22 @@ const noIndex = () => Promise.resolve<IndexResult>({ status: 'unavailable', reas
 const mmp = (config as any).mmp;
 const footer = 'Free to share with credit (CC BY 4.0)';
 describe('public site', () => {
-  it.each(pages)('renders $label with navigation, title and the licence footer', async page => {
+  it.each(pages)('renders $label with navigation, title and the licence footer', async (page) => {
     render(<App page={page.path} source={none} indexSource={noIndex} />);
     expect(screen.getByRole('heading', { level: 1, name: page.title })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: page.label })).toHaveAttribute('aria-current', 'page');
-    expect(screen.getByRole('link', { name: footer })).toHaveAttribute('href', 'https://creativecommons.org/licenses/by/4.0/');
+    expect(screen.getByRole('link', { name: footer })).toHaveAttribute(
+      'href',
+      'https://creativecommons.org/licenses/by/4.0/',
+    );
     expect(await screen.findByRole('navigation')).toBeInTheDocument();
   });
   it('lists the owner links on the About page, only those with an address', () => {
     render(<App page="about" source={none} indexSource={noIndex} />);
-    expect(screen.getByRole('link', { name: 'github.com/jamesfeng24' })).toHaveAttribute('href', expect.stringMatching(/^https:\/\/github\.com\//));
+    expect(screen.getByRole('link', { name: 'github.com/jamesfeng24' })).toHaveAttribute(
+      'href',
+      expect.stringMatching(/^https:\/\/github\.com\//),
+    );
     expect(screen.queryByText('Ko-fi')).toBeNull();
   });
   it('links pages with relative addresses', () => {
@@ -37,6 +43,12 @@ describe('public site', () => {
     expect(await screen.findByText('No forecast published yet')).toBeInTheDocument();
     expect(screen.queryByRole('table')).not.toBeInTheDocument();
   });
+  it('says the forecast could not be loaded, not that none is published, when loading fails', async () => {
+    const failed = () => Promise.resolve<LoadResult>({ status: 'unavailable', reason: 'HTTP 500', cause: 'failed' });
+    render(<App page="forecast" source={failed} indexSource={noIndex} />);
+    expect(await screen.findByText('The forecast could not be loaded')).toBeInTheDocument();
+    expect(screen.queryByText('No forecast published yet')).not.toBeInTheDocument();
+  });
   it('names the data sources on the methodology page', () => {
     render(<App page="methodology" source={none} indexSource={noIndex} />);
     expect(screen.getByRole('heading', { name: 'Data sources' })).toBeInTheDocument();
@@ -44,7 +56,9 @@ describe('public site', () => {
   });
   it('shows a loaded snapshot with the as-of banner and the synthetic warning', async () => {
     const snapshot = await runSyntheticDryRun({ draws: 50 });
-    render(<App page="forecast" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    render(
+      <App page="forecast" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
     expect(await screen.findByRole('alert')).toHaveTextContent('SYNTHETIC DATA');
     expect(screen.getByText(/Updated 6 October 2026/)).toBeInTheDocument();
     expect(screen.getByRole('table', { name: /Median with 80% range/ })).toBeInTheDocument();
@@ -53,10 +67,36 @@ describe('public site', () => {
     expect(screen.queryByText('No forecast published yet')).not.toBeInTheDocument();
   });
   it('lists archive entries newest first and marks corrections', async () => {
-    const index: IndexResult = { status: 'loaded', index: { schemaVersion: 1, snapshots: [
-      { snapshotId: 'a', createdAt: '2026-10-08T00:00:00+13:00', dataCutoff: '2026-10-08T00:00:00+13:00', provenanceKind: 'model', path: 'a/snapshot.json', sha256: '0'.repeat(64), supersedes: null, status: 'published', withdrawnReason: null },
-      { snapshotId: 'b', createdAt: '2026-10-09T00:00:00+13:00', dataCutoff: '2026-10-09T00:00:00+13:00', provenanceKind: 'model', path: 'b/snapshot.json', sha256: '1'.repeat(64), supersedes: 'a', status: 'published', withdrawnReason: null },
-    ] } };
+    const index: IndexResult = {
+      status: 'loaded',
+      index: {
+        schemaVersion: 1,
+        snapshots: [
+          {
+            snapshotId: 'a',
+            createdAt: '2026-10-08T00:00:00+13:00',
+            dataCutoff: '2026-10-08T00:00:00+13:00',
+            provenanceKind: 'model',
+            path: 'a/snapshot.json',
+            sha256: '0'.repeat(64),
+            supersedes: null,
+            status: 'published',
+            withdrawnReason: null,
+          },
+          {
+            snapshotId: 'b',
+            createdAt: '2026-10-09T00:00:00+13:00',
+            dataCutoff: '2026-10-09T00:00:00+13:00',
+            provenanceKind: 'model',
+            path: 'b/snapshot.json',
+            sha256: '1'.repeat(64),
+            supersedes: 'a',
+            status: 'published',
+            withdrawnReason: null,
+          },
+        ],
+      },
+    };
     render(<App page="archive" source={none} indexSource={() => Promise.resolve(index)} />);
     const rows = await screen.findAllByRole('row');
     expect(rows[1]).toHaveTextContent('9 October 2026');
@@ -66,19 +106,39 @@ describe('public site', () => {
   });
   it('shows the chance of a majority for each group, no-majority and the electorate table from a full 71-seat snapshot', async () => {
     const snapshot = await buildNowcastSnapshot(bank, {
-      snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-07T00:00:00+00:00', dataCutoff: '2026-10-06T00:00:00+00:00',
-      electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
-      modelVersion: 'synthetic-model', codeRevision: 'synthetic-revision', bankSha256: 'a'.repeat(64),
-      mmp: { rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only', rulesSourceIds: ['synthetic-rules'], blocs: mmp.blocs, hungParliament: mmp.hungParliament },
-      nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
+      snapshotId: 'synthetic-nowcast-1',
+      createdAt: '2026-10-07T00:00:00+00:00',
+      dataCutoff: '2026-10-06T00:00:00+00:00',
+      electionId: 'nz-general-2026',
+      electionDate: '2026-11-07',
+      boundaryVersionId: 'stats-nz-electorates-final-2025',
+      modelVersion: 'synthetic-model',
+      codeRevision: 'synthetic-revision',
+      bankSha256: 'a'.repeat(64),
+      mmp: {
+        rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only',
+        rulesSourceIds: ['synthetic-rules'],
+        blocs: mmp.blocs,
+        hungParliament: mmp.hungParliament,
+      },
+      nationalBasis: 'Synthetic draws',
+      limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
     });
-    render(<App page="forecast" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    render(
+      <App page="forecast" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
     expect(await screen.findByRole('heading', { name: 'Chance of a majority' })).toBeInTheDocument();
-    expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('Labour + Greens + Te Pāti Māori');
-    expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent('No majority');
+    expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent(
+      'Labour + Greens + Te Pāti Māori',
+    );
+    expect(screen.getByRole('table', { name: /Chance each group wins more than half/ })).toHaveTextContent(
+      'No majority',
+    );
     expect(screen.queryByText(/kingmaker/i)).toBeNull();
     const seatTable = screen.getByRole('table', { name: /Seats by party across simulated elections/ });
-    ['Median', '80% range', 'Electorate', 'List', 'Overhang'].forEach(h => expect(within(seatTable).getByRole('columnheader', { name: h })).toBeInTheDocument());
+    ['Median', '80% range', 'Electorate', 'List', 'Overhang'].forEach((h) =>
+      expect(within(seatTable).getByRole('columnheader', { name: h })).toBeInTheDocument(),
+    );
     expect(seatTable.querySelectorAll('.seatbar').length).toBeGreaterThan(3);
     expect(screen.getByRole('heading', { name: 'Overhang' })).toBeInTheDocument();
     expect(screen.getByText(/Chance of at least one overhang seat/)).toBeInTheDocument();
@@ -87,28 +147,47 @@ describe('public site', () => {
   });
   it('marks the sitting MP on the seat page and in the seat list, and rejects inconsistent incumbent flags', async () => {
     const options = {
-      snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-07T00:00:00+00:00', dataCutoff: '2026-10-06T00:00:00+00:00',
-      electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
-      modelVersion: 'synthetic-model', codeRevision: 'synthetic-revision', bankSha256: 'a'.repeat(64),
+      snapshotId: 'synthetic-nowcast-1',
+      createdAt: '2026-10-07T00:00:00+00:00',
+      dataCutoff: '2026-10-06T00:00:00+00:00',
+      electionId: 'nz-general-2026',
+      electionDate: '2026-11-07',
+      boundaryVersionId: 'stats-nz-electorates-final-2025',
+      modelVersion: 'synthetic-model',
+      codeRevision: 'synthetic-revision',
+      bankSha256: 'a'.repeat(64),
       mmp: { rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only', rulesSourceIds: ['synthetic-rules'], blocs: [] },
-      nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
+      nationalBasis: 'Synthetic draws',
+      limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
     };
     const plain = await buildNowcastSnapshot(bank, options);
     expect(plain.incumbency).toBeUndefined();
     const seatId = plain.directory.electorates[0].electorateId;
-    const sitting = plain.directory.candidates.find(c => c.electorateId === seatId)!;
-    const snapshot = await buildNowcastSnapshot(bank, { ...options, incumbents: {
-      source: { label: 'Invented list of MPs', url: 'https://example.org/mps', asOf: '2026-09-23' }, incumbents: [{ targetOccurrenceId: sitting.candidateId }, { targetOccurrenceId: 'not-in-this-bank' }] } });
-    expect(snapshot.directory.candidates.filter(c => c.incumbent).map(c => c.candidateId)).toEqual([sitting.candidateId]);
+    const sitting = plain.directory.candidates.find((c) => c.electorateId === seatId)!;
+    const snapshot = await buildNowcastSnapshot(bank, {
+      ...options,
+      incumbents: {
+        source: { label: 'Invented list of MPs', url: 'https://example.org/mps', asOf: '2026-09-23' },
+        incumbents: [{ targetOccurrenceId: sitting.candidateId }, { targetOccurrenceId: 'not-in-this-bank' }],
+      },
+    });
+    expect(snapshot.directory.candidates.filter((c) => c.incumbent).map((c) => c.candidateId)).toEqual([
+      sitting.candidateId,
+    ]);
     expect(snapshot.incumbency?.asOf).toBe('2026-09-23');
-    const noSource = structuredClone(snapshot); delete noSource.incumbency;
+    const noSource = structuredClone(snapshot);
+    delete noSource.incumbency;
     expect(() => ForecastSnapshotSchema.parse(noSource)).toThrow(/need their source/);
     const two = structuredClone(snapshot);
-    two.directory.candidates.find(c => c.electorateId === seatId && c.candidateId !== sitting.candidateId)!.incumbent = true;
+    two.directory.candidates.find(
+      (c) => c.electorateId === seatId && c.candidateId !== sitting.candidateId,
+    )!.incumbent = true;
     expect(() => ForecastSnapshotSchema.parse(two)).toThrow(/only one incumbent/);
     window.location.hash = `#seat=${seatId}`;
-    render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
-    const row = (await screen.findAllByRole('row')).find(r => r.textContent?.startsWith(sitting.name))!;
+    render(
+      <App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
+    const row = (await screen.findAllByRole('row')).find((r) => r.textContent?.startsWith(sitting.name))!;
     expect(within(row).getByText('Incumbent')).toBeInTheDocument();
     expect(screen.getByRole('columnheader', { name: 'Incumbent' })).toBeInTheDocument();
     expect(screen.getAllByText('None standing').length).toBeGreaterThan(0);
@@ -116,17 +195,42 @@ describe('public site', () => {
   });
   it('filters the seat list by winner party, flips, seat type and close contests', async () => {
     const options = {
-      snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-07T00:00:00+00:00', dataCutoff: '2026-10-06T00:00:00+00:00',
-      electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
-      modelVersion: 'synthetic-model', codeRevision: 'synthetic-revision', bankSha256: 'a'.repeat(64),
+      snapshotId: 'synthetic-nowcast-1',
+      createdAt: '2026-10-07T00:00:00+00:00',
+      dataCutoff: '2026-10-06T00:00:00+00:00',
+      electionId: 'nz-general-2026',
+      electionDate: '2026-11-07',
+      boundaryVersionId: 'stats-nz-electorates-final-2025',
+      modelVersion: 'synthetic-model',
+      codeRevision: 'synthetic-revision',
+      bankSha256: 'a'.repeat(64),
       mmp: { rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only', rulesSourceIds: ['synthetic-rules'], blocs: [] },
-      nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
+      nationalBasis: 'Synthetic draws',
+      limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
     };
     const plain = await buildNowcastSnapshot(bank, options);
-    const incumbents = plain.directory.electorates.flatMap((e, i) => (i % 4 === 3 ? [] : [{ targetOccurrenceId: plain.directory.candidates.filter(c => c.electorateId === e.electorateId)[i % 4 === 2 ? 1 : 0].candidateId }]));
-    const snapshot = await buildNowcastSnapshot(bank, { ...options, incumbents: { source: { label: 'Invented list', url: 'https://example.org/mps', asOf: '2026-09-23' }, incumbents } });
+    const incumbents = plain.directory.electorates.flatMap((e, i) =>
+      i % 4 === 3
+        ? []
+        : [
+            {
+              targetOccurrenceId: plain.directory.candidates.filter((c) => c.electorateId === e.electorateId)[
+                i % 4 === 2 ? 1 : 0
+              ].candidateId,
+            },
+          ],
+    );
+    const snapshot = await buildNowcastSnapshot(bank, {
+      ...options,
+      incumbents: {
+        source: { label: 'Invented list', url: 'https://example.org/mps', asOf: '2026-09-23' },
+        incumbents,
+      },
+    });
     window.location.hash = '';
-    render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    render(
+      <App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
     expect(await screen.findByText(/All 71 electorates \(71 shown\)/)).toBeInTheDocument();
     fireEvent.change(screen.getByRole('combobox', { name: 'Type' }), { target: { value: 'maori' } });
     expect(screen.getByText(/Electorates matching the filters \(7 shown\)/)).toBeInTheDocument();
@@ -158,11 +262,13 @@ describe('public site', () => {
     const snapshot = await syntheticBankSnapshot();
     window.location.hash = '';
     const name = snapshot.directory.electorates[0].name;
-    render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    render(
+      <App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
     const box = await screen.findByRole('combobox', { name: 'Find a seat' });
     fireEvent.focus(box);
     fireEvent.change(box, { target: { value: name.slice(0, 3) } });
-    const option = screen.getAllByRole('option').find(o => o.textContent?.startsWith(name))!;
+    const option = screen.getAllByRole('option').find((o) => o.textContent?.startsWith(name))!;
     expect(option).toBeTruthy();
     expect(document.querySelector('datalist')).toBeNull();
     fireEvent.click(option.querySelector('button')!);
@@ -173,7 +279,9 @@ describe('public site', () => {
   it('shows the 50% range on the solid bar, the 80% range on the light bar and always the median', async () => {
     const snapshot = await syntheticBankSnapshot();
     window.location.hash = `#seat=${snapshot.directory.electorates[0].electorateId}`;
-    const { container } = render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    const { container } = render(
+      <App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
     await screen.findByRole('heading', { level: 2, name: new RegExp(snapshot.directory.electorates[0].name) });
     const bar = container.querySelector('.rangebar')!;
     fireEvent.mouseEnter(bar.querySelector('.r50')!, { clientX: 10 });
@@ -188,25 +296,45 @@ describe('public site', () => {
   });
   it('shows a seat page with odds, shaded ranges and the polls attached to the seat', async () => {
     const base = await buildNowcastSnapshot(bank, {
-      snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-07T00:00:00+00:00', dataCutoff: '2026-10-06T00:00:00+00:00',
-      electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
-      modelVersion: 'synthetic-model', codeRevision: 'synthetic-revision', bankSha256: 'a'.repeat(64),
+      snapshotId: 'synthetic-nowcast-1',
+      createdAt: '2026-10-07T00:00:00+00:00',
+      dataCutoff: '2026-10-06T00:00:00+00:00',
+      electionId: 'nz-general-2026',
+      electionDate: '2026-11-07',
+      boundaryVersionId: 'stats-nz-electorates-final-2025',
+      modelVersion: 'synthetic-model',
+      codeRevision: 'synthetic-revision',
+      bankSha256: 'a'.repeat(64),
       mmp: { rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only', rulesSourceIds: ['synthetic-rules'], blocs: [] },
-      nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
+      nationalBasis: 'Synthetic draws',
+      limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
     });
     const snapshot = structuredClone(base);
     const seat = snapshot.electorateDetail[0];
-    const candidate = snapshot.directory.candidates.find(c => c.electorateId === seat.electorateId)!;
-    const poll = { pollster: 'Invented Research', commissioner: 'An invented client', fieldworkStart: null, fieldworkEnd: '2026-09-27', published: null, sampleSize: 500, marginOfError: 4.5, usedInModel: false, note: null, sources: [{ label: 'Invented Herald', url: 'https://example.org/poll' }],
-      results: [{ candidateId: candidate.candidateId, name: candidate.name, party: null, percent: 40 }] };
+    const candidate = snapshot.directory.candidates.find((c) => c.electorateId === seat.electorateId)!;
+    const poll = {
+      pollster: 'Invented Research',
+      commissioner: 'An invented client',
+      fieldworkStart: null,
+      fieldworkEnd: '2026-09-27',
+      published: null,
+      sampleSize: 500,
+      marginOfError: 4.5,
+      usedInModel: false,
+      note: null,
+      sources: [{ label: 'Invented Herald', url: 'https://example.org/poll' }],
+      results: [{ candidateId: candidate.candidateId, name: candidate.name, party: null, percent: 40 }],
+    };
     seat.evidence = { basis: 'Invented basis text', polls: [poll] };
     expect(() => ForecastSnapshotSchema.parse(snapshot)).not.toThrow();
     const bad = structuredClone(snapshot);
     bad.electorateDetail[0].evidence!.polls[0].results[0].candidateId = 'nobody';
     expect(() => ForecastSnapshotSchema.parse(bad)).toThrow(/unknown candidate/);
     window.location.hash = `#seat=${seat.electorateId}`;
-    render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
-    const name = snapshot.directory.electorates.find(e => e.electorateId === seat.electorateId)!.name;
+    render(
+      <App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
+    const name = snapshot.directory.electorates.find((e) => e.electorateId === seat.electorateId)!.name;
     expect(await screen.findByRole('heading', { level: 2, name: new RegExp(name) })).toBeInTheDocument();
     expect(screen.getAllByRole('img', { name: /50% range .* 80% range/ }).length).toBeGreaterThan(1);
     expect(screen.getByText('Invented basis text')).toBeInTheDocument();

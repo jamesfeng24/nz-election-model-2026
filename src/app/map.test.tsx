@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import { syntheticBankSnapshot } from '../dev/syntheticBank';
 import { App } from './App';
-import { incumbentNote, opacityFor, type MapForecast } from './ElectorateMap';
+import { incumbentNote, opacityFor, type MapForecast } from './map/types';
 import { partyLabel } from './partyNames';
 
 const noIndex = () => Promise.reject(new Error('no archive'));
@@ -10,13 +10,34 @@ const noIndex = () => Promise.reject(new Error('no archive'));
 describe('party names', () => {
   it('uses one set of names everywhere', async () => {
     const snapshot = await syntheticBankSnapshot();
-    expect(['nationalparty', 'labourparty', 'greenparty', 'actnewzealand', 'newzealandfirstparty', 'opportunity', 'tepatimaori'].map(id => partyLabel(snapshot, id)))
-      .toEqual(['National', 'Labour', 'Greens', 'ACT', 'NZ First', 'TOP', 'Te Pāti Māori']);
+    expect(
+      [
+        'nationalparty',
+        'labourparty',
+        'greenparty',
+        'actnewzealand',
+        'newzealandfirstparty',
+        'opportunity',
+        'tepatimaori',
+      ].map((id) => partyLabel(snapshot, id)),
+    ).toEqual(['National', 'Labour', 'Greens', 'ACT', 'NZ First', 'TOP', 'Te Pāti Māori']);
   });
 });
 
 describe('incumbent note', () => {
-  const seat: MapForecast = { id: 'a', name: 'Seat', kind: 'general', leaderParty: null, leaderPartyName: 'Independent', leaderName: 'A B', leaderP: 0.6, available: true, incumbent: 'A B', incumbentStatus: 'leads', candidates: [] };
+  const seat: MapForecast = {
+    id: 'a',
+    name: 'Seat',
+    kind: 'general',
+    leaderParty: null,
+    leaderPartyName: 'Independent',
+    leaderName: 'A B',
+    leaderP: 0.6,
+    available: true,
+    incumbent: 'A B',
+    incumbentStatus: 'leads',
+    candidates: [],
+  };
   it('names the sitting MP and whether they are the favourite', () => {
     expect(incumbentNote(seat)).toBe('. Incumbent: A B (most likely winner)');
     expect(incumbentNote({ ...seat, incumbentStatus: 'trails' })).toBe('. Incumbent: A B (not the most likely winner)');
@@ -37,7 +58,9 @@ describe('electorate map', () => {
 
   it('draws every seat as a link to its page, with a Māori toggle, and selects a seat when clicked', async () => {
     const snapshot = await syntheticBankSnapshot();
-    const { container } = render(<App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />);
+    const { container } = render(
+      <App page="electorates" source={() => Promise.resolve({ status: 'loaded', snapshot })} indexSource={noIndex} />,
+    );
     const general = await screen.findByRole('group', { name: /Map of the general electorates/ });
     const links = within(general).getAllByRole('link');
     expect(links.length).toBeGreaterThan(40);

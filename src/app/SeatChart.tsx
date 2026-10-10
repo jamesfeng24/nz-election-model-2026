@@ -1,54 +1,112 @@
 import type { ForecastSnapshot } from '../types/export';
-import { partyLabel } from './partyNames';
-import { PRIMARY_INTERVAL_LEVEL } from '../types/domain';
 import { hemicycle, hemicycleDot, largestRemainder } from './hemicycle';
+import { mainRange } from './intervals';
+import { COLOURS, FALLBACK, headlineRank } from './partyColours';
+import { partyLabel } from './partyNames';
 
-/** Left-to-right order of the headline chart, set by James (2026-10-09). Parties not in the snapshot are skipped. */
-export const HEADLINE_ORDER = ['tepatimaori', 'greenparty', 'labourparty', 'opportunity', 'newzealandfirstparty', 'nationalparty', 'actnewzealand'];
-export const COLOURS: Record<string, string> = {
-  tepatimaori: '#8c1d40', greenparty: '#1c9a47', labourparty: '#d82a20', opportunity: '#12a4c6',
-  newzealandfirstparty: '#222222', nationalparty: '#00529f', actnewzealand: '#e0b800',
-};
-export const FALLBACK = ['#6b5b95', '#c47f17', '#4d7c8a', '#a05195', '#7a8b3a', '#b5524b', '#5a6b73'];
-const OTHER = '#a9b4b0';
+const OTHERS_COLOUR = '#a9b4b0';
+const WIDTH = 640;
+const EDGE_PADDING = 6;
+const NORMAL_PARLIAMENT = 120;
 
-interface Slice { key: string; label: string; mean: number; median: number; lower: number; upper: number; colour: string; electorate: number | null }
-
-function slices(snapshot: ForecastSnapshot): { slices: Slice[]; total: number } {
-  const name = (id: string) => partyLabel(snapshot, id);
-  const layer = snapshot.seatLayer.status === 'available' ? snapshot.seatLayer.summary : null;
-  const rows = layer
-    ? layer.parties.map(p => ({ id: p.partyId, mean: p.meanSeats, set: p.seats, electorate: p.meanElectorateSeats }))
-    : snapshot.simulation.partySeatSummaries.map(p => ({ id: p.partyId, mean: p.seats[0].median, set: p.seats, electorate: null as number | null }));
-  const rank = (id: string) => { const i = HEADLINE_ORDER.indexOf(id); return i < 0 ? HEADLINE_ORDER.length : i; };
-  const ordered = [...rows].sort((a, b) => rank(a.id) - rank(b.id));
-  const out: Slice[] = ordered.map((r, i) => {
-    const r80 = r.set.find(v => v.level === PRIMARY_INTERVAL_LEVEL)!;
-    return { key: r.id, label: name(r.id), mean: r.mean, median: r.set[0].median, lower: r80.lower, upper: r80.upper, colour: COLOURS[r.id] ?? FALLBACK[i % FALLBACK.length], electorate: r.electorate };
-  });
-  const listed = out.reduce((a, s) => a + s.mean, 0);
-  const size = layer ? layer.parliament.meanSize : listed;
-  if (size - listed >= 0.5) out.push({ key: 'others', label: 'Others', mean: size - listed, median: Math.round(size - listed), lower: NaN, upper: NaN, colour: OTHER, electorate: null });
-  return { slices: out, total: Math.round(size) };
+interface Slice {
+  key: string;
+  label: string;
+  mean: number;
+  /** Absent for "Others", which has no range of its own. */
+  range: { median: number; lower: number; upper: number } | null;
+  colour: string;
 }
 
-/** Headline graphic: expected seats per party as a parliament chart, one dot per seat, parties in James's order. */
+/** One slice per party in headline order, plus "Others" for seats the listed parties do not account for. */
+function slicesOf(snapshot: ForecastSnapshot): { slices: Slice[]; total: number } {
+  const layer = snapshot.seatLayer.status === 'available' ? snapshot.seatLayer.summary : null;
+  const parties = layer
+    ? layer.parties.map((p) => ({ id: p.partyId, mean: p.meanSeats, seats: p.seats }))
+    : snapshot.simulation.partySeatSummaries.map((p) => ({ id: p.partyId, mean: p.seats[0].median, seats: p.seats }));
+  const slices: Slice[] = [...parties]
+    .sort((a, b) => headlineRank(a.id) - headlineRank(b.id))
+    .map((party, i) => {
+      const { lower, upper } = mainRange(party.seats);
+      return {
+        key: party.id,
+        label: partyLabel(snapshot, party.id),
+        mean: party.mean,
+        range: { median: party.seats[0].median, lower, upper },
+        colour: COLOURS[party.id] ?? FALLBACK[i % FALLBACK.length],
+      };
+    });
+  const listed = slices.reduce((sum, slice) => sum + slice.mean, 0);
+  const size = layer ? layer.parliament.meanSize : listed;
+  if (size - listed >= 0.5) {
+    slices.push({ key: 'others', label: 'Others', mean: size - listed, range: null, colour: OTHERS_COLOUR });
+  }
+  return { slices, total: Math.round(size) };
+}
+
+/** Expected seats per party as a parliament chart, one dot per seat. */
 export function SeatChart({ snapshot }: { snapshot: ForecastSnapshot }) {
-  const { slices: parts, total } = slices(snapshot);
-  const counts = largestRemainder(parts.map(p => p.mean), total);
+  const { slices, total } = slicesOf(snapshot);
+  const counts = largestRemainder(
+    slices.map((slice) => slice.mean),
+    total,
+  );
+  const owners = counts.flatMap((count, i) => Array<number>(count).fill(i));
   const seats = hemicycle(total);
-  const owner: number[] = counts.flatMap((n, i) => Array(n).fill(i) as number[]);
-  const W = 640, d = hemicycleDot(total);
-  const pad = (d * W / 2 + 6) / (1 + d), scale = (W - 2 * pad) / 2, dot = d * scale, H = 2 * pad + scale;   // margin = dot radius + 6, so no dot is clipped
-  const summary = parts.map((p, i) => `${p.label} ${counts[i]}`).join(', ');
-  return <figure className="seatchart">
-    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Expected seats, left to right: ${summary}. Parliament of ${total}.`}>
-      {seats.map((s, i) => <circle key={i} cx={pad + s.x * scale} cy={pad + s.y * scale} r={dot} fill={parts[owner[i]]?.colour ?? OTHER} />)}
-      <text x={W / 2} y={H - 70} textAnchor="middle" className="seatchart-total">{total}</text>
-      <text x={W / 2} y={H - 46} textAnchor="middle" className="seatchart-sub">expected seats</text>
-    </svg>
-    <ul className="seatchart-key">{parts.map((p, i) => <li key={p.key}><span style={{ background: p.colour }} aria-hidden="true" /><b>{p.label}</b> {counts[i]}
-      {Number.isNaN(p.lower) ? null : <small> ({p.lower}–{p.upper})</small>}</li>)}</ul>
-    <figcaption>Average seats per party, rounded to a Parliament of {total}. {total > 120 ? `That is 120 seats plus ${total - 120} expected overhang seat${total - 120 === 1 ? '' : 's'}. ` : ''}Brackets show the 80% range. One typical outcome, not the only one.</figcaption>
-  </figure>;
+
+  // The margin is the dot radius plus a few units, so no dot is clipped.
+  const dotRatio = hemicycleDot(total);
+  const padding = ((dotRatio * WIDTH) / 2 + EDGE_PADDING) / (1 + dotRatio);
+  const scale = (WIDTH - 2 * padding) / 2;
+  const dotRadius = dotRatio * scale;
+  const height = 2 * padding + scale;
+
+  const summary = slices.map((slice, i) => `${slice.label} ${counts[i]}`).join(', ');
+  const overhang = total - NORMAL_PARLIAMENT;
+  return (
+    <figure className="seatchart">
+      <svg
+        viewBox={`0 0 ${WIDTH} ${height}`}
+        role="img"
+        aria-label={`Expected seats, left to right: ${summary}. Parliament of ${total}.`}
+      >
+        {seats.map((seat, i) => (
+          <circle
+            key={i}
+            cx={padding + seat.x * scale}
+            cy={padding + seat.y * scale}
+            r={dotRadius}
+            fill={slices[owners[i]]?.colour ?? OTHERS_COLOUR}
+          />
+        ))}
+        <text x={WIDTH / 2} y={height - 70} textAnchor="middle" className="seatchart-total">
+          {total}
+        </text>
+        <text x={WIDTH / 2} y={height - 46} textAnchor="middle" className="seatchart-sub">
+          expected seats
+        </text>
+      </svg>
+      <ul className="seatchart-key">
+        {slices.map((slice, i) => (
+          <li key={slice.key}>
+            <span style={{ background: slice.colour }} aria-hidden="true" />
+            <b>{slice.label}</b> {counts[i]}
+            {slice.range && (
+              <small>
+                {' '}
+                ({slice.range.lower}–{slice.range.upper})
+              </small>
+            )}
+          </li>
+        ))}
+      </ul>
+      <figcaption>
+        Average seats per party, rounded to a Parliament of {total}.{' '}
+        {overhang > 0
+          ? `That is ${NORMAL_PARLIAMENT} seats plus ${overhang} expected overhang seat${overhang === 1 ? '' : 's'}. `
+          : ''}
+        Brackets show the 80% range. One typical outcome, not the only one.
+      </figcaption>
+    </figure>
+  );
 }

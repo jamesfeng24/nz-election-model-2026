@@ -5,5 +5,10 @@ import { pages, type PageId } from './app/pages';
 import './styles.css';
 
 const root = document.getElementById('root')!;
-const page = pages.find(p => p.path === root.dataset.page)?.path ?? 'forecast';
-ReactDOM.createRoot(root).render(<React.StrictMode><App page={page as PageId} /></React.StrictMode>);
+const page = (pages.find((p) => p.path === root.dataset.page)?.path ?? 'forecast') as PageId;
+
+ReactDOM.createRoot(root).render(
+  <React.StrictMode>
+    <App page={page} />
+  </React.StrictMode>,
+);

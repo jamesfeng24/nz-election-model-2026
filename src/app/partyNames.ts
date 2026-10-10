@@ -1,6 +1,6 @@
 import type { ForecastSnapshot } from '../types/export';
 
-/** How the site names parties everywhere (James, 2026-10-09): the names NZ media use, one form each. */
+/** The names NZ media use, one form each. */
 const NAMES: Record<string, string> = {
   nationalparty: 'National',
   labourparty: 'Labour',
@@ -11,7 +11,14 @@ const NAMES: Record<string, string> = {
   tepatimaori: 'Te Pāti Māori',
 };
 
-/** Parties the site has no name for keep the name the export gives them. */
+/** Parties with no name here keep the name from the export. */
 export function partyLabel(snapshot: ForecastSnapshot, id: string): string {
-  return NAMES[id] ?? snapshot.directory.parties.find(p => p.partyId === id)?.name ?? id;
+  return NAMES[id] ?? snapshot.directory.parties.find((p) => p.partyId === id)?.name ?? id;
+}
+
+type Candidate = ForecastSnapshot['directory']['candidates'][number];
+
+export function candidatePartyName(snapshot: ForecastSnapshot, candidate: Candidate | undefined): string {
+  if (candidate?.partyId) return partyLabel(snapshot, candidate.partyId);
+  return candidate?.partyLabel ?? 'Independent';
 }

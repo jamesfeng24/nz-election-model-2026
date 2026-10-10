@@ -9,41 +9,77 @@ import { App } from './App';
 import type { LoadResult } from '../data/loader';
 
 const options = (evidence: unknown) => ({
-  snapshotId: 'synthetic-nowcast-1', createdAt: '2026-10-08T00:00:00+00:00', dataCutoff: '2026-10-07T00:00:00+00:00',
-  electionId: 'nz-general-2026', electionDate: '2026-11-07', boundaryVersionId: 'stats-nz-electorates-final-2025',
-  modelVersion: 'synthetic-model', codeRevision: 'synthetic-revision', bankSha256: 'a'.repeat(64),
-  mmp: null, nationalBasis: 'Synthetic draws', limitations: ['SYNTHETIC FIXTURE: not a nowcast.'], evidence,
+  snapshotId: 'synthetic-nowcast-1',
+  createdAt: '2026-10-08T00:00:00+00:00',
+  dataCutoff: '2026-10-07T00:00:00+00:00',
+  electionId: 'nz-general-2026',
+  electionDate: '2026-11-07',
+  boundaryVersionId: 'stats-nz-electorates-final-2025',
+  modelVersion: 'synthetic-model',
+  codeRevision: 'synthetic-revision',
+  bankSha256: 'a'.repeat(64),
+  mmp: null,
+  nationalBasis: 'Synthetic draws',
+  limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
+  evidence,
 });
-const loaded = (snapshot: unknown): (() => Promise<LoadResult>) => () => Promise.resolve({ status: 'loaded', snapshot: snapshot as never });
+const loaded =
+  (snapshot: unknown): (() => Promise<LoadResult>) =>
+  () =>
+    Promise.resolve({ status: 'loaded', snapshot: snapshot as never });
 
 describe('site evidence in the snapshot', () => {
   it('embeds the produced polls, trend and seat polls and shows them on the polls page', async () => {
     // The synthetic bank's model state (2026-09-27) matches the evidence file; its directory has the real seat names.
     const snapshot = await buildNowcastSnapshot(bank, options(evidenceFile));
     expect(snapshot.evidence!.nationalPolls).toHaveLength(124);
-    expect(snapshot.evidence!.nationalPolls.filter(p => p.usedInModel)).toHaveLength(121);
+    expect(snapshot.evidence!.nationalPolls.filter((p) => p.usedInModel)).toHaveLength(121);
     expect(snapshot.evidence!.trend!.weeks).toHaveLength(156);
-    const detailWithPolls = snapshot.electorateDetail.filter(d => (d.evidence?.polls.length ?? 0) > 0).length;
+    const detailWithPolls = snapshot.electorateDetail.filter((d) => (d.evidence?.polls.length ?? 0) > 0).length;
     expect(detailWithPolls).toBe(6);
-    expect(snapshot.electorateDetail.every(d => d.evidence?.basis)).toBe(true);
+    expect(snapshot.electorateDetail.every((d) => d.evidence?.basis)).toBe(true);
     expect(() => ForecastSnapshotSchema.parse(snapshot)).not.toThrow();
 
     render(<App page="polls" source={loaded(snapshot)} />);
     expect(await screen.findByRole('heading', { name: 'National polls' })).toBeInTheDocument();
     const [table, seatTable] = screen.getAllByRole('table');
     // Opens on the ten newest polls under month headings; the rest sit behind "See more".
-    expect(within(table).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(11);
-    expect(within(table).getAllByRole('row').filter(r => r.className.includes('month')).length).toBeGreaterThan(0);
+    expect(
+      within(table)
+        .getAllByRole('row')
+        .filter((r) => !r.className.includes('month')),
+    ).toHaveLength(11);
+    expect(
+      within(table)
+        .getAllByRole('row')
+        .filter((r) => r.className.includes('month')).length,
+    ).toBeGreaterThan(0);
     fireEvent.click(screen.getByRole('button', { name: /See more \(114 older polls\)/ }));
-    expect(within(table).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(125);
+    expect(
+      within(table)
+        .getAllByRole('row')
+        .filter((r) => !r.className.includes('month')),
+    ).toHaveLength(125);
     expect(screen.getByRole('button', { name: 'Show fewer polls' })).toBeInTheDocument();
-    expect(within(seatTable).getAllByRole('link').some(a => /^https:\/\//.test(a.getAttribute('href') ?? ''))).toBe(true);
+    expect(
+      within(seatTable)
+        .getAllByRole('link')
+        .some((a) => /^https:\/\//.test(a.getAttribute('href') ?? '')),
+    ).toBe(true);
     // Electorate polls share the national layout, with an Electorate column; the newest ten show first.
     expect(within(seatTable).getByRole('columnheader', { name: 'Electorate' })).toBeInTheDocument();
-    expect(within(seatTable).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(7);
+    expect(
+      within(seatTable)
+        .getAllByRole('row')
+        .filter((r) => !r.className.includes('month')),
+    ).toHaveLength(7);
     expect(within(seatTable).getAllByRole('cell', { name: 'No' }).length).toBe(3);
-    expect(within(seatTable).getAllByRole('link').filter(a => (a.getAttribute('href') ?? '').startsWith('../electorates/#seat=')).length).toBe(6);
-    expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10);   // after See more
+    expect(
+      within(seatTable)
+        .getAllByRole('link')
+        .filter((a) => (a.getAttribute('href') ?? '').startsWith('../electorates/#seat=')).length,
+    ).toBe(6);
+    expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10); // after See more
     expect(within(table).queryByRole('columnheader', { name: /Client|Pollster/ })).toBeNull();
     expect(screen.getByText(/The Spinoff–Curia/)).toBeInTheDocument();
   });
@@ -70,7 +106,10 @@ describe('site evidence in the snapshot', () => {
     const { unmount } = render(<App page="methodology" source={loaded(plain)} />);
     expect(screen.queryByRole('heading', { name: 'Manual adjustments' })).not.toBeInTheDocument();
     unmount();
-    const adjusted = await buildNowcastSnapshot(bank, { ...options(evidenceFile), adjustments: { by: 'James', items: [{ what: 'Invented example adjustment', why: 'Invented reason' }] } });
+    const adjusted = await buildNowcastSnapshot(bank, {
+      ...options(evidenceFile),
+      adjustments: { by: 'James', items: [{ what: 'Invented example adjustment', why: 'Invented reason' }] },
+    });
     const view = render(<App page="methodology" source={loaded(adjusted)} />);
     expect(await screen.findByRole('heading', { name: 'Manual adjustments' })).toBeInTheDocument();
     expect(screen.getByText(/includes manual adjustments by James/)).toBeInTheDocument();
@@ -78,6 +117,8 @@ describe('site evidence in the snapshot', () => {
     view.unmount();
     render(<App page="forecast" source={loaded(adjusted)} />);
     expect(await screen.findByText(/Includes manual adjustments by James/)).toBeInTheDocument();
-    await expect(buildNowcastSnapshot(bank, { ...options(evidenceFile), adjustments: { by: 'James', items: [] } })).rejects.toThrow();
+    await expect(
+      buildNowcastSnapshot(bank, { ...options(evidenceFile), adjustments: { by: 'James', items: [] } }),
+    ).rejects.toThrow();
   });
 });
