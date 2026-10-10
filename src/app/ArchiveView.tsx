@@ -4,11 +4,11 @@ import { longDate } from './format';
 /** Newest first. A withdrawn or superseded entry stays listed and says so; corrections never rewrite an earlier file. */
 export function ArchiveView({ result }: { result: IndexResult | { status: 'loading' } }) {
   if (result.status === 'loading') return <p role="status">Loading the archive…</p>;
-  if (result.status === 'unavailable' || result.index.snapshots.length === 0) return <p>No forecasts have been published yet.</p>;
+  if (result.status === 'unavailable' || result.index.snapshots.length === 0) return <p>No forecasts yet.</p>;
   const { snapshots } = result.index;
   const superseded = new Set(snapshots.flatMap(e => (e.supersedes ? [e.supersedes] : [])));
   return <>
-    <p className="intro">Each forecast is saved as it was published and never edited. A correction is published as a new entry that replaces the old one, and the old file stays here.</p>
+    <p className="intro">Every forecast is kept as published. A correction is a new entry; the old file stays.</p>
     <table><caption>Published forecasts, newest first</caption>
       <thead><tr><th>As of</th><th>Published</th><th>Status</th><th>File</th></tr></thead>
       <tbody>{[...snapshots].reverse().map(e => <tr key={e.snapshotId}>

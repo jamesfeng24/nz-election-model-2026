@@ -32,7 +32,7 @@ export function SeatBars({ snapshot }: { snapshot: ForecastSnapshot }) {
         <td className="num">{p.meanElectorateSeats.toFixed(1)}</td><td className="num">{p.meanListSeats.toFixed(1)}</td>
         <td className="num">{prob(p.probOverhang.p)}</td></tr>)}</tbody>
     </table>
-    <p className="legend">Median seats shown as the bar. Electorate seats are won in an electorate; list seats are allocated from the party vote; both are averages across simulated elections. Overhang is the chance the party wins more electorate seats than its party vote entitles it to.</p>
+    <p className="legend">Bars show median seats. Electorate seats are won in an electorate; list seats come from the party vote; both are averages. Overhang: the chance the party wins more electorate seats than its party vote entitles it to.</p>
   </div>;
 }
 
@@ -46,6 +46,6 @@ export function OverhangNote({ snapshot }: { snapshot: ForecastSnapshot }) {
   const r80 = parliament.size.find(v => v.level === PRIMARY_INTERVAL_LEVEL)!;
   return <div className="overhang">
     <h3>Overhang</h3>
-    <p>Parliament has 120 seats unless a party wins more electorate seats than its share of the party vote entitles it to. Those extra "overhang" seats are added on top, so Parliament grows. Chance of at least one overhang seat: <strong>{prob(parliament.probAnyOverhang.p)}</strong>; average {parliament.meanOverhang.toFixed(1)} seat{parliament.meanOverhang.toFixed(1) === '1.0' ? '' : 's'}. Chance of none {prob(at(0))}, one seat {prob(at(1))}, two seats {prob(at(2))}, three or more {prob(threeUp)}. Parliament would have a median of {parliament.size[0].median} seats ({r80.lower} – {r80.upper}, 80% range).</p>
+    <p>Parliament has 120 seats, plus any "overhang" seats: extra electorate seats a party wins beyond its party-vote share. Chance of at least one overhang seat: <strong>{prob(parliament.probAnyOverhang.p)}</strong>; average {parliament.meanOverhang.toFixed(1)} seat{parliament.meanOverhang.toFixed(1) === '1.0' ? '' : 's'}. Chance of none {prob(at(0))}, one seat {prob(at(1))}, two seats {prob(at(2))}, three or more {prob(threeUp)}. Parliament would have a median of {parliament.size[0].median} seats ({r80.lower} – {r80.upper}, 80% range).</p>
   </div>;
 }

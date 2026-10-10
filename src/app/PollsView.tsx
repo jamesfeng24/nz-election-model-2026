@@ -35,10 +35,10 @@ export function PollsView({ snapshot }: { snapshot: ForecastSnapshot }) {
             <td>{p.usedInModel ? 'Yes' : <span title={p.note ?? undefined}>No</span>}</td></tr>])}</tbody></table>
       {evidence.nationalPolls.length > INITIAL_POLLS && <p><button type="button" className="more" aria-expanded={all} onClick={() => setAll(v => !v)}>
         {all ? 'Show fewer polls' : `See more (${evidence.nationalPolls.length - INITIAL_POLLS} older polls)`}</button></p>}
-    </> : <p>This release does not include the national poll listing.</p>}
+    </> : <p>No national poll list.</p>}
     <h2>Electorate polls</h2>
-    {seats.length === 0 ? <p>No electorate polls are attached to this release.</p> : <>
-      <p>Seat polls are rare and small. Each is listed whether or not the forecast uses it.</p>
+    {seats.length === 0 ? <p>No electorate polls.</p> : <>
+      <p>Seat polls are rare and small. All are listed, used or not.</p>
       {seats.map(({ d, name }) => <section key={d.electorateId} id={`seat-${d.electorateId}`}>
         <h3>{name} (<a href={`../electorates/#seat=${d.electorateId}`}>forecast for this seat</a>)</h3>
         {d.evidence!.polls.map((poll, i) => <SeatPollLine key={i} poll={poll} />)}

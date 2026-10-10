@@ -32,6 +32,6 @@ export function TrendChart({ history }: { history: ReleasePoint[] }) {
       <text x={left} y={H - 12} className="tick">{longDate(history[0].dataCutoff)}</text>
       <text x={W - right} y={H - 12} textAnchor="end" className="tick">{longDate(history[history.length - 1].dataCutoff)}</text>
     </svg>
-    <figcaption>Chance of a majority, and of no majority, at each weekly release. Each point is a separate forecast of the same kind; the lines show how the picture has changed, not a prediction.</figcaption>
+    <figcaption>Chance of a majority, and of no majority, at each weekly release. Each point is a separate forecast; the lines show how the picture has changed, not a prediction.</figcaption>
   </figure>;
 }

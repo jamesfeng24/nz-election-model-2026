@@ -21,7 +21,7 @@ export function SnapshotBanner({ snapshot }: { snapshot: ForecastSnapshot }) {
   return <>
     {synthetic && <p role="alert" className="banner banner-synthetic"><strong>SYNTHETIC DATA.</strong> {snapshot.provenance.kind === 'synthetic-fixture' ? snapshot.provenance.label : ''}</p>}
     {snapshot.targetType === 'nowcast'
-      ? <p className="banner"><strong>Forecast if the election were held today, as of {longDate(snapshot.dataCutoff)}.</strong> Polls to {longDate(snapshot.dataCutoff)}; the national picture is that of the week of {longDate(snapshot.modelStateAsOf)}. This is not a prediction of how opinion will move before election day ({longDate(snapshot.electionDate)}). Ranges are central ranges across simulated elections, not margins of error.</p>
+      ? <p className="banner"><strong>Forecast if the election were held today, as of {longDate(snapshot.dataCutoff)}.</strong> Polls to {longDate(snapshot.dataCutoff)}; national picture from the week of {longDate(snapshot.modelStateAsOf)}. Not a prediction of how opinion will change before election day ({longDate(snapshot.electionDate)}). Ranges are central ranges of simulated elections, not margins of error.</p>
       : <p role="note" className="banner">Election-day scenario, not the primary forecast.</p>}
     {snapshot.adjustments && <p className="banner">Includes manual adjustments by {snapshot.adjustments.by}. <a href="../methodology/">What was changed and why</a>.</p>}
   </>;
@@ -36,7 +36,7 @@ function Governing({ snapshot }: { snapshot: ForecastSnapshot }) {
   const group = (ids: string[]) => ids.map(id => partyLabel(snapshot, id)).join(' + ');
   return <>
     <h2>Chance of a majority</h2>
-    <p>Seat arithmetic only: it adds up each group's seats and does not predict who would agree to govern together.</p>
+    <p>Seat arithmetic only. It does not predict who would govern together.</p>
     <table><caption>Chance each group wins more than half of Parliament's seats</caption>
       <thead><tr><th>Group</th><th>Chance of a majority</th></tr></thead>
       <tbody>{blocs.map(b => <tr key={b.id}><td>{group(b.partyIds)}</td><td>{prob(b.probMajority.p)}</td></tr>)}
@@ -84,10 +84,10 @@ export function ForecastView({ snapshot, trend = null }: { snapshot: ForecastSna
     {snapshot.evidence?.trend && <><h2>How support has moved</h2><SupportTrend snapshot={snapshot} /></>}
     {trend && <><h2>How the odds have moved</h2>{trend}</>}
     <h2>Electorates</h2>
-    <p><a href="../electorates/">Look up any seat</a> for each candidate's chance, vote share ranges and the polls behind it.</p>
+    <p><a href="../electorates/">Look up any seat</a> for candidate chances, vote shares and polls.</p>
     <Electorates snapshot={snapshot} />
     <h2>Limitations</h2>
     <ul>{snapshot.limitations.map(l => <li key={l}>{l}</li>)}</ul>
-    <p>Updated after each weekly poll refresh until election day. <a href="../methodology/">How the forecast works and where the data comes from</a>.</p>
+    <p>Updated weekly until election day. <a href="../methodology/">How it works and where the data comes from</a>.</p>
   </section>;
 }

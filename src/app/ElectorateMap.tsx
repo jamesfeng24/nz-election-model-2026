@@ -91,12 +91,12 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
   const shared = { forecasts: byName, onSelect, hrefBase, hover, setHover };
   const legendOf = (id: string | null) => ({ id: id ?? 'independent', name: id ? partyLabel(snapshot, id) : 'Independent', colour: id ? COLOURS[id] ?? INDEPENDENT : INDEPENDENT });
   return <section className="map" aria-labelledby="map-heading">
-    <h2 id="map-heading">Map of electorates</h2>
+    <h2 id="map-heading">Map</h2>
     <div className="maptoggle" role="group" aria-label="Which electorates to show">
       <button type="button" aria-pressed={kind === 'general'} onClick={() => setKind('general')}>General (64)</button>
       <button type="button" aria-pressed={kind === 'maori'} onClick={() => setKind('maori')}>Māori (7)</button>
     </div>
-    <p className="maphint">Hover over or select a seat to see its candidates, their chance of winning and their share of the vote.</p>
+    <p className="maphint">Hover over a seat for its candidates. Click it for full details.</p>
     <p className="sr-only" aria-live="polite">{hot ? (hot.available ? `${hot.name}: ${hot.leaderName}, ${hot.leaderPartyName}, ${prob(hot.leaderP)} to win` : `${hot.name}: no forecast available`) + incumbentNote(hot) : ''}</p>
     <div className="mapgrid" ref={grid} onMouseMove={e => track(e.clientX, e.clientY)}
       onFocusCapture={e => { const r = (e.target as Element).getBoundingClientRect(); track(r.left + r.width / 2, r.top + r.height / 2); }}>

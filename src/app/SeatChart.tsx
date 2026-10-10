@@ -49,6 +49,6 @@ export function SeatChart({ snapshot }: { snapshot: ForecastSnapshot }) {
     </svg>
     <ul className="seatchart-key">{parts.map((p, i) => <li key={p.key}><span style={{ background: p.colour }} aria-hidden="true" /><b>{p.label}</b> {counts[i]}
       {Number.isNaN(p.lower) ? null : <small> ({p.lower}–{p.upper})</small>}</li>)}</ul>
-    <figcaption>Average seats per party across simulated elections, rounded so the dots add up to a Parliament of {total}. {total > 120 ? `That is 120 seats plus ${total - 120} expected overhang seat${total - 120 === 1 ? '' : 's'}: seats a party wins in electorates beyond its party-vote share, added on top of the 120. ` : ''}Brackets give the 80% range; the table below splits each party's seats into electorate seats and list seats. Dots show the single most typical picture, not the only one.</figcaption>
+    <figcaption>Average seats per party, rounded to a Parliament of {total}. {total > 120 ? `That is 120 seats plus ${total - 120} expected overhang seat${total - 120 === 1 ? '' : 's'}. ` : ''}Brackets show the 80% range. One typical outcome, not the only one.</figcaption>
   </figure>;
 }

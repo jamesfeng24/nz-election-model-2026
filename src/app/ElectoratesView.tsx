@@ -66,15 +66,15 @@ function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: 
         <td><span className="odds">{prob(c.winProbability)}</span></td>
         <td>{share ? <><RangeBar colour={(cand?.partyId && COLOURS[cand.partyId]) || '#8b8f94'} set={share.share} axisMax={axisMax} label={`${cand?.name}: median ${pct(share.share[0].median)}, 50% range ${pct(level(share.share, 0.5).lower)} to ${pct(level(share.share, 0.5).upper)}, 80% range ${pct(level(share.share, 0.8).lower)} to ${pct(level(share.share, 0.8).upper)}`} />
           <small>{pct(share.share[0].median)} median · 50%: {pct(level(share.share, 0.5).lower)} – {pct(level(share.share, 0.5).upper)} · 80%: {pct(level(share.share, 0.8).lower)} – {pct(level(share.share, 0.8).upper)}</small></> : <small>Share ranges not available</small>}</td></tr>)}</tbody></table>
-    <p className="legend"><span className="key r50" /> 50% range (solid) <span className="key r80" /> 80% range (pale) <span className="key tick" /> median, in each candidate's party colour. Bars run from 0% to {Math.round(axisMax * 100)}% of the vote. The ranges cover half and four-fifths of simulated elections.</p>
+    <p className="legend"><span className="key r50" /> 50% range (solid) <span className="key r80" /> 80% range (pale) <span className="key tick" /> median, in each candidate's party colour. Bars run from 0% to {Math.round(axisMax * 100)}% of the vote. Ranges cover half and four-fifths of simulated elections.</p>
     <h3>Polls</h3>
-    {!detail?.evidence ? <p>No seat poll information is attached to this forecast.</p> : <>
+    {!detail?.evidence ? <p>No seat poll information for this forecast.</p> : <>
       <p>{detail.evidence.basis}</p>
-      {detail.evidence.polls.length === 0 ? <p>No seat poll has been published for this seat.</p> : <>
+      {detail.evidence.polls.length === 0 ? <p>No poll of this seat.</p> : <>
         {detail.evidence.polls.map((poll, i) => <SeatPollLine key={i} poll={poll} />)}
-        <p><a href={`../polls/#seat-${seatId}`}>See this poll with every other poll</a></p></>}
+        <p><a href={`../polls/#seat-${seatId}`}>See all polls</a></p></>}
     </>}
-    <p><small>Chance of winning is the share of simulated elections the candidate wins; its simulation error is under one percentage point.</small></p>
+    <p><small>Chance of winning is the share of simulated elections the candidate wins. Simulation error is under one percentage point.</small></p>
   </section>;
 }
 
@@ -99,7 +99,7 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
   const forecasts = useMemo(() => rows.map(r => ({ id: r.id, name: r.name, kind: r.kind, leaderParty: r.leaderParty, leaderPartyName: r.leaderPartyName, leaderName: r.leader, leaderP: r.leaderP, available: r.available, incumbent: r.incumbent, incumbentStatus: r.incumbentStatus, candidates: r.candidates })), [rows]);
   const pick = (id: string) => { choose(id); document.getElementById('seat-heading')?.scrollIntoView?.({ block: 'start' }); };
   return <>
-    <p className="intro">Pick a seat to see each candidate's chance of winning, their likely share of the vote and the polls behind it.</p>
+    <p className="intro">Pick a seat for each candidate's chance of winning, vote share and polls.</p>
     <div className="picker">
       <label>Find a seat<input type="search" list="seat-names" value={query} placeholder="Type a seat name" autoComplete="off"
         onChange={e => { setQuery(e.target.value); const hit = rows.find(r => r.name.toLocaleLowerCase('en-NZ') === e.target.value.trim().toLocaleLowerCase('en-NZ')); if (hit) choose(hit.id); }} /></label>
@@ -108,7 +108,7 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
         <option value="name">Name</option><option value="close">Closest contest first</option><option value="wide">Widest uncertainty first</option></select></label>
     </div>
     <ElectorateMap snapshot={snapshot} forecasts={forecasts} onSelect={pick} />
-    {selected ? <SeatDetail snapshot={snapshot} seatId={selected.id} /> : <p>Choose a seat from the list or search above.</p>}
+    {selected ? <SeatDetail snapshot={snapshot} seatId={selected.id} /> : <p>Pick a seat on the map, in the list or in the search box.</p>}
     <table className="seatlist"><caption>All {rows.length} electorates ({listed.length} shown)</caption>
       <thead><tr><th>Electorate</th><th>Most likely winner</th><th>Chance</th>{snapshot.incumbency && <th>Incumbent</th>}</tr></thead>
       <tbody>{listed.map(r => <tr key={r.id} aria-selected={r.id === seatId || undefined}><td><a href={`#seat=${r.id}`} onClick={() => setSeatId(r.id)}>{r.name}</a>{r.kind === 'maori' ? ' (Māori)' : ''}{r.wide ? ' · wider' : ''}</td>
