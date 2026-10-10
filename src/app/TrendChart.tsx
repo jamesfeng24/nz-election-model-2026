@@ -1,4 +1,6 @@
+import { useState, type PointerEvent } from 'react';
 import type { ReleasePoint } from '../data/loader';
+import { ChartTip, chartPointer, type TipPlace } from './chartHover';
 import { longDate, prob } from './format';
 
 export const MIN_RELEASES = 3;
@@ -16,6 +18,7 @@ const LINES = [
 
 /** How the chance of each majority has moved across the weekly releases. */
 export function TrendChart({ history }: { history: ReleasePoint[] }) {
+  const [hover, setHover] = useState<{ line: number; release: number; place: TipPlace } | null>(null);
   if (history.length < MIN_RELEASES) return null;
   const time = (release: ReleasePoint) => Date.parse(release.dataCutoff);
   const first = time(history[0]);
@@ -35,6 +38,31 @@ export function TrendChart({ history }: { history: ReleasePoint[] }) {
   });
   if (series.length === 0) return null;
 
+  // The release nearest the pointer, then the line nearest the pointer at that release.
+  const onMove = (e: PointerEvent<SVGSVGElement>) => {
+    const at = chartPointer(e, WIDTH, HEIGHT);
+    if (
+      at.x < MARGIN.left - 12 ||
+      at.x > plotRight + 12 ||
+      at.y < MARGIN.top - 12 ||
+      at.y > HEIGHT - MARGIN.bottom + 12
+    )
+      return setHover(null);
+    const release = history.reduce(
+      (best, r, k) => (Math.abs(x(r) - at.x) < Math.abs(x(history[best]) - at.x) ? k : best),
+      0,
+    );
+    const line = series.reduce(
+      (best, s, k) =>
+        Math.abs(y(s.points[release].chance) - at.y) < Math.abs(y(series[best].points[release].chance) - at.y)
+          ? k
+          : best,
+      0,
+    );
+    setHover({ line, release, place: at });
+  };
+  const hovered = hover && { ...hover, ...series[hover.line], point: series[hover.line].points[hover.release] };
+
   const summary = series
     .map(
       ({ points }) => `${points[0].label} from ${prob(points[0].chance)} to ${prob(points[points.length - 1].chance)}`,
@@ -43,6 +71,10 @@ export function TrendChart({ history }: { history: ReleasePoint[] }) {
   return (
     <figure className="trend">
       <svg
+        onPointerMove={onMove}
+        onPointerDown={onMove}
+        onPointerLeave={() => setHover(null)}
+        onPointerCancel={() => setHover(null)}
         viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
         role="img"
         aria-label={`Chance over ${history.length} releases: ${summary}`}
@@ -74,6 +106,16 @@ export function TrendChart({ history }: { history: ReleasePoint[] }) {
             </g>
           );
         })}
+        {hovered && (
+          <circle
+            cx={x(hovered.point.release)}
+            cy={y(hovered.point.chance)}
+            r="6"
+            fill="#fff"
+            stroke={hovered.line.colour}
+            strokeWidth="2.5"
+          />
+        )}
         <text x={MARGIN.left} y={HEIGHT - 12} className="tick">
           {longDate(history[0].dataCutoff)}
         </text>
@@ -81,6 +123,13 @@ export function TrendChart({ history }: { history: ReleasePoint[] }) {
           {longDate(history[history.length - 1].dataCutoff)}
         </text>
       </svg>
+      {hovered && (
+        <ChartTip place={hovered.place}>
+          <strong style={{ color: hovered.line.colour }}>{hovered.line.label}</strong>
+          <br />
+          {longDate(hovered.point.release.dataCutoff)}: {prob(hovered.point.chance)}
+        </ChartTip>
+      )}
       <figcaption>
         Chance of a majority, and of no majority, at each weekly release. Each point is a separate forecast; the lines
         show how the picture has changed, not a prediction.
