@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { SeatEvidenceSchema } from '../../types/export';
 
 /**
  * Stage73/74 draw bank (Python `scripts/nowcast_assembly`, schema 2): one row per simulated election. Row i carries
@@ -27,6 +28,8 @@ const Simulated = z.object({
   electorateId: id, scope: z.enum(['general', 'maori']), status: z.literal('simulated'),
   class: z.enum(['ordinary', 'exceptional', 'maori-layer']),
   multiplier: z.number().positive().optional(),
+  withinMultiplier: z.number().positive().optional(),
+  massMultiplier: z.number().positive().optional(),
   source: id.optional(),
   pollFieldworkEnd: z.iso.date().optional(),
   seatPoll: SeatPoll.optional(),
@@ -58,6 +61,8 @@ export const DrawBankSchema = z.object({
   drawIds: z.array(id),
   partyVote: z.object({ groups: z.array(id).min(2), otherBucket: id, shares: z.array(z.array(z.number().finite().nonnegative())) }).strict(),
   seats: z.array(z.discriminatedUnion('status', [Simulated, Unavailable])),
+  /** Stage85: optional per-seat evidence (display data, not part of the simulated content). */
+  seatEvidence: z.array(SeatEvidenceSchema).optional(),
   directory: z.object({
     parties: z.array(z.object({ partyId: id, name: id, abbreviation: id }).strict()),
     electorates: z.array(z.object({ electorateId: id, name: id, kind: z.enum(['general', 'maori']) }).strict()),
@@ -79,6 +84,16 @@ export const DrawBankSchema = z.object({
   });
   const ids = bank.seats.map(s => s.electorateId);
   if (new Set(ids).size !== ids.length) bad('Duplicate electorate', ['seats']);
+  if (bank.seatEvidence) {
+    const simulated = new Set(bank.seats.filter(s => s.status === 'simulated').map(s => s.electorateId));
+    const evidenced = bank.seatEvidence.map(e => e.electorateId);
+    if (new Set(evidenced).size !== evidenced.length || evidenced.length !== simulated.size || evidenced.some(e => !simulated.has(e)))
+      bad('Seat evidence must cover exactly the simulated seats, once each', ['seatEvidence']);
+    bank.seatEvidence.forEach((e, i) => {
+      const seat = bank.seats.find(s => s.electorateId === e.electorateId);
+      if (seat && seat.status === 'simulated' && seat.class !== e.uncertaintyClass) bad('Seat evidence class differs from the seat', ['seatEvidence', i]);
+    });
+  }
   bank.seats.forEach((s, i) => {
     if (s.status !== 'simulated') return;
     if (s.winners.length !== n) bad('Every row needs one winner', ['seats', i]);

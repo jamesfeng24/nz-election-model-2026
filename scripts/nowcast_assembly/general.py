@@ -96,9 +96,12 @@ def candidate_row(electorate, slate, party, parameters):
             'partyOf': [c['group'] for c in slate]}
 
 
-def scaled(scales, multiplier):
+def scaled(scales, multiplier, within=1.0, mass=1.0):
     result = deepcopy(scales)
     result['balance']['seat'] = scales['balance']['seat'] * float(multiplier)
+    for part in ('seat', 'shared'):
+        result['within'][part] = scales['within'][part] * float(within)
+        result['mass'][part] = scales['mass'][part] * float(mass)
     return result
 
 
@@ -123,13 +126,16 @@ def local_transform(config):
     return mixture
 
 
-def simulate(party, candidate, fine, party_scales, candidate_scales, multiplier, deterministic=None):
-    """Candidate shares [count, C] for one seat; the multiplier touches only the candidate balance seat scale."""
-    local, q, _ = simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, multiplier, None, deterministic)
+def simulate(party, candidate, fine, party_scales, candidate_scales, multiplier, deterministic=None, within=1.0, mass=1.0):
+    """Candidate shares [count, C] for one seat; `multiplier` touches only the candidate balance seat scale (D107) and
+    `within` and `mass` the candidate within-remainder and major-mass seat and shared scales (D121)."""
+    local, q, _ = simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, multiplier, None, deterministic,
+                                     within, mass)
     return local, q
 
 
-def simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, multiplier, poll, deterministic=None):
+def simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, multiplier, poll, deterministic=None,
+                       within=1.0, mass=1.0):
     """As `simulate`, plus the Stage79 seat-poll update of the balance when `poll` is given (record returned third)."""
     count = len(fine)
     if deterministic is None:
@@ -142,5 +148,5 @@ def simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, m
     record = None
     if poll is not None and all(partition(candidate['groups'])[:2]):  # no National or no Labour candidate: no balance to update
         conditional, candidate_scales, record = apply_poll(conditional, candidate, candidate_scales, multiplier, poll)
-    q, _ = invert(conditional, candidate, scaled(candidate_scales, multiplier), count)
+    q, _ = invert(conditional, candidate, scaled(candidate_scales, multiplier, within, mass), count)
     return local, q, record

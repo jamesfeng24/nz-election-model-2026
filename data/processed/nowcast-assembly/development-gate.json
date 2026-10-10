@@ -1,5 +1,5 @@
 {
-  "bankDigest": "d4c28efd8999b14b6807f5b16a81a7a7afcef57664f75dea104b6646257f8ebd",
+  "bankDigest": "b1b7fdb7f721a5bba12e48c82bbc8c18091c158e2ec877f75ea5650299cc7576",
   "blockers": [],
   "checks": [
     {
@@ -49,7 +49,7 @@
     },
     {
       "check": "nationalReconciliation",
-      "detail": "max gap 0.405pp, tolerance 1.0pp",
+      "detail": "max gap 0.403pp, tolerance 1.0pp",
       "passed": true
     }
   ],
@@ -58,42 +58,42 @@
     "reconciliation": {
       "byGroup": {
         "actnewzealand": {
-          "gapPP": 0.15227899706969084,
-          "generalSeatWeightedLocalMeanPP": 9.640819264801555,
+          "gapPP": 0.12166377544095275,
+          "generalSeatWeightedLocalMeanPP": 9.610204043172818,
           "nationalMeanPP": 9.488540267731866
         },
         "greenparty": {
-          "gapPP": -0.32065009463961014,
-          "generalSeatWeightedLocalMeanPP": 13.155433901293234,
+          "gapPP": -0.32977237417658734,
+          "generalSeatWeightedLocalMeanPP": 13.146311621756258,
           "nationalMeanPP": 13.476083995932845
         },
         "labourparty": {
-          "gapPP": -0.19925575255254624,
-          "generalSeatWeightedLocalMeanPP": 28.673658453053424,
+          "gapPP": -0.19403876458555236,
+          "generalSeatWeightedLocalMeanPP": 28.67887544102042,
           "nationalMeanPP": 28.87291420560597
         },
         "nationalparty": {
-          "gapPP": 0.405170383817105,
-          "generalSeatWeightedLocalMeanPP": 28.2376517745619,
+          "gapPP": 0.40329939809830573,
+          "generalSeatWeightedLocalMeanPP": 28.2357807888431,
           "nationalMeanPP": 27.832481390744796
         },
         "newzealandfirstparty": {
-          "gapPP": 0.07711982406529289,
-          "generalSeatWeightedLocalMeanPP": 10.710584439415232,
+          "gapPP": 0.07548490010268333,
+          "generalSeatWeightedLocalMeanPP": 10.708949515452622,
           "nationalMeanPP": 10.633464615349938
         },
         "opportunity": {
-          "gapPP": -0.10580331342923133,
-          "generalSeatWeightedLocalMeanPP": 6.420490413661405,
+          "gapPP": -0.06936048416912172,
+          "generalSeatWeightedLocalMeanPP": 6.456933242921514,
           "nationalMeanPP": 6.526293727090636
         },
         "tepatimaori": {
-          "gapPP": -0.023865670652032517,
-          "generalSeatWeightedLocalMeanPP": 1.7135703768392907,
+          "gapPP": -0.03022629896044897,
+          "generalSeatWeightedLocalMeanPP": 1.7072097485308741,
           "nationalMeanPP": 1.7374360474913233
         }
       },
-      "maxAbsGapPP": 0.405170383817105,
+      "maxAbsGapPP": 0.40329939809830573,
       "note": "diagnostic only; the tolerance is set with the publication gate (Stage74)",
       "tolerance": null
     }

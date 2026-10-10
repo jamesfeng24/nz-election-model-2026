@@ -1,6 +1,6 @@
 # Release checklist: remaining work and publication gate (2026 nowcast)
 
-The only active remaining-work list. Design and definitions live in [nowcast-specification.md](nowcast-specification.md). Update an item here when it changes rather than restating it elsewhere. Status as of 7 October 2026.
+The only active remaining-work list. Design and definitions live in [nowcast-specification.md](nowcast-specification.md). Update an item here when it changes rather than restating it elsewhere. Status as of 10 October 2026.
 
 ## Must happen before the first public nowcast
 
@@ -12,8 +12,8 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 | 3 | `config/nowcast-2026.json` as the single live configuration (spec §8) | 2 | done (Stage72); pending fields listed in the file |
 | 4 | 2026 ordinary/exceptional classification for all 64 general seats, dated and sourced; a missing seat fails the build | James | **done** (Config, 2026-10-10): `config/general-seat-classification-2026.json`, 64 seats (13 exceptional), recorded by James with reasons in [general-seat-classification-2026.md](general-seat-classification-2026.md); the live development gate now simulates all 64 general seats |
 | 5 | Canonical final roster after nominations close; rebuild S/R destinations, Māori poll-to-candidate matching, export directory and MMP expected electorates from it | Stage50 (after 8 Oct, 12:00 NZDT) | done (Stage50 part 2: official list applied to the live roster; Stage80: the seven Māori seats carry the official candidate ids) |
-| 6 | Cut over to the Stage69 notional baseline through one pointer; mark the Stage64 and Stage41 2026 artifacts as not live; test that only the configured baseline is read | Stage69 | waiting |
-| 7 | National adapter on `lastDataSupport` from the latest Stage70 refit, as-of week recorded | Stage70 | waiting |
+| 6 | Cut over to the Stage69 notional baseline through one pointer; mark the Stage64 and Stage41 2026 artifacts as not live; test that only the configured baseline is read | Stage69 | done (Stage69 #96, pointer in `config/nowcast-2026.json` `baseline.source` #97) |
+| 7 | National adapter on `lastDataSupport` from the latest Stage70 refit, as-of week recorded | Stage70 | done (Stage70 #93; the 2026-10-07 refresh adopted in #94; later weekly refreshes arrive as reviewed PRs, Stage82 #95) |
 | 8 | Decide the four unpolled Māori seats (labelled fallback, or withhold MMP outputs) | James | decided (James, 2026-10-07, D114): labelled fallback from the Māori layer without a poll; the model is Stage78 arm F, registered by Stage80 (item 15) |
 | 9 | Assembly: Python draw bank → Stage65 seat layer → snapshot v2 exporter, one draw id end to end | 2–8 | Python draw bank and gate (Stage73) and bank → snapshot v2 (Stage74) done; every input is now in place (classification: item 4; fallback: item 15), so the live development gate simulates all 71 seats |
 | 10 | Production draw count and precision policy, with effective-sample Monte Carlo errors for national-driven quantities | Stage63 | set (Stage77): 4,096 national draws × 16 layer replicates (Stage63, James M = 16); batch-means MCSE within chains with replicates kept together |
@@ -26,9 +26,9 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 
 ## Should do soon
 
-- **Stage70:** save joint national draws at the as-of week.
+- ~~**Stage70:** save joint national draws at the as-of week~~ (done: each refresh saves the joint `lastDataSupport` draws, `fit/attempt1.npz`, Stage70).
 - **Māori:** a structure-specific minor-candidate scale; optionally couple the shared factor with national Te Pāti Māori support, with a stated correlation.
-- **General-seat electorate polls:** use the Stage56 route for now; a measurement interface can follow.
+- ~~**General-seat electorate polls:** use the Stage56 route for now; a measurement interface can follow~~ (done: the Stage79 poll update of the National/Labour balance, D117, switched on by James; several pollsters combined by inverse variance, D123).
 
 ## Optional or post-launch
 

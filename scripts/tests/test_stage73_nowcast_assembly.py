@@ -99,6 +99,54 @@ class SeatLayers(unittest.TestCase):
         self.assertTrue(np.allclose(wide[:, n] + wide[:, l], narrow[:, n] + narrow[:, l], atol=1e-14))
         self.assertFalse(np.allclose(wide[:, n], narrow[:, n]))
 
+    def test_within_multiplier_changes_only_the_within_remainder(self):
+        """D121: the within multiplier leaves the National/Labour pair and their mass alone and narrows the other candidates."""
+        c = config()
+        draws, _, groups = national.load(c, COUNT)
+        keys, national2023, base = general.baseline(c)
+        continuing = general.relationships(c)
+        fine = general.fine_national(draws, groups, keys, national2023, continuing)
+        parameters, _ = general.fold_parameters(c)
+        scales = read(c['uncertainty']['scales'])['layers']
+        seat = GENERAL[3]
+        party = general.party_row(seat, keys, base[seat], national2023, continuing)
+        candidate = general.candidate_row(seat, synthetic_slates()[seat], party, parameters)
+        with streams.substituted([party, candidate], COUNT, 'synthetic-test'):
+            _, wide = general.simulate(party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0)
+            _, narrow = general.simulate(party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0, within=0.55)
+            _, same = general.simulate(party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0, within=1.0)
+        n, l = candidate['groups'].index('national'), candidate['groups'].index('labour')
+        rest = [i for i in range(len(candidate['ids'])) if i not in (n, l)]
+        self.assertTrue(np.array_equal(wide, same))
+        self.assertTrue(np.allclose(wide[:, n], narrow[:, n], atol=1e-14) and np.allclose(wide[:, l], narrow[:, l], atol=1e-14))
+        self.assertFalse(np.allclose(wide[:, rest], narrow[:, rest]))
+        self.assertTrue(np.allclose(narrow.sum(axis=1), 1, atol=1e-12))
+
+    def test_mass_multiplier_changes_only_the_major_mass(self):
+        """D121: the mass multiplier narrows the National+Labour total against everyone else and nothing inside either group."""
+        c = config()
+        draws, _, groups = national.load(c, COUNT)
+        keys, national2023, base = general.baseline(c)
+        continuing = general.relationships(c)
+        fine = general.fine_national(draws, groups, keys, national2023, continuing)
+        parameters, _ = general.fold_parameters(c)
+        scales = read(c['uncertainty']['scales'])['layers']
+        seat = GENERAL[3]
+        party = general.party_row(seat, keys, base[seat], national2023, continuing)
+        candidate = general.candidate_row(seat, synthetic_slates()[seat], party, parameters)
+        with streams.substituted([party, candidate], COUNT, 'synthetic-test'):
+            args = (party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0)
+            _, wide = general.simulate(*args)
+            _, narrow = general.simulate(*args, mass=0.5)
+            _, same = general.simulate(*args, mass=1.0)
+        n, l = candidate['groups'].index('national'), candidate['groups'].index('labour')
+        rest = [i for i in range(len(candidate['ids'])) if i not in (n, l)]
+        self.assertTrue(np.array_equal(wide, same))
+        self.assertTrue(np.allclose(wide[:, n] / wide[:, l], narrow[:, n] / narrow[:, l], rtol=1e-9))
+        self.assertTrue(np.allclose(wide[:, rest] / wide[:, rest].sum(axis=1, keepdims=True),
+                                    narrow[:, rest] / narrow[:, rest].sum(axis=1, keepdims=True), atol=1e-9))
+        self.assertFalse(np.allclose(wide[:, n] + wide[:, l], narrow[:, n] + narrow[:, l]))
+
     def test_slate_and_maori_codes_fail_closed(self):
         c = config()
         keys, national2023, base = general.baseline(c)

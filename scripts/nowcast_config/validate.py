@@ -51,6 +51,10 @@ def check_config(config, require_complete=False):
             'modelStateAsOf <= dataCutoff <= electionDate')
     multipliers = config['uncertainty']['candidateBalanceSeatMultiplier']
     require(multipliers == {'ordinary': 0.60, 'exceptional': 1.00}, 'D107 multipliers are 0.60 ordinary and 1.00 exceptional')
+    within = config['uncertainty']['candidateWithinSeatMultiplier']
+    require(within == {'ordinary': 0.55, 'exceptional': 1.00}, 'Stage83 within-remainder multipliers are 0.55 ordinary and 1.00 exceptional (D121)')
+    mass = config['uncertainty']['candidateMassSeatMultiplier']
+    require(mass == {'ordinary': 0.91, 'exceptional': 1.00}, 'Stage83 major-mass multipliers are 0.91 ordinary and 1.00 exceptional (D121)')
     require(config['uncertainty']['extraSdOnExceptionalRequiresOptIn'] is True, 'extra sd on 1.00 seats needs an explicit opt-in (D107)')
     require(config['intervalLevels'] == INTERVAL_LEVELS and config['primaryIntervalLevel'] == 0.8, 'intervals are 50/80/90 with 80% primary')
     require(config['maori']['unpolledSeats'] in (None, 'labelled-fallback', 'withhold'),

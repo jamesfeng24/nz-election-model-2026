@@ -130,7 +130,7 @@ class Repository:
         write(self.root, 'scripts/pipe/__init__.py', '')
         write(self.root, 'scripts/pipe/entry.py',
               "from .helper import help\nfrom scripts.shared import tool\nPATH = 'data/processed/pipe/in.json'\n"
-              "SPEC = 'docs/spec.txt'\nLOCK = 'requirements-boundaries.txt'\n\ndef arrays():\n    return 1\n")
+              "SPEC = 'docs/spec.txt'\nLOCK = 'requirements-boundaries.txt'\nKEY = 'electorates'\n\ndef arrays():\n    return 1\n")
         write(self.root, 'scripts/pipe/helper.py', 'def help():\n    return 1\n')
         write(self.root, 'scripts/pipe2/__init__.py', '')
         write(self.root, 'scripts/pipe2/entry.py', "from .helper import help2\nPATH = 'data/processed/pipe2/in.json'\n")
@@ -220,6 +220,18 @@ class SelectionTests(unittest.TestCase):
         commit(self.repo.root, 'unrelated work and a new stage')
         self.assertEqual(self.repo.select()['mode'], 'integrity')
 
+    def test_a_new_top_level_directory_named_like_a_dictionary_key_is_not_a_dependency(self):
+        """The site's route folders (`electorates/`, ...) share names with keys in pipeline code; adding them is no replay."""
+        write(self.repo.root, 'electorates/index.html', '<!doctype html>\n')
+        commit(self.repo.root, 'site route folder')
+        self.assertEqual(self.repo.select()['mode'], 'integrity')
+        files, literals, _ = frozen.closure(self.repo.root, ['scripts.pipe.entry'])
+        self.assertNotIn('electorates', literals)
+        self.assertIn('requirements-boundaries.txt', literals)
+        write(self.repo.root, 'electorates/index.html', '<!doctype html><title>changed</title>\n')
+        commit(self.repo.root, 'site route edited')
+        self.assertEqual(self.repo.select()['mode'], 'integrity')
+
     def test_every_dependency_class_forces_full(self):
         cases = (('scripts/pipe/helper.py', 'def help():\n    return 2\n'),
                  ('scripts/shared.py', 'def tool():\n    return 2\n'),
@@ -237,6 +249,22 @@ class SelectionTests(unittest.TestCase):
                 write(self.repo.root, name, text)
                 commit(self.repo.root, 'change ' + name)
                 self.assertFull(self.repo.select())
+
+    def test_scheduled_workflow_outside_verify_does_not_force_replay(self):
+        write(self.repo.root, '.github/workflows/poll-refresh.yml', 'name: Poll refresh\n')
+        commit(self.repo.root, 'scheduled workflow')
+        self.assertEqual(self.repo.select()['mode'], 'integrity')
+        # Any other workflow file still forces full.
+        write(self.repo.root, '.github/workflows/other.yml', 'name: Other\n')
+        commit(self.repo.root, 'another workflow')
+        self.assertFull(self.repo.select(), 'CI configuration changed')
+        # So does the exempt file once Verify names it.
+        git(self.repo.root, 'reset', '-q', '--hard', self.repo.base)
+        text = (self.repo.root / '.github/workflows/ci.yml').read_text()
+        write(self.repo.root, '.github/workflows/ci.yml', text + '# calls poll-refresh.yml\n')
+        write(self.repo.root, '.github/workflows/poll-refresh.yml', 'name: Poll refresh\n')
+        commit(self.repo.root, 'verify names the scheduled workflow')
+        self.assertFull(self.repo.select(), 'CI configuration changed')
 
     def test_deleted_existing_data_forces_full(self):
         git(self.repo.root, 'rm', '-q', 'data/processed/other/x.json')

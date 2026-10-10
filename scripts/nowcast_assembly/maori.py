@@ -1,5 +1,8 @@
 """Maori seats: the Stage66 default layer re-run for the polled seats; the unpolled seats use the registered Stage78 fallback.
 
+The polled seats are those with a Maori poll in the newest Stage82 live-inputs run (Stage86, D125), not the pinned 2026-10-07 transcription: a new
+Maori seat poll is a data-only addition and moves its seat from the fallback to the Stage66 layer. The calibration is unchanged.
+
 Stage66 stores only a 500-draw preview, so the registered model is re-simulated here with the assembly's draw
 count. Maori draws are independent of the national draw (Stage66 default; any coupling needs a stated correlation).
 Unpolled seats follow `maori.unpolledFallbackModel` (D114, D115): `stage78-f` draws the 2023 result carried forward by party label
@@ -9,11 +12,13 @@ block. With no model registered the unpolled seats stay `unavailable` with that 
 Candidates carry the official roster ids (`config.candidate.features`, Stage50 part 2). A poll's candidates are matched to the roster by
 surname and party; any candidate that does not match exactly one roster entry fails the build.
 """
+import numpy as np
 from scripts.maori_seat_fallback.draws import f_shares
 from scripts.maori_seat_layer.common import SEATS, fold
 from scripts.maori_seat_layer.fit import fit
 from scripts.maori_seat_layer.run import parameters
-from scripts.maori_seat_layer.simulate import current_polls, simulate as simulate_layer
+from scripts.maori_seat_layer.live import current_polls
+from scripts.maori_seat_layer.simulate import simulate as simulate_layer
 from .common import TARGET_FRAME, read, require, namespace_seed
 from .summaries import share_summaries
 
@@ -66,12 +71,40 @@ def match(seat, name, code, people):
     return found[0]
 
 
-def record(source, people, shares, extra=None):
-    """A simulated seat record from roster entries (in order) and their closed shares (draws x candidates)."""
+def resolver(people):
+    """`resolve(seat, party_code)` for the live poll reader: the displayed name of the one active official candidate whose ballot group is the
+    code's group (an independent column resolves only when the seat's roster has exactly one independent), else the build fails."""
+    def resolve(seat, code):
+        require(code in PARTIES, f'{seat}: unmapped Maori party code {code}')
+        found = [p for p in people[seat] if p['group'] == PARTIES[code]]
+        require(len(found) == 1, f'{seat}: a {code} poll share matches {len(found)} official candidates')
+        return found[0]['name']
+    return resolve
+
+
+def with_unpolled_candidates(roster_people, matched, shares):
+    """Every official candidate of a polled seat, not only those with a poll share (Stage86, D125).
+
+    Stage66 simulates the candidates the poll names and keeps the rest as one unnamed remainder `w` per draw (1 minus the named shares), which by
+    its definition goes to candidates outside the named set. The official roster names them, so each rostered candidate without a poll share
+    gets an equal part of `w` in every draw (the poll gives no basis for any other split; placeholder allocation, stated in the docs). Stage66
+    never lets a candidate outside the poll win, so the winners stay those of the named candidates. Returns (people, shares, named count).
+    """
+    missing = [p for p in roster_people if p['id'] not in {m['id'] for m in matched}]
+    if not missing:
+        return matched, shares, len(matched)
+    remainder = np.clip(1.0 - shares.sum(axis=1), 0.0, None)
+    extra = np.repeat((remainder / len(missing))[:, None], len(missing), axis=1)
+    return matched + missing, np.hstack([shares, extra]), len(matched)
+
+
+def record(source, people, shares, extra=None, named=None):
+    """A simulated seat record from roster entries (in order) and their shares (draws x candidates); winners are among the first `named` columns."""
     ids = [p['id'] for p in people]
     return {'status': 'simulated', 'class': 'maori-layer', 'source': source, **(extra or {}),
             'candidates': ids, 'candidateNames': [p['name'] for p in people], 'candidateParty': [p['group'] for p in people],
-            'candidateShares': share_summaries(ids, shares), 'winners': [int(i) for i in shares.argmax(axis=1)]}
+            'candidateShares': share_summaries(ids, shares),
+            'winners': [int(i) for i in shares[:, :named].argmax(axis=1)]}
 
 
 def simulate(config, count):
@@ -82,7 +115,7 @@ def simulate(config, count):
     require(fallback is None or config['maori']['unpolledSeats'] == 'labelled-fallback', 'a fallback model needs maori.unpolledSeats = labelled-fallback')
     ids = electorate_ids()
     people = roster(config, ids)
-    polls, _, _ = current_polls()
+    polls, _ = current_polls(resolver(people))
     fitted = fit()[0]['fit']
     sim = simulate_layer(polls, parameters(fitted), count, namespace_seed(config['simulation']['seedNamespace'], 'maori'))
     unpolled = [seat for seat in SEATS if seat not in sim['seats']]
@@ -94,7 +127,8 @@ def simulate(config, count):
             s = sim['seats'][seat]
             matched = [match(seat, c['name'], c['party'], people[seat]) for c in s['poll']['candidates']]
             require(len({p['id'] for p in matched}) == len(matched), f'{seat}: two poll candidates match one roster candidate')
-            out[ids[seat]] = record(f"Stage66 default; poll {s['poll']['id']}", matched, s['share'], {'pollFieldworkEnd': s['poll']['fieldworkEnd']})
+            everyone, shares, named = with_unpolled_candidates(people[seat], matched, s['share'])
+            out[ids[seat]] = record(f"Stage66 default; poll {s['poll']['id']}", everyone, shares, {'pollFieldworkEnd': s['poll']['fieldworkEnd']}, named)
         elif seat in drawn:
             inp, shares = drawn[seat]
             slate = []
