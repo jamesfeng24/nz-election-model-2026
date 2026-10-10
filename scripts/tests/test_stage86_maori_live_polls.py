@@ -8,9 +8,11 @@ import unittest.mock
 import numpy as np
 from scripts.maori_seat_layer import live
 from scripts.maori_seat_layer.common import CURRENT_POLLS, SEATS, fold, read as read_plan
-from scripts.maori_seat_layer.simulate import current_polls as pinned_polls
+from scripts.maori_seat_layer.fit import fit
+from scripts.maori_seat_layer.run import parameters
+from scripts.maori_seat_layer.simulate import current_polls as pinned_polls, simulate as simulate_layer
 from scripts.nowcast_assembly import maori
-from scripts.nowcast_assembly.common import CONFIG, AssemblyError, read
+from scripts.nowcast_assembly.common import CONFIG, AssemblyError, namespace_seed, read
 
 COUNT = 2048
 
@@ -141,11 +143,31 @@ class Assembly(Fixture):
             if seat != 'Waiariki':
                 self.assertEqual(without[self.ids[seat]], self.records[self.ids[seat]], seat)
 
-    def test_candidates_are_official_roster_entries(self):
+    def test_every_officially_nominated_candidate_appears_in_every_seat(self):
+        # Audit finding (James, 2026-10-10): a polled seat carried only the candidates the poll named, so Neil Denby (Hauraki-Waikato) and
+        # Christine Fisher and Tania Lee Henare (Te Tai Tonga) were missing from the outputs.
         for seat in SEATS:
             record = self.records[self.ids[seat]]
-            by_id = {p['id']: p for p in self.people[seat]}
-            self.assertTrue(set(record['candidates']) <= set(by_id))
+            self.assertEqual(sorted(record['candidates']), sorted(p['id'] for p in self.people[seat]), seat)
+            self.assertEqual([c['candidateId'] for c in record['candidateShares']], record['candidates'])
+        names = lambda seat: {n for n in self.records[self.ids[seat]]['candidateNames']}
+        self.assertTrue({'Neil DENBY'} <= names('Hauraki-Waikato'))
+        self.assertTrue({'Christine FISHER', 'Tania Lee HENARE'} <= names('Te Tai Tonga'))
+
+    def test_unpolled_candidates_share_the_unnamed_remainder_and_never_win(self):
+        record = self.records[self.ids['Te Tai Tonga']]
+        named = [i for i, n in enumerate(record['candidateNames']) if n not in ('Christine FISHER', 'Tania Lee HENARE')]
+        extra = [i for i in range(len(record['candidates'])) if i not in named]
+        mean = [c['mean'] for c in record['candidateShares']]
+        self.assertAlmostEqual(sum(mean), 1.0, places=9)                     # shares close over the whole slate
+        self.assertAlmostEqual(mean[extra[0]], mean[extra[1]], places=12)    # equal split of the remainder (placeholder allocation)
+        self.assertTrue(all(w in named for w in record['winners']))          # Stage66: only the poll's candidates can win
+        # winners are exactly those of the Stage66 layer on the same poll (the extra columns change nothing)
+        polls, _ = live.current_polls(self.resolve)
+        sim = simulate_layer(polls, parameters(fit()[0]['fit']), COUNT, namespace_seed(self.config['simulation']['seedNamespace'], 'maori'))
+        self.assertEqual([record['candidates'][w] for w in record['winners']],
+                         [maori.match('Te Tai Tonga', polls['Te Tai Tonga']['candidates'][w]['name'], polls['Te Tai Tonga']['candidates'][w]['party'], self.people['Te Tai Tonga'])['id']
+                          for w in sim['seats']['Te Tai Tonga']['winner']])
 
     def test_the_pinned_transcription_is_not_changed(self):
         self.assertEqual(sorted(p['seat'] for p in read_plan(CURRENT_POLLS)['polls']), ['Hauraki-Waikato', 'Te Tai Hauāuru', 'Te Tai Tonga'])

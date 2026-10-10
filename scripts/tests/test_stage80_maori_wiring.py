@@ -63,6 +63,7 @@ class Wiring(unittest.TestCase):
         cls.records = maori.simulate(cls.config, COUNT)
         cls.ids = maori.electorate_ids()
         cls.roster = maori.roster(cls.config, cls.ids)
+        cls.polled_names = {seat: [c['name'] for c in poll['candidates']] for seat, poll in live.current_polls(maori.resolver(cls.roster))[0].items()}
 
     def test_config_registers_the_chosen_fallback(self):
         self.assertEqual(self.config['maori']['unpolledFallbackModel'], maori.FALLBACK_MODEL)
@@ -109,9 +110,9 @@ class Wiring(unittest.TestCase):
             record = self.records[self.ids[seat]]
             total = sum(c['mean'] for c in record['candidateShares'])
             self.assertEqual([c['candidateId'] for c in record['candidateShares']], record['candidates'])
-            if seat in UNPOLLED:   # the fallback closes over the whole official slate
+            if seat in UNPOLLED or len(record['candidates']) > len(self.polled_names[seat]):   # fallback seats, and polled seats whose unpolled candidates get the remainder
                 self.assertAlmostEqual(total, 1.0, places=9)
-            else:                  # the Stage66 layer leaves the unnamed remainder out of the named candidates
+            else:                  # a polled seat naming every candidate leaves the unnamed remainder out (Stage66)
                 self.assertTrue(0.9 < total < 1.0)
 
     def test_deterministic(self):

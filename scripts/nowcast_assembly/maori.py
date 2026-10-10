@@ -12,6 +12,7 @@ block. With no model registered the unpolled seats stay `unavailable` with that 
 Candidates carry the official roster ids (`config.candidate.features`, Stage50 part 2). A poll's candidates are matched to the roster by
 surname and party; any candidate that does not match exactly one roster entry fails the build.
 """
+import numpy as np
 from scripts.maori_seat_fallback.draws import f_shares
 from scripts.maori_seat_layer.common import SEATS, fold
 from scripts.maori_seat_layer.fit import fit
@@ -81,12 +82,29 @@ def resolver(people):
     return resolve
 
 
-def record(source, people, shares, extra=None):
-    """A simulated seat record from roster entries (in order) and their closed shares (draws x candidates)."""
+def with_unpolled_candidates(roster_people, matched, shares):
+    """Every official candidate of a polled seat, not only those with a poll share (Stage86, D125).
+
+    Stage66 simulates the candidates the poll names and keeps the rest as one unnamed remainder `w` per draw (1 minus the named shares), which by
+    its definition goes to candidates outside the named set. The official roster names them, so each rostered candidate without a poll share
+    gets an equal part of `w` in every draw (the poll gives no basis for any other split; placeholder allocation, stated in the docs). Stage66
+    never lets a candidate outside the poll win, so the winners stay those of the named candidates. Returns (people, shares, named count).
+    """
+    missing = [p for p in roster_people if p['id'] not in {m['id'] for m in matched}]
+    if not missing:
+        return matched, shares, len(matched)
+    remainder = np.clip(1.0 - shares.sum(axis=1), 0.0, None)
+    extra = np.repeat((remainder / len(missing))[:, None], len(missing), axis=1)
+    return matched + missing, np.hstack([shares, extra]), len(matched)
+
+
+def record(source, people, shares, extra=None, named=None):
+    """A simulated seat record from roster entries (in order) and their shares (draws x candidates); winners are among the first `named` columns."""
     ids = [p['id'] for p in people]
     return {'status': 'simulated', 'class': 'maori-layer', 'source': source, **(extra or {}),
             'candidates': ids, 'candidateNames': [p['name'] for p in people], 'candidateParty': [p['group'] for p in people],
-            'candidateShares': share_summaries(ids, shares), 'winners': [int(i) for i in shares.argmax(axis=1)]}
+            'candidateShares': share_summaries(ids, shares),
+            'winners': [int(i) for i in shares[:, :named].argmax(axis=1)]}
 
 
 def simulate(config, count):
@@ -109,7 +127,8 @@ def simulate(config, count):
             s = sim['seats'][seat]
             matched = [match(seat, c['name'], c['party'], people[seat]) for c in s['poll']['candidates']]
             require(len({p['id'] for p in matched}) == len(matched), f'{seat}: two poll candidates match one roster candidate')
-            out[ids[seat]] = record(f"Stage66 default; poll {s['poll']['id']}", matched, s['share'], {'pollFieldworkEnd': s['poll']['fieldworkEnd']})
+            everyone, shares, named = with_unpolled_candidates(people[seat], matched, s['share'])
+            out[ids[seat]] = record(f"Stage66 default; poll {s['poll']['id']}", everyone, shares, {'pollFieldworkEnd': s['poll']['fieldworkEnd']}, named)
         elif seat in drawn:
             inp, shares = drawn[seat]
             slate = []
