@@ -398,6 +398,7 @@ class WorkflowShapeTests(unittest.TestCase):
         self.assertEqual(order[-1][:4], 'Open')
         adoption = dict(steps())[order[-1]]
         self.assertIn('continue-on-error: true', adoption)       # bookkeeping after the fact cannot fail a published run
+        self.assertIn("vars.ADOPTION_PR == 'true'", adoption)     # off by default: the weekly run stays lean
 
     def test_the_run_stops_when_nothing_is_new(self):
         for name, text in steps():

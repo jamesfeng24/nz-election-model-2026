@@ -11,6 +11,8 @@ name: Publish
 #     (James sets it after he has approved the first publish). Every other run is a DRY RUN: it builds and checks everything,
 #     never contacts the public repository, never uses the token, and writes nothing outside the runner.
 #   * the run is on main.
+# The bookkeeping pull request that follows a publish (about 15 more minutes, then a Verify run on the pull request) is off unless the repository
+# variable ADOPTION_PR is exactly 'true'; it is not needed for any later publish. Leaving it off keeps the weekly run lean.
 # Only the "Check the public repository", "Push the adoption branch", "Push to the public repository" and "Open the adoption pull request" steps
 # receive the token (secret POLL_REFRESH_TOKEN, James's); each runs only in publish mode. Public commits are authored and committed by James
 # with a plain message and no trailers (scripts/publish_workflow/public.py). Nothing is force-pushed.
@@ -199,7 +201,7 @@ jobs:
         run: |
           python3 -m scripts.publish_workflow.public push --clone "$RUNNER_TEMP/public" --site site --message "Update forecast $CUTOFF" --expected-head "$(cat "$RUNNER_TEMP/public-head")"
       - name: Open the adoption pull request
-        if: steps.release.outputs.skip != 'true' && steps.mode.outputs.mode == 'publish' && steps.push.conclusion == 'success'
+        if: steps.release.outputs.skip != 'true' && steps.mode.outputs.mode == 'publish' && steps.push.conclusion == 'success' && vars.ADOPTION_PR == 'true'
         continue-on-error: true
         env:
           PUBLISH_TOKEN: ${{ secrets.POLL_REFRESH_TOKEN }}
