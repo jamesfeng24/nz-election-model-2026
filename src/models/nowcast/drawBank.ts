@@ -27,6 +27,8 @@ const Simulated = z.object({
   electorateId: id, scope: z.enum(['general', 'maori']), status: z.literal('simulated'),
   class: z.enum(['ordinary', 'exceptional', 'maori-layer']),
   multiplier: z.number().positive().optional(),
+  withinMultiplier: z.number().positive().optional(),
+  massMultiplier: z.number().positive().optional(),
   source: id.optional(),
   pollFieldworkEnd: z.iso.date().optional(),
   seatPoll: SeatPoll.optional(),

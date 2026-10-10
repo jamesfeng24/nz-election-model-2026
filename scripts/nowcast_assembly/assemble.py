@@ -62,6 +62,8 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
     party_scales = scale_file['layers']['local_party']['scales']
     candidate_scales = scale_file['layers']['candidate']['scales']
     multipliers = config['uncertainty']['candidateBalanceSeatMultiplier']
+    within = config['uncertainty']['candidateWithinSeatMultiplier']
+    mass = config['uncertainty']['candidateMassSeatMultiplier']
     frame = seat_frame()
     general_ids = sorted(frame['general'])
     require(set(base) == set(general_ids), 'baseline seats differ from the 2026 general frame')
@@ -84,7 +86,8 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
     rows = list(party_rows.values()) + list(candidate_rows.values())
     polls = seat_polls.inputs(config['national']['dataCutoff']) if config.get('seatPolls', {}).get('enabled') else {}
     state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
-             'candidateScales': candidate_scales, 'multipliers': multipliers, 'classification': classification, 'polls': polls,
+             'candidateScales': candidate_scales, 'multipliers': multipliers, 'withinMultipliers': within,
+             'massMultipliers': mass, 'classification': classification, 'polls': polls,
              'localTransform': general.local_transform(config), 'national2023': national2023, 'replicates': replicates}
     local_means = {}
     with streams.substituted(rows, total, config['simulation']['seedNamespace']), fastmath.accelerated():
@@ -123,13 +126,16 @@ def seat_result(seat):
     deterministic = None if transform is None else transform(s['party'][seat], s['fine'], s['national2023'], s['replicates'])
     local, q, poll = general.simulate_with_poll(s['party'][seat], candidate, s['fine'], s['partyScales'], s['candidateScales'],
                                                 s['multipliers'][kind] if kind else 1.0, s['polls'].get(seat) if candidate else None,
-                                                deterministic)
+                                                deterministic, within=s['withinMultipliers'][kind] if kind else 1.0,
+                                                mass=s['massMultipliers'][kind] if kind else 1.0)
     if q is None:
         return local.mean(axis=0), None
     require(np.isfinite(q).all() and np.allclose(q.sum(axis=1), 1, atol=1e-9), f'{seat}: candidate shares do not close')
     winner = q.argmax(axis=1)
     extra = {'seatPoll': poll} if poll is not None else {}
     return local.mean(axis=0), {**extra, 'status': 'simulated', 'class': kind, 'multiplier': s['multipliers'][kind],
+                                'withinMultiplier': s['withinMultipliers'][kind],
+                                'massMultiplier': s['massMultipliers'][kind],
                                 'candidates': candidate['ids'], 'candidateParty': candidate['partyOf'],
                                 'candidateShares': share_summaries(candidate['ids'], q),
                                 'winners': winner.astype(int).tolist()}
@@ -224,8 +230,11 @@ def gate(bank, config):
     unavailable = [s['electorateId'] for s in bank['seats'] if s['status'] == 'unavailable']
     check('allWinnersPresent', not unavailable, f'{len(unavailable)} unavailable')
     multipliers = config['uncertainty']['candidateBalanceSeatMultiplier']
+    within = config['uncertainty']['candidateWithinSeatMultiplier']
+    mass = config['uncertainty']['candidateMassSeatMultiplier']
     wrong = [s['electorateId'] for s in bank['seats'] if s['scope'] == 'general' and s['status'] == 'simulated'
-             and s['multiplier'] != multipliers[s['class']]]
+             and (s['multiplier'] != multipliers[s['class']] or s['withinMultiplier'] != within[s['class']]
+                  or s['massMultiplier'] != mass[s['class']])]
     check('classificationMultipliers', not wrong, ', '.join(wrong))
     tolerance = config['release']['reconciliationTolerancePP']
     gap = bank['diagnostics']['reconciliation']['maxAbsGapPP']

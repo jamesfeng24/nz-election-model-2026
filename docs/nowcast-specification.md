@@ -70,6 +70,12 @@ National uncertainty enters exactly once, through step 2's draw id. The local an
 
 **Provenance and its limits.** The decision is James's, taken after Stage67. Stage67 itself (D101) recommended holding flagged seats at 1.00 and did **not** establish the narrower ordinary scale. The roughly 0.60 ordinary multiplier is development-informed: it was fitted on 2014–2023 with flags assigned knowing the results, and it is flag-selection-sensitive (the 17 cleaner flags gave no gain over a single scale). This limitation stays attached to the policy.
 
+**Candidate within-remainder and major-mass multipliers (D121, Stage83):**
+- **0.55** on the candidate within-remainder noise and **0.91** on the candidate major-mass noise (the National + Labour total against everyone else), seat and shared parts together, for ordinary general seats;
+- **1.00** for both in exceptional general seats; the means, the balance multiplier and the local-party layer are unchanged.
+
+The 0.55 is James's judgement (2026-10-10), not a fitted value; the 0.91 is the fitted all-election value. The frozen Stage83 rule fitted about 0.80 on earlier elections only and, because ordinary-seat minor-candidate 80% coverage stayed above the registered band, kept control. The pair was chosen with all four elections known and has no out-of-sample support. Its stated costs: National's 80% coverage in ordinary seats falls by 0.024 (guard 0.03), the tails of minor-candidate results in ordinary seats are thinner (a minor-candidate win in an ordinary seat becomes less likely than the fitted law allows), and independent candidates, already under-covered at the 80% level, are narrowed further. It shares the flag-selection sensitivity of the D107 policy. See `docs/stage83-ordinary-minor-spread-findings.md`.
+
 **The 2026 classification.**
 - One dated file classifies every 2026 general seat as `ordinary` or `exceptional`, by 2026 boundary id, with author, date, reason and sources. It is recorded in `config/general-seat-classification-2026.json` (2026-10-10; 13 exceptional, 51 ordinary; reasons in `docs/general-seat-classification-2026.md`).
 - The classification is exhaustive and exclusive over the 64 general seats. A missing seat **fails the build**; it never defaults to 0.60.
@@ -120,7 +126,7 @@ Stage53's fixed `requiredSeats` government combinations are replaced by Stage65'
 `config/nowcast-2026.json` will hold:
 - the election date;
 - the national source (fit, arm, `stateKey: lastDataSupport`);
-- the multipliers `{ordinary: 0.60, exceptional: 1.00}`;
+- the balance multipliers `{ordinary: 0.60, exceptional: 1.00}` and the within-remainder multipliers `{ordinary: 0.55, exceptional: 1.00}` and the major-mass multipliers `{ordinary: 0.91, exceptional: 1.00}` (D121);
 - the classification path;
 - the baseline pointer (Stage64 now, Stage69 later);
 - the roster snapshot id;
