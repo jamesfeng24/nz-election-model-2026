@@ -44,7 +44,6 @@ export interface MapForecast {
   leaderPartyName: string;
   leaderName: string;
   leaderP: number;
-  leaderRange?: [number, number] | null;
   available: boolean;
   incumbent: string | null;
   incumbentStatus: IncumbentStatus;

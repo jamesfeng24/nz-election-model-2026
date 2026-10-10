@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { chance } from '../format';
+import { prob } from '../format';
 import { partyColour } from '../partyColours';
 import { incumbentNote, opacityFor, seatKey, type MapForecast, type MapSeat } from './types';
 
@@ -74,9 +74,7 @@ export function MapShapes({
             </g>
           );
         }
-        const summary = forecast.available
-          ? `${forecast.leaderName} ${chance(forecast.leaderP, forecast.leaderRange)} to win`
-          : 'no forecast';
+        const summary = forecast.available ? `${forecast.leaderName} ${prob(forecast.leaderP)} to win` : 'no forecast';
         return (
           <a
             key={shape.id}
@@ -99,7 +97,7 @@ export function MapShapes({
             <title>
               {shape.name}
               {forecast.available
-                ? `: ${forecast.leaderName} (${forecast.leaderPartyName}) ${chance(forecast.leaderP, forecast.leaderRange)}`
+                ? `: ${forecast.leaderName} (${forecast.leaderPartyName}) ${prob(forecast.leaderP)}`
                 : ': no forecast'}
               {incumbentNote(forecast)}
             </title>

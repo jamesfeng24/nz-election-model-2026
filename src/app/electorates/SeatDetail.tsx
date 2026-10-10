@@ -1,14 +1,10 @@
 import type { ForecastSnapshot } from '../../types/export';
-import { chance, pct } from '../format';
+import { pct, prob } from '../format';
 import { intervalAt, mainRange } from '../intervals';
 import { partyColour } from '../partyColours';
 import { candidatePartyName } from '../partyNames';
 import { SeatPollLine } from '../polls/SeatPollLine';
 import { RangeBar, ShareAxis } from './RangeBar';
-import { chanceRange } from './rows';
-
-const RANGE_NOTE =
-  "Chances are a range between two estimates: one takes the seat polls at face value, the other allows for past Māori seat polls having ended up further from the results than the model's uncertainty implied.";
 
 /** Candidates, chances, vote-share ranges and polls for one electorate. */
 export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: string }) {
@@ -32,9 +28,7 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
       entry,
       candidate: snapshot.directory.candidates.find((c) => c.candidateId === entry.candidateId),
       share: detail?.candidates.find((d) => d.candidateId === entry.candidateId),
-    }))
-    .map((row) => ({ ...row, range: chanceRange(row.entry.winProbability, detail, row.entry.candidateId) }));
-  const hasRange = rows.some((row) => row.range);
+    }));
   const widestUpper = Math.max(0.1, ...rows.map((r) => (r.share ? mainRange(r.share.share).upper : 0)));
   const axisMax = Math.min(1, Math.ceil(widestUpper * 20) / 20);
   const rangeLabel = (name: string | undefined, share: NonNullable<(typeof rows)[number]['share']>) => {
@@ -52,7 +46,6 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
       {snapshot.incumbency && !rows.some((r) => r.candidate?.incumbent) && (
         <p className="note">No sitting MP for this seat is standing here.</p>
       )}
-      {hasRange && <p className="note">{RANGE_NOTE}</p>}
       <table className="candidates">
         <caption>Chance of winning and share of the electorate vote</caption>
         <thead>
@@ -64,7 +57,7 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
           </tr>
         </thead>
         <tbody>
-          {rows.map(({ entry, candidate, share, range }) => (
+          {rows.map(({ entry, candidate, share }) => (
             <tr key={entry.candidateId}>
               <td>
                 <strong>{candidate?.name ?? entry.candidateId}</strong>
@@ -80,7 +73,7 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
                 <small>{candidatePartyName(snapshot, candidate)}</small>
               </td>
               <td data-label="Chance">
-                <span className="odds">{chance(entry.winProbability, range)}</span>
+                <span className="odds">{prob(entry.winProbability)}</span>
               </td>
               <td className="num" data-label="Median">
                 <strong>{share ? pct(share.share[0].median) : '–'}</strong>

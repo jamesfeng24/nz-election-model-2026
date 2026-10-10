@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import bank from '../../data/fixtures/synthetic/nowcast-draw-bank.json';
 import { buildNowcastSnapshot } from '../models/nowcast/fromBank';
 import { ForecastSnapshotSchema } from '../types/export';
 import type { IndexResult } from '../data/loader';
 import { App } from './App';
-import { chance } from './format';
+import { prob } from './format';
 
 const noIndex = () => Promise.resolve<IndexResult>({ status: 'unavailable', reason: 'test' });
 const options = {
@@ -23,16 +23,8 @@ const options = {
   limitations: ['SYNTHETIC FIXTURE: not a nowcast.'],
 };
 
-describe('win chance as a range', () => {
-  it('writes one figure, or both ends of a range', () => {
-    expect(chance(0.88)).toBe('88%');
-    expect(chance(0.88, null)).toBe('88%');
-    expect(chance(0.88, [0.74, 0.88])).toBe('74–88%');
-    expect(chance(0.5, [0.5, 0.5])).toBe('50%');
-    expect(chance(0.02, [0.004, 0.02])).toBe('<1%–2%');
-  });
-
-  it('shows the range for a Māori seat that has the second estimate, and a single figure elsewhere', async () => {
+describe('Māori seat win chance', () => {
+  it('shows one figure, the one the seat totals use, even when the export carries a second estimate', async () => {
     const snapshot = await buildNowcastSnapshot(bank, options);
     const seat = snapshot.electorateDetail.find((d) => d.uncertaintyClass === 'maori-layer')!;
     const leaderId = [...seat.candidates].sort((a, b) => b.winProbability.p - a.winProbability.p)[0].candidateId;
@@ -50,20 +42,13 @@ describe('win chance as a range', () => {
     );
     expect(await screen.findByRole('heading', { level: 2, name: new RegExp(name) })).toBeInTheDocument();
     const lead = seat.candidates.find((c) => c.candidateId === leaderId)!;
-    const expected = chance(lead.winProbability.p, [lead.winProbabilityInflation!.p, lead.winProbability.p]);
     const table = screen.getByRole('table', { name: /Chance of winning and share/ });
-    expect(within(table).getByText(expected)).toBeInTheDocument();
-    expect(screen.getByText(/Chances are a range between two estimates/)).toBeInTheDocument();
+    expect(within(table).getByText(prob(lead.winProbability.p))).toBeInTheDocument();
+    expect(within(table).queryByText(/–/)).toBeNull();
+    expect(screen.queryByText(/range between two estimates/)).toBeNull();
     const listRow = screen.getAllByRole('row').find((r) => r.closest('.seatlist') && r.textContent?.startsWith(name))!;
-    expect(listRow).toHaveTextContent(expected);
-
-    // A seat without the second estimate keeps its single figure and no note.
-    const other = snapshot.electorateDetail.find((d) => d.uncertaintyClass === 'ordinary')!;
-    const otherName = snapshot.directory.electorates.find((e) => e.electorateId === other.electorateId)!.name;
-    fireEvent.click(screen.getAllByRole('button', { name: otherName })[0]);
-    expect(await screen.findByRole('heading', { level: 2, name: new RegExp(otherName) })).toBeInTheDocument();
-    // The first seat folds shut while this one opens, then is removed.
-    await waitFor(() => expect(screen.queryByText(/Chances are a range between two estimates/)).toBeNull());
+    expect(listRow).toHaveTextContent(prob(lead.winProbability.p));
+    expect(listRow.textContent).not.toMatch(/\d+–\d+%/);
     window.location.hash = '';
   });
 });

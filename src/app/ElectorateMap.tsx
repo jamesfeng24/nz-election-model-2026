@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ForecastSnapshot } from '../types/export';
-import { chance } from './format';
+import { prob } from './format';
 import { HoverCard } from './map/HoverCard';
 import { MapShapes } from './map/MapShapes';
 import { incumbentNote, seatKey, type Box, type MapData, type MapForecast } from './map/types';
@@ -71,7 +71,7 @@ export function ElectorateMap({
   }));
   const spoken = hovered
     ? (hovered.available
-        ? `${hovered.name}: ${hovered.leaderName}, ${hovered.leaderPartyName}, ${chance(hovered.leaderP, hovered.leaderRange)} to win`
+        ? `${hovered.name}: ${hovered.leaderName}, ${hovered.leaderPartyName}, ${prob(hovered.leaderP)} to win`
         : `${hovered.name}: no forecast available`) + incumbentNote(hovered)
     : '';
   const kindName = kind === 'general' ? 'general' : 'Māori';

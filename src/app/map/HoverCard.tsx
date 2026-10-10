@@ -1,4 +1,4 @@
-import { chance } from '../format';
+import { prob } from '../format';
 import type { MapForecast } from './types';
 
 /** The favourite, then every candidate with chance of winning, median vote share and incumbent tag. */
@@ -16,8 +16,7 @@ export function HoverCard({ seat }: { seat: MapForecast }) {
     <>
       <h3>{seat.name}</h3>
       <p className="winner">
-        Most likely winner: <strong>{seat.leaderName}</strong> ({seat.leaderPartyName}),{' '}
-        {chance(seat.leaderP, seat.leaderRange)}
+        Most likely winner: <strong>{seat.leaderName}</strong> ({seat.leaderPartyName}), {prob(seat.leaderP)}
         {noSittingMp ? '. No sitting MP is standing here' : ''}
       </p>
       <table>
@@ -41,7 +40,7 @@ export function HoverCard({ seat }: { seat: MapForecast }) {
                   </>
                 )}
               </td>
-              <td className="num">{chance(candidate.winP, candidate.winRange)}</td>
+              <td className="num">{prob(candidate.winP)}</td>
               <td className="num">{candidate.share === null ? '–' : `${(candidate.share * 100).toFixed(1)}%`}</td>
             </tr>
           ))}

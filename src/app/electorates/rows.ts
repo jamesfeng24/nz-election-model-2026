@@ -17,7 +17,6 @@ export interface SeatRow {
   leaderPartyName: string;
   leaderP: number;
   /** The most likely winner's lower and upper win chance where the model gives a range. */
-  leaderRange: [number, number] | null;
   secondP: number;
   /** Most likely winner's median vote share minus the runner-up's; null without two shares. */
   margin: number | null;
@@ -28,16 +27,6 @@ export interface SeatRow {
   /** The sitting MP is standing and the projected winner is from a different party. */
   partyFlip: boolean;
   candidates: MapCandidate[];
-}
-
-/** Both ends of the win chance where the export gives a second estimate, else null. */
-export function chanceRange(
-  main: number,
-  detail: ForecastSnapshot['electorateDetail'][number] | undefined,
-  candidateId: string | undefined,
-): [number, number] | null {
-  const other = detail?.candidates.find((c) => c.candidateId === candidateId)?.winProbabilityInflation?.p;
-  return other === undefined ? null : [Math.min(main, other), Math.max(main, other)];
 }
 
 const byWinChance = (a: { winProbability: number }, b: { winProbability: number }) =>
@@ -77,7 +66,6 @@ function buildRow(snapshot: ForecastSnapshot, electorate: Directory['electorates
         partyName: candidatePartyName(snapshot, candidate),
         colour: partyColour(candidate.partyId),
         winP: entry.winProbability,
-        winRange: chanceRange(entry.winProbability, detail, entry.candidateId),
         share: detail?.candidates.find((d) => d.candidateId === entry.candidateId)?.share[0].median ?? null,
         incumbent: candidate.incumbent === true,
       },
@@ -96,7 +84,6 @@ function buildRow(snapshot: ForecastSnapshot, electorate: Directory['electorates
     leaderParty: leader?.partyId ?? null,
     leaderPartyName: candidatePartyName(snapshot, leader),
     leaderP: ranked[0]?.winProbability ?? 0,
-    leaderRange: ranked[0] ? chanceRange(ranked[0].winProbability, detail, ranked[0].candidateId) : null,
     secondP: ranked[1]?.winProbability ?? 0,
     margin,
     incumbent: sitting?.name ?? null,
