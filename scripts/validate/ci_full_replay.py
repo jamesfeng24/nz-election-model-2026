@@ -11,6 +11,9 @@ runtime cache of the same job, so the three share one group.
     python3 -m scripts.validate.ci_full_replay --list
     python3 -m scripts.validate.ci_full_replay --check          # partition covers every command exactly once
     python3 -m scripts.validate.ci_full_replay --group stage54  # run it (what the workflow does)
+
+`live` is the Verify job of that name (the live 2026 chain); `tests` is the full unittest discovery plus source
+validation, which touch no runtime cache and so can run apart from the historical checks.
 """
 import argparse
 import os
@@ -24,9 +27,12 @@ import time
 ROOT = Path(__file__).resolve().parents[2]
 WORKFLOW = '.github/workflows/ci.yml'
 JOB = 'python'
+LIVE_JOB = 'live'  # Verify already runs it as its own parallel job; here it is the group of the same name
 BASE = 'base'
-# Command prefixes (after `python3 -m `) per group, in matching order. Everything unmatched is `base`.
+# Command prefixes per group, in matching order, matched against the command after `python3 ` with a leading `-m `
+# removed. Everything unmatched in the `python` job is `base`.
 GROUPS = {
+    'tests': ('unittest', 'scripts/validate/source_files.py'),
     'stage39': ('scripts.polling.candidate_integration.',),
     'stage45-47': ('scripts.uncertainty_revision.', 'scripts.uncertainty_tails.',
                    'scripts.diagnostics.uncertainty_tails_', 'scripts.uncertainty_expectation.'),
@@ -34,12 +40,12 @@ GROUPS = {
     'stage54': ('scripts.composed_precision.',),
     'stage63': ('scripts.layer_replication.',),
 }
+LIVE = 'live'
 
 
-def commands(root=ROOT):
-    """Every plain `- run: python3 ...` command of the Verify `python` job, in order, with named steps excluded."""
-    lines = (Path(root) / WORKFLOW).read_text().splitlines()
-    start = next(i for i, line in enumerate(lines) if line == '  {}:'.format(JOB))
+def job_commands(lines, job):
+    """Plain `- run: python3 ...` commands of one job, in order; named steps (reuse gates) and pip setup excluded."""
+    start = next(i for i, line in enumerate(lines) if line == '  {}:'.format(job))
     found = []
     for line in lines[start + 1:]:
         if re.match(r'^  \S', line):
@@ -50,18 +56,31 @@ def commands(root=ROOT):
     return found
 
 
+def entries(root=ROOT):
+    """(group, command) for every validation command of the Verify `live` and `python` jobs, in workflow order."""
+    lines = (Path(root) / WORKFLOW).read_text().splitlines()
+    return ([(LIVE, command) for command in job_commands(lines, LIVE_JOB)] +
+            [(group_of(command), command) for command in job_commands(lines, JOB)])
+
+
+def commands(root=ROOT):
+    return [command for _, command in entries(root)]
+
+
 def group_of(command):
-    module = command[len('python3 -m '):] if command.startswith('python3 -m ') else ''
+    """Group of a `python` job command."""
+    rest = command[len('python3 '):]
+    target = rest[len('-m '):] if rest.startswith('-m ') else rest
     for name, prefixes in GROUPS.items():
-        if any(module.startswith(prefix) for prefix in prefixes):
+        if any(target.startswith(prefix) for prefix in prefixes):
             return name
     return BASE
 
 
 def partition(root=ROOT):
-    result = {name: [] for name in (BASE,) + tuple(GROUPS)}
-    for command in commands(root):
-        result[group_of(command)].append(command)
+    result = {name: [] for name in (BASE,) + tuple(GROUPS) + (LIVE,)}
+    for group, command in entries(root):
+        result[group].append(command)
     return result
 
 

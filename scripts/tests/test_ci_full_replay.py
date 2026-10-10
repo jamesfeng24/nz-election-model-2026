@@ -16,7 +16,9 @@ def synthetic_root(directory, runs):
     path = Path(directory) / replay.WORKFLOW
     path.parent.mkdir(parents=True)
     body = ''.join('      - run: {}\n'.format(command) for command in runs)
-    path.write_text('jobs:\n  check:\n    steps:\n      - run: npm ci\n  python:\n    steps:\n'
+    path.write_text('jobs:\n  check:\n    steps:\n      - run: npm ci\n'
+                    '  live:\n    steps:\n      - run: python3 -m scripts.live_stage.run --check\n'
+                    '  python:\n    steps:\n'
                     '      - run: python3 -m pip install -r requirements-boundaries.txt\n'
                     '      - name: Verify reused Stage45 frozen pipeline\n'
                     '        if: steps.frozen.outputs.stage45 == \'integrity\'\n'
@@ -46,6 +48,13 @@ class PartitionTests(unittest.TestCase):
         for command in ('python3 -m scripts.polling.candidate_integration.construction --check',):
             self.assertEqual(replay.group_of(command), 'stage39')
 
+    def test_live_job_and_unit_tests_have_their_own_groups(self):
+        parts = replay.partition()
+        self.assertIn('python3 -m scripts.nowcast_config.validate --require-complete', parts['live'])
+        self.assertEqual(sorted(c.split()[1] for c in parts['tests']), ['-m', 'scripts/validate/source_files.py'])
+        self.assertIn('python3 -m unittest discover -s scripts/tests -v', parts['tests'])
+        self.assertFalse([c for c in parts['base'] if 'unittest' in c or 'nowcast_config' in c])
+
     def test_stage47_shares_a_group_with_the_stage45_and_stage46_caches_it_reads(self):
         groups = {replay.group_of('python3 -m scripts.{}.construction --check'.format(m))
                   for m in ('uncertainty_revision', 'uncertainty_tails', 'uncertainty_expectation')}
@@ -62,6 +71,7 @@ class PartitionTests(unittest.TestCase):
             parts = replay.partition(root)
             self.assertEqual(parts['base'], ['python3 -m scripts.new_stage.run --check'])
             self.assertEqual(parts['stage48'], ['python3 -m scripts.balance_scale.fit --check'])
+            self.assertEqual(parts['live'], ['python3 -m scripts.live_stage.run --check'])
             self.assertIn('group stage39 has no commands', replay.check(root))
 
 
@@ -70,9 +80,9 @@ class WorkflowTests(unittest.TestCase):
         text = FULL_WORKFLOW.read_text()
         groups = re.findall(r'^          - group: (\S+)$', text, re.M)
         timeouts = re.findall(r'^            timeout: (\d+)$', text, re.M)
-        self.assertEqual(sorted(groups), sorted((replay.BASE,) + tuple(replay.GROUPS)))
+        self.assertEqual(sorted(groups), sorted((replay.BASE, replay.LIVE) + tuple(replay.GROUPS)))
         self.assertEqual(len(timeouts), len(groups))
-        self.assertTrue(all(0 < int(t) <= 360 for t in timeouts))  # GitHub's own job limit is 6 hours
+        self.assertTrue(all(0 < int(t) <= 180 for t in timeouts))  # never above Verify's own 180-minute job limit
         self.assertIn('--group ${{ matrix.group }}', text)
 
     def test_workflow_is_manual_only_and_not_named_by_verify(self):

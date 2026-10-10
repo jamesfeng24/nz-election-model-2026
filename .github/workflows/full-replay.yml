@@ -1,6 +1,7 @@
 name: Full replay
 # Manual, complete validation of main (or any ref) with the frozen pipelines replayed in parallel jobs, so each job
-# fits well inside its limit. It runs every command of the Verify `python` job with no reuse; the command list is
+# fits inside its limit (none above Verify's own 180 minutes). It runs every command of the Verify `live` and `python`
+# jobs with no reuse; the command list is
 # read from ci.yml by scripts/validate/ci_full_replay.py, so the two cannot drift (a unit test checks the partition
 # and this file's group list). It does not replace Verify on pull requests and main pushes and is not read by the
 # frozen-pipeline selector.
@@ -39,17 +40,21 @@ jobs:
       matrix:
         include:
           - group: base
-            timeout: 150
+            timeout: 120
+          - group: tests
+            timeout: 90
+          - group: live
+            timeout: 40
           - group: stage39
-            timeout: 45
+            timeout: 30
           - group: stage45-47
-            timeout: 270
-          - group: stage48
-            timeout: 120
-          - group: stage54
             timeout: 180
+          - group: stage48
+            timeout: 90
+          - group: stage54
+            timeout: 150
           - group: stage63
-            timeout: 120
+            timeout: 90
     steps:
       - uses: actions/checkout@v5
         with:

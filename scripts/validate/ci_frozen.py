@@ -43,10 +43,11 @@ SOURCE_DIRECTORIES = ('config', 'data', 'docs', 'scripts', 'src')
 # nor count as a pipeline change. They are guarded instead by the selector's own always-run unit tests and by
 # ``workflow_errors`` (no attested validation may be removed or newly conditioned).
 MACHINERY = ('.github/validation/', 'scripts/validate/ci_', 'AGENTS.md')
-# Scheduled workflows that Verify never calls (D120). They run no pipeline code and cannot change what Verify
-# executes, so adding or editing them is not a CI-configuration change; any other `.github/` path still is. The
-# exemption lapses if ci.yml names the file (see ``non_verify_workflow``).
-NON_VERIFY_WORKFLOWS = ('.github/workflows/poll-refresh.yml',)
+# Workflows that Verify never calls: the scheduled poll refresh (D120) and the manual Full replay, whose commands
+# are read from ci.yml. They cannot change what Verify executes, so adding or editing them is not a CI-configuration
+# change; any other `.github/` path still is. The exemption lapses if ci.yml names the file (see
+# ``non_verify_workflow``).
+NON_VERIFY_WORKFLOWS = ('.github/workflows/poll-refresh.yml', '.github/workflows/full-replay.yml')
 KNOWN = ('stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63')
 EVENTS = ('pull_request', 'push')  # workflow_dispatch and anything unknown are always full
 ATTESTING_EVENTS = ('pull_request', 'push', 'workflow_dispatch')  # a manual full dispatch of main is a valid reference

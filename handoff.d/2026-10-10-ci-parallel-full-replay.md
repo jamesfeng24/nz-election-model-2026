@@ -1,8 +1,8 @@
 <!-- fold: changelog -->
 ## CI: parallel full replay, 2026-10-10
 
-- New manual-only workflow `.github/workflows/full-replay.yml` runs every Verify `python` job command with no reuse, split into parallel jobs (`base`, `stage39`, `stage45-47`, `stage48`, `stage54`, `stage63`) plus the frontend check, with a final job requiring all of them. The Verify `python` job's 180-minute `timeout-minutes` is what made the single-job manual full dispatch fail; GitHub's own limit is 6 hours.
-- `scripts/validate/ci_full_replay.py` reads the command list from `ci.yml` (no copy), partitions it, and runs one group; `scripts/tests/test_ci_full_replay.py` guards that the partition covers each command exactly once and that each registered frozen pipeline has its own group. Added to `NON_VERIFY_WORKFLOWS` in `ci_frozen.py`. `ci.yml`, the selectors, the registry and the pins are unchanged. No statistical code, output or check changed.
+- New manual-only workflow `.github/workflows/full-replay.yml` runs every Verify `python` job command with no reuse, split into parallel jobs (`base`, `tests`, `live`, `stage39`, `stage45-47`, `stage48`, `stage54`, `stage63`) plus the frontend check, with a final job requiring all of them. The Verify `python` job's 180-minute `timeout-minutes` (unchanged) is what the single-job manual full dispatch can exceed; every Full replay job is capped at or below it and the critical path is the Stage45-47 job at about 2 hours.
+- `scripts/validate/ci_full_replay.py` reads the command list from `ci.yml` (no copy), partitions it, and runs one group; `scripts/tests/test_ci_full_replay.py` guards that the partition covers each command exactly once and that each registered frozen pipeline has its own group. Added to `NON_VERIFY_WORKFLOWS` in `ci_frozen.py` (with a test). `ci.yml`, the selectors, the registry and the pins are unchanged. No statistical code, output or check changed.
 
 <!-- fold: state -->
 # CI: parallel full replay — review-ready, 2026-10-10
