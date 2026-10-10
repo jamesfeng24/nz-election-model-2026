@@ -254,6 +254,9 @@ class SelectionTests(unittest.TestCase):
         write(self.repo.root, '.github/workflows/poll-refresh.yml', 'name: Poll refresh\n')
         commit(self.repo.root, 'scheduled workflow')
         self.assertEqual(self.repo.select()['mode'], 'integrity')
+        write(self.repo.root, '.github/workflows/full-replay.yml', 'name: Full replay\n')
+        commit(self.repo.root, 'manual full replay workflow')
+        self.assertEqual(self.repo.select()['mode'], 'integrity')
         # Any other workflow file still forces full.
         write(self.repo.root, '.github/workflows/other.yml', 'name: Other\n')
         commit(self.repo.root, 'another workflow')
