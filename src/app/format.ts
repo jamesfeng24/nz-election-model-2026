@@ -28,6 +28,15 @@ export function prob(p: number): string {
   return `${Math.round(p * 100)}%`;
 }
 
+/** A win chance, or both ends of the range where the model gives two estimates: `61–84%`. */
+export function chance(p: number, range?: readonly [number, number] | null): string {
+  if (!range) return prob(p);
+  const low = prob(range[0]);
+  const high = prob(range[1]);
+  if (low === high) return high;
+  return /^\d+%$/.test(low) ? `${low.slice(0, -1)}–${high}` : `${low}–${high}`;
+}
+
 /** `2026-09-21`, `2026-09-28` → `21–28 September 2026`; across months `21 September – 3 October 2026`. */
 export function dateRange(start: string | null, end: string): string {
   if (!start || start === end) return longDate(end);

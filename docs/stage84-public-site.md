@@ -35,6 +35,7 @@ Schema v2, plus optional additions so snapshots without them stay valid:
 
 - `evidence`: `source`, `nationalPolls` and the weekly `trend`. Per seat, `electorateDetail[].evidence`: `basis` (plain text from the draw bank's seat source and class) and `polls` (pollster, client, dates, sample, margin, per-candidate percent, `usedInModel`, sources). Seat polls are matched to seats by electorate name. Without evidence the page says no poll information is attached.
 - `directory.candidates[].incumbent` (only ever `true`, at most one per seat) and top-level `incumbency` (`label`, `url`, `asOf`), present together.
+- `electorateDetail[].candidates[].winProbabilityInflation {p, mcse, ess}`, on the polled Māori seats only (every candidate of the seat, or none). Where present, the site shows the chance of winning as a range between `winProbability` and this figure (for example `61–84%`) in the seat table, the hover card, the accessible labels and the electorate list, with a short note on the seat page and a sentence on the methodology page. Seats without it show their single figure as before. The most likely winner, the margin, the close-contest filter and the map shading still use `winProbability`, the figure the seat totals use.
 - `adjustments` (`by`, `items[{what, why}]`): when manual adjustments exist the site shows only the adjusted forecast, a forecast-page note says "includes manual adjustments by <name>", and the methodology page lists what was changed and why. Absent while there are none.
 
 ## Producers

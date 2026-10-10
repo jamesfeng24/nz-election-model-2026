@@ -1,15 +1,19 @@
 import type { ForecastSnapshot } from '../../types/export';
-import { pct, prob } from '../format';
+import { chance, pct } from '../format';
 import { intervalAt, mainRange } from '../intervals';
 import { partyColour } from '../partyColours';
 import { candidatePartyName } from '../partyNames';
 import { SeatPollLine } from '../polls/SeatPollLine';
 import { RangeBar, ShareAxis } from './RangeBar';
+import { chanceRange } from './rows';
 
 const UNCERTAINTY_NOTES: Record<string, string> = {
   'maori-layer': 'Māori electorates are modelled separately, with fewer polls, so ranges here are wider.',
   exceptional: 'This seat has unusual local circumstances, so the model allows wider uncertainty.',
 };
+
+const RANGE_NOTE =
+  "Chances are a range between two estimates: one takes the seat polls at face value, the other allows for past Māori seat polls having ended up further from the results than the model's uncertainty implied.";
 
 /** Candidates, chances, vote-share ranges and polls for one electorate. */
 export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: string }) {
@@ -33,7 +37,9 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
       entry,
       candidate: snapshot.directory.candidates.find((c) => c.candidateId === entry.candidateId),
       share: detail?.candidates.find((d) => d.candidateId === entry.candidateId),
-    }));
+    }))
+    .map((row) => ({ ...row, range: chanceRange(row.entry.winProbability, detail, row.entry.candidateId) }));
+  const hasRange = rows.some((row) => row.range);
   const widestUpper = Math.max(0.1, ...rows.map((r) => (r.share ? mainRange(r.share.share).upper : 0)));
   const axisMax = Math.min(1, Math.ceil(widestUpper * 20) / 20);
   const uncertaintyNote =
@@ -54,6 +60,7 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
         <p className="note">No sitting MP for this seat is standing here.</p>
       )}
       {uncertaintyNote && <p className="note">{uncertaintyNote}</p>}
+      {hasRange && <p className="note">{RANGE_NOTE}</p>}
       <table className="candidates">
         <caption>Chance of winning and share of the electorate vote</caption>
         <thead>
@@ -65,7 +72,7 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
           </tr>
         </thead>
         <tbody>
-          {rows.map(({ entry, candidate, share }) => (
+          {rows.map(({ entry, candidate, share, range }) => (
             <tr key={entry.candidateId}>
               <td>
                 <strong>{candidate?.name ?? entry.candidateId}</strong>
@@ -81,7 +88,7 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
                 <small>{candidatePartyName(snapshot, candidate)}</small>
               </td>
               <td>
-                <span className="odds">{prob(entry.winProbability)}</span>
+                <span className="odds">{chance(entry.winProbability, range)}</span>
               </td>
               <td className="num">
                 <strong>{share ? pct(share.share[0].median) : '–'}</strong>

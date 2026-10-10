@@ -23,6 +23,8 @@ export interface MapCandidate {
   partyName: string;
   colour: string;
   winP: number;
+  /** Lower and upper win chance where the model gives a range (polled Māori seats). */
+  winRange?: [number, number] | null;
   share: number | null;
   incumbent: boolean;
 }
@@ -42,6 +44,7 @@ export interface MapForecast {
   leaderPartyName: string;
   leaderName: string;
   leaderP: number;
+  leaderRange?: [number, number] | null;
   available: boolean;
   incumbent: string | null;
   incumbentStatus: IncumbentStatus;

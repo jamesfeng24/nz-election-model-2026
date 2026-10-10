@@ -12,6 +12,8 @@
 
 - Site tweaks (James): the all-electorates list shows expected margin (winner's median share minus the runner-up's) instead of the incumbent, which stays in the hover card and seat page; the Polls page lists only polls the model used, without an "in model" column or a count on "See more"; the Forecast page no longer repeats the electorates table; the footer reads "Licensed under CC BY 4.0" and no longer says it is an independent research project; the About page puts each name above its link; a visually hidden label inside a scrolling table no longer widens the page (fixes the white strip when scrolling sideways, mostly on phones).
 
+- Māori seat range: the four polled Māori seats' chance of winning shows as a range between `winProbability` (C) and the new `winProbabilityInflation` (P) from Stage88/D127 (seat page, hover card, accessible labels, electorate list), with a note on the seat page and a sentence on the methodology page; seats without P are unchanged. Main merged into the site branch to pick up the export field. Display only.
+
 <!-- fold: state -->
 # Stage84 public site — review-ready, 2026-10-10
 

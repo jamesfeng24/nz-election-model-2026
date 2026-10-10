@@ -1,4 +1,4 @@
-import { prob } from '../format';
+import { chance } from '../format';
 import type { SeatRow } from './rows';
 
 export function SeatList({
@@ -44,7 +44,7 @@ export function SeatList({
                 </>
               )}
             </td>
-            <td>{row.available ? prob(row.leaderP) : 'No forecast'}</td>
+            <td>{row.available ? chance(row.leaderP, row.leaderRange) : 'No forecast'}</td>
             <td>{row.margin === null ? '–' : `${(row.margin * 100).toFixed(1)} pts`}</td>
           </tr>
         ))}

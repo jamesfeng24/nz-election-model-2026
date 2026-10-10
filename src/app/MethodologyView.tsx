@@ -43,7 +43,10 @@ export function MethodologyView({
         </li>
         <li>
           <b>Māori electorates.</b> These are modelled separately from seat-level polls where they exist; seats without
-          a poll are estimated from the 2023 result carried forward and are less certain.
+          a poll are estimated from the 2023 result carried forward and are less certain. For the polled seats the
+          chance of winning is shown as a range between two estimates: one takes the seat polls at face value, the other
+          allows for past Māori seat polls having ended up further from the results than the model's uncertainty
+          implied.
         </li>
         <li>
           <b>Seats in Parliament.</b> Each simulated election is run through New Zealand's MMP rules: the 5% party-vote
