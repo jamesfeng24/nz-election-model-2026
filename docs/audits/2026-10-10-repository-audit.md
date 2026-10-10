@@ -52,16 +52,19 @@ No numerical bug was found in the live assembly path itself: the seat-poll updat
 ## Needs James's decision
 
 ### J1 (High) Māori seats: D114 says "labelled range", the build shows one number
+- **Decided (James, 2026-10-10):** Range. Built by Stage88 (D127).
 - **Where:** `config/nowcast-2026.json:80` `maori.presentation: "labelled-range"`; nothing reads it. `scripts/nowcast_assembly/maori.py` simulates only the Stage66 default (C); Stage71's inflation (P) is never run. Spec `§5` and D114 say the probabilities are shown as a C–P range or withheld.
 - **Why it matters:** Stage71 found C over-predicts leaders (C 0.88 / 0.78 / 0.85 against P roughly 0.6 to 0.75; Te Tai Tonga about 0.5 to 0.75), and P beat C on every pre-registered score. The site would show C's single number.
 - **Options:** **Range** (recommended): seat pages show the C–P range; MMP keeps one law per draw (C) and says so. **C only**: show C and correct D114 and the spec. **P only**: use P for seats and MMP.
 
 ### J2 (Medium) Pin the electorate-poll run in the config
+- **Decided (James, 2026-10-10):** Pin. Built by Stage88 (D128).
 - **Where:** `scripts/seat_polls/live.py:32` and `scripts/maori_seat_layer/live.py:27` read the *newest* `data/processed/polling/electorate-live/` run, not one named in the config; the bank's `inputs` (`assemble.py:107-109`) do not record which run. General-seat polls are cut at `national.dataCutoff`; Māori polls are not.
 - **Why it matters:** merging a refresh PR changes the forecast and makes the development gate stale before anyone adopts it, so the gate cannot sit in CI (C2), and a published snapshot cannot say which poll file it used.
 - **Options:** **Pin** (recommended): `seatPolls.electorateRun` (date and hash) set by `weekly_refresh.adopt` together with the national fit, recorded in the bank inputs, with the same cutoff for both seat types. **Leave**: keep reading the newest run.
 
 ### J3 (Medium, electoral rule) A Te Tai Tokerau Party win is counted as an independent
+- **Decided (James, 2026-10-10):** Overhang. Built by Stage88 (D129).
 - **Where:** `src/models/mmp/seatLayer.ts:170-173` counts any winner whose party is not a listed national group as an s 191(8) independent (seat inside the 120). `docs/stage65-seat-layer-design.md:49` records the same.
 - **Evidence:** Te Tai Tokerau Party is on the 2026 party list (`data/processed/nominations-2026/2026-10-10/party-lists.json`), so under the Act it qualifies by its electorate win and its seat is overhang unless its party vote earns a Sainte-Laguë seat (about 0.4%). Its vote sits inside "Other" (about 1.6% in total), so zero entitlement is far more likely. Kapa-Kingi wins in 13.2% of draws (8,192 Māori draws, fallback arm F). The current rule is equivalent to assuming the party earns exactly one list-entitled seat: the other parties share 119 seats instead of 120, and Parliament is 120 instead of 121, in those draws. An independent win in Te Tai Tonga (1.7% of draws) is correctly s 191(8).
 - **Options:** **Overhang** (recommended): count a listed party inside Other as qualified with zero party votes, so its seat is overhang. **Keep**: document the current rule as an approximation.

@@ -1,7 +1,8 @@
 """Maori seats: the Stage66 default layer re-run for the polled seats; the unpolled seats use the registered Stage78 fallback.
 
-The polled seats are those with a Maori poll in the newest Stage82 live-inputs run (Stage86, D125), not the pinned 2026-10-07 transcription: a new
-Maori seat poll is a data-only addition and moves its seat from the fallback to the Stage66 layer. The calibration is unchanged.
+The polled seats are those with a Maori poll, ending by the data cutoff, in the Stage82 live-inputs run that `seatPolls.electorateRun` pins (Stage86,
+D125; audit J2), not the 2026-10-07 transcription: a new Maori seat poll is a data-only addition and moves its seat from the fallback to the
+Stage66 layer once its run is adopted. The calibration is unchanged.
 
 Stage66 stores only a 500-draw preview, so the registered model is re-simulated here with the assembly's draw
 count. Maori draws are independent of the national draw (Stage66 default; any coupling needs a stated correlation).
@@ -13,11 +14,14 @@ Candidates carry the official roster ids (`config.candidate.features`, Stage50 p
 surname and party; any candidate that does not match exactly one roster entry fails the build.
 """
 import numpy as np
+from scripts.maori_seat_calibration.inflation import arm_p
+from scripts.maori_seat_calibration.readout import simulate as stage71_simulate
 from scripts.maori_seat_fallback.draws import f_shares
 from scripts.maori_seat_layer.common import SEATS, fold
 from scripts.maori_seat_layer.fit import fit
 from scripts.maori_seat_layer.run import parameters
-from scripts.maori_seat_layer.live import current_polls
+from scripts.maori_seat_layer import live as maori_live
+from scripts.polling import electorate_live
 from scripts.maori_seat_layer.simulate import simulate as simulate_layer
 from .common import TARGET_FRAME, read, require, namespace_seed
 from .summaries import share_summaries
@@ -107,17 +111,34 @@ def record(source, people, shares, extra=None, named=None):
             'winners': [int(i) for i in shares[:, :named].argmax(axis=1)]}
 
 
+def inflation_winners(polls, count, namespace):
+    """{seat: winner index per draw} of the polled seats under Stage71's arm P (audit J1, D127): the same polls and Stage66 control fit with
+    sigma^2 and tau^2 multiplied by a lambda drawn per draw from Stage71's bootstrap, simulated by Stage71's readout simulator on its own seed
+    streams. Indices follow the poll's candidate order, which is the order of the record's named candidates. Only the winners are kept: the
+    published shares and the MMP layer stay on the Stage66 control (C), so P is the other end of the labelled range, never a second law."""
+    if not polls:
+        return {}
+    est, lam = arm_p()
+    pick = np.random.default_rng(namespace_seed(namespace, 'maori-inflation-lambda')).integers(0, len(lam), count)
+    # The unnamed-remainder list only advances each seat's stream after its winners are drawn, so a placeholder leaves the winners unchanged.
+    sim = stage71_simulate(polls, est, lam[pick], 0.0, [0.0], namespace_seed(namespace, 'maori-inflation'), count)
+    return {seat: s['winner'] for seat, s in sim['seats'].items()}
+
+
 def simulate(config, count):
     """Return {electorateId: record}; records are simulated (winner party per draw) or unavailable with a reason."""
     require(config['maori']['layer'] == 'stage66-default', 'only the Stage66 default Maori layer is registered')
+    require(config['maori']['presentation'] == 'labelled-range', 'only the labelled C-P range presentation is registered (D114, D127)')
     fallback = config['maori']['unpolledFallbackModel']
     require(fallback in (None, FALLBACK_MODEL), f'unregistered Maori fallback model: {fallback}')
     require(fallback is None or config['maori']['unpolledSeats'] == 'labelled-fallback', 'a fallback model needs maori.unpolledSeats = labelled-fallback')
     ids = electorate_ids()
     people = roster(config, ids)
-    polls, _ = current_polls(resolver(people))
+    run, sha = electorate_live.pinned(config)
+    polls, _ = maori_live.current_polls(resolver(people), maori_live.live_polls(run, sha), config['national']['dataCutoff'])
     fitted = fit()[0]['fit']
     sim = simulate_layer(polls, parameters(fitted), count, namespace_seed(config['simulation']['seedNamespace'], 'maori'))
+    inflated = inflation_winners(polls, count, config['simulation']['seedNamespace'])
     unpolled = [seat for seat in SEATS if seat not in sim['seats']]
     drawn = (f_shares(unpolled, count, namespace_seed(config['simulation']['seedNamespace'], 'maori-fallback'))
              if fallback is not None and unpolled else {})
@@ -128,7 +149,10 @@ def simulate(config, count):
             matched = [match(seat, c['name'], c['party'], people[seat]) for c in s['poll']['candidates']]
             require(len({p['id'] for p in matched}) == len(matched), f'{seat}: two poll candidates match one roster candidate')
             everyone, shares, named = with_unpolled_candidates(people[seat], matched, s['share'])
-            out[ids[seat]] = record(f"Stage66 default; poll {s['poll']['id']}", everyone, shares, {'pollFieldworkEnd': s['poll']['fieldworkEnd']}, named)
+            extra = {'pollFieldworkEnd': s['poll']['fieldworkEnd']}
+            if seat in inflated:
+                extra['inflationWinners'] = [int(i) for i in inflated[seat]]
+            out[ids[seat]] = record(f"Stage66 default; poll {s['poll']['id']}", everyone, shares, extra, named)
         elif seat in drawn:
             inp, shares = drawn[seat]
             slate = []

@@ -13,6 +13,7 @@ A Maori seat's latest poll (from the Stage82 live file since Stage86) is the one
 from scripts.maori_seat_layer import live as maori_live
 from scripts.maori_seat_layer.live import live_polls
 from scripts.seat_polls import live as seat_polls
+from scripts.polling import electorate_live
 from . import maori
 from .common import OTHER, require
 
@@ -54,29 +55,37 @@ def general_seat(seat, record, row, keys, groups, continuing, polls):
             'polls': [poll_row(p, update is not None, scale, note) for p in polls]}
 
 
-def maori_polls(seat_name, record, polls=None):
+def maori_polls(seat_name, record, polls=None, as_of=None):
     """The Maori layer's poll rows for one seat, read from the Stage82 live file the way the layer reads it (Stage86, D125): the latest poll by
-    fieldwork end is the input, earlier ones are listed as superseded. A seat without a poll has none. Shares are the published
-    electorate-vote percentages excluding undecided respondents, by the poll's own party labels. The latest must be the poll the record used.
-    `polls` overrides the file (tests)."""
+    fieldwork end, among those ending by `as_of` (the data cutoff, audit J2), is the input; earlier ones are listed as superseded and later
+    ones as after the cutoff. Shares are the published electorate-vote percentages excluding undecided respondents, by the poll's own party
+    labels. The input must be the poll the record used; a seat on the fallback has no rows. `polls` overrides the file (tests)."""
     if 'pollFieldworkEnd' not in record:
         return []
     mine = sorted((p for p in (live_polls() if polls is None else polls) if maori_live.seat_name(p['seat']) == seat_name),
                   key=lambda p: (p['fieldwork']['end'], p['id']))
-    require(mine and mine[-1]['fieldwork']['end'] == record['pollFieldworkEnd'], f'{seat_name}: the bank record does not match the current Maori poll')
+    eligible = [p for p in mine if as_of is None or p['fieldwork']['end'] <= as_of]
+    used = eligible[-1] if eligible else None
+    require(used is not None and used['fieldwork']['end'] == record['pollFieldworkEnd'], f'{seat_name}: the bank record does not match the current Maori poll')
+
+    def reason(poll):
+        if poll is used:
+            return None
+        return 'superseded by a newer poll for the seat' if poll in eligible else 'fieldwork ended after the data cutoff'
     return [{'pollId': poll['id'], 'pollster': poll.get('pollster'), 'sponsorGroup': None,
              'fieldworkStart': poll['fieldwork']['start'], 'fieldworkEnd': poll['fieldwork']['end'],
              'sampleSize': poll.get('sampleSize'), 'sampleSizeAssumed': False,
              'candidateVotePct': [{'party': k, 'pct': float(v)} for k, v in sorted(poll['electorateVotePct'].items())],
              'approximate': sorted(k for k, v in poll.get('electorateVoteFlags', {}).items() if v == 'approx'),
-             'evidenceGrade': poll.get('evidenceGrade'), 'status': 'used' if poll is mine[-1] else 'not-used',
-             'reason': None if poll is mine[-1] else 'superseded by a newer poll for the seat', 'shareOfPoll': None, 'weight': None}
+             'evidenceGrade': poll.get('evidenceGrade'), 'status': 'used' if poll is used else 'not-used',
+             'reason': reason(poll), 'shareOfPoll': None, 'weight': None}
             for poll in mine]
 
 
 def build(config, bank_seats, keys, groups, base, continuing, as_of, synthetic_maori):
     """Evidence for every simulated seat of `bank_seats` ({seat: record}). `synthetic_maori`: injected Maori records have no poll."""
-    _, polls = (seat_polls.combine(as_of) if config.get('seatPolls', {}).get('enabled') else ({}, {}))
+    run, sha = electorate_live.pinned(config)
+    _, polls = (seat_polls.combine(as_of, rows=seat_polls.live_rows(run, sha)) if config.get('seatPolls', {}).get('enabled') else ({}, {}))
     names = {} if synthetic_maori else {v: k for k, v in maori.electorate_ids().items()}
     out = []
     for seat, record in bank_seats.items():
@@ -84,7 +93,7 @@ def build(config, bank_seats, keys, groups, base, continuing, as_of, synthetic_m
             continue
         if record['class'] == 'maori-layer':
             out.append({'electorateId': seat, 'uncertaintyClass': 'maori-layer', 'multipliers': None, 'baseline': None, 'pollUpdate': None,
-                        'polls': [] if synthetic_maori else maori_polls(names[seat], record)})
+                        'polls': [] if synthetic_maori else maori_polls(names[seat], record, live_polls(run, sha), as_of)})
         else:
             out.append(general_seat(seat, record, base[seat], keys, groups, continuing, polls.get(seat, [])))
     return out

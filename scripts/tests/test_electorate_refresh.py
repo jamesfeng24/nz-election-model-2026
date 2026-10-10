@@ -223,12 +223,18 @@ class CommittedRunTests(unittest.TestCase):
         self.assertTrue(runs)
 
     def test_only_the_authorised_model_layers_read_the_live_file(self):
-        # Two authorised readers, both James 2026-10-10: the general-seat poll layer's live.py (Stage79 follow-up, D123) and the Maori seat layer's
-        # live.py (Stage86, D125). Nothing else may read it.
+        # Authorised readers, both James 2026-10-10: the general-seat poll layer (Stage79 follow-up, D123) and the Maori seat layer (Stage86, D125).
+        # Since D128 (Stage88) both read the run the configuration pins through one module, scripts/polling/electorate_live.py, and nothing else
+        # names the live file; the layers' readers are checked to use it.
         hits = [p.relative_to(ROOT).as_posix() for p in (ROOT / 'scripts').rglob('*.py')
                 if 'electorate-live' in p.read_text(errors='ignore') and 'electorate_refresh' not in str(p)
                 and 'refresh_workflow' not in str(p) and 'test_electorate_refresh' not in str(p) and 'test_weekly_refresh_workflow' not in str(p)]
-        self.assertEqual(sorted(hits), ['scripts/maori_seat_layer/live.py', 'scripts/seat_polls/live.py'])
+        self.assertEqual(sorted(hits), ['scripts/polling/electorate_live.py'])
+        users = [p.relative_to(ROOT).as_posix() for p in (ROOT / 'scripts').rglob('*.py')
+                 if 'electorate_live' in p.read_text(errors='ignore') and '/tests/' not in p.as_posix() and p.name != 'electorate_live.py']
+        self.assertEqual(sorted(users), ['scripts/maori_seat_layer/live.py', 'scripts/nowcast_assembly/assemble.py', 'scripts/nowcast_assembly/evidence.py',
+                                         'scripts/nowcast_assembly/maori.py', 'scripts/nowcast_config/validate.py', 'scripts/polling/weekly_refresh/adopt.py',
+                                         'scripts/seat_polls/live.py', 'scripts/seat_polls/readout.py'])
 
 
 if __name__ == '__main__':

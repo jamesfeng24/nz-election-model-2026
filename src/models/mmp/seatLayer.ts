@@ -20,6 +20,13 @@ export interface SeatLayerConfig {
   listedPartyIds: string[];
   /** Aggregate vote buckets (for example "other"): counted in the valid-vote total, never qualified, never seated. */
   unlistedBucketIds?: string[];
+  /**
+   * Registered parties on the party-list ballot whose party votes are simulated inside a bucket (audit J3, James 2026-10-10). An electorate
+   * winner of one of them is that party's seat, not an independent's: the party qualifies by the electorate (s 191(4)(b)) with zero party
+   * votes of its own, earns no Sainte-Laguë seat and its seats are overhang (s 192(5)). Approximation: its real votes stay in the bucket, so
+   * a vote large enough to earn one list seat (about 0.4%) is not modelled. Winners of any other unlisted party, or none, stay s 191(8).
+   */
+  zeroVotePartyIds?: string[];
   /** Integer vote total that shares are converted to (default 10^9; continuous for practical purposes). */
   voteScale?: number;
   /** When given, every draw must name exactly one winner for each of these electorates (missing is never zero). */
@@ -84,6 +91,9 @@ export function validateSeatLayerConfig(config: SeatLayerConfig): void {
     throw new RangeError('listedPartyIds must be non-empty, unique and non-blank');
   if (!unique(buckets) || buckets.some(b => !b || config.listedPartyIds.includes(b)))
     throw new RangeError('unlistedBucketIds must be unique, non-blank and disjoint from listedPartyIds');
+  const zero = config.zeroVotePartyIds ?? [];
+  if (!unique(zero) || zero.some(z => !z || config.listedPartyIds.includes(z) || buckets.includes(z) || z.includes('#')))
+    throw new RangeError('zeroVotePartyIds must be unique, non-blank and disjoint from listedPartyIds and unlistedBucketIds');
   const nominal = config.nominalSeats ?? NOMINAL_SEATS;
   if (!Number.isSafeInteger(nominal) || nominal <= 0) throw new RangeError('nominalSeats must be a positive integer');
   const scale = config.voteScale ?? DEFAULT_VOTE_SCALE;
@@ -166,10 +176,12 @@ export function allocateDrawFromVotes(
   const nominal = config.nominalSeats ?? NOMINAL_SEATS;
 
   const seats = new Map<string, number>(config.listedPartyIds.map(p => [p, 0]));
+  const zeroVote = new Map<string, number>((config.zeroVotePartyIds ?? []).map(p => [p, 0]));
   let independents = 0;
   for (const w of [...draw.generalWinners, ...draw.maoriWinners]) {
     if (w.partyId !== null && seats.has(w.partyId)) seats.set(w.partyId, seats.get(w.partyId)! + 1);
-    else independents++; // independent, non-listed party or bucket winner (s 191(8))
+    else if (w.partyId !== null && zeroVote.has(w.partyId)) zeroVote.set(w.partyId, zeroVote.get(w.partyId)! + 1);
+    else independents++; // independent or a party not on the party-list ballot (s 191(8))
   }
   const total = [...expected].reduce((s, id) => s + draw.partyVotes[id], 0);
   if (!Number.isSafeInteger(total) || total <= 0) throw new RangeError('Total party votes must be a positive safe integer');
@@ -177,12 +189,14 @@ export function allocateDrawFromVotes(
   const listed: MmpPartyInput[] = config.listedPartyIds.map(partyId => ({
     partyId, partyVotes: draw.partyVotes[partyId], constituencySeats: seats.get(partyId)!,
   }));
+  // A bucketed list party enters the allocation only in a draw where it holds an electorate seat (audit J3).
+  const zeroVoteParties: MmpPartyInput[] = [...zeroVote].filter(([, n]) => n > 0).map(([partyId, n]) => ({ partyId, partyVotes: 0, constituencySeats: n }));
   const bucketPieces = buckets.flatMap(b => splitBucket(b, draw.partyVotes[b], total));
 
   let lots = 0;
   const bumped = new Map<string, number>();
   for (;;) {
-    const parties = [...listed.map(p => ({ ...p, partyVotes: p.partyVotes + (bumped.get(p.partyId) ?? 0) })), ...bucketPieces];
+    const parties = [...listed.map(p => ({ ...p, partyVotes: p.partyVotes + (bumped.get(p.partyId) ?? 0) })), ...zeroVoteParties, ...bucketPieces];
     const result = allocateSeats({
       electionId: draw.electionId, rulesVersion: config.rulesVersion, rulesSourceIds: config.rulesSourceIds,
       nominalSeats: nominal, parties, independentElectorateSeats: independents,
@@ -199,7 +213,7 @@ export function allocateDrawFromVotes(
     for (const piece of bucketPieces)
       if (byId.get(piece.partyId)!.qualified) throw new RangeError(`Bucket piece ${piece.partyId} unexpectedly qualified`);
     const outcomes: Record<string, PartySeatOutcome> = {};
-    const kept = result.allocation.parties.filter(p => config.listedPartyIds.includes(p.partyId));
+    const kept = result.allocation.parties.filter(p => config.listedPartyIds.includes(p.partyId) || zeroVote.has(p.partyId));
     for (const p of kept) {
       outcomes[p.partyId] = {
         electorateSeats: p.electorateSeats, listSeats: p.listSeats, totalSeats: p.totalSeats,

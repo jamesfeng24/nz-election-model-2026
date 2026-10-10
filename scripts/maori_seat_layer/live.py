@@ -1,7 +1,8 @@
 """Stage86 (D125): the 2026 Maori seat polls from the Stage82 live-inputs file, in the shape the Stage66 simulation reads.
 
-The nowcast assembly used to read the pinned transcription `data/source-plans/maori-seat-layer/polls-2026.json`. It now reads the newest run of
-`data/processed/polling/electorate-live/` (append-only, hash-checked against `index.json`), so a new Maori seat poll is a data-only addition:
+The nowcast assembly used to read the pinned transcription `data/source-plans/maori-seat-layer/polls-2026.json`. It now reads the run of
+Stage82 electorate-poll runs (`scripts.polling.electorate_live`) that `seatPolls.electorateRun` pins (append-only, hash-checked against `index.json`; audit J2), up to
+the data cutoff as for the general seats, so a new Maori seat poll is a data-only addition once that run is adopted:
 the Stage66 calibration and the Stage71 and Stage78 decisions are untouched and nothing is refitted. The pinned file still serves the recorded
 Stage66, Stage71 and Stage78 artifacts (a 2026-10-07 snapshot of three seats); the assembly no longer reads it.
 
@@ -13,26 +14,18 @@ Differences from the pinned form, all deliberate:
 - As in Stage66, the latest poll per seat by fieldwork end is used; earlier polls of a seat are returned as superseded, never dropped silently.
 Fails closed: a hash mismatch, an unknown seat or party label, an unresolvable candidate or fewer than two candidates raises.
 """
-import hashlib
-from scripts.maori_seat_layer.common import ROOT, SEATS, fold, read
+from scripts.maori_seat_layer.common import SEATS, fold
+from scripts.polling import electorate_live
 
-LIVE = 'data/processed/polling/electorate-live'
 # Live column labels (the Stage82 parser stores OPP as TOP) -> Stage66 and assembly party codes. "Others" (stored as OTH) is not a named candidate and is not read.
 PARTY_CODES = {'TPM': 'MP', 'LAB': 'LAB', 'GRN': 'GRN', 'NAT': 'NAT', 'NZF': 'NZF', 'TOP': 'TOP', 'IND': 'IND'}
 NOT_A_CANDIDATE = ('OTH', 'Others')
 
 
-def live_polls():
-    """The Maori polls of the newest Stage82 run (empty when there is no run); the file must match its index entry."""
-    runs = read(LIVE + '/index.json')['runs']
-    if not runs:
-        return []
-    run = runs[-1]
-    path = f"{LIVE}/{run['date']}/polls.json"
-    payload = read(path)
-    if len(payload['polls']) != run['pollCount'] or hashlib.sha256((ROOT / path).read_bytes()).hexdigest() != run['pollsSha256']:
-        raise ValueError('electorate-live polls.json does not match its index entry')
-    return [p for p in payload['polls'] if p['type'] == 'maori']
+def live_polls(run=None, sha256=None):
+    """The Maori polls of a Stage82 run: the pinned run `run` (date), else the newest (empty when there is no run). The file must match its
+    index entry and, when given, the pinned hash."""
+    return [p for p in electorate_live.polls(run, sha256) if p['type'] == 'maori']
 
 
 def seat_name(published):
@@ -63,13 +56,15 @@ def poll_record(poll, resolve):
             'fieldworkEnd': poll['fieldwork']['end'], 'sampleSize': poll['sampleSize'], 'candidates': candidates}
 
 
-def current_polls(resolve, polls=None):
+def current_polls(resolve, polls=None, as_of=None):
     """(latest poll per seat, superseded poll ids), the first element in the form `maori_seat_layer.simulate.simulate` reads.
 
-    `resolve(seat, party_code)` returns the displayed name of the one official candidate; `polls` overrides the file (tests).
+    `resolve(seat, party_code)` returns the displayed name of the one official candidate; `polls` overrides the file (tests). With `as_of`
+    (ISO date) a poll whose fieldwork ended after it is not read, as for the general seats (audit J2).
     """
     latest, superseded = {}, []
-    for poll in sorted((live_polls() if polls is None else polls), key=lambda p: (p['fieldwork']['end'], p['id'])):
+    eligible = [p for p in (live_polls() if polls is None else polls) if as_of is None or p['fieldwork']['end'] <= as_of]
+    for poll in sorted(eligible, key=lambda p: (p['fieldwork']['end'], p['id'])):
         record = poll_record(poll, resolve)
         if record['seat'] in latest:
             superseded.append(latest[record['seat']]['id'])

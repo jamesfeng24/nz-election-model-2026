@@ -4,10 +4,12 @@ Each bank row is one simulated election: one national draw id feeds the MMP part
 local party layer; the 2026 layer noise has shared election keys. A seat whose inputs are missing is recorded as
 `unavailable` with a reason, never as zero or a default. The bank is publishable only when every gate check passes.
 """
+from pathlib import Path
 import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_config.validate import check_classification, check_config, ConfigError
 from scripts.seat_polls import live as seat_polls
+from scripts.polling import electorate_live
 from . import evidence, fastmath, general, maori, national, streams
 from .summaries import share_summaries
 from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file_sha256, AssemblyError
@@ -84,7 +86,9 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
         else:
             candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters)
     rows = list(party_rows.values()) + list(candidate_rows.values())
-    polls = seat_polls.inputs(config['national']['dataCutoff']) if config.get('seatPolls', {}).get('enabled') else {}
+    run, sha = electorate_live.pinned(config)
+    polls = (seat_polls.inputs(config['national']['dataCutoff'], rows=seat_polls.live_rows(run, sha))
+             if config.get('seatPolls', {}).get('enabled') else {})
     state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
              'candidateScales': candidate_scales, 'multipliers': multipliers, 'withinMultipliers': within,
              'massMultipliers': mass, 'classification': classification, 'polls': polls,
@@ -107,12 +111,30 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
             'nationalStateKey': config['national']['stateKey'],
             'inputs': {'nationalSource': config['national']['source'], 'nationalSha256': file_sha256(config['national']['source']),
                        'baseline': config['baseline']['source'], 'scales': config['uncertainty']['scales'],
-                       'candidateFitId': fit_id},
+                       'candidateFitId': fit_id, **electorate_run_inputs(config)},
             'draws': total, 'nationalDraws': count, 'layerReplicates': replicates, 'drawIds': draw_ids,
-            'partyVote': {'groups': groups, 'otherBucket': OTHER, 'shares': draws.tolist()},
+            'partyVote': {'groups': groups, 'otherBucket': OTHER, 'ballotPartyIds': ballot_parties(config, groups), 'shares': draws.tolist()},
             'seats': seats, 'seatEvidence': seat_evidence,
             'directory': directory(config, groups, frame, slates if classification is not None else {}, records),
             'diagnostics': {'reconciliation': reconciliation(config, groups, draws, keys, continuing, local_means)}}
+
+
+
+def ballot_parties(config, groups):
+    """Every registered party with a 2026 party list (the party-vote ballot), from the roster snapshot beside the candidate features. The
+    seat layer seats an electorate winner of one simulated inside the other bucket as that party's overhang seat (audit J3)."""
+    path = str(Path(config['candidate']['features']).parent / 'party-lists.json')
+    lists = read(path)
+    require(lists['schemaVersion'] == 1 and lists['parties'], f'{path}: no party lists')
+    ids = sorted(p['targetGroupKey'] for p in lists['parties'])
+    require(len(set(ids)) == len(ids) and all(g in ids for g in groups if g != OTHER), 'every national party group must be on the party-list ballot')
+    return ids
+
+
+def electorate_run_inputs(config):
+    """The pinned electorate-poll run as bank inputs (strings, as the TypeScript bank schema reads them); nothing when none is pinned."""
+    run, sha = electorate_live.pinned(config)
+    return {} if run is None else {'electorateRun': run, 'electorateRunSha256': sha}
 
 
 _STATE = {}

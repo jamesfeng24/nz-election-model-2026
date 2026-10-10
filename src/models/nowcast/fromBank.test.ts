@@ -3,7 +3,7 @@ import pythonBank from '../../../data/fixtures/synthetic/nowcast-draw-bank.json'
 import { ForecastSnapshotSchema } from '../../types/export';
 import { batchMeansMcse, chainOrder } from './batchMeans';
 import { DrawBankSchema, type DrawBank } from './drawBank';
-import { buildNowcastSnapshot, type NowcastSnapshotOptions } from './fromBank';
+import { buildNowcastSnapshot, runSeatLayer, seatLayerConfig, type NowcastSnapshotOptions } from './fromBank';
 
 const clone = <T,>(x: T): T => structuredClone(x);
 
@@ -25,7 +25,7 @@ function smallBank(n = 64): DrawBank {
     schemaVersion: 3, stage: 73, electionYear: 2026, provenance: 'synthetic-fixture', configVersion: 'synthetic-config', estimand: 'nowcast',
     modelStateAsOf: '2026-09-27', dataCutoff: '2026-10-06', nationalStateKey: 'lastDataSupport', inputs: {}, draws: n, nationalDraws: n, layerReplicates: 1,
     drawIds: Array.from({ length: n }, (_, d) => `synthetic-chain${1 + (d % 4)}-draw${String(d).padStart(4, '0')}`),
-    partyVote: { groups, otherBucket: 'other', shares: Array.from({ length: n }, (_, d) => [0.45 + 0.002 * (d % 10), 0.45 - 0.002 * (d % 10), 0.1]) },
+    partyVote: { groups, otherBucket: 'other', ballotPartyIds: ['synthetic-party-a', 'synthetic-party-b', 'synthetic-party-c'], shares: Array.from({ length: n }, (_, d) => [0.45 + 0.002 * (d % 10), 0.45 - 0.002 * (d % 10), 0.1]) },
     seats,
     directory: {
       parties: groups.map(g => ({ partyId: g, name: g, abbreviation: g.slice(-1).toUpperCase() })),
@@ -56,6 +56,8 @@ describe('draw bank contract', () => {
     reject(b => { b.seats[0].winners.pop(); });
     reject(b => { b.drawIds[1] = b.drawIds[0]; });
     reject(b => { b.seats[2].class = 'ordinary'; });
+    reject(b => { b.partyVote.ballotPartyIds = ['synthetic-party-a']; });  // a party group missing from the ballot
+    reject(b => { b.partyVote.ballotPartyIds.push('other'); });
     reject(b => { b.seats[0].winners[0] = 7; });
     reject(b => { b.partyVote.shares[0][0] += 0.1; });
     reject(b => { b.seats[1] = { electorateId: b.seats[1].electorateId, scope: 'general', status: 'unavailable' }; });
@@ -118,6 +120,41 @@ describe('nowcast snapshot from a draw bank', () => {
     const sum = s.simulation.electoratePredictions[0].candidates.reduce((x, c) => x + c.winProbability, 0);
     expect(sum).toBeCloseTo(1, 12);
     expect(JSON.stringify(await buildNowcastSnapshot(smallBank(), options()))).toBe(JSON.stringify(s));
+  });
+
+  it('seats a ballot party simulated inside the other bucket as overhang, not as an independent (audit J3)', () => {
+    const bank = clone(smallBank());
+    const maori = bank.seats[2] as any;
+    maori.candidateParty = ['synthetic-party-a', 'synthetic-party-c'];  // party c is on the ballot but not a simulated party group
+    const mmp = options().mmp!;
+    const config = seatLayerConfig(bank, mmp);
+    expect(config.zeroVotePartyIds).toEqual(['synthetic-party-c']);
+    const { outcomes } = runSeatLayer(bank, config, 'synthetic-election-2026');
+    const wins = maori.winners.map((w: number) => w === 1);
+    expect(wins.some(Boolean)).toBe(true);
+    outcomes.forEach((o, row) => {
+      expect(o.independentElectorateSeats).toBe(0);
+      expect(o.parliamentSize).toBe(wins[row] ? 121 : 120);
+      expect(o.parties['synthetic-party-c']?.overhang ?? 0).toBe(wins[row] ? 1 : 0);
+    });
+  });
+
+  it('exports the Māori C–P range from the inflation winners and keeps the seat totals on the control (D127)', async () => {
+    const plain = await buildNowcastSnapshot(smallBank(), options());
+    const bank = clone(smallBank()) as any;
+    bank.seats[2].inflationWinners = bank.seats[2].winners.map((_: number, d: number) => (d % 2));
+    const parsed = DrawBankSchema.parse(bank);
+    const s = await buildNowcastSnapshot(parsed, options());
+    const maori = s.electorateDetail[2];
+    expect(maori.candidates.map(c => c.winProbabilityInflation?.p)).toEqual([0.5, 0.5]);
+    expect(maori.candidates.map(c => c.winProbability)).toEqual(plain.electorateDetail[2].candidates.map(c => c.winProbability));
+    expect(s.electorateDetail[0].candidates.every(c => c.winProbabilityInflation === undefined)).toBe(true);
+    expect(s.seatLayer).toEqual(plain.seatLayer);
+    expect(s.simulation.electoratePredictions).toEqual(plain.simulation.electoratePredictions);
+    const reject = (edit: (b: any) => void) => { const b = clone(bank); edit(b); expect(DrawBankSchema.safeParse(b).success).toBe(false); };
+    reject(b => { b.seats[0].inflationWinners = b.seats[0].winners; });  // general seats have no calibration range
+    reject(b => { b.seats[2].inflationWinners.pop(); });
+    reject(b => { b.seats[2].inflationWinners[0] = 5; });
   });
 
   it('withholds the seat layer and MMP when any seat is unavailable, never zero-filling', async () => {

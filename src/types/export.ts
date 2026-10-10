@@ -59,14 +59,23 @@ export const SeatLayerExportSchema = z.object({
   }).strict(),
 }).strict();
 
-/** Per-seat detail: the D107 uncertainty class, candidate-share intervals and win probabilities with their errors. */
+/**
+ * Per-seat detail: the D107 uncertainty class, candidate-share intervals and win probabilities with their errors. A polled Māori seat
+ * also carries `winProbabilityInflation`, the win probability under Stage71's variance-inflation calibration (arm P): with
+ * `winProbability` (the Stage66 control, C, which the seat totals use) it is the labelled C–P range (D114, D127).
+ */
 export const ElectorateDetailSchema = z.object({
   electorateId: id,
   uncertaintyClass: z.enum(['ordinary', 'exceptional', 'maori-layer']),
   candidates: z.array(z.object({
     candidateId: id, meanShare: z.number().min(0).max(1), share: IntervalSetSchema, winProbability: ProbabilityEstimateSchema,
+    winProbabilityInflation: ProbabilityEstimateSchema.optional(),
   }).strict()).min(1),
-}).strict();
+}).strict().superRefine((d, ctx) => {
+  const ranged = d.candidates.filter(c => c.winProbabilityInflation).length;
+  if (ranged && (d.uncertaintyClass !== 'maori-layer' || ranged !== d.candidates.length))
+    ctx.addIssue({ code: 'custom', message: 'A calibration range covers every candidate of a Māori seat, or none', path: ['candidates'] });
+});
 
 /**
  * Stage85 per-seat evidence (optional block; display data only, no forecast number depends on it). Names the polls found for a seat,

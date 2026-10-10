@@ -220,6 +220,41 @@ describe('aggregate vote buckets and the threshold', () => {
     expect(Object.values(r.parties).reduce((s, p) => s + p.entitlement, 0)).toBe(17);
     expect(r.parliamentSize).toBe(20);
   });
+
+  // Audit J3 (James, 2026-10-10): a party on the party-list ballot whose vote sits inside the bucket (Te Tai Tokerau Party in 2026) qualifies
+  // through its electorate win with zero party votes of its own, so its seat is overhang and Parliament grows, not an independent seat inside 20.
+  const zeroConfig: SeatLayerConfig = { ...config, zeroVotePartyIds: ['T'] };
+  const zeroRun = (votes: Record<string, number>, general: ElectorateWinnerInput[] = []) =>
+    allocateDrawFromVotes(zeroConfig, { electionId: 'synthetic', partyVotes: votes, generalWinners: general, maoriWinners: [] });
+
+  it('seats a bucketed list-party electorate winner as that party\'s overhang seat', () => {
+    const votes = { A: 500, B: 300, C: 150, OTH: 50 };
+    const r = zeroRun(votes, [{ electorateId: 'e1', partyId: 'T' }, { electorateId: 'e2', partyId: null }]);
+    expect(r.independentElectorateSeats).toBe(1);
+    expect(r.parties.T).toMatchObject({ qualified: true, qualifiedByPartyVote: false, qualifiedByElectorate: true, electorateSeats: 1, listSeats: 0, entitlement: 0, overhang: 1 });
+    expect(r.overhangSeats).toBe(1);
+    expect(r.parliamentSize).toBe(21);
+    expect(['A', 'B', 'C'].reduce((s, p) => s + r.parties[p].entitlement, 0)).toBe(19);  // 20 less the independent
+    MmpAllocationSchema.parse(r.allocation);
+    // As an independent (the earlier rule) the same win took a Sainte-Laguë seat from the other parties.
+    const before = run(votes, [{ electorateId: 'e1', partyId: 'T' }, { electorateId: 'e2', partyId: null }]);
+    expect(before.independentElectorateSeats).toBe(2);
+    expect(before.parliamentSize).toBe(20);
+    expect(['A', 'B', 'C'].reduce((s, p) => s + before.parties[p].entitlement, 0)).toBe(18);
+  });
+
+  it('leaves a draw without such a winner unchanged and keeps the party out of the allocation', () => {
+    const votes = { A: 500, B: 300, C: 150, OTH: 50 }, winners = [{ electorateId: 'e1', partyId: 'A' }];
+    const r = zeroRun(votes, winners);
+    expect(r).toEqual(run(votes, winners));
+    expect(r.parties.T).toBeUndefined();
+  });
+
+  it('rejects a zero-vote party that is also listed, a bucket or repeated', () => {
+    const draw = { electionId: 'synthetic', partyVotes: { A: 500, B: 300, C: 150, OTH: 50 }, generalWinners: [], maoriWinners: [] };
+    for (const zeroVotePartyIds of [['A'], ['OTH'], ['T', 'T'], ['']])
+      expect(() => allocateDrawFromVotes({ ...config, zeroVotePartyIds }, draw)).toThrow(/zeroVotePartyIds/);
+  });
 });
 
 describe('exact ties (s 191(9))', () => {

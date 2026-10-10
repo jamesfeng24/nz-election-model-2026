@@ -31,9 +31,9 @@ jobs:
             echo "check:dist is not defined yet; skipped"
           fi
   live:
-    # The live 2026 chain (Stage50 to Stage83): each stage's own --check, run beside the long `python` job so wall time does
-    # not grow. Not here: the development gate, the synthetic bank fixture and the Stage79 2026 readout, which read the newest
-    # weekly electorate-poll run and so change with every refresh until the config pins that run.
+    # The live 2026 chain (Stage50 to Stage87): each stage's own --check, run beside the long `python` job so wall time does
+    # not grow. The development gate, the synthetic bank fixture and the Stage79 2026 readout read the electorate-poll run the
+    # configuration pins (seatPolls.electorateRun), so a poll refresh does not change them until it is adopted.
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
@@ -67,6 +67,9 @@ jobs:
       - run: python3 -m scripts.ordinary_minor_spread.decision --check
       - run: python3 -m scripts.manual_adjustment.run build-template --check
       - run: python3 -m scripts.candidate_fit_2026.run --check
+      - run: python3 -m scripts.nowcast_assembly.run --check
+      - run: python3 -m scripts.nowcast_assembly.fixture --check
+      - run: python3 -m scripts.seat_polls.readout --check
   python:
     runs-on: ubuntu-latest
     timeout-minutes: 180

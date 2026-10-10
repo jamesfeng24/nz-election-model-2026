@@ -27,7 +27,7 @@ Added before any v2 snapshot was published, so `schemaVersion` stays 2 ([stage74
   - qualification, lifeboat, overhang, majority and exact-half probabilities, each `{p, mcse, ess}` by batch means within national MCMC chains.
 
   An available seat layer requires an MMP example allocation and no unavailable electorate.
-- `electorateDetail`: per predicted seat, the uncertainty class (`ordinary`, `exceptional` or `maori-layer`, D107) and per-candidate `meanShare`, 50/80/90 share intervals and `winProbability {p, mcse, ess}`. A model snapshot must give it for every predicted seat.
+- `electorateDetail`: per predicted seat, the uncertainty class (`ordinary`, `exceptional` or `maori-layer`, D107) and per-candidate `meanShare`, 50/80/90 share intervals and `winProbability {p, mcse, ess}`. A model snapshot must give it for every predicted seat. A polled Māori seat also gives every candidate `winProbabilityInflation {p, mcse, ess}`, the win probability under Stage71's variance inflation (P); with `winProbability` (the Stage66 control, C) it is the labelled C–P range (D114, D127). The seat totals use C. The release gate holds both to the MCSE threshold.
 - `directory.candidates[].partyLabel` (optional): the ballot-group key of a candidate whose party has no national group (`partyId` null).
 - `seatEvidence` (optional, Stage85): per-seat polls, weights, baseline and class for the seat pages; see below.
 - `governmentOutcomes` stays empty for nowcasts. Blocs live in `seatLayer.summary.blocs`, defined by James.
