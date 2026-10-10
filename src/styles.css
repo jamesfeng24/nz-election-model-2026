@@ -564,7 +564,7 @@ table td:not(:first-child),
 .collapsible {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
+  transition: grid-template-rows 0.45s ease;
 }
 .collapsible.is-open {
   grid-template-rows: 1fr;

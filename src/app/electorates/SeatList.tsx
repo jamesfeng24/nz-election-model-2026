@@ -20,12 +20,14 @@ export function SeatList({
   detail: ReactNode;
   onToggle: (id: string) => void;
 }) {
-  // A seat closed by its own row stays on screen while it folds shut; any other change is immediate.
+  // The seat that was open folds shut while the new one opens, so both move at once. `shown` is the open seat as
+  // of the last render; when the selection changes the previous one becomes `closing` until its fold has finished.
+  const [shown, setShown] = useState<{ id: string; detail: ReactNode } | null>(null);
   const [closing, setClosing] = useState<{ id: string; detail: ReactNode } | null>(null);
-  const toggle = (id: string) => {
-    if (id === selectedId) setClosing({ id, detail });
-    onToggle(id);
-  };
+  if ((shown?.id ?? null) !== selectedId) {
+    if (shown) setClosing(shown);
+    setShown(selectedId ? { id: selectedId, detail } : null);
+  }
   return (
     <table className="seatlist">
       <caption>
@@ -45,7 +47,7 @@ export function SeatList({
           return [
             <tr key={row.id} id={`seatrow-${row.id}`} aria-selected={open || undefined}>
               <td>
-                <button type="button" className="rowlink" aria-expanded={open} onClick={() => toggle(row.id)}>
+                <button type="button" className="rowlink" aria-expanded={open} onClick={() => onToggle(row.id)}>
                   {row.name}
                 </button>
                 {row.kind === 'maori' ? ' (Māori)' : ''}

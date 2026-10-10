@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import bank from '../../data/fixtures/synthetic/nowcast-draw-bank.json';
 import { buildNowcastSnapshot } from '../models/nowcast/fromBank';
 import { ForecastSnapshotSchema } from '../types/export';
@@ -62,7 +62,8 @@ describe('win chance as a range', () => {
     const otherName = snapshot.directory.electorates.find((e) => e.electorateId === other.electorateId)!.name;
     fireEvent.click(screen.getAllByRole('button', { name: otherName })[0]);
     expect(await screen.findByRole('heading', { level: 2, name: new RegExp(otherName) })).toBeInTheDocument();
-    expect(screen.queryByText(/Chances are a range between two estimates/)).toBeNull();
+    // The first seat folds shut while this one opens, then is removed.
+    await waitFor(() => expect(screen.queryByText(/Chances are a range between two estimates/)).toBeNull());
     window.location.hash = '';
   });
 });
