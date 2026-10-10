@@ -11,8 +11,11 @@ ROOT = Path(__file__).resolve().parents[2]
 OWNERS = {'exceptional_scale': 'data/processed/exceptional-scale', 'exceptional_balance_scale': 'data/processed/exceptional-balance-scale',
           'ordinary_minor_spread': 'data/processed/ordinary-minor-spread'}
 STAGE83 = 'scripts/ordinary_minor_spread/'
+# scripts/seat_polls/historical.py: the Stage79 scoring diagnostic reads the Stage67 flags for the historical multiplier class
+# (development only); the live path never imports it (test_stage79_seat_polls.Isolation).
 ALLOWED_FILES = {'scripts/tests/test_exceptional_scale.py', 'scripts/tests/test_stage67_exceptional_balance_scale.py',
-                 'scripts/tests/test_stage83_ordinary_minor_spread.py', 'scripts/tests/test_historical_flag_isolation.py'}
+                 'scripts/tests/test_stage83_ordinary_minor_spread.py', 'scripts/tests/test_historical_flag_isolation.py',
+                 'scripts/seat_polls/historical.py'}
 
 
 def sources():

@@ -14,6 +14,15 @@ const ShareSummarySchema = z.object({
   intervals: z.array(z.object({ level, lower: z.number().finite(), median: z.number().finite(), upper: z.number().finite() }).strict()).length(3),
 }).strict();
 
+/** Stage79: the seat-poll update applied to a general seat's National/Labour balance (absent when no poll was used). */
+const SeatPoll = z.object({
+  pollIds: z.array(id).min(1),
+  pollValue: z.number().finite(), pollVariance: z.number().finite().positive(),
+  ageWeeks: z.number().finite().nonnegative(), rho: z.number().finite().min(0).max(1), weight: z.number().finite().min(0).max(1),
+  modelCentre: z.number().finite(), modelSD: z.number().finite().positive(),
+  shift: z.number().finite(), posteriorSD: z.number().finite().positive(), sharedSD: z.number().finite().positive(),
+}).strict();
+
 const Simulated = z.object({
   electorateId: id, scope: z.enum(['general', 'maori']), status: z.literal('simulated'),
   class: z.enum(['ordinary', 'exceptional', 'maori-layer']),
@@ -22,6 +31,7 @@ const Simulated = z.object({
   massMultiplier: z.number().positive().optional(),
   source: id.optional(),
   pollFieldworkEnd: z.iso.date().optional(),
+  seatPoll: SeatPoll.optional(),
   candidates: z.array(id).min(2),
   candidateNames: z.array(id).optional(),
   candidateParty: z.array(id.nullable()),
@@ -77,6 +87,7 @@ export const DrawBankSchema = z.object({
     if (s.candidateParty.length !== s.candidates.length || s.candidateShares.length !== s.candidates.length) bad('Candidate arrays disagree', ['seats', i]);
     if (s.winners.some(w => w >= s.candidates.length)) bad('Winner is not a candidate of the seat', ['seats', i]);
     if ((s.scope === 'general') !== (s.class !== 'maori-layer')) bad('Class does not match scope', ['seats', i]);
+    if (s.seatPoll && s.scope !== 'general') bad('A seat poll update applies to general seats only', ['seats', i]);
   });
 });
 export type DrawBank = z.infer<typeof DrawBankSchema>;
