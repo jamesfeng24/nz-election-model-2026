@@ -51,6 +51,9 @@ def scrub(text, token):
 def git(args, cwd=None, token=None, identity=False, check=True):
     env = dict(os.environ, GIT_TERMINAL_PROMPT='0')
     if identity:
+        # A commit made here is plain: no signature, hooks or templates from a machine's global git configuration.
+        args = ['-c', 'commit.gpgsign=false', '-c', 'tag.gpgsign=false', '-c', 'core.hooksPath=/dev/null', '-c', 'commit.template='] + args
+    if identity:
         env.update(GIT_AUTHOR_NAME=AUTHOR_NAME, GIT_AUTHOR_EMAIL=AUTHOR_EMAIL, GIT_COMMITTER_NAME=AUTHOR_NAME, GIT_COMMITTER_EMAIL=AUTHOR_EMAIL)
     run = subprocess.run(['git'] + header_args(token) + args, cwd=cwd, env=env, capture_output=True, text=True)
     if check and run.returncode != 0:
