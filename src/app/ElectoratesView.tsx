@@ -7,16 +7,15 @@ import { SeatPollLine } from './PollTables';
 import { ElectorateMap, type IncumbentStatus, type MapCandidate } from './ElectorateMap';
 import { COLOURS } from './SeatChart';
 
-type Sort = 'name' | 'close' | 'wide';
-type Status = 'any' | 'flip' | 'held' | 'open';
-interface Filters { party: string; status: Status; kind: 'any' | 'general' | 'maori'; close: boolean }
-const NO_FILTERS: Filters = { party: 'any', status: 'any', kind: 'any', close: false };
+type Sort = 'name' | 'close';
+interface Filters { winner: string; incumbent: string; kind: 'any' | 'general' | 'maori'; close: boolean; flip: boolean }
+const NO_FILTERS: Filters = { winner: 'any', incumbent: 'any', kind: 'any', close: false, flip: false };
 /** A seat counts as close when its most likely winner has under 70% chance. */
 const CLOSE_BELOW = 0.7;
 const level = (set: IntervalSet, l: number) => set.find(v => v.level === l)!;
 const seatFromHash = () => new URLSearchParams(window.location.hash.slice(1)).get('seat');
 
-interface Row { id: string; name: string; kind: 'general' | 'maori'; leader: string; leaderParty: string | null; leaderPartyName: string; leaderP: number; second: number; wide: boolean; available: boolean; incumbent: string | null; incumbentStatus: IncumbentStatus; candidates: MapCandidate[] }
+interface Row { id: string; name: string; kind: 'general' | 'maori'; leader: string; leaderParty: string | null; leaderPartyName: string; leaderP: number; second: number; wide: boolean; available: boolean; incumbent: string | null; incumbentParty: string | null; incumbentStatus: IncumbentStatus; candidates: MapCandidate[] }
 
 function useRows(snapshot: ForecastSnapshot): Row[] {
   return useMemo(() => snapshot.directory.electorates.map(e => {
@@ -32,7 +31,7 @@ function useRows(snapshot: ForecastSnapshot): Row[] {
         winP: c.winProbability, share: detail?.candidates.find(d => d.candidateId === c.candidateId)?.share[0].median ?? null, incumbent: cand.incumbent === true }];
     });
     const sitting = snapshot.incumbency ? snapshot.directory.candidates.find(c => c.electorateId === e.electorateId && c.incumbent) : undefined;
-    return { incumbent: sitting?.name ?? null, candidates, incumbentStatus: (!snapshot.incumbency ? 'unknown' : !sitting ? 'open' : !prediction ? 'standing' : sitting.candidateId === leader?.candidateId ? 'leads' : 'trails') as IncumbentStatus,
+    return { incumbent: sitting?.name ?? null, incumbentParty: sitting ? sitting.partyId ?? 'independent' : null, candidates, incumbentStatus: (!snapshot.incumbency ? 'unknown' : !sitting ? 'open' : !prediction ? 'standing' : sitting.candidateId === leader?.candidateId ? 'leads' : 'trails') as IncumbentStatus,
        id: e.electorateId, name: e.name, kind: e.kind, leader: leader?.name ?? '', leaderParty: leader?.partyId ?? null, leaderPartyName: leader?.partyId ? partyLabel(snapshot, leader.partyId) : leader?.partyLabel ?? 'Independent', leaderP: sorted[0]?.winProbability ?? 0, second: sorted[1]?.winProbability ?? 0, wide: cls === 'exceptional' || cls === 'maori-layer', available: !!prediction };
   }), [snapshot]);
 }
@@ -108,14 +107,17 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
   const rows = useRows(snapshot);
   const [seatId, setSeatId] = useState<string | null>(seatFromHash);
   const [query, setQuery] = useState('');
+  const [open, setOpen] = useState(false);
   const [sort, setSort] = useState<Sort>('name');
   const [filters, setFilters] = useState<Filters>(NO_FILTERS);
   const set = <K extends keyof Filters>(k: K, v: Filters[K]) => setFilters(f => ({ ...f, [k]: v }));
   const filtered = JSON.stringify(filters) !== JSON.stringify(NO_FILTERS);
-  const passes = (r: Row) => (filters.party === 'any' || (r.available && (r.leaderParty ?? 'independent') === filters.party))
-    && (filters.status === 'any' || (filters.status === 'flip' ? r.incumbentStatus === 'trails' : filters.status === 'held' ? r.incumbentStatus === 'leads' : r.incumbentStatus === 'open'))
+  const passes = (r: Row) => (filters.winner === 'any' || (r.available && (r.leaderParty ?? 'independent') === filters.winner))
+    && (filters.incumbent === 'any' || r.incumbentParty === filters.incumbent) && (!filters.flip || r.incumbentStatus === 'trails')
     && (filters.kind === 'any' || r.kind === filters.kind) && (!filters.close || (r.available && r.leaderP < CLOSE_BELOW));
-  const winnerParties = useMemo(() => [...new Map(rows.filter(r => r.available).map(r => [r.leaderParty ?? 'independent', r.leaderPartyName])).entries()].sort((a, b) => a[1].localeCompare(b[1], 'en-NZ')), [rows]);
+  const sortedNames = (pairs: [string, string][]) => [...new Map(pairs).entries()].sort((a, b) => a[1].localeCompare(b[1], 'en-NZ'));
+  const winnerParties = useMemo(() => sortedNames(rows.filter(r => r.available).map(r => [r.leaderParty ?? 'independent', r.leaderPartyName])), [rows]);
+  const incumbentParties = useMemo(() => sortedNames(rows.filter(r => r.incumbentParty).map(r => [r.incumbentParty!, r.incumbentParty === 'independent' ? 'Independent' : partyLabel(snapshot, r.incumbentParty!)])), [rows, snapshot]);
   const matching = useMemo(() => (filtered ? new Set(rows.filter(passes).map(r => r.id)) : null), [rows, filters]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { const on = () => setSeatId(seatFromHash()); window.addEventListener('hashchange', on); return () => window.removeEventListener('hashchange', on); }, []);
   const choose = (id: string) => { window.location.hash = `seat=${id}`; setSeatId(id); };
@@ -125,30 +127,35 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
     const by: Record<Sort, (a: Row, b: Row) => number> = {
       name: (a, b) => a.name.localeCompare(b.name, 'en-NZ'),
       close: (a, b) => (a.leaderP - a.second) - (b.leaderP - b.second) || a.name.localeCompare(b.name, 'en-NZ'),
-      wide: (a, b) => Number(b.wide) - Number(a.wide) || a.name.localeCompare(b.name, 'en-NZ'),
     };
     return [...shown].sort(by[sort]);
   }, [rows, query, sort, filters]); // eslint-disable-line react-hooks/exhaustive-deps
+  const suggestions = useMemo(() => { const q = query.trim().toLocaleLowerCase('en-NZ'); return q ? rows.filter(r => r.name.toLocaleLowerCase('en-NZ').includes(q)).sort((a, b) => a.name.localeCompare(b.name, 'en-NZ')).slice(0, 8) : []; }, [rows, query]);
   const selected = rows.find(r => r.id === seatId);
   const forecasts = useMemo(() => rows.map(r => ({ id: r.id, name: r.name, kind: r.kind, leaderParty: r.leaderParty, leaderPartyName: r.leaderPartyName, leaderName: r.leader, leaderP: r.leaderP, available: r.available, incumbent: r.incumbent, incumbentStatus: r.incumbentStatus, candidates: r.candidates })), [rows]);
   const pick = (id: string) => { choose(id); document.getElementById('seat-heading')?.scrollIntoView?.({ block: 'start' }); };
   return <>
     <p className="intro">Pick a seat for each candidate's chance of winning, vote share and polls.</p>
     <div className="picker">
-      <label>Find a seat<input type="search" list="seat-names" value={query} placeholder="Type a seat name" autoComplete="off"
-        onChange={e => { setQuery(e.target.value); const hit = rows.find(r => r.name.toLocaleLowerCase('en-NZ') === e.target.value.trim().toLocaleLowerCase('en-NZ')); if (hit) choose(hit.id); }} /></label>
-      <datalist id="seat-names">{rows.map(r => <option key={r.id} value={r.name} />)}</datalist>
+      <div className="find" onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false); }}>
+        <label>Find a seat<input type="search" value={query} placeholder="Type a seat name" autoComplete="off" role="combobox" aria-expanded={open && suggestions.length > 0} aria-controls="seat-suggestions"
+          onFocus={() => setOpen(true)} onKeyDown={e => { if (e.key === 'Escape') setOpen(false); if (e.key === 'Enter' && suggestions[0]) { setQuery(suggestions[0].name); setOpen(false); pick(suggestions[0].id); } }}
+          onChange={e => { setQuery(e.target.value); setOpen(true); const hit = rows.find(r => r.name.toLocaleLowerCase('en-NZ') === e.target.value.trim().toLocaleLowerCase('en-NZ')); if (hit) choose(hit.id); }} /></label>
+        {open && suggestions.length > 0 && <ul className="suggest" id="seat-suggestions" role="listbox">{suggestions.map(r => <li key={r.id} role="option" aria-selected={false}>
+          <button type="button" tabIndex={-1} onMouseDown={e => e.preventDefault()} onClick={() => { setQuery(r.name); setOpen(false); pick(r.id); }}>{r.name}{r.kind === 'maori' ? ' (Māori)' : ''}</button></li>)}</ul>}
+      </div>
       <label>Sort by<select value={sort} onChange={e => setSort(e.target.value as Sort)}>
-        <option value="name">Name</option><option value="close">Closest contest first</option><option value="wide">Widest uncertainty first</option></select></label>
+        <option value="name">Alphabetical</option><option value="close">Closest contest first</option></select></label>
     </div>
     <div className="picker filters" role="group" aria-label="Filter seats">
-      <label>Winner's party<select value={filters.party} onChange={e => set('party', e.target.value)}>
+      <label>Projected winner's party<select value={filters.winner} onChange={e => set('winner', e.target.value)}>
         <option value="any">Any party</option>{winnerParties.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
-      {snapshot.incumbency && <label>Sitting MP<select value={filters.status} onChange={e => set('status', e.target.value as Status)}>
-        <option value="any">Any</option><option value="flip">Projected flip (MP not favoured)</option><option value="held">MP favoured</option><option value="open">No sitting MP standing</option></select></label>}
+      {snapshot.incumbency && <label>Incumbent's party<select value={filters.incumbent} onChange={e => set('incumbent', e.target.value)}>
+        <option value="any">Any party</option>{incumbentParties.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>}
       <label>Type<select value={filters.kind} onChange={e => set('kind', e.target.value as Filters['kind'])}>
         <option value="any">General and Māori</option><option value="general">General</option><option value="maori">Māori</option></select></label>
       <label className="check"><input type="checkbox" checked={filters.close} onChange={e => set('close', e.target.checked)} /> Close contests (winner under 70%)</label>
+      {snapshot.incumbency && <label className="check"><input type="checkbox" checked={filters.flip} onChange={e => set('flip', e.target.checked)} /> Projected flips (sitting MP trails)</label>}
       {filtered && <button type="button" className="more" onClick={() => setFilters(NO_FILTERS)}>Clear filters</button>}
     </div>
     <ElectorateMap snapshot={snapshot} forecasts={forecasts} onSelect={pick} highlight={matching} />
