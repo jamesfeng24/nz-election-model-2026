@@ -98,14 +98,17 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 .overhang h3{margin-top:1rem}
 @media(max-width:700px){.seatbars{overflow-x:auto}}
 
-.mapcard{position:sticky;top:.5rem;z-index:2;box-shadow:0 2px 8px rgba(24,45,48,.12);min-height:12.5rem;max-width:760px;margin:.5rem 0 1rem;padding:.6rem .9rem;border:1px solid #d4dcd7;border-radius:6px;background:#fff;font-size:.9rem}
-.mapcard h3{margin:0 0 .15rem;font-size:1.05rem}
-.mapcard .winner{margin:0 0 .35rem}
-.mapcard .maphint{margin:0;color:#576764}
-.mapcard table{width:100%;border-collapse:collapse}
-.mapcard th{text-align:left;font-weight:600;font-size:.78rem;color:#576764;padding:.1rem .4rem .1rem 0}
-.mapcard td{padding:.12rem .4rem .12rem 0;border-top:1px solid #eef2ed}
-.mapcard tr.lead td{font-weight:600}
-.mapcard .num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-.mapcard .dot{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.4em}
-.mapcard small{color:#576764;font-weight:400}
+.mapgrid{position:relative}
+.mapbubble{position:absolute;z-index:5;width:380px;max-width:calc(100vw - 2rem);margin:14px 0 0 14px;padding:.5rem .7rem;border:1px solid #bccdc7;border-radius:8px;background:#fff;box-shadow:0 4px 14px rgba(24,45,48,.22);font-size:.82rem;pointer-events:none}
+.mapbubble.left{margin-left:-394px}
+.mapbubble.up{transform:translateY(calc(-100% - 28px))}
+.mapbubble h3{margin:0 0 .1rem;font-size:.95rem}
+.mapbubble .winner{margin:0 0 .3rem}
+.mapbubble table{width:100%;border-collapse:collapse;margin:0}
+.mapbubble th{text-align:left;font-weight:600;font-size:.72rem;color:#576764;padding:.1rem .3rem .1rem 0}
+.mapbubble td{padding:.1rem .3rem .1rem 0;border-top:1px solid #eef2ed;vertical-align:top}
+.mapbubble tr.lead td{font-weight:600}
+.mapbubble .num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.mapbubble .dot{display:inline-block;width:.65em;height:.65em;border-radius:50%;margin-right:.35em}
+.mapbubble small{color:#576764;font-weight:400}
+.mapbubble .incumbent{font-size:.62rem}

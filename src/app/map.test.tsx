@@ -44,12 +44,13 @@ describe('electorate map', () => {
     expect(links[0].getAttribute('href')).toMatch(/^#seat=/);
     expect(container.querySelectorAll('.mapinsets svg')).toHaveLength(4);
     fireEvent.mouseEnter(links[0]);
-    const card = container.querySelector('.mapcard')!;
+    fireEvent.mouseMove(container.querySelector('.mapgrid')!, { clientX: 40, clientY: 40 });
+    const card = container.querySelector('.mapbubble')!;
     expect(within(card as HTMLElement).getByText(/Most likely winner:/)).toBeInTheDocument();
     expect(card.querySelectorAll('tbody tr').length).toBeGreaterThan(1);
     expect(card.textContent).toMatch(/\d+\.\d%/);
     fireEvent.mouseLeave(links[0]);
-    expect(card.textContent).toMatch(/Hover over or select a seat/);
+    expect(container.querySelector('.mapbubble')).toBeNull();
     fireEvent.click(screen.getByRole('button', { name: /^Māori/ }));
     const maori = screen.getByRole('group', { name: /Map of the Māori electorates/ });
     expect(within(maori).getAllByRole('link')).toHaveLength(7);

@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useState } from 'react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import type { ForecastSnapshot } from '../types/export';
 import { COLOURS } from './SeatChart';
 import { partyLabel } from './partyNames';
@@ -76,6 +76,10 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
   const [data, setData] = useState<MapData | 'failed' | null>(null);
   const [kind, setKind] = useState<'general' | 'maori'>('general');
   const [hover, setHover] = useState<string | null>(null);
+  const [pos, setPos] = useState<{ x: number; y: number; w: number; h: number } | null>(null);
+  const grid = useRef<HTMLDivElement>(null);
+  /** Where the bubble sits: next to the pointer (or the focused seat), inside the map area, so nothing on the page moves. */
+  const track = (clientX: number, clientY: number) => { const r = grid.current?.getBoundingClientRect(); if (r) setPos({ x: clientX - r.left, y: clientY - r.top, w: r.width, h: r.height }); };
   useEffect(() => { let live = true; import('../../data/processed/site-map/2026/map.json').then(m => live && setData(m.default as unknown as MapData), () => live && setData('failed')); return () => { live = false; }; }, []);
   const byName = useMemo(() => new Map(forecasts.map(f => [`${f.kind}:${key(f.name)}`, f])), [forecasts]);
   const parties = useMemo(() => [...new Set(forecasts.filter(f => f.available).map(f => f.leaderParty))], [forecasts]);
@@ -92,8 +96,11 @@ export function ElectorateMap({ snapshot, forecasts, onSelect, hrefBase = '' }: 
       <button type="button" aria-pressed={kind === 'general'} onClick={() => setKind('general')}>General (64)</button>
       <button type="button" aria-pressed={kind === 'maori'} onClick={() => setKind('maori')}>Māori (7)</button>
     </div>
-    <div className="mapcard" aria-live="polite">{hot ? <HoverCard seat={hot} /> : <p className="maphint">Hover over or select a seat to see its candidates, their chance of winning and their share of the vote.</p>}</div>
-    <div className="mapgrid">
+    <p className="maphint">Hover over or select a seat to see its candidates, their chance of winning and their share of the vote.</p>
+    <p className="sr-only" aria-live="polite">{hot ? (hot.available ? `${hot.name}: ${hot.leaderName}, ${hot.leaderPartyName}, ${prob(hot.leaderP)} to win` : `${hot.name}: no forecast available`) + incumbentNote(hot) : ''}</p>
+    <div className="mapgrid" ref={grid} onMouseMove={e => track(e.clientX, e.clientY)}
+      onFocusCapture={e => { const r = (e.target as Element).getBoundingClientRect(); track(r.left + r.width / 2, r.top + r.height / 2); }}>
+      {hot && pos && <div className={`mapbubble${pos.x > pos.w - 420 ? ' left' : ''}${pos.y > pos.h - 260 ? ' up' : ''}`} style={{ left: pos.x, top: pos.y }} aria-hidden="true"><HoverCard seat={hot} /></div>}
       <svg viewBox={`0 0 ${data.width} ${data.height}`} className="mapmain" role="group" aria-label={`Map of the ${kind === 'general' ? 'general' : 'Māori'} electorates, coloured by the most likely winner's party`}>
         <Shapes seats={shown} {...shared} stripe={data.width / 110} />
       </svg>
