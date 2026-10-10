@@ -54,12 +54,12 @@ describe('site evidence in the snapshot', () => {
         .getAllByRole('row')
         .filter((r) => r.className.includes('month')).length,
     ).toBeGreaterThan(0);
-    fireEvent.click(screen.getByRole('button', { name: /See more \(114 older polls\)/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'See more' }));
     expect(
       within(table)
         .getAllByRole('row')
         .filter((r) => !r.className.includes('month')),
-    ).toHaveLength(125);
+    ).toHaveLength(122);
     expect(screen.getByRole('button', { name: 'Show fewer polls' })).toBeInTheDocument();
     expect(
       within(seatTable)
@@ -72,16 +72,17 @@ describe('site evidence in the snapshot', () => {
       within(seatTable)
         .getAllByRole('row')
         .filter((r) => !r.className.includes('month')),
-    ).toHaveLength(7);
-    expect(within(seatTable).getAllByRole('cell', { name: 'No' }).length).toBe(3);
+    ).toHaveLength(4); // the header and the three polls the model used
+    expect(within(seatTable).queryAllByRole('cell', { name: 'No' })).toHaveLength(0);
     expect(
       within(seatTable)
         .getAllByRole('link')
         .filter((a) => (a.getAttribute('href') ?? '').startsWith('../electorates/#seat=')).length,
-    ).toBe(6);
+    ).toBe(3);
     expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10); // after See more
     expect(within(table).queryByRole('columnheader', { name: /Client|Pollster/ })).toBeNull();
-    expect(screen.getByText(/The Spinoff–Curia/)).toBeInTheDocument();
+    // Polls the model did not use stay off the page.
+    expect(screen.queryByText(/The Spinoff–Curia/)).toBeNull();
   });
   it('draws the support trend on the forecast page', async () => {
     const snapshot = await buildNowcastSnapshot(bank, options(evidenceFile));

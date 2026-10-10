@@ -13,7 +13,7 @@ import type { IndexResult, LoadResult } from '../data/loader';
 const none = () => Promise.resolve<LoadResult>({ status: 'unavailable', reason: 'test' });
 const noIndex = () => Promise.resolve<IndexResult>({ status: 'unavailable', reason: 'test' });
 const mmp = (config as any).mmp;
-const footer = 'Free to share with credit (CC BY 4.0)';
+const footer = 'Licensed under CC BY 4.0';
 describe('public site', () => {
   it.each(pages)('renders $label with navigation, title and the licence footer', async (page) => {
     render(<App page={page.path} source={none} indexSource={noIndex} />);
@@ -63,7 +63,7 @@ describe('public site', () => {
     expect(screen.getByText(/Updated 6 October 2026/)).toBeInTheDocument();
     expect(screen.getByRole('table', { name: /Median with 80% range/ })).toBeInTheDocument();
     expect(screen.queryByRole('columnheader', { name: /50% range|90% range/ })).toBeNull();
-    expect(screen.getByRole('heading', { name: 'Electorates' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Electorates' })).toBeNull();
     expect(screen.queryByText('No forecast published yet')).not.toBeInTheDocument();
   });
   it('lists archive entries newest first and marks corrections', async () => {
@@ -142,8 +142,8 @@ describe('public site', () => {
     expect(seatTable.querySelectorAll('.seatbar').length).toBeGreaterThan(3);
     expect(screen.getByRole('heading', { name: 'Overhang' })).toBeInTheDocument();
     expect(screen.getByText(/Chance of at least one overhang seat/)).toBeInTheDocument();
-    expect(screen.getByText('All 71 electorates')).toBeInTheDocument();
-    expect(screen.getAllByText(/Wider/).length).toBeGreaterThan(0);
+    expect(screen.queryByText('All 71 electorates')).toBeNull();
+    expect(screen.queryByRole('heading', { name: 'Electorates' })).toBeNull();
   });
   it('marks the sitting MP on the seat page and in the seat list, and rejects inconsistent incumbent flags', async () => {
     const options = {
@@ -189,8 +189,8 @@ describe('public site', () => {
     );
     const row = (await screen.findAllByRole('row')).find((r) => r.textContent?.startsWith(sitting.name))!;
     expect(within(row).getByText('Incumbent')).toBeInTheDocument();
-    expect(screen.getByRole('columnheader', { name: 'Incumbent' })).toBeInTheDocument();
-    expect(screen.getAllByText('None standing').length).toBeGreaterThan(0);
+    expect(screen.getByRole('columnheader', { name: 'Expected margin' })).toBeInTheDocument();
+    expect(screen.queryByRole('columnheader', { name: 'Incumbent' })).toBeNull();
     window.location.hash = '';
   });
   it('filters the seat list by winner party, flips, seat type and close contests', async () => {

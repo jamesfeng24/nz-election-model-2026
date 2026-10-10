@@ -36,7 +36,7 @@ export function SeeMore({ total, expanded, onToggle }: { total: number; expanded
   return (
     <p>
       <button type="button" className="more" aria-expanded={expanded} onClick={onToggle}>
-        {expanded ? 'Show fewer polls' : `See more (${total - INITIAL_POLLS} older polls)`}
+        {expanded ? 'Show fewer polls' : 'See more'}
       </button>
     </p>
   );

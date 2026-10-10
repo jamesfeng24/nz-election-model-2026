@@ -14,7 +14,7 @@ export function AboutView() {
           <ul className="linklist">
             {links.map((l) => (
               <li key={l.label}>
-                <span className="linklabel">{l.label}</span>{' '}
+                <span className="linklabel">{l.label}</span>
                 <a href={l.url!} rel="noopener noreferrer">
                   {l.shown}
                 </a>

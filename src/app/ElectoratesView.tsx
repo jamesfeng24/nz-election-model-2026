@@ -66,7 +66,6 @@ export function ElectoratesView({ snapshot }: { snapshot: ForecastSnapshot }) {
       <SeatList
         rows={listed}
         caption={filtered ? 'Electorates matching the filters' : `All ${rows.length} electorates`}
-        hasIncumbency={hasIncumbency}
         selectedId={seatId}
         onSelect={setSeatId}
       />

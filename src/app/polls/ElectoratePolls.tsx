@@ -26,13 +26,15 @@ function electoratePolls(snapshot: ForecastSnapshot): ElectoratePoll[] {
   const polls = snapshot.electorateDetail.flatMap((detail) => {
     const seatId = detail.electorateId;
     const seatName = snapshot.directory.electorates.find((e) => e.electorateId === seatId)?.name ?? seatId;
-    return (detail.evidence?.polls ?? []).map((poll) => ({
-      poll,
-      seatId,
-      seatName,
-      date: (poll.fieldworkEnd ?? poll.published)!,
-      firstForSeat: false,
-    }));
+    return (detail.evidence?.polls ?? [])
+      .filter((poll) => poll.usedInModel)
+      .map((poll) => ({
+        poll,
+        seatId,
+        seatName,
+        date: (poll.fieldworkEnd ?? poll.published)!,
+        firstForSeat: false,
+      }));
   });
   polls.sort((a, b) => b.date.localeCompare(a.date) || a.seatName.localeCompare(b.seatName, 'en-NZ'));
   polls.forEach((entry, i) => {
@@ -74,22 +76,17 @@ export function ElectoratePolls({ snapshot }: { snapshot: ForecastSnapshot }) {
             {columns.map((name) => (
               <th key={name}>{name}</th>
             ))}
-            <th>In model</th>
           </tr>
         </thead>
         <tbody>
           {monthRows(
             shown,
             (entry) => entry.date,
-            columns.length + 5,
+            columns.length + 4,
             ({ poll, seatId, seatName, firstForSeat }, i) => {
               const sourceUrl = poll.sources.find((source) => source.url)?.url;
               return (
-                <tr
-                  key={i}
-                  id={firstForSeat ? `seat-${seatId}` : undefined}
-                  className={poll.usedInModel ? undefined : 'unused'}
-                >
+                <tr key={i} id={firstForSeat ? `seat-${seatId}` : undefined}>
                   <td>
                     {sourceUrl ? (
                       <a href={sourceUrl} rel="noopener noreferrer">
@@ -124,7 +121,6 @@ export function ElectoratePolls({ snapshot }: { snapshot: ForecastSnapshot }) {
                       </td>
                     );
                   })}
-                  <td>{poll.usedInModel ? 'Yes' : <span title={poll.note ?? undefined}>No</span>}</td>
                 </tr>
               );
             },

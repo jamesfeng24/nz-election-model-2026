@@ -4,13 +4,11 @@ import type { SeatRow } from './rows';
 export function SeatList({
   rows,
   caption,
-  hasIncumbency,
   selectedId,
   onSelect,
 }: {
   rows: SeatRow[];
   caption: string;
-  hasIncumbency: boolean;
   selectedId: string | null;
   onSelect: (id: string) => void;
 }) {
@@ -24,7 +22,7 @@ export function SeatList({
           <th>Electorate</th>
           <th>Most likely winner</th>
           <th>Chance</th>
-          {hasIncumbency && <th>Incumbent</th>}
+          <th>Expected margin</th>
         </tr>
       </thead>
       <tbody>
@@ -47,7 +45,7 @@ export function SeatList({
               )}
             </td>
             <td>{row.available ? prob(row.leaderP) : 'No forecast'}</td>
-            {hasIncumbency && <td>{row.incumbent ?? 'None standing'}</td>}
+            <td>{row.margin === null ? '–' : `${(row.margin * 100).toFixed(1)} pts`}</td>
           </tr>
         ))}
       </tbody>

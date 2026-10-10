@@ -163,8 +163,7 @@ export function App({
         {page === 'about' && <AboutView />}
       </main>
       <footer>
-        <span>An independent research project, not an official election service.</span>
-        <a href="https://creativecommons.org/licenses/by/4.0/">Free to share with credit (CC BY 4.0)</a>
+        <a href="https://creativecommons.org/licenses/by/4.0/">Licensed under CC BY 4.0</a>
       </footer>
     </>
   );

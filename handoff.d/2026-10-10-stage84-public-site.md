@@ -10,6 +10,8 @@
 
 - Source cleanup: the site code is split into modules (`src/app/electorates/`, `map/`, `polls/`, shared `partyColours.ts`, `intervals.ts`), the stylesheet is one sectioned file without duplicated or overridden rules, narrating comments are removed, and Prettier (`npm run format`, `format:check`) is added for the site code only. The loader result gains `cause` (`none-published` or `failed`) so a failed load says "The forecast could not be loaded" instead of "No forecast published yet"; `check_site.mjs` now requires every page listed in `pages.ts` (including `about/`) and allows root-absolute page links only in `404.html`. Behaviour, numbers and tests unchanged; the rendered pages match the earlier build.
 
+- Site tweaks (James): the all-electorates list shows expected margin (winner's median share minus the runner-up's) instead of the incumbent, which stays in the hover card and seat page; the Polls page lists only polls the model used, without an "in model" column or a count on "See more"; the Forecast page no longer repeats the electorates table; the footer reads "Licensed under CC BY 4.0" and no longer says it is an independent research project; the About page puts each name above its link; a visually hidden label inside a scrolling table no longer widens the page (fixes the white strip when scrolling sideways, mostly on phones).
+
 <!-- fold: state -->
 # Stage84 public site — review-ready, 2026-10-10
 
@@ -30,7 +32,7 @@ Branch `claude/stage84-public-site-9y5788` from main `9d2c8f1`. Requested by Jam
 <!-- fold: decisions -->
 ## D122 — 2026-10-10 — The public site is a static multi-page build of the existing app (Stage84)
 
-The public site lives in the research repository and is built into `site/` (one HTML file per page, relative paths) for a later publish step to copy as it is. It reads only the published snapshot archive (schema v2) through the validating loader and shows "No forecast published yet" when the archive is empty and "The forecast could not be loaded" when a forecast exists but fails to load or verify. The licence notice is a footer line on every page ("Free to share with credit (CC BY 4.0)"), not a LICENSE file in the public repository (James, 2026-10-09). Site output must not contain synthetic content, source maps, extra documents or any mention of the tooling that wrote the code. The number is provisional until the coordinator confirms it.
+The public site lives in the research repository and is built into `site/` (one HTML file per page, relative paths) for a later publish step to copy as it is. It reads only the published snapshot archive (schema v2) through the validating loader and shows "No forecast published yet" when the archive is empty and "The forecast could not be loaded" when a forecast exists but fails to load or verify. The licence notice is a footer line on every page ("Licensed under CC BY 4.0"), not a LICENSE file in the public repository (James, 2026-10-09). Site output must not contain synthetic content, source maps, extra documents or any mention of the tooling that wrote the code. The number is provisional until the coordinator confirms it.
 
 <!-- fold: roadmap -->
 | Stage84 | Public static site from the published export | review-ready |

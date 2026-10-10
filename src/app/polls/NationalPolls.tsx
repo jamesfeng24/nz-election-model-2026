@@ -7,9 +7,10 @@ import { pollName } from './pollNames';
 
 type NationalPoll = NonNullable<ForecastSnapshot['evidence']>['nationalPolls'][number];
 
-export function NationalPolls({ snapshot, polls }: { snapshot: ForecastSnapshot; polls: NationalPoll[] }) {
+export function NationalPolls({ snapshot, polls: allPolls }: { snapshot: ForecastSnapshot; polls: NationalPoll[] }) {
+  const polls = allPolls.filter((poll) => poll.usedInModel);
   const [expanded, setExpanded] = useState(false);
-  const parties = polls[0]?.shares.map((share) => share.partyId) ?? [];
+  const parties = allPolls[0]?.shares.map((share) => share.partyId) ?? [];
   const partyName = (id: string) => (id === 'other' ? 'Other' : partyLabel(snapshot, id));
   const shown = expanded ? polls : polls.slice(0, INITIAL_POLLS);
   return (
@@ -23,16 +24,15 @@ export function NationalPolls({ snapshot, polls }: { snapshot: ForecastSnapshot;
             {parties.map((id) => (
               <th key={id}>{partyName(id)}</th>
             ))}
-            <th>In model</th>
           </tr>
         </thead>
         <tbody>
           {monthRows(
             shown,
             (poll) => poll.fieldworkEnd,
-            parties.length + 4,
+            parties.length + 3,
             (poll) => (
-              <tr key={poll.id} className={poll.usedInModel ? undefined : 'unused'}>
+              <tr key={poll.id}>
                 <td>
                   {poll.publisherUrl ? (
                     <a href={poll.publisherUrl} rel="noopener noreferrer">
@@ -49,7 +49,6 @@ export function NationalPolls({ snapshot, polls }: { snapshot: ForecastSnapshot;
                     {share.percent === null ? '–' : `${share.approximate ? '~' : ''}${share.percent}`}
                   </td>
                 ))}
-                <td>{poll.usedInModel ? 'Yes' : <span title={poll.note ?? undefined}>No</span>}</td>
               </tr>
             ),
           )}

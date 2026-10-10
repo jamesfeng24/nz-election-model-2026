@@ -265,14 +265,20 @@ summary {
   color: #555;
 }
 .linklist .linklabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+}
+.linklist a {
   display: inline-block;
-  min-width: 5.5rem;
-  font-weight: 400;
-  color: #555;
 }
 
 /* Tables */
 table {
+  /* Keeps visually hidden text inside a scrolling table from widening the page. */
+  position: relative;
   width: 100%;
   margin: 0 0 1.5rem;
   border-collapse: collapse;
@@ -316,7 +322,6 @@ table td:not(:first-child),
   font-variant-numeric: tabular-nums;
 }
 .seatlist td:nth-child(2),
-.seatlist td:nth-child(4),
 .candidates td:first-child,
 .nationalpolls td:nth-child(2) {
   font-family: inherit;
@@ -667,9 +672,6 @@ table td:not(:first-child),
 .nationalpolls td {
   padding: 0.3rem 0.45rem;
   white-space: nowrap;
-}
-.nationalpolls tr.unused {
-  color: #8a8a8a;
 }
 .nationalpolls tr.month th {
   padding: 0.4rem 0.45rem;
