@@ -8,13 +8,20 @@ Keys are grouped: all `shared` keys (common to every seat of a layer, so each ro
 scrambled Sobol bank, and each seat-layer's own keys form another, seeded from `simulation.seedNamespace` and the
 group name. Columns are generated only when a seat asks for them, so memory stays bounded at production size
 (65,536 rows) instead of one joint bank of every key.
+
+Independence across groups (Stage87, D126). Separately scrambled Sobol engines are not independent when paired by row:
+the leading output bits of every dimension are fixed by the low bits of the row index (a scramble only flips or mixes
+them), so two engines built from the same index set share their coarse structure and row-paired correlations of 0.9
+and more occur at 65,536 rows. Each non-shared group's rows are therefore taken in an independent seeded permutation.
+This keeps every column exactly as evenly spread as before (and the dimensions of one group jointly low-discrepancy),
+and makes row pairing across groups behave like independent draws. The shared bank keeps its natural row order.
 """
 import contextlib
 import numpy as np
 from scipy.stats import qmc
 from scripts.uncertainty_tails import streams as base
 from scripts.uncertainty_tails.integration import open_unit
-from .common import YEAR, require, namespace_seed
+from .common import YEAR, require, namespace_seed, permutation
 
 
 def group_of(name):
@@ -44,7 +51,10 @@ class GroupedBank:
                     del self.cache[key]
             dims = len(self.members[group])
             sobol = qmc.Sobol(dims, scramble=True, bits=30, seed=namespace_seed(self.namespace, 'layers:' + group))
-            self.cache[group] = open_unit(sobol.random_base2(int(np.log2(self.count))))
+            bank = open_unit(sobol.random_base2(int(np.log2(self.count))))
+            if group != 'shared':
+                bank = bank[permutation(self.count, self.namespace, 'layers-rows:' + group)]
+            self.cache[group] = bank
         return self.cache[group]
 
     def __getitem__(self, key):
