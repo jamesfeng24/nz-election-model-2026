@@ -23,6 +23,7 @@ The only active remaining-work list. Design and definitions live in [nowcast-spe
 | 14 | Production runner and rehearsal | — | done (Stage77): `npm run release:build` / `release:publish`; full-size rehearsal with labelled stand-ins ([stage77-release-steps.md](stage77-release-steps.md)) |
 | 15 | Labelled no-poll fallback for Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau and Te Tai Tokerau: define, calibrate and register it (the Māori layer has none; Stage66/71 left them `unpolled`) | James authorizes a bounded stage | done: Stage78 defined and calibrated it (arm F, the 2023 result carried forward, James 2026-10-09, D115); Stage80 registered it (`maori.unpolledFallbackModel = stage78-f`, D118) and wired it into the assembly |
 | 13 | Export v2 completion: candidate-share intervals, Monte Carlo SE, thresholds/overhang/size/blocs, per-seat uncertainty class; 80% quantiles in Stage65 summaries | 9, 10 | done (Stage74); precision thresholds set (MCSE ≤ 0.01); the calibration label was dropped (D114) |
+| 16 | Publish workflow: adopt the newest refresh, rerun, run every gate, build the site and a frozen copy of it for the archive, push to the public repository only on James's go; a new forecast only when the refresh brought new national polls | 9, 10, 12; site PR #108 (Stage84) | built (CI: Publish workflow, [publish-workflow.md](publish-workflow.md)); dry-runs only until James approves the first publish; James sets the token scope, Pages and `PUBLISH_AUTO` on the public side |
 
 ## Should do soon
 
