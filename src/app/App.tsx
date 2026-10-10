@@ -12,6 +12,7 @@ import { AboutView } from './AboutView';
 import { ArchiveView } from './ArchiveView';
 import { ElectoratesView } from './ElectoratesView';
 import { ForecastView, SnapshotBanner } from './ForecastViews';
+import { longDate } from './format';
 import { MethodologyView } from './MethodologyView';
 import { pages, type PageId } from './pages';
 import { PollsView } from './PollsView';
@@ -37,6 +38,8 @@ export const defaultIndexSource = (): Promise<IndexResult> => loadArchiveIndex(l
 
 type Loading = { status: 'loading' };
 const pageHref = (path: string) => `../${path}/`;
+/** A frozen copy sits at archive/<date>/<page>/, three levels below the live site's root. */
+const LIVE_SITE = '../../../';
 
 function Unavailable({ result }: { result: Extract<LoadResult, { status: 'unavailable' }> }) {
   if (result.cause === 'failed') {
@@ -88,8 +91,11 @@ export function App({
   source = defaultSource,
   indexSource = defaultIndexSource,
   historySource = defaultHistorySource,
+  archivedOn = __ARCHIVE_DATE__ || undefined,
 }: {
   page: PageId;
+  /** Set in the frozen copy served from archive/<date>/: the forecast's date, shown in a banner linking to the live site. */
+  archivedOn?: string;
   source?: () => Promise<LoadResult>;
   indexSource?: () => Promise<IndexResult>;
   historySource?: () => Promise<ReleasePoint[]>;
@@ -151,6 +157,11 @@ export function App({
           </a>
         ))}
       </nav>
+      {archivedOn && (
+        <p className="archive-banner" role="note">
+          You&rsquo;re viewing the forecast from {longDate(archivedOn)}. <a href={LIVE_SITE}>See the latest</a>
+        </p>
+      )}
       <main id="main">
         {showsSnapshot && loaded && <SnapshotBanner snapshot={loaded} />}
         <h1>{current.title}</h1>
@@ -158,7 +169,7 @@ export function App({
         {page === 'methodology' && (
           <MethodologyView adjustments={loaded?.adjustments} incumbency={loaded?.incumbency} />
         )}
-        {page === 'archive' && <ArchiveView result={index} />}
+        {page === 'archive' && <ArchiveView result={index} archived={!!archivedOn} />}
         {page === 'about' && <AboutView />}
       </main>
       <footer>

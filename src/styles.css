@@ -130,6 +130,16 @@ header {
 .brand span {
   font-weight: 800;
 }
+.archive-banner {
+  margin: 0;
+  padding: 10px 40px;
+  background: #fdf0e0;
+  border-bottom: 1px solid #f08a24;
+  font-size: 15px;
+}
+.archive-banner a {
+  font-weight: 700;
+}
 nav {
   display: flex;
   gap: 28px;
@@ -898,6 +908,9 @@ table td:not(:first-child),
 
 /* Narrow screens */
 @media (max-width: 700px) {
+  .archive-banner {
+    padding: 10px 22px;
+  }
   header {
     padding: 14px 22px;
   }

@@ -107,6 +107,40 @@ describe('public site', () => {
     expect(rows[1]).toHaveTextContent('Correction of a');
     expect(rows[2]).toHaveTextContent('Replaced by a correction');
     expect(screen.getAllByRole('link', { name: 'JSON' })[0]).toHaveAttribute('href', '../forecasts/b/snapshot.json');
+    // Only the current entry opens as a frozen site; the replaced one keeps its JSON.
+    expect(screen.getAllByRole('link', { name: 'Site' })).toHaveLength(1);
+    expect(screen.getByRole('link', { name: 'Site' })).toHaveAttribute('href', '../archive/2026-10-09/');
+  });
+  it('shows a frozen copy with a banner and links back to the live site', async () => {
+    const index: IndexResult = {
+      status: 'loaded',
+      index: {
+        schemaVersion: 1,
+        snapshots: [
+          {
+            snapshotId: 'a',
+            createdAt: '2026-10-08T00:00:00+13:00',
+            dataCutoff: '2026-10-08',
+            provenanceKind: 'model',
+            path: 'a/snapshot.json',
+            sha256: '0'.repeat(64),
+            supersedes: null,
+            status: 'published',
+            withdrawnReason: null,
+          },
+        ],
+      },
+    };
+    render(<App page="archive" archivedOn="2026-10-08" source={none} indexSource={() => Promise.resolve(index)} />);
+    const banner = await screen.findByRole('note');
+    expect(banner).toHaveTextContent('You’re viewing the forecast from 8 October 2026.');
+    expect(within(banner).getByRole('link', { name: 'See the latest' })).toHaveAttribute('href', '../../../');
+    expect(screen.getByRole('link', { name: 'Site' })).toHaveAttribute('href', '../../../archive/2026-10-08/');
+    expect(screen.getByRole('link', { name: 'JSON' })).toHaveAttribute('href', '../forecasts/a/snapshot.json');
+  });
+  it('shows no banner on the live site', async () => {
+    render(<App page="about" source={none} />);
+    expect(screen.queryByRole('note')).not.toBeInTheDocument();
   });
   it('shows the chance of a majority for each group, no-majority and the electorate table from a full 71-seat snapshot', async () => {
     const snapshot = await buildNowcastSnapshot(bank, {
