@@ -7,9 +7,8 @@ import { prob } from './format';
 const rank = (id: string) => { const i = HEADLINE_ORDER.indexOf(id); return i < 0 ? HEADLINE_ORDER.length : i; };
 
 /**
- * Seats by party as one row each, in the headline order. The bar is the average split into electorate seats (solid) and
- * list seats (pale) in the party's colour; the whisker is the 80% range of total seats; the number is the median.
- * Chance of overhang sits beside each party, so the extra seats are never hidden in a footnote.
+ * Seats by party as one row each, in the headline order: a plain bar in the party's colour drawn at the median, then the
+ * numbers (median, 80% range, electorate and list seats, chance of overhang), so the extra seats are never hidden in a footnote.
  */
 export function SeatBars({ snapshot }: { snapshot: ForecastSnapshot }) {
   if (snapshot.seatLayer.status !== 'available') return null;
@@ -18,24 +17,22 @@ export function SeatBars({ snapshot }: { snapshot: ForecastSnapshot }) {
     const r80 = p.seats.find(v => v.level === PRIMARY_INTERVAL_LEVEL)!;
     return { p, lower: r80.lower, upper: r80.upper, colour: COLOURS[p.partyId] ?? FALLBACK[i % FALLBACK.length] };
   });
-  const axisMax = Math.max(10, Math.ceil(Math.max(...rows.map(r => r.upper), ...rows.map(r => r.p.meanSeats)) / 10) * 10);
+  const axisMax = Math.max(10, Math.ceil(Math.max(...rows.map(r => r.upper)) / 10) * 10);
   const x = (v: number) => `${(v / axisMax) * 100}%`;
   return <div className="seatbars">
     <table>
-      <caption>Seats by party across simulated elections. The bar shows the average number of electorate seats (solid) and list seats (pale); the line marks the 80% range of the party's total seats.</caption>
-      <thead><tr><th scope="col">Party</th><th scope="col">Seats</th><th scope="col">Median</th><th scope="col">80% range</th><th scope="col">Electorate</th><th scope="col">List</th><th scope="col">Overhang</th></tr></thead>
+      <caption>Seats by party across simulated elections: median with 80% range, and the average split into electorate seats and list seats.</caption>
+      <thead><tr><th scope="col">Party</th><th scope="col"><span className="sr-only">Bar</span></th><th scope="col">Median</th><th scope="col">80% range</th><th scope="col">Electorate</th><th scope="col">List</th><th scope="col">Overhang</th></tr></thead>
       <tbody>{rows.map(({ p, lower, upper, colour }) => <tr key={p.partyId}>
-        <th scope="row"><span className="swatch" style={{ background: colour }} aria-hidden="true" />{partyLabel(snapshot, p.partyId)}</th>
-        <td className="barcell"><div className="seatbar" role="img" aria-label={`${partyLabel(snapshot, p.partyId)}: average ${p.meanElectorateSeats.toFixed(1)} electorate and ${p.meanListSeats.toFixed(1)} list seats; 80% range ${lower} to ${upper} seats`}>
-          <span className="el" style={{ background: colour, width: x(p.meanElectorateSeats) }} />
-          <span className="li" style={{ background: colour, left: x(p.meanElectorateSeats), width: x(p.meanListSeats) }} />
-          <span className="whisker" style={{ left: x(lower), width: `calc(${x(upper)} - ${x(lower)})` }} />
+        <th scope="row">{partyLabel(snapshot, p.partyId)}</th>
+        <td className="barcell"><div className="seatbar" role="img" aria-label={`${partyLabel(snapshot, p.partyId)}: median ${p.seats[0].median} seats`}>
+          <span style={{ background: colour, width: x(p.seats[0].median) }} />
         </div></td>
         <td className="num"><strong>{p.seats[0].median}</strong></td><td className="num">{lower} – {upper}</td>
         <td className="num">{p.meanElectorateSeats.toFixed(1)}</td><td className="num">{p.meanListSeats.toFixed(1)}</td>
         <td className="num">{prob(p.probOverhang.p)}</td></tr>)}</tbody>
     </table>
-    <p className="legend"><span className="key sb-el" /> electorate seats, average <span className="key sb-li" /> list seats, average <span className="key sb-wh" /> 80% range of total seats. Overhang is the chance the party wins more electorate seats than its party vote entitles it to.</p>
+    <p className="legend">Median seats shown as the bar. Electorate seats are won in an electorate; list seats are allocated from the party vote; both are averages across simulated elections. Overhang is the chance the party wins more electorate seats than its party vote entitles it to.</p>
   </div>;
 }
 

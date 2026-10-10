@@ -92,13 +92,8 @@ nav a[aria-current=page]{border-color:#226e59;color:#185340;font-weight:700}
 .seatbars .swatch{display:inline-block;width:.8em;height:.8em;border-radius:50%;margin-right:.45em}
 .seatbars .barcell{width:34%;min-width:140px}
 .seatbars .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-.seatbar{position:relative;height:18px;background:#eef2ed;border-radius:3px}
-.seatbar .el,.seatbar .li{position:absolute;top:0;height:100%}
-.seatbar .li{opacity:.35}
-.seatbar .whisker{position:absolute;top:50%;height:0;border-top:2px solid #10372c;transform:translateY(-1px)}
-.seatbar .whisker::before,.seatbar .whisker::after{content:"";position:absolute;top:-5px;height:10px;border-left:2px solid #10372c}
-.seatbar .whisker::after{right:0}
-.sb-el,.sb-li,.sb-wh{display:inline-block;width:1.4em;height:.7em;margin:0 .3em 0 .1em;border-radius:2px;vertical-align:-1px}
-.sb-el{background:#576764}.sb-li{background:#576764;opacity:.35}.sb-wh{height:0;border-top:2px solid #10372c}
+.seatbar{height:18px}
+.seatbar span{display:block;height:100%;border-radius:2px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .overhang h3{margin-top:1rem}
 @media(max-width:700px){.seatbars{overflow-x:auto}}

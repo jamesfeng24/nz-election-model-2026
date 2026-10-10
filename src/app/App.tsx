@@ -38,10 +38,10 @@ export function App({ page, source = defaultSource, indexSource = defaultIndexSo
     return () => { live = false; };
   }, [page, source, indexSource, historySource]);
   const current = pages.find(p => p.path === page)!;
-  useEffect(() => { document.title = `${current.label} | NZ Election Model 2026`; }, [current]);
+  useEffect(() => { document.title = `${current.label} | NZ Election Forecast`; }, [current]);
   return <>
     <a className="skip" href="#main">Skip to content</a>
-    <header><a className="brand" href={href('forecast')}>NZ <span>Election Model</span><b>2026</b></a><span className="project-tag">INDEPENDENT RESEARCH PROJECT</span></header>
+    <header><a className="brand" href={href('forecast')}>NZ <span>Election Forecast</span></a><span className="project-tag">INDEPENDENT RESEARCH PROJECT</span></header>
     <nav aria-label="Main navigation">{pages.map(p => <a key={p.path} href={href(p.path)} aria-current={p.path === page ? 'page' : undefined} className={p.path === page ? 'active' : undefined}>{p.label}</a>)}</nav>
     <main id="main">
       {(page === 'forecast' || page === 'electorates' || page === 'polls') && <>
