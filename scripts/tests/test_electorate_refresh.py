@@ -222,12 +222,13 @@ class CommittedRunTests(unittest.TestCase):
         self.assertEqual(runs, [e['date'] for e in run.load_index()['runs']])
         self.assertTrue(runs)
 
-    def test_only_the_authorised_model_layer_reads_the_live_file(self):
-        # Stage79 follow-up (D123, James 2026-10-10) is the one authorised reader: the seat-poll layer's live.py. Nothing else may read it.
+    def test_only_the_authorised_model_layers_read_the_live_file(self):
+        # Two authorised readers, both James 2026-10-10: the general-seat poll layer's live.py (Stage79 follow-up, D123) and the Maori seat layer's
+        # live.py (Stage86, D125). Nothing else may read it.
         hits = [p.relative_to(ROOT).as_posix() for p in (ROOT / 'scripts').rglob('*.py')
                 if 'electorate-live' in p.read_text(errors='ignore') and 'electorate_refresh' not in str(p)
                 and 'refresh_workflow' not in str(p) and 'test_electorate_refresh' not in str(p) and 'test_weekly_refresh_workflow' not in str(p)]
-        self.assertEqual(hits, ['scripts/seat_polls/live.py'])
+        self.assertEqual(hits, ['scripts/maori_seat_layer/live.py', 'scripts/seat_polls/live.py'])
 
 
 if __name__ == '__main__':

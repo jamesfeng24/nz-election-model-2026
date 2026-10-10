@@ -9,11 +9,15 @@ import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
 from scripts.maori_seat_fallback import draws
 from scripts.maori_seat_fallback.common import SEATS, read as read_json, DESIGN
-from scripts.maori_seat_fallback.forecast import UNPOLLED
+from scripts.maori_seat_fallback.forecast import UNPOLLED as STAGE78_UNPOLLED
+from scripts.maori_seat_layer import live
 from scripts.nowcast_assembly import maori
 from scripts.nowcast_assembly.common import CONFIG, AssemblyError, read
 
 COUNT = 4096
+# Stage86 (D125): the polled seats are those with a Maori poll in the newest Stage82 live-inputs run, not the four fixed in the Stage78 artifacts.
+LIVE_POLLED = {live.seat_name(p['seat']) for p in live.live_polls()}
+UNPOLLED = tuple(seat for seat in SEATS if seat not in LIVE_POLLED)
 STORED = 'data/processed/maori-seat-fallback/forecast-2026.json'
 
 
@@ -33,7 +37,7 @@ class Draws(unittest.TestCase):
     def test_reproduces_the_stored_stage78_arm_f_exactly_with_the_stage78_seed(self):
         stored = read(STORED)
         n = stored['draws']
-        for seat, (inp, share) in draws.f_shares(UNPOLLED, n).items():
+        for seat, (inp, share) in draws.f_shares(STAGE78_UNPOLLED, n).items():
             p = np.bincount(np.argmax(share, axis=1), minlength=len(inp['names'])) / n
             self.assertTrue(np.allclose([c['winProbability'] for c in stored['arms']['F']['seats'][seat]['candidates']], p, atol=0, rtol=0))
 
@@ -120,7 +124,7 @@ class FailClosed(unittest.TestCase):
         c = config(**{'maori.unpolledFallbackModel': None})
         records = maori.simulate(c, 64)
         unavailable = [r for r in records.values() if r['status'] == 'unavailable']
-        self.assertEqual(len(unavailable), 4)
+        self.assertEqual(len(unavailable), len(UNPOLLED))
         self.assertTrue(all('no fallback model is registered' in r['reason'] for r in unavailable))
 
     def test_unregistered_model_and_missing_decision_are_refused(self):

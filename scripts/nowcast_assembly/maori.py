@@ -1,5 +1,8 @@
 """Maori seats: the Stage66 default layer re-run for the polled seats; the unpolled seats use the registered Stage78 fallback.
 
+The polled seats are those with a Maori poll in the newest Stage82 live-inputs run (Stage86, D125), not the pinned 2026-10-07 transcription: a new
+Maori seat poll is a data-only addition and moves its seat from the fallback to the Stage66 layer. The calibration is unchanged.
+
 Stage66 stores only a 500-draw preview, so the registered model is re-simulated here with the assembly's draw
 count. Maori draws are independent of the national draw (Stage66 default; any coupling needs a stated correlation).
 Unpolled seats follow `maori.unpolledFallbackModel` (D114, D115): `stage78-f` draws the 2023 result carried forward by party label
@@ -13,7 +16,8 @@ from scripts.maori_seat_fallback.draws import f_shares
 from scripts.maori_seat_layer.common import SEATS, fold
 from scripts.maori_seat_layer.fit import fit
 from scripts.maori_seat_layer.run import parameters
-from scripts.maori_seat_layer.simulate import current_polls, simulate as simulate_layer
+from scripts.maori_seat_layer.live import current_polls
+from scripts.maori_seat_layer.simulate import simulate as simulate_layer
 from .common import TARGET_FRAME, read, require, namespace_seed
 from .summaries import share_summaries
 
@@ -66,6 +70,17 @@ def match(seat, name, code, people):
     return found[0]
 
 
+def resolver(people):
+    """`resolve(seat, party_code)` for the live poll reader: the displayed name of the one active official candidate whose ballot group is the
+    code's group (an independent column resolves only when the seat's roster has exactly one independent), else the build fails."""
+    def resolve(seat, code):
+        require(code in PARTIES, f'{seat}: unmapped Maori party code {code}')
+        found = [p for p in people[seat] if p['group'] == PARTIES[code]]
+        require(len(found) == 1, f'{seat}: a {code} poll share matches {len(found)} official candidates')
+        return found[0]['name']
+    return resolve
+
+
 def record(source, people, shares, extra=None):
     """A simulated seat record from roster entries (in order) and their closed shares (draws x candidates)."""
     ids = [p['id'] for p in people]
@@ -82,7 +97,7 @@ def simulate(config, count):
     require(fallback is None or config['maori']['unpolledSeats'] == 'labelled-fallback', 'a fallback model needs maori.unpolledSeats = labelled-fallback')
     ids = electorate_ids()
     people = roster(config, ids)
-    polls, _, _ = current_polls()
+    polls, _ = current_polls(resolver(people))
     fitted = fit()[0]['fit']
     sim = simulate_layer(polls, parameters(fitted), count, namespace_seed(config['simulation']['seedNamespace'], 'maori'))
     unpolled = [seat for seat in SEATS if seat not in sim['seats']]
