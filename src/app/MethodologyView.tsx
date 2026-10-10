@@ -14,7 +14,7 @@ export function MethodologyView({ adjustments, incumbency }: { adjustments?: For
       <li><b>Each electorate's party vote.</b> The national picture is spread across electorates using the 2023 results re-cast onto the 2026 boundaries, with extra uncertainty for local differences.</li>
       <li><b>Electorate winners.</b> Candidates' local shares are estimated from their party's local vote and how candidates have performed relative to their party at past elections. Seats with unusual local circumstances get wider uncertainty.</li>
       <li><b>Māori electorates.</b> These are modelled separately from seat-level polls where they exist; seats without a poll are estimated from the 2023 result carried forward and are less certain.</li>
-      <li><b>Seats in Parliament.</b> Each simulated election is run through New Zealand's MMP rules (Electoral Act 1993 as at 1 January 2026): the 5% party-vote threshold or one electorate win, 120 seats shared by the Sainte-Laguë method, and overhang seats added on top.</li>
+      <li><b>Seats in Parliament.</b> Each simulated election is run through New Zealand's MMP rules: the 5% party-vote threshold or one electorate win, 120 seats shared by the Sainte-Laguë method, and overhang seats added on top.</li>
     </ol>
     <p>Groups such as National + ACT + NZ First or Labour + Greens + Te Pāti Māori are seat arithmetic, not predictions of coalition deals. "No majority" means neither of those two groups gets more than half of Parliament's seats.</p>
     <h2>Electorate seats, list seats and overhang</h2>

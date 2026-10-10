@@ -30,8 +30,6 @@ describe('site evidence in the snapshot', () => {
 
     render(<App page="polls" source={loaded(snapshot)} />);
     expect(await screen.findByRole('heading', { name: 'National polls' })).toBeInTheDocument();
-    expect(screen.getByText(/121 of 124 polls since the 2023 election/)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /Wikipedia, Opinion polling/ })).toHaveAttribute('href', expect.stringContaining('oldid=1378865337'));
     const [table, seatTable] = screen.getAllByRole('table');
     // Opens on the ten newest polls under month headings; the rest sit behind "See more".
     expect(within(table).getAllByRole('row').filter(r => !r.className.includes('month'))).toHaveLength(11);

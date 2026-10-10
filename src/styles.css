@@ -141,7 +141,7 @@ caption{color:#6b6b6b;font-size:.85rem}
 .seat{border:0;border-top:3px solid #222;padding:8px 0 16px}
 .picker input,.picker select{border-radius:0;border-color:#222}
 .maptoggle{border-color:#222}
-.maptoggle button[aria-pressed=true]{background:#222}
+.maptoggle button[aria-pressed=true]{background:#e4e6e8;color:#222;font-weight:700}
 .maptoggle button+button{border-left-color:#222}
 .more{border-color:#222;color:#222;font-weight:700}
 .more:hover{background:#f2f2f2}
@@ -172,7 +172,7 @@ th[scope=row]{font-size:inherit;font-weight:700;text-transform:none;letter-spaci
 .filters .check{flex-direction:row;align-items:center;gap:6px;font-weight:400;font-size:14px;color:#222;align-self:end;padding-bottom:8px}
 .filters select{min-width:200px}
 .filters .more{align-self:end;margin-bottom:2px;padding:.4rem .9rem}
-.flip-tag{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:#222;color:#fff;padding:0 .35em;margin-left:.25em;vertical-align:1px}
+.flip-tag{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:#e4e6e8;color:#444;padding:0 .35em;margin-left:.25em;vertical-align:1px}
 .rangebar span.rangetip{top:auto;bottom:calc(100% + 6px);height:auto}
 .filters .check input{min-width:0;padding:0}
 

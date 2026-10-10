@@ -4,8 +4,6 @@ import { partyLabel } from './partyNames';
 import { dateRange, longDate } from './format';
 import { CODES, pollName } from './PollTables';
 
-const retrieved = (text: string) => { const t = Date.parse(text); return Number.isNaN(t) ? text : longDate(new Date(t).toISOString()); };
-
 /** The list opens on this many of the newest polls; every poll stays in the model and in the page, behind "See more". */
 export const INITIAL_POLLS = 10;
 const monthOf = (iso: string) => longDate(`${iso.slice(0, 7)}-01`).replace(/^1 /, '');
@@ -26,11 +24,9 @@ export function PollsView({ snapshot }: { snapshot: ForecastSnapshot }) {
   const seatLabels = new Set(seatPolls.flatMap(p => p.poll.results.map(r => columnOf(r.party))));
   const seatColumns = [...nationalLabels.filter(l => seatLabels.has(l)), ...[...seatLabels].filter(l => !nationalLabels.includes(l) && l !== 'Other'), ...(seatLabels.has('Other') ? ['Other'] : [])];
   const [allSeat, setAllSeat] = useState(() => typeof window !== 'undefined' && window.location.hash.startsWith('#seat-'));
-  const used = evidence?.nationalPolls.filter(p => p.usedInModel).length ?? 0;
   return <>
     <h2>National polls</h2>
     {evidence ? <>
-      <p>{used} of {evidence.nationalPolls.length} polls since the 2023 election are in the model; the rest are greyed. Figures are percent of the party vote, copied from <a href={evidence.source.url} rel="noopener noreferrer">{evidence.source.label}</a>, revision {evidence.source.revision}, retrieved {retrieved(evidence.source.retrieved)}. A dash means the party was not reported.</p>
       <table className="nationalpolls">
         <thead><tr><th>Poll</th><th>Dates</th><th>Sample</th>{columns.map(c => <th key={c}>{party(c)}</th>)}<th>In model</th></tr></thead>
         <tbody>{(all ? evidence.nationalPolls : evidence.nationalPolls.slice(0, INITIAL_POLLS)).flatMap((p, i, shown) => [
@@ -45,7 +41,6 @@ export function PollsView({ snapshot }: { snapshot: ForecastSnapshot }) {
     </> : <p>No national poll list.</p>}
     <h2>Electorate polls</h2>
     {seatPolls.length === 0 ? <p>No electorate polls.</p> : <>
-      <p>Polls of single electorates are rare and small. Same layout as above, with the electorate in its own column. Figures are percent of the electorate vote for the candidate of that party; hover over a figure for the candidate's name. Candidates without a party are under Other.</p>
       <table className="nationalpolls">
         <thead><tr><th>Poll</th><th>Electorate</th><th>Dates</th><th>Sample</th>{seatColumns.map(c => <th key={c}>{c}</th>)}<th>In model</th></tr></thead>
         <tbody>{(allSeat ? seatPolls : seatPolls.slice(0, INITIAL_POLLS)).flatMap((p, i, shown) => [
