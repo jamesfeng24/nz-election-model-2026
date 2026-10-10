@@ -5,7 +5,8 @@ python -m scripts.release_rehearsal.run [--national 4096] [--replicates 16] [--w
 Real inputs: the Stage70 2026-10-07 national refresh (lastDataSupport; adopted into the config by #94), the Stage64 population-flat baseline, the Stage72 scales,
 the Stage75 candidate fit, the Stage66 Maori layer for the three polled seats, the 2026 frame. SYNTHETIC stand-ins
 (because the real inputs do not exist yet): the official candidate list (Stage50 stand-in: announcements plus
-invented Labour and independent candidates), the D107 classification, and winners for the four unpolled Maori seats.
+invented Labour and independent candidates) and the D107 classification. The four unpolled Maori seats use the real registered Stage78
+fallback (Stage80, D118) with the official Maori roster, not a stand-in.
 The Stage69 baseline (merged, not adopted) is not used.
 
 Writes the bank and the rehearsal publication inputs under the gitignored `.release-build/rehearsal/` only (never
@@ -16,18 +17,16 @@ import copy
 import json
 import os
 import time
-import numpy as np
 from scripts.balance_scale.common import equivalent
 from scripts.nominations_2026 import refresh, synthetic
 from scripts.nowcast_assembly import assemble as A, maori
-from scripts.nowcast_assembly.common import CONFIG, ROOT, encode, read, namespace_seed
+from scripts.nowcast_assembly.common import CONFIG, ROOT, encode, read
 
 REPORT = 'data/processed/release-rehearsal/report.json'
 BUILD = '.release-build/rehearsal/'
 AS_OF = '2026-10-07'
 STAND_INS = ['official candidate list (Stage50 not yet run; announcements + invented Labour/independent rows)',
              'ordinary/exceptional classification (James has not entered it)',
-             'winners for the four unpolled Maori seats (James has not chosen a fallback)',
              'MMP rules-version label (placeholder; the blocs are the configured ones)']
 NOT_USED = ["Stage69 voting-place notional baseline (merged as #96 but not adopted; adoption is James's decision; the configured Stage64 population-flat baseline is used)"]
 STAGE70 = 'data/processed/polling/weekly-refresh/2026-10-07/estimate.json'
@@ -36,22 +35,6 @@ STAGE70 = 'data/processed/polling/weekly-refresh/2026-10-07/estimate.json'
 def synthetic_classification(general):
     """SYNTHETIC: every eighth general seat exceptional. Not a judgement and not the draft for James."""
     return {seat: 'exceptional' if i % 8 == 0 else 'ordinary' for i, seat in enumerate(general)}
-
-
-def synthetic_unpolled(records, total, namespace):
-    """SYNTHETIC: two invented candidates per unpolled Maori seat with seeded coin-flip winners."""
-    out = dict(records)
-    for seat, record in records.items():
-        if record['status'] != 'unavailable':
-            continue
-        rng = np.random.default_rng(namespace_seed(namespace, 'synthetic-unpolled:' + seat))
-        ids = [f'synthetic-{seat}-a', f'synthetic-{seat}-b']
-        out[seat] = {'status': 'simulated', 'class': 'maori-layer', 'source': 'SYNTHETIC stand-in for an unpolled seat',
-                     'candidates': ids, 'candidateNames': ['Synthetic A', 'Synthetic B'], 'candidateParty': ['labourparty', 'tepatimaori'],
-                     'candidateShares': [{'candidateId': i, 'mean': 0.5, 'intervals': [{'level': v, 'lower': 0.5, 'median': 0.5, 'upper': 0.5}
-                                                                                       for v in (0.5, 0.8, 0.9)]} for i in ids],
-                     'winners': rng.integers(0, 2, total).tolist()}
-    return out
 
 
 def rehearse(national, replicates, workers):
@@ -68,7 +51,7 @@ def rehearse(national, replicates, workers):
     slates, _ = A.live_slates(config, features, centred)
     general = sorted(slates)
     total = national * replicates
-    records = synthetic_unpolled(maori.simulate(config, total), total, config['simulation']['seedNamespace'])
+    records = maori.simulate(config, total)
     bank = A.assemble(config, national, slates=slates, classification=synthetic_classification(general),
                       maori_records=records, workers=workers, replicates=replicates)
     passed, checks = A.gate(bank, config)
@@ -88,7 +71,7 @@ def rehearse(national, replicates, workers):
                'mmp': {'rulesVersion': 'UNVERIFIED-PLACEHOLDER-synthetic-only', 'rulesSourceIds': ['synthetic-rules'],
                        'blocs': config['mmp']['blocs'], 'hungParliament': config['mmp']['hungParliament']},
                'nationalBasis': 'Stage70 2026-10-07 refresh, lastDataSupport (latent state, week of ' + config['national']['modelStateAsOf'] + ')',
-               'limitations': ['SYNTHETIC REHEARSAL: stand-in candidate list, classification and unpolled Maori seats; not a nowcast.'],
+               'limitations': ['SYNTHETIC REHEARSAL: stand-in general-seat candidate list and classification; not a nowcast.'],
                'probabilityMcseMax': config['release']['probabilityMcseMax']}
     return report, bank, options, elapsed
 

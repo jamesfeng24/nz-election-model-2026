@@ -1,0 +1,62 @@
+{
+ "stage": 79,
+ "status": "frozen before any Stage79 error, fit or score was computed",
+ "designDocument": "docs/stage79-seat-poll-design.md",
+ "decision": "D117 (number allocated by the coordinator)",
+ "question": "How far should a published general-seat candidate-vote poll move the model's candidate National/Labour balance for that seat, and by how much should it narrow that seat's uncertainty, given the historical error of such polls?",
+ "quantity": {
+  "name": "balance",
+  "definition": "log(National candidate share / Labour candidate share), the Stage45/47 candidate balance coordinate (log scale; equal to logit of National/(National+Labour))",
+  "pollValue": "log(published National share / published Labour share); shares as published, not closed",
+  "modelPrior": "centre mu = mean_logit_location(National/(National+Labour) of the conditional mean, total balance SD), the location the bank draws around; Gaussian noise with total SD sigma = hypot(shared, multiplier * seat)",
+  "multiplier": {"ordinary": 0.6, "exceptional": 1.0, "source": "D107; historical seats use the Stage67 primary flags"}
+ },
+ "eligibility": {
+  "rule": "general seat; the poll publishes both a National and a Labour candidate share; and the poll's two highest published candidate shares are those two candidates",
+  "consequence": "polls led by a Green, ACT or other candidate move no coordinate in this stage (Auckland Central and Wellington Bays in 2026); they stay context",
+  "excludedHistorical": ["Ohariu 2017: the incumbent withdrew after fieldwork (not an error of the poll)"]
+ },
+ "pollError": {
+  "samplingVariance": "1/(n*pNAT) + 1/(n*pLAB), p = published share / 100, n = published sample size",
+  "missingSampleSize": {"assumed": 400, "flag": "sampleSizeAssumed", "sensitivity": "S1 drops these polls"},
+  "inflation": "c = max(1, mean over fitting polls of (y - z)^2 / samplingVariance), z the actual balance; one constant, no bias term, no sponsor lean fitted",
+  "variance": "c * samplingVariance + allowance^2",
+  "allowance": {"labour-aligned": 0.12, "all other groups": 0.0, "note": "SD on the log-ratio scale, equal to one typical n=400 sampling SD; a fixed development choice, variance 0.0144; no directional shift"},
+  "sameSourceMerge": "two polls of one seat by the same pollster within 14 days are merged by inverse variance, the later one with variance multiplied by 1.5 (2026 application only)"
+ },
+ "update": {
+  "weight": "w = min(0.60, sigma^2 / (sigma^2 + pollVariance))",
+  "ageFactor": "rho = 0.5 ** (ageWeeks / 6) in the 2026 application; rho = 1 in scoring (the truth is the election result and c absorbs the lag)",
+  "centre": "mu' = mu + rho * w * (y - mu)",
+  "variance": "V = sigma^2 - 2*rho*w*rho*sigma^2 + (rho*w)^2 * (sigma^2 + pollVariance)",
+  "floor": "V' = max(V, sharedSD^2): a seat poll never narrows the shared candidate-split shift (Stage68), so the total seat SD cannot fall below the shared SD",
+  "assumptions": "poll error independent of model error; the seat deviation is stationary AR(1) in time with half-life 6 weeks; national, local-party and Maori layers unchanged"
+ },
+ "scoring": {
+  "population": "eligible historical polls 2014-2023 for general seats with a Stage44 out-of-sample seat replay",
+  "scheme": "leave one seat-election out: c is fitted on the other seat-elections' eligible polls; each poll is scored on its own against the actual balance",
+  "arms": {
+   "model": "z ~ N(mu, sigma^2)",
+   "modelPlusPoll": "z ~ N(mu', V')"
+  },
+  "metrics": ["sum of log score difference (modelPlusPoll - model, nats)", "mean Gaussian CRPS of each arm", "coverage of central 50/80/90 intervals of each arm", "polls improved / worsened"],
+  "adoptionRule": {
+   "adopt": "total leave-one-out log score gain >= 1.0 nat AND modelPlusPoll 80% coverage in [0.65, 0.95]",
+   "otherwise": "finding not_established: the 2026 layer stays disabled (seatPolls.enabled false), polls remain context and can still justify a Stage56 exceptional flag or extraSdPp, not both",
+   "biasTerm": "none fitted; a Curia/sponsor lean is never adopted by this stage"
+  },
+  "sensitivities": {
+   "S1": "drop polls whose sample size is assumed",
+   "S2": "c fixed at 1 (no inflation)",
+   "S3": "c fitted on every poll that publishes both a National and a Labour share (eligible or not); scoring still on eligible polls"
+  }
+ },
+ "disclosure": "Before this freeze the author had computed, from the same Wikipedia tables, a rough log-ratio error for 12 historical polls (root mean square 0.28, sampling floor about 0.12 at n=400) and seen the Stage67 flags; no model-versus-poll comparison had been computed. The fitted c will therefore agree with that crude figure; the test is the leave-one-out comparison, not the error size.",
+ "doNot": [
+  "use party-vote crosstabs from seat polls",
+  "change Maori seats, D107 multipliers for unpolled seats, the classification draft or any frozen stage",
+  "fit house or sponsor lean, or apply a directional shift to any source",
+  "reopen Student-t, mixtures, regimes, sigma shrinkage, geography fragmentation, candidate-quality scores or national MCMC backtest reruns",
+  "publish a probability, edit data/sources.json, or enable the 2026 layer unless the adoption rule is met"
+ ]
+}

@@ -126,7 +126,11 @@ export const SnapshotEvidenceSchema = z.object({
   trend: NationalTrendSchema.nullable(),
 }).strict();
 
-/** Per-seat detail: the D107 uncertainty class, candidate-share intervals and win probabilities with their errors. */
+/**
+ * Per-seat detail: the D107 uncertainty class, candidate-share intervals and win probabilities with their errors. A polled Māori seat
+ * also carries `winProbabilityInflation`, the win probability under Stage71's variance-inflation calibration (arm P): with
+ * `winProbability` (the Stage66 control, C, which the seat totals use) it is the labelled C–P range (D114, D127).
+ */
 export const ElectorateDetailSchema = z.object({
   electorateId: id,
   uncertaintyClass: z.enum(['ordinary', 'exceptional', 'maori-layer']),
@@ -134,8 +138,70 @@ export const ElectorateDetailSchema = z.object({
   evidence: z.object({ basis: id, polls: z.array(SeatPollSchema) }).strict().optional(),
   candidates: z.array(z.object({
     candidateId: id, meanShare: z.number().min(0).max(1), share: IntervalSetSchema, winProbability: ProbabilityEstimateSchema,
+    winProbabilityInflation: ProbabilityEstimateSchema.optional(),
   }).strict()).min(1),
+}).strict().superRefine((d, ctx) => {
+  const ranged = d.candidates.filter(c => c.winProbabilityInflation).length;
+  if (ranged && (d.uncertaintyClass !== 'maori-layer' || ranged !== d.candidates.length))
+    ctx.addIssue({ code: 'custom', message: 'A calibration range covers every candidate of a Māori seat, or none', path: ['candidates'] });
+});
+
+/**
+ * Stage85 per-seat evidence (optional block; display data only, no forecast number depends on it). Names the polls found for a seat,
+ * how much each moved the model, the seat's starting baseline and its uncertainty class. Balances are log(National / Labour).
+ * A general seat's `weight` is exactly its contribution to the updated balance: updated = model + sum(weight x (poll - model)), and
+ * the model keeps `modelWeight` = 1 - effectiveWeight = 1 - sum(weight). A Maori seat's poll is the one input of its layer, so it has
+ * no share or weight. `status: 'not-used'` polls are context and carry the `reason`.
+ */
+const Fraction = z.number().min(0).max(1);
+export const SeatPollEvidenceSchema = z.object({
+  pollId: id, pollster: id.nullable(), sponsorGroup: id.nullable(),
+  fieldworkStart: z.iso.date(), fieldworkEnd: z.iso.date(),
+  sampleSize: z.number().positive().nullable(), sampleSizeAssumed: z.boolean(),
+  candidateVotePct: z.array(z.object({ party: id, pct: z.number().min(0).max(100), name: id.optional() }).strict()).min(1),
+  approximate: z.array(id), evidenceGrade: id.nullable(),
+  status: z.enum(['used', 'not-used']), reason: id.nullable(),
+  shareOfPoll: Fraction.nullable(), weight: Fraction.nullable(),
 }).strict();
+
+export const SeatPollUpdateSchema = z.object({
+  pollBalance: z.number().finite(), modelBalance: z.number().finite(), updatedBalance: z.number().finite(),
+  ageWeeks: z.number().finite().nonnegative(), ageFactor: Fraction, pollWeight: Fraction, effectiveWeight: Fraction, modelWeight: Fraction,
+  modelSD: z.number().finite().positive(), posteriorSD: z.number().finite().positive(),
+}).strict();
+
+export const SeatEvidenceSchema = z.object({
+  electorateId: id,
+  uncertaintyClass: z.enum(['ordinary', 'exceptional', 'maori-layer']),
+  multipliers: z.object({ balance: z.number().positive(), within: z.number().positive(), mass: z.number().positive() }).strict().nullable(),
+  baseline: z.object({ basis: id, partyVote: z.array(z.object({ partyId: id, share: Fraction }).strict()).min(1) }).strict().nullable(),
+  pollUpdate: SeatPollUpdateSchema.nullable(),
+  polls: z.array(SeatPollEvidenceSchema),
+}).strict().superRefine((e, ctx) => {
+  const bad = (message: string, path: (string | number)[] = []) => ctx.addIssue({ code: 'custom', message, path });
+  const close = (a: number, b: number) => Math.abs(a - b) < 1e-6;
+  const maori = e.uncertaintyClass === 'maori-layer';
+  if (maori !== (e.multipliers === null) || maori !== (e.baseline === null)) bad('Multipliers and baseline belong to general seats only', ['multipliers']);
+  if (maori && e.pollUpdate !== null) bad('A Maori seat has no balance update', ['pollUpdate']);
+  if (e.baseline && !close(e.baseline.partyVote.reduce((a, p) => a + p.share, 0), 1)) bad('Baseline party shares must sum to 1', ['baseline']);
+  if (!unique(e.polls.map(p => p.pollId))) bad('Duplicate poll', ['polls']);
+  const used = e.polls.filter(p => p.status === 'used');
+  e.polls.forEach((p, i) => {
+    if (p.fieldworkStart > p.fieldworkEnd) bad('Fieldwork ends before it starts', ['polls', i]);
+    if ((p.status === 'not-used') !== (p.reason !== null)) bad('Exactly the unused polls carry a reason', ['polls', i, 'reason']);
+    if (maori || p.status === 'not-used' ? p.shareOfPoll !== null || p.weight !== null : p.shareOfPoll === null || p.weight === null)
+      bad('Share and weight belong to the used polls of a general seat', ['polls', i]);
+  });
+  if (!maori && (e.pollUpdate !== null) !== (used.length > 0)) bad('A general seat has a poll update exactly when a poll was used', ['pollUpdate']);
+  if (e.pollUpdate && used.length > 0 && !maori) {
+    const u = e.pollUpdate;
+    if (!close(used.reduce((a, p) => a + (p.shareOfPoll ?? 0), 0), 1)) bad('Used poll shares must sum to 1', ['polls']);
+    if (!close(used.reduce((a, p) => a + (p.weight ?? 0), 0), u.effectiveWeight)) bad('Poll weights must sum to the effective weight', ['polls']);
+    if (!close(u.effectiveWeight + u.modelWeight, 1)) bad('Model and poll weights must sum to 1', ['pollUpdate']);
+    if (!close(u.effectiveWeight, u.ageFactor * u.pollWeight)) bad('Effective weight is the age factor times the poll weight', ['pollUpdate']);
+  }
+});
+export type SeatEvidence = z.infer<typeof SeatEvidenceSchema>;
 
 export const BoundaryReferenceSchema = z.object({
   artifactId: id, path: z.string().regex(/^(?!\/)(?!.*\.\.)(?!.*\\).+\.geojson$/), sha256,
@@ -164,6 +230,8 @@ export const ForecastSnapshotSchema = z.object({
   simulation: SimulationResultSchema,
   unavailableElectorates: z.array(z.object({ electorateId: id, reason: id }).strict()),
   electorateDetail: z.array(ElectorateDetailSchema),
+  /** Optional (Stage85): per-seat polls, baseline and class for the seat pages. Display data only. */
+  seatEvidence: z.array(SeatEvidenceSchema).optional(),
   seatLayer: z.discriminatedUnion('status', [
     z.object({ status: z.literal('available'), summary: SeatLayerExportSchema }).strict(),
     z.object({ status: z.literal('unavailable'), reason: z.string().trim().min(1) }).strict(),
@@ -257,6 +325,17 @@ export const ForecastSnapshotSchema = z.object({
   // A model snapshot carries detail for every predicted seat; only synthetic pipeline fixtures may omit it.
   if (!synthetic && detailed.length !== s.simulation.electoratePredictions.length)
     bad('Every predicted electorate needs its uncertainty class and candidate-share intervals', ['electorateDetail']);
+  if (s.seatEvidence) {
+    const predictedIds = new Set(s.simulation.electoratePredictions.map(p => p.electorateId));
+    const evidenced = s.seatEvidence.map(e => e.electorateId);
+    if (!unique(evidenced) || evidenced.length !== predictedIds.size || evidenced.some(e => !predictedIds.has(e)))
+      bad('Seat evidence must cover exactly the predicted electorates, once each', ['seatEvidence']);
+    s.seatEvidence.forEach((e, i) => {
+      const detail = s.electorateDetail.find(d => d.electorateId === e.electorateId);
+      if (detail && detail.uncertaintyClass !== e.uncertaintyClass) bad('Seat evidence class differs from the electorate detail', ['seatEvidence', i, 'uncertaintyClass']);
+      e.baseline?.partyVote.forEach(p => { if (!parties.has(p.partyId)) bad('Unknown party', ['seatEvidence', i, 'baseline']); });
+    });
+  }
   if (s.seatLayer.status === 'available') {
     s.seatLayer.summary.parties.forEach((p, i) => { if (!parties.has(p.partyId)) bad('Unknown party', ['seatLayer', 'summary', 'parties', i]); });
     if (s.seatLayer.summary.draws !== s.simulation.completedDraws) bad('Seat layer must use every simulated election', ['seatLayer']);

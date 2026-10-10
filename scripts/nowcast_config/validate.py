@@ -12,6 +12,7 @@ import datetime
 import json
 import sys
 from scripts.manual_adjustment.schema import seat_frame
+from scripts.polling import electorate_live
 from scripts.uncertainty_revision.common import ROOT, read
 
 CONFIG = 'config/nowcast-2026.json'
@@ -51,15 +52,39 @@ def check_config(config, require_complete=False):
             'modelStateAsOf <= dataCutoff <= electionDate')
     multipliers = config['uncertainty']['candidateBalanceSeatMultiplier']
     require(multipliers == {'ordinary': 0.60, 'exceptional': 1.00}, 'D107 multipliers are 0.60 ordinary and 1.00 exceptional')
+    within = config['uncertainty']['candidateWithinSeatMultiplier']
+    require(within == {'ordinary': 0.55, 'exceptional': 1.00}, 'Stage83 within-remainder multipliers are 0.55 ordinary and 1.00 exceptional (D121)')
+    mass = config['uncertainty']['candidateMassSeatMultiplier']
+    require(mass == {'ordinary': 0.91, 'exceptional': 1.00}, 'Stage83 major-mass multipliers are 0.91 ordinary and 1.00 exceptional (D121)')
     require(config['uncertainty']['extraSdOnExceptionalRequiresOptIn'] is True, 'extra sd on 1.00 seats needs an explicit opt-in (D107)')
     require(config['intervalLevels'] == INTERVAL_LEVELS and config['primaryIntervalLevel'] == 0.8, 'intervals are 50/80/90 with 80% primary')
     require(config['maori']['unpolledSeats'] in (None, 'labelled-fallback', 'withhold'),
             'maori.unpolledSeats is a labelled fallback or withhold (D114), or still pending')
+    model = config['maori']['unpolledFallbackModel']
+    require(model in (None, 'stage78-f'), 'maori.unpolledFallbackModel is stage78-f (Stage78 arm F, D115) or still pending')
+    require(model is None or config['maori']['unpolledSeats'] == 'labelled-fallback', 'a registered fallback model needs maori.unpolledSeats = labelled-fallback')
+    require(model is not None or config['maori']['unpolledSeats'] != 'labelled-fallback' or 'maori.unpolledFallbackModel' in config.get('pending', {}),
+            'a labelled fallback without a registered model must be listed as pending')
     require(0 < config['release']['probabilityMcseMax'] < 0.5 and config['release']['reconciliationTolerancePP'] > 0,
             'release thresholds must be positive and the MCSE limit below 0.5')
     for path in ('national.source', 'uncertainty.scales', 'baseline.source'):
         section, key = path.split('.')
         require((ROOT / config[section][key]).exists(), f'{path} does not exist: {config[section][key]}')
+    seat_polls = config.get('seatPolls')
+    if seat_polls is not None:
+        require(set(seat_polls) == {'enabled', 'decision', 'electorateRun'} and isinstance(seat_polls['enabled'], bool),
+                'seatPolls is {enabled: bool, decision, electorateRun}')
+        run = seat_polls['electorateRun']
+        require(run is None or (isinstance(run, dict) and set(run) == {'date', 'pollsSha256'}), 'seatPolls.electorateRun is {date, pollsSha256} or null')
+        if run is not None:
+            entry = [r for r in electorate_live.runs() if r['date'] == run['date']]
+            require(len(entry) == 1 and entry[0]['pollsSha256'] == run['pollsSha256'],
+                    'seatPolls.electorateRun must name a Stage82 electorate-poll run and its polls.json hash (audit J2)')
+        if seat_polls['enabled']:
+            require(run is not None, 'enabled seat polls need a pinned seatPolls.electorateRun (audit J2)')
+            findings = 'data/processed/seat-polls/findings.json'
+            require((ROOT / findings).exists() and read(findings)['summary']['finding'] == 'adopt',
+                    'seat polls can be enabled only when the frozen Stage79 finding is adopt (D117)')
     pending = config.get('pending', {})
     for path in pending:
         section, key = path.split('.')

@@ -1,0 +1,57 @@
+{
+ "note": "Dated registry for this electorate poll refresh; data/sources.json is frozen and not edited.",
+ "schemaVersion": 1,
+ "sources": [
+  {
+   "dateOrElection": "2026 general election cycle; electorate poll refresh 2026-10-10",
+   "id": "polling-electorate-live-2026-10-10-wikipedia-opinion-polling-2026.html",
+   "licence": "Wikipedia text is CC BY-SA; bytes preserved unchanged for research provenance. Poll figures originate from the named pollsters and press reports.",
+   "limitations": [
+    "Aggregator transcription; fieldwork dates, sample sizes and shares unverified against primary releases.",
+    "Wikipedia revision 1379243489, last modified Fri, 09 Oct 2026 18:02:04 GMT; table"
+   ],
+   "organisation": "Wikipedia (REST HTML, Opinion polling for the 2026 New Zealand general election, Electorate polling)",
+   "processingScript": "scripts/polling/electorate_refresh/run.py",
+   "rawPath": "data/raw/polling/electorate-live/2026-10-10/wikipedia-opinion-polling-2026.html",
+   "resource": "wikipedia-opinion-polling-2026.html",
+   "retrievedAt": "2026-10-09T18:36:40Z",
+   "schemaVersion": 1,
+   "sha256": "bc0f9fbbae54fefb41593eea7e2c7cf36460ba58d353eaebebccfc1f5a762747",
+   "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2026_New_Zealand_general_election"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; electorate poll refresh 2026-10-10",
+   "id": "polling-electorate-live-2026-10-10-wikipedia-opinion-polling-2026.html.headers",
+   "licence": "Wikipedia text is CC BY-SA; bytes preserved unchanged for research provenance. Poll figures originate from the named pollsters and press reports.",
+   "limitations": [
+    "Aggregator transcription; fieldwork dates, sample sizes and shares unverified against primary releases.",
+    "Wikipedia revision 1379243489, last modified Fri, 09 Oct 2026 18:02:04 GMT; response headers"
+   ],
+   "organisation": "Wikipedia (REST HTML, Opinion polling for the 2026 New Zealand general election, Electorate polling)",
+   "processingScript": "scripts/polling/electorate_refresh/run.py",
+   "rawPath": "data/raw/polling/electorate-live/2026-10-10/wikipedia-opinion-polling-2026.html.headers",
+   "resource": "wikipedia-opinion-polling-2026.html.headers",
+   "retrievedAt": "2026-10-09T18:36:40Z",
+   "schemaVersion": 1,
+   "sha256": "d6d0af06f021090669e8823fc9905390c7286b3365e79020a56f5e035e362002",
+   "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2026_New_Zealand_general_election"
+  },
+  {
+   "dateOrElection": "2026 general election cycle; electorate poll refresh 2026-10-10",
+   "id": "polling-electorate-live-2026-10-10-fetch-log.tsv",
+   "licence": "Wikipedia text is CC BY-SA; bytes preserved unchanged for research provenance. Poll figures originate from the named pollsters and press reports.",
+   "limitations": [
+    "Aggregator transcription; fieldwork dates, sample sizes and shares unverified against primary releases.",
+    "Wikipedia revision 1379243489, last modified Fri, 09 Oct 2026 18:02:04 GMT; fetch log"
+   ],
+   "organisation": "Wikipedia (REST HTML, Opinion polling for the 2026 New Zealand general election, Electorate polling)",
+   "processingScript": "scripts/polling/electorate_refresh/run.py",
+   "rawPath": "data/raw/polling/electorate-live/2026-10-10/fetch-log.tsv",
+   "resource": "fetch-log.tsv",
+   "retrievedAt": "2026-10-09T18:36:40Z",
+   "schemaVersion": 1,
+   "sha256": "a6871f96385dbfb90fc0f1c74c1c1e150599a873ed7e7e8c8ce70865a6bad5f3",
+   "url": "https://en.wikipedia.org/api/rest_v1/page/html/Opinion_polling_for_the_2026_New_Zealand_general_election"
+  }
+ ]
+}

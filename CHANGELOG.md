@@ -668,3 +668,131 @@ Completed Stage36:26 accepted forecast cases/six data abstentions, archived befo
 - **TypeScript:** the release gate and the append-only publisher (`src/release/`, `npm run release:build` / `release:publish`). Synthetic data never goes under `public/`, and model releases go only to `public/forecasts`.
 - **Rehearsal:** at production size with labelled synthetic stand-ins; published to a gitignored archive and read back by the loader. Report: `data/processed/release-rehearsal/report.json`.
 - `.gitignore` gains `node_modules` (as a file, the cause of the Stage74 symlink slip) and `.release-build/`.
+
+## CI: pin Stage63 to its first full run, 2026-10-07
+
+- `stage63` in `.github/validation/frozen-pipelines.json` now carries a durable pin to the Verify run of main at the merge of PR #91 (run 37573315688, head `e0bc9560`), recorded with `python3 -m scripts.validate.ci_frozen --record-pin 37573315688 --pipeline stage63`; evidence in `.github/validation/evidence/frozen-run-37573315688.json`. The run executed Stage63's replaced commands (bounded `evaluation --check` replay and `verification --check`) successfully and the main run on that commit was green.
+- `test_ci_frozen` no longer exempts `stage63` from the pin tests. No pipeline code, output or statistical check changed; hosted CI does not run the complete Stage63 replay (`evaluation --check --full`), which was run locally for PR #91.
+
+## Config: release policy, Māori seats and MMP rules version, 2026-10-07
+
+- `config/nowcast-2026.json` (version 2026-10-07.8) records James's decisions of 2026-10-07 (D114): `release.policyApprovedBy`; `mmp.rulesVersion` = `electoral-act-1993-2026-01-01` with source `mmp-electoral-act-1993-v238-2026-01-01`; `maori.unpolledSeats` = `labelled-fallback`; `maori.presentation` = `labelled-range`; release cadence and the after-election freeze.
+- Removed the `uncalibrated` label end to end: the `calibrationStatus` field in the v2 export schema, the release-gate check, the site banner and the exporter. No fixture or archived snapshot carried the field.
+- Site copy now says "Forecast if the election were held today, as of <refresh date>" instead of "nowcast" (page label, banner, notices); the estimand and field names are unchanged.
+- Removed the staleness windows (`release.staleDays`), `assemble.staleness`, the publisher's "Stale input" limitations and the `--as-of` argument of the production runner.
+- Kept the seat-versus-national reconciliation (1.0pp) as an internal build gate only; it is never exported or shown.
+- Regenerated `data/processed/nowcast-assembly/development-gate.json` and `data/processed/release-rehearsal/report.json` (config version and pending fields changed, staleness key removed). No model input, draw or statistic changed.
+
+## Config: 2026 general-seat classification recorded, 2026-10-10
+
+- Added `config/general-seat-classification-2026.json`: all 64 general seats classified (13 `exceptional`, 51 `ordinary`) in the D107 schema, author James, recordedAt 2026-10-10, a one-line reason per seat and sources on every exceptional seat. Release-checklist item 4 is done.
+- Exceptional: Auckland Central, Epsom, Glendene, Kapiti, Mt Albert, Northland, Papakura, Port Waikato, Tāmaki, Wellington Bays, Wellington North, Whangārei, Wigram. 13 of 64 is 20.3%, against 14.8% flagged in the 2014–2023 audit (12.5%, 9.4%, 15.4%, 21.9% by election).
+- `docs/general-seat-classification-2026-draft.md` is renamed `docs/general-seat-classification-2026.md` and now records the approved list, the rule applied to candidate changes, the close calls and the one bounded scandal check (nothing found touching a major-party general-seat candidate). New appendix `docs/general-seat-classification-2026-historical-flags.md` lists the 2014–2023 flags by year with the repository's evidence for each.
+- Regenerated `data/processed/nowcast-assembly/development-gate.json`: with the classification present the live development gate now simulates all 64 general seats (67 of 71 seats simulated with the three polled Māori seats); the only blocker left is `maori.unpolledFallbackModel` for the four unpolled Māori seats. The gate stays unpublishable. No model input, scale or fit changed, and `config/nowcast-2026.json` is unchanged.
+- Tests: the Stage73 live-gate test now expects the single Māori-fallback blocker; a new Stage72 test pins the recorded classification (valid, 64 seats, James, the 13 exceptional ids).
+- Updated `docs/release-checklist.md` (item 4), `docs/nowcast-specification.md` §4 and the assembly row, and the path in the Stage50, Stage72 and Stage73 docs.
+
+## Electorate poll refresh 2026-10-10
+
+- 12 new electorate poll(s) added to the dated live-inputs file `data/processed/polling/electorate-live/2026-10-10/polls.json` (12 in total) from Wikipedia revision 1379243489: Auckland Central (Taxpayers' Union–Curia), Hauraki-Waikato (Whakaata Māori–Curia), Hutt South (Victor Consulting), Kapiti (Community Engagement Limited), Mt Albert (Curia), Mt Albert (Taxpayers' Union – Curia), Te Tai Hauāuru (Whakaata Māori–Curia), Te Tai Tonga (Whakaata Māori–Curia), Waiariki (Whakaata Māori–Curia), Waitaki (Taxpayers' Union–Curia), Wellington Bays (Taxpayers' Union–Curia), West Coast-Tasman (Taxpayers' Union–Curia). 3 item(s) flagged for human review. Wikipedia aggregator evidence only; not read by any model layer. Data change only, no refit.
+
+## Stage82 — weekly poll refresh on a GitHub Actions schedule, with electorate polls, 2026-10-10
+
+- New workflow `.github/workflows/poll-refresh.yml` ("Poll refresh") runs every Thursday 06:55 NZDT (`55 17 * * 3` UTC; also `workflow_dispatch` with an optional date): it captures the Wikipedia opinion-polling page once, reads the electorate polls (new `scripts/polling/electorate_refresh/`), then runs the unchanged Stage70 national refresh on the same capture, and opens one pull request per refresh (published, updated or blocked; nothing when neither changed). It never merges, never pushes to `main`, never edits earlier runs, does not run on `pull_request` or `push`, and stops cleanly from election day (the existing 7 November guard is unchanged).
+- Electorate polls (docs `docs/stage82-electorate-poll-refresh.md`): a header-driven reader that expands merged cells before reading, so each number sits under its own party; only electorate-vote shares are used (party-vote rows stored unused, Lead ignored); `~30` becomes 30 flagged approximate, dashes and blanks are missing, never zero; seat names matched to the official list ("Mount Albert" is "Mt Albert"); revised or removed published rows, unknown seats and any unrecognised layout stop the run. Output is a dated append-only live-inputs file (`data/processed/polling/electorate-live/`), `aggregator_only`, **read by no model layer yet**. First run 2026-10-10: 12 polls (8 general, 4 Māori).
+- Uses the repository secret `POLL_REFRESH_TOKEN` (fine-grained token) so Verify starts on the pull request; falls back to `GITHUB_TOKEN` and says in the PR body that CI must be started manually. Setup steps: `docs/stage70-weekly-poll-refresh.md`. The Claude routine `trig_01LB91p9NumjAUQjJB6QKdVs` keeps running until the workflow has merged and done one good run.
+- Frozen-pipeline selector (`scripts/validate/ci_frozen.py`, James approved 2026-10-10): `.github/workflows/poll-refresh.yml` is exempt from the "CI configuration changed" full replay (`NON_VERIFY_WORKFLOWS`), because without it a new workflow file forced the 3-hour full replay, which exceeded the job limit on this PR's first Verify run. The exemption lapses if `ci.yml` names the file; any other `.github/` path still forces full. One test added in `scripts/tests/test_ci_frozen.py`.
+- Not touched: Verify, the frozen-pipeline registry, every statistical module, `scripts/polling/weekly_refresh/`, `config/nowcast-2026.json`, `data/sources.json`, Stage66/71/78.
+
+## Stage50 part 2 — official 2026 nominations applied to the live roster, 2026-10-10
+
+- **Preserved:** the Electoral Commission's official electorate-candidate spreadsheet (469 candidates) and party-list PDF, supplied unchanged by James, under `data/raw/nominations/2026-10-10/`. Registered with checksums in the new standalone `data/processed/nominations-2026/source-registry.json`; `data/sources.json` is not touched.
+- **Transcribed** by `scripts/nominations_2026/extract.py` (standard library only):
+  - `official-table.json`: 469 rows, 71 electorates;
+  - `party-lists.json`: the 17 party headings, exactly the registered parties.
+- **Affiliations:**
+  - one new alias (`Alliance Party`);
+  - 11 unregistered printed affiliations (17 candidates), listed explicitly, which get no ballot group, like independents.
+- **Refreshed outputs:**
+  - roster snapshot `data/processed/forecast-readiness/snapshots/2026-10-10/` (71 official complete slates);
+  - Stage42 features and their Stage75 recentring, plus the reconciliation, under `data/processed/nominations-2026/2026-10-10/`.
+- **Config** (2026-10-10.1): the roster now points at the official list. `roster.snapshotId` is no longer pending; `apply_config` edits only those values.
+- **Validator:** a non-null roster's files must exist, and a null roster must be pending.
+- **Classification draft:** rechecked. Christchurch Central and Wigram are added as candidate changes, and the Epsom fact is corrected.
+- **Regenerated:** the development gate and the rehearsal report (config version only).
+
+## Stage78 — no-poll fallback for the unpolled Māori seats, 2026-10-10
+
+- **Question:** can Waiariki, Ikaroa-Rāwhiti, Tāmaki Makaurau and Te Tai Tokerau get candidate shares and winners without a seat poll, and does borrowing the polled seats' swing help? Frozen design `docs/stage78-maori-fallback-design.md` committed before any score.
+- **Model** (`scripts/maori_seat_fallback/`): the 2023 official result carried forward by party label; Stage66 estimators with `b = 0` calibrated on the 2014→2017, 2017→2020 and 2020→2023 changes (`sigma` 0.257, `tau` 0.443 on 19 contrasts); entrants resampled from history; one split-incumbent record (the Te Tai Tokerau Party candidate, `phi` uniform); optional Gaussian posterior of the shared shift from the polled seats' simulated outcomes (arms FC with the Stage66 layer, FP with the Stage71 layer).
+- **Result:** the frozen swing rule returns `mixed_report_to_james` for both swing arms (leave-one-election-out, 21 contests: log score -0.993 / -0.995 against -1.003 for 2023-only, Brier no better). Only 2023-only passes the calibration class; the 2023 wave is unanticipated in the chronological check. James chose 2023-only (F) on 2026-10-09; recorded in `inputs-2026.json`.
+- **Artifacts:** `data/processed/maori-seat-fallback/` (design contract, calibration, scores, findings, 2026 forecast, 200-draw preview, summary, manifest); judgement inputs `data/source-plans/maori-seat-fallback/inputs-2026.json`.
+- **Not touched:** Stage66/71, the configuration, the assembly, the draw bank, TypeScript, `data/sources.json`. 35 new tests.
+
+## Stage79 — general-seat candidate polls: frozen update, scoring and assembly hook switched on, 2026-10-10
+
+- **Preserved:** the Wikipedia opinion-polling pages for 2014, 2017, 2020, 2023 and 2026 (`data/raw/polling/seat-polls/2026-10-09/`; 2011 was rate-limited and is not needed), registered with checksums in the new standalone `data/processed/seat-polls/source-registry.json`. `data/sources.json` untouched.
+- **Transcribed:** 22 general-seat candidate-vote polls to `data/source-plans/seat-polls/polls.json`; every number is checked against the preserved table text (`scripts/seat_polls/data.py`).
+- **Frozen first:** `docs/stage79-seat-poll-design.md` and `data/processed/seat-polls/design-contract.json` (commit `294ddc5`) before any score. Four pre-scoring amendments are recorded in the document.
+- **Scored:** leave-one-seat-election-out on 9 eligible polls (7 seat-elections): +1.85 nats, 80% coverage 0.78, frozen finding `adopt`. Weak: −0.02 nats without the four polls whose sample size is assumed. Findings in `docs/stage79-seat-poll-findings.md`.
+- **Wired and switched on (D117, James 2026-10-09):** `scripts/seat_polls/apply.py` and `general.simulate_with_poll` update the candidate National/Labour balance of a polled seat before the unchanged Stage47 inversion; `assemble` uses it when `config.seatPolls.enabled` is true, which the config now sets (version 2026-10-10.2). The config validator refuses `enabled: true` unless the frozen finding is `adopt`. The development gate, synthetic fixture bank and rehearsal report were regenerated; the TypeScript draw-bank schema accepts the optional per-seat `seatPoll` record (general seats only).
+- **Readout:** `data/processed/seat-polls/readout-2026.json` (2,048 draws, five eligible 2026 seats). Internal; not a forecast.
+
+## Stage80 — Māori fallback wired into the nowcast assembly, 2026-10-10
+
+- **What:** `maori.unpolledFallbackModel = stage78-f` (Stage78 arm F, James's choice of 2026-10-09) is registered in `config/nowcast-2026.json` (`configVersion` 2026-10-10.2, pending list empty, decisions D115 and D118). The assembly (`scripts/nowcast_assembly/maori.py`) simulates the four unpolled seats with Stage78's own draws (`scripts/maori_seat_fallback/draws.py`, seeded from the configured namespace) and gives all seven Māori seats the official roster candidate ids, names and ballot groups; fallback seats carry the export label `Stage78 no-poll fallback: 2023 result carried forward, no seat poll (D115)`.
+- **Result:** with James's classification (#104, #105) merged, the live development gate has no blocker: all 71 seats are simulated and every Python gate check passes at the development draw count. The Stage77 rehearsal no longer uses invented winners for the unpolled seats.
+- **Not touched:** Stage66/71/78 code and outputs, the pinned seat-poll file (the Waiariki poll stays recorded, not adopted), TypeScript, `data/sources.json`. 17 new tests plus updated Stage72/73/77 assertions.
+
+## Stage81 — how the local party vote moves with the national change, 2026-10-10
+
+- **Question:** should a general seat's 2023 party vote move proportionally with the national change (the current layer), by the same points, by the same log-odds, or between? Frozen design `docs/stage81-party-vote-elasticity-design.md` (with a knock-on amendment) committed before any closed-vector score.
+- **Backtest:** closed persistent-party compositions of the Stage5 general-seat records, 2014 to 2017, 2017 to 2020 (evaluated at both source bounds) and 2020 to 2023, arms P, A, L and H (a power-family arm halfway between P and A). Metrics: National minus Labour margin (M1), minor-party composition (M2), lead calls, all parties, the Stage44 residual scale (M5) and large movers in their strongest seats (D1).
+- **Finding:** `carry_mixture` of P, L, H, evidence weak; no arm beats another on the margin and A is rejected on minor parties. The 2026 National electorate count is invariant across arms (29.61 P, 29.65 A, 29.79 L, 29.65 H at 256 draws, general seats); the arms move Northland (NZ First win probability 0.43 P to 0.32 A) and a few minor-party-strong seats.
+- **Code:** `scripts/party_vote_elasticity/`; an optional `localParty` configuration key (`transform` P, A, L, H or `mixture` with `arms`) read by `scripts/nowcast_assembly/general.py` and `assemble.py`. The committed configuration has no such key, so the frozen layer runs and the development gate is reproduced.
+- **Not touched:** `config/nowcast-2026.json`, the Stage5 records, the candidate fit, the noise scales, the draw bank, the export, TypeScript and `data/sources.json`. 24 new tests.
+
+## Stage83 — ordinary-seat minor-candidate spread, 2026-10-10
+
+- **Question:** do ordinary-seat multipliers on the candidate within-remainder noise (and separately the major-mass noise), fitted on earlier elections only, beat the D107-only control on the 257 historical candidate records, with the 38 Stage67 flagged seats held at 1.00? Frozen design `docs/stage83-ordinary-minor-spread-design.md` committed before any score; amendment 1 (a robust scale estimator and four more arms) committed after the moment fits and before any score.
+- **Result:** `keep_control_mixed`. All four candidate arms improve minor CRPS by 2.4% to 3.7% pooled and in all three decision folds, pass the National/Labour guard and leave flagged seats bit-identical, but none brings ordinary-seat minor 80% coverage inside the registered band [0.74, 0.86] (control 0.924, best arm 0.871). No fitted arm is adopted. **James then set 0.55 on the ordinary-seat within-remainder noise as a judgement and the fitted 0.91 on the ordinary-seat major-mass noise (2026-10-10)**, wired into `config/nowcast-2026.json` (`candidateWithinSeatMultiplier`, `candidateMassSeatMultiplier`), the assembly, the gate check, the scales file, the synthetic fixture and the TypeScript draw-bank schema; balance multipliers, flags and exceptional seats are unchanged.
+- **Artifacts:** `data/processed/ordinary-minor-spread/` (design contract, input contract, fits, evaluation, decision); `scripts/ordinary_minor_spread/`; `docs/stage83-ordinary-minor-spread-findings.md`. New tests: `scripts/tests/test_stage83_ordinary_minor_spread.py`.
+- **Guard:** `test_historical_flag_isolation.py` now lists Stage83 (and its output directory) as a third owner of the historical flags, so no module outside Stage67, its predecessor and Stage83 may read them (D107 unchanged).
+- **Regenerated:** the Stage73 development gate (bank digest only), `data/processed/nowcast-config/scales-2026.json`, the Stage74 synthetic fixture. The Stage77 rehearsal report is not regenerated.
+- **Not touched:** any mean, S, R, kappa, ratio, elasticity, local-party, national, balance or Māori component, the Stage67 flags, `data/sources.json`, CI.
+
+## Docs: fold Stage50 part 2, Stage78 to Stage83, config, CI-pin and poll-refresh handoff notes — 2026-10-10
+
+- Folded the 11 pending fragments (CI Stage63 pin, release policy, 2026 classification, electorate poll refresh, Stage82 workflow, Stage50 part 2, Stage78, Stage79, Stage80, Stage81, Stage83) into the shared documents; D114 to D121 are recorded.
+- Corrected stale wording: merged status and PR numbers on the PROJECT_STATE headings from Stage67 on and on the roadmap rows from Stage50 part 2 to Stage83; final D109 to D112, D115, D116 and D121 headings; the roadmap's next-free paragraph (Stage85, D124) and decision list; release-checklist items 6 and 7 marked done.
+- Not touched: any model, data, code, workflow or CI file. The public site (#108) and the electorate-poll follow-up are not part of this fold.
+
+## Poll refresh moved to Monday 00:00 NZ time, 2026-10-10
+
+- `.github/workflows/poll-refresh.yml` now fires weekly at Monday 00:00 NZDT (`0 11 * * 0` UTC) instead of Thursday 06:55, at James's request; refresh dates are 12, 19 and 26 October and 2 November (the last before election day). Wording is date-only: the PR text gives the Wikipedia last-modified as a date, and the site wording ("Most recently refreshed <date>") is the site build's.
+- A same-date rerun of a published electorate run (second manual dispatch) now exits 0 as `ELECTORATE_NO_CHANGE` and edits nothing; a blocked date still fails. Refresh PRs get the `poll-refresh` label; review-flag lines in the PR body read plainly. Selector, registry and statistical code untouched.
+
+## Stage79 follow-up — new general-electorate polls are data-only (D123), 2026-10-10
+
+- `scripts/seat_polls/live.py` now reads the newest run of the Stage82 live-inputs file (`data/processed/polling/electorate-live/`, hash-checked against `index.json`) instead of the pinned transcription, which still serves the historical scoring. A new electorate poll needs no refit and no stage regeneration; the fitted inflation, half-life, cap and allowance are fixed.
+- Pollsters in one seat combine by inverse variance (age-discounted relative to the freshest source); an older poll of one source beyond 14 days is superseded; same-source polls within 14 days merge as before.
+- `data/source-plans/seat-polls/sponsor-groups.json` holds the Labour-aligned sponsor list as data.
+- On the current cutoff the inputs equal the pinned ones; only poll ids in the seat records change, so the development gate, synthetic fixture, rehearsal report and the 2026 readout were regenerated for those ids. Config unchanged.
+
+## Stage85 — per-seat evidence block in the export, 2026-10-10
+
+- The draw bank and the snapshot gain an optional `seatEvidence` array: per predicted seat, the D107 class and multipliers, the 2023 party-vote baseline by national group, the 2026 polls found (used with `shareOfPoll` and `weight`, or unused with a reason) and the National/Labour poll update. Display data for the site's seat pages. Snapshot schema 2 and bank schema 3 are unchanged in version (the field is optional).
+- No forecast number changes: `bank_digest` leaves the block out, the development gate reproduces, and a live bank built on main and on this branch is identical once the block is removed. The synthetic fixture was regenerated and differs only by the added key.
+- `scripts/seat_polls/live.py` gains `combine()` (the `inputs()` result plus per-poll detail); new `scripts/nowcast_assembly/evidence.py`; `src/types/export.ts`, `drawBank.ts`, `fromBank.ts`. No site code, config, data or registry change.
+
+## Stage86 — Māori seat polls come from the weekly refresh (D125), 2026-10-10
+
+- `scripts/maori_seat_layer/live.py` reads the Māori rows of the newest Stage82 live-inputs run (hash-checked against `index.json`) in the form the Stage66 simulation reads; `scripts/nowcast_assembly/maori.py` uses it instead of the pinned `polls-2026.json`. A new Māori seat poll is a data-only addition: no refit, no stage regeneration. Poll parties are resolved to the one official candidate of that ballot group (an independent column only when the seat has exactly one independent).
+- Waiariki is now polled (21 September to 1 October Whakaata Māori–Curia) and leaves the Stage78 fallback; three seats remain on the fallback. Māori Party win probability: Hauraki-Waikato 0.881 to 0.884, Te Tai Hauāuru 0.772 to 0.745, Te Tai Tonga 0.106 to 0.118, Waiariki 0.957 to 0.966. The only cause is the poll shares (published ex-undecided and rounded, against the primary release's shares of all respondents); see `docs/stage86-maori-live-polls.md`.
+- Every officially nominated candidate now appears in a polled seat's output (audit finding): Neil Denby (Hauraki-Waikato), Christine Fisher and Tania Lee Henare (Te Tai Tonga) were missing because the Stage66 layer simulates only the candidates a poll names. Each unpolled candidate gets an equal part of the unnamed remainder (placeholder allocation); winners are unchanged, so they win with probability 0 by construction.
+- Not changed: Stage66 calibration and artifacts, Stage71, Stage78, the pinned transcription, the config, the Stage82 files, the export code, `data/sources.json`. The development gate digest and the rehearsal report are regenerated.
+
+## Stage87 — independent row order for the 2026 layer-noise groups, 2026-10-10
+
+- `scripts/nowcast_assembly/streams.py`: each non-shared key group (one per seat and layer) now takes its rows of the scrambled Sobol bank in an independent seeded permutation; the shared bank keeps its natural order. Before this, separately seeded groups were strongly correlated when paired by row (up to 0.98 at 65,536 rows). Seat odds in the assembly change; the national draws, the shared noise, the model, the configuration and every frozen stage are unchanged.
+- New test `scripts/tests/test_stage87_stream_independence.py` (production size, 7 tests, about 2 s). Regenerated: `data/processed/nowcast-assembly/development-gate.json` (digest only moves) and `data/processed/seat-polls/readout-2026.json`. The Stage77 rehearsal report (last regenerated by Stage86) is not regenerated here, so its digest is stale again until the final full run refreshes it.

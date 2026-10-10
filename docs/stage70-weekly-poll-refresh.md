@@ -31,7 +31,7 @@ If the table is unchanged (no new row, no blocker) the run removes its capture d
 
 ## Routine runbook (what the weekly session does)
 
-Fires **Thursdays 06:55 Pacific/Auckland** (after the Monday–Wednesday releases of 1News–Verian, RNZ–Reid Research, Roy Morgan and Curia are on Wikipedia; the NZ morning leaves the coordinator the day to review). Routine `trig_01LB91p9NumjAUQjJB6QKdVs` ("Weekly NZ poll refresh", cron `CRON_TZ=Pacific/Auckland 55 6 * * 4`). The project is private, so the platform does not allow a fresh session per firing: the routine wakes this Stage70 thread's own session each week, with a prompt that assumes a possibly fresh container and starts from the repository. Before the Stage70 pull request is merged it replies that it is waiting and does nothing. Steps:
+Fires **Thursdays 06:55 Pacific/Auckland** (after the Monday–Wednesday releases of 1News–Verian, RNZ–Reid Research, Roy Morgan and Curia are on Wikipedia; the NZ morning leaves the coordinator the day to review). Routine `trig_01LB91p9NumjAUQjJB6QKdVs` (superseded by the scheduled GitHub Actions workflow below once that has merged and done one good run; "Weekly NZ poll refresh", cron `CRON_TZ=Pacific/Auckland 55 6 * * 4`). The project is private, so the platform does not allow a fresh session per firing: the routine wakes this Stage70 thread's own session each week, with a prompt that assumes a possibly fresh container and starts from the repository. Before the Stage70 pull request is merged it replies that it is waiting and does nothing. Steps:
 
 1. Branch `routine/poll-refresh-<NZ date>` from the latest `main`. Read AGENTS.md and this document.
 2. Build `.venv-external`, run the command above, and read the log.
@@ -41,6 +41,38 @@ Fires **Thursdays 06:55 Pacific/Auckland** (after the Monday–Wednesday release
 6. Never edit an earlier run, `data/sources.json`, Stage59 or Stage62 files, or the shared handoff documents; never rerun other stages.
 
 After 5 November the routine's runs are refused by the election-day guard; disable the routine then.
+
+## Scheduled GitHub Actions workflow (D120, 2026-10-10)
+
+James asked for the weekly refresh to run without any Claude session, so `.github/workflows/poll-refresh.yml` ("Poll refresh") reproduces the routine runbook above on a GitHub schedule, and (Stage82, `docs/stage82-electorate-poll-refresh.md`) also refreshes the electorate polls from the same Wikipedia capture. The Claude routine `trig_01LB91p9NumjAUQjJB6QKdVs` **keeps running until this workflow has merged and has done one good run**; the coordinator then disables it. The two must not both open a pull request for the same Thursday. No statistical, Verify, selector or registry file changed.
+
+**Trigger.** `cron: '0 11 * * 0'` (GitHub cron is UTC) and `workflow_dispatch` with an optional `date` input (NZ civil date, also the poll cutoff; empty means today in Pacific/Auckland). Sunday 11:00 UTC is **Monday 00:00 NZDT** (UTC+13, changed from Thursday 06:55 on 2026-10-10 at James's request), which is in force for every remaining refresh date (12, 19 and 26 October and 2 November); NZST (UTC+12) does not return until April 2027, after the refresh has ended (a reuse after that would fire at 01:00 and need the cron adjusted). GitHub may start a scheduled run some minutes late; the run date is the New Zealand date when the job starts. The workflow never runs on `pull_request` or `push`. From 7 November 2026 (the existing election-day stop in `scripts/polling/weekly_refresh/common.py`, unchanged) a scheduled run exits cleanly with a notice instead of failing; the 2 November run is the last. Refresh wording shows dates only, never a time of day (PR text gives the Wikipedia last-modified as a date). A same-date rerun of a published electorate run (for example a second manual dispatch) is a no-op that exits 0 and edits nothing; a blocked date still fails until a human resolves it.
+
+**Steps.** Checkout of the latest `main`; Python 3.12; refuses (red run) if a `routine/poll-refresh-<date>` branch exists or any refresh pull request is still open, because a new run starts from `main` and would repeat the unmerged polls; `.venv-external` from `requirements-external.lock`; then, in order, with a 120-minute job timeout:
+
+1. `python -m scripts.polling.electorate_refresh.run --date <date>` fetches the Wikipedia page once into `data/raw/polling/weekly-refresh/<date>/` (retrying HTTP 429 with backoff) and reads its electorate tables (Stage82; stdlib, seconds).
+2. `python -m scripts.polling.weekly_refresh.run --date <date> --use-existing-capture` reads the **same** capture for the national polls (about 15 to 35 minutes on the four-core hosted runner when there are new polls). The national code is unchanged.
+
+Outcome by exit status and log line (national and electorate are independent):
+
+| Outcome | Workflow does |
+|---|---|
+| `NO_NEW_POLLS` and `ELECTORATE_NO_CHANGE` | Notices in the run log; no branch, no pull request. |
+| National `PUBLISHED` (exit 0) | Runs `run --check`, `unittest scripts.tests.test_weekly_refresh`. |
+| Electorate `ELECTORATE_UPDATED` (exit 0) | Runs `electorate_refresh.run --check`, `unittest scripts.tests.test_electorate_refresh`. |
+| Either published or updated | Also runs `fold_doc_fragments --check`; refuses to continue if anything outside the allowed paths changed; commits the raw captures, dated run directories, indexes and fragments to `routine/poll-refresh-<date>` and opens one pull request ("Polls: weekly national poll refresh <date>", "... and electorate polls", or "Polls: electorate poll update <date>") with the sections `Scope`, `Changes and limits`, `Local validation`, `CI and boundaries` and `Final published head and hosted validation` (new polls, headline estimate and change, review flags, gate results, check results). If a check fails the pull request is opened as a **draft** with the failure listed and the run ends red. |
+| Blocked: national exit 2 or 3, electorate exit 2 | Commits the raw capture, `blocked.json` and `review.json` of the blocked step (plus whatever the other step published) and opens "Polls: weekly refresh <date> blocked (<reason>)" naming each blocker. |
+| Any other failure (network, exception) | Red run, no pull request; nothing is pushed. A failed scheduled run emails the repository owner. |
+
+It never merges, never pushes to `main`, never edits an earlier run, `data/sources.json`, Stage59 or Stage62 files or the shared handoff documents, and never edits `config/nowcast-2026.json` (adoption stays a separate reviewed pull request). The final step of the workflow carries a commented stub where a later stage may push a reviewed result to the public repository once it exists; nothing is pushed there now. The PR-body, change-guard and election-day logic is in `scripts/polling/refresh_workflow/helper.py` (a new directory, so the `weekly_refresh` code hashes recorded in each run's input contract are unchanged), tested by `scripts/tests/test_weekly_refresh_workflow.py`.
+
+**Token (setup for James, one time).** A pull request opened with the built-in `GITHUB_TOKEN` does not start Verify, so the workflow uses a repository secret named **`POLL_REFRESH_TOKEN`** when it exists:
+
+1. GitHub, Settings, Developer settings, Personal access tokens, **Fine-grained tokens**, Generate new token. Resource owner `jamesfeng24`; Repository access, **Only select repositories**, `nz-election-model-2026`; Repository permissions **Contents: Read and write** and **Pull requests: Read and write** (Metadata is added automatically); no other permissions. Set the expiry after 7 November 2026 (the refresh ends on 5 November), for example 60 days.
+2. Repository `nz-election-model-2026`, Settings, Secrets and variables, Actions, **New repository secret**: name `POLL_REFRESH_TOKEN`, value the token.
+3. After this workflow is merged, run Actions, Poll refresh, Run workflow once (it is the first real test; with no new polls it ends with no pull request).
+
+Without the secret the workflow falls back to `GITHUB_TOKEN`: it works only if Settings, Actions, General, Workflow permissions has **Allow GitHub Actions to create and approve pull requests** ticked, and the pull request body then says plainly that CI must be started manually (close and reopen the pull request once on the GitHub page). A GitHub App token would also work but is not wired in.
 
 ## Limits
 

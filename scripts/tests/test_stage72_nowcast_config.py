@@ -31,17 +31,47 @@ class Scales2026(unittest.TestCase):
         self.assertEqual(by_class['ordinary']['shared'], by_class['exceptional']['shared'])
         self.assertEqual(by_class['exceptional']['multiplier'], 1.0)
 
+    def test_d121_changes_only_the_candidate_within_scales(self):
+        saved = read(scales.OUTPUT)
+        within = saved['layers']['candidate']['scales']['within']
+        by_class = saved['candidateWithinByClass']
+        for part in ('seat', 'shared'):
+            self.assertAlmostEqual(by_class['ordinary'][part], 0.55 * within[part], places=12)
+            self.assertEqual(by_class['exceptional'][part], within[part])
+        mass = saved['layers']['candidate']['scales']['mass']
+        for part in ('seat', 'shared'):
+            self.assertAlmostEqual(saved['candidateMassByClass']['ordinary'][part], 0.91 * mass[part], places=12)
+            self.assertEqual(saved['candidateMassByClass']['exceptional'][part], mass[part])
+        self.assertEqual(saved['layers']['candidate']['scales']['balance'], read(scales.STAGE45)['descriptive']['candidate']['scales']['balance'])
+
 
 class Config(unittest.TestCase):
     def setUp(self):
         self.config = read(V.CONFIG)
 
     def test_live_config_is_valid_with_explicit_pending_fields(self):
-        pending = V.check_config(self.config)
-        self.assertEqual(pending, ['maori.unpolledFallbackModel'])
+        self.assertEqual(V.check_config(self.config), [])   # Stage80 registered the last pending field
+        self.assertEqual(V.check_config(self.config, require_complete=True), [])
         self.assertEqual(self.config['roster']['snapshotId'], 'nz-2026-official-nominations-2026-10-10')   # Stage50 part 2
+        self.assertEqual(self.config['maori']['unpolledFallbackModel'], 'stage78-f')   # Stage80 / D118: Stage78 arm F, James 2026-10-09
+        pending = copy.deepcopy(self.config)
+        pending['roster']['snapshotId'] = None
+        pending['pending'] = {'roster.snapshotId': 'test'}
+        self.assertEqual(V.check_config(pending), ['roster.snapshotId'])
         with self.assertRaises(V.ConfigError):
-            V.check_config(self.config, require_complete=True)
+            V.check_config(pending, require_complete=True)
+
+    def test_fallback_model_is_registered_or_explicitly_pending(self):
+        for edit in (lambda c: c['maori'].update(unpolledFallbackModel='stage78-fc'),       # not a registered model
+                     lambda c: c['maori'].update(unpolledFallbackModel=None),               # null but not listed as pending
+                     lambda c: c['maori'].update(unpolledSeats='withhold')):                # a model needs the labelled-fallback decision
+            broken = copy.deepcopy(self.config); edit(broken)
+            with self.assertRaises(V.ConfigError):
+                V.check_config(broken)
+        pending = copy.deepcopy(self.config)
+        pending['maori']['unpolledFallbackModel'] = None
+        pending['pending'] = {'maori.unpolledFallbackModel': 'test'}
+        self.assertEqual(V.check_config(pending), ['maori.unpolledFallbackModel'])
 
     def test_release_policy_is_recorded_as_james_decided(self):
         """D114 (James, 2026-10-07): no calibration label or staleness windows, internal reconciliation gate, MCSE 0.01."""
@@ -63,6 +93,10 @@ class Config(unittest.TestCase):
                      lambda c: c['national'].update(forbiddenStateKeys=[]),
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.79, 'exceptional': 1.0}),
                      lambda c: c['uncertainty'].update(candidateBalanceSeatMultiplier={'ordinary': 0.60, 'exceptional': 1.5}),
+                     lambda c: c['uncertainty'].update(candidateWithinSeatMultiplier={'ordinary': 0.80, 'exceptional': 1.0}),
+                     lambda c: c['uncertainty'].update(candidateWithinSeatMultiplier={'ordinary': 0.55, 'exceptional': 0.9}),
+                     lambda c: c['uncertainty'].update(candidateMassSeatMultiplier={'ordinary': 0.75, 'exceptional': 1.0}),
+                     lambda c: c['uncertainty'].update(candidateMassSeatMultiplier={'ordinary': 0.91, 'exceptional': 0.9}),
                      lambda c: c.update(intervalLevels=[0.9]),
                      lambda c: c['national'].update(modelStateAsOf=(datetime.date.fromisoformat(c['national']['dataCutoff']) + datetime.timedelta(days=1)).isoformat()),   # state dated after the cutoff
                      lambda c: c['roster'].update(snapshotId=None),   # null roster without a pending entry

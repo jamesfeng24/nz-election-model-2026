@@ -99,6 +99,54 @@ class SeatLayers(unittest.TestCase):
         self.assertTrue(np.allclose(wide[:, n] + wide[:, l], narrow[:, n] + narrow[:, l], atol=1e-14))
         self.assertFalse(np.allclose(wide[:, n], narrow[:, n]))
 
+    def test_within_multiplier_changes_only_the_within_remainder(self):
+        """D121: the within multiplier leaves the National/Labour pair and their mass alone and narrows the other candidates."""
+        c = config()
+        draws, _, groups = national.load(c, COUNT)
+        keys, national2023, base = general.baseline(c)
+        continuing = general.relationships(c)
+        fine = general.fine_national(draws, groups, keys, national2023, continuing)
+        parameters, _ = general.fold_parameters(c)
+        scales = read(c['uncertainty']['scales'])['layers']
+        seat = GENERAL[3]
+        party = general.party_row(seat, keys, base[seat], national2023, continuing)
+        candidate = general.candidate_row(seat, synthetic_slates()[seat], party, parameters)
+        with streams.substituted([party, candidate], COUNT, 'synthetic-test'):
+            _, wide = general.simulate(party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0)
+            _, narrow = general.simulate(party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0, within=0.55)
+            _, same = general.simulate(party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0, within=1.0)
+        n, l = candidate['groups'].index('national'), candidate['groups'].index('labour')
+        rest = [i for i in range(len(candidate['ids'])) if i not in (n, l)]
+        self.assertTrue(np.array_equal(wide, same))
+        self.assertTrue(np.allclose(wide[:, n], narrow[:, n], atol=1e-14) and np.allclose(wide[:, l], narrow[:, l], atol=1e-14))
+        self.assertFalse(np.allclose(wide[:, rest], narrow[:, rest]))
+        self.assertTrue(np.allclose(narrow.sum(axis=1), 1, atol=1e-12))
+
+    def test_mass_multiplier_changes_only_the_major_mass(self):
+        """D121: the mass multiplier narrows the National+Labour total against everyone else and nothing inside either group."""
+        c = config()
+        draws, _, groups = national.load(c, COUNT)
+        keys, national2023, base = general.baseline(c)
+        continuing = general.relationships(c)
+        fine = general.fine_national(draws, groups, keys, national2023, continuing)
+        parameters, _ = general.fold_parameters(c)
+        scales = read(c['uncertainty']['scales'])['layers']
+        seat = GENERAL[3]
+        party = general.party_row(seat, keys, base[seat], national2023, continuing)
+        candidate = general.candidate_row(seat, synthetic_slates()[seat], party, parameters)
+        with streams.substituted([party, candidate], COUNT, 'synthetic-test'):
+            args = (party, candidate, fine, scales['local_party']['scales'], scales['candidate']['scales'], 1.0)
+            _, wide = general.simulate(*args)
+            _, narrow = general.simulate(*args, mass=0.5)
+            _, same = general.simulate(*args, mass=1.0)
+        n, l = candidate['groups'].index('national'), candidate['groups'].index('labour')
+        rest = [i for i in range(len(candidate['ids'])) if i not in (n, l)]
+        self.assertTrue(np.array_equal(wide, same))
+        self.assertTrue(np.allclose(wide[:, n] / wide[:, l], narrow[:, n] / narrow[:, l], rtol=1e-9))
+        self.assertTrue(np.allclose(wide[:, rest] / wide[:, rest].sum(axis=1, keepdims=True),
+                                    narrow[:, rest] / narrow[:, rest].sum(axis=1, keepdims=True), atol=1e-9))
+        self.assertFalse(np.allclose(wide[:, n] + wide[:, l], narrow[:, n] + narrow[:, l]))
+
     def test_slate_and_maori_codes_fail_closed(self):
         c = config()
         keys, national2023, base = general.baseline(c)
@@ -146,7 +194,7 @@ class Bank(unittest.TestCase):
         passed, checks = A.gate(self.bank, self.config)
         failed = {c['check'] for c in checks if not c['passed']}
         self.assertFalse(passed)
-        self.assertEqual(failed, {'configComplete', 'provenanceLive'})
+        self.assertEqual(failed, {'provenanceLive'})   # Stage80 registered the last pending config field
         broken = copy.deepcopy(self.bank)
         broken['seats'][5] = {'electorateId': broken['seats'][5]['electorateId'], 'scope': 'general', 'status': 'unavailable'}
         failed = {c['check'] for c in A.gate(broken, self.config)[1] if not c['passed']}
@@ -154,19 +202,17 @@ class Bank(unittest.TestCase):
         broken['seats'].pop()
         self.assertIn('universe71', {c['check'] for c in A.gate(broken, self.config)[1] if not c['passed']})
 
-    def test_live_inputs_are_blocked_not_defaulted(self):
+    def test_live_inputs_simulate_every_seat_and_nothing_is_defaulted(self):
         report = read('data/processed/nowcast-assembly/development-gate.json')
-        self.assertFalse(report['publishable'])
         self.assertEqual(report['provenance'], 'live')
         self.assertEqual(set(report['seatStatus']), set(GENERAL + MAORI))
-        reasons = {b['reason']: b['seats'] for b in report['blockers']}
-        self.assertEqual(sum(reasons.values()) + sum(v == 'simulated' for v in report['seatStatus'].values()), 71)
-        # Stage50 part 2 set the official roster and James's classification (D107) is recorded: all 64 general seats
-        # simulate on the live inputs; only the four unpolled Maori seats wait, on the fallback model (D114).
-        self.assertTrue(all(report['seatStatus'][seat] == 'simulated' for seat in GENERAL))
-        self.assertEqual(len(reasons), 1)
-        self.assertTrue(any('fallback' in r and n == 4 for r, n in reasons.items()))
-        self.assertFalse(any('Stage50' in r or 'classification' in r for r in reasons))
+        # Stage50 part 2 (official roster), James's classification (D107) and the registered Stage78 fallback (Stage80, D118)
+        # leave nothing pending: all 71 seats simulate on the live inputs and no blocker remains. A missing input would put
+        # its seats back to `unavailable` with a reason (tested in test_stage80_maori_wiring and the pending-config tests).
+        self.assertTrue(all(v == 'simulated' for v in report['seatStatus'].values()))
+        self.assertEqual(report['blockers'], [])
+        self.assertTrue(report['publishable'])
+        self.assertTrue(all(c['passed'] for c in report['checks']))
 
 
 if __name__ == '__main__':

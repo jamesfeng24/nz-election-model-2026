@@ -1,0 +1,1222 @@
+{
+  "arms": {
+    "S1_dropAssumedSampleSize": {
+      "coverage": {
+        "50": {
+          "model": 0.8,
+          "modelPlusPoll": 0.4
+        },
+        "80": {
+          "model": 1.0,
+          "modelPlusPoll": 0.8
+        },
+        "90": {
+          "model": 1.0,
+          "modelPlusPoll": 0.8
+        }
+      },
+      "improved": 3,
+      "inflationRange": [
+        3.5192593547590794,
+        6.646082601267972
+      ],
+      "meanCRPS": {
+        "model": 0.10721460921056732,
+        "modelPlusPoll": 0.12756232540493775
+      },
+      "meanLogScoreGain": -0.004476135578449036,
+      "polls": 5,
+      "records": [
+        {
+          "actual": 0.7298140506099482,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.08551165335904926,
+          "crpsModelPlusPoll": 0.06301175757428917,
+          "exceptional": true,
+          "id": "2023:Ilam:Taxpayers':2023-08-23",
+          "inflation": 6.618221262122586,
+          "logScoreModel": 0.09302790336943045,
+          "logScoreModelPlusPoll": 0.3940047177934539,
+          "modelCentre": 0.7029068112881858,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.4005517788833401,
+          "pollValue": 0.7884573603642703,
+          "posteriorCentre": 0.741426850661757,
+          "posteriorSD": 0.268776086033999,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Ilam",
+          "weight": 0.4502605744740851
+        },
+        {
+          "actual": 0.5389497357035673,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0883760367807567,
+          "crpsModelPlusPoll": 0.11464704093607687,
+          "exceptional": true,
+          "id": "2023:Napier:Taxpayers':2023-08-20",
+          "inflation": 3.5192593547590794,
+          "logScoreModel": 0.08309914683582798,
+          "logScoreModelPlusPoll": 0.240244249663085,
+          "modelCentre": 0.4812136898337396,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.20520296106558675,
+          "pollValue": 0.2602830982636665,
+          "posteriorCentre": 0.34865533489169576,
+          "posteriorSD": 0.19022191216358247,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Napier",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.5389497357035673,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0883760367807567,
+          "crpsModelPlusPoll": 0.14266496030843748,
+          "exceptional": true,
+          "id": "2023:Napier:Curia:2022-11-09",
+          "inflation": 3.5192593547590794,
+          "logScoreModel": 0.08309914683582798,
+          "logScoreModelPlusPoll": 0.01854174790759533,
+          "modelCentre": 0.4812136898337396,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.20815912250924892,
+          "pollValue": 0.19574457712609533,
+          "posteriorCentre": 0.30993222220915306,
+          "posteriorSD": 0.19137471955959745,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Napier",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.4685297896274351,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": false
+            }
+          },
+          "crpsModel": 0.18650148875412945,
+          "crpsModelPlusPoll": 0.26156465106221555,
+          "exceptional": false,
+          "id": "2023:Northland:Taxpayers':2023-09-10",
+          "inflation": 4.05731063819389,
+          "logScoreModel": -0.2425632970303384,
+          "logScoreModelPlusPoll": -1.10512534407228,
+          "modelCentre": 0.7711014486196943,
+          "modelSD": 0.2651578742971254,
+          "pollLeaderWon": null,
+          "pollSD": 0.26723949456995444,
+          "pollValue": 0.8960880245566357,
+          "posteriorCentre": 0.833106059092359,
+          "posteriorSD": 0.18957822979992564,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Northland",
+          "weight": 0.49609016014605767
+        },
+        {
+          "actual": -0.0683984355054944,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0873078303781445,
+          "crpsModelPlusPoll": 0.05592321714366964,
+          "exceptional": true,
+          "id": "2023:Wellington Central:Newshub-Reid:2023-09-03",
+          "inflation": 6.646082601267972,
+          "logScoreModel": 0.08680568485409612,
+          "logScoreModelPlusPoll": 0.5334225356807446,
+          "modelCentre": -0.11697114134391108,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.3015136264827611,
+          "pollValue": -0.0887954987831312,
+          "posteriorCentre": -0.10031704231016565,
+          "posteriorSD": 0.2318091642035571,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Wellington Central",
+          "weight": 0.5910814277906731
+        }
+      ],
+      "seatElections": 4,
+      "totalLogScoreGain": -0.022380677892245182,
+      "worsened": 2
+    },
+    "S2_noInflation": {
+      "coverage": {
+        "50": {
+          "model": 0.6666666666666666,
+          "modelPlusPoll": 0.2222222222222222
+        },
+        "80": {
+          "model": 1.0,
+          "modelPlusPoll": 0.7777777777777778
+        },
+        "90": {
+          "model": 1.0,
+          "modelPlusPoll": 0.7777777777777778
+        }
+      },
+      "improved": 6,
+      "inflationRange": [
+        1.0,
+        1.0
+      ],
+      "meanCRPS": {
+        "model": 0.1466732682195874,
+        "modelPlusPoll": 0.12872886588548182
+      },
+      "meanLogScoreGain": 0.16485967005432367,
+      "polls": 9,
+      "records": [
+        {
+          "actual": -0.16798223927539518,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.2890661586577638,
+          "crpsModelPlusPoll": 0.10606320812339162,
+          "exceptional": true,
+          "id": "2020:Auckland Central:Colmar:2020-09-24",
+          "inflation": 1.0,
+          "logScoreModel": -0.697326852963795,
+          "logScoreModelPlusPoll": 0.3204446085088408,
+          "modelCentre": -0.6276164735819825,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.12440333788202983,
+          "pollValue": -0.15415067982725836,
+          "posteriorCentre": -0.34353699732914805,
+          "posteriorSD": 0.17201280875512667,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Auckland Central",
+          "weight": 0.6
+        },
+        {
+          "actual": -0.16798223927539518,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": false
+            }
+          },
+          "crpsModel": 0.2890661586577638,
+          "crpsModelPlusPoll": 0.26656148660180745,
+          "exceptional": true,
+          "id": "2020:Auckland Central:Newshub:2020-09",
+          "inflation": 1.0,
+          "logScoreModel": -0.697326852963795,
+          "logScoreModelPlusPoll": -1.365742296421693,
+          "modelCentre": -0.6276164735819825,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.12372817676356132,
+          "pollValue": -0.46387587026457866,
+          "posteriorCentre": -0.5293721115915402,
+          "posteriorSD": 0.17201280875512667,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Auckland Central",
+          "weight": 0.6
+        },
+        {
+          "actual": -0.3503590634880883,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.06097326081657646,
+          "crpsModelPlusPoll": 0.07440704815521601,
+          "exceptional": false,
+          "id": "2020:East Coast:Community:2020-09-22",
+          "inflation": 1.0,
+          "logScoreModel": 0.42485567361986476,
+          "logScoreModelPlusPoll": 0.581295713277497,
+          "modelCentre": -0.34689486171532985,
+          "modelSD": 0.26083104860087436,
+          "pollLeaderWon": null,
+          "pollSD": 0.11539365948365612,
+          "pollValue": -0.14595391262307983,
+          "posteriorCentre": -0.22633029225997986,
+          "posteriorSD": 0.17201280875512667,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:East Coast",
+          "weight": 0.6
+        },
+        {
+          "actual": -0.009597059146352324,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.1448807897913459,
+          "crpsModelPlusPoll": 0.0879820176089151,
+          "exceptional": true,
+          "id": "2020:Northland:Colmar:2020-07-29",
+          "inflation": 1.0,
+          "logScoreModel": -0.12834572450490978,
+          "logScoreModelPlusPoll": 0.47193126667998886,
+          "modelCentre": -0.24638822634064833,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.11618648259469735,
+          "pollValue": 0.39465419200394874,
+          "posteriorCentre": 0.13823722466610988,
+          "posteriorSD": 0.17201280875512667,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Northland",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.7298140506099482,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.08551165335904926,
+          "crpsModelPlusPoll": 0.0455569755144514,
+          "exceptional": true,
+          "id": "2023:Ilam:Taxpayers':2023-08-23",
+          "inflation": 1.0,
+          "logScoreModel": 0.09302790336943045,
+          "logScoreModelPlusPoll": 0.7357165854989115,
+          "modelCentre": 0.7029068112881858,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.1556997888323046,
+          "pollValue": 0.7884573603642703,
+          "posteriorCentre": 0.7542371407338365,
+          "posteriorSD": 0.18957822979992564,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Ilam",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.5389497357035673,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0883760367807567,
+          "crpsModelPlusPoll": 0.11469934238536976,
+          "exceptional": true,
+          "id": "2023:Napier:Taxpayers':2023-08-20",
+          "inflation": 1.0,
+          "logScoreModel": 0.08309914683582798,
+          "logScoreModelPlusPoll": 0.2402301417115853,
+          "modelCentre": 0.4812136898337396,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.10938505423543972,
+          "pollValue": 0.2602830982636665,
+          "posteriorCentre": 0.34865533489169576,
+          "posteriorSD": 0.18957822979992564,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Napier",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.5389497357035673,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0883760367807567,
+          "crpsModelPlusPoll": 0.142982778837463,
+          "exceptional": true,
+          "id": "2023:Napier:Curia:2022-11-09",
+          "inflation": 1.0,
+          "logScoreModel": 0.08309914683582798,
+          "logScoreModelPlusPoll": 0.014338303515294415,
+          "modelCentre": 0.4812136898337396,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.1109608593708264,
+          "pollValue": 0.19574457712609533,
+          "posteriorCentre": 0.30993222220915306,
+          "posteriorSD": 0.18957822979992564,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Napier",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.4685297896274351,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": false
+            }
+          },
+          "crpsModel": 0.18650148875412945,
+          "crpsModelPlusPoll": 0.27389804874141965,
+          "exceptional": false,
+          "id": "2023:Northland:Taxpayers':2023-09-10",
+          "inflation": 1.0,
+          "logScoreModel": -0.2425632970303384,
+          "logScoreModelPlusPoll": -1.2392161154552055,
+          "modelCentre": 0.7711014486196943,
+          "modelSD": 0.2651578742971254,
+          "pollLeaderWon": null,
+          "pollSD": 0.1326726830071908,
+          "pollValue": 0.8960880245566357,
+          "posteriorCentre": 0.8460933941818591,
+          "posteriorSD": 0.18957822979992564,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Northland",
+          "weight": 0.6
+        },
+        {
+          "actual": -0.0683984355054944,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0873078303781445,
+          "crpsModelPlusPoll": 0.04640888700130265,
+          "exceptional": true,
+          "id": "2023:Wellington Central:Newshub-Reid:2023-09-03",
+          "inflation": 1.0,
+          "logScoreModel": 0.08680568485409612,
+          "logScoreModelPlusPoll": 0.7300636512259027,
+          "modelCentre": -0.11697114134391108,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.11695642289021772,
+          "pollValue": -0.0887954987831312,
+          "posteriorCentre": -0.10006575580744315,
+          "posteriorSD": 0.18957822979992564,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Wellington Central",
+          "weight": 0.6
+        }
+      ],
+      "seatElections": 7,
+      "totalLogScoreGain": 1.483737030488913,
+      "worsened": 3
+    },
+    "S3_inflationFromAllNationalLabourPolls": {
+      "coverage": {
+        "50": {
+          "model": 0.6666666666666666,
+          "modelPlusPoll": 0.6666666666666666
+        },
+        "80": {
+          "model": 1.0,
+          "modelPlusPoll": 0.7777777777777778
+        },
+        "90": {
+          "model": 1.0,
+          "modelPlusPoll": 1.0
+        }
+      },
+      "improved": 8,
+      "inflationRange": [
+        15.987422910555237,
+        17.85089153137477
+      ],
+      "meanCRPS": {
+        "model": 0.1466732682195874,
+        "modelPlusPoll": 0.1247874755068479
+      },
+      "meanLogScoreGain": 0.16621919686748168,
+      "polls": 9,
+      "records": [
+        {
+          "actual": -0.16798223927539518,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.2890661586577638,
+          "crpsModelPlusPoll": 0.18271212179930366,
+          "exceptional": true,
+          "id": "2020:Auckland Central:Colmar:2020-09-24",
+          "inflation": 17.85089153137477,
+          "logScoreModel": -0.697326852963795,
+          "logScoreModelPlusPoll": -0.2254333136265687,
+          "modelCentre": -0.6276164735819825,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.5256080264887243,
+          "pollValue": -0.15415067982725836,
+          "posteriorCentre": -0.4711357844358882,
+          "posteriorSD": 0.30216771440711854,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Auckland Central",
+          "weight": 0.33050051600381936
+        },
+        {
+          "actual": -0.16798223927539518,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.2890661586577638,
+          "crpsModelPlusPoll": 0.2599899932560048,
+          "exceptional": true,
+          "id": "2020:Auckland Central:Newshub:2020-09",
+          "inflation": 17.85089153137477,
+          "logScoreModel": -0.697326852963795,
+          "logScoreModelPlusPoll": -0.6223783639507217,
+          "modelCentre": -0.6276164735819825,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.5227554494672244,
+          "pollValue": -0.46387587026457866,
+          "posteriorCentre": -0.5731050597697736,
+          "posteriorSD": 0.3016227524178657,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Auckland Central",
+          "weight": 0.3329132341508539
+        },
+        {
+          "actual": -0.3503590634880883,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.06097326081657646,
+          "crpsModelPlusPoll": 0.05778621570796653,
+          "exceptional": false,
+          "id": "2020:East Coast:Community:2020-09-22",
+          "inflation": 16.677267912845515,
+          "logScoreModel": 0.42485567361986476,
+          "logScoreModelPlusPoll": 0.5339958348703735,
+          "modelCentre": -0.34689486171532985,
+          "modelSD": 0.26083104860087436,
+          "pollLeaderWon": null,
+          "pollSD": 0.47124244340047755,
+          "pollValue": -0.14595391262307983,
+          "posteriorCentre": -0.2997715409720232,
+          "posteriorSD": 0.2282065567042456,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:East Coast",
+          "weight": 0.2345132784342171
+        },
+        {
+          "actual": -0.009597059146352324,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.1448807897913459,
+          "crpsModelPlusPoll": 0.0677379763888336,
+          "exceptional": true,
+          "id": "2020:Northland:Colmar:2020-07-29",
+          "inflation": 15.987422910555237,
+          "logScoreModel": -0.12834572450490978,
+          "logScoreModelPlusPoll": 0.32131583836333777,
+          "modelCentre": -0.24638822634064833,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.46456323349570033,
+          "pollValue": 0.39465419200394874,
+          "posteriorCentre": 0.0018372704940123608,
+          "posteriorSD": 0.28908439324021307,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Northland",
+          "weight": 0.3872216404581596
+        },
+        {
+          "actual": 0.7298140506099482,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.08551165335904926,
+          "crpsModelPlusPoll": 0.07376605843003618,
+          "exceptional": true,
+          "id": "2023:Ilam:Taxpayers':2023-08-23",
+          "inflation": 16.90772176637281,
+          "logScoreModel": 0.09302790336943045,
+          "logScoreModelPlusPoll": 0.2346363465704745,
+          "modelCentre": 0.7029068112881858,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.6402219646601327,
+          "pollValue": 0.7884573603642703,
+          "posteriorCentre": 0.7236757739655904,
+          "posteriorSD": 0.31544712392964863,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Ilam",
+          "weight": 0.24276831536094112
+        },
+        {
+          "actual": 0.5389497357035673,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0883760367807567,
+          "crpsModelPlusPoll": 0.094872341889784,
+          "exceptional": true,
+          "id": "2023:Napier:Taxpayers':2023-08-20",
+          "inflation": 16.99043966488612,
+          "logScoreModel": 0.08309914683582798,
+          "logScoreModelPlusPoll": 0.2143182761435931,
+          "modelCentre": 0.4812136898337396,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.4508792978842592,
+          "pollValue": 0.2602830982636665,
+          "posteriorCentre": 0.394472910305938,
+          "posteriorSD": 0.28251663694879403,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Napier",
+          "weight": 0.3926155219671778
+        },
+        {
+          "actual": 0.5389497357035673,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0883760367807567,
+          "crpsModelPlusPoll": 0.10485337780279537,
+          "exceptional": true,
+          "id": "2023:Napier:Curia:2022-11-09",
+          "inflation": 16.99043966488612,
+          "logScoreModel": 0.08309914683582798,
+          "logScoreModelPlusPoll": 0.16492398941212616,
+          "modelCentre": 0.4812136898337396,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.45737468171902224,
+          "pollValue": 0.19574457712609533,
+          "posteriorCentre": 0.37107538936467566,
+          "posteriorSD": 0.28409379158483605,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Napier",
+          "weight": 0.3858151217286306
+        },
+        {
+          "actual": 0.4685297896274351,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.18650148875412945,
+          "crpsModelPlusPoll": 0.21168821700271312,
+          "exceptional": false,
+          "id": "2023:Northland:Taxpayers':2023-09-10",
+          "inflation": 16.119749266702442,
+          "logScoreModel": -0.2425632970303384,
+          "logScoreModelPlusPoll": -0.43194998155349107,
+          "modelCentre": 0.7711014486196943,
+          "modelSD": 0.2651578742971254,
+          "pollLeaderWon": null,
+          "pollSD": 0.5326729620897291,
+          "pollValue": 0.8960880245566357,
+          "posteriorCentre": 0.7959218517872766,
+          "posteriorSD": 0.23737412866517169,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Northland",
+          "weight": 0.19858455183302876
+        },
+        {
+          "actual": -0.0683984355054944,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0873078303781445,
+          "crpsModelPlusPoll": 0.06968097728419409,
+          "exceptional": true,
+          "id": "2023:Wellington Central:Newshub-Reid:2023-09-03",
+          "inflation": 16.91629448610985,
+          "logScoreModel": 0.08680568485409612,
+          "logScoreModelPlusPoll": 0.31186897363042065,
+          "modelCentre": -0.11697114134391108,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.48103502071041426,
+          "pollValue": -0.0887954987831312,
+          "posteriorCentre": -0.10676581802855567,
+          "posteriorSD": 0.2895030642623143,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Wellington Central",
+          "weight": 0.3622037472025954
+        }
+      ],
+      "seatElections": 7,
+      "totalLogScoreGain": 1.4959727718073352,
+      "worsened": 1
+    },
+    "primary": {
+      "coverage": {
+        "50": {
+          "model": 0.6666666666666666,
+          "modelPlusPoll": 0.3333333333333333
+        },
+        "80": {
+          "model": 1.0,
+          "modelPlusPoll": 0.7777777777777778
+        },
+        "90": {
+          "model": 1.0,
+          "modelPlusPoll": 0.8888888888888888
+        }
+      },
+      "improved": 7,
+      "inflationRange": [
+        4.4355063319798145,
+        5.979750170731095
+      ],
+      "meanCRPS": {
+        "model": 0.1466732682195874,
+        "modelPlusPoll": 0.12527379158486884
+      },
+      "meanLogScoreGain": 0.20553545691817307,
+      "polls": 9,
+      "records": [
+        {
+          "actual": -0.16798223927539518,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.2890661586577638,
+          "crpsModelPlusPoll": 0.10603138374846081,
+          "exceptional": true,
+          "id": "2020:Auckland Central:Colmar:2020-09-24",
+          "inflation": 5.979750170731095,
+          "logScoreModel": -0.697326852963795,
+          "logScoreModelPlusPoll": 0.24411003618540317,
+          "modelCentre": -0.6276164735819825,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.304210046912108,
+          "pollValue": -0.15415067982725836,
+          "posteriorCentre": -0.3455532324895116,
+          "posteriorSD": 0.23480238012698887,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Auckland Central",
+          "weight": 0.5957415399655924
+        },
+        {
+          "actual": -0.16798223927539518,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.2890661586577638,
+          "crpsModelPlusPoll": 0.2419778374664068,
+          "exceptional": true,
+          "id": "2020:Auckland Central:Newshub:2020-09",
+          "inflation": 5.979750170731095,
+          "logScoreModel": -0.697326852963795,
+          "logScoreModelPlusPoll": -0.6606233030681967,
+          "modelCentre": -0.6276164735819825,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.30255903980072885,
+          "pollValue": -0.46387587026457866,
+          "posteriorCentre": -0.5296406451840246,
+          "posteriorSD": 0.234040712828862,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Auckland Central",
+          "weight": 0.5983600060886307
+        },
+        {
+          "actual": -0.3503590634880883,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.06097326081657646,
+          "crpsModelPlusPoll": 0.06458963063135287,
+          "exceptional": false,
+          "id": "2020:East Coast:Community:2020-09-22",
+          "inflation": 5.556504460701515,
+          "logScoreModel": 0.42485567361986476,
+          "logScoreModelPlusPoll": 0.6106904192927274,
+          "modelCentre": -0.34689486171532985,
+          "modelSD": 0.26083104860087436,
+          "pollLeaderWon": null,
+          "pollSD": 0.2720086907208726,
+          "pollValue": -0.14595391262307983,
+          "posteriorCentre": -0.2506377704831453,
+          "posteriorSD": 0.1882629771672753,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:East Coast",
+          "weight": 0.4790317337856002
+        },
+        {
+          "actual": -0.009597059146352324,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.1448807897913459,
+          "crpsModelPlusPoll": 0.08886193058543038,
+          "exceptional": true,
+          "id": "2020:Northland:Colmar:2020-07-29",
+          "inflation": 4.4355063319798145,
+          "logScoreModel": -0.12834572450490978,
+          "logScoreModelPlusPoll": 0.3980612198115867,
+          "modelCentre": -0.24638822634064833,
+          "modelSD": 0.3692945821792539,
+          "pollLeaderWon": null,
+          "pollSD": 0.24469618923979847,
+          "pollValue": 0.39465419200394874,
+          "posteriorCentre": 0.13823722466610988,
+          "posteriorSD": 0.2082690547310485,
+          "sampleSizeAssumed": true,
+          "seatElection": "2020:Northland",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.7298140506099482,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.08551165335904926,
+          "crpsModelPlusPoll": 0.06153055781840285,
+          "exceptional": true,
+          "id": "2023:Ilam:Taxpayers':2023-08-23",
+          "inflation": 5.930991972683373,
+          "logScoreModel": 0.09302790336943045,
+          "logScoreModelPlusPoll": 0.418950326608831,
+          "modelCentre": 0.7029068112881858,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.3791854738517853,
+          "pollValue": 0.7884573603642703,
+          "posteriorCentre": 0.7437588646602953,
+          "posteriorSD": 0.262027719068367,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Ilam",
+          "weight": 0.47751947606762535
+        },
+        {
+          "actual": 0.5389497357035673,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0883760367807567,
+          "crpsModelPlusPoll": 0.1139187363668124,
+          "exceptional": true,
+          "id": "2023:Napier:Taxpayers':2023-08-20",
+          "inflation": 4.504689828179125,
+          "logScoreModel": 0.08309914683582798,
+          "logScoreModelPlusPoll": 0.23731903050605885,
+          "modelCentre": 0.4812136898337396,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.23216162392194725,
+          "pollValue": 0.2602830982636665,
+          "posteriorCentre": 0.34865533489169576,
+          "posteriorSD": 0.2010697666191674,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Napier",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.5389497357035673,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0883760367807567,
+          "crpsModelPlusPoll": 0.14090622209873208,
+          "exceptional": true,
+          "id": "2023:Napier:Curia:2022-11-09",
+          "inflation": 4.504689828179125,
+          "logScoreModel": 0.08309914683582798,
+          "logScoreModelPlusPoll": 0.038504069470087776,
+          "modelCentre": 0.4812136898337396,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.23550615285940596,
+          "pollValue": 0.19574457712609533,
+          "posteriorCentre": 0.30993222220915306,
+          "posteriorSD": 0.2024651507712101,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Napier",
+          "weight": 0.6
+        },
+        {
+          "actual": 0.4685297896274351,
+          "covered": {
+            "50": {
+              "model": false,
+              "modelPlusPoll": false
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": false
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": false
+            }
+          },
+          "crpsModel": 0.18650148875412945,
+          "crpsModelPlusPoll": 0.25545445245473075,
+          "exceptional": false,
+          "id": "2023:Northland:Taxpayers':2023-09-10",
+          "inflation": 4.650536660719023,
+          "logScoreModel": -0.2425632970303384,
+          "logScoreModelPlusPoll": -0.9978321362396187,
+          "modelCentre": 0.7711014486196943,
+          "modelSD": 0.2651578742971254,
+          "pollLeaderWon": null,
+          "pollSD": 0.2861100070249189,
+          "pollValue": 0.8960880245566357,
+          "posteriorCentre": 0.8288512026506742,
+          "posteriorSD": 0.19448066558625496,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Northland",
+          "weight": 0.46204765270244685
+        },
+        {
+          "actual": -0.0683984355054944,
+          "covered": {
+            "50": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "80": {
+              "model": true,
+              "modelPlusPoll": true
+            },
+            "90": {
+              "model": true,
+              "modelPlusPoll": true
+            }
+          },
+          "crpsModel": 0.0873078303781445,
+          "crpsModelPlusPoll": 0.0541933730934908,
+          "exceptional": true,
+          "id": "2023:Wellington Central:Newshub-Reid:2023-09-03",
+          "inflation": 5.944922642256065,
+          "logScoreModel": 0.08680568485409612,
+          "logScoreModelPlusPoll": 0.5659642777488874,
+          "modelCentre": -0.11697114134391108,
+          "modelSD": 0.3625034826068846,
+          "pollLeaderWon": null,
+          "pollSD": 0.2851656302977783,
+          "pollValue": -0.0887954987831312,
+          "posteriorCentre": -0.10006575580744315,
+          "posteriorSD": 0.22427750934381652,
+          "sampleSizeAssumed": false,
+          "seatElection": "2023:Wellington Central",
+          "weight": 0.6
+        }
+      ],
+      "seatElections": 7,
+      "totalLogScoreGain": 1.8498191122635577,
+      "worsened": 2
+    }
+  },
+  "schemaVersion": 1,
+  "stage": 79
+}

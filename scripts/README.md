@@ -1,6 +1,8 @@
 # Processing scripts
 
-No ingestion or modelling scripts implemented in stage 1. The standard-library `validate/source_files.py` checks registered local raw files without downloading or changing them; `tests/` contains synthetic integrity tests. Future scripts must document inputs, outputs, invocation and dependency versions; preserve raw bytes and fail clearly on missing inputs. See ../docs/reproducibility.md.
+Offline Python stages, one package per stage; each documents its inputs, outputs, invocation and dependency versions, preserves raw bytes and fails clearly on missing inputs (see ../docs/reproducibility.md). `validate/source_files.py` checks registered local raw files without downloading or changing them; `tests/` holds the unit tests (`python3 -m unittest discover -s scripts/tests -v`). The historical stages' `--check` commands are listed in `.github/workflows/ci.yml` and the sections below.
+
+The live 2026 chain is `nowcast_config` (configuration and scales), `nowcast_assembly` (the draw bank; `python3 -m scripts.nowcast_assembly.run --check` reproduces the development gate), `seat_polls` (general-seat polls), `maori_seat_layer` and `maori_seat_fallback` (Māori seats), `polling/weekly_refresh` and `polling/electorate_refresh` (the weekly refresh) and `release_rehearsal`. The current design is in ../docs/nowcast-specification.md.
 
 ### Stage37 companions (no inference or candidate runner)
 

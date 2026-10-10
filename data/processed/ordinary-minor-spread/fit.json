@@ -1,0 +1,569 @@
+{
+  "descriptive2026Refit": {
+    "primary": {
+      "mass": {
+        "moment": {
+          "capped": false,
+          "estimate": 0.9143915838044676,
+          "multiplier": 0.9143915838044676,
+          "ratioByElection": {
+            "2014": 0.4720772214024918,
+            "2017": 1.3997098819961324,
+            "2020": 0.6879207214818389,
+            "2023": 0.7847400492493081
+          }
+        },
+        "robust": {
+          "capped": false,
+          "estimate": 0.8480419561249007,
+          "multiplier": 0.8480419561249007,
+          "ratioByElection": {
+            "2014": 0.5423557757264759,
+            "2017": 1.2398391365413077,
+            "2020": 0.7386378204800141,
+            "2023": 0.355867904644794
+          }
+        }
+      },
+      "within": {
+        "moment": {
+          "capped": false,
+          "estimate": 0.7998554713427036,
+          "multiplier": 0.7998554713427036,
+          "ratioByElection": {
+            "2014": 0.5392289441316113,
+            "2017": 0.8705655429417598,
+            "2020": 0.6595194157363944,
+            "2023": 0.48976119733766843
+          }
+        },
+        "robust": {
+          "capped": false,
+          "estimate": 0.7993149739576921,
+          "multiplier": 0.7993149739576921,
+          "ratioByElection": {
+            "2014": 0.6657367275529215,
+            "2017": 0.8582917494010335,
+            "2020": 0.5590090264073304,
+            "2023": 0.4725802070106589
+          }
+        }
+      }
+    },
+    "scored": false,
+    "sensitivity": {
+      "mass": {
+        "moment": {
+          "capped": true,
+          "estimate": 1.00967908761389,
+          "multiplier": 1.0,
+          "ratioByElection": {
+            "2014": 0.7568427172292594,
+            "2017": 1.4044713880305892,
+            "2020": 0.7059481970250459,
+            "2023": 1.2105451375743743
+          }
+        },
+        "robust": {
+          "capped": false,
+          "estimate": 0.871800265349386,
+          "multiplier": 0.871800265349386,
+          "ratioByElection": {
+            "2014": 0.562536250682726,
+            "2017": 1.3238913964827201,
+            "2020": 0.7460443736154225,
+            "2023": 0.4076707898721707
+          }
+        }
+      },
+      "within": {
+        "moment": {
+          "capped": false,
+          "estimate": 0.8402569877228302,
+          "multiplier": 0.8402569877228302,
+          "ratioByElection": {
+            "2014": 0.6972026089859762,
+            "2017": 0.8787169840237695,
+            "2020": 0.6938665205310306,
+            "2023": 0.5543411081274016
+          }
+        },
+        "robust": {
+          "capped": false,
+          "estimate": 0.8143901202364481,
+          "multiplier": 0.8143901202364481,
+          "ratioByElection": {
+            "2014": 0.6829649894528643,
+            "2017": 0.9266000917998782,
+            "2020": 0.5590090264073304,
+            "2023": 0.4843509640948719
+          }
+        }
+      }
+    },
+    "trainingYears": [
+      2014,
+      2017,
+      2020,
+      2023
+    ]
+  },
+  "estimator": "penalty-free per-seat-normalised Gaussian likelihood on standardised total-law residuals, equal elections, ordinary seats only; closed form m = sqrt(mean over earlier elections of r_y), r_y the equal-seat mean of the realised-to-expected squared-residual ratio at the election's own Stage45 fold scales; seat and shared parts take the same multiplier",
+  "folds": {
+    "2014": {
+      "primary": {
+        "mass": {
+          "moment": {
+            "estimate": null,
+            "multiplier": 1.0,
+            "status": "no earlier candidate residual: control"
+          },
+          "robust": {
+            "estimate": null,
+            "multiplier": 1.0,
+            "status": "no earlier candidate residual: control"
+          }
+        },
+        "ordinarySeatsUsed": {},
+        "skipped": {},
+        "within": {
+          "moment": {
+            "estimate": null,
+            "multiplier": 1.0,
+            "status": "no earlier candidate residual: control"
+          },
+          "robust": {
+            "estimate": null,
+            "multiplier": 1.0,
+            "status": "no earlier candidate residual: control"
+          }
+        }
+      },
+      "sensitivity": {
+        "mass": {
+          "moment": {
+            "estimate": null,
+            "multiplier": 1.0,
+            "status": "no earlier candidate residual: control"
+          },
+          "robust": {
+            "estimate": null,
+            "multiplier": 1.0,
+            "status": "no earlier candidate residual: control"
+          }
+        },
+        "ordinarySeatsUsed": {},
+        "skipped": {},
+        "within": {
+          "moment": {
+            "estimate": null,
+            "multiplier": 1.0,
+            "status": "no earlier candidate residual: control"
+          },
+          "robust": {
+            "estimate": null,
+            "multiplier": 1.0,
+            "status": "no earlier candidate residual: control"
+          }
+        }
+      },
+      "targetYear": 2014,
+      "trainingYears": []
+    },
+    "2017": {
+      "primary": {
+        "mass": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.6870787592427027,
+            "multiplier": 0.6870787592427027,
+            "ratioByElection": {
+              "2014": 0.4720772214024918
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.736448080808468,
+            "multiplier": 0.736448080808468,
+            "ratioByElection": {
+              "2014": 0.5423557757264759
+            }
+          }
+        },
+        "ordinarySeatsUsed": {
+          "2014": {
+            "mass": 56,
+            "within": 56
+          }
+        },
+        "skipped": {
+          "2014": {
+            "mass": 0,
+            "within": 0
+          }
+        },
+        "within": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.7343220983544014,
+            "multiplier": 0.7343220983544014,
+            "ratioByElection": {
+              "2014": 0.5392289441316113
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.8159269131196258,
+            "multiplier": 0.8159269131196258,
+            "ratioByElection": {
+              "2014": 0.6657367275529215
+            }
+          }
+        }
+      },
+      "sensitivity": {
+        "mass": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.8699670782444928,
+            "multiplier": 0.8699670782444928,
+            "ratioByElection": {
+              "2014": 0.7568427172292594
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.7500241667324633,
+            "multiplier": 0.7500241667324633,
+            "ratioByElection": {
+              "2014": 0.562536250682726
+            }
+          }
+        },
+        "ordinarySeatsUsed": {
+          "2014": {
+            "mass": 63,
+            "within": 63
+          }
+        },
+        "skipped": {
+          "2014": {
+            "mass": 0,
+            "within": 0
+          }
+        },
+        "within": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.8349865920995236,
+            "multiplier": 0.8349865920995236,
+            "ratioByElection": {
+              "2014": 0.6972026089859762
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.8264169585946699,
+            "multiplier": 0.8264169585946699,
+            "ratioByElection": {
+              "2014": 0.6829649894528643
+            }
+          }
+        }
+      },
+      "targetYear": 2017,
+      "trainingYears": [
+        2014
+      ]
+    },
+    "2020": {
+      "primary": {
+        "mass": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.9674159145369235,
+            "multiplier": 0.9674159145369235,
+            "ratioByElection": {
+              "2014": 0.4720772214024918,
+              "2017": 1.3997098819961324
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.9439795845959232,
+            "multiplier": 0.9439795845959232,
+            "ratioByElection": {
+              "2014": 0.5423557757264759,
+              "2017": 1.2398391365413077
+            }
+          }
+        },
+        "ordinarySeatsUsed": {
+          "2014": {
+            "mass": 56,
+            "within": 56
+          },
+          "2017": {
+            "mass": 58,
+            "within": 58
+          }
+        },
+        "skipped": {
+          "2014": {
+            "mass": 0,
+            "within": 0
+          },
+          "2017": {
+            "mass": 0,
+            "within": 0
+          }
+        },
+        "within": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.8395815883740457,
+            "multiplier": 0.8395815883740457,
+            "ratioByElection": {
+              "2014": 0.5392289441316113,
+              "2017": 0.8705655429417598
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.872934269276317,
+            "multiplier": 0.872934269276317,
+            "ratioByElection": {
+              "2014": 0.6657367275529215,
+              "2017": 0.8582917494010335
+            }
+          }
+        }
+      },
+      "sensitivity": {
+        "mass": {
+          "moment": {
+            "capped": true,
+            "estimate": 1.0395465610687789,
+            "multiplier": 1.0,
+            "ratioByElection": {
+              "2014": 0.7568427172292594,
+              "2017": 1.4044713880305892
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.9711919602131821,
+            "multiplier": 0.9711919602131821,
+            "ratioByElection": {
+              "2014": 0.562536250682726,
+              "2017": 1.3238913964827201
+            }
+          }
+        },
+        "ordinarySeatsUsed": {
+          "2014": {
+            "mass": 63,
+            "within": 63
+          },
+          "2017": {
+            "mass": 60,
+            "within": 60
+          }
+        },
+        "skipped": {
+          "2014": {
+            "mass": 0,
+            "within": 0
+          },
+          "2017": {
+            "mass": 0,
+            "within": 0
+          }
+        },
+        "within": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.8876709956424581,
+            "multiplier": 0.8876709956424581,
+            "ratioByElection": {
+              "2014": 0.6972026089859762,
+              "2017": 0.8787169840237695
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.8970967286900401,
+            "multiplier": 0.8970967286900401,
+            "ratioByElection": {
+              "2014": 0.6829649894528643,
+              "2017": 0.9266000917998782
+            }
+          }
+        }
+      },
+      "targetYear": 2020,
+      "trainingYears": [
+        2014,
+        2017
+      ]
+    },
+    "2023": {
+      "primary": {
+        "mass": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.9237077143917447,
+            "multiplier": 0.9237077143917447,
+            "ratioByElection": {
+              "2014": 0.4720772214024918,
+              "2017": 1.3997098819961324,
+              "2020": 0.6879207214818389
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.9166665574692902,
+            "multiplier": 0.9166665574692902,
+            "ratioByElection": {
+              "2014": 0.5423557757264759,
+              "2017": 1.2398391365413077,
+              "2020": 0.7386378204800141
+            }
+          }
+        },
+        "ordinarySeatsUsed": {
+          "2014": {
+            "mass": 56,
+            "within": 56
+          },
+          "2017": {
+            "mass": 58,
+            "within": 58
+          },
+          "2020": {
+            "mass": 55,
+            "within": 55
+          }
+        },
+        "skipped": {
+          "2014": {
+            "mass": 0,
+            "within": 0
+          },
+          "2017": {
+            "mass": 0,
+            "within": 0
+          },
+          "2020": {
+            "mass": 0,
+            "within": 0
+          }
+        },
+        "within": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.8305247142238384,
+            "multiplier": 0.8305247142238384,
+            "ratioByElection": {
+              "2014": 0.5392289441316113,
+              "2017": 0.8705655429417598,
+              "2020": 0.6595194157363944
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.8332741652384056,
+            "multiplier": 0.8332741652384056,
+            "ratioByElection": {
+              "2014": 0.6657367275529215,
+              "2017": 0.8582917494010335,
+              "2020": 0.5590090264073304
+            }
+          }
+        }
+      },
+      "sensitivity": {
+        "mass": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.9776267696629587,
+            "multiplier": 0.9776267696629587,
+            "ratioByElection": {
+              "2014": 0.7568427172292594,
+              "2017": 1.4044713880305892,
+              "2020": 0.7059481970250459
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.9367447216790831,
+            "multiplier": 0.9367447216790831,
+            "ratioByElection": {
+              "2014": 0.562536250682726,
+              "2017": 1.3238913964827201,
+              "2020": 0.7460443736154225
+            }
+          }
+        },
+        "ordinarySeatsUsed": {
+          "2014": {
+            "mass": 63,
+            "within": 63
+          },
+          "2017": {
+            "mass": 60,
+            "within": 60
+          },
+          "2020": {
+            "mass": 59,
+            "within": 59
+          }
+        },
+        "skipped": {
+          "2014": {
+            "mass": 0,
+            "within": 0
+          },
+          "2017": {
+            "mass": 0,
+            "within": 0
+          },
+          "2020": {
+            "mass": 0,
+            "within": 0
+          }
+        },
+        "within": {
+          "moment": {
+            "capped": false,
+            "estimate": 0.8698249083466504,
+            "multiplier": 0.8698249083466504,
+            "ratioByElection": {
+              "2014": 0.6972026089859762,
+              "2017": 0.8787169840237695,
+              "2020": 0.6938665205310306
+            }
+          },
+          "robust": {
+            "capped": false,
+            "estimate": 0.8502105832596364,
+            "multiplier": 0.8502105832596364,
+            "ratioByElection": {
+              "2014": 0.6829649894528643,
+              "2017": 0.9266000917998782,
+              "2020": 0.5590090264073304
+            }
+          }
+        }
+      },
+      "targetYear": 2023,
+      "trainingYears": [
+        2014,
+        2017,
+        2020
+      ]
+    }
+  },
+  "recordsRead": 257,
+  "stage": 83
+}

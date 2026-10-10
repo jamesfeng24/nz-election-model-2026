@@ -27,8 +27,9 @@ Added before any v2 snapshot was published, so `schemaVersion` stays 2 ([stage74
   - qualification, lifeboat, overhang, majority and exact-half probabilities, each `{p, mcse, ess}` by batch means within national MCMC chains.
 
   An available seat layer requires an MMP example allocation and no unavailable electorate.
-- `electorateDetail`: per predicted seat, the uncertainty class (`ordinary`, `exceptional` or `maori-layer`, D107) and per-candidate `meanShare`, 50/80/90 share intervals and `winProbability {p, mcse, ess}`. A model snapshot must give it for every predicted seat.
+- `electorateDetail`: per predicted seat, the uncertainty class (`ordinary`, `exceptional` or `maori-layer`, D107) and per-candidate `meanShare`, 50/80/90 share intervals and `winProbability {p, mcse, ess}`. A model snapshot must give it for every predicted seat. A polled Māori seat also gives every candidate `winProbabilityInflation {p, mcse, ess}`, the win probability under Stage71's variance inflation (P); with `winProbability` (the Stage66 control, C) it is the labelled C–P range (D114, D127). The seat totals use C. The release gate holds both to the MCSE threshold.
 - `directory.candidates[].partyLabel` (optional): the ballot-group key of a candidate whose party has no national group (`partyId` null).
+- `seatEvidence` (optional, Stage85): per-seat polls, weights, baseline and class for the seat pages; see below.
 - `governmentOutcomes` stays empty for nowcasts. Blocs live in `seatLayer.summary.blocs`, defined by James.
 - `seatLayer.summary.scenarios` (Stage77): named seat-arithmetic outcomes over the configured blocs, each `{id, label, definition, probability {p, mcse, ess}}`. James's configuration (`config/nowcast-2026.json` `mmp.hungParliament`) gives three:
   - `hung`: neither NAT+ACT+NZF nor LAB+GRN+TPM has a majority;
@@ -91,3 +92,7 @@ Layout under `<base>/forecasts/`: `index.json` and `<snapshotId>/snapshot.json` 
 ## Not done here
 
 A Python exporter that fills the contract from Stage41–47 artifacts; real national, local, candidate or MMP components; current-cycle polls; Māori layer; reconciliation; the probability-release policy; publication to `public/forecasts/`. Whether named-electorate winner probabilities are part of the minimum publishable product is undecided, so the contract keeps them as ordinary optional-by-explicit-unavailability data. No D-number is assigned to the contract; assign one if it should be a recorded decision.
+
+### Per-seat evidence (Stage85, 10 October 2026)
+
+Optional `seatEvidence` array on the snapshot (and the draw bank), `schemaVersion` stays 2: per predicted seat, the uncertainty class and multipliers, the 2023 party-vote baseline by national group, the polls found (used with `shareOfPoll` and `weight`, or unused with a `reason`) and the poll update. Display data; no forecast number depends on it. Shape and identities: [stage85-seat-evidence.md](stage85-seat-evidence.md).

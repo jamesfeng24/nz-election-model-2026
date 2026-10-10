@@ -37,10 +37,17 @@ WORKFLOW = '.github/workflows/ci.yml'
 # Python environment files: any change forces full validation of every registered pipeline.
 ENVIRONMENT = ('.python-version', 'pyproject.toml', 'requirements-boundaries.txt', 'requirements-external.lock',
                'requirements-polling.lock')
+# Top-level directories that a bare string literal (no slash) in pipeline code may name as a whole-directory dependency.
+SOURCE_DIRECTORIES = ('config', 'data', 'docs', 'scripts', 'src')
 # CI selection machinery and policy files: they are not pipeline dependencies, so edits to them neither force a replay
 # nor count as a pipeline change. They are guarded instead by the selector's own always-run unit tests and by
 # ``workflow_errors`` (no attested validation may be removed or newly conditioned).
 MACHINERY = ('.github/validation/', 'scripts/validate/ci_', 'AGENTS.md')
+# Workflows that Verify never calls: the scheduled poll refresh (D120) and the manual Full replay, whose commands
+# are read from ci.yml. They cannot change what Verify executes, so adding or editing them is not a CI-configuration
+# change; any other `.github/` path still is. The exemption lapses if ci.yml names the file (see
+# ``non_verify_workflow``).
+NON_VERIFY_WORKFLOWS = ('.github/workflows/poll-refresh.yml', '.github/workflows/full-replay.yml')
 KNOWN = ('stage45', 'stage46', 'stage47', 'stage48', 'stage54', 'stage63')
 EVENTS = ('pull_request', 'push')  # workflow_dispatch and anything unknown are always full
 ATTESTING_EVENTS = ('pull_request', 'push', 'workflow_dispatch')  # a manual full dispatch of main is a valid reference
@@ -113,7 +120,11 @@ def closure(root, entries):
                     continue
                 segments = [s for s in value.split('/') if s]
                 if value in tops and '/' not in value:
-                    paths.add(value)
+                    # A bare name is a dependency when it is a top-level file, or a source directory a pipeline could read
+                    # whole. Other top-level directories (the site's route folders such as `electorates/`) share their
+                    # names with dictionary keys in pipeline code and are never read by a replay.
+                    if value in SOURCE_DIRECTORIES or not (root / value).is_dir():
+                        paths.add(value)
                 elif len(segments) >= 2 and segments[0] in tops and segments[0] != '.cache':
                     if segments[0] == 'data' and len(segments) < 3:
                         continue
@@ -433,6 +444,16 @@ def select_pipeline(name, registry, event, root=ROOT, actual_runtime=None, candi
     return {'mode': 'full', 'reason': ' | '.join(reasons)}
 
 
+def non_verify_workflow(root, path):
+    """True for a registered scheduled workflow that the Verify workflow does not reference."""
+    if path not in NON_VERIFY_WORKFLOWS:
+        return False
+    try:
+        return Path(path).name not in (Path(root) / WORKFLOW).read_text()
+    except OSError:
+        return False
+
+
 def select_against(name, registry, root, candidate):
     pipeline = registry['pipelines'][name]
     commit = candidate['commit']
@@ -462,6 +483,8 @@ def select_against(name, registry, root, candidate):
             continue  # judged by workflow_errors above, against the steps that actually passed
         if any(path.startswith(m) for m in MACHINERY):
             continue  # not a pipeline dependency; guarded by always-run selector tests and workflow_errors
+        if non_verify_workflow(root, path):
+            continue  # scheduled workflow outside Verify; cannot change what Verify runs
         if path in watched:
             return full('dependency changed: ' + path)
         if any(under(path, prefix) for prefix in prefixes):

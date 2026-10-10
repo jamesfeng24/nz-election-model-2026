@@ -107,6 +107,8 @@ export function seatLayerConfig(bank: DrawBank, mmp: NonNullable<NowcastSnapshot
   return {
     rulesVersion: mmp.rulesVersion, rulesSourceIds: mmp.rulesSourceIds, blocs: mmp.blocs,
     listedPartyIds: bank.partyVote.groups.filter(g => g !== other), unlistedBucketIds: [other],
+    // A party on the ballot whose vote is inside the other bucket wins an electorate as an overhang seat, not an independent's (audit J3).
+    zeroVotePartyIds: bank.partyVote.ballotPartyIds.filter(p => !bank.partyVote.groups.includes(p)),
     expectedElectorateIds: {
       general: bank.seats.filter(s => s.scope === 'general').map(s => s.electorateId),
       maori: bank.seats.filter(s => s.scope === 'maori').map(s => s.electorateId),
@@ -263,7 +265,9 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
     ...(evidence ? { evidence: seatEvidence(seat, bank.directory.electorates.find(e => e.electorateId === seat.electorateId)!.name, bank, evidence) } : {}),
     candidates: seat.candidates.map(candidateId => {
       const { mean, share } = shareIntervals(seat, candidateId);
-      return { candidateId, meanShare: mean, share, winProbability: probability(seat.winners.map(w => (seat.candidates[w] === candidateId ? 1 : 0)), layout, unit) };
+      const win = (winners: number[]) => probability(winners.map(w => (seat.candidates[w] === candidateId ? 1 : 0)), layout, unit);
+      return { candidateId, meanShare: mean, share, winProbability: win(seat.winners),
+        ...(seat.inflationWinners ? { winProbabilityInflation: win(seat.inflationWinners) } : {}) };
     }),
   }));
 
@@ -283,7 +287,7 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
       partySeatSummaries, governmentOutcomes: [], limitations: options.limitations,
     },
     unavailableElectorates: unavailable.map(s => ({ electorateId: s.electorateId, reason: s.reason })),
-    electorateDetail, seatLayer, mmp, boundaries: null, limitations: options.limitations,
+    electorateDetail, ...(bank.seatEvidence ? { seatEvidence: bank.seatEvidence } : {}), seatLayer, mmp, boundaries: null, limitations: options.limitations,
     ...(incumbents && flagged ? { incumbency: incumbents.source } : {}),
     ...(evidence ? { evidence: { source: evidence.source, nationalPolls: evidence.nationalPolls, trend: evidence.trend } } : {}),
     ...(options.adjustments === undefined ? {} : { adjustments: AdjustmentsSchema.parse(options.adjustments) }),

@@ -1,0 +1,9 @@
+{
+ "note": "Sponsor groups for the Stage79 poll-error allowance, keyed by source key (see scripts/seat_polls/live.py source_key). Only the labour-aligned group carries an allowance (design-contract.json). Facts from James, 2026-10-09: the Hutt South poll published as Victor Consulting was conducted by Community Engagement Limited; both are one Labour-aligned operator (Clint Smith, a former consultant). Every other source is 'all other groups'.",
+ "groups": {
+  "labour-aligned": [
+   "victorconsulting",
+   "communityengagementlimited"
+  ]
+ }
+}

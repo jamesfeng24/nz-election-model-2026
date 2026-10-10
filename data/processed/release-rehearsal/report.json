@@ -1,13 +1,13 @@
 {
   "asOf": "2026-10-07",
-  "bankDigest": "5c0e93271adc2246399b97a6b97805553265153fe0d5a649828ac4b79f119c9c",
-  "configVersion": "2026-10-10.1",
+  "bankDigest": "532ff5e3b507621c602cfa25791f3f3edeb4dd6e318a5cc50e3ad39c24d291f3",
+  "configVersion": "2026-10-10.3",
   "gate": {
     "checks": [
       {
         "check": "configComplete",
-        "detail": "pending fields must be filled before assembly: maori.unpolledFallbackModel",
-        "passed": false
+        "detail": "",
+        "passed": true
       },
       {
         "check": "provenanceLive",
@@ -121,7 +121,6 @@
   "syntheticStandIns": [
     "official candidate list (Stage50 not yet run; announcements + invented Labour/independent rows)",
     "ordinary/exceptional classification (James has not entered it)",
-    "winners for the four unpolled Maori seats (James has not chosen a fallback)",
     "MMP rules-version label (placeholder; the blocs are the configured ones)"
   ]
 }

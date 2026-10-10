@@ -1,0 +1,228 @@
+{
+  "stage": 83,
+  "status": "frozen before any Stage83 arm was fitted, simulated or scored",
+  "designDocument": "docs/stage83-ordinary-minor-spread-design.md",
+  "inheritedFrom": {
+    "stage67": "data/processed/exceptional-balance-scale/design-contract.json",
+    "stage61": "data/processed/layer-audit/design-contract.json"
+  },
+  "question": "Do ordinary-seat multipliers on the candidate within-remainder noise (and, separately, the major-mass noise), seat and shared parts together, fitted on earlier elections only, beat the D107-only control on the 257 historical candidate records, with flagged seats held at 1.00?",
+  "flags": "Stage67 primary flags (38 of 257) and the 17-flag sensitivity set, read from data/processed/exceptional-balance-scale/design-contract.json; not re-researched, revised or extended",
+  "controlBalanceRule": "every arm: candidate balance seat scale x 0.60 in seats not flagged by the Stage67 primary set, x 1.00 in flagged seats (D107); only the within and mass multipliers differ between arms",
+  "arms": {
+    "control": {
+      "role": "control",
+      "within": 1.0,
+      "mass": 1.0
+    },
+    "within": {
+      "role": "candidate",
+      "within": "m_within earlier-trained on ordinary seats, applied to ordinary seats only",
+      "mass": 1.0
+    },
+    "within_mass": {
+      "role": "candidate",
+      "within": "as within",
+      "mass": "m_mass earlier-trained on ordinary seats, applied to ordinary seats only"
+    },
+    "within17": {
+      "role": "sensitivity",
+      "within": "as within with the 17-flag ordinary set in fitting and in the multiplier assignment",
+      "mass": 1.0
+    },
+    "within_mass17": {
+      "role": "sensitivity",
+      "within": "as within17",
+      "mass": "as within_mass with the 17-flag ordinary set"
+    },
+    "within_robust": {
+      "role": "candidate (amendment 1)",
+      "within": "m_within by the robust estimator, ordinary seats only",
+      "mass": 1.0
+    },
+    "within_mass_robust": {
+      "role": "candidate (amendment 1)",
+      "within": "as within_robust",
+      "mass": "m_mass by the robust estimator, ordinary seats only"
+    },
+    "within_robust17": {
+      "role": "sensitivity (amendment 1)",
+      "within": "as within_robust with the 17-flag ordinary set",
+      "mass": 1.0
+    },
+    "within_mass_robust17": {
+      "role": "sensitivity (amendment 1)",
+      "within": "as within_robust17",
+      "mass": "as within_mass_robust with the 17-flag ordinary set"
+    }
+  },
+  "armOrder": [
+    "control",
+    "within",
+    "within_mass",
+    "within_robust",
+    "within_mass_robust",
+    "within17",
+    "within_mass17",
+    "within_robust17",
+    "within_mass_robust17"
+  ],
+  "folds": {
+    "2014": [],
+    "2017": [
+      2014
+    ],
+    "2020": [
+      2014,
+      2017
+    ],
+    "2023": [
+      2014,
+      2017,
+      2020
+    ]
+  },
+  "scoredYears": [
+    2014,
+    2017,
+    2020,
+    2023
+  ],
+  "decisionYears": [
+    2017,
+    2020,
+    2023
+  ],
+  "fit": {
+    "estimator": "penalty-free per-seat-normalised Gaussian likelihood on standardised total-law residuals, equal elections, ordinary seats only; closed form m = sqrt(mean over earlier elections of r_y), r_y the equal-seat mean of the realised-to-expected squared-residual ratio at the election's own Stage45 fold scales; seat and shared parts take the same multiplier",
+    "withinRatio": "per seat ||P e||^2 / trace(P Sigma P): e the raw within-remainder CLR residual (actual minus mean), P the centring over the non-major candidates, Sigma = seat^2 I + shared^2 T T' with T the party-tag indicator; seats with fewer than two non-major candidates or an undefined coordinate are skipped and counted",
+    "massRatio": "per seat e^2 / (shared^2 + seat^2), e = observed major-mass logit minus the Gaussian-logistic location of the mean (the Stage61 total-law residual)",
+    "cap": "multiplier = min(1, estimate): no multiplier above 1 is fitted or applied",
+    "noEarlierElection": "multiplier 1.0 (control) in 2014",
+    "descriptive2026Refit": {
+      "trainingYears": [
+        2014,
+        2017,
+        2020,
+        2023
+      ],
+      "scored": false
+    },
+    "robustEstimator": {
+      "rule": "same closed form m = min(1, sqrt(mean over earlier elections of rho_y)) with rho_y = (median |z| / 0.6745)^2, z the standardised total-law residual pooled over the election's ordinary-seat candidates (within: e_c / sqrt(diag(P Sigma P)_c) for each non-major candidate; mass: e / total per seat)",
+      "why": "the moment ratio is dominated by a few large residuals while coverage and CRPS score the centre; the median recovers the Gaussian scale of the bulk. Stage46's Student-t question is not reopened: the law stays Gaussian and only the scale estimator changes"
+    }
+  },
+  "components": {
+    "draws": 32768,
+    "prefixDraws": 16384,
+    "harness": "scripts.uncertainty_expectation.simulation.component on the Stage44 candidate records, Stage45 fold scales, common streams across arms; general electorates only"
+  },
+  "scoring": {
+    "levels": [
+      50,
+      80,
+      90
+    ],
+    "minorCandidates": "candidates in the 'other' class (affiliated with a party that is not National or Labour); independents (no group) reported separately",
+    "metrics": [
+      "pooled coverage of the 50/80/90 intervals",
+      "CRPS in percentage points, equal-seat mean of the per-seat mean over the group's candidates",
+      "interval score",
+      "major-mass CRPS and coverage",
+      "National and Labour candidate coverage, CRPS and 90% width",
+      "probability of the actual winner and predicted minor-party win mass against actual minor-party wins"
+    ]
+  },
+  "decision": {
+    "population": "ordinary seats (Stage67 primary flags) in the decision years 2017, 2020, 2023; the 17-flag arms are reported on their own ordinary17 population",
+    "candidateArms": [
+      "within",
+      "within_mass",
+      "within_robust",
+      "within_mass_robust"
+    ],
+    "qualifies": {
+      "minorCoverage80": {
+        "band": [
+          0.74,
+          0.86
+        ],
+        "movesTowardNominalFromControl": true
+      },
+      "minorCoverage90Floor": 0.85,
+      "massCoverage80Band": {
+        "arms": [
+          "within_mass"
+        ],
+        "band": [
+          0.74,
+          0.86
+        ]
+      },
+      "minorCRPS": {
+        "pooledRelativeChangeAtMost": -0.01,
+        "minimumFoldsNegative": 2
+      },
+      "majorGuard": {
+        "candidates": [
+          "national",
+          "labour"
+        ],
+        "coverage80FloorAbsolute": 0.7,
+        "coverage80MaxDropFromControl": 0.03,
+        "pooledCRPSRelativeChangeAtMost": 0.01
+      },
+      "flaggedSeatsIdenticalToControl": true,
+      "sensitivity17": "the matching 17-flag arm (name + '17') has a negative pooled minor-CRPS change and a minor 80% coverage nearer nominal than control",
+      "precision": "pooled minor 80% coverage from the first 16384 draws differs from the full 32768 by at most 0.005"
+    },
+    "selection": "step 1, the moment estimator: both candidates qualify: within_mass only if its pooled minor CRPS beats within by a further relative 0.01 and it passes every guard, else within; one qualifies: that arm. Step 2, only if neither moment arm qualifies: the same rule on within_robust and within_mass_robust, recommendation labelled robust and amended. Otherwise keep_control (worse if every candidate arm raises pooled minor CRPS, negligible if all change it by under 0.01, else mixed)",
+    "findings": [
+      "recommend_within_mass_for_james_signoff",
+      "recommend_within_for_james_signoff",
+      "recommend_within_mass_robust_for_james_signoff",
+      "recommend_within_robust_for_james_signoff",
+      "keep_control_negligible",
+      "keep_control_worse",
+      "keep_control_mixed"
+    ],
+    "bootstrap": {
+      "draws": 2000,
+      "seed": 83,
+      "level": 0.9,
+      "scheme": "seats resampled with replacement within election, pooled equal-seat mean, paired against control; reported, not a gate"
+    },
+    "operationalAdoption": null
+  },
+  "descriptive": {
+    "leak": "the Stage67 flags were assigned with every 2014-2023 result known and 21 of the 38 came from a residual-ranked list; narrowing the ordinary group is partly mechanical (about 0.72x from trimming alone, Stage67). The 17-flag arms are the check. Reference values 0.55 (within) and 0.75 (mass) were seen on all four elections before this freeze and are not pre-registered fits.",
+    "preFreezeObservations": "before freezing, the coordinator-level diagnostic (minor-party-spread-findings-2026-10-10.md) showed that narrowing mass by 0.75 in ordinary seats lowers National candidate 80% coverage from 0.731 to 0.689 (Labour 0.799 to 0.776); this is why within and within_mass are separate arms and why the major guard exists."
+  },
+  "doNot": [
+    "no arm beyond control, within, within_mass, within17 and within_mass17; no grid, penalty, prior-strength or feature search",
+    "no Student-t, mixture, regime or sigma-shrinkage; no other item on the do-not-reopen list",
+    "no flag added, removed or reclassified after any Stage83 fit or score",
+    "no mean, S, R, kappa, ratio-offset, elasticity, local-party, national, balance-multiplier or Maori change",
+    "no multiplier above 1; no change to frozen Stage44 to Stage75 outputs, scales, draw counts or tolerances",
+    "no composed bank, national MCMC, acquisition, source or data/sources.json edit",
+    "no CI, workflow or validation-registry edit; the new pipeline is exercised in CI only through its unit tests",
+    "no operational adoption beyond the config values recorded in the findings, which James signs off by merging"
+  ],
+  "deviationsFromTheDraftJamesApproved": [
+    "penalty-free fit (Stage67 precedent) instead of the Stage48 ridge named in the draft: the draft cited Stage67 but named a ridge Stage67 does not use",
+    "within and mass are separate arms (the draft had one joint arm) because the pre-freeze observation above shows mass narrowing trades against National candidate coverage",
+    "the composed 193-seat National/Labour width check is replaced by a candidate-only major guard (coverage and CRPS), since the composed harness needs cached national forecasts"
+  ],
+  "decisionNumber": "D121",
+  "amendments": [
+    {
+      "number": 1,
+      "date": "2026-10-10",
+      "change": "add the robust scale estimator and four arms (within_robust, within_mass_robust and their 17-flag versions); selection tries the pre-registered moment arms first",
+      "reason": "the pre-registered moment-ratio fit produced earlier-trained multipliers of 0.69 to 0.97 (fit.json, read after the freeze), far above the 0.55 and 0.75 that the in-sample coverage diagnostic implied, because the moment is dominated by tail residuals; the pre-registered coverage band could then not be met for a reason unrelated to whether narrowing works",
+      "timing": "after the moment fits were run and their multipliers seen, before any Stage83 score was computed or read",
+      "commitBeforeScoring": true
+    }
+  ]
+}
