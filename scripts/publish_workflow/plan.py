@@ -1,7 +1,7 @@
 """Publish workflow decisions: the run mode, what to release, the snapshot id and the release options (stdlib only; no network).
 
     python3 -m scripts.publish_workflow.plan mode --event E --publish-input B --auto-variable V --ref R
-    python3 -m scripts.publish_workflow.plan release --existing-ids-from PATH --supersedes ID
+    python3 -m scripts.publish_workflow.plan release --mode M --event E [--existing-ids-from PATH] [--supersedes ID]
     python3 -m scripts.publish_workflow.plan options --out PATH --snapshot-id ID --code-revision SHA --national-date D
     python3 -m scripts.publish_workflow.plan adoption ...   (text of the adoption pull request)
     python3 -m scripts.publish_workflow.plan gate-passed
@@ -56,20 +56,46 @@ def decide_mode(event, publish_input, auto_variable, ref):
 
 
 def latest_refresh(root=ROOT):
-    """The newest weekly national run and Stage82 electorate-poll run, and the date of the newest of the two (the release date)."""
+    """The newest weekly national run, its data cutoff and the newest Stage82 electorate-poll run.
+
+    The release date is the national run's data cutoff: a forecast is new only when the national polls are (a refresh without new national
+    polls writes no national run). It names the release (`nowcast-<cutoff>`) and the frozen site folder (`archive/<cutoff>/`).
+    """
     national = [r['date'] for r in read(WEEKLY + '/index.json', root)['runs']]
     electorate_path = Path(root) / ELECTORATE / 'index.json'
     electorate = [r['date'] for r in read(ELECTORATE + '/index.json', root)['runs']] if electorate_path.exists() else []
     if not national:
         raise Refused('There is no published national refresh to release')
-    nat, ele = max(national), (max(electorate) if electorate else None)
-    return {'nationalDate': nat, 'electorateDate': ele, 'releaseDate': max(d for d in (nat, ele) if d)}
+    nat = max(national)
+    cutoff = read(f'{WEEKLY}/{nat}/estimate.json', root)['nowcastInput']['dataCutoff']
+    if not DATE.match(cutoff):
+        raise Refused(f'The {nat} refresh has no usable data cutoff')
+    return {'nationalDate': nat, 'electorateDate': max(electorate) if electorate else None, 'releaseDate': cutoff}
+
+
+def decide_work(mode, event, existing, release_date, supersedes=None):
+    """('release' | 'site' | 'none', snapshot id or None, superseded id or None, notice).
+
+    release: a new forecast (new national polls, or a correction): the whole chain, a new archive entry and a frozen copy of the site.
+    site: no new polls; the live site is rebuilt from the current code and the existing archive, with no new entry and no frozen copy.
+          The push step then commits only if the built files differ.
+    none: nothing to do.
+    A push run that is not allowed to publish does nothing (a rehearsal is a manual dry run); a dry run reads no archive, so it only rehearses a release.
+    """
+    if mode != 'publish' and event == 'push':
+        return 'none', None, None, 'Publishing is not switched on (PUBLISH_AUTO is not true), so a push to main builds nothing. Run Publish manually to rehearse.'
+    new_id, superseded = snapshot_id(release_date, existing, supersedes)
+    if new_id is not None:
+        return 'release', new_id, superseded, f'Releasing {new_id} (data cutoff {release_date}).'
+    if mode != 'publish':
+        return 'none', None, None, f'nowcast-{release_date} is already published.'
+    return 'site', None, None, f'No new polls: nowcast-{release_date} is already published. Rebuilding the live site only; no new forecast and no new archive entry.'
 
 
 def snapshot_id(release_date, existing, supersedes=None):
     """(id, supersedes) of the next release, or (None, None) when this refresh is already published and no correction is asked for.
 
-    One release per refresh date: `nowcast-<date>`. A correction (a supersedes id that is archived) takes the first free `-r<n>` id; the
+    One release per data cutoff: `nowcast-<cutoff>`. A correction (a supersedes id that is archived) takes the first free `-r<n>` id; the
     archive refuses an id it already holds, so ids are never reused.
     """
     if not DATE.match(release_date):
@@ -78,6 +104,8 @@ def snapshot_id(release_date, existing, supersedes=None):
     if supersedes:
         if supersedes not in existing:
             raise Refused(f'Cannot supersede {supersedes}: it is not in the published archive')
+        if not (supersedes == f'nowcast-{release_date}' or supersedes.startswith(f'nowcast-{release_date}-r')):
+            raise Refused(f'Cannot supersede {supersedes}: a correction replaces a release of the newest data cutoff ({release_date}) only, because its frozen site folder is named by that date')
     elif f'nowcast-{release_date}' in existing:
         return None, None
     n = 1
@@ -192,6 +220,7 @@ def main(argv=None):
     m = sub.add_parser('mode')
     m.add_argument('--event', default=''); m.add_argument('--publish-input', default=''); m.add_argument('--auto-variable', default=''); m.add_argument('--ref', default='')
     r = sub.add_parser('release')
+    r.add_argument('--mode', required=True); r.add_argument('--event', default='')
     r.add_argument('--existing-ids-from', help='the archive index.json of the public site; absent in a dry run'); r.add_argument('--supersedes', default='')
     o = sub.add_parser('options')
     o.add_argument('--out', required=True); o.add_argument('--snapshot-id', required=True); o.add_argument('--code-revision', required=True); o.add_argument('--national-date', required=True)
@@ -211,11 +240,10 @@ def main(argv=None):
             found = latest_refresh()
             election_guard(found['releaseDate'], config)
             text = Path(a.existing_ids_from).read_text(encoding='utf-8') if a.existing_ids_from and Path(a.existing_ids_from).exists() else ''
-            new_id, superseded = snapshot_id(found['releaseDate'], existing_ids(text), a.supersedes.strip() or None)
-            if new_id is None:
-                print(f"Nothing to publish: nowcast-{found['releaseDate']} is already in the archive. Run again with a supersedes id to publish a correction.")
+            work, new_id, superseded, notice = decide_work(a.mode, a.event, existing_ids(text), found['releaseDate'], a.supersedes.strip() or None)
+            print(notice)
             emit({'national_date': found['nationalDate'], 'electorate_date': found['electorateDate'], 'release_date': found['releaseDate'],
-                  'snapshot_id': new_id, 'supersedes': superseded, 'skip': 'true' if new_id is None else 'false'})
+                  'snapshot_id': new_id, 'supersedes': superseded, 'work': work})
         elif a.command == 'options':
             options = build_options(read(CONFIG), a.snapshot_id, a.national_date, a.code_revision)
             Path(a.out).parent.mkdir(parents=True, exist_ok=True)

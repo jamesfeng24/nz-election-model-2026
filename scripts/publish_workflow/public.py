@@ -1,26 +1,33 @@
 """The only code that reads or writes the public site repository (jamesfeng24/jamesfeng24.github.io), for the Publish workflow.
 
     python3 -m scripts.publish_workflow.public preflight --clone DIR --archive-to DIR --head-file PATH
-    python3 -m scripts.publish_workflow.public push --clone DIR --site DIR --message TEXT --expected-head SHA
+    python3 -m scripts.publish_workflow.public push --clone DIR --site DIR --message TEXT --expected-head SHA [--frozen DIR --frozen-name YYYY-MM-DD [--correction]]
     python3 -m scripts.publish_workflow.public push-branch --branch NAME
 
 The token comes from the environment (PUBLISH_TOKEN, James's POLL_REFRESH_TOKEN secret) and is sent as a request header for each git command only;
-it is never written into a remote URL or a git config, and it is masked in anything printed. Commits to the public repository carry James's
+it is never written into a remote URL or a git config, and it is masked in anything printed. The frozen copies at `archive/<date>/` are written once
+(or replaced by a correction of that same date) and every other publish leaves them byte for byte as they were; a digest taken before and after
+the tree is rewritten aborts the push on any other difference. Commits to the public repository carry James's
 public GitHub identity as author and committer and no trailers. Nothing is ever force-pushed. A dry run of the workflow never calls this module.
 """
 import argparse
 import base64
+import hashlib
 import os
+import re
 import shutil
 import subprocess
 import sys
 from pathlib import Path
+
+from scripts.publish_workflow.verify import check_frozen
 
 PUBLIC_REPO = 'jamesfeng24/jamesfeng24.github.io'
 PUBLIC_BRANCH = 'main'
 AUTHOR_NAME = 'jamesfeng24'
 AUTHOR_EMAIL = '233003834+jamesfeng24@users.noreply.github.com'
 README_TEMPLATE = Path(__file__).with_name('public-README.md')
+DATED = re.compile(r'^\d{4}-\d{2}-\d{2}$')
 # Kept when the tree is replaced.
 KEEP = {'.git', 'CNAME'}
 # Everything the public repository may contain besides the built site: the entries a publish itself writes. Any other top-level entry stops the
@@ -72,7 +79,17 @@ def unexpected_entries(directory, site_names=()):
     return sorted(p.name for p in Path(directory).iterdir() if p.name not in allowed)
 
 
-def preflight(clone, archive_to, remote, token=None, head_file=None):
+def expected_site_names(root='.'):
+    """Top-level names the site build will write that no fixed list knows: the files of public/ (copied verbatim), the pages and the bundle."""
+    root = Path(root)
+    names = {'index.html', 'assets'}
+    if (root / 'public').is_dir():
+        names |= {p.name for p in (root / 'public').iterdir()}
+    names |= {p.name for p in root.iterdir() if p.is_dir() and (p / 'index.html').is_file() and p.name not in ('node_modules', 'site', 'site-archived', 'public')}
+    return names
+
+
+def preflight(clone, archive_to, remote, token=None, head_file=None, site_names=()):
     """Clone the public repository, confirm the branch, the contents and the token's right to push, and copy its release archive to `archive_to`.
 
     Returns the commit the archive was read from (None for an empty repository). Pushes nothing.
@@ -84,7 +101,7 @@ def preflight(clone, archive_to, remote, token=None, head_file=None):
         branch = git(['symbolic-ref', '--short', 'HEAD'], cwd=clone).stdout.strip()
         if branch != PUBLIC_BRANCH:
             raise PublicError(f'The public repository is on branch {branch}; GitHub Pages must deploy from {PUBLIC_BRANCH}')
-    extra = unexpected_entries(clone)
+    extra = unexpected_entries(clone, site_names)
     if extra:
         raise PublicError('The public repository holds entries a publish does not own: ' + ', '.join(extra) + '. Remove them, or ask for them to be allowed, then run again.')
     probe = clone
@@ -103,22 +120,68 @@ def preflight(clone, archive_to, remote, token=None, head_file=None):
     return head
 
 
-def sync_tree(site, clone):
-    """Make the working tree of the clone equal to the built site plus the README and .nojekyll, keeping only `KEEP`."""
+def frozen_digests(tree):
+    """{date: sha256 over the paths and bytes of the frozen copy `archive/<date>/`} for every dated folder of an assembled tree."""
+    archive = Path(tree) / 'archive'
+    out = {}
+    if not archive.is_dir():
+        return out
+    for folder in sorted(p for p in archive.iterdir() if p.is_dir()):
+        digest = hashlib.sha256()
+        for file in sorted(f for f in folder.rglob('*') if f.is_file()):
+            digest.update(file.relative_to(folder).as_posix().encode() + b'\0' + file.read_bytes() + b'\0')
+        out[folder.name] = digest.hexdigest()
+    return out
+
+
+def sync_tree(site, clone, frozen=None, frozen_name=None, correction=False):
+    """Make the working tree of the clone equal to the built site plus the README and .nojekyll, keeping only `KEEP` and the frozen copies.
+
+    The existing `archive/<date>/` folders are kept as they are. `frozen` (the built archived-mode site) is added as `archive/<frozen_name>/`; an
+    existing folder of that name is replaced only for a correction. Afterwards no frozen copy may differ from before, except that one.
+    """
     site, clone = Path(site), Path(clone)
     names = {p.name for p in site.iterdir()}
     extra = unexpected_entries(clone, names)
     if extra:
         raise PublicError('The public repository holds entries a publish does not own: ' + ', '.join(extra))
+    if frozen_name is not None and not DATED.match(frozen_name):
+        raise PublicError(f'Bad frozen folder name {frozen_name}')
+    if bool(frozen) != bool(frozen_name):
+        raise PublicError('A frozen copy needs both its folder and its date')
+    if (site / 'archive').is_dir() and any(p.is_dir() and DATED.match(p.name) for p in (site / 'archive').iterdir()):
+        raise PublicError('The built live site carries a dated archive folder; frozen copies come only from the archived-mode build')
+    before = frozen_digests(clone)
+    if frozen_name in before and not correction:
+        raise PublicError(f'archive/{frozen_name}/ already exists; a frozen copy is replaced only by a correction of that date')
     for entry in clone.iterdir():
         if entry.name in KEEP:
+            continue
+        if entry.name == 'archive' and entry.is_dir():
+            for child in entry.iterdir():
+                if not (child.is_dir() and DATED.match(child.name)):
+                    shutil.rmtree(child) if child.is_dir() else child.unlink()
             continue
         shutil.rmtree(entry) if entry.is_dir() else entry.unlink()
     for entry in site.iterdir():
         target = clone / entry.name
-        shutil.copytree(entry, target) if entry.is_dir() else shutil.copy2(entry, target)
+        shutil.copytree(entry, target, dirs_exist_ok=True) if entry.is_dir() else shutil.copy2(entry, target)
+    if frozen:
+        target = clone / 'archive' / frozen_name
+        if target.exists():
+            shutil.rmtree(target)
+        shutil.copytree(frozen, target)
     shutil.copyfile(README_TEMPLATE, clone / 'README.md')
     (clone / '.nojekyll').write_text('', encoding='utf-8')
+    after = frozen_digests(clone)
+    expected = dict(before)
+    if frozen_name:
+        expected[frozen_name] = after.get(frozen_name)
+    if after != expected:
+        raise PublicError('A frozen site copy changed: ' + ', '.join(sorted(d for d in set(after) | set(before) if after.get(d) != expected.get(d))) + '. Nothing was pushed.')
+    problems = check_frozen(clone)
+    if problems:
+        raise PublicError('The assembled public tree is not consistent: ' + '; '.join(problems))
 
 
 def commit_and_push(clone, message, remote, token=None, expected_head=None):
@@ -156,6 +219,7 @@ def main(argv=None):
     p = sub.add_parser('preflight'); p.add_argument('--clone', required=True); p.add_argument('--archive-to', required=True); p.add_argument('--head-file', required=True)
     q = sub.add_parser('push')
     q.add_argument('--clone', required=True); q.add_argument('--site', required=True); q.add_argument('--message', required=True); q.add_argument('--expected-head', default='')
+    q.add_argument('--frozen'); q.add_argument('--frozen-name'); q.add_argument('--correction', action='store_true')
     b = sub.add_parser('push-branch'); b.add_argument('--branch', required=True)
     a = ap.parse_args(argv)
     token = os.environ.get('PUBLISH_TOKEN', '')
@@ -164,10 +228,10 @@ def main(argv=None):
         print('::add-mask::' + base64.b64encode(f'x-access-token:{token}'.encode()).decode())
     try:
         if a.command == 'preflight':
-            head = preflight(a.clone, a.archive_to, f'https://github.com/{PUBLIC_REPO}.git', token, a.head_file)
+            head = preflight(a.clone, a.archive_to, f'https://github.com/{PUBLIC_REPO}.git', token, a.head_file, expected_site_names())
             print('Public repository reachable and writable; branch main at', head or '(empty repository)')
         elif a.command == 'push':
-            sync_tree(a.site, a.clone)
+            sync_tree(a.site, a.clone, a.frozen, a.frozen_name, a.correction)
             print('Public repository:', commit_and_push(a.clone, a.message, f'https://github.com/{PUBLIC_REPO}.git', token, a.expected_head or None))
         else:
             repo = os.environ.get('GITHUB_REPOSITORY', '')

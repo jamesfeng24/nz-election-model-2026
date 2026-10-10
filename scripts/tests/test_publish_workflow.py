@@ -15,6 +15,7 @@ from scripts.publish_workflow import plan, public, verify
 ROOT = Path(__file__).resolve().parents[2]
 WORKFLOW = (ROOT / '.github/workflows/publish.yml').read_text(encoding='utf-8')
 CODE = '\n'.join(line for line in WORKFLOW.splitlines() if not line.lstrip().startswith('#'))
+EMPTY_INDEX = '{"schemaVersion": 1, "snapshots": []}'
 CONFIG = json.loads((ROOT / 'config/nowcast-2026.json').read_text(encoding='utf-8'))
 
 
@@ -48,16 +49,35 @@ class ModeTests(unittest.TestCase):
 class ReleaseTests(unittest.TestCase):
     def test_latest_refresh_on_the_repository(self):
         found = plan.latest_refresh()
-        self.assertEqual(found['releaseDate'], max(d for d in (found['nationalDate'], found['electorateDate']) if d))
+        estimate = json.loads((ROOT / plan.WEEKLY / found['nationalDate'] / 'estimate.json').read_text())
+        self.assertEqual(found['releaseDate'], estimate['nowcastInput']['dataCutoff'])
 
-    def test_release_date_is_the_newest_of_national_and_electorate_runs(self):
+    def test_release_date_is_the_data_cutoff_of_the_newest_national_run(self):
         with tempfile.TemporaryDirectory() as tmp:
             for rel, dates in ((plan.WEEKLY, ['2026-10-07', '2026-10-14']), (plan.ELECTORATE, ['2026-10-10', '2026-10-17'])):
                 (Path(tmp) / rel).mkdir(parents=True)
                 (Path(tmp) / rel / 'index.json').write_text(json.dumps({'runs': [{'date': d} for d in dates]}))
-            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'electorateDate': '2026-10-17', 'releaseDate': '2026-10-17'})
+            for d in ('2026-10-07', '2026-10-14'):
+                (Path(tmp) / plan.WEEKLY / d).mkdir()
+                (Path(tmp) / plan.WEEKLY / d / 'estimate.json').write_text(json.dumps({'nowcastInput': {'dataCutoff': d}}))
+            # a newer electorate-poll run does not make a new release: only new national polls move the data cutoff
+            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'electorateDate': '2026-10-17', 'releaseDate': '2026-10-14'})
             shutil.rmtree(Path(tmp) / plan.ELECTORATE)
             self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'electorateDate': None, 'releaseDate': '2026-10-14'})
+
+    def test_a_release_with_new_polls_a_site_only_run_without_and_nothing_for_a_push_that_may_not_publish(self):
+        # new national polls (a new data cutoff): a release, in either mode
+        self.assertEqual(plan.decide_work('publish', 'push', ['nowcast-2026-10-05'], '2026-10-12')[:3], ('release', 'nowcast-2026-10-12', None))
+        self.assertEqual(plan.decide_work('dry-run', 'workflow_dispatch', [], '2026-10-12')[:3], ('release', 'nowcast-2026-10-12', None))
+        # no new polls: the live site only, with no new id
+        self.assertEqual(plan.decide_work('publish', 'push', ['nowcast-2026-10-12'], '2026-10-12')[:3], ('site', None, None))
+        self.assertEqual(plan.decide_work('publish', 'workflow_dispatch', ['nowcast-2026-10-12'], '2026-10-12')[:3], ('site', None, None))
+        # a correction is a release again, with the same date
+        self.assertEqual(plan.decide_work('publish', 'workflow_dispatch', ['nowcast-2026-10-12'], '2026-10-12', 'nowcast-2026-10-12')[:3],
+                         ('release', 'nowcast-2026-10-12-r2', 'nowcast-2026-10-12'))
+        # a push run that may not publish builds nothing, and a dry run never rebuilds a site it cannot compare with
+        self.assertEqual(plan.decide_work('dry-run', 'push', [], '2026-10-12')[0], 'none')
+        self.assertEqual(plan.decide_work('dry-run', 'workflow_dispatch', ['nowcast-2026-10-12'], '2026-10-12')[0], 'none')
 
     def test_snapshot_ids(self):
         self.assertEqual(plan.snapshot_id('2026-10-12', []), ('nowcast-2026-10-12', None))
@@ -68,6 +88,8 @@ class ReleaseTests(unittest.TestCase):
                          ('nowcast-2026-10-12-r3', 'nowcast-2026-10-12-r2'))
         with self.assertRaises(plan.Refused):
             plan.snapshot_id('2026-10-12', ['nowcast-2026-10-05'], 'nowcast-1999-01-01')
+        with self.assertRaises(plan.Refused):           # a correction replaces a release of the newest data cutoff only (its frozen folder is named by that date)
+            plan.snapshot_id('2026-10-12', ['nowcast-2026-10-05'], 'nowcast-2026-10-05')
         with self.assertRaises(plan.Refused):
             plan.snapshot_id('12 October', [])
 
@@ -205,6 +227,14 @@ class ArchiveCheckTests(unittest.TestCase):
         write_release(self.new, 'nowcast-2026-10-13', '2026-10-13')
         self.assertTrue(any('exactly one new entry' in e for e in self.check()))
 
+    def test_a_site_only_run_adds_nothing(self):
+        self.assertEqual(verify.check_archive(self.prev, self.prev, None, ''), [])
+        self.assertTrue(any('no new entry' in e for e in verify.check_archive(self.new, self.prev, None, '')))
+
+    def test_two_current_forecasts_with_the_same_cutoff_date_are_refused(self):
+        write_release(self.new, 'nowcast-2026-10-12-x', '2026-10-12')
+        self.assertTrue(any('share a data cutoff date' in e for e in self.check()))
+
     def test_wrong_cutoff_or_id_is_caught(self):
         self.assertTrue(any('data cutoff' in e for e in self.check(cutoff='2026-10-11')))
         self.assertTrue(self.check(snapshot_id='nowcast-2026-10-19'))
@@ -237,6 +267,36 @@ class TreeCheckTests(unittest.TestCase):
             self.assertIn('forecast', verify.site_pages(ROOT))
 
 
+class FrozenCheckTests(unittest.TestCase):
+    def make(self, tmp, days=('2026-10-05', '2026-10-12'), folders=None):
+        tree = Path(tmp)
+        (tree / 'forecasts').mkdir(parents=True)
+        for d in days:
+            write_release(tree / 'forecasts', 'nowcast-' + d, d)
+        for d in (days if folders is None else folders):
+            for rel in ('index.html', 'forecast/index.html', 'forecasts/index.json'):
+                (tree / 'archive' / d / rel).parent.mkdir(parents=True, exist_ok=True)
+                (tree / 'archive' / d / rel).write_text(d)
+        return tree
+
+    def test_every_current_forecast_has_its_frozen_copy_and_nothing_else_does(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tree = self.make(tmp)
+            self.assertEqual(verify.check_frozen(tree), [])
+            shutil.rmtree(tree / 'archive/2026-10-05')
+            self.assertTrue(any('2026-10-05' in e for e in verify.check_frozen(tree)))
+            self.make(tmp + '/x', days=('2026-10-12',), folders=('2026-10-12', '2026-10-01'))
+            self.assertTrue(any('belongs to no current forecast' in e for e in verify.check_frozen(Path(tmp) / 'x')))
+
+    def test_a_corrected_release_keeps_one_folder_and_an_incomplete_copy_is_caught(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tree = self.make(tmp, days=('2026-10-12',))
+            write_release(tree / 'forecasts', 'nowcast-2026-10-12-r2', '2026-10-12', supersedes='nowcast-2026-10-12')
+            self.assertEqual(verify.check_frozen(tree), [])
+            (tree / 'archive/2026-10-12/forecasts/index.json').unlink()
+            self.assertTrue(any('incomplete' in e for e in verify.check_frozen(tree)))
+
+
 def git(cwd, *args):
     return subprocess.run(['git', *args], cwd=cwd, check=True, capture_output=True, text=True).stdout.strip()
 
@@ -251,7 +311,7 @@ class PublicPushTests(unittest.TestCase):
         subprocess.run(['git', 'init', '-q', '--bare', '--initial-branch=main', str(self.remote)], check=True)
         self.url = self.remote.as_uri()
         self.site = self.tmp / 'site'
-        for rel, text in (('index.html', 'home'), ('404.html', 'nf'), ('forecast/index.html', 'f'), ('forecasts/index.json', '{}'), ('assets/a.js', 'js')):
+        for rel, text in (('index.html', 'home'), ('404.html', 'nf'), ('forecast/index.html', 'f'), ('forecasts/index.json', EMPTY_INDEX), ('assets/a.js', 'js')):
             (self.site / rel).parent.mkdir(parents=True, exist_ok=True)
             (self.site / rel).write_text(text)
 
@@ -276,6 +336,95 @@ class PublicPushTests(unittest.TestCase):
         for word in ('claude', 'anthropic', 'generated by'):
             self.assertNotIn(word, readme.lower())
 
+    def frozen_site(self, name='2026-10-12', text='frozen'):
+        frozen = self.tmp / ('frozen-' + name)
+        shutil.rmtree(frozen, True)
+        for rel in ('index.html', 'forecast/index.html', 'forecasts/index.json'):
+            (frozen / rel).parent.mkdir(parents=True, exist_ok=True)
+            (frozen / rel).write_text(text)
+        return frozen
+
+    def index_site(self, *days):
+        """The built live site whose archive index lists the releases of `days`."""
+        shutil.rmtree(self.site / 'forecasts', True)
+        (self.site / 'forecasts').mkdir(parents=True)
+        for d in days:
+            write_release(self.site / 'forecasts', 'nowcast-' + d, d)
+
+    def publish_with_frozen(self, name, text='frozen', message='Update forecast', correction=False):
+        clone = self.tmp / ('clone-%d' % len(list(self.tmp.glob('clone-*'))))
+        head = public.preflight(clone, self.tmp / 'archive', self.url)
+        public.sync_tree(self.site, clone, self.frozen_site(name, text), name, correction)
+        return public.commit_and_push(clone, message, self.url, expected_head=head), clone
+
+    def clone_of_remote(self):
+        check = self.tmp / ('check-%d' % len(list(self.tmp.glob('check-*'))))
+        subprocess.run(['git', 'clone', '-q', self.url, str(check)], check=True)
+        return check
+
+    def test_frozen_copies_are_written_once_and_never_touched_by_later_publishes(self):
+        self.index_site('2026-10-05')
+        self.assertEqual(self.publish_with_frozen('2026-10-05', 'week one')[0], 'pushed')
+        self.index_site('2026-10-05', '2026-10-12')
+        (self.site / 'assets/a.js').write_text('js v2')
+        self.assertEqual(self.publish_with_frozen('2026-10-12', 'week two')[0], 'pushed')
+        check = self.clone_of_remote()
+        self.assertEqual((check / 'archive/2026-10-05/index.html').read_text(), 'week one')
+        self.assertEqual((check / 'archive/2026-10-12/index.html').read_text(), 'week two')
+        self.assertEqual((check / 'assets/a.js').read_text(), 'js v2')
+        # a site-only publish (no frozen copy, a changed live site) rewrites the live root and leaves every frozen copy as it was
+        (self.site / 'index.html').write_text('new design')
+        (self.site / 'archive').mkdir()
+        (self.site / 'archive/index.html').write_text('archive page v2')
+        clone = self.tmp / 'clone-site'
+        head = public.preflight(clone, self.tmp / 'archive3', self.url)
+        public.sync_tree(self.site, clone)
+        self.assertEqual(public.commit_and_push(clone, 'Update site 2026-10-14', self.url, expected_head=head), 'pushed')
+        check = self.clone_of_remote()
+        self.assertEqual((check / 'index.html').read_text(), 'new design')
+        self.assertEqual((check / 'archive/index.html').read_text(), 'archive page v2')
+        self.assertEqual((check / 'archive/2026-10-05/index.html').read_text(), 'week one')
+        self.assertEqual((check / 'archive/2026-10-12/index.html').read_text(), 'week two')
+
+    def test_a_site_only_publish_with_nothing_changed_pushes_nothing(self):
+        self.index_site('2026-10-05')
+        self.publish_with_frozen('2026-10-05')
+        clone = self.tmp / 'clone-same'
+        head = public.preflight(clone, self.tmp / 'archive4', self.url)
+        public.sync_tree(self.site, clone)
+        self.assertEqual(public.commit_and_push(clone, 'Update site 2026-10-14', self.url, expected_head=head), 'unchanged')
+
+    def test_a_frozen_copy_is_replaced_only_for_a_correction_of_that_date(self):
+        self.index_site('2026-10-05')
+        self.publish_with_frozen('2026-10-05', 'first')
+        clone = self.tmp / 'clone-again'
+        public.preflight(clone, self.tmp / 'archive5', self.url)
+        with self.assertRaises(public.PublicError) as caught:
+            public.sync_tree(self.site, clone, self.frozen_site('2026-10-05', 'second'), '2026-10-05')
+        self.assertIn('already exists', str(caught.exception))
+        write_release(self.site / 'forecasts', 'nowcast-2026-10-05-r2', '2026-10-05', supersedes='nowcast-2026-10-05')
+        self.assertEqual(self.publish_with_frozen('2026-10-05', 'corrected', correction=True)[0], 'pushed')
+        self.assertEqual((self.clone_of_remote() / 'archive/2026-10-05/index.html').read_text(), 'corrected')
+
+    def test_a_publish_that_would_leave_a_current_forecast_without_a_frozen_copy_is_refused(self):
+        self.index_site('2026-10-05', '2026-10-12')           # two current forecasts, one frozen copy offered
+        clone = self.tmp / 'clone-bad'
+        public.preflight(clone, self.tmp / 'archive6', self.url)
+        with self.assertRaises(public.PublicError) as caught:
+            public.sync_tree(self.site, clone, self.frozen_site('2026-10-12'), '2026-10-12')
+        self.assertIn('archive/2026-10-05/', str(caught.exception))
+
+    def test_a_frozen_copy_needs_a_date_and_the_live_build_may_not_carry_dated_folders(self):
+        clone = self.tmp / 'clone-args'
+        public.preflight(clone, self.tmp / 'archive7', self.url)
+        with self.assertRaises(public.PublicError):
+            public.sync_tree(self.site, clone, self.frozen_site(), None)
+        with self.assertRaises(public.PublicError):
+            public.sync_tree(self.site, clone, self.frozen_site('x'), 'yesterday')
+        (self.site / 'archive/2026-10-05').mkdir(parents=True)
+        with self.assertRaises(public.PublicError):
+            public.sync_tree(self.site, clone)
+
     def test_an_unchanged_site_pushes_nothing(self):
         self.publish()
         result, _ = self.publish(message='Update forecast 2026-10-19')
@@ -285,7 +434,7 @@ class PublicPushTests(unittest.TestCase):
         self.publish()
         (self.site / 'assets/a.js').unlink()
         (self.site / 'assets/b.js').write_text('js2')
-        (self.site / 'forecasts/index.json').write_text('{"n": 2}')
+        (self.site / 'forecasts/index.json').write_text(EMPTY_INDEX.replace('}', ', "n": 2}'))
         result, _ = self.publish(message='Update forecast 2026-10-19')
         self.assertEqual(result, 'pushed')
         check = self.tmp / 'check'
@@ -294,11 +443,34 @@ class PublicPushTests(unittest.TestCase):
         self.assertFalse((check / 'assets/a.js').exists())
         self.assertEqual((check / 'assets/b.js').read_text(), 'js2')
 
+    def test_files_the_site_build_adds_at_the_top_level_are_owned_not_stray(self):
+        # public/ files (icons, share card) are copied to the root by the build; a later publish must not mistake them for someone else's files
+        research = self.tmp / 'research'
+        (research / 'public/fonts').mkdir(parents=True)
+        (research / 'public/favicon.svg').write_text('x')
+        (research / 'public/social-card.png').write_text('x')
+        (research / 'forecast').mkdir()
+        (research / 'forecast/index.html').write_text('x')
+        (research / 'src').mkdir()
+        names = public.expected_site_names(research)
+        self.assertTrue({'favicon.svg', 'social-card.png', 'fonts', 'forecast', 'index.html', 'assets'} <= names)
+        self.assertNotIn('src', names)
+        site = self.tmp / 'site-icons'
+        shutil.copytree(self.site, site)
+        (site / 'favicon.svg').write_text('icon')
+        (site / 'social-card.png').write_text('card')
+        self.publish(site=site)
+        clone = self.tmp / 'second'
+        with self.assertRaises(public.PublicError):                  # not known before the build: refused ...
+            public.preflight(clone, self.tmp / 'a1', self.url)
+        shutil.rmtree(clone)
+        public.preflight(clone, self.tmp / 'a2', self.url, site_names=names)   # ... known from the research checkout: accepted
+
     def test_the_archive_is_read_back_from_the_public_repository(self):
         self.publish()
         clone = self.tmp / 'again'
         public.preflight(clone, self.tmp / 'archive2', self.url)
-        self.assertEqual((self.tmp / 'archive2' / 'index.json').read_text(), '{}')
+        self.assertEqual((self.tmp / 'archive2' / 'index.json').read_text(), EMPTY_INDEX)
 
     def test_unexpected_files_stop_the_run_before_anything_is_deleted(self):
         seed = self.tmp / 'seed'
@@ -357,6 +529,9 @@ class WorkflowShapeTests(unittest.TestCase):
         self.assertIn('workflow_dispatch:', CODE)
         self.assertRegex(CODE, r'publish:\n\s+description:[^\n]*\n\s+required: false\n\s+type: boolean\n\s+default: false')
         self.assertIn('data/processed/polling/weekly-refresh/index.json', CODE)
+        for site_path in ('src/**', 'public/**', "'*/index.html'", 'vite.config.ts', 'package-lock.json'):       # a site-only change republishes the live root
+            self.assertIn(site_path, CODE)
+        self.assertIn("'!src/release/**'", CODE)
         self.assertNotIn('pull_request', CODE)
         self.assertNotIn('schedule:', CODE)
 
@@ -389,10 +564,12 @@ class WorkflowShapeTests(unittest.TestCase):
     def test_publication_gates_run_before_any_push_and_the_push_is_last_but_bookkeeping(self):
         order = [name for name, _ in steps()]
         position = {key: next(i for i, n in enumerate(order) if key in n) for key in
-                    ('Production run', 'Release gate and archive', 'Build the site and check', 'Push the adoption branch', 'Push to the public repository', 'Open the adoption')}
+                    ('Production run', 'Release gate and archive', 'Build the site and check', 'Build the frozen copy', 'Push the adoption branch', 'Push to the public repository',
+                     'Open the adoption')}
         self.assertLess(position['Production run'], position['Release gate and archive'])
         self.assertLess(position['Release gate and archive'], position['Build the site and check'])
-        self.assertLess(position['Build the site and check'], position['Push the adoption branch'])
+        self.assertLess(position['Build the site and check'], position['Build the frozen copy'])
+        self.assertLess(position['Build the frozen copy'], position['Push the adoption branch'])
         self.assertLess(position['Push the adoption branch'], position['Push to the public repository'])
         self.assertLess(position['Push to the public repository'], position['Open the adoption'])
         self.assertEqual(order[-1][:4], 'Open')
@@ -400,10 +577,28 @@ class WorkflowShapeTests(unittest.TestCase):
         self.assertIn('continue-on-error: true', adoption)       # bookkeeping after the fact cannot fail a published run
         self.assertIn("vars.ADOPTION_PR == 'true'", adoption)     # off by default: the weekly run stays lean
 
-    def test_the_run_stops_when_nothing_is_new(self):
+    def test_the_release_chain_runs_only_for_a_release_and_the_site_build_never_for_nothing(self):
         for name, text in steps():
-            if name.startswith(('Switch', 'Development', 'Build the site evidence', 'Production', 'Release gate', 'Build the site', 'Push', 'Open')):
-                self.assertIn("steps.release.outputs.skip != 'true'", text, name)
+            if name.startswith(('Switch', 'Development', 'Build the site evidence', 'Production', 'Release gate', 'Build the frozen copy', 'Push the adoption', 'Open')):
+                self.assertIn("steps.release.outputs.work == 'release'", text, name)
+            if name.startswith(('Build the site and check', 'Push to the public repository')):
+                self.assertIn("steps.release.outputs.work != 'none'", text, name)
+        self.assertNotIn('outputs.skip', CODE)
+
+    def test_a_site_only_publish_adds_no_forecast_and_no_frozen_copy(self):
+        text = dict(steps())['Push to the public repository']
+        self.assertIn('--frozen site-archived --frozen-name "$CUTOFF"', text)
+        self.assertIn('if [ "$WORK" = release ]', text)
+        self.assertLess(text.index('if [ "$WORK" = release ]'), text.index('--frozen'))
+        self.assertIn('--no-new', dict(steps())['Put the published archive in place (site-only)'])
+        self.assertIn("steps.release.outputs.work == 'site'", dict(steps())['Put the published archive in place (site-only)'])
+
+    def test_the_frozen_copy_is_built_checked_and_never_rebuilt_in_place(self):
+        text = dict(steps())['Build the frozen copy of the site for this week (release)']
+        self.assertIn('SITE_ARCHIVE_DATE="$CUTOFF" SITE_OUT_DIR=site-archived npm run build', text)
+        self.assertIn('no_synthetic_in_dist.mjs site-archived', text)
+        self.assertIn('check_site.mjs site-archived', text)
+        self.assertIn('--correction', dict(steps())['Push to the public repository'])
 
     def test_logs_print_no_forecast_numbers(self):
         # public logs: no step prints or summarises seats, probabilities or shares

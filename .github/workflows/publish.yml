@@ -3,13 +3,21 @@ name: Publish
 #
 #   weekly Poll refresh PR -> James merges it (his one manual step) -> this workflow (on that push to main):
 #   adopt the newest refresh into the configuration -> development gate -> full production run (65,536 draws; the Python gate must pass)
-#   -> TypeScript release gate and append-only archive -> build the static site -> independent checks -> push to the public repository.
-#   Any failed gate stops the run before anything is pushed.
+#   -> TypeScript release gate and append-only archive -> build the live site and a frozen copy of the whole site as it is this week
+#   -> independent checks -> push to the public repository (live root + archive/<data cutoff date>/). Any failed gate stops the run before
+#   anything is pushed.
+#
+# Two kinds of publish (docs/publish-workflow.md). A RELEASE happens only when the newest refresh brought new national polls (a new data cutoff):
+# it adds one archive entry and one frozen site copy, archive/<date>/, which no later publish touches. With no new polls, a publish is SITE-ONLY:
+# the live root is rebuilt from the current site code and the existing archive (a design fix merged to main), with no new forecast, no archive
+# entry and no change to any frozen copy; it commits only if the built files differ. A push to main that changes neither the refresh indexes nor
+# the site code does not start this workflow.
 #
 # Two things must both be true before this pushes anywhere (docs/publish-workflow.md):
 #   * manual run: the "publish" box is ticked; run on a push to main: the repository variable PUBLISH_AUTO is exactly 'true'
-#     (James sets it after he has approved the first publish). Every other run is a DRY RUN: it builds and checks everything,
-#     never contacts the public repository, never uses the token, and writes nothing outside the runner.
+#     (James sets it after he has approved the first publish). A manual run that is not publishing is a DRY RUN: it builds and checks a
+#     release rehearsal, never contacts the public repository, never uses the token, and writes nothing outside the runner. A push to main
+#     without PUBLISH_AUTO builds nothing.
 #   * the run is on main.
 # The bookkeeping pull request that follows a publish (about 15 more minutes, then a Verify run on the pull request) is off unless the repository
 # variable ADOPTION_PR is exactly 'true'; it is not needed for any later publish. Leaving it off keeps the weekly run lean.
@@ -28,7 +36,7 @@ on:
         type: boolean
         default: false
       supersedes:
-        description: 'Id of an archived forecast this run corrects, for example nowcast-2026-10-12. Empty releases the next forecast.'
+        description: 'Id of an archived forecast this run corrects, for example nowcast-2026-10-12. It must be a release of the newest data cutoff; its frozen site folder is rebuilt. Empty publishes the next forecast, or only the live site when there are no new polls.'
         required: false
         type: string
       preview:
@@ -39,8 +47,22 @@ on:
   push:
     branches: [main]
     paths:
+      # a poll refresh (a new forecast when it brought new national polls)
       - data/processed/polling/weekly-refresh/index.json
       - data/processed/polling/electorate-live/index.json
+      # the site code (a site-only republish of the live root)
+      - src/**
+      - '!src/**/*.test.ts'
+      - '!src/**/*.test.tsx'
+      - '!src/release/**'
+      - public/**
+      - index.html
+      - '*/index.html'
+      - vite.config.ts
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - data/processed/site-map/**
 concurrency:
   group: publish
   cancel-in-progress: false
@@ -72,35 +94,39 @@ jobs:
         run: |
           if [ -z "$PUBLISH_TOKEN" ]; then echo "::error::The POLL_REFRESH_TOKEN secret is not set."; exit 1; fi
           python3 -m scripts.publish_workflow.public preflight --clone "$RUNNER_TEMP/public" --archive-to "$RUNNER_TEMP/previous-forecasts" --head-file "$RUNNER_TEMP/public-head"
-      - name: Decide what to release
+      - name: Decide what to build (a release, the live site only, or nothing)
         id: release
         env:
           SUPERSEDES: ${{ inputs.supersedes }}
+          MODE: ${{ steps.mode.outputs.mode }}
+          EVENT: ${{ github.event_name }}
         run: |
           args=()
           if [ -f "$RUNNER_TEMP/previous-forecasts/index.json" ]; then args+=(--existing-ids-from "$RUNNER_TEMP/previous-forecasts/index.json"); fi
-          python3 -m scripts.publish_workflow.plan release "${args[@]}" --supersedes "$SUPERSEDES"
+          python3 -m scripts.publish_workflow.plan release --mode "$MODE" --event "$EVENT" "${args[@]}" --supersedes "$SUPERSEDES"
       - uses: actions/setup-python@v6
-        if: steps.release.outputs.skip != 'true'
+        if: steps.release.outputs.work == 'release'
         with:
           python-version-file: .python-version
       - uses: actions/setup-node@v5
-        if: steps.release.outputs.skip != 'true'
+        if: steps.release.outputs.work != 'none'
         with:
           node-version-file: .nvmrc
           cache: npm
-      - name: Install the pinned environments
-        if: steps.release.outputs.skip != 'true'
-        run: |
-          python3 -m pip install -r requirements-boundaries.txt
-          npm ci
+      - name: Install the pinned Python environment
+        if: steps.release.outputs.work == 'release'
+        run: python3 -m pip install -r requirements-boundaries.txt
+      - name: Install the pinned Node environment
+        if: steps.release.outputs.work != 'none'
+        run: npm ci
       - name: Switch the configuration to the newest refresh
         id: adopt
-        if: steps.release.outputs.skip != 'true'
+        if: steps.release.outputs.work == 'release'
         env:
           NATIONAL: ${{ steps.release.outputs.national_date }}
           ELECTORATE: ${{ steps.release.outputs.electorate_date }}
           SNAPSHOT: ${{ steps.release.outputs.snapshot_id }}
+          RELEASE_DATE: ${{ steps.release.outputs.release_date }}
         run: |
           args=(--date "$NATIONAL")
           if [ -n "$ELECTORATE" ]; then args+=(--electorate-date "$ELECTORATE"); fi
@@ -113,14 +139,15 @@ jobs:
           echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           echo "cutoff=$(jq -r .national.dataCutoff config/nowcast-2026.json)" >> "$GITHUB_OUTPUT"
           echo "config_version=$(jq -r .configVersion config/nowcast-2026.json)" >> "$GITHUB_OUTPUT"
+          test "$(jq -r .national.dataCutoff config/nowcast-2026.json)" = "$RELEASE_DATE" || { echo "::error::The adopted data cutoff is not the release date $RELEASE_DATE"; exit 1; }
       - name: Development gate on the adopted configuration
-        if: steps.release.outputs.skip != 'true'
+        if: steps.release.outputs.work == 'release'
         run: |
           python3 -m scripts.nowcast_assembly.run
           python3 -m scripts.publish_workflow.plan gate-passed
       - name: Build the site evidence and check the incumbents
         id: inputs
-        if: steps.release.outputs.skip != 'true'
+        if: steps.release.outputs.work == 'release'
         env:
           NATIONAL: ${{ steps.release.outputs.national_date }}
         run: |
@@ -132,12 +159,12 @@ jobs:
           echo "evidence=$evidence" >> "$GITHUB_OUTPUT"
           echo "incumbents=$incumbents" >> "$GITHUB_OUTPUT"
       - name: Production run (65,536 draws, Python publication gate)
-        if: steps.release.outputs.skip != 'true'
+        if: steps.release.outputs.work == 'release'
         run: |
           mkdir -p .release-build/production
           python3 -m scripts.nowcast_assembly.run --require-complete --bank .release-build/production/bank.json --workers 4
       - name: Release gate and archive
-        if: steps.release.outputs.skip != 'true'
+        if: steps.release.outputs.work == 'release'
         env:
           SNAPSHOT: ${{ steps.release.outputs.snapshot_id }}
           SUPERSEDES: ${{ steps.release.outputs.supersedes }}
@@ -157,14 +184,29 @@ jobs:
           prev=()
           if [ -d "$RUNNER_TEMP/previous-forecasts" ]; then prev+=(--previous "$RUNNER_TEMP/previous-forecasts"); fi
           python3 -m scripts.publish_workflow.verify archive --new public/forecasts "${prev[@]}" --snapshot-id "$SNAPSHOT" --cutoff "$CUTOFF" --supersedes "$SUPERSEDES"
+      - name: Put the published archive in place (site-only)
+        if: steps.release.outputs.work == 'site'
+        run: |
+          mkdir -p public/forecasts
+          cp -a "$RUNNER_TEMP/previous-forecasts/." public/forecasts/
+          python3 -m scripts.publish_workflow.verify archive --new public/forecasts --previous "$RUNNER_TEMP/previous-forecasts" --no-new
       - name: Build the site and check the tree
-        if: steps.release.outputs.skip != 'true'
+        if: steps.release.outputs.work != 'none'
         run: |
           npm run build
           npm run check:dist
           python3 -m scripts.publish_workflow.verify tree --site site
+      - name: Build the frozen copy of the site for this week (release)
+        if: steps.release.outputs.work == 'release'
+        env:
+          CUTOFF: ${{ steps.adopt.outputs.cutoff }}
+        run: |
+          SITE_ARCHIVE_DATE="$CUTOFF" SITE_OUT_DIR=site-archived npm run build
+          node scripts/validate/no_synthetic_in_dist.mjs site-archived
+          node scripts/validate/check_site.mjs site-archived
+          python3 -m scripts.publish_workflow.verify tree --site site-archived
       - name: Dry run summary
-        if: steps.release.outputs.skip != 'true' && steps.mode.outputs.mode != 'publish'
+        if: steps.release.outputs.work == 'release' && steps.mode.outputs.mode != 'publish'
         env:
           SNAPSHOT: ${{ steps.release.outputs.snapshot_id }}
           CUTOFF: ${{ steps.adopt.outputs.cutoff }}
@@ -173,18 +215,20 @@ jobs:
           {
             echo "### Dry run: nothing was pushed"
             echo
-            echo "The forecast \`$SNAPSHOT\` (data to $CUTOFF, configuration $CONFIG_VERSION) was built, passed the Python publication gate, the release gate and the archive and site checks."
+            echo "The forecast \`$SNAPSHOT\` (data to $CUTOFF, configuration $CONFIG_VERSION) was built, passed the Python publication gate, the release gate and the archive and site checks, and its frozen site copy for archive/$CUTOFF/ was built and checked."
             echo "The public repository was not contacted and no token was used. To publish, run this workflow again from main with the publish box ticked."
           } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
-        if: steps.release.outputs.skip != 'true' && steps.mode.outputs.mode != 'publish' && inputs.preview
+        if: steps.release.outputs.work == 'release' && steps.mode.outputs.mode != 'publish' && inputs.preview
         with:
           name: site-preview
-          path: site
+          path: |
+            site
+            site-archived
           retention-days: 3
       - name: Push the adoption branch
         id: branch
-        if: steps.release.outputs.skip != 'true' && steps.mode.outputs.mode == 'publish'
+        if: steps.release.outputs.work == 'release' && steps.mode.outputs.mode == 'publish'
         env:
           PUBLISH_TOKEN: ${{ secrets.POLL_REFRESH_TOKEN }}
           SNAPSHOT: ${{ steps.release.outputs.snapshot_id }}
@@ -194,14 +238,23 @@ jobs:
           echo "name=$branch" >> "$GITHUB_OUTPUT"
       - name: Push to the public repository
         id: push
-        if: steps.release.outputs.skip != 'true' && steps.mode.outputs.mode == 'publish'
+        if: steps.release.outputs.work != 'none' && steps.mode.outputs.mode == 'publish'
         env:
           PUBLISH_TOKEN: ${{ secrets.POLL_REFRESH_TOKEN }}
+          WORK: ${{ steps.release.outputs.work }}
           CUTOFF: ${{ steps.adopt.outputs.cutoff }}
+          SUPERSEDES: ${{ steps.release.outputs.supersedes }}
         run: |
-          python3 -m scripts.publish_workflow.public push --clone "$RUNNER_TEMP/public" --site site --message "Update forecast $CUTOFF" --expected-head "$(cat "$RUNNER_TEMP/public-head")"
+          args=(--clone "$RUNNER_TEMP/public" --site site --expected-head "$(cat "$RUNNER_TEMP/public-head")")
+          if [ "$WORK" = release ]; then
+            args+=(--message "Update forecast $CUTOFF" --frozen site-archived --frozen-name "$CUTOFF")
+            if [ -n "$SUPERSEDES" ]; then args+=(--correction); fi
+          else
+            args+=(--message "Update site $(date -u +%F)")
+          fi
+          python3 -m scripts.publish_workflow.public push "${args[@]}"
       - name: Open the adoption pull request
-        if: steps.release.outputs.skip != 'true' && steps.mode.outputs.mode == 'publish' && steps.push.conclusion == 'success' && vars.ADOPTION_PR == 'true'
+        if: steps.release.outputs.work == 'release' && steps.mode.outputs.mode == 'publish' && steps.push.conclusion == 'success' && vars.ADOPTION_PR == 'true'
         continue-on-error: true
         env:
           PUBLISH_TOKEN: ${{ secrets.POLL_REFRESH_TOKEN }}
