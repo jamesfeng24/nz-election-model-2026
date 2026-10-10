@@ -8,7 +8,7 @@ import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_config.validate import check_classification, check_config, ConfigError
 from scripts.seat_polls import live as seat_polls
-from . import fastmath, general, maori, national, streams
+from . import evidence, fastmath, general, maori, national, streams
 from .summaries import share_summaries
 from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file_sha256, AssemblyError
 
@@ -97,6 +97,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
                 records[seat] = record
     records.update(maori.simulate(config, total) if maori_records is None else maori_records)
 
+    seat_evidence = evidence.build(config, records, keys, groups, base, continuing, config['national']['dataCutoff'], maori_records is not None)
     seats = [{'electorateId': seat, 'scope': 'general' if seat in frame['general'] else 'maori', **records[seat]}
              for seat in general_ids + sorted(frame['maori'])]
     return {'schemaVersion': SCHEMA_VERSION, 'stage': 73, 'electionYear': YEAR,
@@ -109,7 +110,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
                        'candidateFitId': fit_id},
             'draws': total, 'nationalDraws': count, 'layerReplicates': replicates, 'drawIds': draw_ids,
             'partyVote': {'groups': groups, 'otherBucket': OTHER, 'shares': draws.tolist()},
-            'seats': seats,
+            'seats': seats, 'seatEvidence': seat_evidence,
             'directory': directory(config, groups, frame, slates if classification is not None else {}, records),
             'diagnostics': {'reconciliation': reconciliation(config, groups, draws, keys, continuing, local_means)}}
 
@@ -243,4 +244,5 @@ def gate(bank, config):
 
 
 def bank_digest(bank):
-    return digest({k: v for k, v in bank.items() if k != 'diagnostics'})
+    """Digest of the simulated content. `diagnostics` and the display-only `seatEvidence` (Stage85) are left out."""
+    return digest({k: v for k, v in bank.items() if k not in ('diagnostics', 'seatEvidence')})

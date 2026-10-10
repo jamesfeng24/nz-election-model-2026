@@ -225,6 +225,6 @@ export async function buildNowcastSnapshot(raw: unknown, options: NowcastSnapsho
       partySeatSummaries, governmentOutcomes: [], limitations: options.limitations,
     },
     unavailableElectorates: unavailable.map(s => ({ electorateId: s.electorateId, reason: s.reason })),
-    electorateDetail, seatLayer, mmp, boundaries: null, limitations: options.limitations,
+    electorateDetail, ...(bank.seatEvidence ? { seatEvidence: bank.seatEvidence } : {}), seatLayer, mmp, boundaries: null, limitations: options.limitations,
   });
 }

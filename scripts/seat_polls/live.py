@@ -46,7 +46,8 @@ def live_rows():
         group = next((g for g, members in groups.items() if key in members), 'all other groups')
         rows.append({'id': poll['id'], 'election': 2026, 'electorate': poll['seat'], 'pollster': poll['pollster'], 'sponsorGroup': group,
                      'fieldworkStart': poll['fieldwork']['start'], 'fieldworkEnd': poll['fieldwork']['end'], 'sampleSize': poll['sampleSize'],
-                     'candidateVotePct': poll['electorateVotePct'], 'excluded': False})
+                     'candidateVotePct': poll['electorateVotePct'], 'excluded': False,
+                     'approximate': sorted(k for k, v in poll['electorateVoteFlags'].items() if v == 'approx'), 'evidenceGrade': poll['evidenceGrade']})
     return rows
 
 
@@ -64,24 +65,43 @@ def date(text):
 
 def inputs(as_of, fit=None, design=None, rows=None):
     """{seat id: {'value', 'variance', 'rho', 'ageWeeks', 'pollIds', ...}} for polls with fieldwork ending on or before `as_of`."""
+    return combine(as_of, fit, design, rows)[0]
+
+
+def combine(as_of, fit=None, design=None, rows=None):
+    """(inputs, detail). `inputs` is as `inputs`. `detail` is {seat id: [poll record]} for every 2026 row of the seat: used polls carry
+    `share` (fraction of the combined poll, summing to 1 over the seat's used polls, from the merge and inverse-variance weights) and
+    unused ones a `reason`. Display evidence only: nothing in `inputs` depends on it."""
     design = design or read(DESIGN)
     fit = fit or read(FIT)
     p = parameters(design)
     ids = seat_ids()
     names = {i: n for n, i in canonical_names().items()}
-    by_seat = {}
+    by_seat, detail, unused = {}, {}, {}
     for poll in (rows if rows is not None else live_rows()):
-        if poll['election'] != 2026 or poll['excluded']:
+        if poll['election'] != 2026:
             continue
         if fold(poll['electorate']) not in ids:
             raise ValueError(f"unknown electorate in a seat poll: {poll['electorate']}")
-        d = derived(poll, design)
-        if not d['eligible'] or date(poll['fieldworkEnd']) > date(as_of):
-            continue
         seat = ids[fold(poll['electorate'])]
-        allowance = design['pollError']['allowance'].get(poll['sponsorGroup'], design['pollError']['allowance']['all other groups'])
-        variance = fit['inflation'] * d['samplingVariance'] + allowance ** 2
-        by_seat.setdefault(seat, {}).setdefault(source_key(poll['pollster']), []).append({'poll': poll, 'value': d['value'], 'variance': variance})
+        d = derived(poll, design)
+        if poll['excluded']:
+            reason = 'excluded from the model'
+        elif not d['eligible']:
+            reason = 'National and Labour are not the top two candidates, so the poll cannot update the National/Labour balance'
+        elif date(poll['fieldworkEnd']) > date(as_of):
+            reason = 'fieldwork ended after the data cutoff'
+        else:
+            reason = None
+            allowance = design['pollError']['allowance'].get(poll['sponsorGroup'], design['pollError']['allowance']['all other groups'])
+            variance = fit['inflation'] * d['samplingVariance'] + allowance ** 2
+            by_seat.setdefault(seat, {}).setdefault(source_key(poll['pollster']), []).append({'poll': poll, 'value': d['value'], 'variance': variance})
+        detail.setdefault(seat, {})[poll['id']] = {'pollId': poll['id'], 'pollster': poll['pollster'], 'sponsorGroup': poll['sponsorGroup'],
+                                                   'fieldworkStart': poll['fieldworkStart'], 'fieldworkEnd': poll['fieldworkEnd'],
+                                                   'sampleSize': poll['sampleSize'], 'sampleSizeAssumed': d['sampleSizeAssumed'],
+                                                   'candidateVotePct': dict(poll['candidateVotePct']), 'approximate': poll.get('approximate', []),
+                                                   'evidenceGrade': poll.get('evidenceGrade'), 'status': 'not-used' if reason else 'used',
+                                                   'reason': reason, 'share': None}
     out = {}
     for seat, sources in by_seat.items():
         merged = []
@@ -92,6 +112,9 @@ def inputs(as_of, fit=None, design=None, rows=None):
                 if (date(cluster[0]['poll']['fieldworkStart']) - date(earlier['poll']['fieldworkEnd'])).days > p['mergeDays']:
                     break
                 cluster.insert(0, earlier)
+            for e in entries:
+                if e not in cluster:
+                    detail[seat][e['poll']['id']].update(status='not-used', reason='superseded by a newer poll from the same pollster')
             value, variance = model.merge_same_source([(e['value'], e['variance']) for e in cluster], p['later'])
             end = max(date(e['poll']['fieldworkEnd']) for e in cluster)
             age = (date(as_of) - end).days / 7
@@ -101,7 +124,12 @@ def inputs(as_of, fit=None, design=None, rows=None):
         precision = sum(weights)
         value = sum(w * m['value'] for w, m in zip(weights, merged)) / precision
         entries = sorted((e for m in merged for e in m['cluster']), key=lambda e: (e['poll']['fieldworkEnd'], e['poll']['id']))
+        for w, m in zip(weights, merged):  # inside a source, the merge precisions (later polls at `later` times the variance)
+            inner = [1 / (e['variance'] * (1 if i == 0 else p['later'])) for i, e in enumerate(m['cluster'])]
+            for e, x in zip(m['cluster'], inner):
+                detail[seat][e['poll']['id']]['share'] = (w / precision) * x / sum(inner)
         out[seat] = {'value': value, 'variance': 1 / precision, 'ageWeeks': freshest['age'], 'rho': freshest['rho'],
                      'cap': p['cap'], 'pollIds': [e['poll']['id'] for e in entries], 'electorate': names[seat],
                      'sources': len(merged)}
-    return out
+    order = lambda r: (r['fieldworkEnd'], r['pollId'])
+    return out, {seat: sorted(polls.values(), key=order) for seat, polls in detail.items()}

@@ -172,3 +172,52 @@ describe('nowcast snapshot from a draw bank', () => {
     expect(classes).toEqual(new Set(['ordinary', 'exceptional', 'maori-layer']));
   });
 });
+
+describe('per-seat evidence (Stage85)', () => {
+  const build = (bank: unknown) => buildNowcastSnapshot(bank, options({
+    electionId: 'nz-general-2026', mmp: { rulesVersion: 'UNVERIFIED-PLACEHOLDER-synthetic-only', rulesSourceIds: ['synthetic-rules'], blocs: [] },
+  }));
+  const withPoll = () => {
+    const bank = clone(pythonBank) as any;
+    const seat = bank.seatEvidence.find((e: any) => e.pollUpdate);
+    return { bank, seat };
+  };
+
+  it('is carried from the bank into the snapshot unchanged, one record per predicted seat', async () => {
+    const s = await build(pythonBank);
+    expect(s.seatEvidence).toHaveLength(71);
+    expect(s.seatEvidence).toEqual((pythonBank as any).seatEvidence);
+    expect(s.seatEvidence!.map(e => e.uncertaintyClass)).toEqual(s.electorateDetail.map(d => d.uncertaintyClass));
+    const polled = s.seatEvidence!.filter(e => e.pollUpdate);
+    expect(polled.length).toBeGreaterThan(0);
+    polled.forEach(e => {
+      const used = e.polls.filter(p => p.status === 'used');
+      expect(used.reduce((a, p) => a + p.weight!, 0)).toBeCloseTo(e.pollUpdate!.effectiveWeight, 9);
+      expect(used.reduce((a, p) => a + p.shareOfPoll!, 0)).toBeCloseTo(1, 9);
+    });
+  });
+  it('is optional: a bank without it gives a snapshot without it', async () => {
+    const bank = clone(pythonBank) as any;
+    delete bank.seatEvidence;
+    expect((await build(bank)).seatEvidence).toBeUndefined();
+  });
+  it('rejects evidence that is incomplete, inconsistent or mislabelled', async () => {
+    const reject = async (edit: (b: any, seat: any) => void) => {
+      const { bank, seat } = withPoll();
+      edit(bank, seat);
+      await expect(build(bank)).rejects.toThrow();
+    };
+    await reject(b => { b.seatEvidence.pop(); });
+    await reject(b => { b.seatEvidence[1] = b.seatEvidence[0]; });
+    await reject(b => { b.seatEvidence[0].uncertaintyClass = b.seatEvidence[0].uncertaintyClass === 'ordinary' ? 'exceptional' : 'ordinary'; });
+    await reject((_, s) => { s.polls.find((p: any) => p.status === 'used').weight += 0.1; });
+    await reject((_, s) => { s.polls.find((p: any) => p.status === 'used').shareOfPoll = 0.5; });
+    await reject((_, s) => { s.pollUpdate.modelWeight += 0.1; });
+    await reject((_, s) => { s.pollUpdate = null; });
+    await reject((_, s) => { s.baseline.partyVote[0].share += 0.1; });
+    await reject((_, s) => { s.baseline.partyVote[0].partyId = 'not-a-party'; });
+    await reject((_, s) => { s.polls[0].status = 'not-used'; s.polls[0].reason = null; });
+    await reject((_, s) => { s.polls[0].extra = 1; });
+    await reject(b => { const m = b.seatEvidence.find((e: any) => e.uncertaintyClass === 'maori-layer'); m.multipliers = { balance: 1, within: 1, mass: 1 }; });
+  });
+});
