@@ -51,19 +51,24 @@ class ReleaseTests(unittest.TestCase):
         found = plan.latest_refresh()
         estimate = json.loads((ROOT / plan.WEEKLY / found['nationalDate'] / 'estimate.json').read_text())
         self.assertEqual(found['releaseDate'], estimate['nowcastInput']['dataCutoff'])
+        self.assertEqual(set(found), {'nationalDate', 'releaseDate'})
 
     def test_release_date_is_the_data_cutoff_of_the_newest_national_run(self):
         with tempfile.TemporaryDirectory() as tmp:
-            for rel, dates in ((plan.WEEKLY, ['2026-10-07', '2026-10-14']), (plan.ELECTORATE, ['2026-10-10', '2026-10-17'])):
-                (Path(tmp) / rel).mkdir(parents=True)
-                (Path(tmp) / rel / 'index.json').write_text(json.dumps({'runs': [{'date': d} for d in dates]}))
+            (Path(tmp) / plan.WEEKLY).mkdir(parents=True)
+            (Path(tmp) / plan.WEEKLY / 'index.json').write_text(json.dumps({'runs': [{'date': d} for d in ('2026-10-07', '2026-10-14')]}))
             for d in ('2026-10-07', '2026-10-14'):
                 (Path(tmp) / plan.WEEKLY / d).mkdir()
                 (Path(tmp) / plan.WEEKLY / d / 'estimate.json').write_text(json.dumps({'nowcastInput': {'dataCutoff': d}}))
-            # a newer electorate-poll run does not make a new release: only new national polls move the data cutoff
-            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'electorateDate': '2026-10-17', 'releaseDate': '2026-10-14'})
-            shutil.rmtree(Path(tmp) / plan.ELECTORATE)
-            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'electorateDate': None, 'releaseDate': '2026-10-14'})
+            # only new national polls move the data cutoff (a refresh without them writes no national run), so only they make a new forecast
+            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'releaseDate': '2026-10-14'})
+
+    def test_the_publish_code_does_not_read_the_live_electorate_file(self):
+        # only the model layers read it (test_electorate_refresh); the adoption pins the newest electorate-poll run itself
+        for name in ('plan.py', 'verify.py', 'public.py'):
+            text = (ROOT / 'scripts/publish_workflow' / name).read_text(encoding='utf-8')
+            for needle in ('electorate' + '-live', 'electorate' + '_live'):          # spelled in two parts so this test is not itself a reader of the file
+                self.assertNotIn(needle, text, name)
 
     def test_a_release_with_new_polls_a_site_only_run_without_and_nothing_for_a_push_that_may_not_publish(self):
         # new national polls (a new data cutoff): a release, in either mode

@@ -124,13 +124,10 @@ jobs:
         if: steps.release.outputs.work == 'release'
         env:
           NATIONAL: ${{ steps.release.outputs.national_date }}
-          ELECTORATE: ${{ steps.release.outputs.electorate_date }}
           SNAPSHOT: ${{ steps.release.outputs.snapshot_id }}
           RELEASE_DATE: ${{ steps.release.outputs.release_date }}
         run: |
-          args=(--date "$NATIONAL")
-          if [ -n "$ELECTORATE" ]; then args+=(--electorate-date "$ELECTORATE"); fi
-          python3 -m scripts.polling.weekly_refresh.adopt "${args[@]}"
+          python3 -m scripts.polling.weekly_refresh.adopt --date "$NATIONAL"
           python3 -m scripts.nowcast_config.validate --require-complete
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -139,6 +136,7 @@ jobs:
           echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           echo "cutoff=$(jq -r .national.dataCutoff config/nowcast-2026.json)" >> "$GITHUB_OUTPUT"
           echo "config_version=$(jq -r .configVersion config/nowcast-2026.json)" >> "$GITHUB_OUTPUT"
+          echo "electorate_date=$(jq -r '.seatPolls.electorateRun.date // empty' config/nowcast-2026.json)" >> "$GITHUB_OUTPUT"
           test "$(jq -r .national.dataCutoff config/nowcast-2026.json)" = "$RELEASE_DATE" || { echo "::error::The adopted data cutoff is not the release date $RELEASE_DATE"; exit 1; }
       - name: Development gate on the adopted configuration
         if: steps.release.outputs.work == 'release'
@@ -263,7 +261,7 @@ jobs:
           SNAPSHOT: ${{ steps.release.outputs.snapshot_id }}
           RELEASE_DATE: ${{ steps.release.outputs.release_date }}
           NATIONAL: ${{ steps.release.outputs.national_date }}
-          ELECTORATE: ${{ steps.release.outputs.electorate_date }}
+          ELECTORATE: ${{ steps.adopt.outputs.electorate_date }}
           REVISION: ${{ steps.adopt.outputs.revision }}
           CONFIG_VERSION: ${{ steps.adopt.outputs.config_version }}
           BRANCH: ${{ steps.branch.outputs.name }}

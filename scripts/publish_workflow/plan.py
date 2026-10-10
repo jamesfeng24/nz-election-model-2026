@@ -21,7 +21,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG = 'config/nowcast-2026.json'
 WEEKLY = 'data/processed/polling/weekly-refresh'
-ELECTORATE = 'data/processed/polling/electorate-live'
 GATE_REPORT = 'data/processed/nowcast-assembly/development-gate.json'
 BOUNDARY_VERSION_ID = 'stats-nz-electorates-final-2025'
 # Produced by the Stage84 site code (PR #108); the workflow refuses to run on a ref that lacks them.
@@ -56,21 +55,20 @@ def decide_mode(event, publish_input, auto_variable, ref):
 
 
 def latest_refresh(root=ROOT):
-    """The newest weekly national run, its data cutoff and the newest Stage82 electorate-poll run.
+    """The newest weekly national run and its data cutoff, which is the release date.
 
-    The release date is the national run's data cutoff: a forecast is new only when the national polls are (a refresh without new national
-    polls writes no national run). It names the release (`nowcast-<cutoff>`) and the frozen site folder (`archive/<cutoff>/`).
+    A forecast is new only when the national polls are (a refresh without new national polls writes no national run). The cutoff names the
+    release (`nowcast-<cutoff>`) and the frozen site folder (`archive/<cutoff>/`). The electorate-poll run is not read here: the adoption
+    pins the newest one itself, and only the model layers read that file.
     """
     national = [r['date'] for r in read(WEEKLY + '/index.json', root)['runs']]
-    electorate_path = Path(root) / ELECTORATE / 'index.json'
-    electorate = [r['date'] for r in read(ELECTORATE + '/index.json', root)['runs']] if electorate_path.exists() else []
     if not national:
         raise Refused('There is no published national refresh to release')
     nat = max(national)
     cutoff = read(f'{WEEKLY}/{nat}/estimate.json', root)['nowcastInput']['dataCutoff']
     if not DATE.match(cutoff):
         raise Refused(f'The {nat} refresh has no usable data cutoff')
-    return {'nationalDate': nat, 'electorateDate': max(electorate) if electorate else None, 'releaseDate': cutoff}
+    return {'nationalDate': nat, 'releaseDate': cutoff}
 
 
 def decide_work(mode, event, existing, release_date, supersedes=None):
@@ -242,7 +240,7 @@ def main(argv=None):
             text = Path(a.existing_ids_from).read_text(encoding='utf-8') if a.existing_ids_from and Path(a.existing_ids_from).exists() else ''
             work, new_id, superseded, notice = decide_work(a.mode, a.event, existing_ids(text), found['releaseDate'], a.supersedes.strip() or None)
             print(notice)
-            emit({'national_date': found['nationalDate'], 'electorate_date': found['electorateDate'], 'release_date': found['releaseDate'],
+            emit({'national_date': found['nationalDate'], 'release_date': found['releaseDate'],
                   'snapshot_id': new_id, 'supersedes': superseded, 'work': work})
         elif a.command == 'options':
             options = build_options(read(CONFIG), a.snapshot_id, a.national_date, a.code_revision)
