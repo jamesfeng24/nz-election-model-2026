@@ -165,9 +165,11 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
               {detail.evidence.polls.map((poll, i) => (
                 <SeatPollLine key={i} poll={poll} />
               ))}
-              <p>
-                <a href={`../polls/#seat-${seatId}`}>See all polls</a>
-              </p>
+              {detail.evidence.polls.some((poll) => poll.usedInModel) && (
+                <p>
+                  <a href={`../polls/#seat-${seatId}`}>See all polls</a>
+                </p>
+              )}
             </>
           )}
         </>

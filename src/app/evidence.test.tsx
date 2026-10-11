@@ -66,25 +66,25 @@ describe('site evidence in the snapshot', () => {
         .getAllByRole('link')
         .some((a) => /^https:\/\//.test(a.getAttribute('href') ?? '')),
     ).toBe(true);
-    // Electorate polls share the national layout, with an Electorate column; every poll found is listed, the newest ten first.
+    // Electorate polls share the national layout, with an Electorate column; only polls the forecast used are listed.
     expect(within(seatTable).getByRole('columnheader', { name: 'Electorate' })).toBeInTheDocument();
-    const seatRows = () =>
+    expect(
       within(seatTable)
         .getAllByRole('row')
-        .filter((r) => !r.className.includes('month'));
-    expect(seatRows()).toHaveLength(11); // the header and the ten newest of twelve polls
-    fireEvent.click(screen.getByRole('button', { name: 'See more' }));
-    expect(seatRows()).toHaveLength(13);
+        .filter((r) => !r.className.includes('month')),
+    ).toHaveLength(11); // the header and the ten polls the model used
+    expect(screen.queryByRole('button', { name: 'See more' })).toBeNull(); // both tables are expanded
     expect(within(seatTable).queryAllByRole('cell', { name: 'No' })).toHaveLength(0);
     expect(
       within(seatTable)
         .getAllByRole('link')
         .filter((a) => (a.getAttribute('href') ?? '').startsWith('../electorates/#seat=')).length,
-    ).toBe(12);
-    // Polls the forecast did not use are listed and marked, not hidden.
-    expect(within(seatTable).getAllByText('Not used')).toHaveLength(2);
+    ).toBe(10);
     expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10); // after See more
     expect(within(table).queryByRole('columnheader', { name: /Client|Pollster/ })).toBeNull();
+    // Polls the model did not use stay off the page (Auckland Central, Wellington Bays).
+    expect(within(seatTable).queryByRole('link', { name: 'Auckland Central' })).toBeNull();
+    expect(within(seatTable).queryByRole('link', { name: 'Wellington Bays' })).toBeNull();
   });
   it('draws the support trend on the forecast page', async () => {
     const snapshot = await buildNowcastSnapshot(bank, options(evidenceFile));

@@ -26,13 +26,15 @@ function electoratePolls(snapshot: ForecastSnapshot): ElectoratePoll[] {
   const polls = snapshot.electorateDetail.flatMap((detail) => {
     const seatId = detail.electorateId;
     const seatName = snapshot.directory.electorates.find((e) => e.electorateId === seatId)?.name ?? seatId;
-    return (detail.evidence?.polls ?? []).map((poll) => ({
-      poll,
-      seatId,
-      seatName,
-      date: (poll.fieldworkEnd ?? poll.published)!,
-      firstForSeat: false,
-    }));
+    return (detail.evidence?.polls ?? [])
+      .filter((poll) => poll.usedInModel)
+      .map((poll) => ({
+        poll,
+        seatId,
+        seatName,
+        date: (poll.fieldworkEnd ?? poll.published)!,
+        firstForSeat: false,
+      }));
   });
   polls.sort((a, b) => b.date.localeCompare(a.date) || a.seatName.localeCompare(b.seatName, 'en-NZ'));
   polls.forEach((entry, i) => {
@@ -51,7 +53,7 @@ function partyColumns(polls: ElectoratePoll[], nationalParties: string[]) {
   ];
 }
 
-/** Every poll of a single electorate that was found, in the national polls layout with an Electorate column; ones the forecast did not use are marked. */
+/** Polls of single electorates, in the same layout as the national polls with an Electorate column. */
 export function ElectoratePolls({ snapshot }: { snapshot: ForecastSnapshot }) {
   const polls = electoratePolls(snapshot);
   const nationalParties = (snapshot.evidence?.nationalPolls[0]?.shares ?? []).map((share) =>
@@ -84,11 +86,7 @@ export function ElectoratePolls({ snapshot }: { snapshot: ForecastSnapshot }) {
             ({ poll, seatId, seatName, firstForSeat }, i) => {
               const sourceUrl = poll.sources.find((source) => source.url)?.url;
               return (
-                <tr
-                  key={i}
-                  id={firstForSeat ? `seat-${seatId}` : undefined}
-                  className={poll.usedInModel ? undefined : 'unused'}
-                >
+                <tr key={i} id={firstForSeat ? `seat-${seatId}` : undefined}>
                   <td>
                     {sourceUrl ? (
                       <a href={sourceUrl} rel="noopener noreferrer">
@@ -97,7 +95,6 @@ export function ElectoratePolls({ snapshot }: { snapshot: ForecastSnapshot }) {
                     ) : (
                       pollName(poll)
                     )}
-                    {!poll.usedInModel && <small className="notused"> Not used</small>}
                   </td>
                   <td>
                     <a href={`../electorates/#seat=${seatId}`}>{seatName}</a>
@@ -131,13 +128,6 @@ export function ElectoratePolls({ snapshot }: { snapshot: ForecastSnapshot }) {
         </tbody>
       </table>
       <SeeMore total={polls.length} expanded={expanded} onToggle={() => setExpanded((v) => !v)} />
-      {polls.some((entry) => !entry.poll.usedInModel) && (
-        <p>
-          <small>
-            "Not used" polls are listed but did not feed the forecast. The reason is on the electorate's page.
-          </small>
-        </p>
-      )}
     </>
   );
 }
