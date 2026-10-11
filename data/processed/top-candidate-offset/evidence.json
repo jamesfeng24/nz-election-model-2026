@@ -1,0 +1,242 @@
+{
+  "definition": "candidate share of candidate votes divided by the same party's share of party votes in the seat; flagged seats (Stage67 audit) and seats the party's candidate won are removed",
+  "label": "DESCRIPTIVE evidence for the TOP candidate-weight offset; nothing fitted or scored",
+  "parties": {
+    "ACT": {
+      "all": {
+        "meanPartySharePct": 6.38,
+        "medianRatio": 0.5241,
+        "n": 132,
+        "ratioOfSums": 0.5055
+      },
+      "byPartyShare": {
+        "0-4%": {
+          "meanPartySharePct": 0.73,
+          "medianRatio": 1.1213,
+          "n": 40,
+          "ratioOfSums": 1.0735
+        },
+        "10-100%": {
+          "meanPartySharePct": 11.52,
+          "medianRatio": 0.4612,
+          "n": 31,
+          "ratioOfSums": 0.5025
+        },
+        "4-7%": {
+          "meanPartySharePct": 5.88,
+          "medianRatio": 0.5408,
+          "n": 24,
+          "ratioOfSums": 0.5554
+        },
+        "7-10%": {
+          "meanPartySharePct": 8.52,
+          "medianRatio": 0.4173,
+          "n": 37,
+          "ratioOfSums": 0.4338
+        }
+      },
+      "byYear": {
+        "2017": {
+          "meanPartySharePct": 0.53,
+          "medianRatio": 1.1235,
+          "n": 37,
+          "ratioOfSums": 1.1499
+        },
+        "2020": {
+          "meanPartySharePct": 8.21,
+          "medianRatio": 0.3994,
+          "n": 49,
+          "ratioOfSums": 0.4185
+        },
+        "2023": {
+          "meanPartySharePct": 9.15,
+          "medianRatio": 0.5065,
+          "n": 46,
+          "ratioOfSums": 0.5585
+        }
+      },
+      "changeBetweenElections": {
+        "meanLogCandidateChange": 0.6488,
+        "meanLogPartyChange": 0.8175,
+        "n": 84,
+        "slope": 0.6032
+      }
+    },
+    "GRN": {
+      "all": {
+        "meanPartySharePct": 8.13,
+        "medianRatio": 0.8721,
+        "n": 140,
+        "ratioOfSums": 0.8746
+      },
+      "byPartyShare": {
+        "0-4%": {
+          "meanPartySharePct": 3.21,
+          "medianRatio": 1.377,
+          "n": 16,
+          "ratioOfSums": 1.4646
+        },
+        "10-100%": {
+          "meanPartySharePct": 15.51,
+          "medianRatio": 0.714,
+          "n": 31,
+          "ratioOfSums": 0.6841
+        },
+        "4-7%": {
+          "meanPartySharePct": 5.38,
+          "medianRatio": 1.013,
+          "n": 57,
+          "ratioOfSums": 1.0735
+        },
+        "7-10%": {
+          "meanPartySharePct": 8.34,
+          "medianRatio": 0.786,
+          "n": 36,
+          "ratioOfSums": 0.8757
+        }
+      },
+      "byYear": {
+        "2017": {
+          "meanPartySharePct": 6.07,
+          "medianRatio": 1.1096,
+          "n": 55,
+          "ratioOfSums": 1.1109
+        },
+        "2020": {
+          "meanPartySharePct": 7.76,
+          "medianRatio": 0.8119,
+          "n": 48,
+          "ratioOfSums": 0.7669
+        },
+        "2023": {
+          "meanPartySharePct": 11.69,
+          "medianRatio": 0.7725,
+          "n": 37,
+          "ratioOfSums": 0.7849
+        }
+      },
+      "changeBetweenElections": {
+        "meanLogCandidateChange": 0.028,
+        "meanLogPartyChange": -0.0018,
+        "n": 110,
+        "slope": 0.4949
+      }
+    },
+    "NZF": {
+      "all": {
+        "meanPartySharePct": 6.27,
+        "medianRatio": 0.7379,
+        "n": 99,
+        "ratioOfSums": 0.8337
+      },
+      "byPartyShare": {
+        "0-4%": {
+          "meanPartySharePct": 2.84,
+          "medianRatio": 0.6881,
+          "n": 26,
+          "ratioOfSums": 0.8339
+        },
+        "10-100%": {
+          "meanPartySharePct": 11.53,
+          "medianRatio": 0.9195,
+          "n": 12,
+          "ratioOfSums": 1.0132
+        },
+        "4-7%": {
+          "meanPartySharePct": 5.68,
+          "medianRatio": 0.6828,
+          "n": 39,
+          "ratioOfSums": 0.7157
+        },
+        "7-10%": {
+          "meanPartySharePct": 8.52,
+          "medianRatio": 0.8636,
+          "n": 22,
+          "ratioOfSums": 0.8405
+        }
+      },
+      "byYear": {
+        "2017": {
+          "meanPartySharePct": 7.23,
+          "medianRatio": 0.7657,
+          "n": 51,
+          "ratioOfSums": 0.8374
+        },
+        "2020": {
+          "meanPartySharePct": 2.79,
+          "medianRatio": 0.6877,
+          "n": 22,
+          "ratioOfSums": 0.8726
+        },
+        "2023": {
+          "meanPartySharePct": 7.35,
+          "medianRatio": 0.7587,
+          "n": 26,
+          "ratioOfSums": 0.814
+        }
+      },
+      "changeBetweenElections": {
+        "meanLogCandidateChange": -0.0477,
+        "meanLogPartyChange": -0.1687,
+        "n": 56,
+        "slope": 1.0545
+      }
+    },
+    "TOP": {
+      "all": {
+        "meanPartySharePct": 2.53,
+        "medianRatio": 1.1404,
+        "n": 41,
+        "ratioOfSums": 1.2449
+      },
+      "byPartyShare": {
+        "0-4%": {
+          "meanPartySharePct": 2.23,
+          "medianRatio": 1.1574,
+          "n": 36,
+          "ratioOfSums": 1.2698
+        },
+        "10-100%": null,
+        "4-7%": {
+          "meanPartySharePct": 4.66,
+          "medianRatio": 1.0865,
+          "n": 5,
+          "ratioOfSums": 1.1591
+        },
+        "7-10%": null
+      },
+      "byYear": {
+        "2017": {
+          "meanPartySharePct": 2.74,
+          "medianRatio": 1.119,
+          "n": 19,
+          "ratioOfSums": 1.1094
+        },
+        "2020": {
+          "meanPartySharePct": 2.03,
+          "medianRatio": 1.123,
+          "n": 15,
+          "ratioOfSums": 1.468
+        },
+        "2023": {
+          "meanPartySharePct": 3.02,
+          "medianRatio": 1.1918,
+          "n": 7,
+          "ratioOfSums": 1.2576
+        }
+      },
+      "changeBetweenElections": {
+        "meanLogCandidateChange": -0.0601,
+        "meanLogPartyChange": -0.0567,
+        "n": 9,
+        "slope": 0.3653
+      }
+    }
+  },
+  "stage": "D132",
+  "years": [
+    2017,
+    2020,
+    2023
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-10-10.4",
-  "decisions": ["D106", "D107", "D114", "D115", "D116", "D117", "D118", "D119", "D121", "D123", "D125", "D127", "D128", "D129"],
+  "configVersion": "2026-10-11.1",
+  "decisions": ["D106", "D107", "D114", "D115", "D116", "D117", "D118", "D119", "D121", "D123", "D125", "D127", "D128", "D129", "D132", "D133"],
   "specification": "docs/nowcast-specification.md",
   "estimand": "nowcast",
   "electionId": "nz-general-2026",
@@ -26,7 +26,16 @@
     "centredFeatures": "data/processed/nominations-2026/2026-10-10/features-centred.json",
     "parameters": "data/processed/candidate-fit-2026/fit.json",
     "fold": {"branch": "live_all_elections", "targetYear": 2026, "method": "baseline_plus_S_plus_R"},
-    "status": "Stage75: the Stage33 S+R design refitted on every completed election (2011-2023 targets); 2026 features recentred on its training-only means"
+    "status": "Stage75: the Stage33 S+R design refitted on every completed election (2011-2023 targets); 2026 features recentred on its training-only means",
+    "partyExponentOffsets": {
+      "opportunity": {
+        "offset": -0.35,
+        "exemptSeats": ["nz-general-2026-boundary-025"],
+        "decision": "D132",
+        "decidedBy": "James, 2026-10-11",
+        "status": "James's judgement, not a fitted value: TOP's electorate vote rises less than its party vote (a party-vote-only campaign in every seat except Mt Albert). Every TOP candidate's log-weight in the candidate step is lowered by 0.35 (about x0.70 before the shares are renormalised); Mt Albert (025) keeps the fitted weight. Evidence: 2017-2023 candidate-to-party ratios of NZ First, ACT and the Greens outside flagged seats and seat wins are about 0.5 to 0.9 (ACT 0.51, NZF 0.83, GRN 0.87, lower at higher party votes), and a party's candidate vote moved about 0.5 to 0.6 as much as its party vote between elections (ACT 0.60, GRN 0.49), so TOP's x2.9 party-vote rise is a x1.7 to 1.9 candidate rise. TOP's own history (41 clean seat-elections, party vote mostly 2 to 3%) shows 1.1 to 1.3 and cannot speak to 6 to 13%."
+      }
+    }
   },
   "uncertainty": {
     "scales": "data/processed/nowcast-config/scales-2026.json",

@@ -84,7 +84,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
         elif classification is None:
             records[seat] = {'status': 'unavailable', 'reason': classification_reason}
         else:
-            candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters)
+            candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters, general.exponent_offsets(config, seat))
     rows = list(party_rows.values()) + list(candidate_rows.values())
     run, sha = electorate_live.pinned(config)
     polls = (poll_module(config).inputs(config['national']['dataCutoff'], rows=seat_polls.live_rows(run, sha))
