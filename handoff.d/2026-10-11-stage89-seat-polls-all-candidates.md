@@ -8,6 +8,11 @@
 
 A 2026 seat poll's published shares for the candidates matched to a party column are rescaled to sum to 1 and compared with the model as log-odds against the poll leader. The model's own spread of those log-odds across simulated elections is combined with the poll (multinomial sampling variance times 10, plus the sponsor allowance, divided by the squared age factor with a 6-week half-life, gain capped at 0.60), every simulated election moves by the same gain with a perturbed observation, and the matched candidates keep their combined share. One poll per pollster counts (the newest); different pollsters are applied in date order. It reopens the National/Labour-only part of D117; the D107 multipliers are kept. The inflation is an in-sample figure from 13 historical polls (40 contrasts, error 3.3 times the sampling SD) and carries no bias term. Minor candidates beat their polls by about 20% on average in that sample; this is documented, not corrected.
 
+<!-- fold: decisions -->
+## D133 — 2026-10-11 — Seat polls move every candidate, not only the National/Labour balance
+
+James (2026-10-11, project thread; "polls for all candidates, weights used", "no heavy backtesting, a 538-style middle ground"). `seatPolls.rule = "all-candidates"` replaces the National/Labour-only update of D117 and D123 with a blend of the fundamentals and every matched candidate's polled share in every contest. Kept: the 6-week half-life, the 0.60 cap, the D107 and D121 multipliers, inverse-variance combination across pollsters (applied in date order; of one pollster only the newest poll counts, which replaces the 14-day merge). Changed: inflation 10 (13 historical polls re-scored on every candidate contrast, error 3.3 times the sampling SD, in-sample, no bias term) in place of the Stage79 5.29. The `balance` rule stays available by config. Effect on win probabilities in the seven polled seats is in `docs/stage89-seat-polls-all-candidates.md`. The Epsom answer: no poll exists, so Epsom is unchanged until one appears. Not touched: national, local-party and Māori layers, MMP, the bank and evidence schemas.
+
 <!-- fold: state -->
 # Stage89 seat polls for every candidate — local, 2026-10-11
 
