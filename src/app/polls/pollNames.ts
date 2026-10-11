@@ -9,6 +9,7 @@ export const PARTY_CODES: Record<string, string> = {
   MP: 'Te Pāti Māori',
   TPM: 'Te Pāti Māori',
   IND: 'Independent',
+  OTH: 'Other',
 };
 
 /** The poll's full name with the client first: "Taxpayers' Union–Curia". */

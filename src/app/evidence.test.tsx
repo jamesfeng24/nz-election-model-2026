@@ -36,7 +36,7 @@ describe('site evidence in the snapshot', () => {
     expect(snapshot.evidence!.nationalPolls.filter((p) => p.usedInModel)).toHaveLength(121);
     expect(snapshot.evidence!.trend!.weeks).toHaveLength(156);
     const detailWithPolls = snapshot.electorateDetail.filter((d) => (d.evidence?.polls.length ?? 0) > 0).length;
-    expect(detailWithPolls).toBe(6);
+    expect(detailWithPolls).toBe(11); // every seat with a poll, used or not
     expect(snapshot.electorateDetail.every((d) => d.evidence?.basis)).toBe(true);
     expect(() => ForecastSnapshotSchema.parse(snapshot)).not.toThrow();
 
@@ -54,7 +54,7 @@ describe('site evidence in the snapshot', () => {
         .getAllByRole('row')
         .filter((r) => r.className.includes('month')).length,
     ).toBeGreaterThan(0);
-    fireEvent.click(screen.getByRole('button', { name: 'See more' }));
+    fireEvent.click(screen.getAllByRole('button', { name: 'See more' })[0]);
     expect(
       within(table)
         .getAllByRole('row')
@@ -66,23 +66,25 @@ describe('site evidence in the snapshot', () => {
         .getAllByRole('link')
         .some((a) => /^https:\/\//.test(a.getAttribute('href') ?? '')),
     ).toBe(true);
-    // Electorate polls share the national layout, with an Electorate column; the newest ten show first.
+    // Electorate polls share the national layout, with an Electorate column; only polls the forecast used are listed.
     expect(within(seatTable).getByRole('columnheader', { name: 'Electorate' })).toBeInTheDocument();
     expect(
       within(seatTable)
         .getAllByRole('row')
         .filter((r) => !r.className.includes('month')),
-    ).toHaveLength(4); // the header and the three polls the model used
+    ).toHaveLength(11); // the header and the ten polls the model used
+    expect(screen.queryByRole('button', { name: 'See more' })).toBeNull(); // both tables are expanded
     expect(within(seatTable).queryAllByRole('cell', { name: 'No' })).toHaveLength(0);
     expect(
       within(seatTable)
         .getAllByRole('link')
         .filter((a) => (a.getAttribute('href') ?? '').startsWith('../electorates/#seat=')).length,
-    ).toBe(3);
+    ).toBe(10);
     expect(within(table).getAllByText("Taxpayers' Union–Curia").length).toBeGreaterThan(10); // after See more
     expect(within(table).queryByRole('columnheader', { name: /Client|Pollster/ })).toBeNull();
-    // Polls the model did not use stay off the page.
-    expect(screen.queryByText(/The Spinoff–Curia/)).toBeNull();
+    // Polls the model did not use stay off the page (Auckland Central, Wellington Bays).
+    expect(within(seatTable).queryByRole('link', { name: 'Auckland Central' })).toBeNull();
+    expect(within(seatTable).queryByRole('link', { name: 'Wellington Bays' })).toBeNull();
   });
   it('draws the support trend on the forecast page', async () => {
     const snapshot = await buildNowcastSnapshot(bank, options(evidenceFile));
