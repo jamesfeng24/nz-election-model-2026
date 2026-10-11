@@ -1,13 +1,19 @@
+import { useState } from 'react';
 import type { ForecastSnapshot } from '../../types/export';
 import { pct, prob } from '../format';
 import { intervalAt, mainRange } from '../intervals';
 import { partyColour } from '../partyColours';
-import { candidatePartyName } from '../partyNames';
+import { candidatePartyName, isMainParty } from '../partyNames';
 import { SeatPollLine } from '../polls/SeatPollLine';
 import { RangeBar, ShareAxis } from './RangeBar';
 
+/** A minor candidate sits under "Other" when its chance of winning is below 1% and its median share below 5%. */
+const MINOR_WIN = 0.01;
+const MINOR_SHARE = 0.05;
+
 /** Candidates, chances, vote-share ranges and polls for one electorate. */
 export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; seatId: string }) {
+  const [otherOpen, setOtherOpen] = useState(false);
   const seat = snapshot.directory.electorates.find((e) => e.electorateId === seatId)!;
   const prediction = snapshot.simulation.electoratePredictions.find((p) => p.electorateId === seatId);
   const detail = snapshot.electorateDetail.find((d) => d.electorateId === seatId);
@@ -37,6 +43,50 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
     return `${name}: median ${pct(share.share[0].median)}, 50% range ${pct(range50.lower)} to ${pct(range50.upper)}, 80% range ${pct(range80.lower)} to ${pct(range80.upper)}`;
   };
 
+  // Two or more minor candidates fold into one "Other" row; a single one is simply listed.
+  const isMinor = (r: (typeof rows)[number]) =>
+    !isMainParty(r.candidate) && r.entry.winProbability < MINOR_WIN && (r.share?.share[0].median ?? 0) < MINOR_SHARE;
+  const minor = rows.filter(isMinor);
+  const grouped = minor.length >= 2;
+  const listed = grouped ? rows.filter((r) => !minor.includes(r)) : rows;
+  const otherChance = minor.reduce((sum, r) => sum + r.entry.winProbability, 0);
+
+  const candidateRow = ({ entry, candidate, share }: (typeof rows)[number], className?: string) => (
+    <tr key={entry.candidateId} className={className}>
+      <td>
+        <strong>{candidate?.name ?? entry.candidateId}</strong>
+        {candidate?.incumbent && (
+          <>
+            {' '}
+            <span className="incumbent" title="The sitting MP for this seat">
+              Incumbent
+            </span>
+          </>
+        )}
+        <br />
+        <small>{candidatePartyName(snapshot, candidate)}</small>
+      </td>
+      <td data-label="Chance">
+        <span className="odds">{prob(entry.winProbability)}</span>
+      </td>
+      <td className="num" data-label="Median">
+        <strong>{share ? pct(share.share[0].median) : '–'}</strong>
+      </td>
+      <td className="barcell">
+        {share ? (
+          <RangeBar
+            colour={partyColour(candidate?.partyId)}
+            set={share.share}
+            axisMax={axisMax}
+            label={rangeLabel(candidate?.name, share)}
+          />
+        ) : (
+          <small>Not available</small>
+        )}
+      </td>
+    </tr>
+  );
+
   return (
     <section aria-labelledby="seat-heading" className="seat">
       <h2 id="seat-heading">
@@ -57,41 +107,36 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
           </tr>
         </thead>
         <tbody>
-          {rows.map(({ entry, candidate, share }) => (
-            <tr key={entry.candidateId}>
+          {listed.map((row) => candidateRow(row))}
+          {grouped && (
+            <tr className="otherrow">
               <td>
-                <strong>{candidate?.name ?? entry.candidateId}</strong>
-                {candidate?.incumbent && (
-                  <>
-                    {' '}
-                    <span className="incumbent" title="The sitting MP for this seat">
-                      Incumbent
-                    </span>
-                  </>
-                )}
+                <button
+                  type="button"
+                  className="otherbutton"
+                  aria-expanded={otherOpen}
+                  onClick={() => setOtherOpen((open) => !open)}
+                >
+                  <strong>Other</strong> <small>({minor.length} candidates)</small>
+                  <span aria-hidden="true" className="otherchevron">
+                    {otherOpen ? ' ▴' : ' ▾'}
+                  </span>
+                </button>
                 <br />
-                <small>{candidatePartyName(snapshot, candidate)}</small>
+                <small>Minor parties and independents</small>
               </td>
               <td data-label="Chance">
-                <span className="odds">{prob(entry.winProbability)}</span>
+                <span className="odds">{prob(otherChance)}</span>
               </td>
               <td className="num" data-label="Median">
-                <strong>{share ? pct(share.share[0].median) : '–'}</strong>
+                –
               </td>
               <td className="barcell">
-                {share ? (
-                  <RangeBar
-                    colour={partyColour(candidate?.partyId)}
-                    set={share.share}
-                    axisMax={axisMax}
-                    label={rangeLabel(candidate?.name, share)}
-                  />
-                ) : (
-                  <small>Not available</small>
-                )}
+                <small>{otherOpen ? 'Shown below' : 'Select to show each candidate'}</small>
               </td>
             </tr>
-          ))}
+          )}
+          {grouped && otherOpen && minor.map((row) => candidateRow(row, 'otherchild'))}
         </tbody>
         <tfoot>
           <tr>
@@ -120,11 +165,9 @@ export function SeatDetail({ snapshot, seatId }: { snapshot: ForecastSnapshot; s
               {detail.evidence.polls.map((poll, i) => (
                 <SeatPollLine key={i} poll={poll} />
               ))}
-              {detail.evidence.polls.some((poll) => poll.usedInModel) && (
-                <p>
-                  <a href={`../polls/#seat-${seatId}`}>See all polls</a>
-                </p>
-              )}
+              <p>
+                <a href={`../polls/#seat-${seatId}`}>See all polls</a>
+              </p>
             </>
           )}
         </>

@@ -1,9 +1,11 @@
 """Stage84 public-site evidence: the polls the forecast rests on, and the national model's weekly trend.
 
-Reads the preserved weekly-refresh outputs (panel, estimate, dataset) and the preserved seat-poll files, and writes one
-deterministic JSON file that the release publisher embeds in the forecast snapshot (`--evidence`). Nothing is fitted and
-no number is invented: poll figures are copied as published, missing values stay null, and a seat poll names its source
-page only where a registry records its address.
+Reads the preserved weekly-refresh outputs (panel, estimate, dataset) and the electorate-poll run the configuration pins
+(`seatPolls.electorateRun`, the run the forecast itself reads), and writes one deterministic JSON file that the release publisher
+embeds in the forecast snapshot (`--evidence`). Nothing is fitted and no number is invented: poll figures are copied as published,
+missing values stay null, and a seat poll names its source page from the poll's own reference. Whether the forecast used a poll is
+decided by the forecast's own readers (`scripts.seat_polls.live.combine` for general seats, the latest poll by fieldwork end for Maori
+seats), so the site cannot list a poll the model did not read or hide one it did.
 
     python3 -m scripts.site_evidence.build --refresh data/processed/polling/weekly-refresh/2026-10-07
     python3 -m scripts.site_evidence.build --refresh data/processed/polling/weekly-refresh/2026-10-07 --check
@@ -11,7 +13,6 @@ page only where a registry records its address.
 from __future__ import annotations
 
 import argparse
-import glob
 import hashlib
 import json
 import re
@@ -32,12 +33,15 @@ POLL_ORDER = ['NAT', 'LAB', 'GRN', 'ACT', 'NZF', 'MRI', 'TOP']
 # Used only for a poll the Wikipedia table no longer carries (a collapsed duplicate); every other poll keeps the table's own label.
 POLLSTER_NAMES = {'Verian lineage': 'Verian', 'Talbot Mills/UMR': 'Talbot Mills'}
 WIKIPEDIA_TITLE = 'Opinion_polling_for_the_2026_New_Zealand_general_election'
-SEAT_POLL_FILES = [
-    ('data/processed/polling/electorate-polls-2026/polls.json', 'general-article'),
-    ('data/source-plans/maori-seat-layer/polls-2026.json', 'maori-used'),
-    ('data/processed/polling/maori-seat-polls-2026-10/polls.json', 'maori-not-adopted'),
-]
-CANDIDATE = re.compile(r'^(?P<name>.+?)\s*\((?P<party>[A-Za-z]+)\)$')
+CONFIG = 'config/nowcast-2026.json'
+TARGET_FRAME = 'data/processed/forecast-readiness/snapshots/2026-10-05/target-frame.json'
+# Poll column codes -> ballot-group keys of the official candidate roster; IND is an independent (no group), OTH is not a candidate.
+POLL_GROUPS = {'NAT': 'nationalparty', 'LAB': 'labourparty', 'GRN': 'greenparty', 'ACT': 'actnewzealand', 'NZF': 'newzealandfirstparty',
+               'TOP': 'opportunity', 'TPM': 'tepatimaori', 'IND': None}
+POLL_LABELS = {'NAT': 'National', 'LAB': 'Labour', 'GRN': 'Greens', 'ACT': 'ACT', 'NZF': 'NZ First', 'TOP': 'TOP', 'TPM': 'Te Pāti Māori',
+               'IND': 'Independent', 'OTH': 'Other'}
+OUTLETS = {'nzherald.co.nz': 'NZ Herald', 'thepost.co.nz': 'The Post', 'taxpayers.org.nz': "Taxpayers' Union", 'rnz.co.nz': 'RNZ',
+           'thespinoff.co.nz': 'The Spinoff', 'teaonews.co.nz': 'Te Ao News', 'newsroom.co.nz': 'Newsroom', 'stuff.co.nz': 'Stuff'}
 
 
 def sha256(path: Path) -> str:
@@ -50,19 +54,6 @@ def load(path: Path):
 
 def rel(path: Path) -> str:
     return path.resolve().relative_to(ROOT).as_posix()
-
-
-def registry_urls() -> dict[str, tuple[str | None, str | None]]:
-    """raw path and source id to (url, organisation) from every dated source registry; `data/sources.json` is read only."""
-    index: dict[str, tuple[str | None, str | None]] = {}
-    files = sorted(glob.glob(str(ROOT / 'data/processed/**/source-registry*.json'), recursive=True))
-    for file in files + [str(ROOT / 'data/sources.json')]:
-        data = load(Path(file))
-        for source in data['sources'] if isinstance(data, dict) else data:
-            for key in (source.get('rawPath'), source.get('id')):
-                if key and key not in index:
-                    index[key] = (source.get('url'), source.get('organisation'))
-    return index
 
 
 def number(value) -> float | None:
@@ -151,52 +142,90 @@ def trend(estimate: dict, dataset: dict) -> dict:
             'weeks': weeks, 'parties': parties}
 
 
-def candidate_results(poll: dict, kind: str) -> list[dict]:
-    if kind == 'general-article':
-        results = []
-        for label, percent in poll['candidateVotePct'].items():
-            m = CANDIDATE.match(label)
-            results.append({'name': m['name'] if m else label, 'party': m['party'] if m else None, 'percent': percent})
-        return sorted(results, key=lambda r: -r['percent'])
-    return [{'name': c['name'], 'party': c['party'], 'percent': c['pollPercent']} for c in poll['candidates']]
+def outlet(url: str) -> str:
+    host = re.sub(r'^www\.', '', re.match(r'https?://([^/]+)', url).group(1))
+    return OUTLETS.get(host, host)
 
 
-def seat_polls(urls: dict) -> list[dict]:
-    out = []
-    for file, kind in SEAT_POLL_FILES:
-        for poll in load(ROOT / file)['polls']:
-            if kind == 'general-article':
-                seat, fw, published = poll['electorate'], poll.get('fieldwork'), None
-                if not fw:
-                    reported = re.search(r'reported (\d{4}-\d{2}-\d{2})', poll.get('fieldworkNote') or '')
-                    assert reported, f"{seat}: a poll with no fieldwork dates needs a stated publication date"
-                    published = reported.group(1)
-                sources = [{'label': urls.get(s, (None, s))[1] or s, 'url': urls.get(s, (None, None))[0]} for s in poll['sources']]
-                moe, commissioner = poll.get('marginOfError'), poll.get('commissioner')
-                note = '; '.join(filter(None, [poll.get('fieldworkNote'), poll.get('candidateVoteUndecidedTreatment')]))
-                used = False
-            else:
-                seat, fw, published = poll['seat'], [poll['fieldworkStart'], poll['fieldworkEnd']], poll.get('published')
-                sources = [{'label': urls.get(s, (None, s))[1] or s, 'url': urls.get(s, (None, None))[0]} for s in poll['sourceFiles']]
-                moe, commissioner = poll.get('marginOfErrorPercent'), None
-                note = poll.get('notes') or ''
-                used = kind == 'maori-used'
-            out.append({'electorateName': seat, 'pollster': poll['pollster'], 'commissioner': commissioner,
-                        'fieldworkStart': fw[0] if fw else None, 'fieldworkEnd': fw[-1] if fw else None, 'published': published,
-                        'sampleSize': poll.get('sampleSize'), 'marginOfError': moe, 'results': candidate_results(poll, kind),
-                        'usedInModel': used, 'note': note or None, 'sources': sources})
-    out.sort(key=lambda p: (p['electorateName'], p['fieldworkEnd'] or ''))
+def roster(config: dict) -> dict[str, list[dict]]:
+    """{target electorate id: active official candidates (displayed name, ballot-group key)}, from the configured nominations file."""
+    out: dict[str, list[dict]] = {}
+    for r in load(ROOT / config['candidate']['features'])['candidateRecords']:
+        if r['active']:
+            out.setdefault(r['targetElectorateId'], []).append({'name': r['displayedName'], 'group': r['ballotGroupKey']})
     return out
+
+
+def poll_results(poll: dict, people: list[dict]) -> list[dict]:
+    """Each poll share, named by the one active official candidate of the seat on that party's ballot line (an independent line only when
+    the seat has exactly one independent). A share that names no single candidate keeps the party's own name, so nothing is guessed."""
+    flags = poll['electorateVoteFlags']
+    results = []
+    for code, percent in sorted(poll['electorateVotePct'].items(), key=lambda kv: (-kv[1], kv[0])):
+        group = POLL_GROUPS.get(code)
+        found = [p for p in people if p['group'] == group] if code in POLL_GROUPS else []
+        results.append({'name': found[0]['name'] if len(found) == 1 else POLL_LABELS.get(code, code),
+                        'party': code if code != 'OTH' else None, 'percent': percent, **({'approximate': True} if flags.get(code) == 'approx' else {})})
+    return results
+
+
+def seat_polls(as_of: str) -> tuple[list[dict], dict[str, str]]:
+    """Every seat poll of the pinned electorate-poll run, general and Maori, with whether and why the forecast used it, and the run's hash.
+
+    General seats: `seat_polls.live.combine` is the forecast's own reader and decides use (eligibility, the data cutoff, merging within a
+    source); Maori seats: the latest poll by fieldwork end up to the data cutoff is the layer's one input and earlier ones are superseded."""
+    from scripts.maori_seat_layer import live as maori_live
+    from scripts.polling import electorate_live
+    from scripts.seat_polls import live as general_live
+    from scripts.seat_polls.common import fold
+
+    config = load(ROOT / CONFIG)
+    run, sha = electorate_live.pinned(config)
+    assert run, 'the configuration pins no electorate-poll run, so there is no seat poll evidence to list'
+    polls = electorate_live.polls(run, sha)
+    people = roster(config)
+    seat_ids = general_live.seat_ids()
+    maori_ids = {fold(r['canonicalName']): r['targetElectorateId'] for r in load(ROOT / TARGET_FRAME)['records'] if r['scope'] == 'maori'}
+    _, detail = general_live.combine(as_of, rows=general_live.live_rows(run, sha))
+    general_status = {rec['pollId']: rec for seat in detail.values() for rec in seat}
+    latest: dict[str, tuple] = {}
+    for poll in polls:
+        if poll['type'] == 'maori' and poll['fieldwork']['end'] <= as_of:
+            key = (poll['fieldwork']['end'], poll['id'])
+            if poll['seat'] not in latest or key > latest[poll['seat']]:
+                latest[poll['seat']] = key
+    out = []
+    for poll in polls:
+        seat = poll['seat']
+        if poll['type'] == 'maori':
+            target = maori_ids[fold(maori_live.seat_name(seat))]
+            if poll['fieldwork']['end'] > as_of:
+                used, reason = False, 'fieldwork ended after the data cutoff'
+            elif latest[seat] == (poll['fieldwork']['end'], poll['id']):
+                used, reason = True, None
+            else:
+                used, reason = False, 'superseded by a newer poll for the seat'
+        else:
+            target = seat_ids[fold(seat)]
+            record = general_status[poll['id']]
+            used, reason = record['status'] == 'used', record['reason']
+        out.append({'electorateName': seat, 'pollster': poll['pollster'], 'commissioner': None,
+                    'fieldworkStart': poll['fieldwork']['start'], 'fieldworkEnd': poll['fieldwork']['end'], 'published': None,
+                    'sampleSize': poll['sampleSize'], 'marginOfError': None, 'results': poll_results(poll, people[target]),
+                    'usedInModel': used, 'note': None if used else reason[0].upper() + reason[1:],
+                    'sources': [{'label': outlet(url), 'url': url} for url in poll['references']]})
+    out.sort(key=lambda p: (p['electorateName'], p['fieldworkEnd'], p['pollster']))
+    return out, {f'{electorate_live.LIVE}/{run}/polls.json': sha}
 
 
 def build(refresh_dir: Path) -> dict:
     panel, estimate, dataset = (load(refresh_dir / f) for f in ('panel.json', 'estimate.json', 'dataset.json'))
     capture = estimate['capture']
     inputs = {rel(refresh_dir / f): sha256(refresh_dir / f) for f in ('panel.json', 'estimate.json', 'dataset.json')}
-    for file, _ in SEAT_POLL_FILES:
-        inputs[file] = sha256(ROOT / file)
     used = used_flags(panel, dataset)
     polls = national_polls(panel, used, wikipedia_labels(capture))
+    seat, seat_inputs = seat_polls(estimate['dataCutoff'])
+    inputs.update(seat_inputs)
     inputs[capture['rawPath']] = capture['sha256']
     assert sum(p['usedInModel'] for p in polls) == estimate['polls2026'], 'the polls marked used are not the polls the fit used'
     return {
@@ -205,7 +234,7 @@ def build(refresh_dir: Path) -> dict:
         'source': {'label': 'Wikipedia, Opinion polling for the 2026 New Zealand general election (volunteer-edited aggregator; text CC BY-SA)',
                    'url': f"https://en.wikipedia.org/w/index.php?title={WIKIPEDIA_TITLE}&oldid={capture['revision']}",
                    'revision': str(capture['revision']), 'retrieved': capture['lastModified']},
-        'nationalPolls': polls, 'trend': trend(estimate, dataset), 'seatPolls': seat_polls(registry_urls()), 'inputs': inputs,
+        'nationalPolls': polls, 'trend': trend(estimate, dataset), 'seatPolls': seat, 'inputs': inputs,
     }
 
 

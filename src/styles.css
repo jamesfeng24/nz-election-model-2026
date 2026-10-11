@@ -628,6 +628,24 @@ table td:not(:first-child),
   text-align: right;
   white-space: nowrap;
 }
+.otherbutton {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+.otherbutton:hover strong,
+.otherbutton:focus-visible strong {
+  text-decoration: underline;
+}
+.otherchild td:first-child {
+  padding-left: 1.4rem;
+}
 .candidates td.axiscell {
   padding-top: 0;
   border-bottom: 0;
@@ -754,6 +772,15 @@ table td:not(:first-child),
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #222;
+}
+.nationalpolls tr.unused td {
+  color: #767676;
+}
+.notused {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .pollline {
   max-width: 880px;
