@@ -1,13 +1,11 @@
 {
  "dataCutoff": "2026-10-07",
  "inputs": {
-  "data/processed/polling/electorate-polls-2026/polls.json": "f72d68d36e7253abf0b38e53080f1d6c1b644129c45ae803f9da323bf5e63da5",
-  "data/processed/polling/maori-seat-polls-2026-10/polls.json": "df9542c613107f7978c0fc6118603db1cc7a4fdfc4b4f79c75ac2cba908d3132",
+  "data/processed/polling/electorate-live/2026-10-10/polls.json": "e746a5da7f7f87346f0b68dd32f2a5dea58661c8198fb22dd3f6671587d81641",
   "data/processed/polling/weekly-refresh/2026-10-07/dataset.json": "10390a9d61a202707c0453c42a5a7b84aaf33af1be8a71df6f7b81955adb8b4e",
   "data/processed/polling/weekly-refresh/2026-10-07/estimate.json": "fea8b0415187e18abd18dbbb8a99b06f4f6c58a84b33af0b4cf784da65ba5866",
   "data/processed/polling/weekly-refresh/2026-10-07/panel.json": "c3618c1ac8db3ccaca3b1cb0f2cef104f770f0b76b655b414f536cc2f25c8a2d",
-  "data/raw/polling/weekly-refresh/2026-10-07/wikipedia-opinion-polling-2026.html": "b1c4a218816390385129b88aef84adfbb06f4d28354c1deea91faa2698338317",
-  "data/source-plans/maori-seat-layer/polls-2026.json": "5e613db83309d7b77cae0f3b5066e4bee9411a797ce5505c95427d91a14e8559"
+  "data/raw/polling/weekly-refresh/2026-10-07/wikipedia-opinion-polling-2026.html": "b1c4a218816390385129b88aef84adfbb06f4d28354c1deea91faa2698338317"
  },
  "modelStateAsOf": "2026-09-27",
  "nationalPolls": [
@@ -6589,31 +6587,62 @@
  "seatPolls": [
   {
    "commissioner": null,
+   "electorateName": "Auckland Central",
+   "fieldworkEnd": "2026-07-29",
+   "fieldworkStart": "2026-07-22",
+   "marginOfError": null,
+   "note": "National and Labour are not the top two candidates, so the poll cannot update the National/Labour balance",
+   "pollster": "Taxpayers' Union–Curia",
+   "published": null,
+   "results": [
+    {
+     "name": "Candace KINSER",
+     "party": "NAT",
+     "percent": 30.0
+    },
+    {
+     "name": "Chlöe SWARBRICK",
+     "party": "GRN",
+     "percent": 25.0
+    },
+    {
+     "name": "Naisi CHEN",
+     "party": "LAB",
+     "percent": 23.0
+    }
+   ],
+   "sampleSize": 400,
+   "sources": [
+    {
+     "label": "NZ Herald",
+     "url": "https://www.nzherald.co.nz/nz/politics/green-party-losing-in-auckland-central-and-national-ahead-of-rivals-in-new-poll/3NWUVM55OZDNFKJ5UOSTUUXZLI/"
+    }
+   ],
+   "usedInModel": false
+  },
+  {
+   "commissioner": null,
    "electorateName": "Hauraki-Waikato",
    "fieldworkEnd": "2026-10-01",
    "fieldworkStart": "2026-09-21",
-   "marginOfError": 4.5,
-   "note": "\"Other\" 13% preferred someone else although no other candidate had been named at the time of the release; nominations close 8 October 2026. Party-vote figures are recorded for the national-layer reconciliation and are not used in the seat forecast.",
-   "pollster": "Whakaata Māori–Curia (Whakatau 2026)",
-   "published": "2026-10-06",
+   "marginOfError": null,
+   "note": null,
+   "pollster": "Whakaata Māori–Curia",
+   "published": null,
    "results": [
     {
-     "name": "Hana-Rāwhiti Maipi-Clarke",
-     "party": "MP",
-     "percent": 45
+     "name": "Hana-Rawhiti MAIPI-CLARKE",
+     "party": "TPM",
+     "percent": 54.0
     },
     {
-     "name": "Kingi Kiriona",
+     "name": "Kingi KIRIONA",
      "party": "LAB",
-     "percent": 26
+     "percent": 31.0
     }
    ],
    "sampleSize": 500,
    "sources": [
-    {
-     "label": "Te Ao Maori News (Whakaata Maori)",
-     "url": "https://www.teaonews.co.nz/2026/10/06/maipi-clarke-leads-hauraki-waikato-as-party-vote-remains-neck-and-neck/"
-    },
     {
      "label": "NZ Herald",
      "url": "https://www.nzherald.co.nz/nz/politics/election-2026-hana-rawhiti-maipi-clarke-well-ahead-in-hauraki-waikato-poll/CETAZEFVJBHM3N2AVG2MLVM6EA/"
@@ -6622,44 +6651,125 @@
    "usedInModel": true
   },
   {
-   "commissioner": "The Spinoff",
+   "commissioner": null,
+   "electorateName": "Hutt South",
+   "fieldworkEnd": "2026-09-19",
+   "fieldworkStart": "2026-09-17",
+   "marginOfError": null,
+   "note": null,
+   "pollster": "Victor Consulting",
+   "published": null,
+   "results": [
+    {
+     "name": "Ginny ANDERSEN",
+     "party": "LAB",
+     "percent": 42.0
+    },
+    {
+     "approximate": true,
+     "name": "Chris BISHOP",
+     "party": "NAT",
+     "percent": 30.0
+    },
+    {
+     "name": "Courtney WHITE",
+     "party": "GRN",
+     "percent": 9.0
+    }
+   ],
+   "sampleSize": 533,
+   "sources": [
+    {
+     "label": "NZ Herald",
+     "url": "https://www.nzherald.co.nz/nz/politics/election-2026-labours-ginny-andersen-ahead-of-minister-chris-bishop-in-hutt-south-race-poll/3YATA3PQRBAXTJKQP6CLDRYRJM/"
+    }
+   ],
+   "usedInModel": true
+  },
+  {
+   "commissioner": null,
+   "electorateName": "Kapiti",
+   "fieldworkEnd": "2026-07-31",
+   "fieldworkStart": "2026-07-29",
+   "marginOfError": null,
+   "note": null,
+   "pollster": "Community Engagement Limited",
+   "published": null,
+   "results": [
+    {
+     "name": "Sophie HANDFORD",
+     "party": "LAB",
+     "percent": 37.5
+    },
+    {
+     "name": "Tim COSTLEY",
+     "party": "NAT",
+     "percent": 33.6
+    },
+    {
+     "name": "Melody WILLIS",
+     "party": "GRN",
+     "percent": 5.9
+    },
+    {
+     "name": "Chee Khiang (CK) SNG",
+     "party": "TOP",
+     "percent": 4.1
+    }
+   ],
+   "sampleSize": 821,
+   "sources": [
+    {
+     "label": "The Post",
+     "url": "https://www.thepost.co.nz/nz-news/361056782/election-2026-poll-showing-labour-ahead-kapiti-electorate"
+    }
+   ],
+   "usedInModel": true
+  },
+  {
+   "commissioner": null,
    "electorateName": "Mt Albert",
    "fieldworkEnd": "2026-09-28",
    "fieldworkStart": "2026-09-21",
-   "marginOfError": 4.9,
-   "note": "unsure voters excluded from the published shares; 6% of the total sample undecided",
+   "marginOfError": null,
+   "note": null,
    "pollster": "Curia",
    "published": null,
    "results": [
     {
-     "name": "Helen White",
+     "name": "Helen WHITE",
      "party": "LAB",
-     "percent": 33
+     "percent": 33.0
     },
     {
-     "name": "Melissa Lee",
+     "name": "Melissa LEE",
      "party": "NAT",
-     "percent": 32
+     "percent": 32.0
     },
     {
-     "name": "Ricardo Menéndez March",
+     "name": "Ricardo MENENDEZ MARCH",
      "party": "GRN",
-     "percent": 14
+     "percent": 14.0
     },
     {
-     "name": "Qiulae Wong",
+     "name": "Qiulae WONG",
      "party": "TOP",
-     "percent": 10
+     "percent": 10.0
     },
     {
-     "name": "Sheldon Eden-Whaitiri",
+     "name": "Sheldon EDEN-WHAITIRI",
      "party": "NZF",
-     "percent": 5
+     "percent": 5.0
     },
     {
-     "name": "Alex Price",
+     "name": "Alex PRICE",
      "party": "ACT",
-     "percent": 3
+     "percent": 3.0
+    },
+    {
+     "name": "Te Pāti Māori",
+     "party": "TPM",
+     "percent": 2.0
     }
    ],
    "sampleSize": 400,
@@ -6667,45 +6777,81 @@
     {
      "label": "The Spinoff",
      "url": "https://thespinoff.co.nz/politics/30-09-2026/opportunity-knocked-qiulae-wong-trails-in-fourth-in-mt-albert-poll"
-    },
-    {
-     "label": "NZ Herald",
-     "url": "https://www.nzherald.co.nz/nz/politics/election-2026-poll-shows-labour-barely-ahead-in-crucial-mt-albert-seat/26PQ3XERH5ABJNUWE4QKR2QEQI/"
     }
    ],
-   "usedInModel": false
+   "usedInModel": true
+  },
+  {
+   "commissioner": null,
+   "electorateName": "Mt Albert",
+   "fieldworkEnd": "2026-10-05",
+   "fieldworkStart": "2026-10-01",
+   "marginOfError": null,
+   "note": null,
+   "pollster": "Taxpayers' Union – Curia",
+   "published": null,
+   "results": [
+    {
+     "name": "Helen WHITE",
+     "party": "LAB",
+     "percent": 31.0
+    },
+    {
+     "name": "Melissa LEE",
+     "party": "NAT",
+     "percent": 26.0
+    },
+    {
+     "name": "Ricardo MENENDEZ MARCH",
+     "party": "GRN",
+     "percent": 18.0
+    },
+    {
+     "name": "Qiulae WONG",
+     "party": "TOP",
+     "percent": 8.0
+    }
+   ],
+   "sampleSize": 400,
+   "sources": [
+    {
+     "label": "NZ Herald",
+     "url": "https://www.nzherald.co.nz/nz/politics/support-rises-for-nz-first-and-labour-in-latest-taxpayers-union-curia-poll/E3BZME653NBDLCU2IMZURSYMLA"
+    }
+   ],
+   "usedInModel": true
   },
   {
    "commissioner": null,
    "electorateName": "Te Tai Hauāuru",
    "fieldworkEnd": "2026-09-24",
    "fieldworkStart": "2026-09-14",
-   "marginOfError": 4.5,
-   "note": "The release states party vote excluding undecided (TPM 18, LAB 30, GRN 22) but gives no undecided-inclusive figures; not recorded here. Te Tai Hauāuru has no Green candidate (stated in the release).",
-   "pollster": "Whakaata Māori–Curia (Whakatau 2026)",
-   "published": "2026-09-29",
+   "marginOfError": null,
+   "note": null,
+   "pollster": "Whakaata Māori–Curia",
+   "published": null,
    "results": [
     {
-     "name": "Debbie Ngarewa-Packer",
-     "party": "MP",
-     "percent": 38
+     "name": "Debbie NGAREWA-PACKER",
+     "party": "TPM",
+     "percent": 46.0
     },
     {
-     "name": "Te Pūoho Katene",
+     "name": "Te Pūoho KĀTENE",
      "party": "LAB",
-     "percent": 27
+     "percent": 34.0
     },
     {
-     "name": "Coral Raukawa",
+     "name": "Coral RAUKAWA",
      "party": "NAT",
-     "percent": 10
+     "percent": 13.0
     }
    ],
    "sampleSize": 500,
    "sources": [
     {
-     "label": "Te Ao Maori News (Whakaata Maori)",
-     "url": "https://www.teaonews.co.nz/2026/09/30/debbie-ngarewa-packer-leads-te-tai-hauauru-poll/"
+     "label": "RNZ",
+     "url": "https://www.rnz.co.nz/news/politics_election-2026/1656179/debbie-ngarewa-packer-leads-te-tai-hauauru-poll"
     }
    ],
    "usedInModel": true
@@ -6715,41 +6861,41 @@
    "electorateName": "Te Tai Tonga",
    "fieldworkEnd": "2026-09-24",
    "fieldworkStart": "2026-09-14",
-   "marginOfError": 4.5,
-   "note": "Candidate-vote shares as published (22% of respondents are not accounted for by the four named candidates; the release states no candidate-vote undecided figure). Ferris stands as an independent after leaving Te Pāti Māori. Party-vote figures are recorded for the national-layer reconciliation and are not used in the seat forecast.",
-   "pollster": "Whakaata Māori–Curia (Whakatau 2026)",
-   "published": "2026-09-28",
+   "marginOfError": null,
+   "note": null,
+   "pollster": "Whakaata Māori–Curia",
+   "published": null,
    "results": [
     {
-     "name": "Mananui Ramsden",
+     "name": "Mananui RAMSDEN",
      "party": "LAB",
-     "percent": 30
+     "percent": 36.0
     },
     {
-     "name": "Lisa Marie Murch",
-     "party": "MP",
-     "percent": 17
+     "name": "Lisa MURCH",
+     "party": "TPM",
+     "percent": 21.0
     },
     {
-     "name": "Lisa Te Morenga",
+     "name": "Lisa TE MORENGA",
      "party": "GRN",
-     "percent": 16
+     "percent": 19.0
     },
     {
-     "name": "Tākuta Ferris",
+     "name": "Tākuta FERRIS",
      "party": "IND",
-     "percent": 15
+     "percent": 18.0
     }
    ],
    "sampleSize": 500,
    "sources": [
     {
-     "label": "Te Ao Maori News (Whakaata Maori)",
-     "url": "https://www.teaonews.co.nz/2026/09/29/whakaata-maori-curia-poll-shows-takuta-ferris-trailing-in-te-tai-tonga/"
+     "label": "NZ Herald",
+     "url": "https://www.nzherald.co.nz/nz/politics/election-2026-new-poll-reveals-frontrunner-in-the-maori-seat-of-te-tai-tonga/7GVSRBESHZDKRPHO5VHNPJB3SM/"
     },
     {
-     "label": "RNZ",
-     "url": "https://www.rnz.co.nz/news/politics_election-2026/1647755/whakaata-maori-curia-poll-reveals-major-shift-in-te-tai-tonga-race"
+     "label": "Te Ao News",
+     "url": "https://www.teaonews.co.nz/2026/09/29/ramsden-takes-lead-in-te-tai-tonga-as-voters-rank-te-tiriti-top-priority/"
     }
    ],
    "usedInModel": true
@@ -6759,90 +6905,200 @@
    "electorateName": "Waiariki",
    "fieldworkEnd": "2026-10-01",
    "fieldworkStart": "2026-09-21",
-   "marginOfError": 4.5,
-   "note": "Candidate shares are shares of all respondents; the four named shares sum to 75% with 18% undecided and 6% other. Party-vote figures are recorded for the national-layer reconciliation and are not used in a seat forecast; their base is not stated.",
-   "pollster": "Whakaata Māori–Curia (Whakatau 2026)",
-   "published": "2026-10-07",
+   "marginOfError": null,
+   "note": null,
+   "pollster": "Whakaata Māori–Curia",
+   "published": null,
    "results": [
     {
-     "name": "Rawiri Waititi",
-     "party": "MP",
-     "percent": 42
+     "name": "Rawiri WAITITI",
+     "party": "TPM",
+     "percent": 52.0
     },
     {
-     "name": "Tania Waikato",
+     "name": "Tania WAIKATO",
      "party": "GRN",
-     "percent": 16
+     "percent": 20.0
     },
     {
-     "name": "Toni Boynton",
+     "name": "Toni BOYNTON",
      "party": "LAB",
-     "percent": 14
+     "percent": 18.0
     },
     {
-     "name": "Pāpā Wharewera",
+     "name": "Pāpā WHAREWERA",
      "party": "TOP",
-     "percent": 3
+     "percent": 3.0
     }
    ],
    "sampleSize": 500,
    "sources": [
     {
-     "label": "The Spinoff (from Te Ao Māori News / Whakaata Māori; fieldwork Curia Market Research)",
-     "url": "https://thespinoff.co.nz/atea/07-10-2026/rawiri-waititi-is-miles-ahead-in-waiariki-but-the-party-vote-is-a-three-way-scrap"
+     "label": "NZ Herald",
+     "url": "https://www.nzherald.co.nz/nz/politics/election-2026-te-pati-maori-co-leader-rawiri-waititi-front-runner-in-waiariki-poll/KB7MLJHWTVC77LNRUN4JXO6ROI/"
     }
    ],
-   "usedInModel": false
+   "usedInModel": true
   },
   {
-   "commissioner": "Taxpayers' Union",
-   "electorateName": "Wellington Bays",
-   "fieldworkEnd": null,
-   "fieldworkStart": null,
+   "commissioner": null,
+   "electorateName": "Waitaki",
+   "fieldworkEnd": "2026-09-25",
+   "fieldworkStart": "2026-09-18",
    "marginOfError": null,
-   "note": "not stated in the article; results revealed at a Taxpayers’ Union candidate debate on Tuesday 15 September 2026; reported 2026-09-16; not stated; the six published shares sum to 86%",
-   "pollster": "Curia",
-   "published": "2026-09-16",
+   "note": null,
+   "pollster": "Taxpayers' Union–Curia",
+   "published": null,
    "results": [
     {
-     "name": "Craig Renney",
-     "party": "LAB",
-     "percent": 29
-    },
-    {
-     "name": "Julie Anne Genter",
-     "party": "GRN",
-     "percent": 29
-    },
-    {
-     "name": "Karunā Muthu",
+     "name": "Miles John ANDERSON",
      "party": "NAT",
-     "percent": 15
+     "percent": 44.0
     },
     {
-     "name": "Gerald Warner",
+     "name": "Damien O'CONNOR",
+     "party": "LAB",
+     "percent": 21.0
+    },
+    {
+     "name": "Michael LAWS",
      "party": "NZF",
-     "percent": 5
+     "percent": 18.0
     },
     {
-     "name": "Nicole McKee",
+     "name": "Greens",
+     "party": "GRN",
+     "percent": 7.0
+    },
+    {
+     "name": "Sean BEAMISH",
      "party": "ACT",
-     "percent": 5
+     "percent": 5.0
     },
     {
-     "name": "Kayla Kingdon-Bebb",
+     "name": "Helen TAIT",
      "party": "TOP",
-     "percent": 3
+     "percent": 2.0
+    },
+    {
+     "name": "Te Pāti Māori",
+     "party": "TPM",
+     "percent": 2.0
     }
    ],
    "sampleSize": 400,
    "sources": [
     {
-     "label": "Newsroom",
-     "url": "https://newsroom.co.nz/2026/09/16/early-poll-reveals-greens-and-labour-in-dead-heat-in-wellington-bays/"
+     "label": "Taxpayers' Union",
+     "url": "https://www.taxpayers.org.nz/wi_poll0926"
+    }
+   ],
+   "usedInModel": true
+  },
+  {
+   "commissioner": null,
+   "electorateName": "Wellington Bays",
+   "fieldworkEnd": "2026-09-10",
+   "fieldworkStart": "2026-09-04",
+   "marginOfError": null,
+   "note": "National and Labour are not the top two candidates, so the poll cannot update the National/Labour balance",
+   "pollster": "Taxpayers' Union–Curia",
+   "published": null,
+   "results": [
+    {
+     "name": "Julie Anne GENTER",
+     "party": "GRN",
+     "percent": 29.0
+    },
+    {
+     "name": "Craig RENNEY",
+     "party": "LAB",
+     "percent": 29.0
+    },
+    {
+     "name": "Karunā MUTHU",
+     "party": "NAT",
+     "percent": 15.0
+    },
+    {
+     "name": "Nicole McKEE",
+     "party": "ACT",
+     "percent": 5.0
+    },
+    {
+     "name": "Gerald WARNER",
+     "party": "NZF",
+     "percent": 5.0
+    },
+    {
+     "name": "Kayla KINGDON-BEBB",
+     "party": "TOP",
+     "percent": 3.0
+    }
+   ],
+   "sampleSize": 400,
+   "sources": [
+    {
+     "label": "Taxpayers' Union",
+     "url": "https://www.taxpayers.org.nz/pollwell_bays26"
     }
    ],
    "usedInModel": false
+  },
+  {
+   "commissioner": null,
+   "electorateName": "West Coast-Tasman",
+   "fieldworkEnd": "2026-09-17",
+   "fieldworkStart": "2026-09-10",
+   "marginOfError": null,
+   "note": null,
+   "pollster": "Taxpayers' Union–Curia",
+   "published": null,
+   "results": [
+    {
+     "name": "Katie MILNE",
+     "party": "NAT",
+     "percent": 36.0
+    },
+    {
+     "name": "Rory William PATERSON",
+     "party": "LAB",
+     "percent": 30.0
+    },
+    {
+     "name": "Jamie CLEINE",
+     "party": "NZF",
+     "percent": 15.0
+    },
+    {
+     "name": "Janelle HOCKING",
+     "party": "ACT",
+     "percent": 7.0
+    },
+    {
+     "name": "Andrew Charles BEAUMONT",
+     "party": "GRN",
+     "percent": 6.0
+    },
+    {
+     "name": "Cindie UDDSTROM",
+     "party": "TOP",
+     "percent": 4.0
+    },
+    {
+     "name": "Other",
+     "party": null,
+     "percent": 2.0
+    }
+   ],
+   "sampleSize": 400,
+   "sources": [
+    {
+     "label": "NZ Herald",
+     "url": "https://www.nzherald.co.nz/sponsored-stories/taxpayers-union-electoral-debate-west-coast-tasman/6Y7J35BKH5DLFGHAQWQ2IDAKYI/"
+    }
+   ],
+   "usedInModel": true
   }
  ],
  "source": {
