@@ -62,6 +62,13 @@ def check_config(config, require_complete=False):
                 f'candidate.partyExponentOffsets.{group} is {{offset, exemptSeats, decision, decidedBy, status}} with general seat ids')
         require(isinstance(setting['offset'], float) and -1.0 <= setting['offset'] < 0, f'candidate.partyExponentOffsets.{group}.offset must be a negative number no smaller than -1 (D132)')
         require(group in config['national']['categoryMap'].values() and group != 'other', f'candidate.partyExponentOffsets.{group} must name a national party group')
+    for setting in config['candidate'].get('candidateExponentOffsets', []):
+        require(set(setting) == {'seat', 'candidateId', 'name', 'offset', 'decision', 'decidedBy', 'status'}
+                and isinstance(setting['seat'], str) and setting['seat'].startswith('nz-general-2026-boundary-')
+                and setting['candidateId'].startswith(setting['seat'] + '-candidate-'),
+                'candidate.candidateExponentOffsets entries are {seat, candidateId, name, offset, decision, decidedBy, status} for a general-seat candidate (D134)')
+        require(isinstance(setting['offset'], float) and 0 < abs(setting['offset']) <= 1.0,
+                'candidate.candidateExponentOffsets offsets are nonzero floats no larger than 1 in size (D134)')
     require(config['uncertainty']['extraSdOnExceptionalRequiresOptIn'] is True, 'extra sd on 1.00 seats needs an explicit opt-in (D107)')
     require(config['intervalLevels'] == INTERVAL_LEVELS and config['primaryIntervalLevel'] == 0.8, 'intervals are 50/80/90 with 80% primary')
     require(config['maori']['unpolledSeats'] in (None, 'labelled-fallback', 'withhold'),

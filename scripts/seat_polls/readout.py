@@ -34,7 +34,7 @@ def build(draws):
                                  uncertainty['candidateMassSeatMultiplier'])  # the live assembly's three seat multipliers (D107, D121)
     seats = sorted(inputs)
     party = {s: general.party_row(s, keys, base[s], national2023, continuing) for s in seats}
-    candidate = {s: general.candidate_row(s, slates[s], party[s], parameters, general.exponent_offsets(config, s)) for s in seats}
+    candidate = {s: general.candidate_row(s, slates[s], party[s], parameters, general.exponent_offsets(config, s), general.candidate_exponent_offsets(config, s)) for s in seats}
     names = {s: {c['id']: c['name'] for c in slates[s]} for s in seats}
     out = {}
     with streams.substituted(list(party.values()) + list(candidate.values()), draws, config['simulation']['seedNamespace']), fastmath.accelerated():

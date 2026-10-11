@@ -71,6 +71,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
     require(set(base) == set(general_ids), 'baseline seats differ from the 2026 general frame')
 
     roster_reason = classification_reason = None
+    named = slates is None  # D134 offsets name real candidates: only the live slates carry them (injected test and fixture slates are invented)
     if slates is None:
         slates, roster_reason = live_slates(config)
     if classification is None:
@@ -84,7 +85,8 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
         elif classification is None:
             records[seat] = {'status': 'unavailable', 'reason': classification_reason}
         else:
-            candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters, general.exponent_offsets(config, seat))
+            candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters, general.exponent_offsets(config, seat),
+                                                           general.candidate_exponent_offsets(config, seat) if named else None)
     rows = list(party_rows.values()) + list(candidate_rows.values())
     run, sha = electorate_live.pinned(config)
     polls = (poll_module(config).inputs(config['national']['dataCutoff'], rows=seat_polls.live_rows(run, sha))
