@@ -7,7 +7,7 @@ name: Publish
 #   -> independent checks -> push to the public repository (live root + archive/<data cutoff date>/). Any failed gate stops the run before
 #   anything is pushed.
 #
-# Two kinds of publish (docs/publish-workflow.md). A RELEASE happens only when the newest refresh brought new national polls (a new data cutoff):
+# Two kinds of publish (docs/publish-workflow.md). A RELEASE happens only when the newest refresh brought new polls, national or electorate (a new data cutoff date):
 # it adds one archive entry and one frozen site copy, archive/<date>/, which no later publish touches. With no new polls, a publish is SITE-ONLY:
 # the live root is rebuilt from the current site code and the existing archive (a design fix merged to main), with no new forecast, no archive
 # entry and no change to any frozen copy; it commits only if the built files differ. A push to main that changes neither the refresh indexes nor
@@ -47,7 +47,7 @@ on:
   push:
     branches: [main]
     paths:
-      # a poll refresh (a new forecast when it brought new national polls)
+      # a poll refresh (a new forecast when it brought new national or electorate polls)
       - data/processed/polling/weekly-refresh/index.json
       - data/processed/polling/electorate-live/index.json
       # the site code (a site-only republish of the live root)
@@ -134,10 +134,9 @@ jobs:
           git add config/nowcast-2026.json
           git diff --cached --quiet || git commit -q -m "Polls: adopt the $NATIONAL refresh for $SNAPSHOT"
           echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-          echo "cutoff=$(jq -r .national.dataCutoff config/nowcast-2026.json)" >> "$GITHUB_OUTPUT"
           echo "config_version=$(jq -r .configVersion config/nowcast-2026.json)" >> "$GITHUB_OUTPUT"
           echo "electorate_date=$(jq -r '.seatPolls.electorateRun.date // empty' config/nowcast-2026.json)" >> "$GITHUB_OUTPUT"
-          test "$(jq -r .national.dataCutoff config/nowcast-2026.json)" = "$RELEASE_DATE" || { echo "::error::The adopted data cutoff is not the release date $RELEASE_DATE"; exit 1; }
+          python3 -m scripts.publish_workflow.plan cutoff --expect "$RELEASE_DATE"
       - name: Development gate on the adopted configuration
         if: steps.release.outputs.work == 'release'
         run: |

@@ -4,7 +4,7 @@
 
 ## The weekly chain
 
-1. Monday 00:00 NZDT the Poll refresh workflow opens a refresh pull request (national and electorate polls). With no new polls it opens nothing.
+1. Monday 00:00 NZDT the Poll refresh workflow opens a refresh pull request when either kind of poll is new: national polls, electorate (seat) polls, or both. With neither it opens nothing.
 2. **James merges it. This is his only manual step.**
 3. The merge changes `data/processed/polling/weekly-refresh/index.json` (or the electorate index), which starts Publish on main.
 4. Publish adopts the newest refresh, runs the forecast and gates, builds the site and pushes it, or stops with a red run and pushes nothing.
@@ -13,10 +13,10 @@
 
 | Kind | When | What it adds to the public repository |
 |---|---|---|
-| **Release** (a new forecast) | the newest national refresh has a data cutoff that is not yet in the archive, which happens exactly when the refresh brought new national polls; or a manual correction | one archive entry (`forecasts/`), one **frozen copy of the whole site as it is that week** at `archive/<data cutoff date>/`, and the live root rebuilt |
+| **Release** (a new forecast) | the newest refresh's release date is not yet in the archive, which happens exactly when the refresh brought new national polls or new electorate polls; or a manual correction | one archive entry (`forecasts/`), one **frozen copy of the whole site as it is that week** at `archive/<data cutoff date>/`, and the live root rebuilt |
 | **Site only** | no new polls, but the site code on main changed (a design fix) or Publish is run by hand | the live root rebuilt from the current site code and the existing archive. **No new forecast, no archive entry, and no frozen copy is touched.** It commits only if the built files differ |
 
-How it is decided (`plan.decide_work`): the release id is `nowcast-<data cutoff of the newest national refresh>`. If that id is not in the published archive, it is a release; if it is, the run is site-only. A Monday with no new national polls has no refresh pull request, so nothing releases. An electorate-poll-only refresh does not move the national data cutoff, so it is not a new forecast either (a manual correction of that week's forecast, below, is the way to publish it).
+How it is decided (`plan.decide_work`): the release date is the later of the newest national refresh's data cutoff and the newest electorate-poll run's date, and the release id is `nowcast-<release date>`. If that id is not in the published archive, it is a release; if it is, the run is site-only. A Monday with neither new national nor new electorate polls has no refresh pull request, so nothing releases. A Monday with only electorate polls is a release: the adoption (`weekly_refresh.adopt`) keeps the national input of the newest national refresh (no refit is needed or run) and pins the new electorate-poll run, and sets `seatPolls.pollCutoff` to the run's date, so the seat polls are read up to that date and aged from it; the forecast, the archive entry, the frozen site folder and the banner date are all that date. The national vote shares are unchanged; only the seat layer moves. The snapshot's national basis says `electorate polls to <date>`.
 
 **Frozen copies.** Each release builds the site twice from the same code and archive: the live site, and an archived-mode copy (`SITE_ARCHIVE_DATE=<cutoff> SITE_OUT_DIR=site-archived npm run build`: banner "You're viewing the forecast from <date>", a link back to the live site, its own `forecasts/` as published up to that week). The second goes unchanged to `archive/<cutoff>/`. Later publishes never rewrite it: the public tree is rebuilt around the existing dated folders, a digest of every dated folder is taken before and after, and any difference aborts the push (a correction replaces only its own date's folder). Every current archive entry must have its folder, and no folder may exist without a current entry. Two current forecasts with the same data cutoff date fail the run.
 

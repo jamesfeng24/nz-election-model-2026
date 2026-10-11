@@ -218,18 +218,28 @@ def seat_polls(as_of: str) -> tuple[list[dict], dict[str, str]]:
     return out, {f'{electorate_live.LIVE}/{run}/polls.json': sha}
 
 
+def forecast_cutoff(national_cutoff: str) -> str:
+    """The date the forecast is as of: the configuration's (it can be later than the national cutoff after an electorate-only refresh) when the
+    configuration adopts this national refresh, else the refresh's own cutoff."""
+    from scripts.polling import electorate_live
+
+    config = load(ROOT / CONFIG)
+    return electorate_live.forecast_cutoff(config) if config['national']['dataCutoff'] == national_cutoff else national_cutoff
+
+
 def build(refresh_dir: Path) -> dict:
     panel, estimate, dataset = (load(refresh_dir / f) for f in ('panel.json', 'estimate.json', 'dataset.json'))
     capture = estimate['capture']
     inputs = {rel(refresh_dir / f): sha256(refresh_dir / f) for f in ('panel.json', 'estimate.json', 'dataset.json')}
     used = used_flags(panel, dataset)
     polls = national_polls(panel, used, wikipedia_labels(capture))
-    seat, seat_inputs = seat_polls(estimate['dataCutoff'])
+    cutoff = forecast_cutoff(estimate['dataCutoff'])
+    seat, seat_inputs = seat_polls(cutoff)
     inputs.update(seat_inputs)
     inputs[capture['rawPath']] = capture['sha256']
     assert sum(p['usedInModel'] for p in polls) == estimate['polls2026'], 'the polls marked used are not the polls the fit used'
     return {
-        'schemaVersion': SCHEMA_VERSION, 'refreshDate': panel['refreshDate'], 'dataCutoff': estimate['dataCutoff'],
+        'schemaVersion': SCHEMA_VERSION, 'refreshDate': panel['refreshDate'], 'dataCutoff': cutoff,
         'modelStateAsOf': estimate['modelStateAsOf'],
         'source': {'label': 'Wikipedia, Opinion polling for the 2026 New Zealand general election (volunteer-edited aggregator; text CC BY-SA)',
                    'url': f"https://en.wikipedia.org/w/index.php?title={WIKIPEDIA_TITLE}&oldid={capture['revision']}",

@@ -19,7 +19,7 @@ OUTPUT = PREFIX + '/readout-2026.json'
 
 def build(draws):
     config = read(CONFIG)
-    inputs = live.inputs(config['national']['dataCutoff'], rows=live.live_rows(*electorate_live.pinned(config)))
+    inputs = live.inputs(electorate_live.forecast_cutoff(config), rows=live.live_rows(*electorate_live.pinned(config)))
     shares, ids, groups = national.load(config, draws)
     keys, national2023, base = general.baseline(config)
     continuing = general.relationships(config)
@@ -56,7 +56,7 @@ def build(draws):
                 entry['classes'][kind] = arms
             out[seat] = entry
     return {'schemaVersion': 1, 'stage': 79, 'label': 'INTERNAL development output; nothing adopted; both D107 classes are shown and the configured class is marked',
-            'draws': draws, 'dataCutoff': config['national']['dataCutoff'], 'nationalDrawIds': ids[:3] + ['...'], 'seats': out,
+            'draws': draws, 'dataCutoff': electorate_live.forecast_cutoff(config), 'nationalDrawIds': ids[:3] + ['...'], 'seats': out,
             'ineligible2026': 'Auckland Central and Wellington Bays (Green-led polls) are context only (design amendment A2)'}
 
 

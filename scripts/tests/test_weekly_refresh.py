@@ -134,6 +134,41 @@ class AdoptTests(unittest.TestCase):
                 adopt.CONFIG = original
         self.assertEqual(cfg['national']['source'], want['source'])
         self.assertEqual(cfg['national']['stateKey'], 'lastDataSupport')
+        # the forecast is as of the later of the adopted national cutoff and the adopted electorate-poll run (an electorate-only refresh moves it)
+        self.assertEqual(cfg['seatPolls']['pollCutoff'], adopt.poll_cutoff(want['dataCutoff'], adopt.electorate_target()))
+        self.assertGreaterEqual(cfg['seatPolls']['pollCutoff'], cfg['national']['dataCutoff'])
+
+    def test_an_electorate_only_refresh_moves_the_pin_and_the_poll_cutoff_but_not_the_national_input(self):
+        from scripts.polling.weekly_refresh import adopt
+        runs = run.load_index()['runs']
+        if not runs:
+            self.skipTest('no published refresh yet')
+        date = runs[-1]['date']
+        want = adopt.target(date)
+        fake = {'date': '2999-01-01', 'pollsSha256': 'a' * 64}                    # a later electorate-poll run; no national run came with it
+        saved = adopt.CONFIG, adopt.electorate_target, adopt.check_config
+        with tempfile.TemporaryDirectory() as d:
+            copy = Path(d) / 'nowcast.json'
+            copy.write_bytes(adopt.CONFIG.read_bytes())
+            before = json.loads(copy.read_text(encoding='utf-8'))
+            adopt.CONFIG, adopt.electorate_target, adopt.check_config = copy, lambda date=None: fake, lambda config: None     # the real index does not hold the run
+            try:
+                adopt.adopt(date)
+                after = json.loads(copy.read_text(encoding='utf-8'))
+            finally:
+                adopt.CONFIG, adopt.electorate_target, adopt.check_config = saved
+        self.assertEqual(after['seatPolls']['electorateRun'], fake)
+        self.assertEqual(after['seatPolls']['pollCutoff'], '2999-01-01')
+        self.assertEqual(after['national']['dataCutoff'], want['dataCutoff'])         # the national input is the newest national run, unchanged
+        changed = {k for k in after if after[k] != before[k]}
+        self.assertEqual(changed, {'national', 'seatPolls', 'configVersion'})
+
+    def test_poll_cutoff_follows_the_later_of_the_national_cutoff_and_the_electorate_run(self):
+        from scripts.polling.weekly_refresh import adopt
+        self.assertEqual(adopt.poll_cutoff('2026-10-07', {'date': '2026-10-10'}), '2026-10-10')       # electorate polls arrived after the last national run
+        self.assertEqual(adopt.poll_cutoff('2026-10-14', {'date': '2026-10-10'}), '2026-10-14')       # national run after the last electorate run
+        self.assertEqual(adopt.poll_cutoff('2026-10-14', {'date': '2026-10-14'}), '2026-10-14')
+        self.assertEqual(adopt.poll_cutoff('2026-10-14', None), '2026-10-14')
 
 
 class CommittedArtifactTests(unittest.TestCase):

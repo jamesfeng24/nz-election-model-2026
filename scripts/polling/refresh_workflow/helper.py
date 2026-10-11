@@ -140,7 +140,7 @@ def electorate_updated_section(day):
     idx = [e for e in read(electorate.INDEX)['runs'] if e['date'] == day][0]
     return f"""### Electorate polls ({len(ch['added'])} new, {idx['pollCount']} held)
 
-From Wikipedia revision {idx['wikipediaRevision']}, written to `data/processed/polling/electorate-live/{day}/polls.json` (cumulative; earlier dates are never edited). Only the electorate-vote shares are kept for use; the party-vote rows are stored but unused. `~` marks a published approximate value. All rows are `aggregator_only` and unverified. Nothing reads this file yet: it is a data change only, with no refit and no change to any estimate.
+From Wikipedia revision {idx['wikipediaRevision']}, written to `data/processed/polling/electorate-live/{day}/polls.json` (cumulative; earlier dates are never edited). Only the electorate-vote shares are kept for use; the party-vote rows are stored but unused. `~` marks a published approximate value. All rows are `aggregator_only` and unverified. This pull request is a data change only: it changes no estimate and no configuration. After it merges, the Publish workflow adopts this run (the newest electorate-poll run) and, when new national polls did not arrive, releases a new forecast dated {day}: the national input stays the newest national refresh, and only the seat polls and their ageing move to {day}.
 
 {electorate_table(ch['added'])}
 

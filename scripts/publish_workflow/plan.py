@@ -2,6 +2,7 @@
 
     python3 -m scripts.publish_workflow.plan mode --event E --publish-input B --auto-variable V --ref R
     python3 -m scripts.publish_workflow.plan release --mode M --event E [--existing-ids-from PATH] [--supersedes ID]
+    python3 -m scripts.publish_workflow.plan cutoff [--expect YYYY-MM-DD]   (the adopted configuration's forecast cutoff)
     python3 -m scripts.publish_workflow.plan options --out PATH --snapshot-id ID --code-revision SHA --national-date D
     python3 -m scripts.publish_workflow.plan adoption ...   (text of the adoption pull request)
     python3 -m scripts.publish_workflow.plan gate-passed
@@ -17,6 +18,8 @@ import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+from scripts.polling import electorate_live     # stdlib only; the plan reads the run index (dates), never a poll
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG = 'config/nowcast-2026.json'
@@ -54,12 +57,20 @@ def decide_mode(event, publish_input, auto_variable, ref):
     return ('publish' if wants else 'dry-run'), why
 
 
-def latest_refresh(root=ROOT):
-    """The newest weekly national run and its data cutoff, which is the release date.
+def newest_electorate_date(root=ROOT):
+    """The date of the newest electorate-poll run, or None. Only the run index is read here (a run exists only when the electorate polls changed);
+    the adoption pins that run, and only the model layers read its polls."""
+    index = Path(root) / electorate_live.LIVE / 'index.json'
+    runs = json.loads(index.read_text(encoding='utf-8'))['runs'] if index.exists() else []
+    return max((r['date'] for r in runs), default=None)
 
-    A forecast is new only when the national polls are (a refresh without new national polls writes no national run). The cutoff names the
-    release (`nowcast-<cutoff>`) and the frozen site folder (`archive/<cutoff>/`). The electorate-poll run is not read here: the adoption
-    pins the newest one itself, and only the model layers read that file.
+
+def latest_refresh(root=ROOT):
+    """The newest weekly national run, its data cutoff, and the release date: the later of that cutoff and the newest electorate-poll run's date.
+
+    A forecast is new when the national polls or the electorate polls are (a refresh with neither writes no run). The release date names the
+    release (`nowcast-<date>`) and the frozen site folder (`archive/<date>/`). It is the national cutoff unless an electorate-only refresh came
+    after the last national one; the national state is then unchanged and the seat polls (and their ageing) are read as of the later date.
     """
     national = [r['date'] for r in read(WEEKLY + '/index.json', root)['runs']]
     if not national:
@@ -68,7 +79,8 @@ def latest_refresh(root=ROOT):
     cutoff = read(f'{WEEKLY}/{nat}/estimate.json', root)['nowcastInput']['dataCutoff']
     if not DATE.match(cutoff):
         raise Refused(f'The {nat} refresh has no usable data cutoff')
-    return {'nationalDate': nat, 'releaseDate': cutoff}
+    ele = newest_electorate_date(root)
+    return {'nationalDate': nat, 'nationalCutoff': cutoff, 'electorateDate': ele, 'releaseDate': max(cutoff, ele) if ele else cutoff}
 
 
 def decide_work(mode, event, existing, release_date, supersedes=None):
@@ -135,16 +147,20 @@ LIMITATIONS = [
 
 def build_options(config, snapshot, national_date, code_revision, now=None):
     """The `release:publish` options file for the adopted configuration. `config` must already carry the adopted national input."""
-    cutoff, state = config['national']['dataCutoff'], config['national']['modelStateAsOf']
+    national_cutoff, state = config['national']['dataCutoff'], config['national']['modelStateAsOf']
+    cutoff = electorate_live.forecast_cutoff(config)
     created = (now or datetime.now(timezone.utc)).replace(microsecond=0).isoformat()
     if created < cutoff:
         raise Refused(f'The data cutoff {cutoff} is after the creation time {created}')
+    basis = f'National polls to {national_cutoff} (weekly refresh of {national_date}); latent support in the week of {state}'
+    if cutoff != national_cutoff:
+        basis += f'; electorate polls to {cutoff}'    # an electorate-only refresh: the national state is unchanged
     mmp = config['mmp']
     return {
         'snapshotId': snapshot, 'createdAt': created, 'dataCutoff': cutoff + 'T00:00:00+00:00', 'electionId': config['electionId'], 'electionDate': config['electionDate'],
         'boundaryVersionId': BOUNDARY_VERSION_ID, 'modelVersion': 'nz-nowcast-' + config['configVersion'], 'codeRevision': code_revision,
         'mmp': {'rulesVersion': mmp['rulesVersion'], 'rulesSourceIds': mmp['rulesSourceIds'], 'blocs': mmp['blocs'], 'hungParliament': mmp['hungParliament']},
-        'nationalBasis': f'National polls to {cutoff} (weekly refresh of {national_date}); latent support in the week of {state}',
+        'nationalBasis': basis,
         'limitations': LIMITATIONS, 'probabilityMcseMax': config['release']['probabilityMcseMax'],
     }
 
@@ -226,6 +242,7 @@ def main(argv=None):
     for name in ('snapshot-id', 'release-date', 'national-date', 'config-version', 'revision', 'run-url', 'fragment-out', 'title-out', 'body-out'):
         f.add_argument('--' + name, required=True)
     f.add_argument('--electorate-date', default='')
+    c = sub.add_parser('cutoff'); c.add_argument('--expect', default='')
     sub.add_parser('gate-passed'); sub.add_parser('check-site')
     a = ap.parse_args(argv)
     try:
@@ -242,6 +259,12 @@ def main(argv=None):
             print(notice)
             emit({'national_date': found['nationalDate'], 'release_date': found['releaseDate'],
                   'snapshot_id': new_id, 'supersedes': superseded, 'work': work})
+        elif a.command == 'cutoff':
+            cutoff = electorate_live.forecast_cutoff(read(CONFIG))
+            if a.expect and cutoff != a.expect:
+                raise Refused(f'The adopted data cutoff {cutoff} is not the release date {a.expect}')
+            print('Forecast data cutoff', cutoff)
+            emit({'cutoff': cutoff})
         elif a.command == 'options':
             options = build_options(read(CONFIG), a.snapshot_id, a.national_date, a.code_revision)
             Path(a.out).parent.mkdir(parents=True, exist_ok=True)

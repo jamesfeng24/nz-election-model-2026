@@ -50,25 +50,54 @@ class ReleaseTests(unittest.TestCase):
     def test_latest_refresh_on_the_repository(self):
         found = plan.latest_refresh()
         estimate = json.loads((ROOT / plan.WEEKLY / found['nationalDate'] / 'estimate.json').read_text())
-        self.assertEqual(found['releaseDate'], estimate['nowcastInput']['dataCutoff'])
-        self.assertEqual(set(found), {'nationalDate', 'releaseDate'})
+        self.assertEqual(found['nationalCutoff'], estimate['nowcastInput']['dataCutoff'])
+        self.assertEqual(found['releaseDate'], max(found['nationalCutoff'], found['electorateDate'] or found['nationalCutoff']))
+        self.assertEqual(set(found), {'nationalDate', 'nationalCutoff', 'electorateDate', 'releaseDate'})
 
-    def test_release_date_is_the_data_cutoff_of_the_newest_national_run(self):
+    def refresh_root(self, tmp, national, electorate):
+        (Path(tmp) / plan.WEEKLY).mkdir(parents=True)
+        (Path(tmp) / plan.WEEKLY / 'index.json').write_text(json.dumps({'runs': [{'date': d} for d in national]}))
+        for d in national:
+            (Path(tmp) / plan.WEEKLY / d).mkdir()
+            (Path(tmp) / plan.WEEKLY / d / 'estimate.json').write_text(json.dumps({'nowcastInput': {'dataCutoff': d}}))
+        if electorate is not None:
+            (Path(tmp) / plan.electorate_live.LIVE).mkdir(parents=True)
+            (Path(tmp) / plan.electorate_live.LIVE / 'index.json').write_text(json.dumps({'runs': [{'date': d} for d in electorate]}))
+
+    def test_release_date_is_the_later_of_the_national_cutoff_and_the_newest_electorate_run(self):
+        # a refresh with neither kind of new poll writes no run, so only new polls make a new forecast
         with tempfile.TemporaryDirectory() as tmp:
-            (Path(tmp) / plan.WEEKLY).mkdir(parents=True)
-            (Path(tmp) / plan.WEEKLY / 'index.json').write_text(json.dumps({'runs': [{'date': d} for d in ('2026-10-07', '2026-10-14')]}))
-            for d in ('2026-10-07', '2026-10-14'):
-                (Path(tmp) / plan.WEEKLY / d).mkdir()
-                (Path(tmp) / plan.WEEKLY / d / 'estimate.json').write_text(json.dumps({'nowcastInput': {'dataCutoff': d}}))
-            # only new national polls move the data cutoff (a refresh without them writes no national run), so only they make a new forecast
-            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'releaseDate': '2026-10-14'})
+            self.refresh_root(tmp, ('2026-10-07', '2026-10-14'), None)
+            self.assertEqual(plan.latest_refresh(tmp), {'nationalDate': '2026-10-14', 'nationalCutoff': '2026-10-14', 'electorateDate': None, 'releaseDate': '2026-10-14'})
+        with tempfile.TemporaryDirectory() as tmp:
+            self.refresh_root(tmp, ('2026-10-07', '2026-10-14'), ('2026-10-10', '2026-10-14'))      # both arrived on the 14th
+            self.assertEqual(plan.latest_refresh(tmp)['releaseDate'], '2026-10-14')
+        with tempfile.TemporaryDirectory() as tmp:
+            self.refresh_root(tmp, ('2026-10-07', '2026-10-14'), ('2026-10-10',))                    # electorate polls older than the national run
+            self.assertEqual(plan.latest_refresh(tmp)['releaseDate'], '2026-10-14')
+        with tempfile.TemporaryDirectory() as tmp:
+            self.refresh_root(tmp, ('2026-10-07', '2026-10-14'), ('2026-10-10', '2026-10-21'))      # only electorate polls on the 21st
+            found = plan.latest_refresh(tmp)
+            self.assertEqual(found, {'nationalDate': '2026-10-14', 'nationalCutoff': '2026-10-14', 'electorateDate': '2026-10-21', 'releaseDate': '2026-10-21'})
+            # that is a new release (a new id) even though the national input is the same one as last week's
+            self.assertEqual(plan.decide_work('publish', 'push', ['nowcast-2026-10-14'], found['releaseDate'])[:3], ('release', 'nowcast-2026-10-21', None))
 
-    def test_the_publish_code_does_not_read_the_live_electorate_file(self):
-        # only the model layers read it (test_electorate_refresh); the adoption pins the newest electorate-poll run itself
-        for name in ('plan.py', 'verify.py', 'public.py'):
+    def test_the_publish_code_reads_no_electorate_poll(self):
+        # only the model layers read the polls (test_electorate_refresh); the adoption pins the newest electorate-poll run itself. The planner reads
+        # the run index for its date alone, through the one module that owns the file; the other publish files do not touch it at all.
+        for name in ('verify.py', 'public.py'):
             text = (ROOT / 'scripts/publish_workflow' / name).read_text(encoding='utf-8')
             for needle in ('electorate' + '-live', 'electorate' + '_live'):          # spelled in two parts so this test is not itself a reader of the file
                 self.assertNotIn(needle, text, name)
+        planner = (ROOT / 'scripts/publish_workflow/plan.py').read_text(encoding='utf-8')
+        self.assertNotIn('electorate' + '-live', planner)
+        for call in ('.polls(', '.pinned(', '.live_rows(', 'polls.json'):
+            self.assertNotIn(call, planner)
+
+    def test_the_adopted_cutoff_is_read_from_the_configuration_not_from_the_national_input(self):
+        adopt = next(text for name, text in steps() if name.startswith('Switch the configuration'))
+        self.assertIn('scripts.publish_workflow.plan cutoff --expect "$RELEASE_DATE"', adopt)
+        self.assertNotIn('.national.dataCutoff', CODE)          # an electorate-only release is dated after the national cutoff
 
     def test_a_release_with_new_polls_a_site_only_run_without_and_nothing_for_a_push_that_may_not_publish(self):
         # new national polls (a new data cutoff): a release, in either mode
@@ -119,12 +148,21 @@ class OptionsTests(unittest.TestCase):
                     'nationalBasis', 'limitations', 'probabilityMcseMax'):
             self.assertIn(key, o)
         self.assertEqual(o['createdAt'], '2026-10-12T00:05:03+00:00')
-        self.assertEqual(o['dataCutoff'], CONFIG['national']['dataCutoff'] + 'T00:00:00+00:00')
+        self.assertEqual(o['dataCutoff'], CONFIG['seatPolls']['pollCutoff'] + 'T00:00:00+00:00')
         self.assertEqual(o['mmp']['blocs'], CONFIG['mmp']['blocs'])
         self.assertEqual(o['mmp']['rulesVersion'], CONFIG['mmp']['rulesVersion'])
         self.assertEqual(o['probabilityMcseMax'], CONFIG['release']['probabilityMcseMax'])
         self.assertEqual(o['codeRevision'], 'abc123')
         self.assertTrue(o['limitations'])
+
+    def test_an_electorate_only_release_is_dated_by_the_seat_polls_and_says_so(self):
+        later = json.loads(json.dumps(CONFIG))
+        later['seatPolls']['pollCutoff'] = '2026-10-21'
+        o = plan.build_options(later, 'nowcast-2026-10-21', '2026-10-14', 'abc', datetime(2026, 10, 22, tzinfo=timezone.utc))
+        self.assertEqual(o['dataCutoff'], '2026-10-21T00:00:00+00:00')
+        self.assertIn(f"National polls to {CONFIG['national']['dataCutoff']}", o['nationalBasis'])
+        self.assertIn('electorate polls to 2026-10-21', o['nationalBasis'])
+        self.assertNotIn('electorate polls to', self.options()['nationalBasis'])          # a national release says nothing extra
 
     def test_a_cutoff_after_the_creation_time_is_refused(self):
         with self.assertRaises(plan.Refused):
