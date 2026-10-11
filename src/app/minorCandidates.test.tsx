@@ -5,6 +5,7 @@ import { buildNowcastSnapshot } from '../models/nowcast/fromBank';
 import type { IndexResult } from '../data/loader';
 import { App } from './App';
 import { candidatePartyName } from './partyNames';
+import { COLOURS, medianColour } from './partyColours';
 
 const noIndex = () => Promise.resolve<IndexResult>({ status: 'unavailable', reason: 'test' });
 const options = {
@@ -135,5 +136,17 @@ describe('minor party names', () => {
     expect(named('aSomethingNewparty')).toBe('aSomethingNewparty'); // already readable
     expect(named('somethingnewparty')).toBe('Other party');
     expect(named(null)).toBe('Independent');
+  });
+});
+
+describe('median line colour', () => {
+  it('stays near-black where it shows and turns white on the darkest party colours', () => {
+    expect(COLOURS.newzealandfirstparty).not.toBe('#222222'); // NZ First is no longer full black
+    expect(medianColour(COLOURS.newzealandfirstparty)).toBe('#222');
+    expect(medianColour(COLOURS.labourparty)).toBe('#222');
+    expect(medianColour(COLOURS.actnewzealand)).toBe('#222');
+    expect(medianColour(COLOURS.tepatimaori)).toBe('#fff');
+    expect(medianColour(COLOURS.nationalparty)).toBe('#fff');
+    expect(medianColour('#222222')).toBe('#fff');
   });
 });
