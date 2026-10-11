@@ -72,8 +72,9 @@ def check_config(config, require_complete=False):
         require((ROOT / config[section][key]).exists(), f'{path} does not exist: {config[section][key]}')
     seat_polls = config.get('seatPolls')
     if seat_polls is not None:
-        require(set(seat_polls) == {'enabled', 'decision', 'electorateRun'} and isinstance(seat_polls['enabled'], bool),
-                'seatPolls is {enabled: bool, decision, electorateRun}')
+        require(set(seat_polls) - {'rule'} == {'enabled', 'decision', 'electorateRun'} and isinstance(seat_polls['enabled'], bool),
+                'seatPolls is {enabled: bool, decision, electorateRun, rule?}')
+        require(seat_polls.get('rule', 'balance') in ('balance', 'all-candidates'), "seatPolls.rule is 'balance' (D117, default) or 'all-candidates'")
         run = seat_polls['electorateRun']
         require(run is None or (isinstance(run, dict) and set(run) == {'date', 'pollsSha256'}), 'seatPolls.electorateRun is {date, pollsSha256} or null')
         if run is not None:

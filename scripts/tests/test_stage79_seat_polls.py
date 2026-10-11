@@ -275,7 +275,7 @@ class Switch(unittest.TestCase):
     def test_config_switch_is_fail_closed(self):
         c = copy.deepcopy(read(CONFIG))
         run = c['seatPolls']['electorateRun']
-        self.assertEqual(c['seatPolls'], {'enabled': True, 'decision': 'D117', 'electorateRun': run})  # James switched it on (D117)
+        self.assertEqual(c['seatPolls'], {'enabled': True, 'decision': 'D117', 'rule': 'all-candidates', 'electorateRun': run})  # James switched it on (D117); every candidate since 11 Oct
         self.assertIn('D117', c['decisions'])
         check_config(c)
         c.pop('seatPolls')
@@ -294,10 +294,17 @@ class Switch(unittest.TestCase):
         check_config(d)
         d['seatPolls'] = {'enabled': False, 'decision': 'D117', 'electorateRun': None}
         check_config(d)
+        for rule in ('balance', 'all-candidates'):
+            d['seatPolls'] = {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'rule': rule}
+            check_config(d)
+        d['seatPolls'] = {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'rule': 'other'}
+        with self.assertRaises(ConfigError):
+            check_config(d)
 
     def test_enabled_bank_changes_only_polled_seats(self):
         c = copy.deepcopy(read(CONFIG))
         pinned = c.pop('seatPolls')
+        pinned['rule'] = 'balance'  # the D117 National/Labour rule; the all-candidates rule has its own tests
         slates = {s: slate(s) for s in GENERAL}
         classes = {s: 'exceptional' if i % 8 == 0 else 'ordinary' for i, s in enumerate(GENERAL)}
         maori = {s: {'status': 'simulated', 'class': 'maori-layer', 'source': 'synthetic-test', 'candidates': ['a', 'b'], 'candidateNames': ['A', 'B'],
