@@ -5,9 +5,11 @@
 Sets config/nowcast-2026.json national.source, modelStateAsOf and dataCutoff to the values recorded in that run's
 estimate.json (`nowcastInput`), pins seatPolls.electorateRun to a Stage82 electorate-poll run (`--electorate-date`, default the newest run: a
 refresh writes an electorate run only when the electorate polls changed; the assembly still reads only polls ending by the data cutoff; audit
-J2) and bumps configVersion (text edits of those values only), then validates the result with scripts.nowcast_config.validate. Nothing else
+J2), sets seatPolls.pollCutoff (the date the seat polls are read up to and aged from, and the release's data cutoff) to the later of that
+national cutoff and the pinned electorate run's date, so a refresh that brought only electorate polls still moves the forecast, and bumps
+configVersion (text edits of those values only), then validates the result with scripts.nowcast_config.validate. Nothing else
 in the configuration changes. `--check` verifies that the config already carries the run's national values and, when `--electorate-date` is
-given, that electorate run (the validator checks any pinned run against the electorate-poll index).
+given, that electorate run and the poll cutoff it implies (the validator checks any pinned run against the electorate-poll index).
 """
 import argparse
 import json
@@ -35,6 +37,11 @@ def run_text(run):
     return 'null' if run is None else f'{{"date": "{run["date"]}", "pollsSha256": "{run["pollsSha256"]}"}}'
 
 
+def poll_cutoff(national_cutoff, run):
+    """The date the forecast is as of: the later of the national data cutoff and the electorate run's date (a run exists only when the polls changed)."""
+    return max(national_cutoff, run['date']) if run else national_cutoff
+
+
 def next_version(old, day):
     base, _, n = old.rpartition('.')
     return f'{day}.{int(n) + 1 if base == day else 1}'
@@ -52,6 +59,8 @@ def adopt(date, check=False, electorate_date=None):
             raise ValueError(f'config national input {current} differs from the {date} refresh {wanted}')
         if electorate_date is not None and run_now != run_wanted:
             raise ValueError(f'config electorate-poll run {run_now} differs from the {date} refresh {run_wanted}')
+        if electorate_date is not None and config['seatPolls']['pollCutoff'] != poll_cutoff(wanted[2], run_wanted):
+            raise ValueError(f"config seatPolls.pollCutoff {config['seatPolls']['pollCutoff']} differs from {poll_cutoff(wanted[2], run_wanted)}")
         return current
     # Surgical text edits keep the diff to the fields adopted (other work edits this file concurrently; a re-dump would reformat it).
     text = CONFIG.read_text(encoding='utf-8')
@@ -66,8 +75,13 @@ def adopt(date, check=False, electorate_date=None):
     if text.count(needle) != 1:
         raise ValueError(f'Expected exactly one {needle} in the config')
     text = text.replace(needle, f'"electorateRun": {run_text(run_wanted)}')
+    cutoff_now, cutoff_wanted = config['seatPolls']['pollCutoff'], poll_cutoff(wanted[2], run_wanted)
+    needle = f'"pollCutoff": "{cutoff_now}"'
+    if text.count(needle) != 1:
+        raise ValueError(f'Expected exactly one {needle} in the config')
+    text = text.replace(needle, f'"pollCutoff": "{cutoff_wanted}"')
     config['national']['source'], config['national']['modelStateAsOf'], config['national']['dataCutoff'], config['configVersion'] = *wanted, version
-    config['seatPolls']['electorateRun'] = run_wanted
+    config['seatPolls']['electorateRun'], config['seatPolls']['pollCutoff'] = run_wanted, cutoff_wanted
     if json.loads(text) != config:
         raise ValueError('Surgical edit changed more than the adopted fields')
     check_config(config)

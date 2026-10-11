@@ -108,6 +108,7 @@ The 0.55 is James's judgement (2026-10-10), not a fitted value; the 0.91 is the 
 - `schemaVersion: 2`;
 - `targetType` (`nowcast`, or a separately labelled `election-day-scenario`);
 - `modelStateAsOf` ≤ `dataCutoff` ≤ `createdAt`;
+- the snapshot's `dataCutoff` is `seatPolls.pollCutoff`: the national data cutoff, or the date of a later electorate-poll refresh when only seat polls were new (the national state is then unchanged and the seat polls are read up to, and aged from, that date; D133);
 - `electionDate` as context;
 - national and party-seat intervals at exactly 50/80/90, nested;
 - `configVersion` in model provenance.

@@ -87,7 +87,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
             candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters)
     rows = list(party_rows.values()) + list(candidate_rows.values())
     run, sha = electorate_live.pinned(config)
-    polls = (seat_polls.inputs(config['national']['dataCutoff'], rows=seat_polls.live_rows(run, sha))
+    polls = (seat_polls.inputs(electorate_live.forecast_cutoff(config), rows=seat_polls.live_rows(run, sha))
              if config.get('seatPolls', {}).get('enabled') else {})
     state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
              'candidateScales': candidate_scales, 'multipliers': multipliers, 'withinMultipliers': within,
@@ -101,13 +101,13 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
                 records[seat] = record
     records.update(maori.simulate(config, total) if maori_records is None else maori_records)
 
-    seat_evidence = evidence.build(config, records, keys, groups, base, continuing, config['national']['dataCutoff'], maori_records is not None)
+    seat_evidence = evidence.build(config, records, keys, groups, base, continuing, electorate_live.forecast_cutoff(config), maori_records is not None)
     seats = [{'electorateId': seat, 'scope': 'general' if seat in frame['general'] else 'maori', **records[seat]}
              for seat in general_ids + sorted(frame['maori'])]
     return {'schemaVersion': SCHEMA_VERSION, 'stage': 73, 'electionYear': YEAR,
             'provenance': 'synthetic-fixture' if synthetic else 'live',
             'configVersion': config['configVersion'], 'estimand': config['estimand'],
-            'modelStateAsOf': config['national']['modelStateAsOf'], 'dataCutoff': config['national']['dataCutoff'],
+            'modelStateAsOf': config['national']['modelStateAsOf'], 'dataCutoff': electorate_live.forecast_cutoff(config),
             'nationalStateKey': config['national']['stateKey'],
             'inputs': {'nationalSource': config['national']['source'], 'nationalSha256': file_sha256(config['national']['source']),
                        'baseline': config['baseline']['source'], 'scales': config['uncertainty']['scales'],

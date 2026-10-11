@@ -66,11 +66,13 @@ class BodyTests(unittest.TestCase):
         self.assertNotIn('CI must be started manually', pat)
         self.assertIn('POLL_REFRESH_TOKEN', pat)
 
-    def test_electorate_only_update_body_lists_the_polls_and_says_nothing_reads_them(self):
+    def test_electorate_only_update_body_lists_the_polls_and_says_what_publish_does_with_them(self):
         title, body = helper.pr_text(self.ELECTORATE_DAY, 'none', 'updated', 'pat', '- `c`: ok')
         self.assertEqual(title, f'Polls: electorate poll update {self.ELECTORATE_DAY}')
-        for text in ('Mt Albert', 'Wellington Bays', 'Te Tai Tonga', 'NAT 30~', 'IND 18', 'data change only, with no refit', 'aggregator_only', 'sponsored_source'):
+        for text in ('Mt Albert', 'Wellington Bays', 'Te Tai Tonga', 'NAT 30~', 'IND 18', 'data change only: it changes no estimate', 'aggregator_only', 'sponsored_source',
+                     f'releases a new forecast dated {self.ELECTORATE_DAY}'):
             self.assertIn(text, body)
+        self.assertNotIn('Nothing reads this file', body)
         self.assertNotIn('Fit gates', body)
 
     def test_titles_by_outcome(self):

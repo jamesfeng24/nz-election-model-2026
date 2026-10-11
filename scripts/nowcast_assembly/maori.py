@@ -135,7 +135,7 @@ def simulate(config, count):
     ids = electorate_ids()
     people = roster(config, ids)
     run, sha = electorate_live.pinned(config)
-    polls, _ = maori_live.current_polls(resolver(people), maori_live.live_polls(run, sha), config['national']['dataCutoff'])
+    polls, _ = maori_live.current_polls(resolver(people), maori_live.live_polls(run, sha), electorate_live.forecast_cutoff(config))
     fitted = fit()[0]['fit']
     sim = simulate_layer(polls, parameters(fitted), count, namespace_seed(config['simulation']['seedNamespace'], 'maori'))
     inflated = inflation_winners(polls, count, config['simulation']['seedNamespace'])

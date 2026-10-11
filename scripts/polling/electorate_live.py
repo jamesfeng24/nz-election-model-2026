@@ -47,6 +47,21 @@ def polls(date=None, sha256=None):
     return payload['polls']
 
 
+def newest_date():
+    """The date of the newest electorate-poll run, or None when there is none (the index only; no poll is read)."""
+    entries = runs()
+    return entries[-1]['date'] if entries else None
+
+
+def forecast_cutoff(config):
+    """The date the whole forecast is as of: the seat polls are read up to it and aged from it, and it is the release's data cutoff.
+
+    `seatPolls.pollCutoff` when set, else the national data cutoff. It is the national cutoff unless an electorate-poll refresh arrived after the
+    last national one: the national state needs no refit when no national poll is new, but the seat polls (and their decay) move with the refresh
+    date. `weekly_refresh.adopt` sets it to the later of the adopted national cutoff and the adopted electorate-poll run's date."""
+    return (config.get('seatPolls') or {}).get('pollCutoff') or config['national']['dataCutoff']
+
+
 def pinned(config):
     """(date, sha256) of the configured run, or (None, None) when seat polls are off or the configuration pins no run."""
     run = (config.get('seatPolls') or {}).get('electorateRun')

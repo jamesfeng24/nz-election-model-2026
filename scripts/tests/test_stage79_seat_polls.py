@@ -274,25 +274,33 @@ class Apply(unittest.TestCase):
 class Switch(unittest.TestCase):
     def test_config_switch_is_fail_closed(self):
         c = copy.deepcopy(read(CONFIG))
-        run = c['seatPolls']['electorateRun']
-        self.assertEqual(c['seatPolls'], {'enabled': True, 'decision': 'D117', 'electorateRun': run})  # James switched it on (D117)
+        run, cut = c['seatPolls']['electorateRun'], c['seatPolls']['pollCutoff']
+        self.assertEqual(c['seatPolls'], {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'pollCutoff': cut})  # James switched it on (D117)
         self.assertIn('D117', c['decisions'])
         check_config(c)
         c.pop('seatPolls')
         check_config(c)
-        for bad in ({'enabled': 'yes', 'decision': 'D117', 'electorateRun': run}, {'enabled': True}, {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'x': 1},
-                    {'enabled': True, 'decision': 'D117'}, {'enabled': True, 'decision': 'D117', 'electorateRun': None},  # enabled polls need a pinned run (audit J2)
-                    {'enabled': True, 'decision': 'D117', 'electorateRun': dict(run, pollsSha256='0' * 64)},
-                    {'enabled': True, 'decision': 'D117', 'electorateRun': dict(run, date='2026-01-01')}):
+        for bad in ({'enabled': 'yes', 'decision': 'D117', 'electorateRun': run, 'pollCutoff': cut}, {'enabled': True},
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'pollCutoff': cut, 'x': 1},
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': run},                                    # the poll cutoff is required
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'pollCutoff': '2026-10-06'},        # not before the national data cutoff
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'pollCutoff': '2026-11-08'},        # not after election day
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'pollCutoff': 'soon'},
+                    {'enabled': True, 'decision': 'D117', 'pollCutoff': cut},
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': None, 'pollCutoff': cut},  # enabled polls need a pinned run (audit J2)
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': dict(run, pollsSha256='0' * 64), 'pollCutoff': cut},
+                    {'enabled': True, 'decision': 'D117', 'electorateRun': dict(run, date='2026-01-01'), 'pollCutoff': cut}):
             d = copy.deepcopy(c)
             d['seatPolls'] = bad
             with self.assertRaises(ConfigError):
                 check_config(d)
         d = copy.deepcopy(c)
-        d['seatPolls'] = {'enabled': True, 'decision': 'D117', 'electorateRun': run}
+        d['seatPolls'] = {'enabled': True, 'decision': 'D117', 'electorateRun': run, 'pollCutoff': cut}
         self.assertEqual(read(PREFIX + '/findings.json')['summary']['finding'], 'adopt')
         check_config(d)
-        d['seatPolls'] = {'enabled': False, 'decision': 'D117', 'electorateRun': None}
+        d['seatPolls']['pollCutoff'] = '2026-10-12'     # later than the national cutoff: an electorate-only refresh
+        check_config(d)
+        d['seatPolls'] = {'enabled': False, 'decision': 'D117', 'electorateRun': None, 'pollCutoff': cut}
         check_config(d)
 
     def test_enabled_bank_changes_only_polled_seats(self):
@@ -306,8 +314,9 @@ class Switch(unittest.TestCase):
         off = A.assemble(c, 8, slates=slates, classification=classes, maori_records=maori)
         c['seatPolls'] = pinned
         on = A.assemble(c, 8, slates=slates, classification=classes, maori_records=maori)
-        polled = set(live.inputs(c['national']['dataCutoff']))
+        polled = set(live.inputs(c['seatPolls']['pollCutoff']))
         self.assertTrue(polled)
+        self.assertEqual((off['dataCutoff'], on['dataCutoff']), (c['national']['dataCutoff'], c['seatPolls']['pollCutoff']))
         for a, b in zip(off['seats'], on['seats']):
             if a['electorateId'] in polled:
                 self.assertIn('seatPoll', b)
