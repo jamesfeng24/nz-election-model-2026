@@ -3,7 +3,7 @@ import copy
 import math
 import unittest
 from scripts.nowcast_assembly import assemble as A, evidence
-from scripts.nowcast_assembly.common import read
+from scripts.nowcast_assembly.common import read, CONFIG
 from scripts.maori_seat_layer import live as maori_live
 from scripts.seat_polls import live
 
@@ -101,8 +101,11 @@ class Bank(unittest.TestCase):
             self.assertAlmostEqual(sum(p['weight'] for p in used), update['effectiveWeight'])
             self.assertAlmostEqual(update['updatedBalance'], update['modelBalance'] + record['shift'])
             pct = lambda p, party: next(c['pct'] for c in p['candidateVotePct'] if c['party'] == party)
-            moved = sum(p['weight'] * (math.log(pct(p, 'NAT') / pct(p, 'LAB')) - update['modelBalance']) for p in used)
-            self.assertAlmostEqual(update['updatedBalance'], update['modelBalance'] + moved)  # linear in the combined poll
+            if read(CONFIG)['seatPolls']['rule'] == 'balance':
+                moved = sum(p['weight'] * (math.log(pct(p, 'NAT') / pct(p, 'LAB')) - update['modelBalance']) for p in used)
+                self.assertAlmostEqual(update['updatedBalance'], update['modelBalance'] + moved)  # linear in the combined poll
+            # all-candidates (D133): the poll moves every candidate, so the National/Labour balance also moves through the others and
+            # is no longer a weighted mean of the polls' own log(NAT/LAB); the weights are the clipped realised share of the gap
         self.assertGreater(polled, 0)
 
     def test_the_bank_digest_ignores_the_evidence_so_existing_digests_stand(self):
