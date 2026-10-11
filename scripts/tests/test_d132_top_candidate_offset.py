@@ -78,6 +78,13 @@ class TopOffset(unittest.TestCase):
 
 
 class Evidence(unittest.TestCase):
+    def test_the_live_path_never_imports_the_evidence_script(self):
+        from scripts.tests.test_historical_flag_isolation import ROOT as repo
+        for base in ('scripts/nowcast_assembly', 'scripts/nowcast_config', 'scripts/seat_polls', 'scripts/publish_workflow'):
+            for path in (repo / base).rglob('*.py'):
+                self.assertNotIn('top_candidate_offset', path.read_text(encoding='utf-8'), path.as_posix())
+
+
     def test_saved_evidence_reproduces_and_supports_the_wording(self):
         from scripts.balance_scale.common import equivalent
         from scripts.top_candidate_offset import evidence
