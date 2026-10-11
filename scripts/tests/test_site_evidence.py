@@ -64,16 +64,42 @@ class SiteEvidenceTests(unittest.TestCase):
         self.assertLessEqual(max(p['fieldworkEnd'] for p in self.evidence['nationalPolls']), cutoff)
         self.assertLessEqual(self.evidence['trend']['weeks'][-1], self.evidence['modelStateAsOf'])
 
-    def test_seat_polls_are_cited_and_marked_used_only_where_the_model_uses_them(self):
-        by_seat = {p['electorateName']: p for p in self.evidence['seatPolls']}
-        self.assertEqual(sorted(by_seat), ['Hauraki-Waikato', 'Mt Albert', 'Te Tai Hauāuru', 'Te Tai Tonga', 'Waiariki', 'Wellington Bays'])
-        self.assertTrue(all(by_seat[s]['usedInModel'] for s in ('Hauraki-Waikato', 'Te Tai Hauāuru', 'Te Tai Tonga')))
-        self.assertFalse(any(by_seat[s]['usedInModel'] for s in ('Mt Albert', 'Waiariki', 'Wellington Bays')))
-        for poll in self.evidence['seatPolls']:
-            self.assertTrue(poll['fieldworkEnd'] or poll['published'])
+    def test_every_poll_of_the_pinned_electorate_run_is_listed(self):
+        from scripts.polling import electorate_live
+        config = json.loads((ROOT / 'config/nowcast-2026.json').read_text(encoding='utf-8'))
+        run = electorate_live.polls(*electorate_live.pinned(config))
+        listed = self.evidence['seatPolls']
+        self.assertEqual(len(listed), len(run))
+        self.assertEqual(sorted((p['electorateName'], p['fieldworkEnd']) for p in listed), sorted((p['seat'], p['fieldwork']['end']) for p in run))
+        for poll in listed:
+            self.assertTrue(poll['fieldworkEnd'])
+            self.assertEqual(poll['usedInModel'], poll['note'] is None)
             for source in poll['sources']:
-                self.assertTrue(source['url'] is None or source['url'].startswith('https://'))
-        self.assertEqual(by_seat['Wellington Bays']['published'], '2026-09-16')
+                self.assertTrue(source['url'].startswith('https://') and source['label'])
+
+    def test_general_seat_polls_are_marked_used_exactly_where_the_forecast_reads_them(self):
+        from scripts.polling import electorate_live
+        from scripts.seat_polls import live
+        config = json.loads((ROOT / 'config/nowcast-2026.json').read_text(encoding='utf-8'))
+        run, sha = electorate_live.pinned(config)
+        rows = live.live_rows(run, sha)
+        model_used = {pid for seat in live.inputs(self.evidence['dataCutoff'], rows=rows).values() for pid in seat['pollIds']}
+        ids = {(r['electorate'], r['fieldworkEnd']): r['id'] for r in rows}
+        general = [p for p in self.evidence['seatPolls'] if (p['electorateName'], p['fieldworkEnd']) in ids]
+        self.assertEqual(len(general), len(rows))
+        self.assertEqual({ids[(p['electorateName'], p['fieldworkEnd'])] for p in general if p['usedInModel']}, model_used)
+
+    def test_each_maori_seat_uses_only_its_latest_poll_by_the_cutoff(self):
+        maori = [p for p in self.evidence['seatPolls'] if p['electorateName'] in ('Hauraki-Waikato', 'Te Tai Hauāuru', 'Te Tai Tonga', 'Waiariki')]
+        self.assertTrue(maori)
+        for seat in {p['electorateName'] for p in maori}:
+            polls = sorted((p for p in maori if p['electorateName'] == seat), key=lambda p: p['fieldworkEnd'])
+            self.assertEqual([p['usedInModel'] for p in polls], [False] * (len(polls) - 1) + [True])
+
+    def test_poll_results_name_the_seats_own_candidates_where_one_matches(self):
+        mt_albert = next(p for p in self.evidence['seatPolls'] if p['electorateName'] == 'Mt Albert')
+        self.assertEqual([r['name'] for r in mt_albert['results'][:2]], ['Helen WHITE', 'Melissa LEE'])
+        self.assertEqual({r['party'] for r in mt_albert['results']} <= {'LAB', 'NAT', 'GRN', 'TOP', 'NZF', 'ACT', 'TPM', None}, True)
 
     def test_the_output_names_no_tooling(self):
         text = SAVED.read_text(encoding='utf-8').lower()

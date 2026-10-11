@@ -628,6 +628,24 @@ table td:not(:first-child),
   text-align: right;
   white-space: nowrap;
 }
+.otherbutton {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+.otherbutton:hover strong,
+.otherbutton:focus-visible strong {
+  text-decoration: underline;
+}
+.otherchild td:first-child {
+  padding-left: 1.4rem;
+}
 .candidates td.axiscell {
   padding-top: 0;
   border-bottom: 0;

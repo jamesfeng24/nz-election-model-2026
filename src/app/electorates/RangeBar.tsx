@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import type { IntervalSet } from '../../types/domain';
 import { pct } from '../format';
 import { intervalAt, mainRange } from '../intervals';
+import { medianColour } from '../partyColours';
 
 /** The spacing of the bars' faint gridlines, as a share of the vote. */
 const gridStep = (axisMax: number) => (axisMax <= 0.25 ? 0.05 : 0.1);
@@ -63,7 +64,7 @@ export function RangeBar({
         onMouseMove={showTip('50%', range50)}
         onMouseEnter={showTip('50%', range50)}
       />
-      <span className="median" style={{ left: position(range50.median) }} />
+      <span className="median" style={{ left: position(range50.median), background: medianColour(colour) }} />
       {tip && (
         <span className="rangetip" style={{ left: tip.x }}>
           {tip.text}

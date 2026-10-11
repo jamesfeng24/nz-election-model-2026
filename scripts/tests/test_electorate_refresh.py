@@ -225,7 +225,8 @@ class CommittedRunTests(unittest.TestCase):
     def test_only_the_authorised_model_layers_read_the_live_file(self):
         # Authorised readers, both James 2026-10-10: the general-seat poll layer (Stage79 follow-up, D123) and the Maori seat layer (Stage86, D125).
         # Since D128 (Stage88) both read the run the configuration pins through one module, scripts/polling/electorate_live.py, and nothing else
-        # names the live file; the layers' readers are checked to use it.
+        # names the live file; the layers' readers are checked to use it. The public-site evidence builder (scripts/site_evidence/build.py, Stage84
+        # follow-up 2026-10-11) is a display-only reader of the same pinned run: it lists the polls the layers read and feeds nothing back to any model.
         hits = [p.relative_to(ROOT).as_posix() for p in (ROOT / 'scripts').rglob('*.py')
                 if 'electorate-live' in p.read_text(errors='ignore') and 'electorate_refresh' not in str(p)
                 and 'refresh_workflow' not in str(p) and 'test_electorate_refresh' not in str(p) and 'test_weekly_refresh_workflow' not in str(p)]
@@ -234,7 +235,7 @@ class CommittedRunTests(unittest.TestCase):
                  if 'electorate_live' in p.read_text(errors='ignore') and '/tests/' not in p.as_posix() and p.name != 'electorate_live.py']
         self.assertEqual(sorted(users), ['scripts/maori_seat_layer/live.py', 'scripts/nowcast_assembly/assemble.py', 'scripts/nowcast_assembly/evidence.py',
                                          'scripts/nowcast_assembly/maori.py', 'scripts/nowcast_config/validate.py', 'scripts/polling/weekly_refresh/adopt.py',
-                                         'scripts/seat_polls/live.py', 'scripts/seat_polls/readout.py'])
+                                         'scripts/seat_polls/live.py', 'scripts/seat_polls/readout.py', 'scripts/site_evidence/build.py'])
 
 
 if __name__ == '__main__':
