@@ -3,7 +3,7 @@ import copy
 import math
 import unittest
 from scripts.nowcast_assembly import assemble as A, evidence
-from scripts.nowcast_assembly.common import read
+from scripts.nowcast_assembly.common import CONFIG, read
 from scripts.maori_seat_layer import live as maori_live
 from scripts.seat_polls import live
 
@@ -100,9 +100,11 @@ class Bank(unittest.TestCase):
             self.assertAlmostEqual(update['effectiveWeight'] + update['modelWeight'], 1)
             self.assertAlmostEqual(sum(p['weight'] for p in used), update['effectiveWeight'])
             self.assertAlmostEqual(update['updatedBalance'], update['modelBalance'] + record['shift'])
+            if read(CONFIG)['seatPolls'].get('rule', 'balance') != 'balance':
+                continue  # all-candidates (D133): the update moves every candidate, so the balance is not linear in the N/L gap; the weights are a display summary
             pct = lambda p, party: next(c['pct'] for c in p['candidateVotePct'] if c['party'] == party)
             moved = sum(p['weight'] * (math.log(pct(p, 'NAT') / pct(p, 'LAB')) - update['modelBalance']) for p in used)
-            self.assertAlmostEqual(update['updatedBalance'], update['modelBalance'] + moved)  # linear in the combined poll
+            self.assertAlmostEqual(update['updatedBalance'], update['modelBalance'] + moved)  # linear in the combined poll (D117 balance rule)
         self.assertGreater(polled, 0)
 
     def test_the_bank_digest_ignores_the_evidence_so_existing_digests_stand(self):

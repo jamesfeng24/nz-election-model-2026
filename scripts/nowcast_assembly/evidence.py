@@ -8,6 +8,9 @@ bank digest (`assemble.bank_digest`), so adding or changing it never changes a b
 Polls: a general seat's `weight` is exactly its contribution to the updated National/Labour balance. The update is linear in the
 combined poll, centre = model + k (poll - model) with k = rho * w, and the combined poll is the share-weighted mean of the polls, so
 poll i moves the centre by `weight` = k * share_i of the gap to its own value and the model keeps 1 - k (`pollUpdate.modelWeight`).
+Under the D133 all-candidates rule the update also moves the other candidates, so the National/Labour balance is no longer linear in
+the combined N/L gap: `weight` is then the share of the gap to the poll actually closed (a display summary), and the exact
+decomposition holds for the D117 balance rule only.
 A Maori seat's latest poll (from the Stage82 live file since Stage86) is the one input of the Stage66 layer, so it has no share or weight.
 """
 from scripts.maori_seat_layer import live as maori_live
