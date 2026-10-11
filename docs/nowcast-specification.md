@@ -76,6 +76,11 @@ National uncertainty enters exactly once, through step 2's draw id. The local an
 
 The 0.55 is James's judgement (2026-10-10), not a fitted value; the 0.91 is the fitted all-election value. The frozen Stage83 rule fitted about 0.80 on earlier elections only and, because ordinary-seat minor-candidate 80% coverage stayed above the registered band, kept control. The pair was chosen with all four elections known and has no out-of-sample support. Its stated costs: National's 80% coverage in ordinary seats falls by 0.024 (guard 0.03), the tails of minor-candidate results in ordinary seats are thinner (a minor-candidate win in an ordinary seat becomes less likely than the fitted law allows), and independent candidates, already under-covered at the 80% level, are narrowed further. It shares the flag-selection sensitivity of the D107 policy. See `docs/stage83-ordinary-minor-spread-findings.md`.
 
+**TOP candidate-weight offset (D132):** every TOP candidate's log-weight in the candidate step is lowered by **0.35** (about ×0.70 before the shares are renormalised), in every general seat except Mt Albert (`nz-general-2026-boundary-025`), where TOP runs a real electorate campaign. The setting is `candidate.partyExponentOffsets.opportunity` in the configuration; it is added to the fitted S+R exponent (`general.weights`) and touches no other candidate, scale, mean or layer.
+- **Why.** The candidate step gives a party's candidate about that party's local party-vote share. TOP's party vote is up about 2.9 times on 2023 (6.4% against 2.3%), but it runs a party-vote-only campaign outside Mt Albert, and a party's candidate vote follows its party vote only partly.
+- **Evidence** (`docs/d132-top-candidate-offset.md`, `scripts/top_candidate_offset/evidence.py`): outside flagged seats and seat wins, 2017–2023 candidate-to-party ratios are ACT 0.51, NZ First 0.83, Greens 0.87 (ACT 0.43–0.56 and Greens 0.68–0.88 above 7% party vote), and between elections a party's candidate vote moved about 0.5–0.6 as much as its party vote (ACT 0.60, Greens 0.49). TOP's own clean history (41 seat-elections, party vote mostly 2–3%) shows 1.1–1.3 and says nothing about 6–13%.
+- **Provenance and limits.** The −0.35 is James's judgement (2026-10-11), the middle of the 0.8×, 0.7× and 0.5× readings of that evidence; it is not fitted or backtested. Flagged seats stand in for two-tick campaigns, which are not recorded. The effect on a seat that Stage79 polls moves with the weights in the same way.
+
 **The 2026 classification.**
 - One dated file classifies every 2026 general seat as `ordinary` or `exceptional`, by 2026 boundary id, with author, date, reason and sources. It is recorded in `config/general-seat-classification-2026.json` (2026-10-10; 13 exceptional, 51 ordinary; reasons in `docs/general-seat-classification-2026.md`).
 - The classification is exhaustive and exclusive over the 64 general seats. A missing seat **fails the build**; it never defaults to 0.60.
@@ -129,6 +134,7 @@ Stage53's fixed `requiredSeats` government combinations are replaced by Stage65'
 - the national source (fit, arm, `stateKey: lastDataSupport`);
 - the balance multipliers `{ordinary: 0.60, exceptional: 1.00}` and the within-remainder multipliers `{ordinary: 0.55, exceptional: 1.00}` and the major-mass multipliers `{ordinary: 0.91, exceptional: 1.00}` (D121);
 - the classification path;
+- the TOP candidate-weight offset `candidate.partyExponentOffsets` (D132);
 - the baseline pointer (the Stage69 voting-place notionals, adopted 2026-10-07);
 - the roster snapshot id;
 - the interval levels;

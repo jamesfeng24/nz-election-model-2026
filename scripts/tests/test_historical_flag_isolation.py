@@ -13,9 +13,11 @@ OWNERS = {'exceptional_scale': 'data/processed/exceptional-scale', 'exceptional_
 STAGE83 = 'scripts/ordinary_minor_spread/'
 # scripts/seat_polls/historical.py: the Stage79 scoring diagnostic reads the Stage67 flags for the historical multiplier class
 # (development only); the live path never imports it (test_stage79_seat_polls.Isolation).
+# scripts/top_candidate_offset/evidence.py (D132): descriptive third-party ratios outside flagged seats, a stand-in for two-tick
+# campaigns; development evidence only, imported by nothing in the live path (test_d132_top_candidate_offset).
 ALLOWED_FILES = {'scripts/tests/test_exceptional_scale.py', 'scripts/tests/test_stage67_exceptional_balance_scale.py',
                  'scripts/tests/test_stage83_ordinary_minor_spread.py', 'scripts/tests/test_historical_flag_isolation.py',
-                 'scripts/seat_polls/historical.py'}
+                 'scripts/seat_polls/historical.py', 'scripts/top_candidate_offset/evidence.py'}
 
 
 def sources():

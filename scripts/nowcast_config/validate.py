@@ -56,6 +56,19 @@ def check_config(config, require_complete=False):
     require(within == {'ordinary': 0.55, 'exceptional': 1.00}, 'Stage83 within-remainder multipliers are 0.55 ordinary and 1.00 exceptional (D121)')
     mass = config['uncertainty']['candidateMassSeatMultiplier']
     require(mass == {'ordinary': 0.91, 'exceptional': 1.00}, 'Stage83 major-mass multipliers are 0.91 ordinary and 1.00 exceptional (D121)')
+    for group, setting in config['candidate'].get('partyExponentOffsets', {}).items():
+        require(set(setting) == {'offset', 'exemptSeats', 'decision', 'decidedBy', 'status'} and isinstance(setting['exemptSeats'], list)
+                and all(isinstance(s, str) and s.startswith('nz-general-2026-boundary-') for s in setting['exemptSeats']),
+                f'candidate.partyExponentOffsets.{group} is {{offset, exemptSeats, decision, decidedBy, status}} with general seat ids')
+        require(isinstance(setting['offset'], float) and -1.0 <= setting['offset'] < 0, f'candidate.partyExponentOffsets.{group}.offset must be a negative number no smaller than -1 (D132)')
+        require(group in config['national']['categoryMap'].values() and group != 'other', f'candidate.partyExponentOffsets.{group} must name a national party group')
+    for setting in config['candidate'].get('candidateExponentOffsets', []):
+        require(set(setting) == {'seat', 'candidateId', 'name', 'offset', 'decision', 'decidedBy', 'status'}
+                and isinstance(setting['seat'], str) and setting['seat'].startswith('nz-general-2026-boundary-')
+                and setting['candidateId'].startswith(setting['seat'] + '-candidate-'),
+                'candidate.candidateExponentOffsets entries are {seat, candidateId, name, offset, decision, decidedBy, status} for a general-seat candidate (D134)')
+        require(isinstance(setting['offset'], float) and 0 < abs(setting['offset']) <= 1.0,
+                'candidate.candidateExponentOffsets offsets are nonzero floats no larger than 1 in size (D134)')
     require(config['uncertainty']['extraSdOnExceptionalRequiresOptIn'] is True, 'extra sd on 1.00 seats needs an explicit opt-in (D107)')
     require(config['intervalLevels'] == INTERVAL_LEVELS and config['primaryIntervalLevel'] == 0.8, 'intervals are 50/80/90 with 80% primary')
     require(config['maori']['unpolledSeats'] in (None, 'labelled-fallback', 'withhold'),
@@ -72,8 +85,9 @@ def check_config(config, require_complete=False):
         require((ROOT / config[section][key]).exists(), f'{path} does not exist: {config[section][key]}')
     seat_polls = config.get('seatPolls')
     if seat_polls is not None:
-        require(set(seat_polls) == {'enabled', 'decision', 'electorateRun'} and isinstance(seat_polls['enabled'], bool),
-                'seatPolls is {enabled: bool, decision, electorateRun}')
+        require(set(seat_polls) - {'rule'} == {'enabled', 'decision', 'electorateRun'} and isinstance(seat_polls['enabled'], bool),
+                'seatPolls is {enabled: bool, decision, electorateRun, rule?}')
+        require(seat_polls.get('rule', 'balance') in ('balance', 'all-candidates'), "seatPolls.rule is 'balance' (D117, default) or 'all-candidates'")
         run = seat_polls['electorateRun']
         require(run is None or (isinstance(run, dict) and set(run) == {'date', 'pollsSha256'}), 'seatPolls.electorateRun is {date, pollsSha256} or null')
         if run is not None:

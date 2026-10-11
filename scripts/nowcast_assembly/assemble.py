@@ -8,11 +8,11 @@ from pathlib import Path
 import numpy as np
 from scripts.manual_adjustment.schema import seat_frame
 from scripts.nowcast_config.validate import check_classification, check_config, ConfigError
-from scripts.seat_polls import live as seat_polls
+from scripts.seat_polls import live as seat_polls, candidates as candidate_polls
 from scripts.polling import electorate_live
 from . import evidence, fastmath, general, maori, national, streams
 from .summaries import share_summaries
-from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file_sha256, AssemblyError
+from .common import YEAR, OTHER, ROOT, TARGET_FRAME, read, require, digest, file_sha256, namespace_seed, AssemblyError
 
 SCHEMA_VERSION = 3
 
@@ -71,6 +71,7 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
     require(set(base) == set(general_ids), 'baseline seats differ from the 2026 general frame')
 
     roster_reason = classification_reason = None
+    named = slates is None  # D134 offsets name real candidates: only the live slates carry them (injected test and fixture slates are invented)
     if slates is None:
         slates, roster_reason = live_slates(config)
     if classification is None:
@@ -84,15 +85,17 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
         elif classification is None:
             records[seat] = {'status': 'unavailable', 'reason': classification_reason}
         else:
-            candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters)
+            candidate_rows[seat] = general.candidate_row(seat, slates[seat], party_rows[seat], parameters, general.exponent_offsets(config, seat),
+                                                           general.candidate_exponent_offsets(config, seat) if named else None)
     rows = list(party_rows.values()) + list(candidate_rows.values())
     run, sha = electorate_live.pinned(config)
-    polls = (seat_polls.inputs(config['national']['dataCutoff'], rows=seat_polls.live_rows(run, sha))
+    polls = (poll_module(config).inputs(config['national']['dataCutoff'], rows=seat_polls.live_rows(run, sha))
              if config.get('seatPolls', {}).get('enabled') else {})
     state = {'party': party_rows, 'candidate': candidate_rows, 'fine': fine, 'partyScales': party_scales,
              'candidateScales': candidate_scales, 'multipliers': multipliers, 'withinMultipliers': within,
              'massMultipliers': mass, 'classification': classification, 'polls': polls,
-             'localTransform': general.local_transform(config), 'national2023': national2023, 'replicates': replicates}
+             'localTransform': general.local_transform(config), 'national2023': national2023, 'replicates': replicates,
+             'pollRule': config.get('seatPolls', {}).get('rule', 'balance'), 'pollSeed': config['simulation']['seedNamespace']}
     local_means = {}
     with streams.substituted(rows, total, config['simulation']['seedNamespace']), fastmath.accelerated():
         for seat, (local_mean, record) in zip(general_ids, run_seats(state, general_ids, workers)):
@@ -118,6 +121,11 @@ def assemble(config, count, slates=None, classification=None, maori_records=None
             'directory': directory(config, groups, frame, slates if classification is not None else {}, records),
             'diagnostics': {'reconciliation': reconciliation(config, groups, draws, keys, continuing, local_means)}}
 
+
+
+def poll_module(config):
+    """The seat-poll module the configured rule names: the D117 National/Labour balance rule (default) or the all-candidates rule."""
+    return candidate_polls if config.get('seatPolls', {}).get('rule', 'balance') == 'all-candidates' else seat_polls
 
 
 def ballot_parties(config, groups):
@@ -147,12 +155,17 @@ def seat_result(seat):
     kind = s['classification'][seat] if candidate else None
     transform = s['localTransform']
     deterministic = None if transform is None else transform(s['party'][seat], s['fine'], s['national2023'], s['replicates'])
+    every = s['pollRule'] == 'all-candidates'
     local, q, poll = general.simulate_with_poll(s['party'][seat], candidate, s['fine'], s['partyScales'], s['candidateScales'],
-                                                s['multipliers'][kind] if kind else 1.0, s['polls'].get(seat) if candidate else None,
+                                                s['multipliers'][kind] if kind else 1.0,
+                                                None if every else (s['polls'].get(seat) if candidate else None),
                                                 deterministic, within=s['withinMultipliers'][kind] if kind else 1.0,
                                                 mass=s['massMultipliers'][kind] if kind else 1.0)
     if q is None:
         return local.mean(axis=0), None
+    if every and s['polls'].get(seat):
+        q, poll = candidate_polls.apply(q, candidate['partyOf'], s['polls'][seat], s['candidateScales']['balance']['shared'],
+                                        namespace_seed(s['pollSeed'], f'seatPoll:{seat}'))
     require(np.isfinite(q).all() and np.allclose(q.sum(axis=1), 1, atol=1e-9), f'{seat}: candidate shares do not close')
     winner = q.argmax(axis=1)
     extra = {'seatPoll': poll} if poll is not None else {}

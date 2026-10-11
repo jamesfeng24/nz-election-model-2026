@@ -8,11 +8,14 @@ bank digest (`assemble.bank_digest`), so adding or changing it never changes a b
 Polls: a general seat's `weight` is exactly its contribution to the updated National/Labour balance. The update is linear in the
 combined poll, centre = model + k (poll - model) with k = rho * w, and the combined poll is the share-weighted mean of the polls, so
 poll i moves the centre by `weight` = k * share_i of the gap to its own value and the model keeps 1 - k (`pollUpdate.modelWeight`).
+Under the D133 all-candidates rule the update also moves the other candidates, so the National/Labour balance is no longer linear in
+the combined N/L gap: `weight` is then the share of the gap to the poll actually closed (a display summary), and the exact
+decomposition holds for the D117 balance rule only.
 A Maori seat's latest poll (from the Stage82 live file since Stage86) is the one input of the Stage66 layer, so it has no share or weight.
 """
 from scripts.maori_seat_layer import live as maori_live
 from scripts.maori_seat_layer.live import live_polls
-from scripts.seat_polls import live as seat_polls
+from scripts.seat_polls import live as seat_polls, candidates as candidate_polls
 from scripts.polling import electorate_live
 from . import maori
 from .common import OTHER, require
@@ -44,7 +47,7 @@ def poll_row(poll, applied, weight_scale, note=None):
 def general_seat(seat, record, row, keys, groups, continuing, polls):
     update = record.get('seatPoll')
     scale = update['rho'] * update['weight'] if update else 0.0
-    note = None if update else 'the seat has no National or no Labour candidate, so the poll could not update the balance'
+    note = None if update else 'the poll could not be applied to this seat (no National or no Labour candidate to summarise, or fewer than two matched candidates)'
     return {'electorateId': seat, 'uncertaintyClass': record['class'],
             'multipliers': {'balance': record['multiplier'], 'within': record['withinMultiplier'], 'mass': record['massMultiplier']},
             'baseline': {'basis': BASELINE_BASIS, 'partyVote': party_vote(row, keys, groups, continuing)},
@@ -85,7 +88,8 @@ def maori_polls(seat_name, record, polls=None, as_of=None):
 def build(config, bank_seats, keys, groups, base, continuing, as_of, synthetic_maori):
     """Evidence for every simulated seat of `bank_seats` ({seat: record}). `synthetic_maori`: injected Maori records have no poll."""
     run, sha = electorate_live.pinned(config)
-    _, polls = (seat_polls.combine(as_of, rows=seat_polls.live_rows(run, sha)) if config.get('seatPolls', {}).get('enabled') else ({}, {}))
+    module = candidate_polls if config.get('seatPolls', {}).get('rule', 'balance') == 'all-candidates' else seat_polls
+    _, polls = (module.combine(as_of, rows=seat_polls.live_rows(run, sha)) if config.get('seatPolls', {}).get('enabled') else ({}, {}))
     names = {} if synthetic_maori else {v: k for k, v in maori.electorate_ids().items()}
     out = []
     for seat, record in bank_seats.items():

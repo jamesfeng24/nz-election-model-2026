@@ -83,17 +83,45 @@ def fold_parameters(config):
     return fit['parameters'], fit['fitId']
 
 
-def candidate_row(electorate, slate, party, parameters):
-    """slate: [{id, group (2026 key or None), S, R}]; centred continuous S/R contributions as Stage43 rows."""
+def exponent_offsets(config, seat):
+    """{2026 group key: offset} for the seat: James's party-level candidate-weight offsets (D132) minus the seats exempted from them."""
+    return {group: float(setting['offset']) for group, setting in config['candidate'].get('partyExponentOffsets', {}).items()
+            if seat not in setting['exemptSeats']}
+
+
+def candidate_exponent_offsets(config, seat):
+    """{candidate id: offset} for the seat: James's single-candidate weight offsets (D134), applied in addition to the party-level ones."""
+    return {c['candidateId']: float(c['offset']) for c in config['candidate'].get('candidateExponentOffsets', []) if c['seat'] == seat}
+
+
+def candidate_row(electorate, slate, party, parameters, offsets=None, candidate_offsets=None):
+    """slate: [{id, group (2026 key or None), S, R}]; centred continuous S/R contributions as Stage43 rows. `offsets`
+    ({group key: offset}, from `exponent_offsets`) is added to the log-weight of every candidate of that group (D132);
+    `candidate_offsets` ({candidate id: offset}, from `candidate_exponent_offsets`) to that one candidate's (D134)."""
     require(len(slate) >= 2 and len({c['id'] for c in slate}) == len(slate), f'{electorate}: incomplete or duplicate slate')
     lookup = set(party['ballotGroupKeys'])
     features = [{'id': c['id'], 'group': c['group'] if c['group'] in lookup else None, 'centered': [float(c['S']), float(c['R'])]}
                 for c in slate]
     groups = ['no_group' if f['group'] is None else role(f['group']) for f in features]
     require(groups.count('national') <= 1 and groups.count('labour') <= 1, f'{electorate}: duplicate major candidate')
-    return {'layer': 'candidate', 'targetYear': YEAR, 'targetElectorateId': electorate, 'ids': [c['id'] for c in slate],
-            'groups': groups, 'features': features, 'parameters': parameters,
-            'partyOf': [c['group'] for c in slate]}
+    row = {'layer': 'candidate', 'targetYear': YEAR, 'targetElectorateId': electorate, 'ids': [c['id'] for c in slate],
+           'groups': groups, 'features': features, 'parameters': parameters,
+           'partyOf': [c['group'] for c in slate]}
+    if offsets or candidate_offsets:
+        offsets, candidate_offsets = offsets or {}, candidate_offsets or {}
+        require(set(candidate_offsets) <= set(row['ids']), f'{electorate}: a candidate exponent offset names a candidate not on the slate')
+        row['exponentOffsets'] = [float(offsets.get(f['group'], 0.0)) + float(candidate_offsets.get(f['id'], 0.0)) for f in features]
+    return row
+
+
+def weights(candidate, party):
+    """Stage47 `candidate_inputs` (destinations, exponents, kappa) with the row's party offsets (D132) added to the exponents."""
+    destinations, exponents, kappa = candidate_inputs(candidate, party)
+    offsets = candidate.get('exponentOffsets')
+    if offsets:
+        require(len(offsets) == len(exponents), f"{candidate['targetElectorateId']}: exponent offsets do not match the slate")
+        exponents = [e + o for e, o in zip(exponents, offsets)]
+    return destinations, exponents, kappa
 
 
 def scaled(scales, multiplier, within=1.0, mass=1.0):
@@ -143,7 +171,7 @@ def simulate_with_poll(party, candidate, fine, party_scales, candidate_scales, m
     local, _ = invert(deterministic, party, party_scales, count)
     if candidate is None:
         return local, None, None
-    destinations, exponents, kappa = candidate_inputs(candidate, party)
+    destinations, exponents, kappa = weights(candidate, party)
     conditional = candidate_vectors(local, destinations, exponents, kappa)
     record = None
     if poll is not None and all(partition(candidate['groups'])[:2]):  # no National or no Labour candidate: no balance to update
