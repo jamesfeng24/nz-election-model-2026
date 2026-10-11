@@ -89,9 +89,15 @@ def exponent_offsets(config, seat):
             if seat not in setting['exemptSeats']}
 
 
-def candidate_row(electorate, slate, party, parameters, offsets=None):
+def candidate_exponent_offsets(config, seat):
+    """{candidate id: offset} for the seat: James's single-candidate weight offsets (D134), applied in addition to the party-level ones."""
+    return {c['candidateId']: float(c['offset']) for c in config['candidate'].get('candidateExponentOffsets', []) if c['seat'] == seat}
+
+
+def candidate_row(electorate, slate, party, parameters, offsets=None, candidate_offsets=None):
     """slate: [{id, group (2026 key or None), S, R}]; centred continuous S/R contributions as Stage43 rows. `offsets`
-    ({group key: offset}, from `exponent_offsets`) is added to the log-weight of every candidate of that group (D132)."""
+    ({group key: offset}, from `exponent_offsets`) is added to the log-weight of every candidate of that group (D132);
+    `candidate_offsets` ({candidate id: offset}, from `candidate_exponent_offsets`) to that one candidate's (D134)."""
     require(len(slate) >= 2 and len({c['id'] for c in slate}) == len(slate), f'{electorate}: incomplete or duplicate slate')
     lookup = set(party['ballotGroupKeys'])
     features = [{'id': c['id'], 'group': c['group'] if c['group'] in lookup else None, 'centered': [float(c['S']), float(c['R'])]}
@@ -101,8 +107,10 @@ def candidate_row(electorate, slate, party, parameters, offsets=None):
     row = {'layer': 'candidate', 'targetYear': YEAR, 'targetElectorateId': electorate, 'ids': [c['id'] for c in slate],
            'groups': groups, 'features': features, 'parameters': parameters,
            'partyOf': [c['group'] for c in slate]}
-    if offsets:
-        row['exponentOffsets'] = [float(offsets.get(f['group'], 0.0)) for f in features]
+    if offsets or candidate_offsets:
+        offsets, candidate_offsets = offsets or {}, candidate_offsets or {}
+        require(set(candidate_offsets) <= set(row['ids']), f'{electorate}: a candidate exponent offset names a candidate not on the slate')
+        row['exponentOffsets'] = [float(offsets.get(f['group'], 0.0)) + float(candidate_offsets.get(f['id'], 0.0)) for f in features]
     return row
 
 
